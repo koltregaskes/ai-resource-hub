@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 10 Sept 2026, 14:24 UTC
+Generated: 10 Sept 2026, 15:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 10 Sept 2026, 14:23 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 10 Sept 2026, 14:23 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 10 Sept 2026, 14:23 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 10 Sept 2026, 14:23 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 10 Sept 2026, 14:23 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 10 Sept 2026, 15:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 10 Sept 2026, 15:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 10 Sept 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 10 Sept 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 10 Sept 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 10 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,161 open roles across 10 tracked companies. | `/jobs/` |
-| 10 Sept 2026, 12:00 UTC | digest | Mathematicians want proof OpenAI didn’t use their work | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/993263/where-does-openai-get-mathematics-training-data) |
-| 10 Sept 2026, 12:00 UTC | digest | Maven Robotics wants to steal your robot deployment deal | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/10/maven-robotics-wants-to-steal-your-robot-deployment-deal/) |
-| 10 Sept 2026, 12:00 UTC | digest | Published the 2026-09-10 daily digest | 4 stories captured from 2 sources. | `/news/` |
-| 10 Sept 2026, 12:00 UTC | digest | Why the current tech backlash feels different | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/podcast/992141/decoder-mailbag-ai-backlash-surveillance-midterms-data-centers) |
+| 10 Sept 2026, 12:00 UTC | digest | Meta’s Muse AI works and creeps me out | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/993391/meta-muse-ai-hands-on) |
+| 10 Sept 2026, 12:00 UTC | digest | Now everyone can put data to work | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/put-data-to-work) |
+| 10 Sept 2026, 12:00 UTC | digest | Published the 2026-09-10 daily digest | 9 stories captured from 3 sources. | `/news/` |
+| 10 Sept 2026, 12:00 UTC | digest | Universal Music is launching an AI music platform with ElevenLabs | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/993465/universal-music-elevenlabs-ai) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |

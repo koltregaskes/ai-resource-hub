@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T14:38:47.433Z",
+  "generatedAt": "2026-09-10T15:55:48.983Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T14:38:47.242Z",
+      "lastCheckedAt": "2026-09-10T15:55:48.680Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,12 +100,16 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T14:38:46.136Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-09-10T15:55:47.920Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partially Degraded Service",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Claude Cowork",
+          "status": "degraded_performance"
+        },
         {
           "name": "claude.ai",
           "status": "operational"
@@ -123,16 +127,35 @@
           "status": "operational"
         },
         {
-          "name": "Claude Cowork",
-          "status": "operational"
-        },
-        {
           "name": "Claude for Government",
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "r1pqn1kb4hvk",
+          "title": "Degraded functionality for Claude Cowork on Windows",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-09-10T15:54:10.108Z",
+          "updatedAt": "2026-09-10T15:54:10.203Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/5yp3rhhztm30",
+          "summary": "A Windows update released September 8 has caused Claude Cowork on Windows is unable to run local commands on your PC, because its workspace can no longer reach your computer’s dri..."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "r1pqn1kb4hvk",
+          "title": "Degraded functionality for Claude Cowork on Windows",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-09-10T15:54:10.108Z",
+          "updatedAt": "2026-09-10T15:54:10.203Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/5yp3rhhztm30",
+          "summary": "A Windows update released September 8 has caused Claude Cowork on Windows is unable to run local commands on your PC, because its workspace can no longer reach your computer’s dri..."
+        },
         {
           "id": "461yvfrzpwtt",
           "title": "Elevated errors for multiple models",
@@ -165,17 +188,6 @@
           "resolvedAt": "2026-09-02T21:44:28.095Z",
           "url": "https://stspg.io/9dgzwz3ymz42",
           "summary": "The issue affecting Claude Sonnet 5 has been resolved. Impact occurred from 2:05pm PT / 21:05 UTC to 2:19pm PT / 21:19 UTC."
-        },
-        {
-          "id": "620swtqyn24k",
-          "title": "Delays in credit purchases",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-01T23:26:48.992Z",
-          "updatedAt": "2026-09-02T01:24:22.264Z",
-          "resolvedAt": "2026-09-02T01:24:22.251Z",
-          "url": "https://stspg.io/jc510qy51bfh",
-          "summary": "This issue has been resolved."
         }
       ]
     },
@@ -190,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T14:38:46.992Z",
+      "lastCheckedAt": "2026-09-10T15:55:48.623Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T14:38:46.260Z",
+      "lastCheckedAt": "2026-09-10T15:55:47.933Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -242,7 +254,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T14:38:46.086Z",
+      "lastCheckedAt": "2026-09-10T15:55:47.980Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -328,7 +340,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T14:38:47.426Z",
+      "lastCheckedAt": "2026-09-10T15:55:48.976Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
