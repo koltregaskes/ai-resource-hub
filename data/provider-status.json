@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T21:12:29.870Z",
+  "generatedAt": "2026-09-10T21:35:31.319Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T21:12:29.863Z",
+      "lastCheckedAt": "2026-09-10T21:35:31.314Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T21:12:28.863Z",
+      "lastCheckedAt": "2026-09-10T21:35:29.821Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -192,6 +192,58 @@
       ]
     },
     {
+      "id": "cohere",
+      "providerId": "cohere",
+      "name": "Cohere",
+      "colour": "#6366f1",
+      "websiteUrl": "https://cohere.com",
+      "statusPageUrl": "https://status.cohere.io",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-09-10T21:35:30.973Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
+      "id": "google",
+      "providerId": "google",
+      "name": "Google",
+      "colour": "#4285f4",
+      "websiteUrl": "https://deepmind.google",
+      "statusPageUrl": "https://status.cloud.google.com",
+      "sourceKind": "google_incidents",
+      "sourceLabel": "Official incident feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-09-10T21:35:30.170Z",
+      "overallStatus": "operational",
+      "overallLabel": "No active Gemini or Vertex AI incidents",
+      "summary": "Filtered from the official Google Cloud public incident feed.",
+      "notes": "Filtered to Gemini and Vertex AI related incidents from the public Google Cloud incident feed.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "41E5S3mkTGDfkZuJZH5k",
+          "title": "Vertex AI Gemini API customers experienced increased error rates when accessing the global endpoint.",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-02-27T12:37:00.000Z",
+          "updatedAt": "2026-03-09T05:25:43.000Z",
+          "resolvedAt": "2026-02-27T14:35:00.000Z",
+          "url": "https://status.cloud.google.com",
+          "summary": "# Incident Report\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models experienced increased error rates. Impacted services incl..."
+        }
+      ]
+    },
+    {
       "id": "openai",
       "providerId": "openai",
       "name": "OpenAI",
@@ -202,10 +254,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T21:12:28.967Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "2 active incidents across 25 tracked components.",
+      "lastCheckedAt": "2026-09-10T21:35:29.907Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -237,44 +289,34 @@
         {
           "id": "01M26E3PPAYJMMRHX2MZJCTHMF",
           "title": "Delays in customer support responses",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "none",
           "startedAt": "2026-09-10T19:53:26.000Z",
-          "updatedAt": "2026-09-10T20:54:53.000Z",
+          "updatedAt": "2026-09-10T21:20:47.000Z",
           "resolvedAt": null,
-          "summary": "We have identified the cause of the issue affecting our customer support systems and are implementing a mitigation. Customers may continue to experience longer than usual response..."
-        },
-        {
-          "id": "01M26DX2PP1AFHGJK5E4M6S2J6",
-          "title": "Elevated errors affecting ChatGPT Work",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-09-10T19:49:49.000Z",
-          "updatedAt": "2026-09-10T20:31:52.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied mitigation and are monitoring recovery."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         }
       ],
       "recentIncidents": [
         {
-          "id": "01M26E3PPAYJMMRHX2MZJCTHMF",
-          "title": "Delays in customer support responses",
-          "status": "identified",
-          "impact": "none",
-          "startedAt": "2026-09-10T19:53:26.000Z",
-          "updatedAt": "2026-09-10T20:54:53.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified the cause of the issue affecting our customer support systems and are implementing a mitigation. Customers may continue to experience longer than usual response..."
-        },
-        {
           "id": "01M26DX2PP1AFHGJK5E4M6S2J6",
           "title": "Elevated errors affecting ChatGPT Work",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-09-10T19:49:49.000Z",
-          "updatedAt": "2026-09-10T20:31:52.000Z",
+          "updatedAt": "2026-09-10T21:30:02.000Z",
+          "resolvedAt": "2026-09-10T21:30:02.000Z",
+          "summary": "All impacted services are now fully recovered."
+        },
+        {
+          "id": "01M26E3PPAYJMMRHX2MZJCTHMF",
+          "title": "Delays in customer support responses",
+          "status": "monitoring",
+          "impact": "none",
+          "startedAt": "2026-09-10T19:53:26.000Z",
+          "updatedAt": "2026-09-10T21:20:47.000Z",
           "resolvedAt": null,
-          "summary": "We have applied mitigation and are monitoring recovery."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         },
         {
           "id": "01M24HYC9SX2Q4471EVMY6EXQE",
@@ -309,27 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T21:12:29.828Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
-      "id": "cohere",
-      "providerId": "cohere",
-      "name": "Cohere",
-      "colour": "#6366f1",
-      "websiteUrl": "https://cohere.com",
-      "statusPageUrl": "https://status.cohere.io",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T21:12:29.623Z",
+      "lastCheckedAt": "2026-09-10T21:35:31.298Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -337,38 +359,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "google",
-      "providerId": "google",
-      "name": "Google",
-      "colour": "#4285f4",
-      "websiteUrl": "https://deepmind.google",
-      "statusPageUrl": "https://status.cloud.google.com",
-      "sourceKind": "google_incidents",
-      "sourceLabel": "Official incident feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T21:12:28.941Z",
-      "overallStatus": "operational",
-      "overallLabel": "No active Gemini or Vertex AI incidents",
-      "summary": "Filtered from the official Google Cloud public incident feed.",
-      "notes": "Filtered to Gemini and Vertex AI related incidents from the public Google Cloud incident feed.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "41E5S3mkTGDfkZuJZH5k",
-          "title": "Vertex AI Gemini API customers experienced increased error rates when accessing the global endpoint.",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-02-27T12:37:00.000Z",
-          "updatedAt": "2026-03-09T05:25:43.000Z",
-          "resolvedAt": "2026-02-27T14:35:00.000Z",
-          "url": "https://status.cloud.google.com",
-          "summary": "# Incident Report\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models experienced increased error rates. Impacted services incl..."
-        }
-      ]
     },
     {
       "id": "deepseek",
@@ -385,7 +375,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
