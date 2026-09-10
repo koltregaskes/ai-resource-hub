@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 10 Sept 2026, 04:44 UTC
+Generated: 10 Sept 2026, 05:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 10 Sept 2026, 12:00 UTC | digest | AI research startup Listen Labs scrubbed a $1.5B funding round for Salesforce talks | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/09/ai-research-startup-listen-labs-scrubbed-a-1-5b-funding-round-for-salesforce-talks/) |
-| 10 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,158 open roles across 10 tracked companies. | `/jobs/` |
+| 10 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,159 open roles across 10 tracked companies. | `/jobs/` |
 | 10 Sept 2026, 12:00 UTC | digest | Published the 2026-09-10 daily digest | 1 stories captured from 1 sources. | `/news/` |
-| 10 Sept 2026, 04:44 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 10 Sept 2026, 04:44 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 10 Sept 2026, 04:44 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 10 Sept 2026, 04:44 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 10 Sept 2026, 04:44 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 10 Sept 2026, 05:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 10 Sept 2026, 05:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 10 Sept 2026, 05:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 10 Sept 2026, 05:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 10 Sept 2026, 05:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
