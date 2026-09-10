@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T19:55:43.480Z",
+  "generatedAt": "2026-09-10T20:56:07.994Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T19:55:43.472Z",
+      "lastCheckedAt": "2026-09-10T20:56:07.987Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T19:55:42.471Z",
+      "lastCheckedAt": "2026-09-10T20:56:06.535Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T19:55:42.545Z",
+      "lastCheckedAt": "2026-09-10T20:56:06.572Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "2 active incidents across 25 tracked components.",
@@ -237,44 +237,44 @@
         {
           "id": "01M26E3PPAYJMMRHX2MZJCTHMF",
           "title": "Delays in customer support responses",
-          "status": "investigating",
+          "status": "identified",
           "impact": "none",
           "startedAt": "2026-09-10T19:53:26.000Z",
-          "updatedAt": "2026-09-10T19:53:26.000Z",
+          "updatedAt": "2026-09-10T20:54:53.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating technical issues affecting our customer support systems. Customers may experience longer than usual response times. We are working to restore normal operation..."
+          "summary": "We have identified the cause of the issue affecting our customer support systems and are implementing a mitigation. Customers may continue to experience longer than usual response..."
         },
         {
           "id": "01M26DX2PP1AFHGJK5E4M6S2J6",
           "title": "Elevated errors affecting ChatGPT Work",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-09-10T19:49:49.000Z",
-          "updatedAt": "2026-09-10T19:50:34.000Z",
+          "updatedAt": "2026-09-10T20:31:52.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating elevated errors affecting some ChatGPT Work users. Some users may encounter server errors. We are working to mitigate the issue."
+          "summary": "We have applied mitigation and are monitoring recovery."
         }
       ],
       "recentIncidents": [
         {
           "id": "01M26E3PPAYJMMRHX2MZJCTHMF",
           "title": "Delays in customer support responses",
-          "status": "investigating",
+          "status": "identified",
           "impact": "none",
           "startedAt": "2026-09-10T19:53:26.000Z",
-          "updatedAt": "2026-09-10T19:53:26.000Z",
+          "updatedAt": "2026-09-10T20:54:53.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating technical issues affecting our customer support systems. Customers may experience longer than usual response times. We are working to restore normal operation..."
+          "summary": "We have identified the cause of the issue affecting our customer support systems and are implementing a mitigation. Customers may continue to experience longer than usual response..."
         },
         {
           "id": "01M26DX2PP1AFHGJK5E4M6S2J6",
           "title": "Elevated errors affecting ChatGPT Work",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-09-10T19:49:49.000Z",
-          "updatedAt": "2026-09-10T19:50:34.000Z",
+          "updatedAt": "2026-09-10T20:31:52.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating elevated errors affecting some ChatGPT Work users. Some users may encounter server errors. We are working to mitigate the issue."
+          "summary": "We have applied mitigation and are monitoring recovery."
         },
         {
           "id": "01M24HYC9SX2Q4471EVMY6EXQE",
@@ -309,7 +309,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T19:55:43.261Z",
+      "lastCheckedAt": "2026-09-10T20:56:07.595Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -329,7 +329,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T19:55:42.646Z",
+      "lastCheckedAt": "2026-09-10T20:56:06.782Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -361,7 +361,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T19:55:43.313Z",
+      "lastCheckedAt": "2026-09-10T20:56:07.735Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -385,7 +385,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
