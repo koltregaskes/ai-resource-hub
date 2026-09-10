@@ -8,11 +8,11 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 10 Sept 2026, 00:11 UTC |
+| Generated | 10 Sept 2026, 01:55 UTC |
 | Providers tracked | 40 |
-| Public models | 335 |
+| Public models | 336 |
 | Active models | 110 |
-| Tracking models | 224 |
+| Tracking models | 225 |
 | Preview models | 1 |
 | Benchmarks | 34 |
 | News items in cache | 67 |
