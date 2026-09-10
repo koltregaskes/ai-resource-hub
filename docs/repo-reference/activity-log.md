@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 10 Sept 2026, 17:55 UTC
+Generated: 10 Sept 2026, 18:24 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 10 Sept 2026, 17:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 10 Sept 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 10 Sept 2026, 17:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 10 Sept 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 10 Sept 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 10 Sept 2026, 18:23 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 10 Sept 2026, 18:23 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 10 Sept 2026, 18:23 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 10 Sept 2026, 18:23 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 10 Sept 2026, 18:23 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 10 Sept 2026, 12:00 UTC | digest | 3 ways to prep for your next big race with Search | Google featured in the latest daily brief. | [open](https://blog.google/products-and-platforms/products/search/running-race-training-tips/) |
 | 10 Sept 2026, 12:00 UTC | digest | Anthropic reveals rogue AI agents hate CAPTCHAs, just like you | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/10/anthropic-reveals-rogue-ai-agents-hate-captchas-just-like-you/) |
 | 10 Sept 2026, 12:00 UTC | digest | India&#8217;s Pocket FM doubles revenue run rate to $500M as AI powers 93% of audio content | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/10/indias-pocket-fm-doubles-revenue-run-rate-to-500m-as-ai-powers-93-of-audio-content/) |
