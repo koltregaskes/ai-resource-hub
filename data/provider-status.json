@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T10:55:40.170Z",
+  "generatedAt": "2026-09-10T11:55:46.330Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T10:55:40.163Z",
+      "lastCheckedAt": "2026-09-10T11:55:46.029Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T10:55:39.050Z",
+      "lastCheckedAt": "2026-09-10T11:55:45.260Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -187,6 +187,26 @@
       ]
     },
     {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-09-10T11:55:46.323Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -197,7 +217,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T10:55:38.975Z",
+      "lastCheckedAt": "2026-09-10T11:55:45.216Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +307,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T10:55:39.678Z",
+      "lastCheckedAt": "2026-09-10T11:55:46.040Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +327,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T10:55:39.104Z",
+      "lastCheckedAt": "2026-09-10T11:55:45.303Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -327,26 +347,6 @@
           "summary": "# Incident Report\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models experienced increased error rates. Impacted services incl..."
         }
       ]
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T10:55:39.749Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
     },
     {
       "id": "deepseek",
