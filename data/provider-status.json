@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T05:55:43.308Z",
+  "generatedAt": "2026-09-10T06:55:40.047Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T05:55:43.083Z",
+      "lastCheckedAt": "2026-09-10T06:55:40.040Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T05:55:42.019Z",
+      "lastCheckedAt": "2026-09-10T06:55:38.903Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -135,24 +135,24 @@
         {
           "id": "01M24HYC9SX2Q4471EVMY6EXQE",
           "title": "Unable to open shared ChatGPT Project using direct link",
-          "status": "investigating",
+          "status": "identified",
           "impact": "minor",
           "startedAt": "2026-09-10T02:21:57.000Z",
-          "updatedAt": "2026-09-10T02:21:57.000Z",
+          "updatedAt": "2026-09-10T06:01:47.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
+          "summary": "We are still implementing the mitigation."
         }
       ],
       "recentIncidents": [
         {
           "id": "01M24HYC9SX2Q4471EVMY6EXQE",
           "title": "Unable to open shared ChatGPT Project using direct link",
-          "status": "investigating",
+          "status": "identified",
           "impact": "minor",
           "startedAt": "2026-09-10T02:21:57.000Z",
-          "updatedAt": "2026-09-10T02:21:57.000Z",
+          "updatedAt": "2026-09-10T06:01:47.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
+          "summary": "We are still implementing the mitigation."
         },
         {
           "id": "01M23KG62KKK448RN434CQ64Z8",
@@ -197,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T05:55:41.962Z",
+      "lastCheckedAt": "2026-09-10T06:55:38.910Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T05:55:42.948Z",
+      "lastCheckedAt": "2026-09-10T06:55:40.005Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T05:55:42.129Z",
+      "lastCheckedAt": "2026-09-10T06:55:39.243Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -339,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-10T05:55:43.301Z",
+      "lastCheckedAt": "2026-09-10T06:55:40.035Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
