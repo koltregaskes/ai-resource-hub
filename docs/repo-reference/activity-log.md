@@ -1,21 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 09 Sept 2026, 23:55 UTC
+Generated: 10 Sept 2026, 00:11 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 09 Sept 2026, 23:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 09 Sept 2026, 23:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 09 Sept 2026, 23:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 09 Sept 2026, 23:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 09 Sept 2026, 23:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 09 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,158 open roles across 10 tracked companies. | `/jobs/` |
-| 09 Sept 2026, 12:00 UTC | digest | Massachusetts hits data centers with new clean power rules | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/09/massachusetts-hits-data-centers-with-new-clean-power-rules/) |
-| 09 Sept 2026, 12:00 UTC | digest | OpenAI adds a prominent AI doomer to its board of directors | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/09/openai-adds-a-prominent-ai-doomer-to-its-board-of-directors/) |
-| 09 Sept 2026, 12:00 UTC | digest | Published the 2026-09-09 daily digest | 20 stories captured from 5 sources. | `/news/` |
-| 09 Sept 2026, 12:00 UTC | digest | Suno releases its first AI music model made with record industry help | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/991977/suno-releases-its-first-ai-music-model-made-with-record-industry-help) |
+| 10 Sept 2026, 12:00 UTC | digest | AI research startup Listen Labs scrubbed a $1.5B funding round for Salesforce talks | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/09/ai-research-startup-listen-labs-scrubbed-a-1-5b-funding-round-for-salesforce-talks/) |
+| 10 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,158 open roles across 10 tracked companies. | `/jobs/` |
+| 10 Sept 2026, 12:00 UTC | digest | Published the 2026-09-10 daily digest | 1 stories captured from 1 sources. | `/news/` |
+| 10 Sept 2026, 00:11 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 10 Sept 2026, 00:11 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 10 Sept 2026, 00:11 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 10 Sept 2026, 00:11 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 10 Sept 2026, 00:11 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
@@ -26,3 +24,5 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 05 Feb 2026, 12:00 UTC | models | Claude Opus 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.6/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 Pro (batch) added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2-pro/` |
+| 24 Nov 2025, 12:00 UTC | models | Claude Opus 4.5 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.5/` |
+| 15 Oct 2025, 12:00 UTC | models | Claude Haiku 4.5 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-haiku-4.5/` |
