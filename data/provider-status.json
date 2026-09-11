@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T09:37:17.054Z",
+  "generatedAt": "2026-09-11T10:55:51.232Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T09:37:17.048Z",
+      "lastCheckedAt": "2026-09-11T10:55:51.225Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T09:37:16.157Z",
+      "lastCheckedAt": "2026-09-11T10:55:49.707Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -202,10 +202,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T09:37:16.172Z",
+      "lastCheckedAt": "2026-09-11T10:55:49.831Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "2 active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -237,44 +237,34 @@
         {
           "id": "01M27VK1VN54RQJGJEHB5JTQJJ",
           "title": "Elevated errors for GPT-5.6 Sol on the API",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-09-11T09:08:15.000Z",
-          "updatedAt": "2026-09-11T09:08:15.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
-        },
-        {
-          "id": "01M27Q9GH7WVKNA61ZR3RDMSY5",
-          "title": "Elevated errors for ChatGPT users in Europe",
           "status": "monitoring",
           "impact": "minor",
-          "startedAt": "2026-09-11T07:53:08.000Z",
-          "updatedAt": "2026-09-11T08:37:26.000Z",
+          "startedAt": "2026-09-11T09:08:15.000Z",
+          "updatedAt": "2026-09-11T10:09:47.000Z",
           "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
+          "summary": "We have brought additional capacity online and are seeing improvements for some GPT-5.6 Sol API traffic.\nWe continue to mitigate elevated errors affecting Chat Completions and Res..."
         }
       ],
       "recentIncidents": [
         {
-          "id": "01M27VK1VN54RQJGJEHB5JTQJJ",
-          "title": "Elevated errors for GPT-5.6 Sol on the API",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-09-11T09:08:15.000Z",
-          "updatedAt": "2026-09-11T09:08:15.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
-        },
-        {
           "id": "01M27Q9GH7WVKNA61ZR3RDMSY5",
           "title": "Elevated errors for ChatGPT users in Europe",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-09-11T07:53:08.000Z",
-          "updatedAt": "2026-09-11T08:37:26.000Z",
+          "updatedAt": "2026-09-11T10:16:32.000Z",
+          "resolvedAt": "2026-09-11T10:16:31.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M27VK1VN54RQJGJEHB5JTQJJ",
+          "title": "Elevated errors for GPT-5.6 Sol on the API",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-09-11T09:08:15.000Z",
+          "updatedAt": "2026-09-11T10:09:47.000Z",
           "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
+          "summary": "We have brought additional capacity online and are seeing improvements for some GPT-5.6 Sol API traffic.\nWe continue to mitigate elevated errors affecting Chat Completions and Res..."
         },
         {
           "id": "01M26E3PPAYJMMRHX2MZJCTHMF",
@@ -309,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T09:37:16.815Z",
+      "lastCheckedAt": "2026-09-11T10:55:50.882Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -329,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T09:37:16.202Z",
+      "lastCheckedAt": "2026-09-11T10:55:49.911Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -361,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T09:37:16.999Z",
+      "lastCheckedAt": "2026-09-11T10:55:51.023Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
