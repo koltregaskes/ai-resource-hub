@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 11 Sept 2026, 07:55 UTC
+Generated: 11 Sept 2026, 08:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 11 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,164 open roles across 10 tracked companies. | `/jobs/` |
-| 11 Sept 2026, 07:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 11 Sept 2026, 07:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 11 Sept 2026, 07:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 11 Sept 2026, 07:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 11 Sept 2026, 07:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 11 Sept 2026, 08:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 11 Sept 2026, 08:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 11 Sept 2026, 08:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 11 Sept 2026, 08:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 11 Sept 2026, 08:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 10 Sept 2026, 12:00 UTC | digest | Jensen Huang explains why Nvidia will grow an astounding 70% next year | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/) |
 | 10 Sept 2026, 12:00 UTC | digest | Mark Wahlberg is coming to TechCrunch Disrupt 2026, and he wants to talk about your work, not his | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/10/mark-wahlberg-is-coming-to-techcrunch-disrupt-2026/) |
 | 10 Sept 2026, 12:00 UTC | digest | Published the 2026-09-10 daily digest | 20 stories captured from 4 sources. | `/news/` |
