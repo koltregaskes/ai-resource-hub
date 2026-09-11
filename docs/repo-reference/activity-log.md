@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 11 Sept 2026, 19:56 UTC
+Generated: 11 Sept 2026, 20:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 11 Sept 2026, 19:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 11 Sept 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 11 Sept 2026, 19:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 11 Sept 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 11 Sept 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 11 Sept 2026, 12:00 UTC | digest | An Anthropic researcher’s doomsday warning comes at a very interesting time | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/podcast/an-anthropic-researchers-doomsday-warning-comes-at-a-very-interesting-time/) |
+| 11 Sept 2026, 20:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 11 Sept 2026, 20:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 11 Sept 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 11 Sept 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 11 Sept 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 11 Sept 2026, 12:00 UTC | digest | Final, final, final call for TechCrunch Disrupt 2026 Side Events | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/11/final-final-final-call-for-techcrunch-disrupt-2026-side-events/) |
 | 11 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,164 open roles across 10 tracked companies. | `/jobs/` |
-| 11 Sept 2026, 12:00 UTC | digest | Kimi-maker Moonshot AI targets $2 billion in annual revenue | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/11/kimi-maker-moonshot-ai-targets-2-billion-in-annual-revenue/) |
-| 11 Sept 2026, 12:00 UTC | digest | Nscale adds former OpenAI exec Fidji Simo to its board ahead of potential IPO | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/11/nscale-adds-former-openai-exec-fidji-simo-to-its-board-ahead-of-potential-ipo/) |
-| 11 Sept 2026, 12:00 UTC | digest | Published the 2026-09-11 daily digest | 6 stories captured from 3 sources. | `/news/` |
+| 11 Sept 2026, 12:00 UTC | digest | Lawyer fined $5K over AI-hallucinated witnesses in a murder case | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/994207/chatgpt-new-mexico-lawyer-fined-murder-appeal) |
+| 11 Sept 2026, 12:00 UTC | digest | One week left to book your exhibit table at TechCrunch Disrupt 2026 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/11/one-week-left-to-book-your-exhibit-table-at-techcrunch-disrupt-2026/) |
+| 11 Sept 2026, 12:00 UTC | digest | Published the 2026-09-11 daily digest | 9 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
