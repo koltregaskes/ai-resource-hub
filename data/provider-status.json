@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T21:41:51.061Z",
+  "generatedAt": "2026-09-11T22:47:44.678Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T21:41:51.053Z",
+      "lastCheckedAt": "2026-09-11T22:47:44.532Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T21:41:49.936Z",
+      "lastCheckedAt": "2026-09-11T22:47:43.646Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T21:41:49.892Z",
+      "lastCheckedAt": "2026-09-11T22:47:43.641Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -237,24 +237,24 @@
         {
           "id": "01M28MEQWTQJDRCRPFD9FWQ0H3",
           "title": "1% of ChatGPT Work (mobile/web) turns are failing for existing threads",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-09-11T16:22:49.000Z",
-          "updatedAt": "2026-09-11T17:17:35.000Z",
+          "updatedAt": "2026-09-11T21:51:56.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         }
       ],
       "recentIncidents": [
         {
           "id": "01M28MEQWTQJDRCRPFD9FWQ0H3",
           "title": "1% of ChatGPT Work (mobile/web) turns are failing for existing threads",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-09-11T16:22:49.000Z",
-          "updatedAt": "2026-09-11T17:17:35.000Z",
+          "updatedAt": "2026-09-11T21:51:56.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         },
         {
           "id": "01M27VK1VN54RQJGJEHB5JTQJJ",
@@ -299,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T21:41:50.815Z",
+      "lastCheckedAt": "2026-09-11T22:47:44.542Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T21:41:50.003Z",
+      "lastCheckedAt": "2026-09-11T22:47:44.005Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -351,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T21:41:50.986Z",
+      "lastCheckedAt": "2026-09-11T22:47:44.669Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
