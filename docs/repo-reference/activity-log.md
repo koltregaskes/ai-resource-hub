@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 11 Sept 2026, 21:41 UTC
+Generated: 11 Sept 2026, 22:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 11 Sept 2026, 21:41 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 11 Sept 2026, 21:41 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 11 Sept 2026, 21:41 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 11 Sept 2026, 21:41 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 11 Sept 2026, 21:41 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 11 Sept 2026, 22:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 11 Sept 2026, 22:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 11 Sept 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 11 Sept 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 11 Sept 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 11 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,166 open roles across 10 tracked companies. | `/jobs/` |
-| 11 Sept 2026, 12:00 UTC | digest | Lawyer fined $5K over AI-hallucinated witnesses in a murder case | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/994207/chatgpt-new-mexico-lawyer-fined-murder-appeal) |
+| 11 Sept 2026, 12:00 UTC | digest | One week left to book your exhibit table at TechCrunch Disrupt 2026 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/11/one-week-left-to-book-your-exhibit-table-at-techcrunch-disrupt-2026/) |
 | 11 Sept 2026, 12:00 UTC | digest | OpenAI&#8217;s feud with mathematicians is only escalating | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/11/openais-feud-with-mathematicians-is-only-escalating/) |
-| 11 Sept 2026, 12:00 UTC | digest | Published the 2026-09-11 daily digest | 11 stories captured from 3 sources. | `/news/` |
-| 11 Sept 2026, 12:00 UTC | digest | Y Combinator&#8217;s Garry Tan wants U.S. open-weight AI labs to &#8216;distill&#8217; frontier models, too | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/) |
+| 11 Sept 2026, 12:00 UTC | digest | Published the 2026-09-11 daily digest | 10 stories captured from 3 sources. | `/news/` |
+| 11 Sept 2026, 12:00 UTC | digest | Y Combinator&#8217;s Garry Tan wants US open-weight AI labs to &#8216;distill&#8217; frontier models, too | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
