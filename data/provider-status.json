@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T08:55:49.619Z",
+  "generatedAt": "2026-09-11T09:37:17.054Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T08:55:49.612Z",
+      "lastCheckedAt": "2026-09-11T09:37:17.048Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T08:55:48.397Z",
+      "lastCheckedAt": "2026-09-11T09:37:16.157Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -202,16 +202,12 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T08:55:48.395Z",
+      "lastCheckedAt": "2026-09-11T09:37:16.172Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
         {
           "name": "Images",
           "status": "operational"
@@ -231,9 +227,23 @@
         {
           "name": "FedRAMP",
           "status": "operational"
+        },
+        {
+          "name": "Sora",
+          "status": "operational"
         }
       ],
       "activeIncidents": [
+        {
+          "id": "01M27VK1VN54RQJGJEHB5JTQJJ",
+          "title": "Elevated errors for GPT-5.6 Sol on the API",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-09-11T09:08:15.000Z",
+          "updatedAt": "2026-09-11T09:08:15.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
         {
           "id": "01M27Q9GH7WVKNA61ZR3RDMSY5",
           "title": "Elevated errors for ChatGPT users in Europe",
@@ -246,6 +256,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01M27VK1VN54RQJGJEHB5JTQJJ",
+          "title": "Elevated errors for GPT-5.6 Sol on the API",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-09-11T09:08:15.000Z",
+          "updatedAt": "2026-09-11T09:08:15.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
         {
           "id": "01M27Q9GH7WVKNA61ZR3RDMSY5",
           "title": "Elevated errors for ChatGPT users in Europe",
@@ -275,16 +295,6 @@
           "updatedAt": "2026-09-10T21:30:02.000Z",
           "resolvedAt": "2026-09-10T21:30:02.000Z",
           "summary": "All impacted services are now fully recovered."
-        },
-        {
-          "id": "01M24HYC9SX2Q4471EVMY6EXQE",
-          "title": "Unable to open shared ChatGPT Project using direct link",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-10T02:21:57.000Z",
-          "updatedAt": "2026-09-10T14:28:15.000Z",
-          "resolvedAt": "2026-09-10T14:28:15.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -299,7 +309,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T08:55:49.282Z",
+      "lastCheckedAt": "2026-09-11T09:37:16.815Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +329,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T08:55:49.137Z",
+      "lastCheckedAt": "2026-09-11T09:37:16.202Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -351,7 +361,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T08:55:49.447Z",
+      "lastCheckedAt": "2026-09-11T09:37:16.999Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
