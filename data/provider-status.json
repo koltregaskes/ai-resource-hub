@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T06:55:50.047Z",
+  "generatedAt": "2026-09-11T07:55:49.973Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T06:55:49.972Z",
+      "lastCheckedAt": "2026-09-11T07:55:49.933Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-09-10T18:35:26.000Z",
+          "id": "fireworks-feed-0-2026-09-11T07:54:20.000Z",
+          "title": "Service Degradation for one of our Serverless models",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-09-11T07:54:20.000Z",
+          "updatedAt": "2026-09-11T07:54:20.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M27QBPE1VPY1HRCES2NRVSE8",
+          "summary": "Status: Investigating We are seeing impacted performance for one of our Serverless models. We are actively investigating."
+        },
+        {
+          "id": "fireworks-feed-1-2026-09-10T18:35:26.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -28,23 +39,23 @@
           "updatedAt": "2026-09-10T18:35:26.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M269613HXXRFAHYMKCW99M12",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-09-10T12:34:48.000Z",
-          "title": "Service Degradation for one of our Serverless models",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-09-10T12:34:48.000Z",
-          "updatedAt": "2026-09-10T12:34:48.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M25MVCQ7KCNCBTZEAPWP2Y4H",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-09-10T18:35:26.000Z",
+          "id": "fireworks-feed-0-2026-09-11T07:54:20.000Z",
+          "title": "Service Degradation for one of our Serverless models",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-09-11T07:54:20.000Z",
+          "updatedAt": "2026-09-11T07:54:20.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M27QBPE1VPY1HRCES2NRVSE8",
+          "summary": "Status: Investigating We are seeing impacted performance for one of our Serverless models. We are actively investigating."
+        },
+        {
+          "id": "fireworks-feed-1-2026-09-10T18:35:26.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-09-10T12:34:48.000Z",
+          "id": "fireworks-feed-2-2026-09-10T12:34:48.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-09-09T12:10:33.000Z",
+          "id": "fireworks-feed-3-2026-09-09T12:10:33.000Z",
           "title": "Service Degradation for one of our Serverless models",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-09-09T12:10:33.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M22SM327V4KT2DBH255R531V",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-09-08T21:43:54.000Z",
-          "title": "Service Degradation for one of our Serverless models",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-09-08T21:43:54.000Z",
-          "updatedAt": "2026-09-08T21:43:54.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M21E38KEM69PGCJ5YBRWVZX8",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T06:55:49.144Z",
+      "lastCheckedAt": "2026-09-11T07:55:48.920Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -192,58 +192,6 @@
       ]
     },
     {
-      "id": "cohere",
-      "providerId": "cohere",
-      "name": "Cohere",
-      "colour": "#6366f1",
-      "websiteUrl": "https://cohere.com",
-      "statusPageUrl": "https://status.cohere.io",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T06:55:49.858Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
-      "id": "google",
-      "providerId": "google",
-      "name": "Google",
-      "colour": "#4285f4",
-      "websiteUrl": "https://deepmind.google",
-      "statusPageUrl": "https://status.cloud.google.com",
-      "sourceKind": "google_incidents",
-      "sourceLabel": "Official incident feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T06:55:49.138Z",
-      "overallStatus": "operational",
-      "overallLabel": "No active Gemini or Vertex AI incidents",
-      "summary": "Filtered from the official Google Cloud public incident feed.",
-      "notes": "Filtered to Gemini and Vertex AI related incidents from the public Google Cloud incident feed.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "41E5S3mkTGDfkZuJZH5k",
-          "title": "Vertex AI Gemini API customers experienced increased error rates when accessing the global endpoint.",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-02-27T12:37:00.000Z",
-          "updatedAt": "2026-03-09T05:25:43.000Z",
-          "resolvedAt": "2026-02-27T14:35:00.000Z",
-          "url": "https://status.cloud.google.com",
-          "summary": "# Incident Report\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models experienced increased error rates. Impacted services incl..."
-        }
-      ]
-    },
-    {
       "id": "openai",
       "providerId": "openai",
       "name": "OpenAI",
@@ -254,10 +202,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T06:55:49.069Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
+      "lastCheckedAt": "2026-09-11T07:55:48.974Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -285,8 +233,29 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "01M27Q9GH7WVKNA61ZR3RDMSY5",
+          "title": "Elevated errors for ChatGPT users in Europe",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-09-11T07:53:08.000Z",
+          "updatedAt": "2026-09-11T07:53:08.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "01M27Q9GH7WVKNA61ZR3RDMSY5",
+          "title": "Elevated errors for ChatGPT users in Europe",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-09-11T07:53:08.000Z",
+          "updatedAt": "2026-09-11T07:53:08.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
         {
           "id": "01M26E3PPAYJMMRHX2MZJCTHMF",
           "title": "Delays in customer support responses",
@@ -316,16 +285,58 @@
           "updatedAt": "2026-09-10T14:28:15.000Z",
           "resolvedAt": "2026-09-10T14:28:15.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
+        }
+      ]
+    },
+    {
+      "id": "cohere",
+      "providerId": "cohere",
+      "name": "Cohere",
+      "colour": "#6366f1",
+      "websiteUrl": "https://cohere.com",
+      "statusPageUrl": "https://status.cohere.io",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-09-11T07:55:49.782Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
+      "id": "google",
+      "providerId": "google",
+      "name": "Google",
+      "colour": "#4285f4",
+      "websiteUrl": "https://deepmind.google",
+      "statusPageUrl": "https://status.cloud.google.com",
+      "sourceKind": "google_incidents",
+      "sourceLabel": "Official incident feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-09-11T07:55:49.090Z",
+      "overallStatus": "operational",
+      "overallLabel": "No active Gemini or Vertex AI incidents",
+      "summary": "Filtered from the official Google Cloud public incident feed.",
+      "notes": "Filtered to Gemini and Vertex AI related incidents from the public Google Cloud incident feed.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
         {
-          "id": "01M23KG62KKK448RN434CQ64Z8",
-          "title": "Investigating unexpected usage limit resets",
+          "id": "41E5S3mkTGDfkZuJZH5k",
+          "title": "Vertex AI Gemini API customers experienced increased error rates when accessing the global endpoint.",
           "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-09-09T17:29:55.000Z",
-          "updatedAt": "2026-09-09T17:54:12.000Z",
-          "resolvedAt": "2026-09-09T17:54:12.000Z",
-          "summary": "All impacted services have now fully recovered."
+          "impact": "minor",
+          "startedAt": "2026-02-27T12:37:00.000Z",
+          "updatedAt": "2026-03-09T05:25:43.000Z",
+          "resolvedAt": "2026-02-27T14:35:00.000Z",
+          "url": "https://status.cloud.google.com",
+          "summary": "# Incident Report\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models experienced increased error rates. Impacted services incl..."
         }
       ]
     },
@@ -340,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-11T06:55:50.040Z",
+      "lastCheckedAt": "2026-09-11T07:55:49.966Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -364,7 +375,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
