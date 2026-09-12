@@ -5,8 +5,8 @@
     "status": "success",
     "models_updated": 1166,
     "error_message": null,
-    "started_at": "2026-09-12 21:55:34",
-    "finished_at": "2026-09-12 21:55:34"
+    "started_at": "2026-09-12 22:14:27",
+    "finished_at": "2026-09-12 22:14:27"
   },
   {
     "id": 10,
@@ -14,17 +14,8 @@
     "status": "error",
     "models_updated": 76,
     "error_message": "VentureBeat: HTTP 429: Too Many Requests",
-    "started_at": "2026-09-12 21:55:28",
-    "finished_at": "2026-09-12 21:55:28"
-  },
-  {
-    "id": 8,
-    "scraper": "quality-scores",
-    "status": "computed",
-    "models_updated": 55,
-    "error_message": null,
-    "started_at": "2026-09-12 21:55:26",
-    "finished_at": "2026-09-12 21:55:26"
+    "started_at": "2026-09-12 22:14:23",
+    "finished_at": "2026-09-12 22:14:23"
   },
   {
     "id": 9,
@@ -32,8 +23,8 @@
     "status": "success",
     "models_updated": 126,
     "error_message": null,
-    "started_at": "2026-09-12 21:55:26",
-    "finished_at": "2026-09-12 21:55:26"
+    "started_at": "2026-09-12 22:14:22",
+    "finished_at": "2026-09-12 22:14:22"
   },
   {
     "id": 7,
@@ -41,17 +32,17 @@
     "status": "fallback",
     "models_updated": 16,
     "error_message": null,
-    "started_at": "2026-09-12 21:55:25",
-    "finished_at": "2026-09-12 21:55:25"
+    "started_at": "2026-09-12 22:14:21",
+    "finished_at": "2026-09-12 22:14:21"
   },
   {
-    "id": 5,
-    "scraper": "benchmarks:chatbot-arena",
-    "status": "success",
-    "models_updated": 27,
+    "id": 8,
+    "scraper": "quality-scores",
+    "status": "computed",
+    "models_updated": 55,
     "error_message": null,
-    "started_at": "2026-09-12 21:55:24",
-    "finished_at": "2026-09-12 21:55:24"
+    "started_at": "2026-09-12 22:14:21",
+    "finished_at": "2026-09-12 22:14:21"
   },
   {
     "id": 6,
@@ -59,17 +50,17 @@
     "status": "success",
     "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-09-12 21:55:24",
-    "finished_at": "2026-09-12 21:55:24"
+    "started_at": "2026-09-12 22:14:20",
+    "finished_at": "2026-09-12 22:14:20"
   },
   {
-    "id": 4,
-    "scraper": "pricing:validator",
+    "id": 5,
+    "scraper": "benchmarks:chatbot-arena",
     "status": "success",
-    "models_updated": 0,
+    "models_updated": 27,
     "error_message": null,
-    "started_at": "2026-09-12 21:55:23",
-    "finished_at": "2026-09-12 21:55:23"
+    "started_at": "2026-09-12 22:14:19",
+    "finished_at": "2026-09-12 22:14:19"
   },
   {
     "id": 3,
@@ -77,8 +68,17 @@
     "status": "success",
     "models_updated": 21,
     "error_message": null,
-    "started_at": "2026-09-12 21:55:22",
-    "finished_at": "2026-09-12 21:55:22"
+    "started_at": "2026-09-12 22:14:18",
+    "finished_at": "2026-09-12 22:14:18"
+  },
+  {
+    "id": 4,
+    "scraper": "pricing:validator",
+    "status": "success",
+    "models_updated": 0,
+    "error_message": null,
+    "started_at": "2026-09-12 22:14:18",
+    "finished_at": "2026-09-12 22:14:18"
   },
   {
     "id": 2,
@@ -86,8 +86,8 @@
     "status": "success",
     "models_updated": 333,
     "error_message": null,
-    "started_at": "2026-09-12 21:55:21",
-    "finished_at": "2026-09-12 21:55:21"
+    "started_at": "2026-09-12 22:14:17",
+    "finished_at": "2026-09-12 22:14:17"
   },
   {
     "id": 1,
@@ -95,7 +95,7 @@
     "status": "success",
     "models_updated": 52,
     "error_message": null,
-    "started_at": "2026-09-12 21:55:20",
-    "finished_at": "2026-09-12 21:55:20"
+    "started_at": "2026-09-12 22:14:16",
+    "finished_at": "2026-09-12 22:14:16"
   }
 ]
