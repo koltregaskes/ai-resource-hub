@@ -8,14 +8,14 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 12 Sept 2026, 15:55 UTC |
+| Generated | 12 Sept 2026, 16:55 UTC |
 | Providers tracked | 40 |
 | Public models | 337 |
 | Active models | 110 |
 | Tracking models | 226 |
 | Preview models | 1 |
 | Benchmarks | 34 |
-| News items in cache | 68 |
+| News items in cache | 67 |
 | Release-desk entries | 44 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
