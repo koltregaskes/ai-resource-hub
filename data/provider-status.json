@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T01:33:59.936Z",
+  "generatedAt": "2026-09-12T01:55:47.157Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-12T01:33:59.717Z",
+      "lastCheckedAt": "2026-09-12T01:55:47.125Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-12T01:33:58.652Z",
+      "lastCheckedAt": "2026-09-12T01:55:45.944Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 6 tracked components.",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-12T01:33:58.650Z",
+      "lastCheckedAt": "2026-09-12T01:55:46.063Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -240,7 +240,7 @@
           "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-09-11T16:22:49.000Z",
-          "updatedAt": "2026-09-11T21:51:56.000Z",
+          "updatedAt": "2026-09-12T01:38:04.000Z",
           "resolvedAt": null,
           "summary": "We have applied the mitigation and are monitoring the recovery."
         }
@@ -252,7 +252,7 @@
           "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-09-11T16:22:49.000Z",
-          "updatedAt": "2026-09-11T21:51:56.000Z",
+          "updatedAt": "2026-09-12T01:38:04.000Z",
           "resolvedAt": null,
           "summary": "We have applied the mitigation and are monitoring the recovery."
         },
@@ -299,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-12T01:33:59.816Z",
+      "lastCheckedAt": "2026-09-12T01:55:46.685Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-12T01:33:59.305Z",
+      "lastCheckedAt": "2026-09-12T01:55:46.217Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -351,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-12T01:33:59.931Z",
+      "lastCheckedAt": "2026-09-12T01:55:47.150Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
