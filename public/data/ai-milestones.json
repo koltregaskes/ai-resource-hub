@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-12T22:14:31.939Z",
+  "generatedAt": "2026-09-12T23:55:21.096Z",
   "overview": {
-    "generatedForLabel": "Saturday, 12 September 2026",
+    "generatedForLabel": "Sunday, 13 September 2026",
     "totalMilestones": 37,
     "verifiedMilestones": 35,
     "trackingMilestones": 2,
@@ -12,62 +12,10 @@
       "id": "mistral-7b-launch",
       "title": "Mistral 7B released",
       "nextOccurrenceLabel": "27 Sept 2026",
-      "daysUntil": 15
+      "daysUntil": 14
     }
   },
-  "todayMilestones": [
-    {
-      "id": "o1-preview-launch",
-      "slug": "o1-preview-launch",
-      "title": "OpenAI o1-preview launched",
-      "summary": "OpenAI’s o1-preview pushed reasoning-first models into the mainstream product conversation.",
-      "year": 2024,
-      "month": 9,
-      "day": 12,
-      "datePrecision": "day",
-      "category": "model_release",
-      "kind": "launch",
-      "significance": "major",
-      "providerId": "openai",
-      "modelId": "o1-preview",
-      "tags": [
-        "reasoning",
-        "openai",
-        "o1"
-      ],
-      "status": "verified",
-      "confidence": "high",
-      "homepageEligible": true,
-      "calendarEligible": true,
-      "exactAnniversaryEligible": true,
-      "sources": [
-        {
-          "label": "OpenAI",
-          "url": "https://openai.com/index/introducing-openai-o1-preview/",
-          "sourceType": "official_news",
-          "role": "canonical"
-        }
-      ],
-      "canonicalSource": {
-        "label": "OpenAI",
-        "url": "https://openai.com/index/introducing-openai-o1-preview/",
-        "sourceType": "official_news",
-        "role": "canonical"
-      },
-      "categoryLabel": "Model release",
-      "kindLabel": "Launch",
-      "significanceLabel": "Major",
-      "statusLabel": "Verified",
-      "dateLabel": "12 Sept 2024",
-      "trackingDateLabel": null,
-      "href": "/new/",
-      "sortKey": 1726142400000,
-      "daysUntil": 0,
-      "anniversaryYears": 2,
-      "nextOccurrenceIso": "2026-09-12T12:00:00.000Z",
-      "nextOccurrenceLabel": "12 Sept 2026"
-    }
-  ],
+  "todayMilestones": [],
   "upcomingMilestones": [
     {
       "id": "mistral-7b-launch",
@@ -117,7 +65,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1695816000000,
-      "daysUntil": 15,
+      "daysUntil": 14,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-09-27T12:00:00.000Z",
       "nextOccurrenceLabel": "27 Sept 2026"
@@ -166,7 +114,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1350129600000,
-      "daysUntil": 31,
+      "daysUntil": 30,
       "anniversaryYears": 14,
       "nextOccurrenceIso": "2026-10-13T12:00:00.000Z",
       "nextOccurrenceLabel": "13 Oct 2026"
@@ -217,7 +165,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1699012800000,
-      "daysUntil": 52,
+      "daysUntil": 51,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-11-03T12:00:00.000Z",
       "nextOccurrenceLabel": "3 Nov 2026"
@@ -267,7 +215,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1606737600000,
-      "daysUntil": 79,
+      "daysUntil": 78,
       "anniversaryYears": 6,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
@@ -318,7 +266,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1669809600000,
-      "daysUntil": 79,
+      "daysUntil": 78,
       "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
@@ -369,7 +317,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1701864000000,
-      "daysUntil": 85,
+      "daysUntil": 84,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-12-06T12:00:00.000Z",
       "nextOccurrenceLabel": "6 Dec 2026"
@@ -420,7 +368,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1702296000000,
-      "daysUntil": 90,
+      "daysUntil": 89,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-12-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Dec 2026"
@@ -470,7 +418,7 @@
       "trackingDateLabel": null,
       "href": "/labs/",
       "sortKey": 1449835200000,
-      "daysUntil": 90,
+      "daysUntil": 89,
       "anniversaryYears": 11,
       "nextOccurrenceIso": "2026-12-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Dec 2026"
