@@ -8,20 +8,20 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 12 Sept 2026, 02:56 UTC |
+| Generated | 12 Sept 2026, 03:56 UTC |
 | Providers tracked | 40 |
-| Public models | 182 |
-| Active models | 61 |
-| Tracking models | 120 |
+| Public models | 337 |
+| Active models | 110 |
+| Tracking models | 226 |
 | Preview models | 1 |
 | Benchmarks | 34 |
 | News items in cache | 68 |
-| Release-desk entries | 24 |
+| Release-desk entries | 44 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
 | Latest visible refresh | 14 Sept 2026, 12:00 UTC |
-| Current evaluated composite leader | Llama 4 Maverick (55.9) |
-| Latest tracked release | Claude Mythos Preview (7 Apr 2026) |
+| Current evaluated composite leader | Llama 4 Maverick (57.6) |
+| Latest tracked release | DeepSeek V4.1 Flash (10 Sept 2026) |
 
 ## Reference Files
 
