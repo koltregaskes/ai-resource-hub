@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T07:58:05.983Z",
+  "generatedAt": "2026-09-13T10:55:35.892Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-13T07:58:05.976Z",
+      "lastCheckedAt": "2026-09-13T10:55:35.585Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-13T07:58:04.634Z",
+      "lastCheckedAt": "2026-09-13T10:55:34.866Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-13T07:58:05.619Z",
+      "lastCheckedAt": "2026-09-13T10:55:35.579Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-13T07:58:04.879Z",
+      "lastCheckedAt": "2026-09-13T10:55:34.797Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -254,7 +254,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-13T07:58:04.669Z",
+      "lastCheckedAt": "2026-09-13T10:55:34.942Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -288,6 +288,16 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "01M2D1CZG0862JB4JHVW56QF89",
+          "title": "Codex GitHub Review and Pull Request Failures",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-09-13T09:26:00.000Z",
+          "updatedAt": "2026-09-13T10:53:10.000Z",
+          "resolvedAt": "2026-09-13T09:53:42.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
           "id": "01M28MEQWTQJDRCRPFD9FWQ0H3",
           "title": "1% of ChatGPT Work (mobile/web) turns are failing for existing threads",
           "status": "resolved",
@@ -316,16 +326,6 @@
           "updatedAt": "2026-09-11T10:16:32.000Z",
           "resolvedAt": "2026-09-11T10:16:31.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M26E3PPAYJMMRHX2MZJCTHMF",
-          "title": "Delays in customer support responses",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-09-10T19:53:26.000Z",
-          "updatedAt": "2026-09-10T21:48:32.000Z",
-          "resolvedAt": "2026-09-10T21:48:32.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -340,7 +340,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-13T07:58:05.833Z",
+      "lastCheckedAt": "2026-09-13T10:55:35.884Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
