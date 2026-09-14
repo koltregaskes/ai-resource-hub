@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T15:55:58.689Z",
+  "generatedAt": "2026-09-14T16:56:18.680Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-14T15:55:58.640Z",
+      "lastCheckedAt": "2026-09-14T16:56:18.430Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-14T15:55:57.681Z",
+      "lastCheckedAt": "2026-09-14T16:56:17.499Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-14T15:55:58.617Z",
+      "lastCheckedAt": "2026-09-14T16:56:18.206Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-14T15:55:57.847Z",
+      "lastCheckedAt": "2026-09-14T16:56:17.757Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -254,10 +254,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-14T15:55:57.791Z",
+      "lastCheckedAt": "2026-09-14T16:56:17.601Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -285,8 +285,29 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "01M2GA8XTS6VB3QCDEGZ0HNAQ5",
+          "title": "Elevated errors affecting Work Mode in ChatGPT",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-09-14T15:58:48.000Z",
+          "updatedAt": "2026-09-14T15:58:48.000Z",
+          "resolvedAt": null,
+          "summary": "Earlier today, some ChatGPT Plus users using Work Mode experienced errors starting or resuming tasks, or had limited access to workspace tools and files. We have applied a mitigat..."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "01M2GA8XTS6VB3QCDEGZ0HNAQ5",
+          "title": "Elevated errors affecting Work Mode in ChatGPT",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-09-14T15:58:48.000Z",
+          "updatedAt": "2026-09-14T15:58:48.000Z",
+          "resolvedAt": null,
+          "summary": "Earlier today, some ChatGPT Plus users using Work Mode experienced errors starting or resuming tasks, or had limited access to workspace tools and files. We have applied a mitigat..."
+        },
         {
           "id": "01M2EWYR55J47M2BPG9WC76VEG",
           "title": "Elevated error rates for Codex and ChatGPT Work",
@@ -316,16 +337,6 @@
           "updatedAt": "2026-09-13T10:53:10.000Z",
           "resolvedAt": "2026-09-13T09:53:42.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M28MEQWTQJDRCRPFD9FWQ0H3",
-          "title": "1% of ChatGPT Work (mobile/web) turns are failing for existing threads",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-11T16:22:49.000Z",
-          "updatedAt": "2026-09-12T01:57:37.000Z",
-          "resolvedAt": "2026-09-12T01:57:37.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -340,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-14T15:55:58.681Z",
+      "lastCheckedAt": "2026-09-14T16:56:18.672Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
