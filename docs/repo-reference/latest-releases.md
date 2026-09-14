@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 14 Sept 2026, 19:19 UTC
+Generated: 14 Sept 2026, 20:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -17,7 +17,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 21 Aug 2026 | Muse Spark 1.2 Contributor | Meta | tracking | watch | watch only | 0 | 1 | n/a |
 | 14 Aug 2026 | Qwen3.8 27B | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | Grok 4.6 | xAI | tracking | watch | watch only | 0 | 0 | n/a |
-| 11 Aug 2026 | Nemotron 3.5 Lightning | NVIDIA | tracking | watch | watch only | 0 | 0 | n/a |
+| 11 Aug 2026 | Nemotron 3.5 Lightning | NVIDIA | tracking | watch | watch only | 0 | 1 | n/a |
 | 5 Aug 2026 | Muse Spark 1.2 | Meta | tracking | watch | watch only | 0 | 1 | n/a |
 | 27 Jul 2026 | Qwen3.7 Flash | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
 | 24 Jul 2026 | Claude Opus 5 (batch) | Anthropic | tracking | watch | ready for editor | 0 | 1 | [official](https://www.anthropic.com/news/claude-opus-5) |
