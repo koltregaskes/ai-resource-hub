@@ -1,18 +1,18 @@
 # Recent Activity Snapshot
 
-Generated: 14 Sept 2026, 18:55 UTC
+Generated: 14 Sept 2026, 19:19 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 14 Sept 2026, 18:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 14 Sept 2026, 18:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 14 Sept 2026, 18:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 14 Sept 2026, 18:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 14 Sept 2026, 18:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 14 Sept 2026, 19:19 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 14 Sept 2026, 19:19 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 14 Sept 2026, 19:19 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 14 Sept 2026, 19:19 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 14 Sept 2026, 19:19 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 14 Sept 2026, 12:00 UTC | digest | Fashion app Daydream uses Apple Intelligence to help you shop the outfits in your camera roll | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/14/fashion-discovery-app-daydream-uses-apple-intelligence-to-help-you-shop-the-outfits-saved-in-your-camera-roll/) |
-| 14 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,172 open roles across 10 tracked companies. | `/jobs/` |
+| 14 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,171 open roles across 10 tracked companies. | `/jobs/` |
 | 14 Sept 2026, 12:00 UTC | digest | Microsoft&#8217;s new AI &#8216;code of conduct&#8217; tells models not to hack systems or trick humans | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/14/microsofts-new-ai-code-of-conduct-tells-models-not-to-hack-systems-or-trick-humans/) |
 | 14 Sept 2026, 12:00 UTC | digest | Published the 2026-09-14 daily digest | 12 stories captured from 4 sources. | `/news/` |
 | 14 Sept 2026, 12:00 UTC | digest | With iOS 27, I&#8217;m actually using Siri again | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/14/with-ios-27-im-actually-using-siri-again/) |
