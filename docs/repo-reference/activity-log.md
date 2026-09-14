@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 14 Sept 2026, 14:56 UTC
+Generated: 14 Sept 2026, 15:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 14 Sept 2026, 14:56 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 14 Sept 2026, 14:56 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 14 Sept 2026, 14:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 14 Sept 2026, 14:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 14 Sept 2026, 14:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 14 Sept 2026, 12:00 UTC | digest | 5 days left to exhibit at TechCrunch Disrupt 2026 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/14/techcrunch-disrupt-2026-exhibit-table-deadline-5-days/) |
+| 14 Sept 2026, 15:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 14 Sept 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 14 Sept 2026, 15:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 14 Sept 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 14 Sept 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 14 Sept 2026, 12:00 UTC | digest | Hear how AI can engineer nature’s comeback at TechCrunch Disrupt 2026 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/14/hear-how-ai-can-engineer-natures-comeback-at-techcrunch-disrupt-2026/) |
-| 14 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,174 open roles across 10 tracked companies. | `/jobs/` |
-| 14 Sept 2026, 12:00 UTC | digest | Published the 2026-09-14 daily digest | 6 stories captured from 3 sources. | `/news/` |
+| 14 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,173 open roles across 10 tracked companies. | `/jobs/` |
+| 14 Sept 2026, 12:00 UTC | digest | Only at TechCrunch Disrupt 2026: What happens when OpenAI ships your roadmap? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/14/only-at-techcrunch-disrupt-2026-what-happens-when-openai-ships-your-roadmap/) |
+| 14 Sept 2026, 12:00 UTC | digest | Published the 2026-09-14 daily digest | 7 stories captured from 3 sources. | `/news/` |
 | 14 Sept 2026, 12:00 UTC | digest | Superhuman acquires YC-backed notetaker Fathom as productivity platforms push for agentic work | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/14/superhuman-acquires-yc-backed-notetaker-fathom-as-productivity-platforms-push-for-agentic-work/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
