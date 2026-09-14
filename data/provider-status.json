@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T01:57:14.321Z",
+  "generatedAt": "2026-09-14T02:56:05.944Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-14T01:57:13.826Z",
+      "lastCheckedAt": "2026-09-14T02:56:05.730Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-14T01:57:13.072Z",
+      "lastCheckedAt": "2026-09-14T02:56:04.606Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-14T01:57:13.985Z",
+      "lastCheckedAt": "2026-09-14T02:56:05.527Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-14T01:57:13.069Z",
+      "lastCheckedAt": "2026-09-14T02:56:05.029Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -254,10 +254,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-14T01:57:13.162Z",
+      "lastCheckedAt": "2026-09-14T02:56:04.525Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -285,8 +285,29 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "01M2EWYR55J47M2BPG9WC76VEG",
+          "title": "Elevated error rates for ChatGPT Chat/Work",
+          "status": "investigating",
+          "impact": "none",
+          "startedAt": "2026-09-14T02:46:48.000Z",
+          "updatedAt": "2026-09-14T02:46:48.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating the issue for the listed services."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "01M2EWYR55J47M2BPG9WC76VEG",
+          "title": "Elevated error rates for ChatGPT Chat/Work",
+          "status": "investigating",
+          "impact": "none",
+          "startedAt": "2026-09-14T02:46:48.000Z",
+          "updatedAt": "2026-09-14T02:46:48.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating the issue for the listed services."
+        },
         {
           "id": "01M2DV6788RRSDZ5K98S5HN0A8",
           "title": "Elevated errors for ChatGPT users in Europe",
@@ -316,16 +337,6 @@
           "updatedAt": "2026-09-12T01:57:37.000Z",
           "resolvedAt": "2026-09-12T01:57:37.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M27VK1VN54RQJGJEHB5JTQJJ",
-          "title": "Elevated errors for GPT-5.6 Sol on the API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-11T09:08:15.000Z",
-          "updatedAt": "2026-09-11T11:21:44.000Z",
-          "resolvedAt": "2026-09-11T11:21:43.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -340,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-14T01:57:14.313Z",
+      "lastCheckedAt": "2026-09-14T02:56:05.937Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -364,7 +375,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
