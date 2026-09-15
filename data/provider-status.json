@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T07:40:38.093Z",
+  "generatedAt": "2026-09-15T08:55:44.363Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T07:40:37.792Z",
+      "lastCheckedAt": "2026-09-15T08:55:44.250Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,103 +90,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T07:40:36.967Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        },
-        {
-          "name": "Files",
-          "status": "operational"
-        },
-        {
-          "name": "FedRAMP",
-          "status": "operational"
-        },
-        {
-          "name": "Sora",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01M2HYH64J2CZMZ63HEV2FCQFA",
-          "title": "Elevated errors from GPT-5.6 and GPT-5.6 Instant on paid plans",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-09-15T07:12:04.000Z",
-          "updatedAt": "2026-09-15T07:24:26.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01M2HYH64J2CZMZ63HEV2FCQFA",
-          "title": "Elevated errors from GPT-5.6 and GPT-5.6 Instant on paid plans",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-09-15T07:12:04.000Z",
-          "updatedAt": "2026-09-15T07:24:26.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
-        {
-          "id": "01M2GA8XTS6VB3QCDEGZ0HNAQ5",
-          "title": "Elevated errors affecting Work Mode in ChatGPT",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-14T15:58:48.000Z",
-          "updatedAt": "2026-09-15T03:11:36.000Z",
-          "resolvedAt": "2026-09-15T03:11:36.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M2H3J1D6Y7RHAP49GRWGJAY0",
-          "title": "Degraded Performance affecting Agents API",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-09-14T23:20:41.000Z",
-          "updatedAt": "2026-09-14T23:39:21.000Z",
-          "resolvedAt": "2026-09-14T23:39:21.000Z",
-          "summary": "The issue affecting the Agents API has been resolved. Managed sessions are now processing turns normally."
-        },
-        {
-          "id": "01M2EWYR55J47M2BPG9WC76VEG",
-          "title": "Elevated error rates for Codex and ChatGPT Work",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-09-14T02:46:48.000Z",
-          "updatedAt": "2026-09-14T03:57:19.000Z",
-          "resolvedAt": "2026-09-14T03:57:19.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -197,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T07:40:36.949Z",
+      "lastCheckedAt": "2026-09-15T08:55:43.501Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T07:40:37.796Z",
+      "lastCheckedAt": "2026-09-15T08:55:44.204Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T07:40:37.254Z",
+      "lastCheckedAt": "2026-09-15T08:55:43.687Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -329,6 +232,92 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-09-15T08:55:43.579Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        },
+        {
+          "name": "Files",
+          "status": "operational"
+        },
+        {
+          "name": "FedRAMP",
+          "status": "operational"
+        },
+        {
+          "name": "Sora",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01M2HYH64J2CZMZ63HEV2FCQFA",
+          "title": "Elevated errors from GPT-5.6 and GPT-5.6 Instant on paid plans",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-09-15T07:12:04.000Z",
+          "updatedAt": "2026-09-15T07:53:36.000Z",
+          "resolvedAt": "2026-09-15T07:53:36.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M2GA8XTS6VB3QCDEGZ0HNAQ5",
+          "title": "Elevated errors affecting Work Mode in ChatGPT",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-09-14T15:58:48.000Z",
+          "updatedAt": "2026-09-15T03:11:36.000Z",
+          "resolvedAt": "2026-09-15T03:11:36.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M2H3J1D6Y7RHAP49GRWGJAY0",
+          "title": "Degraded Performance affecting Agents API",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-09-14T23:20:41.000Z",
+          "updatedAt": "2026-09-14T23:39:21.000Z",
+          "resolvedAt": "2026-09-14T23:39:21.000Z",
+          "summary": "The issue affecting the Agents API has been resolved. Managed sessions are now processing turns normally."
+        },
+        {
+          "id": "01M2EWYR55J47M2BPG9WC76VEG",
+          "title": "Elevated error rates for Codex and ChatGPT Work",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-09-14T02:46:48.000Z",
+          "updatedAt": "2026-09-14T03:57:19.000Z",
+          "resolvedAt": "2026-09-14T03:57:19.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -339,7 +328,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T07:40:38.085Z",
+      "lastCheckedAt": "2026-09-15T08:55:44.355Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
