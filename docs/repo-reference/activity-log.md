@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 15 Sept 2026, 16:55 UTC
+Generated: 15 Sept 2026, 17:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 15 Sept 2026, 16:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 15 Sept 2026, 16:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 15 Sept 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 15 Sept 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 15 Sept 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 15 Sept 2026, 17:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 15 Sept 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 15 Sept 2026, 17:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 15 Sept 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 15 Sept 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 15 Sept 2026, 12:00 UTC | digest | AI agents now have a place to snitch | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/15/ai-agents-now-have-a-place-to-snitch/) |
 | 15 Sept 2026, 12:00 UTC | digest | AI for everyone in every language | Google featured in the latest daily brief. | [open](https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/) |
-| 15 Sept 2026, 12:00 UTC | digest | AI for Societal Impact | Google featured in the latest daily brief. | [open](https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/) |
-| 15 Sept 2026, 12:00 UTC | digest | Building AI to accelerate science and improve lives | Google featured in the latest daily brief. | [open](https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/) |
-| 15 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,182 open roles across 10 tracked companies. | `/jobs/` |
-| 15 Sept 2026, 12:00 UTC | digest | Published the 2026-09-15 daily digest | 12 stories captured from 2 sources. | `/news/` |
+| 15 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,176 open roles across 10 tracked companies. | `/jobs/` |
+| 15 Sept 2026, 12:00 UTC | digest | Meta expands subscription push with new AI-focused plans | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/15/meta-expands-subscription-push-with-new-ai-focused-plans/) |
+| 15 Sept 2026, 12:00 UTC | digest | Published the 2026-09-15 daily digest | 16 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
