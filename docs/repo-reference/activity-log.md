@@ -1,19 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 15 Sept 2026, 12:55 UTC
+Generated: 15 Sept 2026, 13:30 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 15 Sept 2026, 12:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 15 Sept 2026, 12:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 15 Sept 2026, 12:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 15 Sept 2026, 12:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 15 Sept 2026, 12:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 15 Sept 2026, 12:00 UTC | digest | Jensen Huang took a call from Trump, and showed off something else, too | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/14/jensen-huang-took-a-call-from-trump-and-showed-off-something-else-too/) |
+| 15 Sept 2026, 13:29 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 15 Sept 2026, 13:29 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 15 Sept 2026, 13:29 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 15 Sept 2026, 13:29 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 15 Sept 2026, 13:29 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 15 Sept 2026, 12:00 UTC | digest | Early Anthropic hire, former METR COO have found a way to rein in rogue AI agents | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/15/early-anthropic-hire-former-metr-coo-have-found-a-way-to-rein-in-rogue-ai-agents/) |
 | 15 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,181 open roles across 10 tracked companies. | `/jobs/` |
-| 15 Sept 2026, 12:00 UTC | digest | Published the 2026-09-15 daily digest | 2 stories captured from 1 sources. | `/news/` |
+| 15 Sept 2026, 12:00 UTC | digest | New insights from Google’s AI & Economy ATLAS | Google featured in the latest daily brief. | [open](https://blog.google/innovation-and-ai/technology/ai/ai-economy-atlas-september-2026/) |
+| 15 Sept 2026, 12:00 UTC | digest | Published the 2026-09-15 daily digest | 4 stories captured from 2 sources. | `/news/` |
 | 15 Sept 2026, 12:00 UTC | digest | Salesforce and Nvidia&#8217;s new reasoning model is everything the AI labs should fear | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/15/salesforce-and-nvidias-new-reasoning-model-is-everything-the-ai-labs-should-fear/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
@@ -25,4 +26,3 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 05 Feb 2026, 12:00 UTC | models | Claude Opus 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.6/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 Pro (batch) added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2-pro/` |
-| 24 Nov 2025, 12:00 UTC | models | Claude Opus 4.5 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.5/` |
