@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T10:56:00.236Z",
+  "generatedAt": "2026-09-15T12:55:38.304Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T10:56:00.228Z",
+      "lastCheckedAt": "2026-09-15T12:55:37.856Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,30 +100,30 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T10:55:59.234Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Minor Service Outage",
-      "summary": "1 active incident across 6 tracked components.",
+      "lastCheckedAt": "2026-09-15T12:55:37.259Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Claude Code",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Cowork",
           "status": "operational"
         },
         {
@@ -131,28 +131,16 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "6304r9jjhj34",
-          "title": "Intermittent error spikes for Claude Mythos 5.1 and Claude Fable 5.1",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-09-15T09:48:23.076Z",
-          "updatedAt": "2026-09-15T10:50:26.414Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/x1qpycpg6ln7",
-          "summary": "A fix has been deployed for Claude Mythos 5.1 and Claude Fable 5.1 and we are monitoring to ensure it has resolved the issue."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "6304r9jjhj34",
           "title": "Intermittent error spikes for Claude Mythos 5.1 and Claude Fable 5.1",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "major",
           "startedAt": "2026-09-15T09:48:23.076Z",
-          "updatedAt": "2026-09-15T10:50:26.414Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-09-15T11:14:44.396Z",
+          "resolvedAt": "2026-09-15T11:14:44.380Z",
           "url": "https://stspg.io/x1qpycpg6ln7",
           "summary": "A fix has been deployed for Claude Mythos 5.1 and Claude Fable 5.1 and we are monitoring to ensure it has resolved the issue."
         },
@@ -202,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T10:56:00.100Z",
+      "lastCheckedAt": "2026-09-15T12:55:37.864Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T10:55:59.315Z",
+      "lastCheckedAt": "2026-09-15T12:55:37.217Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -254,7 +242,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T10:55:59.256Z",
+      "lastCheckedAt": "2026-09-15T12:55:37.320Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -340,7 +328,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T10:56:00.173Z",
+      "lastCheckedAt": "2026-09-15T12:55:38.297Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -364,7 +352,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
