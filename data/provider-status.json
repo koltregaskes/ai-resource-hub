@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T15:55:37.707Z",
+  "generatedAt": "2026-09-15T16:55:28.438Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T15:55:37.309Z",
+      "lastCheckedAt": "2026-09-15T16:55:28.434Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,15 +20,15 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-09-15T15:20:00.000Z",
+          "id": "fireworks-feed-0-2026-09-15T16:19:53.000Z",
           "title": "Service Degradation for GLM 5.3",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-09-15T15:20:00.000Z",
-          "updatedAt": "2026-09-15T15:20:00.000Z",
+          "startedAt": "2026-09-15T16:19:53.000Z",
+          "updatedAt": "2026-09-15T16:19:53.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M2JTEKTGWQ0SMJHZTP6DXZD1",
-          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.3. We are actively investigating. Affected components GLM 5.3 (Degraded performance)"
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-09-15T14:38:11.000Z",
@@ -44,15 +44,15 @@
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-09-15T15:20:00.000Z",
+          "id": "fireworks-feed-0-2026-09-15T16:19:53.000Z",
           "title": "Service Degradation for GLM 5.3",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-09-15T15:20:00.000Z",
-          "updatedAt": "2026-09-15T15:20:00.000Z",
+          "startedAt": "2026-09-15T16:19:53.000Z",
+          "updatedAt": "2026-09-15T16:19:53.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M2JTEKTGWQ0SMJHZTP6DXZD1",
-          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.3. We are actively investigating. Affected components GLM 5.3 (Degraded performance)"
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-09-15T14:38:11.000Z",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T15:55:36.720Z",
+      "lastCheckedAt": "2026-09-15T16:55:27.348Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T15:55:37.425Z",
+      "lastCheckedAt": "2026-09-15T16:55:28.309Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T15:55:36.680Z",
+      "lastCheckedAt": "2026-09-15T16:55:27.563Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -242,12 +242,16 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T15:55:36.758Z",
+      "lastCheckedAt": "2026-09-15T16:55:27.257Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Ads Manager",
+          "status": "operational"
+        },
         {
           "name": "Images",
           "status": "operational"
@@ -267,14 +271,20 @@
         {
           "name": "FedRAMP",
           "status": "operational"
-        },
-        {
-          "name": "Sora",
-          "status": "operational"
         }
       ],
       "activeIncidents": [],
       "recentIncidents": [
+        {
+          "id": "01M2JZR57HRQTKQGTCWG31M3AS",
+          "title": "Ads Manager login issues",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-09-15T16:52:36.000Z",
+          "updatedAt": "2026-09-15T16:54:01.000Z",
+          "resolvedAt": "2026-09-15T16:54:01.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
         {
           "id": "01M2HYH64J2CZMZ63HEV2FCQFA",
           "title": "Elevated errors from GPT-5.6 and GPT-5.6 Instant on paid plans",
@@ -304,16 +314,6 @@
           "updatedAt": "2026-09-14T23:39:21.000Z",
           "resolvedAt": "2026-09-14T23:39:21.000Z",
           "summary": "The issue affecting the Agents API has been resolved. Managed sessions are now processing turns normally."
-        },
-        {
-          "id": "01M2EWYR55J47M2BPG9WC76VEG",
-          "title": "Elevated error rates for Codex and ChatGPT Work",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-09-14T02:46:48.000Z",
-          "updatedAt": "2026-09-14T03:57:19.000Z",
-          "resolvedAt": "2026-09-14T03:57:19.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -328,7 +328,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-15T15:55:37.700Z",
+      "lastCheckedAt": "2026-09-15T16:55:28.360Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
