@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 16 Sept 2026, 12:55 UTC
+Generated: 16 Sept 2026, 13:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 16 Sept 2026, 12:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 16 Sept 2026, 12:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 16 Sept 2026, 12:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 16 Sept 2026, 12:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 16 Sept 2026, 12:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 16 Sept 2026, 12:00 UTC | digest | A brief history of AI executives calling for regulation | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/995534/a-brief-history-of-ai-executives-calling-for-regulation) |
-| 16 Sept 2026, 12:00 UTC | digest | Amazon launches Alexa+ in India with Hindi support | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/16/amazon-launches-alexa-in-india-with-hindi-support/) |
+| 16 Sept 2026, 13:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 16 Sept 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 16 Sept 2026, 13:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 16 Sept 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 16 Sept 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 16 Sept 2026, 12:00 UTC | digest | Former Infosys chief&#8217;s AI startup nabs another $53M | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/16/former-infosys-chiefs-ai-startup-adds-50m-to-seed-weeks-after-initial-raise/) |
 | 16 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,176 open roles across 10 tracked companies. | `/jobs/` |
-| 16 Sept 2026, 12:00 UTC | digest | Published the 2026-09-16 daily digest | 3 stories captured from 2 sources. | `/news/` |
-| 16 Sept 2026, 12:00 UTC | digest | We don&#8217;t need AI regulation — leave safety to us, Nvidia&#8217;s Jensen Huang says | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/15/we-dont-need-ai-regulation-leave-safety-to-us-nvidias-jensen-huang-says/) |
+| 16 Sept 2026, 12:00 UTC | digest | Published the 2026-09-16 daily digest | 6 stories captured from 3 sources. | `/news/` |
+| 16 Sept 2026, 12:00 UTC | digest | Reimagining advertising with AI | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/reimagining-advertising-with-ai) |
+| 16 Sept 2026, 12:00 UTC | digest | SK Hynix reportedly in talks with Intel to build memory chips in US | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/16/sk-hynix-reportedly-in-talks-with-intel-to-build-memory-chips-in-us/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
