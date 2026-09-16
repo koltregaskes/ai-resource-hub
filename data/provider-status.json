@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T15:55:47.865Z",
+  "generatedAt": "2026-09-16T16:49:52.007Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-16T15:55:47.859Z",
+      "lastCheckedAt": "2026-09-16T16:49:51.989Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,10 +100,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-16T15:55:46.898Z",
+      "lastCheckedAt": "2026-09-16T16:49:50.682Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -131,8 +131,31 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "t8fpw9vcshl9",
+          "title": "Issues with Google Play subscriptions",
+          "status": "identified",
+          "impact": "none",
+          "startedAt": "2026-09-16T16:18:10.735Z",
+          "updatedAt": "2026-09-16T16:18:10.779Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/wzwyxh4x9t39",
+          "summary": "We are aware of an issue affecting users interacting with subscriptions via Google Play, such as when creating a new subscription on Android devices. Google has confirmed an issue..."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "t8fpw9vcshl9",
+          "title": "Issues with Google Play subscriptions",
+          "status": "identified",
+          "impact": "none",
+          "startedAt": "2026-09-16T16:18:10.735Z",
+          "updatedAt": "2026-09-16T16:18:10.779Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/wzwyxh4x9t39",
+          "summary": "We are aware of an issue affecting users interacting with subscriptions via Google Play, such as when creating a new subscription on Android devices. Google has confirmed an issue..."
+        },
         {
           "id": "6304r9jjhj34",
           "title": "Intermittent error spikes for Claude Mythos 5.1 and Claude Fable 5.1",
@@ -165,17 +188,6 @@
           "resolvedAt": "2026-09-11T14:37:11.146Z",
           "url": "https://stspg.io/n9n8kfcxtkfm",
           "summary": "The issue affecting Claude services has been resolved. Impact occurred from 13:57 to 14:20 UTC"
-        },
-        {
-          "id": "2pt83vlkk7x7",
-          "title": "Elevated latency on the Claude API for some users",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-10T21:43:40.215Z",
-          "updatedAt": "2026-09-10T23:24:22.994Z",
-          "resolvedAt": "2026-09-10T23:24:22.978Z",
-          "url": "https://stspg.io/hfs7749ykl14",
-          "summary": "The issue affecting Claude services has been mitigated."
         }
       ]
     },
@@ -190,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-16T15:55:47.765Z",
+      "lastCheckedAt": "2026-09-16T16:49:51.744Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-16T15:55:47.272Z",
+      "lastCheckedAt": "2026-09-16T16:49:51.230Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -242,7 +254,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-16T15:55:46.896Z",
+      "lastCheckedAt": "2026-09-16T16:49:50.707Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -328,7 +340,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-16T15:55:47.852Z",
+      "lastCheckedAt": "2026-09-16T16:49:52.002Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -352,7 +364,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []

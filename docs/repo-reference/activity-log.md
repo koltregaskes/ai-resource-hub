@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 16 Sept 2026, 15:56 UTC
+Generated: 16 Sept 2026, 16:50 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 16 Sept 2026, 15:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 16 Sept 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 16 Sept 2026, 15:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 16 Sept 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 16 Sept 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 16 Sept 2026, 16:49 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 16 Sept 2026, 16:49 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 16 Sept 2026, 16:49 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 16 Sept 2026, 16:49 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 16 Sept 2026, 16:49 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 16 Sept 2026, 12:00 UTC | digest | Anthropic merges Claude chat and Cowork in one interface | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/16/anthropic-merges-claude-chat-and-cowork-in-one-interface/) |
 | 16 Sept 2026, 12:00 UTC | digest | Helping older adults use AI in everyday life | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/helping-older-adults-use-ai-in-everyday-life) |
-| 16 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,178 open roles across 10 tracked companies. | `/jobs/` |
-| 16 Sept 2026, 12:00 UTC | digest | Published the 2026-09-16 daily digest | 11 stories captured from 3 sources. | `/news/` |
+| 16 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,183 open roles across 10 tracked companies. | `/jobs/` |
+| 16 Sept 2026, 12:00 UTC | digest | Published the 2026-09-16 daily digest | 14 stories captured from 3 sources. | `/news/` |
 | 16 Sept 2026, 12:00 UTC | digest | Robots are waiting for a ChatGPT moment: Nvidia’s Les Karpas explains why at TechCrunch Disrupt 2026 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/16/robots-are-waiting-for-a-chatgpt-moment-nvidias-les-karpas-explains-why-at-techcrunch-disrupt-2026/) |
-| 16 Sept 2026, 12:00 UTC | digest | Threads&#8217; new features let podcasters promote shows and reach listeners | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/16/threads-new-features-let-podcasters-promote-shows-and-reach-listeners/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
