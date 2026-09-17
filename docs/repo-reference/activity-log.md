@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 17 Sept 2026, 20:55 UTC
+Generated: 17 Sept 2026, 21:21 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 17 Sept 2026, 20:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 17 Sept 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 17 Sept 2026, 20:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 17 Sept 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 17 Sept 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 17 Sept 2026, 21:21 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 17 Sept 2026, 21:21 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 17 Sept 2026, 21:21 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 17 Sept 2026, 21:21 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 17 Sept 2026, 21:21 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 17 Sept 2026, 12:00 UTC | digest | Is the AI safety debate about safety or control? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/17/is-the-ai-safety-debate-about-safety-or-control/) |
 | 17 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,196 open roles across 10 tracked companies. | `/jobs/` |
 | 17 Sept 2026, 12:00 UTC | digest | OpenAI caught its models leaving notes to successors to hide bad behavior | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/17/openai-caught-its-models-leaving-notes-to-successors-to-hide-bad-behavior/) |
-| 17 Sept 2026, 12:00 UTC | digest | Published the 2026-09-17 daily digest | 20 stories captured from 4 sources. | `/news/` |
+| 17 Sept 2026, 12:00 UTC | digest | Published the 2026-09-17 daily digest | 20 stories captured from 3 sources. | `/news/` |
 | 17 Sept 2026, 12:00 UTC | digest | The fix for rogue AI agents could be more AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/17/the-fix-for-rogue-ai-agents-could-be-more-ai/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
