@@ -1,21 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 17 Sept 2026, 01:22 UTC
+Generated: 17 Sept 2026, 02:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 17 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,193 open roles across 10 tracked companies. | `/jobs/` |
-| 17 Sept 2026, 01:21 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 17 Sept 2026, 01:21 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 17 Sept 2026, 01:21 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 17 Sept 2026, 01:21 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 17 Sept 2026, 01:21 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 16 Sept 2026, 12:00 UTC | digest | Anthropic and OpenAI want to embed safety evaluators. Will they really be independent? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/16/anthropic-and-openai-want-to-embed-safety-evaluators-will-they-really-be-independent/) |
-| 16 Sept 2026, 12:00 UTC | digest | Published the 2026-09-16 daily digest | 20 stories captured from 3 sources. | `/news/` |
-| 16 Sept 2026, 12:00 UTC | digest | Snap is launching a new Specs AI tool, and it’s coming to iOS and Mac | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/996078/snap-specs-intelligence-ai-agent-ios-mac) |
-| 16 Sept 2026, 12:00 UTC | digest | The 2.5-hour AI-generated Odyssey movie is 2.5 hours too long | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/entertainment/996499/ai-odyssey-movie-review) |
+| 17 Sept 2026, 12:00 UTC | digest | Published the 2026-09-17 daily digest | 1 stories captured from 1 sources. | `/news/` |
+| 17 Sept 2026, 12:00 UTC | digest | Snap tries to make the case again for its $2,200 smart glasses | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/16/snap-tries-to-make-the-case-again-for-its-2200-smart-glasses/) |
+| 17 Sept 2026, 02:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 17 Sept 2026, 02:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 17 Sept 2026, 02:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 17 Sept 2026, 02:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 17 Sept 2026, 02:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
@@ -26,3 +24,5 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 05 Feb 2026, 12:00 UTC | models | Claude Opus 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.6/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 Pro (batch) added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2-pro/` |
+| 24 Nov 2025, 12:00 UTC | models | Claude Opus 4.5 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.5/` |
+| 15 Oct 2025, 12:00 UTC | models | Claude Haiku 4.5 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-haiku-4.5/` |
