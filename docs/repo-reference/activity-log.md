@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 17 Sept 2026, 22:56 UTC
+Generated: 17 Sept 2026, 23:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 17 Sept 2026, 22:56 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 17 Sept 2026, 22:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 17 Sept 2026, 22:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 17 Sept 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 17 Sept 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 17 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,200 open roles across 10 tracked companies. | `/jobs/` |
+| 17 Sept 2026, 23:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 17 Sept 2026, 23:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 17 Sept 2026, 23:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 17 Sept 2026, 23:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 17 Sept 2026, 23:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 17 Sept 2026, 12:00 UTC | digest | Crusoe raises $3.9B to build massive data centers and small modular &#8220;AI factories&#8221; | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories/) |
+| 17 Sept 2026, 12:00 UTC | digest | Google DeepMind launches institute to widen the AGI debate | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/) |
+| 17 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,201 open roles across 10 tracked companies. | `/jobs/` |
 | 17 Sept 2026, 12:00 UTC | digest | PrismML hopes its tiny LLM will change how we all use AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/17/prismml-hopes-its-tiny-llm-could-change-how-we-all-use-ai/) |
 | 17 Sept 2026, 12:00 UTC | digest | Published the 2026-09-17 daily digest | 20 stories captured from 3 sources. | `/news/` |
-| 17 Sept 2026, 12:00 UTC | digest | The FAA&#8217;s plan to fix air traffic? $875 million worth of AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/17/the-faas-plan-to-fix-air-traffic-875-million-worth-of-ai/) |
-| 17 Sept 2026, 12:00 UTC | digest | The fix for rogue AI agents could be more AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/17/the-fix-for-rogue-ai-agents-could-be-more-ai/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
