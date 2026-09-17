@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 17 Sept 2026, 09:55 UTC
+Generated: 17 Sept 2026, 10:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 17 Sept 2026, 12:00 UTC | digest | Iceland-based Treble raises $18 million for its voice simulation platform | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/16/iceland-based-treble-raises-18-million-for-its-voice-simulation-platform/) |
-| 17 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,195 open roles across 10 tracked companies. | `/jobs/` |
+| 17 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,194 open roles across 10 tracked companies. | `/jobs/` |
 | 17 Sept 2026, 12:00 UTC | digest | Published the 2026-09-17 daily digest | 3 stories captured from 1 sources. | `/news/` |
 | 17 Sept 2026, 12:00 UTC | digest | Snap tries to make the case again for its $2,200 smart glasses | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/16/snap-tries-to-make-the-case-again-for-its-2200-smart-glasses/) |
 | 17 Sept 2026, 12:00 UTC | digest | Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/) |
-| 17 Sept 2026, 09:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 17 Sept 2026, 09:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 17 Sept 2026, 09:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 17 Sept 2026, 09:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 17 Sept 2026, 09:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 17 Sept 2026, 10:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 17 Sept 2026, 10:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 17 Sept 2026, 10:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 17 Sept 2026, 10:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 17 Sept 2026, 10:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
