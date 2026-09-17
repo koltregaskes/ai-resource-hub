@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T19:56:06.316Z",
+  "generatedAt": "2026-09-17T20:33:52.996Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-17T19:56:06.309Z",
+      "lastCheckedAt": "2026-09-17T20:33:52.990Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,103 +90,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-09-17T19:56:05.387Z",
-      "overallStatus": "partial_outage",
-      "overallLabel": "Partial System Outage",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Ads Manager",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Audio",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Files",
-          "status": "operational"
-        },
-        {
-          "name": "FedRAMP",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01M2RC0WHGTX8EHDH7D60JJ7FC",
-          "title": "Elevated errors affecting ChatGPT Work mode",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-09-17T19:03:17.000Z",
-          "updatedAt": "2026-09-17T19:38:03.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01M2RC0WHGTX8EHDH7D60JJ7FC",
-          "title": "Elevated errors affecting ChatGPT Work mode",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-09-17T19:03:17.000Z",
-          "updatedAt": "2026-09-17T19:38:03.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
-        },
-        {
-          "id": "01M2NRHTYAM3K3M93X1D068MCY",
-          "title": "Elevated errors in ChatGPT Work",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-16T18:44:32.000Z",
-          "updatedAt": "2026-09-16T19:34:36.000Z",
-          "resolvedAt": "2026-09-16T19:34:36.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M2KQNE5C42NEZPX6V01NHH5W",
-          "title": "Elevated errors with gpt-image-2.5-flare",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-09-15T23:50:32.000Z",
-          "updatedAt": "2026-09-16T00:30:48.000Z",
-          "resolvedAt": "2026-09-16T00:30:48.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M2JZR57HRQTKQGTCWG31M3AS",
-          "title": "Ads Manager login issues",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-15T16:52:36.000Z",
-          "updatedAt": "2026-09-15T16:54:01.000Z",
-          "resolvedAt": "2026-09-15T16:54:01.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -197,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-17T19:56:05.287Z",
+      "lastCheckedAt": "2026-09-17T20:33:51.774Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-17T19:56:06.183Z",
+      "lastCheckedAt": "2026-09-17T20:33:52.651Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-17T19:56:05.576Z",
+      "lastCheckedAt": "2026-09-17T20:33:52.001Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -329,6 +232,92 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-09-17T20:33:51.867Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Ads Manager",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Audio",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Files",
+          "status": "operational"
+        },
+        {
+          "name": "FedRAMP",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01M2RC0WHGTX8EHDH7D60JJ7FC",
+          "title": "Elevated errors affecting ChatGPT Work mode",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-09-17T19:03:17.000Z",
+          "updatedAt": "2026-09-17T20:24:45.000Z",
+          "resolvedAt": "2026-09-17T20:24:45.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M2NRHTYAM3K3M93X1D068MCY",
+          "title": "Elevated errors in ChatGPT Work",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-09-16T18:44:32.000Z",
+          "updatedAt": "2026-09-16T19:34:36.000Z",
+          "resolvedAt": "2026-09-16T19:34:36.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M2KQNE5C42NEZPX6V01NHH5W",
+          "title": "Elevated errors with gpt-image-2.5-flare",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-09-15T23:50:32.000Z",
+          "updatedAt": "2026-09-16T00:30:48.000Z",
+          "resolvedAt": "2026-09-16T00:30:48.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M2JZR57HRQTKQGTCWG31M3AS",
+          "title": "Ads Manager login issues",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-09-15T16:52:36.000Z",
+          "updatedAt": "2026-09-15T16:54:01.000Z",
+          "resolvedAt": "2026-09-15T16:54:01.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -339,7 +328,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-17T19:56:06.227Z",
+      "lastCheckedAt": "2026-09-17T20:33:52.820Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -363,7 +352,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
