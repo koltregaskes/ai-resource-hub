@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 17 Sept 2026, 16:55 UTC
+Generated: 17 Sept 2026, 17:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 17 Sept 2026, 16:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 17 Sept 2026, 16:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 17 Sept 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 17 Sept 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 17 Sept 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 17 Sept 2026, 12:00 UTC | digest | AI is feared globally as the destroyer of jobs | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs) |
+| 17 Sept 2026, 17:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 17 Sept 2026, 17:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 17 Sept 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 17 Sept 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 17 Sept 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 17 Sept 2026, 12:00 UTC | digest | Base Labs launches an open-weight AI safety partnership with Hugging Face and Goodfire | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/17/base-labs-launches-an-open-weight-ai-safety-partnership-with-hugging-face-and-goodfire/) |
 | 17 Sept 2026, 12:00 UTC | digest | Huawei plans Q1 2027 launch of new AI chip as it takes on Nvidia | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/17/huawei-plans-q1-2027-launch-of-new-ai-chip-as-it-takes-on-nvidia/) |
 | 17 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,193 open roles across 10 tracked companies. | `/jobs/` |
-| 17 Sept 2026, 12:00 UTC | digest | Microsoft AI CEO says AI threats are real, and Anthropic is making it worse | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/podcast/996412/microsoft-ai-ceo-mustafa-suleyman-regulation-safety-anthropic-claude) |
-| 17 Sept 2026, 12:00 UTC | digest | Published the 2026-09-17 daily digest | 10 stories captured from 2 sources. | `/news/` |
+| 17 Sept 2026, 12:00 UTC | digest | Pinterest teases a new &#8216;Restyle&#8217; feature that lets you redesign your room with AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/17/pinterest-teases-a-new-restyle-feature-that-lets-you-redesign-your-room-with-ai/) |
+| 17 Sept 2026, 12:00 UTC | digest | Published the 2026-09-17 daily digest | 12 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
