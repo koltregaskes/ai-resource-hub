@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 18 Sept 2026, 16:55 UTC
+Generated: 18 Sept 2026, 17:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 18 Sept 2026, 16:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 18 Sept 2026, 16:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 18 Sept 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 18 Sept 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 18 Sept 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Sept 2026, 17:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 18 Sept 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 18 Sept 2026, 17:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 18 Sept 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Sept 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 18 Sept 2026, 12:00 UTC | digest | Automattic&#8217;s 33-Hour Coup, and can AI labs police themselves? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/) |
+| 18 Sept 2026, 12:00 UTC | digest | Dario Amodei and other AI leaders want to &#8216;Pace the Frontier&#8217; but…how? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/video/dario-amodei-and-other-ai-leaders-want-to-pace-the-frontier-buthow/) |
+| 18 Sept 2026, 12:00 UTC | digest | Google&#8217;s new &#8216;CC&#8217; is an AI agent that helps families run their households | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/18/googles-new-cc-is-an-ai-agent-that-helps-families-run-their-households/) |
 | 18 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,218 open roles across 10 tracked companies. | `/jobs/` |
-| 18 Sept 2026, 12:00 UTC | digest | Manus seeks $4B valuation in new $500M fundraise as it resumes independent ops | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/18/manus-seeks-4b-valuation-in-new-500m-fundraise-as-it-resumes-independent-ops/) |
-| 18 Sept 2026, 12:00 UTC | digest | Published the 2026-09-18 daily digest | 11 stories captured from 3 sources. | `/news/` |
-| 18 Sept 2026, 12:00 UTC | digest | Security researchers used Claude to help them hack into OpenAI | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist) |
-| 18 Sept 2026, 12:00 UTC | digest | What Hollywood thinks about existential AI warnings | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/997358/what-hollywood-thinks-about-existential-ai-warnings) |
+| 18 Sept 2026, 12:00 UTC | digest | Published the 2026-09-18 daily digest | 15 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
