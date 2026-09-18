@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 18 Sept 2026, 01:55 UTC
+Generated: 18 Sept 2026, 02:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 18 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,204 open roles across 10 tracked companies. | `/jobs/` |
-| 18 Sept 2026, 01:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 18 Sept 2026, 01:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 18 Sept 2026, 01:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 18 Sept 2026, 01:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 18 Sept 2026, 01:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 18 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,203 open roles across 10 tracked companies. | `/jobs/` |
+| 18 Sept 2026, 02:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 18 Sept 2026, 02:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 18 Sept 2026, 02:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 18 Sept 2026, 02:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Sept 2026, 02:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 17 Sept 2026, 12:00 UTC | digest | Crusoe raises $3.9B to build massive data centers and small modular &#8216;AI factories&#8217; | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories/) |
 | 17 Sept 2026, 12:00 UTC | digest | Google DeepMind launches institute to widen the AGI debate | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/) |
 | 17 Sept 2026, 12:00 UTC | digest | PrismML hopes its tiny LLM will change how we all use AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/17/prismml-hopes-its-tiny-llm-could-change-how-we-all-use-ai/) |
