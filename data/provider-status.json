@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T21:38:15.598Z",
+  "generatedAt": "2026-09-18T22:49:22.579Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-18T21:38:15.592Z",
+      "lastCheckedAt": "2026-09-18T22:49:22.572Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-18T21:38:14.440Z",
+      "lastCheckedAt": "2026-09-18T22:49:20.751Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-18T21:38:15.155Z",
+      "lastCheckedAt": "2026-09-18T22:49:21.788Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-18T21:38:14.636Z",
+      "lastCheckedAt": "2026-09-18T22:49:21.153Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -242,10 +242,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-18T21:38:14.558Z",
+      "lastCheckedAt": "2026-09-18T22:49:20.846Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -275,26 +275,46 @@
       ],
       "activeIncidents": [
         {
+          "id": "01M2VA7X37P1ASADSNZ1CG4N4D",
+          "title": "Overbilling for OpenAI-hosted containers in the Agent API",
+          "status": "investigating",
+          "impact": "none",
+          "startedAt": "2026-09-18T22:29:53.000Z",
+          "updatedAt": "2026-09-18T22:29:53.000Z",
+          "resolvedAt": null,
+          "summary": "We’re investigating an issue causing higher-than-expected charges for OpenAI-hosted containers in the Agent API.\n\nWe’re working on a fix and preparing refunds for affected custome..."
+        },
+        {
           "id": "01M2V76GEPJB0HQGRA0QERRZ3T",
           "title": "Delayed support responses",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "none",
           "startedAt": "2026-09-18T21:36:41.000Z",
-          "updatedAt": "2026-09-18T21:36:41.000Z",
+          "updatedAt": "2026-09-18T21:59:34.000Z",
           "resolvedAt": null,
-          "summary": "Some users are experiencing delayed responses from OpenAI Support by email and chat.\n\nWe’re investigating and will share updates as we learn more."
+          "summary": "We have applied the mitigation and are monitoring the recovery.\n\nSome support responses by email and chat may still be delayed while we work through affected cases."
         }
       ],
       "recentIncidents": [
         {
+          "id": "01M2VA7X37P1ASADSNZ1CG4N4D",
+          "title": "Overbilling for OpenAI-hosted containers in the Agent API",
+          "status": "investigating",
+          "impact": "none",
+          "startedAt": "2026-09-18T22:29:53.000Z",
+          "updatedAt": "2026-09-18T22:29:53.000Z",
+          "resolvedAt": null,
+          "summary": "We’re investigating an issue causing higher-than-expected charges for OpenAI-hosted containers in the Agent API.\n\nWe’re working on a fix and preparing refunds for affected custome..."
+        },
+        {
           "id": "01M2V76GEPJB0HQGRA0QERRZ3T",
           "title": "Delayed support responses",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "none",
           "startedAt": "2026-09-18T21:36:41.000Z",
-          "updatedAt": "2026-09-18T21:36:41.000Z",
+          "updatedAt": "2026-09-18T21:59:34.000Z",
           "resolvedAt": null,
-          "summary": "Some users are experiencing delayed responses from OpenAI Support by email and chat.\n\nWe’re investigating and will share updates as we learn more."
+          "summary": "We have applied the mitigation and are monitoring the recovery.\n\nSome support responses by email and chat may still be delayed while we work through affected cases."
         },
         {
           "id": "01M2RMCS2HVBXGBFKEZ9RZR4FA",
@@ -315,16 +335,6 @@
           "updatedAt": "2026-09-17T20:24:45.000Z",
           "resolvedAt": "2026-09-17T20:24:45.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M2NRHTYAM3K3M93X1D068MCY",
-          "title": "Elevated errors in ChatGPT Work",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-16T18:44:32.000Z",
-          "updatedAt": "2026-09-16T19:34:36.000Z",
-          "resolvedAt": "2026-09-16T19:34:36.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -339,7 +349,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-18T21:38:15.322Z",
+      "lastCheckedAt": "2026-09-18T22:49:21.960Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
