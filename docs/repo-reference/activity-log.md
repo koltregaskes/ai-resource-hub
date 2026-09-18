@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 18 Sept 2026, 20:56 UTC
+Generated: 18 Sept 2026, 21:38 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 18 Sept 2026, 20:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 18 Sept 2026, 20:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 18 Sept 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 18 Sept 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 18 Sept 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Sept 2026, 21:38 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 18 Sept 2026, 21:38 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 18 Sept 2026, 21:38 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 18 Sept 2026, 21:38 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 18 Sept 2026, 21:38 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 18 Sept 2026, 12:00 UTC | digest | A new kind of AI model from a ChatGPT inventor is thrilling developers | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/18/a-new-kind-of-ai-model-from-a-chatgpt-inventor-is-thrilling-developers/) |
-| 18 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,218 open roles across 10 tracked companies. | `/jobs/` |
-| 18 Sept 2026, 12:00 UTC | digest | Published the 2026-09-18 daily digest | 19 stories captured from 3 sources. | `/news/` |
-| 18 Sept 2026, 12:00 UTC | digest | Virginia governor creates an AI task force and moves to restrain data centers | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/997573/virginia-governor-spanberger-data-center-ai-task-force) |
+| 18 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,221 open roles across 10 tracked companies. | `/jobs/` |
+| 18 Sept 2026, 12:00 UTC | digest | OpenAI and Microsoft knew they were starting a ‘doom loop’ for the web | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/997633/openai-microsoft-chatgpt-ai-new-york-times-doom-loop-theft-google-zero) |
+| 18 Sept 2026, 12:00 UTC | digest | Published the 2026-09-18 daily digest | 20 stories captured from 3 sources. | `/news/` |
 | 18 Sept 2026, 12:00 UTC | digest | World model companies are keeping a lot of secrets | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
