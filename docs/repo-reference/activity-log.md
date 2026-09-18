@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 18 Sept 2026, 22:55 UTC
+Generated: 18 Sept 2026, 23:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 18 Sept 2026, 22:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 18 Sept 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 18 Sept 2026, 22:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 18 Sept 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 18 Sept 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 18 Sept 2026, 12:00 UTC | digest | A new kind of AI model from a ChatGPT inventor is thrilling developers | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/18/a-new-kind-of-ai-model-from-a-chatgpt-inventor-is-thrilling-developers/) |
-| 18 Sept 2026, 12:00 UTC | digest | Anthropic&#8217;s first embedded evaluator is &#8230; Accenture? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/18/anthropics-first-embedded-evaluator-is-accenture/) |
-| 18 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,222 open roles across 10 tracked companies. | `/jobs/` |
-| 18 Sept 2026, 12:00 UTC | digest | Published the 2026-09-18 daily digest | 16 stories captured from 3 sources. | `/news/` |
-| 18 Sept 2026, 12:00 UTC | digest | World model companies are keeping a lot of secrets | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets/) |
+| 18 Sept 2026, 23:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 18 Sept 2026, 23:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 18 Sept 2026, 23:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 18 Sept 2026, 23:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 18 Sept 2026, 23:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Sept 2026, 12:00 UTC | digest | A startup that builds other startups raised $100M, and is all-in on physical AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/18/a-startup-that-builds-other-startups-raised-100m-and-is-all-in-on-physical-ai/) |
+| 18 Sept 2026, 12:00 UTC | digest | AI hallucination nearly triggers US military operation | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation/) |
+| 18 Sept 2026, 12:00 UTC | digest | Anthropic is operating a lab that conducts biology experiments | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/18/anthropic-is-operating-a-lab-that-conducts-biology-experiments/) |
+| 18 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,221 open roles across 10 tracked companies. | `/jobs/` |
+| 18 Sept 2026, 12:00 UTC | digest | Published the 2026-09-18 daily digest | 20 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
