@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T06:55:34.397Z",
+  "generatedAt": "2026-09-19T07:55:32.123Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-19T06:55:34.389Z",
+      "lastCheckedAt": "2026-09-19T07:55:32.115Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-19T06:55:32.770Z",
+      "lastCheckedAt": "2026-09-19T07:55:31.132Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-19T06:55:33.843Z",
+      "lastCheckedAt": "2026-09-19T07:55:31.911Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-19T06:55:33.191Z",
+      "lastCheckedAt": "2026-09-19T07:55:31.348Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -242,10 +242,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-19T06:55:32.759Z",
+      "lastCheckedAt": "2026-09-19T07:55:31.164Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -273,28 +273,17 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "01M2VA7X37P1ASADSNZ1CG4N4D",
-          "title": "Overbilling for OpenAI-hosted containers in the Agent API",
-          "status": "monitoring",
-          "impact": "none",
-          "startedAt": "2026-09-18T22:29:53.000Z",
-          "updatedAt": "2026-09-19T05:00:57.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation, and any new sessions would not run into this issue. We are monitoring the recovery."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "01M2VA7X37P1ASADSNZ1CG4N4D",
           "title": "Overbilling for OpenAI-hosted containers in the Agent API",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "none",
           "startedAt": "2026-09-18T22:29:53.000Z",
-          "updatedAt": "2026-09-19T05:00:57.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation, and any new sessions would not run into this issue. We are monitoring the recovery."
+          "updatedAt": "2026-09-19T07:52:40.000Z",
+          "resolvedAt": "2026-09-19T07:52:40.000Z",
+          "summary": "All impacted services have now fully recovered."
         },
         {
           "id": "01M2V76GEPJB0HQGRA0QERRZ3T",
@@ -339,7 +328,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-19T06:55:34.014Z",
+      "lastCheckedAt": "2026-09-19T07:55:31.972Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
