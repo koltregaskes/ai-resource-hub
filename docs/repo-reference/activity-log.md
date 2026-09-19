@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 19 Sept 2026, 15:56 UTC
+Generated: 19 Sept 2026, 17:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 19 Sept 2026, 15:56 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 19 Sept 2026, 15:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 19 Sept 2026, 15:56 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 19 Sept 2026, 15:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 19 Sept 2026, 15:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 19 Sept 2026, 17:58 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 19 Sept 2026, 17:58 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 19 Sept 2026, 17:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 19 Sept 2026, 17:58 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 19 Sept 2026, 17:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 19 Sept 2026, 12:00 UTC | digest | AI safety conversations have gotten unbelievable | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/19/ai-safety-conversations-have-gotten-unbelievable/) |
 | 19 Sept 2026, 12:00 UTC | digest | Gemini went rogue, hacked three companies, and Google hid it | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack) |
+| 19 Sept 2026, 12:00 UTC | digest | Google’s Gemini is the latest AI model to hack other companies | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/) |
 | 19 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,222 open roles across 10 tracked companies. | `/jobs/` |
-| 19 Sept 2026, 12:00 UTC | digest | Petlibro’s new AI-powered feeder is a game changer for multi-cat homes | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/) |
-| 19 Sept 2026, 12:00 UTC | digest | Published the 2026-09-19 daily digest | 9 stories captured from 2 sources. | `/news/` |
+| 19 Sept 2026, 12:00 UTC | digest | Published the 2026-09-19 daily digest | 10 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
