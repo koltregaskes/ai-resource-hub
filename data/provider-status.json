@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T00:17:13.764Z",
+  "generatedAt": "2026-09-19T01:37:26.075Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-19T00:17:13.625Z",
+      "lastCheckedAt": "2026-09-19T01:37:26.012Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,26 +90,6 @@
       ]
     },
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-09-19T00:17:13.757Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -120,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-19T00:17:12.254Z",
+      "lastCheckedAt": "2026-09-19T01:37:24.968Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-19T00:17:13.310Z",
+      "lastCheckedAt": "2026-09-19T01:37:25.896Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-19T00:17:12.637Z",
+      "lastCheckedAt": "2026-09-19T01:37:25.050Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,10 +242,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-19T00:17:12.372Z",
+      "lastCheckedAt": "2026-09-19T01:37:25.002Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "2 active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -297,34 +277,34 @@
         {
           "id": "01M2VA7X37P1ASADSNZ1CG4N4D",
           "title": "Overbilling for OpenAI-hosted containers in the Agent API",
-          "status": "investigating",
+          "status": "identified",
           "impact": "none",
           "startedAt": "2026-09-18T22:29:53.000Z",
-          "updatedAt": "2026-09-18T23:22:34.000Z",
+          "updatedAt": "2026-09-19T01:08:42.000Z",
           "resolvedAt": null,
-          "summary": "We’re continuing to work on a fix for the container overbilling issue.\n\nWe’re also reviewing affected usage to identify impacted customers and calculate refunds."
-        },
-        {
-          "id": "01M2V76GEPJB0HQGRA0QERRZ3T",
-          "title": "Delayed support responses",
-          "status": "monitoring",
-          "impact": "none",
-          "startedAt": "2026-09-18T21:36:41.000Z",
-          "updatedAt": "2026-09-18T21:59:34.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery.\n\nSome support responses by email and chat may still be delayed while we work through affected cases."
+          "summary": "We are still implementing the mitigation."
         }
       ],
       "recentIncidents": [
         {
+          "id": "01M2V76GEPJB0HQGRA0QERRZ3T",
+          "title": "Delayed support responses",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-09-18T21:36:41.000Z",
+          "updatedAt": "2026-09-19T01:10:40.000Z",
+          "resolvedAt": "2026-09-19T01:10:40.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
           "id": "01M2VA7X37P1ASADSNZ1CG4N4D",
           "title": "Overbilling for OpenAI-hosted containers in the Agent API",
-          "status": "investigating",
+          "status": "identified",
           "impact": "none",
           "startedAt": "2026-09-18T22:29:53.000Z",
-          "updatedAt": "2026-09-18T23:22:34.000Z",
+          "updatedAt": "2026-09-19T01:08:42.000Z",
           "resolvedAt": null,
-          "summary": "We’re continuing to work on a fix for the container overbilling issue.\n\nWe’re also reviewing affected usage to identify impacted customers and calculate refunds."
+          "summary": "We are still implementing the mitigation."
         },
         {
           "id": "01M2VBZB1RYSMXHZNRA25ZJ36X",
@@ -337,16 +317,6 @@
           "summary": "All impacted services have now fully recovered."
         },
         {
-          "id": "01M2V76GEPJB0HQGRA0QERRZ3T",
-          "title": "Delayed support responses",
-          "status": "monitoring",
-          "impact": "none",
-          "startedAt": "2026-09-18T21:36:41.000Z",
-          "updatedAt": "2026-09-18T21:59:34.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery.\n\nSome support responses by email and chat may still be delayed while we work through affected cases."
-        },
-        {
           "id": "01M2RMCS2HVBXGBFKEZ9RZR4FA",
           "title": "We are seeing elevated error rates across API models",
           "status": "resolved",
@@ -357,6 +327,26 @@
           "summary": "All impacted services have now fully recovered."
         }
       ]
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-09-19T01:37:26.071Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
     },
     {
       "id": "deepseek",
@@ -373,7 +363,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
