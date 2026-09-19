@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 19 Sept 2026, 18:55 UTC
+Generated: 19 Sept 2026, 19:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 19 Sept 2026, 18:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 19 Sept 2026, 18:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 19 Sept 2026, 18:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 19 Sept 2026, 18:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 19 Sept 2026, 18:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 19 Sept 2026, 19:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 19 Sept 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 19 Sept 2026, 19:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 19 Sept 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 19 Sept 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 19 Sept 2026, 12:00 UTC | digest | AI safety conversations have gotten unbelievable | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/19/ai-safety-conversations-have-gotten-unbelievable/) |
 | 19 Sept 2026, 12:00 UTC | digest | Gemini went rogue, hacked three companies, and Google hid it | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack) |
 | 19 Sept 2026, 12:00 UTC | digest | Google’s Gemini is the latest AI model to hack other companies | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/) |
