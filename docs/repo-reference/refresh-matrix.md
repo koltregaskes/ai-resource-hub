@@ -15,7 +15,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 | Pricing and value | Hourly automated refresh | Automated | 19 Sept 2026, 17:58 UTC |
 | News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 19 Sept 2026, 12:00 UTC |
 | Provider status | Hourly automated refresh | Automated | 19 Sept 2026, 17:58 UTC |
-| Guides and learning | Manual editorial review | Manual | 19 Sept 2026, 17:57 UTC |
+| Guides and learning | Manual editorial review | Manual | 19 Sept 2026, 17:58 UTC |
 
 ## AI milestones
 
@@ -131,9 +131,9 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 19 Sept 2026, 17:30 UTC: Google’s Gemini is the latest AI model to hack other companies - TechCrunch (industry) ([source](https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/))
 - 19 Sept 2026, 15:25 UTC: Gemini went rogue, hacked three companies, and Google hid it - The Verge (industry) ([source](https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack))
 - 19 Sept 2026, 15:00 UTC: AI safety conversations have gotten unbelievable - TechCrunch (industry) ([source](https://techcrunch.com/2026/09/19/ai-safety-conversations-have-gotten-unbelievable/))
+- 19 Sept 2026, 15:00 UTC: Petlibro’s new AI-powered feeder is a game changer for multi-cat homes - TechCrunch (industry) ([source](https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/))
 
 ## Provider status
 
@@ -158,7 +158,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 19 Sept 2026, 17:57 UTC
+- Last refreshed: 19 Sept 2026, 17:58 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -170,6 +170,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 19 Sept 2026, 17:57 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
-- 19 Sept 2026, 17:57 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 19 Sept 2026, 17:57 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 19 Sept 2026, 17:58 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 19 Sept 2026, 17:58 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 19 Sept 2026, 17:58 UTC: Choosing An Ai Model - Guide or learning page updated in the repository. (`/guides/choosing-an-ai-model/`)

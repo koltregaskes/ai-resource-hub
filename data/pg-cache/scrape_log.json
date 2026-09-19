@@ -5,8 +5,8 @@
     "status": "success",
     "models_updated": 1222,
     "error_message": null,
-    "started_at": "2026-09-19 17:58:09",
-    "finished_at": "2026-09-19 17:58:09"
+    "started_at": "2026-09-19 17:58:44",
+    "finished_at": "2026-09-19 17:58:44"
   },
   {
     "id": 10,
@@ -14,8 +14,8 @@
     "status": "error",
     "models_updated": 74,
     "error_message": "VentureBeat: HTTP 429: Too Many Requests",
-    "started_at": "2026-09-19 17:58:05",
-    "finished_at": "2026-09-19 17:58:05"
+    "started_at": "2026-09-19 17:58:41",
+    "finished_at": "2026-09-19 17:58:41"
   },
   {
     "id": 9,
@@ -23,8 +23,8 @@
     "status": "success",
     "models_updated": 126,
     "error_message": null,
-    "started_at": "2026-09-19 17:58:04",
-    "finished_at": "2026-09-19 17:58:04"
+    "started_at": "2026-09-19 17:58:40",
+    "finished_at": "2026-09-19 17:58:40"
   },
   {
     "id": 7,
@@ -32,8 +32,8 @@
     "status": "fallback",
     "models_updated": 16,
     "error_message": null,
-    "started_at": "2026-09-19 17:58:03",
-    "finished_at": "2026-09-19 17:58:03"
+    "started_at": "2026-09-19 17:58:39",
+    "finished_at": "2026-09-19 17:58:39"
   },
   {
     "id": 8,
@@ -41,8 +41,8 @@
     "status": "computed",
     "models_updated": 55,
     "error_message": null,
-    "started_at": "2026-09-19 17:58:03",
-    "finished_at": "2026-09-19 17:58:03"
+    "started_at": "2026-09-19 17:58:39",
+    "finished_at": "2026-09-19 17:58:39"
   },
   {
     "id": 5,
@@ -50,8 +50,8 @@
     "status": "success",
     "models_updated": 27,
     "error_message": null,
-    "started_at": "2026-09-19 17:58:02",
-    "finished_at": "2026-09-19 17:58:02"
+    "started_at": "2026-09-19 17:58:38",
+    "finished_at": "2026-09-19 17:58:38"
   },
   {
     "id": 6,
@@ -59,8 +59,8 @@
     "status": "success",
     "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-09-19 17:58:02",
-    "finished_at": "2026-09-19 17:58:02"
+    "started_at": "2026-09-19 17:58:38",
+    "finished_at": "2026-09-19 17:58:38"
   },
   {
     "id": 3,
@@ -68,8 +68,8 @@
     "status": "success",
     "models_updated": 21,
     "error_message": null,
-    "started_at": "2026-09-19 17:58:01",
-    "finished_at": "2026-09-19 17:58:01"
+    "started_at": "2026-09-19 17:58:37",
+    "finished_at": "2026-09-19 17:58:37"
   },
   {
     "id": 4,
@@ -77,17 +77,8 @@
     "status": "success",
     "models_updated": 0,
     "error_message": null,
-    "started_at": "2026-09-19 17:58:01",
-    "finished_at": "2026-09-19 17:58:01"
-  },
-  {
-    "id": 1,
-    "scraper": "catalog:sync",
-    "status": "success",
-    "models_updated": 52,
-    "error_message": null,
-    "started_at": "2026-09-19 17:58:00",
-    "finished_at": "2026-09-19 17:58:00"
+    "started_at": "2026-09-19 17:58:37",
+    "finished_at": "2026-09-19 17:58:37"
   },
   {
     "id": 2,
@@ -95,7 +86,16 @@
     "status": "success",
     "models_updated": 329,
     "error_message": null,
-    "started_at": "2026-09-19 17:58:00",
-    "finished_at": "2026-09-19 17:58:00"
+    "started_at": "2026-09-19 17:58:36",
+    "finished_at": "2026-09-19 17:58:36"
+  },
+  {
+    "id": 1,
+    "scraper": "catalog:sync",
+    "status": "success",
+    "models_updated": 52,
+    "error_message": null,
+    "started_at": "2026-09-19 17:58:35",
+    "finished_at": "2026-09-19 17:58:35"
   }
 ]
