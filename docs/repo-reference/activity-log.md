@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 20 Sept 2026, 21:30 UTC
+Generated: 20 Sept 2026, 22:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 20 Sept 2026, 21:30 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 20 Sept 2026, 21:30 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 20 Sept 2026, 21:30 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 20 Sept 2026, 21:30 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 20 Sept 2026, 21:30 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 20 Sept 2026, 22:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 20 Sept 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 20 Sept 2026, 22:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 20 Sept 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 20 Sept 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 20 Sept 2026, 12:00 UTC | digest | 6 days left to save up to $200 to TechCrunch Disrupt 2026 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/20/6-days-left-to-get-ahead-at-techcrunch-disrupt-2026/) |
 | 20 Sept 2026, 12:00 UTC | digest | Is the AI industry really ready to slow down? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/20/is-the-ai-industry-really-ready-to-slow-down/) |
 | 20 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,222 open roles across 10 tracked companies. | `/jobs/` |
-| 20 Sept 2026, 12:00 UTC | digest | No one is surprised that Nvidia&#8217;s Jensen Huang thinks AI fears are overblown. | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/997936/nvidia-jensen-huang-ai-fears-overblown) |
 | 20 Sept 2026, 12:00 UTC | digest | Published the 2026-09-20 daily digest | 8 stories captured from 2 sources. | `/news/` |
 | 20 Sept 2026, 12:00 UTC | digest | World model companies are keeping a lot of secrets | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/20/world-model-companies-are-keeping-a-lot-of-secrets/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
