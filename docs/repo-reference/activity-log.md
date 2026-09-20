@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 20 Sept 2026, 17:55 UTC
+Generated: 20 Sept 2026, 18:44 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 20 Sept 2026, 17:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 20 Sept 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 20 Sept 2026, 17:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 20 Sept 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 20 Sept 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 20 Sept 2026, 12:00 UTC | digest | 6 days left to get ahead at TechCrunch Disrupt 2026 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/20/6-days-left-to-get-ahead-at-techcrunch-disrupt-2026/) |
-| 20 Sept 2026, 12:00 UTC | digest | Humans, not rogue AI, are still the biggest cybersecurity risk to energy systems | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/science/997834/ai-cyberattack-energy-critical-infrastructure) |
+| 20 Sept 2026, 18:44 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 20 Sept 2026, 18:44 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 20 Sept 2026, 18:44 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 20 Sept 2026, 18:44 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 20 Sept 2026, 18:44 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 20 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,222 open roles across 10 tracked companies. | `/jobs/` |
-| 20 Sept 2026, 12:00 UTC | digest | Published the 2026-09-20 daily digest | 3 stories captured from 2 sources. | `/news/` |
+| 20 Sept 2026, 12:00 UTC | digest | Published the 2026-09-20 daily digest | 5 stories captured from 2 sources. | `/news/` |
+| 20 Sept 2026, 12:00 UTC | digest | ScrollEd wants to turn textbooks into TikTok | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/20/scrolled-wants-to-turn-textbooks-into-tiktok/) |
 | 20 Sept 2026, 12:00 UTC | digest | Trump now says he wants to form an ‘AI Force’ | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/997867/trump-ai-force-ai-czar) |
+| 20 Sept 2026, 12:00 UTC | digest | Vocci&#8217;s ring adds a new form factor to meeting note-taking | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/20/voccis-ring-adds-a-new-form-factor-to-meeting-note-taking/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
