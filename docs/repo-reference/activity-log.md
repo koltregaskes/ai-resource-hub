@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 21 Sept 2026, 01:55 UTC
+Generated: 21 Sept 2026, 02:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 21 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,222 open roles across 10 tracked companies. | `/jobs/` |
-| 21 Sept 2026, 01:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 21 Sept 2026, 01:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 21 Sept 2026, 01:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 21 Sept 2026, 01:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 21 Sept 2026, 01:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 21 Sept 2026, 02:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 21 Sept 2026, 02:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 21 Sept 2026, 02:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 21 Sept 2026, 02:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 21 Sept 2026, 02:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 20 Sept 2026, 12:00 UTC | digest | 6 days left to save up to $200 to TechCrunch Disrupt 2026 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/20/6-days-left-to-get-ahead-at-techcrunch-disrupt-2026/) |
 | 20 Sept 2026, 12:00 UTC | digest | Is the AI industry really ready to slow down? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/20/is-the-ai-industry-really-ready-to-slow-down/) |
 | 20 Sept 2026, 12:00 UTC | digest | Published the 2026-09-20 daily digest | 8 stories captured from 2 sources. | `/news/` |
