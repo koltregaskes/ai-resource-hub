@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 21 Sept 2026, 18:55 UTC
+Generated: 21 Sept 2026, 19:23 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -12,16 +12,16 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 18 Sept 2026 | GLM 5.3 FlashX | Zhipu AI | tracking | high | watch only | 0 | 0 | n/a |
 | 10 Sept 2026 | DeepSeek V4.1 Flash | DeepSeek | tracking | high | watch only | 0 | 0 | n/a |
 | 3 Sept 2026 | Qwen3.8 Max (0902) | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
-| 2 Sept 2026 | Muse Spark 1.3 Contributor | Meta | tracking | high | watch only | 0 | 0 | n/a |
-| 2 Sept 2026 | Muse Spark 1.3 | Meta | tracking | high | watch only | 0 | 0 | n/a |
+| 2 Sept 2026 | Muse Spark 1.3 Contributor | Meta | tracking | high | watch only | 0 | 1 | n/a |
+| 2 Sept 2026 | Muse Spark 1.3 | Meta | tracking | high | watch only | 0 | 1 | n/a |
 | 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | needs research | 0 | 0 | [official](https://www.anthropic.com/glasswing) |
 | 26 Aug 2026 | Qwen3.8 Flash | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
-| 21 Aug 2026 | Muse Spark 1.2 Contributor | Meta | tracking | watch | watch only | 0 | 1 | n/a |
+| 21 Aug 2026 | Muse Spark 1.2 Contributor | Meta | tracking | watch | watch only | 0 | 2 | n/a |
 | 14 Aug 2026 | Qwen3.8 27B | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | Qwen3.8 2.4T A95B | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | Grok 4.6 | xAI | tracking | watch | watch only | 0 | 0 | n/a |
 | 11 Aug 2026 | Nemotron 3.5 Lightning | NVIDIA | tracking | watch | watch only | 0 | 0 | n/a |
-| 5 Aug 2026 | Muse Spark 1.2 | Meta | tracking | watch | watch only | 0 | 1 | n/a |
+| 5 Aug 2026 | Muse Spark 1.2 | Meta | tracking | watch | watch only | 0 | 2 | n/a |
 | 27 Jul 2026 | Qwen3.7 Flash | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
 | 24 Jul 2026 | Claude Opus 5 (batch) | Anthropic | tracking | watch | needs research | 0 | 0 | [official](https://www.anthropic.com/news/claude-opus-5) |
 | 24 Jul 2026 | Claude Opus 5 Fast | Anthropic | tracking | watch | needs research | 0 | 0 | [official](https://www.anthropic.com/news/claude-opus-5) |
