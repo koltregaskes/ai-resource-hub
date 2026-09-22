@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T09:54:38.136Z",
+  "generatedAt": "2026-09-22T10:20:34.085Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-22T09:54:38.129Z",
+      "lastCheckedAt": "2026-09-22T10:20:34.077Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,6 +90,103 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-09-22T10:20:32.541Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Ads Manager",
+          "status": "operational"
+        },
+        {
+          "name": "Login",
+          "status": "operational"
+        },
+        {
+          "name": "Images",
+          "status": "operational"
+        },
+        {
+          "name": "Files",
+          "status": "operational"
+        },
+        {
+          "name": "FedRAMP",
+          "status": "operational"
+        },
+        {
+          "name": "Sora",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01M348TX2DX7KPM9X857N4APNV",
+          "title": "Increased error rate for Plus and Pro users.",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-09-22T09:58:28.000Z",
+          "updatedAt": "2026-09-22T09:58:28.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01M348TX2DX7KPM9X857N4APNV",
+          "title": "Increased error rate for Plus and Pro users.",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-09-22T09:58:28.000Z",
+          "updatedAt": "2026-09-22T09:58:28.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
+        {
+          "id": "01M2VA7X37P1ASADSNZ1CG4N4D",
+          "title": "Overbilling for OpenAI-hosted containers in the Agent API",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-09-18T22:29:53.000Z",
+          "updatedAt": "2026-09-19T07:52:40.000Z",
+          "resolvedAt": "2026-09-19T07:52:40.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M2V76GEPJB0HQGRA0QERRZ3T",
+          "title": "Delayed support responses",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-09-18T21:36:41.000Z",
+          "updatedAt": "2026-09-19T01:10:40.000Z",
+          "resolvedAt": "2026-09-19T01:10:40.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M2VBZB1RYSMXHZNRA25ZJ36X",
+          "title": "SSO sign-in and SCIM provisioning issues",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-09-18T23:00:09.000Z",
+          "updatedAt": "2026-09-18T23:18:55.000Z",
+          "resolvedAt": "2026-09-18T23:18:55.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -100,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-22T09:54:36.878Z",
+      "lastCheckedAt": "2026-09-22T10:20:32.431Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-22T09:54:37.650Z",
+      "lastCheckedAt": "2026-09-22T10:20:33.358Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-22T09:54:37.190Z",
+      "lastCheckedAt": "2026-09-22T10:20:32.519Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -232,92 +329,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-09-22T09:54:36.781Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Ads Manager",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Files",
-          "status": "operational"
-        },
-        {
-          "name": "FedRAMP",
-          "status": "operational"
-        },
-        {
-          "name": "Sora",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01M2VA7X37P1ASADSNZ1CG4N4D",
-          "title": "Overbilling for OpenAI-hosted containers in the Agent API",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-09-18T22:29:53.000Z",
-          "updatedAt": "2026-09-19T07:52:40.000Z",
-          "resolvedAt": "2026-09-19T07:52:40.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M2V76GEPJB0HQGRA0QERRZ3T",
-          "title": "Delayed support responses",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-09-18T21:36:41.000Z",
-          "updatedAt": "2026-09-19T01:10:40.000Z",
-          "resolvedAt": "2026-09-19T01:10:40.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M2VBZB1RYSMXHZNRA25ZJ36X",
-          "title": "SSO sign-in and SCIM provisioning issues",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-09-18T23:00:09.000Z",
-          "updatedAt": "2026-09-18T23:18:55.000Z",
-          "resolvedAt": "2026-09-18T23:18:55.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M2RMCS2HVBXGBFKEZ9RZR4FA",
-          "title": "We are seeing elevated error rates across API models",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-17T21:29:35.000Z",
-          "updatedAt": "2026-09-17T21:50:36.000Z",
-          "resolvedAt": "2026-09-17T21:50:36.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -328,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-22T09:54:37.713Z",
+      "lastCheckedAt": "2026-09-22T10:20:33.498Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
