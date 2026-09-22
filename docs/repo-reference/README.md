@@ -8,20 +8,20 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 22 Sept 2026, 22:04 UTC |
+| Generated | 22 Sept 2026, 22:55 UTC |
 | Providers tracked | 40 |
-| Public models | 344 |
+| Public models | 345 |
 | Active models | 109 |
-| Tracking models | 234 |
+| Tracking models | 235 |
 | Preview models | 1 |
 | Benchmarks | 34 |
 | News items in cache | 74 |
-| Release-desk entries | 50 |
+| Release-desk entries | 51 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 22 Sept 2026, 22:04 UTC |
+| Latest visible refresh | 22 Sept 2026, 22:55 UTC |
 | Current evaluated composite leader | Llama 4 Maverick (57.6) |
-| Latest tracked release | Grok 4.7 (21 Sept 2026) |
+| Latest tracked release | Command A+ (22 Sept 2026) |
 
 ## Reference Files
 

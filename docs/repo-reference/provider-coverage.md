@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 22 Sept 2026, 22:04 UTC
+Generated: 22 Sept 2026, 22:55 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -13,7 +13,7 @@ This table shows how much of each provider's public model surface is currently r
 | Alibaba | 5 | 47 | 0 | Qwen3.8 Omni Flash (21 Sept 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | DeepSeek | 4 | 11 | 0 | DeepSeek V4 Flash Vision Exp (21 Aug 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |
-| Cohere | 4 | 1 | 0 | n/a | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
+| Cohere | 4 | 2 | 0 | Command A+ (22 Sept 2026) | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
 | Black Forest Labs | 4 | 0 | 0 | n/a | n/a | n/a |
 | Stability AI | 4 | 0 | 0 | n/a | n/a | [docs](https://platform.stability.ai/docs) |
 | Mistral | 3 | 19 | 0 | n/a | [status](https://status.mistral.ai) | [docs](https://docs.mistral.ai) |
