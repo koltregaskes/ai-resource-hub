@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 22 Sept 2026, 14:49 UTC
+Generated: 22 Sept 2026, 15:58 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -11,7 +11,7 @@ This table shows how much of each provider's public model surface is currently r
 | Anthropic | 6 | 16 | 1 | Claude Opus 5 (batch) (24 Jul 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
 | Meta | 6 | 9 | 0 | Muse Spark 1.3 Contributor (2 Sept 2026) | n/a | [docs](https://llama.meta.com/docs) |
 | Alibaba | 5 | 46 | 0 | Qwen3.8 Max (0902) (3 Sept 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
-| DeepSeek | 4 | 11 | 0 | DeepSeek V4.1 Flash (10 Sept 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
+| DeepSeek | 4 | 11 | 0 | DeepSeek V4 Flash Vision Exp (21 Aug 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |
 | Cohere | 4 | 1 | 0 | n/a | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
 | Black Forest Labs | 4 | 0 | 0 | n/a | n/a | n/a |
@@ -40,6 +40,6 @@ This table shows how much of each provider's public model surface is currently r
 | xAI | 0 | 13 | 0 | Grok 4.7 (21 Sept 2026) | [status](https://status.x.ai) | [docs](https://docs.x.ai/developers/models) |
 | MiniMax | 0 | 8 | 0 | MiniMax M3 (31 May 2026) | n/a | [docs](https://platform.minimaxi.com/docs/api-reference/api-overview) |
 | NVIDIA | 0 | 7 | 0 | Nemotron 3.5 Lightning (11 Aug 2026) | n/a | [docs](https://docs.api.nvidia.com) |
-| Moonshot AI | 0 | 5 | 0 | Kimi K3 (16 Jul 2026) | n/a | [docs](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
+| Moonshot AI | 0 | 5 | 0 | Kimi K2.7 Code (12 Jun 2026) | n/a | [docs](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
 | 01.AI | 0 | 3 | 0 | n/a | n/a | n/a |
 | AI21 Labs | 0 | 2 | 0 | n/a | n/a | [docs](https://docs.ai21.com) |
