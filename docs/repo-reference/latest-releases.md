@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 22 Sept 2026, 18:51 UTC
+Generated: 22 Sept 2026, 19:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -9,6 +9,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 21 Sept 2026 | Grok 4.7 | xAI | tracking | high | watch only | 0 | 0 | n/a |
+| 21 Sept 2026 | Qwen3.8 Omni Flash | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
 | 18 Sept 2026 | GLM 5.3 FlashX | Zhipu AI | tracking | high | watch only | 0 | 0 | n/a |
 | 3 Sept 2026 | Qwen3.8 Max (0902) | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
 | 2 Sept 2026 | Muse Spark 1.3 Contributor | Meta | tracking | high | watch only | 0 | 2 | n/a |
@@ -27,6 +28,5 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 31 Jul 2026 | DeepSeek V4 Flash 0731 | DeepSeek | tracking | watch | watch only | 0 | 0 | n/a |
 | 27 Jul 2026 | Qwen3.7 Flash | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
 | 24 Jul 2026 | Claude Opus 5 (batch) | Anthropic | tracking | watch | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-opus-5) |
-| 24 Jul 2026 | Claude Opus 5 Fast | Anthropic | tracking | watch | needs research | 0 | 0 | [official](https://www.anthropic.com/news/claude-opus-5) |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
