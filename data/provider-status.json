@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T00:55:31.998Z",
+  "generatedAt": "2026-09-22T01:55:33.947Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-22T00:55:31.994Z",
+      "lastCheckedAt": "2026-09-22T01:55:33.941Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,30 +100,30 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-22T00:55:30.521Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-09-22T01:55:32.305Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Minor Service Outage",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Code",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Cowork",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
           "status": "operational"
         },
         {
@@ -131,8 +131,31 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "7g1qpkyz5gxh",
+          "title": "Elevated errors for multiple models",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-09-22T00:57:26.126Z",
+          "updatedAt": "2026-09-22T01:35:46.851Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/90s4l9yywzbk",
+          "summary": "We are continuing to work to resolve errors affecting some models. At this time, requests to Claude Fable 5 and 5.1 and Mythos 5 and 5.1 have returned to normal success rates. We..."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "7g1qpkyz5gxh",
+          "title": "Elevated errors for multiple models",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-09-22T00:57:26.126Z",
+          "updatedAt": "2026-09-22T01:35:46.851Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/90s4l9yywzbk",
+          "summary": "We are continuing to work to resolve errors affecting some models. At this time, requests to Claude Fable 5 and 5.1 and Mythos 5 and 5.1 have returned to normal success rates. We..."
+        },
         {
           "id": "t8fpw9vcshl9",
           "title": "Issues with Google Play subscriptions",
@@ -165,17 +188,6 @@
           "resolvedAt": "2026-09-14T19:14:45.969Z",
           "url": "https://stspg.io/5yp3rhhztm30",
           "summary": "This issue has been resolved. Microsoft has released a September 14 Windows update that fixes it: https://support.microsoft.com/en-us/servicing/os/windows-11/2026/09/kb5129195-win..."
-        },
-        {
-          "id": "t33dncr5ydvl",
-          "title": "Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-09-11T14:19:51.478Z",
-          "updatedAt": "2026-09-11T14:37:11.168Z",
-          "resolvedAt": "2026-09-11T14:37:11.146Z",
-          "url": "https://stspg.io/n9n8kfcxtkfm",
-          "summary": "The issue affecting Claude services has been resolved. Impact occurred from 13:57 to 14:20 UTC"
         }
       ]
     },
@@ -190,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-22T00:55:31.329Z",
+      "lastCheckedAt": "2026-09-22T01:55:33.229Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-22T00:55:30.591Z",
+      "lastCheckedAt": "2026-09-22T01:55:32.565Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -242,7 +254,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-22T00:55:30.542Z",
+      "lastCheckedAt": "2026-09-22T01:55:32.236Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -328,7 +340,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-22T00:55:31.465Z",
+      "lastCheckedAt": "2026-09-22T01:55:33.703Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -352,7 +364,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
