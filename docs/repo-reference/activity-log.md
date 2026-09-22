@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 22 Sept 2026, 20:55 UTC
+Generated: 22 Sept 2026, 21:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 22 Sept 2026, 20:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 22 Sept 2026, 20:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 22 Sept 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 22 Sept 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 22 Sept 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 22 Sept 2026, 21:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 22 Sept 2026, 21:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 22 Sept 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 22 Sept 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 22 Sept 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 22 Sept 2026, 12:00 UTC | digest | Better prompt caching for GPT-6 | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/better-prompt-caching-for-gpt-6) |
-| 22 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,228 open roles across 10 tracked companies. | `/jobs/` |
-| 22 Sept 2026, 12:00 UTC | digest | Microsoft disrupts AI-assisted platform that compromised 12,000 | Ars Technica featured in the latest daily brief. | [open](https://arstechnica.com/security/2026/09/microsoft-disrupts-ai-assisted-platform-that-compromised-12000/) |
-| 22 Sept 2026, 12:00 UTC | digest | Published the 2026-09-22 daily digest | 19 stories captured from 4 sources. | `/news/` |
+| 22 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,229 open roles across 10 tracked companies. | `/jobs/` |
+| 22 Sept 2026, 12:00 UTC | digest | Published the 2026-09-22 daily digest | 20 stories captured from 4 sources. | `/news/` |
 | 22 Sept 2026, 12:00 UTC | digest | Qualcomm launches two new smartphone chips with emphasis on AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/22/qualcomm-launches-two-new-smartphone-chips-with-emphasis-on-ai/) |
+| 22 Sept 2026, 12:00 UTC | digest | Rabbit’s new AI agent doesn’t need an R1 to run | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/999094/rabbit-ai-agent-os3) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
