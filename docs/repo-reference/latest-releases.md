@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 22 Sept 2026, 15:58 UTC
+Generated: 22 Sept 2026, 16:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -13,7 +13,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 3 Sept 2026 | Qwen3.8 Max (0902) | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
 | 2 Sept 2026 | Muse Spark 1.3 Contributor | Meta | tracking | high | watch only | 0 | 2 | n/a |
 | 2 Sept 2026 | Muse Spark 1.3 | Meta | tracking | high | watch only | 0 | 2 | n/a |
-| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | needs research | 0 | 0 | [official](https://www.anthropic.com/glasswing) |
+| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 1 | [official](https://www.anthropic.com/glasswing) |
 | 26 Aug 2026 | Qwen3.8 Flash | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
 | 21 Aug 2026 | Muse Spark 1.2 Contributor | Meta | tracking | watch | watch only | 0 | 2 | n/a |
 | 21 Aug 2026 | DeepSeek V4 Flash Vision Exp | DeepSeek | tracking | watch | watch only | 0 | 0 | n/a |
@@ -26,7 +26,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 5 Aug 2026 | Muse Spark 1.2 | Meta | tracking | watch | watch only | 0 | 2 | n/a |
 | 31 Jul 2026 | DeepSeek V4 Flash 0731 | DeepSeek | tracking | watch | watch only | 0 | 0 | n/a |
 | 27 Jul 2026 | Qwen3.7 Flash | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
-| 24 Jul 2026 | Claude Opus 5 (batch) | Anthropic | tracking | watch | needs research | 0 | 0 | [official](https://www.anthropic.com/news/claude-opus-5) |
+| 24 Jul 2026 | Claude Opus 5 (batch) | Anthropic | tracking | watch | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-opus-5) |
 | 24 Jul 2026 | Claude Opus 5 Fast | Anthropic | tracking | watch | needs research | 0 | 0 | [official](https://www.anthropic.com/news/claude-opus-5) |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)

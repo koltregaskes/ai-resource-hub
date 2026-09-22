@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 22 Sept 2026, 15:58 UTC
+Generated: 22 Sept 2026, 16:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 22 Sept 2026, 15:58 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 22 Sept 2026, 15:58 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 22 Sept 2026, 15:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 22 Sept 2026, 15:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 22 Sept 2026, 15:58 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 22 Sept 2026, 12:00 UTC | digest | AstroForge is putting AI in command of its next spacecraft | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/22/astroforge-is-putting-ai-in-command-of-its-next-spacecraft/) |
-| 22 Sept 2026, 12:00 UTC | digest | Five AI safety sessions every founder should have on their TechCrunch Disrupt 2026 agenda | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/22/five-ai-safety-sessions-every-founder-should-have-on-their-techcrunch-disrupt-2026-agenda/) |
-| 22 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,232 open roles across 10 tracked companies. | `/jobs/` |
-| 22 Sept 2026, 12:00 UTC | digest | Published the 2026-09-22 daily digest | 8 stories captured from 2 sources. | `/news/` |
-| 22 Sept 2026, 12:00 UTC | digest | TechCrunch Disrupt 2026: Aaron Edsinger brings Hello Robot’s Stretch 4 to life onstage | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/22/techcrunch-disrupt-2026-aaron-edsinger-brings-hello-robots-stretch-4-to-life-onstage/) |
+| 22 Sept 2026, 16:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 22 Sept 2026, 16:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 22 Sept 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 22 Sept 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 22 Sept 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 22 Sept 2026, 12:00 UTC | digest | Andreessen Horowitz is launching an ‘academy’ with no homework and partnerships with Palantir, Google, and Meta | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/998813/andreessen-horowitz-ai-academy) |
+| 22 Sept 2026, 12:00 UTC | digest | Anthropic launches Claude Opus 5.5 with stricter safeguards for cybersecurity | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity) |
+| 22 Sept 2026, 12:00 UTC | digest | Anthropic releases Opus 5.5 with lower prices and Fable-level performance | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/) |
+| 22 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,231 open roles across 10 tracked companies. | `/jobs/` |
+| 22 Sept 2026, 12:00 UTC | digest | Published the 2026-09-22 daily digest | 12 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
