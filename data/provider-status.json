@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T23:13:14.216Z",
+  "generatedAt": "2026-09-23T23:40:10.155Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-23T23:13:14.167Z",
+      "lastCheckedAt": "2026-09-23T23:40:10.147Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,6 +90,103 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-09-23T23:40:08.917Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Login",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Compliance API",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Deep Research",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Search",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Agent",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Connectors/Apps",
+          "status": "degraded_performance"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01M389CDQ97B11QPMSRAAYSE5S",
+          "title": "Mobile users unable to see Work Mode and the Model Picker",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-09-23T23:25:00.000Z",
+          "updatedAt": "2026-09-23T23:32:53.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01M389CDQ97B11QPMSRAAYSE5S",
+          "title": "Mobile users unable to see Work Mode and the Model Picker",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-09-23T23:25:00.000Z",
+          "updatedAt": "2026-09-23T23:32:53.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        },
+        {
+          "id": "01M36RMC01ZFWQ861WYJKC4XE1",
+          "title": "Elevated Error Rates for ChatGPT across Plus and Pro plans.",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-09-23T09:13:00.000Z",
+          "updatedAt": "2026-09-23T09:54:16.000Z",
+          "resolvedAt": "2026-09-23T09:54:16.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M34TAFM9WBGEBE3G1GBH4SE8",
+          "title": "Elevated Error Rates for ChatGPT Work, across Plus, Pro, Business, Enterprise and Education plans.",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-09-22T15:04:05.000Z",
+          "updatedAt": "2026-09-22T15:58:32.000Z",
+          "resolvedAt": "2026-09-22T15:58:32.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M348TX2DX7KPM9X857N4APNV",
+          "title": "Increased error rate for Plus and Pro users.",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-09-22T09:58:28.000Z",
+          "updatedAt": "2026-09-22T10:37:42.000Z",
+          "resolvedAt": "2026-09-22T10:37:42.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -100,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-23T23:13:07.394Z",
+      "lastCheckedAt": "2026-09-23T23:40:09.005Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-23T23:13:13.887Z",
+      "lastCheckedAt": "2026-09-23T23:40:09.917Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-23T23:13:13.114Z",
+      "lastCheckedAt": "2026-09-23T23:40:09.356Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -232,92 +329,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-09-23T23:13:07.391Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Ads Manager",
-          "status": "operational"
-        },
-        {
-          "name": "Login",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Files",
-          "status": "operational"
-        },
-        {
-          "name": "FedRAMP",
-          "status": "operational"
-        },
-        {
-          "name": "Sora",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01M36RMC01ZFWQ861WYJKC4XE1",
-          "title": "Elevated Error Rates for ChatGPT across Plus and Pro plans.",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-23T09:13:00.000Z",
-          "updatedAt": "2026-09-23T09:54:16.000Z",
-          "resolvedAt": "2026-09-23T09:54:16.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M34TAFM9WBGEBE3G1GBH4SE8",
-          "title": "Elevated Error Rates for ChatGPT Work, across Plus, Pro, Business, Enterprise and Education plans.",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-22T15:04:05.000Z",
-          "updatedAt": "2026-09-22T15:58:32.000Z",
-          "resolvedAt": "2026-09-22T15:58:32.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M348TX2DX7KPM9X857N4APNV",
-          "title": "Increased error rate for Plus and Pro users.",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-22T09:58:28.000Z",
-          "updatedAt": "2026-09-22T10:37:42.000Z",
-          "resolvedAt": "2026-09-22T10:37:42.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M2VA7X37P1ASADSNZ1CG4N4D",
-          "title": "Overbilling for OpenAI-hosted containers in the Agent API",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-09-18T22:29:53.000Z",
-          "updatedAt": "2026-09-19T07:52:40.000Z",
-          "resolvedAt": "2026-09-19T07:52:40.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -328,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-23T23:13:14.210Z",
+      "lastCheckedAt": "2026-09-23T23:40:09.993Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -352,7 +363,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "fetch failed",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
