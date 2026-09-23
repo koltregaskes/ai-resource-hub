@@ -1,20 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 23 Sept 2026, 11:29 UTC
+Generated: 23 Sept 2026, 12:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 23 Sept 2026, 12:00 UTC | digest | &#8216;We&#8217;re already fighting yesterday&#8217;s battle&#8217;: Greece&#8217;s prime minister gets candid about AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/22/were-already-fighting-yesterdays-battle-greeces-prime-minister-gets-candid-about-ai/) |
-| 23 Sept 2026, 12:00 UTC | digest | Grab and OpenAI bring practical AI skills to Southeast Asia | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/grab-openai-ai-skills-southeast-asia) |
-| 23 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,228 open roles across 10 tracked companies. | `/jobs/` |
-| 23 Sept 2026, 12:00 UTC | digest | Published the 2026-09-23 daily digest | 2 stories captured from 2 sources. | `/news/` |
-| 23 Sept 2026, 11:29 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 23 Sept 2026, 11:29 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 23 Sept 2026, 11:29 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 23 Sept 2026, 11:29 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 23 Sept 2026, 11:29 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 23 Sept 2026, 12:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 23 Sept 2026, 12:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 23 Sept 2026, 12:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 23 Sept 2026, 12:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 23 Sept 2026, 12:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 23 Sept 2026, 12:00 UTC | digest | Ema raises $77M as AI starts eating into enterprise software and services | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/23/ema-raises-77m-as-ai-starts-eating-into-enterprise-software-and-services/) |
+| 23 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,229 open roles across 10 tracked companies. | `/jobs/` |
+| 23 Sept 2026, 12:00 UTC | digest | OpenAI extends cyber access to Ukraine for civilian defense | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense) |
+| 23 Sept 2026, 12:00 UTC | digest | OpenAI nabs key Patreon execs ahead of upcoming announcement | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/999249/openai-creators-patreon-execs-hire-sam-yam) |
+| 23 Sept 2026, 12:00 UTC | digest | Published the 2026-09-23 daily digest | 6 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
@@ -25,4 +26,3 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 05 Feb 2026, 12:00 UTC | models | Claude Opus 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.6/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 Pro (batch) added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2-pro/` |
-| 24 Nov 2025, 12:00 UTC | models | Claude Opus 4.5 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.5/` |
