@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 23 Sept 2026, 18:55 UTC
+Generated: 23 Sept 2026, 19:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,6 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 23 Sept 2026 | Qwen3.8 Max Prime | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
 | 22 Sept 2026 | Command A+ | Cohere | tracking | high | watch only | 0 | 0 | n/a |
 | 21 Sept 2026 | Grok 4.7 | xAI | tracking | high | watch only | 0 | 0 | n/a |
 | 21 Sept 2026 | Qwen3.8 Omni Flash | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
@@ -27,6 +28,5 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 9 Aug 2026 | Muse Glimmer 30B | Meta | tracking | watch | watch only | 0 | 1 | n/a |
 | 5 Aug 2026 | Muse Spark 1.2 | Meta | tracking | watch | watch only | 0 | 1 | n/a |
 | 31 Jul 2026 | DeepSeek V4 Flash 0731 | DeepSeek | tracking | watch | watch only | 0 | 0 | n/a |
-| 27 Jul 2026 | Qwen3.7 Flash | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
