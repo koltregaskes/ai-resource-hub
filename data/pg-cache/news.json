@@ -1,15 +1,75 @@
 [
   {
+    "id": "news-06d8bd23c921860b999f",
+    "title": "TechCrunch Founder Summit 2026: Everything you need to know",
+    "url": "https://techcrunch.com/2026/09/24/techcrunch-founder-summit-2026-everything-you-need-to-know/",
+    "source": "TechCrunch",
+    "summary": "TechCrunch Founder Summit is a full-day gathering in Boston on November 4 where founders across all stages connect with top VCs and experienced entrepreneurs to gain tactical insights on building and scaling their companies.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-24T16:46:47.000Z",
+    "discovered_at": "2026-09-24 16:55:39"
+  },
+  {
+    "id": "news-5fbe01394f97e0370b12",
+    "title": "20 minutes with the CEO of ElevenLabs, now reportedly valued at $22B",
+    "url": "https://techcrunch.com/2026/09/24/twenty-minutes-with-the-ceo-of-elevenlabs-now-reportedly-valued-at-22-billion/",
+    "source": "TechCrunch",
+    "summary": "ElevenLabs powers the AI voice on the other end of a lot of customer service calls, and its CEO told me this week that businesses should probably tell you that — at least until getting a machine is what everyone expects anyway.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-24T16:35:13.000Z",
+    "discovered_at": "2026-09-24 16:55:39"
+  },
+  {
+    "id": "news-69d34719f9a17ab36a95",
+    "title": "Gemini can now call businesses for you so you don’t have to wait on hold",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1000116/google-gemini-business-phone-calls",
+    "source": "The Verge",
+    "summary": "Google's launching an \"early experiment\" feature on Pixel 11 that lets users delegate local business calls to Gemini, like making a reservation, checking if a product is in stock, or rescheduling an appointment. According to Google, you don't even need to start the call to have Gemini handle it for you: Instead of dia…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-24T16:04:31.000Z",
+    "discovered_at": "2026-09-24 16:55:40"
+  },
+  {
+    "id": "news-a0af0f0d7e888fbf7111",
+    "title": "Meet the next wave of VCs judging Startup Battlefield 200 at TechCrunch Disrupt 2026",
+    "url": "https://techcrunch.com/2026/09/24/meet-the-next-wave-of-vcs-judging-startup-battlefield-200-at-techcrunch-disrupt-2026/",
+    "source": "TechCrunch",
+    "summary": "Meet the next wave of VCs judging the Startup Battlefield 200 contenders on the main stage at TechCrunch Disrupt 2026. Register by September 25 at 11:59 p.m. PT, to save up to $200 and to get a front-row seat to one of the most intense startup pitch competitions.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-24T16:03:36.000Z",
+    "discovered_at": "2026-09-24 16:55:39"
+  },
+  {
+    "id": "news-b79191560dd64013b974",
+    "title": "Google tests letting Gemini call businesses for you",
+    "url": "https://techcrunch.com/2026/09/24/google-tests-letting-gemini-make-phone-calls-initially-for-us-pixel-owners/",
+    "source": "TechCrunch",
+    "summary": "Google says the AI-calling feature will first be available to Pixel 11 owners in the U.S. who pay for a Gemini subscription.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-24T16:00:00.000Z",
+    "discovered_at": "2026-09-24 16:55:39"
+  },
+  {
     "id": "news-5b513703eb7f50ea6463",
     "title": "Shield AI, Waabi, and General Motors on building AI when failure is not an option at TechCrunch Disrupt 2026",
     "url": "https://techcrunch.com/2026/09/24/shield-ai-waabi-and-general-motors-on-building-ai-when-failure-is-not-an-option-at-techcrunch-disrupt-2026/",
     "source": "TechCrunch",
-    "summary": "Leaders from Waabi, Shield AI, and General Motors join the Real World AI Stage at TechCrunch Disrupt 2026 to talk building AI. Save up to $200 by Sept. 25, 11:59 p.m. PT. Get a second pass at 50% off.",
+    "summary": "Leaders from Waabi, Shield AI, and General Motors join the Real World AI Stage at TechCrunch Disrupt 2026 to talk building AI. Save up to $200 by September 25 at 11:59 p.m. PT. Get a second pass at 50% off.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T15:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-d97cd233317bb41e88d9",
@@ -21,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:43:25.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-7921e1c1f3981a03de3e",
@@ -33,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:31:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-eb32233e29f9e6a39551",
@@ -45,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:30:00.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-eb48c349777e4f2bfdc5",
@@ -57,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:30:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-bd3f02787fa0480ec2e4",
@@ -69,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:15:17.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-1175020668fb88f72cea",
@@ -81,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:15:05.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-6fb7e688771724e144b7",
@@ -93,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:15:00.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-9091e5e67e944af84d97",
@@ -105,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-752f2436c805c12b96ff",
@@ -117,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T13:31:43.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-020ea9c727ecd4a54ff8",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T13:30:00.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-eb461d26ec818632cf9d",
@@ -141,11 +201,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T12:54:19.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-7230613e317e42f31588",
-    "title": "OpenAI agents hacked an Australian government website in search for data",
+    "title": "OpenAI agents hacked an Australian government website in search of data",
     "url": "https://www.theverge.com/ai-artificial-intelligence/999874/openai-agents-hacked-an-australian-government-website-in-search-for-data",
     "source": "The Verge",
     "summary": "OpenAI's artificial intelligence agents hacked an Australian government website and attempted to breach numerous other government and university websites. The attack appears to be the first confirmed instance of a rogue AI agent breaching a government website, adding fuel to rapidly intensifying concerns about the saf…",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T11:52:32.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-864189f9e259ba6cab31",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T09:04:18.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-5f9b2dff770ee5eea050",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T01:13:32.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-b03075519864836b1cd6",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T00:46:17.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-6330e9855670eee094cb",
@@ -201,19 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T00:15:20.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
-  },
-  {
-    "id": "news-14d2985af4197e865143",
-    "title": "Muse is coming to Meta smart glasses",
-    "url": "https://www.theverge.com/tech/999673/meta-connect-2026-muse-glasses-features",
-    "source": "The Verge",
-    "summary": "Just a couple of weeks after launching Muse, Meta announced that it's \"working on\" bringing the agent to its smart glasses, including the new glasses it unveiled at Meta Connect. Users will be able to activate Muse from their glasses by saying its name and ask it to handle tasks like guiding a workout, logging [&#8230…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-23T23:40:56.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-b8569e46aaeee2e50080",
@@ -225,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T23:39:44.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-72bffe5e6639c434181a",
@@ -237,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T22:17:39.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-d6b54cabcf8d5174ad7c",
@@ -249,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T19:31:28.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-8a86c97089bb6492a0d5",
@@ -261,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T18:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-d9a1b51f35a634c186cb",
@@ -273,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T17:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-40adb5958ef217301ab2",
@@ -285,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T16:49:58.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-9d02eeb8cef10808bb22",
@@ -297,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T16:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-8138d300d9ea6ebf7e67",
@@ -309,55 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T15:19:30.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
-  },
-  {
-    "id": "news-33d4153d93666fb28932",
-    "title": "YouTube releases new AI features for creators within its Studio app",
-    "url": "https://techcrunch.com/2026/09/23/youtube-releases-new-ai-features-for-creators-within-its-studio-app/",
-    "source": "TechCrunch",
-    "summary": "YouTube is adding new features to generate ideas and monitor the performance of thumbnails.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-23T14:30:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
-  },
-  {
-    "id": "news-3fbc62c6d1b242a721a3",
-    "title": "StrictlyVC at TechCrunch Disrupt 2026: Inside the changing rules of venture capital",
-    "url": "https://techcrunch.com/2026/09/23/strictlyvc-at-techcrunch-disrupt-2026-inside-the-changing-rules-of-venture-capital/",
-    "source": "TechCrunch",
-    "summary": "StrictlyVC joins TechCrunch Disrupt 2026 to discuss the changing VC landscape thanks to AI. Get your Investor Pass to join these exclusive sessions. Save $200 before September 25 at 11:59 p.m. PT.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-23T14:30:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
-  },
-  {
-    "id": "news-ec5172ddcc942332d6fe",
-    "title": "YouTube will let you build your own algorithm with AI",
-    "url": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/",
-    "source": "TechCrunch",
-    "summary": "YouTube’s new custom feeds let users describe the videos they want to see in their own words, then use Gemini to build a personalized feed around the request.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-23T14:30:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
-  },
-  {
-    "id": "news-bed8eeca800d4219e86d",
-    "title": "3 days left to save up to $200 and make impactful connections at TechCrunch Disrupt 2026",
-    "url": "https://techcrunch.com/2026/09/23/3-days-left-to-save-up-to-200-and-make-impactful-connections-at-techcrunch-disrupt-2026/",
-    "source": "TechCrunch",
-    "summary": "3 days to save up to $200 on your TechCrunch Disrupt 2026 pass, plus 50% off a second. Make impactful connections with 10,000+ tech leaders. Last day to save is September 25 at 11:59 p.m. PT. Register today.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-23T14:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-1d77064cbebb782f18a0",
@@ -369,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T13:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-7cff1964bf19497febe2",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-7357353a1f1d61a65439",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-f7558dc5c9de5bb5fdc7",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-01d4e543c9419cead77e",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-1d5a9cc2d9509da81910",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T10:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-1dd9ce125c6e0e6007fa",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T02:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-73fafdf6f45f6a4122d4",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T01:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-09a0c6dbf1c6c00d5fb7",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T00:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-b6b1e4118cdbb52902a3",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T21:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-69bd5b227657faccb6a8",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T19:45:47.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-3d48e529ad7a20b189a9",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T18:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-ce45d8dc0f6c9cea266a",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T12:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-b4fb82cc1313a309dc9a",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T00:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-b2c543ac59e1c4518c6a",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T22:24:38.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-a7ca59844a94ccd6f8fa",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T12:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-d37f5b2c59270d018304",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T12:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-2c9792fbb14ae5db99d4",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T10:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-530db518a73a571777c5",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T07:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:34"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-079e661c04cec0b07e5c",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T14:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-13d62ca6fcfd55d7fb1a",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T13:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-e7b9d12d1b3a7eb0c954",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T20:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-168e3a7edc7326171115",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T18:33:13.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-a243976a4aeffe7860e7",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-b86d9a766fb72b730ea5",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-18592959ad29d5e254c8",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-00e29a681a6f5e3b92e5",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T13:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-6758d03842f78c1d60a7",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T21:04:32.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-b49b47db0b359f67793a",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T19:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-bf70dc826a65d37ea361",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T16:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-1852061b5cf6950bdd51",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-10T16:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-eca0578fed4853fc9470",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T20:55:02.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-e8269fc9a10961e9d9fc",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T16:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-b0dd0e34ba0b936c69dc",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T16:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-bf8c2b1da340d9c0e6fb",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-08T21:11:46.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-680bad5aa943a5735811",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-04T22:17:36.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-289c57109448005063ce",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-04T17:18:12.000Z",
-    "discovered_at": "2026-09-24 15:55:36"
+    "discovered_at": "2026-09-24 16:55:40"
   },
   {
     "id": "news-28b149c75e15ee1815b2",
@@ -813,7 +813,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-02T15:40:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-66eabab6976f3ac7c05c",
@@ -825,7 +825,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-01T20:45:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-77cd2a6a82f1c4f3f7d9",
@@ -837,7 +837,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-01T16:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-3df5fbd9b80322fba0d8",
@@ -849,7 +849,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-01T00:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   },
   {
     "id": "news-5a6b85529262921a7e71",
@@ -861,18 +861,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-27T16:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
-  },
-  {
-    "id": "news-5f0b03166bf110740909",
-    "title": "5 ways to upgrade your home decor with Google Search",
-    "url": "https://blog.google/products-and-platforms/products/search/home-decor-tips/",
-    "source": "Google",
-    "summary": "Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-08-25T16:00:00.000Z",
-    "discovered_at": "2026-09-24 15:55:35"
+    "discovered_at": "2026-09-24 16:55:39"
   }
 ]
