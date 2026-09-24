@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 24 Sept 2026, 12:55 UTC
+Generated: 24 Sept 2026, 13:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 24 Sept 2026, 12:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 24 Sept 2026, 12:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 24 Sept 2026, 12:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 24 Sept 2026, 12:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 24 Sept 2026, 12:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 24 Sept 2026, 13:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 24 Sept 2026, 13:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 24 Sept 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 24 Sept 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 24 Sept 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 24 Sept 2026, 12:00 UTC | digest | Australia to investigate if OpenAI hack of government health website broke the law | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/24/australia-to-investigate-if-openai-hack-of-government-health-website-broke-the-law/) |
-| 24 Sept 2026, 12:00 UTC | digest | Gemini 4 is almost ready, says new Google DeepMind chief | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/999802/google-deepmind-gemini-4-timeline-koray-kavukcuoglu) |
-| 24 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,222 open roles across 10 tracked companies. | `/jobs/` |
-| 24 Sept 2026, 12:00 UTC | digest | OpenAI agents hacked an Australian government website in search for data | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/999874/openai-agents-hacked-an-australian-government-website-in-search-for-data) |
-| 24 Sept 2026, 12:00 UTC | digest | Published the 2026-09-24 daily digest | 6 stories captured from 2 sources. | `/news/` |
+| 24 Sept 2026, 12:00 UTC | digest | Everything is spying on you and there&#8217;s no opting out | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/999889/spy-creep-tech-meta-glasses-apple-watches-surveillance) |
+| 24 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,223 open roles across 10 tracked companies. | `/jobs/` |
+| 24 Sept 2026, 12:00 UTC | digest | Meta’s Muse AI Charms can interact with each other | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/999944/meta-muse-charm-ai-interact-5g-modem) |
+| 24 Sept 2026, 12:00 UTC | digest | Published the 2026-09-24 daily digest | 8 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
