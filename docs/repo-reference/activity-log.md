@@ -1,6 +1,6 @@
 # Recent Activity Snapshot
 
-Generated: 24 Sept 2026, 09:57 UTC
+Generated: 24 Sept 2026, 10:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
@@ -8,14 +8,14 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | --- | --- | --- | --- | --- |
 | 24 Sept 2026, 12:00 UTC | digest | Everything new coming to Meta&#8217;s AI agent Muse | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/23/everything-new-coming-to-metas-ai-agent-muse/) |
 | 24 Sept 2026, 12:00 UTC | digest | Gemini 4 is almost ready, says new Google DeepMind chief | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/999802/google-deepmind-gemini-4-timeline-koray-kavukcuoglu) |
-| 24 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,226 open roles across 10 tracked companies. | `/jobs/` |
+| 24 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,222 open roles across 10 tracked companies. | `/jobs/` |
 | 24 Sept 2026, 12:00 UTC | digest | Meta made a Tamagotchi-like wearable for its Muse AI agent | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/23/meta-made-a-tamagotchi-like-wearable-for-its-muse-ai-agent/) |
 | 24 Sept 2026, 12:00 UTC | digest | Published the 2026-09-24 daily digest | 4 stories captured from 2 sources. | `/news/` |
-| 24 Sept 2026, 09:57 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 24 Sept 2026, 09:56 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 24 Sept 2026, 09:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 24 Sept 2026, 09:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 24 Sept 2026, 09:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 24 Sept 2026, 10:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 24 Sept 2026, 10:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 24 Sept 2026, 10:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 24 Sept 2026, 10:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 24 Sept 2026, 10:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
