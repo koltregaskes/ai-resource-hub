@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T18:55:43.381Z",
+  "generatedAt": "2026-09-24T19:06:13.497Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-24T18:55:43.288Z",
+      "lastCheckedAt": "2026-09-24T19:06:13.490Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-09-24T18:50:20.000Z",
+          "id": "fireworks-feed-0-2026-09-24T19:04:13.000Z",
+          "title": "Service Degradation for Qwen 3.8 Max",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-09-24T19:04:13.000Z",
+          "updatedAt": "2026-09-24T19:04:13.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M3AB4X82NDHSDWYXKR8FCYEC",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-09-24T18:50:20.000Z",
           "title": "Service Degradation for Nemotron 3.5 Lightning",
           "status": "reported",
           "impact": "unknown",
@@ -29,22 +40,22 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M3AC2749JME7F6TVGQ2YM4TD",
           "summary": "Status: Investigating We are seeing impacted performance for Nemotron 3.5 Lightning. We are actively investigating. Affected components Nemotron 3.5 Lightning (Degraded performanc..."
-        },
-        {
-          "id": "fireworks-feed-1-2026-09-24T18:34:20.000Z",
-          "title": "Service Degradation for Qwen 3.8 Max",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-09-24T18:34:20.000Z",
-          "updatedAt": "2026-09-24T18:34:20.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M3AB4X82NDHSDWYXKR8FCYEC",
-          "summary": "Status: Investigating We are seeing impacted performance for Qwen 3.8 Max. We are actively investigating. Affected components Qwen 3.8 Max (Degraded performance)"
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-09-24T18:50:20.000Z",
+          "id": "fireworks-feed-0-2026-09-24T19:04:13.000Z",
+          "title": "Service Degradation for Qwen 3.8 Max",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-09-24T19:04:13.000Z",
+          "updatedAt": "2026-09-24T19:04:13.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M3AB4X82NDHSDWYXKR8FCYEC",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-09-24T18:50:20.000Z",
           "title": "Service Degradation for Nemotron 3.5 Lightning",
           "status": "reported",
           "impact": "unknown",
@@ -53,17 +64,6 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M3AC2749JME7F6TVGQ2YM4TD",
           "summary": "Status: Investigating We are seeing impacted performance for Nemotron 3.5 Lightning. We are actively investigating. Affected components Nemotron 3.5 Lightning (Degraded performanc..."
-        },
-        {
-          "id": "fireworks-feed-1-2026-09-24T18:34:20.000Z",
-          "title": "Service Degradation for Qwen 3.8 Max",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-09-24T18:34:20.000Z",
-          "updatedAt": "2026-09-24T18:34:20.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M3AB4X82NDHSDWYXKR8FCYEC",
-          "summary": "Status: Investigating We are seeing impacted performance for Qwen 3.8 Max. We are actively investigating. Affected components Qwen 3.8 Max (Degraded performance)"
         },
         {
           "id": "fireworks-feed-2-2026-09-23T13:50:11.000Z",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-24T18:55:42.008Z",
+      "lastCheckedAt": "2026-09-24T19:06:12.276Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-24T18:55:43.375Z",
+      "lastCheckedAt": "2026-09-24T19:06:13.171Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-24T18:55:42.187Z",
+      "lastCheckedAt": "2026-09-24T19:06:12.625Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -242,10 +242,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-24T18:55:42.032Z",
+      "lastCheckedAt": "2026-09-24T19:06:12.201Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -273,8 +273,29 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "01M3ACKDE4GYY67FXXNRRSC0CE",
+          "title": "Elevated Error Rates on GPT-6 Astra Pro",
+          "status": "identified",
+          "impact": "none",
+          "startedAt": "2026-09-24T18:59:44.000Z",
+          "updatedAt": "2026-09-24T18:59:44.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for GPT-6 Astra Pro.\n\nWe are working on implementing a mitigation."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "01M3ACKDE4GYY67FXXNRRSC0CE",
+          "title": "Elevated Error Rates on GPT-6 Astra Pro",
+          "status": "identified",
+          "impact": "none",
+          "startedAt": "2026-09-24T18:59:44.000Z",
+          "updatedAt": "2026-09-24T18:59:44.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for GPT-6 Astra Pro.\n\nWe are working on implementing a mitigation."
+        },
         {
           "id": "01M389CDQ97B11QPMSRAAYSE5S",
           "title": "Mobile users unable to see Work Mode and the Model Picker",
@@ -304,16 +325,6 @@
           "updatedAt": "2026-09-22T15:58:32.000Z",
           "resolvedAt": "2026-09-22T15:58:32.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M348TX2DX7KPM9X857N4APNV",
-          "title": "Increased error rate for Plus and Pro users.",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-22T09:58:28.000Z",
-          "updatedAt": "2026-09-22T10:37:42.000Z",
-          "resolvedAt": "2026-09-22T10:37:42.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -328,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-24T18:55:43.063Z",
+      "lastCheckedAt": "2026-09-24T19:06:13.286Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
