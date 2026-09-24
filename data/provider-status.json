@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T17:58:04.740Z",
+  "generatedAt": "2026-09-24T18:55:43.381Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-24T17:58:04.675Z",
+      "lastCheckedAt": "2026-09-24T18:55:43.288Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,31 +20,53 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-09-23T13:50:11.000Z",
-          "title": "Service Degradation for GLM 5.2 US",
+          "id": "fireworks-feed-0-2026-09-24T18:50:20.000Z",
+          "title": "Service Degradation for Nemotron 3.5 Lightning",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-09-23T13:50:11.000Z",
-          "updatedAt": "2026-09-23T13:50:11.000Z",
+          "startedAt": "2026-09-24T18:50:20.000Z",
+          "updatedAt": "2026-09-24T18:50:20.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M376PSV9XP5X666QF3Y0NYW5",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+          "url": "https://status.fireworks.ai//incidents/01M3AC2749JME7F6TVGQ2YM4TD",
+          "summary": "Status: Investigating We are seeing impacted performance for Nemotron 3.5 Lightning. We are actively investigating. Affected components Nemotron 3.5 Lightning (Degraded performanc..."
         },
         {
-          "id": "fireworks-feed-1-2026-09-22T00:00:52.000Z",
-          "title": "Service Degradation for Deepseek V4.1 Flash",
+          "id": "fireworks-feed-1-2026-09-24T18:34:20.000Z",
+          "title": "Service Degradation for Qwen 3.8 Max",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-09-22T00:00:52.000Z",
-          "updatedAt": "2026-09-22T00:00:52.000Z",
+          "startedAt": "2026-09-24T18:34:20.000Z",
+          "updatedAt": "2026-09-24T18:34:20.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M3366VWWP8AY12Q1D50EFCSS",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+          "url": "https://status.fireworks.ai//incidents/01M3AB4X82NDHSDWYXKR8FCYEC",
+          "summary": "Status: Investigating We are seeing impacted performance for Qwen 3.8 Max. We are actively investigating. Affected components Qwen 3.8 Max (Degraded performance)"
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-09-23T13:50:11.000Z",
+          "id": "fireworks-feed-0-2026-09-24T18:50:20.000Z",
+          "title": "Service Degradation for Nemotron 3.5 Lightning",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-09-24T18:50:20.000Z",
+          "updatedAt": "2026-09-24T18:50:20.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M3AC2749JME7F6TVGQ2YM4TD",
+          "summary": "Status: Investigating We are seeing impacted performance for Nemotron 3.5 Lightning. We are actively investigating. Affected components Nemotron 3.5 Lightning (Degraded performanc..."
+        },
+        {
+          "id": "fireworks-feed-1-2026-09-24T18:34:20.000Z",
+          "title": "Service Degradation for Qwen 3.8 Max",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-09-24T18:34:20.000Z",
+          "updatedAt": "2026-09-24T18:34:20.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M3AB4X82NDHSDWYXKR8FCYEC",
+          "summary": "Status: Investigating We are seeing impacted performance for Qwen 3.8 Max. We are actively investigating. Affected components Qwen 3.8 Max (Degraded performance)"
+        },
+        {
+          "id": "fireworks-feed-2-2026-09-23T13:50:11.000Z",
           "title": "Service Degradation for GLM 5.2 US",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-09-22T00:00:52.000Z",
+          "id": "fireworks-feed-3-2026-09-22T00:00:52.000Z",
           "title": "Service Degradation for Deepseek V4.1 Flash",
           "status": "reported",
           "impact": "unknown",
@@ -63,28 +85,6 @@
           "updatedAt": "2026-09-22T00:00:52.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M3366VWWP8AY12Q1D50EFCSS",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-2-2026-09-19T17:04:04.000Z",
-          "title": "Service Degradation for Kimi K3 Fast",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-09-19T17:04:04.000Z",
-          "updatedAt": "2026-09-19T17:04:04.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M2X9P4QGG4V22SVWTEACW1D0",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-09-19T11:37:53.000Z",
-          "title": "Service Degradation for GLM 5.3 US",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-09-19T11:37:53.000Z",
-          "updatedAt": "2026-09-19T11:37:53.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M2WPY5JYQQ1R385ER9F3S5EM",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-24T17:58:03.876Z",
+      "lastCheckedAt": "2026-09-24T18:55:42.008Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-24T17:58:04.579Z",
+      "lastCheckedAt": "2026-09-24T18:55:43.375Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-24T17:58:03.940Z",
+      "lastCheckedAt": "2026-09-24T18:55:42.187Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -242,7 +242,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-24T17:58:03.922Z",
+      "lastCheckedAt": "2026-09-24T18:55:42.032Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -328,7 +328,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-24T17:58:04.733Z",
+      "lastCheckedAt": "2026-09-24T18:55:43.063Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -352,7 +352,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []

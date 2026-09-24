@@ -1,5 +1,41 @@
 [
   {
+    "id": "news-57d9461ca601ffb7f3cb",
+    "title": "Oracle sends force majeure notice on its New Mexico Stargate data center",
+    "url": "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/",
+    "source": "TechCrunch",
+    "summary": "The notice would allow Oracle to delay payments should the facility miss its 2028 target to come online.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-24T18:11:44.000Z",
+    "discovered_at": "2026-09-24 18:55:38"
+  },
+  {
+    "id": "news-3ab9cbba8c0d8bf46782",
+    "title": "Jensen Huang talks about AI and climate change like a supervillain",
+    "url": "https://www.theverge.com/tech/1000140/jensen-huang-nvidia-ai-energy-climate-change-supervillain",
+    "source": "The Verge",
+    "summary": "As Jensen Huang puts it, AI can help fight climate change - but only if it inflicts \"an enormous amount of pain and suffering\" first. The Nvidia CEO discussed the future of energy and AI's impact on our planet in the latest episode of The Ezra Klein Show. But his comments boil down to the [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-24T18:04:44.000Z",
+    "discovered_at": "2026-09-24 18:55:38"
+  },
+  {
+    "id": "news-18e7444965179a134bbd",
+    "title": "Meta is going to let you build games with AI right on your phone",
+    "url": "https://www.theverge.com/games/999972/meta-horizon-create-studio-ai-games",
+    "source": "The Verge",
+    "summary": "Meta has a new plan to get people to make games for its Horizon social platform. The company today announced two new development tools that will let you create games with AI prompts: Horizon Create, a mobile app, and Horizon Studio, a browser app that offers more granular controls. The apps will be available in [&#823…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-24T17:52:29.000Z",
+    "discovered_at": "2026-09-24 18:55:38"
+  },
+  {
     "id": "news-6374a69076e5abec24c6",
     "title": "Meta&#8217;s Muse Charm looks like a Tamagotchi, but it&#8217;s tapping into a much newer trend",
     "url": "https://techcrunch.com/2026/09/24/metas-muse-charm-looks-like-a-tamagotchi-but-its-tapping-into-a-much-newer-trend/",
@@ -9,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T17:39:24.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-cb7e0a0370f056e24a2e",
@@ -21,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T17:14:12.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-0b7b681fb83d1416c8cb",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T17:10:38.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-091e61d14291c59ce718",
@@ -45,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T17:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-03ce780af89be3224910",
@@ -57,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T17:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-06d8bd23c921860b999f",
@@ -69,11 +105,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T16:46:47.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-5fbe01394f97e0370b12",
-    "title": "20 minutes with the CEO of ElevenLabs, now reportedly valued at $22B",
+    "title": "ElevenLabs&#8217; CEO on margins, IPO timing, and telling customers they&#8217;re talking to a bot",
     "url": "https://techcrunch.com/2026/09/24/twenty-minutes-with-the-ceo-of-elevenlabs-now-reportedly-valued-at-22-billion/",
     "source": "TechCrunch",
     "summary": "ElevenLabs powers the AI voice on the other end of a lot of customer service calls, and its CEO told me this week that businesses should probably tell you that — at least until getting a machine is what everyone expects anyway.",
@@ -81,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T16:35:13.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-69d34719f9a17ab36a95",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T16:04:31.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-a0af0f0d7e888fbf7111",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T16:03:36.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-b79191560dd64013b974",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T16:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-5b513703eb7f50ea6463",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T15:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-d97cd233317bb41e88d9",
@@ -141,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:43:25.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-7921e1c1f3981a03de3e",
@@ -153,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:31:00.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-eb32233e29f9e6a39551",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:30:00.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-eb48c349777e4f2bfdc5",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:30:00.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-bd3f02787fa0480ec2e4",
@@ -189,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:15:17.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-1175020668fb88f72cea",
@@ -201,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:15:05.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-6fb7e688771724e144b7",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:15:00.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-9091e5e67e944af84d97",
@@ -225,31 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T14:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
-  },
-  {
-    "id": "news-752f2436c805c12b96ff",
-    "title": "Meta’s Muse AI Charms can interact with each other",
-    "url": "https://www.theverge.com/tech/999944/meta-muse-charm-ai-interact-5g-modem",
-    "source": "The Verge",
-    "summary": "Meta's handheld AI gadget, called the Muse Charm, will be able to recognize and interact with other nearby Charms when it launches later this year. That's according to a report from Bloomberg, which includes more details about the device that the company teased during its Meta Connect keynote on Wednesday. The Muse Ch…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-24T13:31:43.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
-  },
-  {
-    "id": "news-020ea9c727ecd4a54ff8",
-    "title": "Everything is spying on you and there&#8217;s no opting out",
-    "url": "https://www.theverge.com/tech/999889/spy-creep-tech-meta-glasses-apple-watches-surveillance",
-    "source": "The Verge",
-    "summary": "Earlier this month, Apple announced that its new Apple Watches will have the ability to continuously listen to every spoken word they detect and create summaries of whatever's going on around you. The privacy blowback was immediate and inevitable: Experts warned of the legal risks of using the features, especially in…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-24T13:30:00.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-eb461d26ec818632cf9d",
@@ -261,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T12:54:19.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-5f9b2dff770ee5eea050",
@@ -273,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T01:13:32.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-b03075519864836b1cd6",
@@ -285,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-24T00:46:17.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-b8569e46aaeee2e50080",
@@ -297,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T23:39:44.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-72bffe5e6639c434181a",
@@ -309,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T22:17:39.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-d6b54cabcf8d5174ad7c",
@@ -321,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T19:31:28.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-8a86c97089bb6492a0d5",
@@ -333,19 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T18:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
-  },
-  {
-    "id": "news-d9a1b51f35a634c186cb",
-    "title": "ChatGPT mobile app gets voice-based agentic features",
-    "url": "https://techcrunch.com/2026/09/23/chatgpt-mobile-app-gets-voice-based-agentic-features/",
-    "source": "TechCrunch",
-    "summary": "Pro and Plus users will be able to use the Work tab on their phones to complete agentic tasks.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-23T17:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-9d02eeb8cef10808bb22",
@@ -357,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T16:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-1d77064cbebb782f18a0",
@@ -369,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T13:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-7cff1964bf19497febe2",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-7357353a1f1d61a65439",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-f7558dc5c9de5bb5fdc7",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-01d4e543c9419cead77e",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-1d5a9cc2d9509da81910",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T10:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-1dd9ce125c6e0e6007fa",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T02:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-73fafdf6f45f6a4122d4",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T01:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-09a0c6dbf1c6c00d5fb7",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T00:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-b6b1e4118cdbb52902a3",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T21:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-69bd5b227657faccb6a8",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T19:45:47.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:41"
   },
   {
     "id": "news-3d48e529ad7a20b189a9",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T18:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-ce45d8dc0f6c9cea266a",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T12:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-b4fb82cc1313a309dc9a",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T00:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-b2c543ac59e1c4518c6a",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T22:24:38.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:41"
   },
   {
     "id": "news-a7ca59844a94ccd6f8fa",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T12:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-d37f5b2c59270d018304",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T12:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-2c9792fbb14ae5db99d4",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T10:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-530db518a73a571777c5",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T07:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:37"
   },
   {
     "id": "news-079e661c04cec0b07e5c",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T14:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-13d62ca6fcfd55d7fb1a",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T13:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-e7b9d12d1b3a7eb0c954",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T20:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-168e3a7edc7326171115",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T18:33:13.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:41"
   },
   {
     "id": "news-a243976a4aeffe7860e7",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-b86d9a766fb72b730ea5",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-18592959ad29d5e254c8",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-00e29a681a6f5e3b92e5",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T13:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-6758d03842f78c1d60a7",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T21:04:32.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:41"
   },
   {
     "id": "news-b49b47db0b359f67793a",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T19:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-bf70dc826a65d37ea361",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T16:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-1852061b5cf6950bdd51",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-10T16:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-eca0578fed4853fc9470",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T20:55:02.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:41"
   },
   {
     "id": "news-e8269fc9a10961e9d9fc",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T16:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-b0dd0e34ba0b936c69dc",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T16:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-bf8c2b1da340d9c0e6fb",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-08T21:11:46.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:41"
   },
   {
     "id": "news-680bad5aa943a5735811",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-04T22:17:36.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:41"
   },
   {
     "id": "news-289c57109448005063ce",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-04T17:18:12.000Z",
-    "discovered_at": "2026-09-24 17:55:37"
+    "discovered_at": "2026-09-24 18:55:41"
   },
   {
     "id": "news-28b149c75e15ee1815b2",
@@ -813,7 +813,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-02T15:40:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-66eabab6976f3ac7c05c",
@@ -825,7 +825,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-01T20:45:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-77cd2a6a82f1c4f3f7d9",
@@ -837,7 +837,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-01T16:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-3df5fbd9b80322fba0d8",
@@ -849,7 +849,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-01T00:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   },
   {
     "id": "news-5a6b85529262921a7e71",
@@ -861,6 +861,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-08-27T16:00:00.000Z",
-    "discovered_at": "2026-09-24 17:55:36"
+    "discovered_at": "2026-09-24 18:55:38"
   }
 ]
