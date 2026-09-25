@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T21:55:46.106Z",
+  "generated": "2026-09-25T22:16:34.824Z",
   "model_count": 182,
   "active_model_count": 109,
   "tracking_model_count": 72,
@@ -108,7 +108,7 @@
       },
       "value_score": 2,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "veo-3",
@@ -289,7 +289,7 @@
       },
       "value_score": 2.7,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-5.2",
@@ -334,7 +334,7 @@
       },
       "value_score": 22.9,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gemini-stt",
@@ -427,7 +427,7 @@
       },
       "value_score": 65.5,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "claude-opus-4.6",
@@ -466,7 +466,7 @@
       },
       "value_score": 5.9,
       "pricing_source": "Anthropic (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "flux-kontext",
@@ -664,7 +664,7 @@
       },
       "value_score": 35.2,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "o3-pro",
@@ -692,7 +692,7 @@
       },
       "value_score": 1.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "deepgram-nova-2",
@@ -741,7 +741,7 @@
       },
       "value_score": 30.9,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gen-4",
@@ -811,7 +811,7 @@
       },
       "value_score": 76.5,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "udio-v2",
@@ -860,7 +860,7 @@
       },
       "value_score": 11.5,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "claude-sonnet-4.6",
@@ -888,7 +888,7 @@
       },
       "value_score": 9.6,
       "pricing_source": "Anthropic (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-4o-mini-tts",
@@ -1025,7 +1025,7 @@
       },
       "value_score": 36.3,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "deepseek-r1",
@@ -1067,7 +1067,7 @@
       },
       "value_score": 53.1,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "recraft-v3",
@@ -1184,7 +1184,7 @@
       },
       "value_score": 2.2,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "o3-mini",
@@ -1211,7 +1211,7 @@
       },
       "value_score": 61.1,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gemini-2.5-pro",
@@ -1259,7 +1259,7 @@
       },
       "value_score": 14.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gen-4-turbo",
@@ -1354,7 +1354,7 @@
       },
       "value_score": 62.6,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "resemble-v3",
@@ -1533,7 +1533,7 @@
       },
       "value_score": 98.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "sora-turbo",
@@ -1625,7 +1625,7 @@
       },
       "value_score": 12.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "dream-machine",
@@ -1749,7 +1749,7 @@
       },
       "value_score": 8.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "claude-sonnet-4.5",
@@ -1775,7 +1775,7 @@
       },
       "value_score": 17.6,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "command-r-plus",
@@ -1797,7 +1797,7 @@
       "benchmarks": null,
       "value_score": 12.6,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "hailuo-i2v-01-live",
@@ -1846,7 +1846,7 @@
       },
       "value_score": 395,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "flux-1-schnell",
@@ -1890,7 +1890,7 @@
       "benchmarks": null,
       "value_score": 693.3,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gemini-2.5-flash",
@@ -1918,7 +1918,7 @@
       },
       "value_score": 111.4,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "nova-pro",
@@ -1940,7 +1940,7 @@
       "benchmarks": null,
       "value_score": 39,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "openai-tts-1",
@@ -2035,7 +2035,7 @@
       },
       "value_score": 123.2,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-4.1",
@@ -2064,7 +2064,7 @@
       },
       "value_score": 30.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "llama-3.1-70b",
@@ -2086,7 +2086,7 @@
       "benchmarks": null,
       "value_score": 192.5,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "claude-haiku-4.5",
@@ -2112,7 +2112,7 @@
       },
       "value_score": 50.7,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "cogvideox-1.5",
@@ -2162,7 +2162,7 @@
       },
       "value_score": 125.6,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "llama-4-maverick",
@@ -2195,7 +2195,7 @@
       },
       "value_score": 180.7,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-4.1-mini",
@@ -2222,7 +2222,7 @@
       },
       "value_score": 150,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-4.1-nano",
@@ -2244,7 +2244,7 @@
       "benchmarks": null,
       "value_score": 600,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-4o",
@@ -2285,7 +2285,7 @@
       },
       "value_score": 24,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "stable-diffusion-xl",
@@ -2356,7 +2356,7 @@
       },
       "value_score": 394.7,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gemini-2.5-flash-lite",
@@ -2382,7 +2382,7 @@
       },
       "value_score": 592,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "phi-4",
@@ -2409,7 +2409,7 @@
       },
       "value_score": 704.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "reka-flash-3",
@@ -2431,7 +2431,7 @@
       "benchmarks": null,
       "value_score": 493.3,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "sonar",
@@ -2453,7 +2453,7 @@
       "benchmarks": null,
       "value_score": 74,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "command-r",
@@ -2475,7 +2475,7 @@
       "benchmarks": null,
       "value_score": 194.7,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "mistral-large-3",
@@ -2504,7 +2504,7 @@
       },
       "value_score": 18.3,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "mistral-nemo",
@@ -2526,7 +2526,7 @@
       "benchmarks": null,
       "value_score": 2938.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "mistral-small-3.1",
@@ -2552,7 +2552,7 @@
       },
       "value_score": 158.9,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "musicgen-large",
@@ -2596,7 +2596,7 @@
       "benchmarks": null,
       "value_score": 480,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "llama-3.3-70b",
@@ -2623,7 +2623,7 @@
       },
       "value_score": 338.1,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "qwen-2.5-72b",
@@ -2651,7 +2651,7 @@
       },
       "value_score": 186.8,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "llama-3.1-8b",
@@ -2673,7 +2673,7 @@
       "benchmarks": null,
       "value_score": 1046.2,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "nova-micro",
@@ -2695,7 +2695,7 @@
       "benchmarks": null,
       "value_score": 777.1,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "command-r7b",
@@ -2717,7 +2717,7 @@
       "benchmarks": null,
       "value_score": 691.5,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gemini-3.1-pro",
@@ -2742,7 +2742,7 @@
       },
       "value_score": 27.4,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "grok-4",
@@ -2802,7 +2802,7 @@
       "benchmarks": null,
       "value_score": 135.4,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "grok-4.1-fast",
@@ -3015,7 +3015,7 @@
       "benchmarks": null,
       "value_score": 461.1,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "mistral-large-2",
@@ -3037,7 +3037,7 @@
       "benchmarks": null,
       "value_score": 20.5,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "mistral-medium-3",
@@ -3059,7 +3059,7 @@
       "benchmarks": null,
       "value_score": 68.3,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "nova-2-lite",
@@ -3081,7 +3081,7 @@
       "benchmarks": null,
       "value_score": 58.6,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "pixtral-large",
@@ -3125,7 +3125,7 @@
       "benchmarks": null,
       "value_score": 264.5,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "codestral",
@@ -3147,7 +3147,7 @@
       "benchmarks": null,
       "value_score": 135,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "deepseek-v2.5",
@@ -3213,7 +3213,7 @@
       "benchmarks": null,
       "value_score": 123.1,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "nova-premier",
@@ -3235,7 +3235,7 @@
       "benchmarks": null,
       "value_score": 10.7,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "phi-4-reasoning",
@@ -3284,7 +3284,7 @@
       "benchmarks": null,
       "value_score": 8.9,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-4.5",
@@ -3409,7 +3409,7 @@
       },
       "value_score": 89.1,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "qwen-qwq-32b",
@@ -3851,7 +3851,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "Anthropic (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "claude-opus-4.7",
@@ -3873,7 +3873,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "Anthropic (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "claude-opus-4.8",
@@ -3895,7 +3895,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "Anthropic (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "claude-opus-4.8-fast",
@@ -3917,7 +3917,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "Anthropic (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "claude-opus-5",
@@ -3939,7 +3939,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "Anthropic (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "claude-opus-5-fast",
@@ -3961,7 +3961,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "Anthropic (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "claude-sonnet-5",
@@ -3983,7 +3983,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "Anthropic (official, introductory through 2026-08-31)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "glm-5",
@@ -4005,7 +4005,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "glm-5-turbo",
@@ -4027,7 +4027,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-5.4",
@@ -4049,7 +4049,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "OpenAI (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-5.4-mini",
@@ -4071,7 +4071,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "OpenAI (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-5.4-nano",
@@ -4093,7 +4093,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "OpenAI (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-5.4-pro",
@@ -4115,7 +4115,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "OpenAI (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-5.5",
@@ -4137,7 +4137,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "OpenAI (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-5.5-pro",
@@ -4159,7 +4159,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "OpenAI (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-5.6-luna",
@@ -4181,7 +4181,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "OpenAI (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-5.6-sol",
@@ -4203,7 +4203,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "OpenAI (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gpt-5.6-terra",
@@ -4225,7 +4225,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "OpenAI (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gemini-3.5-flash",
@@ -4247,7 +4247,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "Google AI (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gemini-3.5-flash-lite",
@@ -4269,7 +4269,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "Google AI (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gemini-3.6-flash",
@@ -4291,7 +4291,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "Google AI (official)",
-      "last_updated": "2026-09-25 21:55:31"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "gemma-4",
@@ -4313,7 +4313,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "grok-4.20",
@@ -4335,7 +4335,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "grok-4.20-multi-agent",
@@ -4357,7 +4357,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "kimi-k2.5",
@@ -4379,7 +4379,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "minimax-m2.7",
@@ -4401,7 +4401,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "qwen3.6-plus",
@@ -4423,7 +4423,7 @@
       "benchmarks": null,
       "value_score": null,
       "pricing_source": "openrouter.ai/api/v1/models",
-      "last_updated": "2026-09-25 21:55:30"
+      "last_updated": "2026-09-25 22:16:19"
     },
     {
       "id": "claude-mythos-preview",

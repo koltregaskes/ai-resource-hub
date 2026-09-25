@@ -1,18 +1,18 @@
 # Recent Activity Snapshot
 
-Generated: 25 Sept 2026, 21:55 UTC
+Generated: 25 Sept 2026, 22:16 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 25 Sept 2026, 21:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 25 Sept 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 25 Sept 2026, 21:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 25 Sept 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 25 Sept 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 25 Sept 2026, 22:16 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 25 Sept 2026, 22:16 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 25 Sept 2026, 22:16 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 25 Sept 2026, 22:16 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 25 Sept 2026, 22:16 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 25 Sept 2026, 12:00 UTC | digest | Anthropic to pay Akamai $11.6 billion over seven years in cloud deal | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/) |
-| 25 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,214 open roles across 10 tracked companies. | `/jobs/` |
+| 25 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,210 open roles across 10 tracked companies. | `/jobs/` |
 | 25 Sept 2026, 12:00 UTC | digest | Meta opens early access program for new Muse features | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/25/meta-opens-early-access-program-for-new-muse-features/) |
 | 25 Sept 2026, 12:00 UTC | digest | Proaction boosts sales 60% and saves 75+ hours with Codex | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/proaction) |
 | 25 Sept 2026, 12:00 UTC | digest | Published the 2026-09-25 daily digest | 20 stories captured from 3 sources. | `/news/` |
