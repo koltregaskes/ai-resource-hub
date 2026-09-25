@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 25 Sept 2026, 13:42 UTC
+Generated: 25 Sept 2026, 14:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 25 Sept 2026, 13:42 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 25 Sept 2026, 13:42 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 25 Sept 2026, 13:42 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 25 Sept 2026, 13:42 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 25 Sept 2026, 13:42 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 25 Sept 2026, 14:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 25 Sept 2026, 14:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 25 Sept 2026, 14:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 25 Sept 2026, 14:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 25 Sept 2026, 14:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 25 Sept 2026, 12:00 UTC | digest | Affected by layoffs? Don&#8217;t miss this $75 deal for your TechCrunch Disrupt 2026 Expo+ Pass | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/25/disrupt-2026-layoff-expo-plus-passes-available-for-75-dollars/) |
 | 25 Sept 2026, 12:00 UTC | digest | Can Apple Home’s AI camera features outsmart Amazon’s and Google’s? I put them to the test | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1000321/apple-intelligence-home-security-camera-amazon-ring-alexa-google-nest-gemini-home-review) |
-| 25 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,215 open roles across 10 tracked companies. | `/jobs/` |
-| 25 Sept 2026, 12:00 UTC | digest | Lightspeed targets $250M for new India fund, focusing on early-stage AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/24/lightspeed-targets-250m-for-new-india-fund-focusing-on-early-stage-ai/) |
-| 25 Sept 2026, 12:00 UTC | digest | Microsoft thinks its new Copilot ‘super app’ will be as influential as Office | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot) |
-| 25 Sept 2026, 12:00 UTC | digest | Published the 2026-09-25 daily digest | 3 stories captured from 2 sources. | `/news/` |
+| 25 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,216 open roles across 10 tracked companies. | `/jobs/` |
+| 25 Sept 2026, 12:00 UTC | digest | Last 24 hours to save up to $200 on TechCrunch Disrupt 2026. Reason 5/5 to attend: Leave further ahead. | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/25/last-24-hours-to-save-up-to-200-on-techcrunch-disrupt-2026-reason-5-5-to-attend/) |
+| 25 Sept 2026, 12:00 UTC | digest | Published the 2026-09-25 daily digest | 5 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
