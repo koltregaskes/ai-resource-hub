@@ -1,21 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 25 Sept 2026, 04:55 UTC
+Generated: 25 Sept 2026, 05:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 25 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,218 open roles across 10 tracked companies. | `/jobs/` |
-| 25 Sept 2026, 04:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 25 Sept 2026, 04:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 25 Sept 2026, 04:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 25 Sept 2026, 04:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 25 Sept 2026, 04:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 24 Sept 2026, 12:00 UTC | digest | Bring your co-founder, partner, or colleague and get 50% off a second TechCrunch Disrupt 2026 pass | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/24/bring-your-co-founder-partner-or-colleague-and-get-50-off-a-second-techcrunch-disrupt-2026-pass/) |
-| 24 Sept 2026, 12:00 UTC | digest | Gemini 3.8 Live with Live Avatar gives Google&#8217;s AI a face | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face) |
-| 24 Sept 2026, 12:00 UTC | digest | PrismML brings its tiny LLMs to Qualcomm-powered smart glasses | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/24/prismml-brings-its-tiny-llms-to-qualcomm-powered-smart-glasses/) |
-| 24 Sept 2026, 12:00 UTC | digest | Published the 2026-09-24 daily digest | 20 stories captured from 2 sources. | `/news/` |
+| 25 Sept 2026, 12:00 UTC | digest | Lightspeed targets $250M for new India fund, focusing on early-stage AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/24/lightspeed-targets-250m-for-new-india-fund-focusing-on-early-stage-ai/) |
+| 25 Sept 2026, 12:00 UTC | digest | Published the 2026-09-25 daily digest | 1 stories captured from 1 sources. | `/news/` |
+| 25 Sept 2026, 05:56 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 25 Sept 2026, 05:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 25 Sept 2026, 05:56 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 25 Sept 2026, 05:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 25 Sept 2026, 05:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
@@ -26,3 +24,5 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 05 Feb 2026, 12:00 UTC | models | Claude Opus 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.6/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 Pro (batch) added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2-pro/` |
+| 24 Nov 2025, 12:00 UTC | models | Claude Opus 4.5 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.5/` |
+| 15 Oct 2025, 12:00 UTC | models | Claude Haiku 4.5 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-haiku-4.5/` |
