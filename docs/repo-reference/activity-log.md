@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 26 Sept 2026, 22:45 UTC
+Generated: 26 Sept 2026, 23:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 26 Sept 2026, 22:45 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 26 Sept 2026, 22:45 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 26 Sept 2026, 22:45 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 26 Sept 2026, 22:45 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 26 Sept 2026, 22:45 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 26 Sept 2026, 23:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 26 Sept 2026, 23:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 26 Sept 2026, 23:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 26 Sept 2026, 23:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 26 Sept 2026, 23:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 26 Sept 2026, 12:00 UTC | digest | Can Cloudflare CEO Matthew Prince save the web from AI? | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/podcast/1000344/cloudflare-matthew-prince-google-zero-ai-web-advertising) |
 | 26 Sept 2026, 12:00 UTC | digest | Insurers claim AI is already increasing healthcare costs | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/) |
 | 26 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,211 open roles across 10 tracked companies. | `/jobs/` |

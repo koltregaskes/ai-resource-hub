@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-26T22:45:14.643Z",
+  "generatedAt": "2026-09-26T23:55:46.629Z",
   "overview": {
-    "generatedForLabel": "Saturday, 26 September 2026",
+    "generatedForLabel": "Sunday, 27 September 2026",
     "totalMilestones": 37,
     "verifiedMilestones": 35,
     "trackingMilestones": 2,
@@ -9,14 +9,13 @@
     "exactDateMilestones": 27,
     "homepageEligibleMilestones": 34,
     "nextMilestone": {
-      "id": "mistral-7b-launch",
-      "title": "Mistral 7B released",
-      "nextOccurrenceLabel": "27 Sept 2026",
-      "daysUntil": 1
+      "id": "alexnet-breakthrough",
+      "title": "AlexNet wins ILSVRC 2012",
+      "nextOccurrenceLabel": "13 Oct 2026",
+      "daysUntil": 16
     }
   },
-  "todayMilestones": [],
-  "upcomingMilestones": [
+  "todayMilestones": [
     {
       "id": "mistral-7b-launch",
       "slug": "mistral-7b-launch",
@@ -65,11 +64,13 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1695816000000,
-      "daysUntil": 1,
+      "daysUntil": 0,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-09-27T12:00:00.000Z",
       "nextOccurrenceLabel": "27 Sept 2026"
-    },
+    }
+  ],
+  "upcomingMilestones": [
     {
       "id": "alexnet-breakthrough",
       "slug": "alexnet-breakthrough",
@@ -114,7 +115,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1350129600000,
-      "daysUntil": 17,
+      "daysUntil": 16,
       "anniversaryYears": 14,
       "nextOccurrenceIso": "2026-10-13T12:00:00.000Z",
       "nextOccurrenceLabel": "13 Oct 2026"
@@ -165,7 +166,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1699012800000,
-      "daysUntil": 38,
+      "daysUntil": 37,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-11-03T12:00:00.000Z",
       "nextOccurrenceLabel": "3 Nov 2026"
@@ -215,7 +216,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1606737600000,
-      "daysUntil": 65,
+      "daysUntil": 64,
       "anniversaryYears": 6,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
@@ -266,7 +267,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1669809600000,
-      "daysUntil": 65,
+      "daysUntil": 64,
       "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
@@ -317,7 +318,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1701864000000,
-      "daysUntil": 71,
+      "daysUntil": 70,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-12-06T12:00:00.000Z",
       "nextOccurrenceLabel": "6 Dec 2026"
@@ -368,7 +369,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1702296000000,
-      "daysUntil": 76,
+      "daysUntil": 75,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-12-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Dec 2026"
@@ -418,10 +419,61 @@
       "trackingDateLabel": null,
       "href": "/labs/",
       "sortKey": 1449835200000,
-      "daysUntil": 76,
+      "daysUntil": 75,
       "anniversaryYears": 11,
       "nextOccurrenceIso": "2026-12-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Dec 2026"
+    },
+    {
+      "id": "deepseek-v3-launch",
+      "slug": "deepseek-v3-launch",
+      "title": "DeepSeek-V3 released",
+      "summary": "DeepSeek-V3 turned the lab into a serious global open-model competitor late in 2024.",
+      "year": 2024,
+      "month": 12,
+      "day": 26,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "deepseek",
+      "modelId": "deepseek-v3",
+      "tags": [
+        "deepseek",
+        "open-weights",
+        "reasoning"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "DeepSeek API docs",
+          "url": "https://api-docs.deepseek.com/news/news1226",
+          "sourceType": "official_docs",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "DeepSeek API docs",
+        "url": "https://api-docs.deepseek.com/news/news1226",
+        "sourceType": "official_docs",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "26 Dec 2024",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1735214400000,
+      "daysUntil": 90,
+      "anniversaryYears": 2,
+      "nextOccurrenceIso": "2026-12-26T12:00:00.000Z",
+      "nextOccurrenceLabel": "26 Dec 2026"
     }
   ],
   "latestLaunches": [
