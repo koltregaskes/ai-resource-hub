@@ -1,6 +1,6 @@
 # Recent Activity Snapshot
 
-Generated: 26 Sept 2026, 05:55 UTC
+Generated: 26 Sept 2026, 07:36 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
@@ -9,11 +9,11 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 26 Sept 2026, 12:00 UTC | digest | At Meta Connect, the company&#8217;s smart glasses were everywhere | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/25/at-meta-connect-the-companys-smart-glasses-were-everywhere/) |
 | 26 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,212 open roles across 10 tracked companies. | `/jobs/` |
 | 26 Sept 2026, 12:00 UTC | digest | Published the 2026-09-26 daily digest | 1 stories captured from 1 sources. | `/news/` |
-| 26 Sept 2026, 05:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 26 Sept 2026, 05:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 26 Sept 2026, 05:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 26 Sept 2026, 05:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 26 Sept 2026, 05:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 26 Sept 2026, 07:36 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 26 Sept 2026, 07:36 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 26 Sept 2026, 07:36 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 26 Sept 2026, 07:36 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 26 Sept 2026, 07:36 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
