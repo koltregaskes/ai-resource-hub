@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-27T22:06:46.669Z",
+  "generatedAt": "2026-09-27T23:55:49.806Z",
   "overview": {
-    "generatedForLabel": "Sunday, 27 September 2026",
+    "generatedForLabel": "Monday, 28 September 2026",
     "totalMilestones": 37,
     "verifiedMilestones": 35,
     "trackingMilestones": 2,
@@ -12,64 +12,10 @@
       "id": "alexnet-breakthrough",
       "title": "AlexNet wins ILSVRC 2012",
       "nextOccurrenceLabel": "13 Oct 2026",
-      "daysUntil": 16
+      "daysUntil": 15
     }
   },
-  "todayMilestones": [
-    {
-      "id": "mistral-7b-launch",
-      "slug": "mistral-7b-launch",
-      "title": "Mistral 7B released",
-      "summary": "Mistral 7B immediately changed perceptions of how capable a smaller open-weight model could be.",
-      "year": 2023,
-      "month": 9,
-      "day": 27,
-      "datePrecision": "day",
-      "category": "model_release",
-      "kind": "launch",
-      "significance": "major",
-      "providerId": "mistral",
-      "modelId": "mistral-7b",
-      "tags": [
-        "mistral",
-        "open-weights",
-        "efficiency"
-      ],
-      "status": "verified",
-      "confidence": "high",
-      "homepageEligible": true,
-      "calendarEligible": true,
-      "exactAnniversaryEligible": true,
-      "sources": [
-        {
-          "label": "Mistral AI",
-          "url": "https://mistral.ai/news/about-mistral-ai",
-          "sourceType": "official_news",
-          "role": "canonical",
-          "notes": "The company launch article explicitly states Mistral 7B was released that day."
-        }
-      ],
-      "canonicalSource": {
-        "label": "Mistral AI",
-        "url": "https://mistral.ai/news/about-mistral-ai",
-        "sourceType": "official_news",
-        "role": "canonical",
-        "notes": "The company launch article explicitly states Mistral 7B was released that day."
-      },
-      "categoryLabel": "Model release",
-      "kindLabel": "Launch",
-      "significanceLabel": "Major",
-      "statusLabel": "Verified",
-      "dateLabel": "27 Sept 2023",
-      "trackingDateLabel": null,
-      "href": "/new/",
-      "sortKey": 1695816000000,
-      "daysUntil": 0,
-      "anniversaryYears": 3,
-      "nextOccurrenceIso": "2026-09-27T12:00:00.000Z",
-      "nextOccurrenceLabel": "27 Sept 2026"
-    }
-  ],
+  "todayMilestones": [],
   "upcomingMilestones": [
     {
       "id": "alexnet-breakthrough",
@@ -115,7 +61,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1350129600000,
-      "daysUntil": 16,
+      "daysUntil": 15,
       "anniversaryYears": 14,
       "nextOccurrenceIso": "2026-10-13T12:00:00.000Z",
       "nextOccurrenceLabel": "13 Oct 2026"
@@ -166,7 +112,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1699012800000,
-      "daysUntil": 37,
+      "daysUntil": 36,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-11-03T12:00:00.000Z",
       "nextOccurrenceLabel": "3 Nov 2026"
@@ -216,7 +162,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1606737600000,
-      "daysUntil": 64,
+      "daysUntil": 63,
       "anniversaryYears": 6,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
@@ -267,7 +213,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1669809600000,
-      "daysUntil": 64,
+      "daysUntil": 63,
       "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
@@ -318,7 +264,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1701864000000,
-      "daysUntil": 70,
+      "daysUntil": 69,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-12-06T12:00:00.000Z",
       "nextOccurrenceLabel": "6 Dec 2026"
@@ -369,7 +315,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1702296000000,
-      "daysUntil": 75,
+      "daysUntil": 74,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-12-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Dec 2026"
@@ -419,7 +365,7 @@
       "trackingDateLabel": null,
       "href": "/labs/",
       "sortKey": 1449835200000,
-      "daysUntil": 75,
+      "daysUntil": 74,
       "anniversaryYears": 11,
       "nextOccurrenceIso": "2026-12-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Dec 2026"
@@ -470,7 +416,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1735214400000,
-      "daysUntil": 90,
+      "daysUntil": 89,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-12-26T12:00:00.000Z",
       "nextOccurrenceLabel": "26 Dec 2026"

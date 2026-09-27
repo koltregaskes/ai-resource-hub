@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 27 Sept 2026, 22:06 UTC
+Generated: 27 Sept 2026, 23:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 27 Sept 2026, 22:06 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 27 Sept 2026, 22:06 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 27 Sept 2026, 22:06 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 27 Sept 2026, 22:06 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 27 Sept 2026, 22:06 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 27 Sept 2026, 23:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 27 Sept 2026, 23:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 27 Sept 2026, 23:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 27 Sept 2026, 23:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 27 Sept 2026, 23:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 27 Sept 2026, 12:00 UTC | digest | Anthropic’s CEO is about to have dinner with President Trump | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/) |
 | 27 Sept 2026, 12:00 UTC | digest | Can Muse overcome Meta’s trust issues? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/27/can-muse-overcome-metas-trust-issues/) |
+| 27 Sept 2026, 12:00 UTC | digest | Engram is a sampler that turns broken AI hallucinations into music | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1001193/engram-sampler-ai-hallucinations-music) |
 | 27 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,212 open roles across 10 tracked companies. | `/jobs/` |
-| 27 Sept 2026, 12:00 UTC | digest | OpenAI agents tried to ‘bruteforce’ a UN website | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1001178/openai-agents-bruteforce-un-website) |
-| 27 Sept 2026, 12:00 UTC | digest | Published the 2026-09-27 daily digest | 5 stories captured from 2 sources. | `/news/` |
+| 27 Sept 2026, 12:00 UTC | digest | Published the 2026-09-27 daily digest | 6 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
