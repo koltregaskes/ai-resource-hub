@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 27 Sept 2026, 17:55 UTC
+Generated: 27 Sept 2026, 18:20 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 27 Sept 2026, 17:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 27 Sept 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 27 Sept 2026, 17:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 27 Sept 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 27 Sept 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 27 Sept 2026, 18:20 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 27 Sept 2026, 18:20 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 27 Sept 2026, 18:20 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 27 Sept 2026, 18:20 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 27 Sept 2026, 18:20 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 27 Sept 2026, 12:00 UTC | digest | Anthropic&#8217;s Dario Amodei gets the SNL treatment | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/) |
 | 27 Sept 2026, 12:00 UTC | digest | Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/) |
 | 27 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,212 open roles across 10 tracked companies. | `/jobs/` |
