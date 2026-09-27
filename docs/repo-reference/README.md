@@ -8,7 +8,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 27 Sept 2026, 01:23 UTC |
+| Generated | 27 Sept 2026, 02:56 UTC |
 | Providers tracked | 40 |
 | Public models | 346 |
 | Active models | 109 |
@@ -19,7 +19,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | Release-desk entries | 51 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 27 Sept 2026, 01:23 UTC |
+| Latest visible refresh | 27 Sept 2026, 12:00 UTC |
 | Current evaluated composite leader | DeepSeek V3.2 (56.3) |
 | Latest tracked release | GLM 5.3 Prime (23 Sept 2026) |
 
