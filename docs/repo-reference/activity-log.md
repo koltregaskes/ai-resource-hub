@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 28 Sept 2026, 15:23 UTC
+Generated: 28 Sept 2026, 16:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 28 Sept 2026, 15:22 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 28 Sept 2026, 15:22 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 28 Sept 2026, 15:22 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 28 Sept 2026, 15:22 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 28 Sept 2026, 15:22 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 28 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,214 open roles across 10 tracked companies. | `/jobs/` |
-| 28 Sept 2026, 12:00 UTC | digest | Modulate raises $25M for its voice models and analysis suite | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/28/modulate-raises-25m-for-its-voice-models-and-analysis-suite/) |
-| 28 Sept 2026, 12:00 UTC | digest | Next five VCs judging Startup Battlefield 200 contenders at TechCrunch Disrupt 2026 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/28/next-five-vcs-judging-startup-battlefield-200-contenders-at-techcrunch-disrupt-2026/) |
-| 28 Sept 2026, 12:00 UTC | digest | Published the 2026-09-28 daily digest | 5 stories captured from 1 sources. | `/news/` |
-| 28 Sept 2026, 12:00 UTC | digest | Your final chance to grab your exhibit table at TechCrunch Disrupt 2026 is Oct. 2 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/28/disrupt-2026-exhibitor-program-extended-until-oct-2/) |
+| 28 Sept 2026, 16:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 28 Sept 2026, 16:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 28 Sept 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 28 Sept 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 28 Sept 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 28 Sept 2026, 12:00 UTC | digest | After a deepfake voice fooled her grandfather, this founder sprang into action | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/28/after-a-deepfake-voice-fooled-her-grandfather-this-founder-sprang-into-action/) |
+| 28 Sept 2026, 12:00 UTC | digest | Anthropic, Gamma, and Clay share what happens when enterprises actually deploy AI at TechCrunch Disrupt 2026 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/28/anthropic-gamma-and-clay-share-what-happens-when-enterprises-actually-deploy-ai-at-techcrunch-disrupt-2026/) |
+| 28 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,215 open roles across 10 tracked companies. | `/jobs/` |
+| 28 Sept 2026, 12:00 UTC | digest | Meta launches enterprise AI platform, hires MongoDB CEO to lead new initiative | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/28/meta-launches-enterprise-ai-platform-hires-mongodb-ceo-to-lead-new-initiative/) |
+| 28 Sept 2026, 12:00 UTC | digest | Published the 2026-09-28 daily digest | 10 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |

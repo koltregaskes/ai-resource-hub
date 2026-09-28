@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 28 Sept 2026, 15:23 UTC
+Generated: 28 Sept 2026, 16:55 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,20 +8,20 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| AI milestones | Curated updates as research lands | Mixed | 28 Sept 2026, 15:23 UTC |
+| AI milestones | Curated updates as research lands | Mixed | 28 Sept 2026, 16:55 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 28 Sept 2026, 15:23 UTC |
-| Benchmarks and evals | Hourly automated refresh | Automated | 28 Sept 2026, 15:22 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 28 Sept 2026, 15:22 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 28 Sept 2026, 16:55 UTC |
+| Benchmarks and evals | Hourly automated refresh | Automated | 28 Sept 2026, 16:55 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 28 Sept 2026, 16:55 UTC |
 | News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 28 Sept 2026, 12:00 UTC |
-| Provider status | Hourly automated refresh | Automated | 28 Sept 2026, 15:22 UTC |
-| Guides and learning | Manual editorial review | Manual | 28 Sept 2026, 15:22 UTC |
+| Provider status | Hourly automated refresh | Automated | 28 Sept 2026, 16:55 UTC |
+| Guides and learning | Manual editorial review | Manual | 28 Sept 2026, 16:55 UTC |
 
 ## AI milestones
 
 - Cadence: Curated updates as research lands
 - Automation: Mixed
-- Last refreshed: 28 Sept 2026, 15:23 UTC
+- Last refreshed: 28 Sept 2026, 16:55 UTC
 - Category route: `/milestones/`
 - Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
 
@@ -34,7 +34,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 ### Last Visible Updates
 
 - 13 Oct 2026, 12:00 UTC: AlexNet wins ILSVRC 2012 - Next exact anniversary in 15 days. (`/milestones/`)
-- 28 Sept 2026, 15:23 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
+- 28 Sept 2026, 16:55 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -60,7 +60,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 28 Sept 2026, 15:23 UTC
+- Last refreshed: 28 Sept 2026, 16:55 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -80,7 +80,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 28 Sept 2026, 15:22 UTC
+- Last refreshed: 28 Sept 2026, 16:55 UTC
 - Category route: `/benchmarks/`
 
 
@@ -92,14 +92,14 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 28 Sept 2026, 15:22 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
-- 28 Sept 2026, 15:22 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
+- 28 Sept 2026, 16:55 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
+- 28 Sept 2026, 16:55 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
 
 ## Pricing and value
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 28 Sept 2026, 15:22 UTC
+- Last refreshed: 28 Sept 2026, 16:55 UTC
 - Category route: `/compare/llm/`
 
 
@@ -111,9 +111,9 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 28 Sept 2026, 15:22 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
-- 28 Sept 2026, 15:22 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 28 Sept 2026, 15:22 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 28 Sept 2026, 16:55 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
+- 28 Sept 2026, 16:55 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 28 Sept 2026, 16:55 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
@@ -131,15 +131,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 28 Sept 2026, 14:30 UTC: Next five VCs judging Startup Battlefield 200 contenders at TechCrunch Disrupt 2026 - TechCrunch (industry) ([source](https://techcrunch.com/2026/09/28/next-five-vcs-judging-startup-battlefield-200-contenders-at-techcrunch-disrupt-2026/))
-- 28 Sept 2026, 14:05 UTC: Modulate raises $25M for its voice models and analysis suite - TechCrunch (industry) ([source](https://techcrunch.com/2026/09/28/modulate-raises-25m-for-its-voice-models-and-analysis-suite/))
-- 28 Sept 2026, 14:00 UTC: Your final chance to grab your exhibit table at TechCrunch Disrupt 2026 is Oct. 2 - TechCrunch (industry) ([source](https://techcrunch.com/2026/09/28/disrupt-2026-exhibitor-program-extended-until-oct-2/))
+- 28 Sept 2026, 16:52 UTC: Meta launches enterprise AI platform, hires MongoDB CEO to lead new initiative - TechCrunch (industry) ([source](https://techcrunch.com/2026/09/28/meta-launches-enterprise-ai-platform-hires-mongodb-ceo-to-lead-new-initiative/))
+- 28 Sept 2026, 15:30 UTC: Anthropic, Gamma, and Clay share what happens when enterprises actually deploy AI at TechCrunch Disrupt 2026 - TechCrunch (industry) ([source](https://techcrunch.com/2026/09/28/anthropic-gamma-and-clay-share-what-happens-when-enterprises-actually-deploy-ai-at-techcrunch-disrupt-2026/))
+- 28 Sept 2026, 15:00 UTC: After a deepfake voice fooled her grandfather, this founder sprang into action - TechCrunch (industry) ([source](https://techcrunch.com/2026/09/28/after-a-deepfake-voice-fooled-her-grandfather-this-founder-sprang-into-action/))
 
 ## Provider status
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 28 Sept 2026, 15:22 UTC
+- Last refreshed: 28 Sept 2026, 16:55 UTC
 - Category route: `/status/`
 
 
@@ -150,15 +150,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 28 Sept 2026, 15:22 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
-- 28 Sept 2026, 15:22 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
-- 28 Sept 2026, 15:22 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
+- 28 Sept 2026, 16:55 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
+- 28 Sept 2026, 16:55 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
+- 28 Sept 2026, 16:55 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
 
 ## Guides and learning
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 28 Sept 2026, 15:22 UTC
+- Last refreshed: 28 Sept 2026, 16:55 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -170,6 +170,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 28 Sept 2026, 15:22 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
-- 28 Sept 2026, 15:22 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 28 Sept 2026, 15:22 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 28 Sept 2026, 16:55 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
+- 28 Sept 2026, 16:55 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 28 Sept 2026, 16:55 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
