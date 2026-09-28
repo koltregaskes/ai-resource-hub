@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 28 Sept 2026, 21:55 UTC
+Generated: 28 Sept 2026, 21:57 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 28 Sept 2026, 21:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 28 Sept 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 28 Sept 2026, 21:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 28 Sept 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 28 Sept 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 28 Sept 2026, 12:00 UTC | digest | AMD is acquiring AI company World Labs in a deal worth more than $8 billion | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1001749/amd-world-labs-ai-acquisition-deal) |
+| 28 Sept 2026, 21:57 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 28 Sept 2026, 21:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 28 Sept 2026, 21:56 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 28 Sept 2026, 21:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 28 Sept 2026, 21:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 28 Sept 2026, 12:00 UTC | digest | AMD will acquire Fei-Fei Li&#8217;s World Labs for $8.2 billion | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/) |
 | 28 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,218 open roles across 10 tracked companies. | `/jobs/` |
 | 28 Sept 2026, 12:00 UTC | digest | Published the 2026-09-28 daily digest | 20 stories captured from 3 sources. | `/news/` |
+| 28 Sept 2026, 12:00 UTC | digest | Shopify opens checkout to browser-based AI agents | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/) |
 | 28 Sept 2026, 12:00 UTC | digest | Source: Inference provider Modal Labs closing in on $750M round at $15.75B valuation | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/28/source-inference-provider-modal-labs-closing-in-on-750m-round-at-15-75b-valuation/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
