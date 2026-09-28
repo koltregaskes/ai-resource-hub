@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 28 Sept 2026, 17:56 UTC
+Generated: 28 Sept 2026, 18:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 28 Sept 2026, 17:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 28 Sept 2026, 17:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 28 Sept 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 28 Sept 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 28 Sept 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 28 Sept 2026, 12:00 UTC | digest | Florida seeks a ban on ChatGPT acting like a person | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1001527/chatgpt-florida-ban-first-person-human-attributes-kids) |
+| 28 Sept 2026, 18:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 28 Sept 2026, 18:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 28 Sept 2026, 18:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 28 Sept 2026, 18:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 28 Sept 2026, 18:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 28 Sept 2026, 12:00 UTC | digest | Anthropic releases Sonnet 5.5, which it calls a significantly cheaper, faster work partner | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/) |
 | 28 Sept 2026, 12:00 UTC | digest | Google is killing off Gemini&#8217;s Gems in favor of &#8216;skills&#8217; | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/28/google-is-killing-off-geminis-gems-in-favor-of-skills/) |
-| 28 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,216 open roles across 10 tracked companies. | `/jobs/` |
-| 28 Sept 2026, 12:00 UTC | digest | OpenAI still doesn&#8217;t seem to have a handle on all of its rogue AI activity | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/28/openai-still-doesnt-seem-to-have-a-handle-on-all-of-its-rogue-ai-activity/) |
-| 28 Sept 2026, 12:00 UTC | digest | Published the 2026-09-28 daily digest | 16 stories captured from 3 sources. | `/news/` |
+| 28 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,217 open roles across 10 tracked companies. | `/jobs/` |
+| 28 Sept 2026, 12:00 UTC | digest | Nvidia launches new platform for reining in rogue AI agents | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/) |
+| 28 Sept 2026, 12:00 UTC | digest | Published the 2026-09-28 daily digest | 15 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
