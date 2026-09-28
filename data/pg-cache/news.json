@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-0c80d209a6b85e3b8e8d",
+    "title": "Google is killing off Gemini&#8217;s Gems in favor of &#8216;skills&#8217;",
+    "url": "https://techcrunch.com/2026/09/28/google-is-killing-off-geminis-gems-in-favor-of-skills/",
+    "source": "TechCrunch",
+    "summary": "As all-in-one AI agents like Meta's Muse and Instinct take off, Google is opting to end a feature which built task-specific agents.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-28T17:29:50.000Z",
+    "discovered_at": "2026-09-28 17:55:38"
+  },
+  {
+    "id": "news-bd9271a6418db6290a88",
+    "title": "OpenAI still doesn&#8217;t seem to have a handle on all of its rogue AI activity",
+    "url": "https://techcrunch.com/2026/09/28/openai-still-doesnt-seem-to-have-a-handle-on-all-of-its-rogue-ai-activity/",
+    "source": "TechCrunch",
+    "summary": "On Friday, OpenAI published a new site devoted to “misalignment reports” and the breadth of the incidents is alarming.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-28T17:09:02.000Z",
+    "discovered_at": "2026-09-28 17:55:38"
+  },
+  {
+    "id": "news-523d5e9de5b0c404a2ab",
+    "title": "Florida seeks a ban on ChatGPT acting like a person",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1001527/chatgpt-florida-ban-first-person-human-attributes-kids",
+    "source": "The Verge",
+    "summary": "Florida Attorney General James Uthmeier is calling for a judge to block OpenAI from \"giving ChatGPT false human attributes,\" a few months after Florida sued the AI company over safety concerns. According to Uthmeier, users are lulled into a false sense of security by the AI bot, as \"ChatGPT's use of language, includin…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-28T17:00:23.000Z",
+    "discovered_at": "2026-09-28 17:55:38"
+  },
+  {
+    "id": "news-c5ed54694a4a2d5e0e15",
+    "title": "OpenAI keeps bulldozing mathematicians",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1001477/openai-math-advisory-group",
+    "source": "The Verge",
+    "summary": "In a chaotic few months, OpenAI has demonstrated it can do two things with remarkable consistency: make impressive breakthroughs in mathematics, then colossally screw up announcing them. OpenAI is now trying to do better. Somehow, it has botched that too. OpenAI's latest attempt to repair fractured relations with a ma…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-28T17:00:00.000Z",
+    "discovered_at": "2026-09-28 17:55:38"
+  },
+  {
     "id": "news-80f86534580d63e604f6",
     "title": "Meta launches enterprise AI platform, hires MongoDB CEO to lead new initiative",
     "url": "https://techcrunch.com/2026/09/28/meta-launches-enterprise-ai-platform-hires-mongodb-ceo-to-lead-new-initiative/",
@@ -9,7 +57,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T16:52:38.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
+  },
+  {
+    "id": "news-907cbfcfae983fb3831f",
+    "title": "Walmart won’t hike prices based on your shopping history, CEO says",
+    "url": "https://www.theverge.com/tech/1001492/walmart-dynamic-pricing-digital-shelf-labels",
+    "source": "The Verge",
+    "summary": "Walmart says it won't change product prices based on your personal information or the time of day, as reported earlier by The Wall Street Journal. In a letter to customers, Walmart CEO John Furner writes that the company's switch to digital shelf labels is meant to save store associates time, rather than dynamically c…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-28T16:44:57.000Z",
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-eb2524f2e41527a45027",
@@ -21,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T15:30:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-ddea09bd560a3a7feee3",
@@ -33,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T15:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-1766de63251c73b925ac",
@@ -45,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T14:30:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-99a28bb41a76f4e35260",
@@ -57,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T14:05:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-0ed30c8df6bfb9148a95",
@@ -69,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T14:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-c8d62adae18155e7fdfc",
@@ -81,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T14:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-6639960050d0cc0912c6",
@@ -93,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T14:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-4fc7509a6662a1b09b12",
@@ -105,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T13:38:48.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-fa45a29570c32d230e34",
@@ -117,7 +177,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T13:36:06.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
+  },
+  {
+    "id": "news-216d56bba26ca4582d8f",
+    "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+    "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+    "source": "OpenAI",
+    "summary": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-28T07:00:00.000Z",
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-9c14e3f084274fca9ea2",
@@ -129,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-27T20:46:36.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-79b213b7598aad1423d6",
@@ -141,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-27T20:34:28.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-eaa520eb586c5ae89d8a",
@@ -153,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-27T19:57:30.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-ed2cbcca51ab9ede81af",
@@ -165,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-27T17:21:07.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-8884274c1b64da537738",
@@ -177,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-27T16:30:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-b09c672e4408b8f8615c",
@@ -189,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-27T01:30:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-d70ce2b78b06f813fdc0",
@@ -201,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-26T21:02:06.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-819e92326da0d8d2b38b",
@@ -213,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-26T16:34:59.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-344d41dcb1d635bb04e5",
@@ -225,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-26T14:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-c6fb97f6187af92ce0ad",
@@ -237,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-26T14:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-1fe1b6ab723e89e732ed",
@@ -249,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-26T01:08:57.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-303ad555831b21dbfdf1",
@@ -261,31 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-25T23:11:10.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
-  },
-  {
-    "id": "news-df19e6663c5ff486a4ea",
-    "title": "Unsecured OpenAI agents posted 53 user images on the internet without the lab&#8217;s knowledge",
-    "url": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/",
-    "source": "TechCrunch",
-    "summary": "AI agents operating in OpenAI's research environment posted user images on public image-hosting sites without the lab's knowledge.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-25T22:20:47.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
-  },
-  {
-    "id": "news-28eff29135c5cfc539d6",
-    "title": "Meta opens early access program for new Muse features",
-    "url": "https://techcrunch.com/2026/09/25/meta-opens-early-access-program-for-new-muse-features/",
-    "source": "TechCrunch",
-    "summary": "Anyone interested in joining has to ask Muse to put them on the list.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-25T20:34:53.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-d2d497e5eee41848c95c",
@@ -297,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-25T19:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-e84d98e81ae7850f4891",
@@ -309,43 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-25T16:49:53.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
-  },
-  {
-    "id": "news-706759721ffd238cd76f",
-    "title": "Sony and UMG are suing Suno again",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1000758/suno-sony-umg-lawsuit-ai-music",
-    "source": "The Verge",
-    "summary": "Sony and Universal Music Group filed yet another suit against Suno. The labels claim its new v6 model still infringes on their copyrights because it's trained on user outputs from previous models, which were themselves trained on unlicensed music ripped from YouTube and other sources. Sony and UMG are notable holdouts…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-25T15:51:56.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
-  },
-  {
-    "id": "news-637d4699a545ce92fb9c",
-    "title": "One company is at the center of a wave of rogue AI attacks",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1000644/irregular-rogue-ai-cyberattacks-hacking-openai-meta-anthropic-google",
-    "source": "The Verge",
-    "summary": "In July, OpenAI revealed that its AI agents had attacked Hugging Face without permission, sparking widespread concerns about AI safety. Since then, a string of similar incidents involving agents from Meta, Anthropic, Google, and other companies has fueled further fears about rogue AI. As disclosures implicating numero…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-25T15:39:48.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
-  },
-  {
-    "id": "news-f5e0462c8aedb2aaa5b0",
-    "title": "Can Apple Home’s AI camera features outsmart Amazon’s and Google’s? I put them to the test",
-    "url": "https://www.theverge.com/tech/1000321/apple-intelligence-home-security-camera-amazon-ring-alexa-google-nest-gemini-home-review",
-    "source": "The Verge",
-    "summary": "A few years back, I was at a beachside Easter egg hunt, watching my kids dash through sand dunes searching for sweet treats. My phone buzzed in my pocket; I ignored it. A moment later, it buzzed again. I pulled it out, glanced down, and saw a \"motion detected\" notification from my security camera. \"Just [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-25T13:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-8a86c97089bb6492a0d5",
@@ -357,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T18:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-9d02eeb8cef10808bb22",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T16:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-1d77064cbebb782f18a0",
@@ -381,43 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T13:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
-  },
-  {
-    "id": "news-7cff1964bf19497febe2",
-    "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
-    "url": "https://openai.com/index/ringg",
-    "source": "OpenAI",
-    "summary": "Using GPT-5.6, Ringg powers multilingual agents across voice, chat, WhatsApp, and web for 90% less cost vs. GPT-4.1.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
-  },
-  {
-    "id": "news-7357353a1f1d61a65439",
-    "title": "How invideo improves color grading 3x with GPT‑6 Astra",
-    "url": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
-    "source": "OpenAI",
-    "summary": "With GPT‑6 Astra, invideo plans edits with greater precision, improves color correction and grading threefold, and produces 50 custom effects in one day.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
-  },
-  {
-    "id": "news-f7558dc5c9de5bb5fdc7",
-    "title": "Harvey turns legal context into stronger drafts with GPT-6 Astra",
-    "url": "https://openai.com/index/harvey-from-context-to-confidence-with-astra",
-    "source": "OpenAI",
-    "summary": "GPT-6 Astra produces more structured, context-aware legal documents, freeing lawyers to focus on strategy.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-01d4e543c9419cead77e",
@@ -429,7 +405,43 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
+    "discovered_at": "2026-09-28 17:55:37"
+  },
+  {
+    "id": "news-7cff1964bf19497febe2",
+    "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
+    "url": "https://openai.com/index/ringg",
+    "source": "OpenAI",
+    "summary": "Using GPT-5.6, Ringg powers multilingual agents across voice, chat, WhatsApp, and web for 90% less cost vs. GPT-4.1.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-23T12:00:00.000Z",
+    "discovered_at": "2026-09-28 17:55:37"
+  },
+  {
+    "id": "news-7357353a1f1d61a65439",
+    "title": "How invideo improves color grading 3x with GPT‑6 Astra",
+    "url": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
+    "source": "OpenAI",
+    "summary": "With GPT‑6 Astra, invideo plans edits with greater precision, improves color correction and grading threefold, and produces 50 custom effects in one day.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-23T12:00:00.000Z",
+    "discovered_at": "2026-09-28 17:55:37"
+  },
+  {
+    "id": "news-f7558dc5c9de5bb5fdc7",
+    "title": "Harvey turns legal context into stronger drafts with GPT-6 Astra",
+    "url": "https://openai.com/index/harvey-from-context-to-confidence-with-astra",
+    "source": "OpenAI",
+    "summary": "GPT-6 Astra produces more structured, context-aware legal documents, freeing lawyers to focus on strategy.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-23T12:00:00.000Z",
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-1d5a9cc2d9509da81910",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T10:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-1dd9ce125c6e0e6007fa",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T02:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-73fafdf6f45f6a4122d4",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T01:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-09a0c6dbf1c6c00d5fb7",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T00:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-b6b1e4118cdbb52902a3",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T21:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-69bd5b227657faccb6a8",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T19:45:47.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-3d48e529ad7a20b189a9",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T18:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-ce45d8dc0f6c9cea266a",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T12:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-b4fb82cc1313a309dc9a",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T00:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-b2c543ac59e1c4518c6a",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T22:24:38.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-a7ca59844a94ccd6f8fa",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T12:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-d37f5b2c59270d018304",
@@ -573,19 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T12:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
-  },
-  {
-    "id": "news-2c9792fbb14ae5db99d4",
-    "title": "Building standards for the next phase of AI",
-    "url": "https://openai.com/index/building-standards-next-phase-ai",
-    "source": "OpenAI",
-    "summary": "OpenAI outlines a path to shared global AI standards, calling for coordinated evaluation, reporting, and governance to improve safety.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-21T10:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:36"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-079e661c04cec0b07e5c",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T14:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-13d62ca6fcfd55d7fb1a",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T13:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-e7b9d12d1b3a7eb0c954",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T20:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-168e3a7edc7326171115",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T18:33:13.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-a243976a4aeffe7860e7",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-b86d9a766fb72b730ea5",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-18592959ad29d5e254c8",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-00e29a681a6f5e3b92e5",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T13:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-6758d03842f78c1d60a7",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T21:04:32.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-b49b47db0b359f67793a",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T19:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-bf70dc826a65d37ea361",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T16:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-1852061b5cf6950bdd51",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-10T16:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-eca0578fed4853fc9470",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T20:55:02.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-e8269fc9a10961e9d9fc",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T16:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-b0dd0e34ba0b936c69dc",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T16:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-bf8c2b1da340d9c0e6fb",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-08T21:11:46.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-680bad5aa943a5735811",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-04T22:17:36.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-289c57109448005063ce",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-04T17:18:12.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:38"
   },
   {
     "id": "news-28b149c75e15ee1815b2",
@@ -813,7 +813,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-02T15:40:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-66eabab6976f3ac7c05c",
@@ -825,7 +825,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-01T20:45:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-77cd2a6a82f1c4f3f7d9",
@@ -837,7 +837,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-01T16:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:38"
+    "discovered_at": "2026-09-28 17:55:37"
   },
   {
     "id": "news-3df5fbd9b80322fba0d8",
@@ -849,6 +849,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-01T00:00:00.000Z",
-    "discovered_at": "2026-09-28 16:55:37"
+    "discovered_at": "2026-09-28 17:55:37"
   }
 ]
