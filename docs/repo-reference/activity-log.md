@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 29 Sept 2026, 16:55 UTC
+Generated: 29 Sept 2026, 17:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 29 Sept 2026, 16:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 29 Sept 2026, 16:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 29 Sept 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 29 Sept 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 29 Sept 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 29 Sept 2026, 12:00 UTC | digest | Instinct founder said more than 50% of transactions on the platform are travel-related | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/instinct-founder-said-more-than-50-of-transactions-on-the-platform-are-travel-related/) |
-| 29 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,219 open roles across 10 tracked companies. | `/jobs/` |
-| 29 Sept 2026, 12:00 UTC | digest | Meta&#8217;s Muse AI sent a YouTuber’s address to a stranger | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1001886/meta-muse-ai-facebook-marketplace-security-concerns) |
-| 29 Sept 2026, 12:00 UTC | digest | OpenAI DevDay 2026: The biggest news and announcements | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1001681/openai-devday-2026-biggest-news-announcements) |
-| 29 Sept 2026, 12:00 UTC | digest | Published the 2026-09-29 daily digest | 11 stories captured from 2 sources. | `/news/` |
+| 29 Sept 2026, 17:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 29 Sept 2026, 17:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 29 Sept 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 29 Sept 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 29 Sept 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 29 Sept 2026, 12:00 UTC | digest | AI-powered app maker Wabi pivots to a messaging experience | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/ai-powered-app-maker-wabi-pivots-to-a-messaging-experience/) |
+| 29 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,216 open roles across 10 tracked companies. | `/jobs/` |
+| 29 Sept 2026, 12:00 UTC | digest | OpenAI launches Dots, its bubbly agentic avatar | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/) |
+| 29 Sept 2026, 12:00 UTC | digest | OpenAI takes on Microsoft with the launch of what feels a whole lot like ChatGPT&#8217;s own office suite | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/openai-takes-on-microsoft-with-the-launch-of-what-feels-a-whole-lot-like-chatgpts-own-office-suite/) |
+| 29 Sept 2026, 12:00 UTC | digest | Published the 2026-09-29 daily digest | 18 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
