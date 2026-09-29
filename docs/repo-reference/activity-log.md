@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 29 Sept 2026, 20:44 UTC
+Generated: 29 Sept 2026, 21:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 29 Sept 2026, 20:43 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 29 Sept 2026, 20:43 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 29 Sept 2026, 20:43 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 29 Sept 2026, 20:43 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 29 Sept 2026, 20:43 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 29 Sept 2026, 21:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 29 Sept 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 29 Sept 2026, 21:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 29 Sept 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 29 Sept 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 29 Sept 2026, 12:00 UTC | digest | Here&#8217;s why OpenAI is absent from Nvidia&#8217;s industry-wide effort to end rogue AI agents | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/heres-why-openai-is-absent-from-nvidias-industry-wide-effort-to-end-rogue-ai-agents/) |
 | 29 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,219 open roles across 10 tracked companies. | `/jobs/` |
 | 29 Sept 2026, 12:00 UTC | digest | OpenAI repotedly in talks to raise $30B round at $1.4T valuation | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/openai-repotedly-in-talks-to-raise-30b-round-at-1-4t-valuation/) |

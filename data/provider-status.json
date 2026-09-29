@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T20:43:51.898Z",
+  "generatedAt": "2026-09-29T21:55:42.279Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T20:43:51.891Z",
+      "lastCheckedAt": "2026-09-29T21:55:42.274Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T20:43:50.498Z",
+      "lastCheckedAt": "2026-09-29T21:55:41.260Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "2 active incidents across 25 tracked components.",
@@ -133,46 +133,46 @@
       ],
       "activeIncidents": [
         {
+          "id": "01M3Q4HMNP8SZ27DTZKW6F5BJ4",
+          "title": "Support available via email",
+          "status": "monitoring",
+          "impact": "none",
+          "startedAt": "2026-09-29T17:49:05.000Z",
+          "updatedAt": "2026-09-29T21:50:57.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        },
+        {
           "id": "01M3Q4RK1SM4EMK445GGPG7C0N",
           "title": "Elevated errors across ChatGPT, Codex, and the API including the Agents API",
           "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-09-29T17:52:52.000Z",
-          "updatedAt": "2026-09-29T19:39:36.000Z",
+          "updatedAt": "2026-09-29T21:09:11.000Z",
           "resolvedAt": null,
           "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
-        {
-          "id": "01M3Q4HMNP8SZ27DTZKW6F5BJ4",
-          "title": "Support available via email",
-          "status": "investigating",
-          "impact": "none",
-          "startedAt": "2026-09-29T17:49:05.000Z",
-          "updatedAt": "2026-09-29T18:50:38.000Z",
-          "resolvedAt": null,
-          "summary": "Our Help Center is available, but support chat remains unavailable. If you need assistance, you can browse the Help Center or email [support@openai.com](mailto:support@openai.com..."
         }
       ],
       "recentIncidents": [
         {
+          "id": "01M3Q4HMNP8SZ27DTZKW6F5BJ4",
+          "title": "Support available via email",
+          "status": "monitoring",
+          "impact": "none",
+          "startedAt": "2026-09-29T17:49:05.000Z",
+          "updatedAt": "2026-09-29T21:50:57.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        },
+        {
           "id": "01M3Q4RK1SM4EMK445GGPG7C0N",
           "title": "Elevated errors across ChatGPT, Codex, and the API including the Agents API",
           "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-09-29T17:52:52.000Z",
-          "updatedAt": "2026-09-29T19:39:36.000Z",
+          "updatedAt": "2026-09-29T21:09:11.000Z",
           "resolvedAt": null,
           "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
-        {
-          "id": "01M3Q4HMNP8SZ27DTZKW6F5BJ4",
-          "title": "Support available via email",
-          "status": "investigating",
-          "impact": "none",
-          "startedAt": "2026-09-29T17:49:05.000Z",
-          "updatedAt": "2026-09-29T18:50:38.000Z",
-          "resolvedAt": null,
-          "summary": "Our Help Center is available, but support chat remains unavailable. If you need assistance, you can browse the Help Center or email [support@openai.com](mailto:support@openai.com..."
         },
         {
           "id": "01M3DCNWMW57HYK8FJ5FBFPA39",
@@ -180,7 +180,7 @@
           "status": "resolved",
           "impact": "critical",
           "startedAt": "2026-09-25T22:58:48.000Z",
-          "updatedAt": "2026-09-25T23:54:41.000Z",
+          "updatedAt": "2026-09-29T21:33:31.000Z",
           "resolvedAt": "2026-09-25T23:54:41.000Z",
           "summary": "All impacted services have now fully recovered."
         },
@@ -207,7 +207,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T20:43:50.475Z",
+      "lastCheckedAt": "2026-09-29T21:55:41.291Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -297,7 +297,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T20:43:51.161Z",
+      "lastCheckedAt": "2026-09-29T21:55:42.007Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -317,7 +317,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T20:43:50.509Z",
+      "lastCheckedAt": "2026-09-29T21:55:41.346Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -349,7 +349,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T20:43:51.290Z",
+      "lastCheckedAt": "2026-09-29T21:55:42.178Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -373,7 +373,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
