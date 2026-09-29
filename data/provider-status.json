@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T14:55:49.012Z",
+  "generatedAt": "2026-09-29T15:45:40.471Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T14:55:48.712Z",
+      "lastCheckedAt": "2026-09-29T15:45:40.464Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,31 +100,31 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T14:55:47.865Z",
+      "lastCheckedAt": "2026-09-29T15:45:39.297Z",
       "overallStatus": "degraded",
-      "overallLabel": "Minor Service Outage",
+      "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
-        {
-          "name": "claude.ai",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "degraded_performance"
-        },
         {
           "name": "Claude API (api.anthropic.com)",
           "status": "degraded_performance"
         },
         {
+          "name": "claude.ai",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
           "name": "Claude Code",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "name": "Claude Cowork",
-          "status": "partial_outage"
+          "status": "operational"
         },
         {
           "name": "Claude for Government",
@@ -135,26 +135,26 @@
         {
           "id": "4xvtc2gnq73l",
           "title": "Elevated errors on claude.ai, Claude Code, Claude Cowork and the Claude API",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "major",
           "startedAt": "2026-09-29T14:21:37.188Z",
-          "updatedAt": "2026-09-29T14:41:08.276Z",
+          "updatedAt": "2026-09-29T15:30:44.559Z",
           "resolvedAt": null,
           "url": "https://stspg.io/br61xzj05pp5",
-          "summary": "We have applied a mitigation and error rates have dropped substantially. Some sign-in attempts, account actions and Claude Code and Cowork sessions are still failing. We are conti..."
+          "summary": "All services have been operating normally since 14:59 UTC. We are continuing to monitor."
         }
       ],
       "recentIncidents": [
         {
           "id": "4xvtc2gnq73l",
           "title": "Elevated errors on claude.ai, Claude Code, Claude Cowork and the Claude API",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "major",
           "startedAt": "2026-09-29T14:21:37.188Z",
-          "updatedAt": "2026-09-29T14:41:08.276Z",
+          "updatedAt": "2026-09-29T15:30:44.559Z",
           "resolvedAt": null,
           "url": "https://stspg.io/br61xzj05pp5",
-          "summary": "We have applied a mitigation and error rates have dropped substantially. Some sign-in attempts, account actions and Claude Code and Cowork sessions are still failing. We are conti..."
+          "summary": "All services have been operating normally since 14:59 UTC. We are continuing to monitor."
         },
         {
           "id": "7g1qpkyz5gxh",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T14:55:48.718Z",
+      "lastCheckedAt": "2026-09-29T15:45:40.180Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T14:55:47.867Z",
+      "lastCheckedAt": "2026-09-29T15:45:39.637Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -254,7 +254,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T14:55:47.834Z",
+      "lastCheckedAt": "2026-09-29T15:45:39.331Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -340,7 +340,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T14:55:49.005Z",
+      "lastCheckedAt": "2026-09-29T15:45:40.213Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -364,7 +364,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []

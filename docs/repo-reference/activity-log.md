@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 29 Sept 2026, 14:56 UTC
+Generated: 29 Sept 2026, 15:45 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 29 Sept 2026, 14:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 29 Sept 2026, 14:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 29 Sept 2026, 14:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 29 Sept 2026, 14:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 29 Sept 2026, 14:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 29 Sept 2026, 15:45 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 29 Sept 2026, 15:45 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 29 Sept 2026, 15:45 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 29 Sept 2026, 15:45 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 29 Sept 2026, 15:45 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 29 Sept 2026, 12:00 UTC | digest | Instinct founder said more than 50% of transactions on the platform are travel-related | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/instinct-founder-said-more-than-50-of-transactions-on-the-platform-are-travel-related/) |
 | 29 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,215 open roles across 10 tracked companies. | `/jobs/` |
-| 29 Sept 2026, 12:00 UTC | digest | Meta is expanding its AI agent Muse to small businesses | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/meta-is-expanding-its-ai-agent-muse-to-small-businesses/) |
 | 29 Sept 2026, 12:00 UTC | digest | Meta&#8217;s Muse AI sent a YouTuber’s address to a stranger | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1001886/meta-muse-ai-facebook-marketplace-security-concerns) |
-| 29 Sept 2026, 12:00 UTC | digest | Published the 2026-09-29 daily digest | 9 stories captured from 2 sources. | `/news/` |
+| 29 Sept 2026, 12:00 UTC | digest | Published the 2026-09-29 daily digest | 10 stories captured from 2 sources. | `/news/` |
 | 29 Sept 2026, 12:00 UTC | digest | With Dazzle, Marissa Mayer bets your camera roll has more info on your life than your inbox | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/with-dazzle-marissa-mayer-bets-your-camera-roll-has-more-info-on-your-life-than-your-inbox/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
