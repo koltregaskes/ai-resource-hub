@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T14:21:21.338Z",
+  "generatedAt": "2026-09-29T14:55:49.012Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T14:21:21.330Z",
+      "lastCheckedAt": "2026-09-29T14:55:48.712Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,39 +100,62 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T14:21:20.149Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-09-29T14:55:47.865Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Minor Service Outage",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Code",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Cowork",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude for Government",
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "4xvtc2gnq73l",
+          "title": "Elevated errors on claude.ai, Claude Code, Claude Cowork and the Claude API",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-09-29T14:21:37.188Z",
+          "updatedAt": "2026-09-29T14:41:08.276Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/br61xzj05pp5",
+          "summary": "We have applied a mitigation and error rates have dropped substantially. Some sign-in attempts, account actions and Claude Code and Cowork sessions are still failing. We are conti..."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "4xvtc2gnq73l",
+          "title": "Elevated errors on claude.ai, Claude Code, Claude Cowork and the Claude API",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-09-29T14:21:37.188Z",
+          "updatedAt": "2026-09-29T14:41:08.276Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/br61xzj05pp5",
+          "summary": "We have applied a mitigation and error rates have dropped substantially. Some sign-in attempts, account actions and Claude Code and Cowork sessions are still failing. We are conti..."
+        },
         {
           "id": "7g1qpkyz5gxh",
           "title": "Elevated errors for multiple models",
@@ -165,17 +188,6 @@
           "resolvedAt": "2026-09-15T11:14:44.380Z",
           "url": "https://stspg.io/x1qpycpg6ln7",
           "summary": "A fix has been deployed for Claude Mythos 5.1 and Claude Fable 5.1 and we are monitoring to ensure it has resolved the issue."
-        },
-        {
-          "id": "r1pqn1kb4hvk",
-          "title": "Degraded functionality for Claude Cowork on Windows",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-09-10T15:54:10.000Z",
-          "updatedAt": "2026-09-14T19:14:45.986Z",
-          "resolvedAt": "2026-09-14T19:14:45.969Z",
-          "url": "https://stspg.io/5yp3rhhztm30",
-          "summary": "This issue has been resolved. Microsoft has released a September 14 Windows update that fixes it: https://support.microsoft.com/en-us/servicing/os/windows-11/2026/09/kb5129195-win..."
         }
       ]
     },
@@ -190,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T14:21:21.042Z",
+      "lastCheckedAt": "2026-09-29T14:55:48.718Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T14:21:20.425Z",
+      "lastCheckedAt": "2026-09-29T14:55:47.867Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -242,7 +254,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T14:21:20.086Z",
+      "lastCheckedAt": "2026-09-29T14:55:47.834Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -328,7 +340,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-29T14:21:21.113Z",
+      "lastCheckedAt": "2026-09-29T14:55:49.005Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -352,7 +364,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
