@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 29 Sept 2026, 11:56 UTC
+Generated: 29 Sept 2026, 12:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 29 Sept 2026, 12:00 UTC | digest | Anthropic warns of ‘catastrophic’ AI risks in its own IPO filing | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1001838/anthropic-ipo-prospectus-ai-safety-threat) |
-| 29 Sept 2026, 12:00 UTC | digest | Anthropic&#8217;s prospectus details losses, growth, and, yes, a warning that its AI could end humanity | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/28/anthropics-prospectus-details-losses-growth-and-yes-a-warning-that-its-ai-could-end-humanity/) |
-| 29 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,218 open roles across 10 tracked companies. | `/jobs/` |
-| 29 Sept 2026, 12:00 UTC | digest | Peak XV ups Surge seed investment ceiling to $5M, unveils 18-startup cohort | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/) |
-| 29 Sept 2026, 12:00 UTC | digest | Published the 2026-09-29 daily digest | 3 stories captured from 2 sources. | `/news/` |
-| 29 Sept 2026, 11:56 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 29 Sept 2026, 11:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 29 Sept 2026, 11:56 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 29 Sept 2026, 11:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 29 Sept 2026, 11:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 29 Sept 2026, 12:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 29 Sept 2026, 12:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 29 Sept 2026, 12:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 29 Sept 2026, 12:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 29 Sept 2026, 12:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 29 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,216 open roles across 10 tracked companies. | `/jobs/` |
+| 29 Sept 2026, 12:00 UTC | digest | OpenAI apologizes to Australia after its AI agents breached government sites | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/openai-apologizes-to-australia-after-its-ai-agents-breached-government-sites/) |
+| 29 Sept 2026, 12:00 UTC | digest | Published the 2026-09-29 daily digest | 6 stories captured from 2 sources. | `/news/` |
+| 29 Sept 2026, 12:00 UTC | digest | Reco raises $55M as AI agent security startups crowd the market | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/reco-raises-55m-as-ai-agent-security-startups-crowd-the-market/) |
+| 29 Sept 2026, 12:00 UTC | digest | Will Chinese AI companies slow down? A top House Democrat wants answers | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/1001767/khanna-ai-safety-china-treaty) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
