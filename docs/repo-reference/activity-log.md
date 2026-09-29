@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 29 Sept 2026, 21:55 UTC
+Generated: 29 Sept 2026, 22:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 29 Sept 2026, 21:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 29 Sept 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 29 Sept 2026, 21:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 29 Sept 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 29 Sept 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 29 Sept 2026, 12:00 UTC | digest | Here&#8217;s why OpenAI is absent from Nvidia&#8217;s industry-wide effort to end rogue AI agents | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/heres-why-openai-is-absent-from-nvidias-industry-wide-effort-to-end-rogue-ai-agents/) |
-| 29 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,219 open roles across 10 tracked companies. | `/jobs/` |
-| 29 Sept 2026, 12:00 UTC | digest | OpenAI repotedly in talks to raise $30B round at $1.4T valuation | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/openai-repotedly-in-talks-to-raise-30b-round-at-1-4t-valuation/) |
-| 29 Sept 2026, 12:00 UTC | digest | OpenAI&#8217;s latest features take direct aim at the app store model | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/openais-latest-features-take-direct-aim-at-the-app-store-model/) |
+| 29 Sept 2026, 22:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 29 Sept 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 29 Sept 2026, 22:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 29 Sept 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 29 Sept 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 29 Sept 2026, 12:00 UTC | digest | Elon Musk&#8217;s AI-powered Grokipedia is updating again | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1002448/elon-musk-grokipedia-ai-updating-again) |
+| 29 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,217 open roles across 10 tracked companies. | `/jobs/` |
 | 29 Sept 2026, 12:00 UTC | digest | Published the 2026-09-29 daily digest | 20 stories captured from 2 sources. | `/news/` |
+| 29 Sept 2026, 12:00 UTC | digest | The internet is convinced Elon Musk&#8217;s xAI trolled OpenAI&#8217;s &#8216;Dots&#8217; launch | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/) |
+| 29 Sept 2026, 12:00 UTC | digest | Trump orders US government to call AI ‘Super Intelligence’ | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/1002468/trump-ai-superintelligence-executive-order-ai) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
