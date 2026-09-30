@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T01:55:48.181Z",
+  "generatedAt": "2026-09-30T02:24:08.129Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-30T01:55:48.174Z",
+      "lastCheckedAt": "2026-09-30T02:24:07.988Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,6 +90,103 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-09-30T02:24:07.161Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Realtime",
+          "status": "operational"
+        },
+        {
+          "name": "Compliance API",
+          "status": "operational"
+        },
+        {
+          "name": "Ads API",
+          "status": "operational"
+        },
+        {
+          "name": "Search",
+          "status": "operational"
+        },
+        {
+          "name": "Agent",
+          "status": "operational"
+        },
+        {
+          "name": "Connectors/Apps",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01M3R1T4FCR1337FBBYY9K2RPB",
+          "title": "Elevated errors in ChatGPT Space Pages",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-09-30T02:20:32.000Z",
+          "updatedAt": "2026-09-30T02:20:32.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users may experience errors creating or interacting with Pages, including failures when using Page tools or connecting to live Page sessions.\n\nWe are worki..."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01M3R1T4FCR1337FBBYY9K2RPB",
+          "title": "Elevated errors in ChatGPT Space Pages",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-09-30T02:20:32.000Z",
+          "updatedAt": "2026-09-30T02:20:32.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users may experience errors creating or interacting with Pages, including failures when using Page tools or connecting to live Page sessions.\n\nWe are worki..."
+        },
+        {
+          "id": "01M3Q4HMNP8SZ27DTZKW6F5BJ4",
+          "title": "Support available via email",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-09-29T17:49:05.000Z",
+          "updatedAt": "2026-09-29T23:18:57.000Z",
+          "resolvedAt": "2026-09-29T23:18:57.000Z",
+          "summary": "The issue affecting support chat has been resolved. You can now contact our support team through the Help Center as usual.\n\nThank you for your patience while we worked to restore..."
+        },
+        {
+          "id": "01M3Q4RK1SM4EMK445GGPG7C0N",
+          "title": "Elevated errors across ChatGPT, Codex, and the API including the Agents API",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-09-29T17:52:52.000Z",
+          "updatedAt": "2026-09-29T23:14:02.000Z",
+          "resolvedAt": "2026-09-29T23:14:02.000Z",
+          "summary": "The issue causing elevated errors across ChatGPT, Codex, and the API has been resolved, and all affected services have recovered.\n\nThank you for your patience while we worked to r..."
+        },
+        {
+          "id": "01M3DCNWMW57HYK8FJ5FBFPA39",
+          "title": "Issues with Codex ",
+          "status": "resolved",
+          "impact": "critical",
+          "startedAt": "2026-09-25T22:58:48.000Z",
+          "updatedAt": "2026-09-29T21:33:31.000Z",
+          "resolvedAt": "2026-09-25T23:54:41.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -100,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-30T01:55:46.436Z",
+      "lastCheckedAt": "2026-09-30T02:24:07.158Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-30T01:55:47.443Z",
+      "lastCheckedAt": "2026-09-30T02:24:08.062Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-30T01:55:46.603Z",
+      "lastCheckedAt": "2026-09-30T02:24:07.346Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -232,92 +329,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-09-30T01:55:46.444Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Realtime",
-          "status": "operational"
-        },
-        {
-          "name": "Compliance API",
-          "status": "operational"
-        },
-        {
-          "name": "Ads API",
-          "status": "operational"
-        },
-        {
-          "name": "Search",
-          "status": "operational"
-        },
-        {
-          "name": "Agent",
-          "status": "operational"
-        },
-        {
-          "name": "Connectors/Apps",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01M3Q4HMNP8SZ27DTZKW6F5BJ4",
-          "title": "Support available via email",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-09-29T17:49:05.000Z",
-          "updatedAt": "2026-09-29T23:18:57.000Z",
-          "resolvedAt": "2026-09-29T23:18:57.000Z",
-          "summary": "The issue affecting support chat has been resolved. You can now contact our support team through the Help Center as usual.\n\nThank you for your patience while we worked to restore..."
-        },
-        {
-          "id": "01M3Q4RK1SM4EMK445GGPG7C0N",
-          "title": "Elevated errors across ChatGPT, Codex, and the API including the Agents API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-29T17:52:52.000Z",
-          "updatedAt": "2026-09-29T23:14:02.000Z",
-          "resolvedAt": "2026-09-29T23:14:02.000Z",
-          "summary": "The issue causing elevated errors across ChatGPT, Codex, and the API has been resolved, and all affected services have recovered.\n\nThank you for your patience while we worked to r..."
-        },
-        {
-          "id": "01M3DCNWMW57HYK8FJ5FBFPA39",
-          "title": "Issues with Codex ",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-09-25T22:58:48.000Z",
-          "updatedAt": "2026-09-29T21:33:31.000Z",
-          "resolvedAt": "2026-09-25T23:54:41.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M3ACKDE4GYY67FXXNRRSC0CE",
-          "title": "Elevated Error Rates on GPT-6 Astra Pro",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-09-24T18:59:44.000Z",
-          "updatedAt": "2026-09-24T19:46:28.000Z",
-          "resolvedAt": "2026-09-24T19:46:28.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -328,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-30T01:55:47.631Z",
+      "lastCheckedAt": "2026-09-30T02:24:08.122Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -352,7 +363,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
