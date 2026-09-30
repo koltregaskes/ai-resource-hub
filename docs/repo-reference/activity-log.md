@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 30 Sept 2026, 17:55 UTC
+Generated: 30 Sept 2026, 18:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 30 Sept 2026, 17:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 30 Sept 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 30 Sept 2026, 17:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 30 Sept 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 30 Sept 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 30 Sept 2026, 12:00 UTC | digest | DoorDash launches an AI agent you can text to order food | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/30/doordash-launches-an-ai-agent-you-can-text-to-order-food/) |
-| 30 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,214 open roles across 10 tracked companies. | `/jobs/` |
-| 30 Sept 2026, 12:00 UTC | digest | Meta disputes claim that Muse read a user&#8217;s private messages without permission | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/30/meta-disputes-claim-that-muse-read-a-users-private-messages-without-permission/) |
-| 30 Sept 2026, 12:00 UTC | digest | Published the 2026-09-30 daily digest | 16 stories captured from 3 sources. | `/news/` |
+| 30 Sept 2026, 18:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 30 Sept 2026, 18:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 30 Sept 2026, 18:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 30 Sept 2026, 18:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 30 Sept 2026, 18:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 30 Sept 2026, 12:00 UTC | digest | AI voice startup ElevenLabs doubles valuation to $22B | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/30/ai-voice-startup-elevenlabs-doubles-valuation-to-22b/) |
+| 30 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,215 open roles across 10 tracked companies. | `/jobs/` |
+| 30 Sept 2026, 12:00 UTC | digest | Published the 2026-09-30 daily digest | 18 stories captured from 3 sources. | `/news/` |
+| 30 Sept 2026, 12:00 UTC | digest | Reddit is killing RSS feeds and ending public API access because of AI bots | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/) |
 | 30 Sept 2026, 12:00 UTC | digest | The ugly economics of consumer AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/30/the-ugly-economics-of-consumer-ai/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
