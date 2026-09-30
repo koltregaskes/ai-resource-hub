@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 30 Sept 2026, 13:38 UTC
+Generated: 30 Sept 2026, 14:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 30 Sept 2026, 13:38 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 30 Sept 2026, 13:38 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 30 Sept 2026, 13:38 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 30 Sept 2026, 13:38 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 30 Sept 2026, 13:38 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 30 Sept 2026, 12:00 UTC | digest | Airbnb adds AI search, more social features | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/30/airbnb-adds-ai-search-more-social-features/) |
-| 30 Sept 2026, 12:00 UTC | digest | Here’s how tech leaders will self-police AI safety under Trump’s deal | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1002584/trump-us-ai-safety-deal-self-regulation-tech-execs) |
-| 30 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,212 open roles across 10 tracked companies. | `/jobs/` |
-| 30 Sept 2026, 12:00 UTC | digest | Published the 2026-09-30 daily digest | 3 stories captured from 2 sources. | `/news/` |
-| 30 Sept 2026, 12:00 UTC | digest | Sam Altman says OpenAI won’t go public until its models are safe | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety) |
+| 30 Sept 2026, 14:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 30 Sept 2026, 14:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 30 Sept 2026, 14:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 30 Sept 2026, 14:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 30 Sept 2026, 14:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 30 Sept 2026, 12:00 UTC | digest | Cerebras Systems’ Andrew Feldman on whether AI can keep scaling at TechCrunch Disrupt 2026 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/30/cerebras-systems-andrew-feldman-on-whether-ai-can-keep-scaling-at-techcrunch-disrupt-2026/) |
+| 30 Sept 2026, 12:00 UTC | digest | Google reportedly tests paying publishers for AI search results | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1002665/google-paying-publishers-ai-search-features) |
+| 30 Sept 2026, 12:00 UTC | digest | Instagram is adding an AI ‘assistant’ to tell you how to post | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1002402/instagram-ai-edits-assistant-creators-analytics-youtube) |
+| 30 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,213 open roles across 10 tracked companies. | `/jobs/` |
+| 30 Sept 2026, 12:00 UTC | digest | Published the 2026-09-30 daily digest | 8 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
