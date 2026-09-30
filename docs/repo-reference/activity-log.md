@@ -1,21 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 29 Sept 2026, 23:56 UTC
+Generated: 30 Sept 2026, 00:23 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 29 Sept 2026, 23:56 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 29 Sept 2026, 23:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 29 Sept 2026, 23:56 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 29 Sept 2026, 23:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 29 Sept 2026, 23:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 29 Sept 2026, 12:00 UTC | digest | America.gov gets really weird when you ask it about Minecraft, but it&#8217;s not a glitch | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/america-gov-gets-really-weird-when-you-ask-it-about-minecraft-but-its-not-a-glitch/) |
-| 29 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,215 open roles across 10 tracked companies. | `/jobs/` |
-| 29 Sept 2026, 12:00 UTC | digest | Published the 2026-09-29 daily digest | 20 stories captured from 2 sources. | `/news/` |
-| 29 Sept 2026, 12:00 UTC | digest | The internet is convinced Elon Musk&#8217;s xAI trolled OpenAI&#8217;s &#8216;Dots&#8217; launch | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/09/29/the-internet-is-convinced-elon-musks-xai-trolled-openais-dots-launch/) |
-| 29 Sept 2026, 12:00 UTC | digest | Trump orders US government to call AI ‘Super Intelligence’ | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/1002468/trump-ai-superintelligence-executive-order-ai) |
+| 30 Sept 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,214 open roles across 10 tracked companies. | `/jobs/` |
+| 30 Sept 2026, 12:00 UTC | digest | OpenAI won’t go public until its models are safe | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety) |
+| 30 Sept 2026, 12:00 UTC | digest | Published the 2026-09-30 daily digest | 1 stories captured from 1 sources. | `/news/` |
+| 30 Sept 2026, 00:23 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 30 Sept 2026, 00:23 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 30 Sept 2026, 00:23 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 30 Sept 2026, 00:23 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 30 Sept 2026, 00:23 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
@@ -26,3 +24,5 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 05 Feb 2026, 12:00 UTC | models | Claude Opus 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.6/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 Pro (batch) added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2-pro/` |
+| 24 Nov 2025, 12:00 UTC | models | Claude Opus 4.5 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.5/` |
+| 15 Oct 2025, 12:00 UTC | models | Claude Haiku 4.5 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-haiku-4.5/` |
