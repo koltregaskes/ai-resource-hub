@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T05:55:49.346Z",
+  "generatedAt": "2026-09-30T06:39:40.906Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-30T05:55:49.339Z",
+      "lastCheckedAt": "2026-09-30T06:39:40.899Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-30T05:55:48.433Z",
+      "lastCheckedAt": "2026-09-30T06:39:39.502Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "2 active incidents across 25 tracked components.",
@@ -133,46 +133,46 @@
       ],
       "activeIncidents": [
         {
-          "id": "01M3RDNY37CAPQGRKPBVMNRT4K",
-          "title": "Elevated error rates for ChatGPT Pro and Plus users",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-09-30T05:47:57.000Z",
-          "updatedAt": "2026-09-30T05:47:57.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
-        },
-        {
           "id": "01M3R1T4FCR1337FBBYY9K2RPB",
           "title": "Elevated errors in ChatGPT Space Pages",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-09-30T02:20:32.000Z",
-          "updatedAt": "2026-09-30T02:20:32.000Z",
+          "updatedAt": "2026-09-30T06:03:10.000Z",
           "resolvedAt": null,
-          "summary": "We have identified that users may experience errors creating or interacting with Pages, including failures when using Page tools or connecting to live Page sessions.\n\nWe are worki..."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        },
+        {
+          "id": "01M3RDNY37CAPQGRKPBVMNRT4K",
+          "title": "Elevated error rates for ChatGPT Pro and Plus users",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-09-30T05:47:57.000Z",
+          "updatedAt": "2026-09-30T05:56:48.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         }
       ],
       "recentIncidents": [
         {
-          "id": "01M3RDNY37CAPQGRKPBVMNRT4K",
-          "title": "Elevated error rates for ChatGPT Pro and Plus users",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-09-30T05:47:57.000Z",
-          "updatedAt": "2026-09-30T05:47:57.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
-        },
-        {
           "id": "01M3R1T4FCR1337FBBYY9K2RPB",
           "title": "Elevated errors in ChatGPT Space Pages",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-09-30T02:20:32.000Z",
-          "updatedAt": "2026-09-30T02:20:32.000Z",
+          "updatedAt": "2026-09-30T06:03:10.000Z",
           "resolvedAt": null,
-          "summary": "We have identified that users may experience errors creating or interacting with Pages, including failures when using Page tools or connecting to live Page sessions.\n\nWe are worki..."
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        },
+        {
+          "id": "01M3RDNY37CAPQGRKPBVMNRT4K",
+          "title": "Elevated error rates for ChatGPT Pro and Plus users",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-09-30T05:47:57.000Z",
+          "updatedAt": "2026-09-30T05:56:48.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
         },
         {
           "id": "01M3Q4HMNP8SZ27DTZKW6F5BJ4",
@@ -207,7 +207,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-30T05:55:48.518Z",
+      "lastCheckedAt": "2026-09-30T06:39:39.525Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -297,7 +297,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-30T05:55:49.259Z",
+      "lastCheckedAt": "2026-09-30T06:39:40.316Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -317,7 +317,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-30T05:55:48.582Z",
+      "lastCheckedAt": "2026-09-30T06:39:39.828Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -349,7 +349,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-09-30T05:55:49.272Z",
+      "lastCheckedAt": "2026-09-30T06:39:40.535Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
