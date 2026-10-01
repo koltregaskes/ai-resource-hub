@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T17:55:47.843Z",
+  "generatedAt": "2026-10-01T18:50:57.647Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T17:55:47.835Z",
+      "lastCheckedAt": "2026-10-01T18:50:57.640Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,6 +90,113 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-10-01T18:50:56.523Z",
+      "overallStatus": "partial_outage",
+      "overallLabel": "Partial System Outage",
+      "summary": "2 active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Login",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Chat Completions",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Agents",
+          "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01M3WCKTAN41RZ01SBRRTY4AYM",
+          "title": "Issues with login and signup",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-10-01T18:46:17.000Z",
+          "updatedAt": "2026-10-01T18:46:17.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating an issue affecting login and signup. We will share further updates as we learn more."
+        },
+        {
+          "id": "01M3R1T4FCR1337FBBYY9K2RPB",
+          "title": "Elevated errors in ChatGPT Space Pages",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-09-30T02:20:32.000Z",
+          "updatedAt": "2026-10-01T16:51:16.000Z",
+          "resolvedAt": null,
+          "summary": "We are continuing to monitor our mitigiations. Some users may see slow or timed out results, especially for creating new pages or spaces."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01M3WCKTAN41RZ01SBRRTY4AYM",
+          "title": "Issues with login and signup",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-10-01T18:46:17.000Z",
+          "updatedAt": "2026-10-01T18:46:17.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating an issue affecting login and signup. We will share further updates as we learn more."
+        },
+        {
+          "id": "01M3R1T4FCR1337FBBYY9K2RPB",
+          "title": "Elevated errors in ChatGPT Space Pages",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-09-30T02:20:32.000Z",
+          "updatedAt": "2026-10-01T16:51:16.000Z",
+          "resolvedAt": null,
+          "summary": "We are continuing to monitor our mitigiations. Some users may see slow or timed out results, especially for creating new pages or spaces."
+        },
+        {
+          "id": "01M3SMF1Q0TDCQVNYSXYG37QMR",
+          "title": "Elevated latency for some API requests",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-09-30T17:05:46.000Z",
+          "updatedAt": "2026-09-30T20:35:46.000Z",
+          "resolvedAt": "2026-09-30T20:35:46.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M3RDNY37CAPQGRKPBVMNRT4K",
+          "title": "Elevated error rates for ChatGPT Pro and Plus users",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-09-30T05:47:57.000Z",
+          "updatedAt": "2026-09-30T13:23:37.000Z",
+          "resolvedAt": "2026-09-30T13:23:37.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -100,22 +207,22 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T17:55:46.768Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
+      "lastCheckedAt": "2026-10-01T18:50:56.475Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
+          "name": "claude.ai",
+          "status": "operational"
+        },
+        {
           "name": "Claude Console (platform.claude.com)",
-          "status": "degraded_performance"
+          "status": "operational"
         },
         {
           "name": "Claude API (api.anthropic.com)",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "claude.ai",
           "status": "operational"
         },
         {
@@ -134,27 +241,27 @@
       "activeIncidents": [
         {
           "id": "k0h22tsvnydg",
-          "title": "Degraded performance on the Claude API and platform.claude.com",
-          "status": "investigating",
+          "title": "Delayed credits on the Claude Platform",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-10-01T16:20:40.775Z",
-          "updatedAt": "2026-10-01T16:20:40.930Z",
+          "updatedAt": "2026-10-01T18:23:02.751Z",
           "resolvedAt": null,
           "url": "https://stspg.io/jg26d0skzh27",
-          "summary": "We are investigating delays in credit purchases being reflected in account balances, resulting in some requests failing for insufficient credit balance. We will provide an additio..."
+          "summary": "We have resolved the issue causing delays in credits being applied after purchase. We are monitoring closely to ensure no further issues."
         }
       ],
       "recentIncidents": [
         {
           "id": "k0h22tsvnydg",
-          "title": "Degraded performance on the Claude API and platform.claude.com",
-          "status": "investigating",
+          "title": "Delayed credits on the Claude Platform",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-10-01T16:20:40.775Z",
-          "updatedAt": "2026-10-01T16:20:40.930Z",
+          "updatedAt": "2026-10-01T18:23:02.751Z",
           "resolvedAt": null,
           "url": "https://stspg.io/jg26d0skzh27",
-          "summary": "We are investigating delays in credit purchases being reflected in account balances, resulting in some requests failing for insufficient credit balance. We will provide an additio..."
+          "summary": "We have resolved the issue causing delays in credits being applied after purchase. We are monitoring closely to ensure no further issues."
         },
         {
           "id": "4xvtc2gnq73l",
@@ -192,103 +299,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T17:55:46.800Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Chat Completions",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Agents",
-          "status": "operational"
-        },
-        {
-          "name": "Decisions",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01M3R1T4FCR1337FBBYY9K2RPB",
-          "title": "Elevated errors in ChatGPT Space Pages",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-09-30T02:20:32.000Z",
-          "updatedAt": "2026-10-01T16:51:16.000Z",
-          "resolvedAt": null,
-          "summary": "We are continuing to monitor our mitigiations. Some users may see slow or timed out results, especially for creating new pages or spaces."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01M3R1T4FCR1337FBBYY9K2RPB",
-          "title": "Elevated errors in ChatGPT Space Pages",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-09-30T02:20:32.000Z",
-          "updatedAt": "2026-10-01T16:51:16.000Z",
-          "resolvedAt": null,
-          "summary": "We are continuing to monitor our mitigiations. Some users may see slow or timed out results, especially for creating new pages or spaces."
-        },
-        {
-          "id": "01M3SMF1Q0TDCQVNYSXYG37QMR",
-          "title": "Elevated latency for some API requests",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-30T17:05:46.000Z",
-          "updatedAt": "2026-09-30T20:35:46.000Z",
-          "resolvedAt": "2026-09-30T20:35:46.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M3RDNY37CAPQGRKPBVMNRT4K",
-          "title": "Elevated error rates for ChatGPT Pro and Plus users",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-09-30T05:47:57.000Z",
-          "updatedAt": "2026-09-30T13:23:37.000Z",
-          "resolvedAt": "2026-09-30T13:23:37.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M3Q4HMNP8SZ27DTZKW6F5BJ4",
-          "title": "Support available via email",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-09-29T17:49:05.000Z",
-          "updatedAt": "2026-09-29T23:18:57.000Z",
-          "resolvedAt": "2026-09-29T23:18:57.000Z",
-          "summary": "The issue affecting support chat has been resolved. You can now contact our support team through the Help Center as usual.\n\nThank you for your patience while we worked to restore..."
-        }
-      ]
-    },
-    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -299,7 +309,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T17:55:47.424Z",
+      "lastCheckedAt": "2026-10-01T18:50:57.189Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +329,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T17:55:46.856Z",
+      "lastCheckedAt": "2026-10-01T18:50:56.628Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -351,7 +361,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T17:55:47.564Z",
+      "lastCheckedAt": "2026-10-01T18:50:57.239Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
