@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T21:55:29.881Z",
+  "generatedAt": "2026-10-01T22:55:27.818Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T21:55:29.850Z",
+      "lastCheckedAt": "2026-10-01T22:55:27.806Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T21:55:28.697Z",
+      "lastCheckedAt": "2026-10-01T22:55:26.993Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -197,10 +197,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T21:55:28.681Z",
+      "lastCheckedAt": "2026-10-01T22:55:27.004Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 6 tracked components.",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -228,30 +228,18 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "k0h22tsvnydg",
-          "title": "Delayed credits on the Claude Platform",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-10-01T16:20:40.775Z",
-          "updatedAt": "2026-10-01T18:23:02.751Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/jg26d0skzh27",
-          "summary": "We have resolved the issue causing delays in credits being applied after purchase. We are monitoring closely to ensure no further issues."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "k0h22tsvnydg",
           "title": "Delayed credits on the Claude Platform",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-10-01T16:20:40.775Z",
-          "updatedAt": "2026-10-01T18:23:02.751Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-10-01T22:36:22.239Z",
+          "resolvedAt": "2026-10-01T22:36:22.210Z",
           "url": "https://stspg.io/jg26d0skzh27",
-          "summary": "We have resolved the issue causing delays in credits being applied after purchase. We are monitoring closely to ensure no further issues."
+          "summary": "This issue has been resolved."
         },
         {
           "id": "4xvtc2gnq73l",
@@ -299,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T21:55:29.623Z",
+      "lastCheckedAt": "2026-10-01T22:55:27.626Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T21:55:28.912Z",
+      "lastCheckedAt": "2026-10-01T22:55:27.043Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -351,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T21:55:29.875Z",
+      "lastCheckedAt": "2026-10-01T22:55:27.814Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -375,7 +363,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
