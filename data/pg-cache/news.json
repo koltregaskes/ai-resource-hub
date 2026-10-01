@@ -1,5 +1,41 @@
 [
   {
+    "id": "news-1b019ab53f254357248e",
+    "title": "Opus 5.5 loves to tell you &#8216;this matters&#8217; (and other AI writing tells)",
+    "url": "https://techcrunch.com/2026/10/01/opus-5-5-loves-to-tell-you-this-matters-and-other-ai-writing-tells/",
+    "source": "TechCrunch",
+    "summary": "Opus 5.5’s biggest tell is the word “dependable,” which pops up 23 times more often than in human samples.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-01T17:50:19.000Z",
+    "discovered_at": "2026-10-01 17:55:45"
+  },
+  {
+    "id": "news-e7f973146b85fb7cf321",
+    "title": "Judge dismisses antitrust lawsuits over Google’s AI Overviews",
+    "url": "https://www.theverge.com/tech/1003589/google-ai-overviews-chegg-penske-lawsuits-dismissed",
+    "source": "The Verge",
+    "summary": "A federal judge has dismissed a pair of antitrust lawsuits filed by Chegg and Rolling Stone parent company Penske Media Corporation, which accused Google of driving away web traffic with its AI-powered search features, as reported earlier by Reuters. US District Judge Amit Mehta takes Google's side in a ruling on Wedn…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-01T17:12:21.000Z",
+    "discovered_at": "2026-10-01 17:55:45"
+  },
+  {
+    "id": "news-7e67b43cf9d0e609b77c",
+    "title": "The eternal complement",
+    "url": "https://openai.com/index/the-eternal-complement",
+    "source": "OpenAI",
+    "summary": "Advanced AI may matter most for the routine work behind breakthrough ideas. Explore why execution could shape the next economy and the pace of progress.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-01T17:00:00.000Z",
+    "discovered_at": "2026-10-01 17:55:45"
+  },
+  {
     "id": "news-f85c4d066c1ce9bdb6a3",
     "title": "Amazon releases its own Jev clone as decision models flood the web",
     "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
@@ -9,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T16:49:22.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-67fa7499b8fbed8bff1f",
@@ -21,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T16:44:35.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-a80484c2d5849bdb1405",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T16:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-fdadf99fae2beb470971",
@@ -45,7 +81,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T15:12:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
+  },
+  {
+    "id": "news-9c6f1560c6228e1aff9a",
+    "title": "OpenAI’s new agent is a shot at Meta — but can it compete with free?",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1003399/meta-openai-ai-agents-muse-dots-battle",
+    "source": "The Verge",
+    "summary": "At OpenAI's annual DevDay conference, the company pulled out all the stops to compete with its rivals - primarily Meta, whose Muse AI agent platform has seen early runaway success. CEO Sam Altman walked onstage to cheers and announced Dots, a \"real-deal AI\" agent powered by GPT-6 Astra, \"inspired by the cool agents th…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-01T14:36:50.000Z",
+    "discovered_at": "2026-10-01 17:55:45"
+  },
+  {
+    "id": "news-adb45e048c1df812a391",
+    "title": "Inside our months-long investigation into Kevin O’Leary’s Utah data center debacle",
+    "url": "https://www.theverge.com/podcast/1002851/utah-ai-data-center-stratos-kevin-oleary-investigation-backlash",
+    "source": "The Verge",
+    "summary": "Today I’m talking with Josh Dzieza, a longtime features writer here at The Verge, about Kevin O’Leary’s plans to build a massive data center in Utah.&#160; The idea was to build the world&#8217;s biggest data center — a 40,000-acre AI campus with nine gigawatts of power, or more than double the average power usage of…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-01T14:00:00.000Z",
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-2be59ecee0ce4c211045",
@@ -57,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T14:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-498d9d05d6fce3270bab",
@@ -69,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T13:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-de11222dc23d9742c3a6",
@@ -81,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T12:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-5afad699a57c67421c96",
@@ -93,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T00:23:45.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-1237634e7f12d4ede1ce",
@@ -105,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T23:43:07.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-f9953f3a0f91b8140b61",
@@ -117,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T21:07:40.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-97fa5252aa29114144a3",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T20:41:41.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-c2747f33753d29b6045a",
@@ -141,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T19:00:57.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-6e1523d27751ae55b66a",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T18:23:57.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-940c49f7ad52416d7c83",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T18:07:38.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-8b112c5c219001418488",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T17:45:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-04acd56abe8020c9b2b3",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T17:24:45.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-b3707029996ac4053575",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T17:15:49.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-f59f9ed0e27c740e3435",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T16:24:23.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-4141c50f4da56ba485e7",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T16:00:24.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-8e63278d5d977ca68315",
@@ -237,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T16:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-ab1a11a5392320d7efae",
@@ -249,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T15:56:28.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-1c9685f8d86dfe8f8d09",
@@ -261,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T15:18:49.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-445d1099f6799085254c",
@@ -273,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T14:51:49.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-0f203ce721db6c0318d5",
@@ -285,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T14:30:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-9fcaf5c1a6dad3620fef",
@@ -297,31 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T14:30:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
-  },
-  {
-    "id": "news-4a00c2f7a1bdff65e2f1",
-    "title": "Restate lands $20M as the need for durable infrastructure increases with AI agents",
-    "url": "https://techcrunch.com/2026/09/30/restate-lands-20m-as-the-need-for-durable-infrastructure-increases-with-ai-agents/",
-    "source": "TechCrunch",
-    "summary": "Instead of building its durable execution engine on top of an external database, the company developed its own storage, replication, and redundancy layers. This architecture allows Restate to be exceptionally fast and lightweight.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-30T14:27:11.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
-  },
-  {
-    "id": "news-2104d195eeaa747cb637",
-    "title": "Here’s how tech leaders will self-police AI safety under Trump’s deal",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1002584/trump-us-ai-safety-deal-self-regulation-tech-execs",
-    "source": "The Verge",
-    "summary": "We now have the full details of the \"morally binding\" AI safety deal announced by President Trump yesterday, in which top executives agreed to self-regulate their artificial intelligence technology. The accord, officially titled the Joint Commitment on Frontier Responsibilities, was shared online by tech founder and p…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-30T12:24:32.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-6a91381a429232e70fbb",
@@ -333,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T10:30:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-b5e5e43443d214dfc5c6",
@@ -345,31 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T10:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
-  },
-  {
-    "id": "news-1eb6183d721b63e02936",
-    "title": "Sam Altman says OpenAI won’t go public until its models are safe",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
-    "source": "The Verge",
-    "summary": "For months, people have wondered when OpenAI will go public. CEO Sam Altman says it won't happen until the company can make better promises about model safety, with no firm timeline in sight. \"We intend to continue with AI progress … but as the models have had this surge forward in capability, and we see [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-30T00:19:13.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
-  },
-  {
-    "id": "news-719d3195b24b8f323fed",
-    "title": "Trump orders US government to call AI ‘Super Intelligence’",
-    "url": "https://www.theverge.com/policy/1002468/trump-ai-superintelligence-executive-order-ai",
-    "source": "The Verge",
-    "summary": "The US executive branch is no longer acknowledging the existence of \"artificial intelligence.\" Going forward, official policy websites, policy documents, and press releases will refer only to \"Super Intelligence,\" thanks to a new executive order signed by President Donald Trump. \"The word super is the best word of all…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-29T22:25:45.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-dd66acaed2a04b44cad2",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-29T10:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-19db7cc5ca5cc5ea9756",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-29T10:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-884977ecb8004cb31230",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-29T00:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-1eadd5627184a89f1bbe",
@@ -417,19 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
-  },
-  {
-    "id": "news-cf468ec39dd67f092816",
-    "title": "Towards safety cases for frontier AI training",
-    "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
-    "source": "OpenAI",
-    "summary": "Our early guidelines for safety cases in frontier AI training cover technical safeguards, operational practices, and investigating misalignment incidents",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-cfe8e900401f31bb5337",
@@ -441,7 +441,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
+  },
+  {
+    "id": "news-cf468ec39dd67f092816",
+    "title": "Towards safety cases for frontier AI training",
+    "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+    "source": "OpenAI",
+    "summary": "Our early guidelines for safety cases in frontier AI training cover technical safeguards, operational practices, and investigating misalignment incidents",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-28T19:00:00.000Z",
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-216d56bba26ca4582d8f",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T07:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-bf0fe8cc388a34470fdd",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T00:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-914f14710638400cde95",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T00:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-d2d497e5eee41848c95c",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-25T19:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-8a86c97089bb6492a0d5",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T18:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-9d02eeb8cef10808bb22",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T16:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-1d77064cbebb782f18a0",
@@ -525,31 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T13:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
-  },
-  {
-    "id": "news-01d4e543c9419cead77e",
-    "title": "Sam Altman’s remarks at the United Nations Security Council",
-    "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
-    "source": "OpenAI",
-    "summary": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
-  },
-  {
-    "id": "news-7357353a1f1d61a65439",
-    "title": "How invideo improves color grading 3x with GPT‑6 Astra",
-    "url": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
-    "source": "OpenAI",
-    "summary": "With GPT‑6 Astra, invideo plans edits with greater precision, improves color correction and grading threefold, and produces 50 custom effects in one day.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-f7558dc5c9de5bb5fdc7",
@@ -561,7 +549,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
+  },
+  {
+    "id": "news-01d4e543c9419cead77e",
+    "title": "Sam Altman’s remarks at the United Nations Security Council",
+    "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
+    "source": "OpenAI",
+    "summary": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-23T12:00:00.000Z",
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-7cff1964bf19497febe2",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T12:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-69bd5b227657faccb6a8",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T19:45:47.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-0c90c73c08cf283551a1",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T00:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:40"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-b2c543ac59e1c4518c6a",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T22:24:38.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-079e661c04cec0b07e5c",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T14:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-13d62ca6fcfd55d7fb1a",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T13:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-e7b9d12d1b3a7eb0c954",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T20:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-168e3a7edc7326171115",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T18:33:13.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-a243976a4aeffe7860e7",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-b86d9a766fb72b730ea5",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-18592959ad29d5e254c8",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-00e29a681a6f5e3b92e5",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T13:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-6758d03842f78c1d60a7",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T21:04:32.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-b49b47db0b359f67793a",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T19:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-bf70dc826a65d37ea361",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T16:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-1852061b5cf6950bdd51",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-10T16:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-eca0578fed4853fc9470",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T20:55:02.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-e8269fc9a10961e9d9fc",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T16:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-b0dd0e34ba0b936c69dc",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T16:00:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-bf8c2b1da340d9c0e6fb",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-08T21:11:46.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-680bad5aa943a5735811",
@@ -813,7 +813,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-04T22:17:36.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-289c57109448005063ce",
@@ -825,7 +825,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-04T17:18:12.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-28b149c75e15ee1815b2",
@@ -837,7 +837,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-02T15:40:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   },
   {
     "id": "news-66eabab6976f3ac7c05c",
@@ -849,6 +849,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-01T20:45:00.000Z",
-    "discovered_at": "2026-10-01 16:55:41"
+    "discovered_at": "2026-10-01 17:55:45"
   }
 ]
