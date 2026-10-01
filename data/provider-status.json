@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T15:55:44.174Z",
+  "generatedAt": "2026-10-01T16:55:43.916Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T15:55:44.167Z",
+      "lastCheckedAt": "2026-10-01T16:55:43.751Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,6 +90,108 @@
       ]
     },
     {
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-10-01T16:55:42.545Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partially Degraded Service",
+      "summary": "1 active incident across 6 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "claude.ai",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "operational"
+        },
+        {
+          "name": "Claude for Government",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "k0h22tsvnydg",
+          "title": "Degraded performance on the Claude API and platform.claude.com",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-10-01T16:20:40.775Z",
+          "updatedAt": "2026-10-01T16:20:40.930Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/jg26d0skzh27",
+          "summary": "We are investigating delays in credit purchases being reflected in account balances, resulting in some requests failing for insufficient credit balance. We will provide an additio..."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "k0h22tsvnydg",
+          "title": "Degraded performance on the Claude API and platform.claude.com",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-10-01T16:20:40.775Z",
+          "updatedAt": "2026-10-01T16:20:40.930Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/jg26d0skzh27",
+          "summary": "We are investigating delays in credit purchases being reflected in account balances, resulting in some requests failing for insufficient credit balance. We will provide an additio..."
+        },
+        {
+          "id": "4xvtc2gnq73l",
+          "title": "Elevated errors on claude.ai, Claude Code, Claude Cowork and the Claude API",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-09-29T14:21:37.188Z",
+          "updatedAt": "2026-09-29T16:27:21.393Z",
+          "resolvedAt": "2026-09-29T16:27:21.369Z",
+          "url": "https://stspg.io/br61xzj05pp5",
+          "summary": "The issue affecting Claude.ai, the Claude desktop and mobile apps, Claude Code, Claude Cowork, and the Claude API has been resolved, and services have been operating normally sinc..."
+        },
+        {
+          "id": "7g1qpkyz5gxh",
+          "title": "Elevated errors for multiple models",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-09-22T00:57:26.126Z",
+          "updatedAt": "2026-09-22T02:35:23.858Z",
+          "resolvedAt": "2026-09-22T02:35:23.836Z",
+          "url": "https://stspg.io/90s4l9yywzbk",
+          "summary": "This issue has been resolved. Impact occurred from 5:50pm PT / 00:50 UTC to 7:10pm PT / 02:10 UTC."
+        },
+        {
+          "id": "t8fpw9vcshl9",
+          "title": "Issues with Google Play subscriptions",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-09-16T16:18:10.735Z",
+          "updatedAt": "2026-09-16T16:51:09.034Z",
+          "resolvedAt": "2026-09-16T16:51:09.019Z",
+          "url": "https://stspg.io/wzwyxh4x9t39",
+          "summary": "This issue has been resolved."
+        }
+      ]
+    },
+    {
       "id": "openai",
       "providerId": "openai",
       "name": "OpenAI",
@@ -100,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T15:55:43.074Z",
+      "lastCheckedAt": "2026-10-01T16:55:42.427Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -138,12 +240,22 @@
           "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-09-30T02:20:32.000Z",
-          "updatedAt": "2026-09-30T15:00:05.000Z",
+          "updatedAt": "2026-10-01T16:51:16.000Z",
           "resolvedAt": null,
-          "summary": "We have applied mitigations and are monitoring the recovery."
+          "summary": "We are continuing to monitor our mitigiations. Some users may see slow or timed out results, especially for creating new pages or spaces."
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01M3R1T4FCR1337FBBYY9K2RPB",
+          "title": "Elevated errors in ChatGPT Space Pages",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-09-30T02:20:32.000Z",
+          "updatedAt": "2026-10-01T16:51:16.000Z",
+          "resolvedAt": null,
+          "summary": "We are continuing to monitor our mitigiations. Some users may see slow or timed out results, especially for creating new pages or spaces."
+        },
         {
           "id": "01M3SMF1Q0TDCQVNYSXYG37QMR",
           "title": "Elevated latency for some API requests",
@@ -153,16 +265,6 @@
           "updatedAt": "2026-09-30T20:35:46.000Z",
           "resolvedAt": "2026-09-30T20:35:46.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M3R1T4FCR1337FBBYY9K2RPB",
-          "title": "Elevated errors in ChatGPT Space Pages",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-09-30T02:20:32.000Z",
-          "updatedAt": "2026-09-30T15:00:05.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied mitigations and are monitoring the recovery."
         },
         {
           "id": "01M3RDNY37CAPQGRKPBVMNRT4K",
@@ -187,96 +289,6 @@
       ]
     },
     {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T15:55:43.076Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Code",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "operational"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "4xvtc2gnq73l",
-          "title": "Elevated errors on claude.ai, Claude Code, Claude Cowork and the Claude API",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-09-29T14:21:37.188Z",
-          "updatedAt": "2026-09-29T16:27:21.393Z",
-          "resolvedAt": "2026-09-29T16:27:21.369Z",
-          "url": "https://stspg.io/br61xzj05pp5",
-          "summary": "The issue affecting Claude.ai, the Claude desktop and mobile apps, Claude Code, Claude Cowork, and the Claude API has been resolved, and services have been operating normally sinc..."
-        },
-        {
-          "id": "7g1qpkyz5gxh",
-          "title": "Elevated errors for multiple models",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-09-22T00:57:26.126Z",
-          "updatedAt": "2026-09-22T02:35:23.858Z",
-          "resolvedAt": "2026-09-22T02:35:23.836Z",
-          "url": "https://stspg.io/90s4l9yywzbk",
-          "summary": "This issue has been resolved. Impact occurred from 5:50pm PT / 00:50 UTC to 7:10pm PT / 02:10 UTC."
-        },
-        {
-          "id": "t8fpw9vcshl9",
-          "title": "Issues with Google Play subscriptions",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-09-16T16:18:10.735Z",
-          "updatedAt": "2026-09-16T16:51:09.034Z",
-          "resolvedAt": "2026-09-16T16:51:09.019Z",
-          "url": "https://stspg.io/wzwyxh4x9t39",
-          "summary": "This issue has been resolved."
-        },
-        {
-          "id": "6304r9jjhj34",
-          "title": "Intermittent error spikes for Claude Mythos 5.1 and Claude Fable 5.1",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-09-15T09:48:23.076Z",
-          "updatedAt": "2026-09-15T11:14:44.396Z",
-          "resolvedAt": "2026-09-15T11:14:44.380Z",
-          "url": "https://stspg.io/x1qpycpg6ln7",
-          "summary": "A fix has been deployed for Claude Mythos 5.1 and Claude Fable 5.1 and we are monitoring to ensure it has resolved the issue."
-        }
-      ]
-    },
-    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -287,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T15:55:44.009Z",
+      "lastCheckedAt": "2026-10-01T16:55:43.669Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T15:55:43.856Z",
+      "lastCheckedAt": "2026-10-01T16:55:42.841Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -339,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-01T15:55:44.113Z",
+      "lastCheckedAt": "2026-10-01T16:55:43.908Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -363,7 +375,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
