@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 01 Oct 2026, 14:55 UTC
+Generated: 01 Oct 2026, 15:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 01 Oct 2026, 14:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 01 Oct 2026, 14:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 01 Oct 2026, 14:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 01 Oct 2026, 14:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 01 Oct 2026, 14:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 01 Oct 2026, 12:00 UTC | digest | Hearing tech startup Legato launches its AI hearing glasses | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/01/hearing-tech-startup-legato-launches-its-ai-hearing-glasses/) |
-| 01 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,215 open roles across 10 tracked companies. | `/jobs/` |
-| 01 Oct 2026, 12:00 UTC | digest | Photon held a funeral for mobile apps. Now it has $4.5M to help replace them with agents. | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/01/photon-held-a-funeral-for-mobile-apps-now-it-has-4-5m-to-help-replace-them-with-agents/) |
-| 01 Oct 2026, 12:00 UTC | digest | Published the 2026-10-01 daily digest | 4 stories captured from 2 sources. | `/news/` |
-| 01 Oct 2026, 12:00 UTC | digest | Satlyt, founded by a former Google and SpaceX product manager, raises $8M to run AI on satellites | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/01/satlyt-founded-by-a-former-google-and-spacex-product-manager-raises-8m-to-run-ai-on-satellites/) |
+| 01 Oct 2026, 15:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 01 Oct 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 01 Oct 2026, 15:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 01 Oct 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 01 Oct 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 01 Oct 2026, 12:00 UTC | digest | Brian Chesky interview: AI agents need their own operating system | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/01/brian-chesky-interview-ai-agents-need-their-own-operating-system/) |
+| 01 Oct 2026, 12:00 UTC | digest | Inside our months-long investigation into Kevin O’Leary’s Utah data center debacle | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/podcast/1002851/utah-ai-data-center-stratos-kevin-oleary-investigation-backlash) |
+| 01 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,212 open roles across 10 tracked companies. | `/jobs/` |
+| 01 Oct 2026, 12:00 UTC | digest | OpenAI’s new agent is a shot at Meta — but can it compete with free? | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1003399/meta-openai-ai-agents-muse-dots-battle) |
+| 01 Oct 2026, 12:00 UTC | digest | Published the 2026-10-01 daily digest | 7 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
