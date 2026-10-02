@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 02 Oct 2026, 21:18 UTC
+Generated: 02 Oct 2026, 22:55 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,20 +8,20 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| AI milestones | Curated updates as research lands | Mixed | 02 Oct 2026, 21:18 UTC |
+| AI milestones | Curated updates as research lands | Mixed | 02 Oct 2026, 22:55 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 02 Oct 2026, 21:18 UTC |
-| Benchmarks and evals | Hourly automated refresh | Automated | 02 Oct 2026, 21:18 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 02 Oct 2026, 21:18 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 02 Oct 2026, 22:55 UTC |
+| Benchmarks and evals | Hourly automated refresh | Automated | 02 Oct 2026, 22:55 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 02 Oct 2026, 22:55 UTC |
 | News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 02 Oct 2026, 12:00 UTC |
-| Provider status | Hourly automated refresh | Automated | 02 Oct 2026, 21:18 UTC |
-| Guides and learning | Manual editorial review | Manual | 02 Oct 2026, 21:18 UTC |
+| Provider status | Hourly automated refresh | Automated | 02 Oct 2026, 22:55 UTC |
+| Guides and learning | Manual editorial review | Manual | 02 Oct 2026, 22:55 UTC |
 
 ## AI milestones
 
 - Cadence: Curated updates as research lands
 - Automation: Mixed
-- Last refreshed: 02 Oct 2026, 21:18 UTC
+- Last refreshed: 02 Oct 2026, 22:55 UTC
 - Category route: `/milestones/`
 - Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
 
@@ -34,7 +34,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 ### Last Visible Updates
 
 - 13 Oct 2026, 12:00 UTC: AlexNet wins ILSVRC 2012 - Next exact anniversary in 11 days. (`/milestones/`)
-- 02 Oct 2026, 21:18 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
+- 02 Oct 2026, 22:55 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -60,7 +60,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 02 Oct 2026, 21:18 UTC
+- Last refreshed: 02 Oct 2026, 22:55 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -72,15 +72,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 29 Sept 2026, 12:00 UTC: GPT-6.1 Sol Pro - OpenAI release desk entry is watch only with 4 related stories and 0 benchmark signals attached. (`/new/`)
-- 29 Sept 2026, 12:00 UTC: GPT-6.1 Sol - OpenAI release desk entry is watch only with 5 related stories and 0 benchmark signals attached. (`/new/`)
+- 29 Sept 2026, 12:00 UTC: GPT-6.1 Sol Pro - OpenAI release desk entry is watch only with 3 related stories and 0 benchmark signals attached. (`/new/`)
+- 29 Sept 2026, 12:00 UTC: GPT-6.1 Sol - OpenAI release desk entry is watch only with 4 related stories and 0 benchmark signals attached. (`/new/`)
 - 23 Sept 2026, 12:00 UTC: GLM 5.3 Prime - Zhipu AI release desk entry is watch only with 0 related stories and 0 benchmark signals attached. (`/new/`)
 
 ## Benchmarks and evals
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 02 Oct 2026, 21:18 UTC
+- Last refreshed: 02 Oct 2026, 22:55 UTC
 - Category route: `/benchmarks/`
 
 
@@ -92,14 +92,14 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 02 Oct 2026, 21:18 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
-- 02 Oct 2026, 21:18 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
+- 02 Oct 2026, 22:55 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
+- 02 Oct 2026, 22:55 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
 
 ## Pricing and value
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 02 Oct 2026, 21:18 UTC
+- Last refreshed: 02 Oct 2026, 22:55 UTC
 - Category route: `/compare/llm/`
 
 
@@ -111,9 +111,9 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 02 Oct 2026, 21:18 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
-- 02 Oct 2026, 21:18 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 02 Oct 2026, 21:18 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 02 Oct 2026, 22:55 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
+- 02 Oct 2026, 22:55 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 02 Oct 2026, 22:55 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
@@ -132,14 +132,14 @@ This mirrors the public updates page in a repo-readable format so contributors c
 ### Last Visible Updates
 
 - 02 Oct 2026, 21:09 UTC: Sean Parker is rebuilding Stability AI around music - TechCrunch (industry) ([source](https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music/))
-- 02 Oct 2026, 19:15 UTC: Affected by layoffs? Don&#8217;t miss this $75 deal for your TechCrunch Disrupt 2026 Expo+ Pass - TechCrunch (industry) ([source](https://techcrunch.com/2026/10/02/disrupt-2026-layoff-expo-plus-passes-available-for-75-dollars/))
-- 02 Oct 2026, 18:11 UTC: Apple says it&#8217;s tightening macOS &#8216;Full Disk Access&#8217; controls due to new risks from AI agents - TechCrunch (industry) ([source](https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/))
+- 02 Oct 2026, 21:08 UTC: Meta open sources code to let you make Muse AI gadgets - The Verge (industry) ([source](https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link))
+- 02 Oct 2026, 20:08 UTC: Apple will limit Mac disk access as AI agents ‘substantially’ increase risk - The Verge (industry) ([source](https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents))
 
 ## Provider status
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 02 Oct 2026, 21:18 UTC
+- Last refreshed: 02 Oct 2026, 22:55 UTC
 - Category route: `/status/`
 
 
@@ -150,15 +150,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 02 Oct 2026, 21:18 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
-- 02 Oct 2026, 21:18 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
-- 02 Oct 2026, 21:18 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
+- 02 Oct 2026, 22:55 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
+- 02 Oct 2026, 22:55 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
+- 02 Oct 2026, 22:55 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
 
 ## Guides and learning
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 02 Oct 2026, 21:18 UTC
+- Last refreshed: 02 Oct 2026, 22:55 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -170,6 +170,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 02 Oct 2026, 21:18 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 02 Oct 2026, 21:18 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
-- 02 Oct 2026, 21:18 UTC: Choosing An Ai Model - Guide or learning page updated in the repository. (`/guides/choosing-an-ai-model/`)
+- 02 Oct 2026, 22:55 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
+- 02 Oct 2026, 22:55 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 02 Oct 2026, 22:55 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)

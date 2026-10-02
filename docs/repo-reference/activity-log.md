@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 02 Oct 2026, 21:18 UTC
+Generated: 02 Oct 2026, 22:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 02 Oct 2026, 21:18 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 02 Oct 2026, 21:18 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 02 Oct 2026, 21:18 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 02 Oct 2026, 21:18 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 02 Oct 2026, 21:18 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 02 Oct 2026, 12:00 UTC | digest | Affected by layoffs? Don&#8217;t miss this $75 deal for your TechCrunch Disrupt 2026 Expo+ Pass | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/02/disrupt-2026-layoff-expo-plus-passes-available-for-75-dollars/) |
-| 02 Oct 2026, 12:00 UTC | digest | Apple says it&#8217;s tightening macOS &#8216;Full Disk Access&#8217; controls due to new risks from AI agents | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/) |
+| 02 Oct 2026, 22:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 02 Oct 2026, 22:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 02 Oct 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 02 Oct 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 02 Oct 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 02 Oct 2026, 12:00 UTC | digest | Apple will limit Mac disk access as AI agents ‘substantially’ increase risk | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents) |
 | 02 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,019 open roles across 10 tracked companies. | `/jobs/` |
-| 02 Oct 2026, 12:00 UTC | digest | Published the 2026-10-02 daily digest | 17 stories captured from 4 sources. | `/news/` |
+| 02 Oct 2026, 12:00 UTC | digest | Meta open sources code to let you make Muse AI gadgets | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link) |
+| 02 Oct 2026, 12:00 UTC | digest | Published the 2026-10-02 daily digest | 20 stories captured from 4 sources. | `/news/` |
 | 02 Oct 2026, 12:00 UTC | digest | Sean Parker is rebuilding Stability AI around music | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
