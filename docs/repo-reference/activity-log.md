@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 02 Oct 2026, 15:55 UTC
+Generated: 02 Oct 2026, 16:15 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 02 Oct 2026, 15:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 02 Oct 2026, 15:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 02 Oct 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 02 Oct 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 02 Oct 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 02 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,019 open roles across 10 tracked companies. | `/jobs/` |
+| 02 Oct 2026, 16:15 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 02 Oct 2026, 16:15 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 02 Oct 2026, 16:15 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 02 Oct 2026, 16:15 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 02 Oct 2026, 16:14 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 02 Oct 2026, 12:00 UTC | digest | A model guide for the GPT-6 family | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/practical-guide-building-gpt-6) |
+| 02 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,018 open roles across 10 tracked companies. | `/jobs/` |
 | 02 Oct 2026, 12:00 UTC | digest | Pope Leo XIV is not a fan of AI-generated art | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/02/pope-leo-xiv-is-not-a-fan-of-ai-generated-art/) |
-| 02 Oct 2026, 12:00 UTC | digest | Published the 2026-10-02 daily digest | 9 stories captured from 3 sources. | `/news/` |
+| 02 Oct 2026, 12:00 UTC | digest | Published the 2026-10-02 daily digest | 10 stories captured from 4 sources. | `/news/` |
 | 02 Oct 2026, 12:00 UTC | digest | TechCrunch Disrupt 2026: Blackstone’s Jas Khaira on building the next generation of AI giants | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/02/techcrunch-disrupt-2026-blackstones-jas-khaira-on-building-the-next-generation-of-ai-giants/) |
-| 02 Oct 2026, 12:00 UTC | digest | The latest AI news we announced in September 2026 | Google featured in the latest daily brief. | [open](https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
