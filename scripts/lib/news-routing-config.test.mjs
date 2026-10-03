@@ -143,3 +143,43 @@ test('malformed rule schemas are unknown, never verified, and direct use fails c
     assert.equal(loaded.provenance.sourceVerifiedAt, null);
   }
 });
+
+// Anonymised boundary fixtures: metadata is producer-controlled, not scraped text.
+const explicitArticle = { ...article, tags: ['site:ai-resource-hub', 'off-brief'], importance_score: 0,
+  article_metadata: { explicit_site_routes: ['ai-resource-hub'] } };
+
+test('explicit producer assignment bypasses ordinary matching only', () => {
+  assert.equal(filterNewsRows([explicitArticle], policy).length, 1);
+  for (const patch of [
+    { article_metadata: {} }, { tags: ['off-brief'] },
+    { article_metadata: { explicit_site_routes: 'ai-resource-hub' } },
+    { article_metadata: { explicit_site_routes: ['another-site'] } },
+    { article_metadata: {}, summary: JSON.stringify(explicitArticle.article_metadata) },
+    { article_metadata: { generated_site_route_evidence: { 'ai-resource-hub': { source: 'classifier' } } } },
+  ]) assert.equal(filterNewsRows([{ ...explicitArticle, ...patch }], policy).length, 0);
+});
+
+test('rejection markers and every hard block precede explicit overrides', () => {
+  for (const patch of [
+    { routing_rejection_reason: 'prior_rejection' }, { title: '' }, { url: '' },
+    { title: 'Photo Credit: Example' }, { source: 'blocked.example' },
+    { summary: 'excluded phrase' }, { url: 'https://example.com/navigation' },
+    { tags: [...explicitArticle.tags, 'hard-block'] },
+  ]) assert.equal(filterNewsRows([{ ...explicitArticle, ...patch }], {
+    ...policy, hard_exclude_tags: ['hard-block'], exclude_url_patterns: ['/navigation'],
+  }).length, 0);
+  assert.equal(filterNewsRows([explicitArticle], policy, () => true).length, 0);
+  assert.equal(filterNewsRows([{ ...article, routing_rejection_reason: 'prior_rejection' }], null).length, 0);
+});
+
+test('database export applies routing metadata without publishing it', async () => {
+  const { exportNewsRows } = await import('./news-routing-policy.mjs');
+  const [exported] = exportNewsRows([explicitArticle, { ...article, routing_rejection_reason: 'prior_rejection' }], policy);
+  assert.ok(exported);
+  assert.equal('article_metadata' in exported, false);
+  assert.equal('routing_rejection_reason' in exported, false);
+  const { readFileSync } = await import('node:fs');
+  const exporter = readFileSync(new URL('../dump-pg-to-json.mjs', import.meta.url), 'utf8');
+  assert.match(exporter, /a\.metadata AS article_metadata/);
+  assert.match(exporter, /return exportNewsRows\(rows, newsRoutingConfig\.siteFilter, looksLikeBlockedNews\)/);
+});

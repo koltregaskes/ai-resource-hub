@@ -14,7 +14,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import path from 'path';
 import { getOptionalEnv } from './lib/load-env.mjs';
 import { loadNewsRoutingConfig } from './lib/news-routing-config.mjs';
-import { filterNewsRows } from './lib/news-routing-policy.mjs';
+import { exportNewsRows } from './lib/news-routing-policy.mjs';
 
 const require = createRequire(import.meta.url);
 const Database = require('better-sqlite3');
@@ -223,7 +223,7 @@ function looksLikeBlockedNews(article) {
 }
 
 function filterSharedNews(rows) {
-  return filterNewsRows(rows, newsRoutingConfig.siteFilter, looksLikeBlockedNews);
+  return exportNewsRows(rows, newsRoutingConfig.siteFilter, looksLikeBlockedNews);
 }
 
 async function connectPostgres() {
@@ -472,6 +472,7 @@ await dumpPostgres(pgClient, 'news', `
     a.summary,
     a.category::text AS category,
     a.tags,
+    a.metadata AS article_metadata,
     a.importance_score,
     a.published_at,
     a.discovered_at
