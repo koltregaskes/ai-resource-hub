@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 03 Oct 2026, 15:55 UTC
+Generated: 03 Oct 2026, 16:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 03 Oct 2026, 15:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 03 Oct 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 03 Oct 2026, 15:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 03 Oct 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 03 Oct 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 03 Oct 2026, 12:00 UTC | digest | All the AI agents that can live in your text messages | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/) |
+| 03 Oct 2026, 16:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 03 Oct 2026, 16:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 03 Oct 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 03 Oct 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 03 Oct 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 03 Oct 2026, 12:00 UTC | digest | An OpenAI safety employee has quit and is sounding the alarm | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1004408/openai-safety-quits-sounding-the-alarm) |
 | 03 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,019 open roles across 10 tracked companies. | `/jobs/` |
-| 03 Oct 2026, 12:00 UTC | digest | Published the 2026-10-03 daily digest | 4 stories captured from 2 sources. | `/news/` |
+| 03 Oct 2026, 12:00 UTC | digest | OpenAI safety employee resigns, claiming the company’s ‘culture is broken’ | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/) |
+| 03 Oct 2026, 12:00 UTC | digest | Published the 2026-10-03 daily digest | 5 stories captured from 2 sources. | `/news/` |
 | 03 Oct 2026, 12:00 UTC | digest | Splice CEO Kakul Srivastava thinks AI emails are killing conversations | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/entertainment/1004162/splice-ceo-kakul-srivastava-ai-interview) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |

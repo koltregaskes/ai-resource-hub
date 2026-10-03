@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 03 Oct 2026, 15:55 UTC
+Generated: 03 Oct 2026, 16:55 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,20 +8,20 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| AI milestones | Curated updates as research lands | Mixed | 03 Oct 2026, 15:55 UTC |
+| AI milestones | Curated updates as research lands | Mixed | 03 Oct 2026, 16:55 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 03 Oct 2026, 15:55 UTC |
-| Benchmarks and evals | Hourly automated refresh | Automated | 03 Oct 2026, 15:55 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 03 Oct 2026, 15:55 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 03 Oct 2026, 16:55 UTC |
+| Benchmarks and evals | Hourly automated refresh | Automated | 03 Oct 2026, 16:55 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 03 Oct 2026, 16:55 UTC |
 | News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 03 Oct 2026, 12:00 UTC |
-| Provider status | Hourly automated refresh | Automated | 03 Oct 2026, 15:55 UTC |
-| Guides and learning | Manual editorial review | Manual | 03 Oct 2026, 15:55 UTC |
+| Provider status | Hourly automated refresh | Automated | 03 Oct 2026, 16:55 UTC |
+| Guides and learning | Manual editorial review | Manual | 03 Oct 2026, 16:55 UTC |
 
 ## AI milestones
 
 - Cadence: Curated updates as research lands
 - Automation: Mixed
-- Last refreshed: 03 Oct 2026, 15:55 UTC
+- Last refreshed: 03 Oct 2026, 16:55 UTC
 - Category route: `/milestones/`
 - Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
 
@@ -34,7 +34,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 ### Last Visible Updates
 
 - 13 Oct 2026, 12:00 UTC: AlexNet wins ILSVRC 2012 - Next exact anniversary in 10 days. (`/milestones/`)
-- 03 Oct 2026, 15:55 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
+- 03 Oct 2026, 16:55 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -60,7 +60,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 03 Oct 2026, 15:55 UTC
+- Last refreshed: 03 Oct 2026, 16:55 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -80,7 +80,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 03 Oct 2026, 15:55 UTC
+- Last refreshed: 03 Oct 2026, 16:55 UTC
 - Category route: `/benchmarks/`
 
 
@@ -92,14 +92,14 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 03 Oct 2026, 15:55 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
-- 03 Oct 2026, 15:55 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
+- 03 Oct 2026, 16:55 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
+- 03 Oct 2026, 16:55 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
 
 ## Pricing and value
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 03 Oct 2026, 15:55 UTC
+- Last refreshed: 03 Oct 2026, 16:55 UTC
 - Category route: `/compare/llm/`
 
 
@@ -111,9 +111,9 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 03 Oct 2026, 15:55 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
-- 03 Oct 2026, 15:55 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 03 Oct 2026, 15:55 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 03 Oct 2026, 16:55 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
+- 03 Oct 2026, 16:55 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 03 Oct 2026, 16:55 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
@@ -131,15 +131,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
+- 03 Oct 2026, 16:30 UTC: OpenAI safety employee resigns, claiming the company’s ‘culture is broken’ - TechCrunch (industry) ([source](https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/))
 - 03 Oct 2026, 15:00 UTC: Splice CEO Kakul Srivastava thinks AI emails are killing conversations - The Verge (industry) ([source](https://www.theverge.com/entertainment/1004162/splice-ceo-kakul-srivastava-ai-interview))
 - 03 Oct 2026, 14:31 UTC: An OpenAI safety employee has quit and is sounding the alarm - The Verge (industry) ([source](https://www.theverge.com/ai-artificial-intelligence/1004408/openai-safety-quits-sounding-the-alarm))
-- 03 Oct 2026, 14:00 UTC: All the AI agents that can live in your text messages - TechCrunch (industry) ([source](https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/))
 
 ## Provider status
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 03 Oct 2026, 15:55 UTC
+- Last refreshed: 03 Oct 2026, 16:55 UTC
 - Category route: `/status/`
 
 
@@ -150,15 +150,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 03 Oct 2026, 15:55 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
-- 03 Oct 2026, 15:55 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
-- 03 Oct 2026, 15:55 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
+- 03 Oct 2026, 16:55 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
+- 03 Oct 2026, 16:55 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
+- 03 Oct 2026, 16:55 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
 
 ## Guides and learning
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 03 Oct 2026, 15:55 UTC
+- Last refreshed: 03 Oct 2026, 16:55 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -170,6 +170,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 03 Oct 2026, 15:55 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
-- 03 Oct 2026, 15:55 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 03 Oct 2026, 15:55 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 03 Oct 2026, 16:55 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
+- 03 Oct 2026, 16:55 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 03 Oct 2026, 16:55 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
