@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 03 Oct 2026, 21:11 UTC
+Generated: 03 Oct 2026, 22:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 03 Oct 2026, 21:10 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 03 Oct 2026, 21:10 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 03 Oct 2026, 21:10 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 03 Oct 2026, 21:10 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 03 Oct 2026, 21:10 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 03 Oct 2026, 22:55 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
+| 03 Oct 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 03 Oct 2026, 22:55 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
+| 03 Oct 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 03 Oct 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 03 Oct 2026, 12:00 UTC | digest | Amazon responds to data center backlash, says it no longer uses NDAs | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/) |
 | 03 Oct 2026, 12:00 UTC | digest | Capcom is preparing for a ‘future where we create games together with AI’ | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/games/1004418/capcom-ai-game-development) |
 | 03 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,018 open roles across 10 tracked companies. | `/jobs/` |
