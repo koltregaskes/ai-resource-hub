@@ -1,9 +1,12 @@
 import fs from 'node:fs/promises';
 import fsSync from 'node:fs';
 import path from 'node:path';
+import { digest, snapshotDigest } from './news-pipeline-provenance.mjs';
 
 const repoRoot = process.cwd();
 function resolveEstateRoot() {
+  // An explicit root is authoritative, including when it is unavailable.
+  if (process.env.WEBSITES_ESTATE_ROOT) return path.resolve(process.env.WEBSITES_ESTATE_ROOT);
   const candidates = [
     process.env.WEBSITES_ESTATE_ROOT,
     path.resolve(repoRoot, '..', '..'),
@@ -58,6 +61,37 @@ function getMissingEstateConfigPaths() {
 
 function canReuseCommittedSnapshot() {
   return fsSync.existsSync(outputPath) && fsSync.existsSync(publicSourceRegistryPath);
+}
+
+const statusPath = path.join(publicDataDir, 'news-pipeline-status.json');
+const attemptedAt = new Date().toISOString();
+
+async function cachedSnapshot() {
+  if (!canReuseCommittedSnapshot()) return null;
+  try {
+    const snapshot = JSON.parse(await fs.readFile(publicSourceRegistryPath, 'utf8'));
+    const module = await fs.readFile(outputPath, 'utf8');
+    const match = module.match(/^export const newsPipelineSnapshot = ([\s\S]*?) as const;/);
+    if (!match || snapshotDigest(JSON.parse(match[1])) !== snapshotDigest(snapshot)) return null;
+    if (!Array.isArray(snapshot.sources) || !Array.isArray(snapshot.sites)) return null;
+    return snapshot;
+  } catch {
+    return null;
+  }
+}
+
+async function writeStatus(status, reason, snapshot = null, missingInputs = []) {
+  const result = {
+    schemaVersion: 1, status, reason, attemptedAt,
+    sourceGeneratedAt: snapshot?.generatedAt ?? null,
+    sourceVerifiedAt: snapshot?.provenance?.sourceVerifiedAt ?? null,
+    sourceEdition: snapshot?.provenance?.sourceEdition ?? null,
+    snapshotSha256: snapshot ? snapshotDigest(snapshot) : null,
+    missingInputs,
+  };
+  await fs.mkdir(publicDataDir, { recursive: true });
+  await fs.writeFile(statusPath, JSON.stringify(result, null, 2) + '\n');
+  console.log(JSON.stringify(result));
 }
 
 const SITE_OVERRIDES = {
@@ -239,20 +273,15 @@ function describeSourceGovernance(source, categories) {
 async function main() {
   const missingEstateConfigPaths = getMissingEstateConfigPaths();
   if (missingEstateConfigPaths.length > 0) {
-    if (canReuseCommittedSnapshot()) {
-      console.log(
-        [
-          'WARN: shared website news routing config is unavailable in this environment.',
-          'Keeping committed news pipeline snapshots unchanged.',
-          `Missing: ${missingEstateConfigPaths.map((candidate) => path.relative(repoRoot, candidate)).join(', ')}`,
-        ].join(' ')
-      );
+    const snapshot = await cachedSnapshot();
+    const missingInputs = missingEstateConfigPaths.map((candidate) => path.basename(candidate));
+    await writeStatus(snapshot ? 'cached' : 'unknown', 'missing_canonical_config', snapshot, missingInputs);
+    if (snapshot) {
+      console.warn('Canonical news routing config unavailable; preserving cached output. See public/data/news-pipeline-status.json.');
       return;
     }
-
-    throw new Error(
-      `Missing shared website news routing config and no committed snapshot is available: ${missingEstateConfigPaths.join(', ')}`
-    );
+    process.exitCode = 1;
+    return;
   }
 
   const [siteFiltersRaw, sourcesRaw, estateRaw] = await Promise.all([
@@ -264,6 +293,10 @@ async function main() {
   const siteFilters = JSON.parse(siteFiltersRaw);
   const sourcesConfig = JSON.parse(sourcesRaw);
   const estateSites = parseActiveSites(estateRaw);
+  if (!siteFilters?.sites || typeof siteFilters.sites !== 'object' || Array.isArray(siteFilters.sites)
+    || !Array.isArray(sourcesConfig?.sources) || estateSites.length === 0) {
+    throw new Error('Invalid canonical news routing configuration.');
+  }
   const configuredSites = siteFilters?.sites ?? {};
   const configuredSources = Array.isArray(sourcesConfig?.sources) ? sourcesConfig.sources : [];
   const siteNameBySlug = Object.fromEntries(
@@ -370,7 +403,15 @@ async function main() {
   );
 
   const snapshot = {
-    generatedAt: new Date().toISOString(),
+    generatedAt: attemptedAt,
+    provenance: {
+      sourceVerifiedAt: attemptedAt,
+      sourceEdition: {
+        siteFiltersSha256: digest(siteFiltersRaw),
+        sourcesSha256: digest(sourcesRaw),
+        estateManifestSha256: digest(estateRaw),
+      },
+    },
     sourceOfTruth: {
       estateManifestPath: toPublicWorkspacePath(estateManifestPath),
       siteFiltersPath: toPublicWorkspacePath(siteFiltersPath),
@@ -435,11 +476,17 @@ async function main() {
     fs.writeFile(outputPath, fileContents, 'utf8'),
     fs.writeFile(publicSourceRegistryPath, JSON.stringify(snapshot, null, 2) + '\n', 'utf8'),
   ]);
+  await writeStatus('fresh', 'canonical_config_read', snapshot);
   console.log(`Wrote ${path.relative(repoRoot, outputPath)}`);
   console.log(`Wrote ${path.relative(repoRoot, publicSourceRegistryPath)}`);
 }
 
-main().catch((error) => {
-  console.error(error);
+main().catch(async () => {
+  // Do not serialize parse errors or local paths from private configuration.
+  const snapshot = await cachedSnapshot();
+  await writeStatus('failed', 'sync_failed', snapshot).catch(() => {
+    console.error('Unable to write news pipeline status.');
+  });
+  console.error('News pipeline sync failed; cached output has not been verified.');
   process.exitCode = 1;
 });
