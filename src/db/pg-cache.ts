@@ -11,6 +11,8 @@ import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { getRenderableCliTools } from '../data/cli-tools';
 import { isPubliclyVerifiedModel } from '../data/model-verification';
+import { assessBenchmarkProvenance } from '../data/benchmark-provenance';
+import { findVerifiedBenchmarkScoreEvidence } from '../../scripts/benchmark-score-evidence';
 
 const CACHE_DIR = path.join(process.cwd(), 'data', 'pg-cache');
 
@@ -46,7 +48,12 @@ interface CachedModel {
   max_output: number;
   speed: number;
   ttft: number;
-  quality_score: number;
+  quality_score: number | null;
+  quality_score_state?: 'suppressed_untraceable';
+  quality_score_method?: null;
+  quality_score_measured_at?: null;
+  quality_score_source_urls?: string[];
+  quality_score_evidence_count?: number;
   released: string | null;
   open_source: boolean;
   modality: string;
@@ -322,7 +329,14 @@ export function getModels(): CachedModel[] {
     output_price: toNumber(model.output_price),
     speed: toNumber(model.speed),
     ttft: toNumber(model.ttft),
-    quality_score: toNumber(model.quality_score),
+    // The stored score has no row-level method, source set or measurement date.
+    // Keep it in the raw cache for remediation, but never expose it publicly.
+    quality_score: null,
+    quality_score_state: 'suppressed_untraceable',
+    quality_score_method: null,
+    quality_score_measured_at: null,
+    quality_score_source_urls: [],
+    quality_score_evidence_count: 0,
   }));
 }
 
@@ -381,7 +395,7 @@ export function getAllBenchmarkIds(): string[] {
   return getBenchmarks().map(b => b.id);
 }
 
-export function getBenchmarkScores(): CachedBenchmarkScore[] {
+export function getAllBenchmarkScores(): CachedBenchmarkScore[] {
   const models = new Map(getModels().map((model) => [model.id, model]));
   return loadCache<CachedBenchmarkScore>('benchmark_scores').map((score) => ({
     ...score,
@@ -390,6 +404,20 @@ export function getBenchmarkScores(): CachedBenchmarkScore[] {
     measured_at: score.measured_at ?? null,
     updated_at: score.updated_at ?? null,
   }));
+}
+
+/**
+ * Public benchmark consumers must only see evidence that is both row-level
+ * source-backed and current under the release policy. The raw cache is retained
+ * for remediation through getAllBenchmarkScores(), but it must never silently
+ * enter a leaderboard, comparison, model page or composite score.
+ */
+export function getBenchmarkScores(): CachedBenchmarkScore[] {
+  const benchmarks = new Map(getBenchmarks().map((benchmark) => [benchmark.id, benchmark]));
+  return getAllBenchmarkScores().filter((score) => (
+    findVerifiedBenchmarkScoreEvidence(score) !== null
+    && assessBenchmarkProvenance(score, benchmarks.get(score.benchmark_id)).rankable
+  ));
 }
 
 export function getModelBenchmarks(modelId: string): CachedBenchmarkScore[] {
@@ -500,11 +528,6 @@ export function getModelsWithPriceHistory(): CachedPriceHistory[] {
 
 export function getLLMModelsFromDB() {
   return getModelsByCategory('llm').map(m => {
-    const blended = (Number(m.input_price) + 3 * Number(m.output_price)) / 4;
-    const valueScore = blended > 0 && m.quality_score > 0
-      ? Math.round((Number(m.quality_score) / blended) * 10)
-      : 0;
-
     return {
       id: m.id,
       name: m.name,
@@ -516,8 +539,13 @@ export function getLLMModelsFromDB() {
       maxOutput: Number(m.max_output),
       speed: Number(m.speed),
       ttft: Number(m.ttft),
-      qualityScore: Number(m.quality_score),
-      valueScore,
+      qualityScore: null,
+      valueScore: null,
+      qualityScoreState: 'suppressed_untraceable' as const,
+      qualityScoreMethod: null,
+      qualityScoreMeasuredAt: null,
+      qualityScoreSourceUrls: [] as string[],
+      qualityScoreEvidenceCount: 0,
       released: m.released || '',
       openSource: !!m.open_source,
       modality: (m.modality || 'text').split(',').map((s: string) => s.trim()),
@@ -691,7 +719,7 @@ export function getModelsWithTTFT() {
       speed: Number(m.speed),
       provider: m.provider_name,
       provider_colour: m.provider_colour,
-      quality_score: Number(m.quality_score),
+      quality_score: null,
       input_price: Number(m.input_price),
       output_price: Number(m.output_price),
       speed_source: m.speed_source,

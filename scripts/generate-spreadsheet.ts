@@ -14,6 +14,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { getAiResourceHubSqlitePath } from './sqlite-path';
 import { isPubliclyVerifiedModel } from '../src/data/model-verification';
+import { assessBenchmarkProvenance } from '../src/data/benchmark-provenance';
+import {
+  findVerifiedBenchmarkScoreEvidence,
+  type VerifiedBenchmarkScoreEvidence,
+} from './benchmark-score-evidence';
 
 interface ModelRow {
   id: string;
@@ -41,6 +46,9 @@ interface BenchmarkScoreRow {
   model_id: string;
   benchmark_id: string;
   score: number;
+  source?: string | null;
+  source_url?: string | null;
+  measured_at?: string | null;
 }
 
 interface SpeedRow {
@@ -111,12 +119,11 @@ function readSqliteSource(): SpreadsheetSource | null {
           WHEN 'retired' THEN 4
           ELSE 5
         END,
-        m.quality_score DESC,
         m.name ASC
     `).all() as ModelRow[];
 
     const benchmarkScores = db.prepare(`
-      SELECT model_id, benchmark_id, score
+      SELECT model_id, benchmark_id, score, source, source_url, measured_at
       FROM benchmark_scores
     `).all() as BenchmarkScoreRow[];
 
@@ -172,10 +179,6 @@ function readPgCacheSource(): SpreadsheetSource | null {
 
       const rankDiff = statusRank(a.status) - statusRank(b.status);
       if (rankDiff !== 0) return rankDiff;
-
-      const qualityA = Number(a.quality_score ?? 0);
-      const qualityB = Number(b.quality_score ?? 0);
-      if (qualityB !== qualityA) return qualityB - qualityA;
 
       return String(a.name ?? '').localeCompare(String(b.name ?? ''));
     });
@@ -248,13 +251,25 @@ function toNumber(value: unknown): number | null {
 function main() {
   const source = selectSpreadsheetSource();
   const { models, benchmarkScores, speedData } = source;
+  const publicBenchmarkScores = benchmarkScores.flatMap((row) => {
+    const evidence = findVerifiedBenchmarkScoreEvidence(row);
+    const provenance = assessBenchmarkProvenance(
+      row,
+      { id: row.benchmark_id, url: null },
+    );
+    return evidence && provenance.rankable ? [{ row, evidence }] : [];
+  });
   console.log('Generating model comparison spreadsheet...\n');
   console.log(`  Source: ${source.label} (${models.length} public models)`);
+  console.log(`  Benchmark evidence: ${publicBenchmarkScores.length}/${benchmarkScores.length} exact, current rows`);
 
   const scoreMap = new Map<string, Record<string, number>>();
-  for (const s of benchmarkScores) {
-    if (!scoreMap.has(s.model_id)) scoreMap.set(s.model_id, {});
-    scoreMap.get(s.model_id)![s.benchmark_id] = s.score;
+  const evidenceMap = new Map<string, Record<string, VerifiedBenchmarkScoreEvidence>>();
+  for (const { row, evidence } of publicBenchmarkScores) {
+    if (!scoreMap.has(row.model_id)) scoreMap.set(row.model_id, {});
+    scoreMap.get(row.model_id)![row.benchmark_id] = row.score;
+    if (!evidenceMap.has(row.model_id)) evidenceMap.set(row.model_id, {});
+    evidenceMap.get(row.model_id)![row.benchmark_id] = evidence;
   }
 
   const speedMap = new Map<string, any>();
@@ -271,11 +286,11 @@ function main() {
 
   // CSV headers
   const headers = [
-    'Model', 'Provider', 'Category', 'Status', 'Quality Score', 'Input Price ($/M tokens)', 'Output Price ($/M tokens)',
+    'Model', 'Provider', 'Category', 'Status', 'Model Quality (not published)', 'Input Price ($/M tokens)', 'Output Price ($/M tokens)',
     'Context Window', 'Max Output', 'Speed (tok/s)', 'TTFT (ms)',
     'Open Source', 'Modality', 'API Available', 'Released',
     ...benchmarkIds.map(b => b.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())),
-    'Value Score', 'Pricing Source', 'Last Updated',
+    'Benchmark Evidence (JSON)', 'Benchmark Value (not evaluated in this export)', 'Pricing Source', 'Last Updated',
   ];
 
   // Build rows
@@ -284,23 +299,17 @@ function main() {
 
   for (const m of models) {
     const scores = scoreMap.get(m.id) || {};
+    const evidence = evidenceMap.get(m.id) || {};
     const speed = speedMap.get(m.id);
     const inputPrice = toNumber(m.input_price);
     const outputPrice = toNumber(m.output_price);
-    const qualityScore = toNumber(m.quality_score);
-
-    // Calculate value score: quality / cost (higher = better value)
-    const avgCost = ((inputPrice ?? 0) + (outputPrice ?? 0)) / 2;
-    const valueScore = avgCost > 0 && (qualityScore ?? 0) > 0
-      ? Math.round(((qualityScore ?? 0) / avgCost) * 10) / 10
-      : '';
 
     const row = [
       m.name || '',
       m.provider_name || m.provider_id || '',
       m.category || '',
       m.status || '',
-      String(m.quality_score || ''),
+      '',
       String(m.input_price ?? ''),
       String(m.output_price ?? ''),
       String(m.context_window ?? ''),
@@ -312,7 +321,8 @@ function main() {
       toBoolean(m.api_available) === true ? 'Yes' : (toBoolean(m.api_available) === false ? 'No' : ''),
       m.released || '',
       ...benchmarkIds.map(b => scores[b] != null ? String(scores[b]) : ''),
-      String(valueScore),
+      Object.keys(evidence).length > 0 ? JSON.stringify(evidence) : '',
+      '',
       m.pricing_source || '',
       m.pricing_updated || '',
     ];
@@ -326,7 +336,8 @@ function main() {
       provider: m.provider_name || m.provider_id,
       category: m.category || null,
       status: m.status || null,
-      quality_score: qualityScore,
+      quality_score: null,
+      quality_score_state: 'suppressed_untraceable',
       input_price: inputPrice,
       output_price: outputPrice,
       context_window: m.context_window,
@@ -338,7 +349,20 @@ function main() {
       api_available: toBoolean(m.api_available),
       released: m.released,
       benchmarks: Object.keys(scores).length > 0 ? scores : null,
-      value_score: valueScore || null,
+      benchmark_evidence: Object.keys(evidence).length > 0
+        ? Object.fromEntries(Object.entries(evidence).map(([benchmarkId, entry]) => [
+          benchmarkId,
+          {
+            score: entry.score,
+            source: entry.source,
+            source_url: entry.sourceUrl,
+            measured_at: entry.measuredAt,
+            evidence_note: entry.evidenceNote,
+            evidence_state: 'verified-row',
+          },
+        ]))
+        : null,
+      value_score: null,
       pricing_source: m.pricing_source,
       last_updated: m.pricing_updated,
     });
@@ -371,6 +395,12 @@ function main() {
     active_model_count: models.filter((model) => publicStatus(model.status) === 'active').length,
     tracking_model_count: models.filter((model) => publicStatus(model.status) === 'tracking').length,
     benchmark_types: benchmarkIds,
+    benchmark_policy: {
+      evidence_state: 'exact-reviewed-row',
+      raw_score_count: benchmarkScores.length,
+      rankable_score_count: publicBenchmarkScores.length,
+      quarantined_score_count: benchmarkScores.length - publicBenchmarkScores.length,
+    },
     models: jsonRows,
   };
 
@@ -382,7 +412,7 @@ function main() {
   fs.writeFileSync(path.join(outputDir, 'models-latest.json'), JSON.stringify(jsonData), 'utf8');
 
   source.close();
-  console.log(`\n  ${models.length} models exported with ${benchmarkIds.length} benchmark columns`);
+  console.log(`\n  ${models.length} models exported with ${benchmarkIds.length} benchmark columns and row-level evidence`);
   console.log('  Done.');
 }
 

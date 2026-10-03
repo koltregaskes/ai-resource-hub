@@ -1,7 +1,8 @@
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import path from 'node:path';
 
-import { getLastScrapeTime, getNews, getRecentModels } from '../db/queries';
+import { getBenchmarkScores, getLastScrapeTime, getNews, getRecentModels } from '../db/queries';
+import { benchmarkFreshness } from './benchmark-freshness';
 import { getAiMilestonesOverview } from './ai-milestones';
 import { modelReleaseDesk } from './model-release-desk.generated';
 import { getLatestDigest, normaliseDateTime } from './hub-dashboard';
@@ -257,24 +258,13 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
     },
   ]);
 
+  const benchmarkMeasuredAt = benchmarkFreshness(getBenchmarkScores(), []).measuredAt;
   const benchmarkUpdates = scrapeHighlights([
     {
-      title: 'Arena and headline eval track refresh',
-      detail: 'Updated the frontier conversation benchmark used in the ranking layer.',
+      title: 'Latest evidence-backed benchmark measurement',
+      detail: 'Measurement date from an exact public evidence row; not a scrape or recompute timestamp.',
       href: formatRoute(basePath, '/benchmarks/'),
-      date: getLastScrapeTime('benchmarks:chatbot-arena'),
-    },
-    {
-      title: 'Creative benchmark sweep',
-      detail: 'Refreshed image and creative-model benchmark signals.',
-      href: formatRoute(basePath, '/benchmarks/'),
-      date: getLastScrapeTime('creative-benchmarks'),
-    },
-    {
-      title: 'Quality score recompute',
-      detail: 'Rebuilt the weighted scoring layer used across the hub.',
-      href: formatRoute(basePath, '/leaderboard/'),
-      date: getLastScrapeTime('quality-scores'),
+      date: benchmarkMeasuredAt,
     },
   ]);
 
@@ -333,21 +323,18 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
     {
       id: 'benchmarks',
       label: 'Benchmarks and evals',
-      cadence: 'Hourly automated refresh',
+      cadence: 'Hourly collection attempts; measurement dates vary',
       automation: 'Automated',
-      status: 'healthy',
+      status: 'watch',
       href: formatRoute(basePath, '/benchmarks/'),
-      summary: 'Keep the benchmark library and weighted score layer fresh enough that new releases can be compared quickly and honestly.',
+      summary: 'Only exact dated evidence is eligible for public comparison. Cached inputs and successful collection attempts do not establish current measurements.',
       sources: [
         'Artificial Analysis and other benchmark owners',
         'LMSYS / arena-style public benchmark sources',
         'Research repositories and public eval feeds where intended for reuse',
       ],
-      lastRefreshed: latestDateTime(
-        getLastScrapeTime('benchmarks:chatbot-arena'),
-        getLastScrapeTime('creative-benchmarks'),
-        getLastScrapeTime('quality-scores'),
-      ),
+      lastRefreshed: benchmarkMeasuredAt,
+      note: 'Raw evidence gaps remain quarantined. Collection health and source verification require separate evidence.',
       highlights: benchmarkUpdates,
     },
     {

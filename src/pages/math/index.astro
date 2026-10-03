@@ -26,9 +26,10 @@ const mathModels = allModels
     const benchCount = Object.keys(benchmarks).length;
     const avgScore = benchCount > 0
       ? Object.values(benchmarks).reduce((sum, score) => sum + score, 0) / benchCount
-      : model.qualityScore * 0.5;
+      : 0;
     return { ...model, mathScore: Math.round(avgScore), benchmarks, benchCount };
   })
+  .filter((model) => model.benchCount > 0)
   .sort((a, b) => b.mathScore - a.mathScore)
   .slice(0, 40);
 ---
@@ -88,7 +89,7 @@ const mathModels = allModels
     </div>
 
     <div class="mt-8 text-xs text-(--color-text-muted)">
-      <p>Composite score averages available math benchmarks (MATH-500, GSM8K, AIME 2025). Models without benchmark data use a quality-weighted estimate.</p>
+      <p>Composite score averages only current, row-level source-backed MATH-500, GSM8K and AIME 2025 results. Models without rankable maths evidence are not ranked.</p>
     </div>
   </section>
 

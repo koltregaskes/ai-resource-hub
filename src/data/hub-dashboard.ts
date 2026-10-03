@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
+import { benchmarkFreshness } from './benchmark-freshness';
 
 import {
   getAIJobsOverview,
@@ -12,7 +13,6 @@ import {
   getRecentModels,
 } from '../db/queries';
 
-type PublicLLMModel = ReturnType<typeof getPublicModelsByCategory>[number];
 type BenchmarkDefinition = ReturnType<typeof getBenchmarks>[number];
 type BenchmarkScoreRow = ReturnType<typeof getBenchmarkScores>[number];
 type RecentModel = ReturnType<typeof getRecentModels>[number];
@@ -74,7 +74,7 @@ export interface MetaLeaderboardEntry {
   status: string;
   metaScore: number;
   benchmarkScore: number;
-  qualityScore: number;
+  qualityScore: null;
   freshnessScore: number;
   benchmarkCount: number;
   coverageRatio: number;
@@ -101,7 +101,7 @@ export interface FrontierNowEntry {
   outputPrice: number;
   contextWindow: number;
   speed: number;
-  qualityScore: number;
+  qualityScore: null;
   benchmarkCount: number;
   coverageRatio: number;
   openSource: boolean;
@@ -129,6 +129,8 @@ export interface AgiOverview {
 }
 
 export interface DataPulseEntry {
+  attemptedAt?: string | null;
+  sourceVerifiedAt?: string | null;
   id: string;
   label: string;
   note: string;
@@ -190,8 +192,8 @@ const FRONTIER_NOW_PRIORITY_IDS = [
 
 const SCRAPER_ACTIVITY_LABELS: Record<string, { title: string; detail: string; href: string }> = {
   'quality-scores': {
-    title: 'Recomputed benchmark-weighted quality scores',
-    detail: 'Refreshed the model quality layer that feeds ranking and comparison pages.',
+    title: 'Recomputed internal benchmark aggregates',
+    detail: 'Refreshed the remediation layer; public rankings still require row-level provenance and current dates.',
     href: '/leaderboard/',
   },
   'official-pricing': {
@@ -210,13 +212,13 @@ const SCRAPER_ACTIVITY_LABELS: Record<string, { title: string; detail: string; h
     href: '/speed/',
   },
   'benchmarks:chatbot-arena': {
-    title: 'Synced Chatbot Arena benchmark track',
-    detail: 'Updated the frontier conversation signal used in leaderboard weighting.',
+    title: 'Attempted Chatbot Arena collection',
+    detail: 'Collection attempt only; cached scores and transport success do not verify measurements.',
     href: '/benchmarks/',
   },
   'benchmarks:open-llm-leaderboard': {
-    title: 'Synced Open LLM leaderboard benchmarks',
-    detail: 'Updated benchmark rows used for open model scoring and ranking.',
+    title: 'Attempted Open LLM benchmark collection',
+    detail: 'Collection attempt only; public ranking still requires exact dated evidence.',
     href: '/benchmarks/',
   },
 };
@@ -542,66 +544,8 @@ function getEvidenceFactor(benchmarkCount: number): number {
   return 0.5;
 }
 
-function getStatusMultiplier(status: string | null | undefined): number {
-  switch ((status ?? '').toLowerCase()) {
-    case 'active':
-      return 1;
-    case 'tracking':
-      return 0.97;
-    case 'preview':
-      return 0.9;
-    case 'superseded':
-      return 0.82;
-    case 'retired':
-      return 0.65;
-    default:
-      return 0.8;
-  }
-}
-
-function getVariantPenalty(name: string): number {
-  const lower = name.toLowerCase();
-  let penalty = 1;
-
-  if (/\bbeta\b/.test(lower)) penalty *= 0.8;
-  if (/\bpreview\b/.test(lower)) penalty *= 0.88;
-  if (/\bmini\b|\bnano\b|\bflash\b|\bhaiku\b|\blite\b/.test(lower)) penalty *= 0.82;
-
-  return penalty;
-}
-
-function buildProviderLatestReleaseMap(models: PublicLLMModel[]): Map<string, string> {
-  const latestByProvider = new Map<string, string>();
-
-  for (const model of models) {
-    if (!model.released) continue;
-
-    const current = latestByProvider.get(model.provider_id);
-    if (!current || model.released > current) {
-      latestByProvider.set(model.provider_id, model.released);
-    }
-  }
-
-  return latestByProvider;
-}
-
-function getProviderAgePenalty(model: PublicLLMModel, latestByProvider: Map<string, string>): number {
-  if (!model.released) return 0.85;
-
-  const providerLatest = latestByProvider.get(model.provider_id);
-  if (!providerLatest || providerLatest === model.released) return 1;
-
-  const gapDays = (Date.parse(providerLatest) - Date.parse(model.released)) / (1000 * 60 * 60 * 24);
-  if (gapDays >= 240) return 0.55;
-  if (gapDays >= 120) return 0.7;
-  if (gapDays >= 60) return 0.84;
-  if (gapDays >= 30) return 0.92;
-  return 1;
-}
-
 function getFrontierEvidence(
   benchmarkCount: number,
-  qualityScore: number,
 ): Pick<FrontierNowEntry, 'evidenceLabel' | 'evidenceState'> {
   if (benchmarkCount >= 4) {
     return {
@@ -610,18 +554,27 @@ function getFrontierEvidence(
     };
   }
 
-  if (benchmarkCount >= 2 || qualityScore > 0) {
+  if (benchmarkCount >= 2) {
     return {
-      evidenceLabel: benchmarkCount >= 2 ? `${benchmarkCount} public evals` : 'quality layer only',
+      evidenceLabel: `${benchmarkCount} public evals`,
+      evidenceState: 'partial',
+    };
+  }
+
+  if (benchmarkCount === 1) {
+    return {
+      evidenceLabel: '1 public eval',
       evidenceState: 'partial',
     };
   }
 
   return {
-    evidenceLabel: 'tracking official release',
+    evidenceLabel: 'awaiting rankable benchmark evidence',
     evidenceState: 'tracking',
   };
 }
+
+export const MIN_EVALUATED_BENCHMARKS = 2;
 
 export function getMetaLeaderboard(limit = 10): MetaLeaderboardEntry[] {
   const models = getPublicModelsByCategory('llm');
@@ -630,8 +583,6 @@ export function getMetaLeaderboard(limit = 10): MetaLeaderboardEntry[] {
   const benchmarkMap = new Map(benchmarks.map((benchmark) => [benchmark.id, benchmark]));
   const totalWeight = benchmarks.reduce((sum, benchmark) => sum + toNumber(benchmark.weight), 0);
   const scoresByModel = new Map<string, BenchmarkScoreRow[]>();
-  const latestByProvider = buildProviderLatestReleaseMap(models);
-
   for (const score of benchmarkScores) {
     if (!scoresByModel.has(score.model_id)) scoresByModel.set(score.model_id, []);
     scoresByModel.get(score.model_id)?.push(score);
@@ -662,18 +613,13 @@ export function getMetaLeaderboard(limit = 10): MetaLeaderboardEntry[] {
       const benchmarkScore = coveredWeight > 0 ? weightedScoreTotal / coveredWeight : 0;
       const coverageRatio = totalWeight > 0 ? coveredWeight / totalWeight : 0;
       const coverageFactor = Math.min(1, coverageRatio / 0.55);
-      const qualityScore = toNumber(model.quality_score);
       const freshnessScore = getFreshnessScore(model.released);
 
-      if (scores.length === 0 && qualityScore === 0) return null;
+      if (new Set(scores.map((score) => score.benchmark_id)).size < MIN_EVALUATED_BENCHMARKS) return null;
 
-      const baseScore = benchmarkScore * 0.5 + qualityScore * 0.25 + freshnessScore * 0.25;
-      const metaScore = baseScore
+      const metaScore = benchmarkScore
         * (0.7 + 0.3 * coverageFactor)
-        * getEvidenceFactor(scores.length)
-        * getStatusMultiplier(model.status)
-        * getProviderAgePenalty(model, latestByProvider)
-        * getVariantPenalty(model.name);
+        * getEvidenceFactor(scores.length);
 
       return {
         id: model.id,
@@ -683,7 +629,7 @@ export function getMetaLeaderboard(limit = 10): MetaLeaderboardEntry[] {
         status: model.status,
         metaScore: Number(metaScore.toFixed(1)),
         benchmarkScore: Number(benchmarkScore.toFixed(1)),
-        qualityScore,
+        qualityScore: null,
         freshnessScore,
         benchmarkCount: scores.length,
         coverageRatio: Number(coverageRatio.toFixed(3)),
@@ -694,7 +640,7 @@ export function getMetaLeaderboard(limit = 10): MetaLeaderboardEntry[] {
         speed: toNumber(model.speed),
         valueScore: (() => {
           const blended = (toNumber(model.input_price) + 3 * toNumber(model.output_price)) / 4;
-          return blended > 0 && qualityScore > 0 ? Math.round((qualityScore / blended) * 10) : 0;
+          return blended > 0 ? Math.round((benchmarkScore / blended) * 10) : 0;
         })(),
         released: model.released || null,
         openSource: Boolean(model.open_source),
@@ -705,9 +651,8 @@ export function getMetaLeaderboard(limit = 10): MetaLeaderboardEntry[] {
     .filter((model): model is MetaLeaderboardEntry => Boolean(model))
     .sort((a, b) =>
       b.metaScore - a.metaScore ||
-      b.freshnessScore - a.freshnessScore ||
       b.benchmarkScore - a.benchmarkScore ||
-      b.qualityScore - a.qualityScore ||
+      b.benchmarkCount - a.benchmarkCount ||
       a.name.localeCompare(b.name))
     .slice(0, limit);
 }
@@ -728,12 +673,9 @@ export function getFrontierNow(limit = 10): FrontierNowEntry[] {
       priorityOrder.has(model.id)
       || (model.released ? Date.parse(model.released) >= Date.now() - (1000 * 60 * 60 * 24 * 180) : false)
       || (scoreCounts.get(model.id) ?? 0) > 0
-      || toNumber(model.quality_score) > 0
     ))
     .map((model): FrontierNowEntry => {
       const benchmarkCount = scoreCounts.get(model.id) ?? 0;
-      const qualityScore = toNumber(model.quality_score);
-
       return {
         id: model.id,
         name: model.name,
@@ -745,13 +687,13 @@ export function getFrontierNow(limit = 10): FrontierNowEntry[] {
         outputPrice: toNumber(model.output_price),
         contextWindow: toNumber(model.context_window),
         speed: toNumber(model.speed),
-        qualityScore,
+        qualityScore: null,
         benchmarkCount,
         coverageRatio: benchmarkCount > 0 ? Number((benchmarkCount / 11).toFixed(3)) : 0,
         openSource: Boolean(model.open_source),
         apiAvailable: Boolean(model.api_available),
         modality: toModalityList(model.modality),
-        ...getFrontierEvidence(benchmarkCount, qualityScore),
+        ...getFrontierEvidence(benchmarkCount),
       };
     })
     .sort((a, b) => {
@@ -761,7 +703,7 @@ export function getFrontierNow(limit = 10): FrontierNowEntry[] {
       const releaseDelta = Date.parse(b.released ?? '') - Date.parse(a.released ?? '');
       if (Number.isFinite(releaseDelta) && releaseDelta !== 0) return releaseDelta;
 
-      return b.qualityScore - a.qualityScore || a.name.localeCompare(b.name);
+      return b.benchmarkCount - a.benchmarkCount || a.name.localeCompare(b.name);
     })
     .slice(0, limit);
 }
@@ -853,10 +795,7 @@ export function getAgiOverview(): AgiOverview {
     }, null);
   }
 
-  const benchmarkUpdatedAt = latestDateTime(
-    ...benchmarks.map((benchmark) => ('updated_at' in benchmark ? String(benchmark.updated_at ?? '') : null)),
-    ...benchmarkScores.map((score) => score.updated_at ?? score.measured_at ?? null),
-  );
+  const benchmarkUpdatedAt = benchmarkFreshness(benchmarkScores, []).measuredAt;
 
   return {
     frontierPoints,
@@ -870,18 +809,16 @@ export function getAgiOverview(): AgiOverview {
 export function getDataPulse(basePath = '/'): DataPulseEntry[] {
   const digest = getLatestDigest();
   const jobsOverview = getAIJobsOverview();
-  const benchmarkRefresh = latestDateTime(
-    getLastScrapeTime('quality-scores'),
-    getLastScrapeTime('benchmarks:open-llm-leaderboard'),
-    getLastScrapeTime('benchmarks:chatbot-arena'),
-  );
+  const benchmarkRefresh = benchmarkFreshness(getBenchmarkScores(), readCacheArray<CacheScrapeLog>('scrape_log'));
 
   return [
     {
       id: 'meta',
       label: 'Evaluated composite',
-      note: `${getBenchmarks().length} benchmark tracks feed the benchmark-backed scored view.`,
-      updatedAt: benchmarkRefresh,
+      note: 'Latest measurement among exact evidence-backed rows; collection and recomputation do not refresh measurement dates.',
+      updatedAt: benchmarkRefresh.measuredAt,
+      attemptedAt: benchmarkRefresh.attemptedAt,
+      sourceVerifiedAt: benchmarkRefresh.sourceVerifiedAt,
       href: `${basePath}leaderboard/`,
     },
     {
@@ -919,7 +856,8 @@ export function getDataPulse(basePath = '/'): DataPulseEntry[] {
 
 function latestScrapeActivities(basePath: string): ActivityEntry[] {
   const logs = readCacheArray<CacheScrapeLog>('scrape_log')
-    .filter((entry) => entry.status === 'success' || entry.status === 'computed')
+    .filter((entry) => entry.status === 'success' || entry.status === 'computed'
+      || (entry.scraper.startsWith('benchmarks:') && ['live', 'fallback'].includes(entry.status)))
     .sort((a, b) => Date.parse(normaliseDateTime(b.finished_at) ?? '') - Date.parse(normaliseDateTime(a.finished_at) ?? ''));
 
   const latestByScraper = new Map<string, CacheScrapeLog>();

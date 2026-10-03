@@ -19,6 +19,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { REQUIRED_FRONTIER_MODELS, type FrontierModelRequirement } from './frontier-registry.ts';
 import { getAiResourceHubSqlitePath } from './sqlite-path';
+import {
+  getBenchmarkProvenanceGateFailures,
+  summariseBenchmarkProvenance,
+  type BenchmarkDefinitionProvenanceInput,
+  type BenchmarkScoreProvenanceInput,
+} from './benchmark-provenance';
 
 const DB_PATH = getAiResourceHubSqlitePath();
 const PUBLIC_CACHE_MODELS_PATH = path.join(process.cwd(), 'data', 'pg-cache', 'models.json');
@@ -170,31 +176,69 @@ function main() {
   }
   console.log();
 
-  // 4. Benchmark Scores Without Sources
-  const noSource = db.prepare(`
-    SELECT bs.model_id, m.name, b.name AS benchmark_name
+  // 4. Benchmark provenance and measurement freshness
+  const benchmarkRows = db.prepare(`
+    SELECT
+      bs.model_id,
+      bs.benchmark_id,
+      bs.source,
+      bs.source_url,
+      bs.measured_at,
+      bs.updated_at,
+      m.name,
+      b.name AS benchmark_name,
+      b.url AS benchmark_url
     FROM benchmark_scores bs
     JOIN models m ON bs.model_id = m.id
     JOIN benchmarks b ON bs.benchmark_id = b.id
     WHERE m.status = 'active'
-      AND (bs.source IS NULL OR bs.source = '')
-  `).all() as Array<{ model_id: string; name: string; benchmark_name: string }>;
+  `).all() as Array<
+    BenchmarkScoreProvenanceInput & {
+      name: string;
+      benchmark_name: string;
+      benchmark_url: string | null;
+    }
+  >;
+  const benchmarkDefinitions = Array.from(
+    new Map(
+      benchmarkRows.map((row) => [
+        row.benchmark_id,
+        { id: row.benchmark_id, url: row.benchmark_url } satisfies BenchmarkDefinitionProvenanceInput,
+      ]),
+    ).values(),
+  );
+  const provenanceSummary = summariseBenchmarkProvenance(benchmarkRows, benchmarkDefinitions);
+  const provenanceFailures = getBenchmarkProvenanceGateFailures(provenanceSummary);
 
-  if (noSource.length > 0) {
-    console.log(`WARN NO SOURCE: ${noSource.length} benchmark scores without source attribution`);
-    for (const score of noSource.slice(0, 5)) {
-      console.log(`    ${score.name} / ${score.benchmark_name}`);
+  console.log(`  URL-backed: ${provenanceSummary.urlBacked}`);
+  console.log(`  Inherited traceable: ${provenanceSummary.inheritedTraceable}`);
+  console.log(`  Label-only: ${provenanceSummary.labelOnly}`);
+  console.log(`  Missing: ${provenanceSummary.missing}`);
+  console.log(`  Stale >${provenanceSummary.maxAgeDays}d: ${provenanceSummary.stale}`);
+  console.log(`  Undated / invalid / future: ${provenanceSummary.undated} / ${provenanceSummary.invalidDate} / ${provenanceSummary.futureDated}`);
+  console.log(`  Rankable: ${provenanceSummary.rankable}/${provenanceSummary.total}`);
+
+  if (provenanceFailures.length > 0) {
+    console.log(`CRITICAL BENCHMARK PROVENANCE: ${provenanceSummary.unrankable} score(s) are not rankable`);
+    const rowByKey = new Map(
+      benchmarkRows.map((row) => [`${row.model_id ?? ''}\u0000${row.benchmark_id}`, row]),
+    );
+    for (const assessment of provenanceSummary.assessments.filter((item) => !item.rankable).slice(0, 10)) {
+      const row = rowByKey.get(`${assessment.modelId ?? ''}\u0000${assessment.benchmarkId}`);
+      console.log(`    ${row?.name ?? assessment.modelId ?? 'unknown'} / ${row?.benchmark_name ?? assessment.benchmarkId}: ${assessment.reasons.join(' ')}`);
       issues.push({
-        id: score.model_id,
-        name: score.name,
-        issue: 'no-benchmark-source',
-        detail: `${score.benchmark_name} has no source`,
+        id: assessment.modelId ?? assessment.benchmarkId,
+        name: row?.name ?? assessment.modelId ?? 'Unknown model',
+        issue: 'benchmark-provenance',
+        detail: `${row?.benchmark_name ?? assessment.benchmarkId}: ${assessment.reasons.join(' ')}`,
       });
     }
-    if (noSource.length > 5) console.log(`    ... and ${noSource.length - 5} more`);
-    warnings += noSource.length;
+    if (provenanceSummary.unrankable > 10) {
+      console.log(`    ... and ${provenanceSummary.unrankable - 10} more`);
+    }
+    criticals += provenanceSummary.unrankable;
   } else {
-    console.log('OK All benchmark scores have source attribution');
+    console.log('OK All active benchmark scores are traceable, current, and rankable');
   }
   console.log();
 

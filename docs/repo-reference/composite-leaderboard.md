@@ -1,6 +1,6 @@
 # Composite Leaderboard Snapshot
 
-Generated: 03 Oct 2026, 22:55 UTC
+Generated: 03 Oct 2026, 23:07 UTC
 
 This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
 
@@ -8,26 +8,10 @@ This is the repo-readable top slice of the current benchmark-weighted leaderboar
 
 | Rank | Model | Provider | Composite | Bench | Coverage | Best for | Price | Released |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Llama 4 Maverick | Meta | 54.2 | 77.0 / 10 | 28% | Coding | $0.19 / $0.65 | 05 Apr 2025 |
-| 2 | DeepSeek V3.2 | DeepSeek | 53.3 | 74.6 / 6 | 21% | General use | $0.29 / $1.14 | 29 Sept 2025 |
-| 3 | GPT-5.2 | OpenAI | 52.8 | 78.5 / 22 | 67% | multilingual | $0.88 / $7.00 | 10 Dec 2025 |
-| 4 | Claude Opus 4.6 (batch) | Anthropic | 52.3 | 75.9 / 16 | 49% | Chat | $5.00 / $25.00 | 05 Feb 2026 |
-| 5 | Mistral Large | Mistral | 50.4 | 70.6 / 6 | 20% | General use | $2.00 / $6.00 | 01 Jun 2025 |
-| 6 | Phi-4 Reasoning | Microsoft | 49.2 | 79.9 / 4 | 15% | Coding | $0.07 / $0.14 | 01 May 2025 |
-| 7 | Llama 4 Scout | Meta | 47.3 | 80.4 / 4 | 13% | Coding | $0.10 / $0.30 | 05 Apr 2025 |
-| 8 | Claude Sonnet 4.6 (batch) | Anthropic | 42.9 | 82.3 / 5 | 19% | Chat | $3.00 / $15.00 | 17 Feb 2026 |
-| 9 | GPT-5.2 Pro (batch) | OpenAI | 42.5 | 91.3 / 4 | 16% | Chat | $10.50 / $84.00 | 10 Dec 2025 |
-| 10 | R1 0528 | DeepSeek | 40.8 | 82.4 / 6 | 23% | Chat | $0.50 / $2.15 | 28 May 2025 |
-| 11 | O3 | OpenAI | 39.8 | 80.6 / 21 | 64% | multilingual | $1.00 / $4.00 | 16 Apr 2025 |
-| 12 | Qwen3 Max | Alibaba | 37.8 | 86.1 / 4 | 15% | Coding | $0.78 / $3.90 | 01 Sept 2025 |
-| 13 | Gemini 2.5 Pro | Google | 35.9 | 77.1 / 25 | 75% | multilingual | $1.25 / $10.00 | 25 Mar 2025 |
-| 14 | Claude Opus 4 | Anthropic | 35.5 | 75.5 / 17 | 49% | multilingual | $15.00 / $75.00 | 22 May 2025 |
-| 15 | Grok 4 | xAI | 35.2 | 74.4 / 15 | 47% | Chat | $3.00 / $15.00 | 09 Jul 2025 |
-| 16 | DeepSeek R1 | DeepSeek | 34.5 | 70.9 / 19 | 58% | General use | $0.70 / $2.50 | 20 Jan 2025 |
-| 17 | Mistral Small 3.1 24B | Mistral | 34.4 | 76.1 / 3 | 9% | Coding | $0.35 / $0.56 | 18 Mar 2025 |
-| 18 | Claude Sonnet 4 | Anthropic | 34.0 | 76.5 / 13 | 38% | General use | $3.00 / $15.00 | 22 May 2025 |
-| 19 | Grok 3 | xAI | 32.6 | 84.7 / 7 | 24% | General use | $3.00 / $15.00 | 10 Jun 2025 |
-| 20 | GPT-5 Pro (batch) | OpenAI | 32.5 | 88.5 / 4 | 16% | Chat | $7.50 / $60.00 | 06 Oct 2025 |
+| 1 | GPT-5.2 | OpenAI | 52.1 | 71.2 / 4 | 16% | Coding | $0.88 / $7.00 | 10 Dec 2025 |
+| 2 | Gemini 3 Pro | Google | 51.4 | 84.1 / 2 | 9% | Reasoning | $2.00 / $12.00 | 18 Nov 2025 |
+| 3 | Claude Opus 4.5 (batch) | Anthropic | 51.4 | 84.0 / 2 | 9% | Reasoning | $2.50 / $12.50 | 24 Nov 2025 |
+| 4 | Claude Sonnet 4.5 (batch) | Anthropic | 49.1 | 80.3 / 2 | 9% | Reasoning | $1.50 / $7.50 | 29 Sept 2025 |
 
 Notes:
 

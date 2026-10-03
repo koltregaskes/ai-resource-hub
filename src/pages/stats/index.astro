@@ -8,6 +8,7 @@ import {
   getStoryTagCount,
 } from '../../data/content-curation';
 import { loadNewsItems } from '../../data/news-digests';
+import { getMetaLeaderboard } from '../../data/hub-dashboard';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -56,8 +57,7 @@ const largestContext = modelsWithContext.length > 0 ? [...modelsWithContext].sor
 const ossModels = llmModels.filter(m => m.openSource);
 const ossPercentage = llmModels.length > 0 ? (ossModels.length / llmModels.length * 100) : 0;
 
-// Quality stats
-const topQuality = [...llmModels].sort((a, b) => b.qualityScore - a.qualityScore)[0];
+const topEvaluated = getMetaLeaderboard(1)[0] ?? null;
 
 // Benchmark coverage
 let totalScores = 0;
@@ -227,11 +227,11 @@ function formatRefreshLabel(value: string | null): string {
               </a>
             </div>
           )}
-          {topQuality && (
+          {topEvaluated && (
             <div class="flex justify-between items-center">
-              <span class="text-sm text-(--color-text-muted)">Highest Quality Score</span>
-              <a href={`${base}models/${topQuality.id}/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
-                {topQuality.name} ({topQuality.qualityScore}/100)
+              <span class="text-sm text-(--color-text-muted)">Leading Evaluated Composite</span>
+              <a href={`${base}models/${topEvaluated.id}/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
+                {topEvaluated.name} ({topEvaluated.metaScore}/100)
               </a>
             </div>
           )}

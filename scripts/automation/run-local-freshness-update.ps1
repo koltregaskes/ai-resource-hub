@@ -123,6 +123,38 @@ function Import-ConfiguredEnvironment {
   Write-Log "Loaded the configured database environment key from $Path without logging its value."
 }
 
+function Write-ExecutionProof {
+  $gitCommand = Get-Command -Name 'git' -CommandType Application -ErrorAction Stop |
+    Select-Object -First 1
+  $sourceCommitOutput = & $gitCommand.Path -C $repoRoot rev-parse HEAD 2>&1
+  if ($LASTEXITCODE -ne 0) {
+    throw "Could not resolve the execution source commit: $($sourceCommitOutput -join ' ')"
+  }
+
+  $sourceCommit = ($sourceCommitOutput -join '').Trim()
+  $worktreeStatus = @(& $gitCommand.Path -C $repoRoot status --porcelain --untracked-files=normal 2>&1)
+  if ($LASTEXITCODE -ne 0) {
+    throw "Could not resolve the execution worktree state: $($worktreeStatus -join ' ')"
+  }
+
+  $worktreeState = if ($worktreeStatus.Count -gt 0) { 'modified' } else { 'clean' }
+  $publishVerifierPath = Join-Path $repoRoot 'scripts\verify-publish-readiness.ts'
+  $strictBenchmarkGatePath = Join-Path $repoRoot 'scripts\benchmark-provenance.ts'
+  $strictBenchmarkGateWired = (
+    (Test-Path -LiteralPath $strictBenchmarkGatePath) -and
+    (Select-String -LiteralPath $publishVerifierPath -Pattern 'getBenchmarkProvenanceGateFailures' -Quiet)
+  )
+  $publishPolicy = if ($strictBenchmarkGateWired) {
+    'strict-benchmark-provenance-v1'
+  } else {
+    'production-cache-parity-and-routing-v1'
+  }
+  $verifierHash = (Get-FileHash -LiteralPath $publishVerifierPath -Algorithm SHA256).Hash.ToLowerInvariant()
+
+  $level = if ($worktreeState -eq 'clean') { 'PROOF' } else { 'WARN' }
+  Write-Log "Execution proof: sourceCommit=$sourceCommit; worktreeState=$worktreeState; publishPolicy=$publishPolicy; verifierSha256=$verifierHash" $level
+}
+
 function Restore-GeneratedPublishArtifacts {
   Write-Log 'Restoring generated publish artifacts because AIRH_LOCAL_REFRESH_RESTORE=1.'
   Invoke-Logged 'git' (@('restore', '--source', 'HEAD', '--worktree', '--') + $publishPaths)
@@ -135,6 +167,7 @@ Push-Location $repoRoot
 try {
   Write-Log "Starting local-only freshness update for $repoRoot"
   Write-Log 'Safety mode: no git pull, no commit, no push, no deploy, no publish.'
+  Write-ExecutionProof
   if ($restoreAfterVerify) {
     Write-Log 'Restore mode: generated publish artifacts will be restored after verification.'
   } else {

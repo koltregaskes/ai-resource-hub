@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 03 Oct 2026, 22:55 UTC
+Generated: 03 Oct 2026, 23:07 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,20 +8,20 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| AI milestones | Curated updates as research lands | Mixed | 03 Oct 2026, 22:55 UTC |
+| AI milestones | Curated updates as research lands | Mixed | 03 Oct 2026, 23:07 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 03 Oct 2026, 22:55 UTC |
-| Benchmarks and evals | Hourly automated refresh | Automated | 03 Oct 2026, 22:55 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 03 Oct 2026, 23:07 UTC |
+| Benchmarks and evals | Hourly collection attempts; measurement dates vary | Automated | 05 Feb 2026, 00:00 UTC |
 | Pricing and value | Hourly automated refresh | Automated | 03 Oct 2026, 22:55 UTC |
 | News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 03 Oct 2026, 12:00 UTC |
 | Provider status | Hourly automated refresh | Automated | 03 Oct 2026, 22:55 UTC |
-| Guides and learning | Manual editorial review | Manual | 03 Oct 2026, 22:55 UTC |
+| Guides and learning | Manual editorial review | Manual | 03 Oct 2026, 22:01 UTC |
 
 ## AI milestones
 
 - Cadence: Curated updates as research lands
 - Automation: Mixed
-- Last refreshed: 03 Oct 2026, 22:55 UTC
+- Last refreshed: 03 Oct 2026, 23:07 UTC
 - Category route: `/milestones/`
 - Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
 
@@ -33,8 +33,8 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 13 Oct 2026, 12:00 UTC: AlexNet wins ILSVRC 2012 - Next exact anniversary in 10 days. (`/milestones/`)
-- 03 Oct 2026, 22:55 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
+- 13 Oct 2026, 12:00 UTC: AlexNet wins ILSVRC 2012 - Next exact anniversary in 9 days. (`/milestones/`)
+- 03 Oct 2026, 23:07 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -60,7 +60,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 03 Oct 2026, 22:55 UTC
+- Last refreshed: 03 Oct 2026, 23:07 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -72,17 +72,17 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 29 Sept 2026, 12:00 UTC: GPT-6.1 Sol Pro - OpenAI release desk entry is watch only with 3 related stories and 0 benchmark signals attached. (`/new/`)
 - 29 Sept 2026, 12:00 UTC: GPT-6.1 Sol - OpenAI release desk entry is watch only with 4 related stories and 0 benchmark signals attached. (`/new/`)
+- 29 Sept 2026, 12:00 UTC: GPT-6.1 Sol Pro - OpenAI release desk entry is watch only with 3 related stories and 0 benchmark signals attached. (`/new/`)
 - 23 Sept 2026, 12:00 UTC: GLM 5.3 Prime - Zhipu AI release desk entry is watch only with 0 related stories and 0 benchmark signals attached. (`/new/`)
 
 ## Benchmarks and evals
 
-- Cadence: Hourly automated refresh
+- Cadence: Hourly collection attempts; measurement dates vary
 - Automation: Automated
-- Last refreshed: 03 Oct 2026, 22:55 UTC
+- Last refreshed: 05 Feb 2026, 00:00 UTC
 - Category route: `/benchmarks/`
-
+- Note: Raw evidence gaps remain quarantined. Collection health and source verification require separate evidence.
 
 ### Source Types
 
@@ -92,8 +92,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 03 Oct 2026, 22:55 UTC: Arena and headline eval track refresh - Updated the frontier conversation benchmark used in the ranking layer. (`/benchmarks/`)
-- 03 Oct 2026, 22:55 UTC: Quality score recompute - Rebuilt the weighted scoring layer used across the hub. (`/leaderboard/`)
+- 05 Feb 2026, 00:00 UTC: Latest evidence-backed benchmark measurement - Measurement date from an exact public evidence row; not a scrape or recompute timestamp. (`/benchmarks/`)
 
 ## Pricing and value
 
@@ -158,7 +157,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 03 Oct 2026, 22:55 UTC
+- Last refreshed: 03 Oct 2026, 22:01 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -170,6 +169,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 03 Oct 2026, 22:55 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
-- 03 Oct 2026, 22:55 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 03 Oct 2026, 22:55 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 03 Oct 2026, 22:01 UTC: Guides - Guide or learning page updated in the repository. (`/guides/`)
+- 03 Oct 2026, 22:01 UTC: Prompting Basics - Guide or learning page updated in the repository. (`/guides/prompting-basics/`)
+- 03 Oct 2026, 22:01 UTC: Understanding Ai Pricing - Guide or learning page updated in the repository. (`/guides/understanding-ai-pricing/`)

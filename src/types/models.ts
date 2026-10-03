@@ -9,8 +9,13 @@ export interface LLMModel {
   maxOutput: number;        // tokens
   speed: number;            // tokens per second (output)
   ttft: number;             // time to first token (ms)
-  qualityScore: number;     // 0-100 composite benchmark score
-  valueScore: number;       // computed: quality / cost ratio
+  qualityScore: number | null; // suppressed until model-level method/source/date are traceable
+  valueScore: number | null;   // suppressed with the untraceable quality score
+  qualityScoreState: 'suppressed_untraceable';
+  qualityScoreMethod: null;
+  qualityScoreMeasuredAt: null;
+  qualityScoreSourceUrls: string[];
+  qualityScoreEvidenceCount: number;
   released: string;         // ISO date string
   openSource: boolean;
   modality: string[];       // e.g. ['text', 'vision', 'audio']
@@ -34,7 +39,7 @@ export interface ColumnDef {
   field: SortField;
   label: string;
   shortLabel?: string;
-  format: (value: number | string) => string;
+  format: (value: number | string | null) => string;
   align?: 'left' | 'right';
   defaultSort?: SortDirection;
 }

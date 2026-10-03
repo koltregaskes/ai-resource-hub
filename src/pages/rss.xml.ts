@@ -100,7 +100,7 @@ export const GET: APIRoute = ({ site }) => {
     <item>
       <title>New ${catLabel} Model: ${escapeXml(model.name)} by ${escapeXml(model.provider)}</title>
       <link>${base}models/${model.id}/</link>
-      <description>${escapeXml(model.name)} by ${escapeXml(model.provider)} — ${catLabel} model with quality score ${model.qualityScore}/100.</description>
+      <description>${escapeXml(model.name)} by ${escapeXml(model.provider)} — tracked ${catLabel} model. Legacy model-level quality is not published without traceable evidence.</description>
       <pubDate>${new Date(model.released ?? '2026-01-01').toUTCString()}</pubDate>
       <guid isPermaLink="true">${base}models/${model.id}/</guid>
       <category>${catLabel} Models</category>

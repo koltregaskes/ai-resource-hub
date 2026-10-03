@@ -10,6 +10,7 @@
 import Database from 'better-sqlite3';
 import fs from 'node:fs';
 import path from 'node:path';
+import { VERIFIED_BENCHMARK_SCORE_EVIDENCE } from './benchmark-score-evidence';
 import { MODEL_LIFECYCLE_OVERRIDES } from './model-catalog';
 import { getAiResourceHubLegacySqlitePath, getAiResourceHubSqlitePath } from './sqlite-path';
 
@@ -1288,6 +1289,30 @@ const insertScores = db.transaction(() => {
   }
 });
 insertScores();
+
+const updateVerifiedScoreEvidence = db.prepare(`
+  UPDATE benchmark_scores
+  SET score = ?, source = ?, source_url = ?, measured_at = ?
+  WHERE model_id = ? AND benchmark_id = ?
+`);
+const applyVerifiedScoreEvidence = db.transaction(() => {
+  for (const evidence of VERIFIED_BENCHMARK_SCORE_EVIDENCE) {
+    const result = updateVerifiedScoreEvidence.run(
+      evidence.score,
+      evidence.source,
+      evidence.sourceUrl,
+      evidence.measuredAt,
+      evidence.modelId,
+      evidence.benchmarkId,
+    );
+    if (result.changes !== 1) {
+      throw new Error(
+        `Verified benchmark evidence target missing or duplicated: ${evidence.modelId}:${evidence.benchmarkId}`,
+      );
+    }
+  }
+});
+applyVerifiedScoreEvidence();
 
 // ─── TTFT and Speed Source Data ─────────────────────────────────
 // Time to First Token (ms) sourced from Artificial Analysis and provider benchmarks

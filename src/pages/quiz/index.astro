@@ -1,14 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getModelsByCategory } from '../../db/queries';
+import { getMetaLeaderboard } from '../../data/hub-dashboard';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
 const models = getModelsByCategory('llm');
+const evaluatedById = new Map(getMetaLeaderboard(250).map((model) => [model.id, model]));
 
 const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
-const modelsJSON = safeJson(models.map(m => ({
+const modelsJSON = safeJson(models.filter((model) => evaluatedById.has(model.id)).map(m => ({
   id: m.id,
   name: m.name,
   provider: m.provider,
@@ -18,7 +20,7 @@ const modelsJSON = safeJson(models.map(m => ({
   contextWindow: m.contextWindow,
   maxOutput: m.maxOutput,
   speed: m.speed,
-  qualityScore: m.qualityScore,
+  evaluatedComposite: evaluatedById.get(m.id)?.metaScore ?? null,
   released: m.released,
   openSource: m.openSource,
   modality: m.modality,
@@ -282,26 +284,23 @@ const baseJSON = safeJson(base);
           } else if (notesLC.includes('programming') || notesLC.includes('developer')) {
             score += 20;
           }
-          // High quality models tend to be good at coding
-          score += (model.qualityScore / 100) * 15;
+          score += (model.evaluatedComposite / 100) * 15;
         } else if (useCase === 'writing') {
           if (notesLC.includes('writing') || notesLC.includes('creative') || notesLC.includes('content')) {
             score += 25;
           }
-          // High quality + large output = good for writing
-          score += (model.qualityScore / 100) * 15;
+          score += (model.evaluatedComposite / 100) * 15;
           score += Math.min(10, (model.maxOutput / 8000) * 10);
         } else if (useCase === 'research') {
           if (notesLC.includes('research') || notesLC.includes('analysis') || notesLC.includes('reasoning')) {
             score += 25;
           }
-          // Large context + quality = good for research
-          score += (model.qualityScore / 100) * 15;
+          score += (model.evaluatedComposite / 100) * 15;
           score += Math.min(10, (model.contextWindow / 200000) * 10);
         } else if (useCase === 'chatbot') {
-          // For chatbots: speed + quality balance
+          // For chatbots: speed plus the source-backed evaluated composite.
           score += (model.speed / 100) * 12;
-          score += (model.qualityScore / 100) * 12;
+          score += (model.evaluatedComposite / 100) * 12;
           if (notesLC.includes('chat') || notesLC.includes('assistant') || notesLC.includes('conversational')) {
             score += 10;
           }
@@ -341,11 +340,9 @@ const baseJSON = safeJson(base);
           } else {
             score += 5;
           }
-          // Also reward quality
-          score += (model.qualityScore / 100) * 5;
+          score += (model.evaluatedComposite / 100) * 5;
         } else if (budget === 'high') {
-          // High budget — prioritise quality over cost
-          score += (model.qualityScore / 100) * 25;
+          score += (model.evaluatedComposite / 100) * 25;
         }
 
         // 3. Speed vs quality (0-20 points)
@@ -354,9 +351,9 @@ const baseJSON = safeJson(base);
           score += (model.speed / 100) * 20;
         } else if (speedPref === 'balanced') {
           score += (model.speed / 100) * 10;
-          score += (model.qualityScore / 100) * 10;
+          score += (model.evaluatedComposite / 100) * 10;
         } else if (speedPref === 'quality') {
-          score += (model.qualityScore / 100) * 20;
+          score += (model.evaluatedComposite / 100) * 20;
         }
 
         // 4. Open source preference (0-15 points)
@@ -507,8 +504,8 @@ const baseJSON = safeJson(base);
                 <!-- Key stats -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
                   <div class="p-2 rounded-lg bg-(--color-bg-secondary)">
-                    <div class="text-[10px] text-(--color-text-muted) uppercase tracking-wide mb-0.5">Quality</div>
-                    <div class="text-sm font-semibold text-(--color-text-primary)">${model.qualityScore}/100</div>
+                    <div class="text-[10px] text-(--color-text-muted) uppercase tracking-wide mb-0.5">Evaluated composite</div>
+                    <div class="text-sm font-semibold text-(--color-text-primary)">${model.evaluatedComposite}/100</div>
                   </div>
                   <div class="p-2 rounded-lg bg-(--color-bg-secondary)">
                     <div class="text-[10px] text-(--color-text-muted) uppercase tracking-wide mb-0.5">Speed</div>

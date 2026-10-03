@@ -1,14 +1,15 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getLLMModels } from '../../data/llm-models';
+import { getMetaLeaderboard } from '../../data/hub-dashboard';
 
 const models = getLLMModels();
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
-// Pick representative models for recommendations
-const topQuality = [...models].sort((a, b) => b.qualityScore - a.qualityScore).slice(0, 3);
-const topValue = [...models].sort((a, b) => b.valueScore - a.valueScore).slice(0, 3);
+const evaluatedModels = getMetaLeaderboard(250);
+const topQuality = evaluatedModels.slice(0, 3);
+const topValue = [...evaluatedModels].sort((a, b) => b.valueScore - a.valueScore).slice(0, 3);
 const cheapest = [...models].filter(m => m.inputPrice > 0).sort((a, b) => {
   const aCost = (a.inputPrice + 3 * a.outputPrice) / 4;
   const bCost = (b.inputPrice + 3 * b.outputPrice) / 4;
@@ -187,24 +188,24 @@ function formatPrice(price: number): string {
       <section>
         <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Current Model Rankings (from Our Data)</h2>
         <p class="text-(--color-text-secondary) leading-relaxed mb-4">
-          Here's what our data says about the top models right now. These rankings are based on benchmark scores
-          and pricing data we track across {models.length} models.
+          Here's what the traceable data says about the top evaluated models right now. These rankings use
+          source-backed benchmark rows and pricing data from a catalogue of {models.length} models.
         </p>
 
         <div class="grid sm:grid-cols-3 gap-4 mb-4">
           <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-            <h3 class="text-sm font-semibold text-(--color-accent) mb-3">Highest Quality</h3>
+            <h3 class="text-sm font-semibold text-(--color-accent) mb-3">Evaluated Composite</h3>
             {topQuality.map((m, i) => (
               <div class="flex items-center justify-between py-1.5">
                 <a href={`${base}models/${m.id}/`} class="text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
                   {i + 1}. {m.name}
                 </a>
-                <span class="text-xs text-(--color-text-muted)">{m.qualityScore}/100</span>
+                <span class="text-xs text-(--color-text-muted)">{m.metaScore}/100</span>
               </div>
             ))}
           </div>
           <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-            <h3 class="text-sm font-semibold text-(--color-success) mb-3">Best Value</h3>
+            <h3 class="text-sm font-semibold text-(--color-success) mb-3">Benchmark Value</h3>
             {topValue.map((m, i) => (
               <div class="flex items-center justify-between py-1.5">
                 <a href={`${base}models/${m.id}/`} class="text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors">

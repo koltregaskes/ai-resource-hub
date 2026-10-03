@@ -4,6 +4,7 @@
  */
 import { getDB } from './schema';
 import type { LLMModel } from '../types/models';
+import { assessBenchmarkProvenance } from '../data/benchmark-provenance';
 
 export interface DBProvider {
   id: string;
@@ -81,20 +82,12 @@ export function getLLMModelsFromDB(): LLMModel[] {
     FROM models m
     JOIN providers p ON m.provider_id = p.id
     WHERE m.category = 'llm' AND m.status = 'active'
-    ORDER BY m.quality_score DESC
+    ORDER BY m.name ASC
   `).all() as Array<Record<string, unknown>>;
 
   return rows.map((row) => {
     const inputPrice = row.inputPrice as number;
     const outputPrice = row.outputPrice as number;
-    const qualityScore = row.qualityScore as number;
-
-    // Value score: quality per dollar (blended cost: 3:1 output:input ratio)
-    const blendedCostPer1M = (inputPrice + 3 * outputPrice) / 4;
-    const valueScore = blendedCostPer1M > 0
-      ? Math.round((qualityScore / blendedCostPer1M) * 10)
-      : 0;
-
     return {
       id: row.id as string,
       name: row.name as string,
@@ -106,8 +99,13 @@ export function getLLMModelsFromDB(): LLMModel[] {
       maxOutput: row.maxOutput as number,
       speed: row.speed as number,
       ttft: row.ttft as number,
-      qualityScore,
-      valueScore,
+      qualityScore: null,
+      valueScore: null,
+      qualityScoreState: 'suppressed_untraceable' as const,
+      qualityScoreMethod: null,
+      qualityScoreMeasuredAt: null,
+      qualityScoreSourceUrls: [],
+      qualityScoreEvidenceCount: 0,
       released: row.released as string,
       openSource: (row.openSource as number) === 1,
       modality: (row.modality as string).split(',').map((m: string) => m.trim()),
@@ -299,18 +297,12 @@ export function getModelsByProvider(providerId: string): LLMModel[] {
     FROM models m
     JOIN providers p ON m.provider_id = p.id
     WHERE m.provider_id = ? AND m.status = 'active'
-    ORDER BY m.quality_score DESC
+    ORDER BY m.released DESC, m.name ASC
   `).all(providerId) as Array<Record<string, unknown>>;
 
   return rows.map((row) => {
     const inputPrice = row.inputPrice as number;
     const outputPrice = row.outputPrice as number;
-    const qualityScore = row.qualityScore as number;
-    const blendedCostPer1M = (inputPrice + 3 * outputPrice) / 4;
-    const valueScore = blendedCostPer1M > 0
-      ? Math.round((qualityScore / blendedCostPer1M) * 10)
-      : 0;
-
     return {
       id: row.id as string,
       name: row.name as string,
@@ -322,8 +314,13 @@ export function getModelsByProvider(providerId: string): LLMModel[] {
       maxOutput: row.maxOutput as number,
       speed: row.speed as number,
       ttft: row.ttft as number,
-      qualityScore,
-      valueScore,
+      qualityScore: null,
+      valueScore: null,
+      qualityScoreState: 'suppressed_untraceable' as const,
+      qualityScoreMethod: null,
+      qualityScoreMeasuredAt: null,
+      qualityScoreSourceUrls: [],
+      qualityScoreEvidenceCount: 0,
       released: row.released as string,
       openSource: (row.openSource as number) === 1,
       modality: (row.modality as string).split(',').map((m: string) => m.trim()),
@@ -469,7 +466,7 @@ export interface DBModelTTFT {
   speed: number;
   provider: string;
   provider_colour: string;
-  quality_score: number;
+  quality_score: number | null;
   input_price: number;
   output_price: number;
   speed_source: string | null;
@@ -477,7 +474,7 @@ export interface DBModelTTFT {
 
 export function getModelsWithTTFT(): DBModelTTFT[] {
   const db = getDB();
-  return db.prepare(`
+  const rows = db.prepare(`
     SELECT m.id, m.name, m.ttft, m.speed, p.name AS provider, p.colour AS provider_colour,
            m.quality_score, m.input_price, m.output_price, m.speed_source
     FROM models m
@@ -485,6 +482,7 @@ export function getModelsWithTTFT(): DBModelTTFT[] {
     WHERE m.ttft > 0 AND m.status = 'active' AND m.category = 'llm'
     ORDER BY m.ttft ASC
   `).all() as DBModelTTFT[];
+  return rows.map((row) => ({ ...row, quality_score: null }));
 }
 
 /**
@@ -565,7 +563,7 @@ export interface CategoryModel {
   contextWindow: number;
   maxOutput: number;
   speed: number;
-  qualityScore: number;
+  qualityScore: number | null;
   released: string;
   openSource: boolean;
   modality: string;
@@ -595,7 +593,7 @@ export function getModelsByCategory(category: string): CategoryModel[] {
     FROM models m
     JOIN providers p ON m.provider_id = p.id
     WHERE m.category = ? AND m.status = 'active'
-    ORDER BY m.quality_score DESC
+    ORDER BY m.released DESC, m.name ASC
   `).all(category) as Array<Record<string, unknown>>;
 
   return rows.map((row) => ({
@@ -608,7 +606,7 @@ export function getModelsByCategory(category: string): CategoryModel[] {
     contextWindow: row.contextWindow as number,
     maxOutput: row.maxOutput as number,
     speed: row.speed as number,
-    qualityScore: row.qualityScore as number,
+    qualityScore: null,
     released: row.released as string,
     openSource: (row.openSource as number) === 1,
     modality: row.modality as string,
@@ -682,12 +680,12 @@ export interface RecentModel {
   providerColour: string;
   category: string;
   released: string | null;
-  qualityScore: number;
+  qualityScore: number | null;
 }
 
 export function getRecentModels(limit: number = 12): RecentModel[] {
   const db = getDB();
-  return db.prepare(`
+  const rows = db.prepare(`
     SELECT m.id, m.name, p.name AS provider, p.colour AS providerColour,
            m.category, m.released, m.quality_score AS qualityScore
     FROM models m
@@ -696,6 +694,7 @@ export function getRecentModels(limit: number = 12): RecentModel[] {
     ORDER BY m.released DESC
     LIMIT ?
   `).all(limit) as RecentModel[];
+  return rows.map((row) => ({ ...row, qualityScore: null }));
 }
 
 /**
@@ -714,7 +713,7 @@ export function getModelsByProviderGrouped(providerId: string): Record<string, A
     FROM models m
     JOIN providers p ON m.provider_id = p.id
     WHERE m.provider_id = ? AND m.status = 'active'
-    ORDER BY m.quality_score DESC
+    ORDER BY m.released DESC, m.name ASC
   `).all(providerId) as Array<Record<string, unknown>>;
 
   const grouped: Record<string, Array<CategoryModel & { category: string }>> = {};
@@ -731,7 +730,7 @@ export function getModelsByProviderGrouped(providerId: string): Record<string, A
       contextWindow: row.contextWindow as number,
       maxOutput: row.maxOutput as number,
       speed: row.speed as number,
-      qualityScore: row.qualityScore as number,
+      qualityScore: null,
       released: row.released as string,
       openSource: (row.openSource as number) === 1,
       modality: row.modality as string,
@@ -749,12 +748,16 @@ export function getBenchmarkMatrix(): BenchmarkMatrix {
   const benchmarks = db.prepare(
     'SELECT * FROM benchmarks ORDER BY category, name'
   ).all() as DBBenchmark[];
+  const benchmarkById = new Map(benchmarks.map((benchmark) => [benchmark.id, benchmark]));
 
-  const rows = db.prepare(`
+  const rows = (db.prepare(`
     SELECT
       bs.model_id,
       bs.benchmark_id,
       bs.score,
+      bs.source,
+      bs.source_url,
+      bs.measured_at,
       m.name AS model_name,
       p.name AS provider,
       p.colour AS providerColour
@@ -762,15 +765,21 @@ export function getBenchmarkMatrix(): BenchmarkMatrix {
     JOIN models m ON bs.model_id = m.id
     JOIN providers p ON m.provider_id = p.id
     WHERE m.status = 'active'
-    ORDER BY m.quality_score DESC
+    ORDER BY m.name ASC
   `).all() as Array<{
     model_id: string;
     benchmark_id: string;
     score: number;
+    source: string | null;
+    source_url: string | null;
+    measured_at: string | null;
     model_name: string;
     provider: string;
     providerColour: string;
-  }>;
+  }>).filter((row) => assessBenchmarkProvenance(
+    row,
+    benchmarkById.get(row.benchmark_id),
+  ).rankable);
 
   const modelMap = new Map<string, {
     id: string;

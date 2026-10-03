@@ -39,8 +39,8 @@ function exportCSV(models: LLMModel[]): void {
     m.contextWindow.toString(),
     m.maxOutput.toString(),
     m.speed.toString(),
-    m.qualityScore.toString(),
-    m.valueScore.toString(),
+    m.qualityScore?.toString() ?? 'Not published',
+    m.valueScore?.toString() ?? 'Not published',
     m.released,
     m.openSource ? 'Yes' : 'No',
     m.modality.join('; '),
@@ -187,8 +187,8 @@ function ModelBadges({ model, isBestValue }: { model: LLMModel; isBestValue: boo
 export default function LLMComparisonTable({ models, baseUrl = '/' }: Props) {
   const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
   const [sort, setSort] = useState<SortConfig>({
-    field: 'valueScore',
-    direction: 'desc',
+    field: 'name',
+    direction: 'asc',
   });
   const [search, setSearch] = useState('');
   const [providerFilter, setProviderFilter] = useState<string>('all');
@@ -202,7 +202,9 @@ export default function LLMComparisonTable({ models, baseUrl = '/' }: Props) {
 
   // Find the best value model ID for badging
   const bestValueId = useMemo(() => {
-    const sorted = [...models].sort((a, b) => b.valueScore - a.valueScore);
+    const sorted = models
+      .filter((model) => model.valueScore !== null)
+      .sort((a, b) => (b.valueScore ?? 0) - (a.valueScore ?? 0));
     return sorted[0]?.id;
   }, [models]);
 
@@ -254,7 +256,13 @@ export default function LLMComparisonTable({ models, baseUrl = '/' }: Props) {
       const bVal = b[sort.field];
 
       let cmp: number;
-      if (typeof aVal === 'string' && typeof bVal === 'string') {
+      if (aVal === null && bVal === null) {
+        cmp = 0;
+      } else if (aVal === null) {
+        return 1;
+      } else if (bVal === null) {
+        return -1;
+      } else if (typeof aVal === 'string' && typeof bVal === 'string') {
         cmp = aVal.localeCompare(bVal);
       } else {
         cmp = (aVal as number) - (bVal as number);
@@ -472,14 +480,16 @@ export default function LLMComparisonTable({ models, baseUrl = '/' }: Props) {
       <div className="mt-4 flex flex-wrap gap-4 text-xs text-[var(--color-text-muted)]">
         <span>Prices per 1M tokens (USD)</span>
         <span>Speed in output tokens/second</span>
-        <span>Quality: composite benchmark score (0-100)</span>
-        <span>Value: quality per unit cost</span>
+        <span>Legacy model quality and value are not published without traceable evidence</span>
       </div>
     </div>
   );
 }
 
-function QualityBadge({ score }: { score: number }) {
+function QualityBadge({ score }: { score: number | null }) {
+  if (score === null) {
+    return <span className="text-[var(--color-text-muted)]">Not published</span>;
+  }
   let colour = 'var(--color-text-secondary)';
   if (score >= 90) colour = 'var(--color-success)';
   else if (score >= 85) colour = 'var(--color-accent)';
@@ -492,7 +502,10 @@ function QualityBadge({ score }: { score: number }) {
   );
 }
 
-function ValueBadge({ score }: { score: number }) {
+function ValueBadge({ score }: { score: number | null }) {
+  if (score === null) {
+    return <span className="text-[var(--color-text-muted)]">Not published</span>;
+  }
   let colour = 'var(--color-text-secondary)';
   if (score >= 500) colour = 'var(--color-success)';
   else if (score >= 200) colour = 'var(--color-accent)';

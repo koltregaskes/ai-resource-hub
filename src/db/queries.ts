@@ -183,7 +183,12 @@ export interface DBModelDetail {
   ttft: number;
   speed_source: string | null;
   speed_updated: string | null;
-  quality_score: number;
+  quality_score: number | null;
+  quality_score_state?: 'suppressed_untraceable';
+  quality_score_method?: null;
+  quality_score_measured_at?: null;
+  quality_score_source_urls?: string[];
+  quality_score_evidence_count?: number;
   released: string | null;
   open_source: number | boolean;
   modality: string;
@@ -233,7 +238,7 @@ export interface DBModelTTFT {
   speed: number;
   provider: string;
   provider_colour: string;
-  quality_score: number;
+  quality_score: number | null;
   input_price: number;
   output_price: number;
   speed_source: string | null;
@@ -274,7 +279,13 @@ export interface CategoryModel {
   contextWindow: number;
   maxOutput: number;
   speed: number;
-  qualityScore: number;
+  qualityScore: number | null;
+  valueScore?: number | null;
+  qualityScoreState?: 'suppressed_untraceable';
+  qualityScoreMethod?: null;
+  qualityScoreMeasuredAt?: null;
+  qualityScoreSourceUrls?: string[];
+  qualityScoreEvidenceCount?: number;
   released: string;
   openSource: boolean;
   modality: string;
@@ -290,7 +301,7 @@ type CompatModel = DBModelDetail & CategoryModel & {
   output_price: number;
   context_window: number;
   max_output: number;
-  quality_score: number;
+  quality_score: number | null;
   open_source: boolean;
   api_available: boolean;
 };
@@ -304,7 +315,7 @@ function normalizeCompatModel(model: any): CompatModel {
     outputPrice: model.outputPrice ?? Number(model.output_price ?? 0),
     contextWindow: model.contextWindow ?? Number(model.context_window ?? 0),
     maxOutput: model.maxOutput ?? Number(model.max_output ?? 0),
-    qualityScore: model.qualityScore ?? Number(model.quality_score ?? 0),
+    qualityScore: model.qualityScore ?? null,
     openSource: model.openSource ?? Boolean(model.open_source),
     apiAvailable: model.apiAvailable ?? Boolean(model.api_available),
     notes: model.notes ?? undefined,
@@ -312,7 +323,7 @@ function normalizeCompatModel(model: any): CompatModel {
     output_price: Number(model.output_price ?? model.outputPrice ?? 0),
     context_window: Number(model.context_window ?? model.contextWindow ?? 0),
     max_output: Number(model.max_output ?? model.maxOutput ?? 0),
-    quality_score: Number(model.quality_score ?? model.qualityScore ?? 0),
+    quality_score: model.quality_score ?? model.qualityScore ?? null,
     open_source: Boolean(model.open_source ?? model.openSource),
     api_available: Boolean(model.api_available ?? model.apiAvailable),
   };
@@ -383,7 +394,7 @@ export interface RecentModel {
   providerColour: string;
   category: string;
   released: string | null;
-  qualityScore: number;
+  qualityScore: number | null;
 }
 
 export interface DBSubscriptionPlan {
@@ -460,7 +471,7 @@ export function getRecentModels(limit: number = 12): RecentModel[] {
     providerColour: model.providerColour ?? model.provider_colour,
     category: model.category,
     released: model.released ?? null,
-    qualityScore: Number(model.qualityScore ?? model.quality_score ?? 0),
+    qualityScore: model.qualityScore ?? model.quality_score ?? null,
   }));
 }
 

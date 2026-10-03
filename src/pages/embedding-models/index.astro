@@ -15,7 +15,7 @@ const models = getModelsByCategory('embedding');
       <h1 class="mt-2 text-3xl font-black font-display text-(--color-text-primary)">Embedding Models</h1>
       <p class="mt-3 max-w-2xl text-sm leading-7 text-(--color-text-secondary)">
         Text embedding models for RAG, semantic search, clustering, and similarity applications.
-        Ranked by quality score, with dimensions and pricing.
+        Listed by release date with dimensions and pricing. Model-level quality is not published without traceable evidence.
       </p>
     </div>
 
@@ -43,7 +43,7 @@ const models = getModelsByCategory('embedding');
                   <span class="text-(--color-text-secondary)">{m.provider}</span>
                 </span>
               </td>
-              <td class="py-3 pr-4 text-right font-mono font-semibold text-(--color-accent)">{m.qualityScore}</td>
+              <td class="py-3 pr-4 text-right text-xs text-(--color-text-muted)">Not published</td>
               <td class="py-3 pr-4 text-right font-mono text-(--color-text-secondary)">{m.maxOutput > 0 ? m.maxOutput.toLocaleString() : '—'}</td>
               <td class="py-3 pr-4 text-right font-mono text-(--color-text-secondary)">{m.inputPrice > 0 ? `$${m.inputPrice}` : 'Free'}</td>
               <td class="py-3 text-xs text-(--color-text-muted)">{m.openSource ? '✓ Open' : 'Proprietary'}</td>

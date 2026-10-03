@@ -1,8 +1,20 @@
 # Source Registry Snapshot
 
-Generated: 03 Oct 2026, 22:55 UTC
+Document built: 2026-10-03T23:07:58.351Z
 
-This is the repo-readable mirror of the shared source registry. It shows where source definitions currently live, how they route into the website estate, and which collection / verification lane each source should use.
+Sync status: cached
+
+Last sync attempted: 2026-10-03T23:07:57.389Z
+
+Source edition generated: 2026-07-25T15:11:54.247Z
+
+Canonical configuration last verified: Unknown
+
+Canonical source edition (SHA-256): Unknown
+
+Verification means the canonical configuration was read; it does not establish collector or whole-pipeline health.
+
+This is the repo-readable mirror of the shared source registry. It shows where the exported source definitions live, how they route into the website estate, and which collection / verification lane each source should use.
 
 Canonical config:
 
@@ -13,7 +25,7 @@ Canonical config:
 
 | Metric | Value |
 | --- | --- |
-| Generated | 03 Oct 2026, 22:55 UTC |
+| Source edition generated | 25 Jul 2026, 15:11 UTC |
 | Configured sources | 14 |
 | AI Resource Hub routed sources | 14 |
 | Automated sources | 14 |

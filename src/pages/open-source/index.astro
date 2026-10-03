@@ -12,7 +12,7 @@ const allModels: Array<{
   name: string;
   provider: string;
   colour: string;
-  qualityScore: number;
+  qualityScore: null;
   inputPrice: number;
   outputPrice: number;
   contextWindow: number;
@@ -33,7 +33,7 @@ for (const cat of categories) {
         name: m.name,
         provider: m.provider,
         colour: m.providerColour,
-        qualityScore: m.qualityScore,
+        qualityScore: null,
         inputPrice: m.inputPrice,
         outputPrice: m.outputPrice,
         contextWindow: m.contextWindow,
@@ -47,8 +47,9 @@ for (const cat of categories) {
   }
 }
 
-// Sort by quality score
-allModels.sort((a, b) => b.qualityScore - a.qualityScore);
+allModels.sort((a, b) =>
+  String(b.released ?? '').localeCompare(String(a.released ?? '')) ||
+  a.name.localeCompare(b.name));
 
 const llmModels = allModels.filter(m => m.category === 'llm');
 const otherModels = allModels.filter(m => m.category !== 'llm');
@@ -135,7 +136,7 @@ const categoryLabels: Record<string, string> = {
                     <span class="text-[10px] text-(--color-text-muted)">{m.provider}</span>
                   </td>
                   <td class="py-3 px-4 text-right">
-                    <span class="font-mono font-medium text-(--color-accent)">{m.qualityScore.toFixed(1)}</span>
+                    <span class="text-xs text-(--color-text-muted)">Not published</span>
                   </td>
                   <td class="py-3 px-4 text-right hidden sm:table-cell">
                     <span class="text-xs text-(--color-text-muted)">{m.contextWindow > 0 ? `${(m.contextWindow / 1000).toFixed(0)}K` : '—'}</span>
@@ -167,7 +168,7 @@ const categoryLabels: Record<string, string> = {
               </div>
               <p class="text-xs text-(--color-text-muted) mb-2">{m.provider} &middot; {categoryLabels[m.category] || m.category}</p>
               <div class="flex items-center justify-between">
-                <span class="font-mono text-sm text-(--color-accent)">{m.qualityScore.toFixed(1)}</span>
+                <span class="text-xs text-(--color-text-muted)">Quality not published</span>
                 <span class="text-xs text-(--color-text-muted)">{m.inputPrice > 0 ? `$${m.inputPrice.toFixed(2)}/M` : 'Self-host'}</span>
               </div>
             </a>

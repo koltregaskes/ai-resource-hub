@@ -52,9 +52,6 @@ const statusLabel = model.status === 'preview'
 const inputPrice = model.input_price;
 const outputPrice = model.output_price;
 const blendedCostPer1M = (inputPrice + 3 * outputPrice) / 4;
-const valueScore = blendedCostPer1M > 0
-  ? Math.round((model.quality_score / blendedCostPer1M) * 10)
-  : 0;
 const modalities = model.modality.split(',').map((m: string) => m.trim());
 const releaseDateFormatted = model.released
   ? new Date(model.released).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
@@ -98,7 +95,7 @@ const structuredData = {
   title={`${model.name} - The AI Resource Hub`}
   description={isTrackedModel
     ? `${model.name} by ${model.provider_name}. Tracked release page with pricing, context window, availability, and source notes while benchmark coverage is still being collected.`
-    : `${model.name} by ${model.provider_name}. Pricing: ${formatPrice(inputPrice)}/${formatPrice(outputPrice)} per 1M tokens. Context: ${formatTokens(model.context_window)} tokens. Quality score: ${model.quality_score}/100.`}
+    : `${model.name} by ${model.provider_name}. Pricing: ${formatPrice(inputPrice)}/${formatPrice(outputPrice)} per 1M tokens. Context: ${formatTokens(model.context_window)} tokens. Benchmark evidence is shown only when it has a current row-level source.`}
 >
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <!-- Breadcrumb -->
@@ -164,7 +161,7 @@ const structuredData = {
         </p>
         <p class="mt-2 text-sm leading-relaxed text-(--color-text-secondary)">
           This page is live so the release is discoverable quickly, but it is not treated as a fully evaluated ranked model yet.
-          Pricing, context, availability, and source notes may already be present while benchmark and quality coverage are still being collected.
+          Pricing, context, availability, and source notes may already be present while rankable benchmark evidence is still being collected.
         </p>
       </div>
     )}
@@ -193,13 +190,13 @@ const structuredData = {
       </div>
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
         <p class="text-xs text-(--color-text-muted) mb-1">Quality Score</p>
-        <p class="text-xl font-bold text-(--color-accent)">{isTrackedModel && model.quality_score === 0 ? '--' : model.quality_score}</p>
-        <p class="text-xs text-(--color-text-muted)">{isTrackedModel && model.quality_score === 0 ? 'awaiting evaluation' : 'out of 100'}</p>
+        <p class="text-xl font-bold text-(--color-accent)">--</p>
+        <p class="text-xs text-(--color-text-muted)">legacy score suppressed</p>
       </div>
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
         <p class="text-xs text-(--color-text-muted) mb-1">Value Score</p>
-        <p class="text-xl font-bold text-(--color-success)">{isTrackedModel && model.quality_score === 0 ? '--' : valueScore}</p>
-        <p class="text-xs text-(--color-text-muted)">{isTrackedModel && model.quality_score === 0 ? 'awaiting evaluation' : 'quality per $'}</p>
+        <p class="text-xl font-bold text-(--color-success)">--</p>
+        <p class="text-xs text-(--color-text-muted)">awaiting traceable quality method</p>
       </div>
     </div>
 
