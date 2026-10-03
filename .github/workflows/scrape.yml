@@ -86,6 +86,9 @@ jobs:
       - name: Generate repo reference snapshots
         run: npm run generate:repo-reference
 
+      - name: Generate homepage news digest
+        run: npm run generate:homepage-digest
+
       - name: Run data staleness check
         run: npx tsx scripts/check-staleness.ts
         timeout-minutes: 1
@@ -97,14 +100,21 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git diff --quiet -- data/pg-cache data/provider-status.json data/events-source-status.json public/data src/data/model-release-desk.generated.ts src/data/news-pipeline.generated.ts docs/repo-reference || echo "changed=true" >> "$GITHUB_OUTPUT"
+          shopt -s nullglob
+          digest_files=(src/data/digest-*.md)
+          news_feed_files=(src/data/news-feed-latest.json)
+          git add data/pg-cache data/provider-status.json data/events-source-status.json public/data src/data/model-release-desk.generated.ts src/data/news-pipeline.generated.ts docs/repo-reference "${digest_files[@]}" "${news_feed_files[@]}"
+          git diff --cached --quiet || echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit updated data
         if: steps.changes.outputs.changed == 'true' || inputs.force_rebuild == 'true'
         run: |
           git config user.name "The AI Resource Hub Bot"
           git config user.email "bot@theairesourcehub.com"
-          git add data/pg-cache data/provider-status.json data/events-source-status.json public/data src/data/model-release-desk.generated.ts src/data/news-pipeline.generated.ts docs/repo-reference
+          shopt -s nullglob
+          digest_files=(src/data/digest-*.md)
+          news_feed_files=(src/data/news-feed-latest.json)
+          git add data/pg-cache data/provider-status.json data/events-source-status.json public/data src/data/model-release-desk.generated.ts src/data/news-pipeline.generated.ts docs/repo-reference "${digest_files[@]}" "${news_feed_files[@]}"
           git diff --staged --quiet || git commit -m "chore: update pricing & benchmark data $(date +%Y-%m-%d) [automated]"
           git push
 

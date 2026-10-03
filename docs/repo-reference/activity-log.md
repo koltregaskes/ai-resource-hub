@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 26 Aug 2026, 01:56 UTC
+Generated: 03 Oct 2026, 22:18 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 26 Aug 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,106 open roles across 10 tracked companies. | `/jobs/` |
-| 26 Aug 2026, 01:56 UTC | data | Recomputed benchmark-weighted quality scores | Refreshed the model quality layer that feeds ranking and comparison pages. | `/leaderboard/` |
-| 26 Aug 2026, 01:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 26 Aug 2026, 01:56 UTC | data | Synced Chatbot Arena benchmark track | Updated the frontier conversation signal used in leaderboard weighting. | `/benchmarks/` |
-| 26 Aug 2026, 01:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 26 Aug 2026, 01:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 25 May 2026, 12:00 UTC | digest | OpenGuardrails: An Open-Source Context-Aware AI Guardrails Platform | Papers With Code featured in the latest daily brief. | [open](https://paperswithcode.com/papers/2510.19169) |
-| 25 May 2026, 12:00 UTC | digest | Published the 2026-05-25 daily digest | 7 stories captured from tracked sources. | `/news/` |
-| 25 May 2026, 12:00 UTC | digest | Workbench Launches Open Source BullMQ Dashboard For Node Backends | Aligned News (Scoble) featured in the latest daily brief. | [open](https://x.com/pontusab/status/2058588422001029549) |
-| 24 May 2026, 12:00 UTC | digest | SpecBench Tests Reward Hacking In Long Horizon Coding Agents | Aligned News (Scoble) featured in the latest daily brief. | [open](https://x.com/WecoAI/status/2057503162945118637) |
+| 03 Oct 2026, 21:10 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 03 Oct 2026, 21:10 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 03 Oct 2026, 21:10 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 03 Oct 2026, 21:10 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 03 Oct 2026, 21:10 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 03 Oct 2026, 12:00 UTC | digest | Amazon responds to data center backlash, says it no longer uses NDAs | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/) |
+| 03 Oct 2026, 12:00 UTC | digest | Capcom is preparing for a ‘future where we create games together with AI’ | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/games/1004418/capcom-ai-game-development) |
+| 03 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,018 open roles across 10 tracked companies. | `/jobs/` |
+| 03 Oct 2026, 12:00 UTC | digest | OpenAI safety employee resigns, claiming the company’s ‘culture is broken’ | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/) |
+| 03 Oct 2026, 12:00 UTC | digest | Published the 2026-10-03 daily digest | 7 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
