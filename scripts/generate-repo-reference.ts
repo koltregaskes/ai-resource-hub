@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
 import { getBenchmarks, getNews } from '../src/db/queries';
@@ -9,6 +9,8 @@ import { formatAvailabilityDate, getAvailabilityOverview, getAvailabilityRows } 
 import { modelReleaseDesk } from '../src/data/model-release-desk.generated';
 import { newsPipelineSnapshot } from '../src/data/news-pipeline.generated';
 import { getUpdatesDashboard } from '../src/data/updates-dashboard';
+
+import { sourceRegistryProvenanceMarkdown } from './news-pipeline-provenance.mjs';
 
 const ROOT = process.cwd();
 const OUT_DIR = path.join(ROOT, 'docs', 'repo-reference');
@@ -395,7 +397,14 @@ ${table}
 `;
 }
 
-function buildSourceRegistryDoc(generatedAt: string): string {
+function buildSourceRegistryDoc(documentBuiltAt: string): string {
+  let syncStatus = null;
+  try {
+    syncStatus = JSON.parse(readFileSync(path.join(ROOT, 'public/data/news-pipeline-status.json'), 'utf8'));
+  } catch {
+    // Older exports have no verification evidence. Keep that state unknown.
+  }
+  const provenance = sourceRegistryProvenanceMarkdown(newsPipelineSnapshot, syncStatus, documentBuiltAt);
   const sources = [...newsPipelineSnapshot.sources].sort((left, right) =>
     left.name.localeCompare(right.name));
   const aiHubSources = sources.filter((source) => source.routeSiteSlugs.includes('ai-resource-hub'));
@@ -404,7 +413,7 @@ function buildSourceRegistryDoc(generatedAt: string): string {
   const summaryTable = markdownTable(
     ['Metric', 'Value'],
     [
-      ['Generated', formatDateTime(generatedAt)],
+      ['Source edition generated', formatDateTime(newsPipelineSnapshot.generatedAt)],
       ['Configured sources', String(newsPipelineSnapshot.summary.configuredSourceCount)],
       ['AI Resource Hub routed sources', String(aiHubSources.length)],
       ['Automated sources', String(newsPipelineSnapshot.summary.automatedSourceCount)],
@@ -441,9 +450,9 @@ function buildSourceRegistryDoc(generatedAt: string): string {
   return `
 # Source Registry Snapshot
 
-Generated: ${formatDateTime(generatedAt)}
+${provenance}
 
-This is the repo-readable mirror of the shared source registry. It shows where source definitions currently live, how they route into the website estate, and which collection / verification lane each source should use.
+This is the repo-readable mirror of the shared source registry. It shows where the exported source definitions live, how they route into the website estate, and which collection / verification lane each source should use.
 
 Canonical config:
 
