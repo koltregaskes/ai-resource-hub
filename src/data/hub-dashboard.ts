@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
+import { benchmarkFreshness } from './benchmark-freshness';
 
 import {
   getAIJobsOverview,
@@ -127,6 +128,8 @@ export interface AgiOverview {
 }
 
 export interface DataPulseEntry {
+  attemptedAt?: string | null;
+  sourceVerifiedAt?: string | null;
   id: string;
   label: string;
   note: string;
@@ -208,13 +211,13 @@ const SCRAPER_ACTIVITY_LABELS: Record<string, { title: string; detail: string; h
     href: '/speed/',
   },
   'benchmarks:chatbot-arena': {
-    title: 'Synced Chatbot Arena benchmark track',
-    detail: 'Updated the frontier conversation signal used in leaderboard weighting.',
+    title: 'Attempted Chatbot Arena collection',
+    detail: 'Collection attempt only; cached scores and transport success do not verify measurements.',
     href: '/benchmarks/',
   },
   'benchmarks:open-llm-leaderboard': {
-    title: 'Synced Open LLM leaderboard benchmarks',
-    detail: 'Updated benchmark rows used for open model scoring and ranking.',
+    title: 'Attempted Open LLM benchmark collection',
+    detail: 'Collection attempt only; public ranking still requires exact dated evidence.',
     href: '/benchmarks/',
   },
 };
@@ -696,10 +699,7 @@ export function getAgiOverview(): AgiOverview {
     }, null);
   }
 
-  const benchmarkUpdatedAt = latestDateTime(
-    ...benchmarks.map((benchmark) => ('updated_at' in benchmark ? String(benchmark.updated_at ?? '') : null)),
-    ...benchmarkScores.map((score) => score.updated_at ?? score.measured_at ?? null),
-  );
+  const benchmarkUpdatedAt = benchmarkFreshness(benchmarkScores, []).measuredAt;
 
   return {
     frontierPoints,
@@ -713,18 +713,16 @@ export function getAgiOverview(): AgiOverview {
 export function getDataPulse(basePath = '/'): DataPulseEntry[] {
   const digest = getLatestDigest();
   const jobsOverview = getAIJobsOverview();
-  const benchmarkRefresh = latestDateTime(
-    getLastScrapeTime('quality-scores'),
-    getLastScrapeTime('benchmarks:open-llm-leaderboard'),
-    getLastScrapeTime('benchmarks:chatbot-arena'),
-  );
+  const benchmarkRefresh = benchmarkFreshness(getBenchmarkScores(), readCacheArray<CacheScrapeLog>('scrape_log'));
 
   return [
     {
       id: 'meta',
       label: 'Evaluated composite',
-      note: `${getBenchmarks().length} benchmark tracks feed the benchmark-backed scored view.`,
-      updatedAt: benchmarkRefresh,
+      note: 'Latest measurement among exact evidence-backed rows; collection and recomputation do not refresh measurement dates.',
+      updatedAt: benchmarkRefresh.measuredAt,
+      attemptedAt: benchmarkRefresh.attemptedAt,
+      sourceVerifiedAt: benchmarkRefresh.sourceVerifiedAt,
       href: `${basePath}leaderboard/`,
     },
     {
@@ -762,7 +760,8 @@ export function getDataPulse(basePath = '/'): DataPulseEntry[] {
 
 function latestScrapeActivities(basePath: string): ActivityEntry[] {
   const logs = readCacheArray<CacheScrapeLog>('scrape_log')
-    .filter((entry) => entry.status === 'success' || entry.status === 'computed')
+    .filter((entry) => entry.status === 'success' || entry.status === 'computed'
+      || (entry.scraper.startsWith('benchmarks:') && ['live', 'fallback'].includes(entry.status)))
     .sort((a, b) => Date.parse(normaliseDateTime(b.finished_at) ?? '') - Date.parse(normaliseDateTime(a.finished_at) ?? ''));
 
   const latestByScraper = new Map<string, CacheScrapeLog>();

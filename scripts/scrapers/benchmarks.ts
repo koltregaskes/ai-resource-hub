@@ -8,19 +8,21 @@
  * 1. Artificial Analysis API (MMLU-Pro, GPQA, MATH-500 etc.) — saved by speed scraper
  * 2. LMSYS Chatbot Arena (ELO rankings) via HuggingFace datasets API
  * 3. Open LLM Leaderboard v2 via HuggingFace datasets API
- * 4. Fallback to validated known data when APIs are inaccessible
+ * 4. Fallback to historical cached data when APIs are inaccessible
  *
  * Strategy:
  * - Try live data first from HuggingFace
- * - Fall back to known-good data if APIs fail
+ * - Fall back to historical cached data if APIs fail
  * - Log clearly what's LIVE vs CACHED so we know when data is stale
  */
 import { getDB, logScrapeRun } from './base';
 import type Database from 'better-sqlite3';
 import fs from 'node:fs';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
+import { benchmarkCollectionReceipt } from '../../src/data/benchmark-freshness';
 
-interface ScrapedScore {
+export interface ScrapedScore {
   modelId: string;
   benchmarkId: string;
   score: number;
@@ -150,12 +152,12 @@ async function scrapeChatbotArena(existingModels: Set<string>): Promise<{ scores
     // Dataset not accessible either
   }
 
-  // Fall back to validated known data
-  console.log('    Using validated known data (LMSYS API not directly accessible)');
+  // Fall back to historical cached data
+  console.log('    Using historical cached data (measurement unverified) (LMSYS API not directly accessible)');
   return { scores: getKnownArenaScores(), isLive: false };
 }
 
-function parseArenaData(tableData: unknown, existingModels: Set<string>): ScrapedScore[] {
+export function parseArenaData(tableData: unknown, existingModels: Set<string>): ScrapedScore[] {
   const scores: ScrapedScore[] = [];
 
   // Gradio table format varies, try to parse rows
@@ -178,7 +180,8 @@ function parseArenaData(tableData: unknown, existingModels: Set<string>): Scrape
       score: Math.round(elo),
       source: 'LMSYS Chatbot Arena (live)',
       sourceUrl: 'https://chat.lmsys.org',
-      measuredAt: new Date().toISOString().split('T')[0],
+      // This table has no measurement date. Retrieval time is not a measurement.
+      measuredAt: undefined,
     });
   }
 
@@ -186,9 +189,9 @@ function parseArenaData(tableData: unknown, existingModels: Set<string>): Scrape
 }
 
 // ─── Known Chatbot Arena ELO Ratings ────────────────────────────
-// Validated against lmsys.org leaderboard. Updated by live scraper
-// when the API is accessible. These serve as fallback data.
-function getKnownArenaScores(): ScrapedScore[] {
+// Historical fallback values, not newly verified measurements. Never upsert
+// these over existing rows or use their availability as live-collection success.
+export function getKnownArenaScores(): ScrapedScore[] {
   const data: [string, number, string][] = [
     ['gemini-3.1-pro', 1375, '2026-02-15'],
     ['gpt-5.2', 1370, '2026-01-01'],
@@ -230,7 +233,9 @@ function getKnownArenaScores(): ScrapedScore[] {
 }
 
 // ─── Upsert Benchmark Scores ─────────────────────────────────
-function upsertScores(db: Database.Database, scores: ScrapedScore[]): number {
+export function upsertScores(db: Database.Database, scores: ScrapedScore[], isLive: boolean): number {
+  // Historical fallback must never overwrite reviewed rows or refresh their timestamps.
+  if (!isLive) return 0;
   const upsert = db.prepare(`
     INSERT INTO benchmark_scores (model_id, benchmark_id, score, source, source_url, measured_at, updated_at)
     VALUES (@modelId, @benchmarkId, @score, @source, @sourceUrl, @measuredAt, datetime('now'))
@@ -240,6 +245,10 @@ function upsertScores(db: Database.Database, scores: ScrapedScore[]): number {
       source_url = excluded.source_url,
       measured_at = excluded.measured_at,
       updated_at = datetime('now')
+    WHERE benchmark_scores.score IS NOT excluded.score
+      OR benchmark_scores.source IS NOT excluded.source
+      OR benchmark_scores.source_url IS NOT excluded.source_url
+      OR benchmark_scores.measured_at IS NOT excluded.measured_at
   `);
 
   const existingModels = new Set(
@@ -250,7 +259,7 @@ function upsertScores(db: Database.Database, scores: ScrapedScore[]): number {
   const upsertAll = db.transaction(() => {
     for (const score of scores) {
       if (!existingModels.has(score.modelId)) continue;
-      upsert.run({
+      const result = upsert.run({
         modelId: score.modelId,
         benchmarkId: score.benchmarkId,
         score: score.score,
@@ -258,7 +267,7 @@ function upsertScores(db: Database.Database, scores: ScrapedScore[]): number {
         sourceUrl: score.sourceUrl ?? null,
         measuredAt: score.measuredAt ?? null,
       });
-      updated++;
+      updated += result.changes;
     }
   });
 
@@ -266,9 +275,16 @@ function upsertScores(db: Database.Database, scores: ScrapedScore[]): number {
   return updated;
 }
 
+export function recordBenchmarkCollection(db: Database.Database, scraper: string, scores: ScrapedScore[], isLive: boolean): number {
+  const updated = upsertScores(db, scores, isLive);
+  logScrapeRun(db, scraper, isLive ? 'live' : 'fallback', updated, JSON.stringify(benchmarkCollectionReceipt(isLive)));
+  return updated;
+}
+
 // ─── Artificial Analysis benchmark data ─────────────────────────
 // The speed scraper saves AA benchmark scores to data/reports/aa-benchmarks-latest.json.
-// We import those scores here to keep benchmark data fresh from a live source.
+// This legacy report has no measurement or source-verification metadata. Reading
+// it is cache reuse, not a new verified measurement; existing DB rows are preserved.
 
 const AA_SLUG_TO_DB: Record<string, string> = {
   'gpt-4o': 'gpt-4o', 'gpt-4o-mini': 'gpt-4o-mini',
@@ -288,8 +304,7 @@ const AA_SLUG_TO_DB: Record<string, string> = {
   'command-a': 'command-a',
 };
 
-function loadAABenchmarks(): ScrapedScore[] {
-  const reportPath = path.join(process.cwd(), 'data', 'reports', 'aa-benchmarks-latest.json');
+export function loadAABenchmarks(reportPath = path.join(process.cwd(), 'data', 'reports', 'aa-benchmarks-latest.json')): ScrapedScore[] {
   if (!fs.existsSync(reportPath)) {
     console.log('  ⊘ Artificial Analysis benchmarks: no data file (run speed scraper first with AA_API_KEY)');
     return [];
@@ -308,8 +323,7 @@ function loadAABenchmarks(): ScrapedScore[] {
   }> = JSON.parse(fs.readFileSync(reportPath, 'utf-8'));
 
   const scores: ScrapedScore[] = [];
-  const today = new Date().toISOString().split('T')[0];
-  const source = 'Artificial Analysis (live)';
+  const source = 'Artificial Analysis (cached report; measurement unverified)';
   const sourceUrl = 'https://artificialanalysis.ai/leaderboards/models';
 
   // Benchmark ID mapping (AA field → our benchmark ID in DB)
@@ -334,7 +348,7 @@ function loadAABenchmarks(): ScrapedScore[] {
           score,
           source,
           sourceUrl,
-          measuredAt: today,
+          measuredAt: undefined,
         });
       }
     }
@@ -359,10 +373,9 @@ async function main() {
   try {
     const aaScores = loadAABenchmarks();
     if (aaScores.length > 0) {
-      const updated = upsertScores(db, aaScores);
+      const updated = recordBenchmarkCollection(db, 'benchmarks:artificial-analysis', aaScores, false);
       totalUpdated += updated;
-      logScrapeRun(db, 'benchmarks:artificial-analysis', 'success', updated);
-      console.log(`  ✓ Artificial Analysis: ${updated} benchmark scores updated (LIVE)`);
+      console.log(`  ✓ Artificial Analysis: ${aaScores.length} cached report scores available; ${updated} rows changed (measurement unverified)`);
     }
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
@@ -374,9 +387,8 @@ async function main() {
   try {
     const { scores, isLive } = await scrapeChatbotArena(existingModels);
     if (scores.length > 0) {
-      const updated = upsertScores(db, scores);
+      const updated = recordBenchmarkCollection(db, 'benchmarks:chatbot-arena', scores, isLive);
       totalUpdated += updated;
-      logScrapeRun(db, 'benchmarks:chatbot-arena', 'success', updated);
       console.log(`  ✓ Chatbot Arena: ${updated} ELO scores updated (${isLive ? 'LIVE' : 'CACHED'})`);
     }
   } catch (err) {
@@ -389,4 +401,6 @@ async function main() {
   db.close();
 }
 
-main().catch(console.error);
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
+  main().catch(console.error);
+}
