@@ -14,6 +14,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import path from 'path';
 import { getOptionalEnv } from './lib/load-env.mjs';
 import { loadNewsRoutingConfig } from './lib/news-routing-config.mjs';
+import { filterNewsRows } from './lib/news-routing-policy.mjs';
 
 const require = createRequire(import.meta.url);
 const Database = require('better-sqlite3');
@@ -214,26 +215,6 @@ function dumpSqlite(name, query, params = []) {
   }
 }
 
-function toTagArray(value) {
-  if (Array.isArray(value)) return value.map((item) => String(item).trim()).filter(Boolean);
-  if (typeof value === 'string') {
-    const trimmed = value.trim();
-    if (!trimmed) return [];
-    if (trimmed.startsWith('{') && trimmed.endsWith('}')) {
-      return trimmed.slice(1, -1).split(',').map((item) => item.replace(/^"+|"+$/g, '').trim()).filter(Boolean);
-    }
-    if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
-      try {
-        return JSON.parse(trimmed).map((item) => String(item).trim()).filter(Boolean);
-      } catch {
-        return [];
-      }
-    }
-    return trimmed.split(',').map((item) => item.trim()).filter(Boolean);
-  }
-  return [];
-}
-
 function looksLikeBlockedNews(article) {
   if (blockedNewsSources.has(article.source)) return true;
   if (blockedNewsUrlPatterns.some((pattern) => pattern.test(article.url || ''))) return true;
@@ -242,22 +223,7 @@ function looksLikeBlockedNews(article) {
 }
 
 function filterSharedNews(rows) {
-  const siteFilter = newsRoutingConfig.siteFilter;
-  if (!siteFilter) return rows.filter((row) => !looksLikeBlockedNews(row));
-
-  const includeTags = new Set(siteFilter.include_tags ?? []);
-  const excludeTags = new Set(siteFilter.exclude_tags ?? []);
-  const minImportance = Number(siteFilter.min_importance_score ?? 0);
-
-  return rows.filter((row) => {
-    const tags = toTagArray(row.tags);
-    const importance = Number(row.importance_score ?? 0);
-    if (importance < minImportance) return false;
-    if (looksLikeBlockedNews(row)) return false;
-    if (tags.some((tag) => excludeTags.has(tag))) return false;
-    if (includeTags.size > 0 && !tags.some((tag) => includeTags.has(tag))) return false;
-    return true;
-  });
+  return filterNewsRows(rows, newsRoutingConfig.siteFilter, looksLikeBlockedNews);
 }
 
 async function connectPostgres() {
