@@ -28,6 +28,9 @@ jobs:
       - name: Test benchmark provenance
         run: npm run test:benchmark-provenance
 
+      - name: Test news routing provenance
+        run: node --test scripts/news-pipeline-provenance.test.mjs scripts/lib/news-routing-config.test.mjs
+
       - name: Verify publish readiness
         run: npm run verify:publish
 

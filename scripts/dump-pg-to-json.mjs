@@ -13,6 +13,7 @@ import { execFileSync } from 'child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import path from 'path';
 import { getOptionalEnv } from './lib/load-env.mjs';
+import { loadNewsRoutingConfig } from './lib/news-routing-config.mjs';
 
 const require = createRequire(import.meta.url);
 const Database = require('better-sqlite3');
@@ -25,21 +26,16 @@ try {
 }
 
 const repoRoot = process.cwd();
-const estateRoot = path.resolve(repoRoot, '..', '..');
 const legacyDbPath = path.join(repoRoot, 'data', 'the-ai-resource-hub.db');
 const localDbDir = path.join(repoRoot, '.local', 'data');
 const localDbPath = path.join(localDbDir, 'the-ai-resource-hub.db');
 const cacheDir = path.join(repoRoot, 'data', 'pg-cache');
-const siteFiltersPath = path.join(
-  estateRoot,
-  'shared',
-  'website-tools',
-  'pipelines',
-  'news',
-  'site-filters.json',
-);
-
 const PG_URL = getOptionalEnv('DATABASE_URL');
+const newsRoutingConfig = loadNewsRoutingConfig(repoRoot);
+if (newsRoutingConfig.provenance.status === 'unknown') {
+  console.warn('Canonical news routing configuration is unavailable or invalid; using fallback filtering without verified configuration.');
+}
+console.log(JSON.stringify({ newsRoutingConfiguration: newsRoutingConfig.provenance }));
 
 if (!existsSync(cacheDir)) mkdirSync(cacheDir, { recursive: true });
 
@@ -218,16 +214,6 @@ function dumpSqlite(name, query, params = []) {
   }
 }
 
-function loadSiteFilter() {
-  if (!existsSync(siteFiltersPath)) return null;
-  try {
-    const raw = JSON.parse(readFileSync(siteFiltersPath, 'utf8'));
-    return raw?.sites?.['ai-resource-hub'] ?? null;
-  } catch {
-    return null;
-  }
-}
-
 function toTagArray(value) {
   if (Array.isArray(value)) return value.map((item) => String(item).trim()).filter(Boolean);
   if (typeof value === 'string') {
@@ -256,7 +242,7 @@ function looksLikeBlockedNews(article) {
 }
 
 function filterSharedNews(rows) {
-  const siteFilter = loadSiteFilter();
+  const siteFilter = newsRoutingConfig.siteFilter;
   if (!siteFilter) return rows.filter((row) => !looksLikeBlockedNews(row));
 
   const includeTags = new Set(siteFilter.include_tags ?? []);
@@ -545,6 +531,8 @@ await dumpPostgres(pgClient, 'agi_milestones', 'SELECT * FROM agi_milestones ORD
 await dumpPostgres(pgClient, 'agi_capabilities', 'SELECT * FROM agi_capabilities ORDER BY category, name');
 
 const meta = {
+  // Cache build time is not proof of canonical routing or ingestion freshness.
+  news_routing_configuration: newsRoutingConfig.provenance,
   generated_at: new Date().toISOString(),
   source: 'local sqlite + shared postgres',
   sqlite_storage: 'local-only',
