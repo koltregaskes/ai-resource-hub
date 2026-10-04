@@ -8,18 +8,18 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 04 Oct 2026, 21:19 UTC |
+| Generated | 04 Oct 2026, 22:56 UTC |
 | Providers tracked | 40 |
 | Public models | 348 |
 | Active models | 109 |
 | Tracking models | 238 |
 | Preview models | 1 |
 | Benchmarks | 34 |
-| News items in cache | 70 |
+| News items in cache | 69 |
 | Release-desk entries | 49 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 04 Oct 2026, 21:19 UTC |
+| Latest visible refresh | 04 Oct 2026, 22:55 UTC |
 | Current evaluated composite leader | GPT-5.2 (52.1) |
 | Latest tracked release | GPT-6.1 Sol (29 Sept 2026) |
 
