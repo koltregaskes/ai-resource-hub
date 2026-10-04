@@ -1,5 +1,13 @@
 {
-  "generated_at": "2026-10-03T22:55:50.221Z",
+  "news_routing_configuration": {
+    "status": "unknown",
+    "reason": "missing_config",
+    "routingMode": "fallback",
+    "checkedAt": "2026-10-04T09:56:00.090Z",
+    "sourceVerifiedAt": null,
+    "siteFiltersSha256": null
+  },
+  "generated_at": "2026-10-04T09:56:00.833Z",
   "source": "local sqlite + shared postgres",
   "sqlite_storage": "local-only",
   "shared_postgres_available": false
