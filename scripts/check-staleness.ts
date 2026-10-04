@@ -15,6 +15,7 @@
  * Outputs a summary report. Non-zero exit code if critical issues are found.
  */
 import Database from 'better-sqlite3';
+import { verifyPublicationMode, benchmarkAuditSeverity } from './staleness-publication-gate';
 import fs from 'node:fs';
 import path from 'node:path';
 import { REQUIRED_FRONTIER_MODELS, type FrontierModelRequirement } from './frontier-registry.ts';
@@ -74,6 +75,7 @@ function matchesRequirement(model: PublicCacheModel, requirement: FrontierModelR
 }
 
 function main() {
+  const publicationVerified = verifyPublicationMode(process.argv.slice(2));
   const db = new Database(DB_PATH, { readonly: true });
   db.pragma('foreign_keys = ON');
 
@@ -216,10 +218,11 @@ function main() {
   console.log(`  Missing: ${provenanceSummary.missing}`);
   console.log(`  Stale >${provenanceSummary.maxAgeDays}d: ${provenanceSummary.stale}`);
   console.log(`  Undated / invalid / future: ${provenanceSummary.undated} / ${provenanceSummary.invalidDate} / ${provenanceSummary.futureDated}`);
+  console.log("  Scope: active SQLite benchmark rows; not the total public benchmark count.");
   console.log(`  Rankable: ${provenanceSummary.rankable}/${provenanceSummary.total}`);
 
   if (provenanceFailures.length > 0) {
-    console.log(`CRITICAL BENCHMARK PROVENANCE: ${provenanceSummary.unrankable} score(s) are not rankable`);
+    console.log(`${publicationVerified ? "WARN RAW BENCHMARK QUARANTINE" : "CRITICAL BENCHMARK PROVENANCE"}: ${provenanceSummary.unrankable} score(s) are not rankable`);
     const rowByKey = new Map(
       benchmarkRows.map((row) => [`${row.model_id ?? ''}\u0000${row.benchmark_id}`, row]),
     );
@@ -236,7 +239,10 @@ function main() {
     if (provenanceSummary.unrankable > 10) {
       console.log(`    ... and ${provenanceSummary.unrankable - 10} more`);
     }
-    criticals += provenanceSummary.unrankable;
+    const severity = benchmarkAuditSeverity(provenanceSummary.unrankable, publicationVerified);
+    criticals += severity.criticals;
+    warnings += severity.warnings;
+    if (publicationVerified) console.log("    Public exports passed strict verification; raw evidence debt remains unresolved.");
   } else {
     console.log('OK All active benchmark scores are traceable, current, and rankable');
   }
