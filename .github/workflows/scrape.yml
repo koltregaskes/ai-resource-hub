@@ -90,7 +90,7 @@ jobs:
         run: npm run generate:homepage-digest
 
       - name: Run data staleness check
-        run: npx tsx scripts/check-staleness.ts
+        run: npx tsx scripts/check-staleness.ts --publication
         timeout-minutes: 1
 
       - name: Verify publish readiness

@@ -315,3 +315,18 @@ As of 20 Apr 2026, the main gaps are:
 3. Add simple deltas to speed views and model pages.
 4. Add a future public degradation summary page once the data model is real.
 5. Build a small educational-source intake lane for trusted creator material, starting with Theo, using summaries and source cards rather than transcript dumps.
+
+### Scheduled publication versus raw benchmark remediation
+
+The scheduled refresh runs `check-staleness.ts --publication`. This mode first
+runs the existing strict publish-readiness verifier. Only after that succeeds
+are raw, non-rankable benchmark rows reported as quarantine warnings. The raw
+row counts and failure reasons remain visible, and all other critical staleness
+checks still block publication. The workflow's separate publish-readiness step
+also remains mandatory before commit/deploy.
+
+`npm run check:staleness` without this option and
+`npm run verify:benchmark-provenance` remain strict raw-data audits. A successful
+publication does not resolve their evidence debt, verify collection freshness,
+or promote quarantined data. The staleness check's active SQLite scope is not
+the public benchmark total.
