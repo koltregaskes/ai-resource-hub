@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T08:55:52.687Z",
+  "generatedAt": "2026-10-05T09:55:54.866Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T08:55:52.680Z",
+      "lastCheckedAt": "2026-10-05T09:55:54.571Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T08:55:51.366Z",
+      "lastCheckedAt": "2026-10-05T09:55:54.126Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -135,24 +135,24 @@
         {
           "id": "01M45E0JFFJZ6EQ3BWYPW74R2Z",
           "title": "Elevated Work Mode errors",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-10-05T07:03:53.000Z",
-          "updatedAt": "2026-10-05T07:14:08.000Z",
+          "updatedAt": "2026-10-05T09:50:38.000Z",
           "resolvedAt": null,
-          "summary": "We are continuing to observe elevated Work Mode errors. Scheduled tasks may also be impacted."
+          "summary": "We have mitigated the issue, and are monitoring recovery."
         }
       ],
       "recentIncidents": [
         {
           "id": "01M45E0JFFJZ6EQ3BWYPW74R2Z",
           "title": "Elevated Work Mode errors",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-10-05T07:03:53.000Z",
-          "updatedAt": "2026-10-05T07:14:08.000Z",
+          "updatedAt": "2026-10-05T09:50:38.000Z",
           "resolvedAt": null,
-          "summary": "We are continuing to observe elevated Work Mode errors. Scheduled tasks may also be impacted."
+          "summary": "We have mitigated the issue, and are monitoring recovery."
         },
         {
           "id": "01M3YNNVTSCXS8YM2V1YMHMVSE",
@@ -197,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T08:55:51.314Z",
+      "lastCheckedAt": "2026-10-05T09:55:54.062Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T08:55:52.046Z",
+      "lastCheckedAt": "2026-10-05T09:55:54.740Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T08:55:51.611Z",
+      "lastCheckedAt": "2026-10-05T09:55:54.115Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -339,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T08:55:52.452Z",
+      "lastCheckedAt": "2026-10-05T09:55:54.858Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
