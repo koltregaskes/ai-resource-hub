@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 05 Oct 2026, 16:55 UTC
+Generated: 05 Oct 2026, 17:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 05 Oct 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 05 Oct 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 05 Oct 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 05 Oct 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 05 Oct 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 05 Oct 2026, 17:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 05 Oct 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 05 Oct 2026, 17:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 05 Oct 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 05 Oct 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 05 Oct 2026, 12:00 UTC | digest | HackerRank&#8217;s AI interviewer offers a glimpse into what job interviews could become | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/05/hackerranks-ai-interviewer-offers-a-glimpse-into-what-job-interviews-could-become/) |
-| 05 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,015 open roles across 10 tracked companies. | `/jobs/` |
-| 05 Oct 2026, 12:00 UTC | digest | Open or closed AI? How founders are choosing what to build on at TechCrunch Disrupt 2026 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/05/open-or-closed-ai-how-founders-are-choosing-what-to-build-on-at-techcrunch-disrupt-2026/) |
+| 05 Oct 2026, 12:00 UTC | digest | Hot Girl Hotline is like &#8216;Dear Abby&#8217; for the AI era | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/05/hot-girl-hotline-is-like-dear-abby-for-the-ai-era/) |
+| 05 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,017 open roles across 10 tracked companies. | `/jobs/` |
 | 05 Oct 2026, 12:00 UTC | digest | OpenAI launches visual ads that appear alongside image generation results | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/) |
-| 05 Oct 2026, 12:00 UTC | digest | Published the 2026-10-05 daily digest | 13 stories captured from 3 sources. | `/news/` |
+| 05 Oct 2026, 12:00 UTC | digest | Published the 2026-10-05 daily digest | 14 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |

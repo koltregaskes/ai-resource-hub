@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T16:55:51.394Z",
+  "generatedAt": "2026-10-05T17:55:54.906Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T16:55:51.389Z",
+      "lastCheckedAt": "2026-10-05T17:55:54.656Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-10-05T14:33:59.000Z",
+          "id": "fireworks-feed-0-2026-10-05T17:41:43.000Z",
+          "title": "Service Degradation for Kimi K3 US",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-10-05T17:41:43.000Z",
+          "updatedAt": "2026-10-05T17:41:43.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M46H0RX8S9S8FGAXCXY1CYJM",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-10-05T14:33:59.000Z",
           "title": "Service Degradation for Qwen 3.8 Max",
           "status": "reported",
           "impact": "unknown",
@@ -28,23 +39,23 @@
           "updatedAt": "2026-10-05T14:33:59.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M467PA7FMZZNR4QQSBQSZPKT",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-10-05T06:24:34.000Z",
-          "title": "Service Degradation for Deepseek V4.1 Flash",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-10-05T06:24:34.000Z",
-          "updatedAt": "2026-10-05T06:24:34.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M45BJN2VAX8VND7D7V96XEZY",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-10-05T14:33:59.000Z",
+          "id": "fireworks-feed-0-2026-10-05T17:41:43.000Z",
+          "title": "Service Degradation for Kimi K3 US",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-10-05T17:41:43.000Z",
+          "updatedAt": "2026-10-05T17:41:43.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M46H0RX8S9S8FGAXCXY1CYJM",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-10-05T14:33:59.000Z",
           "title": "Service Degradation for Qwen 3.8 Max",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-10-05T06:24:34.000Z",
+          "id": "fireworks-feed-2-2026-10-05T06:24:34.000Z",
           "title": "Service Degradation for Deepseek V4.1 Flash",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-10-04T16:29:41.000Z",
+          "id": "fireworks-feed-3-2026-10-04T16:29:41.000Z",
           "title": "Service Degradation for Deepseek V4.1 Flash",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-10-04T16:29:41.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M43VZTJ14XKC8M4PW5A1K310",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-10-02T22:49:23.000Z",
-          "title": "Service Degradation for GLM 5.3 Fast",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-10-02T22:49:23.000Z",
-          "updatedAt": "2026-10-02T22:49:23.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M3ZC4HVRY7QFHWQF3ZP0XQ0R",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,12 +100,16 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T16:55:50.341Z",
+      "lastCheckedAt": "2026-10-05T17:55:53.656Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "2 active incidents across 25 tracked components.",
+      "summary": "3 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Conversations",
+          "status": "degraded_performance"
+        },
         {
           "name": "ChatGPT Work",
           "status": "degraded_performance"
@@ -125,13 +129,19 @@
         {
           "name": "Agents",
           "status": "operational"
-        },
-        {
-          "name": "Decisions",
-          "status": "operational"
         }
       ],
       "activeIncidents": [
+        {
+          "id": "01M46G248GGHV9RSAJE82BZY1X",
+          "title": "Elevated errors in ChatGPT conversations",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-10-05T16:58:56.000Z",
+          "updatedAt": "2026-10-05T17:55:04.000Z",
+          "resolvedAt": null,
+          "summary": "We have mitigated the issue affecting ChatGPT conversations and are monitoring recovery."
+        },
         {
           "id": "01M46C47WYYD9NMZVGH83X3ZR1",
           "title": "Admin Console Intermittently Inaccessible",
@@ -154,6 +164,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01M46G248GGHV9RSAJE82BZY1X",
+          "title": "Elevated errors in ChatGPT conversations",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-10-05T16:58:56.000Z",
+          "updatedAt": "2026-10-05T17:55:04.000Z",
+          "resolvedAt": null,
+          "summary": "We have mitigated the issue affecting ChatGPT conversations and are monitoring recovery."
+        },
         {
           "id": "01M46C47WYYD9NMZVGH83X3ZR1",
           "title": "Admin Console Intermittently Inaccessible",
@@ -183,16 +203,6 @@
           "updatedAt": "2026-10-05T09:50:38.000Z",
           "resolvedAt": null,
           "summary": "We have mitigated the issue, and are monitoring recovery."
-        },
-        {
-          "id": "01M3YNNVTSCXS8YM2V1YMHMVSE",
-          "title": "Issues with data analysis and file creation in ChatGPT",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-02T16:03:10.000Z",
-          "updatedAt": "2026-10-02T16:51:13.000Z",
-          "resolvedAt": "2026-10-02T16:51:13.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -207,7 +217,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T16:55:50.320Z",
+      "lastCheckedAt": "2026-10-05T17:55:53.767Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -297,7 +307,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T16:55:51.161Z",
+      "lastCheckedAt": "2026-10-05T17:55:54.585Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -317,7 +327,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T16:55:50.646Z",
+      "lastCheckedAt": "2026-10-05T17:55:54.027Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -349,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T16:55:51.298Z",
+      "lastCheckedAt": "2026-10-05T17:55:54.899Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -373,7 +383,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "fetch failed",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
