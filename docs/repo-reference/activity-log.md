@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 05 Oct 2026, 15:56 UTC
+Generated: 05 Oct 2026, 15:57 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 05 Oct 2026, 15:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 05 Oct 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 05 Oct 2026, 15:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 05 Oct 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 05 Oct 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 05 Oct 2026, 15:57 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 05 Oct 2026, 15:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 05 Oct 2026, 15:57 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 05 Oct 2026, 15:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 05 Oct 2026, 15:57 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 05 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,014 open roles across 10 tracked companies. | `/jobs/` |
 | 05 Oct 2026, 12:00 UTC | digest | Open or closed AI? How founders are choosing what to build on at TechCrunch Disrupt 2026 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/05/open-or-closed-ai-how-founders-are-choosing-what-to-build-on-at-techcrunch-disrupt-2026/) |
 | 05 Oct 2026, 12:00 UTC | digest | OpenAI launches visual ads that appear alongside image generation results | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/) |
