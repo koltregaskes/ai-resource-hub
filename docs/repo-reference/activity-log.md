@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 05 Oct 2026, 21:55 UTC
+Generated: 05 Oct 2026, 22:35 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 05 Oct 2026, 21:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 05 Oct 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 05 Oct 2026, 21:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 05 Oct 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 05 Oct 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 05 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,025 open roles across 10 tracked companies. | `/jobs/` |
+| 05 Oct 2026, 22:35 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 05 Oct 2026, 22:35 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 05 Oct 2026, 22:35 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 05 Oct 2026, 22:35 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 05 Oct 2026, 22:35 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 05 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,022 open roles across 10 tracked companies. | `/jobs/` |
 | 05 Oct 2026, 12:00 UTC | digest | OpenAI will start watermarking ChatGPT&#8217;s text in the EU | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/) |
 | 05 Oct 2026, 12:00 UTC | digest | Published the 2026-10-05 daily digest | 20 stories captured from 3 sources. | `/news/` |
 | 05 Oct 2026, 12:00 UTC | digest | Reflection debuts Beam, an open-weight AI model to rival Chinese models at lower compute cost | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/) |
