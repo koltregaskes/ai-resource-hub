@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T18:55:53.827Z",
+  "generatedAt": "2026-10-05T21:55:51.033Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T18:55:53.821Z",
+      "lastCheckedAt": "2026-10-05T21:55:51.029Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,15 +20,15 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-10-05T18:51:40.000Z",
+          "id": "fireworks-feed-0-2026-10-05T19:15:31.000Z",
           "title": "Service Degradation for GLM 5.3",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-10-05T18:51:40.000Z",
-          "updatedAt": "2026-10-05T18:51:40.000Z",
+          "startedAt": "2026-10-05T19:15:31.000Z",
+          "updatedAt": "2026-10-05T19:15:31.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M46PGHWSZ51Y87R23495R122",
-          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.3. We are actively investigating. Affected components GLM 5.3 (Degraded performance)"
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-10-05T17:41:43.000Z",
@@ -44,15 +44,15 @@
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-10-05T18:51:40.000Z",
+          "id": "fireworks-feed-0-2026-10-05T19:15:31.000Z",
           "title": "Service Degradation for GLM 5.3",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-10-05T18:51:40.000Z",
-          "updatedAt": "2026-10-05T18:51:40.000Z",
+          "startedAt": "2026-10-05T19:15:31.000Z",
+          "updatedAt": "2026-10-05T19:15:31.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M46PGHWSZ51Y87R23495R122",
-          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.3. We are actively investigating. Affected components GLM 5.3 (Degraded performance)"
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-10-05T17:41:43.000Z",
@@ -100,10 +100,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T18:55:52.947Z",
+      "lastCheckedAt": "2026-10-05T21:55:49.756Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "4 active incidents across 25 tracked components.",
+      "summary": "3 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -153,16 +153,6 @@
           "summary": "We have mitigated the issue affecting ChatGPT conversations and are monitoring recovery."
         },
         {
-          "id": "01M46C47WYYD9NMZVGH83X3ZR1",
-          "title": "Admin Console Intermittently Inaccessible",
-          "status": "investigating",
-          "impact": "none",
-          "startedAt": "2026-10-05T15:50:11.000Z",
-          "updatedAt": "2026-10-05T15:50:11.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
-        },
-        {
           "id": "01M45E0JFFJZ6EQ3BWYPW74R2Z",
           "title": "Elevated Work Mode errors",
           "status": "monitoring",
@@ -174,6 +164,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01M46C47WYYD9NMZVGH83X3ZR1",
+          "title": "Admin Console Intermittently Inaccessible",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-10-05T15:50:11.000Z",
+          "updatedAt": "2026-10-05T21:07:22.000Z",
+          "resolvedAt": "2026-10-05T21:07:22.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
         {
           "id": "01M46KED6KQ6PR195KZYYVNY8W",
           "title": "Elevated error rates in Codex Cloud",
@@ -193,16 +193,6 @@
           "updatedAt": "2026-10-05T17:55:04.000Z",
           "resolvedAt": null,
           "summary": "We have mitigated the issue affecting ChatGPT conversations and are monitoring recovery."
-        },
-        {
-          "id": "01M46C47WYYD9NMZVGH83X3ZR1",
-          "title": "Admin Console Intermittently Inaccessible",
-          "status": "investigating",
-          "impact": "none",
-          "startedAt": "2026-10-05T15:50:11.000Z",
-          "updatedAt": "2026-10-05T15:50:11.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating the issue for the listed services."
         },
         {
           "id": "01M461GYDMCVJJK8330PVCH42C",
@@ -227,7 +217,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T18:55:52.872Z",
+      "lastCheckedAt": "2026-10-05T21:55:49.722Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -317,7 +307,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T18:55:53.656Z",
+      "lastCheckedAt": "2026-10-05T21:55:50.782Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -337,7 +327,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T18:55:53.022Z",
+      "lastCheckedAt": "2026-10-05T21:55:50.199Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -369,7 +359,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-05T18:55:53.705Z",
+      "lastCheckedAt": "2026-10-05T21:55:50.886Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -393,7 +383,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []

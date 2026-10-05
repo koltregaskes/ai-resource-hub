@@ -1,5 +1,65 @@
 [
   {
+    "id": "news-549ccc4aeee79ea21eba",
+    "title": "OpenAI will start watermarking ChatGPT&#8217;s text in the EU",
+    "url": "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/",
+    "source": "TechCrunch",
+    "summary": "OpenAI will watermark ChatGPT and Codex text in the EU to comply with the AI Act. Editing can make the invisible marks harder to detect, it says.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-05T20:36:48.000Z",
+    "discovered_at": "2026-10-05 21:55:48"
+  },
+  {
+    "id": "news-5bc9d1f4735012c90398",
+    "title": "This startup is issuing AI-generated acne prescriptions",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1005075/nolla-health-acne-ai-prescriptions",
+    "source": "The Verge",
+    "summary": "People in Utah can now use AI to get a prescription for acne treatment. On Monday, healthcare startup Nolla Health announced that users in the state can scan their faces using its app, allowing its AI system to analyze acne severity and autonomously write a prescription, as reported earlier by Bloomberg. The service i…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-05T20:14:57.000Z",
+    "discovered_at": "2026-10-05 21:55:48"
+  },
+  {
+    "id": "news-82cd9e3ab19b07103e80",
+    "title": "Reflection debuts Beam, an open-weight AI model to rival Chinese models at lower compute cost",
+    "url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/",
+    "source": "TechCrunch",
+    "summary": "Reflection is aiming Beam and future models at enterprises and sovereign nations. The pitch is to build “AI factories,” a product that would let institutions build their own customized, local AI system by training Reflection’s AI models on their own proprietary data.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-05T19:33:53.000Z",
+    "discovered_at": "2026-10-05 21:55:48"
+  },
+  {
+    "id": "news-ba6c5da9a8807f4fa6f2",
+    "title": "All the drama around AI&#8217;s takeover of mathematics",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1004933/ai-math-openai-breakthrough-solution",
+    "source": "The Verge",
+    "summary": "This past year, OpenAI, Anthropic, and other labs have announced breakthroughs on numerous long-standing mathematical problems, in some cases pushing well beyond what researchers expected current systems to be capable of — including resolving one of the famous Millennium Prize problems. But in classic Silicon Valley s…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-05T19:28:59.000Z",
+    "discovered_at": "2026-10-05 21:55:48"
+  },
+  {
+    "id": "news-e3d6a6e5d9a351b0a9ff",
+    "title": "Wikipedia operator says OpenAI&#8217;s &#8216;rogue&#8217; bots may be linked to a May outage",
+    "url": "https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage",
+    "source": "The Verge",
+    "summary": "Following many recent disclosures about AI agents accessing third-party websites and services, the Wikimedia Foundation, which hosts Wikipedia, says that it \"can confirm that we have discovered some activity\" by \"rogue\" OpenAI agents on Wikimedia platforms. The activity includes edits to Wikimedia wikis, \"unsuccessful…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-05T19:05:19.000Z",
+    "discovered_at": "2026-10-05 21:55:48"
+  },
+  {
     "id": "news-ddc310eb36a6d0afa274",
     "title": "Instinct brings its AI agent to group chats, even for friends without an account",
     "url": "https://techcrunch.com/2026/10/05/instinct-brings-its-ai-agent-to-group-chats-even-for-friends-without-an-account/",
@@ -9,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T18:54:30.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-e08f8e4c161b27155c02",
@@ -21,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T18:29:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-773083672101122dd4b4",
@@ -33,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T18:08:39.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-92b884bb4da0ee95936d",
@@ -45,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T17:29:22.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-cf94a559a112605973d2",
@@ -57,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T16:55:42.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-4d92ee383d0037d578fa",
@@ -69,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T16:44:21.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-5253c2e75c44c31df446",
@@ -81,19 +141,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T16:43:35.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-4e1c2d3dedbab3134ece",
     "title": "OpenAI launches visual ads that appear alongside image generation results",
     "url": "https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/",
     "source": "TechCrunch",
-    "summary": "OpenAI said the new visual ads will show up after your image generation results appear in the U.S. only for now.",
+    "summary": "The new ads will begin to appear later this month in the U.S. only for now, and will feature products and services from an initial test group of advertisers.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T15:14:24.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-bc11900335c3d5d7c8d1",
@@ -105,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T15:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-78ad53815846c15cf660",
@@ -117,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T15:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-622d42420ad4b4927f6f",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T14:35:09.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-b48158e5ab87dd61c34e",
@@ -141,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T14:30:00.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-d3ec75561d9b0380dea1",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T14:30:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-c853576929bc05c45c0a",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T14:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-0d7653e5ccb1edf6ed98",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T13:47:14.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-ec6a33d8c1604062e67d",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T13:09:48.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-8219cfaf573df5c9601a",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T12:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-a5a880c6829c652f990c",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T10:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-3cbec84de8bf615536c6",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T10:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-00aaae6618c7519602af",
@@ -237,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-04T20:31:07.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-bbc50510cd13d4d18de8",
@@ -249,31 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-04T20:08:34.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
-  },
-  {
-    "id": "news-cb4cee0e9eb9f5f85193",
-    "title": "NJ’s former Lt Gov is using AI to say he’s innocent of sexual harassment",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1004549/well-if-ai-said-it-it-must-be-true",
-    "source": "The Verge",
-    "summary": "New Jersey's lieutenant governor Dale Caldwell was forced to resign on September 25th after an investigation found he had sexually harassed a staffer and repeatedly violated ethics rules. The now-former Lt. governor has been making the media rounds trying to clear his name. But he took a particularly odd tactic during…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-04T16:16:04.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
-  },
-  {
-    "id": "news-d5a8ffd2dd505a1539f8",
-    "title": "An AI couldn’t beat humans at StarCraft, so it decided to cheat",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1004543/openai-gpt-cheat-starcraft",
-    "source": "The Verge",
-    "summary": "StarSkirmish pits AI-made StarCraft-playing bots against one another, as well as against human-made bots. OpenAI's GPT-6 Astra and Claude Opus 5.5 were essentially tied as the best-performing AI-made bots, but they couldn't top Stardust, the top-rated human-made bot. On Friday, GPT was facing off against Claude and th…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-04T15:21:59.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-8aaa4b741173b837390a",
@@ -285,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-04T15:15:10.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-f8ba7ef564870c95a9a5",
@@ -297,19 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-03T18:43:57.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
-  },
-  {
-    "id": "news-f1c80105d2f2cb39d33f",
-    "title": "Capcom is preparing for a ‘future where we create games together with AI’",
-    "url": "https://www.theverge.com/games/1004418/capcom-ai-game-development",
-    "source": "The Verge",
-    "summary": "Capcom's Pragmata might be all about the horrors of AI, but in practice the studio doesn't seem so down on the tech. During the Capcom Open Conference RE: 2026 programmer Satoshi Ishida gave a presentation with the mouthful of a title: \"The Outlook and Future of the REX Project, Further Evolving the RE Engine for [&#8…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-03T16:49:10.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-a17db24aed38baa7bdb2",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-03T16:30:01.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-41a7e440548d1d8c70b0",
@@ -333,19 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-03T14:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
-  },
-  {
-    "id": "news-83485a4ee257ce392f82",
-    "title": "Meta wants your next gadget to be Muse-infused",
-    "url": "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/",
-    "source": "TechCrunch",
-    "summary": "Meta wants Muse in your TV and your toaster, so it's giving the code away for free.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-03T00:45:39.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-6ee8ae0821d338b723f5",
@@ -357,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T23:03:16.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
-  },
-  {
-    "id": "news-3cc6542c47eb9be7c59c",
-    "title": "Sean Parker is rebuilding Stability AI around music",
-    "url": "https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music/",
-    "source": "TechCrunch",
-    "summary": "Sean Parker, who once taught the music industry what asking for forgiveness looks like, is now back with the labels' blessing and money.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-02T21:09:14.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-8e206c4d9ed6ea5b326e",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T16:15:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-1122627a66dfc215a84f",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T15:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-a97398f76ee518bf736b",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T00:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-7e67b43cf9d0e609b77c",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T17:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-a80484c2d5849bdb1405",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T16:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-3bba5275857381087ca5",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T00:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-6a91381a429232e70fbb",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T10:30:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-b5e5e43443d214dfc5c6",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T10:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-dd66acaed2a04b44cad2",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-29T10:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-19db7cc5ca5cc5ea9756",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-29T10:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-884977ecb8004cb31230",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-29T00:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-1eadd5627184a89f1bbe",
@@ -513,19 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
-  },
-  {
-    "id": "news-cfe8e900401f31bb5337",
-    "title": "How we will do better for Australia",
-    "url": "https://openai.com/index/how-we-will-do-better-for-australia",
-    "source": "OpenAI",
-    "summary": "OpenAI apologises for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-cf468ec39dd67f092816",
@@ -537,7 +525,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
+  },
+  {
+    "id": "news-cfe8e900401f31bb5337",
+    "title": "How we will do better for Australia",
+    "url": "https://openai.com/index/how-we-will-do-better-for-australia",
+    "source": "OpenAI",
+    "summary": "OpenAI apologises for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-28T19:00:00.000Z",
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-216d56bba26ca4582d8f",
@@ -549,19 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T07:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
-  },
-  {
-    "id": "news-bf0fe8cc388a34470fdd",
-    "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
-    "url": "https://openai.com/index/basis-tax-workbook-with-astra",
-    "source": "OpenAI",
-    "summary": "GPT-6 Astra completed a 50-tab tax workbook twice as fast as GPT-5.6 Sol, and its stronger understanding of user intent gives Basis more confidence in real-world use.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-28T00:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-914f14710638400cde95",
@@ -573,7 +561,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T00:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
+  },
+  {
+    "id": "news-bf0fe8cc388a34470fdd",
+    "title": "Basis completes a tax workbook 2x faster with GPT-6 Astra",
+    "url": "https://openai.com/index/basis-tax-workbook-with-astra",
+    "source": "OpenAI",
+    "summary": "GPT-6 Astra completed a 50-tab tax workbook twice as fast as GPT-5.6 Sol, and its stronger understanding of user intent gives Basis more confidence in real-world use.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-28T00:00:00.000Z",
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-d2d497e5eee41848c95c",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-25T19:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-8a86c97089bb6492a0d5",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T18:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-69bd5b227657faccb6a8",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T19:45:47.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-0c90c73c08cf283551a1",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T00:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-b2c543ac59e1c4518c6a",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T22:24:38.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-079e661c04cec0b07e5c",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T14:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-13d62ca6fcfd55d7fb1a",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T13:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-e7b9d12d1b3a7eb0c954",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T20:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-168e3a7edc7326171115",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T18:33:13.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-a243976a4aeffe7860e7",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-b86d9a766fb72b730ea5",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-18592959ad29d5e254c8",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-00e29a681a6f5e3b92e5",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T13:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-6758d03842f78c1d60a7",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T21:04:32.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-b49b47db0b359f67793a",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T19:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-bf70dc826a65d37ea361",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T16:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-1852061b5cf6950bdd51",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-10T16:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-eca0578fed4853fc9470",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T20:55:02.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-e8269fc9a10961e9d9fc",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T16:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-b0dd0e34ba0b936c69dc",
@@ -813,7 +813,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T16:00:00.000Z",
-    "discovered_at": "2026-10-05 18:55:51"
+    "discovered_at": "2026-10-05 21:55:48"
   },
   {
     "id": "news-bf8c2b1da340d9c0e6fb",
@@ -825,6 +825,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-08T21:11:46.000Z",
-    "discovered_at": "2026-10-05 18:55:52"
+    "discovered_at": "2026-10-05 21:55:48"
   }
 ]
