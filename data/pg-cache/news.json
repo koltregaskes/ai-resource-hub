@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-622d42420ad4b4927f6f",
+    "title": "Researchers are tracking a Chinese AI &#8216;agent fleet&#8217;",
+    "url": "https://techcrunch.com/2026/10/05/researchers-are-tracking-a-chinese-ai-agent-fleet/",
+    "source": "TechCrunch",
+    "summary": "Independent researchers discovered an agent swarm that seems to be running on Tencent's infrastructure and targeting Alibaba's map service, Amap.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-05T14:35:09.000Z",
+    "discovered_at": "2026-10-05 14:55:49"
+  },
+  {
+    "id": "news-b48158e5ab87dd61c34e",
+    "title": "Sen. Adam Schiff on AI regulation, free speech, and impeaching Trump one more time",
+    "url": "https://www.theverge.com/podcast/1004286/senator-adam-schiff-ai-trump-regulation-corruption",
+    "source": "The Verge",
+    "summary": "Today, I’m talking with Senator Adam Schiff, a Democrat from California. Sen. Schiff sits on a number of committees with oversight into tech and AI: intellectual property, antitrust, privacy and technology — it’s all there. I really wanted to ask him about how we might regulate anything related to the tech industry at…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-05T14:30:00.000Z",
+    "discovered_at": "2026-10-05 14:55:49"
+  },
+  {
+    "id": "news-d3ec75561d9b0380dea1",
+    "title": "Meet the Startup Battlefield 200 judges who’ll decide the winner at TechCrunch Disrupt 2026",
+    "url": "https://techcrunch.com/2026/10/05/meet-the-startup-battlefield-200-judges-wholl-decide-the-winner-at-techcrunch-disrupt-2026/",
+    "source": "TechCrunch",
+    "summary": "Meet the final five Startup Battlefield judges who'll decide who wins the pitch competition at TechCrunch Disrupt 2026. Get your pass now to save up to $100, and get a second at 50% off.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-05T14:30:00.000Z",
+    "discovered_at": "2026-10-05 14:55:49"
+  },
+  {
+    "id": "news-c853576929bc05c45c0a",
+    "title": "The final Disrupt Stage lineup: Three days of conversations you won’t hear anywhere outside of TechCrunch Disrupt 2026",
+    "url": "https://techcrunch.com/2026/10/05/the-final-disrupt-stage-lineup-three-days-of-conversations-you-wont-hear-anywhere-outside-of-techcrunch-disrupt-2026/",
+    "source": "TechCrunch",
+    "summary": "The full TechCrunch Disrupt Stage lineup revealed, featuring Max Hodak, Mark Wahlberg, Benchmark partners, and more. Register now to save up to $100 on your pass and get a second at 50% off.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-05T14:00:00.000Z",
+    "discovered_at": "2026-10-05 14:55:49"
+  },
+  {
     "id": "news-0d7653e5ccb1edf6ed98",
     "title": "An open-source tool lets you delete 12GB of Apple Intelligence data on macOS",
     "url": "https://www.theverge.com/ai-artificial-intelligence/1004672/mac-delete-apple-intelligence-ai-tool",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T13:47:14.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-ec6a33d8c1604062e67d",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T13:09:48.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-8219cfaf573df5c9601a",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T12:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-a5a880c6829c652f990c",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T10:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-3cbec84de8bf615536c6",
@@ -57,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T10:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-00aaae6618c7519602af",
@@ -69,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-04T20:31:07.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-bbc50510cd13d4d18de8",
@@ -81,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-04T20:08:34.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-cb4cee0e9eb9f5f85193",
@@ -93,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-04T16:16:04.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-d5a8ffd2dd505a1539f8",
@@ -105,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-04T15:21:59.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-8aaa4b741173b837390a",
@@ -117,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-04T15:15:10.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-f8ba7ef564870c95a9a5",
@@ -129,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-03T18:43:57.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-f1c80105d2f2cb39d33f",
@@ -141,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-03T16:49:10.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-a17db24aed38baa7bdb2",
@@ -153,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-03T16:30:01.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-2b2053e0bc6be5dfbae9",
@@ -165,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-03T15:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-91c2390ce603b2e9cae9",
@@ -177,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-03T14:31:56.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-41a7e440548d1d8c70b0",
@@ -189,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-03T14:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-83485a4ee257ce392f82",
@@ -201,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-03T00:45:39.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-6ee8ae0821d338b723f5",
@@ -213,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T23:03:16.000Z",
-    "discovered_at": "2026-10-05 13:55:57"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-3cc6542c47eb9be7c59c",
@@ -225,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T21:09:14.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-c0a74765cc53d7bd6246",
@@ -237,19 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T21:08:37.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
-  },
-  {
-    "id": "news-e148a12b4219ef6ae479",
-    "title": "Apple will limit Mac disk access as AI agents ‘substantially’ increase risk",
-    "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents",
-    "source": "The Verge",
-    "summary": "Apple will add new limits for \"full disk access\" on Mac in response to risks posed by AI agents, as reported earlier by TechCrunch. In an update on Friday, Apple says it's rolling out new controls to \"ensure that users who genuinely wish to grant an app this extraordinary level of access can only do [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-02T20:08:40.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-c73e8583724730e3c21b",
@@ -261,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T19:15:51.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-8931b830d8ddf5c9c353",
@@ -273,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T18:11:27.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-5c5d251d2d2f20d86fe6",
@@ -285,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T17:56:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-fcd1b322a9ec5b0c04dd",
@@ -297,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T17:48:16.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-0e0757d37a99a075d370",
@@ -309,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T17:32:05.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-2e0c293fdeeb9b01e96e",
@@ -321,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T17:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-8e206c4d9ed6ea5b326e",
@@ -333,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T16:15:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
-  },
-  {
-    "id": "news-0a4d2fa92a2dd8e7dc1c",
-    "title": "Pope Leo XIV is not a fan of AI-generated art",
-    "url": "https://techcrunch.com/2026/10/02/pope-leo-xiv-is-not-a-fan-of-ai-generated-art/",
-    "source": "TechCrunch",
-    "summary": "\"There is an ontological difference, even before an aesthetic one, between art and what a machine can generate through statistical calculation based on millions of images created by others,\" the pope wrote. \"Algorithms lack the spark of humanity.\"",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-02T15:39:41.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-1122627a66dfc215a84f",
@@ -357,31 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T15:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
-  },
-  {
-    "id": "news-57b183de48bd6b4f046b",
-    "title": "TechCrunch Disrupt 2026: Clay’s Kareem Amin on the rise of the GTM engineer",
-    "url": "https://techcrunch.com/2026/10/02/techcrunch-disrupt-2026-clays-kareem-amin-on-the-rise-of-the-gtm-engineer/",
-    "source": "TechCrunch",
-    "summary": "Clay Co-founder and CEO Kareem Amin joins the AI Stage to discuss the rise of GTM engineer at TechCrunch Disrupt 2026. Register for your ticket and get a second pass at 50% off.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-02T14:30:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
-  },
-  {
-    "id": "news-e527bfa9070eba77d8e3",
-    "title": "Last 24 hours: Exhibit at TechCrunch Disrupt 2026 and reach 10,000+ tech leaders",
-    "url": "https://techcrunch.com/2026/10/02/last-24-hours-exhibit-at-techcrunch-disrupt-2026-and-reach-10000-tech-leaders/",
-    "source": "TechCrunch",
-    "summary": "Today is the last day to book your exhibit table at TechCrunch Disrupt 2026. From October 13–15, 10,000+ founders, investors, operators, and tech leaders will arrive at San Francisco’s Moscone West looking for companies, products, ideas, and people worth knowing. The question is: Will they find your startup?",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-02T14:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-a97398f76ee518bf736b",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T00:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-7e67b43cf9d0e609b77c",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T17:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-a80484c2d5849bdb1405",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T16:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-3bba5275857381087ca5",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T00:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-6a91381a429232e70fbb",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T10:30:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-b5e5e43443d214dfc5c6",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T10:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-dd66acaed2a04b44cad2",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-29T10:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-19db7cc5ca5cc5ea9756",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-29T10:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-884977ecb8004cb31230",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-29T00:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-1eadd5627184a89f1bbe",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-cf468ec39dd67f092816",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-cfe8e900401f31bb5337",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-216d56bba26ca4582d8f",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T07:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-914f14710638400cde95",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T00:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-bf0fe8cc388a34470fdd",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T00:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-d2d497e5eee41848c95c",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-25T19:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-8a86c97089bb6492a0d5",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T18:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-9d02eeb8cef10808bb22",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T16:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:48"
   },
   {
     "id": "news-69bd5b227657faccb6a8",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T19:45:47.000Z",
-    "discovered_at": "2026-10-05 13:55:57"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-0c90c73c08cf283551a1",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T00:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-b2c543ac59e1c4518c6a",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T22:24:38.000Z",
-    "discovered_at": "2026-10-05 13:55:57"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-079e661c04cec0b07e5c",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T14:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-13d62ca6fcfd55d7fb1a",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T13:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-e7b9d12d1b3a7eb0c954",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T20:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-168e3a7edc7326171115",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T18:33:13.000Z",
-    "discovered_at": "2026-10-05 13:55:57"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-a243976a4aeffe7860e7",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-b86d9a766fb72b730ea5",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-18592959ad29d5e254c8",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-00e29a681a6f5e3b92e5",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T13:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-6758d03842f78c1d60a7",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T21:04:32.000Z",
-    "discovered_at": "2026-10-05 13:55:57"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-b49b47db0b359f67793a",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T19:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-bf70dc826a65d37ea361",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T16:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-1852061b5cf6950bdd51",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-10T16:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-eca0578fed4853fc9470",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T20:55:02.000Z",
-    "discovered_at": "2026-10-05 13:55:57"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-e8269fc9a10961e9d9fc",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T16:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-b0dd0e34ba0b936c69dc",
@@ -813,7 +813,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T16:00:00.000Z",
-    "discovered_at": "2026-10-05 13:55:56"
+    "discovered_at": "2026-10-05 14:55:49"
   },
   {
     "id": "news-bf8c2b1da340d9c0e6fb",
@@ -825,6 +825,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-08T21:11:46.000Z",
-    "discovered_at": "2026-10-05 13:55:57"
+    "discovered_at": "2026-10-05 14:55:49"
   }
 ]
