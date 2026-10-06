@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T02:56:43.683Z",
+  "generatedAt": "2026-10-06T03:20:05.523Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-06T02:56:43.623Z",
+      "lastCheckedAt": "2026-10-06T03:20:05.276Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,16 +100,12 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-06T02:56:42.608Z",
+      "lastCheckedAt": "2026-10-06T03:20:04.198Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "3 active incidents across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
-        {
-          "name": "Conversations",
-          "status": "degraded_performance"
-        },
         {
           "name": "ChatGPT Work",
           "status": "degraded_performance"
@@ -119,29 +115,23 @@
           "status": "degraded_performance"
         },
         {
-          "name": "Image Generation",
-          "status": "degraded_performance"
-        },
-        {
           "name": "Chat Completions",
           "status": "operational"
         },
         {
           "name": "Responses",
           "status": "operational"
+        },
+        {
+          "name": "Agents",
+          "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
         }
       ],
       "activeIncidents": [
-        {
-          "id": "01M47HC9SGHGFPBN44KGC6SKAQ",
-          "title": "Elevated errors affecting multiple products including ChatGPT (conversations), Image generations, Spaces and Pages, API rehydration, and Dots.",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-10-06T02:41:12.000Z",
-          "updatedAt": "2026-10-06T02:44:03.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
         {
           "id": "01M46KED6KQ6PR195KZYYVNY8W",
           "title": "Elevated error rates in Codex Cloud",
@@ -167,12 +157,12 @@
         {
           "id": "01M47HC9SGHGFPBN44KGC6SKAQ",
           "title": "Elevated errors affecting multiple products including ChatGPT (conversations), Image generations, Spaces and Pages, API rehydration, and Dots.",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-10-06T02:41:12.000Z",
-          "updatedAt": "2026-10-06T02:44:03.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
+          "updatedAt": "2026-10-06T03:17:12.000Z",
+          "resolvedAt": "2026-10-06T03:17:11.000Z",
+          "summary": "All impacted services have now fully recovered."
         },
         {
           "id": "01M47AFBNRNXKJWN549T3PMYV8",
@@ -217,7 +207,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-06T02:56:42.556Z",
+      "lastCheckedAt": "2026-10-06T03:20:04.251Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -307,7 +297,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-06T02:56:43.228Z",
+      "lastCheckedAt": "2026-10-06T03:20:05.149Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -327,7 +317,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-06T02:56:42.569Z",
+      "lastCheckedAt": "2026-10-06T03:20:04.601Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +349,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-06T02:56:43.678Z",
+      "lastCheckedAt": "2026-10-06T03:20:05.518Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -383,7 +373,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
