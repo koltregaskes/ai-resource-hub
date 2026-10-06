@@ -12,10 +12,10 @@ This mirrors the public updates page in a repo-readable format so contributors c
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
 | Models and releases | Hourly automated refresh | Mixed | 06 Oct 2026, 02:56 UTC |
 | Benchmarks and evals | Hourly collection attempts; measurement dates vary | Automated | 05 Feb 2026, 00:00 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 06 Oct 2026, 02:55 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 06 Oct 2026, 02:56 UTC |
 | News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 05 Oct 2026, 12:00 UTC |
-| Provider status | Hourly automated refresh | Automated | 06 Oct 2026, 02:55 UTC |
-| Guides and learning | Manual editorial review | Manual | 06 Oct 2026, 02:55 UTC |
+| Provider status | Hourly automated refresh | Automated | 06 Oct 2026, 02:56 UTC |
+| Guides and learning | Manual editorial review | Manual | 06 Oct 2026, 02:56 UTC |
 
 ## AI milestones
 
@@ -98,7 +98,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 06 Oct 2026, 02:55 UTC
+- Last refreshed: 06 Oct 2026, 02:56 UTC
 - Category route: `/compare/llm/`
 
 
@@ -110,9 +110,9 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 06 Oct 2026, 02:55 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
-- 06 Oct 2026, 02:55 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 06 Oct 2026, 02:55 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 06 Oct 2026, 02:56 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
+- 06 Oct 2026, 02:56 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 06 Oct 2026, 02:56 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
@@ -138,7 +138,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 06 Oct 2026, 02:55 UTC
+- Last refreshed: 06 Oct 2026, 02:56 UTC
 - Category route: `/status/`
 
 
@@ -149,15 +149,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 06 Oct 2026, 02:55 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
-- 06 Oct 2026, 02:55 UTC: OpenAI - Partial System Degradation ([source](https://status.openai.com))
-- 06 Oct 2026, 02:55 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
+- 06 Oct 2026, 02:56 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
+- 06 Oct 2026, 02:56 UTC: OpenAI - Partial System Degradation ([source](https://status.openai.com))
+- 06 Oct 2026, 02:56 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
 
 ## Guides and learning
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 06 Oct 2026, 02:55 UTC
+- Last refreshed: 06 Oct 2026, 02:56 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -169,6 +169,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 06 Oct 2026, 02:55 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 06 Oct 2026, 02:55 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
-- 06 Oct 2026, 02:55 UTC: Choosing An Ai Model - Guide or learning page updated in the repository. (`/guides/choosing-an-ai-model/`)
+- 06 Oct 2026, 02:56 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
+- 06 Oct 2026, 02:56 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 06 Oct 2026, 02:56 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
