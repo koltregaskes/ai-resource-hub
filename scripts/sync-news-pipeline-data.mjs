@@ -7,12 +7,13 @@ const repoRoot = process.cwd();
 function resolveEstateRoot() {
   // An explicit root is authoritative, including when it is unavailable.
   if (process.env.WEBSITES_ESTATE_ROOT) return path.resolve(process.env.WEBSITES_ESTATE_ROOT);
+  // Prefer the repository itself when the canonical config is checked into this repo.
   const candidates = [
-    process.env.WEBSITES_ESTATE_ROOT,
+    repoRoot,
     path.resolve(repoRoot, '..', '..'),
     'W:\\Websites',
     'C:\\Workspaces\\Websites',
-  ].filter(Boolean);
+  ];
 
   for (const candidate of candidates) {
     const siteFilters = path.join(
@@ -29,7 +30,8 @@ function resolveEstateRoot() {
     }
   }
 
-  return path.resolve(repoRoot, '..', '..');
+  // Default to the repository root when nothing else resolves cleanly.
+  return repoRoot;
 }
 
 const estateRoot = resolveEstateRoot();

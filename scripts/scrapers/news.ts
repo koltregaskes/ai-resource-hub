@@ -173,6 +173,14 @@ async function sleep(ms: number): Promise<void> {
   await new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function isVentureBeat(url: string): boolean {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '') === 'venturebeat.com';
+  } catch {
+    return false;
+  }
+}
+
 async function fetchFeed(url: string, attempt: number = 1): Promise<string> {
   const response = await fetch(url, {
     headers: {
@@ -185,19 +193,26 @@ async function fetchFeed(url: string, attempt: number = 1): Promise<string> {
   });
 
   // Handle common rate-limit/service unavailable scenarios with one gentle retry
-  if ((response.status === 429 || response.status === 503) && attempt < 2) {
+  if ((response.status === 429 || response.status === 503) && attempt < 3) {
     const retryAfterHeader = response.headers.get('retry-after');
     const retryAfterSeconds = retryAfterHeader ? parseInt(retryAfterHeader, 10) : NaN;
+    const defaultBackoff = isVentureBeat(url)
+      ? (attempt === 1 ? 15000 : 35000)
+      : (attempt === 1 ? 8000 : 18000);
     const backoffMs = Number.isFinite(retryAfterSeconds)
-      ? Math.min(Math.max(retryAfterSeconds, 5), 20) * 1000
-      : 8000 + Math.floor(Math.random() * 4000);
-    console.warn(`  ${url} returned ${response.status}; backing off for ${(backoffMs / 1000).toFixed(0)}s then retrying once...`);
+      ? Math.min(Math.max(retryAfterSeconds, 5), 60) * 1000
+      : defaultBackoff + Math.floor(Math.random() * 3000);
+    console.warn(`  ${url} returned ${response.status}; backing off for ${(backoffMs / 1000).toFixed(0)}s then retrying...`);
     await sleep(backoffMs);
     return fetchFeed(url, attempt + 1);
   }
 
   if (!response.ok) {
-    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    const isRateLimited = response.status === 429 || response.status === 503;
+    const note = isRateLimited && isVentureBeat(url)
+      ? ' (rate-limited; skipping this source for this run)'
+      : '';
+    throw new Error(`HTTP ${response.status}: ${response.statusText}${note}`);
   }
 
   return response.text();

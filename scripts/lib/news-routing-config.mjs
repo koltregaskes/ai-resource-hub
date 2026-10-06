@@ -5,8 +5,8 @@ import { digest } from '../news-pipeline-provenance.mjs';
 // Preserve the exporter's historical relative root unless explicitly overridden.
 export function loadNewsRoutingConfig(repoRoot, env = process.env) {
   const estateRoot = env.WEBSITES_ESTATE_ROOT
-    ? path.resolve(repoRoot, env.WEBSITES_ESTATE_ROOT)
-    : path.resolve(repoRoot, '..', '..');
+    ? path.resolve(env.WEBSITES_ESTATE_ROOT)
+    : repoRoot;
   const configPath = path.join(estateRoot, 'shared/website-tools/pipelines/news/site-filters.json');
   const checkedAt = new Date().toISOString();
   const unknown = (reason) => ({
