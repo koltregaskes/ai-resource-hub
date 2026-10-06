@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "status": "cached",
-  "reason": "missing_canonical_config",
-  "attemptedAt": "2026-10-06T14:55:54.934Z",
-  "sourceGeneratedAt": "2026-07-25T15:11:54.247Z",
-  "sourceVerifiedAt": null,
-  "sourceEdition": null,
-  "snapshotSha256": "0f8fc59742a6e9cb656f8053cc60796e9a47dc8faf5aa018465896c3ecd35239",
-  "missingInputs": [
-    "site-filters.json",
-    "sources.json",
-    "estate.yml"
-  ]
+  "status": "fresh",
+  "reason": "canonical_config_read",
+  "attemptedAt": "2026-10-06T15:07:35.789Z",
+  "sourceGeneratedAt": "2026-10-06T15:07:35.789Z",
+  "sourceVerifiedAt": "2026-10-06T15:07:35.789Z",
+  "sourceEdition": {
+    "siteFiltersSha256": "bad10f90faa07d54f4ce690f38214e0e06b7b46dbc1710c466d53bc45e7f5768",
+    "sourcesSha256": "4299709f06121cfefd781c092a5bc01a1168cb636477b159e5774bd69d38bc8d",
+    "estateManifestSha256": "a0aaffd48032be4a810d6152fecef37730130d3b2d1e3d655ede268b63f3b63f"
+  },
+  "snapshotSha256": "a1cadb644ceb6d7db89863e50ba91a9578f967ff747affb4d64888d05dcc0c84",
+  "missingInputs": []
 }

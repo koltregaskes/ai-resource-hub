@@ -49,7 +49,8 @@ const FEEDS: FeedSource[] = [
   },
   {
     name: 'VentureBeat',
-    url: 'https://venturebeat.com/category/ai/feed',
+    // Use canonical feed URL with trailing slash to avoid redirects
+    url: 'https://venturebeat.com/category/ai/feed/',
     category: 'industry',
   },
   {
@@ -168,13 +169,32 @@ function shorten(text: string, maxLength: number): string {
   return `${text.slice(0, maxLength - 1).trimEnd()}…`;
 }
 
-async function fetchFeed(url: string): Promise<string> {
+async function sleep(ms: number): Promise<void> {
+  await new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function fetchFeed(url: string, attempt: number = 1): Promise<string> {
   const response = await fetch(url, {
     headers: {
-      'User-Agent': 'The-AI-Resource-Hub-Bot/1.0 (RSS collector; public feed access only)',
+      // Be a little more browser-like and include a contact point
+      'User-Agent': 'Mozilla/5.0 (compatible; AI-Resource-Hub-Bot/1.0; +https://theairesourcehub.com/robots.txt)',
       Accept: 'application/rss+xml, application/atom+xml, application/xml, text/xml;q=0.9, */*;q=0.8',
+      'Cache-Control': 'no-cache',
+      Pragma: 'no-cache',
     },
   });
+
+  // Handle common rate-limit/service unavailable scenarios with one gentle retry
+  if ((response.status === 429 || response.status === 503) && attempt < 2) {
+    const retryAfterHeader = response.headers.get('retry-after');
+    const retryAfterSeconds = retryAfterHeader ? parseInt(retryAfterHeader, 10) : NaN;
+    const backoffMs = Number.isFinite(retryAfterSeconds)
+      ? Math.min(Math.max(retryAfterSeconds, 5), 20) * 1000
+      : 8000 + Math.floor(Math.random() * 4000);
+    console.warn(`  ${url} returned ${response.status}; backing off for ${(backoffMs / 1000).toFixed(0)}s then retrying once...`);
+    await sleep(backoffMs);
+    return fetchFeed(url, attempt + 1);
+  }
 
   if (!response.ok) {
     throw new Error(`HTTP ${response.status}: ${response.statusText}`);

@@ -1,5 +1,13 @@
 export const newsPipelineSnapshot = {
-  "generatedAt": "2026-07-25T15:11:54.247Z",
+  "generatedAt": "2026-10-06T15:07:35.789Z",
+  "provenance": {
+    "sourceVerifiedAt": "2026-10-06T15:07:35.789Z",
+    "sourceEdition": {
+      "siteFiltersSha256": "bad10f90faa07d54f4ce690f38214e0e06b7b46dbc1710c466d53bc45e7f5768",
+      "sourcesSha256": "4299709f06121cfefd781c092a5bc01a1168cb636477b159e5774bd69d38bc8d",
+      "estateManifestSha256": "a0aaffd48032be4a810d6152fecef37730130d3b2d1e3d655ede268b63f3b63f"
+    }
+  },
   "sourceOfTruth": {
     "estateManifestPath": "estate.yml",
     "siteFiltersPath": "shared/website-tools/pipelines/news/site-filters.json",
@@ -13,7 +21,7 @@ export const newsPipelineSnapshot = {
     "manualReviewSourceCount": 0,
     "officialFirstSourceCount": 4,
     "crossCheckSourceCount": 10,
-    "routingTagCount": 67,
+    "routingTagCount": 0,
     "lookbackHours": 24,
     "sectionCount": 4
   },
@@ -97,350 +105,14 @@ export const newsPipelineSnapshot = {
       "label": "Technical Analysis"
     }
   ],
-  "routingTags": [
-    {
-      "id": "3d_gen",
-      "label": "3D Gen",
-      "keywordCount": 6
-    },
-    {
-      "id": "acquisition",
-      "label": "Acquisition",
-      "keywordCount": 5
-    },
-    {
-      "id": "agent_sdk",
-      "label": "Agent SDK",
-      "keywordCount": 4
-    },
-    {
-      "id": "agent_tool",
-      "label": "Agent Tool",
-      "keywordCount": 6
-    },
-    {
-      "id": "agentic_framework",
-      "label": "Agentic Framework",
-      "keywordCount": 7
-    },
-    {
-      "id": "ai_agents",
-      "label": "AI Agents",
-      "keywordCount": 6
-    },
-    {
-      "id": "ai_safety",
-      "label": "AI Safety",
-      "keywordCount": 7
-    },
-    {
-      "id": "announcement",
-      "label": "Announcement",
-      "keywordCount": 4
-    },
-    {
-      "id": "api_update",
-      "label": "Api Update",
-      "keywordCount": 8
-    },
-    {
-      "id": "architecture",
-      "label": "Architecture",
-      "keywordCount": 7
-    },
-    {
-      "id": "art_ai",
-      "label": "Art AI",
-      "keywordCount": 4
-    },
-    {
-      "id": "autonomous_systems",
-      "label": "Autonomous Systems",
-      "keywordCount": 5
-    },
-    {
-      "id": "benchmark",
-      "label": "Benchmark",
-      "keywordCount": 11
-    },
-    {
-      "id": "camera",
-      "label": "Camera",
-      "keywordCount": 14
-    },
-    {
-      "id": "camera_release",
-      "label": "Camera Release",
-      "keywordCount": 5
-    },
-    {
-      "id": "capture_one",
-      "label": "Capture One",
-      "keywordCount": 2
-    },
-    {
-      "id": "cli_tool",
-      "label": "Cli Tool",
-      "keywordCount": 8
-    },
-    {
-      "id": "creative_tool",
-      "label": "Creative Tool",
-      "keywordCount": 7
-    },
-    {
-      "id": "creative_workflow",
-      "label": "Creative Workflow",
-      "keywordCount": 4
-    },
-    {
-      "id": "crypto",
-      "label": "Crypto",
-      "keywordCount": 12
-    },
-    {
-      "id": "crypto_defi",
-      "label": "Crypto Defi",
-      "keywordCount": 6
-    },
-    {
-      "id": "crypto_regulation",
-      "label": "Crypto Regulation",
-      "keywordCount": 7
-    },
-    {
-      "id": "crypto_trading",
-      "label": "Crypto Trading",
-      "keywordCount": 9
-    },
-    {
-      "id": "dataset",
-      "label": "Dataset",
-      "keywordCount": 6
-    },
-    {
-      "id": "developer_tool",
-      "label": "Developer Tool",
-      "keywordCount": 9
-    },
-    {
-      "id": "entertainment",
-      "label": "Entertainment",
-      "keywordCount": 8
-    },
-    {
-      "id": "evaluation",
-      "label": "Evaluation",
-      "keywordCount": 7
-    },
-    {
-      "id": "event",
-      "label": "Event",
-      "keywordCount": 7
-    },
-    {
-      "id": "funding",
-      "label": "Funding",
-      "keywordCount": 7
-    },
-    {
-      "id": "game_event",
-      "label": "Game Event",
-      "keywordCount": 10
-    },
-    {
-      "id": "game_preview",
-      "label": "Game Preview",
-      "keywordCount": 5
-    },
-    {
-      "id": "game_release",
-      "label": "Game Release",
-      "keywordCount": 11
-    },
-    {
-      "id": "game_review",
-      "label": "Game Review",
-      "keywordCount": 5
-    },
-    {
-      "id": "gaming_platform",
-      "label": "Gaming Platform",
-      "keywordCount": 8
-    },
-    {
-      "id": "github_release",
-      "label": "Github Release",
-      "keywordCount": 6
-    },
-    {
-      "id": "hardware",
-      "label": "Hardware",
-      "keywordCount": 10
-    },
-    {
-      "id": "image_gen",
-      "label": "Image Gen",
-      "keywordCount": 9
-    },
-    {
-      "id": "industry_move",
-      "label": "Industry Move",
-      "keywordCount": 7
-    },
-    {
-      "id": "inference",
-      "label": "Inference",
-      "keywordCount": 6
-    },
-    {
-      "id": "lens",
-      "label": "Lens",
-      "keywordCount": 7
-    },
-    {
-      "id": "lightroom",
-      "label": "Lightroom",
-      "keywordCount": 3
-    },
-    {
-      "id": "mcp",
-      "label": "MCP",
-      "keywordCount": 4
-    },
-    {
-      "id": "model_release",
-      "label": "Model Release",
-      "keywordCount": 15
-    },
-    {
-      "id": "multi_agent",
-      "label": "Multi Agent",
-      "keywordCount": 6
-    },
-    {
-      "id": "music_gen",
-      "label": "Music Gen",
-      "keywordCount": 6
-    },
-    {
-      "id": "open_source",
-      "label": "Open Source",
-      "keywordCount": 7
-    },
-    {
-      "id": "opinion",
-      "label": "Opinion",
-      "keywordCount": 6
-    },
-    {
-      "id": "photo_editing",
-      "label": "Photo Editing",
-      "keywordCount": 10
-    },
-    {
-      "id": "photography",
-      "label": "Photography",
-      "keywordCount": 9
-    },
-    {
-      "id": "photography_ai",
-      "label": "Photography AI",
-      "keywordCount": 7
-    },
-    {
-      "id": "photography_business",
-      "label": "Photography Business",
-      "keywordCount": 5
-    },
-    {
-      "id": "photography_technique",
-      "label": "Photography Technique",
-      "keywordCount": 6
-    },
-    {
-      "id": "photoshop",
-      "label": "Photoshop",
-      "keywordCount": 4
-    },
-    {
-      "id": "policy",
-      "label": "Policy",
-      "keywordCount": 8
-    },
-    {
-      "id": "pricing_change",
-      "label": "Pricing Change",
-      "keywordCount": 7
-    },
-    {
-      "id": "product_launch",
-      "label": "Product Launch",
-      "keywordCount": 7
-    },
-    {
-      "id": "reasoning",
-      "label": "Reasoning",
-      "keywordCount": 8
-    },
-    {
-      "id": "regulation",
-      "label": "Regulation",
-      "keywordCount": 7
-    },
-    {
-      "id": "release_date",
-      "label": "Release Date",
-      "keywordCount": 6
-    },
-    {
-      "id": "repo_update",
-      "label": "Repo Update",
-      "keywordCount": 10
-    },
-    {
-      "id": "research_paper",
-      "label": "Research Paper",
-      "keywordCount": 10
-    },
-    {
-      "id": "showcase",
-      "label": "Showcase",
-      "keywordCount": 5
-    },
-    {
-      "id": "tool_update",
-      "label": "Tool Update",
-      "keywordCount": 8
-    },
-    {
-      "id": "tool_use",
-      "label": "Tool Use",
-      "keywordCount": 6
-    },
-    {
-      "id": "training",
-      "label": "Training",
-      "keywordCount": 6
-    },
-    {
-      "id": "video_gen",
-      "label": "Video Gen",
-      "keywordCount": 8
-    },
-    {
-      "id": "voice_synthesis",
-      "label": "Voice Synthesis",
-      "keywordCount": 6
-    }
-  ],
+  "routingTags": [],
   "sites": [
     {
       "slug": "kols-korner",
       "name": "Kol's Korner",
       "shortName": "Kol's Korner",
       "role": "broad-ai",
-      "description": "Broad AI news, general-interest angle. Gets most things except deep technical and creative-only.",
+      "description": "No shared news routing description available.",
       "note": null,
       "newsEnabled": true,
       "includeTags": [
@@ -633,7 +305,7 @@ export const newsPipelineSnapshot = {
       "name": "Axy Lusion",
       "shortName": "Axy Lusion",
       "role": "creative-ai",
-      "description": "Creative AI tools â€” image, video, music, voice, 3D generation.",
+      "description": "No shared news routing description available.",
       "note": null,
       "newsEnabled": true,
       "includeTags": [
@@ -911,7 +583,7 @@ export const newsPipelineSnapshot = {
       "name": "AI Resource Hub",
       "shortName": "AI Resource Hub",
       "role": "technical-ai",
-      "description": "Technical AI reference. Model releases, benchmarks, pricing, research papers, infrastructure.",
+      "description": "No shared news routing description available.",
       "note": null,
       "newsEnabled": true,
       "includeTags": [
@@ -1129,7 +801,7 @@ export const newsPipelineSnapshot = {
       "name": "Ghost in the Model",
       "shortName": "Ghost in the Model",
       "role": "agent-editorial",
-      "description": "AI agents, multi-agent systems, autonomy, tool use, and safety. Used as article inspiration for the Ghost in the Models writing agents.",
+      "description": "No shared news routing description available.",
       "note": "Articles here are inspiration for the writing agents, not published directly as news",
       "newsEnabled": true,
       "includeTags": [
@@ -1277,7 +949,7 @@ export const newsPipelineSnapshot = {
       "name": "Kol Tregaskes Photography",
       "shortName": "Photography",
       "role": "photography",
-      "description": "Photography news â€” cameras, gear, editing software, technique, AI photography tools, competitions.",
+      "description": "No shared news routing description available.",
       "note": null,
       "newsEnabled": true,
       "includeTags": [
@@ -1438,7 +1110,7 @@ export const newsPipelineSnapshot = {
       "name": "GameTrackDaily",
       "shortName": "GameTrackDaily",
       "role": "news-destination",
-      "description": "Public game release, event, platform, review, and preview routing for the GameTrackDaily watch desk.",
+      "description": "No shared news routing description available.",
       "note": null,
       "newsEnabled": true,
       "includeTags": [
@@ -1541,7 +1213,7 @@ export const newsPipelineSnapshot = {
       "name": "Repo Foundry",
       "shortName": "Repo Foundry",
       "role": "news-destination",
-      "description": "Public repo release and open-source ecosystem routing for Repo Foundry.",
+      "description": "No shared news routing description available.",
       "note": null,
       "newsEnabled": true,
       "includeTags": [
@@ -1664,7 +1336,7 @@ export const newsPipelineSnapshot = {
       "name": "Stack Scout",
       "shortName": "Stack Scout",
       "role": "news-destination",
-      "description": "Public tool, service, API, CLI, MCP, and release-note routing for Stack Scout.",
+      "description": "No shared news routing description available.",
       "note": null,
       "newsEnabled": true,
       "includeTags": [
