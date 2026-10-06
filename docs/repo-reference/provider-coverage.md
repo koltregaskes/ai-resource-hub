@@ -1,13 +1,13 @@
 # Provider Coverage Snapshot
 
-Generated: 06 Oct 2026, 16:49 UTC
+Generated: 06 Oct 2026, 17:56 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
 | Provider | Active | Tracking | Preview | Latest release | Status page | Docs |
 | --- | --- | --- | --- | --- | --- | --- |
 | OpenAI | 25 | 48 | 0 | GPT-6.1 Sol (29 Sept 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
-| Google | 8 | 20 | 0 | Gemini 3.5 Flash Lite (batch) (21 Jul 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
+| Google | 8 | 21 | 0 | Nano Banana 2.1 (6 Oct 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
 | Anthropic | 6 | 17 | 1 | Claude Opus 5 (batch) (24 Jul 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
 | Meta | 6 | 9 | 0 | Muse Spark 1.3 (2 Sept 2026) | n/a | [docs](https://llama.meta.com/docs) |
 | Alibaba | 5 | 48 | 0 | Qwen3.8 Max Prime (23 Sept 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
