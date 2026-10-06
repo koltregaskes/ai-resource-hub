@@ -7,12 +7,16 @@ const repoRoot = process.cwd();
 function resolveEstateRoot() {
   // An explicit root is authoritative, including when it is unavailable.
   if (process.env.WEBSITES_ESTATE_ROOT) return path.resolve(process.env.WEBSITES_ESTATE_ROOT);
-  // Prefer the repository itself when the canonical config is checked into this repo.
+  // Restore original candidate priority for local publishers:
+  // - shared Websites checkout (two levels up)
+  // - W:\\Websites
+  // - C:\\Workspaces\\Websites
+  // - finally, repo root as a last-resort fallback (primarily for CI)
   const candidates = [
-    repoRoot,
     path.resolve(repoRoot, '..', '..'),
     'W:\\Websites',
     'C:\\Workspaces\\Websites',
+    repoRoot,
   ];
 
   for (const candidate of candidates) {
@@ -30,8 +34,8 @@ function resolveEstateRoot() {
     }
   }
 
-  // Default to the repository root when nothing else resolves cleanly.
-  return repoRoot;
+  // Default remains two levels up (historical behaviour).
+  return path.resolve(repoRoot, '..', '..');
 }
 
 const estateRoot = resolveEstateRoot();
