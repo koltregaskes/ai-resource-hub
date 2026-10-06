@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T00:55:56.265Z",
+  "generatedAt": "2026-10-06T01:55:56.128Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-06T00:55:56.258Z",
+      "lastCheckedAt": "2026-10-06T01:55:56.121Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,16 +100,12 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-06T00:55:54.929Z",
+      "lastCheckedAt": "2026-10-06T01:55:54.964Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "3 active incidents across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
-        {
-          "name": "Login",
-          "status": "degraded_performance"
-        },
         {
           "name": "ChatGPT Work",
           "status": "degraded_performance"
@@ -129,19 +125,13 @@
         {
           "name": "Agents",
           "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
         }
       ],
       "activeIncidents": [
-        {
-          "id": "01M47AFBNRNXKJWN549T3PMYV8",
-          "title": "Elevated errors in API Platform login and administration APIs.",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-10-06T00:40:32.000Z",
-          "updatedAt": "2026-10-06T00:40:57.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        },
         {
           "id": "01M46KED6KQ6PR195KZYYVNY8W",
           "title": "Elevated error rates in Codex Cloud",
@@ -167,12 +157,12 @@
         {
           "id": "01M47AFBNRNXKJWN549T3PMYV8",
           "title": "Elevated errors in API Platform login and administration APIs.",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-10-06T00:40:32.000Z",
-          "updatedAt": "2026-10-06T00:40:57.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
+          "updatedAt": "2026-10-06T01:35:53.000Z",
+          "resolvedAt": "2026-10-06T01:35:53.000Z",
+          "summary": "All impacted services have now fully recovered."
         },
         {
           "id": "01M46G248GGHV9RSAJE82BZY1X",
@@ -217,7 +207,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-06T00:55:54.961Z",
+      "lastCheckedAt": "2026-10-06T01:55:54.924Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -307,7 +297,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-06T00:55:55.705Z",
+      "lastCheckedAt": "2026-10-06T01:55:55.833Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -327,7 +317,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-06T00:55:55.155Z",
+      "lastCheckedAt": "2026-10-06T01:55:55.184Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -359,7 +349,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-06T00:55:55.770Z",
+      "lastCheckedAt": "2026-10-06T01:55:55.984Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
