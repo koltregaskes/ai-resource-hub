@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 06 Oct 2026, 20:55 UTC
+Generated: 06 Oct 2026, 21:36 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 06 Oct 2026, 20:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 06 Oct 2026, 20:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 06 Oct 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 06 Oct 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 06 Oct 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 06 Oct 2026, 21:36 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 06 Oct 2026, 21:36 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 06 Oct 2026, 21:36 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 06 Oct 2026, 21:36 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 06 Oct 2026, 21:36 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 06 Oct 2026, 12:00 UTC | digest | AI computing startup Lambda to raise $4B ahead of planned IPO | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/) |
 | 06 Oct 2026, 12:00 UTC | digest | How AI decision models could change content moderation | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/06/how-ai-decision-models-could-change-content-moderation/) |
-| 06 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,003 open roles across 10 tracked companies. | `/jobs/` |
+| 06 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,006 open roles across 10 tracked companies. | `/jobs/` |
 | 06 Oct 2026, 12:00 UTC | digest | Published the 2026-10-06 daily digest | 16 stories captured from 4 sources. | `/news/` |
 | 06 Oct 2026, 12:00 UTC | digest | The next hurdle for AI agents: getting websites to let them in | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/06/the-next-hurdle-for-ai-agents-getting-websites-to-let-them-in/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |

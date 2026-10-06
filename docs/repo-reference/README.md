@@ -8,18 +8,18 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 06 Oct 2026, 20:55 UTC |
+| Generated | 06 Oct 2026, 21:36 UTC |
 | Providers tracked | 40 |
 | Public models | 350 |
 | Active models | 109 |
 | Tracking models | 240 |
 | Preview models | 1 |
 | Benchmarks | 34 |
-| News items in cache | 69 |
+| News items in cache | 70 |
 | Release-desk entries | 51 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 06 Oct 2026, 20:55 UTC |
+| Latest visible refresh | 06 Oct 2026, 21:36 UTC |
 | Current evaluated composite leader | GPT-5.2 (52.1) |
 | Latest tracked release | Mistral Large 4 (6 Oct 2026) |
 
