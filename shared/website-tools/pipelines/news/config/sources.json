@@ -1,0 +1,370 @@
+{
+  "defaults": {
+    "sectionOrder": [
+      "Top Stories",
+      "Industry",
+      "Research & Products",
+      "Policy & Ethics"
+    ]
+  },
+  "sources": [
+    {
+      "id": "techcrunch-ai",
+      "name": "TechCrunch AI",
+      "adapter": "rss",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "section": "Top Stories",
+      "status": "active",
+      "categories": [
+        "industry-media",
+        "ai-newsroom"
+      ],
+      "tags": [
+        "announcement",
+        "product_launch",
+        "funding",
+        "acquisition",
+        "industry_move"
+      ],
+      "sites": [
+        "kols-korner",
+        "ai-resource-hub",
+        "axylusion",
+        "ghost-in-the-models"
+      ]
+    },
+    {
+      "id": "the-verge-ai",
+      "name": "The Verge AI",
+      "adapter": "html",
+      "url": "https://www.theverge.com/ai-artificial-intelligence",
+      "listingUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "section": "Industry",
+      "status": "active",
+      "maxItems": 5,
+      "categories": [
+        "industry-media",
+        "consumer-tech"
+      ],
+      "tags": [
+        "announcement",
+        "product_launch",
+        "policy",
+        "industry_move"
+      ],
+      "sites": [
+        "kols-korner",
+        "ai-resource-hub",
+        "axylusion",
+        "ghost-in-the-models"
+      ],
+      "articleLinkPattern": "^https://www\\.theverge\\.com/\\d{4}/"
+    },
+    {
+      "id": "ars-technica-ai",
+      "name": "Ars Technica AI",
+      "adapter": "html",
+      "url": "https://arstechnica.com/tag/artificial-intelligence/",
+      "listingUrl": "https://arstechnica.com/tag/artificial-intelligence/",
+      "section": "Industry",
+      "status": "active",
+      "maxItems": 5,
+      "categories": [
+        "industry-media",
+        "technical-analysis"
+      ],
+      "tags": [
+        "research_paper",
+        "open_source",
+        "hardware",
+        "policy"
+      ],
+      "sites": [
+        "kols-korner",
+        "ai-resource-hub",
+        "axylusion",
+        "ghost-in-the-models"
+      ],
+      "articleLinkPattern": "^https://arstechnica\\.com/[^/]+/\\d{4}/\\d{2}/[^?#]+/?$"
+    },
+    {
+      "id": "anthropic-news",
+      "name": "Anthropic News",
+      "adapter": "html",
+      "url": "https://www.anthropic.com/news",
+      "listingUrl": "https://www.anthropic.com/news",
+      "section": "Top Stories",
+      "status": "active",
+      "maxItems": 5,
+      "categories": [
+        "provider-blog",
+        "official-lab"
+      ],
+      "tags": [
+        "model_release",
+        "api_update",
+        "ai_agents",
+        "ai_safety"
+      ],
+      "sites": [
+        "kols-korner",
+        "ai-resource-hub",
+        "axylusion",
+        "ghost-in-the-models"
+      ],
+      "articleLinkPattern": "^https://www\\.anthropic\\.com/news/[^/?#]+/?$"
+    },
+    {
+      "id": "deepmind-blog",
+      "name": "Google DeepMind Blog",
+      "adapter": "html",
+      "url": "https://deepmind.google/blog/",
+      "listingUrl": "https://deepmind.google/blog/",
+      "section": "Research & Products",
+      "status": "active",
+      "maxItems": 5,
+      "categories": [
+        "provider-blog",
+        "research-lab"
+      ],
+      "tags": [
+        "research_paper",
+        "model_release",
+        "architecture",
+        "training"
+      ],
+      "sites": [
+        "kols-korner",
+        "ai-resource-hub",
+        "axylusion",
+        "ghost-in-the-models"
+      ],
+      "articleLinkPattern": "^https://deepmind\\.google/blog/[^/?#]+/?$"
+    },
+    {
+      "id": "meta-ai-blog",
+      "name": "Meta AI Blog",
+      "adapter": "html",
+      "url": "https://ai.meta.com/blog/",
+      "listingUrl": "https://ai.meta.com/blog/",
+      "section": "Research & Products",
+      "status": "active",
+      "maxItems": 5,
+      "categories": [
+        "provider-blog",
+        "research-lab"
+      ],
+      "tags": [
+        "research_paper",
+        "model_release",
+        "open_source",
+        "architecture"
+      ],
+      "sites": [
+        "kols-korner",
+        "ai-resource-hub",
+        "axylusion",
+        "ghost-in-the-models"
+      ],
+      "articleLinkPattern": "^https://ai\\.meta\\.com/blog/[^/?#]+/?$"
+    },
+    {
+      "id": "hugging-face-blog",
+      "name": "Hugging Face Blog",
+      "adapter": "rss",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "section": "Research & Products",
+      "status": "active",
+      "categories": [
+        "platform-blog",
+        "open-source"
+      ],
+      "tags": [
+        "open_source",
+        "model_release",
+        "tool_use",
+        "agentic_framework"
+      ],
+      "sites": [
+        "kols-korner",
+        "ai-resource-hub",
+        "axylusion",
+        "ghost-in-the-models"
+      ]
+    },
+    {
+      "id": "huggingnews",
+      "name": "HuggingNews",
+      "adapter": "huggingnews",
+      "url": "https://api.huggingnews.com/api/stories",
+      "listingUrl": "https://huggingnews.com/",
+      "section": "Top Stories",
+      "status": "active",
+      "maxItems": 8,
+      "categories": [
+        "curated-digest",
+        "ai-newsroom"
+      ],
+      "tags": [],
+      "sites": [
+        "kols-korner",
+        "ai-resource-hub",
+        "axylusion",
+        "ghost-in-the-models"
+      ],
+      "articleLinkPattern": "^https://huggingnews\\.com/ai/[^/?#]+/?$"
+    },
+    {
+      "id": "mit-technology-review-ai",
+      "name": "MIT Technology Review AI",
+      "adapter": "rss",
+      "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+      "section": "Industry",
+      "status": "active",
+      "categories": [
+        "industry-media",
+        "analysis"
+      ],
+      "tags": [
+        "policy",
+        "research_paper",
+        "industry_move",
+        "ai_safety"
+      ],
+      "sites": [
+        "kols-korner",
+        "ai-resource-hub",
+        "ghost-in-the-models"
+      ]
+    },
+    {
+      "id": "arxiv-cs-ai",
+      "name": "arXiv cs.AI",
+      "adapter": "rss",
+      "url": "https://export.arxiv.org/rss/cs.AI",
+      "section": "Research & Products",
+      "status": "active",
+      "categories": [
+        "research-feed",
+        "academic"
+      ],
+      "tags": [
+        "research_paper",
+        "evaluation",
+        "reasoning",
+        "ai_agents"
+      ],
+      "sites": [
+        "kols-korner",
+        "ai-resource-hub",
+        "axylusion",
+        "ghost-in-the-models"
+      ]
+    },
+    {
+      "id": "arxiv-cs-lg",
+      "name": "arXiv cs.LG",
+      "adapter": "rss",
+      "url": "https://export.arxiv.org/rss/cs.LG",
+      "section": "Research & Products",
+      "status": "active",
+      "categories": [
+        "research-feed",
+        "academic"
+      ],
+      "tags": [
+        "research_paper",
+        "training",
+        "architecture",
+        "evaluation"
+      ],
+      "sites": [
+        "kols-korner",
+        "ai-resource-hub",
+        "axylusion",
+        "ghost-in-the-models"
+      ]
+    },
+    {
+      "id": "venturebeat-ai",
+      "name": "VentureBeat AI",
+      "adapter": "rss",
+      "url": "https://venturebeat.com/category/ai/feed/",
+      "section": "Industry",
+      "status": "partial",
+      "categories": [
+        "industry-media",
+        "enterprise-ai"
+      ],
+      "tags": [
+        "announcement",
+        "product_launch",
+        "industry_move",
+        "ai_agents"
+      ],
+      "sites": [
+        "kols-korner",
+        "ai-resource-hub",
+        "axylusion",
+        "ghost-in-the-models"
+      ]
+    },
+    {
+      "id": "digg-ai",
+      "name": "Digg AI",
+      "adapter": "html",
+      "url": "https://www.digg.com/ai",
+      "listingUrl": "https://www.digg.com/ai",
+      "section": "Top Stories",
+      "status": "active",
+      "maxItems": 8,
+      "categories": [
+        "industry-media",
+        "curated-digest",
+        "open-source"
+      ],
+      "tags": [
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
+      ],
+      "sites": [
+        "kols-korner",
+        "ai-resource-hub",
+        "axylusion",
+        "ghost-in-the-models"
+      ],
+      "articleLinkPattern": "^(https://(?:www\\.)?digg\\.com/ai/[^?#]+(?:\\?[^#]*)?|https://github\\.com/[^/?#]+/[^/?#]+/?(?:\\?[^#]*)?)$"
+    },
+    {
+      "id": "bens-bites",
+      "name": "Ben's Bites",
+      "adapter": "html",
+      "url": "https://www.bensbites.co/",
+      "listingUrl": "https://www.bensbites.co/",
+      "section": "Industry",
+      "status": "partial",
+      "maxItems": 3,
+      "categories": [
+        "newsletter",
+        "curated-digest"
+      ],
+      "tags": [
+        "announcement",
+        "product_launch",
+        "industry_move",
+        "open_source"
+      ],
+      "sites": [
+        "kols-korner",
+        "ai-resource-hub",
+        "axylusion",
+        "ghost-in-the-models"
+      ],
+      "articleLinkPattern": "^https://www\\.bensbites\\.(?:co|com)/p/"
+    }
+  ]
+}
