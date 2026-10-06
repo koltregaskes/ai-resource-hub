@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 06 Oct 2026, 22:55 UTC
+Generated: 06 Oct 2026, 23:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 06 Oct 2026, 22:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 06 Oct 2026, 22:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 06 Oct 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 06 Oct 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 06 Oct 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 06 Oct 2026, 12:00 UTC | digest | AI computing startup Lambda to raise $4B ahead of planned IPO | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/) |
+| 06 Oct 2026, 23:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 06 Oct 2026, 23:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 06 Oct 2026, 23:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 06 Oct 2026, 23:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 06 Oct 2026, 23:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 06 Oct 2026, 12:00 UTC | digest | Ex-Ramp engineers raise $20M for platform Melius after scrapping their first product | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product/) |
 | 06 Oct 2026, 12:00 UTC | digest | How AI decision models could change content moderation | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/06/how-ai-decision-models-could-change-content-moderation/) |
 | 06 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,016 open roles across 10 tracked companies. | `/jobs/` |
-| 06 Oct 2026, 12:00 UTC | digest | Published the 2026-10-06 daily digest | 18 stories captured from 4 sources. | `/news/` |
+| 06 Oct 2026, 12:00 UTC | digest | OpenAI drops another batch of mathematical breakthroughs | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1005004/openai-math-release-github) |
+| 06 Oct 2026, 12:00 UTC | digest | Published the 2026-10-06 daily digest | 20 stories captured from 4 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
