@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 06 Oct 2026, 12:56 UTC
+Generated: 06 Oct 2026, 13:56 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,6 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 6 Oct 2026 | Mistral Large 4 | Mistral | tracking | high | watch only | 0 | 0 | n/a |
 | 29 Sept 2026 | GPT-6.1 Sol | OpenAI | tracking | high | watch only | 0 | 5 | n/a |
 | 29 Sept 2026 | GPT-6.1 Sol Pro | OpenAI | tracking | high | watch only | 0 | 4 | n/a |
 | 23 Sept 2026 | GLM 5.3 Prime | Zhipu AI | tracking | high | watch only | 0 | 0 | n/a |
@@ -27,6 +28,5 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 12 Aug 2026 | DeepSeek V4 Pro 0813 | DeepSeek | tracking | watch | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | Grok 4.6 | xAI | tracking | watch | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | Qwen3.8 2.4T A95B | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
-| 11 Aug 2026 | Nemotron 3.5 Lightning | NVIDIA | tracking | watch | watch only | 0 | 0 | n/a |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
