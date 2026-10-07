@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T20:55:55.248Z",
+  "generatedAt": "2026-10-07T21:55:46.982Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T20:55:55.211Z",
+      "lastCheckedAt": "2026-10-07T21:55:46.924Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-10-07T19:13:40.000Z",
+          "id": "fireworks-feed-0-2026-10-07T21:40:18.000Z",
+          "title": "Service Degradation for GLM 5.3",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-10-07T21:40:18.000Z",
+          "updatedAt": "2026-10-07T21:40:18.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M4C4AP4HEGH7XXJHRDVCCFB3",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-10-07T19:13:40.000Z",
           "title": "Service Degradation for Qwen 3.8 Max",
           "status": "reported",
           "impact": "unknown",
@@ -29,22 +40,22 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M4BVY4DXQT3EMCD2JGDPFEE4",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-10-06T15:26:00.000Z",
-          "title": "Service Degradation for GLM 5.3 Flash",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-10-06T15:26:00.000Z",
-          "updatedAt": "2026-10-06T15:26:00.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M4B4PMGPYEBPK0ZYJVD1WKJ9",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational. Affected components GLM 5.3 Flash (Operational)"
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-10-07T19:13:40.000Z",
+          "id": "fireworks-feed-0-2026-10-07T21:40:18.000Z",
+          "title": "Service Degradation for GLM 5.3",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-10-07T21:40:18.000Z",
+          "updatedAt": "2026-10-07T21:40:18.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M4C4AP4HEGH7XXJHRDVCCFB3",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-10-07T19:13:40.000Z",
           "title": "Service Degradation for Qwen 3.8 Max",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-10-06T15:26:00.000Z",
+          "id": "fireworks-feed-2-2026-10-06T15:26:00.000Z",
           "title": "Service Degradation for GLM 5.3 Flash",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational. Affected components GLM 5.3 Flash (Operational)"
         },
         {
-          "id": "fireworks-feed-2-2026-10-05T19:15:31.000Z",
+          "id": "fireworks-feed-3-2026-10-05T19:15:31.000Z",
           "title": "Service Degradation for GLM 5.3",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-10-05T19:15:31.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M46PGHWSZ51Y87R23495R122",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-10-05T17:41:43.000Z",
-          "title": "Service Degradation for Kimi K3 US",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-10-05T17:41:43.000Z",
-          "updatedAt": "2026-10-05T17:41:43.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M46H0RX8S9S8FGAXCXY1CYJM",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,15 +100,15 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T20:55:54.019Z",
+      "lastCheckedAt": "2026-10-07T21:55:45.881Z",
       "overallStatus": "degraded",
-      "overallLabel": "Minor Service Outage",
+      "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "Claude Console (platform.claude.com)",
-          "status": "partial_outage"
+          "status": "degraded_performance"
         },
         {
           "name": "claude.ai",
@@ -135,26 +135,37 @@
         {
           "id": "978mjkgw6mh7",
           "title": "Elevated errors on platform.claude.com",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "major",
           "startedAt": "2026-10-07T13:25:04.163Z",
-          "updatedAt": "2026-10-07T17:28:02.570Z",
+          "updatedAt": "2026-10-07T21:45:27.699Z",
           "resolvedAt": null,
           "url": "https://stspg.io/sjkw7njwf0mt",
-          "summary": "We've identified the cause of errors loading usage data. The Admin API usage report has recovered, and fixes for the platform.claude.com Usage and Rate limits pages are in progres..."
+          "summary": "We've mitigated the errors loading usage data on platform.claude.com and in the Admin API usage report. While we work on a full fix, the most recent ~30 minutes of usage may take..."
         }
       ],
       "recentIncidents": [
         {
+          "id": "vmys9qn874h4",
+          "title": "Issue with spend limits",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-10-07T21:23:29.603Z",
+          "updatedAt": "2026-10-07T21:23:29.665Z",
+          "resolvedAt": "2026-10-07T21:23:29.656Z",
+          "url": "https://stspg.io/frlrjsqqn605",
+          "summary": "We have identified an issue which resulted in some organizations to be incorrectly paused for having reached their spend limit, resulting in refused requests on the Claude API, Cl..."
+        },
+        {
           "id": "978mjkgw6mh7",
           "title": "Elevated errors on platform.claude.com",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "major",
           "startedAt": "2026-10-07T13:25:04.163Z",
-          "updatedAt": "2026-10-07T17:28:02.570Z",
+          "updatedAt": "2026-10-07T21:45:27.699Z",
           "resolvedAt": null,
           "url": "https://stspg.io/sjkw7njwf0mt",
-          "summary": "We've identified the cause of errors loading usage data. The Admin API usage report has recovered, and fixes for the platform.claude.com Usage and Rate limits pages are in progres..."
+          "summary": "We've mitigated the errors loading usage data on platform.claude.com and in the Admin API usage report. While we work on a full fix, the most recent ~30 minutes of usage may take..."
         },
         {
           "id": "wf2v8ms031sx",
@@ -177,17 +188,6 @@
           "resolvedAt": "2026-10-06T12:43:02.988Z",
           "url": "https://stspg.io/bzc81gbv1b99",
           "summary": "The issue affecting Claude Opus 5.5 has been resolved."
-        },
-        {
-          "id": "bhphxz3vr58g",
-          "title": "Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-10-05T13:05:44.488Z",
-          "updatedAt": "2026-10-05T13:21:37.638Z",
-          "resolvedAt": "2026-10-05T13:21:37.611Z",
-          "url": "https://stspg.io/wdqhxt8xt574",
-          "summary": "The issue affecting Claude Mythos 5.1 and Claude Fable 5.1 has been resolved. Impact occurred from 05:40 PT / 12:40 UTC to 06:10 PT / 13:10 UTC."
         }
       ]
     },
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T20:55:55.010Z",
+      "lastCheckedAt": "2026-10-07T21:55:46.614Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T20:55:54.154Z",
+      "lastCheckedAt": "2026-10-07T21:55:45.968Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -254,7 +254,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T20:55:54.040Z",
+      "lastCheckedAt": "2026-10-07T21:55:45.903Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -340,7 +340,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T20:55:55.241Z",
+      "lastCheckedAt": "2026-10-07T21:55:46.975Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
