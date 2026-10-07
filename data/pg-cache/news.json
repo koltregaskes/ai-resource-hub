@@ -1,5 +1,77 @@
 [
   {
+    "id": "news-a5b44d5e4c84e5df9652",
+    "title": "Everything announced at Microsoft&#8217;s Surface Laptop Ultra event",
+    "url": "https://www.theverge.com/tech/1007147/microsoft-surface-laptop-ultra-windows-event-everything-announced",
+    "source": "The Verge",
+    "summary": "Microsoft just wrapped up a big Windows and Surface-focused keynote in San Francisco. The biggest announcement was arguably the release details about the Surface Laptop Ultra, its new laptop that&#8217;s powered by Nvidia&#8217;s RTX Spark Arm-based chip. The machine will start at $2,599 for a configuration with an 8-…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-07T18:42:22.000Z",
+    "discovered_at": "2026-10-07 18:55:40"
+  },
+  {
+    "id": "news-769d4c9aeb150070faef",
+    "title": "Meta&#8217;s Muse launches on iPad just a month after its mobile debut",
+    "url": "https://techcrunch.com/2026/10/07/metas-muse-launches-on-ipad-just-a-month-after-its-mobile-debut/",
+    "source": "TechCrunch",
+    "summary": "Meta’s AI agent Muse is now available on iPad, just a month after its mobile debut, as the company rapidly expands the assistant’s reach and integrations.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-07T18:30:57.000Z",
+    "discovered_at": "2026-10-07 18:55:31"
+  },
+  {
+    "id": "news-69c1beaf03675dd4f6c8",
+    "title": "ChatGPT for Teens keeps teens talking, even during mental health crises",
+    "url": "https://techcrunch.com/2026/10/07/chatgpt-for-teens-keeps-teens-talking-even-during-mental-health-crises/",
+    "source": "TechCrunch",
+    "summary": "ChatGPT’s teen safeguards are meant to protect vulnerable users, but new testing found the chatbot continues encouraging engagement during crises and potentially encourages unhealthy relationships with the AI itself.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-07T18:15:28.000Z",
+    "discovered_at": "2026-10-07 18:55:31"
+  },
+  {
+    "id": "news-9c7dd462aa5ae2f1c64e",
+    "title": "Microsoft is giving Copilot more control over Windows and your files",
+    "url": "https://www.theverge.com/tech/1007113/microsoft-windows-copilot-ai-control-search-hybrid-intelligence",
+    "source": "The Verge",
+    "summary": "At today's Windows and Surface event, Microsoft showed off an upgrade to its Copilot AI system that will give it access to local files on your PC and the ability to take actions across the OS. It's part of an idea Microsoft is calling \"Hybrid Intelligence,\" where apps and tools rely on a mix of [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-07T18:01:20.000Z",
+    "discovered_at": "2026-10-07 18:55:40"
+  },
+  {
+    "id": "news-a5478fc42d691e9598fa",
+    "title": "ChatGPT is getting a lot more visual, with the launch of a new interface",
+    "url": "https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/",
+    "source": "TechCrunch",
+    "summary": "OpenAI is launching a new user interface that will bring interactive visuals to ChatGPT.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-07T18:00:19.000Z",
+    "discovered_at": "2026-10-07 18:55:31"
+  },
+  {
+    "id": "news-2c81a4fbc76bda68799b",
+    "title": "Surface RTX Spark Dev Box is available for preorder for $5,999",
+    "url": "https://www.theverge.com/tech/1006915/microsoft-surface-rtx-spark-dev-box-preorder",
+    "source": "The Verge",
+    "summary": "Microsoft's Nvidia-powered Surface RTX Spark Dev Box is available for preorder now directly, and slated to ship in November for just about $6,000. It's pricier than the DGX Spark mini PC Nvidia launched last year, but PC prices have been climbing due to shortages of RAM and other components. The Dev Box's flat, 3D-pri…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-07T17:46:44.000Z",
+    "discovered_at": "2026-10-07 18:55:40"
+  },
+  {
     "id": "news-b5ad269253017c9dfae0",
     "title": "Meta rolls out new AI tools to detect ads that secretly lead to child sexual abuse material",
     "url": "https://techcrunch.com/2026/10/07/meta-rolls-out-new-ai-tools-to-detect-ads-that-secretly-lead-to-child-sexual-abuse-material/",
@@ -9,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T16:53:46.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-ee6859a51c49dfea8dd7",
@@ -21,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T16:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:40"
   },
   {
     "id": "news-b8b3b1c514003fadcbca",
@@ -33,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T15:37:23.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:40"
   },
   {
     "id": "news-5d700d9f9acafc68d6b9",
@@ -45,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T15:07:08.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-c1d0cf6b00caa99cb319",
@@ -57,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T14:41:38.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-4c9b009d21f89481bd06",
@@ -69,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T14:40:52.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:40"
   },
   {
     "id": "news-3dcafb3a31cf9e467c58",
@@ -81,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T14:36:23.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-814772bc922cb1691e54",
@@ -93,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T14:30:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-d5ce11bd19f21ebe926d",
@@ -105,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T14:15:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-9d9fcd082b29c3d62aa7",
@@ -117,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T14:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-e4ccf311f643de16590a",
@@ -129,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T14:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-8b63f191edc0d5fe2c04",
@@ -141,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:40"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -153,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-ad4e14640e358f44fa86",
@@ -165,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-f81ac359aaf43f7680a0",
@@ -177,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T09:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:40"
   },
   {
     "id": "news-04e9dc3828b5420c0f01",
@@ -189,7 +261,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T07:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
+    "discovered_at": "2026-10-07 18:55:31"
+  },
+  {
+    "id": "news-0ca1450969b5beb55904",
+    "title": "GPT-6 and Intelligent UI for everyone",
+    "url": "https://openai.com/index/gpt-6-for-everyone",
+    "source": "OpenAI",
+    "summary": "GPT‑6 is rolling out globally in ChatGPT with Intelligent UI, delivering faster responses with visuals and interactive experiences you can explore and use directly.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-07T00:00:00.000Z",
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-e4feb1bf5e6900f4a7b1",
@@ -201,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T23:26:38.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:40"
   },
   {
     "id": "news-049bf6f5219d688ae1f8",
@@ -213,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T22:34:03.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-c3d8360c1095ad0a9ffc",
@@ -225,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T20:35:20.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-4e425615ccb8ed091e19",
@@ -237,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T20:00:30.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-a9ee6e883253250cddb1",
@@ -249,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T19:56:50.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-e5d1b19822b0f77d1475",
@@ -261,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T18:22:45.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-c0a0a7f4f30162f412a5",
@@ -273,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T16:35:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-688a40cc7a92b803cf06",
@@ -285,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T16:29:44.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:40"
   },
   {
     "id": "news-3417141909f471af13bc",
@@ -297,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T16:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-60ef2af305e795fe7c29",
@@ -309,55 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T16:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
-  },
-  {
-    "id": "news-f37dd1b56e968316a9da",
-    "title": "LibreOffice says &#8216;no AI&#8217; is now a software feature",
-    "url": "https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature/",
-    "source": "TechCrunch",
-    "summary": "The maker of the open source document editor says it has no plans to add AI to its software's default configuration, citing user privacy.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-06T15:25:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
-  },
-  {
-    "id": "news-dfb231c34b69f85731a9",
-    "title": "Mistral’s new 1T model aims to leapfrog closed and open rivals",
-    "url": "https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/",
-    "source": "TechCrunch",
-    "summary": "French AI lab Mistral AI has released Mistral Large 4, a new large multimodal model aiming to leapfrog both American and Chinese rivals.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-06T14:33:16.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
-  },
-  {
-    "id": "news-fcad74cef1905398b936",
-    "title": "Pinterest&#8217;s AI now turns beauty Pins into action plans",
-    "url": "https://techcrunch.com/2026/10/06/pinterests-ai-now-turns-beauty-pins-into-action-plans/",
-    "source": "TechCrunch",
-    "summary": "Pinterest’s new AI-powered Beauty Guides translate hair and nail Pins into salon terminology, with estimated costs, appointment times, and maintenance needs.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-06T14:00:49.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
-  },
-  {
-    "id": "news-c481fc93e0dd7dc82279",
-    "title": "Google is about to remove free access to Gemini Flash and Pro",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1005451/google-gemini-free-flash-lite-only",
-    "source": "The Verge",
-    "summary": "Starting on October 9th, anyone using Google Gemini on a free plan will be limited to the Flash Lite model. Free users can currently choose from Gemini Flash Lite, Flash, and Pro, but now you'll need a $4.99/month Google AI Plus subscription to access the standard Flash model. However, that subscription is also gettin…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-06T13:19:01.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-307bfda48464106bf8e3",
@@ -369,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:21:53.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:40"
   },
   {
     "id": "news-47b9255d8fa0f8e89c91",
@@ -381,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-342677ae7eadb2eb62e4",
@@ -393,19 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
-  },
-  {
-    "id": "news-9f54e4bc2e92628f0a69",
-    "title": "Amazon Alexa Plus keeps creepily singing ‘lalala’ for minutes on end",
-    "url": "https://www.theverge.com/tech/1005342/amazon-alexa-plus-keeps-creepily-singing-lalala-for-minutes-on-end",
-    "source": "The Verge",
-    "summary": "An unsettling Alexa Plus bug has seen some Amazon Echo smart home speakers reduced to saying - and sometimes singing - nothing but \"lalala\" on repeat for minutes at a time, often in the middle of conversations with users. When quizzed about the behavior, Alexa is apparently entirely unaware of what it's been doing. Th…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-06T10:53:11.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-9964af802e9c5fdee2b9",
@@ -417,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T10:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-a22a6ca92e5c69fdf01e",
@@ -429,19 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T00:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
-  },
-  {
-    "id": "news-fb1f3dca95af1a8c2c62",
-    "title": "Gemini Call for Me might tell your mom you&#8217;re running late",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1005177/google-gemini-call-for-me-expansion-rumors",
-    "source": "The Verge",
-    "summary": "Google may be expanding its \"Call for Me\" AI feature beyond business calls so you can use it to send messages to friends and family. Android Authority reports finding a \"Gemini Calling\" introductory screen in an APK teardown with examples that include \"Call Mom and tell her I will be 15 minutes late\" and \"Call [&#8230…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-05T23:09:55.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-aaf1cc502a6b16035865",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T22:26:35.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:40"
   },
   {
     "id": "news-78ad53815846c15cf660",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T15:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-3cbec84de8bf615536c6",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T10:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-6ee8ae0821d338b723f5",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T23:03:16.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:40"
   },
   {
     "id": "news-8e206c4d9ed6ea5b326e",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T16:15:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-1122627a66dfc215a84f",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T15:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-a97398f76ee518bf736b",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T00:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-7e67b43cf9d0e609b77c",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T17:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-a80484c2d5849bdb1405",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T16:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-3bba5275857381087ca5",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-01T00:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-6a91381a429232e70fbb",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T10:30:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-b5e5e43443d214dfc5c6",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-30T10:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-dd66acaed2a04b44cad2",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-29T10:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-19db7cc5ca5cc5ea9756",
@@ -609,19 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-29T10:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
-  },
-  {
-    "id": "news-884977ecb8004cb31230",
-    "title": "Introducing dots",
-    "url": "https://openai.com/index/introducing-dots",
-    "source": "OpenAI",
-    "summary": "Dots by OpenAI are proactive assistants that can keep working across complex projects and everyday tasks. Learn how dots help you stay in control while work moves forward.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-29T00:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:35"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-1eadd5627184a89f1bbe",
@@ -633,7 +633,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
+  },
+  {
+    "id": "news-50e18c5419845c26792b",
+    "title": "Introducing Claude Sonnet 5.5",
+    "url": "https://www.anthropic.com/claude-sonnet-5-5",
+    "source": "Anthropic",
+    "summary": "A clear upgrade over Sonnet 5 that runs 30% faster and costs up to 30% less for most work.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-09-28T00:00:00.000Z",
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-8a86c97089bb6492a0d5",
@@ -645,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T18:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-69bd5b227657faccb6a8",
@@ -657,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T19:45:47.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:40"
   },
   {
     "id": "news-0c90c73c08cf283551a1",
@@ -669,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T00:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-b2c543ac59e1c4518c6a",
@@ -681,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T22:24:38.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:40"
   },
   {
     "id": "news-079e661c04cec0b07e5c",
@@ -693,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T14:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-13d62ca6fcfd55d7fb1a",
@@ -705,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T13:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-e7b9d12d1b3a7eb0c954",
@@ -717,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T20:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-168e3a7edc7326171115",
@@ -729,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T18:33:13.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:40"
   },
   {
     "id": "news-a243976a4aeffe7860e7",
@@ -741,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-b86d9a766fb72b730ea5",
@@ -753,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-18592959ad29d5e254c8",
@@ -765,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-00e29a681a6f5e3b92e5",
@@ -777,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T13:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-6758d03842f78c1d60a7",
@@ -789,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T21:04:32.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:40"
   },
   {
     "id": "news-b49b47db0b359f67793a",
@@ -801,7 +813,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T19:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-bf70dc826a65d37ea361",
@@ -813,7 +825,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T16:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-1852061b5cf6950bdd51",
@@ -825,7 +837,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-10T16:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-eca0578fed4853fc9470",
@@ -837,7 +849,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T20:55:02.000Z",
-    "discovered_at": "2026-10-07 17:55:48"
+    "discovered_at": "2026-10-07 18:55:40"
   },
   {
     "id": "news-e8269fc9a10961e9d9fc",
@@ -849,7 +861,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T16:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   },
   {
     "id": "news-b0dd0e34ba0b936c69dc",
@@ -861,6 +873,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-09T16:00:00.000Z",
-    "discovered_at": "2026-10-07 17:55:36"
+    "discovered_at": "2026-10-07 18:55:31"
   }
 ]

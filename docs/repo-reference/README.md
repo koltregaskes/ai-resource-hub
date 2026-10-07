@@ -8,20 +8,20 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 07 Oct 2026, 17:55 UTC |
+| Generated | 07 Oct 2026, 18:55 UTC |
 | Providers tracked | 40 |
-| Public models | 350 |
+| Public models | 351 |
 | Active models | 109 |
-| Tracking models | 240 |
+| Tracking models | 241 |
 | Preview models | 1 |
 | Benchmarks | 34 |
-| News items in cache | 72 |
-| Release-desk entries | 51 |
+| News items in cache | 73 |
+| Release-desk entries | 52 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 07 Oct 2026, 17:55 UTC |
+| Latest visible refresh | 07 Oct 2026, 18:55 UTC |
 | Current evaluated composite leader | GPT-5.2 (52.1) |
-| Latest tracked release | Mistral Large 4 (6 Oct 2026) |
+| Latest tracked release | Claude Haiku 5.5 (7 Oct 2026) |
 
 ## Reference Files
 
