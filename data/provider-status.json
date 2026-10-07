@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T04:55:48.052Z",
+  "generatedAt": "2026-10-07T05:55:50.199Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T04:55:48.046Z",
+      "lastCheckedAt": "2026-10-07T05:55:49.518Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,6 +90,103 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-10-07T05:55:47.737Z",
+      "overallStatus": "partial_outage",
+      "overallLabel": "Partial System Outage",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Codex in ChatGPT Desktop",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Chat Completions",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Agents",
+          "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01M4ADHMMBK7K92NJFJ0DXRYJM",
+          "title": "Unable to create new ChatGPT Work threads in latest version of desktop app",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-10-07T05:31:56.000Z",
+          "updatedAt": "2026-10-07T05:54:27.000Z",
+          "resolvedAt": null,
+          "summary": "we have identified the issue, working on rolling back to the previous version."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01M4ADHMMBK7K92NJFJ0DXRYJM",
+          "title": "Unable to create new ChatGPT Work threads in latest version of desktop app",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-10-07T05:31:56.000Z",
+          "updatedAt": "2026-10-07T05:54:27.000Z",
+          "resolvedAt": null,
+          "summary": "we have identified the issue, working on rolling back to the previous version."
+        },
+        {
+          "id": "01M49YQE6WZT02WYF0KBXVMQ5G",
+          "title": "Workspace Agents Degraded and Responses Impacted",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-07T01:12:57.000Z",
+          "updatedAt": "2026-10-07T03:00:54.000Z",
+          "resolvedAt": "2026-10-07T03:00:54.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M493CZ0CB14KPC0EER83MNVB",
+          "title": "Computer Use Is Experiencing Issues",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-06T17:15:23.000Z",
+          "updatedAt": "2026-10-06T20:00:46.000Z",
+          "resolvedAt": "2026-10-06T20:00:46.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M48Y8E81QAFF9XKVGE118E6X",
+          "title": "Errors processing large PDFs in the Responses API",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-06T15:45:31.000Z",
+          "updatedAt": "2026-10-06T20:11:27.000Z",
+          "resolvedAt": "2026-10-06T17:50:00.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -100,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T04:55:46.712Z",
+      "lastCheckedAt": "2026-10-07T05:55:48.998Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T04:55:47.612Z",
+      "lastCheckedAt": "2026-10-07T05:55:49.774Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T04:55:46.838Z",
+      "lastCheckedAt": "2026-10-07T05:55:49.029Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -232,92 +329,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T04:55:46.716Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Chat Completions",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Agents",
-          "status": "operational"
-        },
-        {
-          "name": "Decisions",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01M49YQE6WZT02WYF0KBXVMQ5G",
-          "title": "Workspace Agents Degraded and Responses Impacted",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-07T01:12:57.000Z",
-          "updatedAt": "2026-10-07T03:00:54.000Z",
-          "resolvedAt": "2026-10-07T03:00:54.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M493CZ0CB14KPC0EER83MNVB",
-          "title": "Computer Use Is Experiencing Issues",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-06T17:15:23.000Z",
-          "updatedAt": "2026-10-06T20:00:46.000Z",
-          "resolvedAt": "2026-10-06T20:00:46.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M48Y8E81QAFF9XKVGE118E6X",
-          "title": "Errors processing large PDFs in the Responses API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-06T15:45:31.000Z",
-          "updatedAt": "2026-10-06T20:11:27.000Z",
-          "resolvedAt": "2026-10-06T17:50:00.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M48PT6B8SDTW023NC9XZTBC0",
-          "title": "Elevated error rates in ChatGPT Go conversations",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-06T13:35:25.000Z",
-          "updatedAt": "2026-10-06T14:40:31.000Z",
-          "resolvedAt": "2026-10-06T14:40:31.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -328,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T04:55:47.771Z",
+      "lastCheckedAt": "2026-10-07T05:55:50.192Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -352,7 +363,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
