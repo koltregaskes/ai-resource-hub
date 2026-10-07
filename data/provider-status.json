@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T09:17:31.335Z",
+  "generatedAt": "2026-10-07T09:55:44.088Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T09:17:31.327Z",
+      "lastCheckedAt": "2026-10-07T09:55:43.879Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T09:17:30.169Z",
+      "lastCheckedAt": "2026-10-07T09:55:42.832Z",
       "overallStatus": "partial_outage",
       "overallLabel": "Partial System Outage",
       "summary": "1 active incident across 25 tracked components.",
@@ -138,9 +138,9 @@
           "status": "identified",
           "impact": "major",
           "startedAt": "2026-10-07T05:31:56.000Z",
-          "updatedAt": "2026-10-07T05:54:27.000Z",
+          "updatedAt": "2026-10-07T09:28:55.000Z",
           "resolvedAt": null,
-          "summary": "we have identified the issue, working on rolling back to the previous version."
+          "summary": "We have identified the issue. We have released an updated app version for Linux and macOS. We are actively working to roll out the fix for Windows."
         }
       ],
       "recentIncidents": [
@@ -150,9 +150,9 @@
           "status": "identified",
           "impact": "major",
           "startedAt": "2026-10-07T05:31:56.000Z",
-          "updatedAt": "2026-10-07T05:54:27.000Z",
+          "updatedAt": "2026-10-07T09:28:55.000Z",
           "resolvedAt": null,
-          "summary": "we have identified the issue, working on rolling back to the previous version."
+          "summary": "We have identified the issue. We have released an updated app version for Linux and macOS. We are actively working to roll out the fix for Windows."
         },
         {
           "id": "01M49YQE6WZT02WYF0KBXVMQ5G",
@@ -197,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T09:17:30.223Z",
+      "lastCheckedAt": "2026-10-07T09:55:42.913Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T09:17:30.957Z",
+      "lastCheckedAt": "2026-10-07T09:55:43.769Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T09:17:30.212Z",
+      "lastCheckedAt": "2026-10-07T09:55:43.211Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -339,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T09:17:31.301Z",
+      "lastCheckedAt": "2026-10-07T09:55:44.083Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
