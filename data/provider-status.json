@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T01:49:01.983Z",
+  "generatedAt": "2026-10-07T02:55:49.986Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T01:49:01.795Z",
+      "lastCheckedAt": "2026-10-07T02:55:49.979Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,6 +90,103 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-10-07T02:55:48.962Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Agent",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Chat Completions",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Agents",
+          "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01M49YQE6WZT02WYF0KBXVMQ5G",
+          "title": "Workspace Agents Degraded and Responses Impacted",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-10-07T01:12:57.000Z",
+          "updatedAt": "2026-10-07T02:45:26.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01M49YQE6WZT02WYF0KBXVMQ5G",
+          "title": "Workspace Agents Degraded and Responses Impacted",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-10-07T01:12:57.000Z",
+          "updatedAt": "2026-10-07T02:45:26.000Z",
+          "resolvedAt": null,
+          "summary": "We have applied the mitigation and are monitoring the recovery."
+        },
+        {
+          "id": "01M493CZ0CB14KPC0EER83MNVB",
+          "title": "Computer Use Is Experiencing Issues",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-06T17:15:23.000Z",
+          "updatedAt": "2026-10-06T20:00:46.000Z",
+          "resolvedAt": "2026-10-06T20:00:46.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M48Y8E81QAFF9XKVGE118E6X",
+          "title": "Errors processing large PDFs in the Responses API",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-06T15:45:31.000Z",
+          "updatedAt": "2026-10-06T20:11:27.000Z",
+          "resolvedAt": "2026-10-06T17:50:00.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M48PT6B8SDTW023NC9XZTBC0",
+          "title": "Elevated error rates in ChatGPT Go conversations",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-06T13:35:25.000Z",
+          "updatedAt": "2026-10-06T14:40:31.000Z",
+          "resolvedAt": "2026-10-06T14:40:31.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -100,18 +197,18 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T01:49:01.117Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Minor Service Outage",
-      "summary": "1 active incident across 6 tracked components.",
+      "lastCheckedAt": "2026-10-07T02:55:49.000Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "partial_outage"
+          "name": "claude.ai",
+          "status": "operational"
         },
         {
-          "name": "claude.ai",
+          "name": "Claude Console (platform.claude.com)",
           "status": "operational"
         },
         {
@@ -131,30 +228,18 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "wf2v8ms031sx",
-          "title": "Elevated errors loading usage data on platform.claude.com",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-10-07T01:20:26.681Z",
-          "updatedAt": "2026-10-07T01:20:26.960Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/scdhhnplc2jn",
-          "summary": "We are investigating elevated errors loading usage data on the platform.claude.com Usage page and the Admin API usage report endpoint since 5 PM PT. Messages API requests are not..."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "wf2v8ms031sx",
           "title": "Elevated errors loading usage data on platform.claude.com",
-          "status": "investigating",
+          "status": "resolved",
           "impact": "major",
           "startedAt": "2026-10-07T01:20:26.681Z",
-          "updatedAt": "2026-10-07T01:20:26.960Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-10-07T02:33:38.847Z",
+          "resolvedAt": "2026-10-07T02:33:38.815Z",
           "url": "https://stspg.io/scdhhnplc2jn",
-          "summary": "We are investigating elevated errors loading usage data on the platform.claude.com Usage page and the Admin API usage report endpoint since 5 PM PT. Messages API requests are not..."
+          "summary": "This incident has been resolved. From 17:00 PT on October 6 / 00:00 UTC on October 7 to 18:40 PT on October 6 / 01:40 UTC on October 7, many requests to load usage data on the pla..."
         },
         {
           "id": "ch27pb90bn85",
@@ -192,103 +277,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T01:49:00.811Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Agent",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Chat Completions",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Agents",
-          "status": "operational"
-        },
-        {
-          "name": "Decisions",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01M49YQE6WZT02WYF0KBXVMQ5G",
-          "title": "Workspace Agents Degraded and Responses Impacted",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-10-07T01:12:57.000Z",
-          "updatedAt": "2026-10-07T01:12:57.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating the issue for workspace agents, users may not see the responses during the issue time."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01M49YQE6WZT02WYF0KBXVMQ5G",
-          "title": "Workspace Agents Degraded and Responses Impacted",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-10-07T01:12:57.000Z",
-          "updatedAt": "2026-10-07T01:12:57.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating the issue for workspace agents, users may not see the responses during the issue time."
-        },
-        {
-          "id": "01M493CZ0CB14KPC0EER83MNVB",
-          "title": "Computer Use Is Experiencing Issues",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-06T17:15:23.000Z",
-          "updatedAt": "2026-10-06T20:00:46.000Z",
-          "resolvedAt": "2026-10-06T20:00:46.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M48Y8E81QAFF9XKVGE118E6X",
-          "title": "Errors processing large PDFs in the Responses API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-06T15:45:31.000Z",
-          "updatedAt": "2026-10-06T20:11:27.000Z",
-          "resolvedAt": "2026-10-06T17:50:00.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M48PT6B8SDTW023NC9XZTBC0",
-          "title": "Elevated error rates in ChatGPT Go conversations",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-06T13:35:25.000Z",
-          "updatedAt": "2026-10-06T14:40:31.000Z",
-          "resolvedAt": "2026-10-06T14:40:31.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -299,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T01:49:01.884Z",
+      "lastCheckedAt": "2026-10-07T02:55:49.584Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T01:49:00.924Z",
+      "lastCheckedAt": "2026-10-07T02:55:49.157Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -351,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T01:49:01.976Z",
+      "lastCheckedAt": "2026-10-07T02:55:49.650Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -375,7 +363,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
