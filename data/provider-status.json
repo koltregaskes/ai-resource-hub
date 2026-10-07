@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T12:55:52.901Z",
+  "generatedAt": "2026-10-07T13:55:53.391Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T12:55:52.761Z",
+      "lastCheckedAt": "2026-10-07T13:55:53.384Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,18 +100,18 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T12:55:52.029Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-10-07T13:55:52.331Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Minor Service Outage",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
-          "name": "claude.ai",
-          "status": "operational"
+          "name": "Claude Console (platform.claude.com)",
+          "status": "partial_outage"
         },
         {
-          "name": "Claude Console (platform.claude.com)",
+          "name": "claude.ai",
           "status": "operational"
         },
         {
@@ -131,8 +131,31 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "978mjkgw6mh7",
+          "title": "Elevated errors on platform.claude.com",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-10-07T13:25:04.163Z",
+          "updatedAt": "2026-10-07T13:25:04.274Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/sjkw7njwf0mt",
+          "summary": "We are investigating elevated errors affecting usage data on the platform.claude.com Usage page and the Admin API usage report. Core functionality is not affected. We will provide..."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "978mjkgw6mh7",
+          "title": "Elevated errors on platform.claude.com",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-10-07T13:25:04.163Z",
+          "updatedAt": "2026-10-07T13:25:04.274Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/sjkw7njwf0mt",
+          "summary": "We are investigating elevated errors affecting usage data on the platform.claude.com Usage page and the Admin API usage report. Core functionality is not affected. We will provide..."
+        },
         {
           "id": "wf2v8ms031sx",
           "title": "Elevated errors loading usage data on platform.claude.com",
@@ -165,17 +188,6 @@
           "resolvedAt": "2026-10-05T13:21:37.611Z",
           "url": "https://stspg.io/wdqhxt8xt574",
           "summary": "The issue affecting Claude Mythos 5.1 and Claude Fable 5.1 has been resolved. Impact occurred from 05:40 PT / 12:40 UTC to 06:10 PT / 13:10 UTC."
-        },
-        {
-          "id": "k0h22tsvnydg",
-          "title": "Delayed credits on the Claude Platform",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-01T16:20:40.775Z",
-          "updatedAt": "2026-10-01T22:36:22.239Z",
-          "resolvedAt": "2026-10-01T22:36:22.210Z",
-          "url": "https://stspg.io/jg26d0skzh27",
-          "summary": "This issue has been resolved."
         }
       ]
     },
@@ -190,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T12:55:52.727Z",
+      "lastCheckedAt": "2026-10-07T13:55:52.808Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T12:55:51.966Z",
+      "lastCheckedAt": "2026-10-07T13:55:52.337Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -242,7 +254,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T12:55:52.085Z",
+      "lastCheckedAt": "2026-10-07T13:55:52.063Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -328,7 +340,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T12:55:52.894Z",
+      "lastCheckedAt": "2026-10-07T13:55:52.986Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
