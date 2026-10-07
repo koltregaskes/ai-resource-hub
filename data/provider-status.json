@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T00:55:42.002Z",
+  "generatedAt": "2026-10-07T01:30:41.384Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T00:55:41.791Z",
+      "lastCheckedAt": "2026-10-07T01:30:41.377Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,18 +100,18 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T00:55:40.553Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-10-07T01:30:40.113Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Minor Service Outage",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
-          "name": "claude.ai",
-          "status": "operational"
+          "name": "Claude Console (platform.claude.com)",
+          "status": "partial_outage"
         },
         {
-          "name": "Claude Console (platform.claude.com)",
+          "name": "claude.ai",
           "status": "operational"
         },
         {
@@ -131,8 +131,31 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "wf2v8ms031sx",
+          "title": "Elevated errors loading usage data on platform.claude.com",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-10-07T01:20:26.681Z",
+          "updatedAt": "2026-10-07T01:20:26.960Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/scdhhnplc2jn",
+          "summary": "We are investigating elevated errors loading usage data on the platform.claude.com Usage page and the Admin API usage report endpoint since 5 PM PT. Messages API requests are not..."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "wf2v8ms031sx",
+          "title": "Elevated errors loading usage data on platform.claude.com",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-10-07T01:20:26.681Z",
+          "updatedAt": "2026-10-07T01:20:26.960Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/scdhhnplc2jn",
+          "summary": "We are investigating elevated errors loading usage data on the platform.claude.com Usage page and the Admin API usage report endpoint since 5 PM PT. Messages API requests are not..."
+        },
         {
           "id": "ch27pb90bn85",
           "title": "Elevated errors for Claude Opus 5.5",
@@ -165,69 +188,6 @@
           "resolvedAt": "2026-10-01T22:36:22.210Z",
           "url": "https://stspg.io/jg26d0skzh27",
           "summary": "This issue has been resolved."
-        },
-        {
-          "id": "4xvtc2gnq73l",
-          "title": "Elevated errors on claude.ai, Claude Code, Claude Cowork and the Claude API",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-09-29T14:21:37.188Z",
-          "updatedAt": "2026-09-29T16:27:21.393Z",
-          "resolvedAt": "2026-09-29T16:27:21.369Z",
-          "url": "https://stspg.io/br61xzj05pp5",
-          "summary": "The issue affecting Claude.ai, the Claude desktop and mobile apps, Claude Code, Claude Cowork, and the Claude API has been resolved, and services have been operating normally sinc..."
-        }
-      ]
-    },
-    {
-      "id": "cohere",
-      "providerId": "cohere",
-      "name": "Cohere",
-      "colour": "#6366f1",
-      "websiteUrl": "https://cohere.com",
-      "statusPageUrl": "https://status.cohere.io",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T00:55:41.658Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
-      "id": "google",
-      "providerId": "google",
-      "name": "Google",
-      "colour": "#4285f4",
-      "websiteUrl": "https://deepmind.google",
-      "statusPageUrl": "https://status.cloud.google.com",
-      "sourceKind": "google_incidents",
-      "sourceLabel": "Official incident feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T00:55:40.861Z",
-      "overallStatus": "operational",
-      "overallLabel": "No active Gemini or Vertex AI incidents",
-      "summary": "Filtered from the official Google Cloud public incident feed.",
-      "notes": "Filtered to Gemini and Vertex AI related incidents from the public Google Cloud incident feed.",
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "41E5S3mkTGDfkZuJZH5k",
-          "title": "Vertex AI Gemini API customers experienced increased error rates when accessing the global endpoint.",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-02-27T12:37:00.000Z",
-          "updatedAt": "2026-03-09T05:25:43.000Z",
-          "resolvedAt": "2026-02-27T14:35:00.000Z",
-          "url": "https://status.cloud.google.com",
-          "summary": "# Incident Report\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models experienced increased error rates. Impacted services incl..."
         }
       ]
     },
@@ -242,12 +202,16 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T00:55:40.528Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
+      "lastCheckedAt": "2026-10-07T01:30:40.111Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Agent",
+          "status": "degraded_performance"
+        },
         {
           "name": "Chat Completions",
           "status": "operational"
@@ -267,14 +231,31 @@
         {
           "name": "Fine-tuning",
           "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "01M49YQE6WZT02WYF0KBXVMQ5G",
+          "title": "Workspace Agents Degraded and Responses Impacted",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-10-07T01:12:57.000Z",
+          "updatedAt": "2026-10-07T01:12:57.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating the issue for workspace agents, users may not see the responses during the issue time."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "01M49YQE6WZT02WYF0KBXVMQ5G",
+          "title": "Workspace Agents Degraded and Responses Impacted",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-10-07T01:12:57.000Z",
+          "updatedAt": "2026-10-07T01:12:57.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating the issue for workspace agents, users may not see the responses during the issue time."
+        },
         {
           "id": "01M493CZ0CB14KPC0EER83MNVB",
           "title": "Computer Use Is Experiencing Issues",
@@ -304,16 +285,58 @@
           "updatedAt": "2026-10-06T14:40:31.000Z",
           "resolvedAt": "2026-10-06T14:40:31.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
+        }
+      ]
+    },
+    {
+      "id": "cohere",
+      "providerId": "cohere",
+      "name": "Cohere",
+      "colour": "#6366f1",
+      "websiteUrl": "https://cohere.com",
+      "statusPageUrl": "https://status.cohere.io",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-10-07T01:30:40.885Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
+      "id": "google",
+      "providerId": "google",
+      "name": "Google",
+      "colour": "#4285f4",
+      "websiteUrl": "https://deepmind.google",
+      "statusPageUrl": "https://status.cloud.google.com",
+      "sourceKind": "google_incidents",
+      "sourceLabel": "Official incident feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-10-07T01:30:40.288Z",
+      "overallStatus": "operational",
+      "overallLabel": "No active Gemini or Vertex AI incidents",
+      "summary": "Filtered from the official Google Cloud public incident feed.",
+      "notes": "Filtered to Gemini and Vertex AI related incidents from the public Google Cloud incident feed.",
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": [
         {
-          "id": "01M3Q4RK1SM4EMK445GGPG7C0N",
-          "title": "Elevated errors across ChatGPT, Codex, and the API including the Agents API",
+          "id": "41E5S3mkTGDfkZuJZH5k",
+          "title": "Vertex AI Gemini API customers experienced increased error rates when accessing the global endpoint.",
           "status": "resolved",
           "impact": "minor",
-          "startedAt": "2026-09-29T17:52:52.000Z",
-          "updatedAt": "2026-10-06T18:48:00.000Z",
-          "resolvedAt": "2026-09-29T23:14:02.000Z",
-          "summary": "All impacted services have now fully recovered."
+          "startedAt": "2026-02-27T12:37:00.000Z",
+          "updatedAt": "2026-03-09T05:25:43.000Z",
+          "resolvedAt": "2026-02-27T14:35:00.000Z",
+          "url": "https://status.cloud.google.com",
+          "summary": "# Incident Report\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models experienced increased error rates. Impacted services incl..."
         }
       ]
     },
@@ -328,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-07T00:55:41.998Z",
+      "lastCheckedAt": "2026-10-07T01:30:41.140Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -352,7 +375,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []

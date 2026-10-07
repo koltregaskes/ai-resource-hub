@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 07 Oct 2026, 00:55 UTC
+Generated: 07 Oct 2026, 01:30 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 07 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,017 open roles across 10 tracked companies. | `/jobs/` |
-| 07 Oct 2026, 00:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 07 Oct 2026, 00:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 07 Oct 2026, 00:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 07 Oct 2026, 00:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 07 Oct 2026, 00:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 07 Oct 2026, 01:30 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 07 Oct 2026, 01:30 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 07 Oct 2026, 01:30 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 07 Oct 2026, 01:30 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 07 Oct 2026, 01:30 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 06 Oct 2026, 12:00 UTC | digest | Ex-Ramp engineers raise $20M for platform Melius after scrapping their first product | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product/) |
 | 06 Oct 2026, 12:00 UTC | digest | How AI decision models could change content moderation | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/06/how-ai-decision-models-could-change-content-moderation/) |
 | 06 Oct 2026, 12:00 UTC | digest | OpenAI drops another batch of mathematical breakthroughs | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1005004/openai-math-release-github) |
