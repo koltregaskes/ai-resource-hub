@@ -1,20 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 08 Oct 2026, 13:56 UTC
+Generated: 08 Oct 2026, 14:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 08 Oct 2026, 13:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 08 Oct 2026, 13:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 08 Oct 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 08 Oct 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 08 Oct 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 08 Oct 2026, 12:00 UTC | digest | China&#8217;s Manus raises over $500M in first funding round since split with Meta | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/08/chinas-manus-raises-over-500m-in-first-funding-round-since-split-with-meta/) |
-| 08 Oct 2026, 12:00 UTC | digest | Google releases a new local-first Granola competitor | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/08/google-releases-a-new-local-first-granola-competitor/) |
+| 08 Oct 2026, 14:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 08 Oct 2026, 14:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 08 Oct 2026, 14:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 08 Oct 2026, 14:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 08 Oct 2026, 14:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 08 Oct 2026, 12:00 UTC | digest | Artificial is a wicked satire that also sticks to the facts | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1007786/artificial-is-a-wicked-satire-that-also-sticks-to-the-facts) |
+| 08 Oct 2026, 12:00 UTC | digest | Cal AI&#8217;s 19-year-old founder just raised $10M for his new AI startup | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/08/cal-ais-19-year-old-founder-just-raised-10m-for-his-new-ai-startup/) |
+| 08 Oct 2026, 12:00 UTC | digest | Can you trust Meta’s Muse or OpenAI’s Dots to run your life? | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/podcast/1007408/meta-muse-openai-dots-ai-agent-race-privacy-free) |
 | 08 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,017 open roles across 10 tracked companies. | `/jobs/` |
-| 08 Oct 2026, 12:00 UTC | digest | Published the 2026-10-08 daily digest | 2 stories captured from 1 sources. | `/news/` |
+| 08 Oct 2026, 12:00 UTC | digest | Published the 2026-10-08 daily digest | 6 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
@@ -25,4 +26,3 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 05 Feb 2026, 12:00 UTC | models | Claude Opus 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.6/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 Pro (batch) added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2-pro/` |
-| 24 Nov 2025, 12:00 UTC | models | Claude Opus 4.5 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.5/` |
