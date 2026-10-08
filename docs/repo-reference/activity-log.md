@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 08 Oct 2026, 19:55 UTC
+Generated: 08 Oct 2026, 20:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 08 Oct 2026, 19:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 08 Oct 2026, 19:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 08 Oct 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 08 Oct 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 08 Oct 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 08 Oct 2026, 20:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 08 Oct 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 08 Oct 2026, 20:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 08 Oct 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 08 Oct 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 08 Oct 2026, 12:00 UTC | digest | Ben Affleck is an AI nerd, and the internet is impressed | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/08/ben-affleck-is-an-ai-nerd-and-the-internet-is-impressed/) |
-| 08 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,011 open roles across 10 tracked companies. | `/jobs/` |
-| 08 Oct 2026, 12:00 UTC | digest | OpenAI&#8217;s revenue is reportedly $20 billion less than previously projected | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/08/openais-revenue-is-reportedly-20-billion-less-than-previously-projected/) |
-| 08 Oct 2026, 12:00 UTC | digest | Popular AI leaderboard Arena nearly doubles valuation to $3.1B valuation in 10 months | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/08/popular-ai-leaderboard-arena-nearly-doubles-valuation-to-3-1b-valuation-in-10-months/) |
+| 08 Oct 2026, 12:00 UTC | digest | California is trying to shut down robot vs. human cage matches | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1008401/california-shut-down-rek-fighting-robot-company-human) |
+| 08 Oct 2026, 12:00 UTC | digest | Fired OpenAI safety researchers dispute misconduct claims, warn of chilling effect | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/) |
+| 08 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,014 open roles across 10 tracked companies. | `/jobs/` |
 | 08 Oct 2026, 12:00 UTC | digest | Published the 2026-10-08 daily digest | 20 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
