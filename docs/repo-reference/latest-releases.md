@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 09 Oct 2026, 14:56 UTC
+Generated: 09 Oct 2026, 15:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -27,6 +27,6 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 12 Aug 2026 | DeepSeek V4 Pro 0813 | DeepSeek | tracking | watch | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | Grok 4.6 | xAI | tracking | watch | watch only | 0 | 1 | n/a |
 | 12 Aug 2026 | Qwen3.8 2.4T A95B | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
-| 11 Aug 2026 | Nemotron 3.5 Lightning | NVIDIA | tracking | watch | watch only | 0 | 1 | n/a |
+| 11 Aug 2026 | Nemotron 3.5 Lightning | NVIDIA | tracking | watch | watch only | 0 | 0 | n/a |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
