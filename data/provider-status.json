@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T21:55:53.306Z",
+  "generatedAt": "2026-10-09T22:55:56.061Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T21:55:53.301Z",
+      "lastCheckedAt": "2026-10-09T22:55:56.054Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T21:55:51.615Z",
+      "lastCheckedAt": "2026-10-09T22:55:54.715Z",
       "overallStatus": "partial_outage",
       "overallLabel": "Partial System Outage",
       "summary": "3 active incidents across 25 tracked components.",
@@ -135,12 +135,22 @@
         {
           "id": "01M4HA7BCCXVHTR5DCYMSBQF2H",
           "title": "Workspace admins may be unable to manage plugins",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "major",
           "startedAt": "2026-10-09T21:48:34.000Z",
-          "updatedAt": "2026-10-09T21:48:34.000Z",
+          "updatedAt": "2026-10-09T22:52:35.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating an issue affecting some ChatGPT workspace administrators’ ability to view and manage plugin availability and settings. Some users may also see plugins as unav..."
+          "summary": "We are seeing recovery in workspace administrators’ ability to view and manage plugin availability and settings. We are monitoring to ensure service remains stable."
+        },
+        {
+          "id": "01M4GV1M2A3K38T73JCVCD9G0R",
+          "title": "Delayed Costs data in the Compliance API",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-10-09T17:23:18.000Z",
+          "updatedAt": "2026-10-09T22:03:59.000Z",
+          "resolvedAt": null,
+          "summary": "We have implemented a mitigation, and delayed Costs data is now processing through the Compliance API. Some customers may continue to see incomplete Costs data while the backlog c..."
         },
         {
           "id": "01M4H7FKXDA425TDNP2CRGEYA3",
@@ -151,28 +161,28 @@
           "updatedAt": "2026-10-09T21:00:39.000Z",
           "resolvedAt": null,
           "summary": "We have identified an issue affecting the ChatGPT Android app where users may see “This content is unavailable in this version of the app” instead of certain content. A fix is rol..."
-        },
-        {
-          "id": "01M4GV1M2A3K38T73JCVCD9G0R",
-          "title": "Delayed Costs data in the Compliance API",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-10-09T17:23:18.000Z",
-          "updatedAt": "2026-10-09T18:46:25.000Z",
-          "resolvedAt": null,
-          "summary": "Some customers may continue to experience delayed Costs data through the Compliance API. ChatGPT usage and API Platform requests are not affected, and other reporting channels rem..."
         }
       ],
       "recentIncidents": [
         {
           "id": "01M4HA7BCCXVHTR5DCYMSBQF2H",
           "title": "Workspace admins may be unable to manage plugins",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "major",
           "startedAt": "2026-10-09T21:48:34.000Z",
-          "updatedAt": "2026-10-09T21:48:34.000Z",
+          "updatedAt": "2026-10-09T22:52:35.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating an issue affecting some ChatGPT workspace administrators’ ability to view and manage plugin availability and settings. Some users may also see plugins as unav..."
+          "summary": "We are seeing recovery in workspace administrators’ ability to view and manage plugin availability and settings. We are monitoring to ensure service remains stable."
+        },
+        {
+          "id": "01M4GV1M2A3K38T73JCVCD9G0R",
+          "title": "Delayed Costs data in the Compliance API",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-10-09T17:23:18.000Z",
+          "updatedAt": "2026-10-09T22:03:59.000Z",
+          "resolvedAt": null,
+          "summary": "We have implemented a mitigation, and delayed Costs data is now processing through the Compliance API. Some customers may continue to see incomplete Costs data while the backlog c..."
         },
         {
           "id": "01M4H7FKXDA425TDNP2CRGEYA3",
@@ -183,16 +193,6 @@
           "updatedAt": "2026-10-09T21:00:39.000Z",
           "resolvedAt": null,
           "summary": "We have identified an issue affecting the ChatGPT Android app where users may see “This content is unavailable in this version of the app” instead of certain content. A fix is rol..."
-        },
-        {
-          "id": "01M4GV1M2A3K38T73JCVCD9G0R",
-          "title": "Delayed Costs data in the Compliance API",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-10-09T17:23:18.000Z",
-          "updatedAt": "2026-10-09T18:46:25.000Z",
-          "resolvedAt": null,
-          "summary": "Some customers may continue to experience delayed Costs data through the Compliance API. ChatGPT usage and API Platform requests are not affected, and other reporting channels rem..."
         },
         {
           "id": "01M4CR8GCAFC1RYQXZDXAZP2VT",
@@ -217,7 +217,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T21:55:51.691Z",
+      "lastCheckedAt": "2026-10-09T22:55:54.777Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -319,7 +319,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T21:55:52.624Z",
+      "lastCheckedAt": "2026-10-09T22:55:55.788Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -339,7 +339,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T21:55:51.950Z",
+      "lastCheckedAt": "2026-10-09T22:55:55.099Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -371,7 +371,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T21:55:52.908Z",
+      "lastCheckedAt": "2026-10-09T22:55:55.983Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
