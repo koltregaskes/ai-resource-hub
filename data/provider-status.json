@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T17:55:49.941Z",
+  "generatedAt": "2026-10-09T18:55:49.318Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T17:55:49.934Z",
+      "lastCheckedAt": "2026-10-09T18:55:49.312Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T17:55:48.995Z",
+      "lastCheckedAt": "2026-10-09T18:55:47.721Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T17:55:48.941Z",
+      "lastCheckedAt": "2026-10-09T18:55:47.736Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -240,9 +240,9 @@
           "status": "identified",
           "impact": "minor",
           "startedAt": "2026-10-09T17:23:18.000Z",
-          "updatedAt": "2026-10-09T17:27:49.000Z",
+          "updatedAt": "2026-10-09T18:46:25.000Z",
           "resolvedAt": null,
-          "summary": "We have identified an issue causing delays in publishing Costs data through the Compliance API. The API Platform organization costs endpoint and ChatGPT usage are not affected, an..."
+          "summary": "Some customers may continue to experience delayed Costs data through the Compliance API. ChatGPT usage and API Platform requests are not affected, and other reporting channels rem..."
         }
       ],
       "recentIncidents": [
@@ -252,9 +252,9 @@
           "status": "identified",
           "impact": "minor",
           "startedAt": "2026-10-09T17:23:18.000Z",
-          "updatedAt": "2026-10-09T17:27:49.000Z",
+          "updatedAt": "2026-10-09T18:46:25.000Z",
           "resolvedAt": null,
-          "summary": "We have identified an issue causing delays in publishing Costs data through the Compliance API. The API Platform organization costs endpoint and ChatGPT usage are not affected, an..."
+          "summary": "Some customers may continue to experience delayed Costs data through the Compliance API. ChatGPT usage and API Platform requests are not affected, and other reporting channels rem..."
         },
         {
           "id": "01M4CR8GCAFC1RYQXZDXAZP2VT",
@@ -299,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T17:55:49.770Z",
+      "lastCheckedAt": "2026-10-09T18:55:48.512Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T17:55:49.281Z",
+      "lastCheckedAt": "2026-10-09T18:55:47.875Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -351,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T17:55:49.859Z",
+      "lastCheckedAt": "2026-10-09T18:55:48.678Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",

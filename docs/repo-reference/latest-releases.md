@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 09 Oct 2026, 17:55 UTC
+Generated: 09 Oct 2026, 18:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -9,7 +9,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 6 Oct 2026 | Mistral Large 4 | Mistral | tracking | high | watch only | 0 | 0 | n/a |
-| 6 Oct 2026 | Nano Banana 2.1 | Google | tracking | high | watch only | 0 | 3 | n/a |
+| 6 Oct 2026 | Nano Banana 2.1 | Google | tracking | high | watch only | 0 | 2 | n/a |
 | 23 Sept 2026 | GLM 5.3 Prime | Zhipu AI | tracking | high | watch only | 0 | 0 | n/a |
 | 23 Sept 2026 | Qwen3.8 Max Prime | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
 | 22 Sept 2026 | Command A+ | Cohere | tracking | high | watch only | 0 | 0 | n/a |
