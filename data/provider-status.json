@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T22:55:56.061Z",
+  "generatedAt": "2026-10-09T23:55:45.914Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T22:55:56.054Z",
+      "lastCheckedAt": "2026-10-09T23:55:45.909Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,10 +100,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T22:55:54.715Z",
+      "lastCheckedAt": "2026-10-09T23:55:44.309Z",
       "overallStatus": "partial_outage",
       "overallLabel": "Partial System Outage",
-      "summary": "3 active incidents across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -133,16 +133,6 @@
       ],
       "activeIncidents": [
         {
-          "id": "01M4HA7BCCXVHTR5DCYMSBQF2H",
-          "title": "Workspace admins may be unable to manage plugins",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-10-09T21:48:34.000Z",
-          "updatedAt": "2026-10-09T22:52:35.000Z",
-          "resolvedAt": null,
-          "summary": "We are seeing recovery in workspace administrators’ ability to view and manage plugin availability and settings. We are monitoring to ensure service remains stable."
-        },
-        {
           "id": "01M4GV1M2A3K38T73JCVCD9G0R",
           "title": "Delayed Costs data in the Compliance API",
           "status": "monitoring",
@@ -167,12 +157,12 @@
         {
           "id": "01M4HA7BCCXVHTR5DCYMSBQF2H",
           "title": "Workspace admins may be unable to manage plugins",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "major",
           "startedAt": "2026-10-09T21:48:34.000Z",
-          "updatedAt": "2026-10-09T22:52:35.000Z",
-          "resolvedAt": null,
-          "summary": "We are seeing recovery in workspace administrators’ ability to view and manage plugin availability and settings. We are monitoring to ensure service remains stable."
+          "updatedAt": "2026-10-09T23:26:59.000Z",
+          "resolvedAt": "2026-10-09T23:26:59.000Z",
+          "summary": "All impacted services have now fully recovered."
         },
         {
           "id": "01M4GV1M2A3K38T73JCVCD9G0R",
@@ -217,7 +207,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T22:55:54.777Z",
+      "lastCheckedAt": "2026-10-09T23:55:44.268Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -319,7 +309,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T22:55:55.788Z",
+      "lastCheckedAt": "2026-10-09T23:55:45.145Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -339,7 +329,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T22:55:55.099Z",
+      "lastCheckedAt": "2026-10-09T23:55:44.568Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -371,7 +361,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T22:55:55.983Z",
+      "lastCheckedAt": "2026-10-09T23:55:45.340Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -395,7 +385,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
