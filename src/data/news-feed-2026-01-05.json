@@ -1,9 +1,44 @@
 {
-  "generated": "2026-05-25T14:37:34.778Z",
+  "generated": "2026-08-26T02:57:11.631Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-05",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 2,
+  "archived_story_count": 163,
+  "articles": [
+    {
+      "title": "GitHub Releases · Crush: v0.30.3",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.30.3",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-01-05T17:03:14.000Z",
+      "summary": "# More Models This release brings new models to GitHub Copilot users: * Claude Opus 4.5 * GPT 5.2 * GPT 5.1 * GPT 5.1 Codex * GPT 5.1 Max Remember that you need to enable those [in Copilot settings](https://github.com/settings/copilot/features) in order for them to work properly! Also included are fixes to reduce the number of count requests on Copilot when using sub-agents (searches, etc). ## Changelog ### Fixed * 5f7beb0e8c647fd6e8326db2df61760a28c955c4: fix: enable responses api for github copilot (@andreynering) * a94866c85c68f036c343710145bbc5e71e755382: fix: quota for subagents in copilot (@kujtimiihoxha) ### Other stuff * 58b2c5b26d54421ae4e3303bc366b20220b46786: chore(copilot): update message: \"wait a minute\" -> \"wait 5 minutes\" (@andreynering) * c70d34db16b603bc5cfd9b861f2eae492df552dd: chore: make it so the small model also is always considered a subagent (@kujtimiihoxha) * 65e20ea8ad8dea9c90c31402d4bc2866719b48ae: chore: update fantasy to v0.6.0 (@andreynering) --- Verifying",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.400",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.400",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-01-05T11:45:30.000Z",
+      "summary": "## What's Changed * `@remotion/media`: Don't call .allocationSize() if format is `null` by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6216 * `@remotion/media`: Fix extracting a frame from after end of video by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6217 * `@remotion/media`: Fix potential video sample leak by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6218 * `@remotion/web-renderer`: Account for \"cannotStartLine\" Unicode rules by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6224 * `@remotion/web-renderer`: Fix background-clip nested in another element by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6225 * `@remotion/web-renderer`: Add support for backface-visibility by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6223 * `@remotion/web-renderer`: Add some timings giving insight into the performance of a render by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/623",
+      "category": "ai_tools"
+    }
+  ]
 }

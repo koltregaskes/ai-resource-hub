@@ -1,0 +1,347 @@
+{
+  "generated": "2026-08-26T17:52:12.835Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Alibaba’s Qwen Team Releases Qwen3.8-Flash-Next: A 125B Multimodal MoE With 6B Active Parameters Previewing the Qwen4 Architecture",
+      "url": "https://www.marktechpost.com/2026/08/26/alibabas-qwen-team-releases-qwen3-8-flash-next-a-125b-multimodal-moe-with-6b-active-parameters-previewing-the-qwen4-architecture/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "architecture"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-26T15:20:00.000Z",
+      "summary": "We look at Qwen3.8-Flash-Next, Alibaba's open-weight multimodal Mixture-of-Experts model and an early preview of the Qwen4 architecture. We break down where the 180B parameters actually sit: a 125B backbone, a 51B N-gram embedding table, and a 4B multi-token prediction module, with only 6B active per token. We walk through the four architectural changes — the Gated DeltaNet and Qwen Sparse Attention hybrid, Gated Residual, N-gram Embedding, and the Muon optimizer. We also cover the benchmark results, the reported 1/9 training cost against Qwen3.7-Plus, and what self-hosting a 172.78 GiB...",
+      "category": "ai_research"
+    },
+    {
+      "title": "IBM Releases Granite 4.2: Bringing Native Reasoning and Agentic RL to Open Enterprise Models",
+      "url": "https://www.marktechpost.com/2026/08/25/ibm-releases-granite-4-2-bringing-native-reasoning-and-agentic-rl-to-open-enterprise-models/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-26T05:48:10.000Z",
+      "summary": "IBM has released Granite 4.2, a family of open reasoning language models in 3B, 8B, and 30B sizes, all under Apache 2.0. Every model exposes a thinking / low-effort / non-thinking switch and native tool calling. The 8B and 30B additionally go through an agentic RL block that trains them to edit code, drive a terminal, and run web searches inside real sandboxed environments. The 30B reports 57.00 on SWE-Bench Verified and 29.24 on Terminal-Bench 2.1. The post IBM Releases Granite 4.2: Bringing Native Reasoning and Agentic RL to Open Enterprise Models appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenAI’s Jalapeño chip is built for fast inference at scale, benchmarks show",
+      "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "benchmark",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-08-25T14:22:04.000Z",
+      "summary": "Tested on SemiAnalysis’ InferenceX benchmark, Jalapeño registered both more tokens per user and more throughput per kilowatt than the currently available state-of-the art.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "IBM Releases Granite 4.2 Open Weights, Reserving Agentic Training for 8B and 30B",
+      "url": "https://superpowerdaily.com/posts/ibm-releases-granite-4-2-open-weights-reserving-agentic-training-for-8b-and-30b",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "api_update",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-26T12:01:42.000Z",
+      "summary": "The new family gives self-hosted deployments a choice between a smaller tool-capable model and larger variants trained for code, search and other tool-use tasks.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Perplexity Ships Portable Computer on NVIDIA DGX Spark: Local Harness, OS-Enforced Sandbox, and Zero Per-Token Cost for Local Steps",
+      "url": "https://www.marktechpost.com/2026/08/25/perplexity-ships-portable-computer-on-nvidia-dgx-spark-local-harness-os-enforced-sandbox-and-zero-per-token-cost-for-local-steps/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-25T19:12:19.000Z",
+      "summary": "Perplexity releases Portable Computer, packaging local models, harness, sandbox, and connectors into one system running on NVIDIA DGX Spark. The post Perplexity Ships Portable Computer on NVIDIA DGX Spark: Local Harness, OS-Enforced Sandbox, and Zero Per-Token Cost for Local Steps appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Qwen Releases Qwen3.8-Flash With 1M-Token Option and One-Ninth Training-Cost Claim",
+      "url": "https://superpowerdaily.com/posts/qwen-releases-qwen3-8-flash-with-1m-token-option-and-one-ninth-training-cost-claim",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "pricing_change"
+      ],
+      "importance": 0.72,
+      "date": "2026-08-26T15:29:20.000Z",
+      "summary": "The new model gives developers a published context limit and usage price, while Qwen’s performance and efficiency comparisons remain its own stated results.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Meta AI Introduces MetaRoCE: A Clean-Sheet RDMA Transport Built for AI-Scale Ethernet",
+      "url": "https://www.marktechpost.com/2026/08/25/meta-ai-introduces-metaroce-a-clean-sheet-rdma-transport-built-for-ai-scale-ethernet/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-25T17:25:36.000Z",
+      "summary": "Training and serving frontier models is now a networking problem as much as a compute problem. Collective operations like all-reduce and all-to-all synchronize thousands of accelerators during training, and the slowest transfer sets the pace for the entire job. Even small amounts of network friction directly strand significant compute capacity. This week, Meta introduced MetaRoCE. […] The post Meta AI Introduces MetaRoCE: A Clean-Sheet RDMA Transport Built for AI-Scale Ethernet appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Qwen Code Desktop v0.2.2",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.2.2",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-26T09:37:43.000Z",
+      "summary": "What's Changed fix(goal): converge the three continuation prompts on one guarded contract by @qqqys in #9834 feat(core): require an explicit user opt-in before the model launches a workflow by @qqqys in #9806 fix(review): ban unexecuted mutation claims in coverage briefs by @wenshao in #9923 fix(ci): scope workflow-size ratchet to the PR that grew the file by @wenshao in #9931 feat(review): run the reviewed repository's own commands behind a container ( #9556 ) by @wenshao in #9723 feat(core): add a per-project outside-repo artifact landing by @wenshao in #9776 fix(web-shell): reduce...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.22.2-preview.1",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.22.2-preview.1",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-26T06:12:32.000Z",
+      "summary": "What's Changed fix(goal): converge the three continuation prompts on one guarded contract by @qqqys in #9834 feat(core): require an explicit user opt-in before the model launches a workflow by @qqqys in #9806 fix(review): ban unexecuted mutation claims in coverage briefs by @wenshao in #9923 fix(ci): scope workflow-size ratchet to the PR that grew the file by @wenshao in #9931 feat(review): run the reviewed repository's own commands behind a container ( #9556 ) by @wenshao in #9723 feat(core): add a per-project outside-repo artifact landing by @wenshao in #9776 fix(web-shell): reduce...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.57.0",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-25T18:37:14.000Z",
+      "summary": "What's Changed fix(core): dynamically resolve Cloud Workstations proxy redirect URI for OAuth flows by @amelidev in #28688 fix(core): resolve swallowed directory mismatch in IDE connections by @amelidev in #28729 Feat/eval validate by @ved015 in #28344 feat(evals): add tool call formatter and integrate failure summaries by @ved015 in #28305 Changelog for v0.55.1 by @gemini-cli-robot in #28779 test(e2e): stabilize file-system-interactive test on slow runners by @DavidAPierce in #28793 fix(core): implement context-aware silent retries and availability TTL for capacity errors ( #28761 ) by...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SageMaker SDK v3 Lets Teams Change Model Code Without Rebuilding Container Images",
+      "url": "https://superpowerdaily.com/posts/sagemaker-sdk-v3-lets-teams-change-model-code-without-rebuilding-container-images",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.64,
+      "date": "2026-08-26T16:36:10.000Z",
+      "summary": "The new workflow treats the container as a reusable runtime and sends local code into it when a job starts. That can shorten script-level iteration, while leaving teams responsible for images, permissions and storage.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Foxglove Adds Cosmos Data Search as Robot Builders Struggle for Reliable Work",
+      "url": "https://superpowerdaily.com/posts/foxglove-adds-cosmos-data-search-as-robot-builders-struggle-for-reliable-work",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "inference"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "inference"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-08-26T14:54:17.000Z",
+      "summary": "Foxglove’s new search tool is meant to speed the data and evaluation loop, while robot makers still face a harder test: dependable commercial performance.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Radar makes podcasts searchable — and usable by AI agents",
+      "url": "https://techcrunch.com/2026/08/26/radar-makes-podcasts-searchable-and-usable-by-ai-agents/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-08-26T15:47:28.000Z",
+      "summary": "Particle’s new podcast intelligence platform transcribes and analyzes more than 130,000 podcasts, making their conversations searchable on the web and accessible to AI agents through an API and MCP.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI models flub these intelligence tests. Can you fare any better?",
+      "url": "https://www.technologyreview.com/2026/08/26/1141952/puzzles-ai-models-flub-these-tests/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-08-26T09:00:00.000Z",
+      "summary": "Puzzles and games have been central to AI development since the very beginning. Just as we humans like to test our smarts with crosswords or logic puzzles, developers can test how far models have advanced with a gaming gauntlet. The term “machine learning” was popularized in a 1959 article by the IBM computer scientist Arthur…",
+      "category": "ai_research"
+    },
+    {
+      "title": "Here’s how to use intelligent dictation in Gemini for macOS.",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-08-25T17:00:15.534Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Granite 4.2 LLMs: How They're Built",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-08-25T15:14:14.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "A knowledge-driven framework for predicting single-cell responses for unprofiled drugs",
+      "url": "https://www.nature.com/articles/s42256-026-01286-w",
+      "source": "Nature AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-26T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Longitudinal alignments and syntheses of multimodal clinical data for personalized medicine with the PULSE framework",
+      "url": "https://www.nature.com/articles/s43588-026-01026-5",
+      "source": "Nature AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-26T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Deep learning aging marker from retinal images unveils sex-specific clinical and genetic signatures",
+      "url": "https://www.nature.com/articles/s41467-026-77102-1",
+      "source": "Nature AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-26T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Prime Agent: A Self-Improving RLM Harness",
+      "url": "https://paperswithcode.com/papers/2608.23552",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-25T17:00:10.506Z",
+      "summary": "",
+      "category": "ai_research"
+    }
+  ]
+}

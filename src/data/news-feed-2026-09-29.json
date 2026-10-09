@@ -1,0 +1,367 @@
+{
+  "generated": "2026-09-29T17:45:06.336Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Anthropic Releases Claude Sonnet 5.5: 70.6% on Terminal-Bench 4.0 at the Same $2/$10 Price",
+      "url": "https://www.marktechpost.com/2026/09/28/anthropic-releases-claude-sonnet-5-5-70-6-on-terminal-bench-4-0-at-the-same-2-10-price/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "evaluation",
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "evaluation",
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-29T04:20:59.000Z",
+      "summary": "Anthropic has released Claude Sonnet 5.5, the second model in its Claude 5.5 family. It scores 70.6% on Terminal-Bench 4.0 and lands within 2 points of Opus 5.5 on GDPval-AA. It also generates output 30%+ faster than Sonnet 5 and keeps the same $2/$10 per million token price. Anthropic says cost per task falls by up to 30% because the model uses fewer tokens. You can deploy it today via the Claude API, AWS, Google Cloud and Azure. The post Anthropic Releases Claude Sonnet 5.5: 70.6% on Terminal-Bench 4.0 at the Same $2/$10 Price appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "H Company Releases Holo4: Open-Weight Computer-Use Models That Click, Code and Call Tools Across Desktop, Web, Android and APIs",
+      "url": "https://www.marktechpost.com/2026/09/29/h-company-releases-holo4-open-weight-computer-use-models-that-click-code-and-call-tools-across-desktop-web-android-and-apis/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-29T07:38:13.000Z",
+      "summary": "H Company has released Holo4, a family of generalist computer-use models for AI agents. One set of weights clicks and types on screens. It also writes code and calls MCP or API tools. Holo4 ships in 2 sizes: Holo4 27B (dense) and Holo4 35B-A3B (Mixture of Experts, 3B active). Both serve a 256K context on […] The post H Company Releases Holo4: Open-Weight Computer-Use Models That Click, Code and Call Tools Across Desktop, Web, Android and APIs appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "NVIDIA Launches Open Agent Safety Platform: OpenShell Sandboxes Agents on Vera CPUs While Sentry on BlueField-4 Quarantines Them in Milliseconds",
+      "url": "https://www.marktechpost.com/2026/09/28/nvidia-launches-open-agent-safety-platform/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-28T19:21:25.000Z",
+      "summary": "NVIDIA has launched the Open Agent Safety Platform, an open reference design that enforces AI agent safety outside the agent itself. OpenShell, an Apache 2.0 runtime, sandboxes agents under YAML policies. Sentry, an out-of-band watchdog on BlueField-4 DPUs, can quarantine an agent that escapes its boundary in milliseconds. NVIDIA says over 100 organizations are working with the platform. The post NVIDIA Launches Open Agent Safety Platform: OpenShell Sandboxes Agents on Vera CPUs While Sentry on BlueField-4 Quarantines Them in Milliseconds appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Alibaba Qwen Releases Qwen-Audio-3.1-Realtime: A Full-Duplex Voice Model Trained to Think, Act, and Decide When to Speak",
+      "url": "https://www.marktechpost.com/2026/09/28/alibaba-qwen-releases-qwen-audio-3-1-realtime-a-full-duplex-voice-model-trained-to-think-act-and-decide-when-to-speak/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-29T04:58:15.000Z",
+      "summary": "Alibaba's Qwen team released Qwen-Audio-3.1-Realtime, a full-duplex voice model trained to reason, call tools and decide when to speak. On a τ-Voice adaptation, task success rises to 82.0% from 78.4%. Replies to background speech drop from 73% to 13%. It is available now as an API on QwenCloud. The post Alibaba Qwen Releases Qwen-Audio-3.1-Realtime: A Full-Duplex Voice Model Trained to Think, Act, and Decide When to Speak appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Claude Sonnet 5.5",
+      "url": "https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-28T22:07:38.000Z",
+      "summary": "Claude Sonnet 5.5 New Sonnet model from Anthropic today. They say it \"runs 30%+ faster, and costs up to 30% less for most work\" - it's priced the same as Sonnet 5 but appears to beat it on every benchmark, and should be cheaper to run as well. Here are some pelicans riding bicycles . Sonnet 5.5 suffered from the same bug as Opus 5.5 : the \"max\" thinking effort pelican thought for 128,000 tokens (at a cost of $1.28) before running out of tokens and failing to produce an SVG. Here's the pelican it gave me for thinking effort \"xhigh\", at a cost of 5.74 cents and taking 41 seconds: Sonnet 5.5...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AutoTrust Releases JEV-27B for Self-Hosted AI Agent Decisions",
+      "url": "https://superpowerdaily.com/posts/autotrust-releases-jev-27b-for-self-hosted-ai-agent-decisions",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-28T20:59:56.000Z",
+      "summary": "The open-weights model pairs fast, structured choices with text generation. Its close benchmark result against a hosted rival comes from AutoTrust’s own tests.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NVIDIA Releases Kumo Tabular to Predict from Tables Without Task-Specific Training",
+      "url": "https://superpowerdaily.com/posts/nvidia-releases-kumo-tabular-to-predict-from-tables-without-task-specific-training",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "hardware"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-29T16:39:38.000Z",
+      "summary": "The downloadable model uses labeled rows as context for new predictions. NVIDIA reports strong benchmark results, but warns that accuracy can slip when real tables differ from its training range.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SDK TypeScript Release v0.1.17",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.17",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-29T15:12:40.000Z",
+      "summary": "Bundled CLI Version This SDK release bundles CLI version: 0.24.7 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.24.6 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.24.5 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.24.3 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.24.1 Source: CLI built from source (same branch/ref as...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic releases Sonnet 5.5, which it calls a significantly cheaper, faster work partner",
+      "url": "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-28T18:00:00.000Z",
+      "summary": "Anthropic has released the newest version of its mid-range model, boasting faster response times and less token burn.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "When can we say AI made a scientific discovery?",
+      "url": "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-28T17:03:16.000Z",
+      "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Last Wednesday, Anthropic announced that earlier this year it had launched a molecular biology lab, where Claude agents read and conjecture about hard biology problems and human scientists run experiments on what…",
+      "category": "ai_research"
+    },
+    {
+      "title": "Making AI an asset, not an expense",
+      "url": "https://www.technologyreview.com/2026/09/29/1145186/making-ai-an-asset-not-an-expense/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "research_paper",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "evaluation"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-29T10:43:45.000Z",
+      "summary": "When customers talk about AI costs, the conversation usually starts with token prices and ends with access to the latest, most capable model in the cloud. Do they always need that level of capability? Not necessarily. But that is often where the conversation goes. As AI moves from experimentation to production, model choice is only…",
+      "category": "ai_research"
+    },
+    {
+      "title": "Hallo, Deutschland!",
+      "url": "https://mistral.ai/news/hallo-deutschland/",
+      "source": "Mistral AI Blog",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-28T15:57:59.000Z",
+      "summary": "Mistral opens a Munich hub for Physics AI and Industrial AI research, partnering with German industry.",
+      "category": "ai_models"
+    },
+    {
+      "title": "NVIDIA Kumo Tabular Sets a New Accuracy-Efficiency Frontier for Tabular Prediction",
+      "url": "https://huggingface.co/blog/nvidia/kumo-tabular",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-29T15:30:38.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Oracle Releases 25 AI Apps Built to Plan and Execute Business Tasks",
+      "url": "https://superpowerdaily.com/posts/oracle-releases-25-ai-apps-built-to-plan-and-execute-business-tasks",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-29T14:44:01.000Z",
+      "summary": "Fusion Claw separates AI planning from calculations and transactions. Customers can require approval before it acts, but Oracle has not provided production-performance results.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nebius Opens 2026 Physical AI Awards: Five $150K Compute Prizes, Nine Judges, and an October 25 Deadline",
+      "url": "https://www.marktechpost.com/2026/09/29/nebius-opens-2026-physical-ai-awards-five-150k-compute-prizes-nine-judges-and-an-october-25-deadline/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-29T16:17:34.000Z",
+      "summary": "Nebius and NVIDIA are running the 2026 Physical AI Awards for startups with products in the field. Five category winners each get $150,000 in compute credits, joint promotion, executive mentorship, and seats at an executive dinner. Applications close October 25. The post Nebius Opens 2026 Physical AI Awards: Five $150K Compute Prizes, Nine Judges, and an October 25 Deadline appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Anthropic pushes Sonnet 5.5 as a faster, cheaper AI work partner",
+      "url": "https://superintelligencenews.com/ai-fields/large-language-models/sonnet-5-5-anthropic-faster-cheaper-work-partner/",
+      "source": "Superintelligence Newsletter",
+      "tags": [
+        "evaluation",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "pricing_change"
+      ],
+      "importance": 0.62,
+      "date": "2026-09-28T18:25:11.000Z",
+      "summary": "Sonnet 5.5 is Anthropic’s faster, cheaper AI model for coding and office work, with stronger cyber safeguards and better agent performance. The post Anthropic pushes Sonnet 5.5 as a faster, cheaper AI work partner appeared first on Superintelligence News - Artificial Intelligence News .",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Why NVIDIA Launched the Open Agent Safety Platform",
+      "url": "https://aimagazine.com/news/nvidia-unveils-agent-safety-platform-backed-by-100-partners",
+      "source": "AI Magazine",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.62,
+      "date": "2026-09-28T17:00:16.298Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Safety Over Speed: OpenAI Scraps GPT-6.1 Astra Release",
+      "url": "https://aimagazine.com/news/safety-over-speed-openai-scraps-gpt-6-1-astra-release",
+      "source": "AI Magazine",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 0.54,
+      "date": "2026-09-29T17:00:34.824Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
+      "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-29T13:07:00.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "OpenAI scraps rollout of new model over safety concerns The firm also issued an update on incidents in which its models accessed Australian government systems.",
+      "url": "https://www.bbc.com/news/articles/cm5y5nynl75ko",
+      "source": "BBC AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-29T04:52:34.356Z",
+      "summary": "",
+      "category": "ai_tools"
+    }
+  ]
+}

@@ -1,9 +1,87 @@
 {
-  "generated": "2026-05-25T14:37:36.658Z",
+  "generated": "2026-08-26T03:03:48.487Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-03-02",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 5,
+  "archived_story_count": 176,
+  "articles": [
+    {
+      "title": "Introducing Together AI’s new look",
+      "url": "https://www.together.ai/blog/introducing-together-ai-new-look",
+      "source": "Together AI Blog",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.62,
+      "date": "2026-03-02T00:00:00.000Z",
+      "summary": "We&#39;ve refreshed our visual identity — designed with Pentagram to express how Together AI connects open-source innovation, systems research, and builders to unlock new possibilities.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Enabling Claude Code To Work More Autonomously",
+      "url": "https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-03-02T21:07:46.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.46.2",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.46.2",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-03-02T20:22:39.000Z",
+      "summary": "# Tiny patch A very small patch to fix scroll not always following bottom when it should. Our favorite contributor @huaiyuWangh also continues to deliver good patches, this time a small fix for an edge-case on LSPs integration. Have a great week! Charm ✨ ## Changelog ### Fixed * 4596b02f5617c29fd7e8a3768c49be71fd68098b: fix(lsp): treat adjacent ranges as non-overlapping per LSP spec (#2322) (@huaiyuWangh) * 8762efc8fa0970883f807a5f564b5ef8b6042e4c: fix(ui): follow scroll when at bottom (#2336) (@aymanbagabas) --- Verifying the artifacts First, download the [`checksums.txt` file](https://github.com/charmbracelet/crush/releases/download/v0.46.2/checksums.txt) and the [`checksums.txt.sigstore.json` file](https://github.com/charmbracelet/crush/releases/download/v0.46.2/checksums.txt.sigstore.json) files, for example, with `wget`: ```bash wget 'https://github.com/charmbracelet/crush/releases/download/v0.46.2/checksums.txt' wget 'https://github.com/charmbracelet/crush/releases/download/v0.46",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Import AI 447: The AGI economy; testing AIs with generated games; and agent ecologies",
+      "url": "https://importai.substack.com/p/import-ai-447-the-agi-economy-testing",
+      "source": "Import AI (Jack Clark)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-03-02T13:45:27.000Z",
+      "summary": "What might a superintelligence arcology be like?",
+      "category": "ai_research"
+    },
+    {
+      "title": "ChatGPT as a therapist? New study reveals serious ethical risks",
+      "url": "https://www.sciencedaily.com/releases/2026/03/260302030642.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.94,
+      "date": "2026-03-02T15:04:35.000Z",
+      "summary": "As millions turn to ChatGPT and other AI chatbots for therapy-style advice, new research from Brown University raises a serious red flag: even when instructed to act like trained therapists, these systems routinely break core ethical standards of mental health care. In side-by-side evaluations with peer counselors and licensed psychologists, researchers uncovered 15 distinct ethical risks — from mishandling crisis situations and reinforcing harmful beliefs to showing biased responses and offering “deceptive empathy” that mimics care without real understanding.",
+      "category": "ai_research"
+    }
+  ]
 }

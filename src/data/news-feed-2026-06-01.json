@@ -1,0 +1,115 @@
+{
+  "generated": "2026-06-05T00:44:45.200Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-06-01",
+  "article_count": 7,
+  "archived_story_count": 220,
+  "articles": [
+    {
+      "title": "Nvidia announces new AI chip for personal computers",
+      "url": "https://www.bbc.com/news/articles/crmp9mppvzro",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-06-01T10:33:25.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Nvidia Cosmos 3",
+      "url": "https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3/",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.83,
+      "date": "2026-06-01T13:32:44.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "First benchmark results from the Snapdragon 8cx Gen 3-powered Radxa Dragon Q8B",
+      "url": "https://bret.dk/radxa-dragon-q8b-a-laptop-cosplaying-as-an-sbc/",
+      "source": "Hacker News",
+      "tags": [
+        "benchmark"
+      ],
+      "matching_tags": [
+        "benchmark"
+      ],
+      "importance": 0.82,
+      "date": "2026-05-30T17:59:19.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Microsoft builds MacBook Pro rival with NVIDIA-powered Surface Laptop Ultra",
+      "url": "https://www.windowslatest.com/2026/06/01/microsoft-builds-its-ultimate-macbook-pro-rival-with-the-nvidia-powered-surface-laptop-ultra/",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.73,
+      "date": "2026-06-01T12:04:29.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Rejuvenation Roundup May 2026",
+      "url": "https://lifespan.io/rejuvenation-roundup-may-2026/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=rejuvenation-roundup-may-2026",
+      "source": "Lifespan.io Research",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.71,
+      "date": "2026-06-01T16:30:59.000Z",
+      "summary": "Approaches that modify the processes of aging at their roots have gone well beyond basic research and into therapies intended for the clinic within the next few years. Here&#8217;s how the field has advanced in [&#8230;]",
+      "category": "health_research"
+    },
+    {
+      "title": "Finding success in industry as a chip designer",
+      "url": "https://spectrum.ieee.org/chip-design-academic-vs-industry",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.71,
+      "date": "2026-05-29T12:15:43.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Nvidia RTX Spark",
+      "url": "https://www.nvidia.com/en-us/products/rtx-spark/",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-06-01T05:24:40.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

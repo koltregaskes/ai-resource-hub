@@ -1,9 +1,25 @@
 {
-  "generated": "2026-05-25T14:37:34.739Z",
+  "generated": "2026-08-26T02:57:10.826Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-04",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 1,
+  "archived_story_count": 142,
+  "articles": [
+    {
+      "title": "GitHub Releases · Crush: v0.30.2",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.30.2",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-04T02:09:17.000Z",
+      "summary": "# Quick ’Lil Patch This is a tiny patch release to fix a nil pointer issue in the last release, as reported by @umairimtiaz9. Thanks, Umair! 💘 ## Changelog ### Fixed * b618a5bc98367c6011f6ed2a2d85d1faa90ad500: fix(sessions): nil pointer dereference (#1759) (@meowgorithm) --- Verifying the artifacts First, download the [`checksums.txt` file](https://github.com/charmbracelet/crush/releases/download/v0.30.2/checksums.txt) and the [`checksums.txt.sigstore.json` file](https://github.com/charmbracelet/crush/releases/download/v0.30.2/checksums.txt.sigstore.json) files, for example, with `wget`: ```bash wget 'https://github.com/charmbracelet/crush/releases/download/v0.30.2/checksums.txt' wget 'https://github.com/charmbracelet/crush/releases/download/v0.30.2/checksums.txt.sigstore.json' ``` Then, verify it using [`cosign`](https://github.com/sigstore/cosign): ```bash cosign verify-blob \\ --certificate-identity 'https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/m",
+      "category": "ai_tools"
+    }
+  ]
 }

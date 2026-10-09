@@ -1,0 +1,349 @@
+{
+  "generated": "2026-09-03T17:45:08.994Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Perplexity Open Sources Lily: A Rust + Metal Inference Engine for Qwen3.6-35B-A3B on Apple Silicon",
+      "url": "https://www.marktechpost.com/2026/09/02/perplexity-open-sources-lily-a-rust-metal-inference-engine-for-qwen3-6-35b-a3b-on-apple-silicon/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-03T06:57:07.000Z",
+      "summary": "Perplexity has open sourced Lily, the local inference engine behind Hybrid Compute in Perplexity Computer. Built in Rust with custom Metal kernels for one model on one chip family, it averages 1.23x MLX-LM's prefill throughput and 1.35x its decode throughput on a 40-core, 128 GB M5 Max. The post Perplexity Open Sources Lily: A Rust + Metal Inference Engine for Qwen3.6-35B-A3B on Apple Silicon appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Meet Switchyard: A Rust Proxy and Library That Routes and Translates LLM Traffic Across OpenAI and Anthropic APIs",
+      "url": "https://www.marktechpost.com/2026/09/02/nvidia-releases-switchyard-rust-proxy-llm-traffic-openai-anthropic-api-translation/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-02T18:05:52.000Z",
+      "summary": "NVIDIA has released Switchyard, an Apache-2.0 Rust proxy and library for LLM traffic. It decodes requests into provider-neutral types, routes them with passthrough, random, LLM-classifier, or stage-router algorithms, and translates responses back into the client's format, so Claude Code or Codex CLI can run against vLLM, NIM, or Ollama unchanged. The project is pre-alpha and not for production. The post Meet Switchyard: A Rust Proxy and Library That Routes and Translates LLM Traffic Across OpenAI and Anthropic APIs appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Nature Study Finds AI Agent Teams Can Cut Sequential Planning Performance by 70%",
+      "url": "https://superpowerdaily.com/posts/nature-study-finds-ai-agent-teams-can-cut-sequential-planning-performance-by-70",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-02T16:47:44.000Z",
+      "summary": "The controlled experiment offers a bounded way to choose an agent architecture: assess the task and a single agent’s baseline before paying the cost of coordination.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Microsoft Releases MAI-Transcribe-2 at 10 Cents an Hour",
+      "url": "https://superpowerdaily.com/posts/microsoft-releases-mai-transcribe-2-at-10-cents-an-hour",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "inference"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-03T16:28:09.000Z",
+      "summary": "The new model adds language coverage and transcript-formatting features while sharply lowering Microsoft’s introductory rate. Its benchmark pitch is focused on recorded-audio throughput, leaving live transcription and speaker-label accuracy as practical tests for buyers.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OneRail uses Nvidia AI for real-time last-mile delivery optimisation",
+      "url": "https://www.artificialintelligence-news.com/news/ai-last-mile-delivery-optimisation/",
+      "source": "AI News",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-03T16:07:18.000Z",
+      "summary": "OneRail has launched an AI-powered delivery platform that uses Nvidia technology to help retailers, wholesalers, and distributors decide how individual orders should be delivered. Called OmniSTAR, the system evaluates options including owned fleets, couriers, parcel carriers, and other delivery modes, then selects the lowest-cost option that meets the required service level, according to OneRail. The […] The post OneRail uses Nvidia AI for real-time last-mile delivery optimisation appeared first on AI News .",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen Developers Open-Sources zg (zvec-grep): A Local-First Search Layer Unifying ripgrep, BM25, and Vector Search",
+      "url": "https://www.marktechpost.com/2026/09/02/qwen-developers-open-sources-zg-zvec-grep-a-local-first-search-layer-unifying-ripgrep-bm25-and-vector-search/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-02T23:48:47.000Z",
+      "summary": "We look at zg (zvec-grep), the local-first search layer that Qwen Developers just open-sourced under Apache 2.0. We explain how it puts ripgrep, BM25, and vector search behind a single interface, so an agent can move from a plain-language description to an exact line span without switching tools. We cover the deliberately small MCP surface, the on-device embedding catalog, and the authorization gate that stands between local content and remote models. The post Qwen Developers Open-Sources zg (zvec-grep): A Local-First Search Layer Unifying ripgrep, BM25, and Vector Search appeared first...",
+      "category": "ai_research"
+    },
+    {
+      "title": "Google DeepMind Releases Gemini 3.8 Flash and Gemini 3.8 Flash Cyber: One Core Model, Two Access Envelopes",
+      "url": "https://www.marktechpost.com/2026/09/02/google-deepmind-releases-gemini-3-8-flash-and-gemini-3-8-flash-cyber-one-core-model-two-access-envelopes/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-02T17:20:24.000Z",
+      "summary": "Google released Gemini 3.8 Flash and Gemini 3.8 Flash Cyber on September 2, 2026. Both variants run on the same foundational intelligence, split by safety mitigations rather than model size. Gemini 3.8 Flash is generally available at $0.75 and $3.75 per 1M tokens, introductory through December 31, 2026. Flash Cyber reaches 47.2% pass@1 on CWE-Bench and is restricted to vetted defenders through the Fairwind Program. This article covers the benchmarks, the token-for-accuracy tradeoff, and what deploying either one actually requires. The post Google DeepMind Releases Gemini 3.8 Flash and...",
+      "category": "ai_research"
+    },
+    {
+      "title": "llm-gemini 0.34",
+      "url": "https://simonwillison.net/2026/Sep/2/llm-gemini/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-02T16:39:38.000Z",
+      "summary": "Release: llm-gemini 0.34 New model gemini-3.8-flash for Gemini 3.8 Flash , with low, medium and high thinking levels. #146 Fixed async responses failing to record the resolved model version. Thanks, Charlie Tonneslan . #137 Google released Gemini 3.8 Flash (and 3.8 Flash Cyber, but that's available to \"trusted defenders\" only) today. Here are the pelicans for high, medium, and low. This is high: For comparison, here are the same pelicans generated using Gemini 3.7 Flash . Something I appreciate about Gemini Flash is that it's fast, cheap, and competent at things like HTML and JavaScript....",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Equinix Sets Q1 2027 Start for Distributed Enterprise AI Inference Service",
+      "url": "https://superpowerdaily.com/posts/equinix-sets-q1-2027-start-for-distributed-enterprise-ai-inference-service",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-02T14:50:05.000Z",
+      "summary": "The planned service combines NVIDIA infrastructure designs, Together AI model serving and Equinix connectivity. Its test is whether one package can simplify placing AI workloads across providers and locations.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
+      "url": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "dataset"
+      ],
+      "matching_tags": [
+        "model_release",
+        "dataset"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-03T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Artificial Analysis Rebuilds Image Editing Arena With Different Leaders by Task",
+      "url": "https://superpowerdaily.com/posts/artificial-analysis-rebuilds-image-editing-arena-with-different-leaders-by-task",
+      "source": "Superpower Daily",
+      "tags": [
+        "benchmark",
+        "api_update"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "api_update"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-03T03:51:32.000Z",
+      "summary": "The revised benchmark makes model selection a task-by-task decision: its overall winner does not lead every kind of edit, and listed API prices vary sharply.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Enterprise Buyers Put Non-Nvidia Chip Evaluations Ahead of Nvidia’s Next GPUs",
+      "url": "https://superpowerdaily.com/posts/enterprise-buyers-put-non-nvidia-chip-evaluations-ahead-of-nvidia-s-next-gpus",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-02T23:41:35.000Z",
+      "summary": "The July survey signals a broader search across AWS, Google, AMD, Intel and custom hardware. It does not show a migration away from Nvidia, but it does show buyers weighing performance, reliability and integration at the workload level.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Sparks Fly: NVIDIA Accelerates Local AI at IFA 2026",
+      "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-03T16:00:59.000Z",
+      "summary": "Frontier intelligence is going local. At IFA 2026, NVIDIA, Microsoft and its partners are teaming up to provide faster inference and new tools that make agents easier to set up and run locally on NVIDIA hardware. New compact NVIDIA RTX Spark Windows PCs are also coming in October to give AI enthusiasts, developers and creators […]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google Puts WeatherNext 3’s Hourly AI Forecasts Into Search, Maps and Gemini",
+      "url": "https://superpowerdaily.com/posts/google-puts-weathernext-3-s-hourly-ai-forecasts-into-search-maps-and-gemini",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-03T15:28:05.000Z",
+      "summary": "The launch moves an observation-led weather model from Google’s research stack into consumer products and cloud data tools. Its performance claims are substantial, while Google directs users seeking official severe-weather warnings and public-safety advisories to meteorological agencies.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Perplexity Open-Sources Lily, a Qwen-Specific Mac Engine That Beats MLX-LM in Its Test",
+      "url": "https://superpowerdaily.com/posts/perplexity-open-sources-lily-a-mac-engine-35-faster-in-its-qwen-test",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-03T07:17:15.000Z",
+      "summary": "The Rust-and-Metal runtime gives developers a public, deployable version of Perplexity’s local inference stack. Its reported gains come from one Qwen model, one hardware family and a batch-one comparison on a high-memory M5 Max.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "September 3, 2026 A connectomics milestone: Mapping the complete male fruit fly brain General Science · Health & Bioscience · Machine Intelligence · Open Source Models & Datasets",
+      "url": "https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/",
+      "source": "Google Research Blog",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.54,
+      "date": "2026-09-03T17:01:00.123Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Nvidia’s free PAIR software turns spare home PCs into a local AI cluster",
+      "url": "https://superintelligencenews.com/applications/nvidia-free-local-ai-cluster-pair/",
+      "source": "Superintelligence Newsletter",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.54,
+      "date": "2026-09-03T16:52:31.000Z",
+      "summary": "Nvidia’s PAIR turns idle home PCs into a local AI cluster, linking GPUs and Macs for secure, distributed inference and agent workflows. The post Nvidia’s free PAIR software turns spare home PCs into a local AI cluster appeared first on Superintelligence News - Artificial Intelligence News .",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Motional and MIT AI explains self-driving car decisions",
+      "url": "https://www.artificialintelligence-news.com/news/motional-and-mit-ai-explains-self-driving-car-decisions/",
+      "source": "AI News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-02T15:25:12.000Z",
+      "summary": "Motional and MIT researchers have built a system that lets self-driving cars explain their decisions in real-time, tackling the black-box problem in autonomous vehicle AI. The work, published in Nature, comes from a team at Motional that includes CEO Laura Major, working alongside researchers from MIT’s Computer Science and Artificial Intelligence Laboratory. Their proposed method, […] The post Motional and MIT AI explains self-driving car decisions appeared first on AI News .",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Uber launches UK's first robotaxis with a driver - here's what it's like to ride in one The ride-hailing app has launched 15 self-driving taxis, but they will have safety drivers inside.",
+      "url": "https://www.bbc.com/news/articles/ce9e838jzpzo",
+      "source": "BBC AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-03T04:51:00.352Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Training a coding model to paint watercolours with TRL and OpenEnv",
+      "url": "https://huggingface.co/blog/train-to-paint-with-code",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-03T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_models"
+    }
+  ]
+}

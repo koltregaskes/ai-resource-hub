@@ -1,9 +1,121 @@
 {
-  "generated": "2026-05-25T14:37:35.601Z",
+  "generated": "2026-08-26T02:57:35.223Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-29",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 7,
+  "archived_story_count": 168,
+  "articles": [
+    {
+      "title": "GitHub Releases · Goose: v1.22.0",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.22.0",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-01-29T22:01:35.000Z",
+      "summary": "# Goose v1.22.0 Release Notes **Released:** January 29, 2026 ## ✨ New Features - **Session Forking** - Fork existing sessions to create new branches of conversation ([#5882](https://github.com/block/goose/pull/5882)) by [@wpfleger96](https://github.com/wpfleger96) - **Collapsible Chat Navigation** - Chat nav is now collapsible for a cleaner UI ([#6649](https://github.com/block/goose/pull/6649)) by [@zanesq](https://github.com/zanesq) - **Goose Documentation Skill** - Built-in skill for referencing goose documentation ([#6534](https://github.com/block/goose/pull/6534)) by [@lifeizhou-ap](https://github.com/lifeizhou-ap) - **Codex Subscription Support** - Added support for Codex subscriptions ([#6600](https://github.com/block/goose/pull/6600)) by [@michaelneale](https://github.com/michaelneale) - **External Editor Support** - Use external editors like vim, helix, etc. ([#5823](https://github.com/block/goose/pull/5823)) by [@peterwilli](https://github.com/peterwilli) - **Diagnostics Viewe",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.412",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.412",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-01-29T16:29:39.000Z",
+      "summary": "## What's Changed * **Homepage: Make pricing cheaper for prompters!** by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6413 * Update Showcase page by @MehmetAdemi in https://github.com/remotion-dev/remotion/pull/6414 * docs: Add AI code generation and dynamic preview guides by @ASchwad in https://github.com/remotion-dev/remotion/pull/6397 * docs: Update HLS support docs for Chrome v142+ by @poetryofcode in https://github.com/remotion-dev/remotion/pull/6342 * `@remotion/cli`: Replace add-skills with skills by @tiwariaayu in https://github.com/remotion-dev/remotion/pull/6396 ## New Contributors * @poetryofcode made their first contribution in https://github.com/remotion-dev/remotion/pull/6342 **Full Changelog**: https://github.com/remotion-dev/remotion/compare/v4.0.411...v4.0.412",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · ComfyUI: v0.11.1",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.11.1",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-01-29T07:52:21.000Z",
+      "summary": "## What's Changed * Add support for dev-only nodes. by @guill in https://github.com/Comfy-Org/ComfyUI/pull/12106 * Update Python 3.14 compatibility notes in README by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12127 * [API Nodes] Grok Imagine nodes by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/12136 * bump manager version to 4.1b1 by @ltdrdata in https://github.com/Comfy-Org/ComfyUI/pull/12140 * Update workflow templates to v0.8.27 by @comfyui-wiki in https://github.com/Comfy-Org/ComfyUI/pull/12141 * Add missing spacial downscale ratios. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12146 **Full Changelog**: https://github.com/Comfy-Org/ComfyUI/compare/v0.11.0...v0.11.1",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.414",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.414",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-29T16:39:53.000Z",
+      "summary": "- `@remotion/promo-pages`: Fix link linking to free license **Full Changelog**: https://github.com/remotion-dev/remotion/compare/v4.0.413...v4.0.414",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.413",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.413",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-29T16:30:29.000Z",
+      "summary": "`@remotion/design`: Fix ` ` component **Full Changelog**: https://github.com/remotion-dev/remotion/compare/v4.0.412...v4.0.413",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.411",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.411",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-29T08:39:45.000Z",
+      "summary": "## What's Changed * Skills: Add Skill for transparent videos by @tiwariaayu in https://github.com/remotion-dev/remotion/pull/6388 * `@remotion/lambda-client`: Surface function error by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6401 * `@remotion/studio`: Preserve web renderer options on retry by @romeoscript in https://github.com/remotion-dev/remotion/pull/6392 * `@remotion/media`: Convert sample to frame earlier to avoid it being closed in the meanwhile by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6407 * `create-video`: Enable agent skills by default by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6410 ## Templates * Prompt-to-Motion-Graphics template: Compiler improvements and Improve Lambda error UX by @ASchwad in https://github.com/remotion-dev/remotion/pull/6391 * Prompt-to-Motion-Graphics template: Add follow-up edits via chat by @ASchwad in https://github.com/remotion-dev/remotion/pull/6398 * Remove Mapbox Globe from sale b",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Project Genie: Experimenting with infinite, interactive worlds",
+      "url": "https://deepmind.google/blog/project-genie-experimenting-with-infinite-interactive-worlds/",
+      "source": "DeepMind Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-01-29T17:01:05.000Z",
+      "summary": "Google AI Ultra subscribers in the U.S. can try out Project Genie, an experimental research prototype that lets you create and explore worlds.",
+      "category": "ai_research"
+    }
+  ]
 }

@@ -1,0 +1,89 @@
+{
+  "generated": "2026-08-26T03:12:11.285Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-06-07",
+  "article_count": 5,
+  "archived_story_count": 119,
+  "articles": [
+    {
+      "title": "GitHub Releases · Turbo: Turborepo v2.9.17-canary.5",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.9.17-canary.5",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-06-07T22:02:18.000Z",
+      "summary": "## What's Changed ### Changelog * release(turborepo): 2.9.17-canary.4 by @github-actions[bot] in https://github.com/vercel/turborepo/pull/13032 * fix: Preserve pnpm override-resolved prune deps by @anthonyshew in https://github.com/vercel/turborepo/pull/13031 * fix: Keep PTY stdin open for tasks by @anthonyshew in https://github.com/vercel/turborepo/pull/13033 * fix: Add TUI pane padding before logs by @anthonyshew in https://github.com/vercel/turborepo/pull/13034 * fix(api-client): Support P-521 ECDSA certificate chains over rustls by @anthonyshew in https://github.com/vercel/turborepo/pull/13036 * chore: Restore aarch64 musl release builds by @anthonyshew in https://github.com/vercel/turborepo/pull/13037 **Full Changelog**: https://github.com/vercel/turborepo/compare/v2.9.17-canary.4...v2.9.17-canary.5",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · OpenClaw: openclaw 2026.6.5-beta.2",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.6.5-beta.2",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-06-07T00:26:39.000Z",
+      "summary": "## 2026.6.5 ### Highlights - **Safer channel output:** QQBot strips model reasoning and thinking scaffolding before native delivery, so users see the final answer rather than raw internal markup. (#89913, #90132) Thanks @openperf, @dygg2001, @Takhoffman, and @vincentkoc. - **MCP results no longer poison sessions:** `resource_link`, audio, malformed images, and future non-text blocks are normalized before provider conversion, avoiding Anthropic 400s and broken follow-up history. (#90710, #90728) Thanks @RanSHammer, @849261680, and @Takhoffman. - **Anthropic extended thinking recovers after restarts:** prompt-cache expiry and early-signature failures wait for a real message start, so they reach the existing retry path rather than ending a turn. (#90667, #90697) Thanks @openperf, @MIHHHMIH, @Takhoffman, @vincentkoc, @itsuzef, and @mcaxtr. - **Parallel web search is bundled:** API-key discovery, guarded endpoint handling, cache-safe session IDs, onboarding, and documentation make it a firs",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Next.js 15: v16.3.0-canary.44",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.44",
+      "source": "GitHub Releases · Next.js 15",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-06-07T23:59:42.000Z",
+      "summary": "### Misc Changes - Turbopack: remove EcmascriptParsable::parse_original: #94465 - Turbopack: Add an experimental option for eviction: #94439 - Specialize client hook prerender abort reasons: #94494 - enable eviction on canary: #94451 - Remove turbopackMemoryLimit it is dead: #94483 - [turbopack] Enable Effects to be evicted: #94173 ### Credits Huge thanks to @lukesandberg and @gnoff for helping!",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Qwen Code: Release v0.17.1-nightly.20260607.cef26a86a",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.17.1-nightly.20260607.cef26a86a",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-06-07T00:41:55.000Z",
+      "summary": "## What's Changed * chore(release): v0.17.1 by @qwen-code-ci-bot in https://github.com/QwenLM/qwen-code/pull/4742 * fix(cli): skip thought parts in copy output by @he-yufeng in https://github.com/QwenLM/qwen-code/pull/4738 * feat(installer): verify release assets + switch public docs to standalone entrypoint by @yiliang114 in https://github.com/QwenLM/qwen-code/pull/3855 * feat(ci): add @qwen /triage workflow for automated issue and PR triage by @yiliang114 in https://github.com/QwenLM/qwen-code/pull/4768 * fix(cli): Improve approval mode display text by @BZ-D in https://github.com/QwenLM/qwen-code/pull/4753 * fix(ui): display model name instead of id in statusline and startup banner by @zzhenyao in https://github.com/QwenLM/qwen-code/pull/4741 * feat(cli): add standalone auto-update support by @yiliang114 in https://github.com/QwenLM/qwen-code/pull/4629 * fix(ci): fix triage prompt variable expansion, bot identity, and model secret by @yiliang114 in https://github.com/QwenLM/qwen-code",
+      "category": "ai_tools"
+    },
+    {
+      "title": "🥇Top AI Papers of the Week",
+      "url": "https://nlp.elvissaravia.com/p/top-ai-papers-of-the-week-a3d",
+      "source": "NLP News (Elvis Saravia)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-06-07T15:00:58.000Z",
+      "summary": "The Top AI Papers of the Week (May 31 - June 7)",
+      "category": "ai_research"
+    }
+  ]
+}

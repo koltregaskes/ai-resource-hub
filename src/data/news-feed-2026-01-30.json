@@ -1,9 +1,40 @@
 {
-  "generated": "2026-05-25T14:37:35.628Z",
+  "generated": "2026-08-26T02:57:35.770Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-30",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 2,
+  "archived_story_count": 155,
+  "articles": [
+    {
+      "title": "GitHub Releases · Goose: v1.22.1",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.22.1",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-30T20:57:23.000Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.37.0",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.37.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-30T17:09:59.000Z",
+      "summary": "# LSP Auto-Discovery and More Hi! We've been cranking. How about you? This release adds some bugfixes nice quality-of-life features, and Copilot improvements. More below. ## Auto-LSP LSPs in Crush are awesome. What is less awesome is setting them up. Now, with Crush v0.37.0, you don't have to. Crush will auto-detect LSPs and set 'em up as needed. So go on, install that `haskell-language-server` you've been meaning to, fire up Crush, and get knee-deep in monads. ## More Copilot Models We made all Copilot models available on Crush, which means you'll a few more models available now, particularly Gemini 3 Pro (Preview) and Gemini 3 Flash (Preview). ## New UI? What new UI? We're continuing to iterate, test, and add features the new UI which we're pretending is a secret. Wanna try it? Set `CRUSH_NEW_UI=1` in your environment. Enjoy your weekend! Charm 💘 ## Changelog ### New! * c81b02f440a1c442fe731122f5b2150547ab8fd3: feat(lsp): auto-discover LSPs (#1834) (@caarlos0) * fea878e4d4c315f91c19",
+      "category": "ai_tools"
+    }
+  ]
 }

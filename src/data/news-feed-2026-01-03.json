@@ -1,9 +1,42 @@
 {
-  "generated": "2026-05-25T14:37:34.708Z",
+  "generated": "2026-08-26T02:57:09.579Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-03",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 2,
+  "archived_story_count": 150,
+  "articles": [
+    {
+      "title": "GitHub Releases · Remotion: v4.0.399",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.399",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-01-03T12:50:23.000Z",
+      "summary": "## What's Changed * `@remotion/web-renderer`: Improve error messages for broken and tainted images by @samohovets in https://github.com/remotion-dev/remotion/pull/6171 * `@remotion/web-renderer`: Support `object-fit` property by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6206 * `@remotion/web-renderer`: Fix how SVGs are rendered in a container they do not fit in by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6193 * `@remotion/web-renderer`: Add support for `-webkit-text-fill-color` by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6194 * `@remotion/web-renderer`: Support `background-clip` CSS property by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6198 * `@remotion/web-renderer`: Skip very compressed transforms for performance by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6202 * `@remotion/web-renderer`: Reuse WebGL context for more performance by @JonnyBurger in https://github.com/remotion-dev/rem",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.30.1",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.30.1",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-03T17:54:30.000Z",
+      "summary": "# A Fistful of Fixes Happy New Year! This is a little patch release to fix session naming, Copilot quota usage, and symlinks in skill directories, and a potential panic. Best wishes for 2026! 💘 ## Changelog ### Fixed * aeadffde3bbb407bec508f7c8b95acf0991b1f3c: fix: copilot quota handling (#1738) (@Gustave-241021, @kujtimiihoxha) * 7315fceb643a44014da37257f88ed23e79ab4b50: fix(sessions): generate title with large model if small model fails (@meowgorithm) * d361a3311470b91c9d9184a968ed13c56e74f6cb: fix(skills): use fastwalk to resolve symlinks (#1732) (@Amolith) * c49b4fe243ffd6b9ded5afdc53c9e85e0dff404c: fix(sessions): tag removal, handle multibyte (@meowgorithm) * 63a3d831881d76b9a4aab615ba8581498fcb5ae0: fix(tui): guard model selection when list is empty (#1715) (@jamestrew) ### Other stuff * 7091b4f77b0d58a482f3872b8bfd3d3586b78c21: chore(cli): simplify help text (#1752) (@meowgorithm) * 67e8f140fab298698c7b15d41a95097256551ac3: chore: auto-update files (@charmcli) * 59e4adc2fb034f5",
+      "category": "ai_tools"
+    }
+  ]
 }

@@ -1,0 +1,333 @@
+{
+  "generated": "2026-09-13T17:45:10.348Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Implementation of Machine Learning Workflows with NVIDIA cuML, RAPIDS, GPU Benchmarking, Explainability, Clustering, and Model Inference",
+      "url": "https://www.marktechpost.com/2026/09/12/implementation-of-machine-learning-workflows-with-nvidia-cuml-rapids-gpu-benchmarking-explainability-clustering-and-model-inference/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "evaluation",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "evaluation",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-13T01:42:58.000Z",
+      "summary": "This practical tutorial demonstrates how to build and accelerate machine learning workflows using NVIDIA cuML and RAPIDS. It covers GPU environment setup, zero-code scikit-learn acceleration with cuml.accel, performance benchmarking across key ML algorithms, manifold learning with UMAP and HDBSCAN, tree-model inference with FIL, and model explainability using GPU-accelerated SHAP The post Implementation of Machine Learning Workflows with NVIDIA cuML, RAPIDS, GPU Benchmarking, Explainability, Clustering, and Model Inference appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "cua-driver-rs v0.20.6",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/cua-driver-rs-v0.20.6",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update",
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-13T11:15:51.000Z",
+      "summary": "Qwen CUA Driver prebuilt binaries (vendored under packages/cua-driver ). macOS : codesigned + notarized universal binary + QwenCuaDriver.app Linux : unsigned (x86_64 + arm64, glibc 2.31 floor) Windows : unsigned UIAccess worker + native SDK payload (x86_64 + arm64); deployments must sign and trust the worker on the target machine before UIAccess activation Node.js : the same workflow publishes @qwen-code/cua-sdk after a clean install against these release assets and publishes the independently versioned @qwen-code/node-repl-mcp package after its MCP protocol smoke tests Enable relative...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Cognition Releases SWE-2: A Kimi K3 Post-Trained Coding Model That Matches Fable 5.1 on FrontierCode at 64% Lower Cost",
+      "url": "https://www.marktechpost.com/2026/09/12/cognition-releases-swe-2-a-kimi-k3-post-trained-coding-model-that-matches-fable-5-1-on-frontiercode-at-64-lower-cost/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-12T23:56:03.000Z",
+      "summary": "Cognition, the company behind the Devin coding agent, has released SWE-2, its most capable coding model to date. SWE-2 is post-trained with reinforcement learning from Kimi K3, Moonshot AI’s 2.8T-parameter open model. Cognition reports a score of 50.0% on FrontierCode 1.1 Main, within 1 point of Fable 5.1 at 64% lower cost. It is also […] The post Cognition Releases SWE-2: A Kimi K3 Post-Trained Coding Model That Matches Fable 5.1 on FrontierCode at 64% Lower Cost appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Release v0.23.3-nightly.20260912.54aa66834b",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.3-nightly.20260912.54aa66834b",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-12T22:03:27.000Z",
+      "summary": "What's Changed refactor(dingtalk): remove obsolete background response aggregation by @qqqys in #11570 feat(channels)!: remove message prefix filtering by @qqqys in #11571 fix(ci): widen the replayed supersede-cede timeline margin to deflake Scripts by @wenshao in #11581 test(review): pin the fold invariant the per-line escape rests on by @wenshao in #11533 fix(autofix): charge regressions to the brake and gate test weakening by @wenshao in #10188 fix(acp): Preserve submitted prompt provenance for auto recall by @doudouOUC in #11455 fix(serve): restore configured channels after restart by...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AWS Introduces Pizza Bot: An Open Source Inbox for Background AI Agents",
+      "url": "https://www.marktechpost.com/2026/09/13/aws-introduces-pizza-bot-an-open-source-inbox-for-background-ai-agents/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-13T08:10:51.000Z",
+      "summary": "Pizza Bot is an open source, self-hosted inbox for AI agents built on DeepAgents and LangGraph. It combines persistent task state, MCP integrations, configurable approvals, and scheduled workflows across multiple model providers. The post AWS Introduces Pizza Bot: An Open Source Inbox for Background AI Agents appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Specific Labs Launches Private-Code Benchmark Where Top Coding Setup Solves 38.8%",
+      "url": "https://superpowerdaily.com/posts/specific-labs-launches-private-code-benchmark-where-top-coding-setup-solves-38-8",
+      "source": "Superpower Daily",
+      "tags": [
+        "benchmark",
+        "architecture"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "architecture"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-12T22:39:37.000Z",
+      "summary": "The new Real-SWE benchmark is designed to test unfamiliar production systems, not public repositories. Its first results suggest that business rules, existing architecture, and multi-service workflows remain hard for today’s coding agents.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Fly Language Model (FLM) Wires the Full Fruit Fly Connectome Into a Frozen 1.2B LLM, and Its Own Controls Show the Wiring Does Not Help",
+      "url": "https://www.marktechpost.com/2026/09/12/fly-language-model-flm-wires-the-full-fruit-fly-connectome-into-a-frozen-1-2b-llm-and-its-own-controls-show-the-wiring-does-not-help/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-12T18:51:24.000Z",
+      "summary": "The Fly Language Model (FLM) drives all 166,700 retained neurons and 25.6 million edges of the MaleCNS fruit fly connectome with token embeddings, then adds a small learned correction to a frozen LFM2.5-1.2B-Instruct backbone. Only 278,528 parameters train. The accompanying preprint reports a 0.0222 nat per token improvement over the backbone, but a parameter-matched control without the graph does slightly better in every seed. We break down the architecture, the four controls, the 0.6 per token memory bound, and what it takes to run the MIT-licensed code locally. The post Fly Language...",
+      "category": "ai_research"
+    },
+    {
+      "title": "Sep 03 OpenAI GPT-6 Astra Show details",
+      "url": "https://news.smol.ai/issues/26-09-03-gpt-6-astra",
+      "source": "Smol AI News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-13T04:50:44.702Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Generating running routes with GPT-6 Astra and ChatGPT Work",
+      "url": "https://simonwillison.net/2026/Sep/12/astra-running-routes/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-12T23:56:42.000Z",
+      "summary": "Here's a neat thing I had ChatGPT Work with GPT-6 Astra (Max) do this morning: I live at . Figure out 5K and 10K running routes from me that loop from my house. Use OSM data. It worked for 27 minutes and produced exactly what I'd asked for, as both an embedded visualization and downloadable GPX file and GeoJSON files. Here's that 5K route: When I asked it how it had created the route, it replied: I used Nominatim to locate the address and Overpass to download local OpenStreetMap roads and trails , then calculated the loops locally. Frustratingly, the actual code it ran and exact details...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Lifesaving Lincoln Laboratory device wins 2026 Excellence in Technology Transfer Award",
+      "url": "https://news.mit.edu/2026/lifesaving-lincoln-laboratory-technology-wins-tech-transfer-award-0911",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-12T17:01:08.164Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "GitHub Releases · Turbo: Turborepo v2.10.13-canary.6",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.10.13-canary.6",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-13T14:59:15.000Z",
+      "summary": "## What's Changed ### Changelog * chore: Release Turborepo 2.10.13-canary.5 by @github-actions[bot] in https://github.com/vercel/turborepo/pull/14051 * fix: Preserve native task dependencies across entrypoints by @anthonyshew in https://github.com/vercel/turborepo/pull/14047 * fix: Pass through LOCALAPPDATA by default by @vercel-gh-bot-2[bot] in https://github.com/vercel/turborepo/pull/14056 **Full Changelog**: https://github.com/vercel/turborepo/compare/v2.10.13-canary.5...v2.10.13-canary.6",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.61.0-nightly.20260913.g9c1b0a610",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.61.0-nightly.20260913.g9c1b0a610",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-13T01:29:27.000Z",
+      "summary": "Full Changelog : v0.61.0-nightly.20260912.g9c1b0a610...v0.61.0-nightly.20260913.g9c1b0a610",
+      "category": "ai_tools"
+    },
+    {
+      "title": "nightly",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-13T01:06:24.000Z",
+      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity ' https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI Agents Allegedly Powered May RubyGems Attack That Tried to Steal API Keys",
+      "url": "https://superintelligencenews.com/companies/openai-agents-rubygems-attack/",
+      "source": "Superintelligence Newsletter",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-12T21:54:22.000Z",
+      "summary": "Researchers say OpenAI agents drove a May RubyGems attack, flooding the repo and trying to steal API keys. The post OpenAI Agents Allegedly Powered May RubyGems Attack That Tried to Steal API Keys appeared first on Superintelligence News - Artificial Intelligence News .",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Turborepo v2.10.13-canary.5",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.10.13-canary.5",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-12T16:10:01.000Z",
+      "summary": "What's Changed Changelog chore: Release Turborepo 2.10.13-canary.4 by @github-actions[bot] in #14039 docs: Explain circular package dependencies in boundaries by @vercel-gh-bot-2[bot] in #14042 docs: Document circular dependencies in boundaries by @vercel-gh-bot-2[bot] in #14041 fix: Preserve Yarn resolution declaration order by @anthonyshew in #14045 fix: Avoid duplicate interrupts during task shutdown by @anthonyshew in #14046 fix: Preserve nested Bun package keys by @vercel-gh-bot-5[bot] in #14050 chore: Update with-mcp-servers example by @vercel-gh-bot-2[bot] in #14049 Full Changelog...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI uncovers hidden Ozempic side effects across 400,000 Reddit posts",
+      "url": "https://www.sciencedaily.com/releases/2026/09/260912222856.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-09-13T10:46:19.000Z",
+      "summary": "AI analysis of 400,000 Reddit posts found that users of drugs such as Ozempic, Wegovy, Mounjaro, and Zepbound reported unexpected symptoms including menstrual changes, chills, hot flashes, and fatigue. Researchers cannot say the medications caused these problems, but the patterns may reveal overlooked signals worth studying.",
+      "category": "ai_research"
+    },
+    {
+      "title": "Context Engineering Inside the Harness: 4 Mechanisms That Beat Context Overflow and Goal Loss on Long-Horizon Tasks",
+      "url": "https://www.marktechpost.com/2026/09/12/context-engineering-inside-the-harness-4-mechanisms-that-beat-context-overflow-and-goal-loss-on-long-horizon-tasks/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-13T05:56:03.000Z",
+      "summary": "A shallow agent is an LLM calling tools in a loop, and on long tasks it fails in 2 ways: context overflow and goal loss. This article opens the harness layer that fixes both, with the actual thresholds shipped by LangChain Deep Agents, Claude Code, Manus, OpenAI Codex and Amazon Bedrock AgentCore, plus an interactive simulator that shows a 200K window filling up. The post Context Engineering Inside the Harness: 4 Mechanisms That Beat Context Overflow and Goal Loss on Long-Horizon Tasks appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenAI Profiles Lab Using ChatGPT and Codex to Speed Antimicrobial Search",
+      "url": "https://superpowerdaily.com/posts/openai-profiles-lab-using-chatgpt-and-codex-to-speed-antimicrobial-search",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-13T03:20:54.000Z",
+      "summary": "César de la Fuente’s lab says its AI systems can shrink the first candidate search from years to hours. The harder work—showing a molecule is safe, effective and manufacturable—still happens in the lab.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic opens safety reviews to outside evaluators",
+      "url": "https://superpowerdaily.com/posts/anthropic-opens-safety-reviews-to-outside-evaluators",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-09-13T08:00:00.000Z",
+      "summary": "Dario Amodei also wants slower capability gains, but shared standards still require other labs and governments to opt in.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v4.0.524",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.524",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.54,
+      "date": "2026-09-13T07:50:18.000Z",
+      "summary": "What's Changed @remotion/web-renderer : Pitch-shifting using toneFrequency is now supported in preview and rendering! by @JonnyBurger in #11183 @remotion/bundler : Fix Rspack bundles without optional Studio dependencies by @JonnyBurger in #11257 @remotion/media : Upgrade Mediabunny to 1.56.1 by @JonnyBurger in #11219 @remotion/promo-pages : Add video automation landing page by @JonnyBurger in #11184 @remotion/skills : Use SVG agent icons by @JonnyBurger in #11217 @remotion/studio : Simplify Studio settings controls by @JonnyBurger in #11193 @remotion/studio : Create, duplicate, rename and...",
+      "category": "ai_tools"
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "generated": "2026-09-18T17:45:10.506Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Alibaba Qwen Releases Qwen3.8-Omni-Flash: A 1M-Context Omni-Modal Model Built Around Agentic Audio-Video Understanding and Tool Use",
+      "url": "https://www.marktechpost.com/2026/09/18/alibaba-qwen-releases-qwen3-8-omni-flash/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-18T08:40:37.000Z",
+      "summary": "Alibaba's Qwen3.8-Omni-Flash understands audio and video, plans tasks, calls tools, and reports about 45.7% fewer tokens on OmniVideoBench. The post Alibaba Qwen Releases Qwen3.8-Omni-Flash: A 1M-Context Omni-Modal Model Built Around Agentic Audio-Video Understanding and Tool Use appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Scale AI and Korea AI Safety Institute Release Benchmark Exposing a Translation Gap",
+      "url": "https://superpowerdaily.com/posts/scale-ai-and-korea-ai-safety-institute-release-benchmark-exposing-a-translation-gap",
+      "source": "Superpower Daily",
+      "tags": [
+        "benchmark",
+        "evaluation",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "evaluation",
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-17T23:17:49.000Z",
+      "summary": "The study found lower harmful-response scores in Korean prompts, but also more refusals of harmless requests—complicating claims that a model is simply safer in another language.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.24.0-nightly.20260917.f822124af5",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.0-nightly.20260917.f822124af5",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-17T21:59:43.000Z",
+      "summary": "What's Changed docs(serve): record merged ACP boundary acceptance by @wenshao in #12024 fix(ci): wait for the published export renderer before packaging the VSIX by @yiliang114 in #12036 fix(web-shell): stop dropping the daemon credential on two navigation paths by @yiliang114 in #12011 fix(acp): restore managed auto-memory extraction by @yiliang114 in #12018 fix(cli): close twelve OpenTUI parity gaps found against ink by @chiga0 in #11806 fix(core): count Stop-hook blocks across tool round trips by @qqqys in #12062 feat(workflows): let agent() narrow a subagent to an explicit tool...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "LangChain Releases Deep Life Sci for Auditable Clinical and Lab AI Work",
+      "url": "https://superpowerdaily.com/posts/langchain-releases-deep-life-sci-for-auditable-clinical-and-lab-ai-work",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-18T06:29:18.000Z",
+      "summary": "The open-source template combines large biomedical search collections with code execution and run-by-run records, but each organization must adapt it to its own data and controls.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Be alert: targeted attacks on prominent Rustaceans",
+      "url": "https://simonwillison.net/2026/Sep/17/targeted-attacks-on-rustaceans/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-17T23:59:19.000Z",
+      "summary": "Be alert: targeted attacks on prominent Rustaceans Important warning from Adam Harvey and the crates security team: We believe that there is an ongoing campaign targeting rust-lang members and owners of popular crates that is attempting to compromise devices and accounts in order to use them to publish malware. A video call is set up for something positive — maybe for a job, maybe for a project, maybe for a contract opportunity — and then that's used as a vector to either get the target to install something on their computer (such as a purportedly missing audio codec) or execute another...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Microsoft Open-Sources TauGrid: A Kubernetes-Native Stack for GPU AI Workloads",
+      "url": "https://www.marktechpost.com/2026/09/17/microsoft-open-sources-taugrid-a-kubernetes-native-stack-for-gpu-ai-workloads/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-17T21:21:08.000Z",
+      "summary": "Microsoft's AKS engineering team open-sourced TauGrid on August 28, 2026, packaging the tau CLI, Kueue queueing, KubeRay orchestration, GPU node health monitoring and observability into one Helm install. It is MIT licensed and deployable now on any Kubernetes 1.30+ cluster with GPU nodes, kubectl and Helm 3.0 or later. The post Microsoft Open-Sources TauGrid: A Kubernetes-Native Stack for GPU AI Workloads appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "SemiAnalysis Publishes a Map of China’s AI Data-Center Footprint",
+      "url": "https://superpowerdaily.com/posts/semianalysis-publishes-a-map-of-china-s-ai-data-center-footprint",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-17T20:15:41.000Z",
+      "summary": "The new model brings self-built sites, leased capacity, colocation tenants and chip-based AI-lab estimates into one view, while keeping the difference between measured facilities and inferred power needs in focus.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Delta Develops Integrated Power and Cooling Infrastructure for NVIDIA DSX",
+      "url": "https://superpowerdaily.com/posts/delta-develops-integrated-power-and-cooling-infrastructure-for-nvidia-dsx",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-17T19:20:42.000Z",
+      "summary": "The company is linking onsite energy systems to rack and chip-level equipment, with prefabricated modules intended to speed the path from available electricity to productive AI capacity.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI Says an Astra Training Model Inserted Its Own Jailbreak Instructions",
+      "url": "https://superpowerdaily.com/posts/openai-says-an-astra-training-model-inserted-its-own-jailbreak-instructions",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "training"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "training"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-17T14:36:32.000Z",
+      "summary": "One fabricated restriction caused an incorrect medical-research refusal. OpenAI says the rare behavior did not appear in the final Astra training run, but its suspected cause remains unproven.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Best Open-Source Agent Harnesses for Local LLMs in 2026",
+      "url": "https://www.marktechpost.com/2026/09/18/best-open-source-agent-harnesses-for-local-llms-in-2026/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-18T09:44:55.000Z",
+      "summary": "Which open-source harness works with Ollama, LM Studio, or llama.cpp? 11 verified picks with licenses and setup rules. The post Best Open-Source Agent Harnesses for Local LLMs in 2026 appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "DeepSeek’s Insane New Architecture",
+      "url": "https://www.youtube.com/watch?v=vIHw_2VjSUw",
+      "source": "Two Minute Papers",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-18T07:03:46.000Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Oracle Publishes 1,000-Agent Cloud Benchmark, With a Clear Latency Trade-Off",
+      "url": "https://superpowerdaily.com/posts/oracle-publishes-1-000-agent-cloud-benchmark-with-a-clear-latency-trade-off",
+      "source": "Superpower Daily",
+      "tags": [
+        "benchmark",
+        "inference"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "inference"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-17T23:22:26.000Z",
+      "summary": "The company’s reference design separates public request handling from private agent execution and gives each agent durable storage, but its own test shows that pushing concurrency higher can sharply slow the slowest responses.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "UN findings show US strikes on Minab could be war crimes",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/18/un-findings-show-us-strikes-on-minab-could-be-war-crimes?traffic_source=rss",
+      "source": "Al Jazeera",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.62,
+      "date": "2026-09-18T01:58:53.000Z",
+      "summary": "UN-backed human rights experts say the US committed possible war crimes when it launched two strikes.",
+      "category": "tech_general"
+    },
+    {
+      "title": "Dynamically Scaled Activation Steering",
+      "url": "https://machinelearning.apple.com/research/dynamically-scaled-activation-steering",
+      "source": "Apple Machine Learning",
+      "tags": [
+        "research_paper",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "evaluation"
+      ],
+      "importance": 0.62,
+      "date": "2026-09-18T00:00:00.000Z",
+      "summary": "Activation steering has emerged as a powerful method for guiding the behavior of generative models towards desired outcomes such as toxicity mitigation. However, most existing methods apply interventions uniformly across all inputs, degrading model performance when steering is unnecessary. We introduce Dynamically Scaled Activation Steering (DSAS), a method-agnostic steering framework that decouples when to steer from how to steer. DSAS adaptively modulates the strength of existing steering transformations across layers and inputs, intervening strongly only when undesired behavior is detected…",
+      "category": "ai_research"
+    },
+    {
+      "title": "Google DeepMind launches institute to widen the AGI debate",
+      "url": "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-17T23:21:17.000Z",
+      "summary": "The new institute aims to surface differing views between Google, Google DeepMind, and the broader global research community around AGI. \"They will not always agree, and they will likely change their minds, as more data and information comes to light at the fast-moving frontier.\"",
+      "category": "ai_tools"
+    },
+    {
+      "title": "The FAA’s plan to fix air traffic? $875M worth of AI",
+      "url": "https://techcrunch.com/2026/09/17/the-faas-plan-to-fix-air-traffic-875-million-worth-of-ai/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-17T22:14:59.000Z",
+      "summary": "A new AI-based software program is being launched to help air traffic controllers better navigate their jobs as the crossing guards of America's skies.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI caught its models leaving notes to successors to hide bad behavior",
+      "url": "https://techcrunch.com/2026/09/17/openai-caught-its-models-leaving-notes-to-successors-to-hide-bad-behavior/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-17T20:34:24.000Z",
+      "summary": "OpenAI disclosed instances of GPT-5.6 Sol instructing future contexts to conceal mistakes and misaligned behavior, highlighting the growing challenge of detecting misalignment as increasingly capable AI models learn to hide it.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "'AI slop' art trail cost £11,688, figures reveal Artists and residents in Scarborough criticised the trail when it was launched in the summer.",
+      "url": "https://www.bbc.com/news/articles/cqvgy898p47zo",
+      "source": "BBC AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-17T17:01:54.497Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Roku’s new Labs hub brings experimental apps to the big screen",
+      "url": "https://techcrunch.com/2026/09/17/rokus-new-labs-hub-brings-experimental-apps-to-the-big-screen/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-17T15:50:29.000Z",
+      "summary": "Roku’s latest OS update introduces Roku Labs, a new hub for experimental apps, alongside personalized home screens in more markets, streaming subscription bundles, and more.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Salesforce Agentforce: Bridging the Enterprise AI Gap from ‘Vibe Coding’ to Battle-Tested Orchestration",
+      "url": "https://www.marktechpost.com/2026/09/18/salesforce-agentforce-bridging-the-enterprise-ai-gap-from-vibe-coding-to-battle-tested-orchestration/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-18T07:34:06.000Z",
+      "summary": "Building an AI prototype is easy, but operating autonomous agents at scale requires production-grade tooling. Salesforce Agentforce bridges the gap from \"vibe coding\" to enterprise reliability by combining synthetic stress-testing, real-time optimization, dynamic agentic UIs, and deterministic guardrails—as proven by Southwest Airlines' 7x ROI. The post Salesforce Agentforce: Bridging the Enterprise AI Gap from ‘Vibe Coding’ to Battle-Tested Orchestration appeared first on MarkTechPost .",
+      "category": "ai_research"
+    }
+  ]
+}

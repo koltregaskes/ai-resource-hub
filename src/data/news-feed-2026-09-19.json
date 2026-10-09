@@ -1,0 +1,361 @@
+{
+  "generated": "2026-09-19T05:35:11.581Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Jina AI Releases jina-ocr-v1: A 3.4B MoE Document Parser With Built-In Speculative Decoding for Low-Budget GPUs",
+      "url": "https://www.marktechpost.com/2026/09/18/jina-ai-releases-jina-ocr-v1-a-3-4b-moe-document-parser-with-built-in-speculative-decoding-for-low-budget-gpus/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "evaluation",
+        "architecture",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "evaluation",
+        "architecture",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-18T21:21:59.000Z",
+      "summary": "Jina AI has released jina-ocr-v1, a visual document parser that converts PDFs, scans, tables, charts and invoices into Markdown. The model has 3.4B total parameters, with about 570M active per token, and builds on DeepSeek-OCR. A built-in FastMTP speculative decoding head drafts 3 tokens per step while keeping output lossless. It scores 91.14 on OmniDocBench v1.6 and 83.4 on olmOCR-Bench, and parses 2.57 pages per second on 1 A100. Weights are on Hugging Face under CC BY-NC 4.0, with hosted access through Jina Reader. The post Jina AI Releases jina-ocr-v1: A 3.4B MoE Document Parser With...",
+      "category": "ai_research"
+    },
+    {
+      "title": "SpaceXAI Releases Grok Voice Transcribe 2.0: A Speech-to-Text API Claiming 2x Accuracy Over 1.0 at $0.10 per Hour",
+      "url": "https://www.marktechpost.com/2026/09/18/spacexai-releases-grok-voice-transcribe-2-0/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-19T03:42:24.000Z",
+      "summary": "SpaceXAI has released Grok Voice Transcribe 2.0, its newest speech-to-text model for batch and streaming audio. The company says it is twice as accurate as version 1.0 at the same price. Short-phrase word error rate across 19 languages fell from 20.6% to 6.8%. Pricing stays at $0.10 per hour for batch and $0.20 for streaming. The model is available today through the Grok Voice API. The post SpaceXAI Releases Grok Voice Transcribe 2.0: A Speech-to-Text API Claiming 2x Accuracy Over 1.0 at $0.10 per Hour appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "PrismML Releases Ternary Bonsai 2 27B: A 5.9 GB Apache 2.0 Model Retaining 98.2% of Qwen3.8 27B Performance",
+      "url": "https://www.marktechpost.com/2026/09/18/prismml-releases-ternary-bonsai-2-27b-a-5-9-gb-apache-2-0-model-retaining-98-2-of-qwen3-8-27b-performance/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "evaluation",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "evaluation",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-18T18:06:36.000Z",
+      "summary": "PrismML has released Ternary Bonsai 2 27B, a ternary-weight version of Qwen3.8 27B. The language model occupies 5.93 GB, against 53.80 GB in FP16. PrismML reports that it keeps 98.2% of the parent model’s average across 20 benchmarks. The model accepts text and images and supports a 262K-token context. PrismML demos it driving Cline coding […] The post PrismML Releases Ternary Bonsai 2 27B: A 5.9 GB Apache 2.0 Model Retaining 98.2% of Qwen3.8 27B Performance appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Alibaba Qwen Releases Qwen3.8-Omni-Flash: A 1M-Context Omni-Modal Model Built Around Agentic Audio-Video Understanding and Tool Use",
+      "url": "https://www.marktechpost.com/2026/09/18/alibaba-qwen-releases-qwen3-8-omni-flash/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-18T08:40:37.000Z",
+      "summary": "Alibaba's Qwen3.8-Omni-Flash understands audio and video, plans tasks, calls tools, and reports about 45.7% fewer tokens on OmniVideoBench. The post Alibaba Qwen Releases Qwen3.8-Omni-Flash: A 1M-Context Omni-Modal Model Built Around Agentic Audio-Video Understanding and Tool Use appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Release v0.24.0-nightly.20260918.537311b8a5",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.0-nightly.20260918.537311b8a5",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-18T21:59:11.000Z",
+      "summary": "What's Changed docs(serve): record merged ACP boundary acceptance by @wenshao in #12024 fix(ci): wait for the published export renderer before packaging the VSIX by @yiliang114 in #12036 fix(web-shell): stop dropping the daemon credential on two navigation paths by @yiliang114 in #12011 fix(acp): restore managed auto-memory extraction by @yiliang114 in #12018 fix(cli): close twelve OpenTUI parity gaps found against ink by @chiga0 in #11806 fix(core): count Stop-hook blocks across tool round trips by @qqqys in #12062 feat(workflows): let agent() narrow a subagent to an explicit tool...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "pnpm 12.5",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v12.5.0",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-18T17:02:57.000Z",
+      "summary": "pnpm 12.5.0 makes Python a first-class ecosystem, accepts Package URLs in pnpm add , names whole platforms in supportedArchitectures , and gives tasks machine-wide concurrency limits. It also fixes an install that could reuse one package's downloaded tarball for another. Minor Changes Installing packages pnpm add accepts a Package URL in place of a package name. pnpm add pkg:npm/express@4.18.2 saves express to package.json . pnpm add pkg:cargo/serde@1.0.188 saves serde to Cargo.toml . pnpm add pkg:pypi/requests@2.31.0 saves requests to pyproject.toml . pkg is now a reserved specifier...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.24.1-preview.0",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.1-preview.0",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-18T16:55:28.000Z",
+      "summary": "What's Changed docs(serve): record merged ACP boundary acceptance by @wenshao in #12024 fix(ci): wait for the published export renderer before packaging the VSIX by @yiliang114 in #12036 fix(web-shell): stop dropping the daemon credential on two navigation paths by @yiliang114 in #12011 fix(acp): restore managed auto-memory extraction by @yiliang114 in #12018 fix(cli): close twelve OpenTUI parity gaps found against ink by @chiga0 in #11806 fix(core): count Stop-hook blocks across tool round trips by @qqqys in #12062 feat(workflows): let agent() narrow a subagent to an explicit tool...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "LangChain Releases Deep Life Sci for Auditable Clinical and Lab AI Work",
+      "url": "https://superpowerdaily.com/posts/langchain-releases-deep-life-sci-for-auditable-clinical-and-lab-ai-work",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-18T06:29:18.000Z",
+      "summary": "The open-source template combines large biomedical search collections with code execution and run-by-run records, but each organization must adapt it to its own data and controls.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Jina AI Releases Document Parser, Claims 2.57 Pages Per Second",
+      "url": "https://superpowerdaily.com/posts/jina-ai-releases-document-parser-claims-2-57-pages-per-second",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-18T21:46:57.000Z",
+      "summary": "The open-weight model combines speculative decoding with API access, while its reported results point to damaged scans as a practical limitation.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Best Open-Source Agent Harnesses for Local LLMs in 2026",
+      "url": "https://www.marktechpost.com/2026/09/18/best-open-source-agent-harnesses-for-local-llms-in-2026/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-18T09:44:55.000Z",
+      "summary": "Which open-source harness works with Ollama, LM Studio, or llama.cpp? 11 verified picks with licenses and setup rules. The post Best Open-Source Agent Harnesses for Local LLMs in 2026 appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "DeepSeek’s Insane New Architecture",
+      "url": "https://www.youtube.com/watch?v=vIHw_2VjSUw",
+      "source": "Two Minute Papers",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-18T07:03:46.000Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "SpaceXAI Releases Grok Voice Transcribe 2.0 at Its Existing API Prices",
+      "url": "https://superpowerdaily.com/posts/spacexai-releases-grok-voice-transcribe-2-0-at-its-existing-api-prices",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-18T18:02:01.000Z",
+      "summary": "The new batch and live-transcription model is available now, while SpaceXAI’s strongest accuracy results come from its own testing and version 1.0 remains the current default.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Architect Labs Says Its AI Took Redwood From Chip Spec to FPGA in Two Weeks",
+      "url": "https://superpowerdaily.com/posts/architect-labs-says-its-ai-took-redwood-from-chip-spec-to-fpga-in-two-weeks",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-18T17:48:55.000Z",
+      "summary": "The reported speedup could let hardware teams revise designs around changing AI workloads, but Redwood’s performance case remains a projection until it reaches fabricated silicon.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "UN findings show US strikes on Minab could be war crimes",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/18/un-findings-show-us-strikes-on-minab-could-be-war-crimes?traffic_source=rss",
+      "source": "Al Jazeera",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.62,
+      "date": "2026-09-18T01:58:53.000Z",
+      "summary": "UN-backed human rights experts say the US committed possible war crimes when it launched two strikes.",
+      "category": "tech_general"
+    },
+    {
+      "title": "NVIDIA Researchers Present SoL-Pi, Reporting Up to 49% Less Token Traffic",
+      "url": "https://superpowerdaily.com/posts/nvidia-researchers-present-sol-pi-reporting-up-to-49-less-token-traffic",
+      "source": "Superpower Daily",
+      "tags": [
+        "benchmark",
+        "hardware"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "hardware"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-09-18T23:19:11.000Z",
+      "summary": "The project changes the software around a coding model rather than the model itself. Its promising benchmark result now faces the harder test of varied real-world development workflows.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Sep 18, 2026 Announcements Partnering with Accenture on embedded evaluation",
+      "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.54,
+      "date": "2026-09-19T04:51:17.499Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Could AI really kill us all? Your questions, answered.",
+      "url": "https://www.technologyreview.com/2026/09/18/1144435/could-ai-really-kill-us-all-your-questions-answered/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-18T11:29:22.000Z",
+      "summary": "On Wednesday, MIT Technology Review hosted a live Roundtables event for subscribers that asked the question everyone’s asking right now: Could AI really kill us all? But attendees had so many more questions than we had time to answer in the 30 minute session. So we asked our senior AI editor Will Douglas Heaven and…",
+      "category": "ai_research"
+    },
+    {
+      "title": "Salesforce Agentforce: Bridging the Enterprise AI Gap from ‘Vibe Coding’ to Battle-Tested Orchestration",
+      "url": "https://www.marktechpost.com/2026/09/18/salesforce-agentforce-bridging-the-enterprise-ai-gap-from-vibe-coding-to-battle-tested-orchestration/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-18T07:34:06.000Z",
+      "summary": "Building an AI prototype is easy, but operating autonomous agents at scale requires production-grade tooling. Salesforce Agentforce bridges the gap from \"vibe coding\" to enterprise reliability by combining synthetic stress-testing, real-time optimization, dynamic agentic UIs, and deterministic guardrails—as proven by Southwest Airlines' 7x ROI. The post Salesforce Agentforce: Bridging the Enterprise AI Gap from ‘Vibe Coding’ to Battle-Tested Orchestration appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "A new chapter for MIT Reads",
+      "url": "https://news.mit.edu/2026/new-chapter-mit-reads-0918",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-18T17:03:13.249Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Ethics, Equity, Inclusion",
+      "url": "https://hai.stanford.edu/topics/ethics-equity-inclusion",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-18T04:50:26.329Z",
+      "summary": "",
+      "category": "ai_research"
+    }
+  ]
+}

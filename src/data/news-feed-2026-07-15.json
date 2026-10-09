@@ -1,0 +1,177 @@
+{
+  "generated": "2026-07-18T17:45:40.497Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-07-15",
+  "article_count": 11,
+  "archived_story_count": 222,
+  "articles": [
+    {
+      "title": "Murati's Thinking Machines Releases Open-Weights 975B Parameter LLM",
+      "url": "https://thinkingmachines.ai/inkling/",
+      "source": "Hacker News",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-07-15T18:14:23.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Forever Healthy Launches Evipedia AI Integration",
+      "url": "https://lifespan.io/forever-healthy-launches-evipedia-ai-integration/",
+      "source": "Lifespan.io Research",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-07-15T17:08:51.000Z",
+      "summary": "Today, Forever Healthy announces the launch of a set of new tools to make it easier than ever for AI agents, research pipelines, and AI environments to integrate Evipedia. Evipedia [&#8230;]",
+      "category": "health_research"
+    },
+    {
+      "title": "Launch HN: Coasty (YC S26) – An API for computer-use agents",
+      "url": "https://coasty.ai/docs",
+      "source": "Hacker News",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-07-15T15:51:20.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Inkling: Our Open-Weights Model",
+      "url": "https://thinkingmachines.ai/news/introducing-inkling/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.97,
+      "date": "2026-07-15T18:12:45.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Open-source memory for coding agents, synced over SSH",
+      "url": "https://github.com/vshulcz/deja-vu/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.95,
+      "date": "2026-07-15T16:15:03.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Weathergotchi – an open-source climate Tamagotchi",
+      "url": "https://github.com/Michael-Manning/E-Paper-Climate-Logger",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.86,
+      "date": "2026-07-15T11:02:43.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Grok Build is open source",
+      "url": "https://github.com/xai-org/grok-build",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.85,
+      "date": "2026-07-15T20:24:58.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Starlink 2X Price Increase",
+      "url": "https://www.corporatejetinvestor.com/news/starlink-price-rise-reckless-says-correnti/",
+      "source": "Hacker News",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.83,
+      "date": "2026-07-15T16:22:43.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Governments, companies, nonprofits should invest in free, open source AI [pdf]",
+      "url": "https://www.siegelendowment.org/wp-content/uploads/2026/07/fortune-david-siegel-open-source-ai.pdf",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.82,
+      "date": "2026-07-15T21:16:36.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "SpaceX bond worth 10% less than issue price – heading for junk bond status",
+      "url": "https://www.ft.com/content/3a023b95-66c3-41e1-b0ce-df752a499541",
+      "source": "Hacker News",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-15T12:59:09.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Surprising lessons from my research scientist job search",
+      "url": "https://yongzx.github.io/blog/2026/06/24/job-search/",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7,
+      "date": "2026-07-10T14:58:13.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

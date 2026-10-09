@@ -1,0 +1,365 @@
+{
+  "generated": "2026-07-26T17:47:16.964Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "AISN #76: Fable 5 Restrictions Lifted & OpenAI Limits GPT-5.6 Release",
+      "url": "https://newsletter.safe.ai/p/aisn-76-fable-5-restrictions-lifted",
+      "source": "AI Safety Newsletter",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "evaluation"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-06T16:15:31.000Z",
+      "summary": "Also: Recent benchmark scores suggest rapid capabilities progress",
+      "category": "ai_research"
+    },
+    {
+      "title": "🗞️ Z.ai releases GLM 5.2 model: 1M context window with MIT-licensed open weights, long-horizon coding agents",
+      "url": "https://www.rohan-paul.com/p/zai-releases-glm-52-model-1m-context",
+      "source": "Rohan Paul",
+      "tags": [
+        "model_release",
+        "api_update",
+        "inference",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "inference",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-06-17T22:08:31.000Z",
+      "summary": "GLM 5.2 with 1M context, Tensordyne’s 13x inference claims, MIT’s AI productivity gap, DiffusionGemma for local LLMs, Amodei’s regulation warning, OpenAI buys Ona, Lutnick’s Anthropic letter",
+      "category": "ai_tools"
+    },
+    {
+      "title": "[AINews] \"Laguna S 2.1 Released: Cheaper than Deepseek v4 Flash, Better than V4 Pro\"",
+      "url": "https://www.latent.space/p/ainews-laguna-s-21-released-cheaper",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-23T05:18:47.000Z",
+      "summary": "a quiet day lets us highlight a new neolab win.",
+      "category": "ai_research"
+    },
+    {
+      "title": "Inside the Model Factory — Eiso Kant, Poolside AI",
+      "url": "https://www.latent.space/p/poolside",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper",
+        "architecture",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-23T05:09:14.000Z",
+      "summary": "Poolside's co-CEO on how his small team of top researchers built a model factory capable of training Laguna S - a 118B MOE beating Thinky's ~1T open weights model... and this is just the beginning.",
+      "category": "ai_research"
+    },
+    {
+      "title": "🗞️ Mira Murati's Thinking Machines Lab drops massive open-weight AI model, Inkling, Apache 2.0 license, no restrictions.",
+      "url": "https://www.rohan-paul.com/p/mira-muratis-thinking-machines-lab",
+      "source": "Rohan Paul",
+      "tags": [
+        "model_release",
+        "inference",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-16T22:12:27.000Z",
+      "summary": "Inkling open-weight AI, LMCache 10.7x inference speedup, Meta Muse Spark coding push, Apple sues OpenAI, Grok 4.5 tops WANDR, GPT-5.6 Sol Ultra prompt, Terra cost curve, agent token use 24x by 2030",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI just dropped the limited preview of its new GPT 5.6 model suite",
+      "url": "https://www.rohan-paul.com/p/openai-just-dropped-the-limited-preview",
+      "source": "Rohan Paul",
+      "tags": [
+        "model_release",
+        "pricing_change",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-06-29T22:50:09.000Z",
+      "summary": "OpenAI GPT-5.6: Sol, Terra & Luna; 10x rise in severity-3 agent actions; Claude usage logs; LLM hallucinations in document Q&A; AI budget shift to cheaper/open-source Chinese model",
+      "category": "ai_tools"
+    },
+    {
+      "title": "[AINews] Claude Opus 5: Fable-level performance at Opus price (half Fable)",
+      "url": "https://www.latent.space/p/ainews-claude-opus-5-fable-level",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper",
+        "evaluation",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "evaluation",
+        "pricing_change"
+      ],
+      "importance": 0.72,
+      "date": "2026-07-25T07:25:38.000Z",
+      "summary": "ain't nobody beats Anthropic at distilling Fable!",
+      "category": "ai_research"
+    },
+    {
+      "title": "Ruff v0.16.0",
+      "url": "https://simonwillison.net/2026/Jul/25/ruff/#atom-everything",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "architecture"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-25T22:44:05.000Z",
+      "summary": "<p><strong><a href=\"https://astral.sh/blog/ruff-v0.16.0\">Ruff v0.16.0</a></strong></p> Astral shipped a significant new version of their Ruff Python linting tool a few days ago on July 23rd. I noticed today because my various CI jobs all started failing thanks to new default Ruff checks and my unpinned <code>\"ruff\"</code> dev dependency.</p> <p>From Brent Westbrook's announcement post:</p> <blockquote> <p>Ruff now enables 413 rules by default, up from 59 in previous versions.</p> <p>Since Ruff's default rule set was last modified in <a href=\"https://github.com/astral-sh/ruff/blob/main/changelogs/0.1.x.md#breaking-changes\">v0.1.0</a>, the number of rules in Ruff has grown from 708 to 968. Many of these rules catch severe issues, including <a href=\"https://docs.astral.sh/ruff/rules/load-before-global-declaration\">syntax errors</a> and <a href=\"https://docs.astral.sh/ruff/rules/yield-in-init/\">immediate runtime errors</a> but were not previously enabled by default. With the new rule set, Ruff will bring these issues and many others to your attention without any Ruff configuration.</p> </blockquote> <p>Here's a one-liner for trying it on any Python project:</p> <pre><code>uvx ruff@latest check . </code></pre> <p>I ran the latest Ruff against my three biggest projects - <a href=\"https://datasette.io/\">Datasette</a>, <a href=\"https://sqlite-utils.datasette.io/\">sqlite-utils</a>, and <a href=\"https://llm.datasette.io/\">LLM</a> - and it found <em>hundreds</em> of minor issues that breached the new default rules.</p> <p>All three projects have very comprehensive test suites, executed in CI against Python 3.10 through Python 3.14, so upgrades like this are pretty safe. The following command did the bulk of the upgrades:</p> <pre><code>uvx ruff@latest check . --fix --unsafe-fixes </code></pre> <p>Against <code>sqlite-utils</code>, that command reported:</p> <pre><code>Found 1618 errors (1538 fixed, 80 remaining). </code></pre> <p>As an illustrative example, here are three of the remaining issues. Ruff does a nice job of explaining each one:</p> <pre><code>DTZ005 `datetime.datetime.now()` called without a `tz` argument --> tests/test_duplicate.py:17:10 | 15 | \"datetime_col\" TEXT)\"\"\") 16 | # Insert one row of mock data: 17 | dt = datetime.datetime.now() | ^^^^^^^^^^^^^^^^^^^^^^^ 18 | data = { 19 | \"text_col\": \"Cleo\", | help: Pass a `datetime.timezone` object to the `tz` parameter BLE001 Do not catch blind exception: `Exception` --> tests/test_plugins.py:16:12 | 14 | db.execute(\"select * from pragma_function_list()\") 15 | return True 16 | except Exception: | ^^^^^^^^^ 17 | return False 18 | finally: | B018 Found useless attribute access. Either assign it to a variable or remove it. --> tests/test_update.py:46:5 | 44 | def test_update_invalid_pk(fresh_db, pk, update_pk): 45 | table = fresh_db[\"table\"] 46 | table.insert({\"id1\": 5, \"id2\": 3, \"v\": 1}, pk=pk).last_pk | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 47 | with pytest.raises(NotFoundError): 48 | table.update(update_pk, {\"v\": 2}) | </code></pre> <p>Unsurprisingly, given Astral's <a href=\"https://simonwillison.net/2026/Mar/19/openai-acquiring-astral/\">new home at OpenAI</a>, this output provides everything a coding agent would need to fix the problems.</p> <p>I had Codex (GPT-5.6 Sol high) <a href=\"https://github.com/simonw/llm/pull/1557\">upgrade LLM</a> and <a href=\"https://github.com/simonw/sqlite-utils/pull/814\">sqlite-utils</a>, and Claude Code (with Opus 5) <a href=\"https://github.com/simonw/datasette/pull/2857\">upgrade Datasette</a>. <p>Tags: <a href=\"https://simonwillison.net/tags/python\">python</a>, <a href=\"https://simonwillison.net/tags/ruff\">ruff</a>, <a href=\"https://simonwillison.net/tags/astral\">astral</a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "🗞️ Google releases 3 new Gemini models, intensifying AI price war, but no 3.5 Pro yet",
+      "url": "https://www.rohan-paul.com/p/google-releases-3-new-gemini-models",
+      "source": "Rohan Paul",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-21T22:40:29.000Z",
+      "summary": "Google’s new Gemini models and AI price war; Fractal’s self-managing agent trees; U.S.–China AI restrictions; limits of self-improving AI; Anthropic’s $1.5B author payout; Kimi K3 cost cuts.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AISN #77: New Model Releases From OpenAI, SpaceXAI, and Meta",
+      "url": "https://newsletter.safe.ai/p/aisn-77-new-model-releases-from-openai",
+      "source": "AI Safety Newsletter",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-21T17:53:15.000Z",
+      "summary": "Also, economists and mathematicians expect near-term AI impacts, and AI 2040: Plan A",
+      "category": "ai_research"
+    },
+    {
+      "title": "🗞️ Moonshot’s Kimi K3 sends Chinese AI into Fable-grade territory",
+      "url": "https://www.rohan-paul.com/p/moonshots-kimi-k3-sends-chinese-ai",
+      "source": "Rohan Paul",
+      "tags": [
+        "architecture",
+        "open_source"
+      ],
+      "matching_tags": [
+        "architecture",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-18T01:02:01.000Z",
+      "summary": "Kimi K3’s Fable-grade AI leap, GLM-5.2 744B MoE on 25GB RAM, open agentic embedding models, Claude Code on agents vs automation, Grok Build under Apache 2.0, AI job-creation doubts, OpenAI’s hardware",
+      "category": "ai_tools"
+    },
+    {
+      "title": "🗞️ OpenAI Launches GPT-5.6 Sol across ChatGPT and API and also unveils ChatGPT work agent to field tasks for hours.",
+      "url": "https://www.rohan-paul.com/p/openai-launches-gpt-56-sol-across",
+      "source": "Rohan Paul",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-10T08:12:28.000Z",
+      "summary": "GPT-5.6 Sol, ChatGPT work agent, Grok 4.5 coding agents, DeepMind agent warning, Claude Code’s AI-written leap, breast cancer AI, China AI companion shutdowns, Cloudflare x402 payments, Claude Cowork",
+      "category": "ai_tools"
+    },
+    {
+      "title": "🗞️ Meta just launched its 1st image model after Mark Zuckerberg’s AI shake-up.",
+      "url": "https://www.rohan-paul.com/p/meta-just-launched-its-1st-image",
+      "source": "Rohan Paul",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-09T07:51:49.000Z",
+      "summary": "Meta’s first image model; DeepSeek and Zhipu custom AI chips; China’s $50B AI-chip push; Gemini production AI agents; Claude Code job-application workflow; Yann LeCun on LLM limits",
+      "category": "ai_tools"
+    },
+    {
+      "title": "🗞️ ByteDance published EdgeBench, a benchmark that checks whether AI agents get better with experience",
+      "url": "https://www.rohan-paul.com/p/bytedance-published-edgebench-a-benchmark",
+      "source": "Rohan Paul",
+      "tags": [
+        "benchmark",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-05T22:49:16.000Z",
+      "summary": "EdgeBench for AI agents, Mark Cuban on AI skills, human vs LLM research ideas, HBR on AI speeding wrong work, AI’s messy productivity phase, Gym-Anything agent environments, multi-agent debates",
+      "category": "ai_tools"
+    },
+    {
+      "title": "🗞️ Mira Murati’s Thinking Machines made finance expert judgment trainable, beats frontier models with 29.8% fewer errors.",
+      "url": "https://www.rohan-paul.com/p/mira-muratis-thinking-machines-made",
+      "source": "Rohan Paul",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-04T22:30:53.000Z",
+      "summary": "Thinking Machines finetune; Claude Code to Claude Tag; image-based text context for Fable 5; humans as the bottleneck; DeepSeek V4 surge pricing; Alibaba blocks Claude Code",
+      "category": "ai_tools"
+    },
+    {
+      "title": "🗞️ OpenAI has proposed giving Washington 5% of its $852B business to ease AI pressure.",
+      "url": "https://www.rohan-paul.com/p/openai-has-proposed-giving-washington",
+      "source": "Rohan Paul",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-03T23:46:00.000Z",
+      "summary": "OpenAI’s Washington 5% proposal, Fable 5 safety routing to Opus, Meta limiting Claude/Codex use, MCP server patterns, quantized reasoning efficiency, NVIDIA 30B model 2.42x speedup",
+      "category": "ai_tools"
+    },
+    {
+      "title": "🗞️ OpenAI’s new paper shows how they are now seeing the first version of office work where agents do most of the execution.",
+      "url": "https://www.rohan-paul.com/p/openais-new-paper-shows-how-they",
+      "source": "Rohan Paul",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-06-26T22:44:20.000Z",
+      "summary": "OpenAI’s agentic office work, State of the AI Economy, 2027 IPO pressure, larger model learning, AI content flood, safer RL generalization, MIT’s code-output gap, Qwen-AgentWorld for agent training",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AISN #75: Anthropic Releases Fable, the US Government Restricts it",
+      "url": "https://newsletter.safe.ai/p/aisn-75-anthropic-releases-fable",
+      "source": "AI Safety Newsletter",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-06-17T14:15:58.000Z",
+      "summary": "Also: Anthropic’s proposal for the AI industry to collectively slow down",
+      "category": "ai_research"
+    },
+    {
+      "title": "AI Safety Newsletter #62: Big Tech Launches $100 Million pro-AI Super PAC",
+      "url": "https://newsletter.safe.ai/p/ai-safety-newsletter-62-big-tech",
+      "source": "AI Safety Newsletter",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2025-08-27T16:29:19.000Z",
+      "summary": "Plus: Meta’s Chatbot Policies Prompt Backlash Amid AI Reorganization; China Reverses Course on Nvidia H20 Purchases",
+      "category": "ai_research"
+    },
+    {
+      "title": "AI Safety Newsletter #61: OpenAI Releases GPT-5",
+      "url": "https://newsletter.safe.ai/p/ai-safety-newsletter-61-openai-releases",
+      "source": "AI Safety Newsletter",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2025-08-12T17:09:49.000Z",
+      "summary": "Welcome to the AI Safety Newsletter by the Center for AI Safety. We discuss developments in AI and AI safety. No technical background required.",
+      "category": "ai_research"
+    }
+  ]
+}

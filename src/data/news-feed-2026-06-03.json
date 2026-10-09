@@ -1,0 +1,205 @@
+{
+  "generated": "2026-06-05T00:44:45.677Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-06-03",
+  "article_count": 13,
+  "archived_story_count": 269,
+  "articles": [
+    {
+      "title": "Gooey: A GPU-accelerated UI framework for Zig",
+      "url": "https://github.com/duanebester/gooey",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.9400000000000001,
+      "date": "2026-06-03T17:12:27.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Capstone – multi-platform, multi-architecture disassembly framework",
+      "url": "https://www.capstone-engine.org/",
+      "source": "Hacker News",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.9400000000000001,
+      "date": "2026-06-03T01:59:46.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Skyvern (YC S23) Is Hiring Open-Source Loving DevRel Engineers",
+      "url": "https://www.ycombinator.com/companies/skyvern/jobs/1qRTlVx-founding-developer-marketing-open-source-ai",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.8899999999999999,
+      "date": "2026-06-03T17:01:00.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "PlayStation Architecture",
+      "url": "https://www.copetti.org/writings/consoles/playstation/",
+      "source": "Hacker News",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.88,
+      "date": "2026-06-03T10:24:25.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "AI outperforms law professors in Stanford Law study",
+      "url": "https://law.stanford.edu/press/ai-outperforms-law-professors-in-stanford-law-study/",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.88,
+      "date": "2026-06-02T23:43:12.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Roku LT Operating System open source distribution",
+      "url": "https://blog.roku.com/developer/roku-lt-os",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.86,
+      "date": "2026-06-03T01:13:38.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Forever Healthy Foundation Launches Evipedia.ai",
+      "url": "https://lifespan.io/forever-healthy-foundation-launches-evipedia-ai/?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=forever-healthy-foundation-launches-evipedia-ai",
+      "source": "Lifespan.io Research",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.84,
+      "date": "2026-06-03T17:24:06.000Z",
+      "summary": "The Forever Healthy Foundation today publicly launched evipedia.ai, an open online encyclopedia of in-depth evidence reviews covering more than 500 health and longevity interventions, including first-generation rejuvenation therapies, supplements, botanicals, lifestyle protocols, and more. Evipedia was [&#8230;]",
+      "category": "health_research"
+    },
+    {
+      "title": "Uber's $1,500/month AI limit is a useful signal for AI tool pricing",
+      "url": "https://simonwillison.net/2026/Jun/3/uber-caps-usage/",
+      "source": "Hacker News",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.83,
+      "date": "2026-06-03T12:25:14.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Ableton Extensions SDK",
+      "url": "https://www.ableton.com/en/live/extensions/",
+      "source": "Hacker News",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-06-03T20:39:34.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "HHS is overriding peer review to require changes to research scope, design",
+      "url": "https://www.science.org/content/article/exclusive-hhs-now-weighing-science-nih-grants",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-06-03T03:07:48.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Use your Nvidia GPU's VRAM as swap space on Linux",
+      "url": "https://github.com/c0dejedi/nbd-vram",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-06-02T22:55:33.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Journey to JPEG XL: open-source experiments shaped the future of image coding",
+      "url": "https://opensource.googleblog.com/2026/06/journey-to-jpeg-xl-how-open-source-experiments-shaped-the-future-of-image-coding.html",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-06-03T21:55:23.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Loss of Kidney Function Correlates with Progression of Frailty",
+      "url": "https://www.fightaging.org/archives/2026/06/loss-of-kidney-function-correlates-with-progression-of-frailty/",
+      "source": "Fight Aging Newsletter",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-06-03T10:11:51.000Z",
+      "summary": "It is not surprising to find aspects of aging correlated with one another; some people have a greater burden of cell and tissue damage than others, and thus tend to be more greatly impacted in all organs and systems as a result. Equally, the failing capacity of any one organ or system can accelerate the decline of all the others. The immune system is a good example, given its importance to tissue function, and the kidney is another. Kidney function is absolutely vital for health, and impairment drags down the rest of the body. As an example of this, researchers here report on a correlation between degree of kidney aging and degree of frailty in older people. This study aimed to investigate the association between [&#8230;]",
+      "category": "health_research"
+    }
+  ]
+}

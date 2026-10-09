@@ -1,9 +1,174 @@
 {
-  "generated": "2026-05-25T14:37:36.744Z",
+  "generated": "2026-08-26T03:03:55.439Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-03-05",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 10,
+  "archived_story_count": 163,
+  "articles": [
+    {
+      "title": "GitHub Releases · Crush: v0.47.2",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.47.2",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-03-05T20:39:22.000Z",
+      "summary": "# GPT 5.4 Second patch of the day to bring you some new goodies. ## OpenAI [GPT-5.4](https://developers.openai.com/api/docs/models/gpt-5.4) and [GPT-5.4 Pro](https://developers.openai.com/api/docs/models/gpt-5.4-pro) Both these models were released today. We usually don't require updating Crush to use new models or providers, but these were an exception. > [!NOTE] > The Pro version is considerably more expensive and slower then other OpenAI models. Check its price before using. ## New providers We recently added a couple new providers. You don't really need to update Crush to use them, but we're mentioning them below: * [Zhipu and Zhipu Coding](https://bigmodel.cn/) * QiniuCloud Keep crushing, Charm ✨ ## Changelog ### Fixed * ef0671ccf9af76c74dd3d97cc6e2968649024109: fix: suppress message when clipboard is empty (#2361) (@andreynering) ### Other stuff * eb71faf2449032851a52df81e28b56c0e77c8c9e: chore: add gpt 5.4 and gpt 5.4 pro (#2363) (@andreynering) --- Verifying the artifacts First",
+      "category": "ai_tools"
+    },
+    {
+      "title": "FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling",
+      "url": "https://www.together.ai/blog/flashattention-4",
+      "source": "Together AI Blog",
+      "tags": [
+        "research_paper",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.86,
+      "date": "2026-03-05T00:00:00.000Z",
+      "summary": "As GPU throughput outpaces memory bandwidth, kernels must evolve. We introduce FlashAttention-4, featuring new pipelining for maximum overlap, 2-CTA MMA modes to reduce shared memory traffic, and a hardware-software hybrid approach to softmax exponentials.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.434",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.434",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-03-05T15:09:32.000Z",
+      "summary": "## What's Changed * `@remotion/media`: Account for audio latency in seek queued period check by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6816 * `@remotion/studio`: Fix duplicate audio codec setting in the web render modal by @samohovets in https://github.com/remotion-dev/remotion/pull/6813 * `@remotion/studio`: Add \"Render via CLI\" to deployed studio modal by @samohovets in https://github.com/remotion-dev/remotion/pull/6770 * `@remotion/web-renderer`: Add CSS filter property support by @saimfd in https://github.com/remotion-dev/remotion/pull/6814 ## Docs * Make public blob the default in Vercel deploy URLs by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6817 * Fix typo in support documentation by @MehmetAdemi in https://github.com/remotion-dev/remotion/pull/6815 **Full Changelog**: https://github.com/remotion-dev/remotion/compare/v4.0.433...v4.0.434",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · ComfyUI: v0.16.0",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.16.0",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "architecture"
+      ],
+      "importance": 1,
+      "date": "2026-03-05T10:35:07.000Z",
+      "summary": "## What's Changed * Portable with cu128 isn't useful anymore. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12666 * feat(ace-step): add ACE-Step 1.5 lycoris key alias mapping for LoKR #… by @fappaz in https://github.com/Comfy-Org/ComfyUI/pull/12665 * bug_report template: Push harder for logs by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/12657 * feat: Support SDPose-OOD by @kijai in https://github.com/Comfy-Org/ComfyUI/pull/12661 * Enable Pytorch Attention for gfx950 by @vickytsang in https://github.com/Comfy-Org/ComfyUI/pull/12641 * Fix GLSL node requiring all input images to have same dimensions by @pythongosssss in https://github.com/Comfy-Org/ComfyUI/pull/12673 * feat: add ResolutionSelector node for aspect ratio presets by @christian-byrne in https://github.com/Comfy-Org/ComfyUI/pull/12199 * Class WanVAE, def encode, feat_map is using self.decoder instead of self.encoder by @ReinerBforartists in https://github.com/Comfy-Org/ComfyUI/pull/12682 * ops: i",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Key research and product announcements at the AI Native Conf",
+      "url": "https://www.together.ai/blog/ai-native-conf-research-and-product-announcements",
+      "source": "Together AI Blog",
+      "tags": [
+        "research_paper",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference"
+      ],
+      "importance": 0.94,
+      "date": "2026-03-05T00:00:00.000Z",
+      "summary": "At AI Native Conf, Together AI announced breakthroughs across kernels, RL, and inference optimization — including FlashAttention-4, ThunderAgent, and together.compile. Research that ships to production. That&#39;s the AI Native Cloud.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · ComfyUI: v0.16.3",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.16.3",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-03-05T23:18:25.000Z",
+      "summary": "## What's Changed * Add manual cast to LTX2 vocoder conv_transpose1d by @kijai in https://github.com/Comfy-Org/ComfyUI/pull/12795 * LTX audio vae novram fixes. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12796 * feat: add causal_fix parameter to add_keyframe_index and append_keyframe by @tavihalperin in https://github.com/Comfy-Org/ComfyUI/pull/12797 **Full Changelog**: https://github.com/Comfy-Org/ComfyUI/compare/v0.16.2...v0.16.3",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Goose: v1.27.1",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.27.1",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-03-05T20:32:32.000Z",
+      "summary": "## 🐛 **Bug Fixes** - Ensure platform binary exists before execution [#7676](https://github.com/block/goose/pull/7676)",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · ComfyUI: v0.16.2",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.16.2",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-03-05T20:07:22.000Z",
+      "summary": "## What's Changed * comfy-aimdo 0.2.7 by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/12791 * ops: Handle CPU weight in VBAR caster by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/12792 * Update workflow templates to v0.9.10 by @comfyui-wiki in https://github.com/Comfy-Org/ComfyUI/pull/12793 * Refactor. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12794 **Full Changelog**: https://github.com/Comfy-Org/ComfyUI/compare/v0.16.1...v0.16.2",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.47.1",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.47.1",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-03-05T14:33:01.000Z",
+      "summary": "# Window resize fix This patch fixes an issue of Crush not adapting well to window resizes in some terminal emulators, like the Windows Terminal. There is also a minor fix for LSP integration regarding handling non-UTF8 encodings. See ya 👋 Charm ## Changelog ### Other stuff * ca1366121cc016a60a0bf62d75c639440417ba7d: chore: update bubble tea to v2.0.1 (#2360) (@andreynering) * ae1bac33d20768c95327120fd7d11eaf4dd29f73: chore: update hyper (#2354) (@andreynering) * fae0f2e82da57a0e0335d86b417a819121f4e69f: fix(lsp/edit): properly handle non-ascii chars (e.g. CJK) (#2325) (@meowgorithm) --- Verifying the artifacts First, download the [`checksums.txt` file](https://github.com/charmbracelet/crush/releases/download/v0.47.1/checksums.txt) and the [`checksums.txt.sigstore.json` file](https://github.com/charmbracelet/crush/releases/download/v0.47.1/checksums.txt.sigstore.json) files, for example, with `wget`: ```bash wget 'https://github.com/charmbracelet/crush/releases/download/v0.47.1/checks",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Goose: v1.27.0",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.27.0",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-03-05T00:30:33.000Z",
+      "summary": "## ✨ Features - Structured `{stdout, stderr}` return from shell tool with output schema [#7604](https://github.com/block/goose/pull/7604) - Analyze platform extension with tree-sitter AST parsing [#7542](https://github.com/block/goose/pull/7542) - Anthropic adaptive thinking support [#7356](https://github.com/block/goose/pull/7356) - Fullscreen and PiP display modes for MCP Apps [#7312](https://github.com/block/goose/pull/7312) - Persistent text bar with message queue [#7560](https://github.com/block/goose/pull/7560) - Self-signed HTTPS for goosed server [#7126](https://github.com/block/goose/pull/7126) - pctx/Code Mode as optional dependency via 'code-mode' feature [#7567](https://github.com/block/goose/pull/7567) - Goose AI bot can search goose codebase [#7508](https://github.com/block/goose/pull/7508) - Goose-powered release notes generator workflow [#7503](https://github.com/block/goose/pull/7503) ## 🐛 Bug Fixes - Resolve parameters in initial message with autosubmit [#7659](https",
+      "category": "ai_tools"
+    }
+  ]
 }

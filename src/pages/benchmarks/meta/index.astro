@@ -124,17 +124,22 @@ function dsweTokens(entry: MetaBenchmarkLeaderboardEntry): string {
 
     <header class="meta-public-header">
       <div>
-        <p class="desk-kicker">AI Resource Hub benchmark draft</p>
+        <p class="desk-kicker">Historical benchmark snapshot</p>
         <h1>Meta Benchmark Hub</h1>
-        <p>Four current views of model reality. <strong>100 = saturated.</strong></p>
+        <p>Provisional evidence captured on 12 June 2026. <strong>This is not a current model ranking.</strong></p>
       </div>
       <div class="meta-public-pills" aria-label="Meta-benchmark status">
-        <span>{rankedLeaderboard.length} models</span>
+        <span>Snapshot: 12 Jun 2026</span>
+        <span>Not current</span>
         <span>4 leaderboards</span>
-        <span>DSWE metrics</span>
-        <span>Fable pending</span>
+        <span>{rankedLeaderboard.length} historical rows</span>
       </div>
     </header>
+
+    <section class="meta-stale-notice" aria-label="Benchmark freshness warning">
+      <strong>Historical evidence only</strong>
+      <p>{overview.evidenceState}</p>
+    </section>
 
     <nav class="meta-tabs" aria-label="Benchmark leaderboards">
       <button type="button" data-meta-tab="floor" aria-selected="true">Floor Capability</button>
@@ -254,7 +259,7 @@ function dsweTokens(entry: MetaBenchmarkLeaderboardEntry): string {
               <th title="Rank within the Frontier Reality leaderboard.">#</th>
               <th title="Click a model name for detail.">Model</th>
               <th title="0-100 aggregate of current public benchmark signal.">Reality score</th>
-              <th title="Most useful current external signal.">Primary signal</th>
+              <th title="Most useful external signal captured in the 12 June snapshot.">Primary signal</th>
               <th title="Floor Capability score for context.">Floor</th>
               <th title="DeepSWE Pass@1 when reported.">DSWE</th>
               <th title="Evidence completeness, not model capability.">Evidence %</th>
@@ -555,6 +560,25 @@ function dsweTokens(entry: MetaBenchmarkLeaderboardEntry): string {
     </details>
   </section>
 </BaseLayout>
+
+<style>
+  .meta-stale-notice {
+    margin: 1rem 0;
+    border: 1px solid color-mix(in srgb, var(--color-warning, #f59e0b) 55%, transparent);
+    background: color-mix(in srgb, var(--color-warning, #f59e0b) 11%, var(--color-bg-secondary));
+    padding: 0.9rem 1rem;
+  }
+
+  .meta-stale-notice strong {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .meta-stale-notice p {
+    margin: 0;
+    color: var(--color-text-secondary);
+  }
+</style>
 
 <script>
   const tabButtons = document.querySelectorAll('[data-meta-tab]');

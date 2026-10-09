@@ -1,0 +1,351 @@
+{
+  "generated": "2026-09-09T17:45:10.918Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "NVIDIA Announces CUDA Rust with cuda-oxide (SIMT) and cutile-rs (Tile) for Compile-Time-Safe GPU Kernels",
+      "url": "https://www.marktechpost.com/2026/09/08/nvidia-announces-cuda-rust-with-cuda-oxide-simt-and-cutile-rs-tile-for-compile-time-safe-gpu-kernels/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-08T19:51:54.000Z",
+      "summary": "NVIDIA has announced CUDA Rust, a push to make Rust a first-class language for GPU kernels. Two open-source NVlabs projects cover the two CUDA programming models: cuda-oxide compiles SIMT kernels from Rust MIR through Pliron and LLVM to PTX, while cutile-rs JIT-compiles Tile kernels through CUDA Tile IR on stable Rust 1.89+. The post NVIDIA Announces CUDA Rust with cuda-oxide (SIMT) and cutile-rs (Tile) for Compile-Time-Safe GPU Kernels appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Google DeepMind Releases AlphaGenome Atlas With Precomputed Molecular Effect Predictions and AVI Scores for 9 Billion Human DNA Variants",
+      "url": "https://www.marktechpost.com/2026/09/08/google-deepmind-releases-alphagenome-atlas-with-precomputed-molecular-effect-predictions-and-avi-scores-for-9-billion-human-dna-variants/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-08T19:00:09.000Z",
+      "summary": "DeepMind's AlphaGenome Atlas maps every single-letter change in the human genome with 1 impact score per variant. The post Google DeepMind Releases AlphaGenome Atlas With Precomputed Molecular Effect Predictions and AVI Scores for 9 Billion Human DNA Variants appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "v1.50.0",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.50.0",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release",
+        "api_update",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "inference"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-08T19:39:48.000Z",
+      "summary": "✨ Features Support GPT-6 Astra models #11869 Tool calling for goose-agent #11627 Kotlin callers can now configure Databricks AI Gateway path #11631 🐛 Bug Fixes Require HTTPS for Snowflake connections #11745 Bind CLI session naming to trusted path #11787 Honor content capture opt-out in tracing #11782 Enforce subagent platform guards #11604 Show authoritative tool approval details #11743 Preserve permission revocations across managers #11383 Resolve UI freeze after renaming session #11759 Count durable background turns in summon #11841 Anchor chat-payload breakpoints on the agentic tail...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SDK TypeScript Release v0.1.10",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.10",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-08T16:49:20.000Z",
+      "summary": "Bundled CLI Version This SDK release bundles CLI version: 0.23.1 Source: CLI built from source (same branch/ref as SDK) Highlights The bundled CLI 0.23.0 includes two fixes requested in #11022 : Managed memory availability now respects the memory.enableManagedAutoMemory setting ( #6941 ). Hosts that disable managed auto memory no longer see remember/dream requests admitted or managed-memory instructions in the system prompt; local patches can be removed. Size-triggered microcompaction now clears old tool results toward a low watermark ( #8464 ), so it no longer rewrites another part of...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SDK TypeScript Release v0.1.9",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.9",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-08T15:33:14.000Z",
+      "summary": "Highlights The bundled CLI 0.23.0 includes two fixes requested in #11022 : Managed memory availability now respects the memory.enableManagedAutoMemory setting ( #6941 ). Hosts that disable managed auto memory no longer see remember/dream requests admitted or managed-memory instructions in the system prompt; local patches can be removed. Size-triggered microcompaction now clears old tool results toward a low watermark ( #8464 ), so it no longer rewrites another part of the conversation prefix on every subsequent turn. Provider prompt-cache reuse is preserved across long tool-heavy...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ChatGPT promises local image edits without restarts",
+      "url": "https://superpowerdaily.com/posts/chatgpt-promises-local-image-edits-without-restarts",
+      "source": "Superpower Daily",
+      "tags": [
+        "api_update",
+        "inference"
+      ],
+      "matching_tags": [
+        "api_update",
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-09T08:00:00.000Z",
+      "summary": "Images 2.5 adds on-image comments, Sketch, templates, and API options that trade speed for tighter control.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemini 3.8 Flash Has a 13.33x Price Lead Over Fable 5.1—But Not a Proven Coding-Cost Win",
+      "url": "https://superpowerdaily.com/posts/google-s-gemini-3-8-flash-undercuts-fable-5-1-on-price-not-proven-task-cost",
+      "source": "Superpower Daily",
+      "tags": [
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-09T00:01:10.000Z",
+      "summary": "The current API rate cards strongly favor Google’s model, but reasoning settings, cache patterns and successful-task rates decide what an automated coding workflow actually costs.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ModelBest Releases MiniCPM5-2B With Training Stack for Edge Devices",
+      "url": "https://superpowerdaily.com/posts/modelbest-releases-minicpm5-2b-with-training-stack-for-edge-devices",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-09T14:11:54.000Z",
+      "summary": "The open-weights package is designed for local deployment and publishes datasets, recipes and reinforcement-learning infrastructure alongside the model itself.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Better Data Led AI Training Efficiency Gains in Small-Scale Study",
+      "url": "https://superpowerdaily.com/posts/better-data-led-ai-training-efficiency-gains-in-small-scale-study",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-08T22:25:03.000Z",
+      "summary": "The six-year experiment separates changes in training data from changes in model design, but it cannot establish whether the same pattern holds at frontier scale.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google Moves Chrome to Two-Week Releases to Speed Security Fixes",
+      "url": "https://superpowerdaily.com/posts/google-moves-chrome-to-two-week-releases-to-speed-security-fixes",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-08T15:58:15.000Z",
+      "summary": "Chrome 153 begins the faster rhythm across desktop, iOS, and Android. Google says the change can shorten the time between known vulnerabilities and delivered fixes while accelerating feature work.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.23.2",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.2",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-09T10:53:20.000Z",
+      "summary": "Highlights See the complete change list below. Breaking Changes No known breaking changes. Complete Change List Features feat(web-shell): Improve split-view session navigation ( #11250 ) by @wenshao feat(goal): carry budget figures and progress guidance in the continuation prompt ( #11257 ) by @qqqys feat(workflows): journal failed agents and settle agent failures to null ( #11196 ) by @qqqys feat(core): enable the built-in web_search by default on ModelStudio Standard/Token Plan ( #11348 ) by @qqqys feat(web-shell): add opt-in browser task notifications ( #11398 ) by @doudouOUC...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.60.0-preview.0",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0-preview.0",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-08T21:04:17.000Z",
+      "summary": "What's Changed fix(core): improve destination validation and connection routing in web fetch utilities by @diegogodinezr in #29120 fix(core): enforce RFC 9207 issuer identification in MCP OAuth flow by @jvargassanchez-dot in #29117 chore(release): bump version to 0.60.0-nightly.20260901.g0bd1d4397 by @gemini-cli-robot in #29162 Changelog for v0.58.0 by @gemini-cli-robot in #29161 fix(cli): isolate temporary directory for macOS Seatbelt sandbox by @jvargassanchez-dot in #29171 feat(extensions): harden path resolution and boundary validation in extension loader by @diegogodinezr in #29169...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v16.4.0-canary.21",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.21",
+      "source": "GitHub Releases · Next.js 15",
+      "tags": [
+        "evaluation",
+        "api_update"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-08T20:23:08.000Z",
+      "summary": "Misc Changes Bump to swc v78: #98268 Create next.config.ts when generating apps with pnpm new-test : #98364 test(evals): accept LayoutProps in App Router migration: #98365 [test] Run deploy tests against local JavaScript changes by default: #98353 [test] Resolve workspace:* packages to the version under test: #98330 turbo-tasks: explicit GC root anchoring + cross-session orphan reclamation: #96857 [PPF] Fix missing runtime-follow up if hints are stale: #98278 Instant validation for caches excluded from prerenders: #98342 [PPF] Model caches with stale as prefetch-only data: #98339 docs:...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NYU Mathematician’s OpenAI Accusation Raises Questions Over Navier-Stokes Breakthrough Race",
+      "url": "https://superintelligencenews.com/ai-fields/large-language-models/openai-dispute-navier-stokes-breakthrough/",
+      "source": "Superintelligence Newsletter",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-08T17:54:25.000Z",
+      "summary": "An OpenAI dispute over a Navier-Stokes breakthrough raises questions about AI, academic priority, compute power and research ethics. The post NYU Mathematician’s OpenAI Accusation Raises Questions Over Navier-Stokes Breakthrough Race appeared first on Superintelligence News - Artificial Intelligence News .",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Inside the megakernel serving engine for North Mini Code A technical deep dive into how Cohere’s approach to megakernels delivers 1.58x faster LLM serving on H100 devices. Sep 08, 2026 22 min read",
+      "url": "https://cohere.com/blog/megakernels",
+      "source": "Cohere Blog",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-08T17:00:17.850Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Google DeepMind Launches AlphaGenome Atlas to Map DNA Variants and Speed Disease Research",
+      "url": "https://superintelligencenews.com/ai-fields/alphagenome-atlas-dna-variants-research/",
+      "source": "Superintelligence Newsletter",
+      "tags": [
+        "research_paper",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-08T14:38:20.000Z",
+      "summary": "Google DeepMind’s AlphaGenome Atlas maps billions of DNA variants, helping researchers rank mutations and study disease faster. The post Google DeepMind Launches AlphaGenome Atlas to Map DNA Variants and Speed Disease Research appeared first on Superintelligence News - Artificial Intelligence News .",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Mask Forcing: Improving Autoregressive Video Diffusion Distillation via Dual-Noise Masking Rollout",
+      "url": "https://paperswithcode.com/papers/2609.09123",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-09T17:01:29.534Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "What OpenAI’s latest controversy tells us about the future of math",
+      "url": "https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-09T03:10:08.000Z",
+      "summary": "OpenAI’s latest mathematical milestone has quickly become mired in controversy. Today, the company announced that its agents have solved one of the Millennium Prize Problems, some of the most important open problems in mathematics. Under normal circumstances, that solution would be a huge feather in OpenAI’s cap. But the announcement has been overshadowed by accusations…",
+      "category": "ai_research"
+    },
+    {
+      "title": "Safety for Whom? Refusing the Right Subset of a Topic, Not the Whole Topic",
+      "url": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-08T14:23:07.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Neon Releases Artificial Teaser With Andrew Garfield as Sam Altman",
+      "url": "https://superpowerdaily.com/posts/neon-releases-artificial-teaser-with-andrew-garfield-as-sam-altman",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-09T11:07:43.000Z",
+      "summary": "The first preview frames Sam Altman’s 2023 ouster and return as both a corporate power struggle and a foreboding story about AI’s social stakes.",
+      "category": "ai_tools"
+    }
+  ]
+}

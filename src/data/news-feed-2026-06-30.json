@@ -1,0 +1,54 @@
+{
+  "generated": "2026-06-30T17:45:06.339Z",
+  "site": "AI Resource Hub",
+  "article_count": 3,
+  "articles": [
+    {
+      "title": "Apple Neural Engine: Architecture, Programming, and Performance",
+      "url": "https://arxiv.org/abs/2606.22283",
+      "source": "Hacker News",
+      "tags": [
+        "evaluation",
+        "architecture"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "architecture"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-06-27T23:30:14.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Ornith-1.0: self-improving open-source models for agentic coding",
+      "url": "https://github.com/deepreinforce-ai/Ornith-1",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.72,
+      "date": "2026-06-29T17:16:17.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Micro-Agent: Beat Frontier Models with Collaboration Inside Model API",
+      "url": "https://vllm.ai/blog/2026-06-29-micro-agent-frontier-models",
+      "source": "Hacker News",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-06-29T18:03:26.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

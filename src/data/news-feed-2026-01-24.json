@@ -1,9 +1,27 @@
 {
-  "generated": "2026-05-25T14:37:35.441Z",
+  "generated": "2026-08-26T02:57:30.509Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-24",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 1,
+  "archived_story_count": 120,
+  "articles": [
+    {
+      "title": "Categories of Inference-Time Scaling for Improved LLM Reasoning",
+      "url": "https://magazine.sebastianraschka.com/p/categories-of-inference-time-scaling",
+      "source": "Sebastian Raschka",
+      "tags": [
+        "research_paper",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-01-24T11:23:18.000Z",
+      "summary": "And an Overview of Recent Inference-Scaling Papers",
+      "category": "ai_research"
+    }
+  ]
 }

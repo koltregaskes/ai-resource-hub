@@ -1,0 +1,335 @@
+{
+  "generated": "2026-07-22T17:53:12.475Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Release v0.20.0-nightly.20260722.b98306b7e",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.20.0-nightly.20260722.b98306b7e",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "evaluation",
+        "dataset"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "evaluation",
+        "dataset"
+      ],
+      "importance": 0.7,
+      "date": "2026-07-22T07:47:14.000Z",
+      "summary": "<h2>What's Changed</h2> <ul> <li>test(telemetry): Cover daemon metrics init ordering and document metricReader asymmetry by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/doudouOUC/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/doudouOUC\">@doudouOUC</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4941012725\" data-permission-text=\"Title is private\" data-url=\"https://github.com/QwenLM/qwen-code/issues/7456\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/7456/hovercard\" href=\"https://github.com/QwenLM/qwen-code/pull/7456\">#7456</a></li> </ul> <p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/QwenLM/qwen-code/compare/v0.20.1...v0.20.0-nightly.20260722.b98306b7e\"><tt>v0.20.1...v0.20.0-nightly.20260722.b98306b7e</tt></a></p> <h2>Qwen Code benchmark</h2> <table> <thead> <tr> <th>Field</th> <th>Result</th> </tr> </thead> <tbody> <tr> <td>Status</td> <td><strong>Completed</strong></td> </tr> <tr> <td>Dataset</td> <td><code>swe-bench/swe-bench-verified</code> at <code>2</code></td> </tr> <tr> <td>Suite</td> <td><code>swebench_verified_harbor_smoke</code></td> </tr> <tr> <td>Evaluation</td> <td>Qwen Code agent (Harbor)</td> </tr> <tr> <td>Cases</td> <td>1 / 1 completed</td> </tr> <tr> <td>Results</td> <td>1 resolved · 0 unresolved · 0 infrastructure errors</td> </tr> <tr> <td>Score</td> <td><strong>100.00%</strong></td> </tr> <tr> <td>Qwen Code</td> <td><code>0.20.0-nightly.20260722.b98306b7e</code> · <a href=\"https://github.com/QwenLM/qwen-code/commit/77115af615fca031a57505dee07deeaf702a0937\"><code>77115af</code></a></td> </tr> <tr> <td>Run</td> <td><code>qwen-bench-dbdb9b0c0c504913</code></td> </tr> </tbody> </table>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Experimenting with the proposed Cross-Origin Storage API in Transformers.js",
+      "url": "https://huggingface.co/blog/cross-origin-storage",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "research_paper",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper",
+        "api_update"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-06-23T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "datasette 1.0a37",
+      "url": "https://simonwillison.net/2026/Jul/14/datasette/#atom-everything",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-14T16:31:41.000Z",
+      "summary": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/datasette/releases/tag/1.0a37\">datasette 1.0a37</a></p> <p>A minor release. Performance and <a href=\"https://docs.datasette.io/en/latest/authentication.html#authentication-permissions-explained\">documentation</a> improvements to the permissions system, plus I reverted a cosmetic API change which caused almost every existing plugin test suite to break.</p> <p>Tags: <a href=\"https://simonwillison.net/tags/datasette\">datasette</a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "New programmable photonic chip can control how fast light moves",
+      "url": "https://www.sciencedaily.com/releases/2026/07/260718010149.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-07-22T02:43:34.000Z",
+      "summary": "Scientists have created a programmable optical chip that can slow light on demand, giving engineers far greater control over how optical signals propagate through a circuit. The technology could provide the delays, synchronization, and buffering functions needed to make light-based computing more practical. A single chip could eventually perform several tasks that currently require separate devices, potentially reducing energy use, cost, and complexity in AI servers and data centers.",
+      "category": "ai_research"
+    },
+    {
+      "title": "lobste.rs is now running on SQLite",
+      "url": "https://simonwillison.net/2026/Jul/14/lobsters-sqlite/#atom-everything",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-14T19:44:11.000Z",
+      "summary": "<p><strong><a href=\"https://lobste.rs/s/ko1ji1/lobste_rs_is_now_running_on_sqlite\">lobste.rs is now running on SQLite</a></strong></p> Community site <a href=\"https://lobste.rs\">Lobsters</a> has been planning a migration away from MariaDB <a href=\"https://github.com/lobsters/lobsters/issues/539#issuecomment-4959857588\">since August 2018</a> - originally targeting PostgreSQL, but last year they decided to <a href=\"https://github.com/lobsters/lobsters/issues/539#issuecomment-2964114295\">investigate SQLite</a> instead.</p> <p>This weekend they completed the migration, and now consider it stable enough that it looks like this is the permanent architecture for the site going forward:</p> <blockquote> <p>SQLite seems to have passed with flying colors: cpu usage is down, memory usage is down, site seems to be snappier at least for me, 1/2 the vps cost once mariadb vps is taken down</p> </blockquote> <p>The Lobsters Rails application now runs on a single VPS, with a primary content SQLite database file that's around 3.8GB. <a href=\"https://lobste.rs/s/ko1ji1/lobste_rs_is_now_running_on_sqlite#c_c9ydhs\">There's also</a> a 1.1GB cache database, a 218MB queue database, and a still growing 555MB rack_attack database used by the <a href=\"https://github.com/rack/rack-attack\">Rack::Attack</a> middleware for blocking and throttling abusive requests.</p> <p>There are plenty more details in both the linked thread and this <a href=\"https://github.com/lobsters/lobsters/pull/1927\">SQLite migration PR</a> by Thomas Dziedzic, which added 735 lines and removed 593 lines across 30 commits and 188 files. That PR built on top of previous PRs <a href=\"https://github.com/lobsters/lobsters/pull/1705\">#1705</a>, <a href=\"https://github.com/lobsters/lobsters/pull/1871\">#1871</a>, and <a href=\"https://github.com/lobsters/lobsters/pull/1924\">#1924</a>.</p> <p>This is a really useful case study, and a great reminder that you can get a whole lot done with a single server and SQLite in 2026. <p>Tags: <a href=\"https://simonwillison.net/tags/migrations\">migrations</a>, <a href=\"https://simonwillison.net/tags/ops\">ops</a>, <a href=\"https://simonwillison.net/tags/rails\">rails</a>, <a href=\"https://simonwillison.net/tags/sqlite\">sqlite</a>, <a href=\"https://simonwillison.net/tags/lobsters\">lobsters</a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Arcee, a US open source AI lab, says Chinese models are not inherently dangerous",
+      "url": "https://techcrunch.com/2026/07/22/arcee-a-us-open-source-ai-lab-says-chinese-models-are-not-inherently-dangerous/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "evaluation",
+        "open_source"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "open_source"
+      ],
+      "importance": 0.74,
+      "date": "2026-07-22T16:24:08.000Z",
+      "summary": "As Chinese AI models grow in capability and popularity among US companies, the arguing over what should be done about them has reached a fever pitch.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AMD Ryzen 7 7700X3D Review: 3D V-Cache Gaming Performance for Less – HotHardware",
+      "url": "https://hothardware.com/reviews/amd-ryzen-7-7700x3d-gaming-cpu-review",
+      "source": "Hacker News",
+      "tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 0.72,
+      "date": "2026-07-19T10:54:41.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "MIT’s new lidar chip could give self-driving cars a wider view",
+      "url": "https://www.sciencedaily.com/releases/2026/07/260722032127.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-07-22T10:00:54.000Z",
+      "summary": "MIT engineers have found a way to give chip-based lidar a wider, clearer view without relying on moving parts. Their design uses differently shaped antennas that can sit close together without scrambling one another’s signals. In tests, the system sharply reduced interference while steering a single precise beam across a broad field of view.",
+      "category": "ai_research"
+    },
+    {
+      "title": "‘If all else fails, sue’: how ultra-processed food firms are using the courts to obstruct health rules",
+      "url": "https://www.theguardian.com/society/2026/jul/22/processed-food-firms-courts-obstruct-health-regulations",
+      "source": "The Guardian (Society/Health)",
+      "tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "importance": 0.62,
+      "date": "2026-07-22T10:00:12.000Z",
+      "summary": "<p>Exclusive: Global investigation reveals 235 lawsuits have been brought against governments in five countries since 2010</p><p>The world’s biggest ultra-processed food companies have filed scores of lawsuits challenging government policies that tackle junk diets, the Guardian can reveal.</p><p>Ultra-processed food (UPF) is linked to harm in every major organ system of the human body and <a href=\"https://www.theguardian.com/society/2025/nov/18/ultra-processed-food-linked-to-harm-in-every-major-human-organ-study-finds\">poses a seismic threat to global health</a>. Worldwide consumption is rising and UPF now makes up as much as half the average diet in many countries, including the UK, the US and Australia.</p> <a href=\"https://www.theguardian.com/society/2026/jul/22/processed-food-firms-courts-obstruct-health-regulations\">Continue reading...</a>",
+      "category": "health_research"
+    },
+    {
+      "title": "TV tonight: Katie Price on her wild wedding and life with Peter Andre",
+      "url": "https://www.theguardian.com/tv-and-radio/2026/jul/22/tv-tonight-katie-price-on-her-wild-wedding-and-life-with-peter-andre",
+      "source": "The Guardian (Culture)",
+      "tags": [
+        "pricing_change",
+        "inference"
+      ],
+      "matching_tags": [
+        "pricing_change",
+        "inference"
+      ],
+      "importance": 0.62,
+      "date": "2026-07-22T05:15:06.000Z",
+      "summary": "<p>The model tells all in her highly entertaining, eyebrow-raising documentary. Plus, revisiting a classic Play for Today. Here’s what to watch this evening</p><p><strong>9pm, Sky Documentaries</strong><strong><br></strong>Twenty years before Taylor and Travis’s stadium wedding bonanza, there was Katie Price and Peter Andre’s fairytale ceremony – or, as Kerry Katona puts it, “like Cinderella on coke and speed on a seven-day bender”. The third episode of Price’s documentary focuses on the marriage she says provided the best years of her life … until it didn’t. “I’d love you to interview Pete,” she says. “The chances are zero.” And she’s right. <em>Hollie Richardson</em></p> <a href=\"https://www.theguardian.com/tv-and-radio/2026/jul/22/tv-tonight-katie-price-on-her-wild-wedding-and-life-with-peter-andre\">Continue reading...</a>",
+      "category": "tech_general"
+    },
+    {
+      "title": "AI agent went rogue and hacked startup by itself, OpenAI reveals",
+      "url": "https://www.theguardian.com/technology/2026/jul/22/openai-says-its-models-went-rogue-and-hacked-startup-in-unprecedented-incident",
+      "source": "The Guardian Tech",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-07-22T16:34:23.000Z",
+      "summary": "<p>Company behind ChatGPT says agent ‘cheated’ an evaluation by attacking a Hugging Face database </p><p>OpenAI has revealed that an autonomous AI agent powered by its technology went rogue during a test, accessed the open web and hacked a prominent startup by itself in an “unprecedented incident”.</p><p>The company behind ChatGPT said the startup Hugging Face had detected and contained the agent – an AI tool designed to carry out tasks without human assistance – which had entered its systems.</p> <a href=\"https://www.theguardian.com/technology/2026/jul/22/openai-says-its-models-went-rogue-and-hacked-startup-in-unprecedented-incident\">Continue reading...</a>",
+      "category": "tech_general"
+    },
+    {
+      "title": "OpenAI says its AI went rogue and launched 'unprecedented' cyber-attack It is one of the first publicly disclosed cyber-attacks carried out by AI without direct human involvement. See more",
+      "url": "https://www.bbc.com/news/articles/c3ek3gvdnj3o",
+      "source": "BBC AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-07-22T10:28:32.808Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Glow emerges from stealth at $1.2B valuation to challenge endpoint security in the AI era",
+      "url": "https://techcrunch.com/2026/07/22/glow-emerges-from-stealth-at-1-2b-valuation-to-challenge-endpoint-security-in-the-ai-era/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-07-22T10:00:00.000Z",
+      "summary": "Glow is targeting a new class of endpoint risks created by the rapid adoption of AI agents and developer tools inside enterprises.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Synthesia’s AI training platform is moving beyond videos into live coaching",
+      "url": "https://techcrunch.com/2026/07/22/synthesias-ai-training-platform-is-moving-beyond-videos-into-live-coaching/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-07-22T08:00:00.000Z",
+      "summary": "Synthesia launched AI Roleplay Sessions, an interactive enterprise training platform where employees practice workplace conversations with AI avatars that provide feedback, scoring, and analytics to help companies measure training effectiveness.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Dimension Capital’s $800M third fund shows the intersection of science and compute is booming",
+      "url": "https://techcrunch.com/2026/07/21/dimension-capitals-800m-third-fund-shows-the-intersection-of-science-and-compute-is-booming/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-07-22T01:27:58.000Z",
+      "summary": "The four-year-old firm's latest fund is 60% larger than its second vehicle announced 18 months ago.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Data Processing Agreement: US K-12",
+      "url": "https://anthropic.com/legal/k12-dpa",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-07-21T22:29:22.663Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Consumer health data privacy policy",
+      "url": "https://www.anthropic.com/legal/consumer-health-data-privacy-policy",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-07-21T22:29:22.651Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Show HN: Browser Tools SDK – an optimal browser harness for agents",
+      "url": "https://libretto.sh/browser-tools",
+      "source": "Hacker News",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-21T21:01:57.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Show HN: Imagin Raw – A 9MB Open-Source Alternative to Adobe Bridge for Mac",
+      "url": "https://github.com/cristibaluta/Imagin-Raw",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-21T17:30:01.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Introducing: Devstral 2 and Mistral Vibe CLI.",
+      "url": "https://mistral.ai/news/devstral-2-vibe-cli/",
+      "source": "Mistral AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2025-12-09T12:00:00.000Z",
+      "summary": "",
+      "category": "ai_models"
+    }
+  ]
+}

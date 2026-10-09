@@ -1,9 +1,76 @@
 {
-  "generated": "2026-05-25T14:37:36.305Z",
+  "generated": "2026-08-26T03:02:17.622Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-20",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 4,
+  "archived_story_count": 143,
+  "articles": [
+    {
+      "title": "GitHub Releases · Crush: v0.43.4",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.43.4",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-02-20T18:28:58.000Z",
+      "summary": "# Killin’ some bugs We’re finishing the week by crushing some small bugs. Some highlights: * Fixed a potential panic related to LSP configuration * Fixed an authorization bug for MiniMax that was affecting a minority of the users * IO.net API keys are now properly validated * Fixed a bug related to thinking in the chosen small model * Fixed a bug where Crush would struggle with certain disks on Windows Have an incredible weekend ✨ Charm ## Changelog * fix(lsp): prevent nil client from being stored in clients map by @acmacalister in https://github.com/charmbracelet/crush/pull/2262 * fix: use `Authorization` header for MiniMax by @taoeffect in https://github.com/charmbracelet/crush/pull/2269 * fix: proper validate io.net api keys by @andreynering in https://github.com/charmbracelet/crush/pull/2272 * fix(agent): pass correct model config to small provider builder by @0xarcher in https://github.com/charmbracelet/crush/pull/2236 * fix: more reliably detect windows drive by @andreynering in ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · pnpm: pnpm 10.30.1",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v10.30.1",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-02-20T01:17:18.000Z",
+      "summary": "## Patch Changes * Use the `/-/npm/v1/security/audits/quick` endpoint as the primary audit endpoint, falling back to `/-/npm/v1/security/audits` when it fails [#10649](https://github.com/pnpm/pnpm/issues/10649). ## Platinum Sponsors ## Gold Sponsors",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · PowerShell: v7.6.0-rc.1 Release of PowerShell",
+      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.6.0-rc.1",
+      "source": "GitHub Releases · PowerShell",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-02-20T00:15:37.000Z",
+      "summary": "## [7.6.0-rc.1] - 2026-02-19 ### Tests - Fix `$PSDefaultParameterValues` leak causing tests to skip unexpectedly (#26705) ### Build and Packaging Improvements Expand to see details. Update branch for release (#26779) Update Microsoft.PowerShell.PSResourceGet version to 1.2.0-rc3 (#26767) Update Microsoft.PowerShell.Native package version (#26748) Move PowerShell build to depend on .NET SDK 10.0.102 (#26717) Fix buildinfo.json uploading for preview, LTS, and stable releases (#26715) Fix macOS preview package identifier detection to use version string (#26709) Update metadata.json to update the Latest attribute with a better name (#26708) Remove unused runCodesignValidationInjection variable from pipeline templates (#26707) Update Get-ChangeLog to handle backport PRs correctly (#26706) Bring release changes from the v7.6.0-preview.6 release (#26626) Fix the DSC test by skipping AfterAll cleanup if the initial setup in BeforeAll failed (#26622) [7.6.0-rc.1]: https://github.com/PowerShell/",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Claude Code Security",
+      "url": "https://www.anthropic.com/news/claude-code-security",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-20T17:59:33.000Z",
+      "summary": null,
+      "category": "ai_models"
+    }
+  ]
 }

@@ -1,0 +1,936 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { loadNewsItems } from '../../data/news-digests';
+import { modelReleaseDesk } from '../../data/model-release-desk.generated';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const sections = [
+  {
+    id: 'release-radar',
+    label: 'Release radar',
+    note: 'Tracked model launches, with evidence gaps left visible.',
+    defaultOn: true,
+  },
+  {
+    id: 'signal-desk',
+    label: 'Signal desk',
+    note: 'A small cut of the latest routed AI news.',
+    defaultOn: true,
+  },
+  {
+    id: 'try-this',
+    label: 'Try this',
+    note: 'One practical guide or workflow from the Hub.',
+    defaultOn: true,
+  },
+  {
+    id: 'kol-network',
+    label: "Kol's network",
+    note: 'New work, websites, demos, images, video and music.',
+    defaultOn: true,
+  },
+] as const;
+
+const websites = [
+  { name: 'AI Resource Hub', slug: 'ai-resource-hub', active: true },
+  { name: "Kol's Korner", slug: 'kols-korner', active: false },
+  { name: 'Axy Lusion', slug: 'axylusion', active: false },
+  { name: 'Ghost in the Models', slug: 'ghost-in-the-models', active: false },
+  { name: 'Kol Tregaskes Photography', slug: 'kol-tregaskes-photography', active: false },
+  { name: 'Elusion Works', slug: 'elusion-works', active: false },
+  { name: 'Sun Window', slug: 'sun-window', active: false },
+  { name: 'GameTrackDaily', slug: 'gametrackdaily', active: false },
+  { name: 'Repo Foundry', slug: 'repo-foundry', active: false },
+  { name: 'StackScout', slug: 'stackscout', active: false },
+] as const;
+
+const newsItems = [];
+const sourceCounts = new Map<string, number>();
+for (const item of loadNewsItems().filter((entry) => entry.url && entry.title)) {
+  if (/^(nightly|v?\d+(?:\.\d+){1,3})$/i.test(item.title.trim())) continue;
+  const sourceCount = sourceCounts.get(item.source) ?? 0;
+  if (sourceCount >= 2) continue;
+  newsItems.push(item);
+  sourceCounts.set(item.source, sourceCount + 1);
+  if (newsItems.length === 4) break;
+}
+
+const releaseItems = modelReleaseDesk.releases
+  .filter((release) => release.priority === 'high')
+  .slice(0, 3);
+
+const latestSignalDate = newsItems[0]?.date ?? modelReleaseDesk.generatedAt;
+const editionDate = new Date(latestSignalDate).toLocaleDateString('en-GB', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+
+function cleanSummary(value: string, maxLength = 210): string {
+  const normalised = value
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&quot;/gi, '"')
+    .replace(/&#0*39;|&apos;/gi, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (normalised.length <= maxLength) return normalised;
+  return `${normalised.slice(0, maxLength).replace(/\s+\S*$/, '')}…`;
+}
+
+function formatContextWindow(tokens: number): string {
+  if (!tokens) return 'Context unverified';
+  if (tokens >= 1_000_000) return `${Number((tokens / 1_000_000).toFixed(1))}M context`;
+  if (tokens >= 1_000) return `${Number((tokens / 1_000).toFixed(0))}K context`;
+  return `${tokens} context`;
+}
+---
+
+<BaseLayout
+  title="AI Resource Hub Dispatch - Build Your Newsletter Preview"
+  description="Preview and customise a draft AI Resource Hub newsletter using current release, news, guide, and website data. Preferences stay on this device."
+>
+  <main class="newsletter-lab">
+    <section class="mx-auto max-w-[1500px] px-4 pb-12 pt-7 sm:px-6 lg:px-8">
+      <nav class="mb-4 text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
+        <a href={base} class="transition-colors hover:text-(--color-text-secondary)">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-(--color-text-secondary)">Newsletter lab</span>
+      </nav>
+
+      <div class="dispatch-hero">
+        <div class="dispatch-grid" aria-hidden="true"></div>
+        <div class="signal-beam" aria-hidden="true"></div>
+        <div class="relative z-10 grid gap-8 p-6 sm:p-9 lg:grid-cols-[minmax(0,1.45fr)_minmax(19rem,0.72fr)] lg:items-end lg:p-12">
+          <div>
+            <p class="font-mono text-[11px] uppercase tracking-[0.34em] text-(--color-accent-muted)">
+              AI Resource Hub / Newsletter Lab / Phase 1
+            </p>
+            <h1 class="mt-5 max-w-4xl text-5xl font-black leading-[0.92] tracking-[-0.035em] text-(--color-text-primary) sm:text-6xl lg:text-8xl">
+              The Dispatch
+            </h1>
+            <p class="mt-5 max-w-2xl font-display text-2xl leading-tight text-(--color-text-secondary) sm:text-3xl">
+              One useful signal. One honest caveat. One thing worth trying.
+            </p>
+            <p class="mt-5 max-w-2xl text-sm leading-7 text-(--color-text-secondary) sm:text-base">
+              The first edition is a broad AI Resource Hub briefing. Switch sections on and off,
+              see the edition change immediately, and leave email delivery safely disconnected
+              until the format earns its keep.
+            </p>
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a href="#edition-builder" class="dispatch-primary">Build my edition</a>
+              <a href="#edition-preview" class="dispatch-secondary">Read the preview</a>
+            </div>
+          </div>
+
+          <aside class="dispatch-docket" aria-label="Edition status">
+            <div class="flex items-center justify-between gap-3 border-b border-(--color-border) pb-4">
+              <span class="font-mono text-[10px] uppercase tracking-[0.24em] text-(--color-text-muted)">Test docket</span>
+              <span class="status-light"><span></span> Local only</span>
+            </div>
+            <dl class="mt-5 grid grid-cols-2 gap-x-4 gap-y-5">
+              <div>
+                <dt>Edition</dt>
+                <dd>000 / Pilot</dd>
+              </div>
+              <div>
+                <dt>Signal date</dt>
+                <dd>{editionDate}</dd>
+              </div>
+              <div>
+                <dt>Live sections</dt>
+                <dd><span data-section-count>{sections.length}</span> of {sections.length}</dd>
+              </div>
+              <div>
+                <dt>Active sites</dt>
+                <dd>1 of {websites.length}</dd>
+              </div>
+            </dl>
+            <p class="mt-6 border-t border-(--color-border) pt-4 text-xs leading-5 text-(--color-text-muted)">
+              No email address is collected. Your section choices stay in this browser.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="edition-builder" class="mx-auto grid max-w-[1500px] gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[minmax(18rem,0.72fr)_minmax(0,1.48fr)] lg:px-8">
+      <aside class="lg:sticky lg:top-24 lg:self-start">
+        <div class="border-y-2 border-(--color-text-primary) py-5">
+          <p class="font-mono text-[10px] uppercase tracking-[0.28em] text-(--color-accent)">Edition controls</p>
+          <h2 class="mt-3 text-3xl font-black leading-none text-(--color-text-primary)">Make it yours</h2>
+          <p class="mt-3 text-sm leading-6 text-(--color-text-secondary)">
+            Phase 1 keeps the content broad. These controls prove the preference model before accounts,
+            subscriber storage or delivery services enter the room.
+          </p>
+        </div>
+
+        <fieldset class="mt-6 space-y-3">
+          <legend class="mb-3 font-mono text-[11px] uppercase tracking-[0.24em] text-(--color-text-muted)">Sections</legend>
+          {sections.map((section) => (
+            <label class="section-control">
+              <input
+                type="checkbox"
+                name="newsletter-section"
+                value={section.id}
+                checked={section.defaultOn}
+                data-section-toggle
+              />
+              <span class="section-box" aria-hidden="true"></span>
+              <span>
+                <strong>{section.label}</strong>
+                <small>{section.note}</small>
+              </span>
+            </label>
+          ))}
+        </fieldset>
+
+        <div class="mt-5 flex flex-wrap gap-2">
+          <button type="button" class="dispatch-primary text-xs" data-save-preferences>Save this mix</button>
+          <button type="button" class="dispatch-secondary text-xs" data-reset-preferences>Reset</button>
+        </div>
+        <p class="mt-3 min-h-5 text-xs text-(--color-success)" role="status" aria-live="polite" data-preference-status></p>
+      </aside>
+
+      <div id="edition-preview" class="edition-paper">
+        <header class="edition-masthead">
+          <div>
+            <p class="font-mono text-[10px] uppercase tracking-[0.26em] text-(--color-text-muted)">AI Resource Hub</p>
+            <h2>The Dispatch</h2>
+          </div>
+          <div class="text-right font-mono text-[10px] uppercase leading-5 tracking-[0.16em] text-(--color-text-muted)">
+            <div>Pilot edition 000</div>
+            <div>{editionDate}</div>
+          </div>
+        </header>
+
+        <div class="edition-opener">
+          <span>Editor’s note</span>
+          <p>
+            AI coverage gets noisy quickly. This draft is built to do less, better: surface a handful
+            of changes, show where the evidence is thin, and leave you with something useful to explore.
+          </p>
+        </div>
+
+        <section class="edition-section" data-preview-section="release-radar">
+          <div class="edition-section-heading">
+            <span>01</span>
+            <div>
+              <p>Model watch</p>
+              <h3>Release radar</h3>
+            </div>
+          </div>
+          <div class="release-ledger">
+            {releaseItems.map((release) => (
+              <article>
+                <div class="release-index">{release.providerName.slice(0, 2).toUpperCase()}</div>
+                <div>
+                  <p class="release-meta">{release.releaseDateLabel} / {release.draftStatus.replaceAll('_', ' ')}</p>
+                  <h4>{release.modelName}</h4>
+                  <p>{cleanSummary(release.summary)}</p>
+                  <div class="mt-3 flex flex-wrap gap-2">
+                    <span>{formatContextWindow(release.contextWindow)}</span>
+                    <span>{release.benchmarkCount} benchmark signals</span>
+                    <span>{release.sourceCount} source{release.sourceCount === 1 ? '' : 's'}</span>
+                  </div>
+                  <a href={`${base}new/`}>Inspect on the release desk →</a>
+                </div>
+              </article>
+            ))}
+          </div>
+          <p class="evidence-note">
+            Release-desk entries are tracked leads, not finished verdicts. Claims marked as awaiting verification stay that way in the newsletter.
+          </p>
+        </section>
+
+        <section class="edition-section" data-preview-section="signal-desk">
+          <div class="edition-section-heading">
+            <span>02</span>
+            <div>
+              <p>Latest routed coverage</p>
+              <h3>Signal desk</h3>
+            </div>
+          </div>
+          {newsItems.length > 0 ? (
+            <div class="signal-list">
+              {newsItems.map((item, index) => (
+                <article>
+                  <span class="signal-number">{String(index + 1).padStart(2, '0')}</span>
+                  <div>
+                    <p class="release-meta">{item.source} / {item.dateLabel}</p>
+                    <h4><a href={item.url} target="_blank" rel="noopener noreferrer">{item.title}</a></h4>
+                    {item.summary && <p>{cleanSummary(item.summary, 180)}</p>}
+                    <div class="mt-2 flex flex-wrap gap-2">
+                      {item.tags.slice(0, 3).map((tag) => <span>{tag}</span>)}
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p class="empty-state">The routed news feed is empty in this build. The edition remains a draft until fresh source evidence is available.</p>
+          )}
+          <a class="edition-route" href={`${base}news/`}>Open the full news desk →</a>
+        </section>
+
+        <section class="edition-section" data-preview-section="try-this">
+          <div class="edition-section-heading">
+            <span>03</span>
+            <div>
+              <p>Practical, not preachy</p>
+              <h3>Try this</h3>
+            </div>
+          </div>
+          <div class="try-this-grid">
+            <div class="try-this-mark">?</div>
+            <div>
+              <p class="release-meta">Five-minute field guide</p>
+              <h4>Choose a model by the job, not the leaderboard</h4>
+              <p>
+                Start with the constraint that will actually hurt: cost, latency, context, privacy or reliability.
+                Compare the smallest sensible shortlist, then run your own prompt before committing.
+              </p>
+              <a href={`${base}guides/choosing-an-ai-model/`}>Use the choosing guide →</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="edition-section" data-preview-section="kol-network">
+          <div class="edition-section-heading">
+            <span>04</span>
+            <div>
+              <p>Across the estate</p>
+              <h3>Kol’s network</h3>
+            </div>
+          </div>
+          <div class="network-lead">
+            <div>
+              <p class="release-meta">Now live in the pilot</p>
+              <h4>AI Resource Hub</h4>
+              <p>Models, benchmarks, pricing, releases, guides and the current AI news pipeline.</p>
+            </div>
+            <a href={base}>Explore the Hub →</a>
+          </div>
+          <div class="coming-grid">
+            {websites.filter((site) => !site.active).map((site) => (
+              <div>
+                <span>Coming soon</span>
+                <strong>{site.name}</strong>
+              </div>
+            ))}
+            <div class="demos-card">
+              <span>Phase 3</span>
+              <strong>Website demos, images, video and music</strong>
+            </div>
+          </div>
+        </section>
+
+        <footer class="edition-footer">
+          <div>
+            <strong>Delivery is deliberately disconnected.</strong>
+            <p>This is a live format test, not a subscription form. No address, send or schedule is created.</p>
+          </div>
+          <a href={`${base}rss.xml`}>RSS remains live →</a>
+        </footer>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-[1500px] px-4 pb-16 sm:px-6 lg:px-8">
+      <div class="phase-map">
+        <div>
+          <span>1</span>
+          <p>Now</p>
+          <h2>Generic Hub edition</h2>
+          <small>Current AIRH releases, news, guides and network preview. Local preferences only.</small>
+        </div>
+        <div>
+          <span>2</span>
+          <p>Next</p>
+          <h2>Sections and sites</h2>
+          <small>Choose topic sections, frequency and which of the verified estate sites to include.</small>
+        </div>
+        <div>
+          <span>3</span>
+          <p>Later</p>
+          <h2>Personal network feed</h2>
+          <small>Fine-grained topics, demos and media, powered by consented subscriber profiles and provenance rules.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  const storageKey = 'airh-newsletter-sections-v1';
+  const toggles = Array.from(document.querySelectorAll<HTMLInputElement>('[data-section-toggle]'));
+  const previewSections = Array.from(document.querySelectorAll<HTMLElement>('[data-preview-section]'));
+  const status = document.querySelector<HTMLElement>('[data-preference-status]');
+  const count = document.querySelector<HTMLElement>('[data-section-count]');
+
+  const applySelection = () => {
+    const enabled = new Set(toggles.filter((toggle) => toggle.checked).map((toggle) => toggle.value));
+    previewSections.forEach((section) => {
+      section.hidden = !enabled.has(section.dataset.previewSection ?? '');
+    });
+    if (count) count.textContent = String(enabled.size);
+  };
+
+  const readSavedSelection = () => {
+    try {
+      const saved = JSON.parse(localStorage.getItem(storageKey) ?? 'null');
+      if (!Array.isArray(saved)) return;
+      toggles.forEach((toggle) => {
+        toggle.checked = saved.includes(toggle.value);
+      });
+    } catch {
+      localStorage.removeItem(storageKey);
+    }
+  };
+
+  readSavedSelection();
+  applySelection();
+
+  toggles.forEach((toggle) => toggle.addEventListener('change', applySelection));
+
+  document.querySelector('[data-save-preferences]')?.addEventListener('click', () => {
+    const enabled = toggles.filter((toggle) => toggle.checked).map((toggle) => toggle.value);
+    localStorage.setItem(storageKey, JSON.stringify(enabled));
+    if (status) status.textContent = `Saved ${enabled.length} section${enabled.length === 1 ? '' : 's'} on this device.`;
+  });
+
+  document.querySelector('[data-reset-preferences]')?.addEventListener('click', () => {
+    localStorage.removeItem(storageKey);
+    toggles.forEach((toggle) => {
+      toggle.checked = true;
+    });
+    applySelection();
+    if (status) status.textContent = 'Reset to the full Phase 1 edition.';
+  });
+</script>
+
+<style>
+  .newsletter-lab {
+    overflow: clip;
+  }
+
+  .dispatch-hero {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-border-strong);
+    border-radius: 2.25rem;
+    background:
+      linear-gradient(120deg, color-mix(in srgb, var(--color-bg-secondary) 96%, transparent), color-mix(in srgb, var(--color-bg-tertiary) 78%, transparent));
+    box-shadow: 0 2rem 6rem rgba(33, 20, 11, 0.12);
+  }
+
+  .dispatch-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.32;
+    background-image:
+      linear-gradient(var(--color-border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(100deg, black, transparent 74%);
+  }
+
+  .signal-beam {
+    position: absolute;
+    top: -30%;
+    right: 10%;
+    width: 1px;
+    height: 160%;
+    background: linear-gradient(transparent, var(--color-accent), transparent);
+    box-shadow: 0 0 42px 16px var(--color-accent-glow);
+    transform: rotate(18deg);
+    animation: signal-scan 6s ease-in-out infinite alternate;
+  }
+
+  .dispatch-docket {
+    border: 1px solid var(--color-border-strong);
+    background: color-mix(in srgb, var(--color-bg-primary) 82%, transparent);
+    padding: 1.35rem;
+    box-shadow: 0.5rem 0.5rem 0 var(--color-accent-glow);
+    backdrop-filter: blur(12px);
+  }
+
+  .dispatch-docket dt {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .dispatch-docket dd {
+    margin-top: 0.3rem;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+  }
+
+  .status-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-success);
+  }
+
+  .status-light span {
+    width: 0.48rem;
+    height: 0.48rem;
+    border-radius: 50%;
+    background: currentColor;
+    box-shadow: 0 0 0.8rem currentColor;
+  }
+
+  .dispatch-primary,
+  .dispatch-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-text-primary);
+    padding: 0.72rem 1.1rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+  }
+
+  .dispatch-primary {
+    background: var(--color-text-primary);
+    color: var(--color-bg-primary);
+  }
+
+  .dispatch-secondary {
+    background: transparent;
+    color: var(--color-text-primary);
+  }
+
+  .dispatch-primary:hover,
+  .dispatch-secondary:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 var(--color-accent);
+  }
+
+  .section-control {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.8rem;
+    align-items: start;
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.8rem 0;
+  }
+
+  .section-control input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .section-box {
+    display: grid;
+    width: 1.15rem;
+    height: 1.15rem;
+    place-items: center;
+    border: 1px solid var(--color-text-primary);
+    margin-top: 0.12rem;
+  }
+
+  .section-control input:checked + .section-box {
+    background: var(--color-accent);
+    box-shadow: inset 0 0 0 3px var(--color-bg-primary);
+  }
+
+  .section-control input:focus-visible + .section-box {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  .section-control strong,
+  .section-control small {
+    display: block;
+  }
+
+  .section-control strong {
+    font-size: 0.9rem;
+    color: var(--color-text-primary);
+  }
+
+  .section-control small {
+    margin-top: 0.18rem;
+    line-height: 1.45;
+    color: var(--color-text-muted);
+  }
+
+  .edition-paper {
+    position: relative;
+    border: 1px solid var(--color-border-strong);
+    background: var(--color-bg-secondary);
+    box-shadow: 0.85rem 0.85rem 0 color-mix(in srgb, var(--color-accent) 16%, transparent);
+  }
+
+  .edition-masthead {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 0.42rem solid var(--color-text-primary);
+    border-bottom: 1px solid var(--color-text-primary);
+    padding: 1.5rem;
+  }
+
+  .edition-masthead h2 {
+    font-size: clamp(2.6rem, 8vw, 5.2rem);
+    font-weight: 900;
+    line-height: 0.88;
+    letter-spacing: -0.045em;
+  }
+
+  .edition-opener {
+    display: grid;
+    gap: 1rem;
+    border-bottom: 1px solid var(--color-border-strong);
+    padding: 1.5rem;
+  }
+
+  .edition-opener span {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-accent);
+  }
+
+  .edition-opener p {
+    max-width: 52rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    line-height: 1.22;
+    color: var(--color-text-primary);
+  }
+
+  .edition-section {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--color-border-strong);
+  }
+
+  .edition-section[hidden] {
+    display: none;
+  }
+
+  .edition-section-heading {
+    display: flex;
+    align-items: end;
+    gap: 1rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .edition-section-heading > span {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    line-height: 0.8;
+    color: var(--color-accent);
+  }
+
+  .edition-section-heading p {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .edition-section-heading h3 {
+    margin-top: 0.18rem;
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .release-ledger,
+  .signal-list {
+    display: grid;
+  }
+
+  .release-ledger article,
+  .signal-list article {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1rem;
+    border-top: 1px solid var(--color-border);
+    padding: 1.25rem 0;
+  }
+
+  .release-index,
+  .signal-number,
+  .try-this-mark {
+    font-family: var(--font-display);
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: var(--color-accent);
+  }
+
+  .release-meta {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .release-ledger h4,
+  .signal-list h4,
+  .try-this-grid h4,
+  .network-lead h4 {
+    margin-top: 0.4rem;
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.12;
+    color: var(--color-text-primary);
+  }
+
+  .release-ledger p:not(.release-meta),
+  .signal-list p:not(.release-meta),
+  .try-this-grid p:not(.release-meta),
+  .network-lead p:not(.release-meta) {
+    margin-top: 0.55rem;
+    font-size: 0.83rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+  }
+
+  .release-ledger span,
+  .signal-list span:not(.signal-number) {
+    border: 1px solid var(--color-border);
+    padding: 0.25rem 0.45rem;
+    font-family: var(--font-mono);
+    font-size: 0.56rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .release-ledger a,
+  .try-this-grid a,
+  .edition-route {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+
+  .signal-list h4 a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .signal-list h4 a:hover {
+    color: var(--color-accent);
+  }
+
+  .evidence-note,
+  .empty-state {
+    border-left: 3px solid var(--color-warning);
+    background: color-mix(in srgb, var(--color-warning) 9%, transparent);
+    padding: 0.8rem 1rem;
+    font-size: 0.72rem;
+    line-height: 1.55;
+    color: var(--color-text-secondary);
+  }
+
+  .try-this-grid {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1rem;
+  }
+
+  .try-this-mark {
+    display: grid;
+    width: 2.6rem;
+    height: 2.6rem;
+    place-items: center;
+    border: 1px solid var(--color-accent);
+    border-radius: 50%;
+  }
+
+  .network-lead {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    border: 1px solid var(--color-text-primary);
+    padding: 1rem;
+  }
+
+  .network-lead a {
+    flex: none;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+
+  .coming-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: 1rem;
+    background: var(--color-border-strong);
+    border: 1px solid var(--color-border-strong);
+  }
+
+  .coming-grid > div {
+    min-height: 5.6rem;
+    background: var(--color-bg-secondary);
+    padding: 0.85rem;
+  }
+
+  .coming-grid span {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .coming-grid strong {
+    display: block;
+    margin-top: 0.45rem;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    line-height: 1.05;
+  }
+
+  .demos-card {
+    background: var(--color-text-primary) !important;
+    color: var(--color-bg-primary);
+  }
+
+  .demos-card span {
+    color: var(--color-accent-muted);
+  }
+
+  .edition-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: var(--color-bg-tertiary);
+  }
+
+  .edition-footer strong {
+    font-size: 0.84rem;
+  }
+
+  .edition-footer p {
+    margin-top: 0.25rem;
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+  }
+
+  .edition-footer a {
+    flex: none;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+
+  .phase-map {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 2px solid var(--color-text-primary);
+    border-bottom: 2px solid var(--color-text-primary);
+  }
+
+  .phase-map > div {
+    position: relative;
+    padding: 1.5rem;
+  }
+
+  .phase-map > div + div {
+    border-left: 1px solid var(--color-border-strong);
+  }
+
+  .phase-map span {
+    position: absolute;
+    right: 1rem;
+    top: 0.6rem;
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--color-accent-glow);
+  }
+
+  .phase-map p {
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .phase-map h2 {
+    position: relative;
+    z-index: 1;
+    margin-top: 1.2rem;
+    font-size: 1.35rem;
+    font-weight: 800;
+  }
+
+  .phase-map small {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin-top: 0.55rem;
+    line-height: 1.55;
+    color: var(--color-text-muted);
+  }
+
+  @keyframes signal-scan {
+    from { transform: translateX(-4rem) rotate(18deg); opacity: 0.45; }
+    to { transform: translateX(4rem) rotate(18deg); opacity: 0.9; }
+  }
+
+  @media (max-width: 760px) {
+    .edition-masthead,
+    .network-lead,
+    .edition-footer {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .coming-grid,
+    .phase-map {
+      grid-template-columns: 1fr;
+    }
+
+    .phase-map > div + div {
+      border-left: 0;
+      border-top: 1px solid var(--color-border-strong);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .signal-beam {
+      animation: none;
+    }
+  }
+</style>

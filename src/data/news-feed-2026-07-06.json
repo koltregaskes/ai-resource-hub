@@ -1,0 +1,270 @@
+{
+  "generated": "2026-08-26T03:14:12.645Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-07-06",
+  "article_count": 16,
+  "archived_story_count": 236,
+  "articles": [
+    {
+      "title": "AISN #76: Fable 5 Restrictions Lifted & OpenAI Limits GPT-5.6 Release",
+      "url": "https://newsletter.safe.ai/p/aisn-76-fable-5-restrictions-lifted",
+      "source": "AI Safety Newsletter",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-07-06T16:15:31.000Z",
+      "summary": "Also: Recent benchmark scores suggest rapid capabilities progress",
+      "category": "ai_research"
+    },
+    {
+      "title": "GitHub Releases · Qwen Code: Release v0.19.6-nightly.20260706.47f62a466",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.6-nightly.20260706.47f62a466",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "research_paper",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-07-06T00:48:59.000Z",
+      "summary": "## What's Changed * fix(triage): strengthen PR gate with batch detection, problem existence check, and red flag patterns by @pomelo-nwu in https://github.com/QwenLM/qwen-code/pull/5723 * feat(review): route suggestion-level findings to an updatable PR comment by @pomelo-nwu in https://github.com/QwenLM/qwen-code/pull/5786 * fix(autofix): unconditionally restore tracked files before branch checkout (#6281) by @qwen-code-dev-bot in https://github.com/QwenLM/qwen-code/pull/6286 * feat(serve): Add runtime.activity fields to daemon status API by @doudouOUC in https://github.com/QwenLM/qwen-code/pull/6270 * feat(web-shell): add a daemon status page backed by GET /daemon/status by @wenshao in https://github.com/QwenLM/qwen-code/pull/6272 * fix(vscode): keep auth quick inputs open on focus loss by @barry166 in https://github.com/QwenLM/qwen-code/pull/6274 * ci(audio): clarify macOS prebuild artifact suffix by @barry166 in https://github.com/QwenLM/qwen-code/pull/6275 * fix(cache): preserve too",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Vercel CLI: vercel@54.21.0",
+      "url": "https://github.com/vercel/vercel/releases/tag/vercel%4054.21.0",
+      "source": "GitHub Releases · Vercel CLI",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-07-06T20:58:42.000Z",
+      "summary": "### Minor Changes - cc74129: Enable monorepo subdirectory build fixes by default (previously gated behind `VERCEL_RESOLVE_ROOT_DIRECTORY=1`), scoped to directories the workspace actually claims. When a project is linked in place (`apps/api/.vercel/project.json`) and `vc build` is run from that directory, the build now re-anchors to the workspace root and expresses the project as its path relative to that root — so builders trace correctly, hoisted dependencies are packaged, and `--standalone` output preserves package-manager symlinks so dependencies resolve at runtime. Re-anchoring only happens when an ancestor workspace manifest (`pnpm-workspace.yaml` or `package.json#workspaces`) actually declares the linked directory as a member package. Membership is decided by matching the directory's path against the manifest's declared patterns (including negations like `!apps/legacy`) plus a `package.json` existence check — pure string matching with no filesystem traversal, so large repositorie",
+      "category": "ai_tools"
+    },
+    {
+      "title": "How Open Models Are Driving AI Research",
+      "url": "https://blogs.nvidia.com/blog/open-models-icml-2026/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-07-06T16:00:00.000Z",
+      "summary": "Every year, the International Conference on Machine Learning (ICML) reveals where thousands of AI researchers have decided to put their work. This year’s accepted papers reveal a clear direction: open frontier models and open AI infrastructure have become foundational to how modern AI science gets done. NVIDIA had 74 papers accepted at ICML 2026. Approximately […]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Import AI 464: Fables writes GPU kernels; AI automation; and analog computation",
+      "url": "https://jack-clark.net/2026/07/06/import-ai-464-fables-writes-gpu-kernels-ai-automation-and-analog-computation/",
+      "source": "Import AI (Jack Clark)",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-07-06T12:31:05.000Z",
+      "summary": "Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. If you’d like to support this, please subscribe. Subscribe now Fable writes a decent GPU kernel, hinting at broader AI R&#38;D automation:…The start of an RSI loop…Fable has written “the first genuine (and fastest) megakernel ever [&#8230;]",
+      "category": "ai_research"
+    },
+    {
+      "title": "Import AI 464: Fable writes GPU kernels; AI automation; and analog computation",
+      "url": "https://importai.substack.com/p/import-ai-464-fables-writes-gpu-kernels",
+      "source": "Import AI (Jack Clark)",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-07-06T12:31:05.000Z",
+      "summary": "Is this the beginning of a new world?",
+      "category": "ai_research"
+    },
+    {
+      "title": "Jul 6, 2026 Case Study Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems",
+      "url": "https://www.anthropic.com/news/alberta-government-claude-cybersecurity",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.94,
+      "date": "2026-07-06T19:00:35.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Building Safeguards For Claude",
+      "url": "https://www.anthropic.com/news/building-safeguards-for-claude",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-06T23:32:01.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "🗞️ CAIS and Scale (AI safety research group) say Fable 5 now automates 16.1% of real remote-work projects, about 2x Opus 4.8.",
+      "url": "https://www.rohan-paul.com/p/cais-and-scale-ai-safety-research",
+      "source": "Rohan Paul",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-07-06T22:39:34.000Z",
+      "summary": "Fable 5 automates remote work; Report on open LLMs; AI speedup illusion; Big Tech AI capex at 3.2% of US GDP; AI revenue scaling 3x faster; Cathie Wood on AI productivity; Hugging Face coding-agent",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Vercel CLI: @vercel/python@6.48.0",
+      "url": "https://github.com/vercel/vercel/releases/tag/%40vercel/python%406.48.0",
+      "source": "GitHub Releases · Vercel CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-06T20:58:54.000Z",
+      "summary": "### Minor Changes - 4097a62: Fix django services when using static assets and vc dev.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Vercel CLI: @vercel/next@4.20.3",
+      "url": "https://github.com/vercel/vercel/releases/tag/%40vercel/next%404.20.3",
+      "source": "GitHub Releases · Vercel CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-06T20:58:51.000Z",
+      "summary": "### Patch Changes - 6dbc280: [next] Update to latest Next.js adapter",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Vercel CLI: @vercel/fs-detectors@6.11.6",
+      "url": "https://github.com/vercel/vercel/releases/tag/%40vercel/fs-detectors%406.11.6",
+      "source": "GitHub Releases · Vercel CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-06T20:58:48.000Z",
+      "summary": "### Patch Changes - Updated dependencies [85c897e] - @vercel/frameworks@3.30.5",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Turbo: Turborepo v2.10.4",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.10.4",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-06T20:18:53.000Z",
+      "summary": "## What's Changed ### Changelog * release(turborepo): 2.10.3 by @github-actions[bot] in https://github.com/vercel/turborepo/pull/13222 * ci: Retry Windows nextest aborts from transient 0xc0000142 spawn failures by @anthonyshew in https://github.com/vercel/turborepo/pull/13240 * perf: Use mimalloc as the global allocator by @anthonyshew in https://github.com/vercel/turborepo/pull/13237 * perf: Parse yarn v1 lockfiles in a single pass by @anthonyshew in https://github.com/vercel/turborepo/pull/13241 * ci: Fix cache outputs for Eve app by @anthonyshew in https://github.com/vercel/turborepo/pull/13243 * perf: Stop materializing spans for the disabled daemon log layer by @anthonyshew in https://github.com/vercel/turborepo/pull/13244 * fix: Keep ancestor-scoped bun dependencies resolvable after prune renames by @anthonyshew in https://github.com/vercel/turborepo/pull/13236 * perf: Overlap external dependency hashing with package file hashing by @anthonyshew in https://github.com/vercel/turbo",
+      "category": "ai_tools"
+    },
+    {
+      "title": "PRX Part 4: Our Data Strategy",
+      "url": "https://huggingface.co/blog/Photoroom/prx-part4-data",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-06T15:30:55.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "GitHub Releases · Gemini CLI: Release v0.51.0-nightly.20260706.gf7af4e518",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.51.0-nightly.20260706.gf7af4e518",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-06T01:31:23.000Z",
+      "summary": "**Full Changelog**: https://github.com/google-gemini/gemini-cli/compare/v0.51.0-nightly.20260705.gf7af4e518...v0.51.0-nightly.20260706.gf7af4e518",
+      "category": "ai_tools"
+    },
+    {
+      "title": "🤗 Kernels: Major Updates",
+      "url": "https://huggingface.co/blog/revamped-kernels",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-06T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_models"
+    }
+  ]
+}

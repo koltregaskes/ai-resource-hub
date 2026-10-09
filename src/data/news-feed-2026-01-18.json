@@ -1,9 +1,25 @@
 {
-  "generated": "2026-05-25T14:37:35.208Z",
+  "generated": "2026-08-26T02:57:23.147Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-18",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 1,
+  "archived_story_count": 129,
+  "articles": [
+    {
+      "title": "GitHub Releases · Crush: v0.33.3",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.33.3",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-18T09:27:04.000Z",
+      "summary": "# Mini MCP Fix This patch reverts a change which caused MCPs to block the first interaction until loaded. No more! MCPs are back to async. Hope you're having a great weekend! 💘 ### Fixed * c0662f13c0a71c584f71aee9bdbe8a63f6dca457: fix: do not wait for MCP on interactive mode (@kujtimiihoxha) * e55706507ff00460f09cfabb8b15278ccc2ee8d0: fix: don't build native clipboard for ios (@aymanbagabas) --- Verifying the artifacts First, download the [`checksums.txt` file](https://github.com/charmbracelet/crush/releases/download/v0.33.3/checksums.txt) and the [`checksums.txt.sigstore.json` file](https://github.com/charmbracelet/crush/releases/download/v0.33.3/checksums.txt.sigstore.json) files, for example, with `wget`: ```bash wget 'https://github.com/charmbracelet/crush/releases/download/v0.33.3/checksums.txt' wget 'https://github.com/charmbracelet/crush/releases/download/v0.33.3/checksums.txt.sigstore.json' ``` Then, verify it using [`cosign`](https://github.com/sigstore/cosign): ```bash cosig",
+      "category": "ai_tools"
+    }
+  ]
 }

@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meta Benchmark Model Detail</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f4f1ec;
+      --paper: #fffaf1;
+      --ink: #171717;
+      --muted: #6b6257;
+      --line: #d8cfc2;
+      --accent: #005c5f;
+      font-family: "Aptos", "Segoe UI", system-ui, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #10100f;
+        --paper: #171614;
+        --ink: #f6efe3;
+        --muted: #b9aa98;
+        --line: #342f29;
+        --accent: #40b8b3;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); }
+    main { width: min(1080px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 42px; }
+    a { color: var(--accent); }
+    h1 { margin: 8px 0; font-size: clamp(2.2rem, 5vw, 4rem); line-height: 0.96; letter-spacing: 0; }
+    h2 { margin: 6px 0; letter-spacing: 0; }
+    p { color: var(--muted); line-height: 1.5; }
+    .kicker { color: var(--accent); font-size: 0.76rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+    .crumb { display: inline-flex; margin-bottom: 14px; color: var(--muted); text-decoration: none; }
+    .hero { display: grid; gap: 16px; align-items: end; margin-bottom: 16px; }
+    .score-card, .card, .section { border: 1px solid var(--line); border-radius: 10px; background: var(--paper); padding: 16px; }
+    .score-card span { display: block; font-size: 3rem; font-weight: 900; line-height: 1; }
+    .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-bottom: 14px; }
+    .score-strip { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); margin-bottom: 14px; }
+    .score-strip article { border: 1px solid var(--line); border-radius: 10px; background: var(--paper); padding: 13px; }
+    .score-strip span { display: block; margin-bottom: 4px; font-size: 1.8rem; font-weight: 900; line-height: 1; }
+    .score-strip p { margin: 4px 0 0; font-size: 0.82rem; }
+    .components { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); margin-top: 12px; }
+    .components article { border-top: 1px solid var(--line); padding-top: 10px; }
+    .components span { display: block; font-size: 1.7rem; font-weight: 900; }
+    .section { margin-top: 14px; }
+    .two { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    li { color: var(--muted); margin: 4px 0; }
+    .citation-list { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); margin-top: 8px; }
+    .citation-list a { font-weight: 800; }
+    .formula { margin-top: 8px; padding: 10px 11px; border: 1px dashed var(--line); border-radius: 8px; font-size: 0.86rem; color: var(--muted); }
+    @media (min-width: 820px) { .hero { grid-template-columns: minmax(0, 1fr) 180px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="crumb" href="meta-benchmark-workbench.html">Back to leaderboard</a>
+    <header class="hero">
+      <div>
+        <p id="provider" class="kicker"></p>
+        <h1 id="name"></h1>
+        <p id="summary"></p>
+      </div>
+      <div class="score-card">
+        <span id="score"></span>
+        <strong>Floor score</strong>
+        <p id="confidence"></p>
+      </div>
+    </header>
+
+    <section id="meta-scores" class="score-strip" aria-label="Meta scores"></section>
+
+    <section class="grid">
+      <article class="card"><p class="kicker">Current signal</p><h2 id="metric"></h2></article>
+      <article class="card"><p class="kicker">Evidence %</p><h2 id="coverage"></h2><p>Evidence completeness, not capability.</p></article>
+      <article class="card"><p class="kicker">DSWE</p><h2 id="dswe"></h2><p id="dswe-detail"></p></article>
+    </section>
+
+    <section class="section">
+      <p class="kicker">Calculation</p>
+      <h2>Score components</h2>
+      <div id="components" class="components"></div>
+    </section>
+
+    <section class="section two">
+      <article>
+        <p class="kicker">Evidence</p>
+        <h2>Sources used</h2>
+        <ul id="evidence"></ul>
+      </article>
+      <article>
+        <p class="kicker">Caveat</p>
+        <h2>What to watch</h2>
+        <p id="caveat"></p>
+      </article>
+    </section>
+
+    <section class="section">
+      <p class="kicker">Meaning</p>
+      <h2>How to read this</h2>
+      <p>Each score is a 0-100 saturation scale. A score of 100 means that benchmark lane is complete for this model. Confidence is evidence confidence, not another model grade. Evidence % is source coverage, not capability.</p>
+      <p class="formula">Floor score draft weighting: 25% accuracy + grounding, 20% instruction discipline, 15% honesty + reliability, 15% reasoning floor, 15% agent/coding, 10% operating envelope.</p>
+    </section>
+
+    <section class="section">
+      <p class="kicker">Citations</p>
+      <h2>Benchmark sources</h2>
+      <div id="citations" class="citation-list"></div>
+    </section>
+  </main>
+
+  <script>
+    const models = {
+      "claude-fable-5": {
+        name: "Claude Fable 5", provider: "Anthropic", score: 84, confidence: "medium", coverage: 74,
+        metaScores: { floor: 84, operating: 58, frontier: 92, research: 82 },
+        metric: "AA Index 64.9 (#1)",
+        summary: "AA reported #1 Intelligence Index on 2026-06-10, score 64.9; HLE 53%; GDPval-AA Elo 1932; Opus 4.8 fallback observed in some tasks.",
+        caveat: "Current external frontier leader, but the public AA row includes Opus 4.8 fallback routing. Treat as provisional until internal prompt runs separate Fable from fallback.",
+        operatingNote: "DSWE pending, so operating score is capped.",
+        researchNote: "Strong signal, fallback caveat.",
+        evidence: ["Artificial Analysis Intelligence Index", "AA-Omniscience", "Humanity's Last Exam", "GDPval-AA", "Terminal-Bench Hard"],
+        components: [82, 82, 86, 88, 86, 72]
+      },
+      "claude-opus-4.8": {
+        name: "Claude Opus 4.8", provider: "Anthropic", score: 80, confidence: "high", coverage: 82,
+        metaScores: { floor: 80, operating: 60, frontier: 88, research: 82 },
+        metric: "AA Index 61 / AA-Omniscience #2",
+        summary: "AA puts Opus 4.8 at 61 on Intelligence Index, #2 on AA-Omniscience with 46.6% accuracy and 35.9% hallucination rate; Kilo has it #3 coding at 67.6%.",
+        caveat: "Strongest clean Anthropic row for floor-style comparison. Cost is high, so operating envelope drags the meta score down.",
+        operatingNote: "Strong DSWE pass rate, expensive and token-heavy.",
+        researchNote: "Best clean Anthropic evidence row.",
+        evidence: ["Artificial Analysis Intelligence Index", "AA-Omniscience", "Humanity's Last Exam", "IFBench", "Terminal-Bench Hard", "Kilo Bench", "DeepSWE"],
+        components: [80, 80, 86, 84, 78, 62],
+        dswe: { pass: 58, cost: "$12.58", time: "43m", tokens: "136k", effort: "max" }
+      },
+      "gpt-5.5-xhigh": {
+        name: "GPT-5.5 xhigh", provider: "OpenAI", score: 78, confidence: "medium", coverage: 70,
+        metaScores: { floor: 78, operating: 86, frontier: 87, research: 75 },
+        metric: "AA Index 60 / Kilo #1 coding",
+        summary: "AA leaderboard puts GPT-5.5 xhigh at 60; Kilo lists GPT-5.5 #1 coding at 74.2% completion, $72.63 per attempt.",
+        caveat: "Very strong capability and coding signal, but less floor-specific hallucination/abstention evidence in the current public rows.",
+        operatingNote: "Best tracked DSWE pass rate with compact output.",
+        researchNote: "Needs more abstention and citation evidence.",
+        evidence: ["Artificial Analysis Intelligence Index", "Kilo Bench", "Arena Text", "Arena Agent", "DeepSWE"],
+        components: [76, 80, 74, 82, 88, 66],
+        dswe: { pass: 70, cost: "$6.61", time: "21m", tokens: "47k", effort: "xhigh" }
+      },
+      "gemini-3.1-pro": {
+        name: "Gemini 3.1 Pro", provider: "Google", score: 77, confidence: "medium", coverage: 76,
+        metaScores: { floor: 77, operating: 67, frontier: 86, research: 76 },
+        metric: "AA Index 63 / 148 tok/s",
+        summary: "AA reported Gemini 3.1 Pro Preview at Intelligence Index 63, with 1M context and 148 output tokens/sec.",
+        caveat: "Still a current top Gemini intelligence row even though Gemini 3.5 Flash is newer. DSWE has not reported a row yet.",
+        operatingNote: "High speed, no DSWE row yet.",
+        researchNote: "Strong intelligence row, needs source-discipline runs.",
+        evidence: ["Artificial Analysis Intelligence Index", "AA-Omniscience", "Humanity's Last Exam", "SciCode", "Terminal-Bench Hard"],
+        components: [78, 76, 74, 82, 76, 78]
+      },
+      "qwen3.7-max": {
+        name: "Qwen3.7 Max", provider: "Alibaba", score: 74, confidence: "medium", coverage: 62,
+        metaScores: { floor: 74, operating: 62, frontier: 81, research: 70 },
+        metric: "AA Index 56.6",
+        summary: "AA reports Qwen3.7 Max at 56.6 with high verbosity during evaluation; pricing is $2.50 input / $7.50 output per 1M tokens.",
+        caveat: "Top current Qwen row. Verbose output is a real operating cost risk for agentic sessions.",
+        operatingNote: "Visible pricing, missing DSWE row.",
+        researchNote: "Verbose output risk.",
+        evidence: ["Artificial Analysis Intelligence Index", "Qwen3.7 release notes", "cost/token evidence"],
+        components: [72, 74, 70, 78, 76, 68]
+      },
+      "gemini-3.5-flash": {
+        name: "Gemini 3.5 Flash", provider: "Google", score: 73, confidence: "medium", coverage: 68,
+        metaScores: { floor: 73, operating: 78, frontier: 79, research: 68 },
+        metric: "AA Index 55 / Kilo #4 coding",
+        summary: "AA changelog lists Gemini 3.5 Flash at 55; Kilo lists it #4 coding at 64.7% completion. Public coverage emphasizes speed and broad app availability.",
+        caveat: "Newest Google row to track for this table. It may beat older Pro rows in practical coding/speed but still needs internal hallucination and instruction-following runs.",
+        operatingNote: "Fast DSWE time, very high token output.",
+        researchNote: "Needs floor runs.",
+        evidence: ["Artificial Analysis Intelligence Index", "Kilo Bench", "Google release coverage", "speed/price evidence", "DeepSWE"],
+        components: [70, 72, 68, 74, 78, 76],
+        dswe: { pass: 28, cost: "$7.42", time: "17m", tokens: "189k", effort: "medium" }
+      },
+      "minimax-m3": {
+        name: "MiniMax-M3", provider: "MiniMax", score: 71, confidence: "medium", coverage: 64,
+        metaScores: { floor: 71, operating: 70, frontier: 77, research: 67 },
+        metric: "AA Index 54.7 / Kilo #10 coding",
+        summary: "AA reports MiniMax-M3 around 55 and describes it as leading open weights once weights are released; Kilo lists 47.6% coding completion at $10.35 per attempt.",
+        caveat: "Promising open-weight/current MiniMax row. Weight release and provider variance need tracking before treating it as a stable floor model.",
+        operatingNote: "Moderate cost, slow DSWE time.",
+        researchNote: "Provider variance still needs tracking.",
+        evidence: ["Artificial Analysis Intelligence Index", "Kilo Bench", "price evidence", "DeepSWE"],
+        components: [70, 70, 66, 74, 70, 82],
+        dswe: { pass: 20, cost: "$5.57", time: "57m", tokens: "98k" }
+      },
+      "kimi-k2.6": {
+        name: "Kimi K2.6", provider: "Moonshot AI", score: 70, confidence: "medium", coverage: 64,
+        metaScores: { floor: 70, operating: 77, frontier: 76, research: 66 },
+        metric: "AA Index 54 / Kilo #6 coding",
+        summary: "AA reports Kimi K2.6 at 54 and notes 170M tokens generated during evaluation; Kilo lists 54.4% coding completion at $24.84 per attempt.",
+        caveat: "Strong open/current model. AA notes very verbose token generation, so operating metrics must be captured on every internal run.",
+        operatingNote: "Cheapest tracked DSWE row, slow and verbose.",
+        researchNote: "Token volume makes trust score cautious.",
+        evidence: ["Artificial Analysis Intelligence Index", "Kilo Bench", "Kimi release notes", "token-volume evidence", "DeepSWE"],
+        components: [70, 70, 66, 72, 74, 68],
+        dswe: { pass: 24, cost: "$3.16", time: "56m", tokens: "84k" }
+      },
+      "glm-5.1-reasoning": {
+        name: "GLM-5.1 Reasoning", provider: "Z.ai", score: 67, confidence: "medium", coverage: 58,
+        metaScores: { floor: 67, operating: 68, frontier: 72, research: 64 },
+        metric: "AA Index 51 / Kilo #8 coding",
+        summary: "AA reports GLM-5.1 Reasoning at 51 with 200k context; Kilo lists GLM 5.1 at 49.4% coding completion.",
+        caveat: "Current GLM row is worth tracking, but public floor-specific honesty and instruction data is thin.",
+        operatingNote: "Mid-pack DSWE cost and time.",
+        researchNote: "Thin floor-specific honesty data.",
+        evidence: ["Artificial Analysis Intelligence Index", "Kilo Bench", "context window evidence", "DeepSWE"],
+        components: [66, 68, 64, 70, 68, 66],
+        dswe: { pass: 18, cost: "$7.46", time: "35m", tokens: "49k" }
+      },
+      "deepseek-v4-pro": {
+        name: "DeepSeek V4 Pro", provider: "DeepSeek", score: 66, confidence: "medium", coverage: 54,
+        metaScores: { floor: 66, operating: 72, frontier: 71, research: 62 },
+        metric: "AA open top-3 / Index 52",
+        summary: "AA lists DeepSeek V4 Pro as a top-three open-weights model with Intelligence Index 52.",
+        caveat: "Included as a current open-model baseline. Needs fresh internal floor prompts before it can be trusted as a user-facing assistant score.",
+        operatingNote: "Contained cost/time, low DSWE pass rate.",
+        researchNote: "Baseline only until source-discipline evidence improves.",
+        evidence: ["Artificial Analysis open-weights leaderboard", "Arena/Kilo coding signals", "DeepSWE"],
+        components: [64, 66, 62, 70, 70, 70],
+        dswe: { pass: 8, cost: "$4.22", time: "37m", tokens: "50k" }
+      }
+    };
+
+    const labels = ["Accuracy + grounding", "Instruction discipline", "Honesty + reliability", "Reasoning floor", "Agent/coding", "Operating envelope"];
+    const sourceLinks = {
+      "Artificial Analysis Intelligence Index": "https://artificialanalysis.ai/leaderboards/models",
+      "AA-Omniscience": "https://artificialanalysis.ai/leaderboards/models",
+      "Humanity's Last Exam": "https://agi.safe.ai/",
+      "GDPval-AA": "https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index",
+      "Terminal-Bench Hard": "https://www.tbench.ai/",
+      "IFBench": "https://github.com/allenai/IFBench",
+      "Kilo Bench": "https://kilo.ai/leaderboard",
+      "DeepSWE": "https://deepswe.datacurve.ai/",
+      "Arena Text": "https://arena.ai/",
+      "Arena Agent": "https://arena.ai/",
+      "SciCode": "https://scicode-bench.github.io/",
+      "Qwen3.7 release notes": "https://qwenlm.github.io/",
+      "Google release coverage": "https://blog.google/products/gemini/",
+      "Kimi release notes": "https://www.moonshot.ai/",
+      "Artificial Analysis open-weights leaderboard": "https://artificialanalysis.ai/leaderboards/models"
+    };
+    const byId = (id) => document.getElementById(id);
+    const id = new URLSearchParams(location.search).get("model") || "claude-fable-5";
+    const model = models[id] || models["claude-fable-5"];
+    document.title = `${model.name} Meta Benchmark Detail`;
+    byId("provider").textContent = model.provider;
+    byId("name").textContent = model.name;
+    byId("summary").textContent = model.summary;
+    byId("score").textContent = model.score;
+    byId("confidence").textContent = `confidence: ${model.confidence}`;
+    byId("metric").textContent = model.metric;
+    byId("coverage").textContent = `${model.coverage}%`;
+    const scoreCards = [
+      ["Floor Capability", model.metaScores.floor, "Finished benchmark shape"],
+      ["Operating Envelope", model.metaScores.operating, model.operatingNote],
+      ["Frontier Reality", model.metaScores.frontier, model.metric],
+      ["Research Trust", model.metaScores.research, model.researchNote]
+    ];
+    byId("meta-scores").innerHTML = scoreCards.map(([label, value, note]) => `<article><span>${value}</span><strong>${label}</strong><p>${note}</p></article>`).join("");
+    if (model.dswe) {
+      byId("dswe").innerHTML = `<a href="${sourceLinks.DeepSWE}" target="_blank" rel="noopener">${model.dswe.pass}% pass@1</a>`;
+      byId("dswe-detail").innerHTML = `<a href="${sourceLinks.DeepSWE}" target="_blank" rel="noopener">${model.dswe.cost} / ${model.dswe.time} / ${model.dswe.tokens} output tokens${model.dswe.effort ? ` / ${model.dswe.effort}` : ""}</a>`;
+    } else {
+      byId("dswe").textContent = "Not reported";
+      byId("dswe-detail").textContent = "Keep watch for a DeepSWE row.";
+    }
+    byId("components").innerHTML = model.components.map((value, index) => `<article><span>${value}</span><strong>${labels[index]}</strong></article>`).join("");
+    const evidenceLink = (item) => sourceLinks[item] ? `<a href="${sourceLinks[item]}" target="_blank" rel="noopener">${item}</a>` : item;
+    byId("evidence").innerHTML = model.evidence.map((item) => `<li>${evidenceLink(item)}</li>`).join("");
+    byId("caveat").textContent = model.caveat;
+    const usedSources = [...new Set(model.evidence.filter((item) => sourceLinks[item]))];
+    byId("citations").innerHTML = usedSources.map((item) => `<a href="${sourceLinks[item]}" target="_blank" rel="noopener">${item}</a>`).join("");
+  </script>
+</body>
+</html>

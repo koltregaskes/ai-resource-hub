@@ -1,0 +1,100 @@
+{
+  "generated": "2026-07-18T17:45:40.449Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-07-14",
+  "article_count": 6,
+  "archived_story_count": 206,
+  "articles": [
+    {
+      "title": "Show HN: Juggler – an open-source GUI coding agent, by the creator of JUCE",
+      "url": "https://github.com/juggler-ai/juggler",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.85,
+      "date": "2026-07-12T18:28:15.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "The zero-cost fallacy: open-source software in the agentic era",
+      "url": "https://www.thoughtworks.com/insights/blog/open-source/zero-cost-fallacy-open-source-agentic-era",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.84,
+      "date": "2026-07-10T20:45:43.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Measuring Input Latency on Linux: X11 vs. Wayland, VRR, and DXVK",
+      "url": "https://marco-nett.de/blog/measuring-input-latency-on-linux-x11-vs-wayland-vrr-dxvk/",
+      "source": "Hacker News",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-14T16:36:06.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Proposing the Synergy of Therapeutic Plasma Exchange and Partial Epigenetic Reprogramming",
+      "url": "https://www.fightaging.org/archives/2026/07/proposing-the-synergy-of-therapeutic-plasma-exchange-and-partial-epigenetic-reprogramming/",
+      "source": "Fight Aging Newsletter",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7000000000000001,
+      "date": "2026-07-14T18:22:54.000Z",
+      "summary": "It seems a little early in the development of partial epigenetic reprogramming as a class of therapy to be thinking about which of the other approaches to aging it can best be combined with. Nonetheless, a proposal for therapeutic plasma exchange and partial epigenetic programming to go well together is the topic of today's open access paper. The argument is that these two classes of approach are addressing different layers of the dysfunction of aging, and should this do little to interfere with each other's benefits. Until such time as someone comes up with a safe, viable small molecule reprogramming therapy, it seems likely that reprogramming will remain quite limited in scope because of the delivery challenges inherent in gene therapy. Very few delivery systems [&#8230;]",
+      "category": "health_research"
+    },
+    {
+      "title": "Peripheral Inflammation May Drive Parkinson’s",
+      "url": "https://lifespan.io/peripheral-inflammation-may-drive-parkinsons/",
+      "source": "Lifespan.io Research",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.62,
+      "date": "2026-07-14T13:50:42.000Z",
+      "summary": "A new study suggests that aging or Parkinson’s-triggering mutations create inflammation in peripheral tissues, and then circulating extracellular vesicles spread it to the brain, which might contribute [&#8230;]",
+      "category": "health_research"
+    },
+    {
+      "title": "It is Never Too Late to Make Better Lifestyle Choices",
+      "url": "https://www.fightaging.org/archives/2026/07/it-is-never-too-late-to-make-better-lifestyle-choices/",
+      "source": "Fight Aging Newsletter",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-07-13T10:22:08.000Z",
+      "summary": "Studies tend to show that even a late life adjustment of lifestyle can meaningfully improve health and reduce mortality risk. It is never too late to gain some benefit from a better diet, more physical activity, greater physical fitness, and loss of excess visceral fat tissue. As an illustration of this point, researchers here show that older people who improve their lifestyle choices exhibit a sizable reduction in the risk of cognitive impairment versus those who retain a poor set of lifestyle choices. This study included 6,765 older adults from the Chinese Longitudinal Healthy Longevity Survey. Data on lifestyle, including dietary habits, sleep quality, physical, cognitive, and social activity were self-reported from 2008 to 2014. Cognitive function was measured using the Mini-Mental State Examination from [&#8230;]",
+      "category": "health_research"
+    }
+  ]
+}

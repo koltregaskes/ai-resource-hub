@@ -1,9 +1,87 @@
 {
-  "generated": "2026-05-25T14:37:36.716Z",
+  "generated": "2026-08-26T03:03:53.739Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-03-04",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 5,
+  "archived_story_count": 172,
+  "articles": [
+    {
+      "title": "Cache-aware prefill–decode disaggregation (CPD) for up to 40% faster long-context LLM serving",
+      "url": "https://www.together.ai/blog/cache-aware-disaggregated-inference",
+      "source": "Together AI Blog",
+      "tags": [
+        "architecture",
+        "inference"
+      ],
+      "matching_tags": [
+        "architecture",
+        "inference"
+      ],
+      "importance": 0.62,
+      "date": "2026-03-04T00:00:00.000Z",
+      "summary": "Serving long prompts doesn&#39;t have to mean slow responses. Learn how Together AI&#39;s CPD architecture separates warm and cold inference workloads to deliver 40% higher throughput and dramatically lower time-to-first-token for long-context LLM serving.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Goose: v1.26.2",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.26.2",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-03-04T23:01:29.000Z",
+      "summary": "## 🐛 **Bug Fixes** - Allow sandbox to write to goose config.yaml [#7656](https://github.com/block/goose/pull/7656)",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Goose: v1.25.3",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.25.3",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-03-04T21:20:59.000Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.47.0",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.47.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-03-04T14:49:43.000Z",
+      "summary": "# Community patch We're shipping a small release with two nice contributions from the community. ## Better background jobs @portertech implemented a new `wait: true` optional parameter on the `job_output` tool. This means that the model can now ask Crush to wait for a background job command to finish before returning its output. This is important to prevent polling, which would also consume more tokens than needed. ## LSP connection fix @taigrr worked on a patch to ensure that LSP connections are closed once the server is shut down. Enjoy! ## Changelog ### New! * 9ec46b8d439646a505018576e7197b2daacfb7b3: feat(shell): add blocking wait option to job_output tool (#2189) (@portertech) ### Fixed * 56d79d108ee5036224ef13155871457425c7729e: fix(lsp): fallback to Kill() on timeout (#2349) (@taigrr) ### Other stuff * aa0997b31590d4ac61221f6d6f35eef2de50628f: chore: bump powernap to v0.1.2 (@aymanbagabas) * 6d89de6320761c6eb8791cd7e87c3812a6ee5ce0: chore: update catwalk (@andreynering) --- Veri",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Phi-4-reasoning-vision and the lessons of training a multimodal reasoning model",
+      "url": "https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/",
+      "source": "Microsoft Research Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-04T18:05:57.000Z",
+      "summary": "We are pleased to announce Phi-4-reasoning-vision-15B, a 15 billion parameter open‑weight multimodal reasoning model, available through Microsoft Foundry (opens in new tab), HuggingFace (opens in new tab) and GitHub (opens in new tab). Phi-4-reasoning-vision-15B is a broadly capable model that can be used for a wide array of vision-language tasks such as image captioning, asking [&#8230;] The post Phi-4-reasoning-vision and the lessons of training a multimodal reasoning model appeared first on Microsoft Research .",
+      "category": "ai_research"
+    }
+  ]
 }

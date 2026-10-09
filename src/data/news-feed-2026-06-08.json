@@ -1,0 +1,27 @@
+{
+  "generated": "2026-06-09T02:48:08.231Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-06-08",
+  "article_count": 1,
+  "archived_story_count": 73,
+  "articles": [
+    {
+      "title": "MiMo-v2.5-Pro-UltraSpeed: 1T model with 1000 tokens per second",
+      "url": "https://mimo.xiaomi.com/blog/mimo-tilert-1000tps",
+      "source": "Hacker News",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-06-08T15:27:33.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

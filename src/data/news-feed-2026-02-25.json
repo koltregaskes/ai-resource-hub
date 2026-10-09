@@ -1,9 +1,72 @@
 {
-  "generated": "2026-05-25T14:37:36.480Z",
+  "generated": "2026-08-29T23:19:11.384Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-25",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 4,
+  "archived_story_count": 168,
+  "articles": [
+    {
+      "title": "A Dream of Spring for Open-Weight LLMs: 10 Architectures from Jan-Feb 2026",
+      "url": "https://magazine.sebastianraschka.com/p/a-dream-of-spring-for-open-weight",
+      "source": "Sebastian Raschka",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-25T13:26:56.000Z",
+      "summary": "A Round Up And Comparison of 10 Open-Weight LLM Releases in Spring 2026",
+      "category": "ai_research"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.45.1",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.45.1",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-25T21:14:43.000Z",
+      "summary": "# Small patch Small release with a few bug fixes to make Crush more stable for you. 💪 We're working on some nice stuff to be released in the near future. Stay tuned! Charm ## Changelog ### Fixed * 4018154c7aacbc73aae07decd239b71c450b7ed9: fix(event): guard against panic (#2310) (@meowgorithm) * 62b8c0b3def656ebbdb4f2e39e5ea4e97dfbd975: fix(lsp): fix multiple bugs in lsp client lifecycle and handlers (#2305) (@huaiyuWangh) * 655ce65564a2813bae27d6be0a7562b6a28e60e4: fix(ui): truncate status messages that would otherwise wrap (#2306) (@meowgorithm) *...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Goose: v1.25.1",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.25.1",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-25T20:14:45.000Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Tailscale: v1.94.2",
+      "url": "https://github.com/tailscale/tailscale/releases/tag/v1.94.2",
+      "source": "GitHub Releases · Tailscale",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-25T16:23:12.000Z",
+      "summary": "Please refer to the changelog available at https://tailscale.com/changelog",
+      "category": "ai_tools"
+    }
+  ]
 }

@@ -1,0 +1,343 @@
+{
+  "generated": "2026-09-15T17:45:16.468Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Turborepo v2.10.13",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.10.13",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release",
+        "api_update",
+        "architecture",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "architecture",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-14T16:36:19.000Z",
+      "summary": "What's Changed Changelog chore: Release Turborepo 2.10.12 by @github-actions[bot] in #13844 fix: Remove unsupported remote cache environment variable by @anthonyshew in #13845 fix: Copy TUI selections locally over SSH by @anthonyshew in #13847 feat: Use uv workspace metadata by @anthonyshew in #13848 feat: Support Python virtual environments by @anthonyshew in #13849 fix: Scope uv lockfile affectedness by @anthonyshew in #13850 test: Isolate uv prune configuration by @anthonyshew in #13851 fix: Explain disabled uv task caching by @anthonyshew in #13852 fix: Explain uv identity probe...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.23.4",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.4",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update",
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-14T15:51:38.000Z",
+      "summary": "Highlights See the complete change list below. Breaking Changes Removes configurable message-prefix filtering from channels, so eligible messages now follow normal sender, group, mention, and pairing policies without a prefix. ( #11571 ) by @qqqys fix(core)!: read command hook timeout in seconds ( #11615 ) by @qqqys Complete Change List Features Lets approved Web Shell Goal proposals start automatically after their owning turn finishes, removing the need to copy a manual /goal set command. ( #11360 ) by @qqqys feat(sdk): add a peer endpoint so a program outside Qwen Code can join...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI Infra Summit: NVIDIA Vera Rubin and DSX Platform Advancements Showcase Energy Efficiencies of Optimizing Tokens Per Watt for AI Factories",
+      "url": "https://blogs.nvidia.com/blog/ai-infra-summit-vera-rubin-dsx-energy-efficiencies-tokens-per-watt-ai-factories/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-15T16:55:40.000Z",
+      "summary": "Ian Buck, vice president of hyperscale and high-performance computing at NVIDIA, Tuesday spoke on AI factory efficiency at the AI Infra Summit, the Santa Clara Convention Center event that has morphed into a Coachella of infrastructure tech. Before a packed audience — with more than 8,000 attendees this year, up from 3,500 last year — […]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Agent-net Open Sources Webagent: A Go Harness That Turns Any Website into a Guarded AI Agent",
+      "url": "https://www.marktechpost.com/2026/09/14/agent-net-open-sources-webagent-a-go-harness-that-turns-any-website-into-a-guarded-ai-agent/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-15T04:03:20.000Z",
+      "summary": "Agent-net, the team building an agent-to-agent marketplace where AI agents discover, trust, and pay each other, has released Webagent, an open source harness for standing up public-facing business agents. So, basically you give it your website, get an agent, and let it talk to other agents. Instead of writing orchestration code, a business fills in […] The post Agent-net Open Sources Webagent: A Go Harness That Turns Any Website into a Guarded AI Agent appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Sakana AI Releases PC-ALM, Training 1,000-Layer Networks Without Backpropagation",
+      "url": "https://superpowerdaily.com/posts/sakana-ai-releases-pc-alm-training-1-000-layer-networks-without-backpropagation",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-14T21:08:45.000Z",
+      "summary": "The research method kept close to backpropagation on a deep image-classification test, but its layer-local approach requires iterative settling before each weight update.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Microsoft Research Finds Copilot Retries Can Quadruple Compute Costs",
+      "url": "https://superpowerdaily.com/posts/microsoft-research-finds-copilot-retries-can-quadruple-compute-costs",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-14T16:53:56.000Z",
+      "summary": "A production-scale snapshot of GitHub Copilot shows why tool reliability and context retention matter to the cost of autonomous coding work.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "JPMorgan Double Upgrades IREN as It Bets on Higher AI Cloud Pricing",
+      "url": "https://superpowerdaily.com/posts/jpmorgan-double-upgrades-iren-as-it-bets-on-higher-ai-cloud-pricing",
+      "source": "Superpower Daily",
+      "tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "matching_tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-14T14:44:09.000Z",
+      "summary": "The bank’s new $65 target rests on richer contracts and IREN’s Nvidia relationship, while a $25 billion to $30 billion 2027 spending plan remains the central risk.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Sakana AI Researchers Introduce PC-ALM, a Layer-Local Alternative to Backpropagation That Trains 1000-Layer Networks",
+      "url": "https://www.marktechpost.com/2026/09/14/sakana-ai-researchers-introduce-pc-alm-a-layer-local-alternative-to-backpropagation-that-trains-1000-layer-networks/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-14T20:46:16.000Z",
+      "summary": "Sakana AI researchers Jeffrey Seely and Julian Gould introduce Augmented Lagrangian Predictive Coding (PC-ALM), a local-learning alternative to backpropagation. By attaching a Lagrange multiplier to each layer constraint, PC-ALM keeps predictive coding's layer-local updates while recovering exact backprop gradients in linear networks. It matches BP across widths and depths from 8 to 128 at an inference budget of T = 2L, lifts gradient cosine to BP from 0.604 to 0.909 in the reference cell, and trains 1000-layer residual MLPs within about 2 points of backprop on MNIST. MIT-licensed JAX...",
+      "category": "ai_research"
+    },
+    {
+      "title": "Bolt.new Adds Forge, Offering 50x More AI Coding Usage for Opt-In Training Data",
+      "url": "https://superpowerdaily.com/posts/bolt-new-adds-forge-offering-50x-more-ai-coding-usage-for-opt-in-training-data",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-14T17:34:08.000Z",
+      "summary": "The research preview offers a separate experimental lane for software work, but shared prompts, code and repair records cannot be removed once used in training.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking",
+      "url": "https://paperswithcode.com/papers/2609.13141",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-14T17:06:21.912Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "pnpm 12.4.2",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v12.4.2",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-15T10:49:15.000Z",
+      "summary": "pnpm 12.4.2 includes security fixes for executable shims and GitHub Actions links, more reliable installs, faster peer dependency checks in workspaces, and Python lockfiles that work across compatible targets. Patch Changes Security Dependency executables can no longer take over another package's POSIX bin shim through its shell helpers. Reinstall dependencies to replace existing shims #14837 . On Cygwin, MSYS2, and WSL, shims still use PATH for Windows path conversion, so dependency executables can still redirect them there. GitHub Actions homepage links no longer expose server...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "cua-driver-rs v0.20.9",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/cua-driver-rs-v0.20.9",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-15T05:38:00.000Z",
+      "summary": "Qwen CUA Driver prebuilt binaries (vendored under packages/cua-driver ). macOS : codesigned + notarized universal binary + QwenCuaDriver.app Linux : unsigned (x86_64 + arm64, glibc 2.31 floor) Windows : unsigned UIAccess worker + native SDK payload (x86_64 + arm64); deployments must sign and trust the worker on the target machine before UIAccess activation Node.js : the same workflow publishes @qwen-code/cua-sdk after a clean install against these release assets and publishes the independently versioned @qwen-code/node-repl-mcp package after its MCP protocol smoke tests Enable relative...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "cua-driver-rs v0.20.8",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/cua-driver-rs-v0.20.8",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-14T15:55:36.000Z",
+      "summary": "Qwen CUA Driver prebuilt binaries (vendored under packages/cua-driver ). macOS : codesigned + notarized universal binary + QwenCuaDriver.app Linux : unsigned (x86_64 + arm64, glibc 2.31 floor) Windows : unsigned UIAccess worker + native SDK payload (x86_64 + arm64); deployments must sign and trust the worker on the target machine before UIAccess activation Node.js : the same workflow publishes @qwen-code/cua-sdk after a clean install against these release assets and publishes the independently versioned @qwen-code/node-repl-mcp package after its MCP protocol smoke tests Enable relative...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Pony.ai unveils autonomous electric truck for logistics fleets",
+      "url": "https://www.artificialintelligence-news.com/news/pony-ai-autonomous-electric-truck-for-logistics-fleets/",
+      "source": "AI News",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-15T11:15:57.000Z",
+      "summary": "Pony.ai has unveiled an autonomous electric truck for logistics fleets, developed with GAC Commercial Vehicle for freight supply chains. Unveiled at IAA Transportation 2026, this Level 4 (L4) heavy rig marks the fourth-generation (Gen-4) iteration of Pony.ai’s Robotruck platform. It builds on GAC Commercial Vehicle’s T9 battery-electric truck architecture, with mass production set to start […] The post Pony.ai unveils autonomous electric truck for logistics fleets appeared first on AI News .",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI agents blew the whistle on their cheating colleagues",
+      "url": "https://www.technologyreview.com/2026/09/14/1144037/ai-agents-blew-whistle-o-cheating-colleagues/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-14T16:00:00.000Z",
+      "summary": "A group of AI agents asked to solve a series of math problems split into rival factions—when some cheated, others tried to stop them. That whistleblowing behavior, seen for the first time in a recent experiment run by Google DeepMind, could have implications for alignment researchers trying to keep swarms of autonomous AI agents in…",
+      "category": "ai_research"
+    },
+    {
+      "title": "A Vinyl Bar in Shibuya is a startup offering fun music apps without any AI prompting",
+      "url": "https://techcrunch.com/2026/09/14/a-vinyl-bar-in-shibuya-is-a-startup-offering-fun-music-apps-without-any-ai-prompting/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-14T13:55:00.000Z",
+      "summary": "Former Spotify exec's company releases experimental \"singles\" that involves users in music making.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "DevFest 2026: Come Build with Us",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-14T17:06:25.673Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Agent Harness vs Agent Framework vs MCP: Which Layer Owns the Loop, State, Tools, Permissions, and Recovery",
+      "url": "https://www.marktechpost.com/2026/09/14/agent-harness-vs-agent-framework-vs-mcp-which-layer-owns-the-loop-state-tools-permissions-and-recovery/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-14T21:54:22.000Z",
+      "summary": "A practitioner's map of the 3 layers in a modern agent stack, with verified sources and an overlap analysis. The post Agent Harness vs Agent Framework vs MCP: Which Layer Owns the Loop, State, Tools, Permissions, and Recovery appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Apple Releases macOS 27 With a Siri That Can Read Your Screen",
+      "url": "https://superpowerdaily.com/posts/apple-releases-macos-27-with-a-siri-that-can-read-your-screen",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-14T18:49:52.000Z",
+      "summary": "The update moves Apple’s assistant from a voice prompt toward a desktop tool that can work with windows, selected screen regions, and personal content—though its flagship AI features need newer hardware and begin in English beta.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Cybersecurity Stocks Jump as AI Safety Warnings Lift the Security Trade",
+      "url": "https://superpowerdaily.com/posts/cybersecurity-stocks-jump-as-ai-safety-warnings-lift-the-security-trade",
+      "source": "Superpower Daily",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-14T17:21:05.000Z",
+      "summary": "The gains show investors pricing a more dangerous AI environment into security companies, even though the day’s move offers no evidence yet of higher customer spending.",
+      "category": "ai_tools"
+    }
+  ]
+}

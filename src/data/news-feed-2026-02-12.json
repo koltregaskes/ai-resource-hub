@@ -1,9 +1,100 @@
 {
-  "generated": "2026-05-25T14:37:36.003Z",
+  "generated": "2026-08-26T03:02:10.509Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-12",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 6,
+  "archived_story_count": 162,
+  "articles": [
+    {
+      "title": "GitHub Releases · Goose: v1.24.0",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.24.0",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-12T22:17:00.000Z",
+      "summary": "# goose v1.24.0 Release Notes ## ✨ Features - **Unified summon extension** — replaces subagent and skills with a single, streamlined extension [[#6964](https://github.com/block/goose/pull/6964)](https://github.com/block/goose/pull/6964) - **Top of Mind (tom) platform extension** — new built-in extension enabled by default for contextual awareness [[#7073](https://github.com/block/goose/pull/7073)](https://github.com/block/goose/pull/7073) [[#7111](https://github.com/block/goose/pull/7111)](https://github.com/block/goose/pull/7111) - **MCP support for agentic CLI providers** — Claude Code, Codex, and Gemini CLI can now use MCP tools [[#6972](https://github.com/block/goose/pull/6972)](https://github.com/block/goose/pull/6972) - **Claude Code: dynamic model listing and mid-session model switching** [[#7120](https://github.com/block/goose/pull/7120)](https://github.com/block/goose/pull/7120) - **Claude Code: stream-json protocol for persistent sessions** [[#7029](https://github.com/block/g",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemini 3 Deep Think: Advancing science, research and engineering",
+      "url": "https://deepmind.google/blog/gemini-3-deep-think-advancing-science-research-and-engineering/",
+      "source": "DeepMind Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-02-12T16:15:09.000Z",
+      "summary": "Our most specialized reasoning mode is now updated to solve modern science, research and engineering challenges.",
+      "category": "ai_research"
+    },
+    {
+      "title": "Donate Public First Action",
+      "url": "https://www.anthropic.com/news/donate-public-first-action",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-12T14:45:37.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "#491 – OpenClaw: The Viral AI Agent that Broke the Internet – Peter Steinberger",
+      "url": "https://lexfridman.com/peter-steinberger/?utm_source=rss&utm_medium=rss&utm_campaign=peter-steinberger",
+      "source": "Lex Fridman Podcast",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-02-12T03:10:39.000Z",
+      "summary": "Peter Steinberger is the creator of OpenClaw, an open-source AI agent framework that’s the fastest-growing project in GitHub history. Thank you for listening ❤ Check out our sponsors: https://lexfridman.com/sponsors/ep491-sc See below for timestamps, transcript, and to give feedback, submit questions, contact Lex, etc. Transcript: https://lexfridman.com/peter-steinberger-transcript CONTACT LEX: Feedback – give feedback to Lex: https://lexfridman.com/survey AMA – submit questions, videos or call-in: https://lexfridman.com/ama Hiring – join our team: https://lexfridman.com/hiring Other – other ways to get in touch: https://lexfridman.com/contact EPISODE LINKS: Peter’s X: https://x.com/steipete Peter’s GitHub: https://github.com/steipete Peter’s Website: https://steipete.com Peter’s LinkedIn: https://www.linkedin.com/in/steipete OpenClaw Website: https://openclaw.ai OpenClaw GitHub: https://github.com/openclaw/openclaw OpenClaw Discord: https://discord.gg/openclaw",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI sidesteps Nvidia with unusually fast coding model on plate-sized chips",
+      "url": "https://arstechnica.com/ai/2026/02/openai-sidesteps-nvidia-with-unusually-fast-coding-model-on-plate-sized-chips/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.85,
+      "date": "2026-02-12T22:56:02.000Z",
+      "summary": "OpenAI's new GPT‑5.3‑Codex‑Spark is 15 times faster at coding than its predecessor.",
+      "category": "tech_general"
+    },
+    {
+      "title": "Introducing Dedicated Container Inference: Delivering 2.6x faster inference for custom AI models",
+      "url": "https://www.together.ai/blog/dedicated-container-inference",
+      "source": "Together AI Blog",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.62,
+      "date": "2026-02-12T00:00:00.000Z",
+      "summary": "Together AI launches production-grade orchestration for custom AI models with 1.4x–2.6x faster inference.",
+      "category": "ai_tools"
+    }
+  ]
 }

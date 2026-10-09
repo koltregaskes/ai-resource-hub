@@ -1,9 +1,55 @@
 {
-  "generated": "2026-05-25T14:37:35.811Z",
+  "generated": "2026-08-26T03:02:05.002Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-06",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 3,
+  "archived_story_count": 128,
+  "articles": [
+    {
+      "title": "GitHub Releases · Goose: v1.23.2",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.23.2",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-06T17:30:55.000Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Goose: v1.23.1",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.23.1",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-06T05:36:48.000Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "What do LLMs think when you don&#39;t tell them what to think about?",
+      "url": "https://www.together.ai/blog/what-llms-think",
+      "source": "Together AI Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.54,
+      "date": "2026-02-06T00:00:00.000Z",
+      "summary": "What do language models generate when you don&#39;t tell them what to generate? New research reveals that LLM families have distinct &#39;knowledge priors&#39;—GPT models default to code and math, Llama favors narratives, DeepSeek generates religious content, and Qwen outputs exam questions.",
+      "category": "ai_tools"
+    }
+  ]
 }

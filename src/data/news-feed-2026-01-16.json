@@ -1,9 +1,85 @@
 {
-  "generated": "2026-05-25T14:37:35.139Z",
+  "generated": "2026-08-26T02:57:21.317Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-16",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 5,
+  "archived_story_count": 166,
+  "articles": [
+    {
+      "title": "GitHub Releases · Crush: v0.33.2",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.33.2",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-16T21:48:23.000Z",
+      "summary": "# Pasting images from the ol’ clipboard :framed_picture: Thanks to contributor @kslamph you can now paste images from clipboard directly into Crush. Many other fixes are included to make Crush more stable and reliable as well. Enjoy! :sparkles: ## Changelog ### New! * feat: add clipboard image paste functionality to chat editor by @kslamph in https://github.com/charmbracelet/crush/pull/1151 ### Fixed * fix: race in agent.go by @caarlos0 in https://github.com/charmbracelet/crush/pull/1853 * fix: resolve extra headers for providers by @kujtimiihoxha in https://github.com/charmbracelet/crush/pull/1764 * fix: make hyper and copilot link styled on ui by @andreynering in https://github.com/charmbracelet/crush/pull/1872 * fix: try to make the search tool more reliable by @kujtimiihoxha in https://github.com/charmbracelet/crush/pull/1779 * fix: mcps loading in non interactive mode by @kujtimiihoxha in https://github.com/charmbracelet/crush/pull/1894 ### Other stuff * chore(README): update crus",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.407",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.407",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-16T18:02:25.000Z",
+      "summary": "## What's Changed * `@remotion/web-renderer`: New text renderer by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6300 * `@remotion/media`: Remove readahead threshold by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6295 * `@remotion/media`: Smoother playback, better handle videos with variable FPS and offset start timestamps by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6305 * `@remotion/renderer`: Abort downloads when render fails (fix) by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6307 ## Templates * Prompt to motion graphics: Add Skills setup for Code Generation by @ASchwad in https://github.com/remotion-dev/remotion/pull/6298 **Full Changelog**: https://github.com/remotion-dev/remotion/compare/v4.0.406...v4.0.407",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Goose: v1.20.0",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.20.0",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-16T17:24:01.000Z",
+      "summary": "docs: slash commands topic (https://github.com/block/goose/pull/6333) (https://github.com/block/goose/commit/c90ead254f96d8489b3746d913551b08875c1f3f) feat: add a max tokens env var (https://github.com/block/goose/pull/6264) (https://github.com/block/goose/commit/edcb6347727f96acfcdc3a232a570c182c71a799) make sure the models are using streaming properly (https://github.com/block/goose/pull/6331) (https://github.com/block/goose/commit/a842c99d11b88776b176feee4afc1f57cba0c13b) chore: refactor cli() function to reduce line count (https://github.com/block/goose/pull/6272) (https://github.com/block/goose/commit/f6042fa6fe5b83e344fb49324e4c85266978f95a) chore: refactor docx_tool to reduce function size (https://github.com/block/goose/pull/6273) (https://github.com/block/goose/commit/41dbddade678b138cb77c3d49effa353f75c9a6f) chore: refactor interactive session to reduce line count (https://github.com/block/goose/pull/6274) (https://github.com/block/goose/commit/d7a7b21487904937ed4eb1fcfe10057",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic Appoints Irina Ghose As Managing Director Of India",
+      "url": "https://www.anthropic.com/news/anthropic-appoints-irina-ghose-as-managing-director-of-india",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-16T03:28:16.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "D4RT: Teaching AI to see the world in four dimensions",
+      "url": "https://deepmind.google/blog/d4rt-teaching-ai-to-see-the-world-in-four-dimensions/",
+      "source": "DeepMind Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.65,
+      "date": "2026-01-16T10:39:00.000Z",
+      "summary": "D4RT: Unified, efficient 4D reconstruction and tracking up to 300x faster than prior methods.",
+      "category": "ai_research"
+    }
+  ]
 }

@@ -833,9 +833,9 @@ export const META_BENCHMARK_LEADERBOARD: MetaBenchmarkLeaderboardEntry[] = [
 
 export function getMetaBenchmarkOverview(): MetaBenchmarkOverview {
   return {
-    title: 'Meta-Benchmark Workbench',
+    title: 'Meta-Benchmark Historical Workbench',
     updatedAt: '2026-06-12',
-    evidenceState: 'Headline rows now show four provisional 0-100 meta scores for current top-lab models. Floor Capability is the finished leaderboard shape. Operating Envelope, Frontier Reality, and Research Trust are the next public tabs and remain provisional until prompt-pack runs backfill the current external evidence.',
+    evidenceState: 'Historical snapshot captured on 12 June 2026. The scores are provisional and are not a current model ranking. A new public ranking must wait for versioned prompt packs, reproducible run records, and refreshed external evidence.',
     modes: META_BENCHMARK_MODES,
     dimensions: META_BENCHMARK_DIMENSIONS,
     families: META_BENCHMARK_FAMILIES,

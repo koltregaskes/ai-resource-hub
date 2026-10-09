@@ -1,9 +1,57 @@
 {
-  "generated": "2026-05-25T14:37:36.628Z",
+  "generated": "2026-08-26T03:03:46.853Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-03-01",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 3,
+  "archived_story_count": 161,
+  "articles": [
+    {
+      "title": "GitHub Releases · pnpm: pnpm 11 Alpha 12",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v11.0.0-alpha.12",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-03-01T19:04:09.000Z",
+      "summary": "### Major Changes #### Store * Runtime dependencies are always linked from the global virtual store [#10233](https://github.com/pnpm/pnpm/pull/10233). * Optimized index file format to store the hash algorithm once per file instead of repeating it for every file entry. Each file entry now stores only the hex digest instead of the full integrity string (` - `). Using hex format improves performance since file paths in the content-addressable store use hex representation, eliminating base64-to-hex conversion during path lookups. * Store version bumped to v11. * Switched internal store and cache files from JSON to MessagePack format for improved performance. This change migrates all internal index files and metadata cache files to use MessagePack serialization instead of JSON. MessagePack provides faster serialization/deserialization and more compact file sizes, resulting in improved installation performance. Related PR: [#10500](https://github.com/pnpm/pnpm/pull/10500) * Store the bundled",
+      "category": "ai_tools"
+    },
+    {
+      "title": "‘We are Stanford’: Open Minds Event Honors Staff",
+      "url": "https://news.stanford.edu/stories/2026/03/stanford-open-minds-thanks-staff?mkt_tok=NjYwLVRKQy05ODQAAAGg6B3fELkJi1Q_dOOdJyKR9pLU7hyWTgmE8AXO6Bf4H65obmioMCZi2pWK47w8llUzSooHxiWHKUeBJdLBhTpkBedMcFVNf6iRtzwkKbo",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-03-01T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Study: Sycophantic AI can undermine human judgment",
+      "url": "https://arstechnica.com/science/2026/03/study-sycophantic-ai-can-undermine-human-judgment/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-03-01T00:00:00.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
 }

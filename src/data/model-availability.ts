@@ -1,4 +1,5 @@
 import { getModels } from '../db/pg-cache';
+import { isPubliclyVerifiedModel } from './model-verification';
 
 export type AvailabilityScope = 'provider' | 'model';
 export type AvailabilitySurface = 'api' | 'web' | 'app';
@@ -63,8 +64,6 @@ interface PublicModelRecord {
   category: string;
   status: string;
 }
-
-const PUBLIC_MODEL_STATUSES = new Set(['active', 'tracking', 'preview']);
 
 export const availabilityRules: AvailabilityRule[] = [
   {
@@ -151,7 +150,7 @@ export const availabilityRules: AvailabilityRule[] = [
 ];
 
 function getPublicModels(): PublicModelRecord[] {
-  return getModels().filter((model) => PUBLIC_MODEL_STATUSES.has((model.status ?? '').toLowerCase()));
+  return getModels().filter((model) => isPubliclyVerifiedModel(model));
 }
 
 function matchesRule(model: PublicModelRecord, rule: AvailabilityRule): boolean {

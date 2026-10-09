@@ -1,9 +1,44 @@
 {
-  "generated": "2026-05-25T14:37:35.413Z",
+  "generated": "2026-08-26T02:57:30.034Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-23",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 2,
+  "archived_story_count": 153,
+  "articles": [
+    {
+      "title": "GitHub Releases · Crush: v0.35.0",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.35.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release",
+        "api_update",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-01-23T20:33:48.000Z",
+      "summary": "# Vercel AI Gateway and secret UI stuff This release adds support for Vercel's fancy AI Gateway as well as a boatload of improvements to the secret-not-secret UI refactor that we've cleverly hidden behind a flag. Details below. ## Hello Vercel AI Gateway If you're one of those so-called “production-grade AI” people then you might like to know that Crush now supports the [Vercel AI Gateway](https://vercel.com/docs/ai-gateway). Just pop in your API key (pro tip: use your boss’s key), choose your fave model, mash out a prompt and LET IT RIP. ## Shhhhh We're refactoring the UI for speed and code simplicity. It's not totally finished yet but, if you dare, set `CRUSH_NEW_UI=1` to try it out. Feedback welcome! ## You probably already know this but… …you rock. Thanks for all the Crush love. Your feedback for us is like ambrosia for Zeus. Enjoy your weekend! 💖 ## Changelog ### New! * 88d10d13367eb0722898196b78a422cf98b6c21e: feat(ui): add keybinding to copy chat message content to clipboard (#",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Goose: v1.21.1",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.21.1",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-23T18:08:39.000Z",
+      "summary": null,
+      "category": "ai_tools"
+    }
+  ]
 }

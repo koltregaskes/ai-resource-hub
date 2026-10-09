@@ -1,0 +1,335 @@
+{
+  "generated": "2026-08-29T17:45:12.206Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Release v0.22.3",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.22.3",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "research_paper",
+        "api_update",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "research_paper",
+        "api_update",
+        "architecture"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-28T17:40:58.000Z",
+      "summary": "Highlights Added owner-scoped named sessions in Channels to manage up to eight persistent tasks per chat. ( #10198 ) Enabled daemon Extension installs to accept absolute local paths while rejecting relative paths and unsupported options. ( #10131 ) Updated Web Shell sidebar to display GitHub-style colored state icons for sessions bound to pull requests. ( #10258 ) Added an opt-in composer add menu in Web Shell grouping attachments, files, extensions, MCP servers, and skills. ( #10379 ) Restored bold text visibility in assistant messages and prevented sidebar session names from being...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NVIDIA’s TensorRT Model Connect Skips ONNX, but x86_64 Users Must Build From Source",
+      "url": "https://superpowerdaily.com/posts/nvidia-s-tensorrt-model-connect-skips-onnx-but-x86-64-users-must-build-from-source",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference",
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.72,
+      "date": "2026-08-28T19:59:34.000Z",
+      "summary": "The open-source preview turns model conversion into a versioned deployment artifact, separating engine construction from native inference while imposing an ARM-first installation path.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Intel Releases 20 Agent Skills for Arc GPUs, With an Open-Port Security Catch",
+      "url": "https://superpowerdaily.com/posts/intel-releases-20-agent-skills-for-arc-gpus-with-an-open-port-security-catch",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-28T17:16:04.000Z",
+      "summary": "The open repository turns Intel’s GPU deployment steps into reusable instructions for coding agents, but several model-server launchers bind broadly without authentication by default.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Aug 28, 2026 GLM-5.3’s Exploits, AI Models and Hardware Speed Up, DeepSeek’s New Agent Harness The Batch News & Insights: How have software engineering fundamentals changed with agentic coding?",
+      "url": "https://deeplearning.ai/the-batch/issue-368",
+      "source": "DeepLearning.AI The Batch",
+      "tags": [
+        "research_paper",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-28T17:01:54.774Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "LAION Releases 10-Million-Hour Video Corpus for Research, Excluding Commercial Use",
+      "url": "https://superpowerdaily.com/posts/laion-releases-10-million-hour-video-corpus-for-research-excluding-commercial-use",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.72,
+      "date": "2026-08-29T10:07:01.000Z",
+      "summary": "The release brings video, sound and still frames into one open research resource, while synthetic labels, English-heavy sourcing and noncommercial terms narrow how it can be used.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "A pre-train and fine-tune framework for adaptive boosting of pre-trained polygenic risk scores",
+      "url": "https://www.nature.com/articles/s41467-026-77128-5",
+      "source": "Nature AI",
+      "tags": [
+        "research_paper",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "evaluation"
+      ],
+      "importance": 0.72,
+      "date": "2026-08-29T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "GLM-5.3-Flash vs Qwen3.8-Flash-Next: Two Chinese AI Labs Independently Converge on the Same Model Architecture",
+      "url": "https://www.marktechpost.com/2026/08/28/glm-5-3-flash-vs-qwen3-8-flash-next-two-chinese-ai-labs-independently-converge-on-the-same-model-architecture/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.72,
+      "date": "2026-08-28T19:12:21.000Z",
+      "summary": "Z.ai and Qwen independently shipped near-identical architectures: 3:1 linear hybrids, compressed indexers, gated residuals, and Muon training. The post GLM-5.3-Flash vs Qwen3.8-Flash-Next: Two Chinese AI Labs Independently Converge on the Same Model Architecture appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Salesforce Uses SageMaker Placement Controls to Meet 2-AZ Agentforce Standard, Keep 8x Savings",
+      "url": "https://superpowerdaily.com/posts/salesforce-uses-sagemaker-placement-controls-to-meet-2-az-agentforce-standard-keep-8x-savings",
+      "source": "Superpower Daily",
+      "tags": [
+        "api_update",
+        "hardware"
+      ],
+      "matching_tags": [
+        "api_update",
+        "hardware"
+      ],
+      "importance": 0.72,
+      "date": "2026-08-28T17:24:24.000Z",
+      "summary": "The configuration separates model-level resilience from an endpoint’s infrastructure footprint, but balanced placement still depends on GPU capacity in each target Availability Zone.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "cua-driver-rs v0.20.2",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/cua-driver-rs-v0.20.2",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-28T15:19:46.000Z",
+      "summary": "Qwen CUA Driver prebuilt binaries (vendored under packages/cua-driver ). macOS : codesigned + notarized universal binary + QwenCuaDriver.app Linux : unsigned (x86_64 + arm64, glibc 2.31 floor) Windows : unsigned (x86_64 + arm64) Node.js : the same workflow publishes @qwen-code/cua-sdk after a clean install against these release assets and publishes the independently versioned @qwen-code/node-repl-mcp package after its MCP protocol smoke tests Enable relative coordinates: CUA_DRIVER_RS_COORDINATE_SPACE=1 (default 0 = off; optional CUA_DRIVER_RS_COORDINATE_SCALE=1000 ). Enable textual MCP...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nvidia Rolls Out Vera Rubin as AI Competition Shifts to Data Traffic",
+      "url": "https://superpowerdaily.com/posts/nvidia-rolls-out-vera-rubin-as-ai-competition-shifts-to-system-orchestration",
+      "source": "Superpower Daily",
+      "tags": [
+        "architecture",
+        "hardware"
+      ],
+      "matching_tags": [
+        "architecture",
+        "hardware"
+      ],
+      "importance": 0.64,
+      "date": "2026-08-29T13:48:12.000Z",
+      "summary": "The architecture packages compute with storage and networking hardware, betting that efficiently moving data through large AI systems is becoming its own competitive layer.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "An Anthropic researcher just gave us a peek at self-improving AI",
+      "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-08-28T19:30:38.000Z",
+      "summary": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic Says Claude Found Fixes Across 10 Alignment Failures, but Tests Remain Narrow",
+      "url": "https://superpowerdaily.com/posts/anthropic-says-claude-found-fixes-across-10-alignment-failures-but-tests-remain-narrow",
+      "source": "Superpower Daily",
+      "tags": [
+        "benchmark"
+      ],
+      "matching_tags": [
+        "benchmark"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-28T18:19:08.000Z",
+      "summary": "The release turns safety post-training into a repeatable model-run search process. Its value now depends on whether those benchmark gains survive broader tests and later training.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Vercel AI Open-Sources vgpu: A TypeScript WebGPU Library for AI Agent Shaders",
+      "url": "https://www.marktechpost.com/2026/08/28/vercel-vgpu-webgpu-library-open-source/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-28T17:28:47.000Z",
+      "summary": "Vercel has open-sourced vgpu, the WebGPU library it built to ship the shaders on vercel.com. It treats .wgsl files as importable TypeScript modules, runs the same shader in the browser, in headless Node.js via Dawn, and in a deterministic CI mock, and ships a fullscreen effect in 25 KB gzipped. The post Vercel AI Open-Sources vgpu: A TypeScript WebGPU Library for AI Agent Shaders appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Meta’s EvoHarness-RL Takes Qwen3-8B to 96.9% on ALFWorld, Near Claude Opus 4.5",
+      "url": "https://superpowerdaily.com/posts/meta-s-evoharness-rl-takes-qwen3-8b-to-96-9-on-alfworld-near-claude-opus-4-5",
+      "source": "Superpower Daily",
+      "tags": [
+        "benchmark"
+      ],
+      "matching_tags": [
+        "benchmark"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-28T17:20:48.000Z",
+      "summary": "The result is a strong benchmark showing for learned state management, not yet evidence that the framework improves the long-running enterprise workflows it is designed to target.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "JAMA Paper Says Autonomous AI Could Surpass Physicians and AI-Assisted Care by 2030",
+      "url": "https://superpowerdaily.com/posts/jama-paper-says-autonomous-ai-could-surpass-physicians-and-ai-assisted-care-by-2030",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-28T15:24:27.000Z",
+      "summary": "The contested forecast recasts clinical AI from a physician tool into a possible replacement, while real-world patient use and medical training remain unsettled.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Apple TV is raising its subscription prices again",
+      "url": "https://techcrunch.com/2026/08/28/apple-tv-is-raising-its-subscription-prices-again/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.74,
+      "date": "2026-08-28T14:36:48.000Z",
+      "summary": "Now, Apple TV subscriptions will cost $14.99 per month, up from its previous price of $12.99 per month.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models",
+      "url": "https://paperswithcode.com/papers/2608.26067",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.72,
+      "date": "2026-08-29T04:50:54.150Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Release v0.59.0-nightly.20260829.g0bd1d4397",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0-nightly.20260829.g0bd1d4397",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-29T01:56:42.000Z",
+      "summary": "What's Changed fix(core): enforce fail-closed workspace trust and filter mcpServers in restricted mode by @luisfelipe-alt in #29099 Full Changelog : v0.59.0-nightly.20260828.g3c311beac...v0.59.0-nightly.20260829.g0bd1d4397",
+      "category": "ai_tools"
+    },
+    {
+      "title": "nightly",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-29T00:54:56.000Z",
+      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity ' https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic Research Shows AI Systems Can Improve Alignment Work on Their Own",
+      "url": "https://superintelligencenews.com/ai-fields/ai-alignment-anthropic-automated-research/",
+      "source": "Superintelligence Newsletter",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-28T19:54:30.000Z",
+      "summary": "Anthropic says an automated researcher improved AI alignment benchmarks, hinting that AI alignment research could soon be partially automated. The post Anthropic Research Shows AI Systems Can Improve Alignment Work on Their Own appeared first on Superintelligence News - Artificial Intelligence News .",
+      "category": "ai_tools"
+    }
+  ]
+}

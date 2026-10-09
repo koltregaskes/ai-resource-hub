@@ -1,0 +1,197 @@
+{
+  "generated": "2026-08-31T12:00:09.452Z",
+  "site": "AI Resource Hub",
+  "article_count": 12,
+  "articles": [
+    {
+      "title": "OpenClaw Releases OpenClaw 2.0: Guided Model Setup, 575 ms Control UI Startup, and One Trust Boundary Per Gateway",
+      "url": "https://www.marktechpost.com/2026/08/30/openclaw-releases-openclaw-2-0-guided-model-setup-575-ms-control-ui-startup-and-one-trust-boundary-per-gateway/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-31T05:04:10.000Z",
+      "summary": "The OpenClaw Foundation has released v2026.8.1, which the project calls OpenClaw 2.0: 933 contributors, 569 first-timers, and more than 16,000 pull requests, roughly half of every PR ever merged into the repo. Setup now reuses existing subscriptions, API keys and local models. The rebuilt Control UI cut test-harness startup from about 1.6 seconds to 575 ms. Shared cloud sessions add real multiplayer, though the docs are explicit that they are not a security boundary. The post OpenClaw Releases OpenClaw 2.0: Guided Model Setup, 575 ms Control UI Startup, and One Trust Boundary Per Gateway...",
+      "category": "ai_research"
+    },
+    {
+      "title": "Nvidia Reportedly Suspends Parts of AI Cloud Plan Less Than Two Months After Launch",
+      "url": "https://superpowerdaily.com/posts/nvidia-reportedly-suspends-parts-of-ai-cloud-plan-less-than-two-months-after-launch",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "architecture",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-30T19:18:56.000Z",
+      "summary": "The proposed program paired capital for Nvidia hardware with a claim on cloud revenue, putting new attention on how far a chip supplier can reach into its customers’ businesses.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI Reportedly Buys Tens of Thousands of Macs for Computer-Use Agent Training",
+      "url": "https://superpowerdaily.com/posts/openai-reportedly-buys-tens-of-thousands-of-macs-for-computer-use-agent-training",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-31T10:12:40.000Z",
+      "summary": "The reported purchase points to dedicated capacity for agent training alongside GPU systems, while its cost and performance tradeoffs remain unclear.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "How an MIT research project became a global programming language",
+      "url": "https://news.mit.edu/2026/how-mit-research-project-became-global-programming-language-0831",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-08-31T04:51:19.447Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "IBM quantum computer solves classically intractable problem in 15 minutes",
+      "url": "https://www.sciencedaily.com/releases/2026/08/260829035219.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-08-30T14:08:13.000Z",
+      "summary": "IBM and University of Chicago researchers have completed a quantum computation that leading classical methods could not practically reproduce. The system used 70 error-corrected logical qubits and finished the task in roughly 15 minutes while also providing statistical evidence that the result was reliable.",
+      "category": "ai_research"
+    },
+    {
+      "title": "Release v0.59.0-nightly.20260831.g0bd1d4397",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0-nightly.20260831.g0bd1d4397",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-31T01:30:31.000Z",
+      "summary": "Full Changelog : v0.59.0-nightly.20260830.g0bd1d4397...v0.59.0-nightly.20260831.g0bd1d4397",
+      "category": "ai_tools"
+    },
+    {
+      "title": "JIT-Agent: Scaling Harness Intelligence via Just-in-Time Harness Evolution",
+      "url": "https://paperswithcode.com/papers/2608.25593",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-08-30T17:08:15.506Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenAI Maps a Third Era of Persistent AI Coworkers, With Access and Reliability Still in the Way",
+      "url": "https://superpowerdaily.com/posts/openai-maps-a-third-era-of-persistent-ai-coworkers-with-access-and-reliability-still-in-the-way",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-08-30T15:23:27.000Z",
+      "summary": "The proposed shift would turn AI from a prompt-by-prompt helper into a longer-running collaborator, but its usefulness depends on shared context, workplace-system access, and dependable controls.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "FunAudioLLM: Voice Understanding and Generation Foundation Models for Natural Interaction Between Humans and LLMs",
+      "url": "https://paperswithcode.com/papers/2407.04051",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-08-30T11:18:00.561Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Google Courts Hollywood for AI Licenses, but Talent Rights Are Holding Up Deals",
+      "url": "https://superpowerdaily.com/posts/google-courts-hollywood-for-ai-licenses-but-talent-rights-are-holding-up-deals",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-08-31T10:56:58.000Z",
+      "summary": "The discussions span production tools, character licensing and YouTube’s proposed likeness detection. Studios must weigh new AI revenue and efficiency against copyright claims, performer protections and their ability to sue.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Spatial mapping of RNA turnover kinetics in the mouse brain",
+      "url": "https://www.nature.com/articles/s41593-026-02420-y",
+      "source": "Nature AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-08-31T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "What’s your lab’s archetype? The answer could inform how you use AI",
+      "url": "https://www.nature.com/articles/d41586-026-02543-z",
+      "source": "Nature AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-08-31T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_research"
+    }
+  ]
+}

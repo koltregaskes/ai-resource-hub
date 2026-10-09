@@ -1,9 +1,134 @@
 {
-  "generated": "2026-05-25T14:37:35.037Z",
+  "generated": "2026-08-26T02:57:18.884Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-13",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 8,
+  "archived_story_count": 151,
+  "articles": [
+    {
+      "title": "GitHub Releases · ComfyUI: v0.9.0",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.9.0",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release",
+        "architecture",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "architecture",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-01-13T07:20:31.000Z",
+      "summary": "## What's Changed * Revert \"Force sequential execution in CI test jobs\" by @yoland68 in https://github.com/Comfy-Org/ComfyUI/pull/11725 * bump comfyui_manager version to the 4.0.5 by @ltdrdata in https://github.com/Comfy-Org/ComfyUI/pull/11732 * Better detection if AMD torch compiled with efficient attention. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/11745 * Fix import issue. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/11746 * Add node: JoinAudioChannels by @kijai in https://github.com/Comfy-Org/ComfyUI/pull/11728 * Fix csp error in frontend when forcing offline. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/11749 * Bump comfyui-frontend-package to 1.36.13 by @comfy-pr-bot in https://github.com/Comfy-Org/ComfyUI/pull/11645 * Add most basic Asset support for models by @Kosinkadink in https://github.com/Comfy-Org/ComfyUI/pull/11315 * Fix VAEEncodeForInpaint to support WAN VAE tuple downscale_ratio by @rattus128 in https://github",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Introducing Anthropic Labs",
+      "url": "https://www.anthropic.com/news/introducing-anthropic-labs",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-13T22:46:14.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "GitHub Releases · pnpm: pnpm 11 Alpha 3",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v11.0.0-alpha.3",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-13T15:23:13.000Z",
+      "summary": "## Major Changes * `pnpm config get` (without `--json`) no longer print INI formatted text. Instead, it would print JSON for both objects and arrays and raw string for strings, numbers, booleans, and nulls. `pnpm config get --json` would still print all types of values as JSON like before. * Replace workspace project specific `.npmrc` with `packageConfigs` in `pnpm-workspace.yaml`. A workspace manifest with `packageConfigs` would look something like this: ```yaml # File: pnpm-workspace.yaml packages: - \"packages/project-1\" - \"packages/project-2\" packageConfigs: \"project-1\": saveExact: true \"project-2\": savePrefix: \"~\" ``` Or this: ```yaml # File: pnpm-workspace.yaml packages: - \"packages/project-1\" - \"packages/project-2\" packageConfigs: - match: [\"project-1\", \"project-2\"] modulesDir: \"node_modules\" saveExact: true ``` * `strictDepBuilds` is `true` by default. * `pnpm config list` and `pnpm config get` (without argument) now hide auth-related settings. * `blockExoticSubdeps` is `true` b",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Node.js: 2026-01-13, Version 25.3.0 (Current), @RafaelGSS",
+      "url": "https://github.com/nodejs/node/releases/tag/v25.3.0",
+      "source": "GitHub Releases · Node.js",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-13T13:58:05.000Z",
+      "summary": "This is a security release. ### Notable Changes lib: * (CVE-2025-59465) add TLSSocket default error handler (RafaelGSS) permission: * (CVE-2026-21636) add network check on pipe\\_wrap connect (RafaelGSS) * (CVE-2025-55130) require full read and write to symlink APIs (RafaelGSS) * (CVE-2025-55132) disable futimes when permission model is enabled (RafaelGSS) src: * (CVE-2025-59466) rethrow stack overflow exceptions in async\\_hooks (Matteo Collina) src,lib: * (CVE-2025-55131) refactor unsafe buffer creation to remove zero-fill toggle (Сковорода Никита Андреевич) tls: * (CVE-2026-21637) route callback exceptions through error handlers (Matteo Collina) ### Commits * \\[[`a6a74b89a7`](https://github.com/nodejs/node/commit/a6a74b89a7)] - **deps**: update c-ares to v1.34.6 (Node.js GitHub Bot) [#60997](https://github.com/nodejs/node/pull/60997) * \\[[`5100614e26`](https://github.com/nodejs/node/commit/5100614e26)] - **deps**: update undici to 7.18.2 (Node.js GitHub Bot) [#61283](https://github.co",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Node.js: 2026-01-13, Version 24.13.0 'Krypton' (LTS), @marco-ippolito",
+      "url": "https://github.com/nodejs/node/releases/tag/v24.13.0",
+      "source": "GitHub Releases · Node.js",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-13T13:57:24.000Z",
+      "summary": "This is a security release. ### Notable Changes lib: * (CVE-2025-59465) add TLSSocket default error handler (RafaelGSS) * (CVE-2025-55132) disable futimes when permission model is enabled (RafaelGSS) lib,permission: * (CVE-2025-55130) require full read and write to symlink APIs (RafaelGSS) src: * (CVE-2025-59466) rethrow stack overflow exceptions in async\\_hooks (Matteo Collina) src,lib: * (CVE-2025-55131) refactor unsafe buffer creation to remove zero-fill toggle (Сковорода Никита Андреевич) tls: * (CVE-2026-21637) route callback exceptions through error handlers (Matteo Collina) ### Commits * \\[[`2092785d01`](https://github.com/nodejs/node/commit/2092785d01)] - **deps**: update c-ares to v1.34.6 (Node.js GitHub Bot) [#60997](https://github.com/nodejs/node/pull/60997) * \\[[`3e58b7f2af`](https://github.com/nodejs/node/commit/3e58b7f2af)] - **deps**: update undici to 7.18.2 (Node.js GitHub Bot) [#61283](https://github.com/nodejs/node/pull/61283) * \\[[`4ba536a5a6`](https://github.com/nod",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Node.js: 2026-01-13, Version 22.22.0 'Jod' (LTS), @marco-ippolito",
+      "url": "https://github.com/nodejs/node/releases/tag/v22.22.0",
+      "source": "GitHub Releases · Node.js",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-13T13:56:36.000Z",
+      "summary": "This is a security release. ### Notable Changes lib: * (CVE-2025-59465) add TLSSocket default error handler * (CVE-2025-55132) disable futimes when permission model is enabled lib,permission: * (CVE-2025-55130) require full read and write to symlink APIs src: * (CVE-2025-59466) rethrow stack overflow exceptions in async\\_hooks src,lib: * (CVE-2025-55131) refactor unsafe buffer creation to remove zero-fill toggle tls: * (CVE-2026-21637) route callback exceptions through error handlers ### Commits * \\[[`6badf4e6f4`](https://github.com/nodejs/node/commit/6badf4e6f4)] - **deps**: update c-ares to v1.34.6 (Node.js GitHub Bot) [#60997](https://github.com/nodejs/node/pull/60997) * \\[[`37509c3ff0`](https://github.com/nodejs/node/commit/37509c3ff0)] - **deps**: update undici to 6.23.0 (Matteo Collina) [nodejs-private/node-private#791](https://github.com/nodejs-private/node-private/pull/791) * \\[[`eb8e41f8db`](https://github.com/nodejs/node/commit/eb8e41f8db)] - **(CVE-2025-59465)** **lib**: add",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Node.js: 2026-01-13, Version 20.20.0 'Iron' (LTS), @marco-ippolito",
+      "url": "https://github.com/nodejs/node/releases/tag/v20.20.0",
+      "source": "GitHub Releases · Node.js",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-13T13:55:31.000Z",
+      "summary": "This is a security release. ### Notable Changes lib: * (CVE-2025-55132) disable futimes when permission model is enabled (RafaelGSS) * (CVE-2025-59465) add TLSSocket default error handler (RafaelGSS) lib,permission: * (CVE-2025-55130) require full read and write to symlink APIs (RafaelGSS) src: * (CVE-2025-59466) rethrow stack overflow exceptions in async\\_hooks (Matteo Collina) src,lib: * (CVE-2025-55131) refactor unsafe buffer creation to remove zero-fill toggle (Сковорода Никита Андреевич) tls: * (CVE-2026-21637) route callback exceptions through error handlers (Matteo Collina) ### Commits * \\[[`8f9ba3f623`](https://github.com/nodejs/node/commit/8f9ba3f623)] - **deps**: update c-ares to v1.34.6 (Node.js GitHub Bot) [#60997](https://github.com/nodejs/node/pull/60997) * \\[[`97fc9b0eb7`](https://github.com/nodejs/node/commit/97fc9b0eb7)] - **deps**: update undici to 6.23.0 (Matteo Collina) [nodejs-private/node-private#792](https://github.com/nodejs-private/node-private/pull/792) * \\[[`",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · ComfyUI: v0.9.1",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.9.1",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-13T07:33:55.000Z",
+      "summary": "## What's Changed * Bump ltxav mem estimation a bit. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/11842 **Full Changelog**: https://github.com/Comfy-Org/ComfyUI/compare/v0.9.0...v0.9.1",
+      "category": "ai_tools"
+    }
+  ]
 }

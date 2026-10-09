@@ -1,0 +1,325 @@
+{
+  "generated": "2026-09-28T17:45:08.771Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Fireworks AI Releases Ember-1: A Post-Trained Kimi K3 That Uses About 40% Fewer Tokens",
+      "url": "https://www.marktechpost.com/2026/09/28/fireworks-ai-releases-ember-1-a-post-trained-kimi-k3-that-uses-about-40-fewer-tokens/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-28T07:22:33.000Z",
+      "summary": "Fireworks AI has released Ember-1, a post-trained Kimi K3 that learns to produce shorter reasoning traces instead of lowering reasoning effort. Fireworks reports about 40% fewer tokens, with output tokens per task falling from 49.3K to 29.9K in a production A/B test at an essentially unchanged score. Ember-1 is available now as an API-only Research Preview at Kimi K3 pricing. The post Fireworks AI Releases Ember-1: A Post-Trained Kimi K3 That Uses About 40% Fewer Tokens appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "NVIDIA Adds AI-Agent Controls That Can Block API Writes Even With a Write-Capable Key",
+      "url": "https://superpowerdaily.com/posts/nvidia-releases-openshell-0-1-0-to-enforce-ai-agent-permissions-outside-the-agent",
+      "source": "Superpower Daily",
+      "tags": [
+        "api_update",
+        "hardware"
+      ],
+      "matching_tags": [
+        "api_update",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-28T09:52:50.000Z",
+      "summary": "OpenShell 0.1.0 keeps credentials outside an agent’s workload and lets operators change network rules mid-task. Some sandbox limits still require a restart.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "20 Agentic Use Cases of TypeSafe AI’s Jev",
+      "url": "https://www.marktechpost.com/2026/09/27/20-agentic-use-cases-of-typesafe-ais-jev/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-28T03:07:10.000Z",
+      "summary": "TypeSafe AI's Jev skips text generation and returns typed decisions with calibrated probabilities. Input costs $0.042 per million tokens and output is free. We verified 20 agentic use cases, from model routing and tool-call gating to reranking and injection screening, and compared Jev with its closest open and LLM rivals. The post 20 Agentic Use Cases of TypeSafe AI’s Jev appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "NVIDIA Measures 49% More AI Output Under a Fixed Power Budget at Nscale",
+      "url": "https://superpowerdaily.com/posts/nvidia-measures-49-more-ai-output-under-a-fixed-power-budget-at-nscale",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-28T01:56:24.000Z",
+      "summary": "DSX MaxLPS let the test run an additional inference job, while the 99th-percentile wait for the first token rose 17%.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Engram turns AI glitches into a pocket-size instrument for experimental musicians",
+      "url": "https://superintelligencenews.com/ai-fields/large-language-models/ai-sampler-engram-turns-glitches-into-music/",
+      "source": "Superintelligence Newsletter",
+      "tags": [
+        "pricing_change",
+        "dataset"
+      ],
+      "matching_tags": [
+        "pricing_change",
+        "dataset"
+      ],
+      "importance": 0.62,
+      "date": "2026-09-27T21:24:05.000Z",
+      "summary": "Engram is a local AI sampler that turns audio glitches into music, with open firmware, licensed training data and Kickstarter pricing. The post Engram turns AI glitches into a pocket-size instrument for experimental musicians appeared first on Superintelligence News - Artificial Intelligence News .",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Why NVIDIA Launched the Open Agent Safety Platform",
+      "url": "https://aimagazine.com/news/nvidia-unveils-agent-safety-platform-backed-by-100-partners",
+      "source": "AI Magazine",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.54,
+      "date": "2026-09-28T17:00:16.298Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Faster Rates for Federated Variational Inequalities",
+      "url": "https://machinelearning.apple.com/research/federated-variational-inequalities",
+      "source": "Apple Machine Learning",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.54,
+      "date": "2026-09-28T00:00:00.000Z",
+      "summary": "In this paper, we study federated optimization for solving stochastic variational inequalities (VIs), a problem that has attracted growing attention in recent years. Despite substantial progress, a significant gap remains between existing convergence rates and the state-of-the-art bounds known for federated convex optimization. In this work, we address this limitation by establishing a series of improved convergence rates. First, we show that, for general smooth and monotone variational inequalities, the classical Local Extra SGD algorithm admits tighter guarantees under a refined analysis…",
+      "category": "ai_research"
+    },
+    {
+      "title": "Holo4: powering generalist computer-use agents",
+      "url": "https://huggingface.co/blog/Hcompany/holo4",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-28T09:44:05.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Bluesky reply bot checker",
+      "url": "https://simonwillison.net/2026/Sep/27/bluesky-bot-check/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-27T18:41:44.000Z",
+      "summary": "Tool: Bluesky reply bot checker Automated reply bots on Twitter are a scourge - as someone with a decent number of followers I attract a swarm of these, such that anything I post there attracts dozens of mindless automated replies. They've started manifesting on Bluesky as well. Unlike Twitter, Bluesky still has a freely available and useful API. The lack of such a thing doesn't slow down the bots, but it does make investigating them a lot more frustrating. So I had Opus 5.5 vibe code this tool , which examines any Bluesky profile for evidence of a likely reply bot. It looks for signals...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Our Review Finds AI Agent Logs Differ in What They Capture and Who Keeps Them",
+      "url": "https://superpowerdaily.com/posts/desk-review-finds-no-documented-agent-proof-action-trail-across-three-ai-tools",
+      "source": "Superpower Daily",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-27T17:13:52.000Z",
+      "summary": "Claude Code, OpenAI’s Agents SDK and Grok Bot offer different records of agent work. None of the reviewed documentation establishes a complete, agent-proof action trail across the three.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Meta’s Muse Helps Users Cancel Subscriptions, Putting Forgotten-Bill Revenue at Risk",
+      "url": "https://superpowerdaily.com/posts/meta-s-muse-helps-cancel-subscriptions-challenging-revenue-from-inertia",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-27T15:03:51.000Z",
+      "summary": "Consumers who shared financial statements with the AI agent have cut unwanted bills. Research suggests the business risk lies in how often people keep paying when cancellation takes effort.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "New formulation helps RNA vaccines withstand high temperatures",
+      "url": "https://news.mit.edu/2026/new-formulation-helps-rna-vaccines-withstand-high-temperatures-0928",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-28T11:17:51.722Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Who’s liable when AI agents go rogue?",
+      "url": "https://www.technologyreview.com/2026/09/28/1145197/whos-liable-when-ai-agents-go-rogue/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-28T08:06:22.000Z",
+      "summary": "MIT Technology Review Explains: Let our writers untangle the complex, messy world of technology to help you understand what’s coming next. You can read more from the series here. Over the past few months, a cascade of cyberattacks by AI agents has stunned the world. In July, OpenAI disclosed that a swarm of its agents…",
+      "category": "ai_research"
+    },
+    {
+      "title": "New AI technique could make minimally invasive surgeries safer and more precise",
+      "url": "https://news.mit.edu/index%2ephp/2026/new-ai-technique-could-make-minimally-invasive-surgeries-safer-more-precise-0916",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-28T04:51:39.496Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Release v0.63.0-nightly.20260928.g2fe7c2d3f",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.63.0-nightly.20260928.g2fe7c2d3f",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-28T01:42:38.000Z",
+      "summary": "Full Changelog : v0.63.0-nightly.20260926.g2fe7c2d3f...v0.63.0-nightly.20260928.g2fe7c2d3f",
+      "category": "ai_tools"
+    },
+    {
+      "title": "nightly",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-28T01:02:58.000Z",
+      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity ' https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Turborepo v2.11.5",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.5",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-28T00:45:34.000Z",
+      "summary": "What's Changed Changelog chore: Release Turborepo 2.11.4 by @github-actions[bot] in #14231 test: Move Python opt-in hint into filter contracts by @anthonyshew in #14228 test: Move dependency-output summary assertion into contract by @anthonyshew in #14230 test: Move dependency-output selection and validation cases to engine contracts by @anthonyshew in #14232 test: Move Cargo exclude-only scope coverage by @anthonyshew in #14238 test: Move Cargo cache-authority cases to contracts by @anthonyshew in #14240 test: Move JIT dependency graph scenario into engine contract by @anthonyshew in...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Turborepo v2.11.5-canary.5",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.5-canary.5",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-28T00:13:48.000Z",
+      "summary": "What's Changed Changelog chore: Release Turborepo 2.11.5-canary.4 by @github-actions[bot] in #14324 feat: Add standalone installers URLs for curl | bash by @anthonyshew in #14325 fix: Isolate installer test environment by @anthonyshew in #14326 Full Changelog : v2.11.5-canary.4...v2.11.5-canary.5",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Turborepo v2.11.5-canary.4",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.5-canary.4",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-27T18:56:27.000Z",
+      "summary": "What's Changed Changelog chore: Release Turborepo 2.11.5-canary.3 by @github-actions[bot] in #14320 docs: Update Turborepo schema URL example by @yousefdawood7 in #14321 feat: Publish versioned standalone turbo archives by @anthonyshew in #14322 fix: Run standalone archive job on manual releases by @anthonyshew in #14323 New Contributors @yousefdawood7 made their first contribution in #14321 Full Changelog : v2.11.5-canary.3...v2.11.5-canary.4",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Turborepo v2.11.5-canary.3",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.5-canary.3",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-27T16:37:52.000Z",
+      "summary": "What's Changed Changelog chore: Release Turborepo 2.11.5-canary.2 by @github-actions[bot] in #14249 fix: Stabilize pnpm per-workspace lockfile hashes by @anthonyshew in #14253 chore: Upgrade factory Next.js to 16.3.3 by @anthonyshew in #14254 fix: Update js-yaml to address CVE-2026-84375 by @anthonyshew in #14255 chore: Upgrade Next.js in docs and factory for CVE-2026-94545 by @anthonyshew in #14256 fix: Remove unmaintained proc-macro-error2 by @anthonyshew in #14257 refactor: Replace clap in production CLIs with usage-rs by @anthonyshew in #14259 chore: Remove tiny-gradient dependency by...",
+      "category": "ai_tools"
+    }
+  ]
+}

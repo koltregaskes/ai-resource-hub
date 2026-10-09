@@ -1,0 +1,345 @@
+{
+  "generated": "2026-10-03T17:45:04.771Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Prime Intellect Launches Prime Inference: Serverless and Reserved Serving for Frontier Open Models",
+      "url": "https://www.marktechpost.com/2026/10/02/prime-intellect-launches-prime-inference-serverless-and-reserved-serving-for-frontier-open-models/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-03T05:37:18.000Z",
+      "summary": "Prime Intellect has launched Prime Inference, an OpenAI-compatible platform for serving frontier open models on NVIDIA Blackwell. Its GLM-5.3 deployment uses Dynamo, vLLM and NVFP4 KV compression to serve 66 sessions per prefill group at 101 tok/s per user. The post Prime Intellect Launches Prime Inference: Serverless and Reserved Serving for Frontier Open Models appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "NVIDIA Announces DGX Spark 64GB: A 1-PetaFLOP Grace Blackwell Desktop for Local AI Agents, Fine-Tuning, and Inference",
+      "url": "https://www.marktechpost.com/2026/10/02/nvidia-announces-dgx-spark-64gb-a-1-petaflop-grace-blackwell-desktop-for-local-ai-agents-fine-tuning-and-inference/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "dataset",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "dataset",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-02T18:04:56.000Z",
+      "summary": "NVIDIA announced a new 64GB configuration of DGX Spark — from Acer, ASUS, Dell, Gigabyte, HP and MSI — its GB10-powered desktop AI system. It gives developers a way to start with one system for local models and agents, then cluster two 64GB units for 128GB of memory across the cluster and more compute when […] The post NVIDIA Announces DGX Spark 64GB: A 1-PetaFLOP Grace Blackwell Desktop for Local AI Agents, Fine-Tuning, and Inference appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Microsoft AI Releases MAI-Transcribe-2-Streaming: #1 Real-Time Speech-to-Text Model on Artificial Analysis",
+      "url": "https://www.marktechpost.com/2026/10/02/microsoft-ai-releases-mai-transcribe-2-streaming-1-real-time-speech-to-text-model-on-artificial-analysis/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-03T05:09:53.000Z",
+      "summary": "Microsoft AI has released MAI-Transcribe-2-Streaming, its first real-time speech-to-text model. It ranks #1 of 38 models on Artificial Analysis AA-WER Streaming. It scores 2.5% WER at 0.13s on final transcripts and 2.5% at 0.12s on first partials. It covers 60 languages with continuous language detection and costs $0.54 per hour during the introductory period. It is available now in public preview on Microsoft Foundry. The post Microsoft AI Releases MAI-Transcribe-2-Streaming: #1 Real-Time Speech-to-Text Model on Artificial Analysis appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "IBM Brings Bob to Self-Hosted and Air-Gapped Environments: Agentic Software Development Without Moving Your Code",
+      "url": "https://www.marktechpost.com/2026/10/02/ibm-brings-bob-to-self-hosted-and-air-gapped-environments/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-03T06:55:15.000Z",
+      "summary": "IBM has made a self-hosted deployment of IBM Bob, its agentic software development platform, generally available. Enterprises can now run Bob on premises, in private or sovereign clouds, and in air-gapped networks. They bring their own model: NVIDIA Nemotron or Poolside Laguna for full isolation, or Claude, Gemini or GPT models through hybrid setups. Optional Premium Packages extend Bob to Java, IBM i and IBM Z modernization. The post IBM Brings Bob to Self-Hosted and Air-Gapped Environments: Agentic Software Development Without Moving Your Code appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenAI Schedules Three GPT-5 API Models for Shutdown on April 1, 2027",
+      "url": "https://superpowerdaily.com/posts/openai-schedules-three-gpt-5-api-models-for-shutdown-on-april-1-2027",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-02T17:11:02.000Z",
+      "summary": "The October 1 notice directs developers toward GPT-6 Sol and Luna. Deprecation starts now; loss of API access comes at the scheduled shutdown.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Oct 02, 2026 The Next Top Open Model, Google Voice Agents, DeepSeek Shrinks Caches: Plus a letter on open weight cybersecurity capabilities The Batch News & Insights: Anthropic recently released an encouraging analysis of the cyber capabilities of open weight model GLM-5.3.",
+      "url": "https://deeplearning.ai/the-batch/issue-373",
+      "source": "DeepLearning.AI The Batch",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-02T17:00:48.809Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Datalab Introduces OmniExtractBench to Fix Bias and Opacity in Extraction Benchmarks",
+      "url": "https://www.marktechpost.com/2026/10/02/datalab-introduces-omniextractbench-to-fix-bias-and-opacity-in-extraction-benchmarks/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "benchmark"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "benchmark"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-02T15:23:35.000Z",
+      "summary": "Content-based row matching, 6 per-value verdicts and a null rule make OmniExtractBench an extraction benchmark anyone can audit. The post Datalab Introduces OmniExtractBench to Fix Bias and Opacity in Extraction Benchmarks appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Ai2 Releases Open AI Training Stack With a Reported 2.7× Speed Gain",
+      "url": "https://superpowerdaily.com/posts/ai2-releases-open-ai-training-stack-with-a-reported-2-7-speed-gain",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-02T14:36:47.000Z",
+      "summary": "Olmo-core 3 keeps model experts on GPUs instead of repeatedly moving their weights. Its speed gain comes from a 47-billion-parameter test; separate trillion-parameter experiments measure system scale, not trained-model quality.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NVIDIA Adds a $4,999 DGX Spark With 64GB of Memory for Local AI",
+      "url": "https://superpowerdaily.com/posts/nvidia-adds-a-4-999-dgx-spark-with-64gb-of-memory-for-local-ai",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-02T13:56:53.000Z",
+      "summary": "The partner-only configuration keeps the same chip and software as the 128GB model. NVIDIA offers a two-system growth path, but its speed claim comes from one company-run test.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Decision AI Models Explained: TypeSafe Jev vs Fastino GLiDE, GLiNER2.5-Decide and Open-Source Competitors",
+      "url": "https://www.marktechpost.com/2026/10/02/decision-ai-models-explained-typesafe-jev-vs-fastino-glide-gliner2-5-decide-and-open-source-competitors/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-03T03:31:15.000Z",
+      "summary": "Decision AI models answer typed questions with calibrated probabilities instead of generated text. TypeSafe's Jev costs $0.042 per million input tokens and returns responses in 70 to 500 milliseconds. We break down how it works and its benchmarks, then compare it with Fastino's GLiDE, GLiNER2.5-Decide and 4 open-source rivals. The post Decision AI Models Explained: TypeSafe Jev vs Fastino GLiDE, GLiNER2.5-Decide and Open-Source Competitors appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Baseten Says AI-Built Inference Software Beat Its Baselines by Up to 90%",
+      "url": "https://superpowerdaily.com/posts/baseten-says-ai-built-inference-software-beat-its-baselines-by-up-to-90",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "inference"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "inference"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-02T21:25:07.000Z",
+      "summary": "Two experimental servers improved language and image-model performance in company-run tests. The work depended on narrow targets, accuracy checks and substantial computing resources.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hierarchical Continuous Diffusion Language Models",
+      "url": "https://paperswithcode.com/papers/2610.02193",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-02T17:00:12.279Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "v1.53.0",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.53.0",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-02T18:54:49.000Z",
+      "summary": "✨ Features Resizable Picture-in-Picture window for MCP Apps #12417 Fetch model metadata from models.dev live with bundled fallback #12560 Quoting action to append selected conversation text to composer #12536 Lean ACP-only Goose binary #11961 Model discovery API for GDK Provider #12497 Meta Muse Code provider #11765 Support for Opus 5.5, GPT-6-sol, GPT-6-luna #12447 Session rename command in CLI #12236 Show working directory in session remove command #12232 GDK agent loop runs on wasm32 #12569 🐛 Bug Fixes Session naming and \"none\" reasoning effort for GPT-6.1-sol #12605 Strip inert...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "One Brain, Any Body: Google DeepMind's Keerthana on Gemini Robotics 2, Cross-Embodiment & Humanoids",
+      "url": "https://www.cognitiverevolution.ai/one-brain-any-body-google-deepmind-s-keerthana-on-gemini-robotics-2-cross-embodiment-humanoids/",
+      "source": "Cognitive Revolution",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.62,
+      "date": "2026-10-03T13:00:00.000Z",
+      "summary": "Google DeepMind research lead Keerthana Gopalakrishnan discusses Gemini Robotics 2, explaining the architecture behind its reasoning and action models. She also explores key challenges in physical AI, including sim-to-real transfer, cross-embodiment generalization, and whole-body control.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Oct 2, 2026 Announcements Anthropic invests $100 million to train 10,000 engineers and tackle the enterprise AI talent gap",
+      "url": "https://www.anthropic.com/news/claude-frontier-academy",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-03T04:52:11.898Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Open-sourcing AstaBrief, the fast report-generation model in Asta",
+      "url": "https://huggingface.co/blog/allenai/astabrief",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-02T15:19:50.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Cloudflare Releases Open Models for AI Decisions Without Text Generation",
+      "url": "https://superpowerdaily.com/posts/cloudflare-releases-open-models-for-ai-decisions-without-text-generation",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-02T19:37:24.000Z",
+      "summary": "Clef and Clef-flash return probabilities that software can act on directly. Cloudflare’s tests show faster responses than Jev, but the smaller model’s accuracy varies sharply by task.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Documenting the tech worker movement",
+      "url": "https://news.mit.edu/2026/documenting-tech-worker-movement-0918",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-10-03T04:52:54.018Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Computational tools for society’s most complex challenges",
+      "url": "https://news.mit.edu/2026/computational-tools-for-societys-most-complex-challenges-cathy-wu-1002",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-10-03T04:52:54.005Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Tim de Silva | AI Financial Advice: Supply, Demand, and Life Cycle Implications",
+      "url": "https://hai.stanford.edu/events/tim-de-silva-ai-financial-advice-supply-demand-and-life-cycle-implications",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-10-03T04:50:41.159Z",
+      "summary": "",
+      "category": "ai_research"
+    }
+  ]
+}

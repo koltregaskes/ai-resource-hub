@@ -1,9 +1,74 @@
 {
-  "generated": "2026-05-25T14:37:34.875Z",
+  "generated": "2026-08-26T02:57:13.868Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-07",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 4,
+  "archived_story_count": 166,
+  "articles": [
+    {
+      "title": "GitHub Releases · ComfyUI: v0.8.0",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.8.0",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "importance": 1,
+      "date": "2026-01-07T10:34:18.000Z",
+      "summary": "## What's Changed * Add support for sage attention 3 in comfyui, enable via new cli arg by @mengqin in https://github.com/Comfy-Org/ComfyUI/pull/11026 * V3 Improvements + DynamicCombo + Autogrow exposed in public API by @Kosinkadink in https://github.com/Comfy-Org/ComfyUI/pull/11345 * fix(api-nodes-vidu): preserve percent-encoding for signed URLs by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/11564 * Update workflow templates to v0.7.65 by @comfyui-wiki in https://github.com/Comfy-Org/ComfyUI/pull/11579 * Refactor: move clip_preprocess to comfy.clip_model by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/11586 * Remove duplicate import of model_management by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/11587 * New Year ruff cleanup. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/11595 * Ignore all frames except the first one for MPO format. by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/11569 * Give Mahiro CFG a more ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Goose: v1.19.1",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.19.1",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-07T22:07:29.000Z",
+      "summary": "## :bug: Bug Fixes - Prevent duplicate rendering when tool returns both mcp-ui and mcp-apps resources [#6378](https://github.com/block/goose/pull/6378) - Update MCP Apps `_meta.ui.resourceUri` to use nested format [#6372](https://github.com/block/goose/pull/6372) - Prevent infinite loop of tool-input notifications in MCP Apps [#6374](https://github.com/block/goose/pull/6374)",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.403",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.403",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-07T18:28:23.000Z",
+      "summary": "## What's Changed * `@remotion/web-renderer`: Add audioCodec and audioBitrate options by @samohovets in https://github.com/remotion-dev/remotion/pull/6170 * `@remotion/web-renderer`: New APIs: `canRenderMediaOnWeb()`, `getEncodableAudioCodecs()`, `getEncodableVideoCodecs()` by @samohovets in https://github.com/remotion-dev/remotion/pull/6259 * `@remotion/media`: Fix frames being rendered out of order in ` ` for rendering by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6253 * `@remotion/gif`: Add delayRenderTimeoutInMilliseconds prop to component by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6256 * `@remotion/renderer`: Log if frame extraction error cannot be propagated by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6257 ## Docs * Redesigned remotion.dev/experts by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6258 **Full Changelog**: https://github.com/remotion-dev/remotion/compare/v4.0.402...v4.0.403",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.31.0",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.31.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-07T16:27:27.000Z",
+      "summary": "# Fixes and ch-ch-ch-changes How's it going? This is primarily a maintenance release. * Skills can now be loaded from a general \"agents\" directory (e.g `~/.config/agents/skills`) * Claude Code support was removed to align with Anthropic’s terms of service * Various small fixes and UX improvements Special thanks, as always, to star contributor @Amolith for the constant improvements. See you next release 💘 ## Changelog ### New! * 6b3cd26f9f78ae7318153922763025bfa8831443: feat(skills): also load from .config/agents (#1755) (@Amolith) * 5590161f86806f00bc8e4702b0c67d2abcaa9c62: feat: remove claude code support (#1783) (@andreynering) ### Fixed * bf39639c3d152196384fc139161719202f04f2f8: Revert \"fix: prevent filename insertion when dragging attachments\" (#1773) (@meowgorithm) * 43b0e0bcba1930653125dc156dd532e436a63b1d: fix(mcp): centrally filter disabled tools (#1622) (@Amolith) * ca21111b7672c775ddfab566063c2b9ad044dee3: fix(posthog): correct bool prop name for non-interactive mode (#1771",
+      "category": "ai_tools"
+    }
+  ]
 }

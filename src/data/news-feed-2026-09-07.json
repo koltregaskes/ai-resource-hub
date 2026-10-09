@@ -1,0 +1,295 @@
+{
+  "generated": "2026-09-07T17:45:13.014Z",
+  "site": "AI Resource Hub",
+  "article_count": 18,
+  "articles": [
+    {
+      "title": "IFM Releases K2 Horizon: Six Apache 2.0 Models From 0.9B to 375B",
+      "url": "https://www.marktechpost.com/2026/09/06/ifm-releases-k2-horizon-six-apache-2-0-models-from-0-9b-to-375b/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "training",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "training",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-07T05:00:37.000Z",
+      "summary": "Most open model launches release one checkpoint and a benchmark table. The Institute of Foundation Models (IFM) released something wider last week. IFM is the frontier lab launched by MBZUAI in May 2025. K2 Horizon is a fleet of six models: 375B-A23B, 36B-A4B, 32B, 7B, 3.7B and 0.9B. Shipping alongside them are the pre-training corpus, […] The post IFM Releases K2 Horizon: Six Apache 2.0 Models From 0.9B to 375B appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "H Company Releases NeoMME: A Family of 260M and 800M Single-Tower Multimodal Encoders That Drop the Vision Tower and Causal Decoder",
+      "url": "https://www.marktechpost.com/2026/09/06/h-company-releases-neomme-a-family-of-260m-and-800m-single-tower-multimodal-encoders-that-drop-the-vision-tower-and-causal-decoder/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "architecture",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "architecture",
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-06T21:06:41.000Z",
+      "summary": "We look at NeoMME, a family of 260M and 800M bidirectional encoders from H Company. Unlike ColPali-style retrievers, it processes multilingual text tokens and raw 32×32 image patches in a single Transformer, with no pretrained vision tower and no causal decoder. We cover the masked discrete-diffusion pretraining objective, the dual dense and late-interaction retrieval heads, and the ViDoRe v3 results where the 260M model reaches 0.523 nDCG@10. We also break down the 255× index compression, the 51.3 pages per second indexing throughput on one L40S, and the text-retrieval gaps the authors...",
+      "category": "ai_research"
+    },
+    {
+      "title": "Research acceleration: The view inside OpenAI",
+      "url": "https://simonwillison.net/2026/Sep/6/research-acceleration-the-view-inside-openai/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-06T23:57:40.000Z",
+      "summary": "Research acceleration: The view inside OpenAI Apparently today is RSI day at OpenAI, for Recursive Self-Improvement - I think it's their new AGI. Both this piece and the new essay An Alien Mind (by Chief Scientist Jakub Pachocki) talk about it, and this one doesn't even bother to expand the acronym. Included are details on how OpenAI's own research team are using coding agents. Like pretty much everyone else 2026 has been the year that agentic engineering really took off at OpenAI, best illustrated by this chart: I'm intrigued at what caused that significant acceleration in AI spend per...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Meta FAIR Introduces AI Research Preference Models (RPMs): Ranking ML Experiments Before Spending GPU Hours",
+      "url": "https://www.marktechpost.com/2026/09/06/meta-fair-introduces-ai-research-preference-models-rpms-ranking-ml-experiments-before-spending-gpu-hours/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-06T20:25:17.000Z",
+      "summary": "AI research agents can propose far more experiments than they can afford to run. Meta FAIR, Oxford and UCL introduce AI Research Preference Models — frozen LLM judges that rank 15 unexecuted candidates and execute only one. On AIRS-Bench, the average normalized score rises from 0.684 to 0.729, and the baseline's 24-hour result arrives in roughly 15 hours. The post Meta FAIR Introduces AI Research Preference Models (RPMs): Ranking ML Experiments Before Spending GPU Hours appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Our new contrail avoidance trial in Asia-Pacific",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/contrail-avoidance-ultra-long-haul-flights/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-07T11:16:29.606Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "BAT: Behavior-Aware Human-Like Trajectory Prediction for Autonomous Driving",
+      "url": "https://paperswithcode.com/papers/2312.06371",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-07T11:16:25.876Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "MCP SDK Starter Guides Leave Authorization Outside the HTTP Setup Path",
+      "url": "https://superpowerdaily.com/posts/mcp-sdk-starter-guides-leave-authorization-outside-the-http-setup-path",
+      "source": "Superpower Daily",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-07T03:08:05.000Z",
+      "summary": "A review of four Tier-1 Streamable HTTP starter paths found no copied example that enables authentication or scoped authorization. The SDKs offer protections and authorization tools, but builders must assemble them when moving beyond a local endpoint.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI chief scientist warns no-one is prepared for consequences of AI The post comes as the firm releases GPT-6 Astra, which it says is its most powerful product yet.",
+      "url": "https://www.bbc.com/news/articles/cwyzrrd0kp7o",
+      "source": "BBC AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-07T17:00:29.585Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Import AI 472: DeepMind’s cheating math agents; populist AI policies; and Forethought theorizes a nightwatchman",
+      "url": "https://jack-clark.net/2026/09/07/import-ai-472-deepminds-cheating-math-agents-populist-ai-policies-and-forethought-theorizes-a-nightwatchman/",
+      "source": "Import AI (Jack Clark)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-07T12:26:31.000Z",
+      "summary": "Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. If you’d like to support this, please subscribe. Subscribe now Researchers discover another OpenAI agent emergent communication incident:…Less severe, but worrying nonetheless…Some researchers recently found another incident of AI agents autonomously creating their own communication system […]",
+      "category": "ai_research"
+    },
+    {
+      "title": "Release v0.60.0-nightly.20260907.g85aca163f",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.60.0-nightly.20260907.g85aca163f",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-07T01:27:17.000Z",
+      "summary": "Full Changelog : v0.60.0-nightly.20260906.g85aca163f...v0.60.0-nightly.20260907.g85aca163f",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI research automation 🤖, Tim Cook's role 💼, agent secrets 👨‍💻",
+      "url": "https://tldr.tech/tech/2026-09-07",
+      "source": "TLDR AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-07T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "A multitask framework for automated multi-frame right upper quadrant ultrasound interpretation and clinical decision support",
+      "url": "https://www.nature.com/articles/s41467-026-77498-w",
+      "source": "Nature AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-07T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "WorldSculpt: Generating Compositional Worlds from Grounded Videos",
+      "url": "https://paperswithcode.com/papers/2609.05416",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-09-07T17:01:14.023Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Iris: Climbing to the Search Frontier",
+      "url": "https://paperswithcode.com/papers/2609.04304",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-09-07T17:01:14.013Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Yole Says AI Interconnect Demand Could Push Transceivers to $112B by 2031",
+      "url": "https://superpowerdaily.com/posts/yole-says-ai-interconnect-demand-could-push-transceivers-to-112b-by-2031",
+      "source": "Superpower Daily",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-09-07T16:47:20.000Z",
+      "summary": "The forecast shifts attention from accelerator supply to the networking hardware needed to keep giant clusters synchronized. Copper remains in the picture, while co-packaged optics is still a narrowly deployed bet with a huge projected market.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Matt Clifford to Leave ARIA After Anthropic Role Draws Conflict Concerns",
+      "url": "https://superpowerdaily.com/posts/matt-clifford-to-leave-aria-after-anthropic-role-draws-conflict-concerns",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-09-07T15:12:30.000Z",
+      "summary": "The resignation ends the planned long-term overlap between a public research-agency chair and Anthropic’s government outreach, but Clifford will remain in post until 6 November under safeguards that MPs have questioned.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Uber Caps AI Coding Spend at $1,500 After Its 2026 Budget Ran Out",
+      "url": "https://superpowerdaily.com/posts/uber-caps-ai-coding-spend-at-1-500-after-its-2026-budget-ran-out",
+      "source": "Superpower Daily",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-09-07T14:33:41.000Z",
+      "summary": "Companies are trying caps, cheaper defaults and model-routing systems. The unsettled task is connecting those controls to better software, faster work or other business results.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI-supported extraction of functional tissue unit properties for Human Reference Atlas construction",
+      "url": "https://www.nature.com/articles/s42003-026-10850-4",
+      "source": "Nature AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-09-07T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_research"
+    }
+  ]
+}

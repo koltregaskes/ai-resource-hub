@@ -1,0 +1,343 @@
+{
+  "generated": "2026-10-01T17:45:09.166Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "OpenAI Releases GPT-6.1 Sol: Near-Astra Coding and Computer Use at One-Fifth of Astra’s Token Price",
+      "url": "https://www.marktechpost.com/2026/09/30/openai-releases-gpt-6-1-sol-near-astra-coding-and-computer-use-at-one-fifth-of-astras-token-price/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-30T21:09:24.000Z",
+      "summary": "OpenAI released GPT-6.1 Sol on September 29, 2026, an upgrade to GPT-6 Sol. It reaches near-Astra results on agentic coding, computer use and professional work at one-fifth of Astra's token prices. It costs $2 input and $10 output per million tokens, and cached input drops to $0.10. It is available now through the OpenAI API, ChatGPT Work and Codex. The post OpenAI Releases GPT-6.1 Sol: Near-Astra Coding and Computer Use at One-Fifth of Astra’s Token Price appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "NVIDIA Releases Kumo Tabular: Open Tabular Foundation Models That Predict New Rows in a Single Forward Pass",
+      "url": "https://www.marktechpost.com/2026/09/30/nvidia-releases-kumo-tabular/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-01T06:57:50.000Z",
+      "summary": "NVIDIA has released Kumo Tabular, a new family of tabular foundation models (TFMs) for classification and regression. If you have followed TabPFN or TabICL, the setup will look familiar. The model takes labeled rows as context and predicts new rows in one forward pass. There is no training, no hyperparameter tuning, and no feature engineering. […] The post NVIDIA Releases Kumo Tabular: Open Tabular Foundation Models That Predict New Rows in a Single Forward Pass appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "The Pentagon taps Elon Musk and Palmer Luckey to help decide what the military should do next",
+      "url": "https://techcrunch.com/2026/09/30/the-pentagon-taps-elon-musk-and-palmer-luckey-to-help-decide-what-the-military-should-do-next/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-30T23:08:00.000Z",
+      "summary": "Defense Secretary Pete Hegseth just launched a 120-day study on the future of warfare, led by Elon Musk, Palmer Luckey, and Newt Gingrich, and while it makes sense given their ties to the administration, critics could point out that Musk's and Luckey's companies already sell the kinds of technology the study is likely to recommend.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Modal Opens Multi-Machine AI Computing to All Workspaces With Per-Second Billing",
+      "url": "https://superpowerdaily.com/posts/modal-opens-multi-machine-ai-computing-to-all-workspaces-with-per-second-billing",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-01T08:19:03.000Z",
+      "summary": "The company says clusters start within seconds and configure high-speed networking automatically. Access is broad, but each plan’s GPU limits still bound cluster size.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Perplexity Releases pplx-embed-v2-context-9b-preview: A Contextual Embedding Model That Retrieves Answers and Their Supporting Evidence",
+      "url": "https://www.marktechpost.com/2026/09/30/perplexity-releases-pplx-embed-v2-context-9b-preview-a-contextual-embedding-model-that-retrieves-answers-and-their-supporting-evidence/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-01T03:23:39.000Z",
+      "summary": "Perplexity Research and turbopuffer have released pplx-embed-v2-context-9b-preview, a contextual embedding model for RAG pipelines. Each chunk is embedded with the full document in view. The real change is the training signal. The model learns to retrieve the answer along with the context needed to verify it, not one ‘gold passage.’ P Is it deployable? Yes, […] The post Perplexity Releases pplx-embed-v2-context-9b-preview: A Contextual Embedding Model That Retrieves Answers and Their Supporting Evidence appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Google DeepMind Unveils Gemini 4 Argon with 1M Output Tokens for Coding, Knowledge Work and Cyber Defense",
+      "url": "https://www.marktechpost.com/2026/09/30/google-deepmind-unveils-gemini-4-argon-with-1m-output-tokens-for-coding-knowledge-work-and-cyber-defense/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-30T21:30:08.000Z",
+      "summary": "Gemini 4 Argon tops GPT-6 Astra and Claude Opus 5.5 on most benchmarks, but access remains gated today. The post Google DeepMind Unveils Gemini 4 Argon with 1M Output Tokens for Coding, Knowledge Work and Cyber Defense appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Google Releases Gemini 4 Argon First to Trusted Cyber Defenders",
+      "url": "https://superpowerdaily.com/posts/google-releases-gemini-4-argon-first-to-trusted-cyber-defenders",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-30T20:17:51.000Z",
+      "summary": "Paid API customers and Google AI Ultra subscribers are next in line, but Google has not set a date. Selected defenders will get the model without cyber guardrails.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "This light-powered AI can spot deepfakes with nearly 98% accuracy",
+      "url": "https://www.sciencedaily.com/releases/2026/09/260929053534.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference"
+      ],
+      "importance": 0.74,
+      "date": "2026-10-01T13:03:50.000Z",
+      "summary": "UCLA researchers built an AI system that uses light to analyze more than a dozen videos simultaneously, detecting deepfakes with nearly 98% accuracy. Its speed, low energy demands, and resistance to attacks could make it a powerful tool for screening the growing flood of AI-generated video.",
+      "category": "ai_research"
+    },
+    {
+      "title": "Perplexity Releases a Search Model Trained to Retrieve Answers and Supporting Evidence",
+      "url": "https://superpowerdaily.com/posts/perplexity-releases-a-search-model-trained-to-retrieve-answers-and-supporting-evidence",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-30T20:31:33.000Z",
+      "summary": "The publicly available preview changes how document passages are scored during training. Perplexity claims benchmark leadership, but its results also show where competing models remain stronger.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Mercor Says Queue Redesign Increased AI Evaluation Throughput 6–20 Times",
+      "url": "https://superpowerdaily.com/posts/mercor-says-queue-redesign-increased-ai-evaluation-throughput-6-20-times",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "inference"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "inference"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-30T18:36:31.000Z",
+      "summary": "The Studio scheduler delays jobs before they occupy paid containers, then adjusts concurrency to provider demand. Gateway limits still require manual configuration.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Cohere Releases Embed 5 With Compatible Models for Indexing and Live Search",
+      "url": "https://superpowerdaily.com/posts/cohere-releases-embed-5-with-compatible-models-for-indexing-and-live-search",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-30T16:03:30.000Z",
+      "summary": "Pro and Fast share an embedding space, so developers can use different models for stored documents and incoming queries. Cohere recommends that split, but its release announcement does not quantify the performance tradeoff.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "How Much of a Harness Does a Strong Agent Need for Autonomous ML Engineering?",
+      "url": "https://machinelearning.apple.com/research/harness-autonomous-ml-engineering",
+      "source": "Apple Machine Learning",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-01T00:00:00.000Z",
+      "summary": "Recent autonomous machine learning engineering (MLE) agents have made significant progress on public leaderboards. Often motivated by progress stagnation over long-horizon cycles and limited Large Language Model (LLM) primitives, modern MLE agents are deployed on top of increasingly elaborate machinery: multi-agent orchestrators, dedicated retrieval subagents, and more. While such harnesses expand, the use of more primitive but improved coding agents—where LLMs have direct access to the execution environment through read, write, and bash primitives—has received little attention in the field…",
+      "category": "ai_research"
+    },
+    {
+      "title": "NVIDIA Opens Applications for 2027–2028 Graduate Fellowships With Awards Up to $60,000",
+      "url": "https://blogs.nvidia.com/blog/applications-open-graduate-fellowship-awards-2026/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-30T17:00:21.000Z",
+      "summary": "Bringing together the world’s brightest minds and the latest accelerated computing technology leads to powerful breakthroughs that help tackle some of the biggest research problems. To foster such innovation, the NVIDIA Graduate Fellowship Program provides grants, mentors and technical support to doctoral students doing outstanding research relevant to NVIDIA technologies. The program, in its 26th […]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "CoreWeave Opens Limited Access to Nvidia’s Vera Rubin, With Cognition First in Production",
+      "url": "https://superpowerdaily.com/posts/coreweave-opens-limited-access-to-nvidia-s-vera-rubin-with-cognition-first-in-production",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-30T15:33:54.000Z",
+      "summary": "Cognition’s customer benchmarks show higher token throughput at matched responsiveness, but they do not measure how much faster Devin completes coding assignments.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI:AM: Was Trump-Xi Anything? What Counts as Utopia? + AWS GPUs Cost 3X & AI Diagnoses Rare Diseases",
+      "url": "https://www.cognitiverevolution.ai/ai-am-was-trump-xi-anything-what-counts-as-utopia-aws-gpus-cost-3x-ai-diagnoses-rare-diseases/",
+      "source": "Cognitive Revolution",
+      "tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "matching_tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "importance": 0.54,
+      "date": "2026-10-01T14:52:23.000Z",
+      "summary": "Hosts Nathan Labenz and Prakash Narayanan examine potential US-China AI cooperation, the economics of GPU rental pricing with Steve Hou, and AI applications in rare-disease diagnosis.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google releases Gemini 4 Argon, called its most powerful model yet",
+      "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-30T23:43:07.000Z",
+      "summary": "Google has released its latest Gemini model, marketing it as a workhorse for coding and cybersecurity work.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Oct 1, 2026 Announcements Barclays scales Claude to upgrade operations and improve client experience",
+      "url": "https://www.anthropic.com/news/barclays-scales-claude",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-01T11:17:37.381Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Google's AI ranks #1 for predicting flu hospitalizations.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-science-ai-flu-forecasts/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-01T04:50:49.964Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "OpenAI’s Jev clone could help the frontier lab stop its swarming agents",
+      "url": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-30T19:00:57.000Z",
+      "summary": "OpenAI's \"Decisions API\" is a Jev clone that confirms the importance of fast, cheap intelligence.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ZoomInfo Adds AI Agent Teams to Run Multi-Step Sales Workflows",
+      "url": "https://superpowerdaily.com/posts/zoominfo-adds-ai-agent-teams-to-run-multi-step-sales-workflows",
+      "source": "Superpower Daily",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-01T14:04:17.000Z",
+      "summary": "Built on DoubleO.ai’s orchestration architecture, Agent Teams is available now. ZoomInfo promises less step-by-step supervision, but its launch release offers no measured reliability results.",
+      "category": "ai_tools"
+    }
+  ]
+}

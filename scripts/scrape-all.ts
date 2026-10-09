@@ -15,7 +15,7 @@
  * 3. Pricing validators run THIRD (cross-checks against official sources and live APIs)
  * 4. Benchmarks and speed run FOURTH (quality + latency signals)
  * 5. Registry normalisation runs FIFTH (demotes incomplete models and hides stale speed data)
- * 6. News, status, and jobs run LAST (public editorial + market signals)
+ * 6. News, status, jobs, and events run LAST (public editorial + market signals)
  * 7. Release desk generation runs AFTER data refresh (editorial handoff + release coverage)
  *
  * Exit codes:
@@ -43,6 +43,7 @@ async function main() {
     { name: 'News (RSS + official blogs)', script: 'scripts/scrapers/news.ts' },
     { name: 'Provider Status (official APIs + feeds)', script: 'scripts/scrapers/status-pages.mjs' },
     { name: 'Jobs Market (public ATS boards)', script: 'scripts/scrapers/jobs.ts' },
+    { name: 'AI Events (curated primary sources)', script: 'scripts/scrapers/events.ts' },
     { name: 'Release Desk & Editorial Drafts', script: 'scripts/generate-release-desk.ts' },
   ];
 
@@ -68,7 +69,7 @@ async function main() {
     console.log(`  Pipeline complete with ${failures} failure(s)`);
     console.log('  Check logs above for details');
   } else {
-    console.log('  All scrapers complete — data is fresh');
+    console.log('  All pipeline steps completed; review live, cached, and skipped source states above');
   }
   console.log('═══════════════════════════════════════════════════');
 

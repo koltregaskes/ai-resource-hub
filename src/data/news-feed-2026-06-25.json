@@ -1,0 +1,37 @@
+{
+  "generated": "2026-06-25T17:45:06.042Z",
+  "site": "AI Resource Hub",
+  "article_count": 2,
+  "articles": [
+    {
+      "title": "Cloudflare launched self-managed OAuth for all",
+      "url": "https://blog.cloudflare.com/oauth-for-all/",
+      "source": "Hacker News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-06-25T02:18:10.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "OpenAI unveils its first custom chip, built by Broadcom",
+      "url": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-06-24T17:47:00.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

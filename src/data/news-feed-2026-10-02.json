@@ -1,0 +1,365 @@
+{
+  "generated": "2026-10-02T17:45:05.097Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "How NVIDIA GPUs Help Accelerate OpenAI’s GPT-6 Astra Ultrafast",
+      "url": "https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "model_release",
+        "api_update",
+        "architecture",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "architecture",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-01T23:44:13.000Z",
+      "summary": "GPT-6 Astra Ultrafast, running on NVIDIA Blackwell GPUs, is available now in the OpenAI API and to eligible ChatGPT Work and Codex users. Accelerated by inference optimizations through OpenAI’s models that tap into the capabilities of the NVIDIA Blackwell architecture, Ultrafast offers up to 8x faster token generation than the Astra Standard mode. For developers, […]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AWS Strands Labs Releases Strands Decider 2B: An Open Source Decision Model That Picks Options in About 115 ms",
+      "url": "https://www.marktechpost.com/2026/10/01/aws-strands-labs-releases-strands-decider-2b/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "evaluation",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "evaluation",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-02T06:35:00.000Z",
+      "summary": "AWS's Strands Agents team released Strands Decider 2B, an Apache-2.0 decision model built on Qwen3.5-2B-Base. It returns choices, yes/no probabilities and scores with calibrated confidence in one forward pass, never text. It runs at a 115 ms median on an RTX 3090 and scores 0.723 on the JevBench public set, which makes it a fast local option for routing, tool selection and guardrails in AI agents. The post AWS Strands Labs Releases Strands Decider 2B: An Open Source Decision Model That Picks Options in About 115 ms appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Cloudflare Releases Clef and Clef-flash: Open-Weight Decision Models That Return Typed Probabilities Instead of Text",
+      "url": "https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-02T01:00:41.000Z",
+      "summary": "Cloudflare has released Clef (27B) and Clef-flash (9B), open-weight decision models that return typed probabilities instead of text. They are Jev-API compatible, accept images, and run on Workers AI at 209.3 ms and 38.8 ms median latency. The post Cloudflare Releases Clef and Clef-flash: Open-Weight Decision Models That Return Typed Probabilities Instead of Text appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenAI Adds Faster GPT-6 Astra Access, With NVIDIA Claiming Up to 8x Token Speed",
+      "url": "https://superpowerdaily.com/posts/openai-adds-faster-gpt-6-astra-access-with-nvidia-claiming-up-to-8x-token-speed",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "api_update",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-01T23:58:39.000Z",
+      "summary": "The speed tier runs on Blackwell GPUs, with OpenAI using internal models to improve the software serving it. AWS also offers the mode, but its API speed claim uses a different comparison.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "openclaw 2026.8.34",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.8.34",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update",
+        "architecture"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-02T00:13:33.000Z",
+      "summary": "This is a gateway-only extended-stable release, which is our current equivalent to LTS. This release is OpenClaw from the end of August 2026, plus critical security updates, reliability and performance fixes, and features like new model support. The latest version of OpenClaw at the time of this release is 2026.9.7 2026.8.34 Highlights Extended-stable correctness rollup: backport 113 audit-selected fix units across upgrades, Doctor, authentication, sessions, channels, plugins, sandboxing, filesystem safety, model runtimes, and release packaging. Complete rescan: re-evaluate the full...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Cohere Releases Embed 5: How It Compares to Voyage 4 Large, Gemini Embedding 2, and OpenAI",
+      "url": "https://www.marktechpost.com/2026/10/01/cohere-releases-embed-5/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-01T17:13:12.000Z",
+      "summary": "Cohere has released Embed 5, a new embedding model family. It targets enterprise search, RAG, and agentic retrieval. The model family ships in 2 tiers. Embed 5 Pro targets maximum retrieval quality. Embed 5 Fast targets latency and cost on the live query path. Both accept text, images, and fused text plus image inputs. Both […] The post Cohere Releases Embed 5: How It Compares to Voyage 4 Large, Gemini Embedding 2, and OpenAI appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
+      "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "dataset"
+      ],
+      "matching_tags": [
+        "model_release",
+        "dataset"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-10-02T04:01:31.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Google thinks SpaceX’s Starship has to launch 1,800 times before space data centers get off the ground",
+      "url": "https://techcrunch.com/2026/10/01/google-thinks-spacexs-starship-has-to-launch-1600-times-before-space-data-centers-get-off-the-ground/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-01T19:18:03.000Z",
+      "summary": "Google launched its first advanced chip into orbit to pave the way for space data centers.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Matthew Schwartz Releases BootLoops to Help AI Tackle Exact Scientific Calculations",
+      "url": "https://superpowerdaily.com/posts/matthew-schwartz-releases-bootloops-to-help-ai-tackle-exact-scientific-calculations",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-01T19:19:14.000Z",
+      "summary": "The model-independent toolkit packages methods developed with Claude, but Schwartz’s research examples show why correct calculations still need scientific judgment.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Ideogram Releases 4.5 Image Editor, Claiming Less Drift Across Repeated Changes",
+      "url": "https://superpowerdaily.com/posts/ideogram-releases-4-5-image-editor-claiming-less-drift-across-repeated-changes",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-01T18:50:02.000Z",
+      "summary": "The model is available on Ideogram’s platform and API. Its precision claims rest on company examples, while Recraft support and downloadable weights remain planned.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Datalab Introduces OmniExtractBench to Fix Bias and Opacity in Extraction Benchmarks",
+      "url": "https://www.marktechpost.com/2026/10/02/datalab-introduces-omniextractbench-to-fix-bias-and-opacity-in-extraction-benchmarks/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "benchmark"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "benchmark"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-02T15:23:35.000Z",
+      "summary": "Content-based row matching, 6 per-value verdicts and a null rule make OmniExtractBench an extraction benchmark anyone can audit. The post Datalab Introduces OmniExtractBench to Fix Bias and Opacity in Extraction Benchmarks appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Ai2 Releases Open AI Training Stack With a Reported 2.7× Speed Gain",
+      "url": "https://superpowerdaily.com/posts/ai2-releases-open-ai-training-stack-with-a-reported-2-7-speed-gain",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-02T14:36:47.000Z",
+      "summary": "Olmo-core 3 keeps model experts on GPUs instead of repeatedly moving their weights. Its speed gain comes from a 47-billion-parameter test; separate trillion-parameter experiments measure system scale, not trained-model quality.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google’s Orbital TPU Test Marks a New Phase in Space Computing",
+      "url": "https://superintelligencenews.com/applications/orbital-tpu-google-space-compute-plan/",
+      "source": "Superintelligence Newsletter",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-01T19:36:50.000Z",
+      "summary": "Google launched its first orbital TPU test to gauge space AI computing, launch costs and whether orbital data centers can become viable. The post Google’s Orbital TPU Test Marks a New Phase in Space Computing appeared first on Superintelligence News - Artificial Intelligence News .",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI:AM: Was Trump-Xi Anything? What Counts as Utopia? + AWS GPUs Cost 3X & AI Diagnoses Rare Diseases",
+      "url": "https://www.cognitiverevolution.ai/ai-am-was-trump-xi-anything-what-counts-as-utopia-aws-gpus-cost-3x-ai-diagnoses-rare-diseases/",
+      "source": "Cognitive Revolution",
+      "tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "matching_tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-01T14:52:23.000Z",
+      "summary": "Hosts Nathan Labenz and Prakash Narayanan examine potential US-China AI cooperation, the economics of GPU rental pricing with Steve Hou, and AI applications in rare-disease diagnosis.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Oct 02, 2026 The Next Top Open Model, Google Voice Agents, DeepSeek Shrinks Caches: Plus a letter on open weight cybersecurity capabilities The Batch News & Insights: Anthropic recently released an encouraging analysis of the cyber capabilities of open weight model GLM-5.3.",
+      "url": "https://deeplearning.ai/the-batch/issue-373",
+      "source": "DeepLearning.AI The Batch",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.64,
+      "date": "2026-10-02T17:00:48.809Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Hierarchical Continuous Diffusion Language Models",
+      "url": "https://paperswithcode.com/papers/2610.02193",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.64,
+      "date": "2026-10-02T17:00:12.279Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "NVIDIA Adds a $4,999 DGX Spark With 64GB of Memory for Local AI",
+      "url": "https://superpowerdaily.com/posts/nvidia-adds-a-4-999-dgx-spark-with-64gb-of-memory-for-local-ai",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.64,
+      "date": "2026-10-02T13:56:53.000Z",
+      "summary": "The partner-only configuration keeps the same chip and software as the 128GB model. NVIDIA offers a two-system growth path, but its speed claim comes from one company-run test.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Our Project Suncatcher prototype satellite is in orbit.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-prototype/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-02T04:51:43.296Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Guided Vision in Gemini Live: built for accessibility",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-01T17:01:29.754Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs",
+      "url": "https://huggingface.co/blog/allenai/olmocore3",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-01T15:01:43.000Z",
+      "summary": "",
+      "category": "ai_models"
+    }
+  ]
+}

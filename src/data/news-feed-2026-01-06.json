@@ -1,9 +1,85 @@
 {
-  "generated": "2026-05-25T14:37:34.846Z",
+  "generated": "2026-08-26T02:57:13.162Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-06",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 5,
+  "archived_story_count": 166,
+  "articles": [
+    {
+      "title": "GitHub Releases · Tailscale: v1.92.5",
+      "url": "https://github.com/tailscale/tailscale/releases/tag/v1.92.5",
+      "source": "GitHub Releases · Tailscale",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-06T21:22:20.000Z",
+      "summary": "Please refer to the changelog available at https://tailscale.com/changelog",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Goose: v1.19.0",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.19.0",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-06T20:48:31.000Z",
+      "summary": "## :sparkles: Features - Shell completion generation via new `completion` subcommand for bash, zsh, fish, and more [#6313](https://github.com/block/goose/pull/6313) - OpenAI Codex CLI provider support [#6263](https://github.com/block/goose/pull/6263) - Caching support for Anthropic models via Databricks [#6320](https://github.com/block/goose/pull/6320) - MCP servers from clients like Zed now honored (stdio + http) [#6230](https://github.com/block/goose/pull/6230) - MCP app renderer for richer UI experiences [#6095](https://github.com/block/goose/pull/6095) - Server names now used for MCP extensions in code mode [#6284](https://github.com/block/goose/pull/6284) - Improved UX for tool calls via `execute_code` [#6205](https://github.com/block/goose/pull/6205) - JSONL streaming option for JSON output [#6228](https://github.com/block/goose/pull/6228) - Default todo message for better task tracking [#6217](https://github.com/block/goose/pull/6217) - Upgraded to rmcp 0.12.0 and sacp 10.0.0 (S",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Prompting Long Context",
+      "url": "https://www.anthropic.com/news/prompting-long-context",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-06T15:23:18.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.402",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.402",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-06T10:57:50.000Z",
+      "summary": "v4.0.401 was broken! Use 4.0.402 instead ## What's Changed * `@remotion/media`: Fix AudioContext not being available in Studio by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6252 * Revert \"`@remotion/web-renderer`: Always precompose transforms on WebGL to force flattening\" by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6254 **Full Changelog**: https://github.com/remotion-dev/remotion/compare/v4.0.401...v4.0.402",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.401",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.401",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-06T08:27:56.000Z",
+      "summary": "## What's Changed * `@remotion/web-renderer`: Always precompose transforms on WebGL to force flattening by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6248 * `@remotion/web-renderer`: Use explicit resource management for Mediabunny resources by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6244 * `@remotion/web-renderer`: Add docs for cancelling renders by @samohovets in https://github.com/remotion-dev/remotion/pull/6243 * `@remotion/player`: Don't create an `AudioContext` if mounting a ` ` by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6249 ## Internals * Add Claude skill for writing docs by @samohovets in https://github.com/remotion-dev/remotion/pull/6245 **Full Changelog**: https://github.com/remotion-dev/remotion/compare/v4.0.400...v4.0.401",
+      "category": "ai_tools"
+    }
+  ]
 }

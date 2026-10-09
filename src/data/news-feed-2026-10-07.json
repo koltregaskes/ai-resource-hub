@@ -1,0 +1,363 @@
+{
+  "generated": "2026-10-07T17:45:08.440Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model",
+      "url": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "architecture",
+        "training",
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "architecture",
+        "training",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-06T17:30:46.000Z",
+      "summary": "Mistral AI has released Mistral Large 4, nicknamed Le Chonk, as a public preview. It is a 1.05 trillion parameter Mixture of Experts model with 49 billion active parameters, native image input, and a 1 million token context window, trained on 3,800 NVIDIA Grace Blackwell GPUs in Mistral's own European datacenters. The API is live now; open weights ship end of October 2026. The post Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Introducing Mistral Large 4: Le chonk",
+      "url": "https://simonwillison.net/2026/Oct/6/le-chonk/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update",
+        "training",
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update",
+        "training",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-06T20:18:19.000Z",
+      "summary": "Introducing Mistral Large 4: Le chonk Mistral are back in the game. Today they're releasing a preview of Mistral Large 4, a 1 trillion parameter, 49 billion active parameter model trained on their own cluster of 3,800 NVIDIA Grace Blackwell GPUs. The preview is available via their API. They promise to release the open weights model at the \"end of this month\". The model only supports two reasoning levels - \"none\" and \"high\" - via the Mistral API. Here are both pelicans - the \"high\" one looks better, though surprisingly it only used 2,717 output tokens compared to \"none\" which used 3,275:...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "llm-openai-decisions 0.1a0",
+      "url": "https://simonwillison.net/2026/Oct/6/llm-openai-decisions/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-06T23:04:13.000Z",
+      "summary": "Release: llm-openai-decisions 0.1a0 OpenAI released their new Jev-style Decisions API , as previously announced at last week's DevDay. Since I already have an llm-typesafe plugin for talking to Jev, I had GPT-6 Astra read the new OpenAI API documentation and build an llm-openai-decisions plugin inspired by llm-typesafe . Unlike Jev, the new gpt-6-luna decision model supports image input in addition to text. Both models charge for input it and not for output: OpenAI's is 10 cents per million input tokens, Jev's is 4.2 cents per million. Otherwise the API shape is very similar to Jev, at...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4",
+      "url": "https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-06T18:36:08.000Z",
+      "summary": "Google DeepMind's EmbeddingGemma 2 maps 5 input types into one 768d space and ships today under Apache 2.0. The post Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4 appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Nvidia Says Specialized AI Reached Gold-Level Scores in Math and Coding Olympiads",
+      "url": "https://superpowerdaily.com/posts/nvidia-says-specialized-ai-reached-gold-level-scores-in-math-and-coding-olympiads",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "dataset",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "dataset",
+        "hardware"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-07T13:54:49.000Z",
+      "summary": "The results came from specialist models paired with repeated checking and revision—not fine-tuning alone. Official graders assessed the math proofs; the coding run was outside the official ranking.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.25.1-preview.0",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.1-preview.0",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "research_paper",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-06T18:45:47.000Z",
+      "summary": "What's Changed fix(agents): replace selected remote Hosts without losing bindings by @yiliang114 in #13430 test(core): close #12693 post-merge review test and hygiene gaps by @wenshao in #13341 test(integration): make the /hooks dialog E2E witness the rendered dialog ( #13425 ) by @qwen-code-dev-bot in #13427 fix(ci): wait 60s before the E2E build artifact download retry ( #13284 ) by @qwen-code-dev-bot in #13292 fix(ci): fail yamllint and shellcheck lanes loudly on an empty git file list by @qwen-code-dev-bot in #12650 fix(managed-agent): serve SSE subscribers from a Condition instead of...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Meta AI Open-Sources Rebalancer: A C++ Assignment Solver That Runs About 40 Million Placement Problems a Day",
+      "url": "https://www.marktechpost.com/2026/10/06/meta-ai-open-sources-rebalancer-a-c-assignment-solver-that-runs-about-40-million-placement-problems-a-day/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-07T06:29:14.000Z",
+      "summary": "Meta has open-sourced Rebalancer, the C++ and Python library it has used for over 9 years to place shards, servers and traffic. It handles about 40 million assignment problems a day, using local search or MIP solvers like Gurobi, FICO Xpress and HiGHS. It is pip-installable under Apache 2.0. The post Meta AI Open-Sources Rebalancer: A C++ Assignment Solver That Runs About 40 Million Placement Problems a Day appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Oracle and Alluxio Publish AI Storage Gains, With GPU Utilization Only Emulated",
+      "url": "https://superpowerdaily.com/posts/oracle-and-alluxio-publish-ai-storage-gains-with-gpu-utilization-only-emulated",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-06T20:37:02.000Z",
+      "summary": "The compute-side cache sharply reduced latency in company tests. But the accelerator figures came from emulation, and MLCommons has not verified the result.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "dataset"
+      ],
+      "matching_tags": [
+        "model_release",
+        "dataset"
+      ],
+      "importance": 0.74,
+      "date": "2026-10-07T12:45:31.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "OpenAI Publishes Ironclad Findings, With Astra Scoring 55% on Contracting Tasks",
+      "url": "https://superpowerdaily.com/posts/openai-publishes-ironclad-findings-with-astra-scoring-55-on-contracting-tasks",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-07T01:04:56.000Z",
+      "summary": "The company’s 11-task evaluation measures detailed requirements, not completed contracts. Its faster timing figures are simulated estimates rather than customer savings.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "A Developer’s Guide to Laya: Zero-Shot Decisions and Calibration",
+      "url": "https://www.marktechpost.com/2026/10/06/a-developers-guide-to-laya-zero-shot-decisions-and-calibration/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-07T00:53:03.000Z",
+      "summary": "Explore a comprehensive coding guide to Laya, the open-source zero-shot decision engine. Learn how to implement typed decisions, fit custom temperatures, and build reliable abstention gates using real-world CLINC150 banking data. The post A Developer’s Guide to Laya: Zero-Shot Decisions and Calibration appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Conway Research Opens Underdog Beta With AI That Runs Locally on Macs and Windows PCs",
+      "url": "https://superpowerdaily.com/posts/conway-research-opens-underdog-beta-with-ai-that-runs-locally-on-macs-and-windows-pcs",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-06T22:29:59.000Z",
+      "summary": "The assistant will initially be free and ad-free, its founder says. Its proposed business model takes a share of purchases rather than charging for cloud inference.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Prism: Dynamic Sparse Attention for Native 2K Joint Video-Audio Generation Model Training",
+      "url": "https://paperswithcode.com/papers/2610.05416",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-06T17:01:06.211Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Google Says Its AI Mapped 48 Ebola-Exposed Settlements in Minutes",
+      "url": "https://superpowerdaily.com/posts/google-says-its-ai-mapped-48-ebola-exposed-settlements-in-minutes",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-06T15:37:02.000Z",
+      "summary": "The research pairs local health records with satellite and population data. Emergency-response tools remain prototypes, while a related dataset is commercially available in Preview.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google Releases Nano Banana 2.1 With Lower Image Prices and Stronger Editing Claims",
+      "url": "https://superpowerdaily.com/posts/google-releases-nano-banana-2-1-with-lower-image-prices-and-stronger-editing-claims",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.64,
+      "date": "2026-10-07T15:40:54.000Z",
+      "summary": "Google’s evaluations favor the new model over its predecessors, including Pro. A small hands-on comparison shows why those scores are not a universal quality verdict.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hark releases an AI personal assistant with a focus on privacy",
+      "url": "https://techcrunch.com/2026/10/06/hark-releases-an-ai-personal-assistant-with-a-focus-on-privacy/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-10-06T18:22:45.000Z",
+      "summary": "The AI lab's personal assistant is an operating system from the future designed to compete with Muse, Dots, and Instinct.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "MIT announces the MIT for America initiative, to strengthen STEM education across the country",
+      "url": "https://news.mit.edu/2026/mit-america-initiative-strengthens-stem-education-across-country-1006",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-10-06T17:04:02.763Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Announcements Oct 6, 2026 Expanding the Cyber Verification Program We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced cyber capabilities and reduced blocking classifiers available to qualifying security professionals.",
+      "url": "https://www.anthropic.com/news/cyber-verification-program",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-07T04:52:04.988Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Ask a Scientist: How are researchers using AI to help pregnant women access ultrasounds?",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blind-sweep-ultrasounds-ai/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-07T04:51:38.996Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "OpenAI releases 722 AI-written math papers",
+      "url": "https://superpowerdaily.com/posts/openai-releases-722-ai-written-math-papers",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-07T08:00:00.000Z",
+      "summary": "Many include computer-checkable proofs, but verification is uneven and the model itself remains unreleased.",
+      "category": "ai_tools"
+    }
+  ]
+}

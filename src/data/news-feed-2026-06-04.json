@@ -1,0 +1,52 @@
+{
+  "generated": "2026-06-04T21:49:40.978Z",
+  "site": "AI Resource Hub",
+  "article_count": 3,
+  "articles": [
+    {
+      "title": "Anthropic's open-source framework for AI-powered vulnerability discovery",
+      "url": "https://github.com/anthropics/defending-code-reference-harness",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-06-04T20:11:20.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Show HN: Open Terminal – A Bloomberg Style App for Research",
+      "url": "https://tesseractanalytics.ai/",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-06-04T15:58:48.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Ableton Extensions SDK",
+      "url": "https://www.ableton.com/en/live/extensions/",
+      "source": "Hacker News",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-06-03T20:39:34.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

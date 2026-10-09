@@ -1,0 +1,39 @@
+{
+  "generated": "2026-06-16T17:45:08.052Z",
+  "site": "AI Resource Hub",
+  "article_count": 2,
+  "articles": [
+    {
+      "title": "GateGPT: 56k tokens per second Transformer (KV cache) on FPGA at 80 MHz",
+      "url": "https://twitter.com/fguzmanai/status/2065832668172845209",
+      "source": "Hacker News",
+      "tags": [
+        "architecture",
+        "inference"
+      ],
+      "matching_tags": [
+        "architecture",
+        "inference"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-06-16T16:12:26.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Commodore Releases Flip Phone",
+      "url": "https://commodore.net/why-a-flip-phone/",
+      "source": "Hacker News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-06-16T09:15:31.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

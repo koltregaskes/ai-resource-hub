@@ -1,0 +1,210 @@
+{
+  "generated": "2026-05-27T15:38:04.534Z",
+  "site": "AI Resource Hub",
+  "article_count": 13,
+  "articles": [
+    {
+      "title": "Best Open-Source LLM Models in 2026: Coding, Local, Agentic AI, Benchmarks, and License daya-shankar • Nov 13, 2025 • 15",
+      "url": "https://huggingface.co/blog/daya-shankar/open-source-llms",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-27T05:18:24.486Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Meta Open-Sources Blackwell Attention Kernel — PyTorch Member Claims 2.3x Faster Attention",
+      "url": "https://x.com/PyTorch/status/2059291743632101697",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "architecture",
+        "hardware"
+      ],
+      "matching_tags": [
+        "architecture",
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-26T20:02:43.001Z",
+      "summary": "Useful Signal: Meta open-sourced a PyTorch kernel claiming 2.3x faster attention on NVIDIA Blackwell.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Introducing spii 45: a privacy foundation model It removes PII from text and images with near frontier model performance at 9ms inference time",
+      "url": "https://x.com/screenpipe/status/2059258250315321661",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation",
+        "inference"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "inference"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-26T14:28:53.131Z",
+      "summary": "Braygent POV post idea based on: Introducing spii 45: a privacy foundation model It removes PII from text and images with near frontier model performance at 9ms inference time",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Launched end to end encrypted AI inference on NEAR AI Cloud. 4 privacy modes, up to full E2EE: prompts encrypted on device and decrypted only",
+      "url": "https://x.com/NEARProtocol/status/2059253425238401308",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-26T14:28:53.131Z",
+      "summary": "Braygent POV post idea based on: Launched end to end encrypted AI inference on NEAR AI Cloud. 4 privacy modes, up to full E2EE: prompts encrypted on device and decrypted only",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Samsung memory chip staff in line for £310,000 bonuses after AI profit-sharing deal",
+      "url": "https://www.theguardian.com/technology/2026/may/27/samsung-memory-chip-staff-bonuses-ai-profit-sharing-deal",
+      "source": "The Guardian Tech",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-27T15:24:21.683Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "AI agents are advancing research level math. 🚀 I’m thrilled to share ’s AlphaProof Nexus an agentic framewo…",
+      "url": "https://x.com/ajitesh_shukla7/status/2059196172326330564",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-26T14:28:53.131Z",
+      "summary": "Braygent POV post idea based on: AI agents are advancing research level math. 🚀 I’m thrilled to share ’s AlphaProof Nexus an agentic framewo…",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Claude Opus 4.7, Sonnet 4.6, GPT 5.5 (Thinking + Pro), Gemini 3.1 Pro, DeepSeek V4 Pro, and Kimi 2.6 Thinking. All running inside Abacus AI",
+      "url": "https://x.com/abacusai/status/2059108787735146575",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-26T14:28:53.131Z",
+      "summary": "Braygent POV post idea based on: Claude Opus 4.7, Sonnet 4.6, GPT 5.5 (Thinking + Pro), Gemini 3.1 Pro, DeepSeek V4 Pro, and Kimi 2.6 Thinking. All running inside Abacus AI",
+      "category": "ai_tools"
+    },
+    {
+      "title": "May 26, 2026AnnouncementsAnthropic appoints KiYoung Choi as Representative Director of Korea ahead of Seoul office opening",
+      "url": "https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-27T05:18:20.255Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "InferenceBench Tests AI Agents On H100 Server Optimization — Frontier Models Lose To Simple Baselines",
+      "url": "https://di.gg/ai/n42707zb?rank=11",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-26T20:02:43.001Z",
+      "summary": "Major Signal: InferenceBench tests AI agents on H100 server optimization and finds frontier models losing to simple tuning baselines.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google DeepMind Math Work Gets A Second Paper Citation — AI Co-Mathematician Signal Keeps Building",
+      "url": "https://x.com/OWW/status/2059277197265809848",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-26T15:29:15.520Z",
+      "summary": "A second math paper citing Google DeepMind’s AI co-mathematician work suggests the research signal is spreading.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Super excited that MOVE has already launched GENESIS in LA with House of Moves 🚀 Let us know if you want a live demo or to see the GENESIS",
+      "url": "https://x.com/MoveAI_/status/2059209426633207816",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-26T14:28:53.131Z",
+      "summary": "Braygent POV post idea based on: Super excited that MOVE has already launched GENESIS in LA with House of Moves 🚀 Let us know if you want a live demo or to see the GENESIS",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Galeon Brain update: Galeon Brain will be released soon. Users will soon be able to experience Paper Trader powered by Galeon Brain, test agent",
+      "url": "https://x.com/HelloGaleon/status/2059193273189884330",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-26T14:28:53.131Z",
+      "summary": "Braygent POV post idea based on: Galeon Brain update: Galeon Brain will be released soon. Users will soon be able to experience Paper Trader powered by Galeon Brain, test agent",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Coloring the Noise: Adversarial Sobolev Alignment for Faithful Image Super Resolution",
+      "url": "https://paperswithcode.com/papers/2605.23264",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-05-27T05:18:38.969Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+{
+  "generated": "2026-10-08T17:45:07.835Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "JetBrains Releases Mellum2.1: A 12B MoE Open Model for Coding Agents",
+      "url": "https://www.marktechpost.com/2026/10/08/jetbrains-releases-mellum2-1-a-12b-moe-open-model-for-coding-agents/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "architecture",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "architecture",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-08T16:17:35.000Z",
+      "summary": "JetBrains released Mellum2.1, an Apache 2.0, 12B mixture-of-experts thinking model with 2.5B active parameters. RL in real repositories lifted its SWE-bench Verified score from 2.0 to 47.0. The post JetBrains Releases Mellum2.1: A 12B MoE Open Model for Coding Agents appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Release v0.25.0-nightly.20261007.8003d28042",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.0-nightly.20261007.8003d28042",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "research_paper",
+        "api_update",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper",
+        "api_update",
+        "inference"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-07T22:01:24.000Z",
+      "summary": "What's Changed fix(agents): replace selected remote Hosts without losing bindings by @yiliang114 in #13430 test(core): close #12693 post-merge review test and hygiene gaps by @wenshao in #13341 test(integration): make the /hooks dialog E2E witness the rendered dialog ( #13425 ) by @qwen-code-dev-bot in #13427 fix(ci): wait 60s before the E2E build artifact download retry ( #13284 ) by @qwen-code-dev-bot in #13292 fix(ci): fail yamllint and shellcheck lanes loudly on an empty git file list by @qwen-code-dev-bot in #12650 fix(managed-agent): serve SSE subscribers from a Condition instead of...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Microsoft releases new Nvidia-chip AI PCs with revamped Windows 11",
+      "url": "https://techcrunch.com/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release",
+        "pricing_change",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change",
+        "hardware"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-10-07T20:22:37.000Z",
+      "summary": "Microsoft revealed the specs and price for its Surface Laptop Ultra, AI PCs that run on Nvidia chips that are designed to run AI models and agents.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Architect Launches Liquid Inference, a Real-Time Auction for LLM Inference",
+      "url": "https://www.marktechpost.com/2026/10/08/architect-launches-liquid-inference-a-real-time-auction-for-llm-inference/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-08T08:53:34.000Z",
+      "summary": "Architect Financial Technologies has launched Liquid Inference, an LLM router that runs a live auction for every request. Liquid Inference is an LLM inference marketplace from Architect where providers bid to serve each prompt. The buyer pays the lowest offer that meets its rules. For developers, it is quite simple message: swap a base URL, […] The post Architect Launches Liquid Inference, a Real-Time Auction for LLM Inference appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Anthropic Releases Claude Haiku 5.5: A Small Model With 1M Context Priced at $0.10 per Million Input Tokens",
+      "url": "https://www.marktechpost.com/2026/10/07/anthropic-releases-claude-haiku-5-5-a-small-model-with-1m-context-priced-at-0-10-per-million-input-tokens/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-07T20:38:30.000Z",
+      "summary": "Anthropic's Claude Haiku 5.5 starts at $0.10 per million input tokens, keeps 1M context, scores 72.4% on OSWorld. The post Anthropic Releases Claude Haiku 5.5: A Small Model With 1M Context Priced at $0.10 per Million Input Tokens appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Nvidia Says Specialized AI Reached Gold-Level Scores in Math and Coding Olympiads",
+      "url": "https://superpowerdaily.com/posts/nvidia-says-specialized-ai-reached-gold-level-scores-in-math-and-coding-olympiads",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "dataset",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "dataset",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-07T13:54:49.000Z",
+      "summary": "The results came from specialist models paired with repeated checking and revision—not fine-tuning alone. Official graders assessed the math proofs; the coding run was outside the official ranking.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI chip boom pushes Samsung profits to record $80bn The tech giant is also expected to get a boost from its latest folding devices that were launched in August. See more",
+      "url": "https://www.bbc.com/news/articles/c687z8127302o",
+      "source": "BBC AI",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-10-08T04:52:30.563Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Goodfire says its new ‘inside-out’ monitors catch rogue AI agents at a fraction of the cost",
+      "url": "https://techcrunch.com/2026/10/08/goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-agents-at-a-fraction-of-the-cost/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-08T16:00:00.000Z",
+      "summary": "Goodfire just launched what it says is a cheaper way to keep AI agents in check: Instead of paying a second AI to read everything an agent does, its monitors peek inside the model while it works and only call in backup when something looks fishy.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Perplexity AI Releases pplx-embed-v2-late: A 0.6B Edge Model and a 9B Model Scoring 92.4% on MADQA",
+      "url": "https://www.marktechpost.com/2026/10/07/perplexity-ai-releases-pplx-embed-v2-late-a-0-6b-edge-model-and-a-9b-model-scoring-92-4-on-madqa/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-08T05:39:09.000Z",
+      "summary": "Perplexity's pplx-embed-v2-late comes in 2 sizes: a 0.6B model built to run on edge devices, and a 9B model for building high-quality indexes. Its best score is 92.4% on MADQA, and its weakest is 61.2% on ViDoRe v3 Markdown. Both are MIT-licensed and ready to self-host. The post Perplexity AI Releases pplx-embed-v2-late: A 0.6B Edge Model and a 9B Model Scoring 92.4% on MADQA appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Artcraft Releases Seven Open-Source Adobe Alternatives, Still in Early Alpha",
+      "url": "https://superpowerdaily.com/posts/artcraft-releases-seven-open-source-adobe-alternatives-still-in-early-alpha",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-07T22:41:21.000Z",
+      "summary": "Developer Brandon Thomas credits Claude Opus 5.5 for the Rust apps. His initial promise of matching Adobe’s features within a month has already shifted.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Liquid AI Releases Open-Weight d1-3B and d1-omni-600M: Multimodal Decision Models With Zero Output Tokens",
+      "url": "https://www.marktechpost.com/2026/10/07/liquid-ai-releases-open-weight-d1-3b-and-d1-omni-600m-multimodal-decision-models-with-zero-output-tokens/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-07T18:23:45.000Z",
+      "summary": "Liquid AI has released Open d1, two open-weight multimodal models in its d1 decision model family. d1-3B reads text and images. d1-omni-600M reads text with an image, or text with audio. Neither model writes text. Each returns calibrated, typed answers in one forward pass with zero output tokens. The target is real-time decisions on the […] The post Liquid AI Releases Open-Weight d1-3B and d1-omni-600M: Multimodal Decision Models With Zero Output Tokens appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Google Releases Nano Banana 2.1 With Lower Image Prices and Stronger Editing Claims",
+      "url": "https://superpowerdaily.com/posts/google-releases-nano-banana-2-1-with-lower-image-prices-and-stronger-editing-claims",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-07T15:40:54.000Z",
+      "summary": "Google’s evaluations favor the new model over its predecessors, including Pro. A small hands-on comparison shows why those scores are not a universal quality verdict.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI:AM: A Level We Shouldn't Pass? Notes from The Curve + Tokens vs. Salaries & Is SaaS Cooked?",
+      "url": "https://www.cognitiverevolution.ai/ai-am-a-level-we-shouldn-t-pass-notes-from-the-curve-tokens-vs-salaries-is-saas-cooked/",
+      "source": "Cognitive Revolution",
+      "tags": [
+        "dataset",
+        "hardware"
+      ],
+      "matching_tags": [
+        "dataset",
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-08T10:50:44.000Z",
+      "summary": "Nathan Labenz shares takeaways from The Curve conference regarding frontier AI scaling and compute limits. The episode also features discussions on hardware memory bottlenecks, how agents are changing software, training data sources, and unaddressed AI risks.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "nanoMuse: An Open-Source Personal Agent for Every Device You Own",
+      "url": "https://paperswithcode.com/papers/2610.08699",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.64,
+      "date": "2026-10-08T17:00:07.032Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Normalizing Trajectory Models",
+      "url": "https://machinelearning.apple.com/research/normalizing-trajectory-models",
+      "source": "Apple Machine Learning",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.62,
+      "date": "2026-10-08T00:00:00.000Z",
+      "summary": "Diffusion-based models decompose sampling into many small Gaussian denoising steps, an assumption that breaks down when generation is compressed to a few coarse transitions. Existing few-step methods address this through distillation, consistency training, or adversarial objectives, but sacrifice the likelihood framework in the process. We introduce Normalizing Trajectory Models (NTM), which models each reverse step as an expressive conditional normalizing flow with exact likelihood training. Architecturally, NTM combines shallow invertible blocks within each step with a deep parallel…",
+      "category": "ai_research"
+    },
+    {
+      "title": "Nvidia Commits $1 Billion Over Five Years to U.S. Science and Quantum Research",
+      "url": "https://superpowerdaily.com/posts/nvidia-commits-1-billion-over-five-years-to-us-science-and-quantum-research",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-10-08T16:05:16.000Z",
+      "summary": "The commitment covers universities, quantum research and government-focused cloud providers, but Nvidia has not detailed how the $1 billion will be divided.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Building a safer path to autonomous industrial AI",
+      "url": "https://www.technologyreview.com/2026/10/08/1144020/building-a-safer-path-to-autonomous-industrial-ai/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-10-08T08:17:32.000Z",
+      "summary": "Industrial AI is entering a new phase. After decades of predictive analytics and other specialized applications, advances in foundation models, physical AI, and agentic AI are making it possible to automate more complex tasks across industrial environments. But unlike AI that operates purely in the digital world, industrial AI can interact directly with physical systems,…",
+      "category": "ai_research"
+    },
+    {
+      "title": "Google’s new SynthID website can identify AI-generated media",
+      "url": "https://techcrunch.com/2026/10/07/googles-new-synthid-website-can-identify-ai-generated-media/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-10-07T14:00:00.000Z",
+      "summary": "Google on Tuesday launched a new site that lets anyone verify whether a piece of media, be it an image, a video, or an audio clip, is generated using AI.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Multimodal open d1 decision models for the edge",
+      "url": "https://huggingface.co/blog/LiquidAI/open-d1",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-07T16:54:33.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "What Happens When a Trusted Model Repo Changes? Unsloth Studio Re-Checks Before It Runs",
+      "url": "https://www.marktechpost.com/2026/10/07/what-happens-when-a-trusted-model-repo-changes-unsloth-studio-re-checks-before-it-runs/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-08T01:49:11.000Z",
+      "summary": "Unsloth's October 6 security overview explains how Studio checks code, weights, packages and tools before anything runs. Custom model code is scanned and approval is bound to its fingerprint. Flagged weight files are blocked in the load path, package-content findings fail CI, and tools run in probed OS sandboxes. Here is what each checkpoint decides, and what it does not cover. The post What Happens When a Trusted Model Repo Changes? Unsloth Studio Re-Checks Before It Runs appeared first on MarkTechPost .",
+      "category": "ai_research"
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "generated": "2026-06-12T17:45:10.122Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "MiniMax-01 is Now Open-Source: Scaling Lightning Attention for the AI Agent Era    MiniMax-AI • Jan 15, 2025 •  52",
+      "url": "https://huggingface.co/blog/MiniMax-AI/minimax01",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "architecture",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "architecture",
+        "open_source"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-06-12T15:04:22.037Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "ArticleI fine-tuned my first model on a single GPU most fine-tuning tutorials show you a clean run: install a library, point it at a dataset, watch the loss drop, ship. mine didn&#x27;t go like that. the first time I measured my model, it had apparently...",
+      "url": "https://x.com/i/article/2063168310921883648",
+      "source": "X / @witcheer",
+      "tags": [
+        "dataset",
+        "training",
+        "hardware"
+      ],
+      "matching_tags": [
+        "dataset",
+        "training",
+        "hardware"
+      ],
+      "importance": 0.62,
+      "date": "2026-06-12T15:08:49.917Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "ArticleMini Price, Max Performance: affordable M2 API Pricing, Coding Plan and Agent PlansOver the past 10 days, we&#x27;ve experienced explosive growth in MiniMax-M2&#x27;s online service usage. Our team has been working tirelessly to optimize performance and scale infrastructure to meet the...",
+      "url": "https://x.com/i/article/1986756398009430017",
+      "source": "X / @skylermiao7",
+      "tags": [
+        "evaluation",
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 0.54,
+      "date": "2026-06-12T15:08:22.672Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Welcome NVIDIA Cosmos 3: The First Open Omni-model for Physical AI Reasoning and Action    nvidia • 11 days ago •  76",
+      "url": "https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.74,
+      "date": "2026-06-12T15:04:21.997Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "NVIDIA &amp; Marlowe: Scaling Data Science Workloads with RAPIDS",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfvo5AKhCEaT_4YwwpcrqqXV4E29bnNrVzSG1dhr3YjcnbXtg/viewform",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-06-12T15:04:26.243Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Task-Seeded Synthetic Q&amp;A Generation for Nemotron Pretraining    nvidia • 8 days ago •  16",
+      "url": "https://huggingface.co/blog/nvidia/task-seeded-sdg",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-06-12T15:04:22.027Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "MTEB Leaderboard: From a slow demo to feature-rich leaderboard    Samoed • about 4 hours ago •  14",
+      "url": "https://huggingface.co/blog/Samoed/mteb-v3-leaderboard",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-06-12T15:04:21.983Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "How to Fine-Tune Nemotron 3.5 ASR for Your Language, Domain, or Accent    nvidia • 8 days ago •  49",
+      "url": "https://huggingface.co/blog/nvidia/fine-tuning-nemotron-35-asr",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-06-12T15:04:21.980Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "NVIDIA Research Unlocks Advanced Grasping, Smarter Autonomous Driving and Agent Training at Scale",
+      "url": "https://blogs.nvidia.com/blog/cvpr-research-grasping-driving-agent-training/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.64,
+      "date": "2026-06-12T15:04:44.189Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Introducing North Mini Code: Cohere’s first model for developersSmall, efficient, and open-source — our first agentic coding model, built for the sovereign developer ecosystem.Jun 09, 20263 min read",
+      "url": "https://cohere.com/blog/north-mini-code",
+      "source": "Cohere Blog",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.62,
+      "date": "2026-06-12T15:05:04.690Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "WhatsApp Business API pricing 2026: what's free and where markup hides",
+      "url": "https://wexio.io/blog/free-whatsapp-business-api",
+      "source": "Hacker News",
+      "tags": [
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-06-12T14:37:30.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Thousand Token Wood: shipping a multi-agent economy on a 3B model    build-small-hackathon • 7 days ago •  5",
+      "url": "https://huggingface.co/blog/build-small-hackathon/thousand-token-wood-sim",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-06-12T15:04:22.031Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Anthropic releases ‘safe’ version of Claude Mythos AI model to public",
+      "url": "https://www.theguardian.com/technology/2026/jun/09/anthropic-claude-mythos-ai-model",
+      "source": "The Guardian Tech",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-06-12T15:04:28.292Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "New study raises concerns about AI chatbots fueling delusional thinking",
+      "url": "https://www.theguardian.com/technology/2026/mar/14/ai-chatbots-psychosis",
+      "source": "The Guardian Tech",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-06-12T15:04:28.289Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Introducing Serge: GitHub-Native AI Code Review    huggingface • about 8 hours ago •  6",
+      "url": "https://huggingface.co/blog/huggingface/serge",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-06-12T15:04:22.017Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Arcee Becomes the First Major American AI Lab to Replace AWS S3 with Hugging Face Private Storage, in a Multi-Million Dollar Commercial Partnership    clem • 3 days ago •  30",
+      "url": "https://huggingface.co/blog/clem/arcee-hf",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-06-12T15:04:21.973Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning",
+      "url": "https://paperswithcode.com/papers/2606.13673",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-06-12T15:04:44.237Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Cheaper, faster, and culturally aware, Avataar&#8217;s video AI is built for India&#8217;s scale",
+      "url": "https://techcrunch.com/2026/06/11/cheaper-faster-and-culturally-aware-avataars-video-ai-is-built-for-indias-scale/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-06-12T15:04:26.262Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI Coding Agents Fail at Teamwork",
+      "url": "https://hai.stanford.edu/news/ai-coding-agents-fail-at-teamwork",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-06-12T15:04:26.241Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Reading Today’s Headlines Through AI: A Real-Time Audit of Six Commercial Chatbots",
+      "url": "https://hai.stanford.edu/news/reading-todays-headlines-through-ai-a-real-time-audit-of-six-commercial-chatbots",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-06-12T15:04:26.238Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
+}

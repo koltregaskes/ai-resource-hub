@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Resource Hub Meta Benchmark Hub</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f4f1ec;
+      --paper: #fffaf1;
+      --ink: #171717;
+      --muted: #6b6257;
+      --line: #d8cfc2;
+      --head: #ece3d5;
+      --accent: #005c5f;
+      --accent-2: #b45309;
+      --good: #116149;
+      font-family: "Aptos", "Segoe UI", system-ui, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #10100f;
+        --paper: #171614;
+        --ink: #f6efe3;
+        --muted: #b9aa98;
+        --line: #342f29;
+        --head: #211f1b;
+        --accent: #40b8b3;
+        --accent-2: #f59e0b;
+        --good: #6ee7b7;
+      }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); overflow-x: hidden; }
+    main { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 42px; }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    header { display: grid; gap: 16px; align-items: end; margin-bottom: 16px; }
+    h1 { max-width: 880px; margin: 0; font-size: clamp(2rem, 4.6vw, 4.2rem); line-height: 0.95; letter-spacing: 0; text-wrap: balance; }
+    p { margin: 0; color: var(--muted); line-height: 1.45; }
+    .kicker { color: var(--accent); font-size: 0.76rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+    .lede { margin-top: 8px; font-size: 1rem; }
+    .pills, .tabs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-start; }
+    .pill, .tab {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 11px;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 0.84rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .pill.watch { color: var(--accent-2); }
+    .tab { cursor: pointer; }
+    .tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .tabs { margin: 10px 0 16px; }
+    .help-strip { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); margin: 0 0 14px; }
+    .help-strip article { border: 1px solid var(--line); border-radius: 10px; background: var(--paper); padding: 11px 12px; }
+    .help-strip strong { display: flex; gap: 6px; align-items: center; font-size: 0.86rem; }
+    .help-strip p { margin-top: 4px; font-size: 0.82rem; }
+    .board { border: 1px solid var(--line); border-radius: 10px; background: var(--paper); overflow: hidden; box-shadow: 0 14px 40px rgba(0,0,0,0.08); }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; min-width: 860px; border-collapse: collapse; font-size: 0.92rem; }
+    th, td { padding: 13px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
+    th { background: var(--head); color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; }
+    tbody tr:last-child td { border-bottom: 0; }
+    td strong { font-size: 1rem; }
+    td small { display: block; margin-top: 3px; color: var(--muted); font-size: 0.74rem; }
+    .score { font-variant-numeric: tabular-nums; font-size: 1.3rem; font-weight: 900; }
+    .hot { color: var(--good); font-weight: 900; }
+    .missing { color: var(--muted); }
+    .model-link { color: inherit; text-decoration: none; }
+    .model-link:hover { color: var(--accent); text-decoration: underline; }
+    .info {
+      width: 26px;
+      height: 26px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--muted);
+      font-weight: 900;
+      cursor: help;
+    }
+    .hint {
+      display: inline-grid;
+      place-items: center;
+      width: 18px;
+      height: 18px;
+      margin-left: 5px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--muted);
+      font-size: 0.68rem;
+      font-weight: 900;
+      cursor: help;
+      vertical-align: middle;
+    }
+    .source-pill { display: inline-block; margin: 3px 5px 0 0; font-size: 0.78rem; font-weight: 800; }
+    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; padding: 12px 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.82rem; }
+    details { margin-top: 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
+    summary { padding: 13px 15px; cursor: pointer; font-weight: 900; }
+    .detail-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); padding: 0 15px 15px; }
+    .detail-card { border-top: 1px solid var(--line); padding-top: 12px; }
+    .detail-card h2 { margin: 0 0 6px; font-size: 1rem; }
+    .detail-card ul { margin: 8px 0 0; padding-left: 18px; color: var(--muted); line-height: 1.45; }
+    .formula { margin-top: 8px; padding: 10px 11px; border: 1px dashed var(--line); border-radius: 8px; font-size: 0.86rem; color: var(--muted); }
+    .citation-list { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 8px; }
+    .citation-list a { font-weight: 800; }
+    @media (min-width: 820px) {
+      header { grid-template-columns: minmax(0, 1fr) auto; }
+      .pills { justify-content: flex-end; }
+    }
+    @media (max-width: 520px) {
+      main { width: min(100% - 24px, 1180px); padding-top: 22px; }
+      h1 { font-size: clamp(1.9rem, 8.5vw, 2.6rem); line-height: 1; }
+      .pill, .tab { padding: 7px 9px; font-size: 0.78rem; }
+      table { min-width: 760px; }
+      th, td { padding: 12px 11px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="kicker">AI Resource Hub benchmark draft</p>
+        <h1>Meta Benchmark Hub</h1>
+        <p class="lede">Four views of current model reality. Floor Capability is the finished benchmark.</p>
+      </div>
+      <div class="pills" aria-label="status">
+        <span class="pill">10 models</span>
+        <span class="pill">4 leaderboards</span>
+        <span class="pill watch">Fable DSWE pending</span>
+      </div>
+    </header>
+
+    <nav class="tabs" aria-label="Benchmark leaderboards">
+      <button class="tab" type="button" data-tab="floor" aria-selected="true">Floor Capability</button>
+      <button class="tab" type="button" data-tab="operating" aria-selected="false">Operating Envelope</button>
+      <button class="tab" type="button" data-tab="frontier" aria-selected="false">Frontier Reality</button>
+      <button class="tab" type="button" data-tab="research" aria-selected="false">Research Trust</button>
+    </nav>
+
+    <section class="help-strip" aria-label="Quick guide">
+      <article>
+        <strong>Score <button class="hint" type="button" title="All main scores use a 0-100 saturation scale. 100 means that benchmark lane has no meaningful remaining floor failures under this method.">?</button></strong>
+        <p>0-100 saturation score. Higher is better; 100 means complete.</p>
+      </article>
+      <article>
+        <strong>Evidence % <button class="hint" type="button" title="Evidence percentage is source coverage for the score, not the model's capability score.">?</button></strong>
+        <p>How complete the supporting evidence is, not model quality.</p>
+      </article>
+      <article>
+        <strong>DSWE <button class="hint" type="button" title="DeepSWE is a Datacurve benchmark for long-horizon agentic coding. We also show its average cost, average time, and output-token fields where reported.">?</button></strong>
+        <p>Agentic coding score plus cost, time, and output tokens.</p>
+      </article>
+      <article>
+        <strong>Confidence <button class="hint" type="button" title="Confidence describes how strong the evidence is for this provisional score. It is not another model grade.">?</button></strong>
+        <p>How much trust to put in the provisional score.</p>
+      </article>
+    </section>
+
+    <section class="board" aria-label="Meta benchmark leaderboard">
+      <div class="table-wrap">
+        <table>
+          <thead id="thead"></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <div class="foot">
+        <span id="foot-left"></span>
+        <span id="foot-right">Click a model for detail.</span>
+      </div>
+    </section>
+
+    <details>
+      <summary>Explainer, method and citations</summary>
+      <div class="detail-grid">
+        <article class="detail-card">
+          <h2>Floor Capability</h2>
+          <p>0-100 saturation score. 100 means no meaningful floor-capability failures remain under the benchmark.</p>
+          <p class="formula">Draft weighting: 25% accuracy + grounding, 20% instruction discipline, 15% honesty + reliability, 15% reasoning floor, 15% agent/coding, 10% operating envelope.</p>
+        </article>
+        <article class="detail-card">
+          <h2>Operating Envelope</h2>
+          <p>Cost, average time, output tokens, speed, and run friction. <a href="https://deepswe.datacurve.ai/" target="_blank" rel="noopener">DeepSWE</a> is the first source with enough fields.</p>
+        </article>
+        <article class="detail-card">
+          <h2>Frontier Reality</h2>
+          <p>Current public benchmark reality across <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank" rel="noopener">Artificial Analysis</a>, <a href="https://arena.ai/" target="_blank" rel="noopener">Arena</a>, <a href="https://deepswe.datacurve.ai/" target="_blank" rel="noopener">DeepSWE</a>, <a href="https://kilo.ai/leaderboard" target="_blank" rel="noopener">Kilo</a>, and similar sources.</p>
+        </article>
+        <article class="detail-card">
+          <h2>Research Trust</h2>
+          <p>Draft score for fact-checking, source discipline, citation honesty, bias/fallacy handling, and research reliability.</p>
+        </article>
+        <article class="detail-card">
+          <h2>Why 100?</h2>
+          <p>100 is not "most exciting model". It means the benchmark lane is saturated: routine failures have effectively disappeared under the prompt set. If every model reaches 100, that lane is finished and should be retired or made harder.</p>
+        </article>
+        <article class="detail-card">
+          <h2>Citations</h2>
+          <div class="citation-list">
+            <a href="https://deepswe.datacurve.ai/" target="_blank" rel="noopener">DeepSWE</a>
+            <a href="https://artificialanalysis.ai/leaderboards/models" target="_blank" rel="noopener">Artificial Analysis leaderboards</a>
+            <a href="https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index" target="_blank" rel="noopener">AA Intelligence Index</a>
+            <a href="https://kilo.ai/leaderboard" target="_blank" rel="noopener">Kilo leaderboard</a>
+            <a href="https://arena.ai/" target="_blank" rel="noopener">Arena</a>
+            <a href="https://openrouter.ai/rankings" target="_blank" rel="noopener">OpenRouter rankings</a>
+            <a href="https://livebench.ai/" target="_blank" rel="noopener">LiveBench</a>
+            <a href="https://agi.safe.ai/" target="_blank" rel="noopener">Humanity's Last Exam</a>
+            <a href="https://www.tbench.ai/" target="_blank" rel="noopener">Terminal-Bench</a>
+            <a href="https://github.com/allenai/IFBench" target="_blank" rel="noopener">IFBench</a>
+            <a href="https://scicode-bench.github.io/" target="_blank" rel="noopener">SciCode</a>
+          </div>
+        </article>
+      </div>
+    </details>
+  </main>
+
+  <script>
+    const models = [
+      { id:"claude-fable-5", name:"Claude Fable 5", provider:"Anthropic", floor:84, conf:"medium", dswe:null, cost:null, time:null, tokens:null, evidence:74, frontier:92, operating:58, research:82, signal:"AA #1 / HLE 53%", signalSources:["aa","hle"], trust:"strong but fallback caveat", note:"Fable 5 DSWE pending; AA row includes Opus 4.8 fallback routing." },
+      { id:"claude-opus-4.8", name:"Claude Opus 4.8", provider:"Anthropic", floor:80, conf:"high", dswe:58, cost:"$12.58", time:"43m", tokens:"136k", evidence:82, frontier:88, operating:60, research:82, signal:"AA 61 / Omni #2", signalSources:["aa","aaOmni"], trust:"best clean evidence", note:"Strong source coverage but expensive and token-heavy." },
+      { id:"gpt-5.5-xhigh", name:"GPT-5.5 xhigh", provider:"OpenAI", floor:78, conf:"medium", dswe:70, cost:"$6.61", time:"21m", tokens:"47k", evidence:70, frontier:87, operating:86, research:75, signal:"AA 60 / Kilo #1", signalSources:["aa","kilo"], trust:"less abstention evidence", note:"Best DSWE pass rate among tracked rows." },
+      { id:"gemini-3.1-pro", name:"Gemini 3.1 Pro", provider:"Google", floor:77, conf:"medium", dswe:null, cost:null, time:null, tokens:null, evidence:76, frontier:86, operating:67, research:76, signal:"AA 63 / 148 tok/s", signalSources:["aa"], trust:"strong AA row", note:"Top Gemini intelligence row; no DSWE row yet." },
+      { id:"qwen3.7-max", name:"Qwen3.7 Max", provider:"Alibaba", floor:74, conf:"medium", dswe:null, cost:null, time:null, tokens:null, evidence:62, frontier:81, operating:62, research:70, signal:"AA 56.6", signalSources:["aa"], trust:"verbose output risk", note:"Strong current Qwen signal, but operating evidence is thinner." },
+      { id:"gemini-3.5-flash", name:"Gemini 3.5 Flash", provider:"Google", floor:73, conf:"medium", dswe:28, cost:"$7.42", time:"17m", tokens:"189k", evidence:68, frontier:79, operating:78, research:68, signal:"AA 55 / Kilo #4", signalSources:["aa","kilo"], trust:"needs floor runs", note:"Fast but token-heavy in DSWE." },
+      { id:"minimax-m3", name:"MiniMax-M3", provider:"MiniMax", floor:71, conf:"medium", dswe:20, cost:"$5.57", time:"57m", tokens:"98k", evidence:64, frontier:77, operating:70, research:67, signal:"AA 54.7 / Kilo #10", signalSources:["aa","kilo"], trust:"open-weight variance", note:"Promising but slower DSWE row." },
+      { id:"kimi-k2.6", name:"Kimi K2.6", provider:"Moonshot AI", floor:70, conf:"medium", dswe:24, cost:"$3.16", time:"56m", tokens:"84k", evidence:64, frontier:76, operating:77, research:66, signal:"AA 54 / Kilo #6", signalSources:["aa","kilo"], trust:"verbose-token risk", note:"Cheap DSWE row, but slow and verbose." },
+      { id:"glm-5.1-reasoning", name:"GLM-5.1 Reasoning", provider:"Z.ai", floor:67, conf:"medium", dswe:18, cost:"$7.46", time:"35m", tokens:"49k", evidence:58, frontier:72, operating:68, research:64, signal:"AA 51 / Kilo #8", signalSources:["aa","kilo"], trust:"thin floor evidence", note:"Current GLM row worth tracking; research evidence is thin." },
+      { id:"deepseek-v4-pro", name:"DeepSeek V4 Pro", provider:"DeepSeek", floor:66, conf:"medium", dswe:8, cost:"$4.22", time:"37m", tokens:"50k", evidence:54, frontier:71, operating:72, research:62, signal:"AA open top-3", signalSources:["aa"], trust:"baseline only", note:"Current open-model baseline; needs fresh internal floor prompts." }
+    ];
+
+    const sourceLinks = {
+      dswe: { label: "DeepSWE", url: "https://deepswe.datacurve.ai/" },
+      aa: { label: "Artificial Analysis", url: "https://artificialanalysis.ai/leaderboards/models" },
+      aaOmni: { label: "AA-Omniscience", url: "https://artificialanalysis.ai/evaluations/aa-omniscience" },
+      hle: { label: "HLE", url: "https://agi.safe.ai/" },
+      kilo: { label: "Kilo", url: "https://kilo.ai/leaderboard" },
+      arena: { label: "Arena", url: "https://arena.ai/" },
+      openrouter: { label: "OpenRouter", url: "https://openrouter.ai/rankings" },
+      livebench: { label: "LiveBench", url: "https://livebench.ai/" },
+      terminalBench: { label: "Terminal-Bench", url: "https://www.tbench.ai/" },
+      ifbench: { label: "IFBench", url: "https://github.com/allenai/IFBench" },
+      scicode: { label: "SciCode", url: "https://scicode-bench.github.io/" }
+    };
+
+    const configs = {
+      floor: {
+        sort: "floor",
+        foot: "Floor Capability: 0-100 saturation score. 100 = complete.",
+        columns: [
+          ["#", "Rank within this leaderboard.", (_, i) => i + 1],
+          ["Model", "Click for model detail.", modelCell],
+          ["Score", "Floor Capability score. Small label is evidence confidence.", m => `<span class="score">${m.floor}</span><small title="Confidence in the evidence behind the score.">conf: ${m.conf}</small>`],
+          ["DSWE", "DeepSWE Pass@1 where reported.", m => dsweValue(m)],
+          ["Cost", "DeepSWE average cost.", m => sourceValue(m.cost, "dswe")],
+          ["Time", "DeepSWE average time.", m => sourceValue(m.time, "dswe")],
+          ["Tokens", "DeepSWE output tokens.", m => sourceValue(m.tokens, "dswe")],
+          ["Evidence %", "Evidence completeness for the score, not model capability.", m => `${m.evidence}%`],
+          ["", "Quick detail.", m => info(m.note)]
+        ]
+      },
+      operating: {
+        sort: "operating",
+        foot: "Operating Envelope: higher means cheaper, faster, less wasteful, or better evidenced.",
+        columns: [
+          ["#", "Rank within this leaderboard.", (_, i) => i + 1],
+          ["Model", "Click for model detail.", modelCell],
+          ["Ops score", "0-100 operating score from cost, time, output tokens, speed, and friction.", m => `<span class="score">${m.operating}</span>`],
+          ["DSWE", "DeepSWE Pass@1 where reported.", m => dsweValue(m)],
+          ["Cost", "DeepSWE average cost.", m => sourceValue(m.cost, "dswe")],
+          ["Time", "DeepSWE average time.", m => sourceValue(m.time, "dswe")],
+          ["Tokens", "DeepSWE output tokens.", m => sourceValue(m.tokens, "dswe")],
+          ["Note", "Main operating caveat.", m => m.note]
+        ]
+      },
+      frontier: {
+        sort: "frontier",
+        foot: "Frontier Reality: compact aggregate of current public benchmark signal.",
+        columns: [
+          ["#", "Rank within this leaderboard.", (_, i) => i + 1],
+          ["Model", "Click for model detail.", modelCell],
+          ["Reality score", "0-100 current frontier signal across public leaderboards.", m => `<span class="score">${m.frontier}</span>`],
+          ["Primary signal", "Most useful current external signal.", m => signalCell(m)],
+          ["Floor", "Floor Capability score for context.", m => m.floor],
+          ["DSWE", "DeepSWE Pass@1 where reported.", m => dsweValue(m)],
+          ["Evidence %", "Evidence completeness for this model.", m => `${m.evidence}%`],
+          ["", "Quick detail.", m => info(m.note)]
+        ]
+      },
+      research: {
+        sort: "research",
+        foot: "Research Trust is draft: source discipline and citation honesty need dedicated prompt packs.",
+        columns: [
+          ["#", "Rank within this leaderboard.", (_, i) => i + 1],
+          ["Model", "Click for model detail.", modelCell],
+          ["Trust score", "Draft 0-100 score for research, source discipline, honesty, and fact-checking.", m => `<span class="score">${m.research}</span><small>draft</small>`],
+          ["Evidence %", "Evidence completeness for the trust score.", m => `${m.evidence}%`],
+          ["Signal", "Current public signal contributing to trust estimate.", m => signalCell(m)],
+          ["Caveat", "Why this is still provisional.", m => m.trust],
+          ["", "Quick detail.", m => info(m.note)]
+        ]
+      }
+    };
+
+    function dash(value) { return value ?? `<span class="missing">--</span>`; }
+    function value(value, suffix = "", hot = false) {
+      if (value === null || value === undefined) return `<span class="missing">--</span>`;
+      return `<span class="${hot ? "hot" : ""}">${value}${suffix}</span>`;
+    }
+    function modelCell(model) {
+      return `<a class="model-link" href="meta-benchmark-model.html?model=${model.id}"><strong>${model.name}</strong></a><small>${model.provider}</small>`;
+    }
+    function linkSource(key, label = sourceLinks[key]?.label) {
+      const source = sourceLinks[key];
+      if (!source) return label ?? key;
+      return `<a class="source-link" href="${source.url}" target="_blank" rel="noopener">${label}</a>`;
+    }
+    function sourceValue(value, sourceKey) {
+      if (value === null || value === undefined) return `<span class="missing">--</span>`;
+      return `<a href="${sourceLinks[sourceKey].url}" target="_blank" rel="noopener">${value}</a>`;
+    }
+    function dsweValue(model) {
+      if (model.dswe === null || model.dswe === undefined) return `<span class="missing">--</span>`;
+      return `<a class="hot" href="${sourceLinks.dswe.url}" target="_blank" rel="noopener" title="DeepSWE Pass@1">${model.dswe}%</a>`;
+    }
+    function signalCell(model) {
+      const chips = (model.signalSources ?? []).map((key) => `<span class="source-pill">${linkSource(key)}</span>`).join("");
+      return `${model.signal}<small>${chips}</small>`;
+    }
+    function info(text) {
+      return `<button class="info" title="${text.replaceAll('"', '&quot;')}">i</button>`;
+    }
+    function headerCell(label, title) {
+      if (!title) return label;
+      return `${label} <button class="hint" type="button" title="${title.replaceAll('"', '&quot;')}" aria-label="${label}: ${title.replaceAll('"', '&quot;')}">?</button>`;
+    }
+    function render(tab) {
+      const config = configs[tab];
+      document.querySelectorAll(".tab").forEach((button) => button.setAttribute("aria-selected", String(button.dataset.tab === tab)));
+      document.getElementById("thead").innerHTML = `<tr>${config.columns.map(([label, title]) => `<th title="${title}">${headerCell(label, title)}</th>`).join("")}</tr>`;
+      const rows = [...models].sort((a, b) => b[config.sort] - a[config.sort]);
+      document.getElementById("tbody").innerHTML = rows.map((model, index) => `<tr>${config.columns.map(([, , cell]) => `<td>${cell(model, index)}</td>`).join("")}</tr>`).join("");
+      document.getElementById("foot-left").textContent = config.foot;
+    }
+    document.querySelectorAll(".tab").forEach((button) => button.addEventListener("click", () => render(button.dataset.tab)));
+    render("floor");
+  </script>
+</body>
+</html>

@@ -1,9 +1,55 @@
 {
-  "generated": "2026-05-25T14:37:36.595Z",
+  "generated": "2026-08-26T03:02:30.823Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-28",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 3,
+  "archived_story_count": 142,
+  "articles": [
+    {
+      "title": "GitHub Releases · Remotion: v4.0.431",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.431",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-28T21:43:00.000Z",
+      "summary": "Fixes version mismatch warnings **Full Changelog**: https://github.com/remotion-dev/remotion/compare/v4.0.430...v4.0.431",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.430",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.430",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-28T15:02:08.000Z",
+      "summary": "## What's Changed - `remotion`: Preserve component state during Fast Refresh by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6692 - `@remotion/bundler`: Move sequence stack trace proxy to bundler entry script by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6687 - `@remotion/cli`: Preserve `catalog:` entries during `remotion upgrade` by @samohovets in https://github.com/remotion-dev/remotion/pull/6685 - `@remotion/cli`: Migrate `timeout` and `force` CLI flags to option system by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6717 - `@remotion/cli`: Migrate `--concurrencies` CLI flag to option system by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6720 - `@remotion/design`: Prevent Button from stretching to full width by @nielskaspers in https://github.com/remotion-dev/remotion/pull/6689 - `@remotion/media`: Pre-schedule audio nodes while premounting by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6718 - `",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Feb 27, 2026AnnouncementsStatement on the comments from Secretary of War Pete Hegseth",
+      "url": "https://www.anthropic.com/news/statement-comments-secretary-war",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-02-28T01:31:43.000Z",
+      "summary": null,
+      "category": "ai_models"
+    }
+  ]
 }

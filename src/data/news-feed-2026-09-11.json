@@ -1,0 +1,391 @@
+{
+  "generated": "2026-09-11T17:45:10.807Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Google Research Releases ToolGrad: Answer-First Framework Hits 99.8% Pass Rate for Tool-Use Data Generation",
+      "url": "https://www.marktechpost.com/2026/09/10/google-research-releases-toolgrad-answer-first-framework-hits-99-8-pass-rate-for-tool-use-data-generation/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "evaluation",
+        "api_update",
+        "dataset",
+        "training",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "evaluation",
+        "api_update",
+        "dataset",
+        "training",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-11T06:01:25.000Z",
+      "summary": "Google Research has released ToolGrad, an ACL 2026 Findings framework that inverts tool-use dataset generation: it builds a verified API chain first, then writes the matching user query. Guided by textual \"gradients\" from a 4-module propose-execute-select-update loop, ToolGrad reaches a 99.8% pass rate on ToolBench versus 63.8% for DFS search. Gemma-3-12B fine-tuned on only 500 samples scores 83.1 on BFCL, next to Gemini 2.5 Pro at 83.2. Code, dataset, and models are public under Apache-2.0. The post Google Research Releases ToolGrad: Answer-First Framework Hits 99.8% Pass Rate for...",
+      "category": "ai_research"
+    },
+    {
+      "title": "Sakana AI Launches Fugu Max and Fugu Ultra v2 for Cheaper, Stronger Multi-Agent Orchestration",
+      "url": "https://www.marktechpost.com/2026/09/10/sakana-ai-launches-fugu-max-and-fugu-ultra-v2-for-cheaper-stronger-multi-agent-orchestration/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "evaluation",
+        "pricing_change",
+        "architecture",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "evaluation",
+        "pricing_change",
+        "architecture",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-11T06:34:39.000Z",
+      "summary": "Sakana AI has released Fugu Max and Fugu Ultra v2, 2 models built on the same learned orchestration architecture. Fugu Max routes tasks to lean open and specialized models, including NVIDIA Nemotron, at $2/$6 per 1M tokens. Fugu Ultra v2 targets peak capability, scoring 48.3 on Chartography and 74.3 on DeepSWE. The post Sakana AI Launches Fugu Max and Fugu Ultra v2 for Cheaper, Stronger Multi-Agent Orchestration appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "NVIDIA Details BioNeMo Inference Runtime (BioIR): 2.90x Higher Boltz-2 Folding Throughput and 58.5K Residues per GPU-Hour on 8xH100",
+      "url": "https://www.marktechpost.com/2026/09/10/nvidia-details-bionemo-inference-runtime-bioir-2-90x-higher-boltz-2-folding-throughput-and-58-5k-residues-per-gpu-hour-on-8xh100/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "benchmark",
+        "inference",
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "benchmark",
+        "inference",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-10T21:57:06.000Z",
+      "summary": "NVIDIA has detailed BioNeMo Inference Runtime (BioIR), a Python library that accelerates biomolecular structure-prediction models on NVIDIA GPUs while staying in plain PyTorch. In a matched benchmark on 1,000 human dimer targets across 8xH100 GPUs, BioIR-accelerated Boltz-2 delivered 58.5K successfully folded residues per GPU-hour versus 20.2K for a torch-compiled open-source implementation, a 2.90x gain. The runtime optimizes at 3 layers: custom kernel selection, CUDA Graph capture, and Ray-based replica scaling that places 1 full model copy per GPU. BioIR already powered the AlphaFold...",
+      "category": "ai_research"
+    },
+    {
+      "title": "Cohere Releases North Small Translate: A 218B MoE Translation Model That Scores 83.6 on WMT26 Across 50 Languages",
+      "url": "https://www.marktechpost.com/2026/09/10/cohere-releases-north-small-translate-a-218b-moe-translation-model-that-scores-83-6-on-wmt26-across-50-languages/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "evaluation",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "evaluation",
+        "architecture"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-11T06:57:22.000Z",
+      "summary": "Cohere has released North Small Translate, an open-weight Mixture-of-Experts model built for machine translation across 50 languages. It uses 25B of its 218B parameters per token and scores 83.6 on Cohere's WMT26 evaluation. Weights are free for non-commercial use, with commercial access through Cohere Model Vault or RWS Language Weaver. The post Cohere Releases North Small Translate: A 218B MoE Translation Model That Scores 83.6 on WMT26 Across 50 Languages appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Google Releases ToolGrad, Reporting a 99.8% Pass Rate for Tool-Use Data",
+      "url": "https://superpowerdaily.com/posts/google-releases-toolgrad-reporting-a-99-8-pass-rate-for-tool-use-data",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "research_paper",
+        "api_update",
+        "dataset"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper",
+        "api_update",
+        "dataset"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-11T06:24:38.000Z",
+      "summary": "The research framework reverses a common synthetic-data workflow: it validates API calls first, then writes the request a user might make. Google says the approach produces more usable examples at lower cost, though its results remain tied to research benchmarks.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.23.3",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.3",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "research_paper",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "research_paper",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-10T14:59:02.000Z",
+      "summary": "Highlights See the complete change list below. Breaking Changes No known breaking changes. Complete Change List Features feat(core): expand Kimi, Qwen and DeepSeek reasoning presets ( #11349 ) by @callmeYe feat(sessions): record what kind of session registered, and document the registry and wire contract ( #11463 ) by @qqqys feat(web-shell): keep answered questions visible outside processed summaries ( #11461 ) by @ytahdn feat(web-shell): improve session overview navigation and details ( #11238 ) by @wenshao feat(core): add OpenAI Responses API content generator ( #8169 ) by @netbrah...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI Launches the Agents API in Public Beta, Putting the Codex Harness Behind One API Call",
+      "url": "https://www.marktechpost.com/2026/09/10/openai-launches-the-agents-api-in-public-beta-putting-the-codex-harness-behind-one-api-call/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "api_update",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "api_update",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-10T21:21:58.000Z",
+      "summary": "OpenAI has released the Agents API in public beta. It gives developers the same harness and infrastructure that run Codex. OpenAI hosts and maintains the harness. Developers run the agent’s compute in an OpenAI-managed sandbox, their own infrastructure, or a partner sandbox. Is it deployable? Yes. It is live for all developers in public beta. […] The post OpenAI Launches the Agents API in Public Beta, Putting the Codex Harness Behind One API Call appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "September 10, 2026 ToolGrad: Efficient tool-use dataset generation with textual \"gradients\" Machine Intelligence · Natural Language Processing",
+      "url": "https://research.google/blog/toolgrad-efficient-tool-use-dataset-generation-with-textual-gradients/",
+      "source": "Google Research Blog",
+      "tags": [
+        "research_paper",
+        "api_update",
+        "dataset"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "api_update",
+        "dataset"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-11T04:50:47.484Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Introducing North Small Translate: A leading sovereign open-weight machine translation model Outsized performance, right-sized footprint — translation built for speed and cost efficiency. Sep 10, 2026 4 min read",
+      "url": "https://cohere.com/blog/north-small-translate",
+      "source": "Cohere Blog",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "inference"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-10T17:01:47.747Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "SDK TypeScript Release v0.1.12",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.12",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-10T15:52:03.000Z",
+      "summary": "Bundled CLI Version This SDK release bundles CLI version: 0.23.3 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.23.2 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.23.1 Source: CLI built from source (same branch/ref as SDK) Highlights The bundled CLI 0.23.0 includes two fixes requested in #11022 : Managed memory availability now respects the memory.enableManagedAutoMemory setting ( #6941 ). Hosts that disable managed auto memory no longer see...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Datasette 1.0a39 and 0.65.4 security releases",
+      "url": "https://simonwillison.net/2026/Sep/11/datasette-security/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-11T03:27:16.000Z",
+      "summary": "Datasette 1.0a39 and 0.65.4 security releases Today we're releasing two new security patch versions of Datasette: 1.0a39 and 0.65.4 - one for the current alpha series and one for the stable 0.65.x family. These are security fixes which you should apply if you are running a Datasette instance on the public web - in particular if that instance mixes both public and private tables. Following issues reported by Sevban Dönmez , Alex Garcia and I ran an extensive audit of Datasette using Claude Fable 5.1, GPT-5.6, and GPT-6 Astra. We then spent almost a week collaborating on and reviewing the...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Together AI Cuts GPU Cluster Pricing in Half for Interruptible Workloads",
+      "url": "https://superpowerdaily.com/posts/together-ai-cuts-gpu-cluster-pricing-in-half-for-interruptible-workloads",
+      "source": "Superpower Daily",
+      "tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "matching_tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-11T00:09:59.000Z",
+      "summary": "The public preview gives checkpointed jobs a cheaper way to scale, while putting reliability work—and the risk of sudden capacity loss—on customers.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI Agents API 🤖, open model adoption 📈, sharded Postgres 🧑‍💻",
+      "url": "https://tldr.tech/tech/2026-09-11",
+      "source": "TLDR AI",
+      "tags": [
+        "api_update",
+        "open_source"
+      ],
+      "matching_tags": [
+        "api_update",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-11T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Meet Redis LangCache: A Managed Semantic Cache That Cuts LLM API Costs by Up to 90% and Returns Cache Hits Up to 15x Faster",
+      "url": "https://www.marktechpost.com/2026/09/10/meet-redis-langcache-a-managed-semantic-cache-that-cuts-llm-api-costs-by-up-to-90-and-returns-cache-hits-up-to-15x-faster/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "api_update"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-10T22:34:48.000Z",
+      "summary": "Production LLM applications rarely receive a question nobody has asked before. Support assistants and RAG pipelines field the same intents thousands of times a day, each phrased differently, and most stacks treat every phrasing as a fresh, fully billed request. Redis LangCache is a fully managed semantic caching service that sits between the application and […] The post Meet Redis LangCache: A Managed Semantic Cache That Cuts LLM API Costs by Up to 90% and Returns Cache Hits Up to 15x Faster appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Skild AI Taps NVIDIA Physical AI to Teach Robots New Tasks From a Single Video",
+      "url": "https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-10T16:30:35.000Z",
+      "summary": "Manufacturing floors, warehouses and production lines rarely stay fixed — tasks change, layouts shift and new products arrive, and most robots can’t keep up without significant reprogramming. Skild AI’s new S1 robot foundation model helps address this, designed to learn previously unseen, long-horizon tasks from a single video demonstration. The model, launched last week, uses […]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Morgan State Partners With Google Public Sector on an AI Research Campus",
+      "url": "https://superpowerdaily.com/posts/morgan-state-partners-with-google-public-sector-on-an-ai-research-campus",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-10T14:31:49.000Z",
+      "summary": "The university is pairing cloud and GPU access with an in-house AI platform, aiming to grow research capacity without handing governance to its infrastructure provider.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Tiny nanolaser could cut computer energy use in half",
+      "url": "https://www.sciencedaily.com/releases/2026/09/260911003858.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-11T12:03:26.000Z",
+      "summary": "Scientists have created an ultra-small nanolaser that could eventually allow microchips to transmit information with light instead of electricity, potentially making computers faster while cutting energy use roughly in half. Thousands of the lasers could fit on a single chip, opening possibilities for more efficient data centers, smartphones, and advanced medical sensors.",
+      "category": "ai_research"
+    },
+    {
+      "title": "Salesforce Previews an AI Harness to Govern Agents Across Enterprise Stacks",
+      "url": "https://superpowerdaily.com/posts/salesforce-previews-an-ai-harness-to-govern-agents-across-enterprise-stacks",
+      "source": "Superpower Daily",
+      "tags": [
+        "pricing_change",
+        "architecture"
+      ],
+      "matching_tags": [
+        "pricing_change",
+        "architecture"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-11T01:14:06.000Z",
+      "summary": "The planned architecture combines data context, agent controls and model routing rather than asking companies to standardize on one AI stack. Its price and final commercial model remain unknown.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "pnpr 0.1.0-alpha.11",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/pnpr%400.1.0-alpha.11",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-10T16:56:04.000Z",
+      "summary": "pnpr now serves Cargo, Python, and container registries alongside npm, publishes across all of them in one transaction, and signs users in through OIDC. Minor Changes Cargo and Python registries pnpr now serves Cargo and Python registries alongside npm from one instance. Hosted Cargo registries support cargo publish , cargo yank , and crate downloads. Hosted Python registries support pip install --index-url and twine upload . Upstream registries can proxy crates.io and PyPI with checksum verified downloads, and a router can combine sources from all three ecosystems. A registry that serves...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SimpleDesign: A Joint Model for Protein Sequence and Structure Codesign",
+      "url": "https://machinelearning.apple.com/research/simpledesign-protein-codesign",
+      "source": "Apple Machine Learning",
+      "tags": [
+        "research_paper",
+        "training"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "training"
+      ],
+      "importance": 0.54,
+      "date": "2026-09-11T00:00:00.000Z",
+      "summary": "Proteins are fundamental to biological processes, with their function determined by the complex interplay between the amino acid sequence and the three-dimensional structure. Developing generative models capable of understanding this intrinsically multi-modal relationship is crucial for fields like drug discovery and protein engineering. Existing models often rely on a multi-stage training process where autoencoders that tokenize data into latent representations are trained in a first stage. Secondly, a generative model is trained on the latent representation of the autoencoder(s), i.e…",
+      "category": "ai_research"
+    }
+  ]
+}

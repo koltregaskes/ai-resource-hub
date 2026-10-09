@@ -1,0 +1,353 @@
+{
+  "generated": "2026-09-30T17:45:06.361Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Perplexity Introduces Photon: A Rust-Based Retrieval Engine That Cuts p99 Latency From 800 ms to 65 ms",
+      "url": "https://www.marktechpost.com/2026/09/30/perplexity-introduces-photon-a-rust-based-retrieval-engine-that-cuts-p99-latency-from-800-ms-to-65-ms/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "api_update",
+        "inference",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "api_update",
+        "inference",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-30T08:26:52.000Z",
+      "summary": "Perplexity has released Photon, an in-house retrieval and ranking engine written in Rust. It replaces an open-source engine Perplexity had forked for its AI-native search stack. Photon now handles retrieval and ranking for all production traffic. It also powers a new Fast Search mode in the Perplexity Search API. Perplexity reports single-call latency of 160 […] The post Perplexity Introduces Photon: A Rust-Based Retrieval Engine That Cuts p99 Latency From 800 ms to 65 ms appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "v16.4.0-canary.53",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.4.0-canary.53",
+      "source": "GitHub Releases · Next.js 15",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update",
+        "inference"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-29T23:51:45.000Z",
+      "summary": "Misc Changes [create-next-app] Enable Cache Components by default in create-next-app: #99436 Include async module evaluation in client loading metrics: #99427 turbo-tasks-backend: fix leaf distance tracing compilation: #99443 Enable proxy export tests in deploy mode: #99400 docs: record API stabilization across Next.js 16 releases: #99420 test: migrate and explain custom server deploy exclusions: #98994 test: migrate and explain root-inference deploy exclusions: #99012 Enable build diagnostic suites in deploy mode: #99402 test(turbopack): remove filesystem fuzzer unit tests: #99089...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NVIDIA Releases Kumo Tabular to Predict from Tables Without Task-Specific Training",
+      "url": "https://superpowerdaily.com/posts/nvidia-releases-kumo-tabular-to-predict-from-tables-without-task-specific-training",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-29T16:39:38.000Z",
+      "summary": "The downloadable model uses labeled rows as context for new predictions. NVIDIA reports strong benchmark results, but warns that accuracy can slip when real tables differ from its training range.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SDK TypeScript Release v0.1.17",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.17",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-29T15:12:40.000Z",
+      "summary": "Bundled CLI Version This SDK release bundles CLI version: 0.24.7 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.24.6 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.24.5 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.24.3 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.24.1 Source: CLI built from source (same branch/ref as...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NVIDIA Kumo Tabular Sets a New Accuracy-Efficiency Frontier for Tabular Prediction",
+      "url": "https://huggingface.co/blog/nvidia/kumo-tabular",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-29T15:30:38.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "OpenClaw Releases Free AI-Agent Management Software for Internal Enterprise Pilots",
+      "url": "https://superpowerdaily.com/posts/openclaw-releases-free-ai-agent-management-software-for-internal-enterprise-pilots",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "architecture"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-30T02:04:21.000Z",
+      "summary": "Companies can replace the models and execution components while keeping centralized governance. But the foundation recommends internal pilots, with a 1.0 release and security reference architecture still pending.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Liquid AI Releases d1: A Decision Model That Returns Calibrated Probabilities With Zero Output Tokens",
+      "url": "https://www.marktechpost.com/2026/09/29/liquid-ai-releases-d1-a-decision-model-that-returns-calibrated-probabilities-with-zero-output-tokens/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-29T21:47:09.000Z",
+      "summary": "Liquid AI has released d1, a decision model built for structured choices instead of text generation. You give it context and a set of typed questions. It returns calibrated probabilities across a fixed set of outcomes in a single call, with zero generated tokens. The target is the work many teams still send to general […] The post Liquid AI Releases d1: A Decision Model That Returns Calibrated Probabilities With Zero Output Tokens appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenAI Introduces Private Intelligence to Limit Staff Access to Customer AI Data",
+      "url": "https://superpowerdaily.com/posts/openai-introduces-private-intelligence-to-limit-staff-access-to-customer-ai-data",
+      "source": "Superpower Daily",
+      "tags": [
+        "pricing_change",
+        "inference"
+      ],
+      "matching_tags": [
+        "pricing_change",
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-29T19:50:16.000Z",
+      "summary": "The initiative separates automated safety checks from employee access. But its zero-retention option still requires encrypted records in customer-controlled storage, and the forthcoming inference service lacks pricing and support details.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI Launches dots: Always-On GPT-6 Astra Agents That Work From Their Own Cloud Computers",
+      "url": "https://www.marktechpost.com/2026/09/29/openai-launches-dots-always-on-gpt-6-astra-agents-that-work-from-their-own-cloud-computers/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-29T18:30:13.000Z",
+      "summary": "OpenAI just introduced dots at their DevDay today. Dots are persistent AI agents powered by GPT-6 Astra. Each dot gets its own cloud computer and browser. It works across 4,000+ apps through ChatGPT plugins and keeps going after you log off. Is it deployable today? Yes, as a managed product. Dots are rolling out in […] The post OpenAI Launches dots: Always-On GPT-6 Astra Agents That Work From Their Own Cloud Computers appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Oracle Releases 25 AI Apps Built to Plan and Execute Business Tasks",
+      "url": "https://superpowerdaily.com/posts/oracle-releases-25-ai-apps-built-to-plan-and-execute-business-tasks",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-29T14:44:01.000Z",
+      "summary": "Fusion Claw separates AI planning from calculations and transactions. Customers can require approval before it acts, but Oracle has not provided production-performance results.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Quoting Anthropic Frontier Red Team",
+      "url": "https://simonwillison.net/2026/Sep/29/anthropic-frontier-red-team/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "benchmark",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "research_paper"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-29T22:20:28.000Z",
+      "summary": "We evaluate several models on 100 tasks from the [internal Binary Exploitation benchmark] (selected at random), and find that GLM-5.3 develops full control flow hijacks in 4% of the trials; Claude Mythos Preview did so in 6%. Although GLM-5.3 performs below Claude Mythos Preview here, a meaningful threshold has clearly been crossed: earlier models, like Claude Opus 4.6 and GLM-5.2, do not succeed in any of them. &mdash; Anthropic Frontier Red Team , GLM-5.3 and the spread of advanced cyber capabilities Tags: anthropic , generative-ai , ai-security-research , glm , ai , ai-in-china , llms",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nebius Opens 2026 Physical AI Awards: Five $150K Compute Credit Prizes",
+      "url": "https://www.marktechpost.com/2026/09/29/nebius-opens-2026-physical-ai-awards-five-150k-compute-prizes/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-29T17:48:10.000Z",
+      "summary": "Nebius and NVIDIA are running the 2026 Physical AI Awards for startups with products in the field. Five category winners each get $150,000 in compute credits, joint promotion, executive mentorship, and seats at an executive dinner. Applications close October 25. The post Nebius Opens 2026 Physical AI Awards: Five $150K Compute Credit Prizes appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Nebius Opens 2026 Physical AI Awards: Five $150K Compute Prizes, Nine Judges, and an October 25 Deadline",
+      "url": "https://www.marktechpost.com/2026/09/29/nebius-opens-2026-physical-ai-awards-five-150k-compute-prizes-nine-judges-and-an-october-25-deadline/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-29T16:17:34.000Z",
+      "summary": "Nebius and NVIDIA are running the 2026 Physical AI Awards for startups with products in the field. Five category winners each get $150,000 in compute credits, joint promotion, executive mentorship, and seats at an executive dinner. Applications close October 25. The post Nebius Opens 2026 Physical AI Awards: Five $150K Compute Prizes, Nine Judges, and an October 25 Deadline appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Release v0.62.0",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.62.0",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-29T21:17:07.000Z",
+      "summary": "What's Changed fix(a2a-server): add early return on unsupported store in tasks metadata endpoint by @jesussamuel-byte in #29334 Changelog for v0.61.0-preview.0 by @gemini-cli-robot in #29344 Changelog for v0.60.0 by @gemini-cli-robot in #29345 fix(core,acp): format MCP tool call titles as structured signatures and segregate explanations by @jvargassanchez-dot in #29341 chore(release): bump version to 0.62.0-nightly.20260915.gae28844fb by @gemini-cli-robot in #29346 fix(core): retain oauth refresh token on refresh and make credential deletion idempotent by @villahernandez-coder in #29339...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Safety Over Speed: OpenAI Scraps GPT-6.1 Astra Release",
+      "url": "https://aimagazine.com/news/safety-over-speed-openai-scraps-gpt-6-1-astra-release",
+      "source": "AI Magazine",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-29T17:00:34.824Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Cohere Releases Embed 5 With Compatible Models for Indexing and Live Search",
+      "url": "https://superpowerdaily.com/posts/cohere-releases-embed-5-with-compatible-models-for-indexing-and-live-search",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-30T16:03:30.000Z",
+      "summary": "Pro and Fast share an embedding space, so developers can use different models for stored documents and incoming queries. Cohere recommends that split, but its release announcement does not quantify the performance tradeoff.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "CoreWeave Opens Limited Access to Nvidia’s Vera Rubin, With Cognition First in Production",
+      "url": "https://superpowerdaily.com/posts/coreweave-opens-limited-access-to-nvidia-s-vera-rubin-with-cognition-first-in-production",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-09-30T15:33:54.000Z",
+      "summary": "Cognition’s customer benchmarks show higher token throughput at matched responsiveness, but they do not measure how much faster Devin completes coding assignments.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI unveils AI assistant 'dots' while safety worries delay new model Sam Altman spoke in San Francisco during OpenAI’s annual event for tech developers.",
+      "url": "https://www.bbc.com/news/articles/cw7v42rp083eo",
+      "source": "BBC AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-30T04:51:20.608Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI launches GPT-6.1 Sol, says it nearly matches GPT-6 Astra and costs less",
+      "url": "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-29T17:15:00.000Z",
+      "summary": "OpenAI says GPT-6.1 Sol delivers significant improvements over GPT-6 Sol across complex professional tasks, including code writing and debugging, document understanding, and executing multistep business workflows.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Everything OpenAI announced at the DevDay 2026 keynote",
+      "url": "https://superpowerdaily.com/posts/everything-openai-announced-devday-2026-keynote",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-29T19:39:03.000Z",
+      "summary": "Dots, ChatGPT Space, GPT-6.1 Sol, Ultrafast, Codex Cloud and more: the complete keynote recap, with prices, availability and what is still coming.",
+      "category": "ai_tools"
+    }
+  ]
+}

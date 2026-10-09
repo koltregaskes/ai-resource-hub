@@ -1,9 +1,181 @@
 {
-  "generated": "2026-05-25T14:37:38.131Z",
+  "generated": "2026-08-26T03:07:56.929Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-04-24",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 11,
+  "archived_story_count": 322,
+  "articles": [
+    {
+      "title": "GPT-5.5 is now available in the API.\n\nThe model brings higher intelligence and stronger token efficiency to complex work, helping tasks get done with fewer retries.",
+      "url": "https://x.com/OpenAIDevs/status/2047742566410736090",
+      "source": "X / @openaidevs",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.86,
+      "date": "2026-04-24T18:20:47.000Z",
+      "summary": "GPT-5.5 is now available in the API.\n\nThe model brings higher intelligence and stronger token efficiency to complex work, helping tasks get done with fewer retries.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GPT 5.5 Arrives, DeepSeek V4 Drops, and the Compute War Intensifies",
+      "url": "https://www.youtube.com/watch?v=jz0rNhfAKo8",
+      "source": "AI Explained (YouTube)",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.85,
+      "date": "2026-04-24T18:45:02.000Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Crush v0.62.1 released",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.62.1",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "api_update",
+        "open_source"
+      ],
+      "matching_tags": [
+        "api_update",
+        "open_source"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-24T20:28:22.000Z",
+      "summary": "# Stability release\r\n\r\nOpen Source :tm: is all about community, and this release got some nice contributions from our loved users!\r\n\r\n## MiniMax fix\r\n\r\nCrush wasn't allowing users to  _some_ MiniMax API keys, but now all keys should work.\r\n\r\nFor context, MiniMax does not have an endpoint to validate API keys. We were checking they at least start with `sk-`, but not all keys from MiniMax have this prefix.\r\n\r\nKudos to @flynn-eye for the help with this one!\r\n\r\n## Fantasy fix\r\n\r\n@carsonfarmer made [",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Gemini CLI: Release v0.40.0-preview.3",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.40.0-preview.3",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-24T02:10:01.000Z",
+      "summary": "**Full Changelog**: https://github.com/google-gemini/gemini-cli/compare/v0.40.0-preview.2...v0.40.0-preview.3",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen Code v0.15.2 released",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.15.2",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.9400000000000001,
+      "date": "2026-04-24T12:11:44.000Z",
+      "summary": "## What's Changed\n* fix(core): treat empty 'pages' parameter as unset in ReadFile by @zhangxy-zju in https://github.com/QwenLM/qwen-code/pull/3559\n* feat(session): auto-title sessions via fast model, add /rename --auto by @wenshao in https://github.com/QwenLM/qwen-code/pull/3540\n* fix(i18n): sync mismatched keys between en.js and zh.js by @doudouOUC in https://github.com/QwenLM/qwen-code/pull/3534\n* fix(cli): remove residual blank lines after MCP init completes by @BZ-D in https://github.com/Qwe",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google to invest up to $40B in Anthropic in cash and compute",
+      "url": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-24T20:00:30.000Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Apr 24, 2026AnnouncementsAnthropic and NEC collaborate to build Japan’s largest AI engineering workforce",
+      "url": "https://www.anthropic.com/news/anthropic-nec",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-24T04:06:50.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Gemini CLI v0.39.1 released",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.39.1",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-04-24T02:11:26.000Z",
+      "summary": "**Full Changelog**: https://github.com/google-gemini/gemini-cli/compare/v0.39.0...v0.39.1",
+      "category": "ai_tools"
+    },
+    {
+      "title": "DeepSeek-V4-Flash",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-24T03:20:37.000Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "DeepSeek-V4-Pro",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-04-24T03:07:54.000Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "GPT-5.5 is now available in Devin as an Agent Preview!\n\nGPT-5.5 has set a new bar for what's possible with Devin. It runs longer and more autonomously than any GPT model we've tested, surfacing bugs no other model can catch, and investigating and fixing production issues",
+      "url": "https://x.com/cognition/status/2047743153461936257",
+      "source": "X / @cognition",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-24T18:23:07.000Z",
+      "summary": "GPT-5.5 is now available in Devin as an Agent Preview!\n\nGPT-5.5 has set a new bar for what's possible with Devin. It runs longer and more autonomously than any GPT model we've tested, surfacing bugs no other model can catch, and investigating and fixing production issues",
+      "category": "ai_tools"
+    }
+  ]
 }

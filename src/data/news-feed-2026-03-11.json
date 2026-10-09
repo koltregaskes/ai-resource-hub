@@ -1,9 +1,140 @@
 {
-  "generated": "2026-05-25T14:37:36.910Z",
+  "generated": "2026-08-26T03:04:06.306Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-03-11",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 8,
+  "archived_story_count": 177,
+  "articles": [
+    {
+      "title": "Together AI Brings NVIDIA Nemotron 3 to Developers on Day 0",
+      "url": "https://www.together.ai/blog/nvidia-nemotron-3-super",
+      "source": "Together AI Blog",
+      "tags": [
+        "api_update",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "api_update",
+        "inference",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-03-11T00:00:00.000Z",
+      "summary": "NVIDIA Nemotron 3 Super is now available on Together AI Dedicated Inference, delivering efficient multi-agent reasoning, a 1M-token context window, and production-grade deployment on managed infrastructure.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AnnouncementsFeb 5, 2026Introducing Claude Opus 4.6We’re upgrading our smartest model. Across agentic coding, computer use, tool use, search, and finance, Opus 4.6 is an industry-leading model, often by wide margin.",
+      "url": "https://www.anthropic.com/news/claude-opus-4-6",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-03-11T17:28:58.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "GitHub Releases · pnpm: pnpm 11 Alpha 14",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v11.0.0-alpha.14",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-03-11T00:16:34.000Z",
+      "summary": "### Major Changes #### Store * Runtime dependencies are always linked from the global virtual store [#10233](https://github.com/pnpm/pnpm/pull/10233). * Optimized index file format to store the hash algorithm once per file instead of repeating it for every file entry. Each file entry now stores only the hex digest instead of the full integrity string (` - `). Using hex format improves performance since file paths in the content-addressable store use hex representation, eliminating base64-to-hex conversion during path lookups. * Store version bumped to v11. * Store the bundled manifest (name, version, bin, engines, scripts, etc.) directly in the package index file, eliminating the need to read `package.json` from the content-addressable store during resolution and installation. This reduces I/O and speeds up repeat installs [#10473](https://github.com/pnpm/pnpm/pull/10473). * Use SQLite for storing package index in the content-addressable store. Instead of individual JSON files under `$",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ProductFeb 17, 2026Introducing Claude Sonnet 4.6Sonnet 4.6 delivers frontier performance across coding, agents, and professional work at scale.",
+      "url": "https://www.anthropic.com/news/claude-sonnet-4-6",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.94,
+      "date": "2026-03-11T17:28:36.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Rails testing on autopilot: Building an agent that writes what developers won't",
+      "url": "https://mistral.ai/news/rails-testing-on-autopilot-building-an-agent-that-writes-what-developers-wont/",
+      "source": "Mistral AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.98,
+      "date": "2026-03-11T12:00:00.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Autonomous context compression",
+      "url": "https://blog.langchain.com/autonomous-context-compression/",
+      "source": "LangChain Blog",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-03-11T18:24:27.000Z",
+      "summary": "TL;DR: We&apos;ve added a tool to the Deep Agents SDK (Python) and CLI that allows models to compress their own context windows at opportune times. Motivation Context compression is an action that reduces the information in an agent&#x2019;s working memory. Older messages are replaced by",
+      "category": "ai_agents"
+    },
+    {
+      "title": "Mar 11, 2026AnnouncementsIntroducing The Anthropic Institute",
+      "url": "https://www.anthropic.com/news/the-anthropic-institute",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-03-11T15:17:09.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Mar 10, 2026AnnouncementsSydney will become Anthropic’s fourth office in Asia-Pacific",
+      "url": "https://www.anthropic.com/news/sydney-fourth-office-asia-pacific",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-03-11T02:10:54.000Z",
+      "summary": null,
+      "category": "ai_models"
+    }
+  ]
 }

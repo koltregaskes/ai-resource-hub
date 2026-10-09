@@ -120,40 +120,6 @@
   color-scheme: dark;
 }
 
-[data-theme="terminal"] {
-  --color-bg-primary: #080604;
-  --color-bg-secondary: #100c08;
-  --color-bg-tertiary: #18110b;
-  --color-bg-card: rgba(16, 12, 8, 0.94);
-  --color-bg-hover: #23170d;
-  --color-accent: #ff9b5c;
-  --color-accent-hover: #ffc08f;
-  --color-accent-muted: #f2c078;
-  --color-accent-glow: rgba(255, 155, 92, 0.18);
-  --color-text-primary: #f7ead7;
-  --color-text-secondary: #d7c3a6;
-  --color-text-muted: #9e8a70;
-  --color-border: rgba(255, 202, 142, 0.12);
-  --color-border-hover: rgba(255, 202, 142, 0.24);
-  --color-border-accent: rgba(255, 155, 92, 0.36);
-  --color-border-strong: rgba(255, 202, 142, 0.2);
-  --font-sans: 'IBM Plex Mono', ui-monospace, monospace;
-  --font-display: 'IBM Plex Mono', ui-monospace, monospace;
-  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
-  color-scheme: dark;
-}
-
-.bg-primary { background-color: var(--color-bg-primary); }
-.bg-secondary { background-color: var(--color-bg-secondary); }
-.bg-tertiary { background-color: var(--color-bg-tertiary); }
-.bg-card { background-color: var(--color-bg-card); }
-.bg-hover { background-color: var(--color-bg-hover); }
-.text-primary { color: var(--color-text-primary); }
-.text-secondary { color: var(--color-text-secondary); }
-.text-muted { color: var(--color-text-muted); }
-.border-accent { border-color: var(--color-border-accent); }
-.border-hover { border-color: var(--color-border-hover); }
-
 html {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
@@ -3095,11 +3061,6 @@ a {
   display: none;
 }
 
-.airh-layout-panel[data-airh-layout-panel="dossier"],
-.airh-layout-panel[data-airh-layout-panel="monitor"] {
-  display: none !important;
-}
-
 .airh-ticker {
   border-bottom: 1px solid var(--color-border);
   background: linear-gradient(180deg, var(--color-bg-tertiary), var(--color-bg-primary));
@@ -4734,7 +4695,7 @@ a {
   display: inline-flex;
   gap: 1.25rem;
   min-width: max-content;
-  animation: airh-ticker 54s linear infinite;
+  animation: airh-marquee 54s linear infinite;
 }
 
 .airh-site-ticker:hover .airh-site-ticker-stream {
@@ -4772,9 +4733,11 @@ body.airh-sitewide-system:not(.airh-home-page) main {
   min-width: 0;
   overflow-x: hidden;
   background:
-    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-tertiary) 30%, transparent), transparent 18rem),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-border) 36%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-border) 30%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-tertiary) 22%, transparent), transparent 18rem),
     var(--color-bg-primary);
-  background-size: auto, auto;
+  background-size: 160px 160px, 160px 160px, auto, auto;
 }
 
 body.airh-sitewide-system:not(.airh-home-page) main * {
@@ -4895,60 +4858,15 @@ body.airh-sitewide-system:not(.airh-home-page) main :where(a[class*="p-"][class*
 
 html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main {
   background:
-    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-tertiary) 30%, transparent), transparent 18rem),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-border) 44%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-border) 36%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-tertiary) 24%, transparent), transparent 16rem),
     var(--color-bg-primary);
-  background-size: auto, auto;
+  background-size: 96px 56px, 96px 56px, auto, auto;
 }
 
 html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main :where(table) {
   font-family: var(--font-mono);
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
-  width: min(100%, 1440px);
-  margin-inline: auto !important;
-  padding: 0.78rem 1rem 3.5rem !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
-  max-width: none !important;
-  margin-inline: 0 !important;
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.desk-table-wrap, .table-scroll-container, .airh-table-scroll) {
-  overflow-x: auto;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  background: var(--color-bg-card);
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.desk-table, .table-scroll-container table, .airh-leaderboard-table) {
-  min-width: 980px;
-  border-collapse: collapse;
-  font-size: 0.82rem;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(th) {
-  background: var(--color-bg-secondary) !important;
-  padding: 0.58rem 0.72rem !important;
-  color: var(--color-text-muted) !important;
-  cursor: default;
-  font-family: var(--font-mono);
-  font-size: 0.64rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(td) {
-  padding: 0.64rem 0.72rem !important;
-  color: var(--color-text-secondary);
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(tbody tr:hover td) {
-  background: var(--color-bg-hover) !important;
 }
 
 html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main :where(a[class*="p-"][class*="border"], [class*="bg-(--color-bg-card)"][class*="border"]) {
@@ -4956,15 +4874,12 @@ html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-h
 }
 
 html[data-airh-display-mode="spreadsheet"] .airh-tool-icon[data-airh-layout-switch="spreadsheet"].is-active,
+html[data-airh-display-mode="dossier"] .airh-tool-icon[data-airh-layout-switch="dossier"].is-active,
+html[data-airh-display-mode="monitor"] .airh-tool-icon[data-airh-layout-switch="monitor"].is-active,
 html[data-airh-display-mode="terminal"] .airh-tool-icon[data-airh-layout-switch="terminal"].is-active {
   border-color: var(--color-accent);
   background: color-mix(in srgb, var(--color-accent) 14%, var(--color-bg-tertiary));
   color: var(--color-text-primary);
-}
-
-.airh-tool-icon[data-airh-layout-switch="dossier"],
-.airh-tool-icon[data-airh-layout-switch="monitor"] {
-  display: none !important;
 }
 
 html[data-airh-display-mode="dossier"] body {
@@ -5955,8 +5870,8 @@ html[data-airh-display-mode="monitor"] body.airh-sitewide-system:not(.airh-home-
   }
 }
 
-/* Template parity route shell. Non-home pages keep one shared content frame so
-   spreadsheet and terminal modes do not drift route-by-route. */
+/* Template parity route shell.
+   Non-home pages use the same Dossier and Monitor layout contracts as the homepage. */
 body.airh-sitewide-system:not(.airh-home-page) .airh-route-template-chrome {
   display: none;
 }
@@ -6925,436 +6840,6 @@ html[data-airh-display-mode="terminal"] .airh-route-terminal-hints span {
   html[data-airh-display-mode="terminal"] .airh-route-terminal-log span {
     display: inline-block;
     min-width: 4.25rem;
-  }
-
-  html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-commandbar {
-    grid-template-columns: 1fr;
-    gap: 0.45rem;
-  }
-
-  html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
-    padding: 0.85rem !important;
-  }
-}
-
-/* Final AIRH mode parity layer.
-   Older route skins remain in the file, so the two supported modes need one
-   late source of truth for page background, alignment, tables, and chrome. */
-html[data-airh-display-mode="spreadsheet"] {
-  --airh-spreadsheet-page-bg:
-    linear-gradient(180deg, color-mix(in srgb, var(--color-bg-tertiary) 30%, transparent), transparent 18rem),
-    var(--color-bg-primary);
-  --airh-spreadsheet-band-bg: linear-gradient(180deg, var(--color-bg-tertiary), var(--color-bg-primary));
-}
-
-html[data-airh-display-mode="terminal"] {
-  --airh-terminal-page-bg:
-    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 18rem),
-    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-accent) 4%, transparent) 0 1px, transparent 1px 4px),
-    var(--color-bg-primary);
-  --airh-terminal-shell-bg: color-mix(in srgb, var(--color-bg-primary) 92%, var(--color-bg-secondary));
-  --airh-terminal-panel-bg: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary));
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system,
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system main#main-content,
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system .airh-home,
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system main.airh-route-template-host {
-  background-color: var(--color-bg-primary) !important;
-  background-image: linear-gradient(180deg, color-mix(in srgb, var(--color-bg-tertiary) 30%, transparent), transparent 18rem) !important;
-  background-size: auto !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] .airh-compact-topbar {
-  border-bottom-color: var(--color-border-strong) !important;
-  background: color-mix(in srgb, var(--color-bg-primary) 96%, var(--color-bg-secondary)) !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] .airh-site-ticker,
-html[data-airh-display-mode="spreadsheet"] .airh-ticker {
-  border-bottom-color: var(--color-border) !important;
-  background-color: var(--color-bg-primary) !important;
-  background-image: linear-gradient(180deg, var(--color-bg-tertiary), var(--color-bg-primary)) !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
-  width: 100% !important;
-  min-height: calc(100vh - 48px);
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.airh-route-sheet-head {
-  display: none;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-template-chrome {
-  display: none !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-sheet-head {
-  display: block !important;
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  border-bottom: 1px solid var(--color-border) !important;
-  background-color: var(--color-bg-primary) !important;
-  background-image: linear-gradient(180deg, var(--color-bg-tertiary), var(--color-bg-primary)) !important;
-  box-shadow: none !important;
-  padding: 0.72rem 1rem !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] .airh-route-sheet-tabs {
-  display: flex;
-  width: 100%;
-  max-width: none;
-  overflow-x: auto;
-  border: 1px solid var(--color-border) !important;
-  border-radius: 8px;
-  background-color: var(--color-bg-card);
-}
-
-html[data-airh-display-mode="spreadsheet"] .airh-route-sheet-tabs span {
-  flex: 0 0 auto;
-  border-right: 1px solid var(--color-border);
-  padding: 0.58rem 0.82rem;
-  color: var(--color-text-secondary);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-html[data-airh-display-mode="spreadsheet"] .airh-route-sheet-tabs span:last-child {
-  border-right: 0;
-  margin-left: auto;
-  color: var(--color-text-muted);
-  text-transform: none;
-}
-
-html[data-airh-display-mode="spreadsheet"] .airh-route-sheet-tabs span.is-active {
-  background-color: var(--color-bg-tertiary);
-  color: var(--color-text-primary);
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 auto !important;
-  overflow: visible !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  padding: 0.78rem 1rem 3.5rem !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
-  width: 100% !important;
-  max-width: none !important;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(nav[aria-label="Breadcrumb"]) {
-  margin-bottom: 0.9rem !important;
-  border: 1px solid var(--color-border) !important;
-  border-radius: 6px !important;
-  background-color: var(--color-bg-card) !important;
-  padding: 0.58rem 0.72rem !important;
-  color: var(--color-text-muted) !important;
-  font-family: var(--font-mono) !important;
-  font-size: 0.72rem !important;
-  letter-spacing: 0.04em !important;
-  text-transform: uppercase !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1) {
-  max-width: none !important;
-  color: var(--color-text-primary) !important;
-  font-family: var(--font-display) !important;
-  font-size: clamp(1.75rem, 2.5vw, 2.65rem) !important;
-  font-weight: 750 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.04 !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.desk-header, .desk-note, .desk-section, .mb-8, .rounded-\[1\.75rem\]) {
-  border-color: var(--color-border) !important;
-  border-radius: 8px !important;
-  background-color: var(--color-bg-card) !important;
-  background-image: none !important;
-  box-shadow: none !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.desk-header, .desk-section-head, .activity-toolbar, .hub-home-brief-head, .hub-home-card-head) {
-  align-items: flex-start;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.desk-table-wrap, .table-scroll-container, .airh-table-scroll) {
-  overflow-x: auto !important;
-  max-width: 100% !important;
-  border: 1px solid var(--color-border) !important;
-  border-radius: 8px !important;
-  background-color: var(--color-bg-card) !important;
-  background-image: none !important;
-  box-shadow: none !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(.desk-table, .table-scroll-container table, .airh-leaderboard-table, table) {
-  width: 100% !important;
-  min-width: 980px;
-  border-collapse: collapse !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  color: var(--color-text-secondary);
-  font-family: var(--font-mono) !important;
-  font-size: 0.82rem !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(th) {
-  border-bottom: 1px solid var(--color-border) !important;
-  background-color: var(--color-bg-secondary) !important;
-  background-image: none !important;
-  padding: 0.58rem 0.72rem !important;
-  color: var(--color-text-muted) !important;
-  font-family: var(--font-mono) !important;
-  font-size: 0.64rem !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.12em !important;
-  text-align: left;
-  text-transform: uppercase !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(td) {
-  border-bottom: 1px solid var(--color-border) !important;
-  padding: 0.64rem 0.72rem !important;
-  color: var(--color-text-secondary);
-  vertical-align: middle;
-}
-
-html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(tbody tr:hover td) {
-  background-color: var(--color-bg-hover) !important;
-  background-image: none !important;
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system,
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system .airh-home,
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system .airh-terminal-panel,
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system main.airh-route-template-host {
-  background-color: var(--color-bg-primary) !important;
-  background-image:
-    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 18rem),
-    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-accent) 4%, transparent) 0 1px, transparent 1px 4px) !important;
-  background-size: auto !important;
-  color: var(--color-text-primary);
-  font-family: var(--font-mono);
-}
-
-html[data-airh-display-mode="terminal"] .airh-compact-topbar,
-html[data-airh-display-mode="terminal"] .airh-site-ticker,
-html[data-airh-display-mode="terminal"] .airh-ticker,
-html[data-airh-display-mode="terminal"] .airh-theme-panel,
-html[data-airh-display-mode="terminal"] .airh-compact-menu-panel {
-  border-color: var(--color-border-strong) !important;
-  background-color: color-mix(in srgb, var(--color-bg-primary) 92%, var(--color-bg-secondary)) !important;
-  background-image: none !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] .airh-site-ticker-stream,
-html[data-airh-display-mode="spreadsheet"] .airh-ticker-stream,
-html[data-airh-display-mode="terminal"] .airh-site-ticker-stream,
-html[data-airh-display-mode="terminal"] .airh-ticker-stream {
-  animation: airh-ticker 54s linear infinite !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] .airh-ticker-stream {
-  animation-duration: 110s !important;
-}
-
-html[data-airh-display-mode="spreadsheet"] .airh-site-ticker:hover .airh-site-ticker-stream,
-html[data-airh-display-mode="spreadsheet"] .airh-ticker:hover .airh-ticker-stream,
-html[data-airh-display-mode="terminal"] .airh-site-ticker:hover .airh-site-ticker-stream,
-html[data-airh-display-mode="terminal"] .airh-ticker:hover .airh-ticker-stream {
-  animation-play-state: paused !important;
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
-  display: block !important;
-  width: 100% !important;
-  min-height: calc(100vh - 48px);
-  margin: 0 !important;
-  overflow-x: hidden;
-  background-color: var(--color-bg-primary) !important;
-  background-image:
-    linear-gradient(180deg, color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 18rem),
-    repeating-linear-gradient(0deg, color-mix(in srgb, var(--color-accent) 4%, transparent) 0 1px, transparent 1px 4px) !important;
-  background-size: auto !important;
-  padding: 1rem 1rem 3rem !important;
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-head,
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-log,
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame,
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-commandbar,
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-hints {
-  width: min(100%, 1180px) !important;
-  max-width: min(100%, 1180px) !important;
-  margin-right: auto !important;
-  margin-left: auto !important;
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-head {
-  display: block !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  overflow: hidden !important;
-  border: 1px solid var(--color-border-strong) !important;
-  border-radius: 8px 8px 0 0 !important;
-  background-color: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary)) !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-log,
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  border: 1px solid var(--color-border-strong) !important;
-  border-top: 0 !important;
-  border-radius: 0 !important;
-  background-color: color-mix(in srgb, var(--color-bg-primary) 92%, var(--color-bg-secondary)) !important;
-  background-image: none !important;
-  box-shadow: none !important;
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-log {
-  display: block !important;
-  color: var(--color-text-secondary);
-  padding: 0.9rem 1rem !important;
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
-  overflow: visible !important;
-  color: var(--color-text-secondary);
-  font-family: var(--font-mono);
-  padding: 0 !important;
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame > :where(section, article, div, main) {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  border: 0 !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  padding: 1.1rem !important;
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1) {
-  max-width: none;
-  color: var(--color-text-primary) !important;
-  font-family: var(--font-mono) !important;
-  font-size: clamp(1.45rem, 4vw, 3rem) !important;
-  font-weight: 800 !important;
-  letter-spacing: 0 !important;
-  line-height: 1.08 !important;
-  text-transform: none !important;
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h1)::before {
-  content: "airh > ";
-  color: var(--color-accent);
-  font-size: 0.65em;
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h2)::before {
-  content: "$ ";
-  color: var(--color-accent);
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(h3)::before {
-  content: "[ok] ";
-  color: var(--color-accent);
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(table) {
-  border: 1px solid var(--color-border-strong) !important;
-  background-color: color-mix(in srgb, var(--color-bg-secondary) 78%, #000) !important;
-  background-image: none !important;
-  font-family: var(--font-mono) !important;
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) .airh-route-content-frame :where(th) {
-  color: var(--color-accent) !important;
-  font-family: var(--font-mono) !important;
-  font-size: 0.72rem !important;
-  letter-spacing: 0 !important;
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-commandbar {
-  display: grid !important;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  border: 1px solid var(--color-border-strong) !important;
-  border-top: 0 !important;
-  border-radius: 0 0 8px 8px !important;
-  background-color: color-mix(in srgb, var(--color-bg-secondary) 88%, var(--color-bg-primary)) !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  padding: 0.75rem 1rem !important;
-}
-
-html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-hints {
-  display: flex !important;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin-top: 0.65rem !important;
-  margin-bottom: 0 !important;
-  border: 0 !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
-html[data-airh-display-mode="dossier"],
-html[data-airh-display-mode="monitor"] {
-  --airh-retired-mode-display: spreadsheet;
-}
-
-html[data-airh-display-mode="dossier"] .airh-route-template-chrome,
-html[data-airh-display-mode="monitor"] .airh-route-template-chrome,
-html[data-airh-display-mode="dossier"] .airh-layout-panel,
-html[data-airh-display-mode="monitor"] .airh-layout-panel {
-  display: none !important;
-}
-
-@media (max-width: 760px) {
-  html[data-airh-display-mode="spreadsheet"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-content-frame {
-    padding-right: 0.75rem !important;
-    padding-left: 0.75rem !important;
-  }
-
-  html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main.airh-route-template-host {
-    padding-right: 0.75rem !important;
-    padding-left: 0.75rem !important;
-  }
-
-  html[data-airh-display-mode="terminal"] .airh-route-terminal-masthead,
-  html[data-airh-display-mode="terminal"] .airh-route-terminal-titlebar {
-    align-items: stretch;
-    flex-direction: column;
   }
 
   html[data-airh-display-mode="terminal"] body.airh-sitewide-system:not(.airh-home-page) main#main-content > .airh-route-terminal-commandbar {

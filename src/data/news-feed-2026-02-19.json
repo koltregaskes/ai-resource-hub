@@ -1,9 +1,89 @@
 {
-  "generated": "2026-05-25T14:37:36.270Z",
+  "generated": "2026-08-26T03:02:16.599Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-19",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 5,
+  "archived_story_count": 159,
+  "articles": [
+    {
+      "title": "GitHub Releases · Crush: v0.43.2",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.43.2",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-02-19T14:19:27.000Z",
+      "summary": "# A Quick Patch This release fixes two regressions from the previous release: * Cache work was reverted in favor of a new optimization, due to a bug on UI rendering. * A potential panic was fixed. See you in the next release, Charm ## Changelog ### Fixed * 72bb0866a4481e5dcb695e3d7149dcefe5185148: Revert \"fix(ui): cache blurred and focused renderings separately for assistant messages (#2252)\" (@aymanbagabas) * 46ebd20b63d8e5265e14393821ce747e8ce44ff3: fix(ui): optimize assistant message rendering to improve performance (#2258) (@aymanbagabas) * 9862d3a5552d3246eaff554cca83f2b4eee42ffd: fix: address `nil` pointer dereference panics on lsp client methods (#2256) (@andreynering) --- Verifying the artifacts First, download the [`checksums.txt` file](https://github.com/charmbracelet/crush/releases/download/v0.43.2/checksums.txt) and the [`checksums.txt.sigstore.json` file](https://github.com/charmbracelet/crush/releases/download/v0.43.2/checksums.txt.sigstore.json) files, for example, with ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Consistency diffusion language models: Up to 14x faster inference without sacrificing quality",
+      "url": "https://www.together.ai/blog/consistency-diffusion-language-models",
+      "source": "Together AI Blog",
+      "tags": [
+        "architecture",
+        "inference"
+      ],
+      "matching_tags": [
+        "architecture",
+        "inference"
+      ],
+      "importance": 0.62,
+      "date": "2026-02-19T00:00:00.000Z",
+      "summary": "Standard diffusion language models can&#39;t use KV caching and need too many refinement steps to be practical. CDLM fixes both with a post-training recipe that enables exact block-wise KV caching and trajectory-consistent step reduction — delivering up to 14.5x latency improvements",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.425",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.425",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-19T08:21:38.000Z",
+      "summary": "## What's Changed * `remotion`: Automatically premount Sequences from Remotion 5.0 on by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6566 * `@remotion/renderer`, `@remotion/cli`: Migrate `pixel-format` and `browser-executable` to options system by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6561 * `@remotion/renderer`: Migrate more options to the new options system by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6562 * `@remotion/renderer`, `@remotion/cli`: Migrate `--user-agent`, `--disable-web-security`, `--ignore-certificate-errors` to options system by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6564 * `@remotion/renderer`: Convert concurrency to a proper AnyRemotionOption by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6569 * `@remotion/renderer`: Allow override of fps and durationInFrames by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6573 * `@remotion/studio`: Disallow selec",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemini 3.1 Pro: A smarter model for your most complex tasks",
+      "url": "https://deepmind.google/blog/gemini-3-1-pro-a-smarter-model-for-your-most-complex-tasks/",
+      "source": "DeepMind Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-02-19T16:06:14.000Z",
+      "summary": "3.1 Pro is designed for tasks where a simple answer isn’t enough.",
+      "category": "ai_research"
+    },
+    {
+      "title": "Media Authenticity Methods in Practice: Capabilities, Limitations, and Directions",
+      "url": "https://www.microsoft.com/en-us/research/blog/media-authenticity-methods-in-practice-capabilities-limitations-and-directions/",
+      "source": "Microsoft Research Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.54,
+      "date": "2026-02-19T16:00:51.000Z",
+      "summary": "As synthetic media grows, verifying what’s real, and the origin of content, matters more than ever. Our latest report explores media integrity and authentication methods, their limits, and practical paths toward trustworthy provenance across images, audio, and video. The post Media Authenticity Methods in Practice: Capabilities, Limitations, and Directions appeared first on Microsoft Research .",
+      "category": "ai_research"
+    }
+  ]
 }

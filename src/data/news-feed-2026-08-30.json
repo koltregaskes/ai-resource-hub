@@ -1,0 +1,182 @@
+{
+  "generated": "2026-08-30T12:00:19.212Z",
+  "site": "AI Resource Hub",
+  "article_count": 11,
+  "articles": [
+    {
+      "title": "OpenRelay Routes AI Inference Across GPUs, TPUs and Trainium Through One API",
+      "url": "https://superpowerdaily.com/posts/openrelay-routes-ai-inference-across-gpus-tpus-and-trainium-through-one-api",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "api_update",
+        "inference"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "api_update",
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-30T01:56:58.000Z",
+      "summary": "The early-access network aims to let developers buy performance rather than a particular accelerator, but its cost-savings claims and ability to deliver consistent service across mixed infrastructure remain unproven.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nvidia Rolls Out Vera Rubin as AI Competition Shifts to Data Traffic",
+      "url": "https://superpowerdaily.com/posts/nvidia-rolls-out-vera-rubin-as-ai-competition-shifts-to-system-orchestration",
+      "source": "Superpower Daily",
+      "tags": [
+        "architecture",
+        "hardware"
+      ],
+      "matching_tags": [
+        "architecture",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-29T13:48:12.000Z",
+      "summary": "The architecture packages compute with storage and networking hardware, betting that efficiently moving data through large AI systems is becoming its own competitive layer.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Building Custom Batched Ensemble Weather Forecasting with NVIDIA Earth2Studio",
+      "url": "https://www.marktechpost.com/2026/08/29/building-custom-batched-ensemble-weather-forecasting-with-nvidia-earth2studio/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.72,
+      "date": "2026-08-29T18:57:26.000Z",
+      "summary": "In this tutorial, we build an ensemble weather forecasting workflow with NVIDIA Earth2Studio. We install the required Earth2Studio components while preserving Colab’s existing CUDA-enabled PyTorch environment, load the FCN prognostic model, and retrieve atmospheric initial conditions from GFS. We then implement a custom wind-power diagnostic that converts 10-meter wind components into turbine capacity factors, along […] The post Building Custom Batched Ensemble Weather Forecasting with NVIDIA Earth2Studio appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "LAION Releases 10-Million-Hour Video Corpus for Research, Excluding Commercial Use",
+      "url": "https://superpowerdaily.com/posts/laion-releases-10-million-hour-video-corpus-for-research-excluding-commercial-use",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.72,
+      "date": "2026-08-29T10:07:01.000Z",
+      "summary": "The release brings video, sound and still frames into one open research resource, while synthetic labels, English-heavy sourcing and noncommercial terms narrow how it can be used.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic Opens a Research Preview of the Model Hardware Standard (MHS): A Shared Specification for AI Agents to Safely Operate Physical Devices",
+      "url": "https://www.marktechpost.com/2026/08/29/anthropic-opens-a-research-preview-of-the-model-hardware-standard-mhs-a-shared-specification-for-ai-agents-to-safely-operate-physical-devices/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-30T06:12:21.000Z",
+      "summary": "Anthropic has opened a research preview of the Model Hardware Standard (MHS), a shared driver specification that lets AI agents discover and safely operate physical devices. Instrument integration that normally takes weeks or months drops to hours: Carnegie Mellon went from raw equipment to a finished dose-response curve in eight, and QuEra's laser relock improved from 58% to 99.3% across 700 trials. MHS is model-agnostic, reachable over MCP, and enforces safety limits in the driver rather than the prompt. The post Anthropic Opens a Research Preview of the Model Hardware Standard (MHS): A...",
+      "category": "ai_research"
+    },
+    {
+      "title": "Meet ‘Code-as-World’: An Agentic Loop That Rewrites Real Videos Into Executable MuJoCo Physics Programs",
+      "url": "https://www.marktechpost.com/2026/08/29/mirros-code-as-world-executable-world-representations/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-30T01:35:02.000Z",
+      "summary": "Code-as-World recovers editable MuJoCo scene code from real video, then uses those verified worlds to train physical reasoning. The post Meet ‘Code-as-World’: An Agentic Loop That Rewrites Real Videos Into Executable MuJoCo Physics Programs appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Release v0.59.0-nightly.20260830.g0bd1d4397",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.59.0-nightly.20260830.g0bd1d4397",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-30T01:27:35.000Z",
+      "summary": "Full Changelog : v0.59.0-nightly.20260829.g0bd1d4397...v0.59.0-nightly.20260830.g0bd1d4397",
+      "category": "ai_tools"
+    },
+    {
+      "title": "nightly",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-30T01:00:02.000Z",
+      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity ' https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Israeli Government-Backed Hanover Site Published 560,000 Words to Influence AI Answers",
+      "url": "https://superpowerdaily.com/posts/piro-s-hanover-site-published-560-000-words-to-influence-ai-answers",
+      "source": "Superpower Daily",
+      "tags": [
+        "dataset"
+      ],
+      "matching_tags": [
+        "dataset"
+      ],
+      "importance": 0.64,
+      "date": "2026-08-29T20:58:39.000Z",
+      "summary": "The site’s foreign-agent filings and machine-readable design make its purpose unusually visible. Its effect on chatbot behavior, or on future model-training data, remains unproven.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "PhiZero: A World Model Built Around Physical Language",
+      "url": "https://paperswithcode.com/papers/2607.28624",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-08-29T11:16:36.828Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "FunAudioLLM: Voice Understanding and Generation Foundation Models for Natural Interaction Between Humans and LLMs",
+      "url": "https://paperswithcode.com/papers/2407.04051",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-08-30T11:18:00.561Z",
+      "summary": "",
+      "category": "ai_research"
+    }
+  ]
+}

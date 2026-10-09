@@ -1,0 +1,351 @@
+{
+  "generated": "2026-08-27T17:45:11.360Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "From In-Silico to Wet-Lab: Evaluating AI Protein Design Performance",
+      "url": "https://www.marktechpost.com/2026/08/27/from-in-silico-to-wet-lab-evaluating-ai-protein-design-performance/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "benchmark",
+        "evaluation",
+        "dataset"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "benchmark",
+        "evaluation",
+        "dataset"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-27T15:36:29.000Z",
+      "summary": "In this tutorial, we analyze Anthropic’s 1,440 AI-designed protein binder dataset to benchmark 10 leading structure predictors. Discover how target identity, expression titers, and consensus scoring impact experimental success and learn best practices for rigorous cross-validation in protein design workflows The post From In-Silico to Wet-Lab: Evaluating AI Protein Design Performance appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Alibaba’s Qwen Team Releases Qwen3.8-Flash-Next: A 125B Multimodal MoE With 6B Active Parameters Previewing the Qwen4 Architecture",
+      "url": "https://www.marktechpost.com/2026/08/26/alibabas-qwen-team-releases-qwen3-8-flash-next-a-125b-multimodal-moe-with-6b-active-parameters-previewing-the-qwen4-architecture/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "architecture"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-26T15:20:00.000Z",
+      "summary": "We look at Qwen3.8-Flash-Next, Alibaba's open-weight multimodal Mixture-of-Experts model and an early preview of the Qwen4 architecture. We break down where the 180B parameters actually sit: a 125B backbone, a 51B N-gram embedding table, and a 4B multi-token prediction module, with only 6B active per token. We walk through the four architectural changes — the Gated DeltaNet and Qwen Sparse Attention hybrid, Gated Residual, N-gram Embedding, and the Muon optimizer. We also cover the benchmark results, the reported 1/9 training cost against Qwen3.7-Plus, and what self-hosting a 172.78 GiB...",
+      "category": "ai_research"
+    },
+    {
+      "title": "Introducing Parse: Enterprise document intelligence at scale A high-throughput vision parsing model with the strongest price-performance profile on the market. Aug 27, 2026 5 min read",
+      "url": "https://cohere.com/blog/parse",
+      "source": "Cohere Blog",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "pricing_change",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "pricing_change",
+        "inference"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-27T17:00:50.750Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Qwen Releases Qwen3.8-Flash With 1M-Token Option and One-Ninth Training-Cost Claim",
+      "url": "https://superpowerdaily.com/posts/qwen-releases-qwen3-8-flash-with-1m-token-option-and-one-ninth-training-cost-claim",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-26T15:29:20.000Z",
+      "summary": "The new model gives developers a published context limit and usage price, while Qwen’s performance and efficiency comparisons remain its own stated results.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Lam Breaks Ground on Oregon Lab, First Step in $3B AI-Chip R&D Buildout",
+      "url": "https://superpowerdaily.com/posts/lam-breaks-ground-on-oregon-lab-first-step-in-3b-ai-chip-r-and-d-buildout",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-26T21:22:04.000Z",
+      "summary": "The facility is meant to bring chipmakers into Lam’s process-development workflow before equipment reaches a fab. Its promised speed gains depend on completing the expansion and turning added lab capacity into customer results.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NVIDIA NVLink Fusion Expands With NVHBM Custom High-Bandwidth Memory",
+      "url": "https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-26T21:05:30.000Z",
+      "summary": "The next wave of AI is placing new demands on infrastructure. As AI agents and trillion-parameter workloads become mainstream, the performance of AI infrastructure depends not only on compute, but on how compute, memory, storage, networking and software are designed together as a unified system. To help hyperscalers and AI innovators build the next generation […]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SageMaker SDK v3 Lets Teams Change Model Code Without Rebuilding Container Images",
+      "url": "https://superpowerdaily.com/posts/sagemaker-sdk-v3-lets-teams-change-model-code-without-rebuilding-container-images",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-26T16:36:10.000Z",
+      "summary": "The new workflow treats the container as a reusable runtime and sends local code into it when a job starts. That can shorten script-level iteration, while leaving teams responsible for images, permissions and storage.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NSA Seeks All Commercial AI Models as White House Offers 30-Day Pre-Release Tests",
+      "url": "https://superpowerdaily.com/posts/nsa-seeks-all-commercial-ai-models-as-white-house-offers-30-day-pre-release-tests",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.72,
+      "date": "2026-08-27T16:58:11.000Z",
+      "summary": "The proposed arrangement puts national-security testing nearer to frontier-model releases without creating a licensing system. Whether leading developers will participate—and on what terms—remains unsettled.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Leiolai Launches Device-Run AI With 11M-Token Context and Output From $0.02 Per Million",
+      "url": "https://superpowerdaily.com/posts/leiolai-launches-device-run-ai-with-11m-token-context-and-output-from-0-02-per-million",
+      "source": "Superpower Daily",
+      "tags": [
+        "api_update",
+        "inference"
+      ],
+      "matching_tags": [
+        "api_update",
+        "inference"
+      ],
+      "importance": 0.72,
+      "date": "2026-08-27T16:29:57.000Z",
+      "summary": "The app and API depend on users supplying computation, making coordination, latency and trust central tests of its alternative to centralized AI infrastructure.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v0.91.2",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.91.2",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-26T17:27:06.000Z",
+      "summary": "Fixed GitHub MCP + UI fixes A small patch with a couple fixes. Fixed GitHub MCP The GitHub MCP stopped working in Crush in the recent days, but it's now working again. We \"sessionless\": true (or --sessionless true ) that some MCPs might need to work correctly. For GitHub MCP, we're enabling that automatically so it works without extra config for you. Code indentation fixes We fixed a couple bugs with wrong indentation in code in the UI. This could happen on tool calls previews or code inside markdown. Example screenshots: Before After New Hyper models Last news, we have 3 new models...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Foxglove Adds Cosmos Data Search as Robot Builders Struggle for Reliable Work",
+      "url": "https://superpowerdaily.com/posts/foxglove-adds-cosmos-data-search-as-robot-builders-struggle-for-reliable-work",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "inference"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "inference"
+      ],
+      "importance": 0.64,
+      "date": "2026-08-26T14:54:17.000Z",
+      "summary": "Foxglove’s new search tool is meant to speed the data and evaluation loop, while robot makers still face a harder test: dependable commercial performance.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Deepgram Sends SageMaker Billing and GPU Metrics to CloudWatch Without Container Egress",
+      "url": "https://superpowerdaily.com/posts/deepgram-sends-sagemaker-billing-and-gpu-metrics-to-cloudwatch-without-container-egress",
+      "source": "Superpower Daily",
+      "tags": [
+        "api_update",
+        "hardware"
+      ],
+      "matching_tags": [
+        "api_update",
+        "hardware"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-08-27T16:46:47.000Z",
+      "summary": "The release makes vendor-level cost and capacity signals visible inside AWS tools, but teams still need different metric streams for billing, feature usage and an individual endpoint’s GPU headroom.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Why forward-deployed engineers should build capability, not dependency Aug 27, 2026 5 min read",
+      "url": "https://cohere.com/blog/forward-deployed-engineers-capability-building",
+      "source": "Cohere Blog",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.54,
+      "date": "2026-08-27T17:00:50.736Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Google Tightens Android App Rules as AI Memory Shortages Hit Devices",
+      "url": "https://superintelligencenews.com/applications/android-memory-crunch-google-new-rules/",
+      "source": "Superintelligence Newsletter",
+      "tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 0.54,
+      "date": "2026-08-27T14:59:34.000Z",
+      "summary": "Google is tightening Android app rules as the Android memory crunch from AI chip demand threatens app performance and device reliability. The post Google Tightens Android App Rules as AI Memory Shortages Hit Devices appeared first on Superintelligence News - Artificial Intelligence News .",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI searched 100 million possibilities and found a cheaper way to 3D-print a NASA rocket alloy",
+      "url": "https://www.sciencedaily.com/releases/2026/08/260827010504.htm",
+      "source": "ScienceDaily Top Science",
+      "tags": [
+        "evaluation",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "pricing_change"
+      ],
+      "importance": 0.54,
+      "date": "2026-08-27T13:08:01.000Z",
+      "summary": "Researchers used AI to search through more than 100 million possible settings for 3D-printing a high-performance NASA alloy. After only 40 experiments, the system identified six successful configurations, including one that worked at a record-low 500 watts. That could allow GRCop-42, currently difficult and expensive to print, to be made with much more widely available equipment.",
+      "category": "tech_general"
+    },
+    {
+      "title": "OpenAI releases its official report on the Hugging Face breach",
+      "url": "https://techcrunch.com/2026/08/26/openai-releases-its-official-report-on-the-hugging-face-breach/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-08-26T19:05:22.000Z",
+      "summary": "The report, which spans several discrete cybersecurity compromises, is the most complete accounting of the incident to date.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Radar makes podcasts searchable — and usable by AI agents",
+      "url": "https://techcrunch.com/2026/08/26/radar-makes-podcasts-searchable-and-usable-by-ai-agents/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-08-26T15:47:28.000Z",
+      "summary": "Particle’s new podcast intelligence platform transcribes and analyzes more than 130,000 podcasts, making their conversations searchable on the web and accessible to AI agents through an API and MCP.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Turn your voice into action with new productivity features in Gemini Live",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/productivity-features-gemini-live/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-08-27T04:50:45.611Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "AWS AgentCore Evaluations Uses OpenTelemetry to Score Agents Across Frameworks",
+      "url": "https://superpowerdaily.com/posts/aws-agentcore-evaluations-uses-opentelemetry-to-score-agents-across-frameworks",
+      "source": "Superpower Daily",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-26T19:55:28.000Z",
+      "summary": "The service offers one set of agent-quality evaluators across SDK choices, but its portability depends on specific telemetry conventions, scope names and complete message logs.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "MLSN #23: AIs Leak Their Values Into Factual Questions",
+      "url": "https://newsletter.mlsafety.org/p/mlsn-23-ais-leak-their-values-into",
+      "source": "ML Safety Newsletter",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-26T18:57:43.000Z",
+      "summary": "Also, benchmarking in-context learning, and a newly discovered CoT theft method.",
+      "category": "ai_research"
+    }
+  ]
+}

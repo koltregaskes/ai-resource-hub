@@ -1,9 +1,106 @@
 {
-  "generated": "2026-05-25T14:37:35.897Z",
+  "generated": "2026-08-26T03:02:07.266Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-09",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 6,
+  "archived_story_count": 146,
+  "articles": [
+    {
+      "title": "GitHub Releases · Remotion: v4.0.420",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.420",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-02-09T14:39:23.000Z",
+      "summary": "## What's Changed * `@remotion/media`: Fix global `muted` not being respected by @MehmetAdemi in https://github.com/remotion-dev/remotion/pull/6477 * `@remotion/renderer`: Add Amazon Linux 2023 x64 binary by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6485 ## Docs * Docs: Add FAQ section about Animated Captions by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6483 * Update homepage and pricing table by @MehmetAdemi in https://github.com/remotion-dev/remotion/pull/6475 * Provide accurate wording for template live demos by @MehmetAdemi in https://github.com/remotion-dev/remotion/pull/6479 * Showcase page - AdMove by @roppazvan in https://github.com/remotion-dev/remotion/pull/6416 * Fix UI bug on homepage's template section by @MehmetAdemi in https://github.com/remotion-dev/remotion/pull/6471 ## Internals * Bump @modelcontextprotocol/sdk from 1.25.2 to 1.26.0 in /packages/mcp by @dependabot[bot] in https://github.com/remotion-dev/remotion/pull/6463 ## New",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.41.0",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.41.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-02-09T20:51:23.000Z",
+      "summary": "# Let’s Edit our API Keys At last: edit your API keys in the TUI. Open the models dialog ( ctrl+m ), choose a model and hit ctrl+e . That’s it. This works for oAuth providers too: ctrl+e will prompt you to re-auth via the OAuth2 flow. This is another small but nice Quality of Life™ improvement. Before, you could only edit API keys by manually editing your `crush.json` config file. Voilà! ## Changelog ### New! * 1615de50386d14d80b022a3677a6bbb475a80106: feat: add ability to re-authenticate / edit api key (#2179) (@andreynering) ### Fixed * 340ce206c0248d1a226649b19e5e2c2adaab006f: fix(ui): fix help wrapping on dialogs (@andreynering) ### Other stuff * 7d00857e4c549ddc067a30c16e97e580bb3c0d50: perf: track and start lsp on command (#2176) (@caarlos0) --- Verifying the artifacts First, download the [`checksums.txt` file](https://github.com/charmbracelet/crush/releases/download/v0.41.0/checksums.txt) and the [`checksums.txt.sigstore.json` file](https://github.com/charmbracelet/crush/release",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Claude For Nonprofits",
+      "url": "https://www.anthropic.com/news/claude-for-nonprofits",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-09T15:51:38.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.40.0",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.40.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-09T14:50:52.000Z",
+      "summary": "# Optimized LSPs + MiniMax support Good stuff is being shipped on this Monday, so you have a better joy using Crush on the rest of your week! 🌞 ## On-demand LSP start-up @caarlos0 made a great work optimizing how LSP servers are handled on this release. * An LSP server will now only be started once the model interact with a file of that language. * Once you start a new session, the running servers will be shutdown until needed again. * When you switch into a different session, only the relevant servers will be kept running. All this ensure less CPU and memory are used by Crush, specially on new or small sessions. ## MiniMax support [MiniMax](https://www.minimax.io/) is now officially supported as a provider, and this includes the [MiniMax Coding Plan](https://platform.minimax.io/subscribe/coding-plan), which start at $10/month. Enjoy! ## Changelog ### New! * 02f66a2e8614a6c029260bea7d3ca1565786915a: feat(lsp): start LSPs on demand, improve auto-start (#2103) (@caarlos0) * b66f96ea78b4",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · pnpm: pnpm 10.29.2",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v10.29.2",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-09T01:33:45.000Z",
+      "summary": "## Patch Changes * Reverted a fix shipped in v10.29.1, which caused another issue [#10571](https://github.com/pnpm/pnpm/issues/10571). Reverted fix: Fixed pnpm run -r failing with \"No projects matched the filters\" when an empty pnpm-workspace.yaml exists [#10497](https://github.com/pnpm/pnpm/issues/10497). ## Platinum Sponsors ## Gold Sponsors",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Accelerating Mathematical and Scientific Discovery with Gemini Deep Think",
+      "url": "https://deepmind.google/blog/accelerating-mathematical-and-scientific-discovery-with-gemini-deep-think/",
+      "source": "DeepMind Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-02-09T16:12:06.000Z",
+      "summary": "Research papers point to the growing impact of Deep Think across fields",
+      "category": "ai_research"
+    }
+  ]
 }

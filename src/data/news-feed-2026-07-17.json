@@ -1,0 +1,155 @@
+{
+  "generated": "2026-08-26T03:14:23.190Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-07-17",
+  "article_count": 9,
+  "archived_story_count": 357,
+  "articles": [
+    {
+      "title": "[AINews] Kimi K3 2.8T-A50B: the largest open model ever released; Opus 4.8-class at Sonnet 5 pricing",
+      "url": "https://www.latent.space/p/ainews-kimi-k3-28t-a50b-the-largest",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper",
+        "pricing_change",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "pricing_change",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-07-17T01:46:36.000Z",
+      "summary": "a great week for open models continues.",
+      "category": "ai_research"
+    },
+    {
+      "title": "Fine-tune video and image models at scale with NVIDIA NeMo Automodel and 🤗 Diffusers",
+      "url": "https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-07-17T15:57:54.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "NVIDIA Vera Rubin Maximizes Intelligence per Dollar for Post-Training Workloads — a Key Metric for Agentic AI",
+      "url": "https://blogs.nvidia.com/blog/nvidia-vera-rubin-post-training-intelligence-per-dollar/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "matching_tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-07-17T15:00:14.000Z",
+      "summary": "Lowest cost per token from extreme codesign maximizes intelligence per dollar for post-training in the agentic era.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "When Unlearning Is Free: Leveraging Low Influence Points to Reduce Computational Costs",
+      "url": "https://machinelearning.apple.com/research/unlearning-free-low-influence",
+      "source": "Apple Machine Learning",
+      "tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "importance": 0.62,
+      "date": "2026-07-17T00:00:00.000Z",
+      "summary": "As concerns around data privacy in machine learning grow, the ability to unlearn—or remove—specific data points from trained models becomes increasingly important. While state-of-the-art unlearning methods have emerged in response, they typically treat all points in the forget set equally. In this work, we challenge this approach by asking: do points that have a negligible impact on the model’s learning need to be removed? Through a comparative analysis of influence functions across language and vision tasks, we identify subsets of training data with negligible impact on model outputs…",
+      "category": "ai_research"
+    },
+    {
+      "title": "AI-driven memory crunch jolts India’s smartphone market",
+      "url": "https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-07-17T20:09:27.000Z",
+      "summary": "India's smartphone slowdown highlights how the AI boom is reshaping consumer electronics, from pricing and demand to corporate strategy.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Why a Ukrainian cruise missile is flying with hobby drone hardware",
+      "url": "https://www.newscientist.com/article/2580002-why-a-ukrainian-cruise-missile-is-flying-with-hobby-drone-hardware/?utm_campaign=RSS|NSNS&utm_content=home&utm_medium=RSS&utm_source=NSNS",
+      "source": "New Scientist",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-07-17T10:00:00.000Z",
+      "summary": "An open-source flight-control system found in consumer drones has been installed in Ukraine’s latest cruise missile, showing how cheap technology is making military hardware accessible to all",
+      "category": "tech_general"
+    },
+    {
+      "title": "Release v0.19.11-nightly.20260717.f8e6e8931",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.11-nightly.20260717.f8e6e8931",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-17T00:43:17.000Z",
+      "summary": "<h2>What's Changed</h2> <ul> <li>feat(daemon): Trace cold first-session startup by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/doudouOUC/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/doudouOUC\">@doudouOUC</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4885474123\" data-permission-text=\"Title is private\" data-url=\"https://github.com/QwenLM/qwen-code/issues/6907\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/6907/hovercard\" href=\"https://github.com/QwenLM/qwen-code/pull/6907\">#6907</a></li> <li>fix(serve): Harden multi-workspace ownership guards by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/doudouOUC/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/doudouOUC\">@doudouOUC</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4898571110\" data-permission-text=\"Title is private\" data-url=\"https://github.com/QwenLM/qwen-code/issues/7005\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/7005/hovercard\" href=\"https://github.com/QwenLM/qwen-code/pull/7005\">#7005</a></li> <li>docs(serve): Close multi-workspace hardening gaps by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/doudouOUC/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/doudouOUC\">@doudouOUC</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4899661706\" data-permission-text=\"Title is private\" data-url=\"https://github.com/QwenLM/qwen-code/issues/7019\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/7019/hovercard\" href=\"https://github.com/QwenLM/qwen-code/pull/7019\">#7019</a></li> <li>feat(web-shell): add archived session export by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/doudouOUC/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/doudouOUC\">@doudouOUC</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4885567367\" data-permission-text=\"Title is private\" data-url=\"https://github.com/QwenLM/qwen-code/issues/6910\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/6910/hovercard\" href=\"https://github.com/QwenLM/qwen-code/pull/6910\">#6910</a></li> <li>fix: bound usage-only streams and abort on quit by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/yiliang114/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/yiliang114\">@yiliang114</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4902591677\" data-permission-text=\"Title is private\" data-url=\"https://github.com/QwenLM/qwen-code/issues/7038\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/7038/hovercard\" href=\"https://github.com/QwenLM/qwen-code/pull/7038\">#7038</a></li> <li>fix(acp): disambiguate model routes by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/yiliang114/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/yiliang114\">@yiliang114</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4900843406\" data-permission-text=\"Title is private\" data-url=\"https://github.com/QwenLM/qwen-code/issues/7028\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/7028/hovercard\" href=\"https://github.com/QwenLM/qwen-code/pull/7028\">#7028</a></li> </ul> <p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/QwenLM/qwen-code/compare/v0.19.11...v0.19.11-nightly.20260717.f8e6e8931\"><tt>v0.19.11...v0.19.11-nightly.20260717.f8e6e8931</tt></a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Introducing Gemini 3.5 Flash Cyber",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/",
+      "source": "DeepMind Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8400000000000001,
+      "date": "2026-07-17T15:00:11.000Z",
+      "summary": "Google introduces Gemini 3.5 Flash Cyber, a lightweight cybersecurity model to find and patch vulnerabilities.",
+      "category": "ai_research"
+    },
+    {
+      "title": "Koalas nearly went extinct before humans arrived, DNA study reveals",
+      "url": "https://www.sciencedaily.com/releases/2026/07/260715083551.htm",
+      "source": "ScienceDaily Top Science",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.62,
+      "date": "2026-07-17T09:51:10.000Z",
+      "summary": "A major DNA study has rewritten the koala's evolutionary story, revealing that the species suffered a dramatic population collapse about 100,000 years ago, long before humans arrived in Australia. By calculating the koala's mutation rate for the first time and analyzing hundreds of genomes, researchers discovered that every living koala traces back to a small group that survived extreme climate shifts and later repopulated eastern Australia.",
+      "category": "tech_general"
+    }
+  ]
+}

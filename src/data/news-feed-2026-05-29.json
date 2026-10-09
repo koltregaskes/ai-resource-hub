@@ -1,0 +1,282 @@
+{
+  "generated": "2026-05-29T15:38:05.382Z",
+  "site": "AI Resource Hub",
+  "article_count": 17,
+  "articles": [
+    {
+      "title": "DSPy v3.3.0 Beta Brings ReActV2 to Open-Source AI Programming Framework",
+      "url": "https://x.com/isaacbmiller1/status/2059828079371894786",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "research_paper",
+        "architecture",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper",
+        "architecture",
+        "open_source"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-05-28T12:12:48.493Z",
+      "summary": "Stanford's DSPy framework released v3.3.0 beta on PyPI with ReActV2, improved LM/BaseLM architecture, and RLM data-passing support. DSPy is widely used for structured programming with language models in both research and production.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hexo Releases SIA — Open-Source Self-Improving AI That Updates Its Own Weights During Goal Pursuit",
+      "url": "https://x.com/kunalbhatia91/status/2060013228231725092",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-05-28T17:54:34.974Z",
+      "summary": "Hexo released SIA, an open-source Self-Improving AI that achieves goals through recursive self-improvement — updating its own capabilities as it works toward a goal, not just calling tools with fixed capabilities. The announcement earned 221 likes and 80,000 views.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Dan Shipper at Every: Claude Opus 4.8 Is a Monster — Could Have Called It Opus 5, Beats GPT-5.5 on Senior Engineer Benchmark",
+      "url": "https://x.com/danshipper/status/2060043738752422304",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-28T17:54:34.974Z",
+      "summary": "Dan Shipper, CEO of Every, reports his team tested Opus 4.8 for a week and calls it a monster — strong enough that Anthropic could have named it Opus 5. On Every's hardest internal benchmark (Senior Engineer level), Opus 4.8 beats GPT-5.5.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NVIDIA Dynamo Snapshot Transforms Kubernetes Inference Scaling — Cold Start Drops from Minutes to Seconds",
+      "url": "https://x.com/NVIDIAAI/status/2059785750367850916",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-28T12:12:49.358Z",
+      "summary": "NVIDIA's Dynamo Snapshot checkpoints GPU context to achieve sub-5-second cold starts for inference workloads on Kubernetes, versus minutes previously. This makes auto-scaling AI infrastructure far more responsive to demand fluctuations.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "[AINews] Anthropic raises $965B Series H, releases Opus 4.8 and Dynamic Workflows/ultracode",
+      "url": "https://www.latent.space/p/ainews-anthropic-raises-965b-series",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.64,
+      "date": "2026-05-29T05:18:13.638Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "minWM: A Full-Stack Open-Source Framework for Real-Time Interactive Video World Models",
+      "url": "https://paperswithcode.com/papers/2605.30263",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-05-29T15:24:25.298Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "stable-worldmodel-v1: Reproducible World Modeling Research and Evaluation",
+      "url": "https://paperswithcode.com/papers/2602.08968",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "evaluation"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-05-29T05:18:29.313Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "NVIDIA Research Advances Robotics From Simulation to the Real World",
+      "url": "https://blogs.nvidia.com/blog/icra-research-robotics-simulation-to-real-world/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-05-29T05:18:29.269Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic Launches Claude Opus 4.8 — 1890 on GDPval-AA (+137 over 4.7), Sharper Judgment, Longer Autonomous Work, Same Price",
+      "url": "https://x.com/claudeai/status/2060042702150930686",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-05-28T17:54:34.974Z",
+      "summary": "Anthropic released Claude Opus 4.8 today, building on Opus 4.7 with sharper judgment, more honesty about its own progress, and the ability to work independently longer. Available at the same price with a new Thinking effort selector (Low/Medium/High/Extra/Max). GDPval-AA: 1890, +137 over Opus 4.7, +121 ahead of next-best. Official announcement: 5,693 likes.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic releases Opus 4.8 with new ‘dynamic workflow’ tool",
+      "url": "https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-29T05:18:10.746Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "May 28 Anthropic raises $65B in Series H at a $965B post-money valuation, releases Opus 4.8 and Dynamic Workflows Show details",
+      "url": "https://news.smol.ai/issues/26-05-28-anthropic-series-h",
+      "source": "Smol AI News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-29T05:18:10.685Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "This chip startup just raised $135M on a bet that AI’s biggest bottleneck isn’t compute — it’s memory",
+      "url": "https://techcrunch.com/2026/05/29/xcena-secures-135m-at-570m-valuation-betting-on-memory-as-ais-real-bottleneck/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-29T15:24:19.580Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "METR Founder Says AI Experts Lack Adequate Control Over Frontier AI Risks After Multi-Lab Evaluation",
+      "url": "https://di.gg/ai/0b299e51-847f-428e-a466-5a7221e5030e",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-28T17:54:34.974Z",
+      "summary": "Elizabeth Barnes, METR founder and CEO, says AI experts lack sufficient control over frontier AI risks following the Frontier Risk Report that evaluated AI agents at Anthropic, Google, Meta, and OpenAI. The finding is circulating widely among top AI safety researchers on di.gg.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Shift Launches in NYC — AI Economy Startup Offers Free Home Cleaning to Bridge Today's Economy to the AI Abundance Era",
+      "url": "https://x.com/bercankilic/status/2060043312606638245",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-28T17:49:05.507Z",
+      "summary": "Shift launched in New York City with a mission to bridge the current economy into the AI economy where goods, services, and leisure become affordable through AI. The launch includes free home cleaning as the entry product.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Intel EMIB Investment Creates Alternative to TSMC Packaging for AI Chip Production",
+      "url": "https://x.com/jukan05/status/2059896348812640424",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-28T12:12:49.358Z",
+      "summary": "Intel's multi-billion dollar EMIB packaging investment, if successful, creates a second viable option for advanced chip packaging beyond TSMC's dominance. Korean sources say EMIB offers cost and productivity advantages over TSMC's silicon interposer 2.5D packaging.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Dell Enterprise Hub at Dell Tech World 2026: new models, new platforms, faster to production balaatdell • about 12 hours ago • 6",
+      "url": "https://huggingface.co/blog/balaatdell/dell-enterprise-hub-at-dell-tech-world-2026",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-29T15:24:17.873Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Media Advisory: MIT to establish regional quantum hub",
+      "url": "https://news.mit.edu/2026/media-advisory-mit-establish-regional-quantum-hub",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-29T05:18:09.637Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
+}

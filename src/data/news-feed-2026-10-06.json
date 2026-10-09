@@ -1,0 +1,347 @@
+{
+  "generated": "2026-10-06T17:45:06.560Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Reflection AI Introduces Beam: A 501B Open-Weight MoE Model With 23B Active Parameters for Coding and Agentic Workloads",
+      "url": "https://www.marktechpost.com/2026/10/05/reflection-ai-introduces-beam-a-501b-open-weight-moe-model-with-23b-active-parameters-for-coding-and-agentic-workloads/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "architecture",
+        "inference",
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture",
+        "inference",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-05T21:04:20.000Z",
+      "summary": "Reflection AI has introduced Beam, its first open-weight model. It is a 501B sparse Mixture-of-Experts model with 23B active parameters, built for coding and agentic work. Reflection says it matches GLM-5.2 on reasoning with 3 to 4x less inference compute. Apache 2.0 weights are due later in October 2026. The post Reflection AI Introduces Beam: A 501B Open-Weight MoE Model With 23B Active Parameters for Coding and Agentic Workloads appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Quoting Felix Rieseberg",
+      "url": "https://simonwillison.net/2026/Oct/5/felix-rieseberg/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-05T23:56:47.000Z",
+      "summary": "The \"old\" version of Cowork runs model inference in the cloud, executing tool calls in an Anthropic-provided VM we shipped to your computer. We added the VM for capability, safety, and security reasons - mapping in just the data you explicitly added to your session. People loved what they were able to do with Claude but didn't love the disk, battery, and performance cost of running the VM locally. Also, people didn't love that closing your laptop means the work stops. The \"new\" version of Cowork runs model inference and the VM in the cloud. Each session gets its own sandbox, not sharing...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Building a Streaming Robotics Learning Pipeline Using NVIDIA Cosmos3-DROID",
+      "url": "https://www.marktechpost.com/2026/10/05/building-a-streaming-robotics-learning-pipeline-using-nvidia-cosmos3-droid/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "dataset",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "dataset",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-05T21:41:14.000Z",
+      "summary": "Discover how to construct an end-to-end streaming robotics learning pipeline using the NVIDIA Cosmos3-DROID dataset without local downloads, leveraging byte-range Parquet reads, behavior cloning, and temporal ensembling. The post Building a Streaming Robotics Learning Pipeline Using NVIDIA Cosmos3-DROID appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "AWS Adds a Coding-Agent Skill to Benchmark and Tune SageMaker AI Deployments",
+      "url": "https://superpowerdaily.com/posts/aws-adds-a-coding-agent-skill-to-benchmark-and-tune-sagemaker-ai-deployments",
+      "source": "Superpower Daily",
+      "tags": [
+        "benchmark",
+        "evaluation",
+        "api_update"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "evaluation",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-05T19:16:12.000Z",
+      "summary": "The aws-ai-ml skill generates reviewable Python code for performance tests and instance recommendations. Live-endpoint tests require confirmation, and deployment itself remains outside the agent’s scope.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Reka Releases Rho-1 to Combine Video Creation and Robot Actions in One Model",
+      "url": "https://superpowerdaily.com/posts/reka-releases-rho-1-to-combine-video-creation-and-robot-actions-in-one-model",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "research_paper",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper",
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-05T18:49:32.000Z",
+      "summary": "The research preview keeps generated scenes and later instructions in the same model state. Reka’s speed claims come from internal tests, and its playback demo shortens generation waits.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Reka Releases Rho-1: A 19B Omni-Reasoning Model That Understands, Generates Video and Outputs Robot Actions in One",
+      "url": "https://www.marktechpost.com/2026/10/05/reka-releases-rho-1-a-19b-omni-reasoning-model-that-understands-generates-video-and-outputs-robot-actions-in-one/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-06T06:45:31.000Z",
+      "summary": "Reka has released Rho-1, a 19B omni-reasoning model trained from scratch. One network reads and generates text, images, video and robot actions over a shared KV cache. A distilled variant returns a 5.3-second clip in about a second. It is a research preview with no public weights yet. The post Reka Releases Rho-1: A 19B Omni-Reasoning Model That Understands, Generates Video and Outputs Robot Actions in One appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "HHS Launches AI Clinical-Trial Program to Speed Studies With Fewer Participants",
+      "url": "https://superpowerdaily.com/posts/hhs-launches-ai-clinical-trial-program-to-speed-studies-with-fewer-participants",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-06T03:19:24.000Z",
+      "summary": "SURPASS will pursue simulation, real-time analysis and automated operations. Three coordinated projects tackle trial sites, research data and patient access.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases ReviewBench to Compare What AI Code Reviewers Catch and Miss",
+      "url": "https://superpowerdaily.com/posts/github-releases-reviewbench-to-compare-what-ai-code-reviewers-catch-and-miss",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-05T16:39:47.000Z",
+      "summary": "The public research preview lets teams rank reviewers by coverage or lower noise. Its scoring also distinguishes known issues from valid findings outside the answer set.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen3.8 Scores 23.57% on Addition in Words in Willison’s No-Reasoning Test",
+      "url": "https://superpowerdaily.com/posts/qwen3-8-scores-23-57-on-addition-in-words-in-willison-s-no-reasoning-test",
+      "source": "Superpower Daily",
+      "tags": [
+        "benchmark",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "evaluation"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-05T23:10:05.000Z",
+      "summary": "A local benchmark separates correct formatting from correct arithmetic. A much smaller reasoning-enabled run performed better, but took longer and used only one example per comparison.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Cohere Adds Memory and Company-Wide Usage Caps to North 2 AI Agents",
+      "url": "https://superpowerdaily.com/posts/cohere-adds-memory-and-company-wide-usage-caps-to-north-2-ai-agents",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "pricing_change"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-05T15:11:27.000Z",
+      "summary": "The enterprise platform combines reusable workflows, model choice and private deployment. Its new controls do not yet come with published performance results or standard pricing.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "pnpm 12.10.0",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v12.10.0",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-06T05:24:45.000Z",
+      "summary": "This release adds an experimental loaded node linker, lets pnpm-lock.yaml record resolution settings, and reads cached registry metadata faster. It also carries several security fixes, including one that stops a dependency version from writing files outside the global virtual store. Minor Changes Added experimental nodeLinker: { type: loaded } installation. Compatible dependencies load directly from the content-addressable store through an automatically registered Node.js loader. nodeLinker.excluded selects packages and their dependency trees to install in the global virtual store....",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Prism: Dynamic Sparse Attention for Native 2K Joint Video-Audio Generation Model Training",
+      "url": "https://paperswithcode.com/papers/2610.05416",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.64,
+      "date": "2026-10-06T17:01:06.211Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Google Says Its AI Mapped 48 Ebola-Exposed Settlements in Minutes",
+      "url": "https://superpowerdaily.com/posts/google-says-its-ai-mapped-48-ebola-exposed-settlements-in-minutes",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "importance": 0.64,
+      "date": "2026-10-06T15:37:02.000Z",
+      "summary": "The research pairs local health records with satellite and population data. Emergency-response tools remain prototypes, while a related dataset is commercially available in Preview.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "MIT announces the MIT for America initiative, to strengthen STEM education across the country",
+      "url": "https://news.mit.edu/2026/mit-america-initiative-strengthens-stem-education-across-country-1006",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-06T17:04:02.763Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Frontier Academy",
+      "url": "https://claude.com/programs/frontier-academy",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-06T04:53:51.272Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Meet Together Link: A Free CLI That Runs Open Models Like Kimi K3 and GLM 5.3 Inside Claude Code, Codex, and OpenCode",
+      "url": "https://www.marktechpost.com/2026/10/05/meet-together-link-a-free-cli-that-runs-open-models-like-kimi-k3-and-glm-5-3-inside-claude-code-codex-and-opencode/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-05T22:51:05.000Z",
+      "summary": "Together AI has released Together Link, a free, MIT-licensed CLI that connects Claude Code, Codex, OpenCode, Pi, and the Claude and ChatGPT desktop apps to open models like Kimi K3 and GLM 5.3. One install command sets it up, and an Auto router picks a model for each session. Together claims savings of over 50%. The post Meet Together Link: A Free CLI That Runs Open Models Like Kimi K3 and GLM 5.3 Inside Claude Code, Codex, and OpenCode appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Cresta Says Its AI Agent Builder Roughly Halved Early Deployment Time",
+      "url": "https://superpowerdaily.com/posts/cresta-says-its-ai-agent-builder-roughly-halved-early-deployment-time",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-05T14:28:43.000Z",
+      "summary": "An Anthropic case study details Conductor’s early results and the controls behind them. The gain covers initial deployment, not the ongoing work of keeping agents reliable.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Estimating suicide risk from text",
+      "url": "https://news.mit.edu/index%2Ephp/2026/estimating-suicide-risk-from-text-0924",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-10-06T04:54:30.369Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "5 startups that caught VCs’ attention at the latest PearX demo day",
+      "url": "https://techcrunch.com/2026/10/05/5-startups-that-caught-vcs-attention-at-the-latest-pearx-demo-day/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.74,
+      "date": "2026-10-05T17:26:44.000Z",
+      "summary": "TechCrunch attended Pear’s latest demo day and discovered which startups generated the most buzz, from spatial models to chips for local AI.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Connecting AI agents to enterprise knowledge",
+      "url": "https://www.technologyreview.com/2026/10/05/1145580/connecting-ai-agents-to-enterprise-knowledge/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-10-05T15:47:52.000Z",
+      "summary": "For all the data that AI systems continually amass and analyze, enterprise AI agents often suffer from a curious shortcoming: a lack of knowledge. More than data, knowledge is the understanding of what the data means in the context of individual organizations. AI agents need this understanding to reason about situations, make decisions, and ultimately…",
+      "category": "ai_research"
+    }
+  ]
+}

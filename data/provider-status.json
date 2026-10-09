@@ -1,100 +1,105 @@
 {
-  "generatedAt": "2026-05-27T07:13:53.420Z",
+  "generatedAt": "2026-07-30T07:44:59.663Z",
   "providers": [
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
       "sourceKind": "statuspage_json",
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T07:13:44.166Z",
+      "lastCheckedAt": "2026-07-30T07:44:59.356Z",
       "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "overallLabel": "Minor Service Outage",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
-          "name": "FedRAMP",
-          "status": "degraded_performance"
+          "name": "claude.ai",
+          "status": "partial_outage"
         },
         {
-          "name": "Responses",
+          "name": "Claude API (api.anthropic.com)",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Claude Code",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
           "status": "operational"
         },
         {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Images",
-          "status": "operational"
-        },
-        {
-          "name": "Batch",
-          "status": "operational"
-        },
-        {
-          "name": "Moderations",
+          "name": "Claude for Government",
           "status": "operational"
         }
       ],
       "activeIncidents": [
         {
-          "id": "01KSJKR3EXTMKY0C287HS1BR8P",
-          "title": "Login issues for FedRAMP users who recently logged out",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-05-26T17:01:35.000Z",
-          "updatedAt": "2026-05-27T05:31:12.000Z",
+          "id": "fsh2zzzl2c4l",
+          "title": "Elevated errors across many models",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-07-30T05:57:43.524Z",
+          "updatedAt": "2026-07-30T07:33:15.350Z",
           "resolvedAt": null,
-          "summary": null
+          "url": "https://stspg.io/c0fmy7628y3w",
+          "summary": "As of 7:32 UTC / 0:32 PT, Opus 5 errors are back to baseline but we're seeing again Sonnet 5's errors up."
         }
       ],
       "recentIncidents": [
         {
-          "id": "01KSJKR3EXTMKY0C287HS1BR8P",
-          "title": "Login issues for FedRAMP users who recently logged out",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-05-26T17:01:35.000Z",
-          "updatedAt": "2026-05-27T05:31:12.000Z",
+          "id": "fsh2zzzl2c4l",
+          "title": "Elevated errors across many models",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-07-30T05:57:43.524Z",
+          "updatedAt": "2026-07-30T07:33:15.350Z",
           "resolvedAt": null,
-          "summary": null
+          "url": "https://stspg.io/c0fmy7628y3w",
+          "summary": "As of 7:32 UTC / 0:32 PT, Opus 5 errors are back to baseline but we're seeing again Sonnet 5's errors up."
         },
         {
-          "id": "01KSJZHDY7E780KF9J2ZZ8M0GE",
-          "title": "Users unable to access chat support on help center",
+          "id": "q2kg8n613kr3",
+          "title": "Elevated errors across all models",
           "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-26T20:27:39.000Z",
-          "updatedAt": "2026-05-26T20:30:52.000Z",
-          "resolvedAt": "2026-05-26T20:30:52.000Z",
-          "summary": null
+          "impact": "critical",
+          "startedAt": "2026-07-29T19:49:45.388Z",
+          "updatedAt": "2026-07-29T22:36:20.720Z",
+          "resolvedAt": "2026-07-29T22:36:20.701Z",
+          "url": "https://stspg.io/p7pqqb00414c",
+          "summary": "This issue has been resolved."
         },
         {
-          "id": "01KS88SRADTWQW27NYRAXMBAQN",
-          "title": "Increase in users hitting Codex rate limits",
+          "id": "rkk5x44tndw9",
+          "title": "Elevated errors on Claude Opus 5 and Haiku 4.5",
           "status": "resolved",
           "impact": "minor",
-          "startedAt": "2026-05-22T16:37:50.000Z",
-          "updatedAt": "2026-05-23T10:58:21.000Z",
-          "resolvedAt": "2026-05-23T10:58:20.000Z",
-          "summary": null
+          "startedAt": "2026-07-27T13:39:52.265Z",
+          "updatedAt": "2026-07-27T14:45:47.079Z",
+          "resolvedAt": "2026-07-27T14:36:43.730Z",
+          "url": "https://stspg.io/n0k1648rmm55",
+          "summary": "As of 7:34 PST / 14:34 UTC the errors have returned to baseline."
         },
         {
-          "id": "01KS695P8GHC0NCMFE96C34KJ1",
-          "title": "Elevated latency and error rates for ChatGPT 5.5 Thinking",
+          "id": "mfdtrknpxghq",
+          "title": "Elevated errors on Claude Opus 5",
           "status": "resolved",
           "impact": "minor",
-          "startedAt": "2026-05-21T22:05:52.000Z",
-          "updatedAt": "2026-05-21T23:22:55.000Z",
-          "resolvedAt": "2026-05-21T23:22:55.000Z",
-          "summary": null
+          "startedAt": "2026-07-27T11:27:38.071Z",
+          "updatedAt": "2026-07-27T12:30:22.960Z",
+          "resolvedAt": "2026-07-27T12:30:22.946Z",
+          "url": "https://stspg.io/wlr90hdngtwn",
+          "summary": "As of 4:47 PST / 11:47 UTC the errors have returned to baseline."
         }
       ]
     },
@@ -109,7 +114,7 @@
       "sourceLabel": "Official status page",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T07:13:52.547Z",
+      "lastCheckedAt": "2026-07-30T07:44:59.375Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -117,96 +122,6 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
-    },
-    {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T07:13:44.739Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Code",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "operational"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "fw96fnc5bw45",
-          "title": "Elevated errors on Claude Opus 4.7",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-05-27T05:43:07.404Z",
-          "updatedAt": "2026-05-27T06:40:46.881Z",
-          "resolvedAt": "2026-05-27T06:40:46.853Z",
-          "url": "https://stspg.io/w4j9tvxhrn0c",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "fl8sx824x72r",
-          "title": "Elevated errors for Claude Code in Slack",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-26T01:56:10.558Z",
-          "updatedAt": "2026-05-26T05:19:13.490Z",
-          "resolvedAt": "2026-05-26T05:19:13.475Z",
-          "url": "https://stspg.io/m9vnslk2x1kx",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "44pgyz54d48z",
-          "title": "Elevated error rates on Opus 4.7",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-05-25T10:32:38.909Z",
-          "updatedAt": "2026-05-25T10:39:30.275Z",
-          "resolvedAt": "2026-05-25T10:39:30.243Z",
-          "url": "https://stspg.io/fv0zvltnh6r5",
-          "summary": "This incident has been resolved."
-        },
-        {
-          "id": "r1prbh7v5gcn",
-          "title": "Elevated errors on Claude Opus 4.7",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-05-22T10:17:30.262Z",
-          "updatedAt": "2026-05-22T10:31:12.941Z",
-          "resolvedAt": "2026-05-22T10:31:12.926Z",
-          "url": "https://stspg.io/546qdwzgz0s9",
-          "summary": "This incident has been resolved."
-        }
-      ]
     },
     {
       "id": "cohere",
@@ -219,7 +134,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T07:13:52.680Z",
+      "lastCheckedAt": "2026-07-30T07:44:59.437Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -239,7 +154,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T07:13:53.176Z",
+      "lastCheckedAt": "2026-07-30T07:44:59.472Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -248,48 +163,48 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-05-14T08:17:15.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API recovered",
+          "id": "fireworks-feed-0-2026-07-27T15:35:54.000Z",
+          "title": "OpenAI GPT OSS 120B chat completion API recovered",
           "status": "resolved",
           "impact": "unknown",
-          "startedAt": "2026-05-14T08:17:15.000Z",
-          "updatedAt": "2026-05-14T08:17:15.000Z",
-          "resolvedAt": "2026-05-14T08:17:15.000Z",
+          "startedAt": "2026-07-27T15:35:54.000Z",
+          "updatedAt": "2026-07-27T15:35:54.000Z",
+          "resolvedAt": "2026-07-27T15:35:54.000Z",
           "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
+          "summary": "OpenAI GPT OSS 120B chat completion API recovered"
         },
         {
-          "id": "fireworks-feed-1-2026-05-14T08:14:13.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "id": "fireworks-feed-1-2026-07-27T15:32:42.000Z",
+          "title": "OpenAI GPT OSS 120B chat completion API went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-05-14T08:14:13.000Z",
-          "updatedAt": "2026-05-14T08:14:13.000Z",
+          "startedAt": "2026-07-27T15:32:42.000Z",
+          "updatedAt": "2026-07-27T15:32:42.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+          "summary": "OpenAI GPT OSS 120B chat completion API went down"
         },
         {
-          "id": "fireworks-feed-2-2026-05-13T22:59:08.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API recovered",
+          "id": "fireworks-feed-2-2026-07-24T00:35:50.000Z",
+          "title": "OpenAI GPT OSS 120B chat completion API recovered",
           "status": "resolved",
           "impact": "unknown",
-          "startedAt": "2026-05-13T22:59:08.000Z",
-          "updatedAt": "2026-05-13T22:59:08.000Z",
-          "resolvedAt": "2026-05-13T22:59:08.000Z",
+          "startedAt": "2026-07-24T00:35:50.000Z",
+          "updatedAt": "2026-07-24T00:35:50.000Z",
+          "resolvedAt": "2026-07-24T00:35:50.000Z",
           "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API recovered"
+          "summary": "OpenAI GPT OSS 120B chat completion API recovered"
         },
         {
-          "id": "fireworks-feed-3-2026-05-13T22:50:16.000Z",
-          "title": "Nomic Embed Text v1.5 embeddings API went down",
+          "id": "fireworks-feed-3-2026-07-24T00:32:51.000Z",
+          "title": "OpenAI GPT OSS 120B chat completion API went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-05-13T22:50:16.000Z",
-          "updatedAt": "2026-05-13T22:50:16.000Z",
+          "startedAt": "2026-07-24T00:32:51.000Z",
+          "updatedAt": "2026-07-24T00:32:51.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai/",
-          "summary": "Nomic Embed Text v1.5 embeddings API went down"
+          "summary": "OpenAI GPT OSS 120B chat completion API went down"
         }
       ]
     },
@@ -304,7 +219,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T07:13:52.048Z",
+      "lastCheckedAt": "2026-07-30T07:44:59.311Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -322,28 +237,92 @@
           "resolvedAt": "2026-02-27T14:35:00.000Z",
           "url": "https://status.cloud.google.com",
           "summary": "# Incident Report\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models experienced increased error rates. Impacted services incl..."
+        }
+      ]
+    },
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-07-30T07:44:59.154Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Images",
+          "status": "operational"
         },
         {
-          "id": "8cY8jdUpEGGbsSMSQk7J",
-          "title": "We are investigating elevated error rates with multiple products in us-east1",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2025-07-18T14:42:00.000Z",
-          "updatedAt": "2025-07-22T13:42:49.000Z",
-          "resolvedAt": "2025-07-18T16:47:00.000Z",
-          "url": "https://status.cloud.google.com",
-          "summary": "## \\# Incident Report\n## \\#\\# Summary\nOn Friday, 18 July 2025 07:50 US/Pacific, several Google Cloud Platform (GCP) and Google Workspace (GWS) products experienced elevated latenc..."
+          "name": "Sites",
+          "status": "operational"
         },
         {
-          "id": "ow5i3PPK96RduMcb1SsW",
-          "title": "Multiple GCP products are experiencing Service issues.",
+          "name": "Batch",
+          "status": "operational"
+        },
+        {
+          "name": "Moderations",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Codex in ChatGPT Desktop",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01KYNNX2TQ3PV0KPJ9PTRRPX6C",
+          "title": "Elevated error rates with the invalid_prompt error code",
           "status": "resolved",
           "impact": "minor",
-          "startedAt": "2025-06-12T17:51:00.000Z",
-          "updatedAt": "2025-06-13T23:45:21.000Z",
-          "resolvedAt": "2025-06-13T01:18:00.000Z",
-          "url": "https://status.cloud.google.com",
-          "summary": "# Incident Report\n## **Summary**\n*Google Cloud, Google Workspace and Google Security Operations products experienced increased 503 errors in external API requests, impacting custo..."
+          "startedAt": "2026-07-29T00:55:27.000Z",
+          "updatedAt": "2026-07-29T02:20:19.000Z",
+          "resolvedAt": "2026-07-29T02:20:19.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KYMJND2XYYBDVCF8DKA5DY3N",
+          "title": "Elevated Image Generation Error Rate in ChatGPT",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-28T14:39:36.000Z",
+          "updatedAt": "2026-07-28T15:15:32.000Z",
+          "resolvedAt": "2026-07-28T15:15:32.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KYJFG4S86K8FMTB4N6BDZS7F",
+          "title": "Image generation unavailable in ChatGPT",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-07-27T19:05:49.000Z",
+          "updatedAt": "2026-07-27T20:24:51.000Z",
+          "resolvedAt": "2026-07-27T20:24:51.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01KY23YCPJ9M5BFFT6ZHKQE9MP",
+          "title": "Image generation unavailable in ChatGPT",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-07-21T10:36:02.000Z",
+          "updatedAt": "2026-07-27T19:04:42.000Z",
+          "resolvedAt": "2026-07-22T02:50:19.000Z",
+          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -358,7 +337,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-05-27T07:13:53.411Z",
+      "lastCheckedAt": "2026-07-30T07:44:59.584Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -367,48 +346,48 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "together-feed-0-2026-05-26T08:47:53.000Z",
-          "title": "Qwen3.5 9B recovered",
-          "status": "resolved",
-          "impact": "unknown",
-          "startedAt": "2026-05-26T08:47:53.000Z",
-          "updatedAt": "2026-05-26T08:47:53.000Z",
-          "resolvedAt": "2026-05-26T08:47:53.000Z",
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 9B recovered"
-        },
-        {
-          "id": "together-feed-1-2026-05-26T08:23:53.000Z",
-          "title": "Qwen3.5 9B went down",
-          "status": "investigating",
-          "impact": "major",
-          "startedAt": "2026-05-26T08:23:53.000Z",
-          "updatedAt": "2026-05-26T08:23:53.000Z",
-          "resolvedAt": null,
-          "url": "https://status.together.ai/",
-          "summary": "Qwen3.5 9B went down"
-        },
-        {
-          "id": "together-feed-2-2026-05-25T22:04:56.000Z",
+          "id": "together-feed-0-2026-07-29T09:35:08.000Z",
           "title": "Google Gemma 4 31B IT recovered",
           "status": "resolved",
           "impact": "unknown",
-          "startedAt": "2026-05-25T22:04:56.000Z",
-          "updatedAt": "2026-05-25T22:04:56.000Z",
-          "resolvedAt": "2026-05-25T22:04:56.000Z",
+          "startedAt": "2026-07-29T09:35:08.000Z",
+          "updatedAt": "2026-07-29T09:35:08.000Z",
+          "resolvedAt": "2026-07-29T09:35:08.000Z",
           "url": "https://status.together.ai/",
           "summary": "Google Gemma 4 31B IT recovered"
         },
         {
-          "id": "together-feed-3-2026-05-25T21:51:54.000Z",
+          "id": "together-feed-1-2026-07-29T09:21:48.000Z",
           "title": "Google Gemma 4 31B IT went down",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-05-25T21:51:54.000Z",
-          "updatedAt": "2026-05-25T21:51:54.000Z",
+          "startedAt": "2026-07-29T09:21:48.000Z",
+          "updatedAt": "2026-07-29T09:21:48.000Z",
           "resolvedAt": null,
           "url": "https://status.together.ai/",
           "summary": "Google Gemma 4 31B IT went down"
+        },
+        {
+          "id": "together-feed-2-2026-07-29T02:16:51.000Z",
+          "title": "Google Gemma 3N E4B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-29T02:16:51.000Z",
+          "updatedAt": "2026-07-29T02:16:51.000Z",
+          "resolvedAt": "2026-07-29T02:16:51.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 3N E4B IT recovered"
+        },
+        {
+          "id": "together-feed-3-2026-07-29T01:49:48.000Z",
+          "title": "Google Gemma 4 31B IT recovered",
+          "status": "resolved",
+          "impact": "unknown",
+          "startedAt": "2026-07-29T01:49:48.000Z",
+          "updatedAt": "2026-07-29T01:49:48.000Z",
+          "resolvedAt": "2026-07-29T01:49:48.000Z",
+          "url": "https://status.together.ai/",
+          "summary": "Google Gemma 4 31B IT recovered"
         }
       ]
     },

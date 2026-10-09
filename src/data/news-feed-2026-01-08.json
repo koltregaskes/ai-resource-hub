@@ -1,9 +1,42 @@
 {
-  "generated": "2026-05-25T14:37:34.902Z",
+  "generated": "2026-08-26T02:57:14.831Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-08",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 2,
+  "archived_story_count": 155,
+  "articles": [
+    {
+      "title": "GitHub Releases · ComfyUI: v0.8.1",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.8.1",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-01-08T04:01:52.000Z",
+      "summary": "## What's Changed * Fix stable release workflow not pulling latest comfy kitchen. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/11695 * Support gemma 12B with quant weights. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/11696 * model_patcher: Remove confusing load stat by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/11710 * Add device selection for LTXAVTextEncoderLoader by @kijai in https://github.com/Comfy-Org/ComfyUI/pull/11700 * Lower ltxv text encoder vram use. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/11713 * Bump required comfy-kitchen version. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/11714 * Increase ltxav mem estimation by a bit. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/11715 * Add memory estimation function to ltxav text encoder. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/11716 * ops: Fix offloading with FP8MM performance by @rattus128 in htt",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · ComfyUI: v0.8.2",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.8.2",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-08T06:00:20.000Z",
+      "summary": "## What's Changed * Tweak ltxv vae mem estimation. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/11722 **Full Changelog**: https://github.com/Comfy-Org/ComfyUI/compare/v0.8.1...v0.8.2",
+      "category": "ai_tools"
+    }
+  ]
 }

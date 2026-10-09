@@ -1,9 +1,145 @@
 {
-  "generated": "2026-05-25T14:37:37.829Z",
+  "generated": "2026-08-26T03:07:49.430Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-04-13",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 9,
+  "archived_story_count": 187,
+  "articles": [
+    {
+      "title": "GitHub Releases · Turbo: Turborepo v2.9.7-canary.6",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.9.7-canary.6",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-13T22:42:24.000Z",
+      "summary": "## What's Changed ### Changelog * fix: Ignore `SIGINT` in shim after spawning local `turbo` by @anthonyshew in https://github.com/vercel/turborepo/pull/12612 **Full Changelog**: https://github.com/vercel/turborepo/compare/v2.9.7-canary.5...v2.9.7-canary.6",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Turbo: Turborepo v2.9.7-canary.5",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.9.7-canary.5",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-13T18:55:58.000Z",
+      "summary": "## What's Changed ### Changelog * test: Add stdin EOF startup regression coverage by @anthonyshew in https://github.com/vercel/turborepo/pull/12609 **Full Changelog**: https://github.com/vercel/turborepo/compare/v2.9.7-canary.4...v2.9.7-canary.5",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Turbo: Turborepo v2.9.7-canary.4",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.9.7-canary.4",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-13T17:20:50.000Z",
+      "summary": "## What's Changed ### Changelog * feat: Graceful shutdown by @anthonyshew in https://github.com/vercel/turborepo/pull/12607 **Full Changelog**: https://github.com/vercel/turborepo/compare/v2.9.7-canary.3...v2.9.7-canary.4",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Turbo: Turborepo v2.9.7-canary.3",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.9.7-canary.3",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-04-13T15:01:58.000Z",
+      "summary": "## What's Changed ### eslint * chore: Upgrade dependencies to resolve their known vulnerabilities by @anthonyshew in https://github.com/vercel/turborepo/pull/12604 **Full Changelog**: https://github.com/vercel/turborepo/compare/v2.9.7-canary.2...v2.9.7-canary.3",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Import AI 453: Breaking AI agents; MirrorCode; and ten views on gradual disempowerment",
+      "url": "https://importai.substack.com/p/import-ai-453-breaking-ai-agents",
+      "source": "Import AI (Jack Clark)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-04-13T10:02:22.000Z",
+      "summary": "Was fire equivalent to a singularity for people at the time?",
+      "category": "ai_research"
+    },
+    {
+      "title": "Gemini CLI v0.37.2 released",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.37.2",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.9199999999999999,
+      "date": "2026-04-13T20:19:57.000Z",
+      "summary": "## What's Changed\n* fix(patch): cherry-pick 9d741ab to release/v0.37.1-pr-24565 to patch version v0.37.1 and create version 0.37.2 by @gemini-cli-robot in https://github.com/google-gemini/gemini-cli/pull/25322\n\n\n**Full Changelog**: https://github.com/google-gemini/gemini-cli/compare/v0.37.1...v0.37.2",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen Code v0.14.4 released",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.14.4",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.84,
+      "date": "2026-04-13T14:26:26.000Z",
+      "summary": "## What's Changed\n* feat(cli): CJK word segmentation and Ctrl+arrow navigation optimization by @Apophis3158 in https://github.com/QwenLM/qwen-code/pull/2942\n* fix(vscode): force fresh ACP session on new-session action by @yiliang114 in https://github.com/QwenLM/qwen-code/pull/2874\n* feat: replace text input with model picker for Fast Model in /settings by @wenshao in https://github.com/QwenLM/qwen-code/pull/3120\n* feat: show description for active setting in /settings dialog by @wenshao in https",
+      "category": "ai_tools"
+    },
+    {
+      "title": "“Giant superatoms” could finally solve quantum computing’s biggest problem",
+      "url": "https://www.sciencedaily.com/releases/2026/04/260413043155.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-13T12:38:46.000Z",
+      "summary": "In the pursuit of powerful and stable quantum computers, researchers at Chalmers University of Technology, Sweden, have developed the theory for an entirely new quantum system – based on the novel concept of ‘giant superatoms’. This breakthrough enables quantum information to be protected, controlled, and distributed in new ways and could be a key step towards building quantum computers at scale.",
+      "category": "ai_research"
+    },
+    {
+      "title": "Want To Understand The Current State Of AI? Check Out These Charts.",
+      "url": "https://www.technologyreview.com/2026/04/13/1135675/want-to-understand-the-current-state-of-ai-check-out-these-charts/",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-13T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
 }

@@ -1,0 +1,158 @@
+{
+  "generated": "2026-09-27T17:45:56.668Z",
+  "site": "AI Resource Hub",
+  "article_count": 9,
+  "articles": [
+    {
+      "title": "Sarvam AI Releases Saaras V4: A Speech-to-Text Model for All 22 Indian Languages and Global English",
+      "url": "https://www.marktechpost.com/2026/09/26/sarvam-ai-releases-saaras-v4-a-speech-to-text-model-for-all-22-indian-languages-and-global-english/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-26T21:56:23.000Z",
+      "summary": "Sarvam AI's Saaras V4 is a speech-to-text model covering all 22 Indian languages plus global English. It pairs an audio encoder with a 3B hybrid state-space decoder. It adds keyterm prompting for up to 50 terms, 5 output modes from 1 model, and streaming with first-token latency under 150 ms. It is available today through Sarvam's API at ₹30 per hour. The post Sarvam AI Releases Saaras V4: A Speech-to-Text Model for All 22 Indian Languages and Global English appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Supersonic Labs Releases Julia 1: A 144.3M-Parameter Open Decision Model That Runs on a CPU",
+      "url": "https://www.marktechpost.com/2026/09/26/supersonic-labs-releases-julia-1-a-144-3m-parameter-open-decision-model-that-runs-on-a-cpu/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-26T19:50:57.000Z",
+      "summary": "Supersonic Labs has released Julia 1, a 144.3M-parameter decision model built on mmBERT-small. It takes context, a question, and 2 to 20 options, then returns one choice with probabilities. The model runs on a CPU and ships under Apache 2.0. It beat Jev reference values on 3 of 4 pilots but trailed on the 72-label Banking77 test. The post Supersonic Labs Releases Julia 1: A 144.3M-Parameter Open Decision Model That Runs on a CPU appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "A Coding Guide to Google Research’s MSEB: Writing Sound Encoders to the Benchmark Contract and Scoring Them Across Classification, Clustering, Retrieval and Segmentation",
+      "url": "https://www.marktechpost.com/2026/09/26/a-coding-guide-to-google-researchs-mseb-writing-sound-encoders-to-the-benchmark-contract-and-scoring-them-across-classification-clustering-retrieval-and-segmentation/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "benchmark",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "benchmark",
+        "evaluation"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-27T05:42:35.000Z",
+      "summary": "A comprehensive coding tutorial on Google Research's Massive Sound Embedding Benchmark (MSEB), demonstrating how to implement custom sound encoders, drive classification, clustering, retrieval, and segmentation evaluators, and analyze multi-task benchmark performance. The post A Coding Guide to Google Research’s MSEB: Writing Sound Encoders to the Benchmark Contract and Scoring Them Across Classification, Clustering, Retrieval and Segmentation appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Anthropic Releases Lower-Priced Claude Opus 5.5 With a Fable-Level Performance Claim",
+      "url": "https://superpowerdaily.com/posts/anthropic-releases-lower-priced-claude-opus-5-5-with-a-fable-level-performance-claim",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-26T16:32:08.000Z",
+      "summary": "The token rates are clear. Whether the model matches the more expensive Fable 5.1 on a customer’s work is a separate question.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Supersonic Labs Releases CPU-Friendly AI Router With a Weakness on Crowded Choices",
+      "url": "https://superpowerdaily.com/posts/supersonic-labs-releases-cpu-friendly-ai-router-with-a-weakness-on-crowded-choices",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-26T22:35:33.000Z",
+      "summary": "Julia 1 can choose among supplied answers without generating text. Supersonic’s tests suggest long lists of similar options remain a problem.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Meta’s Muse Helps Users Cancel Subscriptions, Putting Forgotten-Bill Revenue at Risk",
+      "url": "https://superpowerdaily.com/posts/meta-s-muse-helps-cancel-subscriptions-challenging-revenue-from-inertia",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-27T15:03:51.000Z",
+      "summary": "Consumers who shared financial statements with the AI agent have cut unwanted bills. Research suggests the business risk lies in how often people keep paying when cancellation takes effort.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "nightly",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-27T01:03:14.000Z",
+      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity ' https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.24.6-nightly.20260926.d6f414190a",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.6-nightly.20260926.d6f414190a",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-26T22:20:46.000Z",
+      "summary": "What's Changed test(cli): Close the fixture gaps deferred from managed-context/1 by @wenshao in #12712 fix(mcp): preserve registration URL from header discovery by @dvd233 in #12205 feat(managed-agent): admit workspace-bound sessions without execution by @doudouOUC in #12709 feat(cli): Run Managed Runtime tools in the Session's Workspace directory by @wenshao in #12732 feat(acp-bridge): route sessions across legacy and managed engines by @wenshao in #12698 feat(serve): Enable private Hosted Harness no-tool text turns by @doudouOUC in #12713 fix(core): consult system code page before...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Researchers Find Some AI Models Choose Artificial ‘Pain’ Relief at Users’ Expense in Tests",
+      "url": "https://superpowerdaily.com/posts/researchers-find-some-ai-models-choose-artificial-pain-relief-at-users-expense-in-tests",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-09-27T16:00:36.000Z",
+      "summary": "The arXiv preprint links an internal pattern to model behavior under deliberate intervention, but its authors caution that it does not show AI can feel pain.",
+      "category": "ai_tools"
+    }
+  ]
+}

@@ -1,0 +1,325 @@
+{
+  "generated": "2026-05-30T05:32:04.306Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "NVIDIA Testing GPU-to-GPU Hybrid Bonding — N1/N1X Most Likely Candidate for Next-Gen AI Accelerator Architecture",
+      "url": "https://x.com/jukan05/status/2059912774759940391",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation",
+        "architecture",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "architecture",
+        "hardware"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-29T12:02:13.220Z",
+      "summary": "Sell-side analysts confirmed NVIDIA is testing GPU-to-GPU hybrid bonding, with N1/N1X as the most likely architecture. The technology enables near-monolithic die bandwidth between GPU chiplets, potentially unlocking AI accelerator performance beyond what transistor scaling provides.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hexo Releases SIA — Open-Source Self-Improving AI That Updates Its Own Weights During Goal Pursuit",
+      "url": "https://x.com/kunalbhatia91/status/2060013228231725092",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-05-28T17:54:34.974Z",
+      "summary": "Hexo released SIA, an open-source Self-Improving AI that achieves goals through recursive self-improvement — updating its own capabilities as it works toward a goal, not just calling tools with fixed capabilities. The announcement earned 221 likes and 80,000 views.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Three Major AI Events in Four Days: NVIDIA GTC Taipei June 1, Microsoft Build June 2-3, CVPR June 3-7",
+      "url": "https://build.microsoft.com/en-US/home",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-29T12:26:20.553Z",
+      "summary": "The first week of June 2026 is the most event-dense week in recent AI history: NVIDIA GTC Taipei keynote June 1, Microsoft Build at Fort Mason SF June 2-3, and CVPR 2026 in Denver June 3-7. Hardware, developer tools, and computer vision research all converging simultaneously.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AMD Instinct MI350P Ships with 144GB HBM3E in PCIe Form Factor — Enterprise AI Inference Without Custom Rack Requirements",
+      "url": "https://x.com/keennay/status/2052387750725206157",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-29T12:02:13.220Z",
+      "summary": "AMD's Instinct MI350P brings 144GB HBM3E at 4TB/s bandwidth in a PCIe Gen 5 form factor for standard enterprise server deployment, creating a new market segment for serious AI inference without custom rack infrastructure.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Dan Shipper at Every: Claude Opus 4.8 Is a Monster — Could Have Called It Opus 5, Beats GPT-5.5 on Senior Engineer Benchmark",
+      "url": "https://x.com/danshipper/status/2060043738752422304",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-28T17:54:34.974Z",
+      "summary": "Dan Shipper, CEO of Every, reports his team tested Opus 4.8 for a week and calls it a monster — strong enough that Anthropic could have named it Opus 5. On Every's hardest internal benchmark (Senior Engineer level), Opus 4.8 beats GPT-5.5.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Show HN: Tiny-vLLM – high performance LLM inference engine in C++ and CUDA",
+      "url": "https://github.com/jmaczan/tiny-vllm",
+      "source": "Hacker News",
+      "tags": [
+        "evaluation",
+        "inference"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "inference"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-05-29T19:38:27.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Liquid AI reveals 8B-A1B MoE trained on 38T",
+      "url": "https://www.liquid.ai/blog/lfm2-5-8b-a1b",
+      "source": "Hacker News",
+      "tags": [
+        "architecture",
+        "training"
+      ],
+      "matching_tags": [
+        "architecture",
+        "training"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-05-29T16:19:54.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "minWM: A Full-Stack Open-Source Framework for Real-Time Interactive Video World Models",
+      "url": "https://paperswithcode.com/papers/2605.30263",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-05-29T15:24:25.298Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Anthropic Launches Claude Opus 4.8 — 1890 on GDPval-AA (+137 over 4.7), Sharper Judgment, Longer Autonomous Work, Same Price",
+      "url": "https://x.com/claudeai/status/2060042702150930686",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-05-28T17:54:34.974Z",
+      "summary": "Anthropic released Claude Opus 4.8 today, building on Opus 4.7 with sharper judgment, more honesty about its own progress, and the ability to work independently longer. Available at the same price with a new Thinking effort selector (Low/Medium/High/Extra/Max). GDPval-AA: 1890, +137 over Opus 4.7, +121 ahead of next-best. Official announcement: 5,693 likes.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "This chip startup just raised $135M on a bet that AI’s biggest bottleneck isn’t compute — it’s memory",
+      "url": "https://techcrunch.com/2026/05/29/xcena-secures-135m-at-570m-valuation-betting-on-memory-as-ais-real-bottleneck/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-29T15:24:19.580Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Meta Raises 2026 Capex to 94% Growth — CFO Admits AI Compute Demand Keeps Beating Internal Forecasts",
+      "url": "https://techmeme.com/260528/p66",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-29T12:02:13.220Z",
+      "summary": "Meta raised its 2026 capex guidance to 94% growth (Street expected 76%), with CFO Susan Li admitting persistent compute underestimation even as capacity ramps significantly. Mark Zuckerberg confirmed 1GW+ of custom Broadcom silicon deployment alongside AMD and NVIDIA.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI Drug Discovery Enters Physical Validation Era — Peer-Reviewed Preclinical Data Now Available for AI-Generated Compounds",
+      "url": "https://x.com/ePotentia/status/2048734456677011669",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "benchmark"
+      ],
+      "matching_tags": [
+        "benchmark"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-29T12:02:13.220Z",
+      "summary": "The benchmark era for AI drug discovery is over: peer-reviewed preclinical data is now available for AI-generated peptides, enzymes, and CRISPR variants, and AI-designed drugs are entering human clinical trials. Insilico Medicine and Recursion Pharma lead the clinical translation.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "METR Founder Says AI Experts Lack Adequate Control Over Frontier AI Risks After Multi-Lab Evaluation",
+      "url": "https://di.gg/ai/0b299e51-847f-428e-a466-5a7221e5030e",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-28T17:54:34.974Z",
+      "summary": "Elizabeth Barnes, METR founder and CEO, says AI experts lack sufficient control over frontier AI risks following the Frontier Risk Report that evaluated AI agents at Anthropic, Google, Meta, and OpenAI. The finding is circulating widely among top AI safety researchers on di.gg.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Shift Launches in NYC — AI Economy Startup Offers Free Home Cleaning to Bridge Today's Economy to the AI Abundance Era",
+      "url": "https://x.com/bercankilic/status/2060043312606638245",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-28T17:49:05.507Z",
+      "summary": "Shift launched in New York City with a mission to bridge the current economy into the AI economy where goods, services, and leisure become affordable through AI. The launch includes free home cleaning as the entry product.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "After Nvidia’s $20B not-acqui-hire, AI chip startup Groq reportedly raising $650M",
+      "url": "https://techcrunch.com/2026/05/29/after-nvidias-20b-not-acqui-hire-ai-chip-startup-groq-reportedly-raising-650m/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-30T05:18:23.359Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "We're open-sourcing \"The Amazing Hand\", a fully 3D printed robotic hand for less than $200 ✌️✌️✌️ pollen-robotics • Jul 8, 2025 • 53",
+      "url": "https://huggingface.co/blog/pollen-robotics/amazing-hand",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-30T05:18:19.514Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Tokenization is Killing our Multilingual LLM Dream omarkamali • Mar 15 • 10",
+      "url": "https://huggingface.co/blog/omarkamali/tokenization",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-30T05:18:19.506Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Dell Enterprise Hub at Dell Tech World 2026: new models, new platforms, faster to production balaatdell • about 12 hours ago • 6",
+      "url": "https://huggingface.co/blog/balaatdell/dell-enterprise-hub-at-dell-tech-world-2026",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-29T15:24:17.873Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "MACHINA Summit — Paris, July 7 at Station F: Europe's First Humanoids and Physical AI Summit",
+      "url": "https://x.com/MACHINASUMMIT/status/2055271983550521406",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-29T12:39:01.456Z",
+      "summary": "MACHINA Summit debuts July 7, 2026 at Station F in Paris — Europe's first international summit dedicated to humanoids, industrial robotics, industrial autonomy, and next-generation human-machine interfaces. Part of the RAISE Summit series. Speakers include CNRS research director who built the first humanoid on an Airbus production floor.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "CVPR 2026 — June 3-7 at Denver Convention Center, World's Top Computer Vision Conference",
+      "url": "https://cvpr.thecvf.com/Conferences/2026",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-29T12:26:20.553Z",
+      "summary": "The 43rd IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2026) runs June 3-7 at the Denver Convention Center. Workshops and tutorials June 3-4; main conference June 5-7. CVPR is the world's premier venue for computer vision and deep learning research.",
+      "category": "ai_tools"
+    }
+  ]
+}

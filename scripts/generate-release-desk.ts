@@ -3,7 +3,8 @@ import Database from 'better-sqlite3';
 import fs from 'node:fs';
 import path from 'node:path';
 import { routeAiResourceHubNews } from '../src/data/news-routing';
-import { getCatalogModelsById, getCatalogProvidersById } from './model-catalog';
+import { isDiscoveryOnlyModel } from '../src/data/model-verification';
+import { getCatalogModelsById } from './model-catalog';
 import { getAiResourceHubSqlitePath } from './sqlite-path';
 
 const DB_PATH = getAiResourceHubSqlitePath();
@@ -61,6 +62,7 @@ type NewsRow = {
 
 type ReleasePriority = 'high' | 'watch' | 'backfill';
 type ReleaseDraftStatus = 'ready_for_editor' | 'needs_research' | 'watch_only';
+type ReleaseVerificationState = 'official' | 'discovery_only' | 'unverified';
 
 type RoutedStory = {
   title: string;
@@ -120,7 +122,11 @@ function getAliasNeedles(model: ReleaseModelRow, extraAliases: string[]): string
     .filter((value) => value.length >= 3);
 }
 
-function buildSummary(model: ReleaseModelRow, officialUrl: string | null): string {
+function buildSummary(
+  model: ReleaseModelRow,
+  officialUrl: string | null,
+  verificationState: ReleaseVerificationState,
+): string {
   const parts: string[] = [];
 
   parts.push(`${model.name} is ${model.status === 'preview' ? 'a preview-stage' : 'a currently tracked'} release from ${model.provider_name}.`);
@@ -143,8 +149,12 @@ function buildSummary(model: ReleaseModelRow, officialUrl: string | null): strin
     parts.push(model.notes.trim());
   }
 
-  if (officialUrl) {
-    parts.push('There is an official launch or documentation URL attached, so this is ready for source-first editorial work.');
+  if (verificationState === 'official' && officialUrl) {
+    parts.push('A model-level official source is attached, so this can enter source-first editorial review.');
+  } else if (verificationState === 'discovery_only') {
+    parts.push('This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.');
+  } else {
+    parts.push('No model-level primary source is attached yet. Treat this record as unverified.');
   }
 
   const seen = new Set<string>();
@@ -201,13 +211,17 @@ function buildWhyItMatters(model: ReleaseModelRow, benchmarkCount: number, relat
   return bullets;
 }
 
-function buildChecklist(model: ReleaseModelRow): string[] {
+function buildChecklist(model: ReleaseModelRow, verificationState: ReleaseVerificationState): string[] {
   const checklist = [
     'Summarise the official launch post and link the primary docs first.',
     'Cross-check any benchmark claims against tracked evals and note gaps clearly.',
     'Confirm pricing, context window, API availability, and local/open-weight status.',
     'Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups.',
   ];
+
+  if (verificationState !== 'official') {
+    checklist.unshift('Confirm the model exists using a model-level provider source before drafting any release claim.');
+  }
 
   if (model.open_source) {
     checklist.push('Add local-running context: LM Studio, Ollama, GGUF, MLX, or device notes where relevant.');
@@ -304,6 +318,7 @@ function buildDraftMarkdown(entry: {
   providerName: string;
   modelName: string;
   draftStatus: ReleaseDraftStatus;
+  verificationState: ReleaseVerificationState;
   priority: ReleasePriority;
   summary: string;
   whyItMatters: string[];
@@ -325,6 +340,7 @@ title: "${entry.title}"
 slug: "${entry.fileSlug}"
 draft_type: "model-release"
 status: "${entry.draftStatus}"
+verification_state: "${entry.verificationState}"
 priority: "${entry.priority}"
 model: "${entry.modelName}"
 provider: "${entry.providerName}"
@@ -378,7 +394,6 @@ function main() {
   const storyCutoff = isoDaysAgo(RELATED_STORY_WINDOW_DAYS, now);
 
   const catalogModels = getCatalogModelsById();
-  const catalogProviders = getCatalogProvidersById();
   const db = new Database(DB_PATH, { readonly: true });
 
   const models = db.prepare(`
@@ -471,8 +486,12 @@ function main() {
 
   const releases = releaseCandidates.map((model) => {
     const catalogModel = catalogModels.get(model.id);
-    const catalogProvider = catalogProviders.get(model.provider_id);
-    const officialUrl = catalogModel?.officialUrl ?? catalogProvider?.apiDocsUrl ?? model.provider_api_docs_url ?? null;
+    const verificationState: ReleaseVerificationState = catalogModel
+      ? 'official'
+      : isDiscoveryOnlyModel(model)
+        ? 'discovery_only'
+        : 'unverified';
+    const officialUrl = catalogModel?.officialUrl ?? null;
     const aliases = getAliasNeedles(model, catalogModel?.aliases ?? []);
     const competingAliases = (providerAliasMap.get(model.provider_id) ?? [])
       .filter((entry) => entry.modelId !== model.id)
@@ -516,16 +535,16 @@ function main() {
       : ageDays <= 60
         ? 'watch'
         : 'backfill';
-    const draftStatus: ReleaseDraftStatus = relatedStories.length > 0 || benchmarkHighlights.length > 0
-      ? 'ready_for_editor'
-      : officialUrl
-        ? 'needs_research'
-        : 'watch_only';
+    const draftStatus: ReleaseDraftStatus = verificationState !== 'official'
+      ? 'watch_only'
+      : relatedStories.length > 0 || benchmarkHighlights.length > 0
+        ? 'ready_for_editor'
+        : 'needs_research';
     const fileSlug = `${model.released ?? now.toISOString().slice(0, 10)}-${slugify(model.name)}-release-brief`;
     const dek = `${model.provider_name}'s ${model.name} is on the release desk with ${relatedStories.length} related ${relatedStories.length === 1 ? 'story' : 'stories'} and ${benchmarkHighlights.length} benchmark signal${benchmarkHighlights.length === 1 ? '' : 's'} to review.`;
-    const summary = buildSummary(model, officialUrl);
+    const summary = buildSummary(model, officialUrl, verificationState);
     const whyItMatters = buildWhyItMatters(model, benchmarkHighlights.length, relatedStories.length);
-    const checklist = buildChecklist(model);
+    const checklist = buildChecklist(model, verificationState);
     const threadPlan = buildThreadPlan({
       modelName: model.name,
       providerName: model.provider_name,
@@ -547,6 +566,7 @@ function main() {
       releaseDateLabel: formatDate(model.released),
       ageDays,
       status: model.status,
+      verificationState,
       priority,
       draftStatus,
       officialUrl,
@@ -598,6 +618,8 @@ function main() {
       totalReleases: releases.length,
       highPriority: releases.filter((release) => release.priority === 'high').length,
       readyForEditor: releases.filter((release) => release.draftStatus === 'ready_for_editor').length,
+      officiallyVerified: releases.filter((release) => release.verificationState === 'official').length,
+      watchOnly: releases.filter((release) => release.draftStatus === 'watch_only').length,
       openSource: releases.filter((release) => release.openSource).length,
     },
     releases,
@@ -619,6 +641,7 @@ function main() {
       providerName: release.providerName,
       modelName: release.modelName,
       draftStatus: release.draftStatus,
+      verificationState: release.verificationState,
       priority: release.priority,
       summary: release.summary,
       whyItMatters: release.whyItMatters,

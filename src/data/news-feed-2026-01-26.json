@@ -1,9 +1,40 @@
 {
-  "generated": "2026-05-25T14:37:35.511Z",
+  "generated": "2026-08-26T02:57:32.688Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-26",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 2,
+  "archived_story_count": 152,
+  "articles": [
+    {
+      "title": "GitHub Releases · Remotion: v4.0.410",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.410",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-26T18:01:58.000Z",
+      "summary": "## What's Changed * **`@remotion/cli`: Tie `zod` and `mediabunny` version to Remotion version (using `npx remotion add`, `npx remotion studio`, `npx remotion version`, Studio Modal)** by @tiwariaayu in https://github.com/remotion-dev/remotion/pull/6372 * **`@remotion/cli`: `npx remotion skills add`** by @tiwariaayu in https://github.com/remotion-dev/remotion/pull/6368 * `@remotion/compositor`: Add headerpad linker flag for MacOS compositor Builds by @webmonch in https://github.com/remotion-dev/remotion/pull/6344 * `create-video`: Fix \"Open in Cursor\" prompt by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6348 * `@remotion/licensing`: Send isStill & isProduction in usage event by @pskd73 in https://github.com/remotion-dev/remotion/pull/6297 * `@remotion/licensing`: Rename `apiKey` to `licenseKey` by @pskd73 in https://github.com/remotion-dev/remotion/pull/6334 * `create-video`: Make empty template the default by @JonnyBurger in https://github.com/remotion-dev/remotion/p",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · pnpm: pnpm 10.28.2",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v10.28.2",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-26T14:59:42.000Z",
+      "summary": "## Patch Changes * Security fix: prevent path traversal in `directories.bin` field. * When pnpm installs a `file:` or `git:` dependency, it now validates that symlinks point within the package directory. Symlinks to paths outside the package root are skipped to prevent local data from being leaked into `node_modules`. This fixes a security issue where a malicious package could create symlinks to sensitive files (e.g., `/etc/passwd`, `~/.ssh/id_rsa`) and have their contents copied when the package is installed. Note: This only affects `file:` and `git:` dependencies. Registry packages (npm) have symlinks stripped during publish and are not affected. * Fixed optional dependencies to request full metadata from the registry to get the `libc` field, which is required for proper platform compatibility checks [#9950](https://github.com/pnpm/pnpm/issues/9950). ## Platinum Sponsors ## Gold Sponsors",
+      "category": "ai_tools"
+    }
+  ]
 }

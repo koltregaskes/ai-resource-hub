@@ -1,9 +1,40 @@
 {
-  "generated": "2026-05-25T14:37:35.012Z",
+  "generated": "2026-08-26T02:57:17.491Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-12",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 2,
+  "archived_story_count": 162,
+  "articles": [
+    {
+      "title": "GitHub Releases · Remotion: v4.0.405",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.405",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-12T18:58:14.000Z",
+      "summary": "## What's Changed * `@remotion/mcp`: Remove outputSchema registerTool (Fixes `-32602` error) by @pskd73 in https://github.com/remotion-dev/remotion/pull/6277 * `@remotion/renderer`: Force quit compositor when render fails by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6278 * `@remotion/web-renderer`: fix `onProgress` being called after render is finished by @samohovets in https://github.com/remotion-dev/remotion/pull/6280 **Full Changelog**: https://github.com/remotion-dev/remotion/compare/v4.0.404...v4.0.405",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.32.0",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.32.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-01-12T18:41:43.000Z",
+      "summary": "# Optimizations and More Our most ripped dev @caarlos0 ripped more than his abs in today’s release. Thanks to him, Crush now uses less memory and has faster startup and shutdown times across the board. If you only use Crush because of local models, you might be interested in the contribution from @jonhoo who added a `disable_default_providers` setting to disable all default providers. Note that `CRUSH_DISABLE_DEFAULT_PROVIDERS=1` has been around for a bit and will also work. See you on the internet! 🌐 ## Changelog ### New! * 163abdc1c4903bebbe19643e73f0335740ec7c6d: feat: add `disable_default_providers` option (#1675) (@jonhoo) * 617f9e28f634089fed552cc28a987851f23c48e0: feat: allow to send the prompt if its empty but has text attachments (#1806) (@caarlos0) * 467418d5346b5c253dc141ef44d60ca3e1f1f6f8: feat: open editor in the right position (#1804) (@caarlos0) ### Fixed * df6f51492ef104be308f77066442bb5eded86261: fix(sqlite): busy timeout (#1815) (@caarlos0) * 2350f7ea30658e7fe0240b90",
+      "category": "ai_tools"
+    }
+  ]
 }

@@ -1,9 +1,93 @@
 {
-  "generated": "2026-05-25T14:37:36.443Z",
+  "generated": "2026-08-26T03:02:26.569Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-24",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 5,
+  "archived_story_count": 170,
+  "articles": [
+    {
+      "title": "GitHub Releases · ComfyUI: v0.15.0",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.15.0",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-02-24T20:56:09.000Z",
+      "summary": "## What's Changed * ops: limit return of requants (Fix perf of some fp8 dynamic_vram workflows) by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/12506 * Bump comfyui-frontend-package to 1.39.14 by @comfy-pr-bot in https://github.com/Comfy-Org/ComfyUI/pull/12494 * BBox widget by @jtydhr88 in https://github.com/Comfy-Org/ComfyUI/pull/11594 * fix: use glob matching for Gemini image MIME types by @huntcsg in https://github.com/Comfy-Org/ComfyUI/pull/12511 * fix(api-nodes): add price badge for Rodin Gen-2 node by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/12512 * Add simple 3 band equalizer node for audio. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12519 * feat: Add basic text generation support with native models, initially supporting Gemma3 by @kijai in https://github.com/Comfy-Org/ComfyUI/pull/12392 * fix(api-nodes): force Gemini to return uncompressed images by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/12516 * feat: add essentials_",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.45.0",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.45.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-02-24T21:06:33.000Z",
+      "summary": "# GPT 5.3 Codex + Gemini 3 thinking levels On this release we're shipping a few model improvements + small fixes. ## GPT 5.3 Codex This was just made available via API by OpenAI today, and it's already available in Crush. Just open the model picker and choose it. ## Gemini 3+ thinking levels Gemini 3 and 3.1 not support thinking levels. Before we only had an on/off toggle for thinking, but now you can choose levels for Gemini: ## Other highlights * This is for Rustaceans :crab:. Crush won't attempt to start the `rls` LSP automatically anymore. `rls` was deprecated in favor of `rust-analyzer`, which will still be used automatically used if installed. * @0xarcher fixed an issue that made some MCP server failing to start. * @huaiyuWangh made a great job fixing a good number of small bugs related in the agent. ## One more thing Crush is now using the final v2 release of Charm libraries: [Lip Gloss](https://github.com/charmbracelet/lipgloss), [Bubble Tea](https://github.com/charmbracelet/bu",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · pnpm: pnpm 11 Alpha 11",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v11.0.0-alpha.11",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-02-24T09:56:10.000Z",
+      "summary": "### Major Changes #### Store * Runtime dependencies are always linked from the global virtual store [#10233](https://github.com/pnpm/pnpm/pull/10233). * Optimized index file format to store the hash algorithm once per file instead of repeating it for every file entry. Each file entry now stores only the hex digest instead of the full integrity string (` - `). Using hex format improves performance since file paths in the content-addressable store use hex representation, eliminating base64-to-hex conversion during path lookups. * Store version bumped to v11. * Switched internal store and cache files from JSON to MessagePack format for improved performance. This change migrates all internal index files and metadata cache files to use MessagePack serialization instead of JSON. MessagePack provides faster serialization/deserialization and more compact file sizes, resulting in improved installation performance. Related PR: [#10500](https://github.com/pnpm/pnpm/pull/10500) * Store the bundled",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Node.js: 2026-02-24, Version 25.7.0 (Current), @ruyadorno prepared by @aduh95",
+      "url": "https://github.com/nodejs/node/releases/tag/v25.7.0",
+      "source": "GitHub Releases · Node.js",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-24T15:37:51.000Z",
+      "summary": "### Notable Changes * \\[[`b0a79b10f0`](https://github.com/nodejs/node/commit/b0a79b10f0)] - **(SEMVER-MINOR)** **http2**: add http1Options for HTTP/1 fallback configuration (Amol Yadav) [#61713](https://github.com/nodejs/node/pull/61713) * \\[[`2d874dfb8e`](https://github.com/nodejs/node/commit/2d874dfb8e)] - **(SEMVER-MINOR)** **sea**: support ESM entry point in SEA (Joyee Cheung) [#61813](https://github.com/nodejs/node/pull/61813) * \\[[`ee59127664`](https://github.com/nodejs/node/commit/ee59127664)] - **sqlite**: mark as release candidate (Matteo Collina) [#61262](https://github.com/nodejs/node/pull/61262) * \\[[`608736e19e`](https://github.com/nodejs/node/commit/608736e19e)] - **(SEMVER-MINOR)** **stream**: rename `Duplex.toWeb()` type option to `readableType` (René) [#61632](https://github.com/nodejs/node/pull/61632) * \\[[`a43375999f`](https://github.com/nodejs/node/commit/a43375999f)] - **(SEMVER-MINOR)** **test\\_runner**: show interrupted test on SIGINT (Matteo Collina) [#61676](ht",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Node.js: 2026-02-24, Version 24.14.0 'Krypton' (LTS), @ruyadorno prepared by @aduh95",
+      "url": "https://github.com/nodejs/node/releases/tag/v24.14.0",
+      "source": "GitHub Releases · Node.js",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-24T15:37:33.000Z",
+      "summary": "### Notable Changes * \\[[`8b6d31d379`](https://github.com/nodejs/node/commit/8b6d31d379)] - **(SEMVER-MINOR)** **async\\_hooks**: add `trackPromises` option to `createHook()` (Joyee Cheung) [#61415](https://github.com/nodejs/node/pull/61415) * \\[[`68da144b4e`](https://github.com/nodejs/node/commit/68da144b4e)] - **build,deps**: replace cjs-module-lexer with merve (Yagiz Nizipli) [#61456](https://github.com/nodejs/node/pull/61456) * \\[[`f3a24c76e4`](https://github.com/nodejs/node/commit/f3a24c76e4)] - **(SEMVER-MINOR)** **deps**: add LIEF as a dependency (Joyee Cheung) [#61167](https://github.com/nodejs/node/pull/61167) * \\[[`1948861d23`](https://github.com/nodejs/node/commit/1948861d23)] - **(SEMVER-MINOR)** **events**: repurpose `events.listenerCount()` to accept EventTargets (René) [#60214](https://github.com/nodejs/node/pull/60214) * \\[[`d6f7c8d06f`](https://github.com/nodejs/node/commit/d6f7c8d06f)] - **(SEMVER-MINOR)** **fs**: add `ignore` option to `fs.watch` (Matteo Collina) [#61",
+      "category": "ai_tools"
+    }
+  ]
 }

@@ -1,0 +1,304 @@
+{
+  "generated": "2026-08-25T23:02:03.832Z",
+  "site": "AI Resource Hub",
+  "article_count": 19,
+  "articles": [
+    {
+      "title": "Fastino Releases GLiNER2.5: A Boundary-Prediction Architecture That Removes Span Enumeration From Information Extraction",
+      "url": "https://www.marktechpost.com/2026/08/24/fastino-releases-gliner2-5-a-boundary-prediction-architecture-that-removes-span-enumeration-from-information-extraction/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "architecture",
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "architecture",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-24T22:21:22.000Z",
+      "summary": "Fastino released GLiNER2.5, replacing span enumeration with boundary prediction so entity width no longer costs compute. Three Apache 2.0 checkpoints ship at 74M, 194M, and 287M parameters, all CPU-runnable. The release adds joint entity-relation decoding, constrained classification, span attributes, and 4,096-word context. Overall macro F1 reaches 56.17 on 16 zero-shot benchmarks. The post Fastino Releases GLiNER2.5: A Boundary-Prediction Architecture That Removes Span Enumeration From Information Extraction appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenAI’s Jalapeño chip is built for fast inference at scale, benchmarks show",
+      "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "benchmark",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-08-25T14:22:04.000Z",
+      "summary": "Tested on SemiAnalysis’ InferenceX benchmark, Jalapeño registered both more tokens per user and more throughput per kilowatt than the currently available state-of-the art.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Apodex 1.1: Scaling Agentic Intelligence for Complex Work",
+      "url": "https://paperswithcode.com/papers/2608.23283",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-25T17:00:10.487Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "nnMIL: a generalizable multiple instance learning framework for computational pathology",
+      "url": "https://www.nature.com/articles/s41551-026-01767-8",
+      "source": "Nature AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-08-25T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Here’s how to use intelligent dictation in Gemini for macOS.",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/enable-intelligent-dictation-macos/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-08-25T17:00:15.534Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Granite 4.2 LLMs: How They're Built",
+      "url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-08-25T15:14:14.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+      "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-08-25T11:39:24.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "How developers build AI for good with Gemma 4",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/winning-entries-gemma-4-good-challenge/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-08-25T04:50:15.565Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Wire It, Run It, Deploy It: AI Workflows in Gradio",
+      "url": "https://huggingface.co/blog/gradio-workflow-guide",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-08-25T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Prime Agent: A Self-Improving RLM Harness",
+      "url": "https://paperswithcode.com/papers/2608.23552",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.72,
+      "date": "2026-08-25T17:00:10.506Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "nightly",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-25T00:30:34.000Z",
+      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity ' https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.57.0-preview.1",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.57.0-preview.1",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-24T23:24:04.000Z",
+      "summary": "What's Changed fix(patch): cherry-pick 812f7a2 to release/v0.57.0-preview.0-pr-28934 to patch version v0.57.0-preview.0 and create version 0.57.0-preview.1 by @gemini-cli-robot in #29024 Full Changelog : v0.57.0-preview.0...v0.57.0-preview.1",
+      "category": "ai_tools"
+    },
+    {
+      "title": "I spent a day at a robot “carnival” in Shanghai. Here’s what I saw.",
+      "url": "https://www.technologyreview.com/2026/08/25/1141907/dispatch-shanghai-humanoid-robot-carnival/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-08-25T09:00:00.000Z",
+      "summary": "Humanoid robots are having a moment in China. The popular machines are part of the country’s strategy to bring artificial intelligence into daily life. Embedding the technology into physical systems—an idea called embodied AI—was a key facet of China’s latest five-year plan, and companies here are already world leaders in humanoids. Nearly 90% of the…",
+      "category": "ai_research"
+    },
+    {
+      "title": "Generating scenarios for extreme events, without extreme data",
+      "url": "https://news.mit.edu/2026/generating-scenarios-extreme-events-without-extreme-data-0824",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-08-25T04:50:53.338Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Trump bought SpaceX shares two weeks after blockbuster IPO",
+      "url": "https://techcrunch.com/2026/08/24/trump-bought-spacex-shares-two-weeks-after-blockbuster-ipo/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-08-24T21:24:17.000Z",
+      "summary": "The president bought when the stock was in the mid-$150 range. SpaceX finished trading on Monday back at its IPO price of $135.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "TLive-Omni: An Omni-Modal Understanding Model for E-Commerce Live Streaming",
+      "url": "https://paperswithcode.com/papers/2608.20958",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-08-25T17:00:10.553Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenAI Launches AI Futures for Global Governance Research",
+      "url": "https://aimagazine.com/news/openai-introduces-ai-futures-for-the-strategic-futures-team",
+      "source": "AI Magazine",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.62,
+      "date": "2026-08-25T17:01:13.972Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "US launches Economic war on Iran",
+      "url": "https://www.aljazeera.com/videos/newsfeed/2026/8/25/us-launches-economic-war-on-iran?traffic_source=rss",
+      "source": "Al Jazeera",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.62,
+      "date": "2026-08-25T15:12:00.000Z",
+      "summary": "The US says it has launched ‘Operation Economic Outcast’, expanding sanctions on Iran",
+      "category": "tech_general"
+    },
+    {
+      "title": "Trust launches 'first-of-its-kind' nature survey",
+      "url": "https://www.bbc.co.uk/news/articles/c9qrgrx4zpeo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Science & Environment",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.62,
+      "date": "2026-08-25T13:17:40.000Z",
+      "summary": "A wildlife group says \"everyone can get involved with protecting nature\" by taking part in research.",
+      "category": "tech_general"
+    }
+  ]
+}

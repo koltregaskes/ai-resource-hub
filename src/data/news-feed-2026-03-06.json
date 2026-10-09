@@ -1,9 +1,40 @@
 {
-  "generated": "2026-05-25T14:37:36.769Z",
+  "generated": "2026-08-26T03:03:57.520Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-03-06",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 2,
+  "archived_story_count": 152,
+  "articles": [
+    {
+      "title": "GitHub Releases · Goose: v1.27.2",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.27.2",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-03-06T20:25:17.000Z",
+      "summary": "## 🔧 **Improvements** - Cleanup old sandbox [#7700](https://github.com/block/goose/pull/7700)",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Mar 5, 2026AnnouncementsWhere things stand with the Department of War",
+      "url": "https://www.anthropic.com/news/where-stand-department-war",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-03-06T00:51:17.000Z",
+      "summary": null,
+      "category": "ai_models"
+    }
+  ]
 }

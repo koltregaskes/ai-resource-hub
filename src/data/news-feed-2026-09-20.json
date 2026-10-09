@@ -1,0 +1,329 @@
+{
+  "generated": "2026-09-20T17:45:09.544Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Alibaba Qwen Team Releases Qwen3.8-LiveTranslate: A Real-Time Interpretation Model That Cuts Average Lag to 2.3 Seconds Across 60 Languages",
+      "url": "https://www.marktechpost.com/2026/09/19/alibaba-qwen-team-releases-qwen3-8-livetranslate/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-20T06:46:08.000Z",
+      "summary": "Qwen has released Qwen3.8-LiveTranslate, a real-time simultaneous interpretation model built on a new Interleave architecture. It cuts average lagging (LAAL) from 2.8 seconds to 2.3 seconds. It also adds real-time speaker diarization with stable voice cloning, synchronized bilingual display, and long-context disambiguation for names and terms. The model understands 60 languages, speaks 29, and is available now as a WebSocket API on Alibaba Cloud Model Studio and QwenCloud. The post Alibaba Qwen Team Releases Qwen3.8-LiveTranslate: A Real-Time Interpretation Model That Cuts Average Lag to...",
+      "category": "ai_research"
+    },
+    {
+      "title": "TypeSafe AI Releases Jev: A System One Model That Returns Typed, Calibrated Decisions Instead of Text",
+      "url": "https://www.marktechpost.com/2026/09/19/typesafe-ai-releases-jev/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-19T18:41:33.000Z",
+      "summary": "TypeSafe AI released Jev, a System One model that answers typed questions with probabilities instead of generating text. Input costs $0.042 per 1M tokens, and output tokens are free. We cover the API, the vendor benchmarks and their caveats, what developers are already building, and the documented limits. The post TypeSafe AI Releases Jev: A System One Model That Returns Typed, Calibrated Decisions Instead of Text appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Our Analysis Finds VCB 1–100 Scores Don’t Prove Coding-Agent Regression",
+      "url": "https://superpowerdaily.com/posts/our-analysis-finds-vcb-1-100-scores-don-t-prove-coding-agent-regression",
+      "source": "Superpower Daily",
+      "tags": [
+        "benchmark",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "evaluation"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-20T00:11:51.000Z",
+      "summary": "The September leaderboard tests sustained modifications to an existing app under new sequential rules. Without matched reruns or a version-and-harness crosswalk, it cannot serve as a direct trend line from earlier Vibe Code Bench scores.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenClaw Releases 2026.9.5 With Atomic Updates, Plugin Hot Reload, Conversation Sharing, and Expanded GPT Live",
+      "url": "https://www.marktechpost.com/2026/09/19/openclaw-releases-2026-9-5/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-19T21:44:23.000Z",
+      "summary": "OpenClaw 2026.9.5 ships 4,179 pull requests from 502 contributing accounts. The headline change is Atomic Updates, which check the next version against a private copy of your setup while the current Gateway keeps running. The release also adds plugin hot reload, read-only conversation sharing, GPT Live in meetings and calls, shared browser pages, archiving, and guided specialist-agent setup. The post OpenClaw Releases 2026.9.5 With Atomic Updates, Plugin Hot Reload, Conversation Sharing, and Expanded GPT Live appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Alibaba Releases Qwen3.8-Omni-Flash for Tool-Using Media Tasks",
+      "url": "https://superpowerdaily.com/posts/alibaba-releases-qwen3-8-omni-flash-for-tool-using-media-tasks",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-19T14:37:59.000Z",
+      "summary": "The new hosted model is meant to turn long recordings into inputs for AI workflows. Its low listed API rates are clear; its effectiveness on complex, multi-step media jobs remains to be tested.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.24.1-nightly.20260919.c1c00cbaab",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.1-nightly.20260919.c1c00cbaab",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-19T21:58:01.000Z",
+      "summary": "What's Changed fix(ci): reclaim Docker cache and clean review scratch directories by @yiliang114 in #12135 fix(core): handle simple Bash comments in permission rules by @yiliang114 in #12096 fix(ci): pass --allow-escape-sequences to the failure watcher's job-log download by @qwen-code-dev-bot in #12117 feat(web-shell): restore remote workspace add flow by @yiliang114 in #12085 feat(web-shell): expose assistant turn settlement lifecycle by @yiliang114 in #11251 fix(cli): require explicit trust for undecided workspaces by @yiliang114 in #12198 fix(web-shell): make the published package...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "WeVisDoc: From Coverage to Capability for Robust End-to-End Document Parsing",
+      "url": "https://paperswithcode.com/papers/2609.20423",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "evaluation"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-20T17:00:59.227Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "AI:AM Highlights: Zvi on Pacing & Trump-Xi, Astra better behaved than Fable? + a new LLM Pain Axis??",
+      "url": "https://www.cognitiverevolution.ai/ai-am-highlights-zvi-on-pacing-trump-xi-astra-better-behaved-than-fable-a-new-llm-pain-axis/",
+      "source": "Cognitive Revolution",
+      "tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "importance": 0.62,
+      "date": "2026-09-19T18:28:56.000Z",
+      "summary": "Nathan Labenz and Prakash Narayanan review key AI developments, discussing frontier pacing with Zvi Mowshowitz, model evaluation benchmarks from Andon Labs, and research on language model internal states with Cameron Berg.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI helping speed up bus pass applications says council Worcestershire County Council says the Bus Pass AI Agent has helped to process 2,500 applications. See more",
+      "url": "https://www.bbc.com/news/articles/cjqlw7q0ld40o",
+      "source": "BBC AI",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-20T11:25:31.516Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "LangChain Publishes Jev Test Matching Human Labels on 500 Agent Decisions",
+      "url": "https://superpowerdaily.com/posts/langchain-publishes-jev-test-matching-human-labels-on-500-agent-decisions",
+      "source": "Superpower Daily",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-20T02:47:21.000Z",
+      "summary": "The result points to a cheaper, more repeatable way to grade agent behavior, but it comes from five fixed weather-agent runs—not a production test.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Trump Says He Will Form an AI Force While Rejecting a Slowdown",
+      "url": "https://superpowerdaily.com/posts/trump-says-he-will-form-an-ai-force-while-rejecting-a-slowdown",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-19T20:43:42.000Z",
+      "summary": "The proposed monitoring body and an AI czar have no announced structure or authority, while Trump says the U.S. should not restrain AI growth in competition with China.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "datasette-auth-github 1.0",
+      "url": "https://simonwillison.net/2026/Sep/19/datasette-auth-github/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-19T19:52:02.000Z",
+      "summary": "Release: datasette-auth-github 1.0 I run this GitHub login plugin on the agent.datasette.io demo site and I noticed that my authenticated sessions weren't lasting very long. It turned out that the plugin was setting cookies without a Max-Age parameter, so they were expiring at the end of a browser session (which in Mobile Safari seems to happen pretty often, independently of how you are using the app.) I fixed that in #80 and, since this plugin has been around for quite a while and is tested against both Datasette 0.65.x and Datasette 1.0ax, I decided to bump it up to a 1.0 release. I'm...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Turbo: Turborepo v2.11.3-canary.2",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.3-canary.2",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-20T15:21:48.000Z",
+      "summary": "## What's Changed ### Changelog * fix: Avoid microfrontend polyrepo warnings by @anthonyshew in https://github.com/vercel/turborepo/pull/14118 * refactor: Add run and execution selector DTOs by @anthonyshew in https://github.com/vercel/turborepo/pull/14120 * chore: Release Turborepo 2.11.3-canary.1 by @github-actions[bot] in https://github.com/vercel/turborepo/pull/14121 * test: Reuse Go cache in invalidation test by @anthonyshew in https://github.com/vercel/turborepo/pull/14122 **Full Changelog**: https://github.com/vercel/turborepo/compare/v2.11.3-canary.1...v2.11.3-canary.2",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Qwen Code: Release v0.24.2",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.2",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-20T14:12:10.000Z",
+      "summary": "## Highlights _See the complete change list below._ ## Breaking Changes No known breaking changes. ## Complete Change List ### Features - feat(web-shell): restore remote workspace add flow ([#12085](https://github.com/QwenLM/qwen-code/pull/12085)) by @yiliang114 - feat(web-shell): expose assistant turn settlement lifecycle ([#11251](https://github.com/QwenLM/qwen-code/pull/11251)) by @yiliang114 - Adds an internal bwrap-based Linux sandbox execution foundation with structured process launching, supervision, and confined worker support....",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Turbo: Turborepo v2.11.3-canary.1",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.3-canary.1",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-20T13:47:49.000Z",
+      "summary": "## What's Changed ### Changelog * chore: Release Turborepo 2.10.14-canary.5 by @github-actions[bot] in https://github.com/vercel/turborepo/pull/14098 * test: Fix Windows cache restore test by @anthonyshew in https://github.com/vercel/turborepo/pull/14099 * chore: Update with-prisma example by @vercel-gh-bot-4[bot] in https://github.com/vercel/turborepo/pull/14101 * chore: Release Turborepo 2.11.0 by @github-actions[bot] in https://github.com/vercel/turborepo/pull/14102 * docs: Add Turborepo 2.11 release post by @anthonyshew in https://github.com/vercel/turborepo/pull/13652 * fix: Allow...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.62.0-nightly.20260920.gcfbcaa8df",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.62.0-nightly.20260920.gcfbcaa8df",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-20T01:25:39.000Z",
+      "summary": "Full Changelog : v0.62.0-nightly.20260919.gcfbcaa8df...v0.62.0-nightly.20260920.gcfbcaa8df",
+      "category": "ai_tools"
+    },
+    {
+      "title": "nightly",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-20T00:59:58.000Z",
+      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity ' https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Prices go up in 7 days. Get your Disrupt ticket now.",
+      "url": "https://techcrunch.com/2026/09/19/prices-go-up-in-7-days-get-your-disrupt-ticket-now/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-09-19T14:00:00.000Z",
+      "summary": "Current ticket pricing ends Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Agent Memory Challenge Will Open a Shared Test for Long-Running AI Agents",
+      "url": "https://superpowerdaily.com/posts/agent-memory-challenge-will-open-a-shared-test-for-long-running-ai-agents",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-19T14:27:50.000Z",
+      "summary": "The second cycle moves beyond storing past context, testing whether memory systems can surface useful, current evidence across conversations, code and images under one evaluation protocol.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "6 days left to get ahead at TechCrunch Disrupt 2026",
+      "url": "https://techcrunch.com/2026/09/20/6-days-left-to-get-ahead-at-techcrunch-disrupt-2026/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-09-20T14:00:00.000Z",
+      "summary": "Current ticket pricing ends in 6 days on Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then.",
+      "category": "ai_tools"
+    }
+  ]
+}

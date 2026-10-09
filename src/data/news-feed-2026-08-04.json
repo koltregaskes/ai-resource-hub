@@ -1,0 +1,328 @@
+{
+  "generated": "2026-08-26T02:47:53.396Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-08-04",
+  "article_count": 20,
+  "archived_story_count": 972,
+  "articles": [
+    {
+      "title": "A Novel Senolytic Combination Incorporating Low Dose Navitoclax",
+      "url": "https://www.fightaging.org/archives/2026/08/a-novel-senolytic-combination-incorporating-low-dose-navitoclax/",
+      "source": "Fight Aging Newsletter",
+      "tags": [
+        "evaluation",
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.88,
+      "date": "2026-08-04T10:22:50.000Z",
+      "summary": "Navitoclax (or ABT-263) was one of the earliest chemotherapeutics assessed for its ability to selectively clear senescent cells as a senolytic drug. The side effects on platelet function are pronounced, which is probably why it has received less attention than the dasatinib and quercetin combination discovered around the same time. Here, researchers report on a senolytic combination that allows for navitoclax to be used at much lower doses. It is possible that this might make it interesting again, though that ship may have sailed. There are so very many lines of research and development into novel and better senolytics these days, and any attempt to produce widespread use of low cost known senolytics is probably going to remain centered around dasatinib and quercetin, or possibly […]",
+      "category": "health_research"
+    },
+    {
+      "title": "Orchard: An Open-Source Agentic Modeling Framework",
+      "url": "https://paperswithcode.com/papers/2605.15040",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-08-04T19:54:42.364Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "v4.0.506",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.506",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-08-04T16:20:31.000Z",
+      "summary": "<h2>What's Changed</h2> <ul> <li><a href=\"https://remotion.dev/elements\" rel=\"nofollow\"><strong>Remotion Elements</strong>: Gallery of installable items for Remotion!</a> by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a></li> <li><code>remotion</code>: Allow cropping for <code><Interactive.Div></code> by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5050259390\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10100\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10100/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10100\">#10100</a></li> <li><code>remotion</code>: Add fine-grained runtime value reactivity by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5061266452\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10144\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10144/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10144\">#10144</a></li> <li><code>@remotion/player</code>: Performance: <code>usePlayer()</code> with imperative methods by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5061110179\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10142\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10142/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10142\">#10142</a></li> <li><code>@remotion/studio</code>: Deprecate <code>visualControl()</code> by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5061732093\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10148\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10148/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10148\">#10148</a></li> <li><code>@remotion/studio</code>: Add Settings modal by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5058722422\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10125\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10125/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10125\">#10125</a></li> <li><code>@remotion/studio</code>: Add default coding agent setting by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5059253188\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10132\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10132/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10132\">#10132</a></li> <li><code>@remotion/studio</code>: Reduce frame-driven re-renders by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5058852264\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10127\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10127/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10127\">#10127</a></li> <li><code>@remotion/studio</code>: Update Browse Elements icon by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5058973258\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10129\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10129/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10129\">#10129</a></li> <li><code>@remotion/studio</code>: Prefer frame 0 for Canvas drops by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5057617127\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10118\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10118/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10118\">#10118</a></li> <li><code>@remotion/studio</code>: Reduce canvas fit padding by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5057613926\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10117\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10117/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10117\">#10117</a></li> <li><code>@remotion/studio</code>: Prevent project name from wrapping by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5057629459\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10119\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10119/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10119\">#10119</a></li> <li><code>@remotion/studio</code>: Fix canvas flicker when toggling sidebars by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5057564422\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10116\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10116/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10116\">#10116</a></li> <li><code>@remotion/studio-protocol</code>: Restore Chrome tab switching during Element drags by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5061748254\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10149\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10149/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10149\">#10149</a></li> <li><code>@remotion/studio-protocol</code>: Confirm license key installation in Studio by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5051037194\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10106\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10106/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10106\">#10106</a></li> <li><code>@remotion/cli</code>: Apply Studio config changes without reloading by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5046857234\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10073\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10073/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10073\">#10073</a></li> <li><code>@remotion/renderer</code>: Fix fractional OffthreadVideo frame selection by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5048796858\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10090\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10090/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10090\">#10090</a></li> <li><code>create-video</code>: Use bundler override for Tailwind by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5057431944\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10114\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10114/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10114\">#10114</a></li> <li>Skills: Add <code>/remotion-studio</code> skill by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5060969423\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10141\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10141/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10141\">#10141</a></li> <li><code>@remotion/promo-pages</code>: Align About page trust cards and update copy by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/MehmetAdemi/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/MehmetAdemi\">@MehmetAdemi</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5058286504\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10122\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10122/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10122\">#10122</a></li> <li><code>@remotion/promo-pages</code>: Shorten homepage link labels by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5050159041\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10099\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10099/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10099\">#10099</a></li> <li>Homepage: Code is always source of truth by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5052018492\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10110\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10110/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10110\">#10110</a></li> <li>remotion.dev/brand: Add Skills 2.0 code change animation by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5051688411\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10109\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10109/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10109\">#10109</a></li> <li>remotion.dev/brand: Add responsive Studio animation by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5051045140\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10107\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10107/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10107\">#10107</a></li> </ul> <h2>Elements</h2> <ul> <li>Elements: Support component-owned sequences by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5050521244\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10101\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10101/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10101\">#10101</a></li> <li>Elements: Link library from Remotion Studio by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5050664604\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10102\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10102/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10102\">#10102</a></li> <li>Elements: Add homepage link by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5047425895\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10082\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10082/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10082\">#10082</a></li> <li>Elements: Update horizontal bar chart by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5050719584\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10103\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10103/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10103\">#10103</a></li> <li>Elements: Add captions category by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5048724789\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10089\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10089/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10089\">#10089</a></li> <li>Elements: Keep gallery card widths consistent by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5059433948\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10136\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10136/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10136\">#10136</a></li> <li>Elements: Add spacing before contribution links by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5059092817\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10130\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10130/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10130\">#10130</a></li> <li>Elements: Link dependencies to npm by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5050043391\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10096\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10096/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10096\">#10096</a></li> <li>Elements: Require exact dependency versions by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5049428286\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10093\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10093/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10093\">#10093</a></li> <li>Elements: Clarify entry and exit animation guidance by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5059137723\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10131\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10131/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10131\">#10131</a></li> <li>Elements: Clarify focused Element guidelines by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5048642617\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10087\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10087/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10087\">#10087</a></li> <li>Elements: Streamline overview and guidelines by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5048881171\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10091\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10091/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10091\">#10091</a></li> <li>Elements: Remove broken Studio installation link by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5061506668\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10145\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10145/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10145\">#10145</a></li> </ul> <h2>Templates</h2> <ul> <li>Bump postcss from 8.5.18 to 8.5.23 in /packages/template-recorder by <a class=\"user-mention notranslate\" data-hovercard-type=\"organization\" data-hovercard-url=\"/orgs/dependabot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/dependabot\">@dependabot</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5057728847\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10120\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10120/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10120\">#10120</a></li> </ul> <h2>Docs</h2> <ul> <li>Add Create with ChatGPT button by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5061264939\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10143\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10143/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10143\">#10143</a></li> <li>Serve uncacheable 404s for missing assets by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5050899341\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10105\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10105/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10105\">#10105</a></li> <li>Remove Animated Captions section by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/JonnyBurger/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/JonnyBurger\">@JonnyBurger</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5050108414\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10098\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10098/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10098\">#10098</a></li> <li>Add SportGraphics to the Showcase by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/Zafirmk/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/Zafirmk\">@Zafirmk</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5055915979\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10111\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10111/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10111\">#10111</a></li> </ul> <h2>Internal</h2> <ul> <li>Add aggregate required CI check by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5060932390\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10140\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10140/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10140\">#10140</a></li> <li>Experiment: Preserve required CI checks for skipped suites by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5051122435\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10108\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10108/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10108\">#10108</a></li> <li>Experiment: Run only affected CI test groups by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5049625736\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10095\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10095/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10095\">#10095</a></li> <li>Retry flaky SSR tests by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5049564319\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10094\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10094/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10094\">#10094</a></li> <li>Disable Twoslash in docs during local development by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5058395571\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10123\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10123/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10123\">#10123</a></li> <li>Add Vercel preview widget to Pi by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5049045905\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10092\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10092/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10092\">#10092</a></li> <li>Copy environment files into Zed worktrees by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/samohovets/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/samohovets\">@samohovets</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5048691875\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10088\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10088/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10088\">#10088</a></li> <li>Bump guzzlehttp/guzzle from 7.15.1 to 7.15.2 in /packages/lambda-php-example by <a class=\"user-mention notranslate\" data-hovercard-type=\"organization\" data-hovercard-url=\"/orgs/dependabot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/dependabot\">@dependabot</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5057739866\" data-permission-text=\"Title is private\" data-url=\"https://github.com/remotion-dev/remotion/issues/10121\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/remotion-dev/remotion/pull/10121/hovercard\" href=\"https://github.com/remotion-dev/remotion/pull/10121\">#10121</a></li> </ul> <p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/remotion-dev/remotion/compare/v4.0.505...v4.0.506\"><tt>v4.0.505...v4.0.506</tt></a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NVIDIA Alpamayo 2 Super, the Frontier Open Model for Robotaxis and Autonomous Vehicles, Now Available for Commercial Use",
+      "url": "https://blogs.nvidia.com/blog/alpamayo-2-super-open-model-now-available/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "hardware",
+        "open_source"
+      ],
+      "matching_tags": [
+        "hardware",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-08-04T15:00:49.000Z",
+      "summary": "For robotaxis and other autonomous vehicles (AVs), the hardest problems aren’t the everyday scenarios. They’re the rare, complex situations that are difficult to anticipate and train for. Handling these long‑tail events takes more than just object detection and motion prediction. AVs must understand the situation, reason about cause and effect, choose the right action and […]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Introducing Shieldstral.",
+      "url": "https://mistral.ai/news/shieldstral/",
+      "source": "Mistral AI Blog",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-08-04T12:00:26.000Z",
+      "summary": "Shieldstral introduces a 3B open-weights multimodal safety classifier that outperforms models up to 7x its size.",
+      "category": "ai_models"
+    },
+    {
+      "title": "Release v0.21.5",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.21.5",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-08-04T02:29:39.000Z",
+      "summary": "<h2>Highlights</h2> <ul> <li>Adds an opt-in one-time update bridge for macOS users to migrate from the Electron desktop app to the new Tauri shell. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8392\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8392/hovercard\">#8392</a>)</li> <li>Introduces detailed execution-specific outcome tracking for tool calls to distinguish between invocation success, failure, and cancellation. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8180\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8180/hovercard\">#8180</a>)</li> <li>Prevents unsafe replay of MCP tool calls after connection loss unless the tool is explicitly marked idempotent and the workspace is trusted. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8387\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8387/hovercard\">#8387</a>)</li> <li>Stops infinite Goal mode retries after evidence catalog exhaustion by transitioning the Goal to a usage_limited state requiring user intervention. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8430\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8430/hovercard\">#8430</a>)</li> <li>Introduces a structured, finding-centric view in Web Shell for review results, displaying severity, confidence, and suggested fixes. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8402\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8402/hovercard\">#8402</a>)</li> <li>Prevents unexpected page scrolling when closing cell-value dialogs in enhanced Markdown tables while preserving keyboard focus. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8407\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8407/hovercard\">#8407</a>)</li> </ul> <h2>Breaking Changes</h2> <p>No known breaking changes.</p> <h2>Complete Change List</h2> <h3>Features</h3> <ul> <li>Adds an opt-in one-time update bridge for macOS users to migrate from the Electron desktop app to the new Tauri shell. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8392\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8392/hovercard\">#8392</a>) by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/yiliang114/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/yiliang114\">@yiliang114</a></li> <li>Introduces detailed execution-specific outcome tracking for tool calls to distinguish between invocation success, failure, and cancellation. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8180\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8180/hovercard\">#8180</a>) by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/doudouOUC/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/doudouOUC\">@doudouOUC</a></li> <li>Introduces a structured, finding-centric view in Web Shell for review results, displaying severity, confidence, and suggested fixes alongside durable reports. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8402\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8402/hovercard\">#8402</a>) by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/wenshao/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/wenshao\">@wenshao</a></li> <li>Enables support for Qwen 3.8 reasoning effort levels by mapping existing effort flags to the provider-specific reasoning_effort parameter. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8472\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8472/hovercard\">#8472</a>) by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/DragonnZhang/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/DragonnZhang\">@DragonnZhang</a></li> </ul> <h3>Bug Fixes</h3> <ul> <li>Prevents unexpected page scrolling when closing cell-value dialogs in enhanced Markdown tables while preserving keyboard focus. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8407\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8407/hovercard\">#8407</a>) by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/carffuca/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/carffuca\">@carffuca</a></li> <li>Clarifies write_file guidance to explicitly require reading a target file before writing when its existence or contents are unknown. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8428\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8428/hovercard\">#8428</a>) by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/doudouOUC/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/doudouOUC\">@doudouOUC</a></li> <li>Fixes the Windows desktop release smoke test by reading logs from the correct LocalAppData path used by the Tauri runtime. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8381\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8381/hovercard\">#8381</a>) by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/yiliang114/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/yiliang114\">@yiliang114</a></li> <li>Prevents unsafe replay of MCP tool calls after connection loss unless the tool is explicitly marked idempotent and the workspace is trusted. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8387\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8387/hovercard\">#8387</a>) by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/doudouOUC/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/doudouOUC\">@doudouOUC</a></li> <li>Stops infinite Goal mode retries after evidence catalog exhaustion by transitioning the Goal to a usage_limited state requiring user intervention. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8430\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8430/hovercard\">#8430</a>) by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/qqqys/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/qqqys\">@qqqys</a></li> <li>Prevents the review system from unnecessarily re-running agents for launches that were already successfully delivered, saving time and tokens. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8466\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8466/hovercard\">#8466</a>) by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/wenshao/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/wenshao\">@wenshao</a></li> <li>Fixes a failing unit test for MCP reconnection to ensure it correctly validates safe replay policies with trusted server configurations. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8478\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8478/hovercard\">#8478</a>) by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/wenshao/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/wenshao\">@wenshao</a></li> <li>Updates review workflow tests to correctly assert against externalized timeout variables, resolving failures in the Quality Checks job. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8486\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8486/hovercard\">#8486</a>) by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/wenshao/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/wenshao\">@wenshao</a></li> </ul> <h3>Internal Changes</h3> <ul> <li>Removes the broken legacy scheduled PR triage workflow that previously failed to sync labels due to incorrect issue reference parsing. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8434\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8434/hovercard\">#8434</a>) by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/wenshao/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/wenshao\">@wenshao</a></li> <li>Reduces queue times for SDK Java tests by canceling stale runs on new commits and routing trusted Linux jobs to faster ECS runners. (<a href=\"https://github.com/QwenLM/qwen-code/pull/8441\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/QwenLM/qwen-code/pull/8441/hovercard\">#8441</a>) by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/yiliang114/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/yiliang114\">@yiliang114</a></li> </ul> <p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/QwenLM/qwen-code/compare/v0.21.4...v0.21.5\"><tt>v0.21.4...v0.21.5</tt></a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Open-Weight Models Aren’t Enough. We Need Truly Open Source AI Models for Science and Society.",
+      "url": "https://hai.stanford.edu/news/open-weight-models-arent-enough-we-need-truly-open-source-ai-models-for-science-and-society",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.96,
+      "date": "2026-08-04T15:20:19.106Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "How a community in Maine is fighting to save their birthing center",
+      "url": "https://www.npr.org/2026/08/04/nx-s1-5910852/maine-birthing-center-fight",
+      "source": "NPR Health",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.88,
+      "date": "2026-08-04T20:16:26.000Z",
+      "summary": "With maternity care deserts growing around the country, a grassroots coalition in Maine launched a strategic attack to prevent the proposed closure of a rural labor and delivery center.",
+      "category": "health_research"
+    },
+    {
+      "title": "llm-anthropic 0.26",
+      "url": "https://simonwillison.net/2026/Aug/4/llm-anthropic/#atom-everything",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-08-04T22:00:58.000Z",
+      "summary": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/llm-anthropic/releases/tag/0.26\">llm-anthropic 0.26</a></p> <p>Includes new features enabled by <a href=\"https://simonwillison.net/2026/Aug/4/new-release-of-llm/\">LLM 0.32</a>:</p> <blockquote> <ul> <li>New models: <code>claude-fable-5</code>, <code>claude-sonnet-5</code>, and <code>claude-opus-5</code>. <a href=\"https://github.com/simonw/llm-anthropic/issues/75\">#75</a>, <a href=\"https://github.com/simonw/llm-anthropic/issues/76\">#76</a></li> <li>Added server-side tools for <code>WebSearch</code>, <code>WebFetch</code>, <code>CodeExecution</code>, and <code>AnthropicMCP</code>, available through LLM's <code>-T</code> interface or Python <code>tools=</code>. The previous <code>-o web_search*</code> options have been removed in favor of <code>-T WebSearch</code>. <a href=\"https://github.com/simonw/llm-anthropic/issues/79\">#79</a></li> <li>Upgraded to <a href=\"https://llm.datasette.io/en/stable/changelog.html#v0-32\">llm>=0.32</a>. Reasoning, tool calls, tool results, and server-side tool results now stream as typed events. Reasoning for <code>llm</code> CLI prompts now displays to standard error unless you pass <code>--hide-reasoning/-R</code>.</li> <li>Simplified extended thinking to <code>thinking</code> and <code>thinking_effort</code> (<code>low</code>, <code>medium</code>, <code>high</code>, <code>xhigh</code>, or <code>max</code>). Claude 5 models think by default; <code>-o thinking 0</code> disables thinking for Sonnet 5 and Opus 5, while Fable 5 always thinks. <code>-R/--hide-reasoning</code> now omits reasoning from responses and logs. The <code>thinking_budget</code>, <code>thinking_display</code>, and <code>thinking_adaptive</code> options have been removed. <a href=\"https://github.com/simonw/llm-anthropic/issues/80\">#80</a></li> </ul> </blockquote> <p>Tags: <a href=\"https://simonwillison.net/tags/llm\">llm</a>, <a href=\"https://simonwillison.net/tags/anthropic\">anthropic</a>, <a href=\"https://simonwillison.net/tags/claude\">claude</a>, <a href=\"https://simonwillison.net/tags/model-context-protocol\">model-context-protocol</a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SpaceX doubles revenue on Anthropic and Google compute deals, Starlink growth",
+      "url": "https://techcrunch.com/2026/08/04/spacex-doubles-revenues-on-anthropic-and-google-compute-deals-starlink-growth/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-08-04T20:36:30.000Z",
+      "summary": "SpaceX doubled its revenue compared to last year, according to its first quarterly earnings since going public in June.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nvidia doesn’t mess around: A week after open AI industry group formed, it’s already showing progress",
+      "url": "https://techcrunch.com/2026/08/04/nvidia-doesnt-mess-around-a-week-after-open-ai-industry-group-formed-its-already-showing-progress/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-08-04T19:28:49.000Z",
+      "summary": "The week-old Open Secure AI Alliance, spearheaded by Nvidia and grown to over 120 companies, already has proposals out for defending against AI agents.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Deploy local agents everywhere with LFM2.5-2.6B",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-08-04T13:58:29.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "AI Leaders Propose SAFE Guidelines for Cybersecurity Transparency",
+      "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance-contributions/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-08-04T13:00:47.000Z",
+      "summary": "Members of the Open Secure AI Alliance — now more than 120 organizations strong — are developing new guidelines to strengthen agentic AI cybersecurity as the annual Black Hat conference begins in Las Vegas today. The Linux Foundation today shared a Request for Comments on Shared AI Findings Exchange (SAFE), a proposed set of guidelines […]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Is the future of data centers portable? Runware builds a pod to find out",
+      "url": "https://techcrunch.com/2026/08/04/is-the-future-of-data-centers-portable-runware-builds-a-pod-to-find-out/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-08-04T13:00:00.000Z",
+      "summary": "On Tuesday, AI infrastructure company Runware announced the launch of its own modular data center called Sonic Inference Pod.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "openclaw 2026.7.1-2",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-2",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-08-04T00:41:26.000Z",
+      "summary": "<h3>Fixes</h3> <ul> <li><strong>npm plugin updates:</strong> accept singleton-array metadata from newer npm clients so tracked official plugins can install and update to correction releases. (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4893325593\" data-permission-text=\"Title is private\" data-url=\"https://github.com/openclaw/openclaw/issues/108336\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/openclaw/openclaw/pull/108336/hovercard\" href=\"https://github.com/openclaw/openclaw/pull/108336\">#108336</a>)</li> </ul>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Android app developers may be unwittingly sharing their users’ location data with advertisers",
+      "url": "https://techcrunch.com/2026/08/04/android-app-developers-may-be-unwittingly-sharing-their-users-location-data-with-advertisers/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.98,
+      "date": "2026-08-04T20:26:53.000Z",
+      "summary": "New findings by the Electronic Frontier Foundation aim to warn app developers that some of the third-party code they place in their apps may also collect their users' location data when they grant permission to the app.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Elon Musk spends half his time talking robots and AI on Tesla earnings calls",
+      "url": "https://techcrunch.com/2026/08/04/elon-musk-spends-half-his-time-talking-robots-and-ai-on-tesla-earnings-calls/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.98,
+      "date": "2026-08-04T15:20:06.000Z",
+      "summary": "An analysis of the last seven years of Tesla earnings calls shows just how little attention Musk pays to Tesla's car business.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "White House Whipsaws Silicon Valley (and Itself) Over A.I. Rules",
+      "url": "https://www.nytimes.com/2026/08/04/technology/ai-washington-regulation-whiplash.html",
+      "source": "New York Times Technology",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.95,
+      "date": "2026-08-04T19:54:29.000Z",
+      "summary": "The Trump administration has struggled with how to approach “open source” models, which are freely available to download and favored by Chinese companies.",
+      "category": "tech_general"
+    },
+    {
+      "title": "Take an extra $100 off your TechCrunch Disrupt 2026 pass: This week only!",
+      "url": "https://techcrunch.com/2026/08/04/take-an-extra-100-off-your-techcrunch-disrupt-2026-pass-this-week-only/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.95,
+      "date": "2026-08-04T17:20:54.000Z",
+      "summary": "Starting today, you can take an additional $100 off your founder, investor, or attendee TechCrunch Disrupt 2026 pass, which is a nice bonus on top of our current discounted pricing.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Kazakhstan releases first tiger to restore extinct species",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/8/4/kazakhstan-releases-first-tiger-to-restore-extinct-species?traffic_source=rss",
+      "source": "Al Jazeera",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.9,
+      "date": "2026-08-04T19:21:16.000Z",
+      "summary": "Kazakhstan has released the first Amur tiger in the wild in more than 70 years to help restore the extinct Caspian tiger",
+      "category": "tech_general"
+    }
+  ]
+}

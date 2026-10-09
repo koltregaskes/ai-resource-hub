@@ -1,9 +1,145 @@
 {
-  "generated": "2026-05-25T14:37:34.590Z",
+  "generated": "2026-08-26T02:57:08.128Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-01-01",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 9,
+  "archived_story_count": 124,
+  "articles": [
+    {
+      "title": "Unbreakable? Researchers Warn Quantum Computers Have Serious Security Flaws",
+      "url": "https://www.sciencedaily.com/releases/2026/01/260120000330.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-01-01T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Researchers Tested AI Against 100,000 Humans on Creativity",
+      "url": "https://www.sciencedaily.com/releases/2026/01/260125083356.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-01-01T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Scientists Found a Way to Cool Quantum Computers Using Noise",
+      "url": "https://www.sciencedaily.com/releases/2026/01/260129080418.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-01-01T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "AI That Talks to Itself Learns Faster and Smarter",
+      "url": "https://www.sciencedaily.com/releases/2026/01/260127112130.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-01-01T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "The Breakthrough That Makes Robot Faces Feel Less Creepy",
+      "url": "https://www.sciencedaily.com/releases/2026/01/260116035308.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-01-01T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "This AI Spots Dangerous Blood Cells Doctors Often Miss",
+      "url": "https://www.sciencedaily.com/releases/2026/01/260112214317.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-01-01T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "The Human Brain May Work More Like AI Than Anyone Expected",
+      "url": "https://www.sciencedaily.com/releases/2026/01/260120000308.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-01-01T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "NASA’s Perseverance Rover Completes the First AI-planned Drive on Mars",
+      "url": "https://www.sciencedaily.com/releases/2026/01/260131084555.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-01-01T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Stanford’s AI Spots Hidden Disease Warnings That Show Up While You Sleep",
+      "url": "https://www.sciencedaily.com/releases/2026/01/260109023114.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-01-01T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
 }

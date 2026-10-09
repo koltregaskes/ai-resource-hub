@@ -1,0 +1,350 @@
+{
+  "generated": "2026-08-26T02:48:03.865Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-08-20",
+  "article_count": 20,
+  "archived_story_count": 429,
+  "articles": [
+    {
+      "title": "Auditing Preference Biases and Fine-Tuning Language Models with Direct Preference Optimization on Anthropic HH-RLHF Using TRL and LoRA",
+      "url": "https://www.marktechpost.com/2026/08/20/auditing-preference-biases-and-fine-tuning-language-models-with-direct-preference-optimization-on-anthropic-hh-rlhf-using-trl-and-lora/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "evaluation",
+        "dataset",
+        "training"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "evaluation",
+        "dataset",
+        "training"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T08:51:38.000Z",
+      "summary": "This tutorial provides an end-to-end workflow for fine-tuning language models using Direct Preference Optimization (DPO). We demonstrate how to audit the Anthropic HH-RLHF dataset for structural and length-based biases, implement a robust training pipeline using TRL and LoRA, and evaluate model performance to ensure genuine preference learning rather than reliance on lexical shortcuts. The post Auditing Preference Biases and Fine-Tuning Language Models with Direct Preference Optimization on Anthropic HH-RLHF Using TRL and LoRA appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "pnpm 12 RC 8",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v12.0.0-rc.8",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T20:48:28.000Z",
+      "summary": "<h2>Minor Changes</h2> <ul> <li> <p><code>packageImportMethod: auto</code> now tries hardlinks before cloning on Linux. A reflink materializes a new inode and copies extent bookkeeping inside the filesystem's metadata trees, where a hardlink is one directory entry — on btrfs this roughly halves the time an install spends materializing <code>node_modules</code> from a warm store. ext4 installs are unchanged (cloning was never supported there, so <code>auto</code> already hardlinked), and macOS keeps clone-first, where APFS <code>clonefile</code> is the platform's cheap primitive. Cloning remains the fallback when the store refuses hardlinks, and remains available explicitly via <code>packageImportMethod: clone</code>.</p> <p>This ships with pnpm 12 only: pnpm 11's importer deliberately keeps clone-first, since changing what the default materializes on disk is not a point-release change.</p> </li> </ul> <h2>Patch Changes</h2> <ul> <li> <p><code>pnpm approve-builds</code> now removes <code>onlyBuiltDependencies</code>, <code>onlyBuiltDependenciesFile</code>, <code>neverBuiltDependencies</code>, and <code>ignoredBuiltDependencies</code> from <code>pnpm-workspace.yaml</code> when it writes <code>allowBuilds</code>. Those settings were replaced by <code>allowBuilds</code> in pnpm 11 and silently ignored since, so a workspace migrated from pnpm 10 kept them around looking active.</p> </li> <li> <p><code>pnpm audit</code> no longer reports a patched version that was never published or is deprecated. The inferred patched range (e.g. <code>>=4.17.24</code> from <code><=4.17.23</code>) is now checked against the registry packument, and the report is corrected to the lowest non-deprecated published version that satisfies it (e.g. <code>>=4.18.1</code> when <code>4.17.24</code> does not exist and <code>4.18.0</code> is deprecated). When no published version satisfies the range, the report shows <code>Patched versions: None</code>. This also prevents <code>pnpm audit --fix</code> from adding overrides or <code>minimumReleaseAgeExclude</code> entries for patches that do not exist <a href=\"https://github.com/pnpm/pnpm/issues/13824\" data-hovercard-type=\"issue\" data-hovercard-url=\"/pnpm/pnpm/issues/13824/hovercard\">#13824</a>.</p> <p><code>pnpm audit --fix</code> and <code>pnpm audit --fix update</code> no longer add a <code>minimumReleaseAgeExclude</code> entry when the registry packument shows that the minimum patched version was never published. Previously such entries were written for versions that do not exist, which would have let a later publish of that version bypass the <code>minimumReleaseAge</code> gate <a href=\"https://github.com/pnpm/pnpm/issues/11563\" data-hovercard-type=\"issue\" data-hovercard-url=\"/pnpm/pnpm/issues/11563/hovercard\">#11563</a>.</p> <p>The <code>--json</code> output of <code>pnpm audit</code> now returns <code>patched_versions: null</code> for advisories whose inferred patch is not available (never published, skipped, yanked, or deprecated), making it easier for tooling to distinguish \"no fix available\" from \"fix available at version X\".</p> </li> <li> <p>Re-fetch full registry metadata when <code>minimumReleaseAge</code> is enabled and an abbreviated packument's <code>time</code> map omits timestamps for some versions. This prevents mature versions from being filtered out and resolution from falling back to the lowest matching version <a href=\"https://github.com/pnpm/pnpm/issues/13741\" data-hovercard-type=\"issue\" data-hovercard-url=\"/pnpm/pnpm/issues/13741/hovercard\">pnpm/pnpm#13741</a>.</p> </li> <li> <p>A config dependency carrying an inline integrity (the <code><version>+<integrity></code> form, or the object form without a <code>tarball</code>) now takes its tarball URL from the registry's packument instead of deriving it from the registry URL, so migrating one costs an extra metadata request. On a registry that serves tarballs from a path pnpm cannot derive, GitLab's group endpoint for one, installing such a config dependency failed with a 404 while the same package installed fine as a regular dependency <a href=\"https://github.com/pnpm/pnpm/issues/13765\" data-hovercard-type=\"issue\" data-hovercard-url=\"/pnpm/pnpm/issues/13765/hovercard\">#13765</a>.</p> </li> <li> <p>Don't treat files like <code>license16.json</code> as a package license when deciding if the workspace LICENSE file should be included in the packed package.</p> </li> <li> <p>Reduced warm update overhead by limiting virtual-store bin linking and ignored-script build bookkeeping to packages materialized by the current install.</p> </li> <li> <p><code>pnpm init</code> now pins the exact pnpm version instead of a <code>^</code> range, and records it in the <code>packageManager</code> field alongside <code>devEngines.packageManager</code>. Corepack reads only <code>packageManager</code> and accepts nothing but an exact version, so it rejected the generated <code>package.json</code> with \"expected a semver version\" <a href=\"https://github.com/pnpm/pnpm/issues/13969\" data-hovercard-type=\"issue\" data-hovercard-url=\"/pnpm/pnpm/issues/13969/hovercard\">pnpm/pnpm#13969</a>. A package created inside an existing workspace is still left unpinned — it follows the pin at the workspace root — and <code>--no-init-package-manager</code> still scaffolds a manifest without any pin. In pnpm 12, <code>pnpm init</code> also honors <code>initType</code> and its <code>--init-type</code> flag, so the manifest it writes is the same one pnpm 11 writes.</p> </li> <li> <p><code>node-linker=hoisted</code> installs no longer produce broken layouts on graphs with version conflicts. Three hoister fixes, aligning with <code>@yarnpkg/nm</code> (which the TypeScript CLI delegates to):</p> <ul> <li>A version-conflicted package depended on by several packages kept its conflicting transitive dependencies under only one of the dependents, so requiring them through any other dependent resolved the wrong (root-hoisted) version — for example an ESM <code>parse-entities@4</code> resolving <code>character-entities-legacy</code> v1 instead of v3, which crashes with <code>ERR_IMPORT_ATTRIBUTE_MISSING</code> on Node.js 22. Hoist decisions are now made per parent path on decoupled copies (ports upstream's <code>decoupleGraphNode</code>).</li> <li>Peer-resolution variants of one package version now collapse onto a single copy (ports pnpm v11's <code>depPathByPkgId</code> mapping) instead of conflict-nesting a copy under every dependent — on peer-variant-heavy graphs (such as <code>bit</code>'s) the old behavior also made the per-path walk explode.</li> <li>Hoisting no longer shadows names a subtree resolves through an ancestor directory: a candidate is refused when a nearer ancestor holds a different version of its name (upstream's \"filled by parent\" scan) or when the hoist root's subtree already resolves that name from above (upstream's <code>usedDependencies</code> gate).</li> </ul> </li> <li> <p><code>pnpm update --no-save <pkg>@<version></code> now keeps the manifest's declared importer specifier in <code>pnpm-lock.yaml</code> when the requested version satisfies that range, so a subsequent <code>--frozen-lockfile</code> install no longer fails because the lockfile records the requested version as the specifier.</p> </li> <li> <p>Reduced registry metadata requests during dependency resolution by reusing cached metadata when lockfile preferences prove that no uncached version can win <a href=\"https://github.com/pnpm/pnpm/issues/13976\" data-hovercard-type=\"issue\" data-hovercard-url=\"/pnpm/pnpm/issues/13976/hovercard\">pnpm/pnpm#13976</a>.</p> </li> <li> <p>Improved install performance: the store-index writer's shutdown now overlaps the install's final lockfile and <code>.modules.yaml</code> writes instead of extending the install's tail.</p> </li> <li> <p>A setting in the global <code>config.yaml</code> that pnpm does not read from that file, or that is written in kebab-case instead of camelCase, is now reported instead of being ignored silently.</p> </li> <li> <p>A forced full re-resolution (config changes the fast lockfile update cannot absorb, such as a changed override or <code>packageExtensions</code>) no longer moves dependencies whose recorded versions still satisfy their ranges. The prior lockfile now pins each still-satisfied edge even when its recorded subtree cannot be reused wholesale, so open ranges like <code>@types/node: \"*\"</code> keep their locked versions instead of collapsing onto the highest locked version and churning the lockfile.</p> </li> <li> <p>Improved fresh resolution performance when package metadata is already cached.</p> </li> <li> <p>Improved fresh installs by reusing the store index and verified-files cache during dependency materialization.</p> </li> <li> <p>A runtime installed through <code>devEngines.runtime</code> now matches the host when <code>supportedArchitectures</code> lists several platforms. Listing <code>os: [darwin, linux]</code> and <code>cpu: [x64, arm64]</code> used to install the runtime built for the first entry of each list, so a machine running Linux on arm64 got a macOS x64 Node.js that could not execute <a href=\"https://github.com/pnpm/pnpm/issues/13898\" data-hovercard-type=\"issue\" data-hovercard-url=\"/pnpm/pnpm/issues/13898/hovercard\">#13898</a>.</p> </li> <li> <p><code>pnpm self-update <tag></code> no longer downgrades when the dist-tag points at the pnpm version already running and that version is younger than <code>minimumReleaseAge</code>. The maturity cutoff moved the tag back to the previous mature release, so <code>pnpm self-update next-12</code> on v12.0.0-rc.4 switched to v12.0.0-rc.3.</p> </li> <li> <p>Improved install performance: large tarballs are now verified and extracted while they download, so the biggest packages — whose downloads finish last — no longer add their whole extraction to the end of the install.</p> </li> </ul>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Qwen Code: DSW EAS SWE + TB smoke 2026-08-20 r2",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/dsw-eas-tb-smoke-20260820-r2",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "dataset"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "dataset"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T15:29:40.000Z",
+      "summary": "Benchmark-Qwen-Ref: v0.21.14 End-to-end regression smoke after Harbor adapter cache-gate repair: 1 SWE-bench Verified case followed by 1 Terminal-Bench 2.0 case. ### SWE-bench Verified - Status: **SUCCEEDED** - Dataset: `swe-bench/swe-bench-verified@2`; 1/1 completed - Results: 0 resolved, 0 unresolved, 1 execution errors, 0 infrastructure failures - Score: not published (non-scoreable or quarantined run) - Score denominator: valid grader results (0 + 0 = 0) - Qwen Code: `v0.21.14` (`6e20a58923b0`); model `qwen3.7-plus` - Run: `pool-855c156fb59a4a11`; dispatch workflow: https://github.com/QwenLM/qwen-code/actions/runs/32386463790 - Case trajectories: `swe-bench-verified-dsw-eas-tb-smoke-20260820-r2-trajectories.tar.gz` (0 cases) ### Terminal-Bench 2.0 - Status: **SUCCEEDED** - Dataset: `terminal-bench@2.0`; 1/1 completed - Results: 0 resolved, 0 unresolved, 1 execution errors, 0 infrastructure failures - Score: not published (non-scoreable or quarantined run) - Score denominator: valid",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Qwen Code: dsw-eas-tb-smoke-20260820-r1",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/dsw-eas-tb-smoke-20260820-r1",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "dataset"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "dataset"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T15:11:31.000Z",
+      "summary": "Benchmark-Qwen-Ref: v0.21.14 End-to-end regression smoke after fresh Sandbox bootstrap repair: 1 SWE-bench Verified case followed by 1 Terminal-Bench 2.0 case. ### SWE-bench Verified - Status: **SUCCEEDED** - Dataset: `swe-bench/swe-bench-verified@2`; 1/1 completed - Results: 0 resolved, 0 unresolved, 1 execution errors, 0 infrastructure failures - Score: not published (non-scoreable or quarantined run) - Score denominator: valid grader results (0 + 0 = 0) - Qwen Code: `v0.21.14` (`6e20a58923b0`); model `qwen3.7-plus` - Run: `pool-610624947a774f78`; dispatch workflow: https://github.com/QwenLM/qwen-code/actions/runs/32384647090 - Case trajectories: `swe-bench-verified-dsw-eas-tb-smoke-20260820-r1-trajectories.tar.gz` (0 cases) ### Terminal-Bench 2.0 - Status: **SUCCEEDED** - Dataset: `terminal-bench@2.0`; 1/1 completed - Results: 0 resolved, 0 unresolved, 1 execution errors, 0 infrastructure failures - Score: not published (non-scoreable or quarantined run) - Score denominator: valid g",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Qwen Code: DSW Harbor regression smoke",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/dsw-eas-manual-smoke-20260820-r2",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "dataset"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "dataset"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T12:23:33.000Z",
+      "summary": "Benchmark-Qwen-Ref: v0.21.14 Regression smoke: 1 SWE + 1 previously successful Terminal-Bench task. ### SWE-bench Verified - Status: **SUCCEEDED** - Dataset: `swe-bench/swe-bench-verified@2`; 1/1 completed - Results: 1 resolved, 0 unresolved, 0 execution errors, 0 infrastructure failures - Score: **100.00%** - Score denominator: valid grader results (1 + 0 = 1) - Qwen Code: `v0.21.14` (`6e20a58923b0`); model `qwen3.7-plus` - Run: `pool-e1c32affd937493e`; dispatch workflow: https://github.com/QwenLM/qwen-code/actions/runs/32368602733 - Case trajectories: `swe-bench-verified-dsw-eas-manual-smoke-20260820-r2-trajectories.tar.gz` (1 cases) ### Terminal-Bench 2.0 - Status: **SUCCEEDED** - Dataset: `terminal-bench@2.0`; 1/1 completed - Results: 1 resolved, 0 unresolved, 0 execution errors, 0 infrastructure failures - Score: **100.00%** - Score denominator: valid grader results (1 + 0 = 1) - Qwen Code: `v0.21.14` (`6e20a58923b0`); model `qwen3.7-plus` - Run: `pool-e2667ea6c4664284`; dispatch ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Qwen Code: DSW Harbor TB base-image smoke",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/dsw-eas-manual-smoke-20260820-r1",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "dataset"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "dataset"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T11:50:34.000Z",
+      "summary": "Benchmark-Qwen-Ref: v0.21.14 1 SWE + 1 Terminal-Bench smoke for ACR Python base-image mapping. ### SWE-bench Verified - Status: **SUCCEEDED** - Dataset: `swe-bench/swe-bench-verified@2`; 1/1 completed - Results: 1 resolved, 0 unresolved, 0 execution errors, 0 infrastructure failures - Score: **100.00%** - Score denominator: valid grader results (1 + 0 = 1) - Qwen Code: `v0.21.14` (`6e20a58923b0`); model `qwen3.7-plus` - Run: `pool-6dcaf46752d04ea7`; dispatch workflow: https://github.com/QwenLM/qwen-code/actions/runs/32365807498 - Case trajectories: `swe-bench-verified-dsw-eas-manual-smoke-20260820-r1-trajectories.tar.gz` (1 cases)",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Progressive Refinement: An Iterative Pseudo-Labeling Approach for Mandarin-English Code-Switching ASR",
+      "url": "https://machinelearning.apple.com/research/progressive-refinement-pseudo-labeling",
+      "source": "Apple Machine Learning",
+      "tags": [
+        "research_paper",
+        "evaluation",
+        "dataset"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "evaluation",
+        "dataset"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-08-20T00:00:00.000Z",
+      "summary": "Code-switching (CS), alternating languages within the same utterance, poses significant challenges for automatic speech recognition (ASR) due to limited CS training data. This paper applies an iterative pseudo-labeling training approach to CS-ASR for the first time, demonstrating its effectiveness in leveraging unlabeled data to improve CS-ASR performance. The approach comprises three phases: pseudo-label generation, two-stage bilingual model training, and iterative improvements. It begins by generating pseudo-labels from a large unlabeled corpus, creating a semi-supervised dataset. This…",
+      "category": "ai_research"
+    },
+    {
+      "title": "Meet S1-mini: Superwhisper’s 462 MB Open-Weights Text Normalizer That Turns Raw ASR Transcripts Into Clean Written Text",
+      "url": "https://www.marktechpost.com/2026/08/20/meet-s1-mini-superwhispers-462-mb-open-weights-text-normalizer-that-turns-raw-asr-transcripts-into-clean-written-text/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T22:23:17.000Z",
+      "summary": "S1-mini is a 462 MB open-weights normalizer that sits after ASR, removing fillers and resolving self-corrections locally. The post Meet S1-mini: Superwhisper’s 462 MB Open-Weights Text Normalizer That Turns Raw ASR Transcripts Into Clean Written Text appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Liquid AI Releases LFM2.5-DSpark Draft Models That Deliver Up to 3.18x Faster Decoding Without Changing Model Outputs",
+      "url": "https://www.marktechpost.com/2026/08/20/liquid-ai-releases-lfm2-5-dspark-draft-models-that-deliver-up-to-3-18x-faster-decoding/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T18:53:09.000Z",
+      "summary": "Three ~300M drafters bring speculative decoding to LFM2.5, delivering up to 3.18x faster decoding with identical greedy output. The post Liquid AI Releases LFM2.5-DSpark Draft Models That Deliver Up to 3.18x Faster Decoding Without Changing Model Outputs appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T16:52:57.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "A shot-scraper-style JSON API on Bun 1.4's new Bun.WebView",
+      "url": "https://simonwillison.net/2026/Aug/20/bun-webview-json-api/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "research_paper",
+        "api_update"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T15:37:00.000Z",
+      "summary": "<p><strong>Research:</strong> <a href=\"https://github.com/simonw/research/tree/main/bun-webview-json-api#readme\">A shot-scraper-style JSON API on Bun 1.4's new Bun.WebView</a></p> <p>Today saw the long awaited <a href=\"https://bun.com/blog/bun-v1.4\">release of Bun 1.4</a>, the first stable version since the infamous Rust rewrite <a href=\"https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/\">a few months ago</a>.</p> <p>Interestingly, the Rust rewrite was downplayed in the release notes, which introduced a bewildering array of new features and claimed 2,900 additional bug fixes:</p> <blockquote> <p>Bun 1.4 adds +1,517 tests from the Node.js test suite - our biggest jump in Node.js compatibility since Bun 1.0. Bun v1.4 also fixes over 2,900 issues. It reduces idle CPU usage by 5x, reduces memory usage by up to 35%, and starts 50% faster on Linux. It adds <a href=\"https://bun.com/blog/bun-v1.4#bun-image\"><code>Bun.Image</code></a>, <a href=\"https://bun.com/blog/bun-v1.4#bun-webview\"><code>Bun.WebView</code></a>, <a href=\"https://bun.com/blog/bun-v1.4#bun-markdown\"><code>Bun.markdown</code></a>, <a href=\"https://bun.com/blog/bun-v1.4#bun-cron\"><code>Bun.cron()</code></a>, <a href=\"https://bun.com/blog/bun-v1.4#bun-terminal\"><code>Bun.Terminal</code></a>, <a href=\"https://bun.com/blog/bun-v1.4#bun-run-parallel\"><code>bun run --parallel</code></a>, <a href=\"https://bun.com/blog/bun-v1.4#bun-test-parallel\"><code>bun test --parallel</code></a>, <a href=\"https://bun.com/blog/bun-v1.4#bun-audit-fix\"><code>bun audit fix</code></a>, <a href=\"https://bun.com/blog/bun-v1.4#bun-dedupe\"><code>bun dedupe</code></a>, and <a href=\"https://bun.com/blog/bun-v1.4#bun-prune\"><code>bun prune</code></a>. And it rewrites Bun from Zig to Rust.</p> </blockquote> <p>Of these the one that most caught my eye was <code>Bun.WebView</code>, which adds first class support for browser automation to Bun core using either macOS WebKit or control of a local Chromium process via the Chrome DevTools Protocol (CDP).</p> <p>I had Claude Code for web build a prototype of a web API providing the ability to load a web page and then execute JavaScript against it, inspired by my <a href=\"https://shot-scraper.datasette.io/en/stable/javascript.html\">shot-scraper javascript</a> CLI tool - partly to see how much RAM would be needed by such a service.</p> <p>Here's <a href=\"https://github.com/simonw/research/blob/main/bun-webview-json-api/server.ts\">that TypeScript server implementation</a>, which appears to need a 192MB-256MB container to run a full Chrome against complex web pages - tested using cgroups.</p> <p>Tags: <a href=\"https://simonwillison.net/tags/browsers\">browsers</a>, <a href=\"https://simonwillison.net/tags/javascript\">javascript</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/rust\">rust</a>, <a href=\"https://simonwillison.net/tags/typescript\">typescript</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/coding-agents\">coding-agents</a>, <a href=\"https://simonwillison.net/tags/bun\">bun</a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Unlocking hidden revenue streams with market models",
+      "url": "https://www.technologyreview.com/2026/08/20/1142070/unlocking-hidden-revenue-streams-with-market-models/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "research_paper",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T09:47:22.000Z",
+      "summary": "Each day, an airline transports tens of thousands of passengers on hundreds of flights. Often these are not straightforward point-to-point routes, with passengers requiring multiple connections. The airline can consider potentially hundreds of variables to price each of these journeys: demand, season, time of day, current events, global markets, and competitor airline activity to name…",
+      "category": "ai_research"
+    },
+    {
+      "title": "ChatGPT search now uses the site:operator at scale",
+      "url": "https://simonwillison.net/2026/Aug/20/chatgpt-search-now-uses-the-siteoperator-at-scale/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T23:57:32.000Z",
+      "summary": "<p><strong><a href=\"https://promptwatch.com/data/chatgpt-site-operator-fanouts\">ChatGPT search now uses the site:operator at scale</a></strong></p> Promptwatch is part of the emerging \"GEO\" space, for Generative Engine Optimization - the chatbot version of SEO, where companies offer tools and consulting to help your site increase its presence in replies to prompts inside tools like ChatGPT.</p> <p>The Promptwatch product uses automation to track responses to prompts across end-user chat products like ChatGPT, Claude, and Gemini. They publish aggregate reports on this as part of their own content marketing strategy, which do seem to provide credible hints as to otherwise invisible design changes to those products.</p> <p>Their own tracking shows a notable change aligned with the GPT-5.6 rollout earlier this month:</p> <blockquote> <p>The percentage of all ChatGPT Search fanout queries that contain the site:operator, per day. The share hovered between 0.3% and 0.5% for weeks, dipped briefly to 0.15% on August 3 to 5 (consistent with a staged rollout or pre-launch experiment), then jumped to 16-17% on August 8.</p> </blockquote> <p>It's important to note that these figures only reflect the prompts for which they have automated tracking enabled.</p> <p>This corresponds to OpenAI's somewhat vague <a href=\"https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/\">August 6th announcement</a>:</p> <blockquote> <p>For Plus and Pro users, we’re updating GPT‑5.6 Sol in Chat to be more reliable with facts and provide more focused answers.</p> </blockquote> <p>Once again I am hampered by OpenAI's decision to actively obscure their system prompts, but from poking at ChatGPT I believe their latest search tool has a shape like <code>search(query, recency, domains)</code> rather than encouraging a <code>site:</code> operator directly.</p> <p>In <a href=\"https://promptwatch.com/data/reddit-citations-are-dropping-in-chatgpt\">a follow-up</a> on August 18th Promptwatch reported that ChatGPT appeared to have greatly reduced the likelihood of Reddit being used in those searches. My own attempts to ascertain if the system prompt has been updated to discourage Reddit sourcing have been unsuccessful - the <a href=\"https://github.com/asgeirtj/system_prompts_leaks/commits/main/OpenAI\">most thorough leaked system prompt</a> collection I know of doesn't yet show any relevant changes. <p>Tags: <a href=\"https://simonwillison.net/tags/reddit\">reddit</a>, <a href=\"https://simonwillison.net/tags/seo\">seo</a>, <a href=\"https://simonwillison.net/tags/openai\">openai</a>, <a href=\"https://simonwillison.net/tags/chatgpt\">chatgpt</a>, <a href=\"https://simonwillison.net/tags/ai-assisted-search\">ai-assisted-search</a>, <a href=\"https://simonwillison.net/tags/system-prompts\">system-prompts</a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Meet UPDF: A Lightweight Adobe Alternative Built for the Agentic Era",
+      "url": "https://www.marktechpost.com/2026/08/20/meet-updf-a-lightweight-adobe-alternative-built-for-the-agentic-era/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T19:34:10.000Z",
+      "summary": "PDFs are easy to read and hard to change. AI can now summarize a 90-page contract in seconds, but it still won't rewrite the source file cleanly. UPDF is built for that second half: direct editing, 14-format conversion, 38-language OCR, and ten AI agents shipped in version 2.5. The post Meet UPDF: A Lightweight Adobe Alternative Built for the Agentic Era appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Agentic Search. More accurate and efficient results from your AI systems.",
+      "url": "https://mistral.ai/news/agentic-search/",
+      "source": "Mistral AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T12:00:17.000Z",
+      "summary": "The retrieval layer that helps AI systems navigate, read, and verify information inside even the most complex documents",
+      "category": "ai_models"
+    },
+    {
+      "title": "HoneyBook bets on agentic AI to streamline small business operations with its new Claude connector",
+      "url": "https://www.artificialintelligence-news.com/news/honeybook-bets-on-agentic-ai-to-streamline-small-business-operations-with-its-new-claude-connector/",
+      "source": "AI News",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T07:35:07.000Z",
+      "summary": "Autonomous artificial intelligence agents have already penetrated the offices of large, global enterprises. Now, HoneyBook is trying to bring that same capability to independent businesses with the launch of HoneyBook MCP, recently released as a connector for Anthropic’s AI assistant Claude. The move addresses a real gap. McKinsey’s recent State of AI survey found that […] The post HoneyBook bets on agentic AI to streamline small business operations with its new Claude connector appeared first on AI News .",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.56.0-nightly.20260820.ge90c63fa1",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260820.ge90c63fa1",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-08-20T01:27:23.000Z",
+      "summary": "<h2>What's Changed</h2> <ul> <li>fix(core): preserve empty text turns with tools or media by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/DavidAPierce/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/DavidAPierce\">@DavidAPierce</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5184372185\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28892\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28892/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28892\">#28892</a></li> <li>Changelog for v0.57.0-preview.0 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/gemini-cli-robot\">@gemini-cli-robot</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5196337316\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28918\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28918/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28918\">#28918</a></li> </ul> <p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/google-gemini/gemini-cli/compare/v0.56.0-nightly.20260819.g571851b10...v0.56.0-nightly.20260820.ge90c63fa1\"><tt>v0.56.0-nightly.20260819.g571851b10...v0.56.0-nightly.20260820.ge90c63fa1</tt></a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Provenance grounds trust in autonomous science",
+      "url": "https://www.nature.com/articles/s43588-026-01035-4",
+      "source": "Nature AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.9800000000000001,
+      "date": "2026-08-20T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "v16.3.1-canary.26",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.1-canary.26",
+      "source": "GitHub Releases · Next.js 15",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.78,
+      "date": "2026-08-20T23:48:51.000Z",
+      "summary": "<h3>Misc Changes</h3> <ul> <li>docs: document deploymentId build ID override and Pages Router skew in 16.2: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5206750747\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/97645\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/97645/hovercard\" href=\"https://github.com/vercel/next.js/pull/97645\">#97645</a></li> <li>Upgrade React from <code>eb8feb71-20260814</code> to <code>eafeac09-20260819</code>: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5205670885\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/97636\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/97636/hovercard\" href=\"https://github.com/vercel/next.js/pull/97636\">#97636</a></li> <li>Turbopack: rename to use turbopack: no side effects: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4580502420\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/94427\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/94427/hovercard\" href=\"https://github.com/vercel/next.js/pull/94427\">#94427</a></li> <li>refactor: move useDynamic{Route,Search}Params to reduce snapshot churn: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5151161375\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/97360\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/97360/hovercard\" href=\"https://github.com/vercel/next.js/pull/97360\">#97360</a></li> <li>[PPF] unstable_navigation(): <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5090713371\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/96908\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/96908/hovercard\" href=\"https://github.com/vercel/next.js/pull/96908\">#96908</a></li> <li>[PPF] Scaffold unstable_navigation(): <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5130686808\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/97236\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/97236/hovercard\" href=\"https://github.com/vercel/next.js/pull/97236\">#97236</a></li> <li>docs: Explicit cache output description: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5191292180\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/97548\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/97548/hovercard\" href=\"https://github.com/vercel/next.js/pull/97548\">#97548</a></li> <li>Improve Cache Components sync IO migration guidance: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5196877418\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/97572\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/97572/hovercard\" href=\"https://github.com/vercel/next.js/pull/97572\">#97572</a></li> <li>[test] Use a non-native stub for the server externals list test: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5202972821\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/97614\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/97614/hovercard\" href=\"https://github.com/vercel/next.js/pull/97614\">#97614</a></li> <li>Avoid GitHub API rate limits for create-next-app examples: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5202779613\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/97612\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/97612/hovercard\" href=\"https://github.com/vercel/next.js/pull/97612\">#97612</a></li> <li>[test] Cover the prerender worker-thread backend with an addon we control: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5190803248\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/97543\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/97543/hovercard\" href=\"https://github.com/vercel/next.js/pull/97543\">#97543</a></li> <li>[test] Convert the <code>prerender-native-module</code> suite to local fixture packages: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5190802343\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/97542\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/97542/hovercard\" href=\"https://github.com/vercel/next.js/pull/97542\">#97542</a></li> <li>[test] Replace the <code>turbopack-reports</code> <code>sqlite3</code> dependency with a local addon fixture: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5190801434\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/97541\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/97541/hovercard\" href=\"https://github.com/vercel/next.js/pull/97541\">#97541</a></li> <li>[test] Drop the dead <code>sqlite3</code> build approval from the <code>sharp-basic</code> suite: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5190800666\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/97540\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/97540/hovercard\" href=\"https://github.com/vercel/next.js/pull/97540\">#97540</a></li> <li>[ci] Authenticate Turborepo remote caching with OIDC instead of a static PAT: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5197672125\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/97590\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/97590/hovercard\" href=\"https://github.com/vercel/next.js/pull/97590\">#97590</a></li> <li>Remove HmrTarget: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5133721861\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/97253\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/97253/hovercard\" href=\"https://github.com/vercel/next.js/pull/97253\">#97253</a></li> <li>Keep HMR instructions typed until serialization: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5054389210\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/96569\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/96569/hovercard\" href=\"https://github.com/vercel/next.js/pull/96569\">#96569</a></li> <li>Serialize frozen collections by value only: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5065184918\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/96686\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/96686/hovercard\" href=\"https://github.com/vercel/next.js/pull/96686\">#96686</a></li> </ul> <h3>Credits</h3> <p>Huge thanks to <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/icyJoseph/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/icyJoseph\">@icyJoseph</a>, <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/mischnic/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/mischnic\">@mischnic</a>, <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/lubieowoce/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/lubieowoce\">@lubieowoce</a>, <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/aurorascharff/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/aurorascharff\">@aurorascharff</a>, <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/eps1lon/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/eps1lon\">@eps1lon</a>, <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/sokra/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/sokra\">@sokra</a>, and <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/wbinnssmith/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/wbinnssmith\">@wbinnssmith</a> for helping!</p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "RANKL Inhibition Slows Aging in Progeroid Mice",
+      "url": "https://www.fightaging.org/archives/2026/08/rankl-inhibition-slows-aging-in-progeroid-mice/",
+      "source": "Fight Aging Newsletter",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7799999999999999,
+      "date": "2026-08-20T18:07:09.000Z",
+      "summary": "RANKL is best studied in the context of bone remodeling. Its activity, binding to the cell surface receptor RANK, is necessary for the function of the osteoclast cells that break down bone extracellular matrix. Bone tissue is in a constant state of remodeling, built up by osteoblast cells and broken down by osteoclast cells. The loss of bone mineral density that leads to osteoporosis arises from a growing age-related imbalance between osteoblast and osteoclast activity, favoring the osteoclasts. The various established therapies used to slow the progression of osteoporosis attempt to tilt that balance away from loss of bone mineral density, such as via monoclonal antibodies targeting RANKL to suppress osteoclast activity. In today's open access paper, researchers note that RANKL inhibition extends life in […]",
+      "category": "health_research"
+    }
+  ]
+}

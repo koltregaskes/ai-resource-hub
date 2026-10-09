@@ -1,9 +1,112 @@
 {
-  "generated": "2026-05-25T14:37:35.730Z",
+  "generated": "2026-08-26T03:02:00.884Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-03",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 6,
+  "archived_story_count": 177,
+  "articles": [
+    {
+      "title": "GitHub Releases · Node.js: 2026-02-03, Version 25.6.0 (Current), @aduh95",
+      "url": "https://github.com/nodejs/node/releases/tag/v25.6.0",
+      "source": "GitHub Releases · Node.js",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-02-03T11:42:11.000Z",
+      "summary": "### Notable Changes * \\[[`796ff46ae6`](https://github.com/nodejs/node/commit/796ff46ae6)] - **(SEMVER-MINOR)** **async\\_hooks**: add `trackPromises` option to `createHook()` (Joyee Cheung) [#61415](https://github.com/nodejs/node/pull/61415) * \\[[`4cf94fae17`](https://github.com/nodejs/node/commit/4cf94fae17)] - **(SEMVER-MINOR)** **net**: add `setTOS` and `getTOS` to `Socket` (Amol Yadav) [#61503](https://github.com/nodejs/node/pull/61503) * \\[[`dce657071e`](https://github.com/nodejs/node/commit/dce657071e)] - **(SEMVER-MINOR)** **src**: add initial support for ESM in embedder API (Joyee Cheung) [#61548](https://github.com/nodejs/node/pull/61548) * \\[[`e62608bbcf`](https://github.com/nodejs/node/commit/e62608bbcf)] - **src**: improve `TextEncoder` encode performance with `simdutf` (Mert Can Altin) [#61496](https://github.com/nodejs/node/pull/61496) * \\[[`93938a4738`](https://github.com/nodejs/node/commit/93938a4738)] - **(SEMVER-MINOR)** **stream**: add `bytes()` method to `node:stream",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · ComfyUI: v0.12.1",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.12.1",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-02-03T21:27:07.000Z",
+      "summary": "## What's Changed * Add progress bar to ace step. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12242 * Fix some issues with mac. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12247 * llama: cast logits as a comfy-weight by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12248 * Fix mac issue. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12250 * feat(comfy_api): add basic 3D Model file types by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/12129 * Support ace step 1.5 base model loras. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12252 * Fix tiled vae for ace step 1.5 by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12253 **Full Changelog**: https://github.com/Comfy-Org/ComfyUI/compare/v0.12.0...v0.12.1",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.39.0",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.39.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-02-03T19:35:06.000Z",
+      "summary": "# Hello, UI rewrite Hi! Today we're releasing a complete rewrite of the UI portion of the codebase. We vastly simplified and flattened the UI code, putting into practice our current thinking on how complex [Bubble Tea](https://github.com/charmbracelet/bubbletea) applications should be architected. ✨ This means you get: * Considerable performance improvements and a snappier UI * A much better experience in long sessions * The ability to contribute to the codebase easier than ever What’s that you say? “Handsome Charm team, I need features?” Well, allow us to tell you more. ## History navigation, freakin’ finally Yeah! Now you can press up and down to cycle through past prompts, just like in Bash, VSCode, and lots of other tools. Enjoy! ## Better session management Sessions are great, but let’s face it: sometimes you want to wipe one of them off the face of the Earth. Other times you want to rename them because the LLM just didn't quite get the title right. Now you can. In the session dia",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Apple Xcode Claude Agent Sdk",
+      "url": "https://www.anthropic.com/news/apple-xcode-claude-agent-sdk",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-02-03T18:06:03.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "GitHub Releases · ComfyUI: v0.12.0",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.12.0",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-02-03T08:54:29.000Z",
+      "summary": "## What's Changed * fix: count non-dict items in outputs_count by @christian-byrne in https://github.com/Comfy-Org/ComfyUI/pull/12166 * Make empty hunyuan latent 1.0 work with the 1.5 model. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12171 * Remove unused code from _io.py by @Kosinkadink in https://github.com/Comfy-Org/ComfyUI/pull/12147 * [API Nodes] RecraftCreateStyleNode node by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/12055 * Add color type and Color to RGB Int node by @pythongosssss in https://github.com/Comfy-Org/ComfyUI/pull/12145 * Update python patch version in dep workflow. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12184 * Fix model not working with any res. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12186 * [API Nodes] Vidu: Q3 model; Extend and MultiFrame nodes by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/12175 * Assets Part 2 - add more endpoints by @Kosinkadink in https://github.com",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Protecting Well Being Of Users",
+      "url": "https://www.anthropic.com/news/protecting-well-being-of-users",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-03T22:04:42.000Z",
+      "summary": null,
+      "category": "ai_models"
+    }
+  ]
 }

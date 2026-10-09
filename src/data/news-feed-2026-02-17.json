@@ -1,9 +1,187 @@
 {
-  "generated": "2026-05-25T14:37:36.208Z",
+  "generated": "2026-08-26T03:02:14.924Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-17",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 11,
+  "archived_story_count": 167,
+  "articles": [
+    {
+      "title": "GitHub Releases · ComfyUI: v0.14.1",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.14.1",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-02-17T20:31:49.000Z",
+      "summary": "## What's Changed * Fix anima LLM adapter forward when manual cast by @chaObserv in https://github.com/Comfy-Org/ComfyUI/pull/12504 * feat(api-nodes): add \"viduq3-turbo\" model support by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/12482 * feat(api-nodes): add Recraft V4 nodes by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/12502 * Update workflow templates to v0.8.43 by @comfyui-wiki in https://github.com/Comfy-Org/ComfyUI/pull/12507 **Full Changelog**: https://github.com/Comfy-Org/ComfyUI/compare/v0.14.0...v0.14.1",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · pnpm: pnpm 10.30",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v10.30.0",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-02-17T15:05:01.000Z",
+      "summary": "## Minor Changes * `pnpm why` now shows a reverse dependency tree. The searched package appears at the root with its dependents as branches, walking back to workspace roots. This replaces the previous forward-tree output which was noisy and hard to read for deeply nested dependencies. ## Patch Changes * Revert `pnpm why` dependency pruning to prefer correctness over memory consumption. Reverted PR: [#7122](https://github.com/pnpm/pnpm/pull/7122). * Optimize `pnpm why` and `pnpm list` performance in workspaces with many importers by sharing the dependency graph and materialization cache across all importers instead of rebuilding them independently for each one [#10596](https://github.com/pnpm/pnpm/pull/10596/changes). ## Platinum Sponsors ## Gold Sponsors",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · pnpm: pnpm 11 Alpha 5",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v11.0.0-alpha.5",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-02-17T13:55:11.000Z",
+      "summary": "## Major Changes ### Store * Runtime dependencies are always linked from the global virtual store [#10233](https://github.com/pnpm/pnpm/pull/10233). * Optimized index file format to store the hash algorithm once per file instead of repeating it for every file entry. Each file entry now stores only the hex digest instead of the full integrity string (` - `). Using hex format improves performance since file paths in the content-addressable store use hex representation, eliminating base64-to-hex conversion during path lookups. * Store version bumped to v11. * Switched internal store and cache files from JSON to MessagePack format for improved performance. This change migrates all internal index files and metadata cache files to use MessagePack serialization instead of JSON. MessagePack provides faster serialization/deserialization and more compact file sizes, resulting in improved installation performance. Related PR: [#10500](https://github.com/pnpm/pnpm/pull/10500) * Store the bundled m",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · pnpm: pnpm 11 Alpha.4",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v11.0.0-alpha.4",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 1,
+      "date": "2026-02-17T12:09:21.000Z",
+      "summary": "## Major Changes ### Store * Runtime dependencies are always linked from the global virtual store [#10233](https://github.com/pnpm/pnpm/pull/10233). * Optimized index file format to store the hash algorithm once per file instead of repeating it for every file entry. Each file entry now stores only the hex digest instead of the full integrity string (` - `). Using hex format improves performance since file paths in the content-addressable store use hex representation, eliminating base64-to-hex conversion during path lookups. * Store version bumped to v11. * Switched internal store and cache files from JSON to MessagePack format for improved performance. This change migrates all internal index files and metadata cache files to use MessagePack serialization instead of JSON. MessagePack provides faster serialization/deserialization and more compact file sizes, resulting in improved installation performance. Related PR: [#10500](https://github.com/pnpm/pnpm/pull/10500) * Store the bundled m",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · ComfyUI: v0.14.0",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.14.0",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-02-17T06:29:10.000Z",
+      "summary": "## What's Changed * mp: dont deep-clone objects from model_options by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/12382 * sd: delay VAE dtype archive until after override by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/12388 * dynamic_vram: ops: Fix vanilla-fp8 loaded lora quality by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/12390 * Fix 3D models not showing in outputs window by @guill in https://github.com/Comfy-Org/ComfyUI/pull/12381 * Add a VideoSlice node by @AustinMroz in https://github.com/Comfy-Org/ComfyUI/pull/12107 * [Trainer] training with proper offloading by @KohakuBlueleaf in https://github.com/Comfy-Org/ComfyUI/pull/12189 * Make built in lora training work on anima. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12402 * fix(api-nodes): retry on connection errors during polling instead of aborting by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/12393 * Dispatch desktop auto-bump when a ComfyUI release is publi",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic Releases Claude 4.6 Sonnet with 1 Million Token Context to Solve Complex Coding and Search for Developers",
+      "url": "https://www.marktechpost.com/2026/02/17/anthropic-releases-claude-4-6-sonnet-with-1-million-token-context-to-solve-complex-coding-and-search-for-developers/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.98,
+      "date": "2026-02-17T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.424",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.424",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-17T16:23:30.000Z",
+      "summary": "## What's Changed * `@remotion/studio`: Show render queue in read-only mode by @samohovets in https://github.com/remotion-dev/remotion/pull/6530 * `@remotion/media`: Don't rely on sample durations to determine real duration by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6532 * `@remotion/studio`: Show only encoding progress in web renderer by @samohovets in https://github.com/remotion-dev/remotion/pull/6533 * `@remotion/studio`: Show asset info when asset is selected in sidebar by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6536 * `@remotion/renderer`: Add \"bt601\" colorSpace option as an alias for \"default\" by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6542 * `@remotion/renderer`: Fix numberOfGifLoops being ignored on Lambda by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6547 * `@remotion/serverless`: Retry on socket hang up and ECONNRESET errors by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/654",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Bengaluru Office Partnerships Across India",
+      "url": "https://www.anthropic.com/news/bengaluru-office-partnerships-across-india",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-17T15:11:31.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Anthropic Rwanda Mou",
+      "url": "https://www.anthropic.com/news/anthropic-rwanda-mou",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-17T10:01:21.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Anthropic Infosys",
+      "url": "https://www.anthropic.com/news/anthropic-infosys",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-17T09:26:56.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Accelerating discovery in India through AI-powered science and education",
+      "url": "https://deepmind.google/blog/accelerating-discovery-in-india-through-ai-powered-science-and-education/",
+      "source": "DeepMind Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-02-17T13:42:20.000Z",
+      "summary": "Google DeepMind brings National Partnerships for AI initiative to India, scaling AI for science and education",
+      "category": "ai_research"
+    }
+  ]
 }

@@ -1,0 +1,347 @@
+{
+  "generated": "2026-09-05T17:45:12.446Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "OpenAI's rogue agents were caught communicating via public wikis",
+      "url": "https://simonwillison.net/2026/Sep/4/rogue-agent-wikis/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "research_paper",
+        "api_update",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "research_paper",
+        "api_update",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-04T17:38:48.000Z",
+      "summary": "Here we go again... Discovery of a new OpenAI agent message board by Sydney Von Arx, Cormac Slade Byrd, Spencer Kitts, and Thomas Larsen describes the latest accidental cyberattack by models being trained by OpenAI. This time it was agents engaged in some sort of web research benchmark, so they had (supposedly) controlled access to the Web. The agents figured out they could update public Wikis and spent weeks exchanging thousands of messages with each other to collaborate on the benchmark. This story only broke a few hours ago. There are already hints that this affects many other wikis...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.23.0-nightly.20260905.e3d26283e6",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.23.0-nightly.20260905.e3d26283e6",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update",
+        "inference"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-05T05:28:24.000Z",
+      "summary": "What's Changed feat(web-shell): visualize and manage dynamic workflow runs by @qqqys in #10594 perf(web-shell): derive the session workflow projection once by @yiliang114 in #10871 test(integration): synchronize mid-turn /quit completion by @qwen-code-dev-bot in #10926 feat(ipc): tell senders when a message is refused, and expire held ones by @qqqys in #10809 fix(web-shell): make the 30 s overview-poll e2e deterministic by @yiliang114 in #10934 feat(serve): add session resource catalog by @w9lsky in #10837 fix(cli): submit exact slash commands from the live input by @yiliang114 in #10929...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI Extends GPT-6 Astra to Workplace Users With Tool-Use Monitoring",
+      "url": "https://superpowerdaily.com/posts/openai-extends-gpt-6-astra-to-workplace-users-with-tool-use-monitoring",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-04T20:46:23.000Z",
+      "summary": "The expansion moves a model OpenAI classifies at its highest cybersecurity capability level into Work, Codex and the API, where safeguards can interrupt legitimate actions.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Architecting memory and storage in the AI era",
+      "url": "https://www.technologyreview.com/2026/09/04/1140872/architecting-memory-and-storage-in-the-ai-era/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "research_paper",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-04T18:39:19.000Z",
+      "summary": "The era of AI inference has arrived. Imagine a healthcare system analyzing millions of data points in real time to accelerate life-saving medical research, or an intelligent assistant instantly resolving thousands of complex customer needs at once. These real-world breakthroughs rely on advanced infrastructure acting as the engine of continuous intelligence, powering real-time services while…",
+      "category": "ai_research"
+    },
+    {
+      "title": "Adaption Labs Introduces ‘Invent a Dataset’: Training Data Generated From a Task Description, Not a Seed Corpus",
+      "url": "https://www.marktechpost.com/2026/09/04/datasets-invent-api-training-data-without-labeling-adaptive-data-autoscientist/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-05T06:48:29.000Z",
+      "summary": "Adaption Labs has released Invent a Dataset, which generates a structured, training-ready dataset from a description of the behavior you want a model to learn. There is no seed corpus, no schema design, and no labeling guide. A single datasets.invent call sets domains, row count, output format, and language expansion, and the rows download as JSONL, JSON, CSV, or Parquet. The dataset ID then passes straight into AutoScientist, closing an intent-to-trained-model loop. The post Adaption Labs Introduces ‘Invent a Dataset’: Training Data Generated From a Task Description, Not a Seed Corpus...",
+      "category": "ai_research"
+    },
+    {
+      "title": "The Pelican comparison grid for Astra is pretty interesting",
+      "url": "https://simonwillison.net/2026/Sep/4/astra-pelicans/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-04T23:59:05.000Z",
+      "summary": "I got access to GPT-6 Astra this afternoon, so naturally I used it to generate SVGs of pelicans riding bicycles - at low, medium, high, xhigh and max reasoning levels (Astra doesn't support reasoning=none). Then I rendered those pelicans in a comparison grid with GPT-5.6 Sol, Terra, and Luna, and beyond being fun the result was surprisingly useful. See the grid for full quality images. Here's the transcript that created the GPT-6 Nova pelicans. There are a few interesting things that stand out from this grid. The Astra pelicans are much better . The very best GPT-5.6-Sol pelican (I liked...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Meta Adds Max Reasoning to Muse Spark 1.3 After a Two-Day Safety Gate",
+      "url": "https://superpowerdaily.com/posts/meta-adds-max-reasoning-to-muse-spark-1-3-after-a-two-day-safety-gate",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "api_update"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-04T22:17:51.000Z",
+      "summary": "The setting behind many of Meta’s strongest reported evaluations is now usable in Muse Code and its API, though the company’s efficiency and performance claims remain largely its own measurements.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nscale Seeks $3.5 Billion Before IPO, With $2 Billion From Nvidia in View",
+      "url": "https://superpowerdaily.com/posts/nscale-seeks-3-5-billion-before-ipo-with-2-billion-from-nvidia-in-view",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-04T21:41:16.000Z",
+      "summary": "The AI-cloud company’s proposed financing arrives as it presents prospective investors with projected revenue from signed leases rather than current sales.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Adds GPT-6 Astra to Copilot With Gradual Rollout and Admin Controls",
+      "url": "https://superpowerdaily.com/posts/github-adds-gpt-6-astra-to-copilot-with-gradual-rollout-and-admin-controls",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-04T21:35:02.000Z",
+      "summary": "The new model choice reaches Copilot’s major development surfaces, but rollout timing and organization policies govern access while usage is billed at provider list pricing.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Launches HydraFusion, Citing 67% Lower Cost on Terminal-Bench 2.1",
+      "url": "https://superpowerdaily.com/posts/github-launches-hydrafusion-citing-67-lower-cost-on-terminal-bench-2-1",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-04T19:18:11.000Z",
+      "summary": "The Copilot research preview turns model selection into a per-task workflow. Its strongest published savings result is a GitHub-run, tuned offline evaluation—not a measure of ordinary repository work.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Using Blender with coding agents on macOS",
+      "url": "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-05T15:51:09.000Z",
+      "summary": "TIL: Using Blender with coding agents on macOS I've been having fun with Blender in ChatGPT Codex on my Mac recently. Getting it to work with coding agents is really easy: install the full Mac application from blender.org and run a prompt like this: Use the already install /Applications/Blender to render a scene of a pelican riding a bicycle In this case I followed that up with these two prompts: OK add a background and a lot of flair Then: OK make it a whole lot better And got this image, generated using Blender's Python API : Tags: ai , generative-ai , llms , blender ,...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Sep 04, 2026 Inside Key Changes in Data Policies, Ox Alpha Revealed, Taking Custom Models Beyond Fine-Tuning The Batch News & Insights: A key AI engineering skill is using coding agents.",
+      "url": "https://deeplearning.ai/the-batch/issue-369",
+      "source": "DeepLearning.AI The Batch",
+      "tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-05T04:50:32.252Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "HyperVault Targets $7.4 Billion for a 1-Gigawatt AI Campus in Hyderabad",
+      "url": "https://superpowerdaily.com/posts/tcs-unit-hypervault-sets-7-4-billion-plan-for-1-gigawatt-ai-campus",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-05T13:33:08.000Z",
+      "summary": "The proposed campus would give TCS’s infrastructure unit a large physical base for GPU-heavy AI workloads. The next test is converting a secured site and planned capacity into service for AI companies and hyperscalers.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "InferenceX Ranks GB200 First for MiniMax M3, While MI355X Has Lower Token Cost",
+      "url": "https://superpowerdaily.com/posts/inferencex-ranks-gb200-first-for-minimax-m3-while-mi355x-has-lower-token-cost",
+      "source": "Superpower Daily",
+      "tags": [
+        "pricing_change",
+        "inference"
+      ],
+      "matching_tags": [
+        "pricing_change",
+        "inference"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-05T09:18:12.000Z",
+      "summary": "The live AgentX result gives operators a comparable speed-and-price snapshot at one responsiveness target, but the ranking can shift with serving software and does not settle the wider configuration trade-offs.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "MIT Quantum Initiative launches postdoctoral fellowship program",
+      "url": "https://news.mit.edu/index%2Ephp/2026/mit-quantum-initiative-launches-postdoctoral-fellowship-0831",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-05T11:17:17.304Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Create your best tracks yet with Lyria 3.5 in Gemini.",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-05T04:51:27.530Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Repo-To-Skill: Distilling GitHub Repositories Into AI4AI Skills",
+      "url": "https://paperswithcode.com/papers/2609.02749",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-05T04:51:24.162Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Qualcomm Explains How Its Robotics Stack Becomes an SDK Archive",
+      "url": "https://superpowerdaily.com/posts/qualcomm-explains-how-its-robotics-stack-becomes-an-sdk-archive",
+      "source": "Superpower Daily",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-05T04:44:01.000Z",
+      "summary": "The QIR documentation pairs a wide robotics catalog with the less visible rules that package components, gather dependencies and set a ROS 2 build configuration.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google Launches Agentic Video Understanding for Gemini Flash Models, Cutting Video Tokens by Up to 88%",
+      "url": "https://www.marktechpost.com/2026/09/04/google-agentic-video-understanding-gemini-flash-models/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-05T04:37:25.000Z",
+      "summary": "Gemini now navigates video instead of ingesting it at 1 FPS, loading only the segments a prompt needs. The post Google Launches Agentic Video Understanding for Gemini Flash Models, Cutting Video Tokens by Up to 88% appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Ila Kumar: Innovating with communities",
+      "url": "https://news.mit.edu/index%2Ephp/2026/ila-kumar-innovates-with-communities-0901",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-05T11:17:17.292Z",
+      "summary": "",
+      "category": "ai_research"
+    }
+  ]
+}

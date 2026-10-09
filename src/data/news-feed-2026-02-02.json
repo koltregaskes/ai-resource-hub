@@ -1,9 +1,144 @@
 {
-  "generated": "2026-05-25T14:37:35.704Z",
+  "generated": "2026-08-26T03:02:00.475Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-02",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 8,
+  "archived_story_count": 159,
+  "articles": [
+    {
+      "title": "Fine-tuning open LLM judges to outperform GPT-5.2",
+      "url": "https://www.together.ai/blog/fine-tuning-open-llm-judges-to-outperform-gpt-5-2",
+      "source": "Together AI Blog",
+      "tags": [
+        "model_release",
+        "dataset",
+        "training",
+        "inference",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "dataset",
+        "training",
+        "inference",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-02-02T00:00:00.000Z",
+      "summary": "Fine-tuned open-source LLM judges can outperform GPT-5.2 at evaluating model outputs. Using Direct Preference Optimization on just 5,400 preference pairs, we trained GPT-OSS 120B to beat GPT-5.2 on human preference alignment—at 15x lower cost and 14x faster inference speeds.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Together Evaluations now supports comparing top commercial APIs vs. open source models",
+      "url": "https://www.together.ai/blog/together-evaluations-v2",
+      "source": "Together AI Blog",
+      "tags": [
+        "evaluation",
+        "training",
+        "open_source"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "training",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-02-02T00:00:00.000Z",
+      "summary": "Together Evaluations now supports OpenAI, Anthropic, and Google models for cross-provider benchmarking. Compare open-source, fine-tuned, and proprietary models side-by-side to make data-driven decisions on quality, cost, and performance—all in one platform.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI Safety Newsletter #68: Moltbook Exposes Risky AI Behavior",
+      "url": "https://newsletter.safe.ai/p/ai-safety-newsletter-68-moltbook",
+      "source": "AI Safety Newsletter",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.82,
+      "date": "2026-02-02T15:37:46.000Z",
+      "summary": "Plus: The Pentagon Accelerates AI and GPT-5.2 solves open mathematics problems.",
+      "category": "ai_research"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.38.1",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.38.1",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-02T16:44:35.000Z",
+      "summary": "## Whoops This release fixes a regression in previous release that could cause a crash on startup. Not anymore! (Editors note: @andreynering ftw.) ## Changelog ### Fixed * b7e07a59275cb0e03e80813c44bd8eccb21de67c: fix: address potential panic on initialization (#2092) (@andreynering) --- Verifying the artifacts First, download the [`checksums.txt` file](https://github.com/charmbracelet/crush/releases/download/v0.38.1/checksums.txt) and the [`checksums.txt.sigstore.json` file](https://github.com/charmbracelet/crush/releases/download/v0.38.1/checksums.txt.sigstore.json) files, for example, with `wget`: ```bash wget 'https://github.com/charmbracelet/crush/releases/download/v0.38.1/checksums.txt' wget 'https://github.com/charmbracelet/crush/releases/download/v0.38.1/checksums.txt.sigstore.json' ``` Then, verify it using [`cosign`](https://github.com/sigstore/cosign): ```bash cosign verify-blob \\ --certificate-identity 'https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.38.0",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.38.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-02T14:46:55.000Z",
+      "summary": "# Fixes for LSPs, tools behind proxies and more This releases includes fixes for LSPs, in particular to make auto-discovery way more reliable. Crush will now also respect your HTTP proxy configuration fro your operating system, ensuring the tools that need internet access will properly work behind proxies. Vercel is now a proper provider under the hood, instead being considered just an OpenAI provider. This improves support for Vercel's many available models. Enjoy your week! The Charm Team :tm: ## Changelog ### New! * 00bbf45427e278fc8e19e4b6fb4dd03af535ddd5: feat: add support for vercel provider (#2090) (@kujtimiihoxha) ### Fixed * 46068b8fbe8f1b2506a633cfb8e34965ad522e65: fix(lsp): improve auto discovery (#2086) (@caarlos0) * 4a03cbaf3cf5e96cb5f6ac849817de025558e642: fix(lsp): improve lsp tools (#2089) (@caarlos0) * 514318dbcae86487260f18ecd4c403d8c5f4d44a: fix(ui): show auto-discovered LSPs (#2077) (@jamestrew) * 7119b7e6981ceff5764bd3903ac8cb995a65759c: fix(ui): update layout and ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic Partners With Allen Institute And Howard Hughes Medical Institute",
+      "url": "https://www.anthropic.com/news/anthropic-partners-with-allen-institute-and-howard-hughes-medical-institute",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-02T14:22:01.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.417",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.417",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-02T11:17:27.000Z",
+      "summary": "## What's Changed * `@remotion/lambda`: Fix default font not loading in Lambda by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6439 **Full Changelog**: https://github.com/remotion-dev/remotion/compare/v4.0.416...v4.0.417",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Goose: v1.22.2",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.22.2",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-02T05:27:22.000Z",
+      "summary": null,
+      "category": "ai_tools"
+    }
+  ]
 }

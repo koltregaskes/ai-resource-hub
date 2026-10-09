@@ -1,9 +1,40 @@
 {
-  "generated": "2026-05-25T14:37:35.837Z",
+  "generated": "2026-08-26T03:02:05.970Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-07",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 2,
+  "archived_story_count": 96,
+  "articles": [
+    {
+      "title": "GitHub Releases · pnpm: pnpm 10.29.1",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v10.29.1",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-07T18:03:35.000Z",
+      "summary": "## Minor Changes * The `pnpm dlx` / `pnpx` command now supports the `catalog:` protocol. Example: `pnpm dlx shx@catalog:`. * Support configuring `auditLevel` in the `pnpm-workspace.yaml` file [#10540](https://github.com/pnpm/pnpm/issues/10540). * Support bare `workspace:` protocol without version specifier. It is now treated as `workspace:*` and resolves to the concrete version during publish [#10436](https://github.com/pnpm/pnpm/pull/10436). ## Patch Changes * Fixed `pnpm list --json` returning incorrect paths when using global virtual store [#10187](https://github.com/pnpm/pnpm/issues/10187). * Fix `pnpm store path` and `pnpm store status` using workspace root for path resolution when `storeDir` is relative [#10290](https://github.com/pnpm/pnpm/issues/10290). * Fixed `pnpm run -r` failing with \"No projects matched the filters\" when an empty `pnpm-workspace.yaml` exists [#10497](https://github.com/pnpm/pnpm/issues/10497). * Fixed a bug where `catalogMode: strict` would write the liter",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · pnpm: pnpm 10.29",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v10.29.0",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-07T17:40:15.000Z",
+      "summary": "## Minor Changes * The `pnpm dlx` / `pnpx` command now supports the `catalog:` protocol. Example: `pnpm dlx shx@catalog:`. * Support configuring `auditLevel` in the `pnpm-workspace.yaml` file [#10540](https://github.com/pnpm/pnpm/issues/10540). * Support bare `workspace:` protocol without version specifier. It is now treated as `workspace:*` and resolves to the concrete version during publish [#10436](https://github.com/pnpm/pnpm/pull/10436). ## Patch Changes * Fixed `pnpm list --json` returning incorrect paths when using global virtual store [#10187](https://github.com/pnpm/pnpm/issues/10187). * Fix `pnpm store path` and `pnpm store status` using workspace root for path resolution when `storeDir` is relative [#10290](https://github.com/pnpm/pnpm/issues/10290). * Fixed `pnpm run -r` failing with \"No projects matched the filters\" when an empty `pnpm-workspace.yaml` exists [#10497](https://github.com/pnpm/pnpm/issues/10497). * Fixed a bug where `catalogMode: strict` would write the liter",
+      "category": "ai_tools"
+    }
+  ]
 }

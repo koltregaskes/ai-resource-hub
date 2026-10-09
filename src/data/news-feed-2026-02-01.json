@@ -1,9 +1,132 @@
 {
-  "generated": "2026-05-25T14:37:35.681Z",
+  "generated": "2026-08-26T03:01:59.509Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-01",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 8,
+  "archived_story_count": 155,
+  "articles": [
+    {
+      "title": "#490 – State of AI in 2026: LLMs, Coding, Scaling Laws, China, Agents, GPUs, AGI",
+      "url": "https://lexfridman.com/ai-sota-2026/?utm_source=rss&utm_medium=rss&utm_campaign=ai-sota-2026",
+      "source": "Lex Fridman Podcast",
+      "tags": [
+        "dataset",
+        "training"
+      ],
+      "matching_tags": [
+        "dataset",
+        "training"
+      ],
+      "importance": 1,
+      "date": "2026-02-01T02:46:43.000Z",
+      "summary": "Nathan Lambert and Sebastian Raschka are machine learning researchers, engineers, and educators. Nathan is the post-training lead at the Allen Institute for AI (Ai2) and the author of The RLHF Book. Sebastian Raschka is the author of Build a Large Language Model (From Scratch) and Build a Reasoning Model (From Scratch). Thank you for listening ❤ Check out our sponsors: https://lexfridman.com/sponsors/ep490-sc See below for timestamps, transcript, and to give feedback, submit questions, contact Lex, etc. Transcript: https://lexfridman.com/ai-sota-2026-transcript CONTACT LEX: Feedback – give feedback to Lex: https://lexfridman.com/survey AMA – submit questions, videos or call-in: https://lexfridman.com/ama Hiring – join our team: https://lexfridman.com/hiring",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.416",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.416",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-01T20:51:19.000Z",
+      "summary": "Fixes wrong package.json versions in 4.0.415 **Full Changelog**: https://github.com/remotion-dev/remotion/compare/v4.0.415...v4.0.416",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.415",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.415",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-01T13:53:25.000Z",
+      "summary": "## What's Changed * **New package: `@remotion/light-leaks`** by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6429 * **`@remotion/renderer`: Upgrade to Chrome 144 and Lambda to Node.js 24** by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6422 * **`@remotion/transitions`: New ` ` component for adding overlay transitions without reducing total duration** by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6430 * **Deprecate Media Parser** by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6431 * `@remotion/media`: Consider FPS when evicting cache by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6426 * Skills: Better handle captions by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6419 ## Docs * **[remotion.dev/prompts](https://remotion.dev/prompts)** by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6434 * Homepage: Render the video using client-side rendering by @JonnyBurger in htt",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Quantum Computer Breakthrough Tracks Qubit Fluctuations in Real Time",
+      "url": "https://www.sciencedaily.com/releases/2026/02/260219040756.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-02-01T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "A Tiny Light Trap Could Unlock Million Qubit Quantum Computers",
+      "url": "https://www.sciencedaily.com/releases/2026/02/260201223737.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-02-01T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "AI Reads Brain MRIs in Seconds and Flags Emergencies",
+      "url": "https://www.sciencedaily.com/releases/2026/02/260210005419.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-02-01T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Brain Inspired Machines Are Better at Math Than Expected",
+      "url": "https://www.sciencedaily.com/releases/2026/02/260213223923.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-02-01T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Scientists Create Smart Synthetic Skin That Can Hide Images and Change Shape",
+      "url": "https://www.sciencedaily.com/releases/2026/02/260206034836.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-02-01T00:00:00.000Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
 }

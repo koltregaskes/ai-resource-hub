@@ -1,0 +1,369 @@
+{
+  "generated": "2026-09-23T17:45:10.198Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Kyutai Releases Voice of Reason: A Speech-Native Model that Solves Spoken Math with Reinforcement Learning",
+      "url": "https://www.marktechpost.com/2026/09/22/kyutai-releases-voice-of-reason-a-speech-native-model-that-solves-spoken-math-with-reinforcement-learning/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "dataset",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "benchmark",
+        "dataset",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-23T06:33:18.000Z",
+      "summary": "Kyutai has released Voice of Reason, 2 open-weight speech-to-speech models built on GLM-4-Voice-9B. Supervised fine-tuning and reinforcement learning lift spoken GSM8K accuracy from 27.3% to 77.1%. There is no transcription step and no text LLM in the loop. Both checkpoints are on Hugging Face and run on a single H100. The post Kyutai Releases Voice of Reason: A Speech-Native Model that Solves Spoken Math with Reinforcement Learning appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenAI Releases GPT-6 Sol and Luna: 50% Cheaper API Pricing and Benchmarks",
+      "url": "https://www.marktechpost.com/2026/09/22/openai-releases-gpt-6-sol-and-luna-50-cheaper-api-pricing-and-benchmarks/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-23T05:18:36.000Z",
+      "summary": "OpenAI has released GPT-6 Sol and GPT-6 Luna, 2 lower-cost models trained with methods similar to GPT-6 Astra. Sol costs $2/$10 and Luna $0.10/$0.50 per 1M tokens. Both are available now in the API, ChatGPT Work and Codex. They come with improved prompt caching for long-running agents. The post OpenAI Releases GPT-6 Sol and Luna: 50% Cheaper API Pricing and Benchmarks appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war",
+      "url": "https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-22T23:46:41.000Z",
+      "summary": "Yesterday was Grok 4.7 ( pelicans ) and MiMo v2.6 Flash/Pro ( more pelicans ). Today Anthropic released Claude Opus 5.5 , and around an hour later OpenAI released GPT-6 Sol and GPT-6 Luna . It's going to take a while to get a good read on all of these new models, but here are my impressions so far. GPT-6 Sol and Luna are half the price of their GPT-5.6 equivalents GPT-5.6 Luna was already my favorite model for building applications against, because it combined excellent performance with being really cheap . Somehow GPT-6 Luna is half the price of that again - and GPT-6 Sol had a similar...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Together AI Adds Three Model Rollout Paths; Canary Pauses on Metric Regressions",
+      "url": "https://superpowerdaily.com/posts/together-ai-adds-three-model-rollout-paths-canary-pauses-on-metric-regressions",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-23T00:06:48.000Z",
+      "summary": "The newly detailed endpoint controls offer faster and capacity-preserving migration options, but only canary releases stop to assess live performance between traffic shifts.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI Releases GPT-6 Sol and Luna With API Prices Half Their Predecessors’",
+      "url": "https://superpowerdaily.com/posts/openai-releases-gpt-6-sol-and-luna-with-api-prices-half-their-predecessors",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-22T21:25:22.000Z",
+      "summary": "The release creates two cheaper options below GPT-6 Astra, but OpenAI’s promised accuracy gains remain based on its own tests.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic Releases Claude Opus 5.5: Fable 5.1-Level Performance at 40% Lower Running Cost Than Opus 5",
+      "url": "https://www.marktechpost.com/2026/09/22/anthropic-claude-opus-5-5-release/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-22T18:59:35.000Z",
+      "summary": "Anthropic has released Claude Opus 5.5, the first model in its new Claude 5.5 family. The team states it performs at the level of Claude Fable 5.1 on most work. It also costs 40% less to run than Opus 5 on typical workloads at default settings. On Anthropic’s own benchmarks, it leads in agentic coding, […] The post Anthropic Releases Claude Opus 5.5: Fable 5.1-Level Performance at 40% Lower Running Cost Than Opus 5 appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenAI updates GPT-6 Sol and Luna with lower prices and fewer errors",
+      "url": "https://superintelligencenews.com/ai-fields/large-language-models/gpt-6-sol-luna-cheaper-more-accurate/",
+      "source": "Superintelligence Newsletter",
+      "tags": [
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-22T18:24:09.000Z",
+      "summary": "OpenAI updates GPT-6 Sol and Luna with lower API pricing, fewer mistakes and broader access across ChatGPT, Codex and the API. The post OpenAI updates GPT-6 Sol and Luna with lower prices and fewer errors appeared first on Superintelligence News - Artificial Intelligence News .",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic releases Opus 5.5 with lower prices and Fable-level performance",
+      "url": "https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-22T16:30:07.000Z",
+      "summary": "Anthropic called it \"the strongest-performing model we've tested to date.\"",
+      "category": "ai_tools"
+    },
+    {
+      "title": "YouTube releases new AI features for creators within its Studio app",
+      "url": "https://techcrunch.com/2026/09/23/youtube-releases-new-ai-features-for-creators-within-its-studio-app/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-23T14:30:00.000Z",
+      "summary": "YouTube is adding new features to generate ideas and monitor the performance of thumbnails.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nvidia Sets Up Israeli AI Research Group for Medicine and Science",
+      "url": "https://superpowerdaily.com/posts/nvidia-sets-up-israeli-ai-research-group-for-medicine-and-science",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-23T08:18:38.000Z",
+      "summary": "The team is already working with hospital, drug-discovery and materials researchers. Its plan to hire dozens more people is larger than its current staff.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nokia Open-Sources AnyJev: A Training-Free Layer That Turns Any Open LLM Into a Calibrated Decision Model",
+      "url": "https://www.marktechpost.com/2026/09/23/nokia-open-sources-anyjev-a-training-free-layer-that-turns-any-open-llm-into-a-calibrated-decision-model/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-23T07:09:38.000Z",
+      "summary": "Nokia’s applied research team has open-sourced AnyJev, a Python library that turns an open LLM into a decision model. It needs no training. It targets a common production job: picking one answer from a fixed set instead of writing a sentence. Is it deployable? Yes, it installs from PyPI, ships under Apache-2.0, and has transformers […] The post Nokia Open-Sources AnyJev: A Training-Free Layer That Turns Any Open LLM Into a Calibrated Decision Model appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "At AI Day Singapore, NVIDIA and Partners Showcase AI Advancements Across Southeast Asia",
+      "url": "https://blogs.nvidia.com/blog/ai-day-singapore/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-23T02:30:22.000Z",
+      "summary": "NVIDIA AI Day Singapore, which takes place Sept. 22-23 at the Raffles City Convention Centre, is offering attendees opportunities to explore the hands-on training, expert-led sessions and advanced tools to accelerate their work in AI and high-performance computing. At the event, NVIDIA and its partners are showcasing breakthrough AI advancements across the Southeast Asia region […]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Apple Reportedly Considers AI Server for a 2029 Return to the Server Market",
+      "url": "https://superpowerdaily.com/posts/apple-reportedly-considers-ai-server-for-a-2029-return-to-the-server-market",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-22T22:33:25.000Z",
+      "summary": "The unapproved project would package Apple silicon for private AI inference, but the product and its possible Nvidia networking link remain unsettled.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "llm 0.36",
+      "url": "https://simonwillison.net/2026/Sep/22/llm/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-22T18:48:37.000Z",
+      "summary": "Release: llm 0.36 New OpenAI models: gpt-6-sol for GPT-6 Sol and gpt-6-luna for GPT-6 Luna . #1702 Model plugins can now declare supports_conversation = False for models that only accept single-turn prompts. LLM raises llm.ConversationNotSupported when these models receive assistant or tool history, and llm chat rejects them before starting a session. See Models that do not support conversations . The first plugin to use this is llm-typesafe . #1692 Reasoning traces in the Markdown output of llm logs are now wrapped in tags. #1701 Plus bug fixes from five new contributors . Tags: openai , llm",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic Releases a New A.I. Model, Opus 5.5, Amid Safety Debate",
+      "url": "https://www.nytimes.com/2026/09/22/technology/anthropic-ai-model-safety.html",
+      "source": "New York Times Technology",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-22T18:06:39.000Z",
+      "summary": "The company released a cheaper, faster model that it said was the strongest performer on its most rigorous internal safety tests to date.",
+      "category": "tech_general"
+    },
+    {
+      "title": "Anthropic Releases Claude Opus 5.5, Cutting Prices From Opus 5",
+      "url": "https://superpowerdaily.com/posts/anthropic-releases-claude-opus-5-5-cutting-prices-from-opus-5",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-22T16:44:23.000Z",
+      "summary": "The new flagship model is Anthropic’s bet that agentic work will be won as much by lower serving costs and faster output as by benchmark gains.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "llm-typesafe 0.1a0",
+      "url": "https://simonwillison.net/2026/Sep/22/llm-typesafe/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-22T15:54:16.000Z",
+      "summary": "Release: llm-typesafe 0.1a0 I built this new plugin for LLM to add support for TypeSafe AI's new Jev model . Install it like this: llm install llm-typesafe Then set an API key ( get one here , the waitlist seems to move pretty fast): llm keys set typesafe # Paste key And now you can ask yes/no \"noul\" questions like this: llm -m jev 'Please refund my last payment.' \\ -s 'Does this message explicitly request a refund?' Output: {\"type\": \"noul\", \"noul\": 0.99} Or choice questions like this: cat message.txt | llm -m jev \\ -s ' Which team should handle this message? If billing and technical...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Advancing Private AI Compute with secure, server-side memory",
+      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+      "source": "DeepMind Blog",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-23T16:00:57.000Z",
+      "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
+      "category": "ai_research"
+    },
+    {
+      "title": "**Know Who Spoke When: Build Real-Time, Multi-Speaker AI with NVIDIA Nemotron 3 Diarization**",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-diarization",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-23T13:17:01.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Kyutai Releases Spoken-Math Models; Its Stronger Version Scores 77.1% in Its Test",
+      "url": "https://superpowerdaily.com/posts/kyutai-releases-spoken-math-models-its-stronger-version-scores-77-1-in-its-test",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-23T07:18:20.000Z",
+      "summary": "The open-weight models skip a separate text model when answering. Kyutai’s tests also show the limits of their math-focused training.",
+      "category": "ai_tools"
+    }
+  ]
+}

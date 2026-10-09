@@ -1,0 +1,119 @@
+{
+  "generated": "2026-06-05T00:44:45.484Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-06-02",
+  "article_count": 7,
+  "archived_story_count": 241,
+  "articles": [
+    {
+      "title": "Microsoft's MAI-Code-1-Flash Scores 51% SWE-Bench Pro with Just 5B Active Params",
+      "url": "https://microsoft.ai/models/mai-code-1-flash/",
+      "source": "Hacker News",
+      "tags": [
+        "benchmark",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "evaluation"
+      ],
+      "importance": 0.91,
+      "date": "2026-06-02T18:47:07.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Bringing Up DeepSeek-V4-Flash on AMD MI300X",
+      "url": "https://fergusfinn.com/blog/deepseek-v4-flash-mi300x/",
+      "source": "Hacker News",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.88,
+      "date": "2026-06-02T17:52:48.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Alphabet announces $80B equity capital raise to expand AI infra and compute",
+      "url": "https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Proposed-80-Billion-Equity-Capital-Raise-to-Expand-AI-Infrastructure-and-Compute-2026-b0myAMewCa/default.aspx",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-06-01T20:55:15.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "HP re-releases classic computer science calculator: The HP-16C",
+      "url": "https://hpcalcs.com/product/hp-16c-collectors-edition/",
+      "source": "Hacker News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.9400000000000001,
+      "date": "2026-06-02T19:02:40.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Apple rejected my dictation app for using the accessibility API",
+      "url": "https://www.mitmllc.com/blog/apple-rejected-my-dictation-app/",
+      "source": "Hacker News",
+      "tags": [
+        "api_update"
+      ],
+      "matching_tags": [
+        "api_update"
+      ],
+      "importance": 0.86,
+      "date": "2026-06-02T12:00:03.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Caveolin-1 Gene Therapy Reduces TDP-43 Related Neurodegeneration in a Mouse Model",
+      "url": "https://www.fightaging.org/archives/2026/06/caveolin-1-gene-therapy-reduces-tdp-43-related-neurodegeneration-in-a-mouse-model/",
+      "source": "Fight Aging Newsletter",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.71,
+      "date": "2026-06-02T17:50:00.000Z",
+      "summary": "You might recall that gene therapy to overexpress caveolin-1 in the brain was recently shown to reduce pathology in a mouse model of Alzheimer's disease. In today's open access paper, researchers apply the same gene therapy to a mouse model of TDP-43 pathology in the aging brain. In this model, the mice express higher than normal levels of TDP-43, and thus as they age, the animals exhibit greater levels of altered forms of TDP-43 that form aggregates and disrupt cell biochemistry in the brain as a consequence. This pathological aggregation and its consequences are particularly important in amyotrophic lateral sclerosis (ALS) and the recently named limbic-predominant age-related TDP-43 encephalopathy (LATE), but it seems likely that TDP-43 aggregation contributes in some way to all of the [&#8230;]",
+      "category": "health_research"
+    },
+    {
+      "title": "Natural Killer Cells Appear Involved in Wet Macular Degeneration",
+      "url": "https://www.fightaging.org/archives/2026/06/natural-killer-cells-appear-involved-in-wet-macular-degeneration/",
+      "source": "Fight Aging Newsletter",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-06-02T10:22:00.000Z",
+      "summary": "Macular degeneration involves the death of vital cells in the retina, leading to progressive blindness. The less common neovascular (or \"wet\") form of the condition involves the inappropriate growth of leaky blood vessels in the retina and underlying choroid. Existing treatments focus on trying to prevent this blood vessel growth or remove the vessels, rather than addressing underlying causes. Here, researchers make a step in the direction of those underlying causes by identifying a problem immune cell population that appears to contribute to the dysfunction and leakage of blood vessels in the eye. Age-related macular degeneration (AMD) is the leading cause of irreversible central blindness and can result in pathological neovascularization. Using a \"human-first\" approach, we identify immunotherapy as a disease modifier in models of [&#8230;]",
+      "category": "health_research"
+    }
+  ]
+}

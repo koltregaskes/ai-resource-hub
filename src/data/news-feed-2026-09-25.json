@@ -1,0 +1,349 @@
+{
+  "generated": "2026-09-25T17:45:38.264Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "SPEED-Bench: A Unified and Diverse Benchmark for Speculative Decoding",
+      "url": "https://paperswithcode.com/papers/2604.09557",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "benchmark",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "benchmark",
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-25T04:51:57.985Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Contrastive-LM Releases an Open Model for Faster Agent Decisions, With an Accuracy Tradeoff",
+      "url": "https://superpowerdaily.com/posts/contrastive-lm-releases-an-open-agent-decision-model-that-runs-faster-than-jev-in-its-tests",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "inference",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-24T19:33:10.000Z",
+      "summary": "CLM-8B was quicker than Jev across four reported tests, but lower success rates on tool calling and WikiRacing complicate the speed claim.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.24.5-nightly.20260924.ffea2d024e",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.5-nightly.20260924.ffea2d024e",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "research_paper",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-24T21:58:09.000Z",
+      "summary": "What's Changed feat(sdk-java): Add the Hosted Harness private client by @doudouOUC in #12654 test(java): pin runtime-broker guards left open in earlier reviews by @wenshao in #12632 feat(java): Reconcile UNKNOWN tool executions from Runtime evidence by @wenshao in #12655 test(cli): pin the managed-runtime worker's boot, bind and shutdown guards by @wenshao in #12633 fix(review): persist the local findings ledger when a round cannot anchor by @wenshao in #12660 Full Changelog : v0.24.5...v0.24.5-nightly.20260924.ffea2d024e",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SDK TypeScript Release v0.1.15",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.15",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "architecture"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-24T18:09:07.000Z",
+      "summary": "Bundled CLI Version This SDK release bundles CLI version: 0.24.5 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.24.3 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.24.1 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.23.3 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.23.2 Source: CLI built from source (same branch/ref as...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.24.5",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.24.5",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-24T17:06:19.000Z",
+      "summary": "Highlights See the complete change list below. Breaking Changes No known breaking changes. Complete Change List Features feat(channels): decouple group-member access from senderPolicy ( #12475 ) by @qwen-code-dev-bot feat(cli): Add managed runtime attestation worker ( #12506 ) by @doudouOUC feat(serve): restore serve.channels once for a workspace registered after boot ( #12396 ) by @qqqys feat(core): record when each tool call started ( #12517 ) by @qqqys feat(cua): unify App workflows and fix no-Metal capture for SDK 0.20.11 ( #12386 ) by @LaZzyMan feat(web-shell): trajectory overview...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Aikido Security Releases Altar-1: An Open-Weight Security Model Pruned From GLM-5.3 to 328 GB",
+      "url": "https://www.marktechpost.com/2026/09/25/aikido-security-releases-altar-1-an-open-weight-security-model-pruned-from-glm-5-3-to-328-gb/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-25T15:14:45.000Z",
+      "summary": "Aikido Security has released Altar-1, its first open-weight security model. It is a compressed version of Z.AI’s GLM-5.3, built to run inside infrastructure the customer controls. Altar-1 powers Aikido Machine, the company’s autonomous pentesting appliance for on-prem and air-gapped networks. Is it deployable? Yes, the weights are public on Hugging Face and run with vLLM […] The post Aikido Security Releases Altar-1: An Open-Weight Security Model Pruned From GLM-5.3 to 328 GB appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Fastino Releases GLiNER2.5-Decide: A 340M Open-Weight Decision Model That Runs on CPU",
+      "url": "https://www.marktechpost.com/2026/09/24/fastino-releases-gliner2-5-decide-a-340m-open-weight-decision-model-that-runs-on-cpu/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-25T04:46:38.000Z",
+      "summary": "Fastino Labs has released GLiNER2.5-Decide, a 340M-parameter open-weight decision model. It takes text and a schema of typed questions and returns structured answers. Each answer comes with a probability distribution, a confidence score, and constraint-feasibility metadata. It targets the frequent judgment calls inside agent pipelines: routing, triage, tool selection, and guardrails. Is it deployable? Yes, […] The post Fastino Releases GLiNER2.5-Decide: A 340M Open-Weight Decision Model That Runs on CPU appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Perplexity Adds AMD Ryzen AI Max Support to Its Local AI Agent on Windows",
+      "url": "https://superpowerdaily.com/posts/perplexity-adds-its-local-ai-agent-to-amd-powered-windows-pcs",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-24T20:10:44.000Z",
+      "summary": "Portable Computer can run recurring workflows on eligible PCs without using credits for local inference. The processor name alone does not establish compatibility.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "BottleCap AI Releases ThinkingCap-Qwen3.8-27B: 37.2% Fewer Thinking Tokens at a 0.86pp Accuracy Cost",
+      "url": "https://www.marktechpost.com/2026/09/24/bottlecap-ai-releases-thinkingcap-qwen3-8-27b-37-2-fewer-thinking-tokens-at-a-0-86pp-accuracy-cost/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-24T18:58:56.000Z",
+      "summary": "BottleCap AI has released ThinkingCap-Qwen3.8-27B, a fine-tune of Qwen3.8-27B that spends 37.2% fewer thinking tokens across 12 benchmarks. Macro accuracy moves from 86.65% to 85.79%, and long-context AA-LCR improves by 2.25pp. The model is a drop-in replacement on vLLM and SGLang, with FP8, NVFP4, GGUF and MLX builds. The post BottleCap AI Releases ThinkingCap-Qwen3.8-27B: 37.2% Fewer Thinking Tokens at a 0.86pp Accuracy Cost appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "DeepSeek Reportedly Reaches $1 Billion Yearly Revenue Pace After API Price Hikes",
+      "url": "https://superpowerdaily.com/posts/deepseek-reportedly-reaches-1-billion-yearly-revenue-pace-after-api-price-hikes",
+      "source": "Superpower Daily",
+      "tags": [
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-24T16:27:18.000Z",
+      "summary": "The reported pace has more than doubled in a few months, while most of the company’s computing capacity still goes toward training new models.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.62.0-nightly.20260925.gbedef96ef",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.62.0-nightly.20260925.gbedef96ef",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-25T01:23:57.000Z",
+      "summary": "What's Changed Changelog for v0.61.0-preview.1 by @gemini-cli-robot in #29469 Changelog for v0.61.0 by @gemini-cli-robot in #29472 fix(cli): distinguish missing MCP enablement config from malformed JSON by @jesussamuel-byte in #29446 fix(cli): restore paused stdin after capability detection by @ugorla-dev in #29487 fix(core): bound tool output size and optimize memory lifecycle in long-running agent loops by @diegogodinezr in #29451 New Contributors @ugorla-dev made their first contribution in #29487 Full Changelog : v0.62.0-nightly.20260924.g8e70c862f...v0.62.0-nightly.20260925.gbedef96ef",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen Code Desktop v0.24.5",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.24.5",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-24T17:41:47.000Z",
+      "summary": "What's Changed fix(serve): preserve session creation failure diagnostics by @callmeYe in #12331 feat(sdk-java): Add managed runtime attestation client by @doudouOUC in #12522 feat(web-shell): select a time range on the trajectory overview to narrow the table by @qqqys in #12543 feat(serve,web-shell): set the Qwen Live endpoint and model from settings by @qqqys in #12529 feat(channels): separate private and group access policies by @qqqys in #12547 fix(core): bound oversized images returned by MCP tools by @yiliang114 in #10835 feat(serve): run Qwen Live through the Web Shell, native macOS...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Perplexity Trains Its Computer Agent on Real Mistakes With Hint-Guided Self-Distillation",
+      "url": "https://www.marktechpost.com/2026/09/25/perplexity-trains-its-computer-agent-on-real-mistakes-with-hint-guided-self-distillation/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-25T14:30:26.000Z",
+      "summary": "Perplexity Research published a new post-training study. It trains a model inside Perplexity Computer on real user sessions, including failed ones. The method pairs rejection sampling fine-tuning with hint-guided self-distillation. In a live A/B test, tool-call failures fell from 2.24% to 1.77% between 2 trained checkpoints. Perplexity team reports this as a statistically significant 21.2% […] The post Perplexity Trains Its Computer Agent on Real Mistakes With Hint-Guided Self-Distillation appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "MD Anderson Researchers Publish AI Study Predicting Lung Inflammation Risk Before Immunotherapy",
+      "url": "https://superpowerdaily.com/posts/md-anderson-researchers-publish-ai-study-predicting-lung-inflammation-risk-before-immunotherapy",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "dataset"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-25T11:17:49.000Z",
+      "summary": "CIPHER produced similar results in a hospital test and an external dataset. Whether its warnings help clinicians care for patients remains untested.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "How Open Science Can Help Researchers Prepare for the Next Pandemic",
+      "url": "https://blogs.nvidia.com/blog/open-protein-dataset/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.64,
+      "date": "2026-09-24T14:00:50.000Z",
+      "summary": "When COVID-19 emerged, scientists had a crucial advantage: Decades of prior research on coronaviruses meant they understood the virus’ key proteins well enough to design vaccines in record time. The next pandemic may not offer the same head start. To help improve the odds, NVIDIA has joined a coalition of global research organizations, including Google […]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Arguing for Some Age-Related Changes in Cognitive Function to be Adaptive and Programmed",
+      "url": "https://www.fightaging.org/archives/2026/09/arguing-for-some-age-related-changes-in-cognitive-function-to-be-adaptive-and-programmed/",
+      "source": "Fight Aging Newsletter",
+      "tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "importance": 0.62,
+      "date": "2026-09-25T10:11:16.000Z",
+      "summary": "Here find a small slice of programmed aging consideration focused on some of the changes in cognitive function that take place in later life. The researchers argue that a shift in focus to integration of information, characterized by a loss of precision in episodic memory, is adaptive and selected for in older individuals. It is an interesting point of view, though given the tools the research community has today it would be challenging to determine whether any specific age-related alteration in neural circuitry and cognitive function in the brain is adaptive change versus change that is...",
+      "category": "health_research"
+    },
+    {
+      "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-24T14:08:57.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Behind Project Suncatcher, our moonshot to put AI in space",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-09-24T13:53:29.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Google Research Introduces AI Systems for Longer, More Consistent Videos",
+      "url": "https://superpowerdaily.com/posts/google-research-introduces-ai-systems-for-longer-more-consistent-videos",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-24T20:55:03.000Z",
+      "summary": "Four related research systems plan shots, remember visual details and revise prompts. A ten-minute film demonstrates one part of the work, not the reliability of the whole approach.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "commit-rewriter 0.2",
+      "url": "https://simonwillison.net/2026/Sep/24/commit-rewriter/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-24T20:06:53.000Z",
+      "summary": "Release: commit-rewriter 0.2 Support for branches other than the default branch. Use uvx commit-rewriter --branch other to run against another branch. #3 Tags: git",
+      "category": "ai_tools"
+    }
+  ]
+}

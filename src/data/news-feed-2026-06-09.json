@@ -1,0 +1,54 @@
+{
+  "generated": "2026-06-09T17:45:05.942Z",
+  "site": "AI Resource Hub",
+  "article_count": 3,
+  "articles": [
+    {
+      "title": "MiMo-v2.5-Pro-UltraSpeed: 1T model with 1000 tokens per second",
+      "url": "https://mimo.xiaomi.com/blog/mimo-tilert-1000tps",
+      "source": "Hacker News",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-06-08T15:27:33.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Hermes Agent – Open-source AI agent with persistent memory",
+      "url": "https://hermes-agent.org/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.64,
+      "date": "2026-06-05T22:09:38.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Show HN: Gitdot – A better GitHub. Open-source, written in Rust",
+      "url": "https://gitdot.io/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-06-08T16:52:11.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

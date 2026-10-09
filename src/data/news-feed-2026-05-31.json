@@ -1,0 +1,100 @@
+{
+  "generated": "2026-06-05T00:44:44.959Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-05-31",
+  "article_count": 6,
+  "archived_story_count": 98,
+  "articles": [
+    {
+      "title": "The Speed of Prototyping in the Age of AI",
+      "url": "https://darylcecile.net/notes/speed-of-prototyping-age-of-ai",
+      "source": "Hacker News",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.83,
+      "date": "2026-05-31T16:37:34.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "I put a datacenter GPU in my gaming PC",
+      "url": "https://blog.tymscar.com/posts/v100localllm/",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.83,
+      "date": "2026-05-31T13:53:16.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "US healthcare still stupidly expensive, with pathetic outcomes, study finds",
+      "url": "https://arstechnica.com/health/2026/05/us-healthcare-still-stupidly-expensive-with-pathetic-outcomes-study-finds/",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-05-31T20:41:10.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Creatine raises brain energy levels and slows cognitive decline: study",
+      "url": "https://thesciverse.org/scientists-found-that-the-creatine-supplement-millions-take-for-muscle-gains-is-quietly-raising-brain-energy-levels-and-slowing-early-alzheimers-cognitive-decline-by-30/",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-05-31T16:19:34.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "The solution might be cancelling my AI subscription",
+      "url": "https://thoughts.hmmz.org/2026-05-31.html",
+      "source": "Hacker News",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-05-31T14:23:30.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Cheese Paper: a text editor specifically designed for writing",
+      "url": "https://brie.gay/cheese-paper/",
+      "source": "Hacker News",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-05-30T22:58:41.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

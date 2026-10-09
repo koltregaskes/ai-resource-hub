@@ -1,0 +1,337 @@
+{
+  "generated": "2026-09-17T17:45:05.395Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "OpenAI Releases a Model Misalignment Disclosure Framework With 3 Review Tracks and 6 Incident Reports From RL Training",
+      "url": "https://www.marktechpost.com/2026/09/17/openai-releases-a-model-misalignment-disclosure-framework-with-3-review-tracks-and-6-incident-reports-from-rl-training/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-17T07:35:37.000Z",
+      "summary": "OpenAI can disclose misalignment before fixes exist. Its 6 initial reports include fabricated data and leaked API keys. The post OpenAI Releases a Model Misalignment Disclosure Framework With 3 Review Tracks and 6 Incident Reports From RL Training appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Google Research Introduces Retrieve-for-Train (R4T): An RL-Compiled Diffusion Retriever for 12× to 20× Faster Query Fan-Out",
+      "url": "https://www.marktechpost.com/2026/09/16/google-research-introduces-retrieve-for-train-r4t-an-rl-compiled-diffusion-retriever-for-12x-to-20x-faster-query-fan-out/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "architecture",
+        "dataset"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture",
+        "dataset"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-17T06:19:38.000Z",
+      "summary": "Google Research has introduced Retrieve-for-Train (R4T), a framework for search that returns coherent, diverse result sets. It trains a fan-out language model with RL once, using groundedness, diversity, and alignment rewards. That model then synthesizes training data for a 53.9M-parameter diffusion retriever. The retriever generates all retrieval directions in a single pass, running 12× to 20× faster than autoregressive fan-out. No code or model weights have been released yet. The post Google Research Introduces Retrieve-for-Train (R4T): An RL-Compiled Diffusion Retriever for 12× to 20×...",
+      "category": "ai_research"
+    },
+    {
+      "title": "Knowledgator Releases GLiFormer: A 575M-Parameter Encoder That Hits 91.10 F1 on Nested JSON Extraction Without Generating Tokens",
+      "url": "https://www.marktechpost.com/2026/09/16/knowledgator-releases-gliformer-a-575m-parameter-encoder-that-hits-91-10-f1-on-nested-json-extraction-without-generating-tokens/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-16T21:19:32.000Z",
+      "summary": "GLiFormer Large scores 91.10 F1 on nested JSON, near GPT-5.6-luna's 91.96, while grounding every value in source spans. The post Knowledgator Releases GLiFormer: A 575M-Parameter Encoder That Hits 91.10 F1 on Nested JSON Extraction Without Generating Tokens appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "NVIDIA Vera Rubin NVL72 Delivers Leading Performance in MLPerf Inference v6.1 Debut",
+      "url": "https://blogs.nvidia.com/blog/vera-rubin-nvl72-mlperf-inference/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "evaluation",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-16T15:00:48.000Z",
+      "summary": "System performance, efficient infrastructure scaling and continuous software optimization are key levers that determine AI inference economics. Higher system performance means more tokens generated, resulting in higher revenue. Efficient scaling means throughput grows proportionally as hardware gets added, requiring fewer resources to serve users at scale. Continuous optimization means generating more value from infrastructure investments. […]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NVIDIA Publishes Vera Rubin Preview With Up to 3.7x Higher MLPerf Throughput",
+      "url": "https://superpowerdaily.com/posts/nvidia-publishes-vera-rubin-preview-with-up-to-3-7x-higher-mlperf-throughput",
+      "source": "Superpower Daily",
+      "tags": [
+        "benchmark",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-16T18:15:37.000Z",
+      "summary": "The debut benchmark results offer a sizable claimed capacity gain, but they compare two models using different serving stacks—not a universal measure of system speed.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen Code Desktop v0.24.0",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.24.0",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release",
+        "api_update",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update",
+        "inference"
+      ],
+      "importance": 0.7,
+      "date": "2026-09-17T04:17:14.000Z",
+      "summary": "What's Changed fix(cli): scope the ACP permission queue to the session by @chiga0 in #11802 feat(channels): add shared output modes with DingTalk support by @qqqys in #11822 feat(web-shell): slide the active pill between tabs by @callmeYe in #11844 refactor(goal): delete the first-generation Stop-hook Goal implementation by @qqqys in #11900 fix(ci): separate autofix runner labels from queued reviews by @yiliang114 in #11912 feat(daemon): enumerate installed extension skills locally by @callmeYe in #11281 feat(web-shell): follow the reading position in the global turn navigation by...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nunchux AI Introduces VC-Attention: A Training-Free Low-Bit Attention Kernel That Speeds Up Video Diffusion Transformers",
+      "url": "https://www.marktechpost.com/2026/09/16/nunchux-ai-introduces-vc-attention-a-training-free-low-bit-attention-kernel-that-speeds-up-video-diffusion-transformers/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-17T00:45:06.000Z",
+      "summary": "Nunchux AI has released VC-Attention, a training-free low-bit attention kernel built for video Diffusion Transformers (DiTs). It targets 2 problems at once: value quantization error and a slow softmax stage. Why Attention is the Video Bottleneck Video DiTs flatten a clip into 1 sequence of spatiotemporal tokens and run full self-attention at every layer. A […] The post Nunchux AI Introduces VC-Attention: A Training-Free Low-Bit Attention Kernel That Speeds Up Video Diffusion Transformers appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "OpenAI Says an Astra Training Model Inserted Its Own Jailbreak Instructions",
+      "url": "https://superpowerdaily.com/posts/openai-says-an-astra-training-model-inserted-its-own-jailbreak-instructions",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "training"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "training"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-17T14:36:32.000Z",
+      "summary": "One fabricated restriction caused an incorrect medical-research refusal. OpenAI says the rare behavior did not appear in the final Astra training run, but its suspected cause remains unproven.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Cohere Adds Encrypted AI Inference It Says Even It Cannot Read",
+      "url": "https://superpowerdaily.com/posts/cohere-adds-encrypted-ai-inference-it-says-even-it-cannot-read",
+      "source": "Superpower Daily",
+      "tags": [
+        "evaluation",
+        "inference"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "inference"
+      ],
+      "importance": 0.72,
+      "date": "2026-09-16T23:25:36.000Z",
+      "summary": "The newly available Model Vault capability aims to protect data while a model processes it, but customers will need to assess exactly what its attestation evidence covers.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "MIT Schwarzman College of Computing launches pilot to help educators teach AI across disciplines",
+      "url": "https://news.mit.edu/index%2ephp/2026/mit-schwarzman-college-computing-launches-pilot-help-educators-teach-ai-across-disciplines-0909",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-17T11:18:10.645Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026",
+      "url": "https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-09-17T03:30:00.000Z",
+      "summary": "This session will explore how early-stage companies are building teams where humans and AI agents work alongside each other — and how founders can do that without sacrificing speed, accountability, or culture. Learn more at TechCrunch Disrupt 2026. Register before September 25 to save up to $200.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "datasette 1.0a40",
+      "url": "https://simonwillison.net/2026/Sep/16/datasette/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-16T23:51:43.000Z",
+      "summary": "Release: datasette 1.0a40 Same security fix as 0.65.5 , plus some neat new features and bug fixes: Plugins can now launch and manage background tasks using the new datasette.add_background_task() method. Thanks, Alex Garcia . I've migrated Datasette to httpx2 for features like the internal datasette.client.get() method. A whole lot of bug fixes , many of them stemming from a recent effort to triage issues for a 1.0 stable release. Tags: security , datasette",
+      "category": "ai_tools"
+    },
+    {
+      "title": "datasette 0.65.5",
+      "url": "https://simonwillison.net/2026/Sep/16/datasette-2/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-16T23:51:08.000Z",
+      "summary": "Release: datasette 0.65.5 Security fix for an issue where a trailing newline in a requested table name could bypass table permissions and expose private rows, reported by dpfkdlemtp in GHSA-h547-rmjf-5m2m . Tags: security , datasette",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI Adds Public Reporting Framework After Disclosing Six Model Failures",
+      "url": "https://superpowerdaily.com/posts/openai-adds-public-reporting-framework-after-disclosing-six-model-failures",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-16T23:19:49.000Z",
+      "summary": "The disclosures range from concealed mistakes to unauthorized credential use. OpenAI says alignment and monitoring are not yet strong enough to sustain maximum-speed scaling for much longer.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Stanford Researchers Release Paper2Agent: Turning Research Papers Into AI Agents That Reproduce Results and Run on New Data",
+      "url": "https://www.marktechpost.com/2026/09/16/stanford-researchers-release-paper2agent-turning-research-papers-into-ai-agents-that-reproduce-results-and-run-on-new-data/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-16T21:59:26.000Z",
+      "summary": "Paper2Agent, published in Nature, converts papers into validated MCP tools, scoring 91.2% on 300 questions across 74 papers. The post Stanford Researchers Release Paper2Agent: Turning Research Papers Into AI Agents That Reproduce Results and Run on New Data appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Salesforce Introduces DarwinX, Reporting a Browser-Agent Score Jump to 93%",
+      "url": "https://superpowerdaily.com/posts/salesforce-introduces-darwinx-reporting-a-browser-agent-score-jump-to-93",
+      "source": "Superpower Daily",
+      "tags": [
+        "benchmark"
+      ],
+      "matching_tags": [
+        "benchmark"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-16T15:17:27.000Z",
+      "summary": "The framework searches for better prompts, tools and workflows around a fixed model. Its large benchmark gains depend on a harder operational requirement: reliable tests that catch regressions.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic Proposes Embedded AI Safety Evaluators Without Power to Stop Releases",
+      "url": "https://superpowerdaily.com/posts/anthropic-proposes-embedded-ai-safety-evaluators-without-power-to-stop-releases",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-09-16T14:48:01.000Z",
+      "summary": "Dario Amodei’s plan would give third parties unusual access and publication rights. Its banking comparison also shows the distance between scrutiny and enforceable oversight.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "'AI slop' art trail cost £11,688, figures reveal Artists and residents in Scarborough criticised the trail when it was launched in the summer. See more",
+      "url": "https://www.bbc.com/news/articles/cqvgy898p47zo",
+      "source": "BBC AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-17T17:01:54.497Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Roku’s new Labs hub brings experimental apps to the big screen",
+      "url": "https://techcrunch.com/2026/09/17/rokus-new-labs-hub-brings-experimental-apps-to-the-big-screen/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-17T15:50:29.000Z",
+      "summary": "Roku’s latest OS update introduces Roku Labs, a new hub for experimental apps, alongside personalized home screens in more markets, streaming subscription bundles, and more.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Walter Torous named executive director of MIT Center for Real Estate",
+      "url": "https://news.mit.edu/index%2ephp/2026/walter-torous-named-executive-director-mit-center-real-estate-0901",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-09-17T11:18:10.663Z",
+      "summary": "",
+      "category": "ai_research"
+    }
+  ]
+}

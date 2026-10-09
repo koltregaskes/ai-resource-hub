@@ -1,0 +1,214 @@
+{
+  "generated": "2026-05-26T15:38:14.473Z",
+  "site": "AI Resource Hub",
+  "article_count": 13,
+  "articles": [
+    {
+      "title": "WBench: A Comprehensive Multi-turn Benchmark for Interactive Video World Model Evaluation",
+      "url": "https://paperswithcode.com/papers/2605.25874",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "benchmark",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "benchmark",
+        "evaluation"
+      ],
+      "importance": 0.64,
+      "date": "2026-05-26T15:24:21.753Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "💥 Today we release a new paper on decomposing and measuring evaluation awareness in frontier LLMs. We also release EvalAwareBench, a",
+      "url": "https://x.com/maksym_andr/status/2058903329518858636",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-25T14:27:29.126Z",
+      "summary": "Braygent would post this because it is one of the highest signal source backed items from today's sweep.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "💥 Today we release a new paper on decomposing and measuring evaluation awareness in frontier LLMs. We also release EvalAwa…",
+      "url": "https://x.com/HaritzPuerto/status/2058908892705206342",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-25T14:27:29.126Z",
+      "summary": "Braygent would post this because it is one of the highest signal source backed items from today's sweep.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "I wrote paper on \"NLG Evaluation: Past, Present, Future\" for Retroeval. Eval has changed enornously over my career! In future, I expect more on",
+      "url": "https://x.com/EhudReiter/status/2058822137503203741",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-25T14:27:29.126Z",
+      "summary": "Braygent would post this because it is one of the highest signal source backed items from today's sweep.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "💥 Today we release a new paper on decomposing and measuring evaluation awareness in frontier LLMs. We also release EvalAwa…",
+      "url": "https://x.com/BogdanIonutCir2/status/2058907919928676764",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-25T14:27:29.126Z",
+      "summary": "Braygent would post this because it is one of the highest signal source backed items from today's sweep.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Scoble: FDOT Launches 120 AI Companies At A Sold-Out San Francisco Event",
+      "url": "https://x.com/Scobleizer/status/2057868124112982526",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-26T02:23:28.350Z",
+      "summary": "Robert posted that FDOT launched 120 AI companies at a sold-out San Francisco event.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Claude Finds Apple macOS 26.5 Kernel Vulnerability — AI Security Research Enters Developer Workflow",
+      "url": "https://x.com/betterhn50/status/2059089388697506139",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-26T02:22:31.957Z",
+      "summary": "A macOS 26.5 kernel vulnerability was surfaced as found by Claude, showing AI moving into security research.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "3.8% for Claude Opus 4.7 and 0.0% for Gemini 3.1 Pro SaaS-Bench from UniPat AI just dragged Computer-Use Agent benchmark the…",
+      "url": "https://x.com/mkovarski/status/2058859242522542225",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "benchmark"
+      ],
+      "matching_tags": [
+        "benchmark"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-05-25T14:27:29.126Z",
+      "summary": "Braygent would post this because it is one of the highest signal source backed items from today's sweep.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Eight Days in China: What I Learned from the AI Labs, Robotics Startups and Academia matthew-d-white • 4 days ago • 3",
+      "url": "https://huggingface.co/blog/matthew-d-white/ai-in-china",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-26T15:24:14.185Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "AI Hiring Tools Can Yield Racial Bias and Systemic Rejection",
+      "url": "https://hai.stanford.edu/news/ai-hiring-tools-can-yield-racial-bias-and-systemic-rejection",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-26T05:18:20.680Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Borealis — open data, code, weights recipe for training Audio LLM AlexWortega • about 12 hours ago • 8",
+      "url": "https://huggingface.co/blog/AlexWortega/borealis",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-26T05:18:15.914Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "THE THESIS The most important AI story this week isn't a model launch or benchmark. It's a structural contradiction: the US government",
+      "url": "https://x.com/aionaedge/status/2058889798920896861",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "benchmark"
+      ],
+      "matching_tags": [
+        "benchmark"
+      ],
+      "importance": 0.5800000000000001,
+      "date": "2026-05-25T14:27:29.126Z",
+      "summary": "Braygent would post this because it is one of the highest signal source backed items from today's sweep.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Huawei Unveils Tau Scaling Law for Next-Gen Chip Evolution",
+      "url": "https://aimagazine.com/news/huawei-unveils-tau-scaling-law-for-next-gen-chip-evolution",
+      "source": "AI Magazine",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.54,
+      "date": "2026-05-26T15:24:25.019Z",
+      "summary": null,
+      "category": "ai_tools"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "generated": "2026-08-26T02:47:51.753Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-08-01",
+  "article_count": 11,
+  "archived_story_count": 448,
+  "articles": [
+    {
+      "title": "🤖 AI Agents Weekly: Kimi K3, DeepSeek-V4-Flash API, GPT-5.6 Price Cuts, Inkling-Small, YC's QM Harness, Gemini Robotics 2, Codex Security CLI, and More",
+      "url": "https://nlp.elvissaravia.com/p/ai-agents-weekly-kimi-k3-deepseek",
+      "source": "NLP News (Elvis Saravia)",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "api_update",
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-08-01T15:02:40.000Z",
+      "summary": "Kimi K3, DeepSeek-V4-Flash API, GPT-5.6 Price Cuts, Inkling-Small, YC's QM Harness, Gemini Robotics 2, Codex Security CLI, and More",
+      "category": "ai_research"
+    },
+    {
+      "title": "[AINews] not much happened today",
+      "url": "https://www.latent.space/p/ainews-not-much-happened-today-038",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release"
+      ],
+      "importance": 0.89,
+      "date": "2026-08-01T01:38:09.000Z",
+      "summary": "apart from DeepSeek V4-Flash 0731, a quiet day.",
+      "category": "ai_research"
+    },
+    {
+      "title": "datasette-apps 0.2a0",
+      "url": "https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-08-01T21:23:56.000Z",
+      "summary": "<p><strong>Release:</strong> <a href=\"https://github.com/datasette/datasette-apps/releases/tag/0.2a0\">datasette-apps 0.2a0</a></p> <blockquote> <p>Changes that improve Datasette Apps when created and edited using <a href=\"https://agent.datasette.io/\">Datasette Agent</a>:</p> <ul> <li>New <code>app_debug()</code> tool allowing agent to open an app (invisibly) and test it using JavaScript. <a href=\"https://github.com/datasette/datasette-apps/pull/33\">#33</a></li> <li>New <code>app_list()</code> tool for listing apps the user has permission to edit, so the agent can edit them. <a href=\"https://github.com/datasette/datasette-apps/issues/36\">#36</a></li> </ul> </blockquote> <p>The <code>app_debug()</code> tool is pretty neat: it works by displaying the app in a <code>opacity: 0</code> iframe with <code>pointer-events: none</code> (so it can't be seen or interacted with) and then executing agent-provided JavaScript inside that sandboxed iframe. This means the agent can smoke test that the app is working and even do things like measure the dimensions of different elements.</p> <p>This uses the new <code>context.browser_task()</code> mechanism added in <a href=\"https://simonwillison.net/2026/Jul/31/datasette-agent/\">datasette-agent 0.4a0</a>.</p> <p>Tags: <a href=\"https://simonwillison.net/tags/iframes\">iframes</a>, <a href=\"https://simonwillison.net/tags/datasette\">datasette</a>, <a href=\"https://simonwillison.net/tags/datasette-apps\">datasette-apps</a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.55.0-nightly.20260801.gf47d6c6f7",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.55.0-nightly.20260801.gf47d6c6f7",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.9299999999999999,
+      "date": "2026-08-01T01:27:07.000Z",
+      "summary": "<h2>What's Changed</h2> <ul> <li>fix(core): classify capacity exhaustion as terminal to prevent retry hangs by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/luisfelipe-alt/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/luisfelipe-alt\">@luisfelipe-alt</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5019350534\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28599\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28599/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28599\">#28599</a></li> <li>fix(core,cli): propagate InvalidStreamError details to UI for specific empty response guidance by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/DavidAPierce/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/DavidAPierce\">@DavidAPierce</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5002476048\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28566\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28566/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28566\">#28566</a></li> </ul> <p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/google-gemini/gemini-cli/compare/v0.55.0-nightly.20260730.gdc859e8e4...v0.55.0-nightly.20260801.gf47d6c6f7\"><tt>v0.55.0-nightly.20260730.gdc859e8e4...v0.55.0-nightly.20260801.gf47d6c6f7</tt></a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering",
+      "url": "https://paperswithcode.com/papers/2607.28568",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.88,
+      "date": "2026-08-01T17:32:39.613Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Gemini Spark now integrates with Chrome",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-july-2026/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8799999999999999,
+      "date": "2026-08-01T17:32:45.209Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Find out what’s new in the Gemini app in July's Gemini Drop.",
+      "url": "https://blog.google/products-and-platforms/products/gemini/gemini-drop-july-2026/",
+      "source": "Google AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8799999999999999,
+      "date": "2026-08-01T17:32:45.202Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "How a medical database developed at MIT evolved into a global standard of data-sharing",
+      "url": "https://news.mit.edu/index%2Ephp/2026/how-an-mit-database-evolved-into-global-standard-data-sharing-0729",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8400000000000001,
+      "date": "2026-08-01T17:37:28.612Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Dynamic feature pyramid network for real-time gesture recognition",
+      "url": "https://www.nature.com/articles/s41598-026-61258-3",
+      "source": "Nature AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8099999999999999,
+      "date": "2026-08-01T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Deep-learning-enabled multi-omics analyses for prediction of future metastasis in cancer",
+      "url": "https://www.nature.com/articles/s41467-026-76277-x",
+      "source": "Nature AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8099999999999999,
+      "date": "2026-08-01T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_research"
+    },
+    {
+      "title": "Spider-Man fans hail Brand New Day as Holland's best yet",
+      "url": "https://www.bbc.co.uk/news/articles/cwyeq0wpn0go?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Entertainment & Arts",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.63,
+      "date": "2026-08-01T23:40:17.000Z",
+      "summary": "Spider-Man fans are full of praise for Tom Holland's latest web-slinging performance.",
+      "category": "tech_general"
+    }
+  ]
+}

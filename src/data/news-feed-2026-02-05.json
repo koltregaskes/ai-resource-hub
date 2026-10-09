@@ -1,9 +1,123 @@
 {
-  "generated": "2026-05-25T14:37:35.784Z",
+  "generated": "2026-08-26T03:02:02.352Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-05",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 7,
+  "archived_story_count": 161,
+  "articles": [
+    {
+      "title": "GitHub Releases · Remotion: v4.0.419",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.419",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 1,
+      "date": "2026-02-05T17:51:41.000Z",
+      "summary": "## What's Changed * `@remotion/serverless`: Fix negative timeout warning in progress uploads by @Copilot in https://github.com/remotion-dev/remotion/pull/6466 * `@remotion/renderer`: Check glibc version before using custom binaries from remotion.media by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6468 * Skills: Work with FFmpeg by @tiwariaayu in https://github.com/remotion-dev/remotion/pull/6447 * Skills: Add audio visualization rule by @samohovets in https://github.com/remotion-dev/remotion/pull/6467 ## Docs * Update media playback error documentation by @tt0mmy in https://github.com/remotion-dev/remotion/pull/6464 * Template Prompt-to-Motion-Graphics: Add Documentation by @ASchwad in https://github.com/remotion-dev/remotion/pull/6460 * Fix responsiveness issue in pricing by @Vaibhav-Vanjani in https://github.com/remotion-dev/remotion/pull/6459 ## New Contributors * @tt0mmy made their first contribution in https://github.com/remotion-dev/remotion/pull/6464 * @Vaibha",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.39.2",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.39.2",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-02-05T13:27:02.000Z",
+      "summary": "# Quick Windows fix Pasting text on Windows :window: is working again. Thank you for all the support. The Charm Team ™️ ## Changelog ### Fixed * afed74cbee977bc05541bc9106dbe2f698dcd987: fix(ui): api key dialog typo (#2131) (@nickgrim) * b28f4ced49e4ce5c76446a9ee3e3fcd90adac744: fix(ui): completions popup gets too narrow on single item (#2125) (@caarlos0) * 2d0a0e2764686ccb503f91215a22c911fada30c0: fix(ui): fix bug preventing pasting text on windows (#2126) (@andreynering) * 142c854e52e50d48dd37497b6aad09bc222cba51: fix: change hyper url (#2120) (@caarlos0) * 8adfe70c4454363bc839ca405657de91da01998b: fix: hyper provider cancel (#2133) (@kujtimiihoxha) * d29d0e21216eb5bb68bce18134e1fba8d2d7d362: fix: realtime session file changes (#2134) (@kujtimiihoxha) ### Other stuff * 874c1ca0e8bf89533ce1fafcbe7c1dd37187e30b: chore: update ui/agents.md (#2122) (@caarlos0) * 9013bb012202eae93a936273782014f5c6ae35d2: refactor: remove old tui (#2008) (@kujtimiihoxha) --- Verifying the artifacts First, ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · ComfyUI: v0.12.3",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.12.3",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "architecture"
+      ],
+      "importance": 1,
+      "date": "2026-02-05T07:04:07.000Z",
+      "summary": "## What's Changed * Fix crash on safetensors load for some 3rd party Models by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/12266 * mp: Fix checkpoint saving by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/12268 * add File3DAny output to Load3D node; extend SaveGLB to accept File3DAny as input by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/12276 * Fix ace step nan issue on some hardware/pytorch configs. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12289 * Try to fix ace text encoder slowness on some configs. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12290 * Add llm sampling options and make reference audio work on ace step 1.5 by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12295 * Disable sage attention on ace step 1.5 by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12297 * Improvements to ACE-Steps 1.5 text encoding by @blepping in https://github.com/Comfy-Org/ComfyUI/pull/12283 ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Paza: Introducing automatic speech recognition benchmarks and models for low resource languages",
+      "url": "https://www.microsoft.com/en-us/research/blog/paza-introducing-automatic-speech-recognition-benchmarks-and-models-for-low-resource-languages/",
+      "source": "Microsoft Research Blog",
+      "tags": [
+        "research_paper",
+        "benchmark"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "benchmark"
+      ],
+      "importance": 0.86,
+      "date": "2026-02-05T05:07:55.000Z",
+      "summary": "Microsoft Research unveils Paza, a human-centered speech pipeline, and PazaBench, the first leaderboard for low-resource languages. It covers 39 African languages and 52 models and is tested with communities in real settings. The post Paza: Introducing automatic speech recognition benchmarks and models for low resource languages appeared first on Microsoft Research .",
+      "category": "ai_research"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.39.3",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.39.3",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-05T14:43:03.000Z",
+      "summary": "# Tiny UI Fix Tiny fix for an apparently empty message being selected in the UI. Screenshot ## Changelog ### Fixed * f22a6f986a32e94bdd46672557bccf8544575859: fix(ui): list: ensure the offset line does not go negative when scrolling up (@aymanbagabas) --- Verifying the artifacts First, download the [`checksums.txt` file](https://github.com/charmbracelet/crush/releases/download/v0.39.3/checksums.txt) and the [`checksums.txt.sigstore.json` file](https://github.com/charmbracelet/crush/releases/download/v0.39.3/checksums.txt.sigstore.json) files, for example, with `wget`: ```bash wget 'https://github.com/charmbracelet/crush/releases/download/v0.39.3/checksums.txt' wget 'https://github.com/charmbracelet/crush/releases/download/v0.39.3/checksums.txt.sigstore.json' ``` Then, verify it using [`cosign`](https://github.com/sigstore/cosign): ```bash cosign verify-blob \\ --certificate-identity 'https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main' \\ --certificate-",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.418",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.418",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-05T12:41:46.000Z",
+      "summary": "## What's Changed * `@remotion/lambda`: Disable ACLs by default and prefer bucket policies by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6441 * `@remotion/renderer`: Use a custom Linux ARM64 binary with proprietary codecs by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6445 * `@remotion/player`: Add a slot for custom controls by @Yasindu20 in https://github.com/remotion-dev/remotion/pull/6421 * `@remotion/renderer`: Use custom Chrome binary in Linux x64 by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6448 * `create-video`: Update helpful links and add disclaimer about the license by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6454 * `@remotion/skills`: Add line chart and SVG path animation rules by @samohovets in https://github.com/remotion-dev/remotion/pull/6456 * `@remotion/promo-pages`: Add visual feedback for video drag & drop and remove button by @samohovets in https://github.com/remotion-dev/remotion/pull/6458",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Rethinking imitation learning with Predictive Inverse Dynamics Models",
+      "url": "https://www.microsoft.com/en-us/research/blog/rethinking-imitation-learning-with-predictive-inverse-dynamics-models/",
+      "source": "Microsoft Research Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.54,
+      "date": "2026-02-05T17:00:00.000Z",
+      "summary": "This research looks at why Predictive Inverse Dynamics Models often outperform standard Behavior Cloning in imitation learning. By using simple predictions of what happens next, PIDMs reduce ambiguity and learn from far fewer demonstrations. The post Rethinking imitation learning with Predictive Inverse Dynamics Models appeared first on Microsoft Research .",
+      "category": "ai_research"
+    }
+  ]
 }

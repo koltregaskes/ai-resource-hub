@@ -1,9 +1,149 @@
 {
-  "generated": "2026-05-25T14:37:36.968Z",
+  "generated": "2026-08-26T03:04:09.990Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-03-13",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 9,
+  "archived_story_count": 166,
+  "articles": [
+    {
+      "title": "GitHub Releases · Crush: v0.49.0",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.49.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-03-13T21:13:57.000Z",
+      "summary": "# Friday patch Hope you had a great weekend! Here's a patch with some small fixes and improvements. ## No background Added new command on the command palette ( ctrl+p ) to toggle on/off the background color (a.k.a. enable \"transparent mode\"). This will be persisted. Screenshots ## Easier Bedrock If you use AWS Bedrock, you'll now be able to just paste your API key in the input as any other provider. Before, it was working only via environment setup (`AWS_BEARER_TOKEN_BEDROCK` env or `aws login`). ## Updated OpenAI SDK from v2 to v3 Note that this SDK is used not only for OpenAI, but for any provider that is OpenAI compatible. This might look like a technical detail, but it means we're covered with the latest bug fixes. A couple users confirmed this fixed some rare errors on some providers. ## `auto_background_after` @portertech contributed by adding a new `auto_background_after` param to the Bash tool. With this param, the model can ask Crush how many seconds it should wait before movi",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Scientists built the hardest AI test ever and the results are surprising",
+      "url": "https://www.sciencedaily.com/releases/2026/03/260313002650.htm",
+      "source": "ScienceDaily AI",
+      "tags": [
+        "research_paper",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "evaluation"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-03-13T06:08:43.000Z",
+      "summary": "As AI systems began acing traditional tests, researchers realized those benchmarks were no longer tough enough. In response, nearly 1,000 experts created Humanity’s Last Exam, a massive 2,500-question challenge covering highly specialized topics across many fields. The exam was engineered so that any question solvable by current AI models was removed. Early results show even the most advanced systems still struggle — revealing a surprisingly large gap between AI performance and true expert-level knowledge.",
+      "category": "ai_research"
+    },
+    {
+      "title": "Claude Opus 4 5",
+      "url": "https://www.anthropic.com/news/claude-opus-4-5",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-03-13T20:56:07.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "GitHub Releases · ComfyUI: v0.17.1",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.17.1",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-03-13T19:58:49.000Z",
+      "summary": "**Full Changelog**: https://github.com/Comfy-Org/ComfyUI/compare/v0.17.0...v0.17.1",
+      "category": "ai_tools"
+    },
+    {
+      "title": "China’s OpenClaw Boom Is a Gold Rush for AI Companies",
+      "url": "https://www.wired.com/story/china-is-going-all-in-on-openclaw/",
+      "source": "Wired AI",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.9099999999999999,
+      "date": "2026-03-13T12:00:00.000Z",
+      "summary": "Hype around the open source agent is driving people to rent cloud servers and buy AI subscriptions just to try it, creating a windfall for tech companies.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AI Safety Newsletter #69: Department of War, Anthropic, and National Security",
+      "url": "https://newsletter.safe.ai/p/ai-safety-newsletter-69-department",
+      "source": "AI Safety Newsletter",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.74,
+      "date": "2026-03-13T14:15:54.000Z",
+      "summary": "Also, Anthropic Removes a Core Safety Commitment",
+      "category": "ai_research"
+    },
+    {
+      "title": "Why physical AI is becoming manufacturing’s next advantage",
+      "url": "https://www.technologyreview.com/2026/03/13/1134184/why-physical-ai-is-becoming-manufacturings-next-advantage/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-03-13T15:16:55.000Z",
+      "summary": "For decades, manufacturers have pursued automation to drive efficiency, reduce costs, and stabilize operations. That approach delivered meaningful gains, but it is no longer enough. Today’s manufacturing leaders face a different challenge: how to grow amid labor constraints, rising complexity, and increasing pressure to innovate faster without sacrificing safety, quality, or trust. The next phase&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "Future AI chips could be built on glass",
+      "url": "https://www.technologyreview.com/2026/03/13/1134230/future-ai-chips-could-be-built-on-glass/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.64,
+      "date": "2026-03-13T09:00:00.000Z",
+      "summary": "Human-made glass is thousands of years old. But it’s now poised to find its way into the AI chips used in the world’s newest and largest data centers. This year, a South Korean company called Absolics is planning to start commercial production of special glass panels designed to make next-generation computing hardware more powerful and&#8230;",
+      "category": "ai_research"
+    },
+    {
+      "title": "The Download: how AI is used for military targeting, and the Pentagon&#8217;s war on Claude",
+      "url": "https://www.technologyreview.com/2026/03/13/1134278/the-download-defense-official-ai-chatbots-targeting-pentagon-claude-pollute-military-supply-chain/",
+      "source": "MIT Tech Review AI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.59,
+      "date": "2026-03-13T12:16:56.000Z",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Defense&#160;official reveals how AI chatbots could be used for targeting decisions&#160; The US military might use generative AI systems to rank targets and recommend which to strike first, according to a&#160;Defense&#160;Department&#8230;",
+      "category": "ai_research"
+    }
+  ]
 }

@@ -1,0 +1,230 @@
+{
+  "generated": "2026-08-26T03:14:13.447Z",
+  "generatedBy": "Studio news backfill",
+  "site": "AI Resource Hub",
+  "date": "2026-07-08",
+  "article_count": 14,
+  "archived_story_count": 199,
+  "articles": [
+    {
+      "title": "NVIDIA Nemotron Achieves Benchmark-Leading Performance With LangChain Deep Agents Harness",
+      "url": "https://blogs.nvidia.com/blog/nemotron-langchain-agents-open-stack/",
+      "source": "NVIDIA AI Blog",
+      "tags": [
+        "benchmark",
+        "evaluation",
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "evaluation",
+        "inference",
+        "hardware"
+      ],
+      "importance": 1,
+      "date": "2026-07-08T15:00:27.000Z",
+      "summary": "NVIDIA Nemotron 3 Ultra is offering leading performance at lower cost than top closed models with the largest and most widely adopted AI agent orchestration platform. LangChain tuned its Deep Agents harness for NVIDIA Nemotron 3 Ultra, achieving the highest accuracy among open models, while completing more tasks at higher throughput and running at 10x […]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Next.js 15: v16.3.0-canary.81",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.81",
+      "source": "GitHub Releases · Next.js 15",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-07-08T23:59:25.000Z",
+      "summary": "### Misc Changes - [ci] Pin typescript version in tests: #95619 - fix(create-next-app): render filenames in Geist Mono so the preloaded font is used: #95471 - [turbopack] print Turbopack warnings after SSG: #95430 - fix(create-next-app): pin both axes on Tailwind template logos to silence aspect-ratio warning: #95609 - Turbopack: enable `import with {type: 'text'}` by default: #95606 - Consistently gate navigation-testing-lock API on flag: #95582 - test: Fix immutable static asset deployment tests for real: #95600 - Upgrade React from `23def8fd-20260706` to `12a4baec-20260707`: #95581 - Split remaining \"client-node\"-only modules into .browser variants: #95366 - [turbopack] Don't evict when there is little memory to save: #95213 - align dev and build output: #94916 - [turbopack] Don't persist if there is little work to do: #95137 - fix: log \"Partial Prefetching enabled\" during next build: #95593 - [PP] Surface URL data during prefetching as an Instant insight with rule page: #95365 - [t",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Native-speed vLLM transformers modeling backend",
+      "url": "https://huggingface.co/blog/native-speed-vllm-transformers-backend",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-07-08T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Frontier Threats Red Teaming For Ai Safety",
+      "url": "https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-08T22:42:17.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Core Views On Ai Safety",
+      "url": "https://www.anthropic.com/news/core-views-on-ai-safety",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-08T22:23:46.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "v0.83.0",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.83.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-08T20:54:21.000Z",
+      "summary": "<h1>Prep for GPT-5.6</h1> <p>GPT-5.6 should launch tomorrow, and this release is to ensure Crush is ready for when it happens.</p> <h2>Bang mode fix</h2> <p>We also included a UX small fix when navigating the history when previous prompts were Bash commands (using bang mode ™️).</p> <p>Charm 💘</p> <h2>Changelog</h2> <h3>New!</h3> <ul> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/d0dc9fc9dfce76b9e35b2686ee4bfccfca796222/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/d0dc9fc9dfce76b9e35b2686ee4bfccfca796222\"><tt>d0dc9fc</tt></a>: feat: prepare for gpt-5.6 (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4840206231\" data-permission-text=\"Title is private\" data-url=\"https://github.com/charmbracelet/crush/issues/3270\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/charmbracelet/crush/pull/3270/hovercard\" href=\"https://github.com/charmbracelet/crush/pull/3270\">#3270</a>) (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/andreynering/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/andreynering\">@andreynering</a>)</li> </ul> <h3>Fixed</h3> <ul> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/cb1292026cc113e2a2e61f14686f2a36551f74a0/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/cb1292026cc113e2a2e61f14686f2a36551f74a0\"><tt>cb12920</tt></a>: fix(bangmode): don't add extra ! when browsing history (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/meowgorithm/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/meowgorithm\">@meowgorithm</a>)</li> </ul> <h3>Other stuff</h3> <ul> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/72c5668eface73b6e3745cccc8098f2cd1e55879/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/72c5668eface73b6e3745cccc8098f2cd1e55879\"><tt>72c5668</tt></a>: system prompt: avoid emdashes in source code (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/meowgorithm/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/meowgorithm\">@meowgorithm</a>)</li> </ul> <hr> <details> <summary>Verifying the artifacts</summary> <p>First, download the <a href=\"https://github.com/charmbracelet/crush/releases/download/v0.83.0/checksums.txt\"><code>checksums.txt</code> file</a> and the <a href=\"https://github.com/charmbracelet/crush/releases/download/v0.83.0/checksums.txt.sigstore.json\"><code>checksums.txt.sigstore.json</code> file</a> files, for example, with <code>wget</code>:</p> <div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"wget 'https://github.com/charmbracelet/crush/releases/download/v0.83.0/checksums.txt' wget 'https://github.com/charmbracelet/crush/releases/download/v0.83.0/checksums.txt.sigstore.json'\"><pre>wget <span class=\"pl-s\"><span class=\"pl-pds\">'</span>https://github.com/charmbracelet/crush/releases/download/v0.83.0/checksums.txt<span class=\"pl-pds\">'</span></span> wget <span class=\"pl-s\"><span class=\"pl-pds\">'</span>https://github.com/charmbracelet/crush/releases/download/v0.83.0/checksums.txt.sigstore.json<span class=\"pl-pds\">'</span></span></pre></div> <p>Then, verify it using <a href=\"https://github.com/sigstore/cosign\"><code>cosign</code></a>:</p> <div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"cosign verify-blob \\ --certificate-identity 'https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main' \\ --certificate-oidc-issuer 'https://token.actions.githubusercontent.com' \\ --bundle 'checksums.txt.sigstore.json' \\ ./checksums.txt\"><pre>cosign verify-blob \\ --certificate-identity <span class=\"pl-s\"><span class=\"pl-pds\">'</span>https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main<span class=\"pl-pds\">'</span></span> \\ --certificate-oidc-issuer <span class=\"pl-s\"><span class=\"pl-pds\">'</span>https://token.actions.githubusercontent.com<span class=\"pl-pds\">'</span></span> \\ --bundle <span class=\"pl-s\"><span class=\"pl-pds\">'</span>checksums.txt.sigstore.json<span class=\"pl-pds\">'</span></span> \\ ./checksums.txt</pre></div> <p>If the output is <code>Verified OK</code>, you can safely use it to verify the checksums of other artifacts you downloaded from the release using <code>sha256sum</code>:</p> <div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"sha256sum --ignore-missing -c checksums.txt\"><pre>sha256sum --ignore-missing -c checksums.txt</pre></div> <p>Done! You artifacts are now verified!</p> </details> <p><a href=\"https://charm.land/\" rel=\"nofollow\"><img alt=\"The Charm logo\" src=\"https://camo.githubusercontent.com/69664ad4650dabc137df37044e4d9366cfe32124b10f97b798c064aeaef86443/68747470733a2f2f73747566662e636861726d2e73682f636861726d2d62616e6e65722d6e6578742e6a7067\" width=\"400\" data-canonical-src=\"https://stuff.charm.sh/charm-banner-next.jpg\" style=\"max-width: 100%;\"></a></p> <p>Thoughts? Questions? We love hearing from you. Feel free to reach out on <a href=\"https://x.com/charmcli\" rel=\"nofollow\">X</a>, <a href=\"https://charm.land/discord\" rel=\"nofollow\">Discord</a>, <a href=\"https://charm.land/slack\" rel=\"nofollow\">Slack</a>, <a href=\"https://mastodon.social/@charmcli\" rel=\"nofollow\">The Fediverse</a>, <a href=\"https://bsky.app/profile/charm.land\" rel=\"nofollow\">Bluesky</a>.</p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Gemini CLI: Release v0.50.0",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.50.0",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-08T18:31:54.000Z",
+      "summary": "## What's Changed * fix/verify release npm ci ignore scripts by @rmedranollamas in https://github.com/google-gemini/gemini-cli/pull/28116 * fix(ci): prevent workspace binary shadowing in release verification by @galdawave in https://github.com/google-gemini/gemini-cli/pull/28132 * Feat/tool registry discovery by @ved015 in https://github.com/google-gemini/gemini-cli/pull/28113 * fix(ci): prevent bad NPM releases and promote job crashes by @galdawave in https://github.com/google-gemini/gemini-cli/pull/28147 **Full Changelog**: https://github.com/google-gemini/gemini-cli/compare/v0.49.0...v0.50.0",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.51.0-preview.0",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.51.0-preview.0",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-08T17:45:50.000Z",
+      "summary": "<h2>What's Changed</h2> <ul> <li>Changelog for v0.50.0-preview.1 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/gemini-cli-robot\">@gemini-cli-robot</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4746996130\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28150\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28150/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28150\">#28150</a></li> <li>Fix no_proxy test by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/jerrylin3321/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/jerrylin3321\">@jerrylin3321</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4737974425\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28131\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28131/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28131\">#28131</a></li> <li>chore(release): bump version to 0.51.0-nightly.20260625.g3fbf93e26 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/gemini-cli-robot\">@gemini-cli-robot</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4747089380\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28151\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28151/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28151\">#28151</a></li> <li>Vertex base url update by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/DavidAPierce/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/DavidAPierce\">@DavidAPierce</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4746099458\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28145\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28145/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28145\">#28145</a></li> <li>fix(security): enforce case-insensitive sensitive path blocklist and vscode hitl by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/luisfelipe-alt/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/luisfelipe-alt\">@luisfelipe-alt</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4677175748\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/27966\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/27966/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/27966\">#27966</a></li> <li>fix(core-tools): resolve defensive path resolution for at-reference files and fix macOS tests by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/luisfelipe-alt/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/luisfelipe-alt\">@luisfelipe-alt</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4703799978\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28053\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28053/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28053\">#28053</a></li> <li>feat(caretaker): implement Cloud Run webhook ingestion service by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/chadd28/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/chadd28\">@chadd28</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4694763384\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28015\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28015/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28015\">#28015</a></li> <li>fix(core): resolve symbolic link directory escape in memory import processor by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/luisfelipe-alt/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/luisfelipe-alt\">@luisfelipe-alt</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4788023907\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28233\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28233/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28233\">#28233</a></li> <li>feat(caretaker): egress cloud run service skeleton by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/chadd28/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/chadd28\">@chadd28</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4756075933\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28167\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28167/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28167\">#28167</a></li> <li>fix(sandbox): make ~/.gitconfig read-only in the macOS sandbox by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/ompatel-aiml/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/ompatel-aiml\">@ompatel-aiml</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4779278087\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28221\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28221/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28221\">#28221</a></li> <li>fix(core): preserve escape sequences in string literals for modern models by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/luisfelipe-alt/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/luisfelipe-alt\">@luisfelipe-alt</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4816231374\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28299\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28299/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28299\">#28299</a></li> <li>fix(core): strip thoughts from scrubbed history turns and resolve thought leakage by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/amelidev/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/amelidev\">@amelidev</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4678608403\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/27971\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/27971/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/27971\">#27971</a></li> </ul> <h2>New Contributors</h2> <ul> <li><a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/jerrylin3321/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/jerrylin3321\">@jerrylin3321</a> made their first contribution in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4737974425\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28131\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28131/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28131\">#28131</a></li> </ul> <p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/google-gemini/gemini-cli/compare/v0.50.0-preview.1...v0.51.0-preview.0\"><tt>v0.50.0-preview.1...v0.51.0-preview.0</tt></a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Qwen Code: Release v0.19.8",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.8",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-08T15:29:45.000Z",
+      "summary": "## What's Changed * docs(channels): add WeCom to channels overview by @DragonnZhang in https://github.com/QwenLM/qwen-code/pull/6490 * feat(cli): Add serve env isolation and total admission by @doudouOUC in https://github.com/QwenLM/qwen-code/pull/6416 * feat(cli): review auto-generated skills with an inline preview, editor handoff, and an in-dialog off switch by @tanzhenxin in https://github.com/QwenLM/qwen-code/pull/6393 * fix(core): reject fractional LSP limit inputs by @VectorPeak in https://github.com/QwenLM/qwen-code/pull/6455 * fix(core): Match hook display-name matchers to tool ids by @LaZzyMan in https://github.com/QwenLM/qwen-code/pull/6373 * fix(web-shell): hide sidebar settings text when width is insufficient by @wenshao in https://github.com/QwenLM/qwen-code/pull/6494 * fix(web-shell): count daemon sessions in Daemon Status usage dashboard by @wenshao in https://github.com/QwenLM/qwen-code/pull/6493 * feat(cli): Show permission mode badge in footer for DEFAULT mode by @Den",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Qwen Code: Release v0.19.6-preview.0",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.6-preview.0",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-08T00:50:05.000Z",
+      "summary": "## What's Changed * docs(channels): add WeCom to channels overview by @DragonnZhang in https://github.com/QwenLM/qwen-code/pull/6490 **Full Changelog**: https://github.com/QwenLM/qwen-code/compare/v0.19.7...v0.19.6-preview.0",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Qwen Code: Release v0.19.7-nightly.20260708.394c1a289",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.19.7-nightly.20260708.394c1a289",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-07-08T00:48:59.000Z",
+      "summary": "## What's Changed * docs(channels): add WeCom to channels overview by @DragonnZhang in https://github.com/QwenLM/qwen-code/pull/6490 **Full Changelog**: https://github.com/QwenLM/qwen-code/compare/v0.19.7...v0.19.7-nightly.20260708.394c1a289",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Sneha Revanur on how a small team of activists helped pass America’s landmark AI safety laws",
+      "url": "https://80000hours.org/podcast/episodes/sneha-revanur-ai-advocacy/",
+      "source": "80,000 Hours",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.78,
+      "date": "2026-07-08T17:13:57.000Z",
+      "summary": "The post Sneha Revanur on how a small team of activists helped pass America’s landmark AI safety&nbsp;laws appeared first on 80,000 Hours .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Why AI Infrastructure must evolve for Agent Experience — Akshat Bubna, Modal CTO",
+      "url": "https://www.latent.space/p/modal2026",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-07-08T22:55:07.000Z",
+      "summary": "2 years after our first coverage, we return with Modal's other cofounder to explore why Agent Experience is working now, and everything they have learned building the new agent cloud.",
+      "category": "ai_research"
+    },
+    {
+      "title": "[AINews] Lilian Weng summarizes 35 papers on Harness Engineering for RSI",
+      "url": "https://www.latent.space/p/ainews-lilian-weng-summarizes-35",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-07-08T02:20:25.000Z",
+      "summary": "a quiet day lets us read some condensed insight",
+      "category": "ai_research"
+    }
+  ]
+}

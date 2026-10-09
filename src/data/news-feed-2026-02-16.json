@@ -1,9 +1,25 @@
 {
-  "generated": "2026-05-25T14:37:36.147Z",
+  "generated": "2026-08-26T03:02:14.252Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-16",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 1,
+  "archived_story_count": 138,
+  "articles": [
+    {
+      "title": "GitHub Releases · Remotion: v4.0.423",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.423",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-16T18:47:37.000Z",
+      "summary": "## What's Changed * `@remotion/media`: Fix `Invalid message: {\\\"type\\\":\\\"main-tab-ready\\\"…}` happening by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6520 * `@remotion/media`: Fallback to Html5Video/Html5Audio if audio cannot be decoded by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6524 * `@remotion/design`: Add \"as\" prop for ` ` by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6527 * `@remotion/studio`: persist and upload client-side rendered videos into the output directory by @samohovets in https://github.com/remotion-dev/remotion/pull/6498 * `@remotion/studio`: Sort render queue jobs by startedAt timestamp by @samohovets in https://github.com/remotion-dev/remotion/pull/6529 * `@remotion/media`: Fix firefox encoding from f32 to s16 by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6507 * `@remotion/web-renderer`: Add \"Made with Remotion\" metadata by @samohovets in https://github.com/remotion-dev/remotion/pull/6531 *",
+      "category": "ai_tools"
+    }
+  ]
 }

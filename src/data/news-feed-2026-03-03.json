@@ -1,9 +1,74 @@
 {
-  "generated": "2026-05-25T14:37:36.687Z",
+  "generated": "2026-08-26T03:03:51.548Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-03-03",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 4,
+  "archived_story_count": 196,
+  "articles": [
+    {
+      "title": "GitHub Releases · Node.js: 2026-03-03, Version 25.8.0 (Current), @richardlau",
+      "url": "https://github.com/nodejs/node/releases/tag/v25.8.0",
+      "source": "GitHub Releases · Node.js",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-03-03T17:06:52.000Z",
+      "summary": "### Notable Changes * \\[[`e55eddea2a`](https://github.com/nodejs/node/commit/e55eddea2a)] - **build, doc**: use new api doc tooling (flakey5) [#57343](https://github.com/nodejs/node/pull/57343) * \\[[`4c181e2277`](https://github.com/nodejs/node/commit/4c181e2277)] - **(SEMVER-MINOR)** **sqlite**: add limits property to DatabaseSync (Mert Can Altin) [#61298](https://github.com/nodejs/node/pull/61298) * \\[[`46ee1eddd7`](https://github.com/nodejs/node/commit/46ee1eddd7)] - **(SEMVER-MINOR)** **src**: add C++ support for diagnostics channels (RafaelGSS) [#61869](https://github.com/nodejs/node/pull/61869) * \\[[`9ddd1a9c27`](https://github.com/nodejs/node/commit/9ddd1a9c27)] - **(SEMVER-MINOR)** **src,permission**: add --permission-audit (RafaelGSS) [#61869](https://github.com/nodejs/node/pull/61869) * \\[[`0d97ec4044`](https://github.com/nodejs/node/commit/0d97ec4044)] - **(SEMVER-MINOR)** **test\\_runner**: expose worker ID for concurrent test execution (Ali Hassan) [#61394](https://github.co",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Remotion: v4.0.432",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.432",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 1,
+      "date": "2026-03-03T13:42:15.000Z",
+      "summary": "## What's Changed * `@remotion/media`: Better audio scheduling by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6736 * `@remotion/media`: Fix video stretching after changing the size of a ` ` by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6753 * `@remotion/lambda`: Fix size being exceeded when using Apple Emojis by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6750 * Lambda Python SDK: Fix `numberOfGifLoops` default causing non-GIF renders to fail by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6751 * `@remotion/shapes`: Add Arrow shape by @bhaktofmahakal in https://github.com/remotion-dev/remotion/pull/6743 * `@remotion/studio`: Shared contexts for visual mode by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6731 * `@remotion/studio`: Allow saving nested values in visual mode by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/6742 * `@remotion/studio`: Fix asset selection highlighting all ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemini 3.1 Flash-Lite: Built for intelligence at scale",
+      "url": "https://deepmind.google/blog/gemini-3-1-flash-lite-built-for-intelligence-at-scale/",
+      "source": "DeepMind Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-03-03T16:35:55.000Z",
+      "summary": "Gemini 3.1 Flash-Lite is our fastest and most cost-efficient Gemini 3 series model yet.",
+      "category": "ai_research"
+    },
+    {
+      "title": "How to Kill the Code Review",
+      "url": "https://www.latent.space/p/reviews-dead",
+      "source": "Latent Space",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-03-03T11:57:24.000Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
 }

@@ -1,0 +1,331 @@
+{
+  "generated": "2026-07-25T17:47:20.354Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Introducing Claude Opus 5",
+      "url": "https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "pricing_change",
+        "training"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "pricing_change",
+        "training"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-24T23:48:50.000Z",
+      "summary": "<p><strong><a href=\"https://www.anthropic.com/news/claude-opus-5\">Introducing Claude Opus 5</a></strong></p> I've been offline <a href=\"https://en.wikipedia.org/wiki/Elkhorn_Slough\">kayaking with sea otters</a> for much of today so I haven't had a chance to put Anthropic's new model Claude Opus 5 through its paces yet. The buzz is positive, and Anthropic's description of it as a \"thoughtful and proactive model that comes close to the frontier intelligence of Claude Fable 5 at half the price\" sounds promising. It's currently <a href=\"https://twitter.com/artificialanlys/status/2080777718933995967\">leading the Artificial Analysis leaderboard</a>, in front of even Fable 5.</p> <p>It's priced the same as Opus 4.8, and continues to offer a \"fast mode\" at twice the cost of the base model.</p> <p>Based on this anecdote in the release post it sounds like it might be <a href=\"https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/\">relentlessly proactive</a>:</p> <blockquote> <p>On one Frontier-Bench task, Opus 5 was given a drawing of a machine part and asked to write code to rebuild it as a 3D FreeCAD model. However, in this task, the model was intentionally given no way to directly viewthe drawing. Opus 5 responded by writing its own computer vision pipeline to pull the geometry from the raw pixels, then reconstructed the full machine part.</p> </blockquote> <p>It's better at finding vulnerabilities but has deliberately not been trained on how to exploit them. Hopefully this means the US government won't shut it down!</p> <blockquote> <p>As with its predecessor, Opus 4.8, we’ve intentionally avoided training Opus 5 on cyber tasks. The model has nevertheless improved substantially on these tasks as a result of becoming more generally capable, and it comes close to Mythos 5 at <em>finding</em> cybersecurity vulnerabilities. However, it remains substantially behind Mythos 5 on the <em>exploitation</em> of those vulnerabilities—that is, in turning vulnerabilities into material cyber threats.</p> </blockquote> <p>Anthropic have published a <a href=\"https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5\">prompting guide for Claude Opus 5</a>. Thariq Shihipar has also written <a href=\"https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models\">The new rules of context engineering for Claude 5 generation models</a>.</p> <p>The <a href=\"https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fraw.githubusercontent.com%2Fsimonw%2Fllm-anthropic%2F8272dfee5bdb65d5c88eef083da3ad885539b7df%2Flog.md\">first pelican I got</a> was missing the bicycle wheels; the <a href=\"https://tools.simonwillison.net/markdown-svg-renderer#url=https%3A%2F%2Fraw.githubusercontent.com%2Fsimonw%2Fllm-anthropic%2Ffeaab840ea20eb15e29d8f72a9e42feceb23876a%2Flog.md\">second attempt</a> was better. <p>Tags: <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/anthropic\">anthropic</a>, <a href=\"https://simonwillison.net/tags/claude\">claude</a>, <a href=\"https://simonwillison.net/tags/llm-release\">llm-release</a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v0.87.0",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.87.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release",
+        "evaluation",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation",
+        "research_paper"
+      ],
+      "importance": 0.7,
+      "date": "2026-07-24T19:57:10.000Z",
+      "summary": "<h1>MCP OAuth, performance and more</h1> <p>Happy Friday everybody!</p> <p>We're releasing some nice features for you so you can enjoy your weekend vibecoding. (Or not, stay outside 🌞 and return to Crush on Monday! 😃).</p> <h2>MCP OAuth</h2> <p>That's it, it's finally here! Some of you have been asking for this for long.</p> <p>This is required for some MCPs to work. Want to know to it set it up? <a href=\"https://github.com/charmbracelet/crush#mcp-oauth\">Refer to this section into the README</a>.</p> <p>Thank <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump\">@joestump</a> and his agent <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump-agent/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump-agent\">@joestump-agent</a> for this contribution. And of course, our favorite <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/taciturnaxolotl/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/taciturnaxolotl\">@taciturnaxolotl</a> also helped.</p> <h2>Claude Channels MCP extension</h2> <p><a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump\">@joestump</a> (and his agent) <em>also</em> added an initial implementation to support the <a href=\"https://code.claude.com/docs/en/channels-reference\" rel=\"nofollow\">Claude Channels MCP extension</a>, which means MCPs can now send notifications to Crush when certain events happen.</p> <p>Give this a try if you're interested, and let us know how well it works for you.</p> <h2>Restored MCP prompts</h2> <p>MCP prompts were unintentionally disabled in a previous release, but they were now added back!</p> <h2>LSP performance boost</h2> <p>Another cool contrib was made by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/TheJhyeFactor/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/TheJhyeFactor\">@TheJhyeFactor</a>, who vastly improved the CPU and memory usage on handling LSP servers in large repositories!</p> <p>See <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4922746509\" data-permission-text=\"Title is private\" data-url=\"https://github.com/charmbracelet/crush/issues/3370\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/charmbracelet/crush/pull/3370/hovercard\" href=\"https://github.com/charmbracelet/crush/pull/3370\">#3370</a> for a more in-depth explanation of the optimizations.</p> <h2>Bang mode performance boost</h2> <p><a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/TheJhyeFactor/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/TheJhyeFactor\">@TheJhyeFactor</a> <em>also</em> improved performance of output streaming when running command in bang mode.</p> <p>Check <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4928375063\" data-permission-text=\"Title is private\" data-url=\"https://github.com/charmbracelet/crush/issues/3381\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/charmbracelet/crush/pull/3381/hovercard\" href=\"https://github.com/charmbracelet/crush/pull/3381\">#3381</a> to see some benchmarking.</p> <h2><code>/etc/crush/crush.json</code></h2> <p>You read it right! Thank to <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/Muttaqin86/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/Muttaqin86\">@Muttaqin86</a> you can now have a system-wide Crush configuration on <code>/etc/crush/crush.json</code>.</p> <p>The motivation for this was improving compatibility with NixOS.</p> <h2>Fixed Copilot + GPT-5.6</h2> <p>All three GPT-5.6 models (Sol, Terra and Luna) are now fixed when running via GitHub Copilot. Kudos to <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/nghiant03/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/nghiant03\">@nghiant03</a> for this!</p> <p>That was a lot, but it's really fun to how much the community is enganged with Crush dev.</p> <p>Keep Crushing! ™️<br> Charm</p> <h2>Changelog</h2> <h3>New!</h3> <ul> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/6f8a7fe8b2cd619e82683a70de252238f333052f/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/6f8a7fe8b2cd619e82683a70de252238f333052f\"><tt>6f8a7fe</tt></a>: feat(client): reconnect the event stream after it drops (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/meowgorithm/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/meowgorithm\">@meowgorithm</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/d291d9f2c189d1d8c1c4a18d4b73650fc4d20ac9/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/d291d9f2c189d1d8c1c4a18d4b73650fc4d20ac9\"><tt>d291d9f</tt></a>: feat(cmd): add --channels opt-in flag for MCP channel servers (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump\">@joestump</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/37fc995daca4486501acb6d03445a4bd6969d7f3/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/37fc995daca4486501acb6d03445a4bd6969d7f3\"><tt>37fc995</tt></a>: feat(mcp): OAuth 2.1 authorization for HTTP MCP servers (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/taciturnaxolotl/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/taciturnaxolotl\">@taciturnaxolotl</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/1588ae868a8ae7a0f13738cf04542c466dd50f65/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/1588ae868a8ae7a0f13738cf04542c466dd50f65\"><tt>1588ae8</tt></a>: feat(mcp): SSE OAuth, metadata fixups, and resource param stripping (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/taciturnaxolotl/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/taciturnaxolotl\">@taciturnaxolotl</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/d338af88648a8f33f05624800013fcd11b0f1b97/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/d338af88648a8f33f05624800013fcd11b0f1b97\"><tt>d338af8</tt></a>: feat(mcp): add OAuth support for HTTP MCP servers (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump\">@joestump</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/a1cf002270dede2be0b415ace5e36b199cb5773e/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/a1cf002270dede2be0b415ace5e36b199cb5773e\"><tt>a1cf002</tt></a>: feat(mcp): detect claude/channel capability and receive channel messages (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump\">@joestump</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/b238696201229f30b073078b246c4f47416dd34c/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/b238696201229f30b073078b246c4f47416dd34c\"><tt>b238696</tt></a>: feat(ui): tell a lost connection apart from an uninitialized agent (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/meowgorithm/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/meowgorithm\">@meowgorithm</a>)</li> </ul> <h3>Fixed</h3> <ul> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/fbf59341beee53600e8e4f55b60d9392371dc22c/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/fbf59341beee53600e8e4f55b60d9392371dc22c\"><tt>fbf5934</tt></a>: fix(agent): close dispatch completion-boundary cancel race (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump-agent/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump-agent\">@joestump-agent</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/ae9257b9cdce0dfc4afb6a5e7407d40e988c616c/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/ae9257b9cdce0dfc4afb6a5e7407d40e988c616c\"><tt>ae9257b</tt></a>: fix(agent): serialize in-process run dispatch to prevent concurrent turns (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump\">@joestump</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/a09cb3668c2871469250d42e1ced905fef84d820/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/a09cb3668c2871469250d42e1ced905fef84d820\"><tt>a09cb36</tt></a>: fix(backend): log channel flag mismatch on duplicate workspace creation (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump-agent/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump-agent\">@joestump-agent</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/086dc626c68292089fb1c7d7e0569dc7efa52005/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/086dc626c68292089fb1c7d7e0569dc7efa52005\"><tt>086dc62</tt></a>: fix(client): add MCP prompts to ui in client-server mode (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/meowgorithm/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/meowgorithm\">@meowgorithm</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/ca9ef6adeceed920f882a44f68b61ba9de2d9aba/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/ca9ef6adeceed920f882a44f68b61ba9de2d9aba\"><tt>ca9ef6a</tt></a>: fix(cmd): make --channels a persistent flag so <code>crush run</code> inherits it (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump-agent/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump-agent\">@joestump-agent</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/213ad7945184fbbd5ae0830a8ffc313fd8f3722f/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/213ad7945184fbbd5ae0830a8ffc313fd8f3722f\"><tt>213ad79</tt></a>: fix(config): load system-wide config from /etc/crush/crush.json (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4503845323\" data-permission-text=\"Title is private\" data-url=\"https://github.com/charmbracelet/crush/issues/2984\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/charmbracelet/crush/pull/2984/hovercard\" href=\"https://github.com/charmbracelet/crush/pull/2984\">#2984</a>) (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/Muttaqin86/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/Muttaqin86\">@Muttaqin86</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/8ccf6945d6f9f0de98ed2e1f9900a322f7c91fab/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/8ccf6945d6f9f0de98ed2e1f9900a322f7c91fab\"><tt>8ccf694</tt></a>: fix(copilot): add additional responses models (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4970866788\" data-permission-text=\"Title is private\" data-url=\"https://github.com/charmbracelet/crush/issues/3416\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/charmbracelet/crush/pull/3416/hovercard\" href=\"https://github.com/charmbracelet/crush/pull/3416\">#3416</a>) (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/nghiant03/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/nghiant03\">@nghiant03</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/26399fc2ef5968db46627d3bcb2c57d4d330472c/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/26399fc2ef5968db46627d3bcb2c57d4d330472c\"><tt>26399fc</tt></a>: fix(mcp): address OAuth review findings (timeout, refresh, concurrency) (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump-agent/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump-agent\">@joestump-agent</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/bc8ff341a02f8d739dea37af2375f5dcde712474/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/bc8ff341a02f8d739dea37af2375f5dcde712474\"><tt>bc8ff34</tt></a>: fix(mcp): buffer channel notifications during capability negotiation (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump-agent/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump-agent\">@joestump-agent</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/1f623ec075cc28fbd1f683c6431bb8b54c23dd17/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/1f623ec075cc28fbd1f683c6431bb8b54c23dd17\"><tt>1f623ec</tt></a>: fix(mcp): filter channel events from the shared app event stream (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump-agent/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump-agent\">@joestump-agent</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/14fa1de881f0927f09c12bdeebb57ef36fb6578a/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/14fa1de881f0927f09c12bdeebb57ef36fb6578a\"><tt>14fa1de</tt></a>: fix(mcp): prevent clients from inheriting channel opt-ins (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/meowgorithm/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/meowgorithm\">@meowgorithm</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/533fcf1e7c1006213cda8aeace3fff784d9a1c41/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/533fcf1e7c1006213cda8aeace3fff784d9a1c41\"><tt>533fcf1</tt></a>: fix(mcp): prevent panic when auth signal fires twice (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4954358625\" data-permission-text=\"Title is private\" data-url=\"https://github.com/charmbracelet/crush/issues/3403\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/charmbracelet/crush/pull/3403/hovercard\" href=\"https://github.com/charmbracelet/crush/pull/3403\">#3403</a>) (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/meowgorithm/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/meowgorithm\">@meowgorithm</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/f7c53cbc1d89c08622911c8407cfdaadfb922705/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/f7c53cbc1d89c08622911c8407cfdaadfb922705\"><tt>f7c53cb</tt></a>: fix(mcp): route channel messages through must-deliver broker path (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump-agent/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump-agent\">@joestump-agent</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/fed86b00bab56754bc97cd45875923e1489c737d/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/fed86b00bab56754bc97cd45875923e1489c737d\"><tt>fed86b0</tt></a>: fix(mcp): tighten channel meta key validation for XML name safety (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump-agent/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump-agent\">@joestump-agent</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/fd55b5d102169644a365f0835c09aca88303f419/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/fd55b5d102169644a365f0835c09aca88303f419\"><tt>fd55b5d</tt></a>: fix(server): don't shut down while a workspace is being created (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/meowgorithm/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/meowgorithm\">@meowgorithm</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/2cb0bdb26778fbe65eba16aa010801367c0fc64c/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/2cb0bdb26778fbe65eba16aa010801367c0fc64c\"><tt>2cb0bdb</tt></a>: fix(server): stop mapping channel events to spurious state changes (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump-agent/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump-agent\">@joestump-agent</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/fa6ec09dc56bfa799be6b4639ff5e0569ef640d9/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/fa6ec09dc56bfa799be6b4639ff5e0569ef640d9\"><tt>fa6ec09</tt></a>: fix(server): wait before shutting down so back-to-back sessions don't race it (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/meowgorithm/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/meowgorithm\">@meowgorithm</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/00a18434bd33953c5458399ed57bf0238dccdb09/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/00a18434bd33953c5458399ed57bf0238dccdb09\"><tt>00a1843</tt></a>: fix(test): fix nil pointer crash in Windows CI tests (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/meowgorithm/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/meowgorithm\">@meowgorithm</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/1b4ef73f1f6343832e57fbd3e7f71c3f03d0d835/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/1b4ef73f1f6343832e57fbd3e7f71c3f03d0d835\"><tt>1b4ef73</tt></a>: fix(ui): keep shell progress output from corrupting the TUI (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/taciturnaxolotl/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/taciturnaxolotl\">@taciturnaxolotl</a>)</li> </ul> <h3>Docs</h3> <ul> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/7946b21e2e7c41838cb7685b41032151a20248b5/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/7946b21e2e7c41838cb7685b41032151a20248b5\"><tt>7946b21</tt></a>: docs(mcp): add OAuth configuration guide and regenerate schema (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/taciturnaxolotl/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/taciturnaxolotl\">@taciturnaxolotl</a>)</li> </ul> <h3>Other stuff</h3> <ul> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/2af939d8e900f15edb5e78d766ff0b74dd4fe87e/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/2af939d8e900f15edb5e78d766ff0b74dd4fe87e\"><tt>2af939d</tt></a>: chore(cli): hide --channels (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/meowgorithm/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/meowgorithm\">@meowgorithm</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/1ba4dc4b978e25b1486ebdab81871601ddd765de/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/1ba4dc4b978e25b1486ebdab81871601ddd765de\"><tt>1ba4dc4</tt></a>: chore(mcp): merge main; fix createTransport arity; inject browser opener (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump-agent/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump-agent\">@joestump-agent</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/d2c66483d204effe8bb5f191a11e53e1da9ddc14/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/d2c66483d204effe8bb5f191a11e53e1da9ddc14\"><tt>d2c6648</tt></a>: chore: auto-update files (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/charmcli/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/charmcli\">@charmcli</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/b647ccd131099a652294dd31dfb5c568c44ca90d/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/b647ccd131099a652294dd31dfb5c568c44ca90d\"><tt>b647ccd</tt></a>: chore: auto-update files (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/charmcli/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/charmcli\">@charmcli</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/cba1ebcf9c21874c886920e0818bc1c7dad71b53/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/cba1ebcf9c21874c886920e0818bc1c7dad71b53\"><tt>cba1ebc</tt></a>: chore: auto-update files (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/charmcli/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/charmcli\">@charmcli</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/cc971bd60d54d660632bd12c0fb83dbcd33f06ea/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/cc971bd60d54d660632bd12c0fb83dbcd33f06ea\"><tt>cc971bd</tt></a>: perf(lsp): filter servers before searching <code>$PATH</code> (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4922746509\" data-permission-text=\"Title is private\" data-url=\"https://github.com/charmbracelet/crush/issues/3370\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/charmbracelet/crush/pull/3370/hovercard\" href=\"https://github.com/charmbracelet/crush/pull/3370\">#3370</a>) (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/TheJhyeFactor/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/TheJhyeFactor\">@TheJhyeFactor</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/e4175c52b8e14a4e158106ac5988fd42a8958457/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/e4175c52b8e14a4e158106ac5988fd42a8958457\"><tt>e4175c5</tt></a>: perf(ui): avoid quadratic shell output rendering (<a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4928375063\" data-permission-text=\"Title is private\" data-url=\"https://github.com/charmbracelet/crush/issues/3381\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/charmbracelet/crush/pull/3381/hovercard\" href=\"https://github.com/charmbracelet/crush/pull/3381\">#3381</a>) (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/TheJhyeFactor/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/TheJhyeFactor\">@TheJhyeFactor</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/67e748e11c102be90cf881fabd954d2a0f290cee/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/67e748e11c102be90cf881fabd954d2a0f290cee\"><tt>67e748e</tt></a>: revert: remove <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4909322481\" data-permission-text=\"Title is private\" data-url=\"https://github.com/charmbracelet/crush/issues/3348\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/charmbracelet/crush/pull/3348/hovercard\" href=\"https://github.com/charmbracelet/crush/pull/3348\">#3348</a> OAuth implementation (superseded) (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/taciturnaxolotl/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/taciturnaxolotl\">@taciturnaxolotl</a>)</li> <li><a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charmbracelet/crush/commit/1dad49ce8a2ddaefe9abffcae74f33d2d0e15c02/hovercard\" href=\"https://github.com/charmbracelet/crush/commit/1dad49ce8a2ddaefe9abffcae74f33d2d0e15c02\"><tt>1dad49c</tt></a>: style: gofmt formatting cleanup (<a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/joestump-agent/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/joestump-agent\">@joestump-agent</a>)</li> </ul> <hr> <details> <summary>Verifying the artifacts</summary> <p>First, download the <a href=\"https://github.com/charmbracelet/crush/releases/download/v0.87.0/checksums.txt\"><code>checksums.txt</code> file</a> and the <a href=\"https://github.com/charmbracelet/crush/releases/download/v0.87.0/checksums.txt.sigstore.json\"><code>checksums.txt.sigstore.json</code> file</a> files, for example, with <code>wget</code>:</p> <div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"wget 'https://github.com/charmbracelet/crush/releases/download/v0.87.0/checksums.txt' wget 'https://github.com/charmbracelet/crush/releases/download/v0.87.0/checksums.txt.sigstore.json'\"><pre>wget <span class=\"pl-s\"><span class=\"pl-pds\">'</span>https://github.com/charmbracelet/crush/releases/download/v0.87.0/checksums.txt<span class=\"pl-pds\">'</span></span> wget <span class=\"pl-s\"><span class=\"pl-pds\">'</span>https://github.com/charmbracelet/crush/releases/download/v0.87.0/checksums.txt.sigstore.json<span class=\"pl-pds\">'</span></span></pre></div> <p>Then, verify it using <a href=\"https://github.com/sigstore/cosign\"><code>cosign</code></a>:</p> <div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"cosign verify-blob \\ --certificate-identity 'https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main' \\ --certificate-oidc-issuer 'https://token.actions.githubusercontent.com' \\ --bundle 'checksums.txt.sigstore.json' \\ ./checksums.txt\"><pre>cosign verify-blob \\ --certificate-identity <span class=\"pl-s\"><span class=\"pl-pds\">'</span>https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main<span class=\"pl-pds\">'</span></span> \\ --certificate-oidc-issuer <span class=\"pl-s\"><span class=\"pl-pds\">'</span>https://token.actions.githubusercontent.com<span class=\"pl-pds\">'</span></span> \\ --bundle <span class=\"pl-s\"><span class=\"pl-pds\">'</span>checksums.txt.sigstore.json<span class=\"pl-pds\">'</span></span> \\ ./checksums.txt</pre></div> <p>If the output is <code>Verified OK</code>, you can safely use it to verify the checksums of other artifacts you downloaded from the release using <code>sha256sum</code>:</p> <div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"sha256sum --ignore-missing -c checksums.txt\"><pre>sha256sum --ignore-missing -c checksums.txt</pre></div> <p>Done! You artifacts are now verified!</p> </details> <p><a href=\"https://charm.land/\" rel=\"nofollow\"><img alt=\"The Charm logo\" src=\"https://camo.githubusercontent.com/69664ad4650dabc137df37044e4d9366cfe32124b10f97b798c064aeaef86443/68747470733a2f2f73747566662e636861726d2e73682f636861726d2d62616e6e65722d6e6578742e6a7067\" width=\"400\" data-canonical-src=\"https://stuff.charm.sh/charm-banner-next.jpg\" style=\"max-width: 100%;\"></a></p> <p>Thoughts? Questions? We love hearing from you. Feel free to reach out on <a href=\"https://x.com/charmcli\" rel=\"nofollow\">X</a>, <a href=\"https://charm.land/discord\" rel=\"nofollow\">Discord</a>, <a href=\"https://charm.land/slack\" rel=\"nofollow\">Slack</a>, <a href=\"https://mastodon.social/@charmcli\" rel=\"nofollow\">The Fediverse</a>, <a href=\"https://bsky.app/profile/charm.land\" rel=\"nofollow\">Bluesky</a>.</p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "‘I thought, I’ve tried everything else, why not give AI a shot?’: the long-lost family reunited by ChatGPT",
+      "url": "https://www.theguardian.com/lifeandstyle/ng-interactive/2026/jul/25/long-lost-family-reunited-chatgpt-artificial-intelligence-ai",
+      "source": "The Guardian Tech",
+      "tags": [
+        "model_release",
+        "architecture"
+      ],
+      "matching_tags": [
+        "model_release",
+        "architecture"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-07-25T05:00:35.000Z",
+      "summary": "<p>Avtar spent decades wondering what happened to the mother he never got to know. Thousands of miles away, Nicci was haunted by the story of a half-brother given away before she was born. How did a chatbot bring them together?</p><p>As a small boy growing up in Amritsar, India, in the 1960s, Avtar Singh used to hear whispers. <em>Your mum isn’t really your mum</em>, the rumours would say. <em>Your mum lives abroad.</em> Avtar didn’t really pay any attention to it. “I thought, the neighbours are just making up stories.” But the stories were true: the woman raising Avtar was actually his grandmother. When he was too young to remember it, his father had emigrated to Canada to work as a teacher, leaving Avtar in the care of his paternal grandparents. His grandfather, a police officer, was a fearsome authoritarian, but his grandmother brought him up with tenderness, as if he were her own son. She called him by his nickname, Titu. He felt loved.</p><p>When Avtar was around eight years old, he was told about his family in Canada: his dad, his mum and a little brother were waiting for him there, and he would soon travel to join them. Just after his ninth birthday, Avtar found himself sitting on a plane, dressed in a three‑piece suit and tie. He was travelling alone. He had never flown before. He didn’t speak a word of English. He landed in Halifax, Nova Scotia, on Christmas Eve, 1968; his family met him at the airport and took him home. “I didn’t know what to think,” Avtar, now 66, tells me in a video call from his home in Abbotsford, British Columbia. “Before I knew it, it was the first week of January, and I was put in school.”</p> <a href=\"https://www.theguardian.com/lifeandstyle/ng-interactive/2026/jul/25/long-lost-family-reunited-chatgpt-artificial-intelligence-ai\">Continue reading...</a>",
+      "category": "tech_general"
+    },
+    {
+      "title": "AMD and Cerebras Launch AI Inference Solution",
+      "url": "https://www.cerebras.ai/press-release/amd-and-cerebras-announce-industry-leading-ultra-low-latency-and-high-throughput-ai-inference",
+      "source": "Hacker News",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-24T20:44:05.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Nvidia Vera Rubin Driving Performance per Watt, Lowest Token Cost for Partners",
+      "url": "https://www.hpcwire.com/off-the-wire/nvidia-vera-rubin-driving-performance-per-watt-lowest-token-cost-for-partners-worldwide/",
+      "source": "Hacker News",
+      "tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-21T21:04:51.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "TSMC eyes price hikes of up to 25% on chip production services in 2027",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/tsmc-eyes-price-hikes-of-up-to-25-percent-on-chip-production-services-in-2027-report-claims-plans-to-raise-baseline-prices-by-5-percent-to-10-percent-on-advanced-nodes",
+      "source": "Hacker News",
+      "tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "matching_tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-21T13:40:51.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "School of Architecture + Planning",
+      "url": "https://news.mit.edu/index%2Ephp/school/architecture-and-planning",
+      "source": "MIT News AI",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.74,
+      "date": "2026-07-25T01:25:59.843Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU",
+      "url": "https://paperswithcode.com/papers/2607.19191",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.72,
+      "date": "2026-07-25T11:15:07.350Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "v16.3.0-canary.96",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.96",
+      "source": "GitHub Releases · Next.js 15",
+      "tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "matching_tags": [
+        "evaluation",
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-07-25T00:00:34.000Z",
+      "summary": "<h3>Misc Changes</h3> <ul> <li>[sourcemaps] Use file: sourcemaps for Turbopack to improve dev performance: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4925171960\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/95946\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/95946/hovercard\" href=\"https://github.com/vercel/next.js/pull/95946\">#95946</a></li> <li>Give RouteCacheEntry a single hidden class across its lifecycle: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4971434204\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/96164\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/96164/hovercard\" href=\"https://github.com/vercel/next.js/pull/96164\">#96164</a></li> <li>Keep optimistic-route param handling monomorphic: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4971837778\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/96169\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/96169/hovercard\" href=\"https://github.com/vercel/next.js/pull/96169\">#96169</a></li> <li>Store RouteTree slots in a Map to keep slot access monomorphic: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4971815355\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/96168\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/96168/hovercard\" href=\"https://github.com/vercel/next.js/pull/96168\">#96168</a></li> <li>Make reifyRouteTree object literals match the canonical RouteTree key order: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4971404979\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/96162\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/96162/hovercard\" href=\"https://github.com/vercel/next.js/pull/96162\">#96162</a></li> <li>Keep VaryPath monomorphic by making isRootParam required: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4964845818\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/96122\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/96122/hovercard\" href=\"https://github.com/vercel/next.js/pull/96122\">#96122</a></li> <li>docs: expand and modernize the Single-Page Applications guide: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4902953301\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/95860\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/95860/hovercard\" href=\"https://github.com/vercel/next.js/pull/95860\">#95860</a></li> <li>docs: navigation interrupts after streaming has started (notFound, forbidden, unauthorized): <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4901446713\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/95851\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/95851/hovercard\" href=\"https://github.com/vercel/next.js/pull/95851\">#95851</a></li> <li>docs: reframe prefetching around automatic vs. controllable behavior: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4910893221\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/95896\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/95896/hovercard\" href=\"https://github.com/vercel/next.js/pull/95896\">#95896</a></li> <li>docs(view-transitions): fix the skill install command: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4967475640\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/96142\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/96142/hovercard\" href=\"https://github.com/vercel/next.js/pull/96142\">#96142</a></li> <li>Include additional prerender metadata about build-time routes: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4953061760\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/96080\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/96080/hovercard\" href=\"https://github.com/vercel/next.js/pull/96080\">#96080</a></li> <li>Optimize app page entry analysis: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4950175991\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/96058\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/96058/hovercard\" href=\"https://github.com/vercel/next.js/pull/96058\">#96058</a></li> <li>[ts-plugin] Preserve TypeScript quick info metadata: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4903218426\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/95863\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/95863/hovercard\" href=\"https://github.com/vercel/next.js/pull/95863\">#95863</a></li> <li>[turbopack] Import Webpack's tests for tree-shaking: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4891385282\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/95811\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/95811/hovercard\" href=\"https://github.com/vercel/next.js/pull/95811\">#95811</a></li> <li>[turbopack] Drop dead <code>require()</code> calls: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4865944830\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/95718\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/95718/hovercard\" href=\"https://github.com/vercel/next.js/pull/95718\">#95718</a></li> <li>[turbopack] Track usage of modules imported with <code>require()</code>: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4865944437\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/95717\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/95717/hovercard\" href=\"https://github.com/vercel/next.js/pull/95717\">#95717</a></li> <li>Return plain text 404 for non-document requests to unknown paths: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4920493640\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/95930\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/95930/hovercard\" href=\"https://github.com/vercel/next.js/pull/95930\">#95930</a></li> <li>[RSC HMR] Fix a flurry of refetches when a editing component imported from many routes: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4961563705\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/96102\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/96102/hovercard\" href=\"https://github.com/vercel/next.js/pull/96102\">#96102</a></li> <li>[turbopack] Track re-exports in <code>import_usage</code> inside of <code>compute_import_usage</code>: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4934286567\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/next.js/issues/95989\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/next.js/pull/95989/hovercard\" href=\"https://github.com/vercel/next.js/pull/95989\">#95989</a></li> </ul> <h3>Credits</h3> <p>Huge thanks to <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gaearon/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/gaearon\">@gaearon</a>, <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/acdlite/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/acdlite\">@acdlite</a>, <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/aurorascharff/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/aurorascharff\">@aurorascharff</a>, <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gnoff/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/gnoff\">@gnoff</a>, <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/timneutkens/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/timneutkens\">@timneutkens</a>, <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/devjiwonchoi/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/devjiwonchoi\">@devjiwonchoi</a>, and <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/sampoder/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/sampoder\">@sampoder</a> for helping!</p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SpaceX launches new V3 Starlink satellites but suffers another booster failure",
+      "url": "https://techcrunch.com/2026/07/24/spacex-launches-new-v3-starlink-satellites-but-suffers-another-booster-failure/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-07-24T23:25:47.000Z",
+      "summary": "The company ticked off a few more boxes on the second Starship V3 flight, but appears to have had another issue relighting the booster's rocket engines.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Anthropic launches Opus 5",
+      "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-07-24T17:00:00.000Z",
+      "summary": "Opus 5 will be both cheaper and less restrictive than Fable, likely making it preferable in most use cases.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI’s own model went rogue before Kimi had Wall Street sweating",
+      "url": "https://techcrunch.com/video/openais-own-model-went-rogue-before-kimi-had-wall-street-sweating/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-07-24T16:50:08.000Z",
+      "summary": "Chinese AI lab Moonshot’s open model Kimi went viral this week for reasons that had less to do with the model itself and more to do with how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real security breach at Hugging Face — a reminder […]",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Quoting Boris Cherny",
+      "url": "https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "evaluation"
+      ],
+      "matching_tags": [
+        "evaluation"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-25T00:42:59.000Z",
+      "summary": "<blockquote cite=\"https://twitter.com/bcherny/status/2080713091688583312\"><p>More than any of these eval scores, what is most exciting to me is something else: Opus 5 is our least prompt injectable model yet. It is a bit buried in the system card, but across PI evals and red teaming, Opus 5 is very hard to prompt inject successfully.</p></blockquote> <p class=\"cite\">&mdash; <a href=\"https://twitter.com/bcherny/status/2080713091688583312\">Boris Cherny</a>, here's that <a href=\"https://www-cdn.anthropic.com/c5fbac3f0b1280a933ebd26d3cb8bb9f5bdeaf48/Claude%20Opus%205%20System%20Card.pdf#page=73\">System Card section</a>, page 73</p> <p>Tags: <a href=\"https://simonwillison.net/tags/prompt-injection\">prompt-injection</a>, <a href=\"https://simonwillison.net/tags/anthropic\">anthropic</a>, <a href=\"https://simonwillison.net/tags/claude\">claude</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/boris-cherny\">boris-cherny</a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Open Weights and American AI Leadership",
+      "url": "https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-24T23:29:30.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
+      "url": "https://paperswithcode.com/papers/2607.15257",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-24T21:24:41.895Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Show HN: Twigg – open-source big-tech-like version control and software forge",
+      "url": "https://github.com/twigg-vc/monorepo",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-24T19:10:22.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Jensen Huang on X: Open Weights and American AI Leadership",
+      "url": "https://twitter.com/JensenHuang/status/2080643682408321103",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-24T15:41:41.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Show HN: Uploads.sh – the missing upload command for coding agents (open-source)",
+      "url": "https://uploads.sh/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-24T12:15:47.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "BYD Launches the Denza Z9 GT EV in Europe and the UK at over 3X the Price",
+      "url": "https://electrek.co/2026/07/23/byd-launches-denza-z9-gt-ev-europe-the-uk-3x-price/",
+      "source": "Hacker News",
+      "tags": [
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-24T09:19:18.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "AMD's 256-core Epyc 9996 'Venice' claims up to a 3.4x jump over Intel Xeon",
+      "url": "https://www.tomshardware.com/pc-components/cpus/amds-256-core-epyc-9996-venice-claims-up-to-a-3-4x-jump-over-intel-xeon-competition-20-percent-over-nvidia-vera-zen-6-comes-with-up-to-1024mb-of-l3-16-channel-memory-and-5ghz-clock-speeds",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-23T18:16:54.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

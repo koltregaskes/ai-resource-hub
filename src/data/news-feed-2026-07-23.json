@@ -1,0 +1,331 @@
+{
+  "generated": "2026-07-23T17:53:30.426Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
+      "url": "https://huggingface.co/blog/nunchaku-diffusers",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "architecture",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "architecture",
+        "inference"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-07-23T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Are AI labs pelicanmaxxing?",
+      "url": "https://simonwillison.net/2026/Jul/22/are-ai-labs-pelicanmaxxing/#atom-everything",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "benchmark",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "benchmark",
+        "evaluation"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-22T23:01:00.000Z",
+      "summary": "<p><strong><a href=\"https://dylancastillo.co/posts/pelicanmaxxing.html\">Are AI labs pelicanmaxxing?</a></strong></p> Excellent piece of work by Dylan Castillo, who took a deep-dive into the frequently pondered question of whether the AI labs have been deliberately training models to draw pelicans riding bicycles in response to my <a href=\"https://simonwillison.net/tags/pelican-riding-a-bicycle/\">deeply unscientific benchmark</a>.</p> <p>I've been randomly spot-checking this in the past by testing models against other animals riding other types of vehicle, but never with anything close to the diligence of Dylan's methodology here.</p> <p>Dylan took 8 animals × 6 vehicles = 48 prompts and ran them three times each through 7 different models ( GPT-5.6 Terra, Claude Sonnet 5, Gemini 3.5 Flash, Grok 4.5, Qwen3.7-Max, GLM-5.2, and DeepSeek V4 Pro). He then used GPT-5.6 Luna and Gemini 3.1 Flash-Lite to help evaluate the results.</p> <p>There's a neat filter view for exploring the results:</p> <p><img alt=\"Screenshot of a grid for sample 1/3 of GLM-5.2, with pelicn and flamingo and heron riding bicycle, unicycle, skateboard, scooter, plane and boat\" src=\"https://static.simonwillison.net/static/2026/pelican-grid.webp\" /></p> <p>For the models he tested he could find no evidence of pelimaxxing:</p> <blockquote> <ul> <li><a href=\"https://dylancastillo.co/posts/pelicanmaxxing.html#evidence-1-the-pelicans-on-bicycles-dont-look-any-better\">The pelicans on bicycles don’t look any better</a></li> <li><a href=\"https://dylancastillo.co/posts/pelicanmaxxing.html#evidence-2-labs-are-not-better-at-drawing-pelicans\">Labs are not better at drawing pelicans</a></li> <li><a href=\"https://dylancastillo.co/posts/pelicanmaxxing.html#evidence-3-labs-are-not-better-at-drawing-bicycles\">Labs are not better at drawing bicycles</a></li> <li><a href=\"https://dylancastillo.co/posts/pelicanmaxxing.html#evidence-4-labs-are-not-better-at-drawing-pelicans-on-bicycles-even-adjusting-for-difficulty\">Labs are not better at drawing pelicans on bicycles, even adjusting for difficulty</a></li> <li><a href=\"https://dylancastillo.co/posts/pelicanmaxxing.html#evidence-5-the-pelican-bicycle-scenes-dont-look-memorized\">The pelican-bicycle scenes don’t look memorized</a> [...]</li> </ul> <p>Pelicans aren’t drawn any better than other animals. Bicycles aren’t drawn any better than other vehicles. And no lab draws the combination better than its pelicans and bicycles already predict. GLM-5.2 comes closest: it has the largest boost on the exact pelican-bicycle cell, and and its first pelican-on-bicycle sample caught my eye. But the effect is small and not significant, so I wouldn’t put too much weight on it.</p> </blockquote> <p><small></small>Via <a href=\"https://news.ycombinator.com/item?id=49010129\">Hacker News</a></small></p> <p>Tags: <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/evals\">evals</a>, <a href=\"https://simonwillison.net/tags/pelican-riding-a-bicycle\">pelican-riding-a-bicycle</a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "MosaicLeaks: Can your research agent keep a secret?",
+      "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-06-18T18:13:13.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Quoting Thomas Ptacek",
+      "url": "https://simonwillison.net/2026/Jul/22/thomas-ptacek/#atom-everything",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-22T23:59:01.000Z",
+      "summary": "<blockquote cite=\"https://twitter.com/tqbf/status/2080045032162173329\"><p>I genuinely believe that if you took an open weights model from 2025 and built a pentest harness for it, it could do this kind of sandbox escape and scan/hack in most networks. This is only surprising because you assume OpenAI has sounder sandboxes.</p></blockquote> <p class=\"cite\">&mdash; <a href=\"https://twitter.com/tqbf/status/2080045032162173329\">Thomas Ptacek</a>, doesn't think <a href=\"https://simonwillison.net/2026/Jul/22/openai-cyberattack/#resist-the-temptation-to-write-this-off-as-a-stunt\">this even needs</a> a frontier model</p> <p>Tags: <a href=\"https://simonwillison.net/tags/thomas-ptacek\">thomas-ptacek</a>, <a href=\"https://simonwillison.net/tags/openai\">openai</a>, <a href=\"https://simonwillison.net/tags/security\">security</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/ai-security-research\">ai-security-research</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwillison.net/tags/sandboxing\">sandboxing</a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Open Source Models & Datasets",
+      "url": "https://research.google/blog/label/open-source-models-datasets",
+      "source": "Google Research Blog",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.7,
+      "date": "2026-07-23T09:28:37.580Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Release v0.52.0-nightly.20260723.g9681621c6",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.52.0-nightly.20260723.g9681621c6",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.7,
+      "date": "2026-07-23T01:30:36.000Z",
+      "summary": "<h2>What's Changed</h2> <ul> <li>fix(core): sequentially verify cached credentials and restore GOOGLE_APPLICATION_CREDENTIALS fallback by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/luisfelipe-alt/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/luisfelipe-alt\">@luisfelipe-alt</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4935978236\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28472\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28472/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28472\">#28472</a></li> <li>feat(evals): add eval coverage report command by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/ved015/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/ved015\">@ved015</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4756850004\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28169\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28169/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28169\">#28169</a></li> </ul> <p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/google-gemini/gemini-cli/compare/v0.52.0-nightly.20260722.gc776c665b...v0.52.0-nightly.20260723.g9681621c6\"><tt>v0.52.0-nightly.20260722.gc776c665b...v0.52.0-nightly.20260723.g9681621c6</tt></a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.53.0-preview.0",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.53.0-preview.0",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "matching_tags": [
+        "model_release",
+        "evaluation"
+      ],
+      "importance": 0.7,
+      "date": "2026-07-22T20:10:07.000Z",
+      "summary": "<h2>What's Changed</h2> <ul> <li>fix(core,a2a): group cancelled tool responses and coalesce consecutive roles to prevent 400 Bad Request by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/luisfelipe-alt/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/luisfelipe-alt\">@luisfelipe-alt</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4893271589\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28407\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28407/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28407\">#28407</a></li> <li>feat(caretaker-triage): implement LLM triage orchestrator and container build by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/chadd28/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/chadd28\">@chadd28</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4850788084\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28345\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28345/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28345\">#28345</a></li> <li>refactor(cli): align macOS permissive Seatbelt profiles with deny-default model by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/ompatel-aiml/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/ompatel-aiml\">@ompatel-aiml</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4905648856\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28424\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28424/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28424\">#28424</a></li> <li>fix(core): mitigate infinite ReAct loops and prompt injection loops by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/amelidev/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/amelidev\">@amelidev</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4913591703\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28429\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28429/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28429\">#28429</a></li> <li>fix(a2a-server): enforce workspace trust and task isolation to prevent RCE by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/luisfelipe-alt/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/luisfelipe-alt\">@luisfelipe-alt</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4933898579\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28470\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28470/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28470\">#28470</a></li> <li>fix(core): sequentially verify cached credentials and restore GOOGLE_APPLICATION_CREDENTIALS fallback by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/luisfelipe-alt/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/luisfelipe-alt\">@luisfelipe-alt</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4935978236\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28472\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28472/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28472\">#28472</a></li> <li>feat(evals): add eval coverage report command by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/ved015/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/ved015\">@ved015</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4756850004\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28169\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28169/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28169\">#28169</a></li> </ul> <p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/google-gemini/gemini-cli/compare/v0.52.0-preview.0...v0.53.0-preview.0\"><tt>v0.52.0-preview.0...v0.53.0-preview.0</tt></a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Turborepo v2.10.6",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.10.6",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "model_release",
+        "api_update"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-07-22T15:15:44.000Z",
+      "summary": "<h2>What's Changed</h2> <h3>Changelog</h3> <ul> <li>release(turborepo): 2.10.5 by @github-actions[bot] in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4875855379\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13368\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13368/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13368\">#13368</a></li> <li>fix: Disable unresolved Cargo artifact caching by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4875308872\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13362\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13362/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13362\">#13362</a></li> <li>fix: Surface create-turbo Git failures by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4876325675\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13371\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13371/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13371\">#13371</a></li> <li>fix: Resolve exact cargo profile outputs by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4875693326\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13366\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13366/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13366\">#13366</a></li> <li>fix: Prune Bun production workspace dev dependencies by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4875887821\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13369\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13369/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13369\">#13369</a></li> <li>fix: Resolve Cargo target output layouts by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4876196492\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13370\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13370/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13370\">#13370</a></li> <li>release(turborepo): 2.10.6-canary.1 by @github-actions[bot] in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4877622810\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13374\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13374/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13374\">#13374</a></li> <li>fix: Preserve Yarn Babel extension during pruning by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4877377181\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13373\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13373/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13373\">#13373</a></li> <li>feat: Support Cargo-only repos by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4884936525\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13378\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13378/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13378\">#13378</a></li> <li>fix: Preserve colors in TUI output by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4886725037\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13381\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13381/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13381\">#13381</a></li> <li>feat: Infer Cargo workspace tasks by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4886695445\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13380\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13380/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13380\">#13380</a></li> <li>fix: Retain shutdown signals for force exit by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4887120370\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13382\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13382/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13382\">#13382</a></li> <li>release(turborepo): 2.10.6-canary.2 by @github-actions[bot] in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4888599516\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13383\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13383/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13383\">#13383</a></li> <li>fix: Resolve weekly security audit vulnerabilities by <a class=\"user-mention notranslate\" data-hovercard-type=\"organization\" data-hovercard-url=\"/orgs/cursor/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/cursor\">@cursor</a>[bot] in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4871279336\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13358\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13358/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13358\">#13358</a></li> <li>chore: Update to Rust 1.97.0 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/ognevny/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/ognevny\">@ognevny</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4846917816\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13322\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13322/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13322\">#13322</a></li> <li>fix: Pin VS Code extension macOS runners by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4906063326\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13391\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13391/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13391\">#13391</a></li> <li>release(turborepo): 2.10.6-canary.3 by @github-actions[bot] in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4906189135\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13392\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13392/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13392\">#13392</a></li> <li>docs: Add Experimental Rust Guide by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4877653399\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13375\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13375/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13375\">#13375</a></li> <li>ci: Use affected filtering for JS tests by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4905633255\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13386\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13386/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13386\">#13386</a></li> <li>ci: Fold docs checks into quality by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4905633254\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13385\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13385/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13385\">#13385</a></li> <li>ci: Verify schemas through Turborepo by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4905790309\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13387\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13387/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13387\">#13387</a></li> <li>chore: Avoid duplicate N-API Cargo build by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4905790340\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13388\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13388/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13388\">#13388</a></li> <li>chore: Hash embedded frameworks data in Rust builds by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4905836317\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13389\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13389/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13389\">#13389</a></li> <li>ci: Include VS Code extension type checks by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4905917581\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13390\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13390/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13390\">#13390</a></li> <li>refactor: Run releaser bundle directly by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4906362111\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13393\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13393/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13393\">#13393</a></li> <li>refactor: Move release publishing into releaser by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4906363591\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13394\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13394/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13394\">#13394</a></li> <li>refactor: Consolidate release orchestration by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4906364876\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13395\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13395/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13395\">#13395</a></li> <li>feat: Add crate-scoped Cargo verification tasks by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4914514991\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13398\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13398/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13398\">#13398</a></li> <li>ci: Fetch release commit parent by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4918644595\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13400\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13400/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13400\">#13400</a></li> <li>docs: Update Geistdocs to 1.13.0 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/molebox/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/molebox\">@molebox</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4927133040\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13412\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13412/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13412\">#13412</a></li> <li>release(turborepo): 2.10.6-canary.4 by @github-actions[bot] in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4918866465\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13401\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13401/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13401\">#13401</a></li> <li>fix: Preserve pnpm <code>node@runtime:</code> lockfile entries by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4923949300\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13408\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13408/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13408\">#13408</a></li> <li>chore: Fix typos in with-solid example and globwatch comment by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/tajo/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/tajo\">@tajo</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4934109988\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13416\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13416/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13416\">#13416</a></li> <li>refactor: Remove unused public APIs found by Hawk by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4939169826\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13420\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13420/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13420\">#13420</a></li> <li>fix: Check dynamic imports in boundaries by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4938794379\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13418\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13418/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13418\">#13418</a></li> <li>refactor: Use regex! for static pattern compilation by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4938998026\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13419\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13419/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13419\">#13419</a></li> <li>fix: Refactor <code>turbo watch</code> by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4941822415\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13423\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13423/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13423\">#13423</a></li> <li>release(turborepo): 2.10.6-canary.5 by @github-actions[bot] in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4942391588\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13424\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13424/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13424\">#13424</a></li> <li>chore: Upgrade brace-expansion by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4943442680\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13429\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13429/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13429\">#13429</a></li> <li>chore: Update tar to 7.5.18 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4943326673\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13428\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13428/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13428\">#13428</a></li> <li>chore: Upgrade js-yaml by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4943215845\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13427\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13427/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13427\">#13427</a></li> <li>fix: Match JIT inputs for affected tasks by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4943180171\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13426\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13426/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13426\">#13426</a></li> <li>fix: Preserve project Yarn package extensions by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/anthonyshew/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/anthonyshew\">@anthonyshew</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4943176824\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13425\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13425/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13425\">#13425</a></li> </ul> <h2>New Contributors</h2> <ul> <li><a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/tajo/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/tajo\">@tajo</a> made their first contribution in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4934109988\" data-permission-text=\"Title is private\" data-url=\"https://github.com/vercel/turborepo/issues/13416\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/vercel/turborepo/pull/13416/hovercard\" href=\"https://github.com/vercel/turborepo/pull/13416\">#13416</a></li> </ul> <p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/vercel/turborepo/compare/v2.10.5...v2.10.6\"><tt>v2.10.5...v2.10.6</tt></a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Zep: A Temporal Knowledge Graph Architecture for Agent Memory",
+      "url": "https://paperswithcode.com/papers/2501.13956",
+      "source": "Papers With Code",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.64,
+      "date": "2026-07-23T09:28:16.045Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Jul 22, 2026 Economic Research A research agenda for the Economic Futures Research Fund",
+      "url": "https://www.anthropic.com/news/economic-futures-research-fund-agenda",
+      "source": "Anthropic Blog",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.62,
+      "date": "2026-07-22T18:28:26.217Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Regulation, Policy, Governance",
+      "url": "https://hai.stanford.edu/topics/regulation-policy-governance",
+      "source": "Stanford HAI",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-07-23T07:30:42.674Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "New Framework Desktop Option with AMD Ryzen AI Max+ Pro 495 and 192GB Memory",
+      "url": "https://frame.work/desktop?tab=192gb-coming-soon",
+      "source": "Hacker News",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-23T11:09:48.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Quoting Seth Larson",
+      "url": "https://simonwillison.net/2026/Jul/23/seth-larson/#atom-everything",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-07-23T04:50:36.000Z",
+      "summary": "<blockquote cite=\"https://blog.pypi.org/posts/2026-07-22-releases-now-reject-new-files-after-14-days/\"><p>The Python Package Index (PyPI) now rejects new files being uploaded to releases that are older than 14 days. This restriction was <a href=\"https://github.com/pypi/warehouse/pull/19727\">put in place</a> to prevent old and long-stable releases from being poisoned in case publishing tokens or workflows of PyPI projects were compromised. As far as we are aware this has not yet been abused, but there is no technical reason beyond that attackers weren't aware it was possible.</p></blockquote> <p class=\"cite\">&mdash; <a href=\"https://blog.pypi.org/posts/2026-07-22-releases-now-reject-new-files-after-14-days/\">Seth Larson</a>, PyPI blog</p> <p>Tags: <a href=\"https://simonwillison.net/tags/packaging\">packaging</a>, <a href=\"https://simonwillison.net/tags/python\">python</a>, <a href=\"https://simonwillison.net/tags/supply-chain\">supply-chain</a>, <a href=\"https://simonwillison.net/tags/pypi\">pypi</a>, <a href=\"https://simonwillison.net/tags/seth-michael-larson\">seth-michael-larson</a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Meta launched a new AI optimism ad set to a song about human extinction",
+      "url": "https://techcrunch.com/2026/07/23/meta-launched-a-new-ai-optimism-ad-set-to-a-song-about-human-extinction/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.74,
+      "date": "2026-07-23T16:28:50.000Z",
+      "summary": "David Bowie's song \"Five Years,\" which Meta used in a supposedly inspiring advertisement, is about humans learning that they have five years left to live before the apocalypse.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Chasing new skills, going back to basics and pushing for collective action: how software engineers are adapting to AI",
+      "url": "https://www.theguardian.com/technology/ng-interactive/2026/jul/12/software-developers-engineers-ai",
+      "source": "The Guardian Tech",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.74,
+      "date": "2026-07-22T23:18:52.000Z",
+      "summary": "<p>Software engineering was one of the best-paying professions in the US in 2022, but the advent of AI has disrupted it, leading to several layoffs and underemployment</p><p>Every weekday, Matt, a software engineer, looks forward to his four-hour train commute to Pawling, New York. It’s time he uses to work on his own project: a browser-based video game for which he writes every line of code himself.</p><p>“I am actively trying to keep my axe sharp,” said Matt, who did not want to use his actual name, to protect his employment. In the last six months, Matt’s job has increasingly shifted away from coding, problem solving and software architecture towards reviewing code generated by artificial intelligence. Convinced that the shift will weaken his skills, he’s doing what he can to keep them intact. “I am trying not to leverage AI where I can.”</p> <a href=\"https://www.theguardian.com/technology/ng-interactive/2026/jul/12/software-developers-engineers-ai\">Continue reading...</a>",
+      "category": "tech_general"
+    },
+    {
+      "title": "Science Corporation’s vision-restoring chip wins EU approval",
+      "url": "https://techcrunch.com/2026/07/22/science-corporations-vision-restoring-chip-wins-eu-approval/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.74,
+      "date": "2026-07-22T18:18:02.000Z",
+      "summary": "\"The thing that the space needs is a company making $100 million a year of revenue,\" Science Corp. CEO Max Hodak said.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Former spy refused visa to give evidence at royal commission – as it happened",
+      "url": "https://www.theguardian.com/australia-news/live/2026/jul/23/australia-news-live-china-penny-wong-asean-labor-conference-anthony-albanese-one-nation-pauline-hanson-ntwnfb",
+      "source": "The Guardian (World)",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.7,
+      "date": "2026-07-23T08:20:30.000Z",
+      "summary": "<p>This blog is now closed.</p><ul><li><p>Get our <a href=\"https://www.theguardian.com/email-newsletters?CMP=cvau_sfl\">breaking news email</a>, <a href=\"https://app.adjust.com/w4u7jx3\">free app</a> or <a href=\"https://www.theguardian.com/australia-news/series/full-story?CMP=cvau_sfl\">daily news podcast</a></p></li></ul><p><strong>Self-reported domestic violence incidents declining in NSW but deaths and hospitalisations fail to fall</strong></p><p>New data shows self-reported domestic violence incidents in New South Wales have declined, but the number of women and children murdered or hospitalised in domestic and family violence incidents over the past eight years has not significantly budged.</p><p>The decline in self-reported violence is significant because it reflects underlying levels of violence in the community, not just what is reported to police. It suggests that, despite rising reports of domestic violence to police, domestic violence in the community is not increasing and may be trending down.</p><p>There’s a strong perception that violence against women is rising, which is understandable given increases in police-recorded incidents, heightened media attention and greater public awareness.</p> <a href=\"https://www.theguardian.com/australia-news/live/2026/jul/23/australia-news-live-china-penny-wong-asean-labor-conference-anthony-albanese-one-nation-pauline-hanson-ntwnfb\">Continue reading...</a>",
+      "category": "tech_general"
+    },
+    {
+      "title": "July 22, 2026 SymptomAI: Towards a conversational AI agent for everyday symptom assessment General Science · Health & Bioscience · Natural Language Processing · Responsible AI",
+      "url": "https://research.google/blog/symptomai-towards-a-conversational-ai-agent-for-everyday-symptom-assessment/",
+      "source": "Google Research Blog",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7,
+      "date": "2026-07-22T23:29:22.747Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Release v0.52.0",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.52.0",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7,
+      "date": "2026-07-22T20:51:21.000Z",
+      "summary": "<h2>What's Changed</h2> <ul> <li>Refactor: exclude transient CI configuration files from workspace context by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/DavidAPierce/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/DavidAPierce\">@DavidAPierce</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4771753114\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28216\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28216/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28216\">#28216</a></li> <li>feat(caretaker-triage): add triage worker core foundational modules by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/chadd28/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/chadd28\">@chadd28</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4753861958\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28163\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28163/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28163\">#28163</a></li> <li>feat(caretaker-egress): implement octokit github action handler for egress service by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/chadd28/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/chadd28\">@chadd28</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4830419267\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28303\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28303/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28303\">#28303</a></li> <li>chore(release): bump version to 0.52.0-nightly.20260707.g27a3da3e8 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/gemini-cli-robot\">@gemini-cli-robot</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4840274631\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28323\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28323/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28323\">#28323</a></li> <li>Changelog for v0.51.0-preview.0 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/gemini-cli-robot\">@gemini-cli-robot</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4839873704\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28320\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28320/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28320\">#28320</a></li> <li>Changelog for v0.50.0 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/gemini-cli-robot\">@gemini-cli-robot</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4840167585\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28322\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28322/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28322\">#28322</a></li> <li>fix(core-tools): bypass LLM correction for JSON and IPYNB files in write_file and replace by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/amelidev/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/amelidev\">@amelidev</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4780686006\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28223\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28223/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28223\">#28223</a></li> <li>fix(core): use unambiguous previous intent label in fallback summary by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/amelidev/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/amelidev\">@amelidev</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4848950194\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28343\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28343/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28343\">#28343</a></li> <li>feat(caretaker-triage): implement main worker execution loop and egress action publisher by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/chadd28/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/chadd28\">@chadd28</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4832842460\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28306\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28306/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28306\">#28306</a></li> <li>fix(privacy): show a clear message when the account has no Code Assist tier by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/ompatel-aiml/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/ompatel-aiml\">@ompatel-aiml</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4830501064\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28304\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28304/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28304\">#28304</a></li> <li>fix(core): enrich shared project quota limit errors with setup hint by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/amelidev/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/amelidev\">@amelidev</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4875463769\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28391\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28391/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28391\">#28391</a></li> <li>fix(a2a-server): ensure task cancellation aborts execution loop by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/luisfelipe-alt/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/luisfelipe-alt\">@luisfelipe-alt</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4838860348\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28316\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28316/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28316\">#28316</a></li> <li>fix(core): simplify plan mode write policy to support relative paths by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/DavidAPierce/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/DavidAPierce\">@DavidAPierce</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4876823809\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28398\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28398/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28398\">#28398</a></li> <li>feat(core): Bump node google-auth-library version to 10.9.0 by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/jerrylin3321/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/jerrylin3321\">@jerrylin3321</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4869745101\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28385\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28385/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28385\">#28385</a></li> <li>chore/release: bump version to 0.52.0-nightly.20260715.gfa975395b by <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/gemini-cli-robot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/gemini-cli-robot\">@gemini-cli-robot</a> in <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"4888459983\" data-permission-text=\"Title is private\" data-url=\"https://github.com/google-gemini/gemini-cli/issues/28402\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/google-gemini/gemini-cli/pull/28402/hovercard\" href=\"https://github.com/google-gemini/gemini-cli/pull/28402\">#28402</a></li> </ul> <p><strong>Full Changelog</strong>: <a class=\"commit-link\" href=\"https://github.com/google-gemini/gemini-cli/compare/v0.51.0...v0.52.0\"><tt>v0.51.0...v0.52.0</tt></a></p>",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nvidia is sending GPUs to the moon",
+      "url": "https://techcrunch.com/2026/07/23/nvidia-is-sending-gpus-to-the-moon/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.6599999999999999,
+      "date": "2026-07-23T15:00:00.000Z",
+      "summary": "If there's a place in the universe without GPUs, Nvidia is sending them there.",
+      "category": "ai_tools"
+    }
+  ]
+}

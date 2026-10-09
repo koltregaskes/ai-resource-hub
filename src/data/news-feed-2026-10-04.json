@@ -1,0 +1,337 @@
+{
+  "generated": "2026-10-04T17:45:05.470Z",
+  "site": "AI Resource Hub",
+  "article_count": 20,
+  "articles": [
+    {
+      "title": "Aleph Alpha Releases Kolibri: A 78.1B Open-Weight English-German MoE Model With Only 3.46B Active Parameters",
+      "url": "https://www.marktechpost.com/2026/10/04/aleph-alpha-releases-kolibri-a-78-1b-open-weight-english-german-moe-model-with-only-3-46b-active-parameters/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "model_release",
+        "architecture",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "model_release",
+        "architecture",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-04T07:01:04.000Z",
+      "summary": "Aleph Alpha has released Kolibri, a 78.1B-parameter English-German Mixture-of-Experts model that activates only 3.46B parameters per token. It has a 1M-token context and per-request reasoning effort, and its Apache 2.0 FP8 weights run on a single B200 or H200. The post Aleph Alpha Releases Kolibri: A 78.1B Open-Weight English-German MoE Model With Only 3.46B Active Parameters appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Ai2 Releases an Open Model for Faster Scientific Reports With Traceable Sources",
+      "url": "https://superpowerdaily.com/posts/ai2-releases-an-open-model-for-faster-scientific-reports-with-traceable-sources",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "dataset",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "dataset",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-03T18:45:24.000Z",
+      "summary": "AstaBrief’s weights and training data let researchers adapt the report writer locally. Ai2’s claimed speedup comes from simplifying the whole workflow, not just swapping models.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "DeepSeek Harness v0.2 Brings Official Desktop Apps to Its Open-Source Agent Harness",
+      "url": "https://www.marktechpost.com/2026/10/03/deepseek-harness-v0-2-brings-official-desktop-apps-to-its-open-source-agent-harness/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-04T04:49:42.000Z",
+      "summary": "DeepSeek has released official macOS and Windows desktop apps for DeepSeek Harness v0.2, its MIT-licensed agent harness. The preview adds a plugin manager, file and code-change review, and scheduled Automation Tasks. It also supports non-DeepSeek models through OpenAI-compatible endpoints. The post DeepSeek Harness v0.2 Brings Official Desktop Apps to Its Open-Source Agent Harness appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Helion Developers Claim Over 10% Higher AI Serving Throughput on Some H100 Workloads",
+      "url": "https://superpowerdaily.com/posts/pytorch-publishes-helion-backend-results-showing-faster-ai-serving-on-h100",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference",
+        "hardware"
+      ],
+      "matching_tags": [
+        "inference",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-04T02:08:12.000Z",
+      "summary": "The vLLM integration automates workload-specific GPU optimization, while keeping existing libraries for larger inputs. Tuning time and configuration upkeep remain adoption hurdles.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "We're going to need default hard budget caps on pretty much everything",
+      "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "hardware"
+      ],
+      "matching_tags": [
+        "model_release",
+        "hardware"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-04T00:20:16.000Z",
+      "summary": "Here's a product feature which the world is going to need a whole lot more of over the coming months and years: default hard budget caps . I'm talking about the feature of pay-by-usage services and APIs that lets you say \"after $X/month, cut this thing off and return errors\". These need to be hard limits. Soft caps, \"after $X/month, send me a warning email\", will not cut it. Coding agents, and personal agents (coding agents wrapped in a less threatening UI), greatly reduce the friction of spinning up code that can do useful things. Sometimes those things cost money - calls to paid APIs,...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "September sponsors-only newsletter",
+      "url": "https://simonwillison.net/2026/Oct/3/newsletter/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "matching_tags": [
+        "model_release",
+        "pricing_change"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-03T22:00:31.000Z",
+      "summary": "I just sent the September edition of my sponsors-only monthly newsletter . If you are a sponsor (or start a sponsorship now) you can access it here . This month: More Fable class models A pricing war 3D graphics, Blender, and pixel art LLMs come for mathematics So many more accidental cyberattacks The vulnapocalypse comes for Datasette What I'm using right now My software releases this month 2026 in LLMs (so far) Here's a copy of the August newsletter as a preview of what you'll get. Pay $10/month to stay a month ahead of the free copy! Tags: newsletter",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Meta Releases Open-Source Tools for Building Gadgets That Connect to Its AI Agent",
+      "url": "https://superpowerdaily.com/posts/meta-releases-open-source-tools-for-building-gadgets-connected-to-its-ai-agent",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release",
+        "open_source"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-03T18:29:45.000Z",
+      "summary": "Muse Gadgets supplies firmware and a Linux development kit. Meta also says it built 5,000 Home Link devices for subscribers, with shipping expected within weeks.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Mercor Finds AI Beats 12 Licensed Accountants on Simplified Month-End Tasks",
+      "url": "https://superpowerdaily.com/posts/mercor-finds-ai-beats-12-licensed-accountants-on-simplified-month-end-tasks",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "inference"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "inference"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-04T02:38:05.000Z",
+      "summary": "The models’ speed and cost advantage came in structured assignments. The study did not establish how much AI helps accountants—or whether it can handle their wider responsibilities.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Inside NVIDIA’s IsaacTeleop: From Hand and Controller Tracking to Robot Actions with the Graph-Based Retargeting Engine",
+      "url": "https://www.marktechpost.com/2026/10/03/inside-nvidias-isaacteleop-from-hand-and-controller-tracking-to-robot-actions-with-the-graph-based-retargeting-engine/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-04T00:19:38.000Z",
+      "summary": "Learn how NVIDIA IsaacTeleop turns XR hand tracking and motion controller input into robot commands using a pure Python retargeting engine and NumPy. The post Inside NVIDIA’s IsaacTeleop: From Hand and Controller Tracking to Robot Actions with the Graph-Based Retargeting Engine appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Nvidia Raises Its Seven-Year-Old Shield TV Pro’s Price by $100",
+      "url": "https://superpowerdaily.com/posts/nvidia-raises-its-seven-year-old-shield-tv-pro-s-price-by-100",
+      "source": "Superpower Daily",
+      "tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "matching_tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-03T19:12:34.000Z",
+      "summary": "The streaming box remains in production, but its age offers no protection from higher manufacturing costs. Nvidia cites components, including memory—not a hardware upgrade.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AWS Opens Preview of AI Cloud Reviews With Suggested Fixes and Code Changes",
+      "url": "https://superpowerdaily.com/posts/aws-opens-preview-of-ai-cloud-reviews-with-prioritized-fixes-and-code-changes",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "architecture"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-03T18:29:45.000Z",
+      "summary": "Well-Architected Agent pairs architecture findings with implementation steps. Access requires an AWS Support plan, and AWS warns that its AI recommendations can be wrong or incomplete.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nvidia Raises Shield TV Pro Price to $299 as AI-Driven Memory Costs Ripple Through Hardware",
+      "url": "https://superintelligencenews.com/companies/shield-tv-pro-price-hike-299-ai-memory-costs/",
+      "source": "Superintelligence Newsletter",
+      "tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "matching_tags": [
+        "pricing_change",
+        "hardware"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-03T18:23:55.000Z",
+      "summary": "Nvidia raises Shield TV Pro to $299 as AI-driven memory costs squeeze hardware prices across the tech industry. The post Nvidia Raises Shield TV Pro Price to $299 as AI-Driven Memory Costs Ripple Through Hardware appeared first on Superintelligence News - Artificial Intelligence News .",
+      "category": "ai_tools"
+    },
+    {
+      "title": "The Agent Said It Was Done. The Database Disagreed.",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-03T22:56:48.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "Microsoft Brings Its Database-Verified AI Agent Benchmark to Hugging Face",
+      "url": "https://superpowerdaily.com/posts/microsoft-brings-its-database-verified-ai-agent-benchmark-to-hugging-face",
+      "source": "Superpower Daily",
+      "tags": [
+        "benchmark"
+      ],
+      "matching_tags": [
+        "benchmark"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-03T23:12:06.000Z",
+      "summary": "The 507-task benchmark checks the records agents leave behind. Its latest results separate finding a solution from repeating it reliably.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "PewDiePie introduces Ajax, a home-PC AI assistant still awaiting a public download",
+      "url": "https://superpowerdaily.com/posts/pewdiepie-introduces-ajax-a-home-pc-ai-assistant-still-awaiting-a-public-download",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-03T18:57:15.000Z",
+      "summary": "The Qwen-based assistant is intended for his self-hosted Odysseus workspace. Its development also brought an attributed dispute over using OpenAI outputs as training material.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Prime Intellect Launches AI Model Serving Built for Long-Running Agents",
+      "url": "https://superpowerdaily.com/posts/prime-intellect-launches-ai-model-serving-built-for-long-running-agents",
+      "source": "Superpower Daily",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-03T18:51:06.000Z",
+      "summary": "Prime Inference brings an internally used platform to public customers. Its engineering targets crowded, long-context conversations, but the published speed gains come from company-run GLM-5.3 tests.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Jeffrey Ladish Calls for Expert Government Oversight of Autonomous AI Agents",
+      "url": "https://superpowerdaily.com/posts/jeffrey-ladish-calls-for-expert-government-oversight-of-autonomous-ai-agents",
+      "source": "Superpower Daily",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-03T18:37:22.000Z",
+      "summary": "His new interview draws on the Hugging Face intrusion. First-party accounts confirm a containment failure, but distinguish reduced-safeguard research tests from deployed products.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "pnpm 11.28.4",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v11.28.4",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-03T20:48:54.000Z",
+      "summary": "pnpm 11.28.4 fixes two ways credentials could leak, makes pnpm install --frozen-lockfile accept several lockfiles it rejected, warns when an optional dependency cannot be fetched, and stops pnpm self-update from installing a second pnpm next to a Homebrew one. Patch Changes pnpm login no longer forwards credentials in its request body to another origin during redirects. The error for a tarball that fails its integrity check no longer prints credentials, query strings, or fragments from the tarball URL. Installing packages pnpm install --frozen-lockfile now succeeds in a project with no...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Microsoft Releases WSL Containers With Windows Security Controls—but Compose Must Wait",
+      "url": "https://superpowerdaily.com/posts/microsoft-releases-wsl-containers-with-windows-security-controls-but-compose-must-wait",
+      "source": "Superpower Daily",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.64,
+      "date": "2026-10-04T01:45:59.000Z",
+      "summary": "The release brings Linux container activity into Windows management tools and changes how sessions, files and networking work. Support for existing Compose files remains a roadmap goal.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Google Research Moves Federated Learning Into TEEs: Gboard Now Trains With Externally Verifiable Differential Privacy",
+      "url": "https://www.marktechpost.com/2026/10/04/google-research-moves-federated-learning-into-tees-gboard-now-trains-with-externally-verifiable-differential-privacy/",
+      "source": "MarkTechPost",
+      "tags": [
+        "research_paper"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-10-04T07:29:59.000Z",
+      "summary": "Google Research has unveiled a federated learning system that moves gradient computation from phones into attested server-side TEEs. Access policies are published to Sigstore's Rekor log and the binaries are reproducibly buildable, so central differential privacy can be checked externally. Gboard already uses it for English and Japanese next-word prediction. The post Google Research Moves Federated Learning Into TEEs: Gboard Now Trains With Externally Verifiable Differential Privacy appeared first on MarkTechPost .",
+      "category": "ai_research"
+    }
+  ]
+}

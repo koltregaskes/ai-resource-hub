@@ -1,9 +1,162 @@
 {
-  "generated": "2026-05-25T14:37:35.757Z",
+  "generated": "2026-08-26T03:02:01.218Z",
   "generatedBy": "Studio news backfill",
   "site": "AI Resource Hub",
   "date": "2026-02-04",
-  "article_count": 0,
-  "archived_story_count": 0,
-  "articles": []
+  "article_count": 10,
+  "archived_story_count": 166,
+  "articles": [
+    {
+      "title": "Voxtral transcribes at the speed of sound.",
+      "url": "https://mistral.ai/news/voxtral-transcribe-2/",
+      "source": "Mistral AI Blog",
+      "tags": [
+        "model_release",
+        "inference"
+      ],
+      "matching_tags": [
+        "model_release",
+        "inference"
+      ],
+      "importance": 1,
+      "date": "2026-02-04T16:00:00.000Z",
+      "summary": "",
+      "category": "ai_models"
+    },
+    {
+      "title": "GitHub Releases · Goose: v1.23.0",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.23.0",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-04T17:52:25.000Z",
+      "summary": "## :sparkles: Features - Ask AI Discord bot [#6842](https://github.com/block/goose/pull/6842) - WebSocket transport for goose-acp [#6895](https://github.com/block/goose/pull/6895) - Streamable HTTP transport for ACP + goose-acp usage [#6741](https://github.com/block/goose/pull/6741) - Laminar for Observability [#6514](https://github.com/block/goose/pull/6514) - Platform extension migrator + code mode rename [#6611](https://github.com/block/goose/pull/6611) - CLI flag to skip loading profile extensions [#6780](https://github.com/block/goose/pull/6780) - Thinking status hook [#6815](https://github.com/block/goose/pull/6815) - Hourly skill fetching [#6814](https://github.com/block/goose/pull/6814) ## :bug: Bug Fixes - Apps now work in built copies of goose [#6901](https://github.com/block/goose/pull/6901) - Handle thoughtSignature differently for Gemini 2.5 vs 3 [#6890](https://github.com/block/goose/pull/6890) - Preserve working directory when creating new chat [#6789](https://github.com",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Crush: v0.39.1",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.39.1",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-04T12:39:58.000Z",
+      "summary": "# A mini UI patch Oh hi. This is a mini patch release to address fixes various to UI bugs. 🍔 xoxo, Charm ⚡️ ## Changelog ### Fixed * f53402d57eac0590d009611cf892c8957eab15e7: fix(ui): context percentage updates (#2115) (@aymanbagabas) * 112fea822b66cbac3d295a3a2f86d8ac9e534060: fix(ui): cursor mispositioned when pasting large blocks of text in textarea (#2113) (@aymanbagabas) * 3bda767c6700db1ead64af01471b3e7b868a569f: fix(ui): ensure we anchor the chat view to the bottom when toggling (#2117) (@aymanbagabas) * 15a729cbddc6aa087d4a8189829253924d5019f2: fix(ui): only scroll to selected item if item collapsed (@aymanbagabas) * fd35a87b4c1621b3b1338fd95930756f7990a4eb: fix(ui): padding in the view (#2107) (@caarlos0) --- Verifying the artifacts First, download the [`checksums.txt` file](https://github.com/charmbracelet/crush/releases/download/v0.39.1/checksums.txt) and the [`checksums.txt.sigstore.json` file](https://github.com/charmbracelet/crush/releases/download/v0.39.1/checksums.txt.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Apollo Server v4: @apollo/server@5.4.0",
+      "url": "https://github.com/apollographql/apollo-server/releases/tag/%40apollo/server%405.4.0",
+      "source": "GitHub Releases · Apollo Server v4",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-04T10:58:26.000Z",
+      "summary": "### Minor Changes - [`d25a5bd`](https://github.com/apollographql/apollo-server/commit/d25a5bdc377826ad424fcf7f8d1d062055911643) Thanks [@phryneas](https://github.com/phryneas)! - ⚠️ SECURITY `@apollo/server/standalone`: The default configuration of `startStandaloneServer` was vulnerable to denial of service (DoS) attacks through specially crafted request bodies with exotic character set encodings. In accordance with [RFC 7159](https://datatracker.ietf.org/doc/html/rfc7159#section-8.1), we now only accept request bodies encoded in UTF-8, UTF-16 (LE or BE), or UTF-32 (LE or BE). Any other character set will be rejected with a `415 Unsupported Media Type` error. Note that the more recent JSON RFC, [RFC 8259](https://datatracker.ietf.org/doc/html/rfc8259#section-8.1), is more strict and will only allow UTF-8. Since this is a minor release, we have chosen to remain compatible with the more permissive RFC 7159 for now. In a future major release, we may tighten this restriction further to onl",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Apollo Server v4: @apollo/server-integration-testsuite@5.4.0",
+      "url": "https://github.com/apollographql/apollo-server/releases/tag/%40apollo/server-integration-testsuite%405.4.0",
+      "source": "GitHub Releases · Apollo Server v4",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-04T10:58:23.000Z",
+      "summary": "### Patch Changes - Updated dependencies \\[[`d25a5bd`](https://github.com/apollographql/apollo-server/commit/d25a5bdc377826ad424fcf7f8d1d062055911643)]: - @apollo/server@5.4.0",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Apollo Server v4: @apollo/server@4.13.0",
+      "url": "https://github.com/apollographql/apollo-server/releases/tag/%40apollo/server%404.13.0",
+      "source": "GitHub Releases · Apollo Server v4",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-04T10:56:52.000Z",
+      "summary": "### Minor Changes - [#8180](https://github.com/apollographql/apollo-server/pull/8180) [`e9d49d1`](https://github.com/apollographql/apollo-server/commit/e9d49d163a86b8a33be56ed27c494b9acd5400a4) Thanks [@github-actions](https://github.com/apps/github-actions)! - ⚠️ SECURITY `@apollo/server/standalone`: The default configuration of `startStandaloneServer` was vulnerable to denial of service (DoS) attacks through specially crafted request bodies with exotic character set encodings. In accordance with [RFC 7159](https://datatracker.ietf.org/doc/html/rfc7159#section-8.1), we now only accept request bodies encoded in UTF-8, UTF-16 (LE or BE), or UTF-32 (LE or BE). Any other character set will be rejected with a `415 Unsupported Media Type` error. Additionally, upstream libraries used by this version of Apollo Server may not support all of these encodings, so some requests may still fail even if they pass this check. **If you were not using `startStandaloneServer`, you were not affected by th",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · Apollo Server v4: @apollo/server-integration-testsuite@4.13.0",
+      "url": "https://github.com/apollographql/apollo-server/releases/tag/%40apollo/server-integration-testsuite%404.13.0",
+      "source": "GitHub Releases · Apollo Server v4",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-04T10:56:49.000Z",
+      "summary": "### Patch Changes - Updated dependencies \\[[`e9d49d1`](https://github.com/apollographql/apollo-server/commit/e9d49d163a86b8a33be56ed27c494b9acd5400a4)]: - @apollo/server@4.13.0",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Releases · ComfyUI: v0.12.2",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.12.2",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 1,
+      "date": "2026-02-04T06:09:31.000Z",
+      "summary": "## What's Changed * Support the 4B ace step 1.5 lm model. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12257 * Dynamic_vram: Remove Aimdo exemption for empty_cache (fixes VRAM leak) by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/12260 * Fix crash with ace step 1.5 by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/12264 **Full Changelog**: https://github.com/Comfy-Org/ComfyUI/compare/v0.12.1...v0.12.2",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AnnouncementsFeb 4, 2026Claude is a space to thinkWe’ve made a choice: Claude will remain ad-free. We explain why advertising incentives are incompatible with a genuinely helpful AI assistant, and how we plan to expand access without compromising user trust.",
+      "url": "https://www.anthropic.com/news/claude-is-a-space-to-think",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.78,
+      "date": "2026-02-04T17:29:42.000Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Rime Arcana V3 Turbo and Rime Arcana V3 now available on Together AI",
+      "url": "https://www.together.ai/blog/rime-arcana-v3-turbo-and-rime-arcana-v3-now-available-on-together-ai",
+      "source": "Together AI Blog",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.62,
+      "date": "2026-02-04T00:00:00.000Z",
+      "summary": "",
+      "category": "ai_tools"
+    }
+  ]
 }
