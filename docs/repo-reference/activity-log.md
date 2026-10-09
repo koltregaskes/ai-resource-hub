@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 09 Oct 2026, 01:56 UTC
+Generated: 09 Oct 2026, 02:06 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 09 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,016 open roles across 10 tracked companies. | `/jobs/` |
-| 09 Oct 2026, 01:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 09 Oct 2026, 01:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 09 Oct 2026, 01:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 09 Oct 2026, 01:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 09 Oct 2026, 01:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 09 Oct 2026, 02:06 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 09 Oct 2026, 02:06 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 09 Oct 2026, 02:06 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 09 Oct 2026, 02:06 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 09 Oct 2026, 02:06 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 08 Oct 2026, 12:00 UTC | digest | Anthropic launches free AI security scans for open-source projects | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner) |
 | 08 Oct 2026, 12:00 UTC | digest | California is trying to shut down robot vs. human cage matches | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1008401/california-shut-down-rek-fighting-robot-company-human) |
 | 08 Oct 2026, 12:00 UTC | digest | Pretend you&#8217;re sitting at Elizabeth Holmes&#8217; desk on this weirdly detailed website | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/08/pretend-youre-sitting-at-elizabeth-holmes-desk-on-this-weirdly-detailed-website/) |
