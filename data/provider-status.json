@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T21:17:57.796Z",
+  "generatedAt": "2026-10-09T21:55:53.306Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T21:17:57.789Z",
+      "lastCheckedAt": "2026-10-09T21:55:53.301Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,10 +100,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T21:17:56.826Z",
+      "lastCheckedAt": "2026-10-09T21:55:51.615Z",
       "overallStatus": "partial_outage",
       "overallLabel": "Partial System Outage",
-      "summary": "2 active incidents across 25 tracked components.",
+      "summary": "3 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -133,6 +133,16 @@
       ],
       "activeIncidents": [
         {
+          "id": "01M4HA7BCCXVHTR5DCYMSBQF2H",
+          "title": "Workspace admins may be unable to manage plugins",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-10-09T21:48:34.000Z",
+          "updatedAt": "2026-10-09T21:48:34.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating an issue affecting some ChatGPT workspace administrators’ ability to view and manage plugin availability and settings. Some users may also see plugins as unav..."
+        },
+        {
           "id": "01M4H7FKXDA425TDNP2CRGEYA3",
           "title": "Some ChatGPT content may be unavailable on Android",
           "status": "identified",
@@ -154,6 +164,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01M4HA7BCCXVHTR5DCYMSBQF2H",
+          "title": "Workspace admins may be unable to manage plugins",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-10-09T21:48:34.000Z",
+          "updatedAt": "2026-10-09T21:48:34.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating an issue affecting some ChatGPT workspace administrators’ ability to view and manage plugin availability and settings. Some users may also see plugins as unav..."
+        },
         {
           "id": "01M4H7FKXDA425TDNP2CRGEYA3",
           "title": "Some ChatGPT content may be unavailable on Android",
@@ -183,16 +203,6 @@
           "updatedAt": "2026-10-08T04:51:39.000Z",
           "resolvedAt": "2026-10-08T04:51:39.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M4CBXZ62A9SVH8D74KVYQC8M",
-          "title": "Elevated errors with GPT-5.6 Instant in FedRAMP workspaces",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-07T23:42:12.000Z",
-          "updatedAt": "2026-10-08T00:03:19.000Z",
-          "resolvedAt": "2026-10-08T00:03:18.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -207,7 +217,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T21:17:56.843Z",
+      "lastCheckedAt": "2026-10-09T21:55:51.691Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -309,7 +319,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T21:17:57.530Z",
+      "lastCheckedAt": "2026-10-09T21:55:52.624Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -329,7 +339,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T21:17:56.916Z",
+      "lastCheckedAt": "2026-10-09T21:55:51.950Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -361,7 +371,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T21:17:57.775Z",
+      "lastCheckedAt": "2026-10-09T21:55:52.908Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
