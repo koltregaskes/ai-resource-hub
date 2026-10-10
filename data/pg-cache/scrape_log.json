@@ -5,8 +5,8 @@
     "status": "success",
     "models_updated": 1018,
     "error_message": null,
-    "started_at": "2026-10-10 06:55:41",
-    "finished_at": "2026-10-10 06:55:41"
+    "started_at": "2026-10-10 07:01:44",
+    "finished_at": "2026-10-10 07:01:44"
   },
   {
     "id": 10,
@@ -14,8 +14,8 @@
     "status": "error",
     "models_updated": 74,
     "error_message": "VentureBeat: HTTP 429: Too Many Requests",
-    "started_at": "2026-10-10 06:55:38",
-    "finished_at": "2026-10-10 06:55:38"
+    "started_at": "2026-10-10 07:01:40",
+    "finished_at": "2026-10-10 07:01:40"
   },
   {
     "id": 9,
@@ -23,8 +23,8 @@
     "status": "success",
     "models_updated": 129,
     "error_message": null,
-    "started_at": "2026-10-10 06:55:27",
-    "finished_at": "2026-10-10 06:55:27"
+    "started_at": "2026-10-10 07:01:28",
+    "finished_at": "2026-10-10 07:01:28"
   },
   {
     "id": 7,
@@ -32,8 +32,8 @@
     "status": "fallback",
     "models_updated": 16,
     "error_message": null,
-    "started_at": "2026-10-10 06:55:26",
-    "finished_at": "2026-10-10 06:55:26"
+    "started_at": "2026-10-10 07:01:27",
+    "finished_at": "2026-10-10 07:01:27"
   },
   {
     "id": 8,
@@ -41,8 +41,8 @@
     "status": "computed",
     "models_updated": 55,
     "error_message": null,
-    "started_at": "2026-10-10 06:55:26",
-    "finished_at": "2026-10-10 06:55:26"
+    "started_at": "2026-10-10 07:01:27",
+    "finished_at": "2026-10-10 07:01:27"
   },
   {
     "id": 6,
@@ -50,35 +50,17 @@
     "status": "success",
     "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-10-10 06:55:25",
-    "finished_at": "2026-10-10 06:55:25"
-  },
-  {
-    "id": 4,
-    "scraper": "pricing:validator",
-    "status": "success",
-    "models_updated": 0,
-    "error_message": null,
-    "started_at": "2026-10-10 06:55:24",
-    "finished_at": "2026-10-10 06:55:24"
+    "started_at": "2026-10-10 07:01:26",
+    "finished_at": "2026-10-10 07:01:26"
   },
   {
     "id": 5,
     "scraper": "benchmarks:chatbot-arena",
     "status": "fallback",
     "models_updated": 0,
-    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-10-10T06:55:24.791Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
-    "started_at": "2026-10-10 06:55:24",
-    "finished_at": "2026-10-10 06:55:24"
-  },
-  {
-    "id": 2,
-    "scraper": "pricing:openrouter",
-    "status": "success",
-    "models_updated": 335,
-    "error_message": null,
-    "started_at": "2026-10-10 06:55:23",
-    "finished_at": "2026-10-10 06:55:23"
+    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-10-10T07:01:25.620Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
+    "started_at": "2026-10-10 07:01:25",
+    "finished_at": "2026-10-10 07:01:25"
   },
   {
     "id": 3,
@@ -86,8 +68,26 @@
     "status": "success",
     "models_updated": 21,
     "error_message": null,
-    "started_at": "2026-10-10 06:55:23",
-    "finished_at": "2026-10-10 06:55:23"
+    "started_at": "2026-10-10 07:01:24",
+    "finished_at": "2026-10-10 07:01:24"
+  },
+  {
+    "id": 4,
+    "scraper": "pricing:validator",
+    "status": "success",
+    "models_updated": 0,
+    "error_message": null,
+    "started_at": "2026-10-10 07:01:24",
+    "finished_at": "2026-10-10 07:01:24"
+  },
+  {
+    "id": 2,
+    "scraper": "pricing:openrouter",
+    "status": "success",
+    "models_updated": 335,
+    "error_message": null,
+    "started_at": "2026-10-10 07:01:23",
+    "finished_at": "2026-10-10 07:01:23"
   },
   {
     "id": 1,
@@ -95,7 +95,7 @@
     "status": "success",
     "models_updated": 52,
     "error_message": null,
-    "started_at": "2026-10-10 06:55:22",
-    "finished_at": "2026-10-10 06:55:22"
+    "started_at": "2026-10-10 07:01:21",
+    "finished_at": "2026-10-10 07:01:21"
   }
 ]
