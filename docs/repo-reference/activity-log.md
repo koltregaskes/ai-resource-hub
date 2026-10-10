@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 10 Oct 2026, 16:55 UTC
+Generated: 10 Oct 2026, 17:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 10 Oct 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 10 Oct 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 10 Oct 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 10 Oct 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 10 Oct 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 10 Oct 2026, 17:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 10 Oct 2026, 17:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 10 Oct 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 10 Oct 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 10 Oct 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 10 Oct 2026, 12:00 UTC | digest | 3 days to TechCrunch Disrupt 2026: Meet the startups before they hit mainstream | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/10/3-days-to-disrupt-2026-meet-the-startups-before-they-hit-mainstream/) |
 | 10 Oct 2026, 12:00 UTC | digest | Anthropic is cutting off its internal evaluations from the internet | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1009286/anthropic-is-cutting-off-its-internal-evaluations-from-the-internet) |
 | 10 Oct 2026, 12:00 UTC | digest | Here are the top AI agents that can live in your text messages | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/10/all-the-ai-agents-that-can-live-in-your-text-messages/) |
