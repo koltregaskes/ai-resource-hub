@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 11 Oct 2026, 00:57 UTC
+Generated: 11 Oct 2026, 01:50 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 11 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,017 open roles across 10 tracked companies. | `/jobs/` |
-| 11 Oct 2026, 00:56 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 11 Oct 2026, 00:56 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 11 Oct 2026, 00:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 11 Oct 2026, 00:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 11 Oct 2026, 00:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 11 Oct 2026, 01:49 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 11 Oct 2026, 01:49 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 11 Oct 2026, 01:49 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 11 Oct 2026, 01:49 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 11 Oct 2026, 01:49 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 10 Oct 2026, 12:00 UTC | digest | Apple discloses deal to hire team and license tech from personalized podcast startup Huxe | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/) |
 | 10 Oct 2026, 12:00 UTC | digest | Microsoft’s Satya Nadella says AI models need an ‘emergency brake’ | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/) |
 | 10 Oct 2026, 12:00 UTC | digest | Published the 2026-10-10 daily digest | 9 stories captured from 2 sources. | `/news/` |
