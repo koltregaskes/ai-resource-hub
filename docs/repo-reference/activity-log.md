@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 11 Oct 2026, 21:56 UTC
+Generated: 11 Oct 2026, 22:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 11 Oct 2026, 21:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 11 Oct 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 11 Oct 2026, 21:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 11 Oct 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 11 Oct 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 11 Oct 2026, 22:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 11 Oct 2026, 22:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 11 Oct 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 11 Oct 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 11 Oct 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 11 Oct 2026, 12:00 UTC | digest | 48 hours to TechCrunch Disrupt 2026 — hear directly from the people building what’s next | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/11/48-hours-to-techcrunch-disrupt-2026-hear-directly-from-the-people-building-whats-next/) |
 | 11 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,017 open roles across 10 tracked companies. | `/jobs/` |
 | 11 Oct 2026, 12:00 UTC | digest | Published the 2026-10-11 daily digest | 6 stories captured from 2 sources. | `/news/` |
