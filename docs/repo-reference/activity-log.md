@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 11 Oct 2026, 14:56 UTC
+Generated: 11 Oct 2026, 15:37 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 11 Oct 2026, 14:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 11 Oct 2026, 14:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 11 Oct 2026, 14:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 11 Oct 2026, 14:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 11 Oct 2026, 14:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 11 Oct 2026, 15:36 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 11 Oct 2026, 15:36 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 11 Oct 2026, 15:36 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 11 Oct 2026, 15:36 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 11 Oct 2026, 15:36 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 11 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,017 open roles across 10 tracked companies. | `/jobs/` |
 | 11 Oct 2026, 12:00 UTC | digest | Learning to use local AI is exciting, overwhelming, and frustrating | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress) |
 | 11 Oct 2026, 12:00 UTC | digest | Published the 2026-10-11 daily digest | 2 stories captured from 2 sources. | `/news/` |
