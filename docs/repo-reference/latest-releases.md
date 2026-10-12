@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 12 Oct 2026, 17:50 UTC
+Generated: 12 Oct 2026, 18:56 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,7 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 12 Oct 2026 | Muse Wonder | Meta | tracking | high | watch only | 0 | 0 | n/a |
+| 12 Oct 2026 | Muse Wonder | Meta | tracking | high | watch only | 0 | 1 | n/a |
 | 6 Oct 2026 | Mistral Large 4 | Mistral | tracking | high | watch only | 0 | 0 | n/a |
 | 6 Oct 2026 | Nano Banana 2.1 | Google | tracking | high | watch only | 0 | 0 | n/a |
 | 23 Sept 2026 | GLM 5.3 Prime | Zhipu AI | tracking | high | watch only | 0 | 0 | n/a |
