@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-12T22:56:35.012Z",
+  "generatedAt": "2026-10-12T23:56:29.335Z",
   "overview": {
-    "generatedForLabel": "Monday, 12 October 2026",
+    "generatedForLabel": "Tuesday, 13 October 2026",
     "totalMilestones": 37,
     "verifiedMilestones": 35,
     "trackingMilestones": 2,
@@ -9,14 +9,13 @@
     "exactDateMilestones": 27,
     "homepageEligibleMilestones": 34,
     "nextMilestone": {
-      "id": "alexnet-breakthrough",
-      "title": "AlexNet wins ILSVRC 2012",
-      "nextOccurrenceLabel": "13 Oct 2026",
-      "daysUntil": 1
+      "id": "grok-announced",
+      "title": "Grok announced",
+      "nextOccurrenceLabel": "3 Nov 2026",
+      "daysUntil": 21
     }
   },
-  "todayMilestones": [],
-  "upcomingMilestones": [
+  "todayMilestones": [
     {
       "id": "alexnet-breakthrough",
       "slug": "alexnet-breakthrough",
@@ -61,11 +60,13 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1350129600000,
-      "daysUntil": 1,
+      "daysUntil": 0,
       "anniversaryYears": 14,
       "nextOccurrenceIso": "2026-10-13T12:00:00.000Z",
       "nextOccurrenceLabel": "13 Oct 2026"
-    },
+    }
+  ],
+  "upcomingMilestones": [
     {
       "id": "grok-announced",
       "slug": "grok-announced",
@@ -112,7 +113,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1699012800000,
-      "daysUntil": 22,
+      "daysUntil": 21,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-11-03T12:00:00.000Z",
       "nextOccurrenceLabel": "3 Nov 2026"
@@ -162,7 +163,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1606737600000,
-      "daysUntil": 49,
+      "daysUntil": 48,
       "anniversaryYears": 6,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
@@ -213,7 +214,7 @@
       "trackingDateLabel": null,
       "href": "/timeline/",
       "sortKey": 1669809600000,
-      "daysUntil": 49,
+      "daysUntil": 48,
       "anniversaryYears": 4,
       "nextOccurrenceIso": "2026-11-30T12:00:00.000Z",
       "nextOccurrenceLabel": "30 Nov 2026"
@@ -264,7 +265,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1701864000000,
-      "daysUntil": 55,
+      "daysUntil": 54,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-12-06T12:00:00.000Z",
       "nextOccurrenceLabel": "6 Dec 2026"
@@ -315,7 +316,7 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1702296000000,
-      "daysUntil": 60,
+      "daysUntil": 59,
       "anniversaryYears": 3,
       "nextOccurrenceIso": "2026-12-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Dec 2026"
@@ -365,7 +366,7 @@
       "trackingDateLabel": null,
       "href": "/labs/",
       "sortKey": 1449835200000,
-      "daysUntil": 60,
+      "daysUntil": 59,
       "anniversaryYears": 11,
       "nextOccurrenceIso": "2026-12-11T12:00:00.000Z",
       "nextOccurrenceLabel": "11 Dec 2026"
@@ -416,10 +417,61 @@
       "trackingDateLabel": null,
       "href": "/new/",
       "sortKey": 1735214400000,
-      "daysUntil": 75,
+      "daysUntil": 74,
       "anniversaryYears": 2,
       "nextOccurrenceIso": "2026-12-26T12:00:00.000Z",
       "nextOccurrenceLabel": "26 Dec 2026"
+    },
+    {
+      "id": "deepseek-r1-launch",
+      "slug": "deepseek-r1-launch",
+      "title": "DeepSeek-R1 released",
+      "summary": "DeepSeek-R1 pushed low-cost reasoning into the mainstream model conversation and accelerated global interest in Chinese frontier labs.",
+      "year": 2025,
+      "month": 1,
+      "day": 20,
+      "datePrecision": "day",
+      "category": "model_release",
+      "kind": "launch",
+      "significance": "major",
+      "providerId": "deepseek",
+      "modelId": "deepseek-r1",
+      "tags": [
+        "deepseek",
+        "reasoning",
+        "open-weights"
+      ],
+      "status": "verified",
+      "confidence": "high",
+      "homepageEligible": true,
+      "calendarEligible": true,
+      "exactAnniversaryEligible": true,
+      "sources": [
+        {
+          "label": "DeepSeek API docs",
+          "url": "https://api-docs.deepseek.com/news/news250120",
+          "sourceType": "official_docs",
+          "role": "canonical"
+        }
+      ],
+      "canonicalSource": {
+        "label": "DeepSeek API docs",
+        "url": "https://api-docs.deepseek.com/news/news250120",
+        "sourceType": "official_docs",
+        "role": "canonical"
+      },
+      "categoryLabel": "Model release",
+      "kindLabel": "Launch",
+      "significanceLabel": "Major",
+      "statusLabel": "Verified",
+      "dateLabel": "20 Jan 2025",
+      "trackingDateLabel": null,
+      "href": "/new/",
+      "sortKey": 1737374400000,
+      "daysUntil": 99,
+      "anniversaryYears": 2,
+      "nextOccurrenceIso": "2027-01-20T12:00:00.000Z",
+      "nextOccurrenceLabel": "20 Jan 2027"
     }
   ],
   "latestLaunches": [
