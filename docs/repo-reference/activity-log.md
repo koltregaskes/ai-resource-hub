@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 13 Oct 2026, 17:56 UTC
+Generated: 13 Oct 2026, 18:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 13 Oct 2026, 17:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 13 Oct 2026, 17:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 13 Oct 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 13 Oct 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 13 Oct 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 13 Oct 2026, 12:00 UTC | digest | Facebook will let you customize your feed algorithm using AI | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1010344/meta-facebook-your-algorithm-ai) |
-| 13 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,013 open roles across 10 tracked companies. | `/jobs/` |
+| 13 Oct 2026, 18:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 13 Oct 2026, 18:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 13 Oct 2026, 18:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 13 Oct 2026, 18:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 13 Oct 2026, 18:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 13 Oct 2026, 12:00 UTC | digest | Facebook is giving users more control over their algorithm | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/facebook-is-giving-users-more-control-over-their-algorithm/) |
+| 13 Oct 2026, 12:00 UTC | digest | Flox Intelligence is building AI to keep wildlife away from trains, airports, and roads | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/flox-intelligence-is-building-ai-to-keep-wildlife-away-from-trains-airports-and-roads/) |
+| 13 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,015 open roles across 10 tracked companies. | `/jobs/` |
 | 13 Oct 2026, 12:00 UTC | digest | Laplace Intelligence red-teams robots and self-driving cars before they hit the real world | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/) |
-| 13 Oct 2026, 12:00 UTC | digest | Pluto Security raises $42M as AI gives enterprise security teams a new headache | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache/) |
-| 13 Oct 2026, 12:00 UTC | digest | Published the 2026-10-13 daily digest | 18 stories captured from 3 sources. | `/news/` |
+| 13 Oct 2026, 12:00 UTC | digest | Published the 2026-10-13 daily digest | 20 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
