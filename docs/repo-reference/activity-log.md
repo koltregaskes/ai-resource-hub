@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 13 Oct 2026, 20:56 UTC
+Generated: 13 Oct 2026, 21:12 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 13 Oct 2026, 20:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 13 Oct 2026, 20:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 13 Oct 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 13 Oct 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 13 Oct 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 13 Oct 2026, 21:12 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 13 Oct 2026, 21:12 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 13 Oct 2026, 21:12 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 13 Oct 2026, 21:12 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 13 Oct 2026, 21:12 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 13 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,015 open roles across 10 tracked companies. | `/jobs/` |
 | 13 Oct 2026, 12:00 UTC | digest | Judge orders OpenAI to turn over hiring records in Apple trade secrets case | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case/) |
 | 13 Oct 2026, 12:00 UTC | digest | OpenAI employee arrested for allegedly planting a bug in a conference room | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1010642/openai-employee-arrested-recording-device) |
