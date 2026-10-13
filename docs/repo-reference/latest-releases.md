@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 13 Oct 2026, 15:55 UTC
+Generated: 13 Oct 2026, 16:56 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,6 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 13 Oct 2026 | Gemini 4 Argon | Google | tracking | high | watch only | 0 | 2 | n/a |
 | 12 Oct 2026 | Muse Wonder | Meta | tracking | high | watch only | 0 | 1 | n/a |
 | 6 Oct 2026 | Mistral Large 4 | Mistral | tracking | high | watch only | 0 | 0 | n/a |
 | 6 Oct 2026 | Nano Banana 2.1 | Google | tracking | high | watch only | 0 | 0 | n/a |
@@ -27,6 +28,5 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 14 Aug 2026 | Qwen3.8 27B | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | DeepSeek V4 Pro 0813 | DeepSeek | tracking | backfill | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | Grok 4.6 | xAI | tracking | backfill | watch only | 0 | 0 | n/a |
-| 12 Aug 2026 | Qwen3.8 2.4T A95B | Alibaba | tracking | backfill | watch only | 0 | 0 | n/a |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)

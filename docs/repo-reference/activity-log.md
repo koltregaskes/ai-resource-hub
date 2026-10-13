@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 13 Oct 2026, 15:55 UTC
+Generated: 13 Oct 2026, 16:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 13 Oct 2026, 15:54 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 13 Oct 2026, 15:54 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 13 Oct 2026, 15:54 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 13 Oct 2026, 15:54 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 13 Oct 2026, 15:54 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 13 Oct 2026, 12:00 UTC | digest | DLSS 5 gets toned down for its Hogwarts Legacy debut next month | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/news/1009904/dlss-5-hogwarts-legacy-changes-improvements) |
-| 13 Oct 2026, 12:00 UTC | digest | Epic shifts to &#8216;AI-accelerated development&#8217; for upcoming Disney game | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/games/1010097/epic-games-disney-project-ai-coding-art) |
-| 13 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,016 open roles across 10 tracked companies. | `/jobs/` |
-| 13 Oct 2026, 12:00 UTC | digest | Published the 2026-10-13 daily digest | 9 stories captured from 2 sources. | `/news/` |
-| 13 Oct 2026, 12:00 UTC | digest | TechCrunch Disrupt 2026: Day 1 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/techcrunch-disrupt-2026-day-1/) |
+| 13 Oct 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 13 Oct 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 13 Oct 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 13 Oct 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 13 Oct 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 13 Oct 2026, 12:00 UTC | digest | Actress Mia Goth says it’s ‘incomprehensible’ that Instagram allowed an AI image of her to spread | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1010277/mia-goth-instagram-ai-shirt-deepfake-divorce) |
+| 13 Oct 2026, 12:00 UTC | digest | Google finally releases Gemini 4 Argon | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1009862/google-releases-gemini-4-argon) |
+| 13 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,015 open roles across 10 tracked companies. | `/jobs/` |
+| 13 Oct 2026, 12:00 UTC | digest | Published the 2026-10-13 daily digest | 13 stories captured from 3 sources. | `/news/` |
+| 13 Oct 2026, 12:00 UTC | digest | Satlyt, founded by a former Google and SpaceX product manager, raises $8M to run AI on satellites | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/satlyt-founded-by-a-former-google-and-spacex-product-manager-raises-8m-to-run-ai-on-satellites/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
