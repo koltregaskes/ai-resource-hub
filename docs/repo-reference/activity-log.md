@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 13 Oct 2026, 19:56 UTC
+Generated: 13 Oct 2026, 20:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 13 Oct 2026, 19:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 13 Oct 2026, 19:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 13 Oct 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 13 Oct 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 13 Oct 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 13 Oct 2026, 12:00 UTC | digest | Flox Intelligence is building AI to keep wildlife away from trains, airports, and roads | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/flox-intelligence-is-building-ai-to-keep-wildlife-away-from-trains-airports-and-roads/) |
-| 13 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,014 open roles across 10 tracked companies. | `/jobs/` |
+| 13 Oct 2026, 20:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 13 Oct 2026, 20:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 13 Oct 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 13 Oct 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 13 Oct 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 13 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,015 open roles across 10 tracked companies. | `/jobs/` |
+| 13 Oct 2026, 12:00 UTC | digest | Judge orders OpenAI to turn over hiring records in Apple trade secrets case | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case/) |
+| 13 Oct 2026, 12:00 UTC | digest | OpenAI employee arrested for allegedly planting a bug in a conference room | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1010642/openai-employee-arrested-recording-device) |
 | 13 Oct 2026, 12:00 UTC | digest | Published the 2026-10-13 daily digest | 20 stories captured from 3 sources. | `/news/` |
 | 13 Oct 2026, 12:00 UTC | digest | Shopify opens its catalog up to more AI agents | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/news/1010365/shopify-opens-its-catalog-up-to-more-ai-agents) |
-| 13 Oct 2026, 12:00 UTC | digest | Xbox is officially embracing the chaos of AI-powered game ports | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/news/1010406/xbox-labs-game-decompiling-emulation-exploration) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
