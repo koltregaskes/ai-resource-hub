@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 12 Oct 2026, 23:56 UTC
+Generated: 13 Oct 2026, 00:35 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -14,9 +14,9 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 23 Sept 2026 | GLM 5.3 Prime | Zhipu AI | tracking | high | watch only | 0 | 0 | n/a |
 | 23 Sept 2026 | Qwen3.8 Max Prime | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
 | 22 Sept 2026 | Command A+ | Cohere | tracking | high | watch only | 0 | 0 | n/a |
-| 21 Sept 2026 | Grok 4.7 | xAI | tracking | high | watch only | 0 | 0 | n/a |
-| 21 Sept 2026 | Qwen3.8 Omni Flash | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
 | 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 2 | [official](https://www.anthropic.com/glasswing) |
+| 21 Sept 2026 | Grok 4.7 | xAI | tracking | watch | watch only | 0 | 0 | n/a |
+| 21 Sept 2026 | Qwen3.8 Omni Flash | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
 | 18 Sept 2026 | GLM 5.3 FlashX | Zhipu AI | tracking | watch | watch only | 0 | 0 | n/a |
 | 3 Sept 2026 | Qwen3.8 Max (0902) | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
 | 2 Sept 2026 | Muse Spark 1.3 | Meta | tracking | watch | watch only | 0 | 3 | n/a |
