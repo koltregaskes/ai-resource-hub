@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 13 Oct 2026, 13:56 UTC
+Generated: 13 Oct 2026, 14:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 13 Oct 2026, 13:56 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 13 Oct 2026, 13:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 13 Oct 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 13 Oct 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 13 Oct 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 13 Oct 2026, 12:00 UTC | digest | Apple launches HomeView, its first smart display for the home | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1009704/apple-homeview-smart-display-first-look) |
-| 13 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,015 open roles across 10 tracked companies. | `/jobs/` |
-| 13 Oct 2026, 12:00 UTC | digest | Published the 2026-10-13 daily digest | 6 stories captured from 2 sources. | `/news/` |
-| 13 Oct 2026, 12:00 UTC | digest | SpaceXSI bundles X Premium, Grok and Cursor into one subscription | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/spacexsi-bundles-x-premium-grok-and-cursor-into-one-subscription/) |
-| 13 Oct 2026, 12:00 UTC | digest | The final Disrupt Stage lineup: Three days of conversations you won’t hear anywhere outside of TechCrunch Disrupt 2026 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/the-final-disrupt-stage-lineup-three-days-of-conversations-you-wont-hear-anywhere-outside-of-techcrunch-disrupt-2026/) |
+| 13 Oct 2026, 14:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 13 Oct 2026, 14:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 13 Oct 2026, 14:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 13 Oct 2026, 14:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 13 Oct 2026, 14:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 13 Oct 2026, 12:00 UTC | digest | DLSS 5 gets toned down for its Hogwarts Legacy debut next month | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/news/1009904/dlss-5-hogwarts-legacy-changes-improvements) |
+| 13 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,016 open roles across 10 tracked companies. | `/jobs/` |
+| 13 Oct 2026, 12:00 UTC | digest | Published the 2026-10-13 daily digest | 8 stories captured from 2 sources. | `/news/` |
+| 13 Oct 2026, 12:00 UTC | digest | SpaceXSI bundles X Premium, Grok, and Cursor into one subscription | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/spacexsi-bundles-x-premium-grok-and-cursor-into-one-subscription/) |
+| 13 Oct 2026, 12:00 UTC | digest | TechCrunch Disrupt 2026: Day 1 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/techcrunch-disrupt-2026-day-1/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
