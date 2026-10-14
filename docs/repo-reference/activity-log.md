@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 14 Oct 2026, 02:56 UTC
+Generated: 14 Oct 2026, 03:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 14 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,013 open roles across 10 tracked companies. | `/jobs/` |
-| 14 Oct 2026, 02:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 14 Oct 2026, 02:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 14 Oct 2026, 02:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 14 Oct 2026, 02:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 14 Oct 2026, 02:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 14 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,015 open roles across 10 tracked companies. | `/jobs/` |
+| 14 Oct 2026, 03:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 14 Oct 2026, 03:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 14 Oct 2026, 03:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 14 Oct 2026, 03:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 14 Oct 2026, 03:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 13 Oct 2026, 12:00 UTC | digest | Cerebras CEO says we&#8217;re nearing a future where everyone has a personal AI assistant at home | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/cerebras-ceo-says-were-nearing-a-future-where-everyone-has-a-personal-ai-assistant-at-home/) |
 | 13 Oct 2026, 12:00 UTC | digest | Industrial Next wants factory robots to switch tasks in minutes, not weeks | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/industrial-next-wants-factory-robots-to-switch-tasks-in-minutes-not-weeks/) |
 | 13 Oct 2026, 12:00 UTC | digest | Published the 2026-10-13 daily digest | 20 stories captured from 3 sources. | `/news/` |
