@@ -1,53 +1,5 @@
 [
   {
-    "id": "news-524e699ebac35a597cd5",
-    "title": "OpenAI claims an ex-employee took its product plans and presented them to Apple",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1011276/openai-employee-unreleased-product-plans",
-    "source": "The Verge",
-    "summary": "OpenAI claims a former employee took more than 100 files related to its product plans before joining Apple. In a document filed on Wednesday, OpenAI accuses the unnamed employee of sending this information to a personal account and then presenting it to Apple leadership, including the vice president of the company's o…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-14T16:43:24.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
-  },
-  {
-    "id": "news-0784a13f079d03163725",
-    "title": "Microsoft has a new machine learning tool to improve weather forecasts",
-    "url": "https://www.theverge.com/science/1011127/ai-weather-forecast-microsoft",
-    "source": "The Verge",
-    "summary": "Old-school physics-based weather forecasting and even new AI models typically become less reliable beyond two weeks, a problem Microsoft claims to have solved using machine learning. Researchers with the company say they've found a new, cost-effective way to make more accurate weather forecasts two to six weeks in adv…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-14T16:05:21.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
-  },
-  {
-    "id": "news-c034144452ef7e306057",
-    "title": "Android is using AI to suss out scammers in Google Messages",
-    "url": "https://www.theverge.com/tech/1010928/android-scam-protection-enhanced-protection-google-messages",
-    "source": "The Verge",
-    "summary": "Android is introducing new scam defense features that aim to make it easier for users to evade mobile fraud, including bolstered protection in Google Messages and additional safeguarding tools. Building on the Scam Detection feature in Google Messages, a new \"enhanced protection\" setting will be rolling out in the com…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-14T16:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
-  },
-  {
-    "id": "news-d4118e30020d4980661a",
-    "title": "Square’s new kiosk lets you talk to AI for help with your order",
-    "url": "https://www.theverge.com/tech/1009086/square-kiosk",
-    "source": "The Verge",
-    "summary": "Square is launching new hardware: a big kiosk for ordering things that has a touchscreen and lets you talk to an AI. It's called the Square Kiosk. Square says the Kiosk, which has a large pill shape, has an \"agentic, conversational voice layer\" that \"fully understands a seller's menu and listens and responds in real […",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-14T16:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
-  },
-  {
     "id": "news-7627a3f490957e441362",
     "title": "Anthropic’s self-replicating AI warning is alarming deja vu",
     "url": "https://www.theverge.com/ai-artificial-intelligence/1011108/anthropic-self-replicating-ai-smart-devices-risk",
@@ -57,7 +9,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T15:19:02.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
+    "discovered_at": "2026-10-14 17:06:09"
   },
   {
     "id": "news-9c18b5e1b4bfcb8e69db",
@@ -69,7 +21,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T15:16:04.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-c16911033b3182b5b71f",
@@ -81,7 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T15:13:24.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-ecdf723c0581a8308530",
@@ -93,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T15:08:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-40dbf46b638448503956",
@@ -105,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T15:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-62cbe095b5166b3d5e27",
@@ -117,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T14:30:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-08495a955cc82e8dbd1d",
@@ -129,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T13:55:02.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
+    "discovered_at": "2026-10-14 17:06:09"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -141,7 +93,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
+    "discovered_at": "2026-10-14 17:06:09"
+  },
+  {
+    "id": "news-a0e0fec2c2b5f568672d",
+    "title": "Amp puts AI agents to work beyond code with OpenAI models",
+    "url": "https://openai.com/index/amp-beyond-coding",
+    "source": "OpenAI",
+    "summary": "See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-14T12:00:00.000Z",
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-ca567069ecbf16ad27e5",
@@ -153,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T11:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-e181547094b0a112cf0b",
@@ -165,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T07:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-2f3282e483141f68421d",
@@ -177,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T00:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-a2d00ff109e7d12fae1c",
@@ -189,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T23:13:31.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-314375845b17a4289451",
@@ -201,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T23:05:34.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-3e50c67087875e42c6bc",
@@ -213,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T23:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-8ffa5222f5cfbfa360a3",
@@ -225,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T22:36:59.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-082a179fcd5888101db6",
@@ -237,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T20:45:25.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
+    "discovered_at": "2026-10-14 17:06:09"
   },
   {
     "id": "news-41d15466fa73b3da97e9",
@@ -249,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T20:36:44.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-c839b9474faef6c76b98",
@@ -261,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T19:42:42.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
+    "discovered_at": "2026-10-14 17:06:09"
   },
   {
     "id": "news-ffb4af635c9ec6ee6779",
@@ -273,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T19:00:48.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
+    "discovered_at": "2026-10-14 17:06:09"
   },
   {
     "id": "news-ec248a8be840f0c30c3c",
@@ -285,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T18:30:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-5349b4bff5efc00708e8",
@@ -297,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T18:05:24.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-64be3d764257b9ffdf3b",
@@ -309,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T18:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
+    "discovered_at": "2026-10-14 17:06:09"
   },
   {
     "id": "news-0b284eb98b4575c8dc39",
@@ -321,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T17:30:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-992e14a3e4b635ce4e92",
@@ -333,7 +297,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T17:18:25.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
+  },
+  {
+    "id": "news-c9abe9b08cd34f7a691a",
+    "title": "Facebook will let you customize your feed algorithm using AI",
+    "url": "https://www.theverge.com/tech/1010344/meta-facebook-your-algorithm-ai",
+    "source": "The Verge",
+    "summary": "Facebook's new \"Your Algorithm\" feature will let you directly add and manage topics you want to see in your feed and Facebook Reels. Meta says your recommendations \"respond right away\" after you make updates using the new feature by hitting \"interested\" or \"not interested\" for different topics. Your Algorithm previous…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-13T17:01:31.000Z",
+    "discovered_at": "2026-10-14 17:06:09"
+  },
+  {
+    "id": "news-a3312401eb558d6990fb",
+    "title": "Google makes it easier to launch your vibe-coded apps",
+    "url": "https://www.theverge.com/tech/1009066/google-play-vibe-coded-android-apps-launch",
+    "source": "The Verge",
+    "summary": "The next time you vibe-code a custom app with Google's AI Studio, you won't have to connect your phone to a computer to install it. On Tuesday, Google announced a new feature in the US that will allow you to launch personal apps directly through the Play Store. Google first launched the ability to vibe-code [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-13T17:00:00.000Z",
+    "discovered_at": "2026-10-14 17:06:09"
   },
   {
     "id": "news-303c8b8be26ff7b15e21",
@@ -345,7 +333,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T17:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
+  },
+  {
+    "id": "news-e8881f4e9b5e76a5b8b1",
+    "title": "It’s ‘incomprehensible’ that Instagram allowed an AI image of Mia Goth to spread, say her reps",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1010277/mia-goth-instagram-ai-shirt-deepfake-divorce",
+    "source": "The Verge",
+    "summary": "Earlier this month, news broke that actress Mia Goth had filed for divorce from actor and filmmaker Shia LaBeouf. An Instagram post from the account miagoth_ - marked with a blue verified checkmark - quickly spread. The post shows Goth in a T-shirt that reads \"MY EX IS MY BIGGEST FAN\" in bold black letters. [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-13T16:42:51.000Z",
+    "discovered_at": "2026-10-14 17:06:09"
   },
   {
     "id": "news-80618fcba7c6ab56eb38",
@@ -357,7 +357,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:30:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
+  },
+  {
+    "id": "news-24ef7cf40bd2766a26e3",
+    "title": "Google finally releases Gemini 4 Argon",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1009862/google-releases-gemini-4-argon",
+    "source": "The Verge",
+    "summary": "After months sitting on the sidelines of the frontier AI race, Google has finally launched its long-awaited Gemini 4 Argon model, claiming it can compete with the best the industry has to offer. Google says Argon delivers \"frontier reasoning and improved performance across complex workflows,\" while cutting down on hed…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-13T16:00:00.000Z",
+    "discovered_at": "2026-10-14 17:06:09"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-083eb6d9e76f3ec8f7e0",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T14:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-ffc748cb8d88a919ca05",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T12:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-edd58468d564448f5fe7",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-09T07:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-90995f7dbc9c26746d9c",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-09T07:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-112b5f00879d4fef3be3",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-08T16:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-f6d3626eb7c890d94bb5",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-08T12:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-ca1ec6c6a1a1314d953b",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-08T12:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-077dea1e8a7adb2ecc69",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-08T00:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-ad4e14640e358f44fa86",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-04e9dc3828b5420c0f01",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T07:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-4bb428a07b2a9a894359",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T00:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-0ca1450969b5beb55904",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T00:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-60ef2af305e795fe7c29",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T16:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-307bfda48464106bf8e3",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:21:53.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
+    "discovered_at": "2026-10-14 17:06:09"
   },
   {
     "id": "news-47b9255d8fa0f8e89c91",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-342677ae7eadb2eb62e4",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-9964af802e9c5fdee2b9",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T10:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-aaf1cc502a6b16035865",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T22:26:35.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
+    "discovered_at": "2026-10-14 17:06:09"
   },
   {
     "id": "news-78ad53815846c15cf660",
@@ -609,19 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T15:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
-  },
-  {
-    "id": "news-3cbec84de8bf615536c6",
-    "title": "Building advertising for the way people use AI",
-    "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
-    "source": "OpenAI",
-    "summary": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand suitability for advertisers.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-05T10:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:40"
+    "discovered_at": "2026-10-14 17:05:56"
   },
   {
     "id": "news-6ee8ae0821d338b723f5",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T23:03:16.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
+    "discovered_at": "2026-10-14 17:06:09"
   },
   {
     "id": "news-1122627a66dfc215a84f",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T15:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-1eadd5627184a89f1bbe",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-50e18c5419845c26792b",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T00:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-8a86c97089bb6492a0d5",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T18:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-69bd5b227657faccb6a8",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T19:45:47.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
+    "discovered_at": "2026-10-14 17:06:09"
   },
   {
     "id": "news-0c90c73c08cf283551a1",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-22T00:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-b2c543ac59e1c4518c6a",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-21T22:24:38.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
+    "discovered_at": "2026-10-14 17:06:09"
   },
   {
     "id": "news-079e661c04cec0b07e5c",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T14:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-13d62ca6fcfd55d7fb1a",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-18T13:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-e7b9d12d1b3a7eb0c954",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T20:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-168e3a7edc7326171115",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-17T18:33:13.000Z",
-    "discovered_at": "2026-10-14 16:55:52"
+    "discovered_at": "2026-10-14 17:06:09"
   },
   {
     "id": "news-a243976a4aeffe7860e7",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-b86d9a766fb72b730ea5",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-18592959ad29d5e254c8",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T16:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-00e29a681a6f5e3b92e5",
@@ -813,7 +813,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-15T13:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   },
   {
     "id": "news-b49b47db0b359f67793a",
@@ -825,6 +825,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-14T19:00:00.000Z",
-    "discovered_at": "2026-10-14 16:55:41"
+    "discovered_at": "2026-10-14 17:05:57"
   }
 ]
