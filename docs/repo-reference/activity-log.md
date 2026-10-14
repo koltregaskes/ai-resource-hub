@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 14 Oct 2026, 21:55 UTC
+Generated: 14 Oct 2026, 22:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 14 Oct 2026, 21:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 14 Oct 2026, 21:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 14 Oct 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 14 Oct 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 14 Oct 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 14 Oct 2026, 22:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 14 Oct 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 14 Oct 2026, 22:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 14 Oct 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 14 Oct 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 14 Oct 2026, 12:00 UTC | digest | Eight states sue OpenAI, saying ChatGPT isn&#8217;t safe for kids | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety) |
 | 14 Oct 2026, 12:00 UTC | digest | Flock CEO says its microphones detect &#8216;just gunshots&#8217; — its website says different | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/14/flock-ceo-says-its-microphones-detect-just-gunshots-its-website-says-different/) |
 | 14 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,016 open roles across 10 tracked companies. | `/jobs/` |
