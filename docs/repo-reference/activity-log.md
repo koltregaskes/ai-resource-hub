@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 14 Oct 2026, 18:55 UTC
+Generated: 14 Oct 2026, 19:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 14 Oct 2026, 18:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 14 Oct 2026, 18:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 14 Oct 2026, 18:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 14 Oct 2026, 18:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 14 Oct 2026, 18:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 14 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,019 open roles across 10 tracked companies. | `/jobs/` |
+| 14 Oct 2026, 19:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 14 Oct 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 14 Oct 2026, 19:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 14 Oct 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 14 Oct 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 14 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,018 open roles across 10 tracked companies. | `/jobs/` |
 | 14 Oct 2026, 12:00 UTC | digest | Now that Character.AI is going bankrupt, what happens to all of its users&#8217; data? | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/1011417/new-york-ag-characterai-bankruptcy) |
 | 14 Oct 2026, 12:00 UTC | digest | Published the 2026-10-14 daily digest | 20 stories captured from 4 sources. | `/news/` |
+| 14 Oct 2026, 12:00 UTC | digest | The AI race is back on | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1011311/the-ai-race-is-back-on) |
 | 14 Oct 2026, 12:00 UTC | digest | YouTube Music launches new labels as AI-generated music floods streaming platforms | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/) |
-| 14 Oct 2026, 12:00 UTC | digest | YouTube sticks new labels on AI-generated songs | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1011369/youtube-music-ai-label) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
