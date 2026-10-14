@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 14 Oct 2026, 12:56 UTC
+Generated: 14 Oct 2026, 13:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -13,7 +13,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 6 Oct 2026 | Nano Banana 2.1 | Google | tracking | high | watch only | 0 | 2 | n/a |
 | 23 Sept 2026 | GLM 5.3 Prime | Zhipu AI | tracking | high | watch only | 0 | 0 | n/a |
 | 23 Sept 2026 | Qwen3.8 Max Prime | Alibaba | tracking | high | watch only | 0 | 0 | n/a |
-| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 1 | [official](https://www.anthropic.com/glasswing) |
+| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 2 | [official](https://www.anthropic.com/glasswing) |
 | 22 Sept 2026 | Command A+ | Cohere | tracking | watch | watch only | 0 | 0 | n/a |
 | 21 Sept 2026 | Grok 4.7 | xAI | tracking | watch | watch only | 0 | 0 | n/a |
 | 21 Sept 2026 | Qwen3.8 Omni Flash | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
