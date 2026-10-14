@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 14 Oct 2026, 19:55 UTC
+Generated: 14 Oct 2026, 20:40 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 14 Oct 2026, 19:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 14 Oct 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 14 Oct 2026, 19:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 14 Oct 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 14 Oct 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 14 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,018 open roles across 10 tracked companies. | `/jobs/` |
+| 14 Oct 2026, 20:40 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 14 Oct 2026, 20:40 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 14 Oct 2026, 20:40 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 14 Oct 2026, 20:39 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 14 Oct 2026, 20:39 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 14 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,019 open roles across 10 tracked companies. | `/jobs/` |
 | 14 Oct 2026, 12:00 UTC | digest | Now that Character.AI is going bankrupt, what happens to all of its users&#8217; data? | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/1011417/new-york-ag-characterai-bankruptcy) |
 | 14 Oct 2026, 12:00 UTC | digest | Published the 2026-10-14 daily digest | 20 stories captured from 4 sources. | `/news/` |
 | 14 Oct 2026, 12:00 UTC | digest | The AI race is back on | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1011311/the-ai-race-is-back-on) |
