@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 13 Oct 2026, 23:56 UTC
+Generated: 14 Oct 2026, 00:19 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 13 Oct 2026, 23:56 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 13 Oct 2026, 23:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 13 Oct 2026, 23:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 13 Oct 2026, 23:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 13 Oct 2026, 23:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 14 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,012 open roles across 10 tracked companies. | `/jobs/` |
+| 14 Oct 2026, 00:18 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 14 Oct 2026, 00:18 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 14 Oct 2026, 00:18 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 14 Oct 2026, 00:18 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 14 Oct 2026, 00:18 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 13 Oct 2026, 12:00 UTC | digest | Cerebras CEO says we&#8217;re nearing a future where everyone has a personal AI assistant at home | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/cerebras-ceo-says-were-nearing-a-future-where-everyone-has-a-personal-ai-assistant-at-home/) |
 | 13 Oct 2026, 12:00 UTC | digest | Industrial Next wants factory robots to switch tasks in minutes, not weeks | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/industrial-next-wants-factory-robots-to-switch-tasks-in-minutes-not-weeks/) |
-| 13 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,012 open roles across 10 tracked companies. | `/jobs/` |
 | 13 Oct 2026, 12:00 UTC | digest | Published the 2026-10-13 daily digest | 20 stories captured from 3 sources. | `/news/` |
 | 13 Oct 2026, 12:00 UTC | digest | Science Corporation implants its vision-restoring chip in its first Stargardt disease patient | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/13/science-corporation-implants-its-vision-restoring-chip-in-its-first-stargardt-disease-patient/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
