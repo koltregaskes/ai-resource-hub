@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 15 Oct 2026, 16:55 UTC
+Generated: 15 Oct 2026, 17:56 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,6 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 15 Oct 2026 | Muse Spark Open | Meta | tracking | high | watch only | 0 | 0 | n/a |
 | 15 Oct 2026 | Nemotron 3.5 Super VL | NVIDIA | tracking | high | watch only | 0 | 1 | n/a |
 | 12 Oct 2026 | Muse Wonder | Meta | tracking | high | watch only | 0 | 0 | n/a |
 | 6 Oct 2026 | Mistral Large 4 | Mistral | tracking | high | watch only | 0 | 0 | n/a |
@@ -27,6 +28,5 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 21 Aug 2026 | Muse Spark 1.2 Contributor | Meta | tracking | watch | watch only | 0 | 2 | n/a |
 | 14 Aug 2026 | Qwen3.8 27B | Alibaba | tracking | backfill | watch only | 0 | 0 | n/a |
 | 12 Aug 2026 | DeepSeek V4 Pro 0813 | DeepSeek | tracking | backfill | watch only | 0 | 0 | n/a |
-| 12 Aug 2026 | Grok 4.6 | xAI | tracking | backfill | watch only | 0 | 0 | n/a |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)

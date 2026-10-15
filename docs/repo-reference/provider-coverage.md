@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 15 Oct 2026, 16:55 UTC
+Generated: 15 Oct 2026, 17:56 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -8,7 +8,7 @@ This table shows how much of each provider's public model surface is currently r
 | --- | --- | --- | --- | --- | --- | --- |
 | OpenAI | 25 | 48 | 0 | GPT-5.6 Luna (batch) (9 Jul 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
 | Google | 8 | 22 | 0 | Nano Banana 2.1 (6 Oct 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
-| Meta | 6 | 10 | 0 | Muse Wonder (12 Oct 2026) | n/a | [docs](https://llama.meta.com/docs) |
+| Meta | 6 | 11 | 0 | Muse Spark Open (15 Oct 2026) | n/a | [docs](https://llama.meta.com/docs) |
 | Anthropic | 5 | 19 | 1 | Claude Opus 5 (batch) (24 Jul 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
 | DeepSeek | 4 | 10 | 0 | DeepSeek V4 Flash Vision Exp (21 Aug 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |

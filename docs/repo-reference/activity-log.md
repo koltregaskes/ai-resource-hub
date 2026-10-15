@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 15 Oct 2026, 16:55 UTC
+Generated: 15 Oct 2026, 17:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 15 Oct 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 15 Oct 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 15 Oct 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 15 Oct 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 15 Oct 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 15 Oct 2026, 17:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 15 Oct 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 15 Oct 2026, 17:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 15 Oct 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 15 Oct 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 15 Oct 2026, 12:00 UTC | digest | AI agents are coming to Rivian&#8217;s cars | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/) |
 | 15 Oct 2026, 12:00 UTC | digest | Friends don&#8217;t let friends feed their data to AI agents | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1011938/muse-ai-data-friends-consent) |
 | 15 Oct 2026, 12:00 UTC | digest | How Windows is being optimized for Nvidia’s RTX Spark laptops | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1011996/microsoft-windows-rtx-spark-platform-changes-notepad) |
