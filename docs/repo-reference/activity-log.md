@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 15 Oct 2026, 13:56 UTC
+Generated: 15 Oct 2026, 14:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 15 Oct 2026, 13:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 15 Oct 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 15 Oct 2026, 13:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 15 Oct 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 15 Oct 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 15 Oct 2026, 12:00 UTC | digest | Amazon’s always-listening Bee wearable can now help you buy stuff | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1011475/amazon-bee-frontier-eclipse-price-specs) |
-| 15 Oct 2026, 12:00 UTC | digest | Amazon&#8217;s Bee launches two new personal AI devices, starting at $75 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/) |
-| 15 Oct 2026, 12:00 UTC | digest | Google launches its &#8216;universal&#8217; online shopping cart ahead of the holidays | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1011797/google-ai-universal-cart-shopping-tool-launch) |
-| 15 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,010 open roles across 10 tracked companies. | `/jobs/` |
-| 15 Oct 2026, 12:00 UTC | digest | Published the 2026-10-15 daily digest | 7 stories captured from 2 sources. | `/news/` |
+| 15 Oct 2026, 14:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 15 Oct 2026, 14:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 15 Oct 2026, 14:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 15 Oct 2026, 14:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 15 Oct 2026, 14:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 15 Oct 2026, 12:00 UTC | digest | Google’s Universal Cart shopping tool launches in the US | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/15/googles-universal-cart-shopping-tool-launches-in-the-us/) |
+| 15 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,009 open roles across 10 tracked companies. | `/jobs/` |
+| 15 Oct 2026, 12:00 UTC | digest | Published the 2026-10-15 daily digest | 9 stories captured from 3 sources. | `/news/` |
+| 15 Oct 2026, 12:00 UTC | digest | Teaching students to think and learn through questions | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/teaching-students-to-think-and-learn-through-questions) |
+| 15 Oct 2026, 12:00 UTC | digest | TechCrunch Disrupt 2026: Last day | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/15/techcrunch-disrupt-2026-last-day/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
