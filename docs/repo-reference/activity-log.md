@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 15 Oct 2026, 15:55 UTC
+Generated: 15 Oct 2026, 16:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 15 Oct 2026, 15:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 15 Oct 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 15 Oct 2026, 15:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 15 Oct 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 15 Oct 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 15 Oct 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 15 Oct 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 15 Oct 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 15 Oct 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 15 Oct 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 15 Oct 2026, 12:00 UTC | digest | AI agents are coming to Rivian&#8217;s cars | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/) |
-| 15 Oct 2026, 12:00 UTC | digest | Google’s Universal Cart shopping tool launches in the US | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/15/googles-universal-cart-shopping-tool-launches-in-the-us/) |
+| 15 Oct 2026, 12:00 UTC | digest | Friends don&#8217;t let friends feed their data to AI agents | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1011938/muse-ai-data-friends-consent) |
 | 15 Oct 2026, 12:00 UTC | digest | How Windows is being optimized for Nvidia’s RTX Spark laptops | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1011996/microsoft-windows-rtx-spark-platform-changes-notepad) |
-| 15 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,009 open roles across 10 tracked companies. | `/jobs/` |
-| 15 Oct 2026, 12:00 UTC | digest | Published the 2026-10-15 daily digest | 14 stories captured from 3 sources. | `/news/` |
+| 15 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,012 open roles across 10 tracked companies. | `/jobs/` |
+| 15 Oct 2026, 12:00 UTC | digest | Published the 2026-10-15 daily digest | 15 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |

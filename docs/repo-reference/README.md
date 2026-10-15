@@ -8,20 +8,20 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 15 Oct 2026, 15:55 UTC |
+| Generated | 15 Oct 2026, 16:55 UTC |
 | Providers tracked | 40 |
-| Public models | 346 |
+| Public models | 347 |
 | Active models | 106 |
-| Tracking models | 239 |
+| Tracking models | 240 |
 | Preview models | 1 |
 | Benchmarks | 34 |
-| News items in cache | 67 |
-| Release-desk entries | 48 |
+| News items in cache | 64 |
+| Release-desk entries | 49 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 15 Oct 2026, 15:55 UTC |
+| Latest visible refresh | 15 Oct 2026, 16:55 UTC |
 | Current evaluated composite leader | GPT-5.2 (52.1) |
-| Latest tracked release | Muse Wonder (12 Oct 2026) |
+| Latest tracked release | Nemotron 3.5 Super VL (15 Oct 2026) |
 
 ## Reference Files
 

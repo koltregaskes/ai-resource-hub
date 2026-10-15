@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T15:55:42.372Z",
+  "generatedAt": "2026-10-15T16:55:46.785Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T15:55:42.368Z",
+      "lastCheckedAt": "2026-10-15T16:55:46.779Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -85,7 +85,7 @@
           "updatedAt": "2026-10-15T01:53:05.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M4YAMVS2260M80QZMQHBPZPY",
-          "summary": "Status: Resolved Service has been restored for all affected serverless models. This incident is resolved. Affected components MiniMax M3 (Operational) Qwen 3.8 Max (Operational) N..."
+          "summary": "Status: Resolved Service has been restored for all affected serverless models. This incident is resolved. Affected components GPT-OSS 120B (Operational) MiniMax M3 (Operational) K..."
         }
       ]
     },
@@ -100,10 +100,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T15:55:40.978Z",
+      "lastCheckedAt": "2026-10-15T16:55:45.819Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -133,6 +133,16 @@
       ],
       "activeIncidents": [
         {
+          "id": "01M506BA4XRSWH7THR53HQGN3Z",
+          "title": "Widespread feature degradation",
+          "status": "investigating",
+          "impact": "none",
+          "startedAt": "2026-10-15T16:29:26.000Z",
+          "updatedAt": "2026-10-15T16:35:24.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating widespread feature degradation, including issues affecting logins and signups in the ChatGPT iOS/Android apps. We will provide updates as we learn more."
+        },
+        {
           "id": "01M4XNQX7C6RCBNGX9H711WFSG",
           "title": "Delayed Costs data in the Compliance API",
           "status": "identified",
@@ -144,6 +154,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01M506BA4XRSWH7THR53HQGN3Z",
+          "title": "Widespread feature degradation",
+          "status": "investigating",
+          "impact": "none",
+          "startedAt": "2026-10-15T16:29:26.000Z",
+          "updatedAt": "2026-10-15T16:35:24.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating widespread feature degradation, including issues affecting logins and signups in the ChatGPT iOS/Android apps. We will provide updates as we learn more."
+        },
         {
           "id": "01M4XNQX7C6RCBNGX9H711WFSG",
           "title": "Delayed Costs data in the Compliance API",
@@ -173,16 +193,6 @@
           "updatedAt": "2026-10-14T09:53:11.000Z",
           "resolvedAt": "2026-10-14T09:53:11.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M4T4ZCM54D3ZPTQXRSWFG0XS",
-          "title": "Degraded performance in GPT-6.1 Sol Codex and Work mode",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-13T08:10:00.000Z",
-          "updatedAt": "2026-10-13T16:36:42.000Z",
-          "resolvedAt": "2026-10-13T16:36:42.000Z",
-          "summary": "We have resolved the issue causing degraded performance with GPT-6.1 Sol in Codex and ChatGPT Work."
         }
       ]
     },
@@ -197,7 +207,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T15:55:41.004Z",
+      "lastCheckedAt": "2026-10-15T16:55:45.701Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +297,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T15:55:42.043Z",
+      "lastCheckedAt": "2026-10-15T16:55:46.447Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +317,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T15:55:41.408Z",
+      "lastCheckedAt": "2026-10-15T16:55:45.782Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -339,7 +349,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T15:55:42.124Z",
+      "lastCheckedAt": "2026-10-15T16:55:46.585Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -363,7 +373,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
