@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T22:13:05.653Z",
+  "generatedAt": "2026-10-15T23:18:20.138Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T22:13:05.647Z",
+      "lastCheckedAt": "2026-10-15T23:18:20.132Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -85,7 +85,7 @@
           "updatedAt": "2026-10-15T01:53:05.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M4YAMVS2260M80QZMQHBPZPY",
-          "summary": "Status: Resolved Service has been restored for all affected serverless models. This incident is resolved. Affected components GLM 5.3 US (Operational) Minimax M3 US (Operational)..."
+          "summary": "Status: Resolved Service has been restored for all affected serverless models. This incident is resolved. Affected components Nemotron 3.5 Lightning US (Operational) GLM 5.3 Flash..."
         }
       ]
     },
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T22:13:03.616Z",
+      "lastCheckedAt": "2026-10-15T23:18:18.453Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -135,34 +135,34 @@
         {
           "id": "01M4XNQX7C6RCBNGX9H711WFSG",
           "title": "Delayed Costs data in the Compliance API",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-10-14T17:00:44.000Z",
-          "updatedAt": "2026-10-14T20:00:36.000Z",
+          "updatedAt": "2026-10-15T22:36:42.000Z",
           "resolvedAt": null,
-          "summary": "We have identified an issue causing delays in publishing organization cost data through the Costs API. A fix is in progress and currently undergoing testing. API and ChatGPT usage..."
+          "summary": "We have deployed a fix and are monitoring recovery. Costs data in the Compliance API remains delayed while we process the backlog. We will provide further updates as processing ca..."
         }
       ],
       "recentIncidents": [
         {
+          "id": "01M4XNQX7C6RCBNGX9H711WFSG",
+          "title": "Delayed Costs data in the Compliance API",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-10-14T17:00:44.000Z",
+          "updatedAt": "2026-10-15T22:36:42.000Z",
+          "resolvedAt": null,
+          "summary": "We have deployed a fix and are monitoring recovery. Costs data in the Compliance API remains delayed while we process the backlog. We will provide further updates as processing ca..."
+        },
+        {
           "id": "01M506BA4XRSWH7THR53HQGN3Z",
           "title": "Widespread feature degradation",
           "status": "resolved",
-          "impact": "none",
+          "impact": "major",
           "startedAt": "2026-10-15T16:29:26.000Z",
           "updatedAt": "2026-10-15T18:56:00.000Z",
-          "resolvedAt": "2026-10-15T17:41:45.000Z",
+          "resolvedAt": "2026-10-15T18:56:00.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M4XNQX7C6RCBNGX9H711WFSG",
-          "title": "Delayed Costs data in the Compliance API",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-10-14T17:00:44.000Z",
-          "updatedAt": "2026-10-14T20:00:36.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified an issue causing delays in publishing organization cost data through the Costs API. A fix is in progress and currently undergoing testing. API and ChatGPT usage..."
         },
         {
           "id": "01M4WYPP5QA0CJ3JV76KH285K8",
@@ -197,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T22:13:03.626Z",
+      "lastCheckedAt": "2026-10-15T23:18:18.396Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T22:13:04.654Z",
+      "lastCheckedAt": "2026-10-15T23:18:19.240Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T22:13:04.235Z",
+      "lastCheckedAt": "2026-10-15T23:18:18.449Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -339,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T22:13:04.715Z",
+      "lastCheckedAt": "2026-10-15T23:18:19.792Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
