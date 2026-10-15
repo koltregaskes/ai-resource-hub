@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T06:55:37.559Z",
+  "generatedAt": "2026-10-15T07:55:47.153Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T06:55:37.554Z",
+      "lastCheckedAt": "2026-10-15T07:55:47.146Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -39,7 +39,7 @@
           "updatedAt": "2026-10-15T01:53:05.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M4YAMVS2260M80QZMQHBPZPY",
-          "summary": "Status: Resolved Service has been restored for all affected serverless models. This incident is resolved. Affected components GPT-OSS 120B (Operational) GLM 5.3 (Operational) GLM..."
+          "summary": "Status: Resolved Service has been restored for all affected serverless models. This incident is resolved. Affected components MiniMax M3 (Operational) Kimi K3 Fast (Operational) K..."
         }
       ],
       "recentIncidents": [
@@ -63,7 +63,7 @@
           "updatedAt": "2026-10-15T01:53:05.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M4YAMVS2260M80QZMQHBPZPY",
-          "summary": "Status: Resolved Service has been restored for all affected serverless models. This incident is resolved. Affected components GPT-OSS 120B (Operational) GLM 5.3 (Operational) GLM..."
+          "summary": "Status: Resolved Service has been restored for all affected serverless models. This incident is resolved. Affected components MiniMax M3 (Operational) Kimi K3 Fast (Operational) K..."
         },
         {
           "id": "fireworks-feed-2-2026-10-14T22:46:19.000Z",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T06:55:36.432Z",
+      "lastCheckedAt": "2026-10-15T07:55:45.545Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -197,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T06:55:36.351Z",
+      "lastCheckedAt": "2026-10-15T07:55:45.627Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T06:55:37.228Z",
+      "lastCheckedAt": "2026-10-15T07:55:46.179Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T06:55:36.477Z",
+      "lastCheckedAt": "2026-10-15T07:55:45.605Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -339,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T06:55:37.527Z",
+      "lastCheckedAt": "2026-10-15T07:55:46.500Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -363,7 +363,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
