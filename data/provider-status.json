@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T23:18:20.138Z",
+  "generatedAt": "2026-10-15T23:55:43.588Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T23:18:20.132Z",
+      "lastCheckedAt": "2026-10-15T23:55:43.519Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -85,7 +85,7 @@
           "updatedAt": "2026-10-15T01:53:05.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M4YAMVS2260M80QZMQHBPZPY",
-          "summary": "Status: Resolved Service has been restored for all affected serverless models. This incident is resolved. Affected components Nemotron 3.5 Lightning US (Operational) GLM 5.3 Flash..."
+          "summary": "Status: Resolved Service has been restored for all affected serverless models. This incident is resolved. Affected components Nemotron 3 Ultra US (Operational) GLM 5.3 US (Operati..."
         }
       ]
     },
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T23:18:18.453Z",
+      "lastCheckedAt": "2026-10-15T23:55:42.405Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -197,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T23:18:18.396Z",
+      "lastCheckedAt": "2026-10-15T23:55:42.368Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T23:18:19.240Z",
+      "lastCheckedAt": "2026-10-15T23:55:43.344Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T23:18:18.449Z",
+      "lastCheckedAt": "2026-10-15T23:55:42.561Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -339,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T23:18:19.792Z",
+      "lastCheckedAt": "2026-10-15T23:55:43.582Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
