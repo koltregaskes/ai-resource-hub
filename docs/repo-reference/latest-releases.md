@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 15 Oct 2026, 19:05 UTC
+Generated: 15 Oct 2026, 20:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,7 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 15 Oct 2026 | Muse Spark Open | Meta | tracking | high | watch only | 0 | 0 | n/a |
+| 15 Oct 2026 | Muse Spark Open | Meta | tracking | high | watch only | 0 | 1 | n/a |
 | 15 Oct 2026 | Nemotron 3.5 Super VL | NVIDIA | tracking | high | watch only | 0 | 1 | n/a |
 | 12 Oct 2026 | Muse Wonder | Meta | tracking | high | watch only | 0 | 0 | n/a |
 | 6 Oct 2026 | Mistral Large 4 | Mistral | tracking | high | watch only | 0 | 0 | n/a |
