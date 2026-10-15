@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T18:55:49.754Z",
+  "generatedAt": "2026-10-15T19:05:46.382Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T18:55:49.746Z",
+      "lastCheckedAt": "2026-10-15T19:05:46.178Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -85,7 +85,7 @@
           "updatedAt": "2026-10-15T01:53:05.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M4YAMVS2260M80QZMQHBPZPY",
-          "summary": "Status: Resolved Service has been restored for all affected serverless models. This incident is resolved. Affected components Deepseek V4.1 Flash (Operational) GPT-OSS 120B (Opera..."
+          "summary": "Status: Resolved Service has been restored for all affected serverless models. This incident is resolved. Affected components Deepseek V4.1 Flash US (Operational) Ember-1 (Operati..."
         }
       ]
     },
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T18:55:48.568Z",
+      "lastCheckedAt": "2026-10-15T19:05:45.058Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -150,7 +150,7 @@
           "status": "resolved",
           "impact": "none",
           "startedAt": "2026-10-15T16:29:26.000Z",
-          "updatedAt": "2026-10-15T17:41:45.000Z",
+          "updatedAt": "2026-10-15T18:56:00.000Z",
           "resolvedAt": "2026-10-15T17:41:45.000Z",
           "summary": "All impacted services have now fully recovered."
         },
@@ -197,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T18:55:48.505Z",
+      "lastCheckedAt": "2026-10-15T19:05:45.144Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T18:55:49.234Z",
+      "lastCheckedAt": "2026-10-15T19:05:45.946Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T18:55:48.543Z",
+      "lastCheckedAt": "2026-10-15T19:05:45.474Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -339,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-15T18:55:49.499Z",
+      "lastCheckedAt": "2026-10-15T19:05:46.375Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
