@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 15 Oct 2026, 12:55 UTC
+Generated: 15 Oct 2026, 13:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 15 Oct 2026, 12:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 15 Oct 2026, 12:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 15 Oct 2026, 12:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 15 Oct 2026, 12:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 15 Oct 2026, 12:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 15 Oct 2026, 13:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 15 Oct 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 15 Oct 2026, 13:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 15 Oct 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 15 Oct 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 15 Oct 2026, 12:00 UTC | digest | Amazon’s always-listening Bee wearable can now help you buy stuff | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1011475/amazon-bee-frontier-eclipse-price-specs) |
 | 15 Oct 2026, 12:00 UTC | digest | Amazon&#8217;s Bee launches two new personal AI devices, starting at $75 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/) |
-| 15 Oct 2026, 12:00 UTC | digest | Figma announces new features to define how agents work on its platform | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/) |
-| 15 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,011 open roles across 10 tracked companies. | `/jobs/` |
-| 15 Oct 2026, 12:00 UTC | digest | Published the 2026-10-15 daily digest | 5 stories captured from 2 sources. | `/news/` |
-| 15 Oct 2026, 12:00 UTC | digest | Your secrets aren’t safe with this cute robot toy — they’re on Chinese servers ready to be hacked | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1010727/eiliko-robot-hack-energize-lab) |
+| 15 Oct 2026, 12:00 UTC | digest | Google launches its &#8216;universal&#8217; online shopping cart ahead of the holidays | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1011797/google-ai-universal-cart-shopping-tool-launch) |
+| 15 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,010 open roles across 10 tracked companies. | `/jobs/` |
+| 15 Oct 2026, 12:00 UTC | digest | Published the 2026-10-15 daily digest | 7 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
