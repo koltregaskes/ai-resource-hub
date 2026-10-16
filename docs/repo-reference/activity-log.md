@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 16 Oct 2026, 21:02 UTC
+Generated: 16 Oct 2026, 21:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 16 Oct 2026, 21:02 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 16 Oct 2026, 21:02 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 16 Oct 2026, 21:02 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 16 Oct 2026, 21:02 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 16 Oct 2026, 21:02 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 16 Oct 2026, 12:00 UTC | digest | An Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/) |
+| 16 Oct 2026, 21:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 16 Oct 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 16 Oct 2026, 21:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 16 Oct 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 16 Oct 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 16 Oct 2026, 12:00 UTC | digest | India becomes the latest country to report rogue AI agent activity | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/) |
-| 16 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,025 open roles across 10 tracked companies. | `/jobs/` |
+| 16 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,026 open roles across 10 tracked companies. | `/jobs/` |
 | 16 Oct 2026, 12:00 UTC | digest | Physical AI is more than robots, says the Nvidia veteran now investing in it | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/) |
-| 16 Oct 2026, 12:00 UTC | digest | Published the 2026-10-16 daily digest | 11 stories captured from 3 sources. | `/news/` |
+| 16 Oct 2026, 12:00 UTC | digest | Published the 2026-10-16 daily digest | 12 stories captured from 3 sources. | `/news/` |
+| 16 Oct 2026, 12:00 UTC | digest | Replit is no longer working with Anthropic, CEO says | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
