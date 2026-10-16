@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 16 Oct 2026, 14:55 UTC
+Generated: 16 Oct 2026, 15:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 16 Oct 2026, 14:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 16 Oct 2026, 14:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 16 Oct 2026, 14:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 16 Oct 2026, 14:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 16 Oct 2026, 14:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 16 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,018 open roles across 10 tracked companies. | `/jobs/` |
+| 16 Oct 2026, 15:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 16 Oct 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 16 Oct 2026, 15:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 16 Oct 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 16 Oct 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 16 Oct 2026, 12:00 UTC | digest | A week with RTX Spark: everything we’ve learned using Nvidia’s new laptops | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions) |
+| 16 Oct 2026, 12:00 UTC | digest | Jev is Vercel&#8217;s fastest-adopted AI model ever | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/) |
+| 16 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,021 open roles across 10 tracked companies. | `/jobs/` |
 | 16 Oct 2026, 12:00 UTC | digest | Mark Wahlberg on using AI in film &#8216;the right way&#8217; and being open to an AI clone carrying on his legacy | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/16/mark-wahlberg-on-using-ai-in-film-the-right-way-and-being-open-to-an-ai-clone-carrying-on-his-legacy/) |
-| 16 Oct 2026, 12:00 UTC | digest | Published the 2026-10-16 daily digest | 3 stories captured from 1 sources. | `/news/` |
-| 16 Oct 2026, 12:00 UTC | digest | Replit&#8217;s CEO says the future of work is the &#8216;self-driving company&#8217; | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/16/replits-ceo-says-the-future-of-work-is-the-self-driving-company/) |
-| 16 Oct 2026, 12:00 UTC | digest | Veritas expands its anti-counterfeit chip to jewelry, trophies, and fragrance bottles | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/16/veritas-is-building-a-chip-to-verify-luxury-goods/) |
+| 16 Oct 2026, 12:00 UTC | digest | Published the 2026-10-16 daily digest | 6 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
