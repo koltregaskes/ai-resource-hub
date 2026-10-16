@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import fsSync from 'node:fs';
 import path from 'node:path';
 import { digest, snapshotDigest } from './news-pipeline-provenance.mjs';
+import { validNewsSiteFilter } from './lib/news-routing-policy.mjs';
 
 const repoRoot = process.cwd();
 function resolveEstateRoot() {
@@ -298,6 +299,9 @@ async function main() {
     throw new Error('Invalid canonical news routing configuration.');
   }
   const configuredSites = siteFilters?.sites ?? {};
+  if (Object.values(configuredSites).some((site) => !validNewsSiteFilter(site))) {
+    throw new Error('Invalid news site routing policy.');
+  }
   const configuredSources = Array.isArray(sourcesConfig?.sources) ? sourcesConfig.sources : [];
   const siteNameBySlug = Object.fromEntries(
     estateSites.map((slug) => {
@@ -328,6 +332,9 @@ async function main() {
       newsEnabled,
       includeTags,
       excludeTags,
+      requiredAnyTags: configured?.required_any_tags ?? [],
+      excludeSourcePatterns: configured?.exclude_source_patterns ?? [],
+      excludeTextPatterns: configured?.exclude_text_patterns ?? [],
       includeLabels: includeTags.map((tag) => ({
         id: tag,
         label: humaniseToken(tag),

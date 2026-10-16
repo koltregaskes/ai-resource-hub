@@ -107,6 +107,25 @@ test('failure without cache emits failed status and no invented source edition',
   assert.equal(status.sourceEdition, null);
 });
 
+test('sync validates and exports the additional routing rule fields', async (t) => {
+  const f = await fixture(t, { config: true });
+  const filtersPath = path.join(f.news, 'site-filters.json');
+  const config = { sites: { 'test-site': { include_tags: ['topic'], required_any_tags: ['required'],
+    exclude_source_patterns: ['blocked.example'], exclude_text_patterns: ['excluded phrase'] } } };
+  await writeFile(filtersPath, JSON.stringify(config));
+  assert.equal(f.run().status, 0);
+  const text = await f.read('public/data/source-registry.json');
+  const site = JSON.parse(text).sites[0];
+  assert.deepEqual(site.requiredAnyTags, ['required']);
+  assert.deepEqual(site.excludeSourcePatterns, ['blocked.example']);
+  assert.deepEqual(site.excludeTextPatterns, ['excluded phrase']);
+  config.sites['test-site'].exclude_text_patterns = [null];
+  await writeFile(filtersPath, JSON.stringify(config));
+  assert.equal(f.run().status, 1);
+  assert.equal((await f.status()).status, 'failed');
+  assert.equal(await f.read('public/data/source-registry.json'), text);
+});
+
 test('legacy export with no timestamp remains unknown in documentation', () => {
   const doc = sourceRegistryProvenanceMarkdown({ sources: [], sites: [] }, null, '2030-01-01T00:00:00.000Z');
   assert.ok(doc.includes('Source edition generated: Unknown'));
