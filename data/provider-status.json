@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T11:55:41.091Z",
+  "generatedAt": "2026-10-16T12:22:00.490Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-16T11:55:41.087Z",
+      "lastCheckedAt": "2026-10-16T12:22:00.483Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -85,7 +85,7 @@
           "updatedAt": "2026-10-15T01:53:05.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M4YAMVS2260M80QZMQHBPZPY",
-          "summary": "Status: Resolved Service has been restored for all affected serverless models. This incident is resolved. Affected components Kimi K3 US (Operational) Deepseek V4.1 Flash (Operati..."
+          "summary": "Status: Resolved Service has been restored for all affected serverless models. This incident is resolved. Affected components MiniMax M3 (Operational) Kimi K3 US (Operational) Qwe..."
         }
       ]
     },
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-16T11:55:40.299Z",
+      "lastCheckedAt": "2026-10-16T12:21:59.916Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -120,7 +120,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-16T11:55:39.221Z",
+      "lastCheckedAt": "2026-10-16T12:21:59.114Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-16T11:55:40.103Z",
+      "lastCheckedAt": "2026-10-16T12:22:00.055Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +230,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-16T11:55:39.490Z",
+      "lastCheckedAt": "2026-10-16T12:21:59.127Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -262,7 +262,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-16T11:55:39.188Z",
+      "lastCheckedAt": "2026-10-16T12:21:59.176Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -352,7 +352,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
