@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 16 Oct 2026, 16:56 UTC
+Generated: 16 Oct 2026, 17:22 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 16 Oct 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 16 Oct 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 16 Oct 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 16 Oct 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 16 Oct 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 16 Oct 2026, 12:00 UTC | digest | A Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/) |
+| 16 Oct 2026, 17:22 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 16 Oct 2026, 17:22 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 16 Oct 2026, 17:22 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 16 Oct 2026, 17:22 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 16 Oct 2026, 17:22 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 16 Oct 2026, 12:00 UTC | digest | An Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/) |
 | 16 Oct 2026, 12:00 UTC | digest | Elorian’s first AI model wants to reason with images, not just about them | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/) |
 | 16 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,023 open roles across 10 tracked companies. | `/jobs/` |
 | 16 Oct 2026, 12:00 UTC | digest | Physical AI is more than robots, says the Nvidia veteran now investing in it | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/) |

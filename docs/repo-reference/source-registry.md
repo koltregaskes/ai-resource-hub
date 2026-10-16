@@ -1,10 +1,10 @@
 # Source Registry Snapshot
 
-Document built: 2026-10-16T16:56:00.100Z
+Document built: 2026-10-16T17:22:44.498Z
 
 Sync status: cached
 
-Last sync attempted: 2026-10-16T16:55:59.138Z
+Last sync attempted: 2026-10-16T17:22:43.588Z
 
 Source edition generated: 2026-10-06T15:07:35.789Z
 
