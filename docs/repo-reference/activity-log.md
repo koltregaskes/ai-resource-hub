@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 16 Oct 2026, 15:55 UTC
+Generated: 16 Oct 2026, 16:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 16 Oct 2026, 15:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 16 Oct 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 16 Oct 2026, 15:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 16 Oct 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 16 Oct 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 16 Oct 2026, 12:00 UTC | digest | A week with RTX Spark: everything we’ve learned using Nvidia’s new laptops | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions) |
-| 16 Oct 2026, 12:00 UTC | digest | Jev is Vercel&#8217;s fastest-adopted AI model ever | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/) |
-| 16 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,021 open roles across 10 tracked companies. | `/jobs/` |
-| 16 Oct 2026, 12:00 UTC | digest | Mark Wahlberg on using AI in film &#8216;the right way&#8217; and being open to an AI clone carrying on his legacy | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/16/mark-wahlberg-on-using-ai-in-film-the-right-way-and-being-open-to-an-ai-clone-carrying-on-his-legacy/) |
-| 16 Oct 2026, 12:00 UTC | digest | Published the 2026-10-16 daily digest | 6 stories captured from 2 sources. | `/news/` |
+| 16 Oct 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 16 Oct 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 16 Oct 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 16 Oct 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 16 Oct 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 16 Oct 2026, 12:00 UTC | digest | A Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/) |
+| 16 Oct 2026, 12:00 UTC | digest | Elorian’s first AI model wants to reason with images, not just about them | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/) |
+| 16 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,023 open roles across 10 tracked companies. | `/jobs/` |
+| 16 Oct 2026, 12:00 UTC | digest | Physical AI is more than robots, says the Nvidia veteran now investing in it | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/podcast/physical-ai-is-more-than-robots-says-the-nvidia-veteran-now-investing-in-it/) |
+| 16 Oct 2026, 12:00 UTC | digest | Published the 2026-10-16 daily digest | 9 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
