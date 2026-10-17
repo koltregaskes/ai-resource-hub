@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 17 Oct 2026, 07:55 UTC
+Generated: 17 Oct 2026, 08:56 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -10,7 +10,7 @@ This table shows how much of each provider's public model surface is currently r
 | Google | 8 | 22 | 0 | Nano Banana 2.1 (6 Oct 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
 | Meta | 6 | 11 | 0 | Muse Spark Open (15 Oct 2026) | n/a | [docs](https://llama.meta.com/docs) |
 | Anthropic | 5 | 19 | 1 | Claude Opus 5 (batch) (24 Jul 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
-| DeepSeek | 4 | 10 | 0 | DeepSeek V4 Flash Vision Exp (21 Aug 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
+| DeepSeek | 4 | 11 | 0 | DeepSeek V4.1 Flash 1017 (17 Oct 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |
 | Cohere | 4 | 2 | 0 | Command A+ (22 Sept 2026) | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
 | Black Forest Labs | 4 | 0 | 0 | n/a | n/a | n/a |
