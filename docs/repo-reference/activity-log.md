@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 17 Oct 2026, 02:55 UTC
+Generated: 17 Oct 2026, 03:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 17 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,030 open roles across 10 tracked companies. | `/jobs/` |
-| 17 Oct 2026, 02:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 17 Oct 2026, 02:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 17 Oct 2026, 02:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 17 Oct 2026, 02:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 17 Oct 2026, 02:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 17 Oct 2026, 03:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 17 Oct 2026, 03:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 17 Oct 2026, 03:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 17 Oct 2026, 03:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 17 Oct 2026, 03:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 16 Oct 2026, 12:00 UTC | digest | How Itaú is building generative AI for its entire customer base | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/itau-generative-ai) |
 | 16 Oct 2026, 12:00 UTC | digest | OpenAI models hacked a crypto wallet and breached more websites | Ars Technica featured in the latest daily brief. | [open](https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/) |
 | 16 Oct 2026, 12:00 UTC | digest | Published the 2026-10-16 daily digest | 14 stories captured from 4 sources. | `/news/` |
