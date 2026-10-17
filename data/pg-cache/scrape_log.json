@@ -5,8 +5,8 @@
     "status": "success",
     "models_updated": 1030,
     "error_message": null,
-    "started_at": "2026-10-17 10:55:46",
-    "finished_at": "2026-10-17 10:55:46"
+    "started_at": "2026-10-17 11:55:41",
+    "finished_at": "2026-10-17 11:55:41"
   },
   {
     "id": 10,
@@ -14,8 +14,8 @@
     "status": "error",
     "models_updated": 74,
     "error_message": "VentureBeat: HTTP 429: Too Many Requests",
-    "started_at": "2026-10-17 10:55:42",
-    "finished_at": "2026-10-17 10:55:42"
+    "started_at": "2026-10-17 11:55:37",
+    "finished_at": "2026-10-17 11:55:37"
   },
   {
     "id": 9,
@@ -23,17 +23,8 @@
     "status": "success",
     "models_updated": 130,
     "error_message": null,
-    "started_at": "2026-10-17 10:55:30",
-    "finished_at": "2026-10-17 10:55:30"
-  },
-  {
-    "id": 7,
-    "scraper": "creative-benchmarks",
-    "status": "fallback",
-    "models_updated": 16,
-    "error_message": null,
-    "started_at": "2026-10-17 10:55:29",
-    "finished_at": "2026-10-17 10:55:29"
+    "started_at": "2026-10-17 11:55:28",
+    "finished_at": "2026-10-17 11:55:28"
   },
   {
     "id": 8,
@@ -41,8 +32,26 @@
     "status": "computed",
     "models_updated": 55,
     "error_message": null,
-    "started_at": "2026-10-17 10:55:29",
-    "finished_at": "2026-10-17 10:55:29"
+    "started_at": "2026-10-17 11:55:27",
+    "finished_at": "2026-10-17 11:55:27"
+  },
+  {
+    "id": 7,
+    "scraper": "creative-benchmarks",
+    "status": "fallback",
+    "models_updated": 16,
+    "error_message": null,
+    "started_at": "2026-10-17 11:55:26",
+    "finished_at": "2026-10-17 11:55:26"
+  },
+  {
+    "id": 5,
+    "scraper": "benchmarks:chatbot-arena",
+    "status": "fallback",
+    "models_updated": 0,
+    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-10-17T11:55:25.350Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
+    "started_at": "2026-10-17 11:55:25",
+    "finished_at": "2026-10-17 11:55:25"
   },
   {
     "id": 6,
@@ -50,35 +59,8 @@
     "status": "success",
     "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-10-17 10:55:28",
-    "finished_at": "2026-10-17 10:55:28"
-  },
-  {
-    "id": 5,
-    "scraper": "benchmarks:chatbot-arena",
-    "status": "fallback",
-    "models_updated": 0,
-    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-10-17T10:55:27.291Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
-    "started_at": "2026-10-17 10:55:27",
-    "finished_at": "2026-10-17 10:55:27"
-  },
-  {
-    "id": 4,
-    "scraper": "pricing:validator",
-    "status": "success",
-    "models_updated": 0,
-    "error_message": null,
-    "started_at": "2026-10-17 10:55:26",
-    "finished_at": "2026-10-17 10:55:26"
-  },
-  {
-    "id": 2,
-    "scraper": "pricing:openrouter",
-    "status": "success",
-    "models_updated": 341,
-    "error_message": null,
-    "started_at": "2026-10-17 10:55:25",
-    "finished_at": "2026-10-17 10:55:25"
+    "started_at": "2026-10-17 11:55:25",
+    "finished_at": "2026-10-17 11:55:25"
   },
   {
     "id": 3,
@@ -86,8 +68,26 @@
     "status": "success",
     "models_updated": 21,
     "error_message": null,
-    "started_at": "2026-10-17 10:55:25",
-    "finished_at": "2026-10-17 10:55:25"
+    "started_at": "2026-10-17 11:55:24",
+    "finished_at": "2026-10-17 11:55:24"
+  },
+  {
+    "id": 4,
+    "scraper": "pricing:validator",
+    "status": "success",
+    "models_updated": 0,
+    "error_message": null,
+    "started_at": "2026-10-17 11:55:24",
+    "finished_at": "2026-10-17 11:55:24"
+  },
+  {
+    "id": 2,
+    "scraper": "pricing:openrouter",
+    "status": "success",
+    "models_updated": 341,
+    "error_message": null,
+    "started_at": "2026-10-17 11:55:23",
+    "finished_at": "2026-10-17 11:55:23"
   },
   {
     "id": 1,
@@ -95,7 +95,7 @@
     "status": "success",
     "models_updated": 52,
     "error_message": null,
-    "started_at": "2026-10-17 10:55:24",
-    "finished_at": "2026-10-17 10:55:24"
+    "started_at": "2026-10-17 11:55:22",
+    "finished_at": "2026-10-17 11:55:22"
   }
 ]
