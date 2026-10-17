@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 17 Oct 2026, 19:20 UTC
+Generated: 17 Oct 2026, 20:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 17 Oct 2026, 19:20 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 17 Oct 2026, 19:20 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 17 Oct 2026, 19:20 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 17 Oct 2026, 19:20 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 17 Oct 2026, 19:20 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 17 Oct 2026, 20:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 17 Oct 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 17 Oct 2026, 20:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 17 Oct 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 17 Oct 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 17 Oct 2026, 12:00 UTC | digest | Anthropic says its workforce has become less junior and is spending more time in meetings | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/) |
 | 17 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,029 open roles across 10 tracked companies. | `/jobs/` |
 | 17 Oct 2026, 12:00 UTC | digest | Meta removes language that may have allowed it to scrape news sites | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites) |
-| 17 Oct 2026, 12:00 UTC | digest | Published the 2026-10-17 daily digest | 3 stories captured from 2 sources. | `/news/` |
-| 17 Oct 2026, 12:00 UTC | digest | Replit is no longer working with Anthropic, CEO says | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/) |
-| 17 Oct 2026, 12:00 UTC | digest | Websites are closing their doors to AI agents | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web) |
+| 17 Oct 2026, 12:00 UTC | digest | Published the 2026-10-17 daily digest | 4 stories captured from 2 sources. | `/news/` |
+| 17 Oct 2026, 12:00 UTC | digest | Replit makes OpenAI its default over Anthropic, CEO says | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
