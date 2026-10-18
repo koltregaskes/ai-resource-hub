@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 18 Oct 2026, 02:56 UTC
+Generated: 18 Oct 2026, 03:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 18 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,029 open roles across 10 tracked companies. | `/jobs/` |
-| 18 Oct 2026, 02:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 18 Oct 2026, 02:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 18 Oct 2026, 02:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 18 Oct 2026, 02:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 18 Oct 2026, 02:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Oct 2026, 03:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 18 Oct 2026, 03:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 18 Oct 2026, 03:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 18 Oct 2026, 03:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Oct 2026, 03:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 17 Oct 2026, 12:00 UTC | digest | Anthropic says its workforce has become less junior and is spending more time in meetings | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/) |
 | 17 Oct 2026, 12:00 UTC | digest | Meta removes language that raised scraping and AI training concerns | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/) |
 | 17 Oct 2026, 12:00 UTC | digest | Published the 2026-10-17 daily digest | 5 stories captured from 2 sources. | `/news/` |
