@@ -1,21 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 18 Oct 2026, 15:55 UTC
+Generated: 18 Oct 2026, 16:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 18 Oct 2026, 15:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 18 Oct 2026, 15:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 18 Oct 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 18 Oct 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 18 Oct 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 18 Oct 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 18 Oct 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 18 Oct 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 18 Oct 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 18 Oct 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Oct 2026, 12:00 UTC | digest | Disney agrees to hire the majority of Character.AI’s workforce | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/) |
 | 18 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,030 open roles across 10 tracked companies. | `/jobs/` |
-| 17 Oct 2026, 12:00 UTC | digest | Anthropic says its workforce has become less junior and is spending more time in meetings | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/) |
-| 17 Oct 2026, 12:00 UTC | digest | Meta removes language that raised scraping and AI training concerns | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/) |
-| 17 Oct 2026, 12:00 UTC | digest | Published the 2026-10-17 daily digest | 5 stories captured from 2 sources. | `/news/` |
-| 17 Oct 2026, 12:00 UTC | digest | Replit makes OpenAI its default over Anthropic, CEO says | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/) |
+| 18 Oct 2026, 12:00 UTC | digest | Published the 2026-10-18 daily digest | 1 stories captured from 1 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
@@ -26,3 +24,5 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 05 Feb 2026, 12:00 UTC | models | Claude Opus 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.6/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2/` |
 | 10 Dec 2025, 12:00 UTC | models | GPT-5.2 Pro (batch) added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2-pro/` |
+| 24 Nov 2025, 12:00 UTC | models | Claude Opus 4.5 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.5/` |
+| 15 Oct 2025, 12:00 UTC | models | Claude Haiku 4.5 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-haiku-4.5/` |
