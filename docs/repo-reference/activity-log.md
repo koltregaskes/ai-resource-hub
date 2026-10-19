@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 19 Oct 2026, 22:55 UTC
+Generated: 19 Oct 2026, 23:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 19 Oct 2026, 22:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 19 Oct 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 19 Oct 2026, 22:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 19 Oct 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 19 Oct 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 19 Oct 2026, 23:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 19 Oct 2026, 23:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 19 Oct 2026, 23:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 19 Oct 2026, 23:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 19 Oct 2026, 23:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 19 Oct 2026, 12:00 UTC | digest | Embedded AI evaluators won&#8217;t be an easy solution, Hugging Face&#8217;s policy chief says | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/19/embedded-ai-evaluators-wont-be-an-easy-solution-hugging-faces-policy-chief-says/) |
 | 19 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,040 open roles across 10 tracked companies. | `/jobs/` |
 | 19 Oct 2026, 12:00 UTC | digest | Microsoft says AI agents are like insider threats as &#8216;frontier models can&#8217;t be trusted&#8217; | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/) |
-| 19 Oct 2026, 12:00 UTC | digest | Published the 2026-10-19 daily digest | 16 stories captured from 3 sources. | `/news/` |
-| 19 Oct 2026, 12:00 UTC | digest | The fossil fuel comeback is here | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/science/1013954/fossil-fuel-power-infrastructure-data-centers-report) |
+| 19 Oct 2026, 12:00 UTC | digest | Nscale and Anthropic are reportedly in talks for yet another $45 billion compute deal | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/) |
+| 19 Oct 2026, 12:00 UTC | digest | Published the 2026-10-19 daily digest | 17 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
