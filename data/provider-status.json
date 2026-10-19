@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T13:55:50.480Z",
+  "generatedAt": "2026-10-19T14:38:11.578Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-19T13:55:50.473Z",
+      "lastCheckedAt": "2026-10-19T14:38:11.571Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,103 +90,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-10-19T13:55:48.506Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Responses",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Images",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Files",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "File uploads",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Image Generation",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Chat Completions",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01M5A5S1ATN3QB2WCHQ3VDZC81",
-          "title": "File Download errors",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-10-19T13:31:52.000Z",
-          "updatedAt": "2026-10-19T13:31:52.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01M5A5S1ATN3QB2WCHQ3VDZC81",
-          "title": "File Download errors",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-10-19T13:31:52.000Z",
-          "updatedAt": "2026-10-19T13:31:52.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
-        },
-        {
-          "id": "01M4XNQX7C6RCBNGX9H711WFSG",
-          "title": "Delayed Costs data in the Compliance API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-14T17:00:44.000Z",
-          "updatedAt": "2026-10-16T10:44:58.000Z",
-          "resolvedAt": "2026-10-16T10:44:58.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M506BA4XRSWH7THR53HQGN3Z",
-          "title": "Widespread feature degradation",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-10-15T16:29:26.000Z",
-          "updatedAt": "2026-10-15T18:56:00.000Z",
-          "resolvedAt": "2026-10-15T18:56:00.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M4WYPP5QA0CJ3JV76KH285K8",
-          "title": "Limited availability on gpt-image-2.5-flare and gpt-image-2.5-sunburst",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-14T10:18:07.000Z",
-          "updatedAt": "2026-10-14T10:58:07.000Z",
-          "resolvedAt": "2026-10-14T10:58:07.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -197,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-19T13:55:48.509Z",
+      "lastCheckedAt": "2026-10-19T14:38:10.282Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-19T13:55:49.527Z",
+      "lastCheckedAt": "2026-10-19T14:38:10.880Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-19T13:55:48.922Z",
+      "lastCheckedAt": "2026-10-19T14:38:10.236Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -329,6 +232,92 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-10-19T14:38:10.284Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Chat Completions",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Agents",
+          "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Embeddings",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01M5A5S1ATN3QB2WCHQ3VDZC81",
+          "title": "File Download errors",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-19T13:31:52.000Z",
+          "updatedAt": "2026-10-19T14:14:03.000Z",
+          "resolvedAt": "2026-10-19T14:14:03.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M4XNQX7C6RCBNGX9H711WFSG",
+          "title": "Delayed Costs data in the Compliance API",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-14T17:00:44.000Z",
+          "updatedAt": "2026-10-16T10:44:58.000Z",
+          "resolvedAt": "2026-10-16T10:44:58.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M506BA4XRSWH7THR53HQGN3Z",
+          "title": "Widespread feature degradation",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-10-15T16:29:26.000Z",
+          "updatedAt": "2026-10-15T18:56:00.000Z",
+          "resolvedAt": "2026-10-15T18:56:00.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M4WYPP5QA0CJ3JV76KH285K8",
+          "title": "Limited availability on gpt-image-2.5-flare and gpt-image-2.5-sunburst",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-14T10:18:07.000Z",
+          "updatedAt": "2026-10-14T10:58:07.000Z",
+          "resolvedAt": "2026-10-14T10:58:07.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -339,7 +328,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-19T13:55:49.583Z",
+      "lastCheckedAt": "2026-10-19T14:38:11.308Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
