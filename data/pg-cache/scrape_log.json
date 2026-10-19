@@ -3,10 +3,10 @@
     "id": 11,
     "scraper": "jobs",
     "status": "success",
-    "models_updated": 1036,
+    "models_updated": 1037,
     "error_message": null,
-    "started_at": "2026-10-19 15:56:15",
-    "finished_at": "2026-10-19 15:56:15"
+    "started_at": "2026-10-19 16:55:56",
+    "finished_at": "2026-10-19 16:55:56"
   },
   {
     "id": 10,
@@ -14,26 +14,8 @@
     "status": "error",
     "models_updated": 74,
     "error_message": "VentureBeat: HTTP 429: Too Many Requests",
-    "started_at": "2026-10-19 15:56:11",
-    "finished_at": "2026-10-19 15:56:11"
-  },
-  {
-    "id": 9,
-    "scraper": "registry:normalise-status",
-    "status": "success",
-    "models_updated": 131,
-    "error_message": null,
-    "started_at": "2026-10-19 15:55:59",
-    "finished_at": "2026-10-19 15:55:59"
-  },
-  {
-    "id": 7,
-    "scraper": "creative-benchmarks",
-    "status": "fallback",
-    "models_updated": 16,
-    "error_message": null,
-    "started_at": "2026-10-19 15:55:58",
-    "finished_at": "2026-10-19 15:55:58"
+    "started_at": "2026-10-19 16:55:47",
+    "finished_at": "2026-10-19 16:55:47"
   },
   {
     "id": 8,
@@ -41,17 +23,26 @@
     "status": "computed",
     "models_updated": 55,
     "error_message": null,
-    "started_at": "2026-10-19 15:55:58",
-    "finished_at": "2026-10-19 15:55:58"
+    "started_at": "2026-10-19 16:55:35",
+    "finished_at": "2026-10-19 16:55:35"
   },
   {
-    "id": 5,
-    "scraper": "benchmarks:chatbot-arena",
+    "id": 9,
+    "scraper": "registry:normalise-status",
+    "status": "success",
+    "models_updated": 131,
+    "error_message": null,
+    "started_at": "2026-10-19 16:55:35",
+    "finished_at": "2026-10-19 16:55:35"
+  },
+  {
+    "id": 7,
+    "scraper": "creative-benchmarks",
     "status": "fallback",
-    "models_updated": 0,
-    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-10-19T15:55:56.334Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
-    "started_at": "2026-10-19 15:55:56",
-    "finished_at": "2026-10-19 15:55:56"
+    "models_updated": 16,
+    "error_message": null,
+    "started_at": "2026-10-19 16:55:34",
+    "finished_at": "2026-10-19 16:55:34"
   },
   {
     "id": 6,
@@ -59,8 +50,8 @@
     "status": "success",
     "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-10-19 15:55:56",
-    "finished_at": "2026-10-19 15:55:56"
+    "started_at": "2026-10-19 16:55:31",
+    "finished_at": "2026-10-19 16:55:31"
   },
   {
     "id": 4,
@@ -68,8 +59,17 @@
     "status": "success",
     "models_updated": 0,
     "error_message": null,
-    "started_at": "2026-10-19 15:55:55",
-    "finished_at": "2026-10-19 15:55:55"
+    "started_at": "2026-10-19 16:55:30",
+    "finished_at": "2026-10-19 16:55:30"
+  },
+  {
+    "id": 5,
+    "scraper": "benchmarks:chatbot-arena",
+    "status": "fallback",
+    "models_updated": 0,
+    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-10-19T16:55:30.820Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
+    "started_at": "2026-10-19 16:55:30",
+    "finished_at": "2026-10-19 16:55:30"
   },
   {
     "id": 2,
@@ -77,8 +77,8 @@
     "status": "success",
     "models_updated": 339,
     "error_message": null,
-    "started_at": "2026-10-19 15:55:54",
-    "finished_at": "2026-10-19 15:55:54"
+    "started_at": "2026-10-19 16:55:29",
+    "finished_at": "2026-10-19 16:55:29"
   },
   {
     "id": 3,
@@ -86,8 +86,8 @@
     "status": "success",
     "models_updated": 21,
     "error_message": null,
-    "started_at": "2026-10-19 15:55:54",
-    "finished_at": "2026-10-19 15:55:54"
+    "started_at": "2026-10-19 16:55:29",
+    "finished_at": "2026-10-19 16:55:29"
   },
   {
     "id": 1,
@@ -95,7 +95,7 @@
     "status": "success",
     "models_updated": 52,
     "error_message": null,
-    "started_at": "2026-10-19 15:55:53",
-    "finished_at": "2026-10-19 15:55:53"
+    "started_at": "2026-10-19 16:55:24",
+    "finished_at": "2026-10-19 16:55:24"
   }
 ]
