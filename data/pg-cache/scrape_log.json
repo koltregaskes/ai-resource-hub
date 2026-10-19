@@ -5,8 +5,8 @@
     "status": "success",
     "models_updated": 1033,
     "error_message": null,
-    "started_at": "2026-10-19 09:55:51",
-    "finished_at": "2026-10-19 09:55:51"
+    "started_at": "2026-10-19 10:55:48",
+    "finished_at": "2026-10-19 10:55:48"
   },
   {
     "id": 10,
@@ -14,26 +14,8 @@
     "status": "error",
     "models_updated": 74,
     "error_message": "VentureBeat: HTTP 429: Too Many Requests",
-    "started_at": "2026-10-19 09:55:48",
-    "finished_at": "2026-10-19 09:55:48"
-  },
-  {
-    "id": 9,
-    "scraper": "registry:normalise-status",
-    "status": "success",
-    "models_updated": 130,
-    "error_message": null,
-    "started_at": "2026-10-19 09:55:37",
-    "finished_at": "2026-10-19 09:55:37"
-  },
-  {
-    "id": 7,
-    "scraper": "creative-benchmarks",
-    "status": "fallback",
-    "models_updated": 16,
-    "error_message": null,
-    "started_at": "2026-10-19 09:55:36",
-    "finished_at": "2026-10-19 09:55:36"
+    "started_at": "2026-10-19 10:55:45",
+    "finished_at": "2026-10-19 10:55:45"
   },
   {
     "id": 8,
@@ -41,8 +23,35 @@
     "status": "computed",
     "models_updated": 55,
     "error_message": null,
-    "started_at": "2026-10-19 09:55:36",
-    "finished_at": "2026-10-19 09:55:36"
+    "started_at": "2026-10-19 10:55:33",
+    "finished_at": "2026-10-19 10:55:33"
+  },
+  {
+    "id": 9,
+    "scraper": "registry:normalise-status",
+    "status": "success",
+    "models_updated": 131,
+    "error_message": null,
+    "started_at": "2026-10-19 10:55:33",
+    "finished_at": "2026-10-19 10:55:33"
+  },
+  {
+    "id": 7,
+    "scraper": "creative-benchmarks",
+    "status": "fallback",
+    "models_updated": 16,
+    "error_message": null,
+    "started_at": "2026-10-19 10:55:32",
+    "finished_at": "2026-10-19 10:55:32"
+  },
+  {
+    "id": 5,
+    "scraper": "benchmarks:chatbot-arena",
+    "status": "fallback",
+    "models_updated": 0,
+    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-10-19T10:55:31.049Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
+    "started_at": "2026-10-19 10:55:31",
+    "finished_at": "2026-10-19 10:55:31"
   },
   {
     "id": 6,
@@ -50,8 +59,8 @@
     "status": "success",
     "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-10-19 09:55:35",
-    "finished_at": "2026-10-19 09:55:35"
+    "started_at": "2026-10-19 10:55:31",
+    "finished_at": "2026-10-19 10:55:31"
   },
   {
     "id": 4,
@@ -59,17 +68,8 @@
     "status": "success",
     "models_updated": 0,
     "error_message": null,
-    "started_at": "2026-10-19 09:55:34",
-    "finished_at": "2026-10-19 09:55:34"
-  },
-  {
-    "id": 5,
-    "scraper": "benchmarks:chatbot-arena",
-    "status": "fallback",
-    "models_updated": 0,
-    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-10-19T09:55:34.828Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
-    "started_at": "2026-10-19 09:55:34",
-    "finished_at": "2026-10-19 09:55:34"
+    "started_at": "2026-10-19 10:55:30",
+    "finished_at": "2026-10-19 10:55:30"
   },
   {
     "id": 3,
@@ -77,17 +77,8 @@
     "status": "success",
     "models_updated": 21,
     "error_message": null,
-    "started_at": "2026-10-19 09:55:33",
-    "finished_at": "2026-10-19 09:55:33"
-  },
-  {
-    "id": 2,
-    "scraper": "pricing:openrouter",
-    "status": "success",
-    "models_updated": 341,
-    "error_message": null,
-    "started_at": "2026-10-19 09:55:32",
-    "finished_at": "2026-10-19 09:55:32"
+    "started_at": "2026-10-19 10:55:29",
+    "finished_at": "2026-10-19 10:55:29"
   },
   {
     "id": 1,
@@ -95,7 +86,16 @@
     "status": "success",
     "models_updated": 52,
     "error_message": null,
-    "started_at": "2026-10-19 09:55:31",
-    "finished_at": "2026-10-19 09:55:31"
+    "started_at": "2026-10-19 10:55:28",
+    "finished_at": "2026-10-19 10:55:28"
+  },
+  {
+    "id": 2,
+    "scraper": "pricing:openrouter",
+    "status": "success",
+    "models_updated": 339,
+    "error_message": null,
+    "started_at": "2026-10-19 10:55:28",
+    "finished_at": "2026-10-19 10:55:28"
   }
 ]
