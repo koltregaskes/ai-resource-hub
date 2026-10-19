@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 19 Oct 2026, 16:56 UTC
+Generated: 19 Oct 2026, 17:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 19 Oct 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 19 Oct 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 19 Oct 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 19 Oct 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 19 Oct 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 19 Oct 2026, 17:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 19 Oct 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 19 Oct 2026, 17:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 19 Oct 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 19 Oct 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 19 Oct 2026, 12:00 UTC | digest | JB Pritzker thinks AI could help us live to 100 — or threaten us like nukes | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/podcast/1012839/pritzker-ai-privacy-data-centers-flock-congress-laws) |
 | 19 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,037 open roles across 10 tracked companies. | `/jobs/` |
 | 19 Oct 2026, 12:00 UTC | digest | Nvidia launches new open models to run agents in the enterprise and on PCs | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/) |
