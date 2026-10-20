@@ -1,5 +1,29 @@
 [
   {
+    "id": "news-6559d9cb2b558fefb9eb",
+    "title": "Judge dismisses Sam Altman’s sister’s sexual abuse lawsuit",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1014976/sam-altman-ann-altman-lawsuit-dismissed",
+    "source": "The Verge",
+    "summary": "On Tuesday, US District Judge Zachary Bluestone dismissed the lawsuit Ann Altman filed last year alleging that her brother, OpenAI CEO Sam Altman, had sexually abused her throughout her childhood. As reported earlier by The Guardian, the judge wrote that over the past year, Ann had failed to appear for an independent…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T23:04:19.000Z",
+    "discovered_at": "2026-10-20 23:50:37"
+  },
+  {
+    "id": "news-d4e57614c374e23f368e",
+    "title": "Anthropic pitches AI safety bill that may block a model if 50+ people could be killed",
+    "url": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/",
+    "source": "TechCrunch",
+    "summary": "The proposed policy seems to offer protections against AI run amok but actually forbids federal agencies from blocking a model's release without the permission of a judge.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T23:01:23.000Z",
+    "discovered_at": "2026-10-20 23:50:25"
+  },
+  {
     "id": "news-fda7124672794d3fd201",
     "title": "Hugging Face CEO warns that Netflix&#8217;s OpenAI hack documentary isn&#8217;t accurate",
     "url": "https://techcrunch.com/2026/10/20/hugging-face-ceo-warns-that-netflixs-openai-hack-documentary-isnt-accurate/",
@@ -9,7 +33,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T22:24:02.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
+  },
+  {
+    "id": "news-7f6bb9c0aa5027ea3e8e",
+    "title": "Google’s more personalized Gemini AI is heading to your car",
+    "url": "https://www.theverge.com/tech/1014999/google-gemini-ai-cars-android-auto",
+    "source": "The Verge",
+    "summary": "Google is bringing Personal Intelligence to Gemini AI in your car. With this update, Gemini in Android Auto and cars with Google built-in can tap into your information across Google apps, including Gmail, Calendar, Maps, Photos, YouTube, and Search. As an example, Google says you can ask Gemini about your flight statu…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T22:11:34.000Z",
+    "discovered_at": "2026-10-20 23:50:37"
   },
   {
     "id": "news-9ea810a533713aeb54ac",
@@ -21,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T21:25:22.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-38bd10c8e49d1d2ab4a0",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T20:40:41.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-a323e283c5c71adc0bd7",
@@ -45,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T20:35:10.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-45cc8f58865901fe4a59",
@@ -57,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T18:38:24.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-6f64ba14f44d2e04ccf9",
@@ -69,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T18:36:53.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-f52190a49967b68da7ad",
@@ -81,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T18:07:34.000Z",
-    "discovered_at": "2026-10-20 22:55:54"
+    "discovered_at": "2026-10-20 23:50:37"
   },
   {
     "id": "news-2f7a561d0868a8a6426c",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T17:55:12.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-8891282d78b30c77f9a2",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T17:12:48.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-5130abca4141f29e7b41",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T16:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-e85a4c5da2af52ae78eb",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T14:18:37.000Z",
-    "discovered_at": "2026-10-20 22:55:54"
+    "discovered_at": "2026-10-20 23:50:37"
   },
   {
     "id": "news-6fce357d7ac50eec9624",
@@ -141,19 +177,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T14:13:32.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-c723746d1e667296e0ea",
     "title": "US orders federal agencies to remove China’s DeepSeek AI from their systems",
     "url": "https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/",
     "source": "TechCrunch",
-    "summary": "The US has ordered federal civilian agencies to remove DeepSeek products and third-party services built using its technology, citing national security concerns.",
+    "summary": "The U.S. has ordered federal civilian agencies to remove DeepSeek products and third-party services built using its technology, citing national security concerns.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T13:07:24.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-af3e08fe45e196290195",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T13:06:44.000Z",
-    "discovered_at": "2026-10-20 22:55:54"
+    "discovered_at": "2026-10-20 23:50:37"
   },
   {
     "id": "news-208dc20e81cfcf4eac35",
@@ -177,19 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T13:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
-  },
-  {
-    "id": "news-33f72cf8b33fabf0bfc9",
-    "title": "Yelp can now call on your behalf to check wait times at a restaurant",
-    "url": "https://techcrunch.com/2026/10/20/yelp-can-now-call-on-your-behalf-to-check-wait-times-at-a-restaurant/",
-    "source": "TechCrunch",
-    "summary": "Yelp is embedding numerous new AI features into its app that can do everything from call to check on restaurant wait times to create personalized recommendations that remember your preferences.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-20T11:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-697eb620bfd36fec3763",
@@ -201,7 +225,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T11:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
+  },
+  {
+    "id": "news-33f72cf8b33fabf0bfc9",
+    "title": "Yelp can now call on your behalf to check wait times at a restaurant",
+    "url": "https://techcrunch.com/2026/10/20/yelp-can-now-call-on-your-behalf-to-check-wait-times-at-a-restaurant/",
+    "source": "TechCrunch",
+    "summary": "Yelp is embedding numerous new AI features into its app that can do everything from call to check on restaurant wait times to create personalized recommendations that remember your preferences.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T11:00:00.000Z",
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-b3fcb2e42d3211233826",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T10:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-ed298111b59a085c4951",
@@ -225,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T01:27:03.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-dbaa902542534b3aef2d",
@@ -237,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T00:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-b0fb4c0567199f7f70f1",
@@ -249,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T23:39:38.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-d45dacf783b2543c1e1a",
@@ -261,19 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T22:49:27.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
-  },
-  {
-    "id": "news-0cffae2fd0c5318b5d57",
-    "title": "Microsoft says AI agents are like insider threats as &#8216;frontier models can&#8217;t be trusted&#8217;",
-    "url": "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/",
-    "source": "TechCrunch",
-    "summary": "Microsoft wants enterprises to closely watch the agents that employees use with systems not controlled by AI labs like OpenAI and Anthropic.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-19T22:04:28.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-50c115309d98a51fa358",
@@ -285,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T21:48:01.000Z",
-    "discovered_at": "2026-10-20 22:55:54"
+    "discovered_at": "2026-10-20 23:50:37"
   },
   {
     "id": "news-073765c16b4994fd2621",
@@ -297,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T21:28:20.000Z",
-    "discovered_at": "2026-10-20 22:55:54"
+    "discovered_at": "2026-10-20 23:50:37"
   },
   {
     "id": "news-fd89b9b5cd5875ba176f",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T14:30:00.000Z",
-    "discovered_at": "2026-10-20 22:55:54"
+    "discovered_at": "2026-10-20 23:50:37"
   },
   {
     "id": "news-c08e28e17ab3caf75095",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T13:58:41.000Z",
-    "discovered_at": "2026-10-20 22:55:54"
+    "discovered_at": "2026-10-20 23:50:37"
   },
   {
     "id": "news-9279cf6bb0c3cf64fc2e",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T12:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:54"
+    "discovered_at": "2026-10-20 23:50:37"
   },
   {
     "id": "news-7a364f356aab49466020",
@@ -345,31 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T12:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
-  },
-  {
-    "id": "news-de6b0c59a9e6b0d3a8fc",
-    "title": "A woman was arrested in Philly for blocking a delivery robot",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1013541/a-woman-was-arrested-in-philly-for-blocking-a-delivery-robot",
-    "source": "The Verge",
-    "summary": "Carolyn Marvin was arrested and charged with disorderly conduct after blocking the path of an Uber delivery robot and refusing to get out of the way. Marvin told Philadelphia's ABC13 \"I know they're taking the jobs of human delivery workers and so, I have been protesting them whenever I saw them by standing in front […",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-18T18:28:10.000Z",
-    "discovered_at": "2026-10-20 22:55:54"
-  },
-  {
-    "id": "news-ac0eba5f39915c2126df",
-    "title": "Meta removes language that may have allowed it to scrape news sites",
-    "url": "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites",
-    "source": "The Verge",
-    "summary": "After backlash, Meta is updating its terms again to remove language that suggested it could scrape content from sites, including news sites, to train its AI. Specifically, the following language no longer appears on the commercial terms page: … Meta may use any content from such domains, web pages, or URLs to provide,…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-17T15:04:36.000Z",
-    "discovered_at": "2026-10-20 22:55:54"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-10-20 22:55:54"
+    "discovered_at": "2026-10-20 23:50:37"
   },
   {
     "id": "news-65442e708214c10b88da",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T19:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-9db4940a53f868400a11",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T00:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-4a2f3ca18eb9cee6e404",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T00:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-a72d1e4da6b0e1062a21",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T19:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-fa14b8f7db4605dfa58d",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T13:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-dd00c04c9b95848ea0ec",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T00:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-10-20 22:55:54"
+    "discovered_at": "2026-10-20 23:50:37"
   },
   {
     "id": "news-24cc989c02dbc2a2daf4",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-a0e0fec2c2b5f568672d",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-7d10f0ddfecf202c0b2c",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T07:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-e181547094b0a112cf0b",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T07:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-2f3282e483141f68421d",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T00:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-ffc748cb8d88a919ca05",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T12:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-edd58468d564448f5fe7",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-09T07:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-90995f7dbc9c26746d9c",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-09T07:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-112b5f00879d4fef3be3",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-08T16:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:43"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-307bfda48464106bf8e3",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:21:53.000Z",
-    "discovered_at": "2026-10-20 22:55:54"
+    "discovered_at": "2026-10-20 23:50:37"
   },
   {
     "id": "news-aaf1cc502a6b16035865",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T22:26:35.000Z",
-    "discovered_at": "2026-10-20 22:55:54"
+    "discovered_at": "2026-10-20 23:50:37"
   },
   {
     "id": "news-6ee8ae0821d338b723f5",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T23:03:16.000Z",
-    "discovered_at": "2026-10-20 22:55:54"
+    "discovered_at": "2026-10-20 23:50:37"
   },
   {
     "id": "news-1122627a66dfc215a84f",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T15:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-1eadd5627184a89f1bbe",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   },
   {
     "id": "news-8a86c97089bb6492a0d5",
@@ -669,6 +669,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T18:00:00.000Z",
-    "discovered_at": "2026-10-20 22:55:44"
+    "discovered_at": "2026-10-20 23:50:25"
   }
 ]
