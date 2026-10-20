@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 20 Oct 2026, 13:55 UTC
+Generated: 20 Oct 2026, 14:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 20 Oct 2026, 13:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 20 Oct 2026, 13:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 20 Oct 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 20 Oct 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 20 Oct 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 20 Oct 2026, 12:00 UTC | digest | Adobe Lightroom mobile can now open closed eyes in photos with a simple tap | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1014246/adobe-lightroom-mobile-ai-quick-action-open-eyes-closed-blink-repair) |
-| 20 Oct 2026, 12:00 UTC | digest | Eka is worth $1.45B thanks to a physical AI model that has experts raving | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/20/eka-is-worth-1-45-billion-thanks-to-a-physical-ai-model-that-has-experts-raving/) |
-| 20 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,044 open roles across 10 tracked companies. | `/jobs/` |
-| 20 Oct 2026, 12:00 UTC | digest | Published the 2026-10-20 daily digest | 6 stories captured from 2 sources. | `/news/` |
+| 20 Oct 2026, 14:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 20 Oct 2026, 14:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 20 Oct 2026, 14:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 20 Oct 2026, 14:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 20 Oct 2026, 14:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 20 Oct 2026, 12:00 UTC | digest | Figma co-founder Dylan Field thinks MCP is not a perfect protocol | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol/) |
+| 20 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,046 open roles across 10 tracked companies. | `/jobs/` |
+| 20 Oct 2026, 12:00 UTC | digest | Published the 2026-10-20 daily digest | 8 stories captured from 2 sources. | `/news/` |
+| 20 Oct 2026, 12:00 UTC | digest | Spotify pulled 50 million AI slop and spam tracks from its recommendations | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed) |
 | 20 Oct 2026, 12:00 UTC | digest | US orders federal agencies to remove China’s DeepSeek AI from their systems | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
