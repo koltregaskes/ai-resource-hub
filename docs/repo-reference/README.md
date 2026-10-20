@@ -8,18 +8,18 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 20 Oct 2026, 16:57 UTC |
+| Generated | 20 Oct 2026, 17:56 UTC |
 | Providers tracked | 40 |
 | Public models | 348 |
 | Active models | 105 |
 | Tracking models | 242 |
 | Preview models | 1 |
 | Benchmarks | 34 |
-| News items in cache | 59 |
+| News items in cache | 56 |
 | Release-desk entries | 51 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 20 Oct 2026, 16:57 UTC |
+| Latest visible refresh | 20 Oct 2026, 17:56 UTC |
 | Current evaluated composite leader | GPT-5.2 (52.1) |
 | Latest tracked release | DeepSeek V4.1 Flash 1017 (17 Oct 2026) |
 

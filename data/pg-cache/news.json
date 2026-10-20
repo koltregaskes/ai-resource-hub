@@ -1,5 +1,29 @@
 [
   {
+    "id": "news-2f7a561d0868a8a6426c",
+    "title": "Eric Schmidt reportedly owns about half as much of Anthropic as CEO Dario Amodei",
+    "url": "https://techcrunch.com/2026/10/20/eric-schmidt-reportedly-owns-about-half-as-much-of-anthropic-as-ceo-dario-amodei/",
+    "source": "TechCrunch",
+    "summary": "The former Google CEO owns about 1% stake in the leading AI lab, Bloomberg reported.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T17:55:12.000Z",
+    "discovered_at": "2026-10-20 17:55:44"
+  },
+  {
+    "id": "news-8891282d78b30c77f9a2",
+    "title": "Meta&#8217;s Muse hits 10M U.S. downloads in 40 days, a milestone reached by only 11 other apps",
+    "url": "https://techcrunch.com/2026/10/20/metas-muse-hits-10m-u-s-downloads-in-40-days-a-milestone-reached-by-only-11-other-apps/",
+    "source": "TechCrunch",
+    "summary": "Meta's AI companion Muse has surpassed 10 million U.S. downloads in its first 40 days, joining an exclusive group of apps that includes Threads. New data also shows Muse is retaining users at higher rates than its AI rivals.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T17:12:48.000Z",
+    "discovered_at": "2026-10-20 17:55:44"
+  },
+  {
     "id": "news-5130abca4141f29e7b41",
     "title": "Plants can speak using electricity, so this startup built an AI model to decipher their language",
     "url": "https://techcrunch.com/2026/10/20/plants-can-speak-using-electricity-so-this-startup-built-an-ai-model-to-decipher-their-language/",
@@ -9,7 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T16:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-e85a4c5da2af52ae78eb",
@@ -21,19 +45,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T14:18:37.000Z",
-    "discovered_at": "2026-10-20 16:57:24"
+    "discovered_at": "2026-10-20 17:55:55"
   },
   {
     "id": "news-6fce357d7ac50eec9624",
     "title": "Figma co-founder Dylan Field thinks MCP is not a perfect protocol",
     "url": "https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol/",
     "source": "TechCrunch",
-    "summary": "Figma said it plans to support as many standards as possible without exposing all of its data",
+    "summary": "Figma said it plans to support as many standards as possible without exposing all of its data.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T14:13:32.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-c723746d1e667296e0ea",
@@ -45,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T13:07:24.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-af3e08fe45e196290195",
@@ -57,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T13:06:44.000Z",
-    "discovered_at": "2026-10-20 16:57:24"
+    "discovered_at": "2026-10-20 17:55:55"
   },
   {
     "id": "news-208dc20e81cfcf4eac35",
@@ -69,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T13:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-33f72cf8b33fabf0bfc9",
@@ -81,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T11:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-697eb620bfd36fec3763",
@@ -93,7 +117,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T11:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
+  },
+  {
+    "id": "news-b3fcb2e42d3211233826",
+    "title": "Franchisee reconciles cash in 94% less time with ChatGPT Work",
+    "url": "https://openai.com/index/ted-taylor-restaurant",
+    "source": "OpenAI",
+    "summary": "An independent Schlotzsky’s and Cinnabon franchisee cut menu repricing time by 95% and built a workflow that could free up $100K in cash flow.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T10:00:00.000Z",
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-ed298111b59a085c4951",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T01:27:03.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-b0fb4c0567199f7f70f1",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T23:39:38.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-d45dacf783b2543c1e1a",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T22:49:27.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-0cffae2fd0c5318b5d57",
@@ -141,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T22:04:28.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-50c115309d98a51fa358",
@@ -153,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T21:48:01.000Z",
-    "discovered_at": "2026-10-20 16:57:24"
+    "discovered_at": "2026-10-20 17:55:55"
   },
   {
     "id": "news-073765c16b4994fd2621",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T21:28:20.000Z",
-    "discovered_at": "2026-10-20 16:57:24"
+    "discovered_at": "2026-10-20 17:55:55"
   },
   {
     "id": "news-aaaf393dcb103418d2a5",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T20:09:24.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-039a84854fb85dd641d6",
@@ -189,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T19:28:34.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-e37065d0e754995bd156",
@@ -201,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T19:00:12.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-71c2d7263cd3eef9e9a6",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T18:49:04.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-36c2a79412d571d75712",
@@ -225,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T18:37:27.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-f93d80856f11bb09a344",
@@ -237,19 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T16:13:22.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
-  },
-  {
-    "id": "news-d88320583f8c2de091e7",
-    "title": "Nvidia launches new open models to run agents in the enterprise and on PCs",
-    "url": "https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/",
-    "source": "TechCrunch",
-    "summary": "Nvidia is leaning hard into the trend of enterprise companies wanting to run their own open models in their own data centers and also trying to make on-device, private AI agents a thing.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-19T15:37:09.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-fd89b9b5cd5875ba176f",
@@ -261,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T14:30:00.000Z",
-    "discovered_at": "2026-10-20 16:57:24"
+    "discovered_at": "2026-10-20 17:55:55"
   },
   {
     "id": "news-c08e28e17ab3caf75095",
@@ -273,19 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T13:58:41.000Z",
-    "discovered_at": "2026-10-20 16:57:24"
-  },
-  {
-    "id": "news-c17a4963d410cf3c288c",
-    "title": "Laplace Intelligence red-teams robots and self-driving cars before they hit the real world",
-    "url": "https://techcrunch.com/2026/10/19/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/",
-    "source": "TechCrunch",
-    "summary": "University of Michigan spinout Laplace Intelligence uses AI agents and interactive simulation to stress-test robots and self-driving vehicles before deployment. The profitable startup is competing in Startup Battlefield at TechCrunch Disrupt, October 13-15 in San Francisco.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-19T12:30:00.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:55"
   },
   {
     "id": "news-9279cf6bb0c3cf64fc2e",
@@ -297,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T12:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:24"
+    "discovered_at": "2026-10-20 17:55:55"
   },
   {
     "id": "news-7a364f356aab49466020",
@@ -309,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T12:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-de6b0c59a9e6b0d3a8fc",
@@ -321,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-18T18:28:10.000Z",
-    "discovered_at": "2026-10-20 16:57:24"
+    "discovered_at": "2026-10-20 17:55:55"
   },
   {
     "id": "news-ac0eba5f39915c2126df",
@@ -333,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-17T15:04:36.000Z",
-    "discovered_at": "2026-10-20 16:57:24"
+    "discovered_at": "2026-10-20 17:55:55"
   },
   {
     "id": "news-79619743255e89a10aca",
@@ -345,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-17T13:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:24"
+    "discovered_at": "2026-10-20 17:55:55"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -357,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-10-20 16:57:24"
+    "discovered_at": "2026-10-20 17:55:55"
   },
   {
     "id": "news-65442e708214c10b88da",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T19:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-9db4940a53f868400a11",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T00:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-4a2f3ca18eb9cee6e404",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T00:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-a72d1e4da6b0e1062a21",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T19:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-fa14b8f7db4605dfa58d",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T13:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-dd00c04c9b95848ea0ec",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T00:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-10-20 16:57:24"
+    "discovered_at": "2026-10-20 17:55:55"
   },
   {
     "id": "news-24cc989c02dbc2a2daf4",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-a0e0fec2c2b5f568672d",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-7d10f0ddfecf202c0b2c",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T07:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-e181547094b0a112cf0b",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T07:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-2f3282e483141f68421d",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T00:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-ffc748cb8d88a919ca05",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T12:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-90995f7dbc9c26746d9c",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-09T07:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-edd58468d564448f5fe7",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-09T07:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-112b5f00879d4fef3be3",
@@ -561,19 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-08T16:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
-  },
-  {
-    "id": "news-f6d3626eb7c890d94bb5",
-    "title": "LegalOn halves Codex costs while maintaining development speed",
-    "url": "https://openai.com/index/legalon-halves-codex-costs",
-    "source": "OpenAI",
-    "summary": "LegalOn cut estimated daily Codex costs by 65% while maintaining development speed. It matched Astra, Sol, and Luna to tasks and managed budgets strategically.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-08T12:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-ca1ec6c6a1a1314d953b",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-08T12:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -597,19 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
-  },
-  {
-    "id": "news-4bb428a07b2a9a894359",
-    "title": "Introducing Claude Haiku 5.5",
-    "url": "https://www.anthropic.com/claude-haiku-5-5",
-    "source": "Anthropic",
-    "summary": "Our fastest, cheapest, and most capable small model yet. It’s designed for high-volume, cost-sensitive work.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-07T00:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-307bfda48464106bf8e3",
@@ -621,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:21:53.000Z",
-    "discovered_at": "2026-10-20 16:57:24"
+    "discovered_at": "2026-10-20 17:55:55"
   },
   {
     "id": "news-aaf1cc502a6b16035865",
@@ -633,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T22:26:35.000Z",
-    "discovered_at": "2026-10-20 16:57:24"
+    "discovered_at": "2026-10-20 17:55:55"
   },
   {
     "id": "news-6ee8ae0821d338b723f5",
@@ -645,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T23:03:16.000Z",
-    "discovered_at": "2026-10-20 16:57:24"
+    "discovered_at": "2026-10-20 17:55:55"
   },
   {
     "id": "news-1122627a66dfc215a84f",
@@ -657,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T15:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-1eadd5627184a89f1bbe",
@@ -669,19 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
-  },
-  {
-    "id": "news-50e18c5419845c26792b",
-    "title": "Introducing Claude Sonnet 5.5",
-    "url": "https://www.anthropic.com/claude-sonnet-5-5",
-    "source": "Anthropic",
-    "summary": "A clear upgrade over Sonnet 5 that runs 30% faster and costs up to 30% less for most work.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-28T00:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   },
   {
     "id": "news-8a86c97089bb6492a0d5",
@@ -693,18 +669,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T18:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:14"
-  },
-  {
-    "id": "news-0c90c73c08cf283551a1",
-    "title": "Introducing Claude Opus 5.5",
-    "url": "https://www.anthropic.com/claude-opus-5-5",
-    "source": "Anthropic",
-    "summary": "Opus 5.5 performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-09-22T00:00:00.000Z",
-    "discovered_at": "2026-10-20 16:57:13"
+    "discovered_at": "2026-10-20 17:55:44"
   }
 ]
