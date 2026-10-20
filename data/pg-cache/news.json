@@ -1,5 +1,41 @@
 [
   {
+    "id": "news-45cc8f58865901fe4a59",
+    "title": "Google has joined Amazon in attacking Nvidia&#8217;s stronghold with AI app developers",
+    "url": "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/",
+    "source": "TechCrunch",
+    "summary": "Google has joined Amazon in releasing a developer tool that makes it easy for PyTorch users to move their apps off Nvidia GPUs.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T18:38:24.000Z",
+    "discovered_at": "2026-10-20 18:55:43"
+  },
+  {
+    "id": "news-6f64ba14f44d2e04ccf9",
+    "title": "ChatGPT now lets you lock your chats",
+    "url": "https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/",
+    "source": "TechCrunch",
+    "summary": "The company says the feature is designed for situations where users might be discussing something personal or planning a surprise and want to keep those conversations private when handing their device to friends or family to show them something in another chat.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T18:36:53.000Z",
+    "discovered_at": "2026-10-20 18:55:43"
+  },
+  {
+    "id": "news-f52190a49967b68da7ad",
+    "title": "Meta pauses Muse sharing after researchers find AI chats on the web",
+    "url": "https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats",
+    "source": "The Verge",
+    "summary": "Meta says it paused a Muse feature that lets you share conversations with the AI assistant after researchers found the URLs publicly available on the web, as reported by Ars Technica. In a report published this week, researchers at the security firm Claroc say they found more than 6,800 Muse links through public DNS r…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T18:07:34.000Z",
+    "discovered_at": "2026-10-20 18:55:52"
+  },
+  {
     "id": "news-2f7a561d0868a8a6426c",
     "title": "Eric Schmidt reportedly owns about half as much of Anthropic as CEO Dario Amodei",
     "url": "https://techcrunch.com/2026/10/20/eric-schmidt-reportedly-owns-about-half-as-much-of-anthropic-as-ceo-dario-amodei/",
@@ -9,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T17:55:12.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-8891282d78b30c77f9a2",
@@ -21,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T17:12:48.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-5130abca4141f29e7b41",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T16:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-e85a4c5da2af52ae78eb",
@@ -45,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T14:18:37.000Z",
-    "discovered_at": "2026-10-20 17:55:55"
+    "discovered_at": "2026-10-20 18:55:52"
   },
   {
     "id": "news-6fce357d7ac50eec9624",
@@ -57,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T14:13:32.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-c723746d1e667296e0ea",
@@ -69,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T13:07:24.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-af3e08fe45e196290195",
@@ -81,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T13:06:44.000Z",
-    "discovered_at": "2026-10-20 17:55:55"
+    "discovered_at": "2026-10-20 18:55:52"
   },
   {
     "id": "news-208dc20e81cfcf4eac35",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T13:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-33f72cf8b33fabf0bfc9",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T11:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-697eb620bfd36fec3763",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T11:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-b3fcb2e42d3211233826",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T10:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-ed298111b59a085c4951",
@@ -141,7 +177,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T01:27:03.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
+  },
+  {
+    "id": "news-dbaa902542534b3aef2d",
+    "title": "OpenAI acquires Orchestra Bio",
+    "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+    "source": "OpenAI",
+    "summary": "OpenAI is acquiring Orchestra Bio to bring AI-powered operations to life sciences R&D, helping biopharma teams accelerate drug development and advance new treatments.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T00:00:00.000Z",
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-b0fb4c0567199f7f70f1",
@@ -153,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T23:39:38.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-d45dacf783b2543c1e1a",
@@ -165,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T22:49:27.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-0cffae2fd0c5318b5d57",
@@ -177,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T22:04:28.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-50c115309d98a51fa358",
@@ -189,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T21:48:01.000Z",
-    "discovered_at": "2026-10-20 17:55:55"
+    "discovered_at": "2026-10-20 18:55:52"
   },
   {
     "id": "news-073765c16b4994fd2621",
@@ -201,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T21:28:20.000Z",
-    "discovered_at": "2026-10-20 17:55:55"
+    "discovered_at": "2026-10-20 18:55:52"
   },
   {
     "id": "news-aaaf393dcb103418d2a5",
@@ -213,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T20:09:24.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-039a84854fb85dd641d6",
@@ -225,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T19:28:34.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-e37065d0e754995bd156",
@@ -237,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T19:00:12.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-71c2d7263cd3eef9e9a6",
@@ -249,31 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T18:49:04.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
-  },
-  {
-    "id": "news-36c2a79412d571d75712",
-    "title": "Tenstorrent hits $6.2B valuation to scale open-weight AI chips",
-    "url": "https://techcrunch.com/2026/10/19/tenstorrent-hits-6-2b-valuation-to-scale-open-weight-ai-chips/",
-    "source": "TechCrunch",
-    "summary": "After drawing acquisition interest earlier this year, the Nvidia challenger raised $1.5 billion to remain independent.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-19T18:37:27.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
-  },
-  {
-    "id": "news-f93d80856f11bb09a344",
-    "title": "People are using AI to make their smart TVs dumb again",
-    "url": "https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again/",
-    "source": "TechCrunch",
-    "summary": "Fed up with ads, tracking, and sluggish interfaces, some smart TV owners are turning to AI agents to strip away bloatware and take back control of their TVs.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-19T16:13:22.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-fd89b9b5cd5875ba176f",
@@ -285,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T14:30:00.000Z",
-    "discovered_at": "2026-10-20 17:55:55"
+    "discovered_at": "2026-10-20 18:55:52"
   },
   {
     "id": "news-c08e28e17ab3caf75095",
@@ -297,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T13:58:41.000Z",
-    "discovered_at": "2026-10-20 17:55:55"
+    "discovered_at": "2026-10-20 18:55:52"
   },
   {
     "id": "news-9279cf6bb0c3cf64fc2e",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T12:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:55"
+    "discovered_at": "2026-10-20 18:55:52"
   },
   {
     "id": "news-7a364f356aab49466020",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T12:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-de6b0c59a9e6b0d3a8fc",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-18T18:28:10.000Z",
-    "discovered_at": "2026-10-20 17:55:55"
+    "discovered_at": "2026-10-20 18:55:52"
   },
   {
     "id": "news-ac0eba5f39915c2126df",
@@ -345,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-17T15:04:36.000Z",
-    "discovered_at": "2026-10-20 17:55:55"
-  },
-  {
-    "id": "news-79619743255e89a10aca",
-    "title": "Websites are closing their doors to AI agents",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
-    "source": "The Verge",
-    "summary": "Autonomous agents are the hottest thing in AI. OpenAI, Meta, Google, Instinct, and others promise their agents can scour the internet on your behalf, doing anything from booking a dinner reservation and cleaning out your inbox to buying new shoes. But what happens when the rest of the internet won't play nice? In rece…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-17T13:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:55"
+    "discovered_at": "2026-10-20 18:55:52"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-10-20 17:55:55"
+    "discovered_at": "2026-10-20 18:55:52"
   },
   {
     "id": "news-65442e708214c10b88da",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T19:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-9db4940a53f868400a11",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T00:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-4a2f3ca18eb9cee6e404",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T00:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-a72d1e4da6b0e1062a21",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T19:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-fa14b8f7db4605dfa58d",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T13:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-dd00c04c9b95848ea0ec",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T00:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-10-20 17:55:55"
+    "discovered_at": "2026-10-20 18:55:52"
   },
   {
     "id": "news-24cc989c02dbc2a2daf4",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-a0e0fec2c2b5f568672d",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-7d10f0ddfecf202c0b2c",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T07:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-e181547094b0a112cf0b",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T07:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-2f3282e483141f68421d",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T00:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-ffc748cb8d88a919ca05",
@@ -537,19 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T12:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
-  },
-  {
-    "id": "news-90995f7dbc9c26746d9c",
-    "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
-    "url": "https://openai.com/index/asana-browser-agent",
-    "source": "OpenAI",
-    "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-09T07:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-edd58468d564448f5fe7",
@@ -561,7 +561,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-09T07:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
+  },
+  {
+    "id": "news-90995f7dbc9c26746d9c",
+    "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+    "url": "https://openai.com/index/asana-browser-agent",
+    "source": "OpenAI",
+    "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-09T07:00:00.000Z",
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-112b5f00879d4fef3be3",
@@ -573,19 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-08T16:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
-  },
-  {
-    "id": "news-ca1ec6c6a1a1314d953b",
-    "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
-    "url": "https://openai.com/index/pollo-ai",
-    "source": "OpenAI",
-    "summary": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-08T12:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-307bfda48464106bf8e3",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:21:53.000Z",
-    "discovered_at": "2026-10-20 17:55:55"
+    "discovered_at": "2026-10-20 18:55:52"
   },
   {
     "id": "news-aaf1cc502a6b16035865",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T22:26:35.000Z",
-    "discovered_at": "2026-10-20 17:55:55"
+    "discovered_at": "2026-10-20 18:55:52"
   },
   {
     "id": "news-6ee8ae0821d338b723f5",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T23:03:16.000Z",
-    "discovered_at": "2026-10-20 17:55:55"
+    "discovered_at": "2026-10-20 18:55:52"
   },
   {
     "id": "news-1122627a66dfc215a84f",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T15:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-1eadd5627184a89f1bbe",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   },
   {
     "id": "news-8a86c97089bb6492a0d5",
@@ -669,6 +669,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T18:00:00.000Z",
-    "discovered_at": "2026-10-20 17:55:44"
+    "discovered_at": "2026-10-20 18:55:43"
   }
 ]

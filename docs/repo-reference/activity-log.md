@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 20 Oct 2026, 17:56 UTC
+Generated: 20 Oct 2026, 18:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 20 Oct 2026, 17:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 20 Oct 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 20 Oct 2026, 17:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 20 Oct 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 20 Oct 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 20 Oct 2026, 12:00 UTC | digest | Eric Schmidt reportedly owns about half as much of Anthropic as CEO Dario Amodei | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/20/eric-schmidt-reportedly-owns-about-half-as-much-of-anthropic-as-ceo-dario-amodei/) |
+| 20 Oct 2026, 18:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 20 Oct 2026, 18:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 20 Oct 2026, 18:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 20 Oct 2026, 18:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 20 Oct 2026, 18:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 20 Oct 2026, 12:00 UTC | digest | ChatGPT now lets you lock your chats | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/) |
+| 20 Oct 2026, 12:00 UTC | digest | Google has joined Amazon in attacking Nvidia&#8217;s stronghold with AI app developers | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/) |
 | 20 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,043 open roles across 10 tracked companies. | `/jobs/` |
-| 20 Oct 2026, 12:00 UTC | digest | Meta&#8217;s Muse hits 10M U.S. downloads in 40 days, a milestone reached by only 11 other apps | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/20/metas-muse-hits-10m-u-s-downloads-in-40-days-a-milestone-reached-by-only-11-other-apps/) |
-| 20 Oct 2026, 12:00 UTC | digest | Plants can speak using electricity, so this startup built an AI model to decipher their language | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/20/plants-can-speak-using-electricity-so-this-startup-built-an-ai-model-to-decipher-their-language/) |
-| 20 Oct 2026, 12:00 UTC | digest | Published the 2026-10-20 daily digest | 12 stories captured from 3 sources. | `/news/` |
+| 20 Oct 2026, 12:00 UTC | digest | Meta pauses Muse sharing after researchers find AI chats on the web | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats) |
+| 20 Oct 2026, 12:00 UTC | digest | Published the 2026-10-20 daily digest | 16 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
