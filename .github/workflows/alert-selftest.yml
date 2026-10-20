@@ -1,0 +1,19 @@
+# Deliberate failure used to test workflow-failure-alert.yml (KOL-6328).
+# Run it from Actions > alert-selftest > Run workflow (default branch only).
+name: alert-selftest
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fail:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Fail on purpose
+        run: |
+          echo "alert-selftest: failing on purpose to test the workflow failure alert."
+          exit 1

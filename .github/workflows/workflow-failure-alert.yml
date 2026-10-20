@@ -1,0 +1,75 @@
+# Opens or updates ONE "Workflow failure" issue when a listed workflow fails (KOL-6328).
+# workflow_run only fires from the copy of this file on the default branch.
+# This workflow does not check out code and does not touch any publish/deploy path.
+# Its own name is deliberately not in the list below, so it can never trigger itself.
+name: Workflow failure alert
+
+on:
+  workflow_run:
+    workflows:
+      - "Deploy to GitHub Pages"
+      - "Update data (scrape + rebuild)"
+      - "Refresh provider status"
+      - "Validate"
+      - "alert-selftest"
+    types: [completed]
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: workflow-failure-alert
+  cancel-in-progress: false
+
+jobs:
+  alert:
+    if: github.event.workflow_run.conclusion == 'failure' || github.event.workflow_run.conclusion == 'timed_out'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Open or update the Workflow failure issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const run = context.payload.workflow_run;
+            const { owner, repo } = context.repo;
+            const label = 'workflow-failure';
+            const title = 'Workflow failure';
+            const when = new Date(run.updated_at || run.run_started_at || Date.now()).toISOString().replace('T', ' ').replace(/\.\d+Z$/, ' UTC');
+            const details = [
+              `- Workflow: **${run.name}**`,
+              `- Conclusion: \`${run.conclusion}\``,
+              `- Run: ${run.html_url}`,
+              `- Branch: \`${run.head_branch}\``,
+              `- Head SHA: \`${(run.head_sha || '').slice(0, 7)}\``,
+              `- Event: \`${run.event}\``,
+              `- Time: ${when}`,
+            ].join('\n');
+
+            if (context.payload.repository && context.payload.repository.has_issues === false) {
+              core.warning(`Issues are disabled in ${owner}/${repo}, so no alert issue can be opened. Failed run: ${run.html_url}`);
+              await core.summary.addHeading('Workflow failure (Issues disabled, no issue opened)').addRaw(details).write();
+              return;
+            }
+
+            try {
+              await github.rest.issues.getLabel({ owner, repo, name: label });
+            } catch (e) {
+              if (e.status !== 404) throw e;
+              await github.rest.issues.createLabel({ owner, repo, name: label, color: 'B60205', description: 'Opened automatically when a GitHub Actions workflow fails' });
+            }
+
+            const open = await github.paginate(github.rest.issues.listForRepo, { owner, repo, state: 'open', labels: label, per_page: 100 });
+            const existing = open.find((i) => !i.pull_request && i.title === title);
+
+            if (existing) {
+              await github.rest.issues.createComment({ owner, repo, issue_number: existing.number, body: `@koltregaskes another workflow failed.\n\n${details}` });
+              core.info(`Commented on #${existing.number}`);
+            } else {
+              const created = await github.rest.issues.create({
+                owner, repo, title, labels: [label], assignees: ['koltregaskes'],
+                body: `@koltregaskes a GitHub Actions workflow failed in ${owner}/${repo}.\n\n${details}\n\nLater failures are added as comments here. Close this issue once fixed; the next failure opens a new one.`,
+              });
+              core.info(`Opened #${created.data.number}`);
+            }
