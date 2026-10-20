@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T18:55:54.391Z",
+  "generatedAt": "2026-10-20T19:55:54.884Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-20T18:55:54.384Z",
+      "lastCheckedAt": "2026-10-20T19:55:54.878Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,31 +20,53 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-10-20T18:47:30.000Z",
-          "title": "Service Degradation for Kimi K3",
+          "id": "fireworks-feed-0-2026-10-20T19:36:31.000Z",
+          "title": "Service Degradation for GLM 5.3",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-10-20T18:47:30.000Z",
-          "updatedAt": "2026-10-20T18:47:30.000Z",
+          "startedAt": "2026-10-20T19:36:31.000Z",
+          "updatedAt": "2026-10-20T19:36:31.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M5D8MR9P42K116V6D8SZH4PC",
+          "url": "https://status.fireworks.ai//incidents/01M5DCDKG8B2SBP96NM50D2DYQ",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-10-20T02:50:16.000Z",
-          "title": "Elevated latency on some serverless models",
+          "id": "fireworks-feed-1-2026-10-20T19:23:40.000Z",
+          "title": "Service Degradation for Deepseek V4.1 Flash",
           "status": "reported",
-          "impact": "minor",
-          "startedAt": "2026-10-20T02:50:16.000Z",
-          "updatedAt": "2026-10-20T02:50:16.000Z",
+          "impact": "unknown",
+          "startedAt": "2026-10-20T19:23:40.000Z",
+          "updatedAt": "2026-10-20T19:23:40.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M5BETDK0RJV5DGC9Z1AF1RRN",
-          "summary": "Status: Resolved The elevated response latency affecting some serverless models has been resolved. Response latency has returned to normal."
+          "url": "https://status.fireworks.ai//incidents/01M5DC9Y4VP3PMP8T1GBFYRRB2",
+          "summary": "Status: Investigating We are seeing impacted performance for Deepseek V4.1 Flash. We are actively investigating. Affected components Deepseek V4.1 Flash (Degraded performance)"
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-10-20T18:47:30.000Z",
+          "id": "fireworks-feed-0-2026-10-20T19:36:31.000Z",
+          "title": "Service Degradation for GLM 5.3",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-10-20T19:36:31.000Z",
+          "updatedAt": "2026-10-20T19:36:31.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M5DCDKG8B2SBP96NM50D2DYQ",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-10-20T19:23:40.000Z",
+          "title": "Service Degradation for Deepseek V4.1 Flash",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-10-20T19:23:40.000Z",
+          "updatedAt": "2026-10-20T19:23:40.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M5DC9Y4VP3PMP8T1GBFYRRB2",
+          "summary": "Status: Investigating We are seeing impacted performance for Deepseek V4.1 Flash. We are actively investigating. Affected components Deepseek V4.1 Flash (Degraded performance)"
+        },
+        {
+          "id": "fireworks-feed-2-2026-10-20T18:47:30.000Z",
           "title": "Service Degradation for Kimi K3",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-10-20T02:50:16.000Z",
+          "id": "fireworks-feed-3-2026-10-20T02:50:16.000Z",
           "title": "Elevated latency on some serverless models",
           "status": "reported",
           "impact": "minor",
@@ -64,28 +86,6 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M5BETDK0RJV5DGC9Z1AF1RRN",
           "summary": "Status: Resolved The elevated response latency affecting some serverless models has been resolved. Response latency has returned to normal."
-        },
-        {
-          "id": "fireworks-feed-2-2026-10-19T23:23:20.000Z",
-          "title": "Service Degradation for Qwen 3.8 Max",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-10-19T23:23:20.000Z",
-          "updatedAt": "2026-10-19T23:23:20.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M5B6JFNCWZMTM8MB8JCP1F90",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-10-19T21:10:27.000Z",
-          "title": "Service Degradation for GLM 5.3",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-10-19T21:10:27.000Z",
-          "updatedAt": "2026-10-19T21:10:27.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M5APTB2MB411VCQMH1FCKC08",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
     },
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-20T18:55:53.123Z",
+      "lastCheckedAt": "2026-10-20T19:55:52.833Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-20T18:55:53.990Z",
+      "lastCheckedAt": "2026-10-20T19:55:53.690Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-20T18:55:53.515Z",
+      "lastCheckedAt": "2026-10-20T19:55:53.114Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -242,7 +242,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-20T18:55:53.162Z",
+      "lastCheckedAt": "2026-10-20T19:55:52.817Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -328,7 +328,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-20T18:55:54.066Z",
+      "lastCheckedAt": "2026-10-20T19:55:54.155Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -352,7 +352,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
