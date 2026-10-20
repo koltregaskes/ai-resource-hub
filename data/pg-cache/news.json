@@ -1,5 +1,41 @@
 [
   {
+    "id": "news-9ea810a533713aeb54ac",
+    "title": "Anthropic’s cloud partnerships are getting messy",
+    "url": "https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/",
+    "source": "TechCrunch",
+    "summary": "Anthropic is reportedly struggling to secure enough compute from cloud providers that increasingly view it as a competitor, even as its infrastructure spending balloons ahead of a planned November IPO.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T21:25:22.000Z",
+    "discovered_at": "2026-10-20 21:55:43"
+  },
+  {
+    "id": "news-38bd10c8e49d1d2ab4a0",
+    "title": "SpaceX&#8217;s AI business is beating expectations",
+    "url": "https://techcrunch.com/2026/10/20/spacexs-ai-business-is-beating-expectations/",
+    "source": "TechCrunch",
+    "summary": "SpaceX hit profitably in the third-quarter, with net income of $4.4 billion. AI was the engine.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T20:40:41.000Z",
+    "discovered_at": "2026-10-20 21:55:43"
+  },
+  {
+    "id": "news-a323e283c5c71adc0bd7",
+    "title": "OpenAI acquires startup Orchestra Bio⁠ to beef up its biotech business",
+    "url": "https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business/",
+    "source": "TechCrunch",
+    "summary": "OpenAI says it's adding Orchestra's team and technology to work on Rosalind, its AI model for life sciences research, and to its related Rosalind Workbench tool, a harness that aims to help researchers plan experiments and analyze results.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T20:35:10.000Z",
+    "discovered_at": "2026-10-20 21:55:43"
+  },
+  {
     "id": "news-45cc8f58865901fe4a59",
     "title": "Google has joined Amazon in attacking Nvidia&#8217;s stronghold with AI app developers",
     "url": "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/",
@@ -9,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T18:38:24.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-6f64ba14f44d2e04ccf9",
@@ -21,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T18:36:53.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-f52190a49967b68da7ad",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T18:07:34.000Z",
-    "discovered_at": "2026-10-20 20:33:22"
+    "discovered_at": "2026-10-20 21:55:54"
   },
   {
     "id": "news-2f7a561d0868a8a6426c",
@@ -45,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T17:55:12.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-8891282d78b30c77f9a2",
@@ -57,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T17:12:48.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-5130abca4141f29e7b41",
@@ -69,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T16:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-e85a4c5da2af52ae78eb",
@@ -81,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T14:18:37.000Z",
-    "discovered_at": "2026-10-20 20:33:22"
+    "discovered_at": "2026-10-20 21:55:54"
   },
   {
     "id": "news-6fce357d7ac50eec9624",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T14:13:32.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-c723746d1e667296e0ea",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T13:07:24.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-af3e08fe45e196290195",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T13:06:44.000Z",
-    "discovered_at": "2026-10-20 20:33:22"
+    "discovered_at": "2026-10-20 21:55:54"
   },
   {
     "id": "news-208dc20e81cfcf4eac35",
@@ -129,19 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T13:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
-  },
-  {
-    "id": "news-33f72cf8b33fabf0bfc9",
-    "title": "Yelp can now call on your behalf to check wait times at a restaurant",
-    "url": "https://techcrunch.com/2026/10/20/yelp-can-now-call-on-your-behalf-to-check-wait-times-at-a-restaurant/",
-    "source": "TechCrunch",
-    "summary": "Yelp is embedding numerous new AI features into its app that can do everything from call to check on restaurant wait times to create personalized recommendations that remember your preferences.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-20T11:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-697eb620bfd36fec3763",
@@ -153,7 +177,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T11:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
+  },
+  {
+    "id": "news-33f72cf8b33fabf0bfc9",
+    "title": "Yelp can now call on your behalf to check wait times at a restaurant",
+    "url": "https://techcrunch.com/2026/10/20/yelp-can-now-call-on-your-behalf-to-check-wait-times-at-a-restaurant/",
+    "source": "TechCrunch",
+    "summary": "Yelp is embedding numerous new AI features into its app that can do everything from call to check on restaurant wait times to create personalized recommendations that remember your preferences.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T11:00:00.000Z",
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-b3fcb2e42d3211233826",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T10:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-ed298111b59a085c4951",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T01:27:03.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-dbaa902542534b3aef2d",
@@ -189,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T00:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-b0fb4c0567199f7f70f1",
@@ -201,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T23:39:38.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-d45dacf783b2543c1e1a",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T22:49:27.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-0cffae2fd0c5318b5d57",
@@ -225,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T22:04:28.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-50c115309d98a51fa358",
@@ -237,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T21:48:01.000Z",
-    "discovered_at": "2026-10-20 20:33:22"
+    "discovered_at": "2026-10-20 21:55:54"
   },
   {
     "id": "news-073765c16b4994fd2621",
@@ -249,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T21:28:20.000Z",
-    "discovered_at": "2026-10-20 20:33:22"
+    "discovered_at": "2026-10-20 21:55:54"
   },
   {
     "id": "news-aaaf393dcb103418d2a5",
@@ -261,43 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T20:09:24.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
-  },
-  {
-    "id": "news-039a84854fb85dd641d6",
-    "title": "Hackers hit AI coding tool OpenCode, running up charges on users’ AI accounts",
-    "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
-    "source": "TechCrunch",
-    "summary": "OpenCode is an open source AI coding agent that's become a popular alternative to Claude Code and Cursor. But hackers got into part of its online platform and stole some users’ API keys, and the AI tools it turned to for help kept refusing to look at the malicious code.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-19T19:28:34.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
-  },
-  {
-    "id": "news-e37065d0e754995bd156",
-    "title": "Tolan snags $30M for its AI companion that helps users navigate life",
-    "url": "https://techcrunch.com/2026/10/19/tolan-snags-30m-for-its-ai-companion-that-helps-users-navigate-life/",
-    "source": "TechCrunch",
-    "summary": "AI companion app Tolan has raised another $30 million after attracting more than 250,000 active users.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-19T19:00:12.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
-  },
-  {
-    "id": "news-71c2d7263cd3eef9e9a6",
-    "title": "Replika’s founder built the AI assistant she pitched at Disrupt 12 years ago",
-    "url": "https://techcrunch.com/2026/10/19/replikas-founder-built-the-ai-assistant-she-pitched-at-disrupt-12-years-ago/",
-    "source": "TechCrunch",
-    "summary": "Eugenia Kuyda's newest startup Wabi is positioned to take advantage of an idea she had more than a decade ago. Wabi offers a personal AI assistant with a twist, free and downloadable to anyone today.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-19T18:49:04.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-fd89b9b5cd5875ba176f",
@@ -309,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T14:30:00.000Z",
-    "discovered_at": "2026-10-20 20:33:22"
+    "discovered_at": "2026-10-20 21:55:54"
   },
   {
     "id": "news-c08e28e17ab3caf75095",
@@ -321,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T13:58:41.000Z",
-    "discovered_at": "2026-10-20 20:33:22"
+    "discovered_at": "2026-10-20 21:55:54"
   },
   {
     "id": "news-9279cf6bb0c3cf64fc2e",
@@ -333,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T12:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:22"
+    "discovered_at": "2026-10-20 21:55:54"
   },
   {
     "id": "news-7a364f356aab49466020",
@@ -345,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T12:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-de6b0c59a9e6b0d3a8fc",
@@ -357,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-18T18:28:10.000Z",
-    "discovered_at": "2026-10-20 20:33:22"
+    "discovered_at": "2026-10-20 21:55:54"
   },
   {
     "id": "news-ac0eba5f39915c2126df",
@@ -369,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-17T15:04:36.000Z",
-    "discovered_at": "2026-10-20 20:33:22"
+    "discovered_at": "2026-10-20 21:55:54"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-10-20 20:33:22"
+    "discovered_at": "2026-10-20 21:55:54"
   },
   {
     "id": "news-65442e708214c10b88da",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T19:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-9db4940a53f868400a11",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T00:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-4a2f3ca18eb9cee6e404",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T00:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-a72d1e4da6b0e1062a21",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T19:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-fa14b8f7db4605dfa58d",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T13:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-dd00c04c9b95848ea0ec",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T00:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-10-20 20:33:22"
+    "discovered_at": "2026-10-20 21:55:54"
   },
   {
     "id": "news-24cc989c02dbc2a2daf4",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-a0e0fec2c2b5f568672d",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-7d10f0ddfecf202c0b2c",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T07:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-e181547094b0a112cf0b",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T07:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-2f3282e483141f68421d",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T00:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-ffc748cb8d88a919ca05",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T12:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-edd58468d564448f5fe7",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-09T07:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-90995f7dbc9c26746d9c",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-09T07:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-112b5f00879d4fef3be3",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-08T16:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:42"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-307bfda48464106bf8e3",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:21:53.000Z",
-    "discovered_at": "2026-10-20 20:33:22"
+    "discovered_at": "2026-10-20 21:55:54"
   },
   {
     "id": "news-aaf1cc502a6b16035865",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T22:26:35.000Z",
-    "discovered_at": "2026-10-20 20:33:22"
+    "discovered_at": "2026-10-20 21:55:54"
   },
   {
     "id": "news-6ee8ae0821d338b723f5",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T23:03:16.000Z",
-    "discovered_at": "2026-10-20 20:33:22"
+    "discovered_at": "2026-10-20 21:55:54"
   },
   {
     "id": "news-1122627a66dfc215a84f",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T15:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-1eadd5627184a89f1bbe",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   },
   {
     "id": "news-8a86c97089bb6492a0d5",
@@ -669,6 +669,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T18:00:00.000Z",
-    "discovered_at": "2026-10-20 20:33:09"
+    "discovered_at": "2026-10-20 21:55:43"
   }
 ]
