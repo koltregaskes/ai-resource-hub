@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-20T12:55:59.933Z",
+  "generatedAt": "2026-10-20T13:55:59.187Z",
   "overview": {
-    "generatedAt": "2026-10-20T12:55:59.944Z",
+    "generatedAt": "2026-10-20T13:55:59.196Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
@@ -188,7 +188,7 @@
         "Imagen 3",
         "Gemini 2.5 Pro",
         "Gemini 1.5 Flash",
-        "Gemini 2.5 Flash (batch)",
+        "Gemini 2.5 Flash",
         "Gemini 3 Flash Preview (batch)",
         "Gemini 1.5 Pro",
         "Gemini 2.5 Flash Lite (batch)",

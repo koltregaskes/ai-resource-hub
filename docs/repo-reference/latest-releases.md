@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 20 Oct 2026, 12:56 UTC
+Generated: 20 Oct 2026, 13:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,7 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 17 Oct 2026 | DeepSeek V4.1 Flash 1017 | DeepSeek | tracking | high | watch only | 0 | 0 | n/a |
+| 17 Oct 2026 | DeepSeek V4.1 Flash 1017 | DeepSeek | tracking | high | watch only | 0 | 1 | n/a |
 | 15 Oct 2026 | Muse Spark Open | Meta | tracking | high | watch only | 0 | 0 | n/a |
 | 15 Oct 2026 | Nemotron 3.5 Super VL | NVIDIA | tracking | high | watch only | 0 | 1 | n/a |
 | 12 Oct 2026 | Muse Wonder | Meta | tracking | high | watch only | 0 | 0 | n/a |
@@ -25,7 +25,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 2 Sept 2026 | Muse Spark 1.3 | Meta | tracking | watch | watch only | 0 | 1 | n/a |
 | 2 Sept 2026 | Muse Spark 1.3 Contributor | Meta | tracking | watch | watch only | 0 | 1 | n/a |
 | 26 Aug 2026 | Qwen3.8 Flash | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
-| 21 Aug 2026 | DeepSeek V4 Flash Vision Exp | DeepSeek | tracking | watch | watch only | 0 | 0 | n/a |
+| 21 Aug 2026 | DeepSeek V4 Flash Vision Exp | DeepSeek | tracking | watch | watch only | 0 | 1 | n/a |
 | 21 Aug 2026 | Muse Spark 1.2 Contributor | Meta | tracking | watch | watch only | 0 | 1 | n/a |
 | 14 Aug 2026 | Qwen3.8 27B | Alibaba | tracking | backfill | watch only | 0 | 0 | n/a |
 
