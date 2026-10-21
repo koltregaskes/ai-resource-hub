@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T13:55:59.466Z",
+  "generatedAt": "2026-10-21T14:56:01.902Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T13:55:59.459Z",
+      "lastCheckedAt": "2026-10-21T14:56:01.895Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,6 +90,103 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-10-21T14:56:00.407Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Chat Completions",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Agents",
+          "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Embeddings",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01M5FD63HHDRPQPM5YMQWJ5HTN",
+          "title": "Elevated FedRAMP API error rates for Astra and Sol",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-10-21T14:17:32.000Z",
+          "updatedAt": "2026-10-21T14:17:32.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01M5FD63HHDRPQPM5YMQWJ5HTN",
+          "title": "Elevated FedRAMP API error rates for Astra and Sol",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-10-21T14:17:32.000Z",
+          "updatedAt": "2026-10-21T14:17:32.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
+        {
+          "id": "01M5E4G39TD1BW1QWHZG6RFA5H",
+          "title": "Degraded performance in ChatGPT, Codex, and APIs",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-21T02:26:28.000Z",
+          "updatedAt": "2026-10-21T02:48:17.000Z",
+          "resolvedAt": "2026-10-21T03:28:00.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M5A5S1ATN3QB2WCHQ3VDZC81",
+          "title": "File Download errors",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-19T13:31:52.000Z",
+          "updatedAt": "2026-10-19T14:14:03.000Z",
+          "resolvedAt": "2026-10-19T14:14:03.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M4XNQX7C6RCBNGX9H711WFSG",
+          "title": "Delayed Costs data in the Compliance API",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-14T17:00:44.000Z",
+          "updatedAt": "2026-10-16T10:44:58.000Z",
+          "resolvedAt": "2026-10-16T10:44:58.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -100,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T13:55:57.664Z",
+      "lastCheckedAt": "2026-10-21T14:56:00.366Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T13:55:58.554Z",
+      "lastCheckedAt": "2026-10-21T14:56:01.194Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T13:55:57.986Z",
+      "lastCheckedAt": "2026-10-21T14:56:00.577Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -232,92 +329,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T13:55:57.626Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Chat Completions",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Agents",
-          "status": "operational"
-        },
-        {
-          "name": "Decisions",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01M5E4G39TD1BW1QWHZG6RFA5H",
-          "title": "Degraded performance in ChatGPT, Codex, and APIs",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-21T02:26:28.000Z",
-          "updatedAt": "2026-10-21T02:48:17.000Z",
-          "resolvedAt": "2026-10-21T03:28:00.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M5A5S1ATN3QB2WCHQ3VDZC81",
-          "title": "File Download errors",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-19T13:31:52.000Z",
-          "updatedAt": "2026-10-19T14:14:03.000Z",
-          "resolvedAt": "2026-10-19T14:14:03.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M4XNQX7C6RCBNGX9H711WFSG",
-          "title": "Delayed Costs data in the Compliance API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-14T17:00:44.000Z",
-          "updatedAt": "2026-10-16T10:44:58.000Z",
-          "resolvedAt": "2026-10-16T10:44:58.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M506BA4XRSWH7THR53HQGN3Z",
-          "title": "Widespread feature degradation",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-10-15T16:29:26.000Z",
-          "updatedAt": "2026-10-15T18:56:00.000Z",
-          "resolvedAt": "2026-10-15T18:56:00.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -328,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T13:55:58.622Z",
+      "lastCheckedAt": "2026-10-21T14:56:01.428Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
