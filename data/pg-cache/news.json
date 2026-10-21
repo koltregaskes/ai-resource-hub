@@ -9,7 +9,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T23:04:19.000Z",
-    "discovered_at": "2026-10-21 01:55:52"
+    "discovered_at": "2026-10-21 02:55:57"
   },
   {
     "id": "news-d4e57614c374e23f368e",
@@ -21,7 +21,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T23:01:23.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-fda7124672794d3fd201",
@@ -33,7 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T22:24:02.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-7f6bb9c0aa5027ea3e8e",
@@ -45,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T22:11:34.000Z",
-    "discovered_at": "2026-10-21 01:55:52"
+    "discovered_at": "2026-10-21 02:55:57"
   },
   {
     "id": "news-9ea810a533713aeb54ac",
@@ -57,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T21:25:22.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-38bd10c8e49d1d2ab4a0",
@@ -69,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T20:40:41.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-a323e283c5c71adc0bd7",
@@ -81,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T20:35:10.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-45cc8f58865901fe4a59",
@@ -93,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T18:38:24.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-6f64ba14f44d2e04ccf9",
@@ -105,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T18:36:53.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-f52190a49967b68da7ad",
@@ -117,31 +117,43 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T18:07:34.000Z",
-    "discovered_at": "2026-10-21 01:55:52"
+    "discovered_at": "2026-10-21 02:55:57"
   },
   {
     "id": "news-2f7a561d0868a8a6426c",
     "title": "Eric Schmidt reportedly owns about half as much of Anthropic as CEO Dario Amodei",
     "url": "https://techcrunch.com/2026/10/20/eric-schmidt-reportedly-owns-about-half-as-much-of-anthropic-as-ceo-dario-amodei/",
     "source": "TechCrunch",
-    "summary": "The former Google CEO owns about 1% stake in the leading AI lab, Bloomberg reported.",
+    "summary": "Eric Schmidt’s fortune is about to get even bigger.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T17:55:12.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-8891282d78b30c77f9a2",
-    "title": "Meta&#8217;s Muse hits 10M U.S. downloads in 40 days, a milestone reached by only 11 other apps",
+    "title": "Meta&#8217;s Muse hits 10M US downloads in 40 days, a milestone reached by only 11 other apps",
     "url": "https://techcrunch.com/2026/10/20/metas-muse-hits-10m-u-s-downloads-in-40-days-a-milestone-reached-by-only-11-other-apps/",
     "source": "TechCrunch",
-    "summary": "Meta's AI companion Muse has surpassed 10 million U.S. downloads in its first 40 days, joining an exclusive group of apps that includes Threads. New data also shows Muse is retaining users at higher rates than its AI rivals.",
+    "summary": "New data also shows Muse is retaining users at higher rates than its AI rivals.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T17:12:48.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
+  },
+  {
+    "id": "news-6422ce081b343d5f9c4e",
+    "title": "Ex-Nvidia-turned-VC Amulya Vishwanath: &#8216;Physical AI is in its LEGO era&#8217;",
+    "url": "https://techcrunch.com/2026/10/20/ex-nvidia-turned-vc-amulya-vishwanath-physical-ai-is-in-its-lego-era/",
+    "source": "TechCrunch",
+    "summary": "It’s the moment everyone is waiting for — the ChatGPT moment for robotics, Amulya Vishwanath explained to TechCrunch’s Equity.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T16:20:06.000Z",
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-5130abca4141f29e7b41",
@@ -153,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T16:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-e85a4c5da2af52ae78eb",
@@ -165,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T14:18:37.000Z",
-    "discovered_at": "2026-10-21 01:55:52"
+    "discovered_at": "2026-10-21 02:55:57"
   },
   {
     "id": "news-6fce357d7ac50eec9624",
@@ -177,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T14:13:32.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-c723746d1e667296e0ea",
@@ -189,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T13:07:24.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-af3e08fe45e196290195",
@@ -201,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T13:06:44.000Z",
-    "discovered_at": "2026-10-21 01:55:52"
+    "discovered_at": "2026-10-21 02:55:57"
   },
   {
     "id": "news-208dc20e81cfcf4eac35",
@@ -213,19 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T13:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
-  },
-  {
-    "id": "news-33f72cf8b33fabf0bfc9",
-    "title": "Yelp can now call on your behalf to check wait times at a restaurant",
-    "url": "https://techcrunch.com/2026/10/20/yelp-can-now-call-on-your-behalf-to-check-wait-times-at-a-restaurant/",
-    "source": "TechCrunch",
-    "summary": "Yelp is embedding numerous new AI features into its app that can do everything from call to check on restaurant wait times to create personalized recommendations that remember your preferences.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-20T11:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-697eb620bfd36fec3763",
@@ -237,7 +237,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T11:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
+  },
+  {
+    "id": "news-33f72cf8b33fabf0bfc9",
+    "title": "Yelp can now call on your behalf to check wait times at a restaurant",
+    "url": "https://techcrunch.com/2026/10/20/yelp-can-now-call-on-your-behalf-to-check-wait-times-at-a-restaurant/",
+    "source": "TechCrunch",
+    "summary": "Yelp is embedding numerous new AI features into its app that can do everything from call to check on restaurant wait times to create personalized recommendations that remember your preferences.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-20T11:00:00.000Z",
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-b3fcb2e42d3211233826",
@@ -249,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T10:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-a84b6a7bee5c68a62fa1",
@@ -261,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T07:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-ed298111b59a085c4951",
@@ -273,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T01:27:03.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-dbaa902542534b3aef2d",
@@ -285,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T00:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-b0fb4c0567199f7f70f1",
@@ -297,19 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T23:39:38.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
-  },
-  {
-    "id": "news-d45dacf783b2543c1e1a",
-    "title": "Embedded AI evaluators won&#8217;t be an easy solution, Hugging Face&#8217;s policy chief says",
-    "url": "https://techcrunch.com/2026/10/19/embedded-ai-evaluators-wont-be-an-easy-solution-hugging-faces-policy-chief-says/",
-    "source": "TechCrunch",
-    "summary": "The idea of embedded evaluators — in which supposedly \"neutral\" third-party observers are placed inside AI organizations — has been popularized over the last several months, as AI labs grapple with a rash of safety incidents that have spurred concerns over the potential harms of their technology.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-19T22:49:27.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-50c115309d98a51fa358",
@@ -321,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T21:48:01.000Z",
-    "discovered_at": "2026-10-21 01:55:52"
+    "discovered_at": "2026-10-21 02:55:57"
   },
   {
     "id": "news-073765c16b4994fd2621",
@@ -333,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T21:28:20.000Z",
-    "discovered_at": "2026-10-21 01:55:52"
+    "discovered_at": "2026-10-21 02:55:57"
   },
   {
     "id": "news-fd89b9b5cd5875ba176f",
@@ -345,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T14:30:00.000Z",
-    "discovered_at": "2026-10-21 01:55:52"
+    "discovered_at": "2026-10-21 02:55:57"
   },
   {
     "id": "news-c08e28e17ab3caf75095",
@@ -357,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T13:58:41.000Z",
-    "discovered_at": "2026-10-21 01:55:52"
+    "discovered_at": "2026-10-21 02:55:57"
   },
   {
     "id": "news-9279cf6bb0c3cf64fc2e",
@@ -369,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T12:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:52"
+    "discovered_at": "2026-10-21 02:55:57"
   },
   {
     "id": "news-7a364f356aab49466020",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T12:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-10-21 01:55:54"
+    "discovered_at": "2026-10-21 02:55:57"
   },
   {
     "id": "news-65442e708214c10b88da",
@@ -405,19 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T19:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
-  },
-  {
-    "id": "news-9db4940a53f868400a11",
-    "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-    "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
-    "source": "OpenAI",
-    "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-16T00:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-4a2f3ca18eb9cee6e404",
@@ -429,7 +417,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T00:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
+  },
+  {
+    "id": "news-9db4940a53f868400a11",
+    "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+    "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+    "source": "OpenAI",
+    "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-16T00:00:00.000Z",
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-a72d1e4da6b0e1062a21",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T19:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-fa14b8f7db4605dfa58d",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T13:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-dd00c04c9b95848ea0ec",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T00:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-10-21 01:55:54"
+    "discovered_at": "2026-10-21 02:55:57"
   },
   {
     "id": "news-24cc989c02dbc2a2daf4",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-a0e0fec2c2b5f568672d",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-7d10f0ddfecf202c0b2c",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T07:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-e181547094b0a112cf0b",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T07:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-2f3282e483141f68421d",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T00:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-ffc748cb8d88a919ca05",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T12:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-90995f7dbc9c26746d9c",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-09T07:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-edd58468d564448f5fe7",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-09T07:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:40"
+    "discovered_at": "2026-10-21 02:55:47"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-307bfda48464106bf8e3",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:21:53.000Z",
-    "discovered_at": "2026-10-21 01:55:54"
+    "discovered_at": "2026-10-21 02:55:57"
   },
   {
     "id": "news-aaf1cc502a6b16035865",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T22:26:35.000Z",
-    "discovered_at": "2026-10-21 01:55:54"
+    "discovered_at": "2026-10-21 02:55:57"
   },
   {
     "id": "news-6ee8ae0821d338b723f5",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T23:03:16.000Z",
-    "discovered_at": "2026-10-21 01:55:54"
+    "discovered_at": "2026-10-21 02:55:57"
   },
   {
     "id": "news-1122627a66dfc215a84f",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T15:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-1eadd5627184a89f1bbe",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   },
   {
     "id": "news-8a86c97089bb6492a0d5",
@@ -669,6 +669,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T18:00:00.000Z",
-    "discovered_at": "2026-10-21 01:55:41"
+    "discovered_at": "2026-10-21 02:55:48"
   }
 ]
