@@ -9,7 +9,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T22:51:22.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-eaa3fbf80042951ca996",
@@ -21,7 +21,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T22:33:44.000Z",
-    "discovered_at": "2026-10-21 22:55:54"
+    "discovered_at": "2026-10-21 23:15:37"
   },
   {
     "id": "news-86bbef590f282368545d",
@@ -33,7 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T21:30:02.000Z",
-    "discovered_at": "2026-10-21 22:55:54"
+    "discovered_at": "2026-10-21 23:15:37"
   },
   {
     "id": "news-063c29a16ff7723c7295",
@@ -45,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T21:16:20.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-21039cf5358633048c28",
@@ -57,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T21:14:19.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-2ed22a61b2f19a0c8004",
@@ -69,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T21:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-dc1c99f7973e826c237d",
@@ -81,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T20:27:41.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-0d8d033795840d49bc8b",
@@ -93,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T19:53:20.000Z",
-    "discovered_at": "2026-10-21 22:55:54"
+    "discovered_at": "2026-10-21 23:15:37"
   },
   {
     "id": "news-89a2c6e8757c190385eb",
@@ -105,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T19:30:00.000Z",
-    "discovered_at": "2026-10-21 22:55:54"
+    "discovered_at": "2026-10-21 23:15:37"
   },
   {
     "id": "news-a9cc4be8b0bea8a22b3c",
@@ -117,7 +117,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T19:30:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
+  },
+  {
+    "id": "news-66d6885dea0a4d03e769",
+    "title": "PHP Armageddon: OpenAI, Google&#8217;s Wiz find ancient holes, panicking the internet",
+    "url": "https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/",
+    "source": "TechCrunch",
+    "summary": "This is the kind of security issue that was found and prevented by AI, but is also a high risk because of AI.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-21T17:59:12.000Z",
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-49c4538f4284d648327b",
@@ -129,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T17:18:27.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-4ab93569e260b2b0a167",
@@ -141,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T17:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-1bbb4f6fc3d142113db0",
@@ -153,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T15:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:54"
+    "discovered_at": "2026-10-21 23:15:37"
   },
   {
     "id": "news-0b138e9a1d82325f7cb4",
@@ -165,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T14:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-c55b4c3c8ca25718079f",
@@ -177,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T13:57:43.000Z",
-    "discovered_at": "2026-10-21 22:55:54"
+    "discovered_at": "2026-10-21 23:15:37"
   },
   {
     "id": "news-74fcf21eca7add4a8265",
@@ -189,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T13:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-61f4d0141ff303c02405",
@@ -201,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T12:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-edef63b51aedc0121d1a",
@@ -213,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T07:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-d3f519557f32dd3d643c",
@@ -225,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T07:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-1de8e62ff715d1f1b849",
@@ -237,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:50:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -249,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-b2deaf97c98cf0ff4faa",
@@ -261,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T00:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-6559d9cb2b558fefb9eb",
@@ -273,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T23:04:19.000Z",
-    "discovered_at": "2026-10-21 22:55:54"
+    "discovered_at": "2026-10-21 23:15:37"
   },
   {
     "id": "news-d4e57614c374e23f368e",
@@ -285,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T23:01:23.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-fda7124672794d3fd201",
@@ -297,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T22:24:02.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-7f6bb9c0aa5027ea3e8e",
@@ -309,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T22:11:34.000Z",
-    "discovered_at": "2026-10-21 22:55:54"
+    "discovered_at": "2026-10-21 23:15:37"
   },
   {
     "id": "news-9ea810a533713aeb54ac",
@@ -321,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T21:25:22.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-38bd10c8e49d1d2ab4a0",
@@ -333,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T20:40:41.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-a323e283c5c71adc0bd7",
@@ -345,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T20:35:10.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-45cc8f58865901fe4a59",
@@ -357,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T18:38:24.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-6f64ba14f44d2e04ccf9",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T18:36:53.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-f52190a49967b68da7ad",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T18:07:34.000Z",
-    "discovered_at": "2026-10-21 22:55:54"
+    "discovered_at": "2026-10-21 23:15:37"
   },
   {
     "id": "news-2f7a561d0868a8a6426c",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T17:55:12.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-8891282d78b30c77f9a2",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T17:12:48.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-6422ce081b343d5f9c4e",
@@ -417,19 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T16:20:06.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
-  },
-  {
-    "id": "news-5130abca4141f29e7b41",
-    "title": "Plants can speak using electricity, so this startup built an AI model to decipher their language",
-    "url": "https://techcrunch.com/2026/10/20/plants-can-speak-using-electricity-so-this-startup-built-an-ai-model-to-decipher-their-language/",
-    "source": "TechCrunch",
-    "summary": "Electric Plant has built an AI-powered translator to help humans listen to what plants are saying with the subtle electricity coursing through their stems.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-20T16:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-e85a4c5da2af52ae78eb",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T14:18:37.000Z",
-    "discovered_at": "2026-10-21 22:55:54"
+    "discovered_at": "2026-10-21 23:15:37"
   },
   {
     "id": "news-b3fcb2e42d3211233826",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T10:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-a84b6a7bee5c68a62fa1",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T07:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-dbaa902542534b3aef2d",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T00:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-7a364f356aab49466020",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-19T12:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-10-21 22:55:54"
+    "discovered_at": "2026-10-21 23:15:37"
   },
   {
     "id": "news-65442e708214c10b88da",
@@ -513,19 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T19:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
-  },
-  {
-    "id": "news-9db4940a53f868400a11",
-    "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-    "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
-    "source": "OpenAI",
-    "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-16T00:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-4a2f3ca18eb9cee6e404",
@@ -537,7 +525,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T00:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
+  },
+  {
+    "id": "news-9db4940a53f868400a11",
+    "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+    "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+    "source": "OpenAI",
+    "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-16T00:00:00.000Z",
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-a72d1e4da6b0e1062a21",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T19:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-fa14b8f7db4605dfa58d",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T13:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-dd00c04c9b95848ea0ec",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-15T00:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-10-21 22:55:54"
+    "discovered_at": "2026-10-21 23:15:37"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-307bfda48464106bf8e3",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:21:53.000Z",
-    "discovered_at": "2026-10-21 22:55:54"
+    "discovered_at": "2026-10-21 23:15:37"
   },
   {
     "id": "news-aaf1cc502a6b16035865",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T22:26:35.000Z",
-    "discovered_at": "2026-10-21 22:55:54"
+    "discovered_at": "2026-10-21 23:15:37"
   },
   {
     "id": "news-6ee8ae0821d338b723f5",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T23:03:16.000Z",
-    "discovered_at": "2026-10-21 22:55:54"
+    "discovered_at": "2026-10-21 23:15:37"
   },
   {
     "id": "news-1122627a66dfc215a84f",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T15:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-1eadd5627184a89f1bbe",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   },
   {
     "id": "news-8a86c97089bb6492a0d5",
@@ -681,6 +681,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-23T18:00:00.000Z",
-    "discovered_at": "2026-10-21 22:55:45"
+    "discovered_at": "2026-10-21 23:15:28"
   }
 ]
