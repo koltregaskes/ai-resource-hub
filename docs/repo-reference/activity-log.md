@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 21 Oct 2026, 02:56 UTC
+Generated: 21 Oct 2026, 03:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 21 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,045 open roles across 10 tracked companies. | `/jobs/` |
-| 21 Oct 2026, 02:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 21 Oct 2026, 02:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 21 Oct 2026, 02:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 21 Oct 2026, 02:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 21 Oct 2026, 02:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 21 Oct 2026, 03:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 21 Oct 2026, 03:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 21 Oct 2026, 03:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 21 Oct 2026, 03:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 21 Oct 2026, 03:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 20 Oct 2026, 12:00 UTC | digest | Anthropic pitches AI safety bill that may block a model if 50+ people could be killed | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/) |
 | 20 Oct 2026, 12:00 UTC | digest | Hugging Face CEO warns that Netflix&#8217;s OpenAI hack documentary isn&#8217;t accurate | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/20/hugging-face-ceo-warns-that-netflixs-openai-hack-documentary-isnt-accurate/) |
 | 20 Oct 2026, 12:00 UTC | digest | Judge dismisses Sam Altman’s sister’s sexual abuse lawsuit | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1014976/sam-altman-ann-altman-lawsuit-dismissed) |
