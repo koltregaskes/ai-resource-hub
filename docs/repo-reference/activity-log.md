@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 21 Oct 2026, 20:56 UTC
+Generated: 21 Oct 2026, 21:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 21 Oct 2026, 20:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 21 Oct 2026, 20:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 21 Oct 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 21 Oct 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 21 Oct 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 21 Oct 2026, 12:00 UTC | digest | Anthropic takes on Muse with Claude Duet, its new AI agent | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1015843/anthropic-claude-duet-ai-agent) |
+| 21 Oct 2026, 21:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 21 Oct 2026, 21:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 21 Oct 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 21 Oct 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 21 Oct 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 21 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,042 open roles across 10 tracked companies. | `/jobs/` |
+| 21 Oct 2026, 12:00 UTC | digest | Meta says Muse has over 10M users, with shopping a top activity | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/) |
 | 21 Oct 2026, 12:00 UTC | digest | Published the 2026-10-21 daily digest | 15 stories captured from 4 sources. | `/news/` |
 | 21 Oct 2026, 12:00 UTC | digest | Recursive launches Flint, a laptop coding model it says was largely built by AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/) |
-| 21 Oct 2026, 12:00 UTC | digest | Walmart is inviting AI agents to shop for you | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1015715/walmart-ai-shopping-agents) |
+| 21 Oct 2026, 12:00 UTC | digest | TechCrunch Founder Summit 2026: Everything you need to know | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/21/techcrunch-founder-summit-2026-everything-you-need-to-know/) |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
