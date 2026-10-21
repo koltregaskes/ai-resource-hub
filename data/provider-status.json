@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T19:18:23.905Z",
+  "generatedAt": "2026-10-21T19:38:05.727Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T19:18:23.898Z",
+      "lastCheckedAt": "2026-10-21T19:38:05.722Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T19:18:21.497Z",
+      "lastCheckedAt": "2026-10-21T19:38:02.308Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T19:18:22.324Z",
+      "lastCheckedAt": "2026-10-21T19:38:03.589Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T19:18:21.587Z",
+      "lastCheckedAt": "2026-10-21T19:38:02.347Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -242,10 +242,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T19:18:21.488Z",
+      "lastCheckedAt": "2026-10-21T19:38:02.243Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -273,28 +273,17 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "01M5FD63HHDRPQPM5YMQWJ5HTN",
-          "title": "Elevated FedRAMP API error rates for Astra and Sol",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-10-21T14:17:32.000Z",
-          "updatedAt": "2026-10-21T17:04:07.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "01M5FD63HHDRPQPM5YMQWJ5HTN",
           "title": "Elevated FedRAMP API error rates for Astra and Sol",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-10-21T14:17:32.000Z",
-          "updatedAt": "2026-10-21T17:04:07.000Z",
-          "resolvedAt": null,
-          "summary": "We have applied the mitigation and are monitoring the recovery."
+          "updatedAt": "2026-10-21T19:34:58.000Z",
+          "resolvedAt": "2026-10-21T19:34:58.000Z",
+          "summary": "All impacted services have now fully recovered."
         },
         {
           "id": "01M5FHKHPQJMSHCE2B2WDPZW2N",
@@ -339,7 +328,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T19:18:22.694Z",
+      "lastCheckedAt": "2026-10-21T19:38:03.528Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -363,7 +352,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
