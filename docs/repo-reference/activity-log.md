@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 20 Oct 2026, 23:50 UTC
+Generated: 21 Oct 2026, 00:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 20 Oct 2026, 23:50 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 20 Oct 2026, 23:50 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 20 Oct 2026, 23:50 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 20 Oct 2026, 23:50 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 20 Oct 2026, 23:50 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 21 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,045 open roles across 10 tracked companies. | `/jobs/` |
+| 21 Oct 2026, 00:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 21 Oct 2026, 00:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 21 Oct 2026, 00:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 21 Oct 2026, 00:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 21 Oct 2026, 00:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 20 Oct 2026, 12:00 UTC | digest | Anthropic pitches AI safety bill that may block a model if 50+ people could be killed | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/) |
 | 20 Oct 2026, 12:00 UTC | digest | Hugging Face CEO warns that Netflix&#8217;s OpenAI hack documentary isn&#8217;t accurate | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/20/hugging-face-ceo-warns-that-netflixs-openai-hack-documentary-isnt-accurate/) |
-| 20 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,046 open roles across 10 tracked companies. | `/jobs/` |
 | 20 Oct 2026, 12:00 UTC | digest | Judge dismisses Sam Altman’s sister’s sexual abuse lawsuit | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1014976/sam-altman-ann-altman-lawsuit-dismissed) |
 | 20 Oct 2026, 12:00 UTC | digest | Published the 2026-10-20 daily digest | 20 stories captured from 2 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
