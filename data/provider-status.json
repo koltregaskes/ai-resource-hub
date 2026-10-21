@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T15:12:04.225Z",
+  "generatedAt": "2026-10-21T15:37:23.768Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T15:12:04.220Z",
+      "lastCheckedAt": "2026-10-21T15:37:23.762Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,19 +100,19 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T15:12:02.643Z",
+      "lastCheckedAt": "2026-10-21T15:37:21.306Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "Chat Completions",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Responses",
-          "status": "operational"
+          "status": "degraded_performance"
         },
         {
           "name": "Agents",
@@ -133,6 +133,16 @@
       ],
       "activeIncidents": [
         {
+          "id": "01M5FHKHPQJMSHCE2B2WDPZW2N",
+          "title": "Elevated error rates for gpt-5.6-luna API requests",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-10-21T15:34:47.000Z",
+          "updatedAt": "2026-10-21T15:34:47.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
+        {
           "id": "01M5FD63HHDRPQPM5YMQWJ5HTN",
           "title": "Elevated FedRAMP API error rates for Astra and Sol",
           "status": "identified",
@@ -144,6 +154,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01M5FHKHPQJMSHCE2B2WDPZW2N",
+          "title": "Elevated error rates for gpt-5.6-luna API requests",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-10-21T15:34:47.000Z",
+          "updatedAt": "2026-10-21T15:34:47.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
         {
           "id": "01M5FD63HHDRPQPM5YMQWJ5HTN",
           "title": "Elevated FedRAMP API error rates for Astra and Sol",
@@ -173,16 +193,6 @@
           "updatedAt": "2026-10-19T14:14:03.000Z",
           "resolvedAt": "2026-10-19T14:14:03.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M4XNQX7C6RCBNGX9H711WFSG",
-          "title": "Delayed Costs data in the Compliance API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-14T17:00:44.000Z",
-          "updatedAt": "2026-10-16T10:44:58.000Z",
-          "resolvedAt": "2026-10-16T10:44:58.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -197,7 +207,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T15:12:02.660Z",
+      "lastCheckedAt": "2026-10-21T15:37:21.327Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +297,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T15:12:03.320Z",
+      "lastCheckedAt": "2026-10-21T15:37:22.202Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +317,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T15:12:02.873Z",
+      "lastCheckedAt": "2026-10-21T15:37:21.568Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -339,7 +349,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-21T15:12:03.518Z",
+      "lastCheckedAt": "2026-10-21T15:37:22.474Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
