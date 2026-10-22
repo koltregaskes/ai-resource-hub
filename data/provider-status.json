@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T03:02:59.897Z",
+  "generatedAt": "2026-10-22T03:55:56.342Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T03:02:59.890Z",
+      "lastCheckedAt": "2026-10-22T03:55:56.337Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,6 +90,108 @@
       ]
     },
     {
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-10-22T03:55:54.444Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partially Degraded Service",
+      "summary": "1 active incident across 6 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "claude.ai",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "name": "Claude for Government",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "wj6r4t6mxq1r",
+          "title": "Elevated errors affecting Connectors",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-10-22T03:50:12.630Z",
+          "updatedAt": "2026-10-22T03:50:12.763Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/4dcr8c005yxc",
+          "summary": "We are investigating elevated errors affecting connectors. We will provide an update as soon as possible."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "wj6r4t6mxq1r",
+          "title": "Elevated errors affecting Connectors",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-10-22T03:50:12.630Z",
+          "updatedAt": "2026-10-22T03:50:12.763Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/4dcr8c005yxc",
+          "summary": "We are investigating elevated errors affecting connectors. We will provide an update as soon as possible."
+        },
+        {
+          "id": "njk29r81v3wg",
+          "title": "Degraded performance for Claude Fable 5",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-21T19:49:06.495Z",
+          "updatedAt": "2026-10-21T20:29:17.877Z",
+          "resolvedAt": "2026-10-21T20:29:17.844Z",
+          "url": "https://stspg.io/cgklr4v2sgkh",
+          "summary": "The issue affecting other Claude models has been resolved."
+        },
+        {
+          "id": "978mjkgw6mh7",
+          "title": "Elevated errors on platform.claude.com",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-10-07T13:25:04.163Z",
+          "updatedAt": "2026-10-13T18:00:04.390Z",
+          "resolvedAt": "2026-10-13T18:00:04.363Z",
+          "url": "https://stspg.io/sjkw7njwf0mt",
+          "summary": "This issue has been resolved."
+        },
+        {
+          "id": "vmys9qn874h4",
+          "title": "Issue with spend limits",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-10-07T21:23:29.603Z",
+          "updatedAt": "2026-10-07T21:23:29.665Z",
+          "resolvedAt": "2026-10-07T21:23:29.656Z",
+          "url": "https://stspg.io/frlrjsqqn605",
+          "summary": "We have identified an issue which resulted in some organizations to be incorrectly paused for having reached their spend limit, resulting in refused requests on the Claude API, Cl..."
+        }
+      ]
+    },
+    {
       "id": "openai",
       "providerId": "openai",
       "name": "OpenAI",
@@ -100,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T03:02:57.387Z",
+      "lastCheckedAt": "2026-10-22T03:55:54.392Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -187,96 +289,6 @@
       ]
     },
     {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T03:02:57.376Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Code",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "operational"
-        },
-        {
-          "name": "Claude for Government",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "njk29r81v3wg",
-          "title": "Degraded performance for Claude Fable 5",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-21T19:49:06.495Z",
-          "updatedAt": "2026-10-21T20:29:17.877Z",
-          "resolvedAt": "2026-10-21T20:29:17.844Z",
-          "url": "https://stspg.io/cgklr4v2sgkh",
-          "summary": "The issue affecting other Claude models has been resolved."
-        },
-        {
-          "id": "978mjkgw6mh7",
-          "title": "Elevated errors on platform.claude.com",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-10-07T13:25:04.163Z",
-          "updatedAt": "2026-10-13T18:00:04.390Z",
-          "resolvedAt": "2026-10-13T18:00:04.363Z",
-          "url": "https://stspg.io/sjkw7njwf0mt",
-          "summary": "This issue has been resolved."
-        },
-        {
-          "id": "vmys9qn874h4",
-          "title": "Issue with spend limits",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-10-07T21:23:29.603Z",
-          "updatedAt": "2026-10-07T21:23:29.665Z",
-          "resolvedAt": "2026-10-07T21:23:29.656Z",
-          "url": "https://stspg.io/frlrjsqqn605",
-          "summary": "We have identified an issue which resulted in some organizations to be incorrectly paused for having reached their spend limit, resulting in refused requests on the Claude API, Cl..."
-        },
-        {
-          "id": "wf2v8ms031sx",
-          "title": "Elevated errors loading usage data on platform.claude.com",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-10-07T01:20:26.681Z",
-          "updatedAt": "2026-10-07T02:33:38.847Z",
-          "resolvedAt": "2026-10-07T02:33:38.815Z",
-          "url": "https://stspg.io/scdhhnplc2jn",
-          "summary": "This incident has been resolved. From 17:00 PT on October 6 / 00:00 UTC on October 7 to 18:40 PT on October 6 / 01:40 UTC on October 7, many requests to load usage data on the pla..."
-        }
-      ]
-    },
-    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -287,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T03:02:58.265Z",
+      "lastCheckedAt": "2026-10-22T03:55:55.226Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T03:02:57.571Z",
+      "lastCheckedAt": "2026-10-22T03:55:54.725Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -339,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T03:02:58.535Z",
+      "lastCheckedAt": "2026-10-22T03:55:55.495Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
