@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T18:55:48.106Z",
+  "generatedAt": "2026-10-22T19:55:47.563Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T18:55:48.099Z",
+      "lastCheckedAt": "2026-10-22T19:55:47.556Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,10 +100,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T18:55:46.354Z",
+      "lastCheckedAt": "2026-10-22T19:55:45.888Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -133,26 +133,46 @@
       ],
       "activeIncidents": [
         {
+          "id": "01M5JHVJVC8WAXB4WRYFMKG6HP",
+          "title": "New Ad Accounts failing to provision admins",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-10-22T19:36:53.000Z",
+          "updatedAt": "2026-10-22T19:36:53.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that new ad accounts are failing to assign their creator admin. We are investigating the issue."
+        },
+        {
           "id": "01M5JF8DR3EGQJNTXPZ24AKX2G",
-          "title": "Dot Message Failures",
+          "title": "Degraded Performance of Dots on Enterprise",
           "status": "identified",
           "impact": "minor",
           "startedAt": "2026-10-22T18:51:28.000Z",
-          "updatedAt": "2026-10-22T18:52:26.000Z",
+          "updatedAt": "2026-10-22T18:59:18.000Z",
           "resolvedAt": null,
-          "summary": "We are still implementing the mitigation."
+          "summary": "Our teams have identified the issue and are actively implementing a mitigation. At this time the majority of impact is affecting enterprise customers."
         }
       ],
       "recentIncidents": [
         {
+          "id": "01M5JHVJVC8WAXB4WRYFMKG6HP",
+          "title": "New Ad Accounts failing to provision admins",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-10-22T19:36:53.000Z",
+          "updatedAt": "2026-10-22T19:36:53.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that new ad accounts are failing to assign their creator admin. We are investigating the issue."
+        },
+        {
           "id": "01M5JF8DR3EGQJNTXPZ24AKX2G",
-          "title": "Dot Message Failures",
+          "title": "Degraded Performance of Dots on Enterprise",
           "status": "identified",
           "impact": "minor",
           "startedAt": "2026-10-22T18:51:28.000Z",
-          "updatedAt": "2026-10-22T18:52:26.000Z",
+          "updatedAt": "2026-10-22T18:59:18.000Z",
           "resolvedAt": null,
-          "summary": "We are still implementing the mitigation."
+          "summary": "Our teams have identified the issue and are actively implementing a mitigation. At this time the majority of impact is affecting enterprise customers."
         },
         {
           "id": "01M5GPE9C4E19HE461P8JAMYXD",
@@ -173,16 +193,6 @@
           "updatedAt": "2026-10-21T19:34:58.000Z",
           "resolvedAt": "2026-10-21T19:34:58.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M5FHKHPQJMSHCE2B2WDPZW2N",
-          "title": "Elevated error rates for gpt-5.6-luna API requests",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-21T15:34:47.000Z",
-          "updatedAt": "2026-10-21T16:44:09.000Z",
-          "resolvedAt": "2026-10-21T16:44:09.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -197,7 +207,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T18:55:46.304Z",
+      "lastCheckedAt": "2026-10-22T19:55:45.825Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +297,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T18:55:47.122Z",
+      "lastCheckedAt": "2026-10-22T19:55:46.517Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +317,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T18:55:46.519Z",
+      "lastCheckedAt": "2026-10-22T19:55:46.113Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -350,7 +360,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T18:55:47.382Z",
+      "lastCheckedAt": "2026-10-22T19:55:46.637Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
