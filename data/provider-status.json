@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T16:55:45.002Z",
+  "generatedAt": "2026-10-22T17:55:43.517Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T16:55:44.997Z",
+      "lastCheckedAt": "2026-10-22T17:55:43.512Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-10-22T02:05:19.000Z",
+          "id": "fireworks-feed-0-2026-10-22T17:50:42.000Z",
+          "title": "Service Degradation for DeepSeek V4.1 Flash 1017",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-10-22T17:50:42.000Z",
+          "updatedAt": "2026-10-22T17:50:42.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M5JABXN0A6HGJ813BK4R14CY",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-10-22T02:05:19.000Z",
           "title": "Service Degradation for Deepseek V4.1 Flash",
           "status": "reported",
           "impact": "unknown",
@@ -28,23 +39,23 @@
           "updatedAt": "2026-10-22T02:05:19.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M5GNMX28S1J75ATG9Y9JYPPK",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-10-22T01:30:23.000Z",
-          "title": "Service Degradation for Deepseek V4.1 Flash",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-10-22T01:30:23.000Z",
-          "updatedAt": "2026-10-22T01:30:23.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M5GGG3JZ27XS2DMPG2YCXX2M",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-10-22T02:05:19.000Z",
+          "id": "fireworks-feed-0-2026-10-22T17:50:42.000Z",
+          "title": "Service Degradation for DeepSeek V4.1 Flash 1017",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-10-22T17:50:42.000Z",
+          "updatedAt": "2026-10-22T17:50:42.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M5JABXN0A6HGJ813BK4R14CY",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-10-22T02:05:19.000Z",
           "title": "Service Degradation for Deepseek V4.1 Flash",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-10-22T01:30:23.000Z",
+          "id": "fireworks-feed-2-2026-10-22T01:30:23.000Z",
           "title": "Service Degradation for Deepseek V4.1 Flash",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-10-22T00:14:33.000Z",
+          "id": "fireworks-feed-3-2026-10-22T00:14:33.000Z",
           "title": "Service Degradation for Deepseek V4.1 Flash",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-10-22T00:14:33.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M5GF8E19QJ5VFZCNNXZM3J08",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-10-21T09:58:31.000Z",
-          "title": "Service Degradation for DeepSeek V4.1 Flash 1017",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-10-21T09:58:31.000Z",
-          "updatedAt": "2026-10-21T09:58:31.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M5ETTK0ZCA6HPC1S1JV6YFJE",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T16:55:42.600Z",
+      "lastCheckedAt": "2026-10-22T17:55:42.005Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T16:55:43.462Z",
+      "lastCheckedAt": "2026-10-22T17:55:42.573Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T16:55:42.928Z",
+      "lastCheckedAt": "2026-10-22T17:55:42.036Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -253,7 +253,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T16:55:42.633Z",
+      "lastCheckedAt": "2026-10-22T17:55:42.037Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -339,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T16:55:43.668Z",
+      "lastCheckedAt": "2026-10-22T17:55:42.756Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
