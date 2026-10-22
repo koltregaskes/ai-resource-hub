@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 22 Oct 2026, 12:55 UTC
+Generated: 22 Oct 2026, 13:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 22 Oct 2026, 12:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 22 Oct 2026, 12:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 22 Oct 2026, 12:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 22 Oct 2026, 12:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 22 Oct 2026, 12:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 22 Oct 2026, 12:00 UTC | digest | AI agents are ready to shop. Some retailers are wary. | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/report/1015811/ai-shopping-agents-blocked-amazon-the-realreal-target-meta-muse) |
-| 22 Oct 2026, 12:00 UTC | digest | Claude did not invent scorpion antivenom | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1016443/anthropic-claude-citrini-vibecoding-scorpion-antivenom) |
-| 22 Oct 2026, 12:00 UTC | digest | Eiliko maker says it&#8217;s hiring an ‘independent security firm’ after Verge report on its insecure robots | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/news/1015824/eiliko-energize-lab-statement-on-robot-hack-breach) |
-| 22 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,045 open roles across 10 tracked companies. | `/jobs/` |
-| 22 Oct 2026, 12:00 UTC | digest | Published the 2026-10-22 daily digest | 3 stories captured from 1 sources. | `/news/` |
+| 22 Oct 2026, 13:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 22 Oct 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 22 Oct 2026, 13:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 22 Oct 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 22 Oct 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 22 Oct 2026, 12:00 UTC | digest | Claude Duet app is Anthropic&#8217;s bet on agents | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/) |
+| 22 Oct 2026, 12:00 UTC | digest | DeepSeek reportedly raises $15B days after US restrictions | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions/) |
+| 22 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,046 open roles across 10 tracked companies. | `/jobs/` |
+| 22 Oct 2026, 12:00 UTC | digest | Nirva raises $33M for a pendant that only listens to you | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/22/nirva-raises-33m-for-a-pendant-that-only-listens-to-you/) |
+| 22 Oct 2026, 12:00 UTC | digest | Published the 2026-10-22 daily digest | 8 stories captured from 3 sources. | `/news/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | The State of AI is tracked in the reports index | McKinsey is now part of the recurring reports watchlist. | `/reports/` |
