@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 22 Oct 2026, 06:56 UTC
+Generated: 22 Oct 2026, 07:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 22 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,045 open roles across 10 tracked companies. | `/jobs/` |
-| 22 Oct 2026, 06:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 22 Oct 2026, 06:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 22 Oct 2026, 06:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 22 Oct 2026, 06:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 22 Oct 2026, 06:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 22 Oct 2026, 07:56 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 22 Oct 2026, 07:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 22 Oct 2026, 07:56 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 22 Oct 2026, 07:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 22 Oct 2026, 07:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 21 Oct 2026, 12:00 UTC | digest | Blackstone&#8217;s Jas Khaira says fears over AI-buildout debt are overblown | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/21/blackstones-jas-khaira-says-fears-over-ai-buildout-debt-are-overblown/) |
 | 21 Oct 2026, 12:00 UTC | digest | Data centers could erase decades of air quality gains | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1015958/data-center-pollution-rising-report) |
 | 21 Oct 2026, 12:00 UTC | digest | Meta to create a new class of shares to fund AI push | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1015799/meta-shares-class-ai-q3-2026-earnings) |

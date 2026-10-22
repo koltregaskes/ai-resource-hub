@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T06:56:05.206Z",
+  "generatedAt": "2026-10-22T07:56:33.969Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T06:56:05.199Z",
+      "lastCheckedAt": "2026-10-22T07:56:33.963Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T06:56:03.789Z",
+      "lastCheckedAt": "2026-10-22T07:56:32.516Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -135,26 +135,26 @@
         {
           "id": "wj6r4t6mxq1r",
           "title": "Elevated errors affecting Connectors",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-10-22T03:50:12.630Z",
-          "updatedAt": "2026-10-22T03:50:12.763Z",
+          "updatedAt": "2026-10-22T07:28:22.829Z",
           "resolvedAt": null,
           "url": "https://stspg.io/4dcr8c005yxc",
-          "summary": "We are investigating elevated errors affecting connectors. We will provide an update as soon as possible."
+          "summary": "A fix has been deployed for the issue affecting claude.ai and Claude Cowork and we are monitoring for recovery."
         }
       ],
       "recentIncidents": [
         {
           "id": "wj6r4t6mxq1r",
           "title": "Elevated errors affecting Connectors",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-10-22T03:50:12.630Z",
-          "updatedAt": "2026-10-22T03:50:12.763Z",
+          "updatedAt": "2026-10-22T07:28:22.829Z",
           "resolvedAt": null,
           "url": "https://stspg.io/4dcr8c005yxc",
-          "summary": "We are investigating elevated errors affecting connectors. We will provide an update as soon as possible."
+          "summary": "A fix has been deployed for the issue affecting claude.ai and Claude Cowork and we are monitoring for recovery."
         },
         {
           "id": "njk29r81v3wg",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T06:56:03.787Z",
+      "lastCheckedAt": "2026-10-22T07:56:32.459Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -299,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T06:56:04.584Z",
+      "lastCheckedAt": "2026-10-22T07:56:33.259Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T06:56:03.890Z",
+      "lastCheckedAt": "2026-10-22T07:56:32.496Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -351,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-22T06:56:04.757Z",
+      "lastCheckedAt": "2026-10-22T07:56:33.369Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
