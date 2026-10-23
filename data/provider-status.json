@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T01:58:49.856Z",
+  "generatedAt": "2026-10-23T07:56:35.819Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-23T01:58:49.849Z",
+      "lastCheckedAt": "2026-10-23T07:56:35.815Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-23T01:58:48.551Z",
+      "lastCheckedAt": "2026-10-23T07:56:33.796Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-23T01:58:49.212Z",
+      "lastCheckedAt": "2026-10-23T07:56:34.491Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-23T01:58:48.831Z",
+      "lastCheckedAt": "2026-10-23T07:56:33.976Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -253,7 +253,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-23T01:58:48.588Z",
+      "lastCheckedAt": "2026-10-23T07:56:33.857Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -287,6 +287,16 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "01M5KDJ4079XQTZDSRX40NMN6H",
+          "title": "Delays in customer support responses",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-10-23T03:41:03.000Z",
+          "updatedAt": "2026-10-23T05:58:06.000Z",
+          "resolvedAt": "2026-10-23T05:58:06.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
           "id": "01M5JHVJVC8WAXB4WRYFMKG6HP",
           "title": "New Ad Accounts failing to provision admins",
           "status": "resolved",
@@ -315,16 +325,6 @@
           "updatedAt": "2026-10-22T08:50:43.000Z",
           "resolvedAt": "2026-10-22T08:50:43.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M5FD63HHDRPQPM5YMQWJ5HTN",
-          "title": "Elevated FedRAMP API error rates for Astra and Sol",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-21T14:17:32.000Z",
-          "updatedAt": "2026-10-21T19:34:58.000Z",
-          "resolvedAt": "2026-10-21T19:34:58.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -339,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-23T01:58:49.331Z",
+      "lastCheckedAt": "2026-10-23T07:56:34.742Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
