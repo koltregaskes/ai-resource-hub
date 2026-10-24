@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T01:08:16.220Z",
+  "generatedAt": "2026-10-24T06:28:18.680Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-24T01:08:16.215Z",
+      "lastCheckedAt": "2026-10-24T06:28:18.673Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-24T01:08:13.986Z",
+      "lastCheckedAt": "2026-10-24T06:28:17.377Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -134,6 +134,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "0ns5clsk8p2x",
+          "title": "Elevated errors for Claude Fable 5 and Claude Fable 5.1",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-10-24T05:16:50.587Z",
+          "updatedAt": "2026-10-24T05:53:30.629Z",
+          "resolvedAt": "2026-10-24T05:53:30.600Z",
+          "url": "https://stspg.io/7n1wgb6qsfly",
+          "summary": "The issue affecting Claude services has been resolved. Impact occurred from 22:00 PT on October 23 / 05:00 UTC on October 24 to 22:35 PT on October 23 / 05:35 UTC on October 24."
+        },
+        {
           "id": "3cqf3pmlnr96",
           "title": "Elevated errors for Claude Opus 5.5",
           "status": "resolved",
@@ -165,17 +176,6 @@
           "resolvedAt": "2026-10-22T08:07:03.869Z",
           "url": "https://stspg.io/4dcr8c005yxc",
           "summary": "The issue affecting claude.ai and Claude Cowork has been resolved."
-        },
-        {
-          "id": "njk29r81v3wg",
-          "title": "Degraded performance for Claude Fable 5",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-21T19:49:06.495Z",
-          "updatedAt": "2026-10-21T20:29:17.877Z",
-          "resolvedAt": "2026-10-21T20:29:17.844Z",
-          "url": "https://stspg.io/cgklr4v2sgkh",
-          "summary": "The issue affecting other Claude models has been resolved."
         }
       ]
     },
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-24T01:08:14.887Z",
+      "lastCheckedAt": "2026-10-24T06:28:18.334Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-24T01:08:14.159Z",
+      "lastCheckedAt": "2026-10-24T06:28:17.494Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -253,7 +253,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-24T01:08:14.001Z",
+      "lastCheckedAt": "2026-10-24T06:28:17.554Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -339,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-24T01:08:15.190Z",
+      "lastCheckedAt": "2026-10-24T06:28:18.278Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
