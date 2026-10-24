@@ -23,6 +23,7 @@ interface Props {
   translationState?: TranslationState;
   translationNote?: string;
   robots?: string;
+  canonical?: string;
   compactChrome?: boolean;
 }
 
@@ -36,10 +37,11 @@ const {
   translationState = locale === DEFAULT_LOCALE ? 'source' : 'reviewed',
   translationNote,
   robots,
+  canonical,
   compactChrome = true,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(canonical ?? Astro.url.pathname, Astro.site);
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const searchIndex = getSearchIndex(base);

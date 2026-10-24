@@ -103,8 +103,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
       <section>
         <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">4. What happens inside one block</h2>
         <p class="text-(--color-text-secondary) leading-relaxed mb-4">
-          A modern decoder-style model such as GPT or Claude repeats the same broad pattern many times. A single
-          <a href={`${base}glossary/transformer-block/`} class="text-(--color-accent) hover:underline">transformer block</a>
+          A modern decoder-style model such as GPT or Claude repeats the same broad pattern many times. A single transformer block
           usually contains:
         </p>
         <div class="grid gap-3 sm:grid-cols-2">
@@ -145,8 +144,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
           similar links by scoring how strongly one token should attend to others.
         </p>
         <p class="text-(--color-text-secondary) leading-relaxed">
-          In practice, models do this with many
-          <a href={`${base}glossary/attention-head/`} class="text-(--color-accent) hover:underline">attention heads</a>
+          In practice, models do this with many attention heads
           at once. Different heads can specialise in different kinds of relationships: syntax, position, code structure,
           quotation boundaries, or topic continuity.
         </p>

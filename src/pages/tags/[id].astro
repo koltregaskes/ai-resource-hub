@@ -5,6 +5,7 @@ import {
   getTagById,
   getItemsByTag,
   getModelById,
+  getAllModelIds,
   getPeople,
   getYouTubeCreators,
   getBenchmarks,
@@ -36,10 +37,20 @@ const allPeople = getPeople();
 const allCreators = getYouTubeCreators();
 const allBenchmarks = getBenchmarks();
 
+const publishedModelIds = new Set(getAllModelIds());
+
 const taggedModels = modelIds.map(mid => {
   const m = getModelById(mid);
-  return m ? { id: mid, name: m.name, provider: m.provider_name } : null;
-}).filter(Boolean) as Array<{ id: string; name: string; provider: string }>;
+  if (!m) return null;
+  const status = (m.status ?? '').toLowerCase();
+  return {
+    id: mid,
+    name: m.name,
+    provider: m.provider_name,
+    published: publishedModelIds.has(mid),
+    statusLabel: status && status !== 'active' ? status.charAt(0).toUpperCase() + status.slice(1) : '',
+  };
+}).filter(Boolean) as Array<{ id: string; name: string; provider: string; published: boolean; statusLabel: string }>;
 
 const taggedPeople = allPeople.filter(p => peopleIds.includes(p.id));
 const taggedCreators = allCreators.filter(c => creatorIds.includes(c.id));
@@ -78,13 +89,20 @@ const totalItems = taggedModels.length + taggedPeople.length + taggedCreators.le
         <h2 class="text-lg font-bold text-(--color-text-primary) mb-3">Models ({taggedModels.length})</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {taggedModels.map((m) => (
-            <a
-              href={`${base}models/${m.id}/`}
-              class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent) transition-colors"
-            >
-              <p class="font-medium text-(--color-text-primary)">{m.name}</p>
-              <p class="text-xs text-(--color-text-muted)">{m.provider}</p>
-            </a>
+            m.published ? (
+              <a
+                href={`${base}models/${m.id}/`}
+                class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent) transition-colors"
+              >
+                <p class="font-medium text-(--color-text-primary)">{m.name}</p>
+                <p class="text-xs text-(--color-text-muted)">{m.provider}</p>
+              </a>
+            ) : (
+              <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
+                <p class="font-medium text-(--color-text-primary)">{m.name}</p>
+                <p class="text-xs text-(--color-text-muted)">{m.provider}{m.statusLabel ? ` · ${m.statusLabel}` : ''}</p>
+              </div>
+            )
           ))}
         </div>
       </div>

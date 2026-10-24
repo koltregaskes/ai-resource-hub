@@ -4,7 +4,7 @@ const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 ---
 
-<BaseLayout title="Page not found — The AI Resource Hub">
+<BaseLayout title="Page not found — The AI Resource Hub" robots="noindex" canonical="/">
   <div class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 text-center">
     <p class="text-[8rem] font-black font-display leading-none text-(--color-border-hover)">404</p>
     <h1 class="mt-4 text-2xl font-bold font-display text-(--color-text-primary)">Page not found</h1>

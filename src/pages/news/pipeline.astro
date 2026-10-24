@@ -36,7 +36,7 @@ function routeModeLabel(routeMode: string): string {
 const filterOptions = {
   sites: activeNewsSites.map((site) => ({ value: site.slug, label: site.name })),
   categories: newsPipelineSnapshot.sourceCategories,
-  routingTags: newsPipelineSnapshot.routingTags,
+  routingTags: newsPipelineSnapshot.routingTags as unknown as Array<{ id: string; label: string; keywordCount: number }>,
   sections: newsPipelineSnapshot.sections.map((section) => ({ value: section, label: section })),
   statuses: [...new Set(sources.map((source) => source.status))].map((value) => ({ value, label: humaniseToken(value) })),
   adapters: [...new Set(sources.map((source) => source.adapter))].map((value) => ({ value, label: value.toUpperCase() })),

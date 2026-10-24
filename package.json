@@ -40,17 +40,20 @@
     "verify:benchmark-provenance": "tsx scripts/verify-benchmark-provenance.ts",
     "verify:publish": "tsx scripts/verify-publish-readiness.ts",
     "test:benchmark-provenance": "tsx --test scripts/staleness-publication-gate.test.ts scripts/benchmark-collection.test.ts scripts/benchmark-provenance.test.ts scripts/benchmark-score-evidence.test.ts scripts/public-benchmark-selector.test.ts scripts/public-quality-policy.test.ts",
-    "verify:routes": "tsx scripts/verify-route-smoke.ts"
+    "verify:routes": "tsx scripts/verify-route-smoke.ts",
+    "check:links": "node scripts/check-internal-links.mjs",
+    "check:lighthouse": "node scripts/check-lighthouse.mjs"
   },
   "dependencies": {
     "@astrojs/prism": "^4.0.1",
-    "@astrojs/react": "^5.0.5",
-    "@astrojs/sitemap": "^3.7.2",
+    "@astrojs/react": "^7.1.1",
+    "@astrojs/sitemap": "^3.7.4",
     "@tailwindcss/vite": "^4.2.2",
     "@types/pg": "^8.20.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^6.4.6",
+    "astro": "^7.4.2",
+    "oxc-transform-react": "^0.145.0",
     "better-sqlite3": "^12.8.0",
     "chart.js": "^4.5.1",
     "pg": "^8.20.0",
@@ -62,16 +65,17 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.8",
+    "@astrojs/check": "^0.9.12",
     "@types/better-sqlite3": "^7.6.13",
+    "chrome-launcher": "^1.2.2",
+    "lighthouse": "^13.5.0",
     "tsx": "^4.21.0"
   },
   "overrides": {
     "esbuild": "^0.28.1",
-    "vite": "^7.3.5",
-    "rollup": "^4.59.0",
-    "devalue": "^5.8.1",
-    "fast-uri": "^3.1.2",
+    "vite": "^8.3.4",
+    "devalue": "^6.0.2",
+    "fast-uri": "^3.1.9",
     "h3": "^1.15.9",
     "defu": "^6.1.5",
     "yaml": "^2.8.3",
