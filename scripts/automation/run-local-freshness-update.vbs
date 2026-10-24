@@ -1,4 +1,4 @@
-' AI Resource Hub - hidden hourly local freshness launcher.
+' AI Resource Hub - hidden local freshness launcher.
 Option Explicit
 
 Dim shell, command, exitCode

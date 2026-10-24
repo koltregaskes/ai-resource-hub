@@ -3,7 +3,7 @@
  * Write src/data/digest-YYYY-MM-DD.md from the scraped news cache.
  *
  * No LLM. Safe to run in GitHub Actions after dump:pg, and locally as a
- * failover if Actions is down. Empty news must not fail the hourly scrape.
+ * failover if Actions is down. Empty news must not fail the scheduled scrape.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';

@@ -13,12 +13,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="Scheduling Guide - How to Run Automated Updates"
-  description="Set up automated hourly data updates for The AI Resource Hub on Windows, macOS, or Linux."
+  description="Set up three-times-a-day data updates for The AI Resource Hub on Windows, macOS, or Linux."
 >
   <div class="mx-auto max-w-4xl px-4 py-12">
     <h1 class="mb-2 text-3xl font-bold text-(--color-text-primary)">Scheduling Automated Updates</h1>
     <p class="mb-8 text-(--color-text-secondary)">
-      How to keep pricing, benchmarks, news, and model data fresh with automated hourly runs.
+      How to keep pricing, benchmarks, news, and model data fresh. The public site collects three times a day, not every hour.
     </p>
 
     <div class="mb-8 rounded-xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
@@ -26,7 +26,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="space-y-2 text-sm">
         <div class="flex items-center gap-2">
           <span class="h-2 w-2 rounded-full bg-green-500"></span>
-          <span class="text-(--color-text-secondary)"><strong>GitHub Actions</strong> - primary hourly full refresh at 12 minutes past each hour</span>
+          <span class="text-(--color-text-secondary)"><strong>GitHub Actions</strong> - full refresh at 07:12, 13:12, and 19:12 UTC. Provider status is a separate check about every 6 hours.</span>
         </div>
         <div class="flex items-center gap-2">
           <span class="h-2 w-2 rounded-full bg-yellow-500"></span>
@@ -98,7 +98,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <section class="mb-10">
       <h2 class="mb-4 text-xl font-semibold text-(--color-text-primary)">Windows Task Scheduler</h2>
       <p class="mb-4 text-(--color-text-secondary)">
-        If you want a local mirror of the hosted automation, set up an hourly task that runs the scraper pipeline automatically on your Windows machine.
+        A local mirror should follow the same three-times-a-day rhythm. An hourly task asks the same news sites too often. VentureBeat is limited to one request a day inside the collector.
       </p>
 
       <h3 class="mb-3 mt-6 text-base font-semibold text-(--color-text-primary)">Step 1: Create a batch script</h3>
@@ -121,16 +121,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         Open Command Prompt as Administrator and run:
       </p>
       <div class="mb-4 space-y-1 rounded-lg bg-(--color-bg-tertiary) p-4 font-mono text-sm text-(--color-text-secondary)">
-        <p class="text-(--color-text-muted)"># Create an hourly task</p>
-        <p>schtasks /Create /SC HOURLY /MO 1 ^</p>
-        <p>&nbsp;&nbsp;/TN "AI Resource Hub - Update Data" ^</p>
-        <p>&nbsp;&nbsp;/TR "%USERPROFILE%\ai-resource-hub\update-data.bat"</p>
+        <p class="text-(--color-text-muted)"># Morning, afternoon, and evening. Times are local to the computer.</p>
+        <p>schtasks /Create /SC DAILY /ST 08:15 /TN "AI Resource Hub - Morning Update" /TR "%USERPROFILE%\ai-resource-hub\update-data.bat"</p>
+        <p>schtasks /Create /SC DAILY /ST 14:15 /TN "AI Resource Hub - Afternoon Update" /TR "%USERPROFILE%\ai-resource-hub\update-data.bat"</p>
+        <p>schtasks /Create /SC DAILY /ST 20:15 /TN "AI Resource Hub - Evening Update" /TR "%USERPROFILE%\ai-resource-hub\update-data.bat"</p>
       </div>
 
       <h3 class="mb-3 mt-6 text-base font-semibold text-(--color-text-primary)">Step 3: Verify it works</h3>
       <div class="space-y-1 rounded-lg bg-(--color-bg-tertiary) p-4 font-mono text-sm text-(--color-text-secondary)">
         <p class="text-(--color-text-muted)"># Test the task manually</p>
-        <p>Start-ScheduledTask -TaskName "AI Resource Hub - Update Data"</p>
+        <p>Start-ScheduledTask -TaskName "AI Resource Hub - Morning Update"</p>
         <p>&nbsp;</p>
         <p class="text-(--color-text-muted)"># Check the log</p>
         <p>Get-Content .\logs\scrape.log -Tail 50</p>
@@ -140,22 +140,21 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <section class="mb-10">
       <h2 class="mb-4 text-xl font-semibold text-(--color-text-primary)">macOS / Linux (cron)</h2>
       <p class="mb-4 text-(--color-text-secondary)">
-        Use cron for automated hourly runs on macOS or Linux.
+        Use cron for the same three daily runs on macOS or Linux. The times below are UTC.
       </p>
       <div class="space-y-1 rounded-lg bg-(--color-bg-tertiary) p-4 font-mono text-sm text-(--color-text-secondary)">
         <p class="text-(--color-text-muted)"># Open crontab editor</p>
         <p>crontab -e</p>
         <p>&nbsp;</p>
-        <p class="text-(--color-text-muted)"># Add these lines (runs every hour)</p>
-        <p>12 * * * * cd /home/user/ai-resource-hub && npm run scrape &gt;&gt; logs/scrape.log 2&gt;&amp;1</p>
-        <p>20 * * * * cd /home/user/ai-resource-hub && npm run build &gt;&gt; logs/build.log 2&gt;&amp;1</p>
+        <p class="text-(--color-text-muted)"># 07:12, 13:12, and 19:12 UTC</p>
+        <p>12 7,13,19 * * * cd /home/user/ai-resource-hub && npm run scrape &gt;&gt; logs/scrape.log 2&gt;&amp;1</p>
       </div>
     </section>
 
     <section class="mb-10">
       <h2 class="mb-4 text-xl font-semibold text-(--color-text-primary)">GitHub Actions</h2>
       <p class="mb-4 text-(--color-text-secondary)">
-        GitHub Actions is the primary scheduled refresh path for the public site, with a full hourly data run and manual reruns available on demand.
+        GitHub Actions is the primary scheduled refresh path for the public site. A manual rerun is available. Pressing it again does not fetch everything a second time for the same morning, afternoon, or evening slot unless you ask it to.
       </p>
       <div class="space-y-3 rounded-lg border border-(--color-border) bg-(--color-bg-secondary) p-4 text-sm">
         <div>
@@ -164,7 +163,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </div>
         <div>
           <span class="text-(--color-text-muted)">Schedule:</span>
-          <span class="text-(--color-text-secondary)">Hourly at 12 minutes past the hour</span>
+          <span class="text-(--color-text-secondary)">07:12, 13:12, and 19:12 UTC</span>
         </div>
         <div>
           <span class="text-(--color-text-muted)">Manual trigger:</span>
@@ -214,7 +213,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </div>
         <div>
           <p class="font-medium text-(--color-text-primary)">Keep the request rate low</p>
-          <p class="text-(--color-text-secondary)">Hourly collection still uses a conservative source list and avoids aggressive polling.</p>
+          <p class="text-(--color-text-secondary)">Three collections a day, with VentureBeat limited to one request a day, stays well clear of the rate limits that hourly checks were hitting.</p>
         </div>
         <div>
           <p class="font-medium text-(--color-text-primary)">Do not automate blocked or login-only sources</p>
