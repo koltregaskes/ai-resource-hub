@@ -8,8 +8,6 @@
  * - Keep the public site on one canonical news store (`news` table)
  */
 import { createHash } from 'node:crypto';
-import { readFileSync, writeFileSync } from 'node:fs';
-import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { getDB, logScrapeRun } from './base';
 
@@ -19,41 +17,6 @@ interface FeedSource {
   category: string;
   requiresAIKeywords?: boolean;
   type?: 'feed' | 'anthropic-newsroom';
-  /** Minimum time between real HTTP requests. Skipped runs do not move this clock. */
-  minIntervalHours?: number;
-}
-
-interface SourceFetchRecord {
-  attemptedAt: string;
-  result: 'success' | 'rate_limited' | 'error';
-}
-
-const FETCH_STATE_PATH = path.join(process.cwd(), 'data', 'pg-cache', 'news-source-fetch-state.json');
-
-export function shouldFetchSource(
-  lastAttemptedAt: string | null | undefined,
-  minIntervalHours: number | undefined,
-  now = new Date(),
-): boolean {
-  if (!minIntervalHours || minIntervalHours <= 0) return true;
-  if (!lastAttemptedAt) return true;
-  const then = Date.parse(lastAttemptedAt);
-  if (!Number.isFinite(then)) return true;
-  return now.getTime() - then >= minIntervalHours * 60 * 60 * 1000;
-}
-
-function readFetchState(): Record<string, SourceFetchRecord> {
-  try {
-    const parsed = JSON.parse(readFileSync(FETCH_STATE_PATH, 'utf8')) as { sources?: unknown };
-    if (!parsed.sources || typeof parsed.sources !== 'object') return {};
-    return parsed.sources as Record<string, SourceFetchRecord>;
-  } catch {
-    return {};
-  }
-}
-
-function writeFetchState(sources: Record<string, SourceFetchRecord>): void {
-  writeFileSync(FETCH_STATE_PATH, `${JSON.stringify({ sources }, null, 2)}\n`);
 }
 
 interface ParsedEntry {
@@ -87,11 +50,9 @@ const FEEDS: FeedSource[] = [
   },
   {
     name: 'VentureBeat',
-    // Use canonical feed URL with trailing slash to avoid redirects.
-    // VentureBeat rejects frequent collection. Ask at most once a day.
+    // Same public feed as the shared source list. Collected on the same pass as the other feeds.
     url: 'https://venturebeat.com/category/ai/feed/',
     category: 'industry',
-    minIntervalHours: 24,
   },
   {
     name: 'The Verge',
@@ -213,14 +174,6 @@ async function sleep(ms: number): Promise<void> {
   await new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function isVentureBeat(url: string): boolean {
-  try {
-    return new URL(url).hostname.replace(/^www\./, '') === 'venturebeat.com';
-  } catch {
-    return false;
-  }
-}
-
 async function fetchFeed(url: string, attempt: number = 1): Promise<string> {
   const response = await fetch(url, {
     headers: {
@@ -232,10 +185,8 @@ async function fetchFeed(url: string, attempt: number = 1): Promise<string> {
     },
   });
 
-  // A 429 means stop. Retrying VentureBeat makes the block worse, so it gets one try.
-  const mayRetry = (response.status === 429 || response.status === 503)
-    && attempt < 3
-    && !isVentureBeat(url);
+  // One backoff policy for every source. A second refusal ends this run for that feed.
+  const mayRetry = (response.status === 429 || response.status === 503) && attempt < 3;
   if (mayRetry) {
     const retryAfterHeader = response.headers.get('retry-after');
     const retryAfterSeconds = retryAfterHeader ? parseInt(retryAfterHeader, 10) : NaN;
@@ -249,11 +200,7 @@ async function fetchFeed(url: string, attempt: number = 1): Promise<string> {
   }
 
   if (!response.ok) {
-    const isRateLimited = response.status === 429 || response.status === 503;
-    const note = isRateLimited && isVentureBeat(url)
-      ? ' (rate-limited; not asking VentureBeat again for 24 hours)'
-      : '';
-    throw new Error(`HTTP ${response.status}: ${response.statusText}${note}`);
+    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
   }
 
   return response.text();
@@ -273,7 +220,6 @@ async function main() {
   let inserted = 0;
   let successCount = 0;
   const failures: string[] = [];
-  const fetchState = readFetchState();
 
   try {
     const insertMany = db.transaction((rows: Array<{
@@ -301,17 +247,8 @@ async function main() {
     });
 
     for (const feed of FEEDS) {
-      const previous = fetchState[feed.url];
-      if (!shouldFetchSource(previous?.attemptedAt, feed.minIntervalHours)) {
-        console.log(`Skipping ${feed.name}; last request was ${previous?.attemptedAt} and this source is limited to once every ${feed.minIntervalHours}h.`);
-        successCount++;
-        continue;
-      }
-
-      let requested = false;
       try {
         console.log(`Fetching ${feed.name} feed...`);
-        requested = true;
         const body = await fetchFeed(feed.url);
         const parsedEntries = feed.type === 'anthropic-newsroom'
           ? parseAnthropicNewsroom(body)
@@ -332,20 +269,10 @@ async function main() {
           }));
 
         insertMany(entries);
-        fetchState[feed.url] = { attemptedAt: new Date().toISOString(), result: 'success' };
-        writeFetchState(fetchState);
         successCount++;
         console.log(`  ${entries.length} items imported from ${feed.name}`);
       } catch (error) {
         const message = error instanceof Error ? error.message : String(error);
-        if (requested) {
-          const rateLimited = /HTTP 429|HTTP 503/.test(message);
-          fetchState[feed.url] = {
-            attemptedAt: new Date().toISOString(),
-            result: rateLimited ? 'rate_limited' : 'error',
-          };
-          writeFetchState(fetchState);
-        }
         failures.push(`${feed.name}: ${message}`);
         console.warn(`  Failed to fetch ${feed.name}: ${message}`);
       }

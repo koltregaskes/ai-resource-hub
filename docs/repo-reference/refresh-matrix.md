@@ -13,7 +13,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 | Models and releases | Three times a day | Mixed | 22 Oct 2026, 23:20 UTC |
 | Benchmarks and evals | Three times a day; measurement dates vary | Automated | 05 Feb 2026, 00:00 UTC |
 | Pricing and value | Three times a day | Automated | 22 Oct 2026, 23:19 UTC |
-| News and release watch | Three times a day; VentureBeat at most once a day | Mixed | 22 Oct 2026, 12:00 UTC |
+| News and release watch | Three times a day | Mixed | 22 Oct 2026, 12:00 UTC |
 | Provider status | About every 6 hours | Automated | 22 Oct 2026, 23:20 UTC |
 | Guides and learning | Manual editorial review | Manual | 22 Oct 2026, 23:19 UTC |
 
@@ -116,7 +116,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ## News and release watch
 
-- Cadence: Three times a day; VentureBeat at most once a day
+- Cadence: Three times a day
 - Automation: Mixed
 - Last refreshed: 22 Oct 2026, 12:00 UTC
 - Category route: `/news/`

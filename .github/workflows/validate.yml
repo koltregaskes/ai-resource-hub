@@ -35,8 +35,8 @@ jobs:
       - name: Test internal link scanner
         run: node --test scripts/check-internal-links.test.mjs
 
-      - name: Test news fetch intervals
-        run: npx tsx --test scripts/news-feed-interval.test.ts
+      - name: Test shared news tag catalog
+        run: npx tsx --test scripts/news-tag-catalog.test.ts
 
       - name: Verify publish readiness
         run: npm run verify:publish

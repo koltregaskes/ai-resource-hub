@@ -360,7 +360,7 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
     {
       id: 'news',
       label: 'News and release watch',
-      cadence: 'Three times a day; VentureBeat at most once a day',
+      cadence: 'Three times a day',
       automation: 'Mixed',
       status: 'watch',
       href: formatRoute(basePath, '/news/'),

@@ -247,7 +247,7 @@ These labels should appear in docs, data, and future public UI.
 These are the intended operating cadences, not marketing promises:
 
 - provider status: about every 6 hours
-- news: three times a day, with VentureBeat at most once a day
+- news: three times a day
 - pricing: three times a day
 - speed: on the existing speed refresh cadence
 - benchmark scores: when new data is published

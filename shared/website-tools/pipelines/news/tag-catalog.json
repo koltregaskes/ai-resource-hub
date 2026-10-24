@@ -1,0 +1,338 @@
+{
+  "note": "Website entries are coverage briefs for sites already in the estate. They do not add include or exclude tags. Topic keywordPattern values are the matching rules the AI Resource Hub news router already used; they were moved here so the shared catalog is the place that defines a tag. Tags with no keywordPattern are still real tags: a source declares them, and a keyword rule has not been written. Sun Window has no news brief beyond its estate membership.",
+  "sites": {
+    "kols-korner": {
+      "symbol": "🗞️",
+      "definition": "Broad AI news for Kol's Korner: product launches, announcements, funding, acquisitions, policy, regulation, opinion, industry moves, open source, model releases, agents, safety, reasoning, and hardware. Photography, games, and crypto stay out."
+    },
+    "axylusion": {
+      "symbol": "🎨",
+      "definition": "Creative generation for Axy Lusion: images, video, music, voice, 3D, creative tools, creative workflow, and AI art. Photography, crypto, agents, research, benchmarks, hardware, policy, industry business, and games stay out."
+    },
+    "ai-resource-hub": {
+      "symbol": "📘",
+      "definition": "Technical AI reference for the AI Resource Hub: model releases, benchmarks, evaluations, research papers, API updates, pricing changes, architecture, datasets, training, inference, hardware, and open source. Opinion, creative generation, photography, crypto, and games stay out."
+    },
+    "ghost-in-the-models": {
+      "symbol": "👻",
+      "definition": "Agent reference for Ghost in the Model: agents, multi-agent systems, tool use, autonomous systems, AI safety, MCP, reasoning, agent frameworks, and agent SDKs. Photography and games stay out."
+    },
+    "kol-tregaskes-photography": {
+      "symbol": "📷",
+      "definition": "Photography coverage: cameras, lenses, photo editing, Lightroom, Photoshop, Capture One, photography AI, technique, and the business of photography. Crypto and games stay out."
+    },
+    "elusion-works": {
+      "symbol": "🏛️",
+      "definition": "Umbrella brand and estate index. No direct shared news output configured."
+    },
+    "sun-window": {
+      "symbol": "☀️",
+      "definition": "Sun Window is part of the estate. No shared news brief has been written for it, so the pipeline does not route stories there."
+    },
+    "gametrackdaily": {
+      "symbol": "🎮",
+      "definition": "Games coverage for GameTrackDaily: releases, events, reviews, previews, platforms, and release dates. Crypto, AI safety and policy, and camera or lens news stay out."
+    },
+    "repo-foundry": {
+      "symbol": "⚒️",
+      "definition": "Repository coverage for Repo Foundry: repository updates, GitHub releases, open source, developer tools, command-line tools, agent frameworks, MCP, and tool updates. Crypto, photography gear, and games stay out."
+    },
+    "stackscout": {
+      "symbol": "🔭",
+      "definition": "Developer stack coverage for Stack Scout: tool updates, developer tools, command-line tools, MCP, API updates, product launches, open source, agent tools, and GitHub releases. Crypto, photography gear, and games stay out."
+    }
+  },
+  "tags": {
+    "3d_gen": {
+      "symbol": "🧊",
+      "definition": "3D generation and 3D asset tools."
+    },
+    "acquisition": {
+      "symbol": "🤝",
+      "definition": "One company buying another."
+    },
+    "agent_sdk": {
+      "symbol": "🧩",
+      "definition": "A software kit for building agents."
+    },
+    "agent_tool": {
+      "symbol": "🛠️",
+      "definition": "A tool an agent can call."
+    },
+    "agentic_framework": {
+      "symbol": "🕸️",
+      "definition": "A framework for building agents."
+    },
+    "ai_agents": {
+      "symbol": "🤖",
+      "definition": "News about AI agents."
+    },
+    "ai_safety": {
+      "symbol": "🛡️",
+      "definition": "Safety, alignment, guardrails, or misuse research.",
+      "keywordPattern": "\\b(ai safety|alignment|guardrails|red teaming|jailbreak|safety blueprint)\\b"
+    },
+    "announcement": {
+      "symbol": "📣",
+      "definition": "A company announcement that is not itself a model release."
+    },
+    "api_update": {
+      "symbol": "🔌",
+      "definition": "A change to an API, SDK, limit, or tool interface.",
+      "keywordPattern": "\\b(api|sdk|endpoint|rate limit|context window|token limit|function calling|tool use|tooling update)\\b"
+    },
+    "architecture": {
+      "symbol": "🧱",
+      "definition": "How a model is built, including transformers, attention, mixture-of-experts, and diffusion.",
+      "keywordPattern": "\\b(transformer|architecture|attention|moe|mixture of experts|diffusion)\\b"
+    },
+    "art_ai": {
+      "symbol": "✨",
+      "definition": "AI art and generative artwork.",
+      "keywordPattern": "\\b(ai art|generative art|digital art|artist tool)\\b"
+    },
+    "autonomous_systems": {
+      "symbol": "🛰️",
+      "definition": "Systems that act without a person stepping through each action."
+    },
+    "benchmark": {
+      "symbol": "📊",
+      "definition": "A benchmark, leaderboard, or scored comparison of models.",
+      "keywordPattern": "\\b(benchmark|leaderboard|arena|mmlu|gpqa|gsm8k|humaneval|swe-bench|lmarena|lmsys|elo)\\b"
+    },
+    "camera": {
+      "symbol": "📹",
+      "definition": "Cameras and camera bodies.",
+      "keywordPattern": "\\b(camera|mirrorless|dslr|lens)\\b"
+    },
+    "camera_release": {
+      "symbol": "🆕",
+      "definition": "A newly announced camera or lens.",
+      "keywordPattern": "\\b(new camera|camera launch|camera announce|new lens|lens release)\\b"
+    },
+    "capture_one": {
+      "symbol": "C1",
+      "definition": "News about Capture One, the photo editor.",
+      "keywordPattern": "\\bcapture one\\b"
+    },
+    "cli_tool": {
+      "symbol": "⌨️",
+      "definition": "A command-line tool."
+    },
+    "creative_tool": {
+      "symbol": "🖌️",
+      "definition": "A tool for making images, design, or other creative work.",
+      "keywordPattern": "\\b(creative tool|design tool|adobe ai|canva ai|figma ai)\\b"
+    },
+    "creative_workflow": {
+      "symbol": "🔁",
+      "definition": "A workflow for creative production."
+    },
+    "crypto": {
+      "symbol": "₿",
+      "definition": "Cryptocurrency, tokens, and blockchain markets.",
+      "keywordPattern": "\\b(bitcoin|crypto|cryptocurrency|ethereum|solana|defi|nft|web3|stablecoin)\\b"
+    },
+    "crypto_defi": {
+      "symbol": "🏦",
+      "definition": "Decentralised finance, staking, and smart contracts.",
+      "keywordPattern": "\\b(defi|staking|liquidity|dao|smart contract)\\b"
+    },
+    "crypto_regulation": {
+      "symbol": "⚖️",
+      "definition": "Rules, regulators, and crypto tax or exchange-traded fund decisions.",
+      "keywordPattern": "\\b(cftc|sec|spot etf|crypto regulation|crypto tax)\\b"
+    },
+    "crypto_trading": {
+      "symbol": "📈",
+      "definition": "Trading, exchanges, and market moves.",
+      "keywordPattern": "\\b(price action|bull market|bear market|liquidation|binance|coinbase|kraken)\\b"
+    },
+    "dataset": {
+      "symbol": "🗂️",
+      "definition": "A dataset or a change to training data.",
+      "keywordPattern": "\\b(dataset|training data|preference data|synthetic data)\\b"
+    },
+    "developer_tool": {
+      "symbol": "🧰",
+      "definition": "A tool for developers."
+    },
+    "evaluation": {
+      "symbol": "🧪",
+      "definition": "An evaluation or a reported capability result.",
+      "keywordPattern": "\\b(evaluation|evals?|assessed|performance|capability|test results|scor(?:e|es|ing))\\b"
+    },
+    "funding": {
+      "symbol": "💰",
+      "definition": "Investment, a funding round, or a grant."
+    },
+    "game_event": {
+      "symbol": "🏁",
+      "definition": "A games industry event or showcase."
+    },
+    "game_preview": {
+      "symbol": "👀",
+      "definition": "A preview of an unreleased game."
+    },
+    "game_release": {
+      "symbol": "👾",
+      "definition": "A game that has been released or given a release date."
+    },
+    "game_review": {
+      "symbol": "⭐",
+      "definition": "A review of a game."
+    },
+    "gaming_platform": {
+      "symbol": "🕹️",
+      "definition": "A platform, store, or service for playing games."
+    },
+    "github_release": {
+      "symbol": "🐙",
+      "definition": "A GitHub release of a project."
+    },
+    "hardware": {
+      "symbol": "🖥️",
+      "definition": "Chips, GPUs, TPUs, and the computers that run models.",
+      "keywordPattern": "\\b(gpu|tpu|chip|nvidia|amd|intel|h100|a100|datacenter|compute)\\b"
+    },
+    "image_gen": {
+      "symbol": "🖼️",
+      "definition": "Image generation and text-to-image tools.",
+      "keywordPattern": "\\b(image generation|text-to-image|flux|dall-e|midjourney|imagen)\\b"
+    },
+    "industry_move": {
+      "symbol": "🏢",
+      "definition": "A company strategy, partnership, or market shift."
+    },
+    "inference": {
+      "symbol": "⚡",
+      "definition": "Serving speed, latency, throughput, or inference cost.",
+      "keywordPattern": "\\b(inference|latency|throughput|tokens per second|faster inference|serving)\\b"
+    },
+    "lens": {
+      "symbol": "🔍",
+      "definition": "Lenses and lens ranges.",
+      "keywordPattern": "\\b(lens|focal length|telephoto|macro lens)\\b"
+    },
+    "lightroom": {
+      "symbol": "Lr",
+      "definition": "News about Adobe Lightroom.",
+      "keywordPattern": "\\blightroom\\b"
+    },
+    "mcp": {
+      "symbol": "🔗",
+      "definition": "Model Context Protocol servers, clients, or changes."
+    },
+    "model_release": {
+      "symbol": "🚀",
+      "definition": "A newly released, previewed, updated, or newly named model.",
+      "keywordPattern": "\\b(new model|model release|releases?|released|launch(?:es|ed)?|introduc(?:es|ed|ing)|unveil(?:s|ed)|debut(?:s|ed)|preview|gpt-[\\w.]+|claude[\\w\\s.-]*|gemini[\\w\\s.-]*|llama[\\w\\s.-]*|qwen[\\w\\s.-]*|glm[\\w\\s.-]*|kimi[\\w\\s.-]*|grok[\\w\\s.-]*|gemma[\\w\\s.-]*|minimax[\\w\\s.-]*|deepseek[\\w\\s.-]*)\\b"
+    },
+    "multi_agent": {
+      "symbol": "👥",
+      "definition": "Systems where more than one agent works together."
+    },
+    "music_gen": {
+      "symbol": "🎵",
+      "definition": "Music generation and text-to-music tools.",
+      "keywordPattern": "\\b(music generation|text-to-music|udio|suno)\\b"
+    },
+    "open_source": {
+      "symbol": "🔓",
+      "definition": "Open-source code, open weights, or a public model repository.",
+      "keywordPattern": "\\b(open source|open-source|open weights|released weights|apache\\b|mit license|github|hugging face)\\b"
+    },
+    "opinion": {
+      "symbol": "💬",
+      "definition": "Opinion, commentary, or an editorial.",
+      "keywordPattern": "\\b(opinion|editorial|commentary|hot take|analysis:)\\b"
+    },
+    "photo_editing": {
+      "symbol": "✂️",
+      "definition": "Editing software and raw processing, including Lightroom, Photoshop, and Capture One.",
+      "keywordPattern": "\\b(lightroom|photoshop|capture one|raw processing|post-processing)\\b"
+    },
+    "photography": {
+      "symbol": "📸",
+      "definition": "Photography as a practice, including cameras, lenses, and photo editing.",
+      "keywordPattern": "\\b(photography|photographer|camera|lens|mirrorless|wildlife photography|photo editing)\\b"
+    },
+    "photography_ai": {
+      "symbol": "🪄",
+      "definition": "AI features for photographers, such as denoise and upscale tools.",
+      "keywordPattern": "\\b(topaz|luminar ai|ai denoise|ai upscale|computational photography)\\b"
+    },
+    "photography_business": {
+      "symbol": "🏪",
+      "definition": "The business of photography, including stock, prints, and exhibitions.",
+      "keywordPattern": "\\b(stock photography|print sales|photo exhibition|photography business)\\b"
+    },
+    "photography_technique": {
+      "symbol": "📐",
+      "definition": "How a photograph is made: composition, light, and shooting method.",
+      "keywordPattern": "\\b(composition|long exposure|portrait lighting|street photography)\\b"
+    },
+    "photoshop": {
+      "symbol": "Ps",
+      "definition": "News about Adobe Photoshop.",
+      "keywordPattern": "\\bphotoshop\\b"
+    },
+    "policy": {
+      "symbol": "📜",
+      "definition": "Public policy that is not itself a formal regulation."
+    },
+    "pricing_change": {
+      "symbol": "💷",
+      "definition": "A change to price, a free tier, or a paid plan.",
+      "keywordPattern": "\\b(pricing|price|cost per|per million tokens|cheaper|free tier|subscription)\\b"
+    },
+    "product_launch": {
+      "symbol": "🚢",
+      "definition": "A product launch that is not only a model release."
+    },
+    "reasoning": {
+      "symbol": "🧠",
+      "definition": "Reasoning models and reasoning research."
+    },
+    "regulation": {
+      "symbol": "📋",
+      "definition": "A law, a rule, or a regulator action."
+    },
+    "release_date": {
+      "symbol": "📅",
+      "definition": "A dated release."
+    },
+    "repo_update": {
+      "symbol": "📦",
+      "definition": "An update to a source repository."
+    },
+    "research_paper": {
+      "symbol": "📄",
+      "definition": "A paper, preprint, or research finding.",
+      "keywordPattern": "\\b(paper|research paper|arxiv|preprint|study|we present|we introduce|findings)\\b"
+    },
+    "tool_update": {
+      "symbol": "🔧",
+      "definition": "An update to a software tool."
+    },
+    "tool_use": {
+      "symbol": "🔨",
+      "definition": "A model or agent using tools."
+    },
+    "training": {
+      "symbol": "🏋️",
+      "definition": "How a model is trained, including fine-tuning and preference training.",
+      "keywordPattern": "\\b(training|trained on|pre-training|fine-tun|rlhf|dpo)\\b"
+    },
+    "video_gen": {
+      "symbol": "🎬",
+      "definition": "Video generation and text-to-video tools.",
+      "keywordPattern": "\\b(video generation|text-to-video|runway|sora|pika|kling|veo)\\b"
+    },
+    "voice_synthesis": {
+      "symbol": "🎙️",
+      "definition": "Voice cloning, speech synthesis, and text-to-speech.",
+      "keywordPattern": "\\b(voice synthesis|voice clone|text-to-speech|tts|speech synthesis|elevenlabs)\\b"
+    }
+  }
+}
