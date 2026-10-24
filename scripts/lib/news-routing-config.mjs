@@ -4,6 +4,9 @@ import { digest } from '../news-pipeline-provenance.mjs';
 
 // Preserve the exporter's historical relative root unless explicitly overridden.
 export function loadNewsRoutingConfig(repoRoot, env = process.env) {
+  // Restore original behaviour:
+  // - If WEBSITES_ESTATE_ROOT is set, resolve it relative to the repo root (works for absolute paths too)
+  // - Otherwise, fall back to two levels above the repo (shared Websites checkout)
   const estateRoot = env.WEBSITES_ESTATE_ROOT
     ? path.resolve(repoRoot, env.WEBSITES_ESTATE_ROOT)
     : path.resolve(repoRoot, '..', '..');

@@ -61,6 +61,7 @@ jobs:
         run: npm run dump:pg
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          WEBSITES_ESTATE_ROOT: ${{ github.workspace }}
 
       - name: Validate AI milestone seed
         run: npm run validate:milestones
@@ -79,6 +80,8 @@ jobs:
 
       - name: Sync news pipeline snapshot
         run: npm run sync:news-pipeline
+        env:
+          WEBSITES_ESTATE_ROOT: ${{ github.workspace }}
 
       - name: Generate regional availability export
         run: npm run generate:availability
