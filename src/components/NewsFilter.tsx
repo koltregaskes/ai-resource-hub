@@ -283,11 +283,14 @@ export default function NewsFilter({ news }: Props) {
   return (
     <div className="relative flex gap-6">
       <button
+        type="button"
         onClick={() => setSidebarOpen(!sidebarOpen)}
         className="fixed bottom-4 right-4 z-50 rounded-full p-3 shadow-lg lg:hidden"
         style={{ backgroundColor: 'var(--color-accent)', color: '#fff' }}
+        aria-label={sidebarOpen ? 'Close news filters' : 'Open news filters'}
+        aria-expanded={sidebarOpen}
       >
-        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -303,18 +306,21 @@ export default function NewsFilter({ news }: Props) {
       >
         <div className="space-y-5 p-4">
           <button
+            type="button"
             onClick={() => setSidebarOpen(false)}
             className="absolute right-3 top-3 rounded p-1 lg:hidden"
             style={{ color: 'var(--color-text-muted)' }}
+            aria-label="Close news filters"
           >
-            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
           <div>
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Search</h3>
+            <label htmlFor="news-search" className="mb-2 block text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Search</label>
             <input
+              id="news-search"
               type="text"
               placeholder="Search articles..."
               value={searchQuery}
@@ -329,7 +335,7 @@ export default function NewsFilter({ news }: Props) {
           </div>
 
           <div>
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Topics</h3>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Topics</p>
             <div className="flex flex-wrap gap-1.5">
               <button
                 onClick={() => setActiveTag('')}
@@ -358,7 +364,7 @@ export default function NewsFilter({ news }: Props) {
           </div>
 
           <div>
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Date Range</h3>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Date Range</p>
             <div className="mb-2 flex gap-1">
               {([['24h', 'Last 24h'], ['7d', 'Last 7 Days'], ['all', 'All']] as const).map(([key, label]) => (
                 <button
@@ -381,6 +387,7 @@ export default function NewsFilter({ news }: Props) {
             <div className="flex items-center gap-1 text-xs">
               <input
                 type="date"
+                aria-label="From date"
                 value={customFrom}
                 onChange={(event) => {
                   setCustomFrom(event.target.value);
@@ -392,6 +399,7 @@ export default function NewsFilter({ news }: Props) {
               <span style={{ color: 'var(--color-text-muted)' }}>to</span>
               <input
                 type="date"
+                aria-label="To date"
                 value={customTo}
                 onChange={(event) => {
                   setCustomTo(event.target.value);
@@ -404,8 +412,9 @@ export default function NewsFilter({ news }: Props) {
           </div>
 
           <div>
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Archive</h3>
+            <label htmlFor="news-archive" className="mb-2 block text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Archive</label>
             <select
+              id="news-archive"
               value={archiveMonth}
               onChange={(event) => {
                 setArchiveMonth(event.target.value);
@@ -425,7 +434,7 @@ export default function NewsFilter({ news }: Props) {
           </div>
 
           <div>
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Group By</h3>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Group By</p>
             <div className="flex gap-1">
               {(['date', 'tag'] as const).map((value) => (
                 <button
@@ -444,7 +453,7 @@ export default function NewsFilter({ news }: Props) {
           </div>
 
           <div>
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Options</h3>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Options</p>
             <label className="flex cursor-pointer items-center gap-2 py-1 text-xs" style={{ color: 'var(--color-text-secondary)' }}>
               <input
                 type="checkbox"
@@ -496,7 +505,7 @@ export default function NewsFilter({ news }: Props) {
           <div className="space-y-6">
             {Object.entries(grouped).map(([key, items]) => (
               <div key={key}>
-                <h3
+                <h2
                   className="mb-3 border-b pb-1 text-sm font-semibold"
                   style={{ color: 'var(--color-text-primary)', borderBottomColor: 'var(--color-border)' }}
                 >
@@ -504,7 +513,7 @@ export default function NewsFilter({ news }: Props) {
                   <span className="ml-2 font-normal" style={{ color: 'var(--color-text-muted)' }}>
                     ({items.length})
                   </span>
-                </h3>
+                </h2>
                 <div className="grid gap-3 sm:grid-cols-2">
                   {items.map((item) => (
                     <NewsCard

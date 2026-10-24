@@ -7,12 +7,17 @@ const repoRoot = process.cwd();
 function resolveEstateRoot() {
   // An explicit root is authoritative, including when it is unavailable.
   if (process.env.WEBSITES_ESTATE_ROOT) return path.resolve(process.env.WEBSITES_ESTATE_ROOT);
+  // Restore original candidate priority for local publishers:
+  // - shared Websites checkout (two levels up)
+  // - W:\\Websites
+  // - C:\\Workspaces\\Websites
+  // - finally, repo root as a last-resort fallback (primarily for CI)
   const candidates = [
-    process.env.WEBSITES_ESTATE_ROOT,
     path.resolve(repoRoot, '..', '..'),
     'W:\\Websites',
     'C:\\Workspaces\\Websites',
-  ].filter(Boolean);
+    repoRoot,
+  ];
 
   for (const candidate of candidates) {
     const siteFilters = path.join(
@@ -29,6 +34,7 @@ function resolveEstateRoot() {
     }
   }
 
+  // Default remains two levels up (historical behaviour).
   return path.resolve(repoRoot, '..', '..');
 }
 
@@ -270,6 +276,74 @@ function describeSourceGovernance(source, categories) {
   };
 }
 
+function readTagCatalog(filePath) {
+  if (!fsSync.existsSync(filePath)) return null;
+  let parsed;
+  try {
+    parsed = JSON.parse(fsSync.readFileSync(filePath, 'utf8'));
+  } catch {
+    throw new Error('Invalid tag catalog.');
+  }
+  if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+    throw new Error('Invalid tag catalog.');
+  }
+  const tags = parsed.tags;
+  if (!tags || typeof tags !== 'object' || Array.isArray(tags) || Object.keys(tags).length === 0) {
+    return null;
+  }
+  const sites = parsed.sites && typeof parsed.sites === 'object' && !Array.isArray(parsed.sites)
+    ? parsed.sites
+    : {};
+  return { sites, tags };
+}
+
+function loadTagCatalog() {
+  const estateCatalog = path.join(
+    estateRoot,
+    'shared',
+    'website-tools',
+    'pipelines',
+    'news',
+    'tag-catalog.json',
+  );
+  const repoCatalog = path.join(
+    repoRoot,
+    'shared',
+    'website-tools',
+    'pipelines',
+    'news',
+    'tag-catalog.json',
+  );
+  const fromEstate = readTagCatalog(estateCatalog);
+  if (fromEstate) return { catalog: fromEstate, source: 'estate' };
+  if (path.resolve(estateCatalog) !== path.resolve(repoCatalog)) {
+    const fromRepo = readTagCatalog(repoCatalog);
+    if (fromRepo) return { catalog: fromRepo, source: 'checkout' };
+  }
+  return { catalog: { sites: {}, tags: {} }, source: 'none' };
+}
+
+function keywordListCount(value) {
+  return Array.isArray(value) ? value.filter(Boolean).length : 0;
+}
+
+function topicTagRecord(id, entry = {}) {
+  const keywordPattern = typeof entry.keywordPattern === 'string' && entry.keywordPattern.trim()
+    ? entry.keywordPattern.trim()
+    : null;
+  return {
+    id,
+    label: typeof entry.label === 'string' && entry.label.trim() ? entry.label.trim() : humaniseToken(id),
+    symbol: typeof entry.symbol === 'string' && entry.symbol.trim() ? entry.symbol.trim() : null,
+    definition: typeof entry.definition === 'string' && entry.definition.trim()
+      ? entry.definition.trim()
+      : 'No definition has been written for this tag.',
+    kind: 'topic',
+    keywordPattern,
+    keywordCount: keywordPattern ? 1 : keywordListCount(entry.keywords),
+  };
+}
+
 async function main() {
   const missingEstateConfigPaths = getMissingEstateConfigPaths();
   if (missingEstateConfigPaths.length > 0) {
@@ -299,6 +373,46 @@ async function main() {
   }
   const configuredSites = siteFilters?.sites ?? {};
   const configuredSources = Array.isArray(sourcesConfig?.sources) ? sourcesConfig.sources : [];
+  const { catalog: tagCatalog, source: tagCatalogSource } = loadTagCatalog();
+  if (tagCatalogSource === 'checkout') {
+    console.log('Tag catalog: using the site checkout copy because the estate root has no tag catalog yet.');
+  }
+  const tagRecords = new Map(
+    Object.entries(tagCatalog.tags).map(([id, entry]) => [id, topicTagRecord(id, entry)]),
+  );
+  for (const [id, keywords] of Object.entries(siteFilters?.tag_keywords ?? {})) {
+    const existing = tagRecords.get(id);
+    const listed = keywordListCount(keywords);
+    if (!existing) {
+      tagRecords.set(id, topicTagRecord(id, { keywords }));
+      continue;
+    }
+    if (!existing.keywordPattern && listed > existing.keywordCount) {
+      existing.keywordCount = listed;
+    }
+  }
+  const referencedTagIds = new Set();
+  for (const configured of Object.values(configuredSites)) {
+    for (const id of [...(configured?.include_tags ?? []), ...(configured?.exclude_tags ?? [])]) {
+      if (id) referencedTagIds.add(id);
+    }
+  }
+  for (const source of configuredSources) {
+    for (const id of source?.tags ?? []) {
+      if (id) referencedTagIds.add(id);
+    }
+  }
+  for (const id of referencedTagIds) {
+    if (!tagRecords.has(id)) tagRecords.set(id, topicTagRecord(id));
+  }
+  const labelFor = (id) => {
+    const tag = tagRecords.get(id);
+    return {
+      id,
+      label: tag?.label ?? humaniseToken(id),
+      symbol: tag?.symbol ?? null,
+    };
+  };
   const siteNameBySlug = Object.fromEntries(
     estateSites.map((slug) => {
       const override = SITE_OVERRIDES[slug];
@@ -313,6 +427,14 @@ async function main() {
     const newsEnabled = Boolean(configured);
     const includeTags = configured?.include_tags ?? [];
     const excludeTags = configured?.exclude_tags ?? [];
+    const brief = tagCatalog.sites?.[slug] ?? null;
+    const description = override.description
+      ?? configured?.description
+      ?? (typeof brief?.definition === 'string' && brief.definition.trim() ? brief.definition.trim() : null)
+      ?? 'No shared news routing description available.';
+    const symbol = configured?.symbol
+      ?? (typeof brief?.symbol === 'string' && brief.symbol.trim() ? brief.symbol.trim() : null);
+    const coverageTag = configured?.coverage_tag ?? (brief ? slug : null);
     const sourceCoverage = configuredSources.filter((source) => {
       const targetSites = Array.isArray(source.sites) ? source.sites : ['all'];
       return targetSites.includes('all') ? newsEnabled : targetSites.includes(slug);
@@ -323,19 +445,15 @@ async function main() {
       name: override.name ?? configured?.name ?? humaniseToken(slug),
       shortName: override.shortName ?? override.name ?? configured?.name ?? humaniseToken(slug),
       role: override.role ?? (newsEnabled ? 'news-destination' : 'estate-site'),
-      description: override.description ?? configured?.description ?? 'No shared news routing description available.',
+      description,
+      symbol,
+      coverageTag,
       note: configured?.note ?? override.note ?? null,
       newsEnabled,
       includeTags,
       excludeTags,
-      includeLabels: includeTags.map((tag) => ({
-        id: tag,
-        label: humaniseToken(tag),
-      })),
-      excludeLabels: excludeTags.map((tag) => ({
-        id: tag,
-        label: humaniseToken(tag),
-      })),
+      includeLabels: includeTags.map((tag) => labelFor(tag)),
+      excludeLabels: excludeTags.map((tag) => labelFor(tag)),
       minImportanceScore: configured?.min_importance_score ?? null,
       outputFormat: configured?.output_format ?? null,
       outputPath: toPublicWorkspacePath(configured?.output_path),
@@ -374,10 +492,7 @@ async function main() {
         label: humaniseToken(value),
       })),
       tags,
-      tagLabels: tags.map((value) => ({
-        id: value,
-        label: humaniseToken(value),
-      })),
+      tagLabels: tags.map((value) => labelFor(value)),
       siteScope: configuredSiteScope,
       routeSiteSlugs,
       routeSiteNames: routeSiteSlugs.map((slug) => siteNameBySlug[slug] ?? humaniseToken(slug)),
@@ -387,13 +502,20 @@ async function main() {
     };
   });
 
-  const routingTags = sortByLabel(
-    Object.entries(siteFilters?.tag_keywords ?? {}).map(([id, keywords]) => ({
-      id,
-      label: humaniseToken(id),
-      keywordCount: Array.isArray(keywords) ? keywords.length : 0,
-    }))
-  );
+  for (const site of sites) {
+    if (!site.coverageTag) continue;
+    tagRecords.set(site.coverageTag, {
+      id: site.coverageTag,
+      label: site.name,
+      symbol: site.symbol,
+      definition: site.description,
+      kind: 'site',
+      keywordPattern: null,
+      keywordCount: 0,
+    });
+  }
+
+  const routingTags = sortByLabel([...tagRecords.values()]);
 
   const sourceCategories = sortByLabel(
     toUniqueList(sources.flatMap((source) => source.categories)).map((id) => ({
@@ -416,6 +538,16 @@ async function main() {
       estateManifestPath: toPublicWorkspacePath(estateManifestPath),
       siteFiltersPath: toPublicWorkspacePath(siteFiltersPath),
       sourcesPath: toPublicWorkspacePath(sourcesPath),
+      tagCatalogPath: tagCatalogSource === 'none'
+        ? null
+        : toPublicWorkspacePath(path.join(
+            tagCatalogSource === 'checkout' ? repoRoot : estateRoot,
+            'shared',
+            'website-tools',
+            'pipelines',
+            'news',
+            'tag-catalog.json',
+          )),
     },
     summary: {
       estateSiteCount: sites.length,
@@ -425,7 +557,8 @@ async function main() {
       manualReviewSourceCount: sources.filter((source) => source.collectionMode === 'manual_review').length,
       officialFirstSourceCount: sources.filter((source) => source.verificationMode === 'official_first').length,
       crossCheckSourceCount: sources.filter((source) => source.verificationMode === 'cross_check').length,
-      routingTagCount: routingTags.length,
+      routingTagCount: routingTags.filter((tag) => tag.kind === 'topic').length,
+      siteTagCount: routingTags.filter((tag) => tag.kind === 'site').length,
       lookbackHours: siteFilters?.lookback_hours ?? 24,
       sectionCount: Array.isArray(sourcesConfig?.defaults?.sectionOrder)
         ? sourcesConfig.defaults.sectionOrder.length
@@ -451,7 +584,7 @@ async function main() {
       {
         step: 3,
         title: 'Article keyword tagging',
-        detail: 'Title and summary keywords add or reinforce tags per story so a single source can still produce multiple story types.',
+        detail: 'Where a tag has a keyword rule in the shared catalog, the title and summary can add that tag. Tags without a keyword rule are applied only when the source declares them.',
       },
       {
         step: 4,

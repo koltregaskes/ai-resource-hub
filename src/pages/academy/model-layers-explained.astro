@@ -85,8 +85,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
           <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
             <h3 class="font-semibold text-(--color-text-primary) mb-2">Multi-head attention</h3>
             <p class="text-sm text-(--color-text-secondary)">
-              The block computes attention using several heads in parallel. A single
-              <a href={`${base}glossary/attention-head/`} class="text-(--color-accent) hover:underline">attention head</a>
+              The block computes attention using several heads in parallel. A single attention head
               is one learned way of relating tokens to other tokens. Multiple heads let the model capture several kinds
               of relationships at once.
             </p>
@@ -94,22 +93,21 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
           <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
             <h3 class="font-semibold text-(--color-text-primary) mb-2">Feed-forward network</h3>
             <p class="text-sm text-(--color-text-secondary)">
-              After information is mixed across tokens, each token passes through a
-              <a href={`${base}glossary/feed-forward-network/`} class="text-(--color-accent) hover:underline">feed-forward network</a>.
+              After information is mixed across tokens, each token passes through a feed-forward network.
               This gives the model capacity to transform and sharpen what it has learned from attention.
             </p>
           </div>
           <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
             <h3 class="font-semibold text-(--color-text-primary) mb-2">Residual connections</h3>
             <p class="text-sm text-(--color-text-secondary)">
-              A <a href={`${base}glossary/residual-connection/`} class="text-(--color-accent) hover:underline">residual connection</a>
+              A residual connection
               adds the original signal back into a later computation so the network learns refinements instead of replacing the whole signal.
             </p>
           </div>
           <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
             <h3 class="font-semibold text-(--color-text-primary) mb-2">Layer normalization</h3>
             <p class="text-sm text-(--color-text-secondary)">
-              <a href={`${base}glossary/layer-normalization/`} class="text-(--color-accent) hover:underline">Layer normalization</a>
+              Layer normalization
               keeps activations well-scaled and makes deep stacks more stable to train and run.
             </p>
           </div>

@@ -8,6 +8,7 @@
  * - Keep the public site on one canonical news store (`news` table)
  */
 import { createHash } from 'node:crypto';
+import { pathToFileURL } from 'node:url';
 import { getDB, logScrapeRun } from './base';
 
 interface FeedSource {
@@ -49,7 +50,7 @@ const FEEDS: FeedSource[] = [
   },
   {
     name: 'VentureBeat',
-    // Use canonical feed URL with trailing slash to avoid redirects
+    // Same public feed as the shared source list. Collected on the same pass as the other feeds.
     url: 'https://venturebeat.com/category/ai/feed/',
     category: 'industry',
   },
@@ -184,14 +185,16 @@ async function fetchFeed(url: string, attempt: number = 1): Promise<string> {
     },
   });
 
-  // Handle common rate-limit/service unavailable scenarios with one gentle retry
-  if ((response.status === 429 || response.status === 503) && attempt < 2) {
+  // One backoff policy for every source. A second refusal ends this run for that feed.
+  const mayRetry = (response.status === 429 || response.status === 503) && attempt < 3;
+  if (mayRetry) {
     const retryAfterHeader = response.headers.get('retry-after');
     const retryAfterSeconds = retryAfterHeader ? parseInt(retryAfterHeader, 10) : NaN;
+    const defaultBackoff = attempt === 1 ? 8000 : 18000;
     const backoffMs = Number.isFinite(retryAfterSeconds)
-      ? Math.min(Math.max(retryAfterSeconds, 5), 20) * 1000
-      : 8000 + Math.floor(Math.random() * 4000);
-    console.warn(`  ${url} returned ${response.status}; backing off for ${(backoffMs / 1000).toFixed(0)}s then retrying once...`);
+      ? Math.min(Math.max(retryAfterSeconds, 5), 60) * 1000
+      : defaultBackoff + Math.floor(Math.random() * 3000);
+    console.warn(`  ${url} returned ${response.status}; backing off for ${(backoffMs / 1000).toFixed(0)}s then retrying...`);
     await sleep(backoffMs);
     return fetchFeed(url, attempt + 1);
   }
@@ -303,7 +306,15 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+function isDirectRun(): boolean {
+  const entry = process.argv[1];
+  if (!entry) return false;
+  return import.meta.url === pathToFileURL(entry).href;
+}
+
+if (isDirectRun()) {
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}

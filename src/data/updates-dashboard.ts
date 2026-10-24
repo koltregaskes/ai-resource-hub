@@ -306,7 +306,7 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
     {
       id: 'models',
       label: 'Models and releases',
-      cadence: 'Hourly automated refresh',
+      cadence: 'Three times a day',
       automation: 'Mixed',
       status: 'healthy',
       href: formatRoute(basePath, '/new/'),
@@ -323,7 +323,7 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
     {
       id: 'benchmarks',
       label: 'Benchmarks and evals',
-      cadence: 'Hourly collection attempts; measurement dates vary',
+      cadence: 'Three times a day; measurement dates vary',
       automation: 'Automated',
       status: 'watch',
       href: formatRoute(basePath, '/benchmarks/'),
@@ -340,7 +340,7 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
     {
       id: 'pricing',
       label: 'Pricing and value',
-      cadence: 'Hourly automated refresh',
+      cadence: 'Three times a day',
       automation: 'Automated',
       status: 'healthy',
       href: formatRoute(basePath, '/compare/llm/'),
@@ -360,7 +360,7 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
     {
       id: 'news',
       label: 'News and release watch',
-      cadence: 'Hourly automated refresh plus manual newsroom watch',
+      cadence: 'Three times a day',
       automation: 'Mixed',
       status: 'watch',
       href: formatRoute(basePath, '/news/'),
@@ -377,7 +377,7 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
     {
       id: 'status',
       label: 'Provider status',
-      cadence: 'Hourly automated refresh',
+      cadence: 'About every 6 hours',
       automation: 'Automated',
       status: 'healthy',
       href: formatRoute(basePath, '/status/'),

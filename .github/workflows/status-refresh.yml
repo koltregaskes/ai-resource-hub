@@ -1,8 +1,10 @@
 name: Refresh provider status
 
 on:
+  # Official status pages, four times a day. An outage still shows up the
+  # same morning or afternoon. This does not collect prices, news, or benchmarks.
   schedule:
-    - cron: '42 * * * *'
+    - cron: '42 */6 * * *'
   workflow_dispatch:
 
 env:

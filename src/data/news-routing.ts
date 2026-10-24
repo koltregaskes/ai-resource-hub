@@ -22,43 +22,14 @@ const HIGH_SIGNAL_TAGS = new Set([
   'open_source',
 ]);
 
-const KEYWORD_TAG_PATTERNS: Array<[string, RegExp]> = [
-  ['model_release', /\b(new model|model release|releases?|released|launch(?:es|ed)?|introduc(?:es|ed|ing)|unveil(?:s|ed)|debut(?:s|ed)|preview|gpt-[\w.]+|claude[\w\s.-]*|gemini[\w\s.-]*|llama[\w\s.-]*|qwen[\w\s.-]*|glm[\w\s.-]*|kimi[\w\s.-]*|grok[\w\s.-]*|gemma[\w\s.-]*|minimax[\w\s.-]*|deepseek[\w\s.-]*)\b/i],
-  ['benchmark', /\b(benchmark|leaderboard|arena|mmlu|gpqa|gsm8k|humaneval|swe-bench|lmarena|lmsys|elo)\b/i],
-  ['evaluation', /\b(evaluation|evals?|assessed|performance|capability|test results|scor(?:e|es|ing))\b/i],
-  ['research_paper', /\b(paper|research paper|arxiv|preprint|study|we present|we introduce|findings)\b/i],
-  ['api_update', /\b(api|sdk|endpoint|rate limit|context window|token limit|function calling|tool use|tooling update)\b/i],
-  ['pricing_change', /\b(pricing|price|cost per|per million tokens|cheaper|free tier|subscription)\b/i],
-  ['architecture', /\b(transformer|architecture|attention|moe|mixture of experts|diffusion)\b/i],
-  ['dataset', /\b(dataset|training data|preference data|synthetic data)\b/i],
-  ['training', /\b(training|trained on|pre-training|fine-tun|rlhf|dpo)\b/i],
-  ['inference', /\b(inference|latency|throughput|tokens per second|faster inference|serving)\b/i],
-  ['hardware', /\b(gpu|tpu|chip|nvidia|amd|intel|h100|a100|datacenter|compute)\b/i],
-  ['open_source', /\b(open source|open-source|open weights|released weights|apache\b|mit license|github|hugging face)\b/i],
-  ['ai_safety', /\b(ai safety|alignment|guardrails|red teaming|jailbreak|safety blueprint)\b/i],
-  ['opinion', /\b(opinion|editorial|commentary|hot take|analysis:)\b/i],
-  ['image_gen', /\b(image generation|text-to-image|flux|dall-e|midjourney|imagen)\b/i],
-  ['video_gen', /\b(video generation|text-to-video|runway|sora|pika|kling|veo)\b/i],
-  ['music_gen', /\b(music generation|text-to-music|udio|suno)\b/i],
-  ['voice_synthesis', /\b(voice synthesis|voice clone|text-to-speech|tts|speech synthesis|elevenlabs)\b/i],
-  ['creative_tool', /\b(creative tool|design tool|adobe ai|canva ai|figma ai)\b/i],
-  ['art_ai', /\b(ai art|generative art|digital art|artist tool)\b/i],
-  ['photography', /\b(photography|photographer|camera|lens|mirrorless|wildlife photography|photo editing)\b/i],
-  ['camera', /\b(camera|mirrorless|dslr|lens)\b/i],
-  ['camera_release', /\b(new camera|camera launch|camera announce|new lens|lens release)\b/i],
-  ['lens', /\b(lens|focal length|telephoto|macro lens)\b/i],
-  ['photo_editing', /\b(lightroom|photoshop|capture one|raw processing|post-processing)\b/i],
-  ['lightroom', /\blightroom\b/i],
-  ['photoshop', /\bphotoshop\b/i],
-  ['capture_one', /\bcapture one\b/i],
-  ['photography_ai', /\b(topaz|luminar ai|ai denoise|ai upscale|computational photography)\b/i],
-  ['photography_technique', /\b(composition|long exposure|portrait lighting|street photography)\b/i],
-  ['photography_business', /\b(stock photography|print sales|photo exhibition|photography business)\b/i],
-  ['crypto', /\b(bitcoin|crypto|cryptocurrency|ethereum|solana|defi|nft|web3|stablecoin)\b/i],
-  ['crypto_trading', /\b(price action|bull market|bear market|liquidation|binance|coinbase|kraken)\b/i],
-  ['crypto_defi', /\b(defi|staking|liquidity|dao|smart contract)\b/i],
-  ['crypto_regulation', /\b(cftc|sec|spot etf|crypto regulation|crypto tax)\b/i],
-];
+const KEYWORD_TAG_PATTERNS: Array<[string, RegExp]> = newsPipelineSnapshot.routingTags.flatMap((tag) => {
+  if (tag.kind !== 'topic' || !tag.keywordPattern) return [];
+  try {
+    return [[tag.id, new RegExp(tag.keywordPattern, 'i')] as [string, RegExp]];
+  } catch {
+    return [];
+  }
+});
 
 export interface NewsRouteCandidate extends CuratedNewsItem {
   importance_score?: number | string | null;

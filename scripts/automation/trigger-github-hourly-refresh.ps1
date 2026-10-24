@@ -1,5 +1,5 @@
 param(
-  [int]$LookbackMinutes = 50,
+  [int]$GraceMinutes = 90,
   [switch]$WhatIfTrigger
 )
 
@@ -75,30 +75,43 @@ function Get-LatestScrapeRun {
 try {
   Push-Location $repoRoot
 
-  Write-Log "Starting GitHub hourly refresh fallback for $repo"
+  Write-Log "Starting GitHub refresh fallback for $repo"
   Write-Log "Safety mode: no local data edits, no local build, no direct git commit, no direct git push."
-  Write-Log "Fallback mode: dispatch $workflow only when no recent successful or running scrape workflow exists."
+  Write-Log "Fallback mode: dispatch $workflow only when the morning, afternoon, or evening slot was missed. A failed run is not started again."
 
   Invoke-Logged 'gh' @('auth', 'status') | Out-Null
 
   $latest = Get-LatestScrapeRun
-  $cutoff = (Get-Date).ToUniversalTime().AddMinutes(-1 * $LookbackMinutes)
+  $nowUtc = (Get-Date).ToUniversalTime()
+  $slotHours = @(7, 13, 19)
+  $utcMidnight = [datetime]::SpecifyKind($nowUtc.Date, [DateTimeKind]::Utc)
+  $slotCandidates = foreach ($dayOffset in @(0, -1)) {
+    foreach ($hour in $slotHours) {
+      $utcMidnight.AddDays($dayOffset).AddHours($hour).AddMinutes(12)
+    }
+  }
+  $slot = $slotCandidates | Where-Object { $_ -le $nowUtc } | Sort-Object -Descending | Select-Object -First 1
+  $graceEnds = $slot.AddMinutes($GraceMinutes)
+  Write-Log "Latest expected slot: $($slot.ToString('o')). Grace ends: $($graceEnds.ToString('o')). Now: $($nowUtc.ToString('o'))."
+
+  if ($nowUtc -lt $graceEnds) {
+    Write-Log "Still inside the ${GraceMinutes}m grace period for this slot. GitHub's own timer may still start it."
+    exit 0
+  }
 
   if ($latest) {
-    $created = ([datetime]$latest.createdAt).ToUniversalTime()
+    $created = ([datetimeoffset]::Parse([string]$latest.createdAt)).UtcDateTime
     Write-Log "Latest scrape run: id=$($latest.databaseId) event=$($latest.event) status=$($latest.status) conclusion=$($latest.conclusion) created=$($latest.createdAt) updated=$($latest.updatedAt)"
 
-    if ($created -ge $cutoff -and ($latest.status -ne 'completed' -or $latest.conclusion -eq 'success')) {
-      Write-Log "Recent scrape workflow exists inside ${LookbackMinutes}m window; no fallback dispatch needed."
+    if ($created -ge $slot) {
+      Write-Log "This slot was already attempted (status=$($latest.status), conclusion=$($latest.conclusion)). Not dispatching another run."
       exit 0
     }
-
-    if ($created -ge $cutoff -and $latest.status -eq 'completed' -and $latest.conclusion -ne 'success') {
-      Write-Log "Recent scrape workflow completed with conclusion '$($latest.conclusion)'; dispatching a replacement run." 'WARN'
-    }
   } else {
-    Write-Log 'No existing scrape workflow runs found; dispatching fallback run.' 'WARN'
+    Write-Log 'No existing scrape workflow runs found.' 'WARN'
   }
+
+  Write-Log "Scheduled slot $($slot.ToString('o')) has no run after the grace period. Dispatching one fallback run." 'WARN'
 
   if ($WhatIfTrigger) {
     Write-Log 'WhatIfTrigger set; would dispatch GitHub scrape workflow now.'
@@ -113,7 +126,7 @@ try {
     Write-Log "Latest scrape run after dispatch: id=$($newLatest.databaseId) event=$($newLatest.event) status=$($newLatest.status) conclusion=$($newLatest.conclusion) created=$($newLatest.createdAt) url=$($newLatest.url)"
   }
 
-  Write-Log 'GitHub hourly refresh fallback completed successfully.'
+  Write-Log 'GitHub refresh fallback completed successfully.'
   exit 0
 } catch {
   Write-Log $_.Exception.Message 'ERROR'

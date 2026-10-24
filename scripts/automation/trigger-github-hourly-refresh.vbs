@@ -1,4 +1,5 @@
-' AI Resource Hub - hidden hourly GitHub refresh fallback launcher.
+' AI Resource Hub - hidden GitHub refresh fallback launcher.
+' Calling this often is safe. The script dispatches only a missed morning, afternoon, or evening slot.
 Option Explicit
 
 Dim shell, command, exitCode

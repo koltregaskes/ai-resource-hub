@@ -10,11 +10,11 @@ This mirrors the public updates page in a repo-readable format so contributors c
 | --- | --- | --- | --- |
 | AI milestones | Curated updates as research lands | Mixed | 22 Oct 2026, 23:20 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 22 Oct 2026, 23:20 UTC |
-| Benchmarks and evals | Hourly collection attempts; measurement dates vary | Automated | 05 Feb 2026, 00:00 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 22 Oct 2026, 23:19 UTC |
-| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 22 Oct 2026, 12:00 UTC |
-| Provider status | Hourly automated refresh | Automated | 22 Oct 2026, 23:20 UTC |
+| Models and releases | Three times a day | Mixed | 22 Oct 2026, 23:20 UTC |
+| Benchmarks and evals | Three times a day; measurement dates vary | Automated | 05 Feb 2026, 00:00 UTC |
+| Pricing and value | Three times a day | Automated | 22 Oct 2026, 23:19 UTC |
+| News and release watch | Three times a day | Mixed | 22 Oct 2026, 12:00 UTC |
+| Provider status | About every 6 hours | Automated | 22 Oct 2026, 23:20 UTC |
 | Guides and learning | Manual editorial review | Manual | 22 Oct 2026, 23:19 UTC |
 
 ## AI milestones
@@ -58,7 +58,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ## Models and releases
 
-- Cadence: Hourly automated refresh
+- Cadence: Three times a day
 - Automation: Mixed
 - Last refreshed: 22 Oct 2026, 23:20 UTC
 - Category route: `/new/`
@@ -78,7 +78,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ## Benchmarks and evals
 
-- Cadence: Hourly collection attempts; measurement dates vary
+- Cadence: Three times a day; measurement dates vary
 - Automation: Automated
 - Last refreshed: 05 Feb 2026, 00:00 UTC
 - Category route: `/benchmarks/`
@@ -96,7 +96,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ## Pricing and value
 
-- Cadence: Hourly automated refresh
+- Cadence: Three times a day
 - Automation: Automated
 - Last refreshed: 22 Oct 2026, 23:19 UTC
 - Category route: `/compare/llm/`
@@ -116,7 +116,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ## News and release watch
 
-- Cadence: Hourly automated refresh plus manual newsroom watch
+- Cadence: Three times a day
 - Automation: Mixed
 - Last refreshed: 22 Oct 2026, 12:00 UTC
 - Category route: `/news/`
@@ -136,7 +136,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ## Provider status
 
-- Cadence: Hourly automated refresh
+- Cadence: About every 6 hours
 - Automation: Automated
 - Last refreshed: 22 Oct 2026, 23:20 UTC
 - Category route: `/status/`
