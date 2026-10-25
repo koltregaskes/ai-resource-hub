@@ -2613,6 +2613,11 @@ a {
   color: #b45309;
 }
 
+.hub-home-category.is-blog {
+  background: rgba(234, 88, 12, 0.12);
+  color: #c2410c;
+}
+
 [data-theme="dark"] .hub-home-category.is-site {
   color: #7dd3fc;
 }
@@ -2627,6 +2632,10 @@ a {
 
 [data-theme="dark"] .hub-home-category.is-jobs {
   color: #fcd34d;
+}
+
+[data-theme="dark"] .hub-home-category.is-blog {
+  color: #fdba74;
 }
 
 .hub-home-footnote {
@@ -3151,6 +3160,19 @@ a {
 .airh-ticker-time {
   color: var(--color-text-muted);
   font-size: 0.66rem;
+}
+
+.airh-ticker-type {
+  color: var(--color-accent);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.airh-ticker-type[data-ticker-type="essay"],
+.airh-site-ticker-item b[data-ticker-type="essay"] {
+  color: #ea580c;
 }
 
 .airh-spreadsheet-wrap {
@@ -4727,6 +4749,22 @@ a {
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.airh-site-ticker-item b[data-ticker-type="explainer"] {
+  color: #60a5fa;
+}
+
+.airh-site-ticker-item b[data-ticker-type="analysis"] {
+  color: #c4b5fd;
+}
+
+.airh-site-ticker-item b[data-ticker-type="comparison"] {
+  color: #86efac;
+}
+
+.airh-site-ticker-item b[data-ticker-type="beginner"] {
+  color: #fcd34d;
 }
 
 body.airh-sitewide-system:not(.airh-home-page) main {

@@ -4,6 +4,7 @@
  * This now reads from the public cache/query layer instead of talking to
  * SQLite directly, so builds and previews use the same source of truth.
  */
+import { blogPosts } from './blog-posts';
 import {
   getAllBenchmarkIds,
   getAllModelIds,
@@ -112,20 +113,14 @@ export function getSearchIndex(base: string): SearchItem[] {
     });
   }
 
-  const blogPosts = [
-    { id: 'how-ai-benchmarks-work', title: 'How AI Benchmarks Work', description: 'A plain-English guide to MMLU, GPQA, HumanEval, and more' },
-    { id: 'ai-pricing-race-to-zero', title: 'The AI Pricing Race to Zero', description: 'AI model pricing has dropped over 90% in two years' },
-    { id: 'open-source-vs-closed-ai', title: 'Open Source vs Closed AI Models', description: 'Comparing open-source and closed AI models on every benchmark' },
-    { id: 'what-is-an-llm', title: 'What Is an LLM?', description: 'Large Language Models explained for everyone' },
-  ];
-
   for (const post of blogPosts) {
     items.push({
-      id: post.id,
+      id: post.slug,
       title: post.title,
       type: 'blog',
+      category: post.type,
       description: post.description,
-      url: `${base}blog/${post.id}/`,
+      url: `${base}blog/${post.slug}/`,
     });
   }
 
