@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T05:19:34.870Z",
+  "generatedAt": "2026-10-25T10:09:11.308Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-25T05:19:34.863Z",
+      "lastCheckedAt": "2026-10-25T10:09:11.302Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-25T05:19:33.454Z",
+      "lastCheckedAt": "2026-10-25T10:09:09.896Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -134,6 +134,28 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "vx06kp8wfpq2",
+          "title": "Elevated errors for Claude Fable 5.1",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-10-25T08:17:08.285Z",
+          "updatedAt": "2026-10-25T08:49:29.528Z",
+          "resolvedAt": "2026-10-25T08:49:29.501Z",
+          "url": "https://stspg.io/y0gkl12ztjst",
+          "summary": "The issue affecting Claude services has been resolved. Impact occurred from 01:08 PT / 08:08 UTC to 01:29 PT / 08:29 UTC."
+        },
+        {
+          "id": "334jvgbrc4ff",
+          "title": "Elevated errors for Claude Sonnet 5.5 and other models",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-10-25T06:14:18.095Z",
+          "updatedAt": "2026-10-25T07:53:39.036Z",
+          "resolvedAt": "2026-10-25T07:53:39.004Z",
+          "url": "https://stspg.io/s3wd6gmdsdhn",
+          "summary": "The issue affecting Claude services has been resolved. Impact occurred from 23:05 PT on October 24 / 06:05 UTC on October 25 to 23:35 PT on October 24 / 06:35 UTC on October 25."
+        },
+        {
           "id": "0ns5clsk8p2x",
           "title": "Elevated errors for Claude Fable 5 and Claude Fable 5.1",
           "status": "resolved",
@@ -154,28 +176,6 @@
           "resolvedAt": "2026-10-24T00:37:17.808Z",
           "url": "https://stspg.io/dmn3bc440bnb",
           "summary": "The issue affecting Claude Opus 5.5 has been resolved. Impact occurred from 17:23 PT on October 23 / 00:23 UTC on October 24 to 17:34 PT on October 23 / 00:34 UTC on October 24."
-        },
-        {
-          "id": "h101vcmhnfky",
-          "title": "Elevated errors for Claude Fable 5.1, Sonnet 5.5, and Haiku 5.5",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-10-23T23:37:42.667Z",
-          "updatedAt": "2026-10-24T00:11:20.902Z",
-          "resolvedAt": "2026-10-24T00:11:20.874Z",
-          "url": "https://stspg.io/gqp288t3qzpt",
-          "summary": "The issue affecting Claude models has been resolved. Impact occurred from 16:28 PT / 23:28 UTC on October 23 to 16:59 PT / 23:59 UTC on October 23."
-        },
-        {
-          "id": "wj6r4t6mxq1r",
-          "title": "Elevated errors affecting Connectors",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-22T03:50:12.630Z",
-          "updatedAt": "2026-10-22T08:07:03.892Z",
-          "resolvedAt": "2026-10-22T08:07:03.869Z",
-          "url": "https://stspg.io/4dcr8c005yxc",
-          "summary": "The issue affecting claude.ai and Claude Cowork has been resolved."
         }
       ]
     },
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-25T05:19:34.155Z",
+      "lastCheckedAt": "2026-10-25T10:09:10.744Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-25T05:19:33.530Z",
+      "lastCheckedAt": "2026-10-25T10:09:10.257Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -253,7 +253,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-25T05:19:33.447Z",
+      "lastCheckedAt": "2026-10-25T10:09:10.037Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -339,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-25T05:19:34.324Z",
+      "lastCheckedAt": "2026-10-25T10:09:10.799Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
