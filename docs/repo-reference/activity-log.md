@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 26 Oct 2026, 15:57 UTC
+Generated: 26 Oct 2026, 16:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 26 Oct 2026, 15:56 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 26 Oct 2026, 15:56 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 26 Oct 2026, 15:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 26 Oct 2026, 15:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 26 Oct 2026, 15:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 26 Oct 2026, 12:00 UTC | digest | Anthropic officially files for its public debut | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/) |
-| 26 Oct 2026, 12:00 UTC | digest | Anthropic’s IPO filing lays out a plan to &#8216;revolutionize every area of human endeavor&#8217; with AI | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1018476/anthropic-ipo-details-s1-filed-sec) |
+| 26 Oct 2026, 16:56 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 26 Oct 2026, 16:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 26 Oct 2026, 16:56 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 26 Oct 2026, 16:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 26 Oct 2026, 16:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 26 Oct 2026, 12:00 UTC | digest | Anthropic’s IPO filing reveals its strategy for keeping enterprise customers hooked | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/) |
 | 26 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,055 open roles across 10 tracked companies. | `/jobs/` |
-| 26 Oct 2026, 12:00 UTC | digest | Kevin Roose is AGI-pilled. Why aren’t you? | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/podcast/1018264/kevin-roose-the-agi-chronicles-machine-gods-podcast-youtube-openai-anthropic) |
-| 26 Oct 2026, 12:00 UTC | digest | Published the 2026-10-26 daily digest | 5 stories captured from 3 sources. | `/news/` |
+| 26 Oct 2026, 12:00 UTC | digest | Our newest AI Quest: Mapping the human brain | Google featured in the latest daily brief. | [open](https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/) |
+| 26 Oct 2026, 12:00 UTC | digest | Published the 2026-10-26 daily digest | 9 stories captured from 4 sources. | `/news/` |
+| 26 Oct 2026, 12:00 UTC | digest | SpaceX locks in $40B GPU financing deal with Apollo | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
