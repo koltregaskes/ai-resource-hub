@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 26 Oct 2026, 18:56 UTC
+Generated: 26 Oct 2026, 19:14 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 26 Oct 2026, 18:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 26 Oct 2026, 18:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 26 Oct 2026, 18:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 26 Oct 2026, 18:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 26 Oct 2026, 18:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 26 Oct 2026, 19:14 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 26 Oct 2026, 19:14 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 26 Oct 2026, 19:14 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 26 Oct 2026, 19:14 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 26 Oct 2026, 19:14 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 26 Oct 2026, 12:00 UTC | digest | Anthropic’s IPO filing reveals its strategy for keeping enterprise customers hooked | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/) |
 | 26 Oct 2026, 12:00 UTC | digest | Five weird details from Anthropic’s IPO filing | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1018738/anthropic-ipo-s1-filing-weird-details) |
 | 26 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,053 open roles across 10 tracked companies. | `/jobs/` |
