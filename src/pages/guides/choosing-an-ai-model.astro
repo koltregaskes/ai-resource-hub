@@ -1,20 +1,18 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getLLMModels } from '../../data/llm-models';
-import { getMetaLeaderboard } from '../../data/hub-dashboard';
+import modelsLatest from '../../../public/data/models-latest.json';
 
 const models = getLLMModels();
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
-const evaluatedModels = getMetaLeaderboard(250);
-const topQuality = evaluatedModels.slice(0, 3);
-const topValue = [...evaluatedModels].sort((a, b) => b.valueScore - a.valueScore).slice(0, 3);
-const cheapest = [...models].filter(m => m.inputPrice > 0).sort((a, b) => {
-  const aCost = (a.inputPrice + 3 * a.outputPrice) / 4;
-  const bCost = (b.inputPrice + 3 * b.outputPrice) / 4;
-  return aCost - bCost;
-}).slice(0, 3);
+// Standard (non-batch) list prices only, so like is compared with like.
+const cheapest = [...models]
+  .filter((m) => m.inputPrice > 0 && !/\(batch\)/i.test(m.name))
+  .sort((a, b) => (a.inputPrice + 3 * a.outputPrice) / 4 - (b.inputPrice + 3 * b.outputPrice) / 4)
+  .slice(0, 3);
+const exportDate = new Date(modelsLatest.generated).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 
 function formatPrice(price: number): string {
   if (price === 0) return 'Free';
@@ -26,7 +24,7 @@ function formatPrice(price: number): string {
 
 <BaseLayout
   title="How to Choose the Right AI Model — The AI Resource Hub"
-  description="ChatGPT, Claude, Gemini, Copilot — which AI is right for you? A practical, jargon-free guide to picking the best AI model."
+  description="ChatGPT, Claude, Gemini or Copilot? A practical, jargon-free guide to picking an AI assistant, with links to each provider's current plans."
 >
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
@@ -47,7 +45,7 @@ function formatPrice(price: number): string {
       </h1>
       <p class="text-lg text-(--color-text-secondary)">
         There are dozens of AI models available today. Here's how to pick the right one for what
-        you actually need — without getting lost in the technical details.
+        you actually need, without getting lost in the technical details.
       </p>
     </header>
 
@@ -57,7 +55,7 @@ function formatPrice(price: number): string {
         <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">The Three Main Options</h2>
         <p class="text-(--color-text-secondary) leading-relaxed mb-4">
           If you're a regular user (not a developer), your main choices come down to three AI assistants.
-          Each has a free tier, and each has different strengths.
+          Each has a free tier with usage limits and paid plans. Plans and prices change often, so we link to each provider's own page instead of quoting them.
         </p>
 
         <div class="grid gap-4 mb-4">
@@ -66,17 +64,17 @@ function formatPrice(price: number): string {
               <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm" style="background-color: #10a37f">OA</div>
               <div>
                 <h3 class="font-semibold text-(--color-text-primary)">ChatGPT (OpenAI)</h3>
-                <p class="text-xs text-(--color-text-muted)">Free / $20/month for Plus</p>
+                <p class="text-xs text-(--color-text-muted)">Free tier and paid plans: <a href="https://openai.com/chatgpt/pricing/" rel="noopener" class="text-(--color-accent)">OpenAI's plans page</a></p>
               </div>
             </div>
             <p class="text-sm text-(--color-text-secondary) mb-3">
-              The most popular AI chatbot. Great all-rounder with excellent creative writing, image generation
-              (DALL-E), and a massive plugin ecosystem. Best for: general use, creative tasks, and image generation.
+              A general-purpose assistant with web search, file uploads and built-in image generation.
+              Best for: general use, creative tasks and making images in the same chat.
             </p>
             <div class="flex flex-wrap gap-2">
               <span class="text-xs px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Best for beginners</span>
               <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400">Image generation</span>
-              <span class="text-xs px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400">Largest ecosystem</span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400">Web search</span>
             </div>
           </div>
 
@@ -85,12 +83,12 @@ function formatPrice(price: number): string {
               <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm" style="background-color: #d97706">AN</div>
               <div>
                 <h3 class="font-semibold text-(--color-text-primary)">Claude (Anthropic)</h3>
-                <p class="text-xs text-(--color-text-muted)">Free / $20/month for Pro</p>
+                <p class="text-xs text-(--color-text-muted)">Free tier and paid plans: <a href="https://claude.com/pricing" rel="noopener" class="text-(--color-accent)">Anthropic's plans page</a></p>
               </div>
             </div>
             <p class="text-sm text-(--color-text-secondary) mb-3">
-              Excellent at complex reasoning, analysis, and following nuanced instructions. Has a very large
-              context window — can process entire books. Best for: long documents, analysis, coding, and careful reasoning.
+              Strong at analysis, writing and following detailed instructions, and it accepts long documents
+              (see the <a href={`${base}context-window/`} class="text-(--color-accent)">context window table</a> for each model's limit). Best for: long documents, analysis, coding and careful reasoning.
             </p>
             <div class="flex flex-wrap gap-2">
               <span class="text-xs px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Best for analysis</span>
@@ -104,12 +102,12 @@ function formatPrice(price: number): string {
               <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm" style="background-color: #4285f4">GO</div>
               <div>
                 <h3 class="font-semibold text-(--color-text-primary)">Gemini (Google)</h3>
-                <p class="text-xs text-(--color-text-muted)">Free / $20/month for AI Ultra</p>
+                <p class="text-xs text-(--color-text-muted)">Free tier and paid plans: <a href="https://gemini.google/subscriptions/" rel="noopener" class="text-(--color-accent)">Google's Gemini plans page</a></p>
               </div>
             </div>
             <p class="text-sm text-(--color-text-secondary) mb-3">
-              Deeply integrated with Google services (Gmail, Drive, Docs, Search). Has excellent Deep Research
-              mode for comprehensive research tasks. Best for: research, Google ecosystem users, and multimodal tasks.
+              Works with Google services such as Gmail, Drive and Docs, and has a Deep Research
+              mode that searches the web and writes a cited report. Best for: research, Google ecosystem users, and multimodal tasks.
             </p>
             <div class="flex flex-wrap gap-2">
               <span class="text-xs px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Best for research</span>
@@ -142,12 +140,12 @@ function formatPrice(price: number): string {
               <tr class="border-b border-(--color-border)/50">
                 <td class="py-3 px-3 text-(--color-text-primary)">Writing & editing</td>
                 <td class="py-3 px-3 text-(--color-accent)">Claude or ChatGPT</td>
-                <td class="py-3 px-3 text-(--color-text-secondary)">Both excellent — Claude is more nuanced</td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">Both strong. Try each on one of your own drafts</td>
               </tr>
               <tr class="border-b border-(--color-border)/50">
                 <td class="py-3 px-3 text-(--color-text-primary)">Analysing long documents</td>
                 <td class="py-3 px-3 text-(--color-accent)">Claude</td>
-                <td class="py-3 px-3 text-(--color-text-secondary)">Largest context window, thorough analysis</td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">Accepts long documents; check the context window table</td>
               </tr>
               <tr class="border-b border-(--color-border)/50">
                 <td class="py-3 px-3 text-(--color-text-primary)">Coding help</td>
@@ -157,12 +155,12 @@ function formatPrice(price: number): string {
               <tr class="border-b border-(--color-border)/50">
                 <td class="py-3 px-3 text-(--color-text-primary)">In-depth research</td>
                 <td class="py-3 px-3 text-(--color-accent)">Gemini (Deep Research)</td>
-                <td class="py-3 px-3 text-(--color-text-secondary)">Browses hundreds of sources automatically</td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">Searches the web and writes a cited report</td>
               </tr>
               <tr class="border-b border-(--color-border)/50">
                 <td class="py-3 px-3 text-(--color-text-primary)">Image generation</td>
-                <td class="py-3 px-3 text-(--color-accent)">ChatGPT (DALL-E)</td>
-                <td class="py-3 px-3 text-(--color-text-secondary)">Built-in image generation</td>
+                <td class="py-3 px-3 text-(--color-accent)">ChatGPT, or a dedicated image model</td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">Built into the chat. See our image models guide for others</td>
               </tr>
               <tr class="border-b border-(--color-border)/50">
                 <td class="py-3 px-3 text-(--color-text-primary)">Quick web search answers</td>
@@ -172,64 +170,43 @@ function formatPrice(price: number): string {
               <tr class="border-b border-(--color-border)/50">
                 <td class="py-3 px-3 text-(--color-text-primary)">Maximum privacy</td>
                 <td class="py-3 px-3 text-(--color-accent)">Local models (Llama via Ollama)</td>
-                <td class="py-3 px-3 text-(--color-text-secondary)">Runs on your computer — data never leaves</td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">Runs on your own computer, so prompts stay local</td>
               </tr>
               <tr>
                 <td class="py-3 px-3 text-(--color-text-primary)">Minimum cost</td>
                 <td class="py-3 px-3 text-(--color-accent)">Free tiers of any</td>
-                <td class="py-3 px-3 text-(--color-text-secondary)">All three offer generous free access</td>
+                <td class="py-3 px-3 text-(--color-text-secondary)">All three have free tiers, with usage limits</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      <!-- Current rankings from our data -->
+      <!-- What our data can say -->
       <section>
-        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Current Model Rankings (from Our Data)</h2>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">What Our Data Can and Can't Tell You</h2>
         <p class="text-(--color-text-secondary) leading-relaxed mb-4">
-          Here's what the traceable data says about the top evaluated models right now. These rankings use
-          source-backed benchmark rows and pricing data from a catalogue of {models.length} models.
+          We don't publish a current overall ranking. Too few benchmark scores can be traced to a reviewed source
+          for a fair composite, and the internal benchmark on our homepage is a snapshot from 12 June 2026. What we can
+          show is list prices, dated. In our model export of {exportDate}, these language models have the lowest
+          standard (non-batch) prices, in US dollars per million input / output tokens:
         </p>
 
-        <div class="grid sm:grid-cols-3 gap-4 mb-4">
-          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-            <h3 class="text-sm font-semibold text-(--color-accent) mb-3">Evaluated Composite</h3>
-            {topQuality.map((m, i) => (
-              <div class="flex items-center justify-between py-1.5">
-                <a href={`${base}models/${m.id}/`} class="text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
-                  {i + 1}. {m.name}
-                </a>
-                <span class="text-xs text-(--color-text-muted)">{m.metaScore}/100</span>
-              </div>
-            ))}
-          </div>
-          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-            <h3 class="text-sm font-semibold text-(--color-success) mb-3">Benchmark Value</h3>
-            {topValue.map((m, i) => (
-              <div class="flex items-center justify-between py-1.5">
-                <a href={`${base}models/${m.id}/`} class="text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
-                  {i + 1}. {m.name}
-                </a>
-                <span class="text-xs text-(--color-text-muted)">value: {m.valueScore}</span>
-              </div>
-            ))}
-          </div>
-          <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-            <h3 class="text-sm font-semibold text-(--color-warning) mb-3">Most Affordable</h3>
-            {cheapest.map((m, i) => (
-              <div class="flex items-center justify-between py-1.5">
-                <a href={`${base}models/${m.id}/`} class="text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
-                  {i + 1}. {m.name}
-                </a>
-                <span class="text-xs text-(--color-text-muted)">{formatPrice(m.inputPrice)}/{formatPrice(m.outputPrice)}</span>
-              </div>
-            ))}
-          </div>
+        <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-4 max-w-md">
+          {cheapest.map((m, i) => (
+            <div class="flex items-center justify-between py-1.5">
+              <a href={`${base}models/${m.id}/`} class="text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                {i + 1}. {m.name}
+              </a>
+              <span class="text-xs text-(--color-text-muted)">{formatPrice(m.inputPrice)}/{formatPrice(m.outputPrice)}</span>
+            </div>
+          ))}
         </div>
 
         <p class="text-sm text-(--color-text-muted)">
-          See the full comparison: <a href={`${base}compare/llm/`} class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">LLM Comparison Table</a>
+          These are the prices we last recorded, not quotes. Each model page names its price source; check it before you spend.
+          Read <a href={`${base}guides/reading-hub-tables/`} class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">How to Read the Hub's Tables</a>,
+          then see the full <a href={`${base}compare/llm/`} class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">LLM comparison table</a>.
         </p>
       </section>
 
@@ -237,7 +214,7 @@ function formatPrice(price: number): string {
       <section>
         <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Do You Need to Pay?</h2>
         <p class="text-(--color-text-secondary) leading-relaxed mb-4">
-          Honestly? The free tiers are excellent for most people. Here's when upgrading makes sense:
+          For many people a free tier is enough. Here's when upgrading makes sense:
         </p>
 
         <div class="grid sm:grid-cols-2 gap-4">

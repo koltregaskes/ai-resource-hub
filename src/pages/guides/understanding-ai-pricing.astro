@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getLLMModels } from '../../data/llm-models';
+import modelsLatest from '../../../public/data/models-latest.json';
 
 const models = getLLMModels();
 const rawBase = import.meta.env.BASE_URL;
@@ -13,9 +14,9 @@ function formatPrice(price: number): string {
   return `$${price.toFixed(2)}`;
 }
 
-// Get a range of prices for examples
+// Standard (non-batch) list prices only, from the dated model export.
 const priceRange = models
-  .filter(m => m.inputPrice > 0)
+  .filter((m) => m.inputPrice > 0 && !/\(batch\)/i.test(m.name))
   .sort((a, b) => {
     const aCost = (a.inputPrice + 3 * a.outputPrice) / 4;
     const bCost = (b.inputPrice + 3 * b.outputPrice) / 4;
@@ -23,11 +24,29 @@ const priceRange = models
   });
 const cheapest = priceRange[0];
 const mostExpensive = priceRange[priceRange.length - 1];
+const exportDate = new Date(modelsLatest.generated).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+const outputDearer = priceRange.filter((m) => m.outputPrice > m.inputPrice).length;
+
+// Worked examples: half the tokens in, half out, at the lowest and highest listed rates.
+const costAt = (tokens: number, m: { inputPrice: number; outputPrice: number }) =>
+  ((tokens / 2) * m.inputPrice + (tokens / 2) * m.outputPrice) / 1_000_000;
+function formatCost(v: number): string {
+  if (v < 0.001) return '< $0.001';
+  if (v < 0.01) return `$${v.toFixed(3)}`;
+  return `$${v.toFixed(2)}`;
+}
+const tasks = [
+  { task: 'Quick question & answer', tokens: 500 },
+  { task: 'Email draft', tokens: 1_500 },
+  { task: 'Blog post (1,000 words)', tokens: 3_000 },
+  { task: 'Summarise a 10-page document', tokens: 5_000 },
+  { task: 'Analyse a full book', tokens: 100_000 },
+];
 ---
 
 <BaseLayout
   title="Understanding AI Pricing: Tokens, Tiers & Value — The AI Resource Hub"
-  description="What are tokens? Why does AI cost money? Free vs paid tiers explained. How to estimate your costs and find the best value."
+  description="What tokens are, why input and output are priced separately, free and paid plans, and how to estimate your costs from dated list prices."
 >
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
@@ -47,7 +66,7 @@ const mostExpensive = priceRange[priceRange.length - 1];
         Understanding AI Pricing
       </h1>
       <p class="text-lg text-(--color-text-secondary)">
-        Tokens, tiers, input vs output — AI pricing can seem confusing.
+        Tokens, tiers, input and output: AI pricing can seem confusing.
         Here's everything you need to understand how much AI costs and how to get the best value.
       </p>
     </header>
@@ -56,8 +75,8 @@ const mostExpensive = priceRange[priceRange.length - 1];
       <section>
         <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">What Are Tokens?</h2>
         <p class="text-(--color-text-secondary) leading-relaxed mb-4">
-          AI models don't read words — they read <strong class="text-(--color-text-primary)">tokens</strong>.
-          A token is roughly 3-4 characters, or about 75% of a word in English. Here's what that means in practice:
+          AI models don't read words. They read <strong class="text-(--color-text-primary)">tokens</strong>.
+          OpenAI's rule of thumb for English is that a token is about 4 characters, or roughly three quarters of a word (<a href="https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them" rel="noopener" class="text-(--color-accent)">source</a>). Other languages and code can use more. Here's what that means in practice:
         </p>
 
         <div class="grid sm:grid-cols-3 gap-3 mb-4">
@@ -67,7 +86,7 @@ const mostExpensive = priceRange[priceRange.length - 1];
           </div>
           <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
             <p class="text-2xl font-bold text-(--color-accent)">~4</p>
-            <p class="text-sm text-(--color-text-muted)">pages per 1,000 tokens</p>
+            <p class="text-sm text-(--color-text-muted)">characters per token</p>
           </div>
           <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) text-center">
             <p class="text-2xl font-bold text-(--color-accent)">~1.3</p>
@@ -82,25 +101,19 @@ const mostExpensive = priceRange[priceRange.length - 1];
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Why Input and Output Are Priced Differently</h2>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Input and Output Are Priced Separately</h2>
         <p class="text-(--color-text-secondary) leading-relaxed mb-4">
           Most AI APIs charge separately for input tokens (what you send) and output tokens (what the AI writes back).
-          Output tokens are almost always more expensive because generating new text requires more computation than reading it.
+          In our export of {exportDate}, output is priced higher than input for {outputDearer} of the {priceRange.length} language models with a standard list price.
         </p>
 
-        <div class="p-4 rounded-xl bg-(--color-accent-glow) border border-(--color-accent)/20 mb-4">
-          <p class="text-sm text-(--color-text-primary)">
-            <strong>Think of it like a consultant:</strong> Reading your brief (input) takes less effort than writing
-            the deliverable (output). AI pricing reflects this same dynamic.
-          </p>
-        </div>
+        
 
         {cheapest && mostExpensive && (
           <p class="text-(--color-text-secondary) leading-relaxed">
-            Currently, prices range from <strong class="text-(--color-success)">{formatPrice(cheapest.inputPrice)}</strong> per
-            million input tokens ({cheapest.name}) to <strong class="text-(--color-danger)">{formatPrice(mostExpensive.inputPrice)}</strong> per
-            million input tokens ({mostExpensive.name}). That's a {Math.round(mostExpensive.inputPrice / cheapest.inputPrice)}x
-            difference — so choosing the right model matters.
+            In the same export, the cheapest model on a blended standard price is {cheapest.name} at <strong class="text-(--color-success)">{formatPrice(cheapest.inputPrice)}</strong> per
+            million input tokens, and the dearest is {mostExpensive.name} at <strong class="text-(--color-danger)">{formatPrice(mostExpensive.inputPrice)}</strong> per
+            million input tokens, about {Math.round(mostExpensive.inputPrice / cheapest.inputPrice)} times as much. These are the prices we last recorded, not current quotes, so check the provider before you budget.
           </p>
         )}
       </section>
@@ -108,7 +121,7 @@ const mostExpensive = priceRange[priceRange.length - 1];
       <section>
         <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">How Much Does Typical Usage Cost?</h2>
         <p class="text-(--color-text-secondary) leading-relaxed mb-4">
-          For most individual users, the costs are remarkably low. Here are some real-world examples:
+          Here are worked examples at the lowest and highest standard rates in our export of {exportDate}, assuming half the tokens are input and half output. Token counts are rough, and real bills depend on the model and provider.
         </p>
 
         <div class="overflow-x-auto">
@@ -117,41 +130,19 @@ const mostExpensive = priceRange[priceRange.length - 1];
               <tr class="border-b border-(--color-border)">
                 <th class="text-left py-3 px-3 text-(--color-text-muted) font-medium">Task</th>
                 <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">~Tokens</th>
-                <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Cost (cheap)</th>
-                <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Cost (premium)</th>
+                <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Lowest listed rate</th>
+                <th class="text-right py-3 px-3 text-(--color-text-muted) font-medium">Highest listed rate</th>
               </tr>
             </thead>
             <tbody>
-              <tr class="border-b border-(--color-border)/50">
-                <td class="py-3 px-3 text-(--color-text-primary)">Quick question & answer</td>
-                <td class="py-3 px-3 text-right text-(--color-text-secondary)">500</td>
-                <td class="py-3 px-3 text-right text-(--color-success)">{'< $0.001'}</td>
-                <td class="py-3 px-3 text-right text-(--color-text-primary)">$0.01</td>
-              </tr>
-              <tr class="border-b border-(--color-border)/50">
-                <td class="py-3 px-3 text-(--color-text-primary)">Email draft</td>
-                <td class="py-3 px-3 text-right text-(--color-text-secondary)">1,500</td>
-                <td class="py-3 px-3 text-right text-(--color-success)">{'< $0.01'}</td>
-                <td class="py-3 px-3 text-right text-(--color-text-primary)">$0.03</td>
-              </tr>
-              <tr class="border-b border-(--color-border)/50">
-                <td class="py-3 px-3 text-(--color-text-primary)">Blog post (1,000 words)</td>
-                <td class="py-3 px-3 text-right text-(--color-text-secondary)">3,000</td>
-                <td class="py-3 px-3 text-right text-(--color-success)">$0.01</td>
-                <td class="py-3 px-3 text-right text-(--color-text-primary)">$0.06</td>
-              </tr>
-              <tr class="border-b border-(--color-border)/50">
-                <td class="py-3 px-3 text-(--color-text-primary)">Summarise a 10-page document</td>
-                <td class="py-3 px-3 text-right text-(--color-text-secondary)">5,000</td>
-                <td class="py-3 px-3 text-right text-(--color-success)">$0.01</td>
-                <td class="py-3 px-3 text-right text-(--color-text-primary)">$0.08</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-3 text-(--color-text-primary)">Analyse a full book</td>
-                <td class="py-3 px-3 text-right text-(--color-text-secondary)">100,000</td>
-                <td class="py-3 px-3 text-right text-(--color-success)">$0.10</td>
-                <td class="py-3 px-3 text-right text-(--color-text-primary)">$1.50</td>
-              </tr>
+              {tasks.map((t) => (
+                <tr class="border-b border-(--color-border)/50 last:border-0">
+                  <td class="py-3 px-3 text-(--color-text-primary)">{t.task}</td>
+                  <td class="py-3 px-3 text-right text-(--color-text-secondary)">{t.tokens.toLocaleString('en-GB')}</td>
+                  <td class="py-3 px-3 text-right text-(--color-success)">{cheapest ? formatCost(costAt(t.tokens, cheapest)) : 'n/a'}</td>
+                  <td class="py-3 px-3 text-right text-(--color-text-primary)">{mostExpensive ? formatCost(costAt(t.tokens, mostExpensive)) : 'n/a'}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
@@ -167,12 +158,12 @@ const mostExpensive = priceRange[priceRange.length - 1];
           <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
             <h3 class="font-semibold text-(--color-text-primary) mb-3">Subscription (Consumer)</h3>
             <ul class="text-sm text-(--color-text-secondary) space-y-2">
-              <li><strong>ChatGPT Plus:</strong> $20/month</li>
-              <li><strong>Claude Pro:</strong> $20/month</li>
-              <li><strong>Gemini AI Ultra:</strong> $20/month</li>
+              <li><a href="https://openai.com/chatgpt/pricing/" rel="noopener" class="text-(--color-accent)">ChatGPT plans</a> (OpenAI)</li>
+              <li><a href="https://claude.com/pricing" rel="noopener" class="text-(--color-accent)">Claude plans</a> (Anthropic)</li>
+              <li><a href="https://gemini.google/subscriptions/" rel="noopener" class="text-(--color-accent)">Gemini plans</a> (Google)</li>
             </ul>
             <p class="text-xs text-(--color-text-muted) mt-3">
-              Fixed monthly fee, unlimited (or high-limit) usage. Best for individual users who want a simple chat interface.
+              A fixed monthly fee with usage limits set by each plan. Prices and limits change, so check the provider's page. Best for individual users who want a simple chat interface.
             </p>
           </div>
           <div class="p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
@@ -189,7 +180,7 @@ const mostExpensive = priceRange[priceRange.length - 1];
         </div>
 
         <p class="text-sm text-(--color-text-muted)">
-          See all current API prices: <a href={`${base}compare/llm/`} class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">LLM Comparison Table</a>
+          See the API prices we last recorded: <a href={`${base}compare/llm/`} class="text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">LLM Comparison Table</a>
         </p>
       </section>
 
@@ -198,7 +189,7 @@ const mostExpensive = priceRange[priceRange.length - 1];
         <div class="space-y-3">
           <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
             <h3 class="font-semibold text-(--color-text-primary) text-sm mb-1">1. Use the right model for the job</h3>
-            <p class="text-sm text-(--color-text-secondary)">Don't use a $15/1M token model for simple tasks. Use a cheap model for routine work and reserve premium models for hard problems.</p>
+            <p class="text-sm text-(--color-text-secondary)">Don't use the most expensive model for simple tasks. Use a cheap model for routine work and reserve premium models for hard problems.</p>
           </div>
           <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
             <h3 class="font-semibold text-(--color-text-primary) text-sm mb-1">2. Write concise prompts</h3>
@@ -210,7 +201,7 @@ const mostExpensive = priceRange[priceRange.length - 1];
           </div>
           <div class="p-4 rounded-lg bg-(--color-bg-card) border border-(--color-border)">
             <h3 class="font-semibold text-(--color-text-primary) text-sm mb-1">4. Check benchmark value</h3>
-            <p class="text-sm text-(--color-text-secondary)">Benchmark value compares the source-backed evaluated benchmark average with blended price. Models without enough rankable evidence are excluded.</p>
+            <p class="text-sm text-(--color-text-secondary)">Benchmark value compares the source-backed evaluated benchmark average with blended price. Models without enough rankable evidence are excluded, which is most of them at the moment.</p>
           </div>
         </div>
       </section>

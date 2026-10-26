@@ -12,7 +12,7 @@ export const guides: GuideEntry[] = [
   {
     slug: 'prompting-basics',
     title: 'Prompting Basics: How to Talk to AI',
-    description: 'Learn the fundamentals of writing effective prompts. No technical background needed — just clear thinking and these simple techniques.',
+    description: 'Learn the fundamentals of writing effective prompts. No technical background needed, just clear thinking and a few simple techniques.',
     category: 'Beginner',
     readTime: '8 min read',
     icon: '💬',
@@ -20,7 +20,7 @@ export const guides: GuideEntry[] = [
   {
     slug: 'choosing-an-ai-model',
     title: 'How to Choose the Right AI Model',
-    description: 'ChatGPT, Claude, Gemini, Copilot — which one is right for you? A practical guide to picking the best AI for your needs and budget.',
+    description: 'ChatGPT, Claude, Gemini or Copilot? A practical guide to picking an assistant, with links to each provider\'s current plans.',
     category: 'Beginner',
     readTime: '10 min read',
     icon: '🎯',
@@ -36,7 +36,7 @@ export const guides: GuideEntry[] = [
   {
     slug: 'ai-for-writing',
     title: 'Using AI for Writing & Content Creation',
-    description: 'From blog posts to emails to creative fiction — how to use AI as a writing partner without losing your voice.',
+    description: 'From blog posts to emails to creative fiction: how to use AI as a writing partner without losing your voice.',
     category: 'Practical',
     readTime: '10 min read',
     icon: '✍️',
@@ -44,7 +44,7 @@ export const guides: GuideEntry[] = [
   {
     slug: 'ai-for-research',
     title: 'Using AI for Research & Analysis',
-    description: 'How to use AI to research topics, summarise documents, analyse data, and fact-check — plus pitfalls to avoid.',
+    description: 'How to use AI to research topics, summarise documents, analyse data and fact-check, plus the pitfalls to avoid.',
     category: 'Practical',
     readTime: '10 min read',
     icon: '🔍',
@@ -52,7 +52,7 @@ export const guides: GuideEntry[] = [
   {
     slug: 'understanding-ai-pricing',
     title: 'Understanding AI Pricing: Tokens, Tiers & Value',
-    description: 'What are tokens? Why does AI cost money? Free vs paid tiers explained. How to estimate your costs and find the best value.',
+    description: 'What tokens are, why input and output are priced separately, free and paid plans, and how to estimate costs from dated list prices.',
     category: 'Beginner',
     readTime: '7 min read',
     icon: '💰',
