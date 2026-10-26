@@ -1,0 +1,53 @@
+---
+import GuideArticle from '../../components/GuideArticle.astro';
+import HubModelTable from '../../components/HubModelTable.astro';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const sources = [
+  { label: 'Ho et al. (2022), Video Diffusion Models, arXiv:2204.03458', url: 'https://arxiv.org/abs/2204.03458' },
+  { label: 'OpenAI (Feb 2024), Video generation models as world simulators', url: 'https://openai.com/index/video-generation-models-as-world-simulators/' },
+  { label: 'C2PA, Content Credentials specification', url: 'https://c2pa.org/specifications/specifications/2.1/index.html' },
+];
+---
+<GuideArticle
+  title="AI Video Models: A Practical Guide"
+  crumb="Video Models"
+  description="How AI video generators work, what limits they still have, what to compare between them and how to plan a short clip."
+  intro="Video models make short clips from a text prompt, a still image or both. They've improved fast, but clips are short, costs add up and you'll usually need several tries."
+  category="Practical"
+  readTime="7 min read"
+  updated="2026-10-26"
+  sources={sources}
+>
+  <p>
+    Most of them extend the diffusion approach used for images (see <a href={`${base}guides/image-models/`}>AI Image Models</a>) so that it works across frames as well as across the picture. A 2022 Google paper on video diffusion models was an early version. OpenAI's 2024 Sora report described treating video as patches across space and time, an idea several later systems share. The hard part is keeping things consistent: the same face, the same hands, objects that don't melt or vanish between frames.
+  </p>
+
+  <h2>What's in our catalogue</h2>
+  <HubModelTable category="video" limit={10} />
+  <p>
+    The <a href={`${base}compare/video/`}>video comparison page</a> has prices as we last recorded them. Video pricing changes often and is usually per second or per clip, so treat our figures as dated and check the provider.
+  </p>
+
+  <h2>What to compare</h2>
+  <ul>
+    <li><strong>Clip length and resolution.</strong> Many models make clips of a few seconds. Check the maximum before you plan.</li>
+    <li><strong>Motion and physics.</strong> Watch for hands, walking, liquids and anything that collides.</li>
+    <li><strong>Image to video.</strong> Starting from your own still gives far more control than text alone.</li>
+    <li><strong>Camera control.</strong> Can you ask for a pan, a zoom or a fixed shot and get it?</li>
+    <li><strong>Sound.</strong> Some models now generate audio with the video, others are silent.</li>
+    <li><strong>Cost per usable clip.</strong> If one clip in four is good, the real price is four times the list price.</li>
+  </ul>
+
+  <h2>Planning a clip</h2>
+  <ol>
+    <li>Write one sentence per shot: subject, action, setting, camera.</li>
+    <li>Make a still for each shot first, with an image model, and fix the look there.</li>
+    <li>Animate each still separately, then edit the clips together in ordinary video software.</li>
+    <li>Keep actions simple. One clear movement per shot works best.</li>
+  </ol>
+
+  <h2>Rights and labelling</h2>
+  <p>
+    Don't generate real people without their permission, and check the provider's rules on public figures and branded material. Some providers add Content Credentials from the C2PA standard or visible watermarks. Leave them in, and label AI video when you publish it.
+  </p>
+</GuideArticle>
