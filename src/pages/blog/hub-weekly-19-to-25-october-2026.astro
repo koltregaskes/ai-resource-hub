@@ -23,7 +23,7 @@ const structuredData = {
  */
 const changes = [
   { id: 'llama-4-maverick', name: 'Llama 4 Maverick', field: 'Context window (tokens)', before: '1,048,576', after: '524,288', firstSeen: '19 Oct', source: 'openrouter.ai/api/v1/models' },
-  { id: 'deepseek-r1', name: 'DeepSeek R1 (was "R1")', field: 'Price, context, status', before: '$0.70 / $2.50, 64,000, active', after: '$0.55 / $2.19, 128,000, tracking', firstSeen: '19 Oct', source: 'deepseek.com/pricing (was OpenRouter)' },
+  { id: 'deepseek-r1', name: 'DeepSeek R1 (was "R1")', field: 'Price, context, status', before: '$0.70 / $2.50, 64,000, active', after: '$0.55 / $2.19 (historical), 128,000, tracking', firstSeen: '19 Oct', source: 'deepseek.com/pricing (was OpenRouter)' },
   { id: 'deepseek-v3', name: 'DeepSeek V3', field: 'Price', before: '$0.32 / $0.89', after: '$0.257 / $1.029', firstSeen: '20 Oct', source: 'openrouter.ai/api/v1/models' },
   { id: 'gemini-2.5-flash', name: 'Gemini 2.5 Flash (was "(batch)")', field: 'Price', before: '$0.15 / $1.25', after: '$0.30 / $2.50', firstSeen: '20 Oct', source: 'openrouter.ai/api/v1/models' },
   { id: 'gemini-2.5-flash-lite', name: 'Gemini 2.5 Flash Lite (was "(batch)")', field: 'Price', before: '$0.05 / $0.20', after: '$0.10 / $0.40', firstSeen: '21 Oct', source: 'openrouter.ai/api/v1/models' },
@@ -75,7 +75,7 @@ const changes = [
           Two of them look like corrections more than price moves. The Gemini 2.5 Flash and Flash Lite rows lost their "(batch)" label and their listed prices doubled. Our reading, which the feed doesn't confirm, is that a batch price was swapped for the standard one: Google prices its Batch API at 50% of the standard cost, and the old prices were exactly half the new ones. If you'd been comparing Flash against other models on our table, you were looking at a discounted price next to full ones, and that's the kind of quiet error that ends up in someone's budget spreadsheet.
         </p>
         <p>
-          DeepSeek R1 moved from an OpenRouter price to DeepSeek's own pricing page, and from active to tracking. That takes the active count from 106 to 105.
+          DeepSeek R1 moved from an OpenRouter price to one sourced to DeepSeek's pricing page, and from active to tracking. That page now lists only V4, so the $0.55 / $2.19 we show is a historical R1 price. That takes the active count from 106 to 105.
         </p>
         <p>
           The benchmark rules didn't move either. In both the 18 October and 26 October exports, 12 of 365 raw scores are rankable and 353 stay quarantined. That's a lot of held-back numbers, and I'm fine with it.
@@ -158,7 +158,7 @@ const changes = [
           If that's right, anyone who compared Gemini 2.5 Flash on our table before 20 October was comparing a batch price with other models' standard prices. That's on us. I'd rather put it in writing than hope nobody noticed, because a comparison site that hides its own mistakes isn't worth much.
         </p>
         <p>
-          DeepSeek R1 changed the most. Its name went from "R1" to "DeepSeek R1", its price source moved from OpenRouter to DeepSeek's own pricing page, the listed context window went from 64,000 to 128,000 tokens, and its status changed from active to tracking. Tracking rows stay on the site but aren't ranked. Put simply, the row was reconciled against a primary source and then stepped back from the main tables.
+          DeepSeek R1 changed the most. Its name went from "R1" to "DeepSeek R1", its price source moved from OpenRouter to DeepSeek's own pricing page, the listed context window went from 64,000 to 128,000 tokens, and its status changed from active to tracking. Tracking rows stay on the site but aren't ranked. DeepSeek's pricing page now lists only V4, so treat $0.55 in and $2.19 out as a historical R1 price, not one you can check there today.
         </p>
         <p>
           Llama 4 Maverick's context window halved in the export on 19 October, from 1,048,576 to 524,288 tokens. Again the source is OpenRouter. A provider can serve a model with a shorter window than its maker announced, and an aggregated feed will show the serving figure. Both numbers can be true at once. That's why the model page names the source, and it's also why I'd check which provider you're actually going to use before planning around a big window.
@@ -180,7 +180,7 @@ const changes = [
           What's still missing is the catalogue clock. Until new models are added with a verified source, the Hub can't tell you about this month's launches, and it won't pretend to. I want to fix that properly, even if it takes a while, because a rushed catalogue update would just recreate the problem this post is about.
         </p>
         <p>
-          Until then, if you're about to spend money on the strength of a number here, open the model page, look at the source and check the price where it came from. For the Gemini rows and DeepSeek V3 that's <a href="https://openrouter.ai/models" rel="noopener">OpenRouter's model list</a>, and Google's own rates are on its <a href="https://ai.google.dev/gemini-api/docs/pricing" rel="noopener">Gemini API pricing page</a>. For DeepSeek R1 it's <a href="https://api-docs.deepseek.com/quick_start/pricing" rel="noopener">DeepSeek's pricing page</a>.
+          Until then, if you're about to spend money on the strength of a number here, open the model page, look at the source and check the price where it came from. For the Gemini rows and DeepSeek V3 that's <a href="https://openrouter.ai/models" rel="noopener">OpenRouter's model list</a>, and Google's own rates are on its <a href="https://ai.google.dev/gemini-api/docs/pricing" rel="noopener">Gemini API pricing page</a>. For DeepSeek, <a href="https://api-docs.deepseek.com/quick_start/pricing" rel="noopener">DeepSeek's pricing page</a> now lists only V4, so the R1 row is a historical price.
         </p>
       </div>
 
