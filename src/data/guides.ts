@@ -1,0 +1,156 @@
+export interface GuideEntry {
+  slug: string;
+  title: string;
+  description: string;
+  category: 'Beginner' | 'Intermediate' | 'Practical' | 'Advanced';
+  readTime: string;
+  icon: string;
+}
+
+/** Every guide under /guides/. The guides index and site search both read this list. */
+export const guides: GuideEntry[] = [
+  {
+    slug: 'prompting-basics',
+    title: 'Prompting Basics: How to Talk to AI',
+    description: 'Learn the fundamentals of writing effective prompts. No technical background needed — just clear thinking and these simple techniques.',
+    category: 'Beginner',
+    readTime: '8 min read',
+    icon: '💬',
+  },
+  {
+    slug: 'choosing-an-ai-model',
+    title: 'How to Choose the Right AI Model',
+    description: 'ChatGPT, Claude, Gemini, Copilot — which one is right for you? A practical guide to picking the best AI for your needs and budget.',
+    category: 'Beginner',
+    readTime: '10 min read',
+    icon: '🎯',
+  },
+  {
+    slug: 'advanced-prompting',
+    title: 'Advanced Prompting Techniques',
+    description: 'Chain-of-thought, few-shot learning, role prompting, and more. Level up your AI interactions with these proven techniques.',
+    category: 'Intermediate',
+    readTime: '12 min read',
+    icon: '🧠',
+  },
+  {
+    slug: 'ai-for-writing',
+    title: 'Using AI for Writing & Content Creation',
+    description: 'From blog posts to emails to creative fiction — how to use AI as a writing partner without losing your voice.',
+    category: 'Practical',
+    readTime: '10 min read',
+    icon: '✍️',
+  },
+  {
+    slug: 'ai-for-research',
+    title: 'Using AI for Research & Analysis',
+    description: 'How to use AI to research topics, summarise documents, analyse data, and fact-check — plus pitfalls to avoid.',
+    category: 'Practical',
+    readTime: '10 min read',
+    icon: '🔍',
+  },
+  {
+    slug: 'understanding-ai-pricing',
+    title: 'Understanding AI Pricing: Tokens, Tiers & Value',
+    description: 'What are tokens? Why does AI cost money? Free vs paid tiers explained. How to estimate your costs and find the best value.',
+    category: 'Beginner',
+    readTime: '7 min read',
+    icon: '💰',
+  },
+  {
+    slug: 'what-is-an-llm',
+    title: 'What Is an LLM?',
+    description: "What large language models are, how they're trained, what they're good at and where they fail.",
+    category: 'Beginner',
+    readTime: '6 min read',
+    icon: '📖',
+  },
+  {
+    slug: 'reading-hub-tables',
+    title: "How to Read the Hub's Tables",
+    description: 'What each column means, where the numbers come from, how old they are, and what a blank cell is telling you.',
+    category: 'Beginner',
+    readTime: '7 min read',
+    icon: '📊',
+  },
+  {
+    slug: 'context-windows',
+    title: "Context Windows: What They Are and Why Bigger Isn't Always Better",
+    description: 'Tokens, window sizes in our catalogue, why long prompts lose detail, and how to work within the limit.',
+    category: 'Beginner',
+    readTime: '6 min read',
+    icon: '📏',
+  },
+  {
+    slug: 'open-vs-closed-models',
+    title: 'Open vs Closed AI Models',
+    description: 'Open weights, open source and closed models, how licences differ, and how to choose.',
+    category: 'Beginner',
+    readTime: '6 min read',
+    icon: '🔓',
+  },
+  {
+    slug: 'what-is-an-ai-agent',
+    title: 'What Is an AI Agent?',
+    description: 'A model that uses tools in a loop until a job is done. How agents work, where they go wrong, and how to use one safely.',
+    category: 'Beginner',
+    readTime: '6 min read',
+    icon: '🤖',
+  },
+  {
+    slug: 'what-is-rag',
+    title: 'What Is RAG? Retrieval-Augmented Generation',
+    description: "How retrieval-augmented generation works, when it helps, when it doesn't, and how to check a RAG answer.",
+    category: 'Intermediate',
+    readTime: '7 min read',
+    icon: '📚',
+  },
+  {
+    slug: 'how-benchmarks-work',
+    title: 'How AI Benchmarks Work',
+    description: 'What benchmarks measure, why scores mislead, and how the Hub decides which scores it will rank.',
+    category: 'Intermediate',
+    readTime: '7 min read',
+    icon: '🏁',
+  },
+  {
+    slug: 'temperature-and-top-p',
+    title: 'Temperature and Top-p: What the Sampling Settings Do',
+    description: 'What temperature and top-p change, sensible starting values, and why the same prompt gives different answers.',
+    category: 'Intermediate',
+    readTime: '6 min read',
+    icon: '🎛️',
+  },
+  {
+    slug: 'local-models',
+    title: 'Running AI Models Locally',
+    description: 'Run an open-weights model on your own computer: hardware, quantisation and the tools to start with.',
+    category: 'Practical',
+    readTime: '8 min read',
+    icon: '💻',
+  },
+  {
+    slug: 'image-models',
+    title: 'AI Image Models: A Practical Guide',
+    description: 'How image generators work, what to compare, how to prompt them, and the rights questions to check first.',
+    category: 'Practical',
+    readTime: '7 min read',
+    icon: '🖼️',
+  },
+  {
+    slug: 'video-models',
+    title: 'AI Video Models: A Practical Guide',
+    description: 'How video generators work, their limits, what to compare and how to plan a short clip.',
+    category: 'Practical',
+    readTime: '7 min read',
+    icon: '🎬',
+  },
+  {
+    slug: 'voice-models',
+    title: 'AI Voice Models: Text to Speech and Speech to Text',
+    description: 'Text-to-speech, speech-to-text and music models, what to compare in each, and consent for voice cloning.',
+    category: 'Practical',
+    readTime: '7 min read',
+    icon: '🎙️',
+  },
+];
