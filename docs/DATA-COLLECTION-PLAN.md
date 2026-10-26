@@ -65,7 +65,9 @@ Important rule:
 - benchmark measurements older than 365 days, missing a measurement date, carrying an invalid date, or implausibly future-dated are not rankable until reviewed or refreshed
 - the raw cache may retain unresolved or stale rows for remediation, but every public leaderboard, comparison, model page, reliability calculation and composite score must consume the rankable-only selector
 - `models.quality_score` is a legacy remediation field, not a public fact; it must remain suppressed from rankings, displays, exports and value calculations until each model-level value has a documented method, source set and measurement date
-- the evaluated composite requires at least two distinct rankable benchmark rows; zero-evidence models may appear only in explicitly labelled, non-ranked tracking surfaces
+- the evaluated composite requires at least two distinct rankable benchmark rows measured inside the last 90 days (`COMPOSITE_MEASUREMENT_MAX_AGE_DAYS`); older rankable rows stay citeable under the 365-day ceiling but are withheld from the composite and are not given a score
+- zero-evidence models may appear only in explicitly labelled, non-ranked tracking surfaces
+- own-benchmark runs are not feeding the composite: Rooms OS does not publish a benchmark feed this site can ingest, and the hub must not invent a Kol Floor score or register a benchmark id for a feed that does not exist
 - quarantined rows must be counted in release evidence and must never be promoted by weakening freshness or provenance rules
 
 ## 3. Speed And Runtime

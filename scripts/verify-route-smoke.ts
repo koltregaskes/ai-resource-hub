@@ -14,6 +14,8 @@ const distRoot = path.join(repoRoot, 'dist');
 const checks: RouteCheck[] = [
   { route: '/', file: 'index.html', expectedText: 'Floor Capability - historical benchmark snapshot' },
   { route: '/leaderboard/', file: path.join('leaderboard', 'index.html'), expectedText: 'Reliability Floor' },
+  { route: '/leaderboard/', file: path.join('leaderboard', 'index.html'), expectedText: 'Own-benchmark runs are not feeding this board' },
+  { route: '/leaderboard/', file: path.join('leaderboard', 'index.html'), expectedText: 'Withheld from the evaluated composite' },
   { route: '/benchmarks/', file: path.join('benchmarks', 'index.html'), expectedText: 'AI Model Benchmarks' },
   { route: '/models/', file: path.join('models', 'index.html'), expectedText: 'AI model directory' },
   { route: '/updates/', file: path.join('updates', 'index.html'), expectedText: 'Updates' },

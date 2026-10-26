@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getProviders, getBenchmarks } from '../../db/queries';
+import { COMPOSITE_MEASUREMENT_MAX_AGE_DAYS, OWN_BENCHMARK_FEED_NOTICE } from '../../data/hub-dashboard';
 import { RELIABILITY_DIMENSIONS, RELIABILITY_SOURCES } from '../../data/reliability-floor';
 
 const rawBase = import.meta.env.BASE_URL;
@@ -226,8 +227,8 @@ const benchmarks = getBenchmarks();
             </tr>
             <tr>
               <td class="py-3 px-4 text-(--color-text-primary)">Evaluated composite</td>
-              <td class="py-3 px-4 text-(--color-text-secondary)">Which models are currently strongest inside the benchmark-backed scored set?</td>
-              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Weighted score designed to compare models with public evidence, not to replace the frontier watchlist.</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">Which models have at least two benchmark measurements inside the last {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days?</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Ranks only those in-window measurements. Older rows are withheld and are not scored. This is not the frontier watchlist.</td>
             </tr>
           </tbody>
         </table>
@@ -243,34 +244,29 @@ const benchmarks = getBenchmarks();
           </thead>
           <tbody>
             <tr class="border-b border-(--color-border)/50">
-              <td class="py-3 px-4 text-(--color-text-primary)">Normalized benchmark performance</td>
-              <td class="py-3 px-4 text-(--color-text-secondary)">50%</td>
-              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Still the largest input, but no longer strong enough to let old benchmark history dominate the ranking.</td>
+              <td class="py-3 px-4 text-(--color-text-primary)">Measurement window</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">Hard gate, {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Only measured_at counts. A cache refresh does not make an old row current. Rows outside the window are withheld.</td>
             </tr>
             <tr class="border-b border-(--color-border)/50">
-              <td class="py-3 px-4 text-(--color-text-primary)">Existing quality layer</td>
-              <td class="py-3 px-4 text-(--color-text-secondary)">25%</td>
-              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Lets broader capability signals still count.</td>
+              <td class="py-3 px-4 text-(--color-text-primary)">Minimum evidence</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">Two distinct in-window benchmarks</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Fewer than two in-window measurements leaves the model withheld. No score is invented to fill the gap.</td>
             </tr>
             <tr class="border-b border-(--color-border)/50">
-              <td class="py-3 px-4 text-(--color-text-primary)">Freshness</td>
-              <td class="py-3 px-4 text-(--color-text-secondary)">25%</td>
-              <td class="py-3 px-4 text-(--color-text-muted) text-xs">A stronger recency signal so current generations beat stale leaders unless the evidence gap is overwhelming.</td>
+              <td class="py-3 px-4 text-(--color-text-primary)">Normalised benchmark average</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">In-window rows only</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Weighted by the published benchmark weights. Older measurements do not enter the average.</td>
             </tr>
             <tr class="border-b border-(--color-border)/50">
-              <td class="py-3 px-4 text-(--color-text-primary)">Evidence multiplier</td>
+              <td class="py-3 px-4 text-(--color-text-primary)">Coverage and evidence count</td>
               <td class="py-3 px-4 text-(--color-text-secondary)">Penalty, not bonus</td>
-              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Thin public evidence gets penalized until coverage improves.</td>
-            </tr>
-            <tr class="border-b border-(--color-border)/50">
-              <td class="py-3 px-4 text-(--color-text-primary)">Provider age penalty</td>
-              <td class="py-3 px-4 text-(--color-text-secondary)">Penalty, not bonus</td>
-              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Older provider generations lose ground when a newer public generation exists.</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Thin coverage and fewer than seven in-window rows reduce the composite. They never promote a withheld model.</td>
             </tr>
             <tr>
-              <td class="py-3 px-4 text-(--color-text-primary)">Variant penalty</td>
-              <td class="py-3 px-4 text-(--color-text-secondary)">Penalty, not bonus</td>
-              <td class="py-3 px-4 text-(--color-text-muted) text-xs">Compact and preview variants are stopped from reading like the obvious overall best model.</td>
+              <td class="py-3 px-4 text-(--color-text-primary)">Legacy quality and own benchmarks</td>
+              <td class="py-3 px-4 text-(--color-text-secondary)">Not inputs</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">The untraceable quality field stays suppressed. {OWN_BENCHMARK_FEED_NOTICE}</td>
             </tr>
           </tbody>
         </table>
@@ -366,10 +362,9 @@ const benchmarks = getBenchmarks();
     <div class="mb-10">
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Evaluated Composite</h2>
       <p class="text-sm text-(--color-text-secondary) mb-4">
-        Public model rankings use only current benchmark rows with a row-level source URL and measurement date.
-        A model needs at least two distinct rankable benchmark rows to enter the evaluated composite. The legacy
-        <code>model.quality_score</code> field is suppressed because it does not yet have traceable model-level
-        method, source and date evidence.
+        Public composite rankings use benchmark rows with a row-level source URL and a measurement date inside the last {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days.
+        A model needs at least two distinct in-window rows. Older rankable rows are withheld rather than scored. The legacy
+        <code>model.quality_score</code> field stays suppressed. {OWN_BENCHMARK_FEED_NOTICE}
       </p>
       <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
         <table class="w-full text-sm">
@@ -385,8 +380,16 @@ const benchmarks = getBenchmarks();
               <td class="py-3 px-4 text-(--color-text-muted) text-xs">Source URL, measurement date and exact benchmark configuration are required.</td>
             </tr>
             <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Freshness window</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">measured_at within {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days. Models outside the window are listed as withheld and are not ranked.</td>
+            </tr>
+            <tr class="border-b border-(--color-border)/50">
               <td class="py-3 px-4 text-(--color-text-primary)">Minimum coverage</td>
-              <td class="py-3 px-4 text-(--color-text-muted) text-xs">At least two distinct rankable benchmark rows for the evaluated composite.</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">At least two distinct in-window benchmark rows for the evaluated composite.</td>
+            </tr>
+            <tr class="border-b border-(--color-border)/50">
+              <td class="py-3 px-4 text-(--color-text-primary)">Own-benchmark feed</td>
+              <td class="py-3 px-4 text-(--color-text-muted) text-xs">{OWN_BENCHMARK_FEED_NOTICE}</td>
             </tr>
             <tr class="border-b border-(--color-border)/50">
               <td class="py-3 px-4 text-(--color-text-primary)">Composite</td>
@@ -452,6 +455,7 @@ const benchmarks = getBenchmarks();
         <li><strong>Speed data is limited</strong> — we track relative speed ratings rather than real-time latency measurements. For production speed data, we recommend <a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Artificial Analysis</a>.</li>
         <li><strong>Coverage is curated</strong> — we focus on models available via API and major consumer products. Some niche or regional models may not be listed.</li>
         <li><strong>Legacy model quality is suppressed</strong> — the raw catalogue field is retained for remediation but is not a public fact or ranking input until method, source and date are traceable.</li>
+        <li><strong>Own-benchmark runs are not feeding the composite</strong> — Rooms OS does not publish a benchmark feed this site can ingest. Kol Floor reports are not turned into public scores.</li>
       </ul>
     </div>
 

@@ -5,7 +5,12 @@ import { getBenchmarkScores, getLastScrapeTime, getNews, getRecentModels } from 
 import { benchmarkFreshness } from './benchmark-freshness';
 import { getAiMilestonesOverview } from './ai-milestones';
 import { modelReleaseDesk } from './model-release-desk.generated';
-import { getLatestDigest, normaliseDateTime } from './hub-dashboard';
+import {
+  COMPOSITE_MEASUREMENT_MAX_AGE_DAYS,
+  OWN_BENCHMARK_FEED_NOTICE,
+  getLatestDigest,
+  normaliseDateTime,
+} from './hub-dashboard';
 import { getAvailabilityOverview, getAvailabilityRows } from './model-availability';
 
 export interface UpdateHighlight {
@@ -327,14 +332,14 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
       automation: 'Automated',
       status: 'watch',
       href: formatRoute(basePath, '/benchmarks/'),
-      summary: 'Only exact dated evidence is eligible for public comparison. Cached inputs and successful collection attempts do not establish current measurements.',
+      summary: `Only exact dated evidence is eligible for public comparison. The evaluated composite ranks measurements from the last ${COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days and withholds older rows. Cached inputs and successful collection attempts do not establish current measurements.`,
       sources: [
         'Artificial Analysis and other benchmark owners',
         'LMSYS / arena-style public benchmark sources',
         'Research repositories and public eval feeds where intended for reuse',
       ],
       lastRefreshed: benchmarkMeasuredAt,
-      note: 'Raw evidence gaps remain quarantined. Collection health and source verification require separate evidence.',
+      note: `Raw evidence gaps remain quarantined. ${OWN_BENCHMARK_FEED_NOTICE} Collection health and source verification require separate evidence.`,
       highlights: benchmarkUpdates,
     },
     {
