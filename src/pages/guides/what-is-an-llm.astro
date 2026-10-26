@@ -1,0 +1,58 @@
+---
+import GuideArticle from '../../components/GuideArticle.astro';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const sources = [
+  { label: 'Vaswani et al. (2017), Attention Is All You Need, arXiv:1706.03762', url: 'https://arxiv.org/abs/1706.03762' },
+  { label: 'Brown et al. (2020), Language Models are Few-Shot Learners (GPT-3), arXiv:2005.14165', url: 'https://arxiv.org/abs/2005.14165' },
+  { label: 'Ouyang et al. (2022), Training language models to follow instructions with human feedback, arXiv:2203.02155', url: 'https://arxiv.org/abs/2203.02155' },
+];
+---
+<GuideArticle
+  title="What Is an LLM?"
+  crumb="What Is an LLM?"
+  description="A plain-English explanation of large language models: what they are, how they're trained, what they're good at and where they fail."
+  intro="A large language model is a program trained on a huge amount of text to predict the next piece of text. ChatGPT, Claude and Gemini are all built on them."
+  category="Beginner"
+  readTime="6 min read"
+  updated="2026-10-26"
+  sources={sources}
+>
+  <p>
+    Give an LLM some text and it works out which token, a word or part of a word, is most likely to come next. Then it adds that token and does it again. Every answer you've had from a chatbot was built that way, one token at a time.
+  </p>
+
+  <h2>How they're built</h2>
+  <h3>The architecture</h3>
+  <p>
+    Almost all current LLMs use the transformer, described by researchers at Google in the 2017 paper "Attention Is All You Need". Its key idea, attention, lets the model weigh every earlier word when it predicts the next one, so it can keep track of what "it" or "she" refers to several sentences back.
+  </p>
+  <h3>Pre-training</h3>
+  <p>
+    The model starts as billions of random numbers, called parameters or weights. It reads a vast amount of text and, every time it predicts the next token wrongly, its weights are nudged. OpenAI's GPT-3 paper in 2020 described a model with 175 billion parameters and showed that, at that size, it could do many tasks from a few examples in the prompt without extra training.
+  </p>
+  <h3>Teaching it to help</h3>
+  <p>
+    A pre-trained model just continues text. To make it answer questions and follow instructions, labs train it further on examples of good answers and on people's ratings of which answer is better. OpenAI's 2022 InstructGPT paper described this approach, reinforcement learning from human feedback, and found that people preferred the outputs of a much smaller tuned model over the original GPT-3.
+  </p>
+
+  <h2>What they're good at</h2>
+  <ul>
+    <li>Drafting, rewriting and summarising text.</li>
+    <li>Explaining ideas at whatever level you ask for.</li>
+    <li>Writing and fixing code.</li>
+    <li>Pulling structure out of messy text, such as turning notes into a table.</li>
+  </ul>
+
+  <h2>Where they fail</h2>
+  <ul>
+    <li><strong>They make things up.</strong> A model predicts plausible text, and plausible isn't the same as true. Fake citations and wrong figures are common.</li>
+    <li><strong>Their knowledge stops.</strong> Each model has a training cut-off and doesn't know about later events unless it can search or you give it the text. See <a href={`${base}guides/what-is-rag/`}>What Is RAG?</a></li>
+    <li><strong>They can be inconsistent.</strong> The same question can get different answers. See <a href={`${base}guides/temperature-and-top-p/`}>Temperature and Top-p</a>.</li>
+    <li><strong>They have limits on length.</strong> See <a href={`${base}guides/context-windows/`}>Context Windows</a>.</li>
+  </ul>
+
+  <h2>Where to go next</h2>
+  <p>
+    <a href={`${base}guides/prompting-basics/`}>Prompting Basics</a> is the best next step if you're starting out. To compare models, try <a href={`${base}guides/choosing-an-ai-model/`}>How to Choose the Right AI Model</a> and the <a href={`${base}compare/llm/`}>LLM comparison table</a>, and read <a href={`${base}guides/reading-hub-tables/`}>How to Read the Hub's Tables</a> first so you know how old each number is. There's also the February post <a href={`${base}blog/what-is-an-llm/`}>What Is an LLM?</a>
+  </p>
+</GuideArticle>

@@ -1,0 +1,62 @@
+---
+import GuideArticle from '../../components/GuideArticle.astro';
+import modelsLatest from '../../../public/data/models-latest.json';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+type Row = { category: string; open_source: boolean };
+const llms = (modelsLatest.models as Row[]).filter((m) => m.category === 'llm');
+const openCount = llms.filter((m) => m.open_source).length;
+const generated = new Date(modelsLatest.generated).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+const sources = [
+  { label: 'Open Source Initiative, The Open Source AI Definition 1.0', url: 'https://opensource.org/ai/open-source-ai-definition' },
+  { label: 'Meta, Llama 3.1 Community License Agreement', url: 'https://www.llama.com/llama3_1/license/' },
+  { label: 'Hugging Face Hub documentation, Licenses', url: 'https://huggingface.co/docs/hub/repositories-licenses' },
+];
+---
+<GuideArticle
+  title="Open vs Closed AI Models"
+  crumb="Open vs Closed"
+  description="What open weights, open source and closed models actually mean, how licences differ, and how to decide which suits you."
+  intro="A closed model runs only on its maker's servers. An open-weights model can be downloaded and run by anyone with the hardware. Most real choices sit somewhere between."
+  category="Beginner"
+  readTime="6 min read"
+  updated="2026-10-26"
+  sources={sources}
+>
+  <p>
+    GPT, Claude and Gemini's main models are closed. You reach them through an app or an API, and you never see the model file. Llama, Mistral's open releases, Qwen and DeepSeek's releases publish the weights, the billions of numbers that make up the trained model, so you can run them yourself.
+  </p>
+
+  <h2>Open weights isn't the same as open source</h2>
+  <p>
+    The Open Source Initiative published its Open Source AI Definition 1.0 in October 2024. It asks for the weights, the code used to train and run the model, and enough detail about the training data for someone skilled to build a similar system. Most popular "open" models publish weights and inference code but not the training data, so the more accurate term is open weights.
+  </p>
+  <p>
+    Licences vary too. Some releases use permissive licences such as Apache 2.0 or MIT. Others use custom licences with conditions: Meta's Llama 3.1 licence, for example, requires a separate licence from Meta for services with more than 700 million monthly active users and sets out an acceptable use policy. Read the licence on the model's download page before you build on it.
+  </p>
+
+  <h2>What our catalogue shows</h2>
+  <p>
+    In the Hub export generated {generated}, {openCount} of {llms.length} language models are flagged as open weights. The <a href={`${base}open-source/`}>open-source page</a> lists them. Our flag records whether weights are downloadable. It doesn't judge the licence, so check that separately.
+  </p>
+
+  <h2>How to choose</h2>
+  <h3>Closed models suit you if</h3>
+  <ul>
+    <li>you want the strongest general model with no setup;</li>
+    <li>you're happy for your prompts to go to the provider under its terms;</li>
+    <li>you'd rather pay per use than run hardware.</li>
+  </ul>
+  <h3>Open weights suit you if</h3>
+  <ul>
+    <li>your data mustn't leave your own machines or cloud account;</li>
+    <li>you want to fine-tune the model on your own material;</li>
+    <li>you need a fixed version that won't change under you;</li>
+    <li>you have the hardware, or are happy to rent it. Our <a href={`${base}guides/local-models/`}>local models guide</a> covers this.</li>
+  </ul>
+  <p>
+    You don't have to pick one side. Plenty of open-weights models are also sold through hosted APIs, which gives you the open licence without the hardware, and plenty of teams use a closed model for hard tasks and an open one for bulk work.
+  </p>
+  <p>
+    The February post <a href={`${base}blog/open-source-vs-closed-ai/`}>Open Source vs Closed AI</a> has more on the history.
+  </p>
+</GuideArticle>
