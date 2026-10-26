@@ -5,13 +5,9 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 
 export const ROUTED_FEED_SITE = 'AI Resource Hub';
-export const ROUTED_FEED_PATH = path.resolve(
-  path.dirname(fileURLToPath(import.meta.url)),
-  'news-feed-latest.json',
-);
+export const ROUTED_FEED_PATH = path.resolve(process.cwd(), 'src', 'data', 'news-feed-latest.json');
 
 export interface RoutedArticle {
   title?: string;

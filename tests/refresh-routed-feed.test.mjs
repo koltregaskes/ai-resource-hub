@@ -126,7 +126,7 @@ test('an empty match writes a fresh empty feed and a matched item is written', a
   ])
   const bodies = {
     'https://export.arxiv.org/rss/cs.AI': '<rss version="2.0"><channel><title>cs.AI</title></channel></rss>',
-    'https://techcrunch.com/category/artificial-intelligence/feed/': '<rss version="2.0"><channel><item><title>Grok clip</title><link>https://techcrunch.com/2026/10/25/grok/</link><pubDate>Sun, 25 Oct 2026 21:31:16 +0000</pubDate><description>Fetched from the feed.</description></item></channel></rss>',
+    'https://techcrunch.com/category/artificial-intelligence/feed/': '<rss version="2.0"><channel><item><title>Open source model release</title><link>https://techcrunch.com/2026/10/25/grok/</link><pubDate>Sun, 25 Oct 2026 21:31:16 +0000</pubDate><description>Fetched from the feed.</description></item></channel></rss>',
   }
   const missed = await refreshRoutedFeed({
     pipelineDir: dir,
@@ -161,12 +161,60 @@ test('an empty match writes a fresh empty feed and a matched item is written', a
   assert.equal(feed.site, "AI Resource Hub")
   assert.equal(feed.generated, '2026-10-26T00:10:00.000Z')
   assert.equal(feed.article_count, 1)
-  assert.equal(feed.articles[0].title, 'Grok clip')
+  assert.equal(feed.articles[0].title, 'Open source model release')
   assert.equal(feed.articles[0].source, 'TechCrunch AI')
-  assert.deepEqual(feed.articles[0].tags, ['product_launch'])
+  assert.deepEqual(feed.articles[0].tags, ['model_release', 'open_source'])
+  assert.deepEqual(feed.articles[0].matching_tags, ['open_source'])
   assert.equal(feed.articles[0].summary, 'Fetched from the feed.')
+  assert.equal(feed.articles[0].tags.includes('product_launch'), false)
 })
 
+
+test('a source tag list does not qualify an unrelated story', async () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'routed-feed-'))
+  const outputPath = path.join(dir, 'news-feed-latest.json')
+  pipeline(dir, [{
+    id: 'digg-ai',
+    name: 'Digg AI',
+    adapter: 'rss',
+    url: 'https://www.digg.com/ai/feed',
+    tags: ['model_release', 'research_paper', 'open_source', 'announcement'],
+  }])
+  const result = await refreshRoutedFeed({
+    pipelineDir: dir,
+    outputPath,
+    now: new Date('2026-10-26T00:10:00.000Z'),
+    retries: 1,
+    fetchImpl: async () => ({
+      ok: true,
+      status: 200,
+      text: async () => '<rss version="2.0"><channel><item><title>A musical joke about rain on a wedding day</title><link>https://www.digg.com/ai/83foctzd</link><pubDate>Sun, 25 Oct 2026 19:42:26 +0000</pubDate><description>A poster riffs on rain on your wedding day and links to a photo.</description></item></channel></rss>',
+    }),
+  })
+  assert.equal(result.wrote, true)
+  const feed = JSON.parse(fs.readFileSync(outputPath, 'utf8'))
+  assert.equal(feed.article_count, 0)
+  assert.deepEqual(feed.articles, [])
+})
+
+test('html summaries stay inside the current card', () => {
+  const html = `<!DOCTYPE html><html><body>
+    <article><time datetime="2026-10-25T12:00:00Z"></time><a href="https://example.com/first-story-headline">First story headline</a></article>
+    <article><time datetime="2026-10-24T12:00:00Z"></time><a href="https://example.com/second-story-headline">Second story headline</a><p>Second description only.</p></article>
+    <div class="card"><time datetime="2026-10-23T08:00:00Z"></time><p>Own card summary.</p><a href="https://example.com/card-story-headline">Card story headline</a></div>
+    <div class="card"><time datetime="2026-10-22T08:00:00Z"></time><p>Other card summary.</p><a href="https://example.com/other-card-headline">Other card headline</a></div>
+    </body></html>`
+  const dated = parseHtml(html, {
+    url: 'https://example.com/news',
+    articleLinkPattern: 'https://example\\.com/(?:first-story-headline|second-story-headline|card-story-headline|other-card-headline)/?$',
+    maxItems: 10,
+  })
+  const byUrl = Object.fromEntries(dated.map((entry) => [entry.url, entry.summary]))
+  assert.equal(byUrl['https://example.com/first-story-headline'], '')
+  assert.equal(byUrl['https://example.com/second-story-headline'], 'Second description only.')
+  assert.equal(byUrl['https://example.com/card-story-headline'], 'Own card summary.')
+  assert.equal(byUrl['https://example.com/other-card-headline'], 'Other card summary.')
+})
 
 test('html dates come from the enclosing card when the time is before the link', () => {
   const html = `<!DOCTYPE html><html><body>

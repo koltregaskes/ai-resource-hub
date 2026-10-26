@@ -5,10 +5,15 @@ import path from 'node:path'
 import test from 'node:test'
 
 import {
+  ROUTED_FEED_PATH,
   loadRoutedHeadlines,
   loadRoutedNewsCards,
   mapRoutedArticles,
 } from '../src/data/routed-news.ts'
+
+test('the feed path is the checkout file, not the bundled module path', () => {
+  assert.equal(ROUTED_FEED_PATH, path.resolve(process.cwd(), 'src', 'data', 'news-feed-latest.json'))
+})
 
 test('a dated gatherer article keeps its calendar day and source tags', () => {
   const cards = mapRoutedArticles([{
