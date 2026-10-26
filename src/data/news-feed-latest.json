@@ -1,118 +1,409 @@
 {
-  "generated": "2026-05-25T13:38:21.766Z",
+  "generated": "2026-10-26T01:35:37.490Z",
   "site": "AI Resource Hub",
-  "article_count": 7,
+  "article_count": 20,
   "articles": [
     {
-      "title": "Workbench Launches Open Source BullMQ Dashboard For Node Backends",
-      "url": "https://x.com/pontusab/status/2058588422001029549",
-      "source": "Aligned News (Scoble)",
+      "title": "Research agenda proposes seven open problems for multi-agent AI swarms",
+      "url": "https://www.digg.com/ai/r76rcah4",
+      "source": "Digg AI",
       "tags": [
+        "announcement",
         "model_release",
-        "open_source"
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
         "model_release",
-        "open_source"
-      ],
-      "importance": 0.74,
-      "date": "2026-05-25T01:21:33.840Z",
-      "summary": "Workbench launched as an open-source BullMQ dashboard with flows, metrics, schedulers, and search for Node backends.",
-      "category": "ai_tools"
-    },
-    {
-      "title": "SpecBench Tests Reward Hacking In Long Horizon Coding Agents",
-      "url": "https://x.com/WecoAI/status/2057503162945118637",
-      "source": "Aligned News (Scoble)",
-      "tags": [
-        "benchmark",
-        "evaluation"
-      ],
-      "matching_tags": [
-        "benchmark",
-        "evaluation"
-      ],
-      "importance": 0.6599999999999999,
-      "date": "2026-05-24T18:23:12.339Z",
-      "summary": "SpecBench is a benchmark for measuring reward hacking in long horizon coding agents, a useful anomaly in the agent evaluation stack.",
-      "category": "ai_tools"
-    },
-    {
-      "title": "OpenGuardrails: An Open-Source Context-Aware AI Guardrails Platform",
-      "url": "https://paperswithcode.com/papers/2510.19169",
-      "source": "Papers With Code",
-      "tags": [
         "research_paper",
         "open_source"
       ],
+      "importance": 0.5,
+      "date": "2026-10-25T23:40:03.518Z",
+      "summary": "A JinesisLab researcher says each problem is scored for its importance to AI alignment.",
+      "category": "industry-media"
+    },
+    {
+      "title": "Eight-video course on building reasoning models is online",
+      "url": "https://www.digg.com/ai/qjwaj81v",
+      "source": "Digg AI",
+      "tags": [
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
+      ],
       "matching_tags": [
+        "model_release",
         "research_paper",
         "open_source"
       ],
-      "importance": 0.64,
-      "date": "2026-05-25T06:00:24.397Z",
-      "summary": null,
-      "category": "ai_research"
+      "importance": 0.5,
+      "date": "2026-10-25T22:42:49.472Z",
+      "summary": "Sebastian Raschka says the course offers over 11 hours of Python and PyTorch coding on evaluation, reinforcement learning and distillation.",
+      "category": "industry-media"
     },
     {
-      "title": "The Real AI Question Is Whether Product Behavior Beats Press Releases",
-      "url": "https://x.com/aiedge_/status/2058384253042467194",
-      "source": "Aligned News (Scoble)",
+      "title": "Shigeru Miyamoto selected for Japan's Order of Culture, reflects on AI and creativity",
+      "url": "https://www.digg.com/ai/9j7dv2z0",
+      "source": "Digg AI",
       "tags": [
-        "model_release"
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
-        "model_release"
+        "model_release",
+        "research_paper",
+        "open_source"
       ],
-      "importance": 0.6599999999999999,
-      "date": "2026-05-24T18:23:13.327Z",
-      "summary": "Claude Mythos appearing in product surfaces raises the question of whether AI news now breaks through interfaces before announcements.",
-      "category": "ai_tools"
+      "importance": 0.5,
+      "date": "2026-10-25T22:30:01.750Z",
+      "summary": "Famitsu reports Miyamoto distinguished creating from the satisfying work of execution, saying AI could make that difference clearer.",
+      "category": "industry-media"
     },
     {
-      "title": "Relaunching PapersWithCode with new features    nielsr • about 17 hours ago •  4",
-      "url": "https://huggingface.co/blog/nielsr/paperswithcode-launch",
+      "title": "One-time reset restores 25% of monthly quota for Kimi subscribers",
+      "url": "https://www.digg.com/ai/p8tafiis",
+      "source": "Digg AI",
+      "tags": [
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-25T21:24:50.895Z",
+      "summary": "Kimi apologized for K3.1 Pro rate limits and unnecessary quota use, saying it is reducing unnecessary subagent calls.",
+      "category": "industry-media"
+    },
+    {
+      "title": "Softmax and cross-entropy implementations reportedly contain two subtle bugs",
+      "url": "https://www.digg.com/ai/we3n4mdl",
+      "source": "Digg AI",
+      "tags": [
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-25T21:01:18.506Z",
+      "summary": "On X, @jon_barron claims a simple rewrite fixes both bugs and eliminates slingshots during grokking.",
+      "category": "industry-media"
+    },
+    {
+      "title": "@theo's T3 Code work list includes two-click clones and live guest thread sharing",
+      "url": "https://www.digg.com/ai/bpr7gowe",
+      "source": "Digg AI",
+      "tags": [
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-25T20:01:22.038Z",
+      "summary": "In an October 25 post, @theo also described compiler projects and put other merged PRs at roughly 370.",
+      "category": "industry-media"
+    },
+    {
+      "title": "A musical joke about rain on a wedding day",
+      "url": "https://www.digg.com/ai/83foctzd",
+      "source": "Digg AI",
+      "tags": [
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-25T19:42:26.971Z",
+      "summary": "A poster riffs on “It's like raaaaain on your wedding day” and links to a photo.",
+      "category": "industry-media"
+    },
+    {
+      "title": "The 'Scale mafia' and its alumni in AI, venture capital and government",
+      "url": "https://www.digg.com/ai/txkinlkq",
+      "source": "Digg AI",
+      "tags": [
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper",
+        "open_source"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-25T19:03:40.452Z",
+      "summary": "Alexandr Wang calls Scale alumni the 'first true mafia of the modern tech era,' listing their current roles.",
+      "category": "industry-media"
+    },
+    {
+      "title": "Updated Google privacy policy says your Gmail might be used for advertising",
+      "url": "https://arstechnica.com/gadgets/2026/10/updated-google-privacy-policy-says-your-gmail-might-be-used-for-advertising/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "research_paper",
+        "open_source",
+        "hardware",
+        "policy"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-23T20:19:55.000Z",
+      "summary": "Turning on Personal Intelligence gives the company more data for ad targeting.",
+      "category": "industry-media"
+    },
+    {
+      "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+      "url": "https://huggingface.co/blog/allenai/litpivot",
       "source": "Hugging Face Blog",
       "tags": [
-        "model_release"
+        "open_source",
+        "model_release",
+        "tool_use",
+        "agentic_framework"
       ],
       "matching_tags": [
-        "model_release"
+        "model_release",
+        "open_source"
       ],
-      "importance": 0.5800000000000001,
-      "date": "2026-05-25T06:00:10.763Z",
-      "summary": null,
-      "category": "ai_models"
+      "importance": 0.5,
+      "date": "2026-10-23T16:15:50.000Z",
+      "summary": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+      "category": "platform-blog"
     },
     {
-      "title": "Deriving the PPO Loss from First Principles    garg-aayush • Dec 25, 2025 •  44",
-      "url": "https://huggingface.co/blog/garg-aayush/ppo-from-first-principle",
+      "title": "Does Your Model Run on AWS Trainium? Look It Up",
+      "url": "https://huggingface.co/blog/torch-neuronx-model-support",
       "source": "Hugging Face Blog",
       "tags": [
-        "model_release"
+        "open_source",
+        "model_release",
+        "tool_use",
+        "agentic_framework"
       ],
       "matching_tags": [
-        "model_release"
+        "model_release",
+        "open_source"
       ],
-      "importance": 0.5800000000000001,
-      "date": "2026-05-24T18:00:13.987Z",
-      "summary": null,
-      "category": "ai_models"
+      "importance": 0.5,
+      "date": "2026-10-23T00:00:00.000Z",
+      "summary": "Does Your Model Run on AWS Trainium? Look It Up",
+      "category": "platform-blog"
     },
     {
-      "title": "DataFlow: An LLM-Driven Framework for Unified Data Preparation and Workflow Automation in the Era of Data-Centric AI",
-      "url": "https://paperswithcode.com/papers/2512.16676",
-      "source": "Papers With Code",
+      "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+      "source": "Hugging Face Blog",
       "tags": [
-        "research_paper"
+        "open_source",
+        "model_release",
+        "tool_use",
+        "agentic_framework"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-22T22:24:34.000Z",
+      "summary": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+      "category": "platform-blog"
+    },
+    {
+      "title": "Designing an AI serving harness built to last",
+      "url": "https://www.technologyreview.com/2026/10/22/1146109/designing-an-ai-serving-harness-built-to-last/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "policy",
+        "research_paper",
+        "industry_move",
+        "ai_safety"
       ],
       "matching_tags": [
         "research_paper"
       ],
-      "importance": 0.5599999999999999,
-      "date": "2026-05-24T18:00:25.659Z",
-      "summary": null,
-      "category": "ai_research"
+      "importance": 0.5,
+      "date": "2026-10-22T21:17:29.000Z",
+      "summary": "The next competitive advantage in enterprise AI has less to do with which model you choose than with what you build around it. That’s an important shift. For the past several years, much of the AI conversation has centered on model capability: bigger models, better reasoning, larger context windows, higher benchmark scores. Those advances have…",
+      "category": "industry-media"
+    },
+    {
+      "title": "The Foundations of Scalable AI",
+      "url": "https://www.technologyreview.com/2026/10/22/1146103/the-foundations-of-scalable-ai/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "policy",
+        "research_paper",
+        "industry_move",
+        "ai_safety"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-22T18:48:04.000Z",
+      "summary": "A scalable AI system requires a strong foundation. Data, engineering, platforms, operating models, and governance must converge to work as one. This session from MIT Technology Review’s EmTech Future conference explores what it takes to build that foundation in a highly regulated environment and how a responsible, trustworthy implementation can turn emerging capabilities, including agentic…",
+      "category": "industry-media"
+    },
+    {
+      "title": "Making the case for context-aware AI",
+      "url": "https://www.technologyreview.com/2026/10/22/1146812/making-the-case-for-context-aware-ai/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "policy",
+        "research_paper",
+        "industry_move",
+        "ai_safety"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-22T10:00:00.000Z",
+      "summary": "Enterprise AI can generate recommendations, automate tasks, and help organizations make decisions faster. But without an understanding of how a business actually operates, even powerful models can miss the constraints and relationships that determine whether a decision is the right one. As companies look to move AI from experimentation into everyday operations, the challenge ahead…",
+      "category": "industry-media"
+    },
+    {
+      "title": "AI’s hidden storage bill: What inference leaves behind",
+      "url": "https://www.technologyreview.com/2026/10/22/1146948/ais-hidden-storage-bill-what-inference-leaves-behind/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "policy",
+        "research_paper",
+        "industry_move",
+        "ai_safety"
+      ],
+      "matching_tags": [
+        "research_paper"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-22T08:41:18.000Z",
+      "summary": "Ask most executives to picture the cost of AI and they’ll likely see GPUs—racks of accelerators with gigawatts of power—and a waitlist for silicon. But that picture leaves something out: Data storage costs. What happens to data after a model responds? Much of the back-end data that’s generated—from billions of daily prompts, images, and videos—needs…",
+      "category": "industry-media"
+    },
+    {
+      "title": "Ensemble forecasting with IBM Granite time-series models",
+      "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "open_source",
+        "model_release",
+        "tool_use",
+        "agentic_framework"
+      ],
+      "matching_tags": [
+        "model_release",
+        "open_source"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-22T07:51:31.000Z",
+      "summary": "Ensemble forecasting with IBM Granite time-series models",
+      "category": "platform-blog"
+    },
+    {
+      "title": "We’re donating Agent Skills, the open standard that gives AI agents specialized knowledge and workflows, to the Agentic AI Foundation. More than 70 agent platforms, including ChatGPT, Cursor, GitHub Copilot, and VS Code, have integrated Agent Skills since we published the standard in December 2025.",
+      "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release",
+        "api_update",
+        "ai_agents",
+        "ai_safety"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-22T00:00:00.000Z",
+      "summary": "We’re donating Agent Skills, the open standard that gives AI agents specialized knowledge and workflows, to the Agentic AI Foundation. More than 70 agent platforms, including ChatGPT, Cursor, GitHub Copilot, and VS Code, have integrated Agent Skills since we published the standard in December 2025.",
+      "category": "provider-blog"
+    },
+    {
+      "title": "Today, we’re inviting members of the life sciences community to apply to work with us on special projects.",
+      "url": "https://www.anthropic.com/news/open-call-guest-investigators-life-sciences",
+      "source": "Anthropic News",
+      "tags": [
+        "model_release",
+        "api_update",
+        "ai_agents",
+        "ai_safety"
+      ],
+      "matching_tags": [
+        "model_release",
+        "api_update"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-22T00:00:00.000Z",
+      "summary": "Today, we’re inviting members of the life sciences community to apply to work with us on special projects.",
+      "category": "provider-blog"
+    },
+    {
+      "title": "OpenAI’s latest AI models are coming to Google Cloud and Antigravity",
+      "url": "https://arstechnica.com/ai/2026/10/openais-latest-ai-models-are-coming-to-google-cloud-and-antigravity/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "research_paper",
+        "open_source",
+        "hardware",
+        "policy"
+      ],
+      "matching_tags": [
+        "research_paper",
+        "hardware",
+        "open_source"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-21T18:51:42.000Z",
+      "summary": "Google Cloud will have GPT 6.1 Astra, Sol, and Luna in the coming weeks.",
+      "category": "industry-media"
     }
   ]
 }

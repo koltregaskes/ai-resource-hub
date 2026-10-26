@@ -1,0 +1,101 @@
+name: Refresh routed feed
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 05:15 UTC. Every source in the shared news config is fetched. A source
+    # that cannot be fetched fails this run by name and leaves the file unchanged.
+    # A successful fetch commits src/data/news-feed-latest.json, including an
+    # empty article list when nothing matches the AI Resource Hub filter.
+    # That same run publishes GitHub Pages after a commit.
+    - cron: '15 5 * * *'
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: refresh-routed-feed
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Checkout news routing config
+        uses: actions/checkout@v6
+        with:
+          repository: koltregaskes/ai-resource-hub
+          ref: main
+          path: .news-pipeline
+          persist-credentials: false
+          sparse-checkout: shared/website-tools/pipelines/news
+          sparse-checkout-cone-mode: true
+
+      - name: Fetch sources and apply the AI Resource Hub filter
+        run: node scripts/refresh-routed-feed.mjs --pipeline .news-pipeline/shared/website-tools/pipelines/news
+
+      - name: Commit the fetched feed
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- src/data/news-feed-latest.json
+          if git diff --cached --quiet; then
+            echo "No routed feed changes to commit."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "chore: refresh routed news feed"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Push the refreshed feed
+        if: steps.commit.outputs.committed == 'true'
+        run: git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Remove the pipeline checkout
+        if: steps.commit.outputs.committed == 'true'
+        run: rm -rf .news-pipeline
+
+      - name: Setup Node
+        if: steps.commit.outputs.committed == 'true'
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        if: steps.commit.outputs.committed == 'true'
+        run: npm ci
+
+      - name: Verify publish readiness
+        if: steps.commit.outputs.committed == 'true'
+        run: npm run verify:publish
+
+      - name: Build Astro site
+        if: steps.commit.outputs.committed == 'true'
+        run: npm run build
+
+      - name: Upload Pages artifact
+        if: steps.commit.outputs.committed == 'true'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./dist
+
+      - name: Publish GitHub Pages
+        id: deployment
+        if: steps.commit.outputs.committed == 'true'
+        uses: actions/deploy-pages@v5
