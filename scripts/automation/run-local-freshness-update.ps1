@@ -186,7 +186,24 @@ try {
   Invoke-Logged 'node' @('scripts/dump-pg-to-json.mjs')
   Invoke-Logged 'npm.cmd' @('run', 'generate:release-desk')
   Invoke-Logged 'node' @('scripts/sync-news-pipeline-data.mjs')
-  Invoke-Logged 'npm.cmd' @('run', 'scrape:status')
+  $statusPath = Join-Path $repoRoot 'data\provider-status.json'
+  $statusFresh = $false
+  if (Test-Path -LiteralPath $statusPath) {
+    try {
+      $statusSnapshot = Get-Content -LiteralPath $statusPath -Raw | ConvertFrom-Json
+      $generatedAt = [datetimeoffset]::Parse([string]$statusSnapshot.generatedAt).UtcDateTime
+      if (((Get-Date).ToUniversalTime() - $generatedAt).TotalHours -lt 5) {
+        $statusFresh = $true
+      }
+    } catch {
+      Write-Log "Could not read the provider status timestamp. The status check will run. $($_.Exception.Message)" 'WARN'
+    }
+  }
+  if ($statusFresh) {
+    Write-Log 'Provider status was checked less than 5 hours ago. Skipping that request.'
+  } else {
+    Invoke-Logged 'npm.cmd' @('run', 'scrape:status')
+  }
   Invoke-Logged 'npm.cmd' @('run', 'generate:spreadsheet')
   Invoke-Logged 'npm.cmd' @('run', 'verify:publish')
 

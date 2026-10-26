@@ -276,10 +276,6 @@ function main() {
   const upcomingEvents = cacheEvents.filter((event) => (
     event.date_start && (event.date_end ?? event.date_start).slice(0, 10) >= currentDate
   ));
-  if (upcomingEvents.length < 4) {
-    failures.push(`Events cache has too few upcoming confirmed events: ${upcomingEvents.length}`);
-  }
-
   if (!eventSourceStatus) {
     failures.push('Missing event source-check snapshot: data/events-source-status.json');
   } else if (!eventSourceStatus.live) {
@@ -485,6 +481,13 @@ function main() {
     warnings.push('Events cache has no valid update timestamp.');
   } else if (Date.now() - latestEventUpdate > 1000 * 60 * 60 * 24 * 7) {
     warnings.push(`Events cache is stale: latest update=${new Date(latestEventUpdate).toISOString()}`);
+  }
+
+  if (upcomingEvents.length < 4) {
+    warnings.push(
+      `Events cache has too few upcoming confirmed events: ${upcomingEvents.length}. `
+      + 'The events list stays thin, and this does not block pricing, news, or benchmark updates.',
+    );
   }
 
   if (cacheNews.length > 0 && newsDiagnostics.routedItems.length === 0) {

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-06T15:07:35.789Z",
+  "generatedAt": "2026-10-24T19:03:22.115Z",
   "provenance": {
-    "sourceVerifiedAt": "2026-10-06T15:07:35.789Z",
+    "sourceVerifiedAt": "2026-10-24T19:03:22.115Z",
     "sourceEdition": {
       "siteFiltersSha256": "bad10f90faa07d54f4ce690f38214e0e06b7b46dbc1710c466d53bc45e7f5768",
       "sourcesSha256": "4299709f06121cfefd781c092a5bc01a1168cb636477b159e5774bd69d38bc8d",
@@ -11,7 +11,8 @@
   "sourceOfTruth": {
     "estateManifestPath": "estate.yml",
     "siteFiltersPath": "shared/website-tools/pipelines/news/site-filters.json",
-    "sourcesPath": "shared/website-tools/pipelines/news/config/sources.json"
+    "sourcesPath": "shared/website-tools/pipelines/news/config/sources.json",
+    "tagCatalogPath": "shared/website-tools/pipelines/news/tag-catalog.json"
   },
   "summary": {
     "estateSiteCount": 10,
@@ -21,7 +22,8 @@
     "manualReviewSourceCount": 0,
     "officialFirstSourceCount": 4,
     "crossCheckSourceCount": 10,
-    "routingTagCount": 0,
+    "routingTagCount": 64,
+    "siteTagCount": 10,
     "lookbackHours": 24,
     "sectionCount": 4
   },
@@ -105,14 +107,683 @@
       "label": "Technical Analysis"
     }
   ],
-  "routingTags": [],
+  "routingTags": [
+    {
+      "id": "3d_gen",
+      "label": "3D Gen",
+      "symbol": "🧊",
+      "definition": "3D generation and 3D asset tools.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "acquisition",
+      "label": "Acquisition",
+      "symbol": "🤝",
+      "definition": "One company buying another.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "agent_sdk",
+      "label": "Agent SDK",
+      "symbol": "🧩",
+      "definition": "A software kit for building agents.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "agent_tool",
+      "label": "Agent Tool",
+      "symbol": "🛠️",
+      "definition": "A tool an agent can call.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "agentic_framework",
+      "label": "Agentic Framework",
+      "symbol": "🕸️",
+      "definition": "A framework for building agents.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "ai_agents",
+      "label": "AI Agents",
+      "symbol": "🤖",
+      "definition": "News about AI agents.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "ai-resource-hub",
+      "label": "AI Resource Hub",
+      "symbol": "📘",
+      "definition": "Technical AI reference for the AI Resource Hub: model releases, benchmarks, evaluations, research papers, API updates, pricing changes, architecture, datasets, training, inference, hardware, and open source. Opinion, creative generation, photography, crypto, and games stay out.",
+      "kind": "site",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "ai_safety",
+      "label": "AI Safety",
+      "symbol": "🛡️",
+      "definition": "Safety, alignment, guardrails, or misuse research.",
+      "kind": "topic",
+      "keywordPattern": "\\b(ai safety|alignment|guardrails|red teaming|jailbreak|safety blueprint)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "announcement",
+      "label": "Announcement",
+      "symbol": "📣",
+      "definition": "A company announcement that is not itself a model release.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "api_update",
+      "label": "Api Update",
+      "symbol": "🔌",
+      "definition": "A change to an API, SDK, limit, or tool interface.",
+      "kind": "topic",
+      "keywordPattern": "\\b(api|sdk|endpoint|rate limit|context window|token limit|function calling|tool use|tooling update)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "architecture",
+      "label": "Architecture",
+      "symbol": "🧱",
+      "definition": "How a model is built, including transformers, attention, mixture-of-experts, and diffusion.",
+      "kind": "topic",
+      "keywordPattern": "\\b(transformer|architecture|attention|moe|mixture of experts|diffusion)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "art_ai",
+      "label": "Art AI",
+      "symbol": "✨",
+      "definition": "AI art and generative artwork.",
+      "kind": "topic",
+      "keywordPattern": "\\b(ai art|generative art|digital art|artist tool)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "autonomous_systems",
+      "label": "Autonomous Systems",
+      "symbol": "🛰️",
+      "definition": "Systems that act without a person stepping through each action.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "axylusion",
+      "label": "Axy Lusion",
+      "symbol": "🎨",
+      "definition": "Creative generation for Axy Lusion: images, video, music, voice, 3D, creative tools, creative workflow, and AI art. Photography, crypto, agents, research, benchmarks, hardware, policy, industry business, and games stay out.",
+      "kind": "site",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "benchmark",
+      "label": "Benchmark",
+      "symbol": "📊",
+      "definition": "A benchmark, leaderboard, or scored comparison of models.",
+      "kind": "topic",
+      "keywordPattern": "\\b(benchmark|leaderboard|arena|mmlu|gpqa|gsm8k|humaneval|swe-bench|lmarena|lmsys|elo)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "camera",
+      "label": "Camera",
+      "symbol": "📹",
+      "definition": "Cameras and camera bodies.",
+      "kind": "topic",
+      "keywordPattern": "\\b(camera|mirrorless|dslr|lens)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "camera_release",
+      "label": "Camera Release",
+      "symbol": "🆕",
+      "definition": "A newly announced camera or lens.",
+      "kind": "topic",
+      "keywordPattern": "\\b(new camera|camera launch|camera announce|new lens|lens release)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "capture_one",
+      "label": "Capture One",
+      "symbol": "C1",
+      "definition": "News about Capture One, the photo editor.",
+      "kind": "topic",
+      "keywordPattern": "\\bcapture one\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "cli_tool",
+      "label": "Cli Tool",
+      "symbol": "⌨️",
+      "definition": "A command-line tool.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "creative_tool",
+      "label": "Creative Tool",
+      "symbol": "🖌️",
+      "definition": "A tool for making images, design, or other creative work.",
+      "kind": "topic",
+      "keywordPattern": "\\b(creative tool|design tool|adobe ai|canva ai|figma ai)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "creative_workflow",
+      "label": "Creative Workflow",
+      "symbol": "🔁",
+      "definition": "A workflow for creative production.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "crypto",
+      "label": "Crypto",
+      "symbol": "₿",
+      "definition": "Cryptocurrency, tokens, and blockchain markets.",
+      "kind": "topic",
+      "keywordPattern": "\\b(bitcoin|crypto|cryptocurrency|ethereum|solana|defi|nft|web3|stablecoin)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "crypto_defi",
+      "label": "Crypto Defi",
+      "symbol": "🏦",
+      "definition": "Decentralised finance, staking, and smart contracts.",
+      "kind": "topic",
+      "keywordPattern": "\\b(defi|staking|liquidity|dao|smart contract)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "crypto_regulation",
+      "label": "Crypto Regulation",
+      "symbol": "⚖️",
+      "definition": "Rules, regulators, and crypto tax or exchange-traded fund decisions.",
+      "kind": "topic",
+      "keywordPattern": "\\b(cftc|sec|spot etf|crypto regulation|crypto tax)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "crypto_trading",
+      "label": "Crypto Trading",
+      "symbol": "📈",
+      "definition": "Trading, exchanges, and market moves.",
+      "kind": "topic",
+      "keywordPattern": "\\b(price action|bull market|bear market|liquidation|binance|coinbase|kraken)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "dataset",
+      "label": "Dataset",
+      "symbol": "🗂️",
+      "definition": "A dataset or a change to training data.",
+      "kind": "topic",
+      "keywordPattern": "\\b(dataset|training data|preference data|synthetic data)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "developer_tool",
+      "label": "Developer Tool",
+      "symbol": "🧰",
+      "definition": "A tool for developers.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "elusion-works",
+      "label": "Elusion Works",
+      "symbol": "🏛️",
+      "definition": "Umbrella brand and estate index. No direct shared news output configured.",
+      "kind": "site",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "evaluation",
+      "label": "Evaluation",
+      "symbol": "🧪",
+      "definition": "An evaluation or a reported capability result.",
+      "kind": "topic",
+      "keywordPattern": "\\b(evaluation|evals?|assessed|performance|capability|test results|scor(?:e|es|ing))\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "funding",
+      "label": "Funding",
+      "symbol": "💰",
+      "definition": "Investment, a funding round, or a grant.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "game_event",
+      "label": "Game Event",
+      "symbol": "🏁",
+      "definition": "A games industry event or showcase.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "game_preview",
+      "label": "Game Preview",
+      "symbol": "👀",
+      "definition": "A preview of an unreleased game.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "game_release",
+      "label": "Game Release",
+      "symbol": "👾",
+      "definition": "A game that has been released or given a release date.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "game_review",
+      "label": "Game Review",
+      "symbol": "⭐",
+      "definition": "A review of a game.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "gametrackdaily",
+      "label": "GameTrackDaily",
+      "symbol": "🎮",
+      "definition": "Games coverage for GameTrackDaily: releases, events, reviews, previews, platforms, and release dates. Crypto, AI safety and policy, and camera or lens news stay out.",
+      "kind": "site",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "gaming_platform",
+      "label": "Gaming Platform",
+      "symbol": "🕹️",
+      "definition": "A platform, store, or service for playing games.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "ghost-in-the-models",
+      "label": "Ghost in the Model",
+      "symbol": "👻",
+      "definition": "Agent reference for Ghost in the Model: agents, multi-agent systems, tool use, autonomous systems, AI safety, MCP, reasoning, agent frameworks, and agent SDKs. Photography and games stay out.",
+      "kind": "site",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "github_release",
+      "label": "Github Release",
+      "symbol": "🐙",
+      "definition": "A GitHub release of a project.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "hardware",
+      "label": "Hardware",
+      "symbol": "🖥️",
+      "definition": "Chips, GPUs, TPUs, and the computers that run models.",
+      "kind": "topic",
+      "keywordPattern": "\\b(gpu|tpu|chip|nvidia|amd|intel|h100|a100|datacenter|compute)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "image_gen",
+      "label": "Image Gen",
+      "symbol": "🖼️",
+      "definition": "Image generation and text-to-image tools.",
+      "kind": "topic",
+      "keywordPattern": "\\b(image generation|text-to-image|flux|dall-e|midjourney|imagen)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "industry_move",
+      "label": "Industry Move",
+      "symbol": "🏢",
+      "definition": "A company strategy, partnership, or market shift.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "inference",
+      "label": "Inference",
+      "symbol": "⚡",
+      "definition": "Serving speed, latency, throughput, or inference cost.",
+      "kind": "topic",
+      "keywordPattern": "\\b(inference|latency|throughput|tokens per second|faster inference|serving)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "kol-tregaskes-photography",
+      "label": "Kol Tregaskes Photography",
+      "symbol": "📷",
+      "definition": "Photography coverage: cameras, lenses, photo editing, Lightroom, Photoshop, Capture One, photography AI, technique, and the business of photography. Crypto and games stay out.",
+      "kind": "site",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "kols-korner",
+      "label": "Kol's Korner",
+      "symbol": "🗞️",
+      "definition": "Broad AI news for Kol's Korner: product launches, announcements, funding, acquisitions, policy, regulation, opinion, industry moves, open source, model releases, agents, safety, reasoning, and hardware. Photography, games, and crypto stay out.",
+      "kind": "site",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "lens",
+      "label": "Lens",
+      "symbol": "🔍",
+      "definition": "Lenses and lens ranges.",
+      "kind": "topic",
+      "keywordPattern": "\\b(lens|focal length|telephoto|macro lens)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "lightroom",
+      "label": "Lightroom",
+      "symbol": "Lr",
+      "definition": "News about Adobe Lightroom.",
+      "kind": "topic",
+      "keywordPattern": "\\blightroom\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "mcp",
+      "label": "MCP",
+      "symbol": "🔗",
+      "definition": "Model Context Protocol servers, clients, or changes.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "model_release",
+      "label": "Model Release",
+      "symbol": "🚀",
+      "definition": "A newly released, previewed, updated, or newly named model.",
+      "kind": "topic",
+      "keywordPattern": "\\b(new model|model release|releases?|released|launch(?:es|ed)?|introduc(?:es|ed|ing)|unveil(?:s|ed)|debut(?:s|ed)|preview|gpt-[\\w.]+|claude[\\w\\s.-]*|gemini[\\w\\s.-]*|llama[\\w\\s.-]*|qwen[\\w\\s.-]*|glm[\\w\\s.-]*|kimi[\\w\\s.-]*|grok[\\w\\s.-]*|gemma[\\w\\s.-]*|minimax[\\w\\s.-]*|deepseek[\\w\\s.-]*)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "multi_agent",
+      "label": "Multi Agent",
+      "symbol": "👥",
+      "definition": "Systems where more than one agent works together.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "music_gen",
+      "label": "Music Gen",
+      "symbol": "🎵",
+      "definition": "Music generation and text-to-music tools.",
+      "kind": "topic",
+      "keywordPattern": "\\b(music generation|text-to-music|udio|suno)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "open_source",
+      "label": "Open Source",
+      "symbol": "🔓",
+      "definition": "Open-source code, open weights, or a public model repository.",
+      "kind": "topic",
+      "keywordPattern": "\\b(open source|open-source|open weights|released weights|apache\\b|mit license|github|hugging face)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "opinion",
+      "label": "Opinion",
+      "symbol": "💬",
+      "definition": "Opinion, commentary, or an editorial.",
+      "kind": "topic",
+      "keywordPattern": "\\b(opinion|editorial|commentary|hot take|analysis:)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "photo_editing",
+      "label": "Photo Editing",
+      "symbol": "✂️",
+      "definition": "Editing software and raw processing, including Lightroom, Photoshop, and Capture One.",
+      "kind": "topic",
+      "keywordPattern": "\\b(lightroom|photoshop|capture one|raw processing|post-processing)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "photography",
+      "label": "Photography",
+      "symbol": "📸",
+      "definition": "Photography as a practice, including cameras, lenses, and photo editing.",
+      "kind": "topic",
+      "keywordPattern": "\\b(photography|photographer|camera|lens|mirrorless|wildlife photography|photo editing)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "photography_ai",
+      "label": "Photography AI",
+      "symbol": "🪄",
+      "definition": "AI features for photographers, such as denoise and upscale tools.",
+      "kind": "topic",
+      "keywordPattern": "\\b(topaz|luminar ai|ai denoise|ai upscale|computational photography)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "photography_business",
+      "label": "Photography Business",
+      "symbol": "🏪",
+      "definition": "The business of photography, including stock, prints, and exhibitions.",
+      "kind": "topic",
+      "keywordPattern": "\\b(stock photography|print sales|photo exhibition|photography business)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "photography_technique",
+      "label": "Photography Technique",
+      "symbol": "📐",
+      "definition": "How a photograph is made: composition, light, and shooting method.",
+      "kind": "topic",
+      "keywordPattern": "\\b(composition|long exposure|portrait lighting|street photography)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "photoshop",
+      "label": "Photoshop",
+      "symbol": "Ps",
+      "definition": "News about Adobe Photoshop.",
+      "kind": "topic",
+      "keywordPattern": "\\bphotoshop\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "policy",
+      "label": "Policy",
+      "symbol": "📜",
+      "definition": "Public policy that is not itself a formal regulation.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "pricing_change",
+      "label": "Pricing Change",
+      "symbol": "💷",
+      "definition": "A change to price, a free tier, or a paid plan.",
+      "kind": "topic",
+      "keywordPattern": "\\b(pricing|price|cost per|per million tokens|cheaper|free tier|subscription)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "product_launch",
+      "label": "Product Launch",
+      "symbol": "🚢",
+      "definition": "A product launch that is not only a model release.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "reasoning",
+      "label": "Reasoning",
+      "symbol": "🧠",
+      "definition": "Reasoning models and reasoning research.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "regulation",
+      "label": "Regulation",
+      "symbol": "📋",
+      "definition": "A law, a rule, or a regulator action.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "release_date",
+      "label": "Release Date",
+      "symbol": "📅",
+      "definition": "A dated release.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "repo-foundry",
+      "label": "Repo Foundry",
+      "symbol": "⚒️",
+      "definition": "Repository coverage for Repo Foundry: repository updates, GitHub releases, open source, developer tools, command-line tools, agent frameworks, MCP, and tool updates. Crypto, photography gear, and games stay out.",
+      "kind": "site",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "repo_update",
+      "label": "Repo Update",
+      "symbol": "📦",
+      "definition": "An update to a source repository.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "research_paper",
+      "label": "Research Paper",
+      "symbol": "📄",
+      "definition": "A paper, preprint, or research finding.",
+      "kind": "topic",
+      "keywordPattern": "\\b(paper|research paper|arxiv|preprint|study|we present|we introduce|findings)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "stackscout",
+      "label": "Stack Scout",
+      "symbol": "🔭",
+      "definition": "Developer stack coverage for Stack Scout: tool updates, developer tools, command-line tools, MCP, API updates, product launches, open source, agent tools, and GitHub releases. Crypto, photography gear, and games stay out.",
+      "kind": "site",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "sun-window",
+      "label": "Sun Window",
+      "symbol": "☀️",
+      "definition": "Sun Window is part of the estate. No shared news brief has been written for it, so the pipeline does not route stories there.",
+      "kind": "site",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "tool_update",
+      "label": "Tool Update",
+      "symbol": "🔧",
+      "definition": "An update to a software tool.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "tool_use",
+      "label": "Tool Use",
+      "symbol": "🔨",
+      "definition": "A model or agent using tools.",
+      "kind": "topic",
+      "keywordPattern": null,
+      "keywordCount": 0
+    },
+    {
+      "id": "training",
+      "label": "Training",
+      "symbol": "🏋️",
+      "definition": "How a model is trained, including fine-tuning and preference training.",
+      "kind": "topic",
+      "keywordPattern": "\\b(training|trained on|pre-training|fine-tun|rlhf|dpo)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "video_gen",
+      "label": "Video Gen",
+      "symbol": "🎬",
+      "definition": "Video generation and text-to-video tools.",
+      "kind": "topic",
+      "keywordPattern": "\\b(video generation|text-to-video|runway|sora|pika|kling|veo)\\b",
+      "keywordCount": 1
+    },
+    {
+      "id": "voice_synthesis",
+      "label": "Voice Synthesis",
+      "symbol": "🎙️",
+      "definition": "Voice cloning, speech synthesis, and text-to-speech.",
+      "kind": "topic",
+      "keywordPattern": "\\b(voice synthesis|voice clone|text-to-speech|tts|speech synthesis|elevenlabs)\\b",
+      "keywordCount": 1
+    }
+  ],
   "sites": [
     {
       "slug": "kols-korner",
       "name": "Kol's Korner",
       "shortName": "Kol's Korner",
       "role": "broad-ai",
-      "description": "No shared news routing description available.",
+      "description": "Broad AI news for Kol's Korner: product launches, announcements, funding, acquisitions, policy, regulation, opinion, industry moves, open source, model releases, agents, safety, reasoning, and hardware. Photography, games, and crypto stay out.",
+      "symbol": "🗞️",
+      "coverageTag": "kols-korner",
       "note": null,
       "newsEnabled": true,
       "includeTags": [
@@ -156,141 +827,175 @@
       "includeLabels": [
         {
           "id": "product_launch",
-          "label": "Product Launch"
+          "label": "Product Launch",
+          "symbol": "🚢"
         },
         {
           "id": "announcement",
-          "label": "Announcement"
+          "label": "Announcement",
+          "symbol": "📣"
         },
         {
           "id": "funding",
-          "label": "Funding"
+          "label": "Funding",
+          "symbol": "💰"
         },
         {
           "id": "acquisition",
-          "label": "Acquisition"
+          "label": "Acquisition",
+          "symbol": "🤝"
         },
         {
           "id": "policy",
-          "label": "Policy"
+          "label": "Policy",
+          "symbol": "📜"
         },
         {
           "id": "regulation",
-          "label": "Regulation"
+          "label": "Regulation",
+          "symbol": "📋"
         },
         {
           "id": "opinion",
-          "label": "Opinion"
+          "label": "Opinion",
+          "symbol": "💬"
         },
         {
           "id": "industry_move",
-          "label": "Industry Move"
+          "label": "Industry Move",
+          "symbol": "🏢"
         },
         {
           "id": "open_source",
-          "label": "Open Source"
+          "label": "Open Source",
+          "symbol": "🔓"
         },
         {
           "id": "model_release",
-          "label": "Model Release"
+          "label": "Model Release",
+          "symbol": "🚀"
         },
         {
           "id": "ai_agents",
-          "label": "AI Agents"
+          "label": "AI Agents",
+          "symbol": "🤖"
         },
         {
           "id": "ai_safety",
-          "label": "AI Safety"
+          "label": "AI Safety",
+          "symbol": "🛡️"
         },
         {
           "id": "reasoning",
-          "label": "Reasoning"
+          "label": "Reasoning",
+          "symbol": "🧠"
         },
         {
           "id": "hardware",
-          "label": "Hardware"
+          "label": "Hardware",
+          "symbol": "🖥️"
         }
       ],
       "excludeLabels": [
         {
           "id": "crypto",
-          "label": "Crypto"
+          "label": "Crypto",
+          "symbol": "₿"
         },
         {
           "id": "crypto_trading",
-          "label": "Crypto Trading"
+          "label": "Crypto Trading",
+          "symbol": "📈"
         },
         {
           "id": "crypto_defi",
-          "label": "Crypto Defi"
+          "label": "Crypto Defi",
+          "symbol": "🏦"
         },
         {
           "id": "crypto_regulation",
-          "label": "Crypto Regulation"
+          "label": "Crypto Regulation",
+          "symbol": "⚖️"
         },
         {
           "id": "photography",
-          "label": "Photography"
+          "label": "Photography",
+          "symbol": "📸"
         },
         {
           "id": "camera",
-          "label": "Camera"
+          "label": "Camera",
+          "symbol": "📹"
         },
         {
           "id": "camera_release",
-          "label": "Camera Release"
+          "label": "Camera Release",
+          "symbol": "🆕"
         },
         {
           "id": "lens",
-          "label": "Lens"
+          "label": "Lens",
+          "symbol": "🔍"
         },
         {
           "id": "photo_editing",
-          "label": "Photo Editing"
+          "label": "Photo Editing",
+          "symbol": "✂️"
         },
         {
           "id": "lightroom",
-          "label": "Lightroom"
+          "label": "Lightroom",
+          "symbol": "Lr"
         },
         {
           "id": "photoshop",
-          "label": "Photoshop"
+          "label": "Photoshop",
+          "symbol": "Ps"
         },
         {
           "id": "capture_one",
-          "label": "Capture One"
+          "label": "Capture One",
+          "symbol": "C1"
         },
         {
           "id": "photography_ai",
-          "label": "Photography AI"
+          "label": "Photography AI",
+          "symbol": "🪄"
         },
         {
           "id": "photography_technique",
-          "label": "Photography Technique"
+          "label": "Photography Technique",
+          "symbol": "📐"
         },
         {
           "id": "photography_business",
-          "label": "Photography Business"
+          "label": "Photography Business",
+          "symbol": "🏪"
         },
         {
           "id": "game_release",
-          "label": "Game Release"
+          "label": "Game Release",
+          "symbol": "👾"
         },
         {
           "id": "game_event",
-          "label": "Game Event"
+          "label": "Game Event",
+          "symbol": "🏁"
         },
         {
           "id": "game_review",
-          "label": "Game Review"
+          "label": "Game Review",
+          "symbol": "⭐"
         },
         {
           "id": "game_preview",
-          "label": "Game Preview"
+          "label": "Game Preview",
+          "symbol": "👀"
         },
         {
           "id": "gaming_platform",
-          "label": "Gaming Platform"
+          "label": "Gaming Platform",
+          "symbol": "🕹️"
         }
       ],
       "minImportanceScore": 0.45,
@@ -305,7 +1010,9 @@
       "name": "Axy Lusion",
       "shortName": "Axy Lusion",
       "role": "creative-ai",
-      "description": "No shared news routing description available.",
+      "description": "Creative generation for Axy Lusion: images, video, music, voice, 3D, creative tools, creative workflow, and AI art. Photography, crypto, agents, research, benchmarks, hardware, policy, industry business, and games stay out.",
+      "symbol": "🎨",
+      "coverageTag": "axylusion",
       "note": null,
       "newsEnabled": true,
       "includeTags": [
@@ -366,209 +1073,260 @@
       "includeLabels": [
         {
           "id": "image_gen",
-          "label": "Image Gen"
+          "label": "Image Gen",
+          "symbol": "🖼️"
         },
         {
           "id": "video_gen",
-          "label": "Video Gen"
+          "label": "Video Gen",
+          "symbol": "🎬"
         },
         {
           "id": "music_gen",
-          "label": "Music Gen"
+          "label": "Music Gen",
+          "symbol": "🎵"
         },
         {
           "id": "voice_synthesis",
-          "label": "Voice Synthesis"
+          "label": "Voice Synthesis",
+          "symbol": "🎙️"
         },
         {
           "id": "3d_gen",
-          "label": "3D Gen"
+          "label": "3D Gen",
+          "symbol": "🧊"
         },
         {
           "id": "creative_tool",
-          "label": "Creative Tool"
+          "label": "Creative Tool",
+          "symbol": "🖌️"
         },
         {
           "id": "creative_workflow",
-          "label": "Creative Workflow"
+          "label": "Creative Workflow",
+          "symbol": "🔁"
         },
         {
           "id": "art_ai",
-          "label": "Art AI"
+          "label": "Art AI",
+          "symbol": "✨"
         }
       ],
       "excludeLabels": [
         {
           "id": "photography",
-          "label": "Photography"
+          "label": "Photography",
+          "symbol": "📸"
         },
         {
           "id": "camera",
-          "label": "Camera"
+          "label": "Camera",
+          "symbol": "📹"
         },
         {
           "id": "camera_release",
-          "label": "Camera Release"
+          "label": "Camera Release",
+          "symbol": "🆕"
         },
         {
           "id": "lens",
-          "label": "Lens"
+          "label": "Lens",
+          "symbol": "🔍"
         },
         {
           "id": "photo_editing",
-          "label": "Photo Editing"
+          "label": "Photo Editing",
+          "symbol": "✂️"
         },
         {
           "id": "lightroom",
-          "label": "Lightroom"
+          "label": "Lightroom",
+          "symbol": "Lr"
         },
         {
           "id": "photoshop",
-          "label": "Photoshop"
+          "label": "Photoshop",
+          "symbol": "Ps"
         },
         {
           "id": "capture_one",
-          "label": "Capture One"
+          "label": "Capture One",
+          "symbol": "C1"
         },
         {
           "id": "photography_ai",
-          "label": "Photography AI"
+          "label": "Photography AI",
+          "symbol": "🪄"
         },
         {
           "id": "photography_technique",
-          "label": "Photography Technique"
+          "label": "Photography Technique",
+          "symbol": "📐"
         },
         {
           "id": "photography_business",
-          "label": "Photography Business"
+          "label": "Photography Business",
+          "symbol": "🏪"
         },
         {
           "id": "crypto",
-          "label": "Crypto"
+          "label": "Crypto",
+          "symbol": "₿"
         },
         {
           "id": "crypto_trading",
-          "label": "Crypto Trading"
+          "label": "Crypto Trading",
+          "symbol": "📈"
         },
         {
           "id": "crypto_defi",
-          "label": "Crypto Defi"
+          "label": "Crypto Defi",
+          "symbol": "🏦"
         },
         {
           "id": "crypto_regulation",
-          "label": "Crypto Regulation"
+          "label": "Crypto Regulation",
+          "symbol": "⚖️"
         },
         {
           "id": "ai_agents",
-          "label": "AI Agents"
+          "label": "AI Agents",
+          "symbol": "🤖"
         },
         {
           "id": "multi_agent",
-          "label": "Multi Agent"
+          "label": "Multi Agent",
+          "symbol": "👥"
         },
         {
           "id": "tool_use",
-          "label": "Tool Use"
+          "label": "Tool Use",
+          "symbol": "🔨"
         },
         {
           "id": "autonomous_systems",
-          "label": "Autonomous Systems"
+          "label": "Autonomous Systems",
+          "symbol": "🛰️"
         },
         {
           "id": "ai_safety",
-          "label": "AI Safety"
+          "label": "AI Safety",
+          "symbol": "🛡️"
         },
         {
           "id": "mcp",
-          "label": "MCP"
+          "label": "MCP",
+          "symbol": "🔗"
         },
         {
           "id": "reasoning",
-          "label": "Reasoning"
+          "label": "Reasoning",
+          "symbol": "🧠"
         },
         {
           "id": "agentic_framework",
-          "label": "Agentic Framework"
+          "label": "Agentic Framework",
+          "symbol": "🕸️"
         },
         {
           "id": "agent_sdk",
-          "label": "Agent SDK"
+          "label": "Agent SDK",
+          "symbol": "🧩"
         },
         {
           "id": "research_paper",
-          "label": "Research Paper"
+          "label": "Research Paper",
+          "symbol": "📄"
         },
         {
           "id": "benchmark",
-          "label": "Benchmark"
+          "label": "Benchmark",
+          "symbol": "📊"
         },
         {
           "id": "evaluation",
-          "label": "Evaluation"
+          "label": "Evaluation",
+          "symbol": "🧪"
         },
         {
           "id": "architecture",
-          "label": "Architecture"
+          "label": "Architecture",
+          "symbol": "🧱"
         },
         {
           "id": "dataset",
-          "label": "Dataset"
+          "label": "Dataset",
+          "symbol": "🗂️"
         },
         {
           "id": "training",
-          "label": "Training"
+          "label": "Training",
+          "symbol": "🏋️"
         },
         {
           "id": "inference",
-          "label": "Inference"
+          "label": "Inference",
+          "symbol": "⚡"
         },
         {
           "id": "hardware",
-          "label": "Hardware"
+          "label": "Hardware",
+          "symbol": "🖥️"
         },
         {
           "id": "policy",
-          "label": "Policy"
+          "label": "Policy",
+          "symbol": "📜"
         },
         {
           "id": "regulation",
-          "label": "Regulation"
+          "label": "Regulation",
+          "symbol": "📋"
         },
         {
           "id": "funding",
-          "label": "Funding"
+          "label": "Funding",
+          "symbol": "💰"
         },
         {
           "id": "acquisition",
-          "label": "Acquisition"
+          "label": "Acquisition",
+          "symbol": "🤝"
         },
         {
           "id": "industry_move",
-          "label": "Industry Move"
+          "label": "Industry Move",
+          "symbol": "🏢"
         },
         {
           "id": "opinion",
-          "label": "Opinion"
+          "label": "Opinion",
+          "symbol": "💬"
         },
         {
           "id": "game_release",
-          "label": "Game Release"
+          "label": "Game Release",
+          "symbol": "👾"
         },
         {
           "id": "game_event",
-          "label": "Game Event"
+          "label": "Game Event",
+          "symbol": "🏁"
         },
         {
           "id": "game_review",
-          "label": "Game Review"
+          "label": "Game Review",
+          "symbol": "⭐"
         },
         {
           "id": "game_preview",
-          "label": "Game Preview"
+          "label": "Game Preview",
+          "symbol": "👀"
         },
         {
           "id": "gaming_platform",
-          "label": "Gaming Platform"
+          "label": "Gaming Platform",
+          "symbol": "🕹️"
         }
       ],
       "minImportanceScore": 0.4,
@@ -583,7 +1341,9 @@
       "name": "AI Resource Hub",
       "shortName": "AI Resource Hub",
       "role": "technical-ai",
-      "description": "No shared news routing description available.",
+      "description": "Technical AI reference for the AI Resource Hub: model releases, benchmarks, evaluations, research papers, API updates, pricing changes, architecture, datasets, training, inference, hardware, and open source. Opinion, creative generation, photography, crypto, and games stay out.",
+      "symbol": "📘",
+      "coverageTag": "ai-resource-hub",
       "note": null,
       "newsEnabled": true,
       "includeTags": [
@@ -632,161 +1392,200 @@
       "includeLabels": [
         {
           "id": "model_release",
-          "label": "Model Release"
+          "label": "Model Release",
+          "symbol": "🚀"
         },
         {
           "id": "benchmark",
-          "label": "Benchmark"
+          "label": "Benchmark",
+          "symbol": "📊"
         },
         {
           "id": "evaluation",
-          "label": "Evaluation"
+          "label": "Evaluation",
+          "symbol": "🧪"
         },
         {
           "id": "research_paper",
-          "label": "Research Paper"
+          "label": "Research Paper",
+          "symbol": "📄"
         },
         {
           "id": "api_update",
-          "label": "Api Update"
+          "label": "Api Update",
+          "symbol": "🔌"
         },
         {
           "id": "pricing_change",
-          "label": "Pricing Change"
+          "label": "Pricing Change",
+          "symbol": "💷"
         },
         {
           "id": "architecture",
-          "label": "Architecture"
+          "label": "Architecture",
+          "symbol": "🧱"
         },
         {
           "id": "dataset",
-          "label": "Dataset"
+          "label": "Dataset",
+          "symbol": "🗂️"
         },
         {
           "id": "training",
-          "label": "Training"
+          "label": "Training",
+          "symbol": "🏋️"
         },
         {
           "id": "inference",
-          "label": "Inference"
+          "label": "Inference",
+          "symbol": "⚡"
         },
         {
           "id": "hardware",
-          "label": "Hardware"
+          "label": "Hardware",
+          "symbol": "🖥️"
         },
         {
           "id": "open_source",
-          "label": "Open Source"
+          "label": "Open Source",
+          "symbol": "🔓"
         }
       ],
       "excludeLabels": [
         {
           "id": "opinion",
-          "label": "Opinion"
+          "label": "Opinion",
+          "symbol": "💬"
         },
         {
           "id": "image_gen",
-          "label": "Image Gen"
+          "label": "Image Gen",
+          "symbol": "🖼️"
         },
         {
           "id": "video_gen",
-          "label": "Video Gen"
+          "label": "Video Gen",
+          "symbol": "🎬"
         },
         {
           "id": "music_gen",
-          "label": "Music Gen"
+          "label": "Music Gen",
+          "symbol": "🎵"
         },
         {
           "id": "voice_synthesis",
-          "label": "Voice Synthesis"
+          "label": "Voice Synthesis",
+          "symbol": "🎙️"
         },
         {
           "id": "creative_tool",
-          "label": "Creative Tool"
+          "label": "Creative Tool",
+          "symbol": "🖌️"
         },
         {
           "id": "art_ai",
-          "label": "Art AI"
+          "label": "Art AI",
+          "symbol": "✨"
         },
         {
           "id": "photography",
-          "label": "Photography"
+          "label": "Photography",
+          "symbol": "📸"
         },
         {
           "id": "camera",
-          "label": "Camera"
+          "label": "Camera",
+          "symbol": "📹"
         },
         {
           "id": "camera_release",
-          "label": "Camera Release"
+          "label": "Camera Release",
+          "symbol": "🆕"
         },
         {
           "id": "lens",
-          "label": "Lens"
+          "label": "Lens",
+          "symbol": "🔍"
         },
         {
           "id": "photo_editing",
-          "label": "Photo Editing"
+          "label": "Photo Editing",
+          "symbol": "✂️"
         },
         {
           "id": "lightroom",
-          "label": "Lightroom"
+          "label": "Lightroom",
+          "symbol": "Lr"
         },
         {
           "id": "photoshop",
-          "label": "Photoshop"
+          "label": "Photoshop",
+          "symbol": "Ps"
         },
         {
           "id": "capture_one",
-          "label": "Capture One"
+          "label": "Capture One",
+          "symbol": "C1"
         },
         {
           "id": "photography_ai",
-          "label": "Photography AI"
+          "label": "Photography AI",
+          "symbol": "🪄"
         },
         {
           "id": "photography_technique",
-          "label": "Photography Technique"
+          "label": "Photography Technique",
+          "symbol": "📐"
         },
         {
           "id": "photography_business",
-          "label": "Photography Business"
+          "label": "Photography Business",
+          "symbol": "🏪"
         },
         {
           "id": "crypto",
-          "label": "Crypto"
+          "label": "Crypto",
+          "symbol": "₿"
         },
         {
           "id": "crypto_trading",
-          "label": "Crypto Trading"
+          "label": "Crypto Trading",
+          "symbol": "📈"
         },
         {
           "id": "crypto_defi",
-          "label": "Crypto Defi"
+          "label": "Crypto Defi",
+          "symbol": "🏦"
         },
         {
           "id": "crypto_regulation",
-          "label": "Crypto Regulation"
+          "label": "Crypto Regulation",
+          "symbol": "⚖️"
         },
         {
           "id": "game_release",
-          "label": "Game Release"
+          "label": "Game Release",
+          "symbol": "👾"
         },
         {
           "id": "game_event",
-          "label": "Game Event"
+          "label": "Game Event",
+          "symbol": "🏁"
         },
         {
           "id": "game_review",
-          "label": "Game Review"
+          "label": "Game Review",
+          "symbol": "⭐"
         },
         {
           "id": "game_preview",
-          "label": "Game Preview"
+          "label": "Game Preview",
+          "symbol": "👀"
         },
         {
           "id": "gaming_platform",
-          "label": "Gaming Platform"
+          "label": "Gaming Platform",
+          "symbol": "🕹️"
         }
       ],
       "minImportanceScore": 0.5,
@@ -801,7 +1600,9 @@
       "name": "Ghost in the Model",
       "shortName": "Ghost in the Model",
       "role": "agent-editorial",
-      "description": "No shared news routing description available.",
+      "description": "Agent reference for Ghost in the Model: agents, multi-agent systems, tool use, autonomous systems, AI safety, MCP, reasoning, agent frameworks, and agent SDKs. Photography and games stay out.",
+      "symbol": "👻",
+      "coverageTag": "ghost-in-the-models",
       "note": "Articles here are inspiration for the writing agents, not published directly as news",
       "newsEnabled": true,
       "includeTags": [
@@ -836,105 +1637,130 @@
       "includeLabels": [
         {
           "id": "ai_agents",
-          "label": "AI Agents"
+          "label": "AI Agents",
+          "symbol": "🤖"
         },
         {
           "id": "multi_agent",
-          "label": "Multi Agent"
+          "label": "Multi Agent",
+          "symbol": "👥"
         },
         {
           "id": "tool_use",
-          "label": "Tool Use"
+          "label": "Tool Use",
+          "symbol": "🔨"
         },
         {
           "id": "autonomous_systems",
-          "label": "Autonomous Systems"
+          "label": "Autonomous Systems",
+          "symbol": "🛰️"
         },
         {
           "id": "ai_safety",
-          "label": "AI Safety"
+          "label": "AI Safety",
+          "symbol": "🛡️"
         },
         {
           "id": "mcp",
-          "label": "MCP"
+          "label": "MCP",
+          "symbol": "🔗"
         },
         {
           "id": "reasoning",
-          "label": "Reasoning"
+          "label": "Reasoning",
+          "symbol": "🧠"
         },
         {
           "id": "agentic_framework",
-          "label": "Agentic Framework"
+          "label": "Agentic Framework",
+          "symbol": "🕸️"
         },
         {
           "id": "agent_sdk",
-          "label": "Agent SDK"
+          "label": "Agent SDK",
+          "symbol": "🧩"
         }
       ],
       "excludeLabels": [
         {
           "id": "photography",
-          "label": "Photography"
+          "label": "Photography",
+          "symbol": "📸"
         },
         {
           "id": "camera",
-          "label": "Camera"
+          "label": "Camera",
+          "symbol": "📹"
         },
         {
           "id": "camera_release",
-          "label": "Camera Release"
+          "label": "Camera Release",
+          "symbol": "🆕"
         },
         {
           "id": "lens",
-          "label": "Lens"
+          "label": "Lens",
+          "symbol": "🔍"
         },
         {
           "id": "photo_editing",
-          "label": "Photo Editing"
+          "label": "Photo Editing",
+          "symbol": "✂️"
         },
         {
           "id": "lightroom",
-          "label": "Lightroom"
+          "label": "Lightroom",
+          "symbol": "Lr"
         },
         {
           "id": "photoshop",
-          "label": "Photoshop"
+          "label": "Photoshop",
+          "symbol": "Ps"
         },
         {
           "id": "capture_one",
-          "label": "Capture One"
+          "label": "Capture One",
+          "symbol": "C1"
         },
         {
           "id": "photography_ai",
-          "label": "Photography AI"
+          "label": "Photography AI",
+          "symbol": "🪄"
         },
         {
           "id": "photography_technique",
-          "label": "Photography Technique"
+          "label": "Photography Technique",
+          "symbol": "📐"
         },
         {
           "id": "photography_business",
-          "label": "Photography Business"
+          "label": "Photography Business",
+          "symbol": "🏪"
         },
         {
           "id": "game_release",
-          "label": "Game Release"
+          "label": "Game Release",
+          "symbol": "👾"
         },
         {
           "id": "game_event",
-          "label": "Game Event"
+          "label": "Game Event",
+          "symbol": "🏁"
         },
         {
           "id": "game_review",
-          "label": "Game Review"
+          "label": "Game Review",
+          "symbol": "⭐"
         },
         {
           "id": "game_preview",
-          "label": "Game Preview"
+          "label": "Game Preview",
+          "symbol": "👀"
         },
         {
           "id": "gaming_platform",
-          "label": "Gaming Platform"
+          "label": "Gaming Platform",
+          "symbol": "🕹️"
         }
       ],
       "minImportanceScore": 0.4,
@@ -949,7 +1775,9 @@
       "name": "Kol Tregaskes Photography",
       "shortName": "Photography",
       "role": "photography",
-      "description": "No shared news routing description available.",
+      "description": "Photography coverage: cameras, lenses, photo editing, Lightroom, Photoshop, Capture One, photography AI, technique, and the business of photography. Crypto and games stay out.",
+      "symbol": "📷",
+      "coverageTag": "kol-tregaskes-photography",
       "note": null,
       "newsEnabled": true,
       "includeTags": [
@@ -979,85 +1807,105 @@
       "includeLabels": [
         {
           "id": "photography",
-          "label": "Photography"
+          "label": "Photography",
+          "symbol": "📸"
         },
         {
           "id": "camera",
-          "label": "Camera"
+          "label": "Camera",
+          "symbol": "📹"
         },
         {
           "id": "photo_editing",
-          "label": "Photo Editing"
+          "label": "Photo Editing",
+          "symbol": "✂️"
         },
         {
           "id": "lightroom",
-          "label": "Lightroom"
+          "label": "Lightroom",
+          "symbol": "Lr"
         },
         {
           "id": "photoshop",
-          "label": "Photoshop"
+          "label": "Photoshop",
+          "symbol": "Ps"
         },
         {
           "id": "capture_one",
-          "label": "Capture One"
+          "label": "Capture One",
+          "symbol": "C1"
         },
         {
           "id": "photography_ai",
-          "label": "Photography AI"
+          "label": "Photography AI",
+          "symbol": "🪄"
         },
         {
           "id": "camera_release",
-          "label": "Camera Release"
+          "label": "Camera Release",
+          "symbol": "🆕"
         },
         {
           "id": "lens",
-          "label": "Lens"
+          "label": "Lens",
+          "symbol": "🔍"
         },
         {
           "id": "photography_technique",
-          "label": "Photography Technique"
+          "label": "Photography Technique",
+          "symbol": "📐"
         },
         {
           "id": "photography_business",
-          "label": "Photography Business"
+          "label": "Photography Business",
+          "symbol": "🏪"
         }
       ],
       "excludeLabels": [
         {
           "id": "crypto",
-          "label": "Crypto"
+          "label": "Crypto",
+          "symbol": "₿"
         },
         {
           "id": "crypto_trading",
-          "label": "Crypto Trading"
+          "label": "Crypto Trading",
+          "symbol": "📈"
         },
         {
           "id": "crypto_defi",
-          "label": "Crypto Defi"
+          "label": "Crypto Defi",
+          "symbol": "🏦"
         },
         {
           "id": "crypto_regulation",
-          "label": "Crypto Regulation"
+          "label": "Crypto Regulation",
+          "symbol": "⚖️"
         },
         {
           "id": "game_release",
-          "label": "Game Release"
+          "label": "Game Release",
+          "symbol": "👾"
         },
         {
           "id": "game_event",
-          "label": "Game Event"
+          "label": "Game Event",
+          "symbol": "🏁"
         },
         {
           "id": "game_review",
-          "label": "Game Review"
+          "label": "Game Review",
+          "symbol": "⭐"
         },
         {
           "id": "game_preview",
-          "label": "Game Preview"
+          "label": "Game Preview",
+          "symbol": "👀"
         },
         {
           "id": "gaming_platform",
-          "label": "Gaming Platform"
+          "label": "Gaming Platform",
+          "symbol": "🕹️"
         }
       ],
       "minImportanceScore": 0.4,
@@ -1073,6 +1921,8 @@
       "shortName": "Elusion Works",
       "role": "umbrella-brand",
       "description": "Umbrella brand and estate index. No direct shared news output configured.",
+      "symbol": "🏛️",
+      "coverageTag": "elusion-works",
       "note": "This site is part of the estate but does not currently publish a news digest.",
       "newsEnabled": false,
       "includeTags": [],
@@ -1091,7 +1941,9 @@
       "name": "Sun Window",
       "shortName": "Sun Window",
       "role": "estate-site",
-      "description": "No shared news routing description available.",
+      "description": "Sun Window is part of the estate. No shared news brief has been written for it, so the pipeline does not route stories there.",
+      "symbol": "☀️",
+      "coverageTag": "sun-window",
       "note": null,
       "newsEnabled": false,
       "includeTags": [],
@@ -1110,7 +1962,9 @@
       "name": "GameTrackDaily",
       "shortName": "GameTrackDaily",
       "role": "news-destination",
-      "description": "No shared news routing description available.",
+      "description": "Games coverage for GameTrackDaily: releases, events, reviews, previews, platforms, and release dates. Crypto, AI safety and policy, and camera or lens news stay out.",
+      "symbol": "🎮",
+      "coverageTag": "gametrackdaily",
       "note": null,
       "newsEnabled": true,
       "includeTags": [
@@ -1136,69 +1990,85 @@
       "includeLabels": [
         {
           "id": "game_release",
-          "label": "Game Release"
+          "label": "Game Release",
+          "symbol": "👾"
         },
         {
           "id": "game_event",
-          "label": "Game Event"
+          "label": "Game Event",
+          "symbol": "🏁"
         },
         {
           "id": "game_review",
-          "label": "Game Review"
+          "label": "Game Review",
+          "symbol": "⭐"
         },
         {
           "id": "game_preview",
-          "label": "Game Preview"
+          "label": "Game Preview",
+          "symbol": "👀"
         },
         {
           "id": "gaming_platform",
-          "label": "Gaming Platform"
+          "label": "Gaming Platform",
+          "symbol": "🕹️"
         },
         {
           "id": "release_date",
-          "label": "Release Date"
+          "label": "Release Date",
+          "symbol": "📅"
         }
       ],
       "excludeLabels": [
         {
           "id": "crypto",
-          "label": "Crypto"
+          "label": "Crypto",
+          "symbol": "₿"
         },
         {
           "id": "crypto_trading",
-          "label": "Crypto Trading"
+          "label": "Crypto Trading",
+          "symbol": "📈"
         },
         {
           "id": "crypto_defi",
-          "label": "Crypto Defi"
+          "label": "Crypto Defi",
+          "symbol": "🏦"
         },
         {
           "id": "crypto_regulation",
-          "label": "Crypto Regulation"
+          "label": "Crypto Regulation",
+          "symbol": "⚖️"
         },
         {
           "id": "ai_safety",
-          "label": "AI Safety"
+          "label": "AI Safety",
+          "symbol": "🛡️"
         },
         {
           "id": "policy",
-          "label": "Policy"
+          "label": "Policy",
+          "symbol": "📜"
         },
         {
           "id": "regulation",
-          "label": "Regulation"
+          "label": "Regulation",
+          "symbol": "📋"
         },
         {
           "id": "photography",
-          "label": "Photography"
+          "label": "Photography",
+          "symbol": "📸"
         },
         {
           "id": "camera",
-          "label": "Camera"
+          "label": "Camera",
+          "symbol": "📹"
         },
         {
           "id": "lens",
-          "label": "Lens"
+          "label": "Lens",
+          "symbol": "🔍"
         }
       ],
       "minImportanceScore": 0.35,
@@ -1213,7 +2083,9 @@
       "name": "Repo Foundry",
       "shortName": "Repo Foundry",
       "role": "news-destination",
-      "description": "No shared news routing description available.",
+      "description": "Repository coverage for Repo Foundry: repository updates, GitHub releases, open source, developer tools, command-line tools, agent frameworks, MCP, and tool updates. Crypto, photography gear, and games stay out.",
+      "symbol": "⚒️",
+      "coverageTag": "repo-foundry",
       "note": null,
       "newsEnabled": true,
       "includeTags": [
@@ -1243,85 +2115,105 @@
       "includeLabels": [
         {
           "id": "repo_update",
-          "label": "Repo Update"
+          "label": "Repo Update",
+          "symbol": "📦"
         },
         {
           "id": "github_release",
-          "label": "Github Release"
+          "label": "Github Release",
+          "symbol": "🐙"
         },
         {
           "id": "open_source",
-          "label": "Open Source"
+          "label": "Open Source",
+          "symbol": "🔓"
         },
         {
           "id": "developer_tool",
-          "label": "Developer Tool"
+          "label": "Developer Tool",
+          "symbol": "🧰"
         },
         {
           "id": "cli_tool",
-          "label": "Cli Tool"
+          "label": "Cli Tool",
+          "symbol": "⌨️"
         },
         {
           "id": "agentic_framework",
-          "label": "Agentic Framework"
+          "label": "Agentic Framework",
+          "symbol": "🕸️"
         },
         {
           "id": "mcp",
-          "label": "MCP"
+          "label": "MCP",
+          "symbol": "🔗"
         },
         {
           "id": "tool_update",
-          "label": "Tool Update"
+          "label": "Tool Update",
+          "symbol": "🔧"
         }
       ],
       "excludeLabels": [
         {
           "id": "crypto",
-          "label": "Crypto"
+          "label": "Crypto",
+          "symbol": "₿"
         },
         {
           "id": "crypto_trading",
-          "label": "Crypto Trading"
+          "label": "Crypto Trading",
+          "symbol": "📈"
         },
         {
           "id": "crypto_defi",
-          "label": "Crypto Defi"
+          "label": "Crypto Defi",
+          "symbol": "🏦"
         },
         {
           "id": "crypto_regulation",
-          "label": "Crypto Regulation"
+          "label": "Crypto Regulation",
+          "symbol": "⚖️"
         },
         {
           "id": "photography",
-          "label": "Photography"
+          "label": "Photography",
+          "symbol": "📸"
         },
         {
           "id": "camera",
-          "label": "Camera"
+          "label": "Camera",
+          "symbol": "📹"
         },
         {
           "id": "lens",
-          "label": "Lens"
+          "label": "Lens",
+          "symbol": "🔍"
         },
         {
           "id": "game_review",
-          "label": "Game Review"
+          "label": "Game Review",
+          "symbol": "⭐"
         },
         {
           "id": "game_preview",
-          "label": "Game Preview"
+          "label": "Game Preview",
+          "symbol": "👀"
         },
         {
           "id": "game_release",
-          "label": "Game Release"
+          "label": "Game Release",
+          "symbol": "👾"
         },
         {
           "id": "game_event",
-          "label": "Game Event"
+          "label": "Game Event",
+          "symbol": "🏁"
         },
         {
           "id": "gaming_platform",
-          "label": "Gaming Platform"
+          "label": "Gaming Platform",
+          "symbol": "🕹️"
         }
       ],
       "minImportanceScore": 0.35,
@@ -1336,7 +2228,9 @@
       "name": "Stack Scout",
       "shortName": "Stack Scout",
       "role": "news-destination",
-      "description": "No shared news routing description available.",
+      "description": "Developer stack coverage for Stack Scout: tool updates, developer tools, command-line tools, MCP, API updates, product launches, open source, agent tools, and GitHub releases. Crypto, photography gear, and games stay out.",
+      "symbol": "🔭",
+      "coverageTag": "stackscout",
       "note": null,
       "newsEnabled": true,
       "includeTags": [
@@ -1367,89 +2261,110 @@
       "includeLabels": [
         {
           "id": "tool_update",
-          "label": "Tool Update"
+          "label": "Tool Update",
+          "symbol": "🔧"
         },
         {
           "id": "developer_tool",
-          "label": "Developer Tool"
+          "label": "Developer Tool",
+          "symbol": "🧰"
         },
         {
           "id": "cli_tool",
-          "label": "Cli Tool"
+          "label": "Cli Tool",
+          "symbol": "⌨️"
         },
         {
           "id": "mcp",
-          "label": "MCP"
+          "label": "MCP",
+          "symbol": "🔗"
         },
         {
           "id": "api_update",
-          "label": "Api Update"
+          "label": "Api Update",
+          "symbol": "🔌"
         },
         {
           "id": "product_launch",
-          "label": "Product Launch"
+          "label": "Product Launch",
+          "symbol": "🚢"
         },
         {
           "id": "open_source",
-          "label": "Open Source"
+          "label": "Open Source",
+          "symbol": "🔓"
         },
         {
           "id": "agent_tool",
-          "label": "Agent Tool"
+          "label": "Agent Tool",
+          "symbol": "🛠️"
         },
         {
           "id": "github_release",
-          "label": "Github Release"
+          "label": "Github Release",
+          "symbol": "🐙"
         }
       ],
       "excludeLabels": [
         {
           "id": "crypto",
-          "label": "Crypto"
+          "label": "Crypto",
+          "symbol": "₿"
         },
         {
           "id": "crypto_trading",
-          "label": "Crypto Trading"
+          "label": "Crypto Trading",
+          "symbol": "📈"
         },
         {
           "id": "crypto_defi",
-          "label": "Crypto Defi"
+          "label": "Crypto Defi",
+          "symbol": "🏦"
         },
         {
           "id": "crypto_regulation",
-          "label": "Crypto Regulation"
+          "label": "Crypto Regulation",
+          "symbol": "⚖️"
         },
         {
           "id": "photography",
-          "label": "Photography"
+          "label": "Photography",
+          "symbol": "📸"
         },
         {
           "id": "camera",
-          "label": "Camera"
+          "label": "Camera",
+          "symbol": "📹"
         },
         {
           "id": "lens",
-          "label": "Lens"
+          "label": "Lens",
+          "symbol": "🔍"
         },
         {
           "id": "game_review",
-          "label": "Game Review"
+          "label": "Game Review",
+          "symbol": "⭐"
         },
         {
           "id": "game_preview",
-          "label": "Game Preview"
+          "label": "Game Preview",
+          "symbol": "👀"
         },
         {
           "id": "game_release",
-          "label": "Game Release"
+          "label": "Game Release",
+          "symbol": "👾"
         },
         {
           "id": "game_event",
-          "label": "Game Event"
+          "label": "Game Event",
+          "symbol": "🏁"
         },
         {
           "id": "gaming_platform",
-          "label": "Gaming Platform"
+          "label": "Gaming Platform",
+          "symbol": "🕹️"
         }
       ],
       "minImportanceScore": 0.35,
@@ -1495,23 +2410,28 @@
       "tagLabels": [
         {
           "id": "announcement",
-          "label": "Announcement"
+          "label": "Announcement",
+          "symbol": "📣"
         },
         {
           "id": "product_launch",
-          "label": "Product Launch"
+          "label": "Product Launch",
+          "symbol": "🚢"
         },
         {
           "id": "funding",
-          "label": "Funding"
+          "label": "Funding",
+          "symbol": "💰"
         },
         {
           "id": "acquisition",
-          "label": "Acquisition"
+          "label": "Acquisition",
+          "symbol": "🤝"
         },
         {
           "id": "industry_move",
-          "label": "Industry Move"
+          "label": "Industry Move",
+          "symbol": "🏢"
         }
       ],
       "siteScope": [
@@ -1577,19 +2497,23 @@
       "tagLabels": [
         {
           "id": "announcement",
-          "label": "Announcement"
+          "label": "Announcement",
+          "symbol": "📣"
         },
         {
           "id": "product_launch",
-          "label": "Product Launch"
+          "label": "Product Launch",
+          "symbol": "🚢"
         },
         {
           "id": "policy",
-          "label": "Policy"
+          "label": "Policy",
+          "symbol": "📜"
         },
         {
           "id": "industry_move",
-          "label": "Industry Move"
+          "label": "Industry Move",
+          "symbol": "🏢"
         }
       ],
       "siteScope": [
@@ -1655,19 +2579,23 @@
       "tagLabels": [
         {
           "id": "research_paper",
-          "label": "Research Paper"
+          "label": "Research Paper",
+          "symbol": "📄"
         },
         {
           "id": "open_source",
-          "label": "Open Source"
+          "label": "Open Source",
+          "symbol": "🔓"
         },
         {
           "id": "hardware",
-          "label": "Hardware"
+          "label": "Hardware",
+          "symbol": "🖥️"
         },
         {
           "id": "policy",
-          "label": "Policy"
+          "label": "Policy",
+          "symbol": "📜"
         }
       ],
       "siteScope": [
@@ -1733,19 +2661,23 @@
       "tagLabels": [
         {
           "id": "model_release",
-          "label": "Model Release"
+          "label": "Model Release",
+          "symbol": "🚀"
         },
         {
           "id": "api_update",
-          "label": "Api Update"
+          "label": "Api Update",
+          "symbol": "🔌"
         },
         {
           "id": "ai_agents",
-          "label": "AI Agents"
+          "label": "AI Agents",
+          "symbol": "🤖"
         },
         {
           "id": "ai_safety",
-          "label": "AI Safety"
+          "label": "AI Safety",
+          "symbol": "🛡️"
         }
       ],
       "siteScope": [
@@ -1811,19 +2743,23 @@
       "tagLabels": [
         {
           "id": "research_paper",
-          "label": "Research Paper"
+          "label": "Research Paper",
+          "symbol": "📄"
         },
         {
           "id": "model_release",
-          "label": "Model Release"
+          "label": "Model Release",
+          "symbol": "🚀"
         },
         {
           "id": "architecture",
-          "label": "Architecture"
+          "label": "Architecture",
+          "symbol": "🧱"
         },
         {
           "id": "training",
-          "label": "Training"
+          "label": "Training",
+          "symbol": "🏋️"
         }
       ],
       "siteScope": [
@@ -1889,19 +2825,23 @@
       "tagLabels": [
         {
           "id": "research_paper",
-          "label": "Research Paper"
+          "label": "Research Paper",
+          "symbol": "📄"
         },
         {
           "id": "model_release",
-          "label": "Model Release"
+          "label": "Model Release",
+          "symbol": "🚀"
         },
         {
           "id": "open_source",
-          "label": "Open Source"
+          "label": "Open Source",
+          "symbol": "🔓"
         },
         {
           "id": "architecture",
-          "label": "Architecture"
+          "label": "Architecture",
+          "symbol": "🧱"
         }
       ],
       "siteScope": [
@@ -1967,19 +2907,23 @@
       "tagLabels": [
         {
           "id": "open_source",
-          "label": "Open Source"
+          "label": "Open Source",
+          "symbol": "🔓"
         },
         {
           "id": "model_release",
-          "label": "Model Release"
+          "label": "Model Release",
+          "symbol": "🚀"
         },
         {
           "id": "tool_use",
-          "label": "Tool Use"
+          "label": "Tool Use",
+          "symbol": "🔨"
         },
         {
           "id": "agentic_framework",
-          "label": "Agentic Framework"
+          "label": "Agentic Framework",
+          "symbol": "🕸️"
         }
       ],
       "siteScope": [
@@ -2101,19 +3045,23 @@
       "tagLabels": [
         {
           "id": "policy",
-          "label": "Policy"
+          "label": "Policy",
+          "symbol": "📜"
         },
         {
           "id": "research_paper",
-          "label": "Research Paper"
+          "label": "Research Paper",
+          "symbol": "📄"
         },
         {
           "id": "industry_move",
-          "label": "Industry Move"
+          "label": "Industry Move",
+          "symbol": "🏢"
         },
         {
           "id": "ai_safety",
-          "label": "AI Safety"
+          "label": "AI Safety",
+          "symbol": "🛡️"
         }
       ],
       "siteScope": [
@@ -2176,19 +3124,23 @@
       "tagLabels": [
         {
           "id": "research_paper",
-          "label": "Research Paper"
+          "label": "Research Paper",
+          "symbol": "📄"
         },
         {
           "id": "evaluation",
-          "label": "Evaluation"
+          "label": "Evaluation",
+          "symbol": "🧪"
         },
         {
           "id": "reasoning",
-          "label": "Reasoning"
+          "label": "Reasoning",
+          "symbol": "🧠"
         },
         {
           "id": "ai_agents",
-          "label": "AI Agents"
+          "label": "AI Agents",
+          "symbol": "🤖"
         }
       ],
       "siteScope": [
@@ -2254,19 +3206,23 @@
       "tagLabels": [
         {
           "id": "research_paper",
-          "label": "Research Paper"
+          "label": "Research Paper",
+          "symbol": "📄"
         },
         {
           "id": "training",
-          "label": "Training"
+          "label": "Training",
+          "symbol": "🏋️"
         },
         {
           "id": "architecture",
-          "label": "Architecture"
+          "label": "Architecture",
+          "symbol": "🧱"
         },
         {
           "id": "evaluation",
-          "label": "Evaluation"
+          "label": "Evaluation",
+          "symbol": "🧪"
         }
       ],
       "siteScope": [
@@ -2332,19 +3288,23 @@
       "tagLabels": [
         {
           "id": "announcement",
-          "label": "Announcement"
+          "label": "Announcement",
+          "symbol": "📣"
         },
         {
           "id": "product_launch",
-          "label": "Product Launch"
+          "label": "Product Launch",
+          "symbol": "🚢"
         },
         {
           "id": "industry_move",
-          "label": "Industry Move"
+          "label": "Industry Move",
+          "symbol": "🏢"
         },
         {
           "id": "ai_agents",
-          "label": "AI Agents"
+          "label": "AI Agents",
+          "symbol": "🤖"
         }
       ],
       "siteScope": [
@@ -2417,27 +3377,33 @@
       "tagLabels": [
         {
           "id": "announcement",
-          "label": "Announcement"
+          "label": "Announcement",
+          "symbol": "📣"
         },
         {
           "id": "model_release",
-          "label": "Model Release"
+          "label": "Model Release",
+          "symbol": "🚀"
         },
         {
           "id": "open_source",
-          "label": "Open Source"
+          "label": "Open Source",
+          "symbol": "🔓"
         },
         {
           "id": "ai_agents",
-          "label": "AI Agents"
+          "label": "AI Agents",
+          "symbol": "🤖"
         },
         {
           "id": "research_paper",
-          "label": "Research Paper"
+          "label": "Research Paper",
+          "symbol": "📄"
         },
         {
           "id": "industry_move",
-          "label": "Industry Move"
+          "label": "Industry Move",
+          "symbol": "🏢"
         }
       ],
       "siteScope": [
@@ -2503,19 +3469,23 @@
       "tagLabels": [
         {
           "id": "announcement",
-          "label": "Announcement"
+          "label": "Announcement",
+          "symbol": "📣"
         },
         {
           "id": "product_launch",
-          "label": "Product Launch"
+          "label": "Product Launch",
+          "symbol": "🚢"
         },
         {
           "id": "industry_move",
-          "label": "Industry Move"
+          "label": "Industry Move",
+          "symbol": "🏢"
         },
         {
           "id": "open_source",
-          "label": "Open Source"
+          "label": "Open Source",
+          "symbol": "🔓"
         }
       ],
       "siteScope": [
@@ -2563,7 +3533,7 @@
     {
       "step": 3,
       "title": "Article keyword tagging",
-      "detail": "Title and summary keywords add or reinforce tags per story so a single source can still produce multiple story types."
+      "detail": "Where a tag has a keyword rule in the shared catalog, the title and summary can add that tag. Tags without a keyword rule are applied only when the source declares them."
     },
     {
       "step": 4,

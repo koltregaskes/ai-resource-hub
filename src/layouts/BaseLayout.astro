@@ -23,6 +23,7 @@ interface Props {
   translationState?: TranslationState;
   translationNote?: string;
   robots?: string;
+  canonical?: string;
   compactChrome?: boolean;
 }
 
@@ -36,10 +37,11 @@ const {
   translationState = locale === DEFAULT_LOCALE ? 'source' : 'reviewed',
   translationNote,
   robots,
+  canonical,
   compactChrome = true,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(canonical ?? Astro.url.pathname, Astro.site);
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const searchIndex = getSearchIndex(base);
@@ -726,7 +728,7 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
               <span>Monitor</span>
             </div>
             <a href={`${base}models/`}>Search models, benchmarks, news <span>Cmd K</span></a>
-            <p><span class="airh-pulse-dot"></span> Hourly source check is green.</p>
+            <p><span class="airh-pulse-dot"></span> Source check is on schedule.</p>
           </header>
 
           <div class="airh-route-template-chrome airh-route-monitor-tabs" aria-hidden="true">

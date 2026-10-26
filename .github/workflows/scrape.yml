@@ -1,12 +1,23 @@
 name: Update data (scrape + rebuild)
 
 on:
+  # Morning, early afternoon, and evening UK time. GitHub schedules use UTC:
+  # 07:12, 13:12, and 19:12 UTC. Prices, benchmarks, and news do not need
+  # an hourly sweep, and hourly requests were getting news sites blocked.
   schedule:
-    - cron: '12 * * * *'
+    - cron: '12 7,13,19 * * *'
   workflow_dispatch:
     inputs:
       force_rebuild:
         description: 'Force rebuild even if no data changes'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+      force_refresh:
+        description: 'Fetch again even if this morning, afternoon, or evening slot was already attempted'
         required: false
         default: 'false'
         type: choice
@@ -27,7 +38,60 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  guard:
+    runs-on: ubuntu-latest
+    outputs:
+      proceed: ${{ steps.decision.outputs.proceed }}
+    steps:
+      - name: Skip repeat manual refreshes
+        id: decision
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT_NAME: ${{ github.event_name }}
+          FORCE_REBUILD: ${{ github.event_name == 'workflow_dispatch' && inputs.force_rebuild == 'true' }}
+          FORCE_REFRESH: ${{ github.event_name == 'workflow_dispatch' && inputs.force_refresh == 'true' }}
+          CURRENT_RUN_ID: ${{ github.run_id }}
+        run: |
+          if [ "$EVENT_NAME" != "workflow_dispatch" ] || [ "$FORCE_REBUILD" = "true" ] || [ "$FORCE_REFRESH" = "true" ]; then
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+            echo "This is a scheduled refresh, or a manual run that asked to fetch again."
+            exit 0
+          fi
+
+          gh run list --repo "$GITHUB_REPOSITORY" --workflow scrape.yml --limit 15 --json databaseId,createdAt,event,status > /tmp/scrape-runs.json
+          node <<'NODE'
+          const fs = require('node:fs');
+          const runs = JSON.parse(fs.readFileSync('/tmp/scrape-runs.json', 'utf8'));
+          const currentId = Number(process.env.CURRENT_RUN_ID);
+          const now = Date.now();
+          const slotHours = [7, 13, 19];
+          const nowDate = new Date(now);
+          const candidates = [];
+          for (const dayOffset of [0, -1]) {
+            for (const hour of slotHours) {
+              const slot = Date.UTC(nowDate.getUTCFullYear(), nowDate.getUTCMonth(), nowDate.getUTCDate() + dayOffset, hour, 12, 0);
+              if (slot <= now) candidates.push(slot);
+            }
+          }
+          const slot = Math.max(...candidates);
+          const graceEnds = slot + (90 * 60 * 1000);
+          const attempted = runs.filter((run) => Number(run.databaseId) !== currentId && Date.parse(run.createdAt) >= slot);
+          const proceed = now >= graceEnds && attempted.length === 0;
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `proceed=${proceed}\n`);
+          const slotLabel = new Date(slot).toISOString();
+          if (now < graceEnds) {
+            console.log(`Manual run is inside the 90 minute grace period for ${slotLabel}. Skipping so the scheduled run can own this slot.`);
+          } else if (attempted.length > 0) {
+            const latest = attempted[0];
+            console.log(`Slot ${slotLabel} was already attempted at ${latest.createdAt} (${latest.event}, ${latest.status}). Skipping external fetches.`);
+          } else {
+            console.log(`Slot ${slotLabel} was missed. This manual run will fetch.`);
+          }
+          NODE
+
   scrape:
+    needs: guard
+    if: needs.guard.outputs.proceed == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -47,7 +111,7 @@ jobs:
       - name: Seed SQLite baseline
         run: npm run seed
 
-      - name: Run full hourly data refresh
+      - name: Run scheduled data refresh
         run: npm run scrape
         env:
           AA_API_KEY: ${{ secrets.AA_API_KEY }}
@@ -61,6 +125,7 @@ jobs:
         run: npm run dump:pg
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          WEBSITES_ESTATE_ROOT: ${{ github.workspace }}
 
       - name: Validate AI milestone seed
         run: npm run validate:milestones
@@ -79,6 +144,8 @@ jobs:
 
       - name: Sync news pipeline snapshot
         run: npm run sync:news-pipeline
+        env:
+          WEBSITES_ESTATE_ROOT: ${{ github.workspace }}
 
       - name: Generate regional availability export
         run: npm run generate:availability
