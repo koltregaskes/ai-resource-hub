@@ -1,5 +1,29 @@
 [
   {
+    "id": "news-2c43c284058f6166c85e",
+    "title": "Anthropic officially files for its public debut",
+    "url": "https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/",
+    "source": "TechCrunch",
+    "summary": "Anthropic has officially filed for an IPO, revealing soaring revenue, mounting losses, major enterprise adoption, and an unusual governance structure designed to preserve founder control and its AI safety mission.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-26T14:35:22.000Z",
+    "discovered_at": "2026-10-26 14:56:12"
+  },
+  {
+    "id": "news-df88ce95d957f878d0e1",
+    "title": "Kevin Roose is AGI-pilled. Why aren’t you?",
+    "url": "https://www.theverge.com/podcast/1018264/kevin-roose-the-agi-chronicles-machine-gods-podcast-youtube-openai-anthropic",
+    "source": "The Verge",
+    "summary": "Today, I’m talking to Kevin Roose, journalist and author of the new book The AGI Chronicles, which details the recent and explosive transformation of the AI industry. Kevin was a longtime New York Times reporter and host of the popular podcast Hard Fork, but he and friend of the show Casey Newton just left the [&#8230…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-26T14:00:00.000Z",
+    "discovered_at": "2026-10-26 14:56:21"
+  },
+  {
     "id": "news-a0064ee100f0c0b355db",
     "title": "Anthropic’s IPO filing lays out a plan to &#8216;revolutionize every area of human endeavor&#8217; with AI",
     "url": "https://www.theverge.com/ai-artificial-intelligence/1018476/anthropic-ipo-details-s1-filed-sec",
@@ -9,7 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T13:32:49.000Z",
-    "discovered_at": "2026-10-26 13:56:50"
+    "discovered_at": "2026-10-26 14:56:21"
   },
   {
     "id": "news-9c0a98fa46a8163ede8a",
@@ -21,7 +45,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T13:15:00.000Z",
-    "discovered_at": "2026-10-26 13:56:50"
+    "discovered_at": "2026-10-26 14:56:21"
+  },
+  {
+    "id": "news-eb7708c5f537ab79bfe6",
+    "title": "How Fanatics and OpenAI streamline the fan experience",
+    "url": "https://openai.com/index/fanatics-streamline-fan-experience",
+    "source": "OpenAI",
+    "summary": "Fanatics uses OpenAI to help fans complete their game-day outfits with Shop the Look. Testing across roughly 30,000 MLB products showed 10% higher engagement.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-26T07:00:00.000Z",
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-a6feae291b1a855a0bd1",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-25T21:31:16.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-71334093a413753da2fa",
@@ -45,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-25T16:57:32.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-4262d71f08be8cdae2ec",
@@ -57,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-25T14:10:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-b366ba776fde8cd43980",
@@ -69,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-25T13:25:32.000Z",
-    "discovered_at": "2026-10-26 13:56:50"
+    "discovered_at": "2026-10-26 14:56:21"
   },
   {
     "id": "news-99c99157c7fa1579c09f",
@@ -81,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-25T12:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:50"
+    "discovered_at": "2026-10-26 14:56:21"
   },
   {
     "id": "news-0509c80e85fbace7ed38",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-24T21:29:12.000Z",
-    "discovered_at": "2026-10-26 13:56:50"
+    "discovered_at": "2026-10-26 14:56:21"
   },
   {
     "id": "news-b0af889ad05fbb7fe502",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-24T19:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-09a5dda45158396218c8",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-24T18:32:21.000Z",
-    "discovered_at": "2026-10-26 13:56:50"
+    "discovered_at": "2026-10-26 14:56:21"
   },
   {
     "id": "news-35d668020c86331624a1",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-24T16:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-110fd09f65f25a52d9f5",
@@ -141,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-24T15:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-0d4ae8a7dd392962ca0d",
@@ -153,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-24T14:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-b15a6fb9671b3fea845b",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T23:05:49.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-f782f2bc9618a50438a7",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T21:59:19.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-f9113fa394af665d9a88",
@@ -189,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T21:11:07.000Z",
-    "discovered_at": "2026-10-26 13:56:50"
+    "discovered_at": "2026-10-26 14:56:21"
   },
   {
     "id": "news-f490e9c8ed30cee36e02",
@@ -201,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T19:32:39.000Z",
-    "discovered_at": "2026-10-26 13:56:50"
+    "discovered_at": "2026-10-26 14:56:21"
   },
   {
     "id": "news-0931d3afc7b71d97876f",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T19:06:23.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-9ecaeb5e863007f7dce2",
@@ -225,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T17:00:18.000Z",
-    "discovered_at": "2026-10-26 13:56:50"
+    "discovered_at": "2026-10-26 14:56:21"
   },
   {
     "id": "news-298c8de07d18f423dad3",
@@ -237,19 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T17:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
-  },
-  {
-    "id": "news-55f38e2b0de99dcec02b",
-    "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
-    "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
-    "source": "The Verge",
-    "summary": "Google has updated its privacy policy in a way that could mean you'll start seeing targeted ads based on your personal data if you're using personalized AI features. The update, spotted by Android Authority, adds an exception to its promise about not using your Drive, Gmail, or Google Photos for personalized ads. Whil…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-23T16:52:55.000Z",
-    "discovered_at": "2026-10-26 13:56:50"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-48e2274fdf2ba9fe48db",
@@ -261,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T10:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-94cd4ca5fb66dd5df4e3",
@@ -273,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T04:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-085ba153da3bfb7921ab",
@@ -285,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T00:45:37.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-15c1f8ef7a582594bf05",
@@ -297,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T00:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-d73c3fbf5a8b67dc1d22",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-22T22:08:24.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-ee7ecab28959641094a9",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-22T19:07:09.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-1d8d266cc065f7b34e54",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-22T19:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-afbb328c263f52ce8eb1",
@@ -345,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-22T19:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-27825e300358401234fc",
@@ -357,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-22T19:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-4baf690dfb57b3c5a696",
@@ -369,19 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-22T18:43:53.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
-  },
-  {
-    "id": "news-93c844a35d415e95f322",
-    "title": "Chinese hackers spied on thousands of companies after breaching IT giant ConnectWise",
-    "url": "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/",
-    "source": "TechCrunch",
-    "summary": "Microsoft points the blame for ConnectWise's breach at a China-aligned hacker, which relied on AI agents to rapidly hack into thousands of its customers.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-22T16:47:17.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:12"
   },
   {
     "id": "news-63c31ca523f91ccfb067",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-22T06:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-ba6fa07d677a822106bc",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-22T00:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-2ed22a61b2f19a0c8004",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T21:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-4ab93569e260b2b0a167",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T17:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-74fcf21eca7add4a8265",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T13:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-61f4d0141ff303c02405",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T12:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-edef63b51aedc0121d1a",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T07:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-d3f519557f32dd3d643c",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T07:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-1de8e62ff715d1f1b849",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:50:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-b2deaf97c98cf0ff4faa",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T00:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-9201054eeb4c743a362c",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T00:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-b3fcb2e42d3211233826",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T10:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-a84b6a7bee5c68a62fa1",
@@ -549,19 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-20T07:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
-  },
-  {
-    "id": "news-dbaa902542534b3aef2d",
-    "title": "OpenAI acquires Orchestra Bio",
-    "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
-    "source": "OpenAI",
-    "summary": "OpenAI is acquiring Orchestra Bio to bring AI-powered operations to life sciences R&D, helping biopharma teams accelerate drug development and advance new treatments.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-20T00:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-10-26 13:56:50"
+    "discovered_at": "2026-10-26 14:56:21"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-10-26 13:56:50"
+    "discovered_at": "2026-10-26 14:56:21"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-307bfda48464106bf8e3",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:21:53.000Z",
-    "discovered_at": "2026-10-26 13:56:50"
+    "discovered_at": "2026-10-26 14:56:21"
   },
   {
     "id": "news-aaf1cc502a6b16035865",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T22:26:35.000Z",
-    "discovered_at": "2026-10-26 13:56:50"
+    "discovered_at": "2026-10-26 14:56:21"
   },
   {
     "id": "news-6ee8ae0821d338b723f5",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T23:03:16.000Z",
-    "discovered_at": "2026-10-26 13:56:50"
+    "discovered_at": "2026-10-26 14:56:21"
   },
   {
     "id": "news-1122627a66dfc215a84f",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T15:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   },
   {
     "id": "news-1eadd5627184a89f1bbe",
@@ -669,6 +669,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-26 13:56:40"
+    "discovered_at": "2026-10-26 14:56:11"
   }
 ]
