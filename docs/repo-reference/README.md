@@ -8,7 +8,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 26 Oct 2026, 19:14 UTC |
+| Generated | 26 Oct 2026, 20:57 UTC |
 | Providers tracked | 40 |
 | Public models | 349 |
 | Active models | 105 |
@@ -19,7 +19,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | Release-desk entries | 53 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 26 Oct 2026, 19:14 UTC |
+| Latest visible refresh | 26 Oct 2026, 20:57 UTC |
 | Current evaluated composite leader | GPT-5.2 (52.1) |
 | Latest tracked release | Kimi K3.1 Pro (23 Oct 2026) |
 
