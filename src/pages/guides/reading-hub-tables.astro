@@ -7,6 +7,7 @@ const rows = modelsLatest.models as Row[];
 const policy = modelsLatest.benchmark_policy;
 const newestRelease = rows.map((m) => m.released ?? '').sort().at(-1) ?? '';
 const fmt = (d: string) => new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+const previewRows = (modelsLatest.models as { status: string }[]).filter((m) => m.status === 'preview').length;
 const batchRows = (modelsLatest.models as { model: string }[]).filter((m) => /\(batch\)/i.test(m.model)).length;
 const suppressed = rows.filter((m) => m.quality_score_state === 'suppressed_untraceable').length;
 const sources = [
@@ -27,7 +28,7 @@ const sources = [
   sources={sources}
 >
   <p class="note">
-    State of the data on {fmt(modelsLatest.generated)}: the model export holds {modelsLatest.model_count} models, {modelsLatest.active_model_count} active and {modelsLatest.tracking_model_count} tracking. The newest release date in it is {fmt(newestRelease)}. The export file is rebuilt several times a day, but rebuilding doesn't add models, so anything launched since the newest date above won't appear yet.
+    State of the data on {fmt(modelsLatest.generated)}: the model export holds {modelsLatest.model_count} models, {modelsLatest.active_model_count} active, {modelsLatest.tracking_model_count} tracking and {previewRows} in preview. The newest release date in it is {fmt(newestRelease)}. The export file is rebuilt several times a day, but rebuilding doesn't add models, so anything launched since the newest date above won't appear yet.
   </p>
 
   <h2>Two dates to look for</h2>

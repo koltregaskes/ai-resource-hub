@@ -3,6 +3,7 @@ import GuideArticle from '../../components/GuideArticle.astro';
 import modelsLatest from '../../../public/data/models-latest.json';
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 type Row = { category: string; context_window: number | null; status: string };
+const allLlms = (modelsLatest.models as Row[]).filter((m) => m.category === 'llm').length;
 const llms = (modelsLatest.models as Row[]).filter((m) => m.category === 'llm' && m.context_window);
 const windows = llms.map((m) => m.context_window as number).sort((a, b) => a - b);
 const atLeastMillion = windows.filter((w) => w >= 1_000_000).length;
@@ -36,7 +37,7 @@ const sources = [
 
   <h2>What our catalogue shows</h2>
   <p>
-    In the Hub's model export generated {generated}, {llms.length} language models have a context window listed. The median is {fmt(median)} tokens, the smallest is {fmt(windows[0])} and the largest is {fmt(windows[windows.length - 1])}. {atLeastMillion} of them list a million tokens or more. The catalogue's newest release dates from July 2026, so newer models may be missing. The full list is on the <a href={`${base}context-window/`}>context window page</a>.
+    In the Hub's model export generated {generated}, {llms.length} of {allLlms} language models have a context window listed. The median is {fmt(median)} tokens, the smallest is {fmt(windows[0])} and the largest is {fmt(windows[windows.length - 1])}. {atLeastMillion} of them list a million tokens or more. The catalogue's newest release dates from July 2026, so newer models may be missing. The full list is on the <a href={`${base}context-window/`}>context window page</a>.
   </p>
   <p>
     The window and the maximum output are different numbers. A model might accept a very long prompt but only write a few thousand tokens back. Both appear on each model's page.
