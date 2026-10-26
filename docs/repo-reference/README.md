@@ -8,7 +8,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 22 Oct 2026, 23:20 UTC |
+| Generated | 26 Oct 2026, 00:32 UTC |
 | Providers tracked | 40 |
 | Public models | 349 |
 | Active models | 105 |
@@ -19,8 +19,8 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 | Release-desk entries | 52 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 22 Oct 2026, 23:20 UTC |
-| Current evaluated composite leader | GPT-5.2 (52.1) |
+| Latest visible refresh | 26 Oct 2026, 00:24 UTC |
+| Evaluated composite inside the freshness window | None. Measurements outside 90 days are withheld. |
 | Latest tracked release | MiniMax M3.1 Flash (19 Oct 2026) |
 
 ## Reference Files

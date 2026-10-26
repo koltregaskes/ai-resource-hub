@@ -4,7 +4,14 @@ import path from 'node:path';
 import { getBenchmarks, getNews } from '../src/db/queries';
 import { getModels, getProviders } from '../src/db/pg-cache';
 import { formatAiMilestoneDate, getAiMilestonesOverview } from '../src/data/ai-milestones';
-import { getLatestActivities, getMetaLeaderboard, normaliseDateTime } from '../src/data/hub-dashboard';
+import {
+  COMPOSITE_MEASUREMENT_MAX_AGE_DAYS,
+  OWN_BENCHMARK_FEED_NOTICE,
+  getCompositeBoard,
+  getLatestActivities,
+  getMetaLeaderboard,
+  normaliseDateTime,
+} from '../src/data/hub-dashboard';
 import { formatAvailabilityDate, getAvailabilityOverview, getAvailabilityRows } from '../src/data/model-availability';
 import { modelReleaseDesk } from '../src/data/model-release-desk.generated';
 import { newsPipelineSnapshot } from '../src/data/news-pipeline.generated';
@@ -124,7 +131,7 @@ function buildIndexDoc(generatedAt: string): string {
       ['Configured news sources', String(newsPipelineSnapshot.summary.configuredSourceCount)],
       ['Availability rules', String(getAvailabilityOverview().totalRules)],
       ['Latest visible refresh', formatDateTime(latestRefresh)],
-      ['Current evaluated composite leader', leaderboard ? `${leaderboard.name} (${leaderboard.metaScore.toFixed(1)})` : 'Not yet available'],
+      ['Evaluated composite inside the freshness window', leaderboard ? `${leaderboard.name} (${leaderboard.metaScore.toFixed(1)})` : `None. Measurements outside ${COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days are withheld.`],
       ['Latest tracked release', latestRelease ? `${latestRelease.modelName} (${latestRelease.releaseDateLabel})` : 'Not yet available'],
     ],
   );
@@ -240,38 +247,60 @@ ${detailSections}
 }
 
 function buildLeaderboardDoc(generatedAt: string): string {
-  const ranked = getMetaLeaderboard(20);
+  const board = getCompositeBoard(20);
+  const rankedTable = board.ranked.length > 0
+    ? markdownTable(
+      ['Rank', 'Model', 'Provider', 'Composite', 'Bench', 'Coverage', 'Best for', 'Newest measurement', 'Price', 'Released'],
+      board.ranked.map((model, index) => [
+        String(index + 1),
+        model.name,
+        model.provider,
+        model.metaScore.toFixed(1),
+        `${model.benchmarkScore.toFixed(1)} / ${model.benchmarkCount}`,
+        formatCoverage(model.coverageRatio),
+        model.bestFor,
+        formatDate(model.newestMeasuredAt),
+        formatPrice(model.inputPrice, model.outputPrice, model.openSource),
+        formatDate(model.released),
+      ]),
+    )
+    : `No model has two distinct benchmark measurements inside the ${COMPOSITE_MEASUREMENT_MAX_AGE_DAYS}-day window, so nothing is ranked.`;
 
-  const table = markdownTable(
-    ['Rank', 'Model', 'Provider', 'Composite', 'Bench', 'Coverage', 'Best for', 'Price', 'Released'],
-    ranked.map((model, index) => [
-      String(index + 1),
-      model.name,
-      model.provider,
-      model.metaScore.toFixed(1),
-      `${model.benchmarkScore.toFixed(1)} / ${model.benchmarkCount}`,
-      formatCoverage(model.coverageRatio),
-      model.bestFor,
-      formatPrice(model.inputPrice, model.outputPrice, model.openSource),
-      formatDate(model.released),
-    ]),
-  );
+  const withheldTable = board.withheld.length > 0
+    ? markdownTable(
+      ['Model', 'Provider', 'Newest measurement', 'In window', 'Older benchmarks', 'Why'],
+      board.withheld.map((model) => [
+        model.name,
+        model.provider,
+        formatDate(model.newestMeasuredAt),
+        String(model.inWindowBenchmarkCount),
+        String(model.olderBenchmarkCount),
+        model.reason,
+      ]),
+    )
+    : 'No model with rankable public measurements is outside the window.';
 
   return `
 # Composite Leaderboard Snapshot
 
 Generated: ${formatDateTime(generatedAt)}
 
-This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
+This is the repo-readable evaluated composite used on the website. It ranks only measurements whose \`measured_at\` falls inside the last ${COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days. Older measurements are withheld and are not given a score.
 
-## Top 20
+${OWN_BENCHMARK_FEED_NOTICE}
 
-${table}
+## Ranked
+
+${rankedTable}
+
+## Withheld
+
+${withheldTable}
 
 Notes:
 
 - This table reflects the evaluated composite, not a pure "frontier now" list.
-- Newer tracked launches can exist in the registry before they have enough benchmark coverage to rank highly here.
+- A model needs at least two distinct in-window measurements before it receives a rank.
 - For raw exports, see ${repoLink('models-latest.json', '../../public/data/models-latest.json')} and ${repoLink('ai-models-comparison.csv', '../../public/data/ai-models-comparison.csv')}.
 `;
 }

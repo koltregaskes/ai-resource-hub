@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getLLMModels } from '../../data/llm-models';
-import { getMetaLeaderboard } from '../../data/hub-dashboard';
+import { COMPOSITE_MEASUREMENT_MAX_AGE_DAYS, OWN_BENCHMARK_FEED_NOTICE, getMetaLeaderboard } from '../../data/hub-dashboard';
 
 const models = getLLMModels();
 const rawBase = import.meta.env.BASE_URL;
@@ -186,15 +186,16 @@ function formatPrice(price: number): string {
 
       <!-- Current rankings from our data -->
       <section>
-        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Current Model Rankings (from Our Data)</h2>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Evaluated composite inside the freshness window</h2>
         <p class="text-(--color-text-secondary) leading-relaxed mb-4">
-          Here's what the traceable data says about the top evaluated models right now. These rankings use
-          source-backed benchmark rows and pricing data from a catalogue of {models.length} models.
+          These lists include a model only when at least two benchmark measurements fall inside the last {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days.
+          The catalogue has {models.length} models. {OWN_BENCHMARK_FEED_NOTICE}
         </p>
 
         <div class="grid sm:grid-cols-3 gap-4 mb-4">
           <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
             <h3 class="text-sm font-semibold text-(--color-accent) mb-3">Evaluated Composite</h3>
+            {topQuality.length === 0 ? <p class="text-sm text-(--color-text-muted)">None inside the {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS}-day window.</p> : null}
             {topQuality.map((m, i) => (
               <div class="flex items-center justify-between py-1.5">
                 <a href={`${base}models/${m.id}/`} class="text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
@@ -206,6 +207,7 @@ function formatPrice(price: number): string {
           </div>
           <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
             <h3 class="text-sm font-semibold text-(--color-success) mb-3">Benchmark Value</h3>
+            {topValue.length === 0 ? <p class="text-sm text-(--color-text-muted)">None. Value is not calculated from withheld measurements.</p> : null}
             {topValue.map((m, i) => (
               <div class="flex items-center justify-between py-1.5">
                 <a href={`${base}models/${m.id}/`} class="text-sm text-(--color-text-primary) hover:text-(--color-accent) transition-colors">

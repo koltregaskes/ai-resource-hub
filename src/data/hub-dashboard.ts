@@ -1,6 +1,10 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { benchmarkFreshness } from './benchmark-freshness';
+import {
+  assessBenchmarkProvenance,
+  COMPOSITE_MEASUREMENT_MAX_AGE_DAYS,
+} from './benchmark-provenance';
 import { blogPostHref, blogPosts } from './blog-posts';
 
 import {
@@ -86,9 +90,29 @@ export interface MetaLeaderboardEntry {
   speed: number;
   valueScore: number;
   released: string | null;
+  newestMeasuredAt: string | null;
   openSource: boolean;
   apiAvailable: boolean;
   modality: string[];
+}
+
+export interface WithheldCompositeEntry {
+  id: string;
+  name: string;
+  provider: string;
+  providerColour: string;
+  released: string | null;
+  inWindowBenchmarkCount: number;
+  olderBenchmarkCount: number;
+  newestMeasuredAt: string | null;
+  reason: string;
+}
+
+export interface CompositeBoard {
+  windowDays: number;
+  ranked: MetaLeaderboardEntry[];
+  withheld: WithheldCompositeEntry[];
+  ownBenchmarkRunsConnected: boolean;
 }
 
 export interface FrontierNowEntry {
@@ -600,7 +624,44 @@ function getFrontierEvidence(
 
 export const MIN_EVALUATED_BENCHMARKS = 2;
 
-export function getMetaLeaderboard(limit = 10): MetaLeaderboardEntry[] {
+export { COMPOSITE_MEASUREMENT_MAX_AGE_DAYS };
+
+/**
+ * Rooms OS writes Kol Floor reports on the Mini PC. It does not publish a
+ * benchmark feed this site can ingest, and the hub benchmark list has no
+ * Kol Floor id. Keep this false until a real rankable feed exists.
+ */
+export const OWN_BENCHMARK_RUNS_CONNECTED = false;
+
+export const OWN_BENCHMARK_FEED_NOTICE =
+  'Own-benchmark runs are not feeding this board. Rooms OS does not publish a benchmark feed this site can ingest, and this page does not invent scores.';
+
+function measurementInsideCompositeWindow(
+  score: BenchmarkScoreRow,
+  benchmark: BenchmarkDefinition | undefined,
+  now: Date,
+): boolean {
+  return assessBenchmarkProvenance(score, benchmark, {
+    now,
+    maxAgeDays: COMPOSITE_MEASUREMENT_MAX_AGE_DAYS,
+  }).rankable;
+}
+
+function newestMeasuredAt(scores: BenchmarkScoreRow[]): string | null {
+  let bestTime = Number.NEGATIVE_INFINITY;
+  let bestRaw: string | null = null;
+  for (const score of scores) {
+    const raw = score.measured_at?.trim();
+    if (!raw) continue;
+    const parsed = Date.parse(raw);
+    if (!Number.isFinite(parsed) || parsed < bestTime) continue;
+    bestTime = parsed;
+    bestRaw = raw;
+  }
+  return bestRaw;
+}
+
+export function getCompositeBoard(limit = 250, now = new Date()): CompositeBoard {
   const models = getPublicModelsByCategory('llm');
   const benchmarks = getBenchmarks().filter((benchmark) => toNumber(benchmark.weight) > 0);
   const benchmarkScores = getBenchmarkScores().filter((row) => row.model_category === 'llm');
@@ -612,73 +673,123 @@ export function getMetaLeaderboard(limit = 10): MetaLeaderboardEntry[] {
     scoresByModel.get(score.model_id)?.push(score);
   }
 
-  return models
-    .map((model): MetaLeaderboardEntry | null => {
-      const scores = (scoresByModel.get(model.id) ?? []).filter((row) => benchmarkMap.has(row.benchmark_id));
-      const categoryScores = new Map<string, { total: number; weight: number }>();
-      let weightedScoreTotal = 0;
-      let coveredWeight = 0;
+  const ranked: MetaLeaderboardEntry[] = [];
+  const withheld: WithheldCompositeEntry[] = [];
 
-      for (const score of scores) {
-        const benchmark = benchmarkMap.get(score.benchmark_id);
-        if (!benchmark) continue;
+  for (const model of models) {
+    const scores = (scoresByModel.get(model.id) ?? []).filter((row) => benchmarkMap.has(row.benchmark_id));
+    if (scores.length === 0) continue;
 
-        const weight = toNumber(benchmark.weight);
-        const normalized = normaliseBenchmarkScore(score, benchmark);
-        weightedScoreTotal += normalized * weight;
-        coveredWeight += weight;
+    const fresh = scores.filter((score) => (
+      measurementInsideCompositeWindow(score, benchmarkMap.get(score.benchmark_id), now)
+    ));
+    const freshBenchmarkIds = new Set(fresh.map((score) => score.benchmark_id));
+    const olderBenchmarkIds = new Set(
+      scores
+        .filter((score) => !freshBenchmarkIds.has(score.benchmark_id))
+        .map((score) => score.benchmark_id),
+    );
 
-        const current = categoryScores.get(benchmark.category) ?? { total: 0, weight: 0 };
-        current.total += normalized * weight;
-        current.weight += weight;
-        categoryScores.set(benchmark.category, current);
-      }
-
-      const benchmarkScore = coveredWeight > 0 ? weightedScoreTotal / coveredWeight : 0;
-      const coverageRatio = totalWeight > 0 ? coveredWeight / totalWeight : 0;
-      const coverageFactor = Math.min(1, coverageRatio / 0.55);
-      const freshnessScore = getFreshnessScore(model.released);
-
-      if (new Set(scores.map((score) => score.benchmark_id)).size < MIN_EVALUATED_BENCHMARKS) return null;
-
-      const metaScore = benchmarkScore
-        * (0.7 + 0.3 * coverageFactor)
-        * getEvidenceFactor(scores.length);
-
-      return {
+    if (freshBenchmarkIds.size < MIN_EVALUATED_BENCHMARKS) {
+      withheld.push({
         id: model.id,
         name: model.name,
         provider: model.provider_name,
         providerColour: model.provider_colour,
-        status: model.status,
-        metaScore: Number(metaScore.toFixed(1)),
-        benchmarkScore: Number(benchmarkScore.toFixed(1)),
-        qualityScore: null,
-        freshnessScore,
-        benchmarkCount: scores.length,
-        coverageRatio: Number(coverageRatio.toFixed(3)),
-        bestFor: scores.length > 0 ? getBestForLabel(categoryScores) : 'Frontier tracking',
-        inputPrice: toNumber(model.input_price),
-        outputPrice: toNumber(model.output_price),
-        contextWindow: toNumber(model.context_window),
-        speed: toNumber(model.speed),
-        valueScore: (() => {
-          const blended = (toNumber(model.input_price) + 3 * toNumber(model.output_price)) / 4;
-          return blended > 0 ? Math.round((benchmarkScore / blended) * 10) : 0;
-        })(),
         released: model.released || null,
-        openSource: Boolean(model.open_source),
-        apiAvailable: Boolean(model.api_available),
-        modality: toModalityList(model.modality),
-      };
-    })
-    .filter((model): model is MetaLeaderboardEntry => Boolean(model))
-    .sort((a, b) =>
-      b.metaScore - a.metaScore ||
-      b.benchmarkScore - a.benchmarkScore ||
-      b.benchmarkCount - a.benchmarkCount ||
-      a.name.localeCompare(b.name))
-    .slice(0, limit);
+        inWindowBenchmarkCount: freshBenchmarkIds.size,
+        olderBenchmarkCount: olderBenchmarkIds.size,
+        newestMeasuredAt: newestMeasuredAt(scores),
+        reason: freshBenchmarkIds.size === 0
+          ? `Outside the ${COMPOSITE_MEASUREMENT_MAX_AGE_DAYS}-day window.`
+          : `Only ${freshBenchmarkIds.size} distinct benchmark${freshBenchmarkIds.size === 1 ? '' : 's'} inside the ${COMPOSITE_MEASUREMENT_MAX_AGE_DAYS}-day window; ${MIN_EVALUATED_BENCHMARKS} required.`,
+      });
+      continue;
+    }
+
+    const categoryScores = new Map<string, { total: number; weight: number }>();
+    let weightedScoreTotal = 0;
+    let coveredWeight = 0;
+
+    for (const score of fresh) {
+      const benchmark = benchmarkMap.get(score.benchmark_id);
+      if (!benchmark) continue;
+
+      const weight = toNumber(benchmark.weight);
+      const normalized = normaliseBenchmarkScore(score, benchmark);
+      weightedScoreTotal += normalized * weight;
+      coveredWeight += weight;
+
+      const current = categoryScores.get(benchmark.category) ?? { total: 0, weight: 0 };
+      current.total += normalized * weight;
+      current.weight += weight;
+      categoryScores.set(benchmark.category, current);
+    }
+
+    const benchmarkScore = coveredWeight > 0 ? weightedScoreTotal / coveredWeight : 0;
+    const coverageRatio = totalWeight > 0 ? coveredWeight / totalWeight : 0;
+    const coverageFactor = Math.min(1, coverageRatio / 0.55);
+    const metaScore = benchmarkScore
+      * (0.7 + 0.3 * coverageFactor)
+      * getEvidenceFactor(fresh.length);
+
+    ranked.push({
+      id: model.id,
+      name: model.name,
+      provider: model.provider_name,
+      providerColour: model.provider_colour,
+      status: model.status,
+      metaScore: Number(metaScore.toFixed(1)),
+      benchmarkScore: Number(benchmarkScore.toFixed(1)),
+      qualityScore: null,
+      freshnessScore: getFreshnessScore(model.released),
+      benchmarkCount: fresh.length,
+      coverageRatio: Number(coverageRatio.toFixed(3)),
+      bestFor: getBestForLabel(categoryScores),
+      inputPrice: toNumber(model.input_price),
+      outputPrice: toNumber(model.output_price),
+      contextWindow: toNumber(model.context_window),
+      speed: toNumber(model.speed),
+      valueScore: (() => {
+        const blended = (toNumber(model.input_price) + 3 * toNumber(model.output_price)) / 4;
+        return blended > 0 ? Math.round((benchmarkScore / blended) * 10) : 0;
+      })(),
+      released: model.released || null,
+      newestMeasuredAt: newestMeasuredAt(fresh),
+      openSource: Boolean(model.open_source),
+      apiAvailable: Boolean(model.api_available),
+      modality: toModalityList(model.modality),
+    });
+  }
+
+  ranked.sort((a, b) =>
+    b.metaScore - a.metaScore ||
+    b.benchmarkScore - a.benchmarkScore ||
+    b.benchmarkCount - a.benchmarkCount ||
+    a.name.localeCompare(b.name));
+
+  withheld.sort((a, b) => {
+    const aTime = Date.parse(a.newestMeasuredAt ?? '');
+    const bTime = Date.parse(b.newestMeasuredAt ?? '');
+    const delta = (Number.isFinite(bTime) ? bTime : 0) - (Number.isFinite(aTime) ? aTime : 0);
+    if (delta !== 0) return delta;
+    return a.name.localeCompare(b.name);
+  });
+
+  return {
+    windowDays: COMPOSITE_MEASUREMENT_MAX_AGE_DAYS,
+    ranked: ranked.slice(0, limit),
+    withheld,
+    ownBenchmarkRunsConnected: OWN_BENCHMARK_RUNS_CONNECTED,
+  };
+}
+
+export function getMetaLeaderboard(limit = 10, now = new Date()): MetaLeaderboardEntry[] {
+  return getCompositeBoard(limit, now).ranked;
+}
+
+export function getWithheldCompositeModels(now = new Date()): WithheldCompositeEntry[] {
+  return getCompositeBoard(250, now).withheld;
 }
 
 export function getFrontierNow(limit = 10): FrontierNowEntry[] {
@@ -839,7 +950,7 @@ export function getDataPulse(basePath = '/'): DataPulseEntry[] {
     {
       id: 'meta',
       label: 'Evaluated composite',
-      note: 'Latest measurement among exact evidence-backed rows; collection and recomputation do not refresh measurement dates.',
+      note: `Latest measurement among exact evidence-backed rows; collection and recomputation do not refresh measurement dates. The evaluated composite ranks measurements from the last ${COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days only and withholds older rows. ${OWN_BENCHMARK_FEED_NOTICE}`,
       updatedAt: benchmarkRefresh.measuredAt,
       attemptedAt: benchmarkRefresh.attemptedAt,
       sourceVerifiedAt: benchmarkRefresh.sourceVerifiedAt,

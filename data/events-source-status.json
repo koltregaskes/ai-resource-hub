@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-10-22T23:20:09.243Z",
   "sourceType": "curated primary sources",
-  "live": 7,
+  "live": 8,
   "errors": 0,
   "checks": [
     {
@@ -63,6 +63,15 @@
       "name": "NeurIPS 2026",
       "url": "https://neurips.cc/Conferences/2026",
       "checkedAt": "2026-10-22T23:20:08.420Z",
+      "state": "live",
+      "status": 200,
+      "error": null
+    },
+    {
+      "id": "aaai-2027",
+      "name": "AAAI-27",
+      "url": "https://aaai.org/conference/aaai/aaai-27/",
+      "checkedAt": "2026-10-26T00:31:18.667Z",
       "state": "live",
       "status": 200,
       "error": null
