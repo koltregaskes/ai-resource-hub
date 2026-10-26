@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getPublicModelsByCategory, getModelBenchmarks, getBenchmarks } from '../../db/queries';
-import { getMetaLeaderboard } from '../../data/hub-dashboard';
+import { getMetaLeaderboard, getWithheldCompositeModels } from '../../data/hub-dashboard';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -9,6 +9,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const models = getPublicModelsByCategory('llm');
 const allBenchmarks = getBenchmarks();
 const evaluatedByModel = new Map(getMetaLeaderboard(250).map((entry) => [entry.id, entry]));
+const withheldIds = new Set(getWithheldCompositeModels().map((entry) => entry.id));
 
 // Pre-fetch all benchmark scores for all models
 const modelBenchmarks: Record<string, Record<string, number>> = {};
@@ -35,6 +36,7 @@ const modelsJSON = safeJson(models.map(m => ({
   maxOutput: m.maxOutput,
   speed: m.speed,
   evaluatedComposite: evaluatedByModel.get(m.id)?.metaScore ?? null,
+  compositeWithheld: withheldIds.has(m.id),
   released: m.released,
   status: m.status,
   openSource: m.openSource,
@@ -258,6 +260,10 @@ const baseJSON = safeJson(base);
 
     function isEvaluatedModel(model) {
       return model.evaluatedComposite !== null && Object.keys(benchmarkScores[model.id] ?? {}).length >= 2;
+    }
+
+    function compositeGapLabel(model) {
+      return model.compositeWithheld ? 'Outside freshness window' : 'Awaiting evidence';
     }
 
     function getStatusLabel(model) {
@@ -493,7 +499,7 @@ const baseJSON = safeJson(base);
             <div class="grid grid-cols-2 gap-2 text-center">
               <div class="p-2 rounded-lg bg-(--color-bg-tertiary)">
                 <p class="text-lg font-bold text-(--color-accent)">${evaluated ? m.evaluatedComposite : '&mdash;'}</p>
-                <p class="text-[10px] text-(--color-text-muted)">${evaluated ? 'Evaluated composite' : 'Pending evidence'}</p>
+                <p class="text-[10px] text-(--color-text-muted)">${evaluated ? 'Evaluated composite' : compositeGapLabel(m)}</p>
               </div>
               <div class="p-2 rounded-lg bg-(--color-bg-tertiary)">
                 <p class="text-lg font-bold text-green-400">${value}</p>
@@ -555,7 +561,7 @@ const baseJSON = safeJson(base);
         ['Context Window', selected.map((m, i) => `<span class="${ctxBest[i]}">${formatTokens(m.contextWindow)}</span>`)],
         ['Max Output', selected.map((m, i) => `<span class="${outBest[i]}">${formatTokens(m.maxOutput)}</span>`)],
         ['Speed', selected.map((m, i) => `<span class="${speedBest[i]}">${m.speed > 0 ? m.speed + ' tok/s' : 'N/A'}</span>`)],
-        ['Evaluated Composite', selected.map((m, i) => isEvaluatedModel(m) ? `<span class="${compositeBest[i]}">${m.evaluatedComposite}/100</span>` : '<span class="text-(--color-text-muted)">Awaiting evidence</span>')],
+        ['Evaluated Composite', selected.map((m, i) => isEvaluatedModel(m) ? `<span class="${compositeBest[i]}">${m.evaluatedComposite}/100</span>` : `<span class="text-(--color-text-muted)">${compositeGapLabel(m)}</span>`)],
         ['Open Source', selected.map(m => m.openSource ? '<span class="text-green-400">Yes</span>' : '<span class="text-(--color-text-muted)">No</span>')],
         ['API Available', selected.map(m => m.apiAvailable ? '<span class="text-green-400">Yes</span>' : '<span class="text-(--color-text-muted)">No</span>')],
         ['Modality', selected.map(m => `<span class="text-xs">${m.modality}</span>`)],
@@ -652,7 +658,7 @@ const baseJSON = safeJson(base);
               const missingComposite = metric.key === 'evaluatedComposite' && !isEvaluatedModel(m);
               const numericValue = typeof val === 'number' ? val : 0;
               const pct = missingComposite ? 0 : (metric.max > 0 ? (numericValue / metric.max * 100) : 0);
-              const display = missingComposite ? 'Pending' : (metric.key === 'evaluatedComposite' ? numericValue + '/100' : formatTokens(numericValue));
+              const display = missingComposite ? compositeGapLabel(m) : (metric.key === 'evaluatedComposite' ? numericValue + '/100' : formatTokens(numericValue));
               return `
                 <div class="flex items-center gap-3">
                   <span class="text-xs text-(--color-text-secondary) w-28 truncate">${m.name}</span>
@@ -685,7 +691,9 @@ const baseJSON = safeJson(base);
 
       let text = '';
       if (sorted.length === 0) {
-        text = 'These releases are visible early, but they are still waiting for enough rankable benchmark evidence to support a verdict.';
+        text = selected.some((model) => model.compositeWithheld)
+          ? 'No selected model has two benchmark measurements inside the freshness window, so nothing is ranked. Older measurements are withheld and are not turned into a score.'
+          : 'These releases are visible early, but they are still waiting for enough rankable benchmark evidence to support a verdict.';
       } else {
         text = `<strong>${sorted[0].name}</strong> leads among the evaluated models (${sorted[0].evaluatedComposite}/100).`;
       }
@@ -703,7 +711,14 @@ const baseJSON = safeJson(base);
       }
 
       if (pending.length > 0) {
-        text += ` ${pending.map((model) => `<strong>${model.name}</strong>`).join(', ')} ${pending.length === 1 ? 'is' : 'are'} still tracked without enough rankable evidence for a public comparison.`;
+        const withheld = pending.filter((model) => model.compositeWithheld);
+        const waiting = pending.filter((model) => !model.compositeWithheld);
+        if (withheld.length > 0) {
+          text += ` ${withheld.map((model) => `<strong>${model.name}</strong>`).join(', ')} ${withheld.length === 1 ? 'is' : 'are'} withheld because ${withheld.length === 1 ? 'its' : 'their'} measurements are outside the freshness window.`;
+        }
+        if (waiting.length > 0) {
+          text += ` ${waiting.map((model) => `<strong>${model.name}</strong>`).join(', ')} ${waiting.length === 1 ? 'is' : 'are'} still tracked without enough rankable evidence for a public comparison.`;
+        }
       }
 
       document.getElementById('verdict-text').innerHTML = text;

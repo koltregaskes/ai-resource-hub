@@ -8,7 +8,7 @@ import {
   getStoryTagCount,
 } from '../../data/content-curation';
 import { loadNewsItems } from '../../data/news-digests';
-import { getMetaLeaderboard } from '../../data/hub-dashboard';
+import { COMPOSITE_MEASUREMENT_MAX_AGE_DAYS, getMetaLeaderboard } from '../../data/hub-dashboard';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -227,14 +227,16 @@ function formatRefreshLabel(value: string | null): string {
               </a>
             </div>
           )}
-          {topEvaluated && (
-            <div class="flex justify-between items-center">
-              <span class="text-sm text-(--color-text-muted)">Leading Evaluated Composite</span>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-(--color-text-muted)">Leading Evaluated Composite</span>
+            {topEvaluated ? (
               <a href={`${base}models/${topEvaluated.id}/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
                 {topEvaluated.name} ({topEvaluated.metaScore}/100)
               </a>
-            </div>
-          )}
+            ) : (
+              <span class="text-sm text-(--color-text-secondary)">None inside the {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS}-day window</span>
+            )}
+          </div>
           <div class="flex justify-between items-center">
             <span class="text-sm text-(--color-text-muted)">Open Source %</span>
             <span class="font-mono text-sm text-(--color-text-primary)">{ossPercentage.toFixed(0)}% ({ossModels.length} models)</span>

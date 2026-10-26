@@ -1,20 +1,28 @@
 # Composite Leaderboard Snapshot
 
-Generated: 22 Oct 2026, 23:20 UTC
+Generated: 26 Oct 2026, 00:01 UTC
 
-This is the repo-readable top slice of the current benchmark-weighted leaderboard used on the website.
+This is the repo-readable evaluated composite used on the website. It ranks only measurements whose `measured_at` falls inside the last 90 days. Older measurements are withheld and are not given a score.
 
-## Top 20
+Own-benchmark runs are not feeding this board. Rooms OS does not publish a benchmark feed this site can ingest, and this page does not invent scores.
 
-| Rank | Model | Provider | Composite | Bench | Coverage | Best for | Price | Released |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | GPT-5.2 | OpenAI | 52.1 | 71.2 / 4 | 16% | Coding | $0.88 / $7.00 | 10 Dec 2025 |
-| 2 | Gemini 3 Pro | Google | 51.4 | 84.1 / 2 | 9% | Reasoning | $2.00 / $12.00 | 18 Nov 2025 |
-| 3 | Claude Opus 4.5 (batch) | Anthropic | 51.4 | 84.0 / 2 | 9% | Reasoning | $2.50 / $12.50 | 24 Nov 2025 |
-| 4 | Claude Sonnet 4.5 (batch) | Anthropic | 49.1 | 80.3 / 2 | 9% | Reasoning | $1.50 / $7.50 | 29 Sept 2025 |
+## Ranked
+
+No model has two distinct benchmark measurements inside the 90-day window, so nothing is ranked.
+
+## Withheld
+
+| Model | Provider | Newest measurement | In window | Older benchmarks | Why |
+| --- | --- | --- | --- | --- | --- |
+| Claude Opus 4.5 (batch) | Anthropic | 05 Feb 2026 | 0 | 2 | Outside the 90-day window. |
+| Claude Opus 4.6 (batch) | Anthropic | 05 Feb 2026 | 0 | 1 | Outside the 90-day window. |
+| Claude Sonnet 4.5 (batch) | Anthropic | 05 Feb 2026 | 0 | 2 | Outside the 90-day window. |
+| Gemini 3 Pro | Google | 05 Feb 2026 | 0 | 2 | Outside the 90-day window. |
+| GPT-5.2 | OpenAI | 11 Dec 2025 | 0 | 4 | Outside the 90-day window. |
+| GPT-5.2 Pro (batch) | OpenAI | 11 Dec 2025 | 0 | 1 | Outside the 90-day window. |
 
 Notes:
 
 - This table reflects the evaluated composite, not a pure "frontier now" list.
-- Newer tracked launches can exist in the registry before they have enough benchmark coverage to rank highly here.
+- A model needs at least two distinct in-window measurements before it receives a rank.
 - For raw exports, see [models-latest.json](../../public/data/models-latest.json) and [ai-models-comparison.csv](../../public/data/ai-models-comparison.csv).

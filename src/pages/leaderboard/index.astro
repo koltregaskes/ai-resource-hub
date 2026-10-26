@@ -1,14 +1,20 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { modelReleaseDesk } from '../../data/model-release-desk.generated';
-import { getFrontierNow, getMetaLeaderboard } from '../../data/hub-dashboard';
+import {
+  COMPOSITE_MEASUREMENT_MAX_AGE_DAYS,
+  OWN_BENCHMARK_FEED_NOTICE,
+  getCompositeBoard,
+  getFrontierNow,
+} from '../../data/hub-dashboard';
 import { getReliabilityFloorOverview } from '../../data/reliability-floor';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
 const frontierNow = getFrontierNow(18);
-const rankedModels = getMetaLeaderboard(250);
+const compositeBoard = getCompositeBoard(250);
+const rankedModels = compositeBoard.ranked;
+const withheldModels = compositeBoard.withheld;
 const reliabilityOverview = getReliabilityFloorOverview();
 const reliabilityRows = [
   ...reliabilityOverview.ranked,
@@ -26,10 +32,6 @@ const topCheapest = [...rankedModels]
   .slice(0, 24);
 const providerOptions = Array.from(new Set(rankedModels.map((model) => model.provider))).sort((a, b) => a.localeCompare(b));
 const useCaseOptions = Array.from(new Set(rankedModels.map((model) => model.bestFor))).sort((a, b) => a.localeCompare(b));
-const latestTrackedRelease = modelReleaseDesk.releases.find((release) => release.draftStatus === 'ready_for_editor')
-  ?? modelReleaseDesk.releases.find((release) => release.priority === 'high')
-  ?? modelReleaseDesk.releases[0]
-  ?? null;
 
 function formatCoverage(ratio: number): string {
   return `${Math.round(ratio * 100)}%`;
@@ -51,13 +53,26 @@ function formatReleaseDate(value: string | null): string {
     day: 'numeric',
     month: 'short',
     year: 'numeric',
+    timeZone: 'UTC',
+  });
+}
+
+function formatMeasurementDate(value: string | null): string {
+  if (!value) return 'Undated';
+  const parsed = Date.parse(value);
+  if (!Number.isFinite(parsed)) return 'Undated';
+  return new Date(parsed).toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+    timeZone: 'UTC',
   });
 }
 ---
 
 <BaseLayout
   title="AI Leaderboard Desk - The AI Resource Hub"
-  description="Current frontier watchlist, Reliability Floor, and benchmark-backed evaluated composite for AI models."
+  description="Frontier watchlist, Reliability Floor, and an evaluated composite that ranks only measurements inside a stated freshness window."
 >
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
@@ -70,17 +85,60 @@ function formatReleaseDate(value: string | null): string {
       <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Ranking desk</p>
       <h1 class="mt-2 text-3xl sm:text-4xl font-extrabold text-(--color-text-primary)">AI Leaderboard Desk</h1>
       <p class="text-(--color-text-secondary) max-w-3xl mt-3 leading-7">
-        This page separates three different questions. <strong>Frontier now</strong> answers what is current.
+        This page separates three different questions. <strong>Frontier now</strong> answers what is current and is not a score.
         <strong>Reliability Floor</strong> asks whether everyday basics are covered. <strong>Evaluated composite</strong>
-        ranks models inside the benchmark-backed scored set.
+        ranks a model only when at least two distinct benchmark measurements fall inside the last {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days.
       </p>
 
-      {latestTrackedRelease ? (
-        <div class="mt-5 rounded-2xl border border-(--color-border-accent) bg-(--color-accent-glow) p-5">
-          <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-(--color-accent)">Important</p>
-          <p class="mt-2 max-w-4xl text-sm leading-6 text-(--color-text-secondary)">
-            The old “composite leaderboard” confusion came from treating one scored table as the answer to everything. The frontier lane keeps newer launches visible immediately, while the evaluated composite only ranks models once there is enough public evidence to score them with some confidence.
-          </p>
+      <div class="mt-5 rounded-2xl border border-(--color-border-accent) bg-(--color-accent-glow) p-5">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-(--color-accent)">Freshness window</p>
+        <p class="mt-2 max-w-4xl text-sm leading-6 text-(--color-text-secondary)">
+          Measurements outside the {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS}-day window are withheld. They are not given a rank, and they are not turned into a composite score. Hourly collection can refresh timestamps. It does not create new measurements.
+        </p>
+        <p class="mt-2 max-w-4xl text-sm leading-6 text-(--color-text-secondary)">
+          {OWN_BENCHMARK_FEED_NOTICE}
+        </p>
+      </div>
+
+      {withheldModels.length > 0 ? (
+        <div class="mt-5 rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+          <div class="px-4 py-3 border-b border-(--color-border)">
+            <h2 class="text-sm font-semibold text-(--color-text-primary)">Withheld from the evaluated composite</h2>
+            <p class="mt-1 text-xs leading-5 text-(--color-text-muted)">
+              {withheldModels.length} models have rankable public measurements, and not enough of those measurements are inside the {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS}-day window to rank. No score is filled in for them.
+            </p>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-(--color-border)">
+                  <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Model</th>
+                  <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium">Newest measurement</th>
+                  <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium">In window</th>
+                  <th class="text-right py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Older</th>
+                  <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Why withheld</th>
+                </tr>
+              </thead>
+              <tbody>
+                {withheldModels.map((model) => (
+                  <tr class="border-b border-(--color-border)/50">
+                    <td class="py-3 px-4">
+                      <a href={`${base}models/${model.id}/`} class="flex items-center gap-2 text-(--color-text-primary) hover:text-(--color-accent) transition-colors">
+                        <span class="w-2 h-2 rounded-full shrink-0" style={`background-color: ${model.providerColour}`}></span>
+                        <span class="font-medium">{model.name}</span>
+                      </a>
+                      <span class="text-[10px] text-(--color-text-muted)">{model.provider}</span>
+                      <p class="mt-1 text-[11px] leading-4 text-(--color-text-secondary) md:hidden">{model.reason}</p>
+                    </td>
+                    <td class="py-3 px-4 text-(--color-text-secondary)">{formatMeasurementDate(model.newestMeasuredAt)}</td>
+                    <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-muted)">{model.inWindowBenchmarkCount}</td>
+                    <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-muted) hidden sm:table-cell">{model.olderBenchmarkCount}</td>
+                    <td class="py-3 px-4 text-xs text-(--color-text-muted) hidden md:table-cell">{model.reason}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       ) : null}
     </div>
@@ -93,7 +151,7 @@ function formatReleaseDate(value: string | null): string {
         Reliability Floor
       </button>
       <button class="leaderboard-tab px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="meta">
-        Evaluated composite
+        Evaluated composite ({rankedModels.length})
       </button>
       <button class="leaderboard-tab px-4 py-2 text-sm font-medium rounded-t-lg transition-colors" data-tab="value">
         Best value
@@ -220,7 +278,10 @@ function formatReleaseDate(value: string | null): string {
     </div>
 
     <div class="leaderboard-panel hidden" id="panel-meta">
-      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+      <div class:list={['rounded-xl border border-dashed border-(--color-border) bg-(--color-bg-primary) p-5 text-sm leading-6 text-(--color-text-secondary)', topMeta.length > 0 && 'hidden']}>
+        Nothing is ranked. No public model has two distinct benchmark measurements inside the last {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days.
+      </div>
+      <div class:list={['rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden', topMeta.length === 0 && 'hidden']}>
         <table class="w-full text-sm">
           <thead>
             <tr class="border-b border-(--color-border)">
@@ -269,7 +330,10 @@ function formatReleaseDate(value: string | null): string {
     </div>
 
     <div class="leaderboard-panel hidden" id="panel-value">
-      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+      <div class:list={['rounded-xl border border-dashed border-(--color-border) bg-(--color-bg-primary) p-5 text-sm leading-6 text-(--color-text-secondary)', topValue.length > 0 && 'hidden']}>
+        No in-window composite, so benchmark value has nothing to rank.
+      </div>
+      <div class:list={['rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden', topValue.length === 0 && 'hidden']}>
         <table class="w-full text-sm">
           <thead>
             <tr class="border-b border-(--color-border)">
@@ -312,7 +376,10 @@ function formatReleaseDate(value: string | null): string {
     </div>
 
     <div class="leaderboard-panel hidden" id="panel-cheapest">
-      <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+      <div class:list={['rounded-xl border border-dashed border-(--color-border) bg-(--color-bg-primary) p-5 text-sm leading-6 text-(--color-text-secondary)', topCheapest.length > 0 && 'hidden']}>
+        No in-window composite, so this price view has nothing to rank.
+      </div>
+      <div class:list={['rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden', topCheapest.length === 0 && 'hidden']}>
         <table class="w-full text-sm">
           <thead>
             <tr class="border-b border-(--color-border)">
@@ -355,18 +422,23 @@ function formatReleaseDate(value: string | null): string {
     </div>
 
     <p class="mt-6 text-sm text-(--color-text-secondary) max-w-3xl">
-      Evaluated composite uses only current, row-level source-backed benchmark results. Models need at least two
-      distinct rankable benchmarks; coverage and evidence-count penalties reduce thin composites. The value tab
-      divides that benchmark composite by current blended token price. The untraceable legacy quality layer is excluded.
+      Evaluated composite uses only row-level source-backed benchmark results measured within the last {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days.
+      A model needs at least two distinct measurements inside that window. Coverage and evidence-count penalties still reduce thin composites.
+      The value tab divides that composite by current blended token price. The untraceable legacy quality layer is excluded.
+      {OWN_BENCHMARK_FEED_NOTICE}
     </p>
 
     <div class="mt-10 rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-5 sm:p-6">
       <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Explore the field</p>
-          <h2 class="mt-2 text-2xl font-bold text-(--color-text-primary)">Search and filter the full ranked dataset</h2>
+          <h2 class="mt-2 text-2xl font-bold text-(--color-text-primary)">
+            {rankedModels.length === 0 ? 'No ranked composite rows' : 'Search and filter the full ranked dataset'}
+          </h2>
           <p class="mt-2 max-w-3xl text-sm leading-6 text-(--color-text-secondary)">
-            The top tables are quick reads. This table is for actual decision-making when you want a specific lab, use case, release window, or pricing posture.
+            {rankedModels.length === 0
+              ? `The explorer only lists models inside the ${COMPOSITE_MEASUREMENT_MAX_AGE_DAYS}-day measurement window. Nothing qualifies, so there is no rank to filter.`
+              : 'The top tables are quick reads. This table is for actual decision-making when you want a specific lab, use case, release window, or pricing posture.'}
           </p>
         </div>
         <button
@@ -475,8 +547,10 @@ function formatReleaseDate(value: string | null): string {
         </table>
       </div>
 
-      <div id="leaderboard-empty" class="hidden mt-4 rounded-xl border border-dashed border-(--color-border) bg-(--color-bg-primary) p-5 text-center text-sm text-(--color-text-secondary)">
-        No models match the current filters. Reset them and widen the search.
+      <div id="leaderboard-empty" class:list={['mt-4 rounded-xl border border-dashed border-(--color-border) bg-(--color-bg-primary) p-5 text-center text-sm text-(--color-text-secondary)', rankedModels.length > 0 && 'hidden']}>
+        {rankedModels.length === 0
+          ? `No model has two measurements inside the last ${COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days, so this table has nothing to rank.`
+          : 'No models match the current filters. Reset them and widen the search.'}
       </div>
     </div>
   </section>

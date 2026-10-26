@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PriceTrendChart from '../../components/PriceTrendChart';
 import { getModelsByCategory, getModelsWithPriceHistory } from '../../db/queries';
-import { getMetaLeaderboard } from '../../data/hub-dashboard';
+import { COMPOSITE_MEASUREMENT_MAX_AGE_DAYS, OWN_BENCHMARK_FEED_NOTICE, getMetaLeaderboard, getWithheldCompositeModels } from '../../data/hub-dashboard';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -92,6 +92,7 @@ const modelsWithTrends = Object.entries(priceHistoryByModel)
 
 const evaluatedModels = getMetaLeaderboard(250);
 const evaluatedById = new Map(evaluatedModels.map((model) => [model.id, model]));
+const withheldIds = new Set(getWithheldCompositeModels().map((model) => model.id));
 
 // Price-to-benchmark scatter data. Unevaluated models are deliberately excluded.
 const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
@@ -243,7 +244,7 @@ const baseJSON = safeJson(base);
     <!-- Price vs evaluated composite scatter (CSS-based) -->
     <div class="mb-10">
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Price vs Evaluated Composite</h2>
-      <p class="text-xs text-(--color-text-muted) mb-4">Only models with at least two current, source-backed benchmark rows appear. Higher evaluated composite (Y axis) with lower price (left) indicates stronger benchmark value.</p>
+      <p class="text-xs text-(--color-text-muted) mb-4">Only models with at least two benchmark measurements inside the last {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days appear. Higher evaluated composite (Y axis) with lower price (left) indicates stronger benchmark value. {evaluatedModels.length === 0 ? OWN_BENCHMARK_FEED_NOTICE : ''}</p>
       <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5">
         <div class="relative w-full" style="height: 400px;" id="scatter-chart">
           <div class="absolute inset-0 grid grid-cols-4 grid-rows-4" style="pointer-events: none;">
@@ -286,7 +287,7 @@ const baseJSON = safeJson(base);
                 <td class="py-3 px-4 text-right font-mono text-sm text-green-400 font-medium">${m.inputPrice.toFixed(3)}</td>
                 <td class="py-3 px-4 text-right font-mono text-sm text-(--color-text-secondary)">${m.outputPrice.toFixed(3)}</td>
                 <td class="py-3 px-4 text-right font-mono text-xs text-(--color-text-muted)">
-                  {evaluatedById.get(m.id)?.metaScore ?? 'Not evaluated'}
+                  {evaluatedById.get(m.id)?.metaScore ?? (withheldIds.has(m.id) ? 'Withheld' : 'Not evaluated')}
                 </td>
               </tr>
             ))}
