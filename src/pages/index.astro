@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getNews } from '../db/queries';
+import { loadRoutedHeadlines } from '../data/routed-news';
 import {
   getDataPulse,
   activityTypeLabel,
@@ -121,7 +122,8 @@ const dataPulse = getDataPulse(base);
 const activities = getLatestActivities(14, base);
 const latestDigest = getLatestDigest();
 const digestEntries = latestDigest?.entries.slice(0, 5) ?? [];
-const headlineNews = (getNews() as HeadlineNewsItem[])
+const routedHeadlines = loadRoutedHeadlines();
+const headlineNews = routedHeadlines ?? (getNews() as HeadlineNewsItem[])
   .map((item) => ({
     ...item,
     headlineDate: normaliseDateTime(item.published_at ?? item.discovered_at ?? null),
