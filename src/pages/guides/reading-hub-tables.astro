@@ -7,6 +7,7 @@ const rows = modelsLatest.models as Row[];
 const policy = modelsLatest.benchmark_policy;
 const newestRelease = rows.map((m) => m.released ?? '').sort().at(-1) ?? '';
 const fmt = (d: string) => new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+const batchRows = (modelsLatest.models as { model: string }[]).filter((m) => /\(batch\)/i.test(m.model)).length;
 const suppressed = rows.filter((m) => m.quality_score_state === 'suppressed_untraceable').length;
 const sources = [
   { label: 'The AI Resource Hub, Methodology', url: 'https://theairesourcehub.com/methodology/' },
@@ -37,7 +38,7 @@ const sources = [
   <h2>The columns</h2>
   <h3>Input and output price</h3>
   <p>
-    For language models these are US dollars per million tokens, input (what you send) and output (what the model writes). They come from the provider's pricing page or from OpenRouter's public models API, and each model page names its source. They're the list price at the time we fetched them. Batch discounts, caching, free tiers and regional prices aren't shown, and a provider can change prices at any time, so check their page before you budget. Image, video and voice tables use different units, such as cost per image, and say so in the header.
+    For language models these are US dollars per million tokens, input (what you send) and output (what the model writes). They come from the provider's pricing page or from OpenRouter's public models API, and each model page names its source. They're the list price at the time we fetched them. Some rows are batch prices, which are usually discounted, and those carry "(batch)" in the model name; {batchRows} rows in the current export do. Don't compare a batch row with a standard one. Caching discounts, free tiers and regional prices aren't shown, and a provider can change prices at any time, so check their page before you budget. Image, video and voice tables use different units, such as cost per image, and say so in the header.
   </p>
   <h3>Context and max output</h3>
   <p>
