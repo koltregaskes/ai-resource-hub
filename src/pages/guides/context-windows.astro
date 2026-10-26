@@ -1,0 +1,63 @@
+---
+import GuideArticle from '../../components/GuideArticle.astro';
+import modelsLatest from '../../../public/data/models-latest.json';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+type Row = { category: string; context_window: number | null; status: string };
+const llms = (modelsLatest.models as Row[]).filter((m) => m.category === 'llm' && m.context_window);
+const windows = llms.map((m) => m.context_window as number).sort((a, b) => a - b);
+const atLeastMillion = windows.filter((w) => w >= 1_000_000).length;
+const median = windows[Math.floor(windows.length / 2)];
+const generated = new Date(modelsLatest.generated).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+const fmt = (n: number) => n.toLocaleString('en-GB');
+const sources = [
+  { label: 'Liu et al. (2023), Lost in the Middle: How Language Models Use Long Contexts, arXiv:2307.03172', url: 'https://arxiv.org/abs/2307.03172' },
+  { label: 'Anthropic, Context windows (documentation)', url: 'https://docs.anthropic.com/en/docs/build-with-claude/context-windows' },
+  { label: 'OpenAI, What are tokens and how to count them?', url: 'https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them' },
+];
+---
+<GuideArticle
+  title="Context Windows: What They Are and Why Bigger Isn't Always Better"
+  crumb="Context Windows"
+  description="What a context window is, how it's measured in tokens, how long prompts can lose detail, and how to read the context column on the Hub."
+  intro="A context window is the amount of text a model can take in and work with in one go, counting both what you send and what it writes back."
+  category="Beginner"
+  readTime="6 min read"
+  updated="2026-10-26"
+  sources={sources}
+>
+  <p>
+    Everything in a conversation counts: your instructions, any files you paste, earlier messages and the reply. Once the total goes past the window, something has to give. Chat apps usually drop or summarise older messages. An API will often just return an error.
+  </p>
+
+  <h2>Tokens, not words</h2>
+  <p>
+    Windows are measured in tokens, the chunks of text a model reads. OpenAI's rule of thumb for English is that one token is about four characters, or roughly three quarters of a word, so 100 tokens is around 75 words. Other languages and code can use more tokens per word. You can try your own text in the <a href={`${base}token-counter/`}>token counter</a>.
+  </p>
+
+  <h2>What our catalogue shows</h2>
+  <p>
+    In the Hub's model export generated {generated}, {llms.length} language models have a context window listed. The median is {fmt(median)} tokens, the smallest is {fmt(windows[0])} and the largest is {fmt(windows[windows.length - 1])}. {atLeastMillion} of them list a million tokens or more. The catalogue's newest release dates from July 2026, so newer models may be missing. The full list is on the <a href={`${base}context-window/`}>context window page</a>.
+  </p>
+  <p>
+    The window and the maximum output are different numbers. A model might accept a very long prompt but only write a few thousand tokens back. Both appear on each model's page.
+  </p>
+
+  <h2>Why bigger isn't always better</h2>
+  <p>
+    A model that accepts a million tokens doesn't use all of them equally well. In the "Lost in the Middle" study, researchers gave models long prompts with one relevant passage and moved it around, and accuracy was highest when that passage was near the start or the end and dropped when it sat in the middle. Newer models have improved on this, but it's still worth testing on your own material before you rely on it.
+  </p>
+  <p>
+    Cost is the other catch. API pricing is per token, and you pay for the whole prompt every time you send it, so a 200,000 token prompt sent fifty times is ten million input tokens. Some providers offer prompt caching to cut the cost of resending the same text. Check the provider's own pricing page for current terms, because ours are dated.
+  </p>
+
+  <h2>Practical tips</h2>
+  <ul>
+    <li>Put the instructions and the question at the end of a long prompt, after the documents, and repeat the key instruction if it's important.</li>
+    <li>Cut what the model doesn't need. A shorter, cleaner prompt usually beats a huge one.</li>
+    <li>For a large library of files, look at <a href={`${base}guides/what-is-rag/`}>RAG</a> instead of pasting everything.</li>
+    <li>In long chats, start a fresh conversation with a short summary when the model starts forgetting earlier details.</li>
+  </ul>
+  <p>
+    The February blog post <a href={`${base}blog/context-windows-explained/`}>Context Windows Explained</a> goes into more of the history.
+  </p>
+</GuideArticle>
