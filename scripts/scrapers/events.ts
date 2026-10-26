@@ -113,6 +113,16 @@ const CURATED_EVENTS: CuratedEvent[] = [
     category: 'research',
     description: 'Annual Conference on Neural Information Processing Systems, with satellite events in Atlanta and Paris.',
   },
+  {
+    id: 'ces-2027',
+    name: 'CES 2027',
+    url: 'https://www.ces.tech/',
+    date_start: '2027-01-06',
+    date_end: '2027-01-09',
+    location: 'Las Vegas, United States',
+    category: 'tech_conference',
+    description: 'Consumer Technology Association tech show with official 2027 dates published on ces.tech.',
+  },
 ];
 
 function readExistingEvents(): CachedEvent[] {
