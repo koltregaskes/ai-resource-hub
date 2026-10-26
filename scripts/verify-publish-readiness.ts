@@ -17,6 +17,7 @@ import {
 } from './benchmark-provenance';
 import { getPublicQualityPolicyFailures } from './public-quality-policy';
 import { findVerifiedBenchmarkScoreEvidence } from './benchmark-score-evidence';
+import { getUpcomingEvents, getUpcomingEventWarnings } from './events-publication-gate';
 
 const repoRoot = process.cwd();
 const dbPath = getAiResourceHubSqlitePath();
@@ -273,9 +274,7 @@ function main() {
   }
 
   const currentDate = new Date().toISOString().slice(0, 10);
-  const upcomingEvents = cacheEvents.filter((event) => (
-    event.date_start && (event.date_end ?? event.date_start).slice(0, 10) >= currentDate
-  ));
+  const upcomingEvents = getUpcomingEvents(cacheEvents, currentDate);
 
   if (!eventSourceStatus) {
     failures.push('Missing event source-check snapshot: data/events-source-status.json');
@@ -466,11 +465,9 @@ function main() {
   // coupling froze the whole site refresh when news routing dried up.
   const warnings: string[] = [];
 
-  if (upcomingEvents.length < 4) {
-    warnings.push(
-      `Events cache has ${upcomingEvents.length} upcoming confirmed events. A short calendar must not block the news and model publish.`,
-    );
-  }
+  // A short events calendar warns (including up to 30 days ahead) but never
+  // blocks the publish. Zero events or invalid records remain hard failures.
+  warnings.push(...getUpcomingEventWarnings(cacheEvents));
 
   const quarantinedBenchmarkScores = cacheBenchmarkScores.length - publicBenchmarkScores.length;
   if (quarantinedBenchmarkScores > 0) {
