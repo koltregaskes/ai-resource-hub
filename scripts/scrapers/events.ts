@@ -113,6 +113,16 @@ const CURATED_EVENTS: CuratedEvent[] = [
     category: 'research',
     description: 'Annual Conference on Neural Information Processing Systems, with satellite events in Atlanta and Paris.',
   },
+  {
+    id: 'aaai-2027',
+    name: 'AAAI-27',
+    url: 'https://aaai.org/conference/aaai/aaai-27/',
+    date_start: '2027-02-16',
+    date_end: '2027-02-23',
+    location: 'Montréal, Canada',
+    category: 'research',
+    description: 'The 41st AAAI Conference on Artificial Intelligence, held in Montréal, Canada, from 16 to 23 February 2027.',
+  },
 ];
 
 function readExistingEvents(): CachedEvent[] {

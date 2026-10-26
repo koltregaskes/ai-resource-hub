@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 22 Oct 2026, 23:20 UTC
+Generated: 26 Oct 2026, 00:32 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -25,7 +25,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 3 Sept 2026 | Qwen3.8 Max (0902) | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
 | 2 Sept 2026 | Muse Spark 1.3 | Meta | tracking | watch | watch only | 0 | 1 | n/a |
 | 2 Sept 2026 | Muse Spark 1.3 Contributor | Meta | tracking | watch | watch only | 0 | 1 | n/a |
-| 26 Aug 2026 | Qwen3.8 Flash | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
+| 26 Aug 2026 | Qwen3.8 Flash | Alibaba | tracking | backfill | watch only | 0 | 0 | n/a |
 | 21 Aug 2026 | DeepSeek V4 Flash Vision Exp | DeepSeek | tracking | backfill | watch only | 0 | 1 | n/a |
 | 21 Aug 2026 | Muse Spark 1.2 Contributor | Meta | tracking | backfill | watch only | 0 | 1 | n/a |
 

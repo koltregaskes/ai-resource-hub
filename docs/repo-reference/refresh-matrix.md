@@ -10,7 +10,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 | --- | --- | --- | --- |
 | AI milestones | Curated updates as research lands | Mixed | 22 Oct 2026, 23:20 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 22 Oct 2026, 23:20 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 26 Oct 2026, 00:24 UTC |
 | Benchmarks and evals | Hourly collection attempts; measurement dates vary | Automated | 05 Feb 2026, 00:00 UTC |
 | Pricing and value | Hourly automated refresh | Automated | 22 Oct 2026, 23:19 UTC |
 | News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 22 Oct 2026, 12:00 UTC |
@@ -60,7 +60,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 22 Oct 2026, 23:20 UTC
+- Last refreshed: 26 Oct 2026, 00:24 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
