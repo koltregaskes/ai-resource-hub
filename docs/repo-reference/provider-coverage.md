@@ -1,12 +1,12 @@
 # Provider Coverage Snapshot
 
-Generated: 26 Oct 2026, 17:56 UTC
+Generated: 26 Oct 2026, 18:56 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
 | Provider | Active | Tracking | Preview | Latest release | Status page | Docs |
 | --- | --- | --- | --- | --- | --- | --- |
-| OpenAI | 25 | 46 | 0 | GPT-5.6 Luna (batch) (9 Jul 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
+| OpenAI | 25 | 47 | 0 | GPT-5.6 Luna (batch) (9 Jul 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
 | Google | 8 | 22 | 0 | Nano Banana 2.1 (6 Oct 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
 | Meta | 6 | 11 | 0 | Muse Spark Open (15 Oct 2026) | n/a | [docs](https://llama.meta.com/docs) |
 | Anthropic | 5 | 19 | 1 | Claude Opus 5 (batch) (24 Jul 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
