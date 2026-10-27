@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T07:58:24.604Z",
+  "generatedAt": "2026-10-27T08:55:50.880Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T07:58:24.597Z",
+      "lastCheckedAt": "2026-10-27T08:55:50.872Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T07:58:22.751Z",
+      "lastCheckedAt": "2026-10-27T08:55:49.287Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T07:58:23.657Z",
+      "lastCheckedAt": "2026-10-27T08:55:49.972Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T07:58:22.887Z",
+      "lastCheckedAt": "2026-10-27T08:55:49.557Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -253,10 +253,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T07:58:22.797Z",
+      "lastCheckedAt": "2026-10-27T08:55:49.331Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -284,8 +284,29 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "01M5Y60NQGGN514EB3943V94EN",
+          "title": "Elevated error rates for most hosted Code Reviews and Security Reviews on private GitHub repositories",
+          "status": "monitoring",
+          "impact": "none",
+          "startedAt": "2026-10-27T08:00:50.000Z",
+          "updatedAt": "2026-10-27T08:21:10.000Z",
+          "resolvedAt": null,
+          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "01M5Y60NQGGN514EB3943V94EN",
+          "title": "Elevated error rates for most hosted Code Reviews and Security Reviews on private GitHub repositories",
+          "status": "monitoring",
+          "impact": "none",
+          "startedAt": "2026-10-27T08:00:50.000Z",
+          "updatedAt": "2026-10-27T08:21:10.000Z",
+          "resolvedAt": null,
+          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
+        },
         {
           "id": "01M5WPZTT0385GMEV1353ZC4AM",
           "title": "Elevated error rates for Ads POST requests",
@@ -315,16 +336,6 @@
           "updatedAt": "2026-10-23T22:02:57.000Z",
           "resolvedAt": "2026-10-23T22:02:57.000Z",
           "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M5KDJ4079XQTZDSRX40NMN6H",
-          "title": "Delays in customer support responses",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-10-23T03:41:03.000Z",
-          "updatedAt": "2026-10-23T05:58:06.000Z",
-          "resolvedAt": "2026-10-23T05:58:06.000Z",
-          "summary": "All impacted services have now fully recovered."
         }
       ]
     },
@@ -339,7 +350,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T07:58:23.944Z",
+      "lastCheckedAt": "2026-10-27T08:55:50.222Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
