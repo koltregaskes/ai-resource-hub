@@ -1,5 +1,41 @@
 [
   {
+    "id": "news-d8c87d0b44570f5f6083",
+    "title": "VisionQuest is what happens when AI really goes rogue",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1017064/visionquest-marvel-rogue-ai",
+    "source": "The Verge",
+    "summary": "In Marvel's VisionQuest, a superpowered robot tries to better understand humanity by getting lost in elaborate, digital daydreams in which he and other artificial intelligence-powered beings live together in a home. The series is deeply fantastical, yet it plays with some of the ideas that have come to dominate the co…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-27T17:30:00.000Z",
+    "discovered_at": "2026-10-27 17:55:43"
+  },
+  {
+    "id": "news-9ffebaf1b25a4f9bbde0",
+    "title": "Frontier AI labs say their models refuted the Exponential Time Hypothesis. What does that mean?",
+    "url": "https://techcrunch.com/2026/10/27/frontier-ai-labs-say-their-models-refuted-the-exponential-time-hypothesis-what-does-that-mean/",
+    "source": "TechCrunch",
+    "summary": "TechCrunch spoke to the MIT computer scientist charged with explaining OpenAI's latest mind-bending discovery",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-27T17:08:08.000Z",
+    "discovered_at": "2026-10-27 17:55:33"
+  },
+  {
+    "id": "news-5d9174dd4f1a7b53fa43",
+    "title": "Anthropic’s elaborate plan to keep Wall Street at bay",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1019470/anthropic-ipo-resist-investor-pressure-cut-corners-safety",
+    "source": "The Verge",
+    "summary": "Anthropic wants to have it both ways. With its impending IPO, it wants to tap the vast riches of the public markets and insists it doesn't want to compromise its core mission of developing AI safely and for the benefit of humanity. But greater model capabilities bring greater risks, and shareholders eager for returns…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-27T16:51:22.000Z",
+    "discovered_at": "2026-10-27 17:55:43"
+  },
+  {
     "id": "news-dddf43d553b66f1e8660",
     "title": "Google’s Genie 4 world model adds audio, more realistic worlds, and real-time steering",
     "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/",
@@ -9,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T16:30:57.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-abb96e9fdd6f617ed269",
@@ -21,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T16:14:18.000Z",
-    "discovered_at": "2026-10-27 16:34:32"
+    "discovered_at": "2026-10-27 17:55:43"
   },
   {
     "id": "news-3513fbe8e95205561274",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T16:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:32"
+    "discovered_at": "2026-10-27 17:55:43"
   },
   {
     "id": "news-122f4e228239d6c9e1be",
@@ -45,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T14:59:09.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-0d516a24ee36aa2dcba3",
@@ -57,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T13:50:51.000Z",
-    "discovered_at": "2026-10-27 16:34:32"
+    "discovered_at": "2026-10-27 17:55:43"
   },
   {
     "id": "news-6c930674e3dc0d820d7d",
@@ -69,19 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T13:32:57.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
-  },
-  {
-    "id": "news-a878112837ec2938a473",
-    "title": "General Compute raises $100 million Series A, countering the neocloud disaster narrative",
-    "url": "https://techcrunch.com/2026/10/27/general-compute-raises-100-million-series-a-countering-the-neocloud-disaster-narrative/",
-    "source": "TechCrunch",
-    "summary": "General Compute is betting on inference chips from outside the Nvidia ecosystem.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-27T13:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-c3f55709f5e3f7eaef3e",
@@ -93,7 +117,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T13:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
+  },
+  {
+    "id": "news-a878112837ec2938a473",
+    "title": "General Compute raises $100 million Series A, countering the neocloud disaster narrative",
+    "url": "https://techcrunch.com/2026/10/27/general-compute-raises-100-million-series-a-countering-the-neocloud-disaster-narrative/",
+    "source": "TechCrunch",
+    "summary": "General Compute is betting on inference chips from outside the Nvidia ecosystem.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-27T13:00:00.000Z",
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-b007bafd9ff10551e06f",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T11:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-415aa97d276f6d69adba",
@@ -117,7 +153,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T10:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:32"
+    "discovered_at": "2026-10-27 17:55:43"
+  },
+  {
+    "id": "news-a3a879144b2984ac94bf",
+    "title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+    "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+    "source": "OpenAI",
+    "summary": "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power new Oracle offerings.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-27T07:00:00.000Z",
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-858bf7d244f35ab57eab",
@@ -129,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T02:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-543832a6d8326a90f20f",
@@ -141,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T01:12:21.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-bba291662c45fb8c7a23",
@@ -153,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T23:34:58.000Z",
-    "discovered_at": "2026-10-27 16:34:32"
+    "discovered_at": "2026-10-27 17:55:43"
   },
   {
     "id": "news-250e5d8f302445e732f1",
@@ -165,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T22:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-96b9f45bb2e6d93364f6",
@@ -177,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T21:45:31.000Z",
-    "discovered_at": "2026-10-27 16:34:32"
+    "discovered_at": "2026-10-27 17:55:43"
   },
   {
     "id": "news-2500a6aad8741c76ba70",
@@ -189,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T17:30:55.000Z",
-    "discovered_at": "2026-10-27 16:34:32"
+    "discovered_at": "2026-10-27 17:55:43"
   },
   {
     "id": "news-4a8f41d180d7e40825d4",
@@ -201,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T17:10:23.000Z",
-    "discovered_at": "2026-10-27 16:34:32"
+    "discovered_at": "2026-10-27 17:55:43"
   },
   {
     "id": "news-0c7a0e584035924b10db",
@@ -213,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:49:42.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-4a24365e960e7ca3c02d",
@@ -225,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:46:36.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -237,19 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
-  },
-  {
-    "id": "news-b8f740314eab2229226a",
-    "title": "Microsoft offers buyouts to 60,000 employees",
-    "url": "https://www.theverge.com/tech/1018666/microsoft-expands-buyouts-60000-employees-eligible",
-    "source": "The Verge",
-    "summary": "Microsoft is offering voluntary buyouts to up to 60,000 employees across the US, UK, Canada, and India. In a message to employees, Microsoft chief people officer Amy Coleman writes that this gives staff members \"the opportunity to leave Microsoft with financial support and career planning resources\" as the company loo…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-26T15:58:27.000Z",
-    "discovered_at": "2026-10-27 16:34:32"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-2c43c284058f6166c85e",
@@ -261,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T14:35:22.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-f16aefe89a6e3f3b8efe",
@@ -273,19 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T14:30:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
-  },
-  {
-    "id": "news-df88ce95d957f878d0e1",
-    "title": "Kevin Roose is AGI-pilled. Why aren’t you?",
-    "url": "https://www.theverge.com/podcast/1018264/kevin-roose-the-agi-chronicles-machine-gods-podcast-youtube-openai-anthropic",
-    "source": "The Verge",
-    "summary": "Today, I’m talking to Kevin Roose, journalist and author of the new book The AGI Chronicles, which details the recent and explosive transformation of the AI industry. Kevin was a longtime New York Times reporter and host of the popular podcast Hard Fork, but he and friend of the show Casey Newton just left the [&#8230…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-26T14:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:32"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-1a1d4bf2fc111eb84688",
@@ -297,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T13:45:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-64d59b55a8fb866695c8",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T10:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-8f2f08b6e197805b4e59",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T07:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-eb7708c5f537ab79bfe6",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T07:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-1758535ac6be3e6bbbbd",
@@ -345,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T00:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-a6feae291b1a855a0bd1",
@@ -357,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-25T21:31:16.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-71334093a413753da2fa",
@@ -369,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-25T16:57:32.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-4262d71f08be8cdae2ec",
@@ -381,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-25T14:10:00.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-770c71828f233d391173",
@@ -393,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-24T20:15:33.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-b0af889ad05fbb7fe502",
@@ -405,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-24T19:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-35d668020c86331624a1",
@@ -417,19 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-24T16:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
-  },
-  {
-    "id": "news-110fd09f65f25a52d9f5",
-    "title": "Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats.",
-    "url": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
-    "source": "TechCrunch",
-    "summary": "A new study found Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, with the two AI models disagreeing in more than 90% of nearly 500 election races.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-24T15:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-298c8de07d18f423dad3",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T17:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-48e2274fdf2ba9fe48db",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T10:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-15c1f8ef7a582594bf05",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T00:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-c6099fc8919f3d5469ae",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T00:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-27825e300358401234fc",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-22T19:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-63c31ca523f91ccfb067",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-22T06:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-ba6fa07d677a822106bc",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-22T00:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-2ed22a61b2f19a0c8004",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T21:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-4ab93569e260b2b0a167",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T17:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-61f4d0141ff303c02405",
@@ -549,19 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T12:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
-  },
-  {
-    "id": "news-d3f519557f32dd3d643c",
-    "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
-    "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
-    "source": "OpenAI",
-    "summary": "Patch the Planet connects security researchers, maintainers, and incident responders to help address critical vulnerabilities across open source.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-21T07:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:23"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-10-27 16:34:32"
+    "discovered_at": "2026-10-27 17:55:43"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-10-27 16:34:32"
+    "discovered_at": "2026-10-27 17:55:43"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-307bfda48464106bf8e3",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:21:53.000Z",
-    "discovered_at": "2026-10-27 16:34:32"
+    "discovered_at": "2026-10-27 17:55:43"
   },
   {
     "id": "news-aaf1cc502a6b16035865",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T22:26:35.000Z",
-    "discovered_at": "2026-10-27 16:34:32"
+    "discovered_at": "2026-10-27 17:55:43"
   },
   {
     "id": "news-6ee8ae0821d338b723f5",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T23:03:16.000Z",
-    "discovered_at": "2026-10-27 16:34:32"
+    "discovered_at": "2026-10-27 17:55:43"
   },
   {
     "id": "news-1122627a66dfc215a84f",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T15:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   },
   {
     "id": "news-1eadd5627184a89f1bbe",
@@ -681,6 +681,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-09-28T19:00:00.000Z",
-    "discovered_at": "2026-10-27 16:34:24"
+    "discovered_at": "2026-10-27 17:55:33"
   }
 ]
