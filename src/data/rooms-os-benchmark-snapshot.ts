@@ -1,0 +1,27 @@
+export const ROOMS_OS_BENCHMARK_SNAPSHOT = {
+  period: '19–25 Oct 2026',
+  generatedAt: '27 Oct 2026',
+  evidenceClass: 'observational',
+  rankable: false,
+  headline: 'Useful operational evidence, but no controlled cross-model winner.',
+  methodologyUrl: 'https://github.com/koltregaskes/ai-resource-hub/blob/main/docs/repo-reference/rooms-os-benchmark.md',
+  metrics: [
+    { label: 'Controlled model comparisons', value: '0', note: 'No matched, independently accepted configuration comparison qualified for ranking.' },
+    { label: 'Scheduled outputs found', value: '4 / 5', note: 'One reviewed scheduled occurrence completed research but its unattended destination write was denied.' },
+    { label: 'Projects classified', value: '172 / 172', note: 'A bounded project-level inventory across nine active initiatives. Classification is not project completion.' },
+    { label: 'Invalid scheduler timestamps', value: '69 / 161', note: 'Future-dated last-run values were excluded from healthy/recent execution evidence.' },
+    { label: 'Configured weekly wakes', value: '~822', note: 'Configuration estimate across 26 active local definitions, not measured executions or token spend.' },
+    { label: 'MY AGI capability promotions', value: '0', note: 'No new capability promotion had current accepted evidence.' },
+  ],
+  learned: [
+    'Final delivery and destination readback are weaker than intermediate implementation and test output.',
+    'Permission and authority checks need to happen before expensive work, not after it.',
+    'Schedule health needs execution and destination evidence; saved definitions and timestamps are not enough.',
+    'Missing model, effort, tool and intervention provenance is now itself a measurable benchmark gap.',
+  ],
+  changes: [
+    'Daily benchmark scoring now separates component success from final accepted outcome.',
+    'Benchmarking now checks current request/source, owner, allowed action and required destination before durable work is credited.',
+    'Unknown configuration and intervention fields remain UNKNOWN instead of being inferred.',
+  ],
+} as const;
