@@ -5,8 +5,8 @@
     "status": "success",
     "models_updated": 1046,
     "error_message": null,
-    "started_at": "2026-10-27 00:56:20",
-    "finished_at": "2026-10-27 00:56:20"
+    "started_at": "2026-10-27 01:55:56",
+    "finished_at": "2026-10-27 01:55:56"
   },
   {
     "id": 10,
@@ -14,8 +14,8 @@
     "status": "error",
     "models_updated": 69,
     "error_message": "VentureBeat: HTTP 429: Too Many Requests",
-    "started_at": "2026-10-27 00:56:16",
-    "finished_at": "2026-10-27 00:56:16"
+    "started_at": "2026-10-27 01:55:52",
+    "finished_at": "2026-10-27 01:55:52"
   },
   {
     "id": 8,
@@ -23,8 +23,8 @@
     "status": "computed",
     "models_updated": 55,
     "error_message": null,
-    "started_at": "2026-10-27 00:56:02",
-    "finished_at": "2026-10-27 00:56:02"
+    "started_at": "2026-10-27 01:55:39",
+    "finished_at": "2026-10-27 01:55:39"
   },
   {
     "id": 9,
@@ -32,8 +32,8 @@
     "status": "success",
     "models_updated": 131,
     "error_message": null,
-    "started_at": "2026-10-27 00:56:02",
-    "finished_at": "2026-10-27 00:56:02"
+    "started_at": "2026-10-27 01:55:39",
+    "finished_at": "2026-10-27 01:55:39"
   },
   {
     "id": 7,
@@ -41,8 +41,17 @@
     "status": "fallback",
     "models_updated": 16,
     "error_message": null,
-    "started_at": "2026-10-27 00:56:01",
-    "finished_at": "2026-10-27 00:56:01"
+    "started_at": "2026-10-27 01:55:38",
+    "finished_at": "2026-10-27 01:55:38"
+  },
+  {
+    "id": 5,
+    "scraper": "benchmarks:chatbot-arena",
+    "status": "fallback",
+    "models_updated": 0,
+    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-10-27T01:55:37.207Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
+    "started_at": "2026-10-27 01:55:37",
+    "finished_at": "2026-10-27 01:55:37"
   },
   {
     "id": 6,
@@ -50,26 +59,8 @@
     "status": "success",
     "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-10-27 00:56:00",
-    "finished_at": "2026-10-27 00:56:00"
-  },
-  {
-    "id": 5,
-    "scraper": "benchmarks:chatbot-arena",
-    "status": "fallback",
-    "models_updated": 0,
-    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-10-27T00:55:59.797Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
-    "started_at": "2026-10-27 00:55:59",
-    "finished_at": "2026-10-27 00:55:59"
-  },
-  {
-    "id": 3,
-    "scraper": "official-pricing",
-    "status": "success",
-    "models_updated": 21,
-    "error_message": null,
-    "started_at": "2026-10-27 00:55:58",
-    "finished_at": "2026-10-27 00:55:58"
+    "started_at": "2026-10-27 01:55:37",
+    "finished_at": "2026-10-27 01:55:37"
   },
   {
     "id": 4,
@@ -77,17 +68,26 @@
     "status": "success",
     "models_updated": 0,
     "error_message": null,
-    "started_at": "2026-10-27 00:55:58",
-    "finished_at": "2026-10-27 00:55:58"
+    "started_at": "2026-10-27 01:55:36",
+    "finished_at": "2026-10-27 01:55:36"
   },
   {
     "id": 2,
     "scraper": "pricing:openrouter",
     "status": "success",
-    "models_updated": 332,
+    "models_updated": 334,
     "error_message": null,
-    "started_at": "2026-10-27 00:55:56",
-    "finished_at": "2026-10-27 00:55:56"
+    "started_at": "2026-10-27 01:55:35",
+    "finished_at": "2026-10-27 01:55:35"
+  },
+  {
+    "id": 3,
+    "scraper": "official-pricing",
+    "status": "success",
+    "models_updated": 21,
+    "error_message": null,
+    "started_at": "2026-10-27 01:55:35",
+    "finished_at": "2026-10-27 01:55:35"
   },
   {
     "id": 1,
@@ -95,7 +95,7 @@
     "status": "success",
     "models_updated": 52,
     "error_message": null,
-    "started_at": "2026-10-27 00:55:54",
-    "finished_at": "2026-10-27 00:55:54"
+    "started_at": "2026-10-27 01:55:34",
+    "finished_at": "2026-10-27 01:55:34"
   }
 ]

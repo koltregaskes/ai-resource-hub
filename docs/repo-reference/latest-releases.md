@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 27 Oct 2026, 00:56 UTC
+Generated: 27 Oct 2026, 01:56 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -18,15 +18,15 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 6 Oct 2026 | Nano Banana 2.1 | Google | tracking | high | watch only | 0 | 1 | n/a |
 | 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 2 | [official](https://www.anthropic.com/glasswing) |
 | 23 Sept 2026 | GLM 5.3 Prime | Zhipu AI | tracking | watch | watch only | 0 | 0 | n/a |
-| 23 Sept 2026 | Qwen3.8 Max Prime | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
-| 22 Sept 2026 | Command A+ | Cohere | tracking | watch | watch only | 0 | 0 | n/a |
+| 23 Sept 2026 | Qwen3.8 Max Prime | Alibaba | tracking | watch | watch only | 0 | 1 | n/a |
+| 22 Sept 2026 | Command A+ | Cohere | tracking | watch | watch only | 0 | 1 | n/a |
 | 21 Sept 2026 | Grok 4.7 | xAI | tracking | watch | watch only | 0 | 0 | n/a |
-| 21 Sept 2026 | Qwen3.8 Omni Flash | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
+| 21 Sept 2026 | Qwen3.8 Omni Flash | Alibaba | tracking | watch | watch only | 0 | 1 | n/a |
 | 18 Sept 2026 | GLM 5.3 FlashX | Zhipu AI | tracking | watch | watch only | 0 | 0 | n/a |
-| 3 Sept 2026 | Qwen3.8 Max (0902) | Alibaba | tracking | watch | watch only | 0 | 0 | n/a |
+| 3 Sept 2026 | Qwen3.8 Max (0902) | Alibaba | tracking | watch | watch only | 0 | 1 | n/a |
 | 2 Sept 2026 | Muse Spark 1.3 | Meta | tracking | watch | watch only | 0 | 1 | n/a |
 | 2 Sept 2026 | Muse Spark 1.3 Contributor | Meta | tracking | watch | watch only | 0 | 1 | n/a |
-| 26 Aug 2026 | Qwen3.8 Flash | Alibaba | tracking | backfill | watch only | 0 | 0 | n/a |
+| 26 Aug 2026 | Qwen3.8 Flash | Alibaba | tracking | backfill | watch only | 0 | 1 | n/a |
 | 21 Aug 2026 | DeepSeek V4 Flash Vision Exp | DeepSeek | tracking | backfill | watch only | 0 | 0 | n/a |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
