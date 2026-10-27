@@ -83,6 +83,14 @@ const benchmarkResources = BENCHMARK_RESOURCES;
           Latest assessed week: {ROOMS_OS_BENCHMARK_SNAPSHOT.period}. This is {ROOMS_OS_BENCHMARK_SNAPSHOT.evidenceClass} real-work evidence,
           not a controlled model leaderboard. {ROOMS_OS_BENCHMARK_SNAPSHOT.headline}
         </p>
+        <a
+          href={ROOMS_OS_BENCHMARK_SNAPSHOT.methodologyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-xs font-medium text-(--color-accent) hover:text-(--color-accent-hover) transition-colors"
+        >
+          Evidence and counting methodology
+        </a>
       </div>
       <div class="grid gap-3 mt-5 sm:grid-cols-2 lg:grid-cols-3">
         {ROOMS_OS_BENCHMARK_SNAPSHOT.metrics.map((metric) => (
