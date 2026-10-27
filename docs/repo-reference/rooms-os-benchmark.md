@@ -37,3 +37,18 @@ The benchmark contract now targets **up to 10 consecutive eligible natural-work 
 Each assessed task records, where evidence exists: accepted / partial / blocked / failed / recovered / false-completion / unknown; final-destination proof; correction or rescue burden; and exposed execution provenance.
 
 Weekly reporting aggregates the seven daily cohorts and any genuinely controlled comparisons, then records what was learned, what safe change was made, and how the next week will verify whether it helped.
+
+
+## Current cross-agent pulse: 27 October 2026
+
+A separate current observational cohort was added after the completed-week snapshot.
+
+- **Assessed units: 10**
+- **Accepted bounded outcomes: 2**
+- **Partial: 6**
+- **Blocked at stated acceptance gate: 2**
+- **Failed: 0 established**
+
+Sampling: the existing AgentMail bus was searched for RESULT traffic dated 25–26 October. Ten unique substantive result messages were read in full; request-only records and one duplicate delivery of the same Samsung correction were excluded. The cohort includes Grokbot, Samsung/Codex, Claude Device Manager, REA/Codex Work and News Atlas traffic. Exact model/effort/tool configuration and human rescue burden remain unknown where not exposed.
+
+This cohort is not merged into the 19–25 October completed-week denominator and is not a model comparison. Durable receipt: [KOL-5183 comment 4ef7003c-afbf-4b42-a0cf-edd39678e0c4](https://linear.app/koltregaskes/issue/KOL-5183#comment-4ef7003c-afbf-4b42-a0cf-edd39678e0c4).
