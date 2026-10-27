@@ -92,6 +92,18 @@ const benchmarkResources = BENCHMARK_RESOURCES;
           Evidence and counting methodology
         </a>
       </div>
+      <div class="mt-5 rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-4">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-(--color-text-muted)">Current pulse · {ROOMS_OS_BENCHMARK_SNAPSHOT.currentPulse.date}</p>
+        <p class="mt-2 text-sm text-(--color-text-secondary)">
+          {ROOMS_OS_BENCHMARK_SNAPSHOT.currentPulse.assessed} unique cross-agent result units assessed:
+          <strong class="text-(--color-text-primary)"> {ROOMS_OS_BENCHMARK_SNAPSHOT.currentPulse.accepted} accepted bounded</strong>,
+          {ROOMS_OS_BENCHMARK_SNAPSHOT.currentPulse.partial} partial,
+          {ROOMS_OS_BENCHMARK_SNAPSHOT.currentPulse.blocked} blocked,
+          {ROOMS_OS_BENCHMARK_SNAPSHOT.currentPulse.failed} failed established.
+        </p>
+        <p class="mt-2 text-xs leading-5 text-(--color-text-muted)">{ROOMS_OS_BENCHMARK_SNAPSHOT.currentPulse.note}</p>
+      </div>
+
       <div class="grid gap-3 mt-5 sm:grid-cols-2 lg:grid-cols-3">
         {ROOMS_OS_BENCHMARK_SNAPSHOT.metrics.map((metric) => (
           <article class="rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-4">
