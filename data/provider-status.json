@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T09:55:53.537Z",
+  "generatedAt": "2026-10-27T10:29:48.769Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T09:55:53.530Z",
+      "lastCheckedAt": "2026-10-27T10:29:48.765Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,10 +100,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T09:55:52.182Z",
+      "lastCheckedAt": "2026-10-27T10:29:47.476Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 6 tracked components.",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
@@ -131,30 +131,18 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "0q89dylg9vjk",
-          "title": "Elevated errors for Claude Sonnet 5.5",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-10-27T09:14:35.052Z",
-          "updatedAt": "2026-10-27T09:38:11.556Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/rql9h590npxd",
-          "summary": "A fix has been deployed for the issue affecting Claude services and we are monitoring for recovery."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "0q89dylg9vjk",
           "title": "Elevated errors for Claude Sonnet 5.5",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "major",
           "startedAt": "2026-10-27T09:14:35.052Z",
-          "updatedAt": "2026-10-27T09:38:11.556Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-10-27T09:56:46.404Z",
+          "resolvedAt": "2026-10-27T09:56:46.355Z",
           "url": "https://stspg.io/rql9h590npxd",
-          "summary": "A fix has been deployed for the issue affecting Claude services and we are monitoring for recovery."
+          "summary": "The issue affecting Claude services has been resolved."
         },
         {
           "id": "vx06kp8wfpq2",
@@ -202,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T09:55:52.766Z",
+      "lastCheckedAt": "2026-10-27T10:29:48.390Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T09:55:52.194Z",
+      "lastCheckedAt": "2026-10-27T10:29:47.799Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -265,7 +253,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T09:55:52.171Z",
+      "lastCheckedAt": "2026-10-27T10:29:47.398Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 25 tracked components.",
@@ -362,7 +350,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T09:55:53.021Z",
+      "lastCheckedAt": "2026-10-27T10:29:48.481Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
