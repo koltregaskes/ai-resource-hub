@@ -4,6 +4,7 @@ import Tooltip from '../../components/Tooltip.astro';
 import BenchmarkTable from '../../components/BenchmarkTable';
 import { getBenchmarkMatrix } from '../../db/queries';
 import { BENCHMARK_RESOURCES } from '../../data/benchmark-resources';
+import { ROOMS_OS_BENCHMARK_SNAPSHOT } from '../../data/rooms-os-benchmark-snapshot';
 
 const matrix = getBenchmarkMatrix();
 const rawBase = import.meta.env.BASE_URL;
@@ -71,6 +72,43 @@ const benchmarkResources = BENCHMARK_RESOURCES;
             </div>
           </article>
         ))}
+      </div>
+    </div>
+
+    <div class="mb-8 rounded-[1.75rem] border border-(--color-border) bg-(--color-bg-secondary) p-5 sm:p-6">
+      <div class="flex flex-col gap-2">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-(--color-text-muted)">Rooms OS personal benchmark</p>
+        <h2 class="text-xl font-bold text-(--color-text-primary)">What our own agents actually taught us</h2>
+        <p class="text-sm text-(--color-text-secondary)">
+          Latest assessed week: {ROOMS_OS_BENCHMARK_SNAPSHOT.period}. This is {ROOMS_OS_BENCHMARK_SNAPSHOT.evidenceClass} real-work evidence,
+          not a controlled model leaderboard. {ROOMS_OS_BENCHMARK_SNAPSHOT.headline}
+        </p>
+      </div>
+      <div class="grid gap-3 mt-5 sm:grid-cols-2 lg:grid-cols-3">
+        {ROOMS_OS_BENCHMARK_SNAPSHOT.metrics.map((metric) => (
+          <article class="rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-4">
+            <p class="text-xs text-(--color-text-muted)">{metric.label}</p>
+            <p class="mt-2 text-2xl font-bold text-(--color-text-primary)">{metric.value}</p>
+            <p class="mt-2 text-xs leading-5 text-(--color-text-secondary)">{metric.note}</p>
+          </article>
+        ))}
+      </div>
+      <div class="grid gap-4 mt-5 lg:grid-cols-2">
+        <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-5">
+          <h3 class="text-sm font-semibold text-(--color-text-primary)">What we learned</h3>
+          <ul class="mt-3 space-y-2 text-sm text-(--color-text-secondary)">
+            {ROOMS_OS_BENCHMARK_SNAPSHOT.learned.map((item) => <li>• {item}</li>)}
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-5">
+          <h3 class="text-sm font-semibold text-(--color-text-primary)">What changed because of it</h3>
+          <ul class="mt-3 space-y-2 text-sm text-(--color-text-secondary)">
+            {ROOMS_OS_BENCHMARK_SNAPSHOT.changes.map((item) => <li>• {item}</li>)}
+          </ul>
+          <p class="mt-4 text-xs text-(--color-text-muted)">
+            Generated {ROOMS_OS_BENCHMARK_SNAPSHOT.generatedAt}. Rankable model scores remain separate and require matched controlled evidence.
+          </p>
+        </div>
       </div>
     </div>
 
