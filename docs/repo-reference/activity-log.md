@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 27 Oct 2026, 15:56 UTC
+Generated: 27 Oct 2026, 16:34 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 27 Oct 2026, 15:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 27 Oct 2026, 15:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 27 Oct 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 27 Oct 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 27 Oct 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 27 Oct 2026, 12:00 UTC | digest | General Compute raises $100 million Series A, countering the neocloud disaster narrative | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/27/general-compute-raises-100-million-series-a-countering-the-neocloud-disaster-narrative/) |
-| 27 Oct 2026, 12:00 UTC | digest | Japan internet giant GMO says hackers posted stolen customer data | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/27/japan-internet-giant-gmo-says-hackers-posted-stolen-customer-data/) |
+| 27 Oct 2026, 16:34 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 27 Oct 2026, 16:34 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 27 Oct 2026, 16:34 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 27 Oct 2026, 16:34 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 27 Oct 2026, 16:34 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 27 Oct 2026, 12:00 UTC | digest | Firefox’s Smart Window adds AI form filling and webpage monitoring | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1019551/firefox-smart-window-ai-fill-forms) |
+| 27 Oct 2026, 12:00 UTC | digest | Google’s Genie 4 world model adds audio, more realistic worlds, and real-time steering | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/) |
+| 27 Oct 2026, 12:00 UTC | digest | Google’s next Genie AI model generates more realistic experiences | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1019076/google-genie-4-ai-model) |
 | 27 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,047 open roles across 10 tracked companies. | `/jobs/` |
-| 27 Oct 2026, 12:00 UTC | digest | Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/27/meta-ai-director-rohit-patel-leaves-to-take-on-microsoft-office-and-google-workspace/) |
-| 27 Oct 2026, 12:00 UTC | digest | Published the 2026-10-27 daily digest | 8 stories captured from 2 sources. | `/news/` |
+| 27 Oct 2026, 12:00 UTC | digest | Published the 2026-10-27 daily digest | 12 stories captured from 2 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
