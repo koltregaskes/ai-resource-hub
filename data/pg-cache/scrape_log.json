@@ -3,10 +3,10 @@
     "id": 11,
     "scraper": "jobs",
     "status": "success",
-    "models_updated": 1046,
+    "models_updated": 1049,
     "error_message": null,
-    "started_at": "2026-10-27 19:56:13",
-    "finished_at": "2026-10-27 19:56:13"
+    "started_at": "2026-10-27 20:55:51",
+    "finished_at": "2026-10-27 20:55:51"
   },
   {
     "id": 10,
@@ -14,26 +14,8 @@
     "status": "error",
     "models_updated": 69,
     "error_message": "VentureBeat: HTTP 429: Too Many Requests",
-    "started_at": "2026-10-27 19:56:09",
-    "finished_at": "2026-10-27 19:56:09"
-  },
-  {
-    "id": 8,
-    "scraper": "quality-scores",
-    "status": "computed",
-    "models_updated": 55,
-    "error_message": null,
-    "started_at": "2026-10-27 19:55:55",
-    "finished_at": "2026-10-27 19:55:55"
-  },
-  {
-    "id": 9,
-    "scraper": "registry:normalise-status",
-    "status": "success",
-    "models_updated": 131,
-    "error_message": null,
-    "started_at": "2026-10-27 19:55:55",
-    "finished_at": "2026-10-27 19:55:55"
+    "started_at": "2026-10-27 20:55:47",
+    "finished_at": "2026-10-27 20:55:47"
   },
   {
     "id": 7,
@@ -41,8 +23,35 @@
     "status": "fallback",
     "models_updated": 16,
     "error_message": null,
-    "started_at": "2026-10-27 19:55:54",
-    "finished_at": "2026-10-27 19:55:54"
+    "started_at": "2026-10-27 20:55:35",
+    "finished_at": "2026-10-27 20:55:35"
+  },
+  {
+    "id": 8,
+    "scraper": "quality-scores",
+    "status": "computed",
+    "models_updated": 55,
+    "error_message": null,
+    "started_at": "2026-10-27 20:55:35",
+    "finished_at": "2026-10-27 20:55:35"
+  },
+  {
+    "id": 9,
+    "scraper": "registry:normalise-status",
+    "status": "success",
+    "models_updated": 131,
+    "error_message": null,
+    "started_at": "2026-10-27 20:55:35",
+    "finished_at": "2026-10-27 20:55:35"
+  },
+  {
+    "id": 5,
+    "scraper": "benchmarks:chatbot-arena",
+    "status": "fallback",
+    "models_updated": 0,
+    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-10-27T20:55:33.373Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
+    "started_at": "2026-10-27 20:55:33",
+    "finished_at": "2026-10-27 20:55:33"
   },
   {
     "id": 6,
@@ -50,26 +59,8 @@
     "status": "success",
     "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-10-27 19:55:53",
-    "finished_at": "2026-10-27 19:55:53"
-  },
-  {
-    "id": 5,
-    "scraper": "benchmarks:chatbot-arena",
-    "status": "fallback",
-    "models_updated": 0,
-    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-10-27T19:55:52.993Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
-    "started_at": "2026-10-27 19:55:52",
-    "finished_at": "2026-10-27 19:55:52"
-  },
-  {
-    "id": 2,
-    "scraper": "pricing:openrouter",
-    "status": "success",
-    "models_updated": 334,
-    "error_message": null,
-    "started_at": "2026-10-27 19:55:51",
-    "finished_at": "2026-10-27 19:55:51"
+    "started_at": "2026-10-27 20:55:33",
+    "finished_at": "2026-10-27 20:55:33"
   },
   {
     "id": 3,
@@ -77,8 +68,8 @@
     "status": "success",
     "models_updated": 21,
     "error_message": null,
-    "started_at": "2026-10-27 19:55:51",
-    "finished_at": "2026-10-27 19:55:51"
+    "started_at": "2026-10-27 20:55:32",
+    "finished_at": "2026-10-27 20:55:32"
   },
   {
     "id": 4,
@@ -86,8 +77,8 @@
     "status": "success",
     "models_updated": 0,
     "error_message": null,
-    "started_at": "2026-10-27 19:55:51",
-    "finished_at": "2026-10-27 19:55:51"
+    "started_at": "2026-10-27 20:55:32",
+    "finished_at": "2026-10-27 20:55:32"
   },
   {
     "id": 1,
@@ -95,7 +86,16 @@
     "status": "success",
     "models_updated": 52,
     "error_message": null,
-    "started_at": "2026-10-27 19:55:50",
-    "finished_at": "2026-10-27 19:55:50"
+    "started_at": "2026-10-27 20:55:31",
+    "finished_at": "2026-10-27 20:55:31"
+  },
+  {
+    "id": 2,
+    "scraper": "pricing:openrouter",
+    "status": "success",
+    "models_updated": 334,
+    "error_message": null,
+    "started_at": "2026-10-27 20:55:31",
+    "finished_at": "2026-10-27 20:55:31"
   }
 ]

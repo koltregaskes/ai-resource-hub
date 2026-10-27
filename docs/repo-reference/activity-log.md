@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 27 Oct 2026, 19:56 UTC
+Generated: 27 Oct 2026, 20:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 27 Oct 2026, 19:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 27 Oct 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 27 Oct 2026, 19:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 27 Oct 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 27 Oct 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 27 Oct 2026, 20:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 27 Oct 2026, 20:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 27 Oct 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 27 Oct 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 27 Oct 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 27 Oct 2026, 12:00 UTC | digest | Disruptive raises $10B fund to make big bets on at least 10 companies | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/27/disruptive-raises-10b-fund-to-make-big-bets-on-at-least-10-companies/) |
 | 27 Oct 2026, 12:00 UTC | digest | Frontier AI labs say their models refuted the Exponential Time Hypothesis. What does that mean? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/27/frontier-ai-labs-say-their-models-refuted-the-exponential-time-hypothesis-what-does-that-mean/) |
-| 27 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,046 open roles across 10 tracked companies. | `/jobs/` |
+| 27 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,049 open roles across 10 tracked companies. | `/jobs/` |
 | 27 Oct 2026, 12:00 UTC | digest | Published the 2026-10-27 daily digest | 18 stories captured from 3 sources. | `/news/` |
 | 27 Oct 2026, 12:00 UTC | digest | VisionQuest is what happens when AI really goes rogue | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1017064/visionquest-marvel-rogue-ai) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
