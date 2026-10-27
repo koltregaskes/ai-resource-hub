@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T13:34:44.670Z",
+  "generatedAt": "2026-10-27T13:55:50.789Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T13:34:44.666Z",
+      "lastCheckedAt": "2026-10-27T13:55:50.782Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T13:34:42.541Z",
+      "lastCheckedAt": "2026-10-27T13:55:48.775Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T13:34:43.425Z",
+      "lastCheckedAt": "2026-10-27T13:55:49.739Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T13:34:42.904Z",
+      "lastCheckedAt": "2026-10-27T13:55:49.078Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -253,10 +253,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T13:34:42.557Z",
+      "lastCheckedAt": "2026-10-27T13:55:48.830Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "No active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -284,28 +284,17 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "01M5Y60NQGGN514EB3943V94EN",
-          "title": "Elevated error rates for most hosted Code Reviews and Security Reviews on private GitHub repositories",
-          "status": "monitoring",
-          "impact": "none",
-          "startedAt": "2026-10-27T08:00:50.000Z",
-          "updatedAt": "2026-10-27T08:21:10.000Z",
-          "resolvedAt": null,
-          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "01M5Y60NQGGN514EB3943V94EN",
           "title": "Elevated error rates for most hosted Code Reviews and Security Reviews on private GitHub repositories",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "none",
           "startedAt": "2026-10-27T08:00:50.000Z",
-          "updatedAt": "2026-10-27T08:21:10.000Z",
-          "resolvedAt": null,
-          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
+          "updatedAt": "2026-10-27T13:54:35.000Z",
+          "resolvedAt": "2026-10-27T08:30:00.000Z",
+          "summary": "The issue is now resolved."
         },
         {
           "id": "01M5WPZTT0385GMEV1353ZC4AM",
@@ -350,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T13:34:43.687Z",
+      "lastCheckedAt": "2026-10-27T13:55:49.937Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
