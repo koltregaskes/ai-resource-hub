@@ -5,6 +5,16 @@ export const ROOMS_OS_BENCHMARK_SNAPSHOT = {
   rankable: false,
   headline: 'Useful operational evidence, but no controlled cross-model winner.',
   methodologyUrl: 'https://github.com/koltregaskes/ai-resource-hub/blob/main/docs/repo-reference/rooms-os-benchmark.md',
+  currentPulse: {
+    date: '27 Oct 2026',
+    assessed: 10,
+    accepted: 2,
+    partial: 6,
+    blocked: 2,
+    failed: 0,
+    note: 'Ten unique substantive cross-agent RESULT messages from 25–26 Oct were read in full. Request-only messages and one duplicate delivery were excluded. This is observational and outside the completed-week denominator.',
+    evidenceUrl: 'https://linear.app/koltregaskes/issue/KOL-5183#comment-4ef7003c-afbf-4b42-a0cf-edd39678e0c4',
+  },
   metrics: [
     { label: 'Controlled model comparisons', value: '0', note: 'No matched, independently accepted configuration comparison qualified for ranking.' },
     { label: 'Scheduled outputs found', value: '4 / 5', note: 'One reviewed scheduled occurrence completed research but its unattended destination write was denied.' },
