@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T14:55:55.804Z",
+  "generatedAt": "2026-10-27T15:55:57.712Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T14:55:55.797Z",
+      "lastCheckedAt": "2026-10-27T15:55:57.708Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,6 +90,103 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-10-27T15:55:55.801Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Chat Completions",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Responses",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Batch",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Agents",
+          "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01M5YY4A3TQETEQ53DVSK8SW10",
+          "title": "6.1 Sol Degraded Model Performance",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-10-27T15:02:15.000Z",
+          "updatedAt": "2026-10-27T15:40:14.000Z",
+          "resolvedAt": null,
+          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01M5YY4A3TQETEQ53DVSK8SW10",
+          "title": "6.1 Sol Degraded Model Performance",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-10-27T15:02:15.000Z",
+          "updatedAt": "2026-10-27T15:40:14.000Z",
+          "resolvedAt": null,
+          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
+        },
+        {
+          "id": "01M5Y60NQGGN514EB3943V94EN",
+          "title": "Elevated error rates for most hosted Code Reviews and Security Reviews on private GitHub repositories",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-10-27T08:00:50.000Z",
+          "updatedAt": "2026-10-27T13:54:35.000Z",
+          "resolvedAt": "2026-10-27T08:30:00.000Z",
+          "summary": "The issue is now resolved."
+        },
+        {
+          "id": "01M5WPZTT0385GMEV1353ZC4AM",
+          "title": "Elevated error rates for Ads POST requests",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-26T18:19:00.000Z",
+          "updatedAt": "2026-10-26T19:21:04.000Z",
+          "resolvedAt": "2026-10-26T18:30:18.000Z",
+          "summary": "All impacted services have now fully recovered."
+        },
+        {
+          "id": "01M5NFF94XCJ6CGTD4S78A9BEB",
+          "title": "Degraded experience with ChatGPT app connections using CIMD",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-23T22:52:56.000Z",
+          "updatedAt": "2026-10-23T23:43:22.000Z",
+          "resolvedAt": "2026-10-23T23:43:22.000Z",
+          "summary": "All impacted services have now fully recovered."
+        }
+      ]
+    },
+    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -100,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T14:55:54.024Z",
+      "lastCheckedAt": "2026-10-27T15:55:55.800Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -134,6 +231,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "lqhknfdjrcst",
+          "title": "Elevated errors for Claude Sonnet 5.5",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-10-27T15:09:08.936Z",
+          "updatedAt": "2026-10-27T15:50:17.725Z",
+          "resolvedAt": "2026-10-27T15:50:17.700Z",
+          "url": "https://stspg.io/39x7qh3sd7bd",
+          "summary": "The issue affecting claude.ai, the Claude API, Claude Code, and Claude Cowork has been resolved. Impact occurred from 07:42 PT / 14:42 UTC to 08:17 PT / 15:17 UTC."
+        },
+        {
           "id": "0q89dylg9vjk",
           "title": "Elevated errors for Claude Sonnet 5.5",
           "status": "resolved",
@@ -165,17 +273,6 @@
           "resolvedAt": "2026-10-25T07:53:39.004Z",
           "url": "https://stspg.io/s3wd6gmdsdhn",
           "summary": "The issue affecting Claude services has been resolved. Impact occurred from 23:05 PT on October 24 / 06:05 UTC on October 25 to 23:35 PT on October 24 / 06:35 UTC on October 25."
-        },
-        {
-          "id": "0ns5clsk8p2x",
-          "title": "Elevated errors for Claude Fable 5 and Claude Fable 5.1",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-10-24T05:16:50.587Z",
-          "updatedAt": "2026-10-24T05:53:30.629Z",
-          "resolvedAt": "2026-10-24T05:53:30.600Z",
-          "url": "https://stspg.io/7n1wgb6qsfly",
-          "summary": "The issue affecting Claude services has been resolved. Impact occurred from 22:00 PT on October 23 / 05:00 UTC on October 24 to 22:35 PT on October 23 / 05:35 UTC on October 24."
         }
       ]
     },
@@ -190,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T14:55:54.944Z",
+      "lastCheckedAt": "2026-10-27T15:55:56.684Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T14:55:54.222Z",
+      "lastCheckedAt": "2026-10-27T15:55:56.137Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -224,10 +321,10 @@
           "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-10-20T06:00:00.000Z",
-          "updatedAt": "2026-10-22T08:42:46.000Z",
+          "updatedAt": "2026-10-27T15:13:38.000Z",
           "resolvedAt": "2026-10-20T12:10:00.000Z",
           "url": "https://status.cloud.google.com",
-          "summary": "## Preliminary Incident Report\nWe recognize that Google Cloud services are critical to your organization, and we sincerely apologize for the disruption this incident may have caus..."
+          "summary": "## Incident Report\n### **Summary**\nOn Monday, 19 Oct 2026 (Tuesday, 20 Oct BST), a data center facility that hosts europe-west2-b, experienced an external electrical power disrupt..."
         },
         {
           "id": "41E5S3mkTGDfkZuJZH5k",
@@ -243,92 +340,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T14:55:54.069Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Chat Completions",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Agents",
-          "status": "operational"
-        },
-        {
-          "name": "Decisions",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01M5Y60NQGGN514EB3943V94EN",
-          "title": "Elevated error rates for most hosted Code Reviews and Security Reviews on private GitHub repositories",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-10-27T08:00:50.000Z",
-          "updatedAt": "2026-10-27T13:54:35.000Z",
-          "resolvedAt": "2026-10-27T08:30:00.000Z",
-          "summary": "The issue is now resolved."
-        },
-        {
-          "id": "01M5WPZTT0385GMEV1353ZC4AM",
-          "title": "Elevated error rates for Ads POST requests",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-26T18:19:00.000Z",
-          "updatedAt": "2026-10-26T19:21:04.000Z",
-          "resolvedAt": "2026-10-26T18:30:18.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M5NFF94XCJ6CGTD4S78A9BEB",
-          "title": "Degraded experience with ChatGPT app connections using CIMD",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-23T22:52:56.000Z",
-          "updatedAt": "2026-10-23T23:43:22.000Z",
-          "resolvedAt": "2026-10-23T23:43:22.000Z",
-          "summary": "All impacted services have now fully recovered."
-        },
-        {
-          "id": "01M5NAR5GZC5M7D0S7AQ6CGEEN",
-          "title": "Help Center Chat Support Degraded",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-10-23T21:30:25.000Z",
-          "updatedAt": "2026-10-23T22:02:57.000Z",
-          "resolvedAt": "2026-10-23T22:02:57.000Z",
-          "summary": "All impacted services have now fully recovered."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -339,7 +350,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-27T14:55:55.208Z",
+      "lastCheckedAt": "2026-10-27T15:55:56.982Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
