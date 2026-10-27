@@ -4,6 +4,7 @@ export const ROOMS_OS_BENCHMARK_SNAPSHOT = {
   evidenceClass: 'observational',
   rankable: false,
   headline: 'Useful operational evidence, but no controlled cross-model winner.',
+  methodologyUrl: 'https://github.com/koltregaskes/ai-resource-hub/blob/main/docs/repo-reference/rooms-os-benchmark.md',
   metrics: [
     { label: 'Controlled model comparisons', value: '0', note: 'No matched, independently accepted configuration comparison qualified for ranking.' },
     { label: 'Scheduled outputs found', value: '4 / 5', note: 'One reviewed scheduled occurrence completed research but its unattended destination write was denied.' },
