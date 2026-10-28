@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 28 Oct 2026, 15:56 UTC
+Generated: 28 Oct 2026, 15:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 28 Oct 2026, 15:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 28 Oct 2026, 15:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 28 Oct 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 28 Oct 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 28 Oct 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 28 Oct 2026, 15:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 28 Oct 2026, 15:58 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 28 Oct 2026, 15:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 28 Oct 2026, 15:58 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 28 Oct 2026, 15:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 28 Oct 2026, 12:00 UTC | digest | AI execs may be too out of touch to build for the general public | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/28/ai-execs-may-be-too-out-of-touch-to-build-for-the-general-public/) |
 | 28 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,047 open roles across 10 tracked companies. | `/jobs/` |
-| 28 Oct 2026, 12:00 UTC | digest | Published the 2026-10-28 daily digest | 8 stories captured from 3 sources. | `/news/` |
+| 28 Oct 2026, 12:00 UTC | digest | Published the 2026-10-28 daily digest | 9 stories captured from 3 sources. | `/news/` |
 | 28 Oct 2026, 12:00 UTC | digest | South Korea&#8217;s financial industry hit by fresh wave of cyberattacks | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/28/south-koreas-financial-industry-hit-by-fresh-wave-of-cyberattacks/) |
 | 28 Oct 2026, 12:00 UTC | digest | Voice AI in vogue: Nvidia releases new open transcription model | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
