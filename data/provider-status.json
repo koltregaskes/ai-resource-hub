@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T19:55:54.845Z",
+  "generatedAt": "2026-10-28T20:56:10.369Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T19:55:54.840Z",
+      "lastCheckedAt": "2026-10-28T20:56:10.362Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,23 +100,15 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T19:55:53.657Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
-      "summary": "1 active incident across 6 tracked components.",
+      "lastCheckedAt": "2026-10-28T20:56:08.642Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Code",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "degraded_performance"
+          "status": "operational"
         },
         {
           "name": "Claude Console (platform.claude.com)",
@@ -127,34 +119,30 @@
           "status": "operational"
         },
         {
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "operational"
+        },
+        {
           "name": "Claude for Government",
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "phg1y2yh07n2",
-          "title": "Elevated errors affecting the Google Calendar connector",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-10-28T16:19:09.946Z",
-          "updatedAt": "2026-10-28T19:47:31.741Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/75qq31h8672d",
-          "summary": "We are seeing recovery for errors affecting the Google Calendar connector, and error rates have returned to normal levels. We are continuing to monitor with our upstream provider."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "phg1y2yh07n2",
           "title": "Elevated errors affecting the Google Calendar connector",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-10-28T16:19:09.946Z",
-          "updatedAt": "2026-10-28T19:47:31.741Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-10-28T20:05:18.230Z",
+          "resolvedAt": "2026-10-28T20:05:18.208Z",
           "url": "https://stspg.io/75qq31h8672d",
-          "summary": "We are seeing recovery for errors affecting the Google Calendar connector, and error rates have returned to normal levels. We are continuing to monitor with our upstream provider."
+          "summary": "The issue affecting the Google Calendar connector on claude.ai, Claude Code, and Claude Cowork has been resolved. Impact occurred from 04:07 PT / 11:07 UTC on October 26 to 11:52..."
         },
         {
           "id": "9ftx658xtd5z",
@@ -202,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T19:55:54.265Z",
+      "lastCheckedAt": "2026-10-28T20:56:09.531Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T19:55:53.744Z",
+      "lastCheckedAt": "2026-10-28T20:56:08.746Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -265,7 +253,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T19:55:53.597Z",
+      "lastCheckedAt": "2026-10-28T20:56:08.652Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -351,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T19:55:54.443Z",
+      "lastCheckedAt": "2026-10-28T20:56:09.503Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",

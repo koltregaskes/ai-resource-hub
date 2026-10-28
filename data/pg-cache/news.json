@@ -1,5 +1,17 @@
 [
   {
+    "id": "news-fc7d1d71bde9a18e24ca",
+    "title": "Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecurity",
+    "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier",
+    "source": "The Verge",
+    "summary": "Google has released its latest frontier model, Gemini 4 Carbon, offering \"significant gains\" in coding, agentic tasks, and cybersecurity. In an announcement on Wednesday, Google highlights Carbon's top spot on the Artificial Analysis Intelligence Index (v5.0) benchmark, with Claude Opus 5.5 and GPT-6 Astra trailing be…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-28T20:03:00.000Z",
+    "discovered_at": "2026-10-28 20:56:07"
+  },
+  {
     "id": "news-2ede9b7f343197b453df",
     "title": "Anthropic just launched tools to show companies what their AI spending is buying",
     "url": "https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/",
@@ -9,7 +21,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T19:19:58.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-66c9055b3cf21443e3d9",
@@ -21,7 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T19:05:46.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-24b289310b1971f470c3",
@@ -33,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T18:50:39.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-d0753be868cc7807af0c",
@@ -45,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T18:36:26.000Z",
-    "discovered_at": "2026-10-28 19:55:52"
+    "discovered_at": "2026-10-28 20:56:07"
   },
   {
     "id": "news-c802108aab79694f5d98",
@@ -57,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T17:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:52"
+    "discovered_at": "2026-10-28 20:56:07"
   },
   {
     "id": "news-1e8ba9106ed897eba936",
@@ -69,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T17:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-765a5a74d2443b200e79",
@@ -81,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T17:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-1739307690c34a287cf1",
@@ -93,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T16:15:30.000Z",
-    "discovered_at": "2026-10-28 19:55:52"
+    "discovered_at": "2026-10-28 20:56:07"
   },
   {
     "id": "news-d0407e5d8c6e4e865bac",
@@ -105,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T15:53:52.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-feda3ad530f5eea07f7c",
@@ -117,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T15:41:18.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-f1ebb512d4e04c571037",
@@ -129,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T15:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-5283652bd524be85ae23",
@@ -141,7 +153,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T14:44:00.000Z",
-    "discovered_at": "2026-10-28 19:55:52"
+    "discovered_at": "2026-10-28 20:56:07"
+  },
+  {
+    "id": "news-75e2017ed4c5a2ecbacf",
+    "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+    "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+    "source": "OpenAI",
+    "summary": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-28T13:15:00.000Z",
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-11933a85bc5f9fa36ca5",
@@ -153,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T13:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-8030d1b5c63548dbcf56",
@@ -165,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T12:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:52"
+    "discovered_at": "2026-10-28 20:56:07"
   },
   {
     "id": "news-6da995572c9c0a774a7f",
@@ -177,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T11:27:30.000Z",
-    "discovered_at": "2026-10-28 19:55:52"
+    "discovered_at": "2026-10-28 20:56:07"
   },
   {
     "id": "news-0dc3cf0b7c98dcde7cee",
@@ -189,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T10:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-41c97fe8dc29ac4a3866",
@@ -201,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T09:30:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-0a7119608b55c94e6b0e",
@@ -213,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T01:15:28.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-6210b5315dda5af848ea",
@@ -225,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T23:34:27.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-1f592db8b0867fb6d5ee",
@@ -237,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T22:55:41.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-f45c20f72906e9105c8d",
@@ -249,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T21:44:34.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-a9a2cf8c96fedf8c4af8",
@@ -261,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T21:38:28.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-ba3cece69efb7bc08816",
@@ -273,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T20:48:58.000Z",
-    "discovered_at": "2026-10-28 19:55:52"
+    "discovered_at": "2026-10-28 20:56:07"
   },
   {
     "id": "news-44543de8094b27f0323c",
@@ -285,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T18:55:35.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-d8c87d0b44570f5f6083",
@@ -297,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T17:30:00.000Z",
-    "discovered_at": "2026-10-28 19:55:52"
+    "discovered_at": "2026-10-28 20:56:07"
   },
   {
     "id": "news-9ffebaf1b25a4f9bbde0",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T17:08:08.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-5d9174dd4f1a7b53fa43",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T16:51:22.000Z",
-    "discovered_at": "2026-10-28 19:55:52"
+    "discovered_at": "2026-10-28 20:56:07"
   },
   {
     "id": "news-dddf43d553b66f1e8660",
@@ -333,19 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T16:30:57.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
-  },
-  {
-    "id": "news-abb96e9fdd6f617ed269",
-    "title": "Firefox’s Smart Window adds AI form filling and webpage monitoring",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1019551/firefox-smart-window-ai-fill-forms",
-    "source": "The Verge",
-    "summary": "Mozilla is updating Smart Window - Firefox's AI-powered browsing experience - with a new feature that can help you fill out online forms based on your open tabs. As an example, Mozilla says Smart Window can pull information from your online portfolio or LinkedIn page to paste your work history into a job application.…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-27T16:14:18.000Z",
-    "discovered_at": "2026-10-28 19:55:52"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-d42fb1eb3362412fc304",
@@ -357,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T15:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-122f4e228239d6c9e1be",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T14:59:09.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-a3a879144b2984ac94bf",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T07:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-8cb333260a17a3244327",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T00:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-250e5d8f302445e732f1",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T22:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-f16aefe89a6e3f3b8efe",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T14:30:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-1a1d4bf2fc111eb84688",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T13:45:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-64d59b55a8fb866695c8",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T10:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-8f2f08b6e197805b4e59",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T07:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-eb7708c5f537ab79bfe6",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T07:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-1758535ac6be3e6bbbbd",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T00:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-298c8de07d18f423dad3",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T17:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-48e2274fdf2ba9fe48db",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T10:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-15c1f8ef7a582594bf05",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T00:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-c6099fc8919f3d5469ae",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T00:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-27825e300358401234fc",
@@ -549,19 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-22T19:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
-  },
-  {
-    "id": "news-63c31ca523f91ccfb067",
-    "title": "What FDE means at OpenAI",
-    "url": "https://openai.com/index/forward-deployed-engineering-means",
-    "source": "OpenAI",
-    "summary": "What forward deployed engineering means at OpenAI",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-22T06:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:40"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-10-28 19:55:52"
+    "discovered_at": "2026-10-28 20:56:07"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-10-28 19:55:52"
+    "discovered_at": "2026-10-28 20:56:07"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   },
   {
     "id": "news-307bfda48464106bf8e3",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:21:53.000Z",
-    "discovered_at": "2026-10-28 19:55:52"
+    "discovered_at": "2026-10-28 20:56:07"
   },
   {
     "id": "news-aaf1cc502a6b16035865",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T22:26:35.000Z",
-    "discovered_at": "2026-10-28 19:55:52"
+    "discovered_at": "2026-10-28 20:56:07"
   },
   {
     "id": "news-6ee8ae0821d338b723f5",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T23:03:16.000Z",
-    "discovered_at": "2026-10-28 19:55:52"
+    "discovered_at": "2026-10-28 20:56:07"
   },
   {
     "id": "news-1122627a66dfc215a84f",
@@ -669,6 +669,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T15:00:00.000Z",
-    "discovered_at": "2026-10-28 19:55:41"
+    "discovered_at": "2026-10-28 20:55:55"
   }
 ]
