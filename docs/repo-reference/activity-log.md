@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 28 Oct 2026, 21:01 UTC
+Generated: 28 Oct 2026, 21:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 28 Oct 2026, 21:00 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 28 Oct 2026, 21:00 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 28 Oct 2026, 21:00 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 28 Oct 2026, 21:00 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 28 Oct 2026, 21:00 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 28 Oct 2026, 12:00 UTC | digest | Anthropic just launched tools to show companies what their AI spending is buying | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/) |
-| 28 Oct 2026, 12:00 UTC | digest | Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecurity | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier) |
+| 28 Oct 2026, 21:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 28 Oct 2026, 21:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 28 Oct 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 28 Oct 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 28 Oct 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 28 Oct 2026, 12:00 UTC | digest | Google expands AI Search ads globally as core ad growth slows | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/) |
 | 28 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,049 open roles across 10 tracked companies. | `/jobs/` |
+| 28 Oct 2026, 12:00 UTC | digest | Microsoft hits 10 quarters of record- breaking revenue in a row | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/28/microsoft-hits-10-quarters-of-record-breaking-revenue-in-a-row/) |
+| 28 Oct 2026, 12:00 UTC | digest | Microsoft recorded $10 billion in revenue from OpenAI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/28/microsoft-recorded-10-billion-in-revenue-from-openai/) |
 | 28 Oct 2026, 12:00 UTC | digest | Published the 2026-10-28 daily digest | 20 stories captured from 3 sources. | `/news/` |
-| 28 Oct 2026, 12:00 UTC | digest | Wiz’s CTO on PHP2Shell and the coming &#8216;vulnpocalypse&#8217; | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/video/wizs-cto-on-php2shell-and-the-coming-vulnpocalypse/) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
