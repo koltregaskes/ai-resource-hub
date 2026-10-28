@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 28 Oct 2026, 21:56 UTC
+Generated: 28 Oct 2026, 22:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 28 Oct 2026, 21:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 28 Oct 2026, 21:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 28 Oct 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 28 Oct 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 28 Oct 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 28 Oct 2026, 22:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 28 Oct 2026, 22:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 28 Oct 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 28 Oct 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 28 Oct 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 28 Oct 2026, 12:00 UTC | digest | Google expands AI Search ads globally as core ad growth slows | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/) |
-| 28 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,049 open roles across 10 tracked companies. | `/jobs/` |
-| 28 Oct 2026, 12:00 UTC | digest | Microsoft hits 10 quarters of record- breaking revenue in a row | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/28/microsoft-hits-10-quarters-of-record-breaking-revenue-in-a-row/) |
+| 28 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,047 open roles across 10 tracked companies. | `/jobs/` |
+| 28 Oct 2026, 12:00 UTC | digest | Microsoft just shared Azure&#8217;s actual revenue in dollars: $33.2 billion | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion/) |
 | 28 Oct 2026, 12:00 UTC | digest | Microsoft recorded $10 billion in revenue from OpenAI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/28/microsoft-recorded-10-billion-in-revenue-from-openai/) |
 | 28 Oct 2026, 12:00 UTC | digest | Published the 2026-10-28 daily digest | 20 stories captured from 3 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
