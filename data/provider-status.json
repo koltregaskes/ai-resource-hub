@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T16:16:34.340Z",
+  "generatedAt": "2026-10-28T16:55:59.851Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T16:16:34.333Z",
+      "lastCheckedAt": "2026-10-28T16:55:59.845Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,15 +100,23 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T16:16:32.093Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 6 tracked components.",
+      "lastCheckedAt": "2026-10-28T16:55:58.164Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partially Degraded Service",
+      "summary": "1 active incident across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "operational"
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude Code",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Console (platform.claude.com)",
@@ -119,20 +127,35 @@
           "status": "operational"
         },
         {
-          "name": "Claude Code",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "operational"
-        },
-        {
           "name": "Claude for Government",
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "phg1y2yh07n2",
+          "title": "Elevated errors affecting the Google Calendar connector",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-10-28T16:19:09.946Z",
+          "updatedAt": "2026-10-28T16:19:10.243Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/75qq31h8672d",
+          "summary": "We are investigating elevated errors affecting the Google Calendar connector. Some requests to list or search calendar events have been failing since October 26. We will provide a..."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "phg1y2yh07n2",
+          "title": "Elevated errors affecting the Google Calendar connector",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-10-28T16:19:09.946Z",
+          "updatedAt": "2026-10-28T16:19:10.243Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/75qq31h8672d",
+          "summary": "We are investigating elevated errors affecting the Google Calendar connector. Some requests to list or search calendar events have been failing since October 26. We will provide a..."
+        },
         {
           "id": "9ftx658xtd5z",
           "title": "Elevated errors affecting the Gmail connector",
@@ -165,17 +188,6 @@
           "resolvedAt": "2026-10-27T09:56:46.355Z",
           "url": "https://stspg.io/rql9h590npxd",
           "summary": "The issue affecting Claude services has been resolved."
-        },
-        {
-          "id": "vx06kp8wfpq2",
-          "title": "Elevated errors for Claude Fable 5.1",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-10-25T08:17:08.285Z",
-          "updatedAt": "2026-10-25T08:49:29.528Z",
-          "resolvedAt": "2026-10-25T08:49:29.501Z",
-          "url": "https://stspg.io/y0gkl12ztjst",
-          "summary": "The issue affecting Claude services has been resolved. Impact occurred from 01:08 PT / 08:08 UTC to 01:29 PT / 08:29 UTC."
         }
       ]
     },
@@ -190,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T16:16:33.176Z",
+      "lastCheckedAt": "2026-10-28T16:55:59.086Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T16:16:32.630Z",
+      "lastCheckedAt": "2026-10-28T16:55:58.340Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -253,7 +265,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T16:16:32.066Z",
+      "lastCheckedAt": "2026-10-28T16:55:58.442Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -339,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T16:16:33.240Z",
+      "lastCheckedAt": "2026-10-28T16:55:59.327Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -363,7 +375,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
