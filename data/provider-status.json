@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T17:56:00.341Z",
+  "generatedAt": "2026-10-28T18:56:01.910Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T17:56:00.334Z",
+      "lastCheckedAt": "2026-10-28T18:56:01.904Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T17:55:58.660Z",
+      "lastCheckedAt": "2026-10-28T18:55:59.878Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 6 tracked components.",
@@ -138,10 +138,10 @@
           "status": "investigating",
           "impact": "minor",
           "startedAt": "2026-10-28T16:19:09.946Z",
-          "updatedAt": "2026-10-28T16:19:10.243Z",
+          "updatedAt": "2026-10-28T17:59:30.066Z",
           "resolvedAt": null,
           "url": "https://stspg.io/75qq31h8672d",
-          "summary": "We are investigating elevated errors affecting the Google Calendar connector. Some requests to list or search calendar events have been failing since October 26. We will provide a..."
+          "summary": "We are continuing to investigate elevated errors affecting the Google Calendar connector, and are working with our upstream provider. We will provide another update as soon as we..."
         }
       ],
       "recentIncidents": [
@@ -151,10 +151,10 @@
           "status": "investigating",
           "impact": "minor",
           "startedAt": "2026-10-28T16:19:09.946Z",
-          "updatedAt": "2026-10-28T16:19:10.243Z",
+          "updatedAt": "2026-10-28T17:59:30.066Z",
           "resolvedAt": null,
           "url": "https://stspg.io/75qq31h8672d",
-          "summary": "We are investigating elevated errors affecting the Google Calendar connector. Some requests to list or search calendar events have been failing since October 26. We will provide a..."
+          "summary": "We are continuing to investigate elevated errors affecting the Google Calendar connector, and are working with our upstream provider. We will provide another update as soon as we..."
         },
         {
           "id": "9ftx658xtd5z",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T17:56:00.098Z",
+      "lastCheckedAt": "2026-10-28T18:56:00.657Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T17:55:58.711Z",
+      "lastCheckedAt": "2026-10-28T18:55:59.871Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -265,7 +265,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T17:55:58.572Z",
+      "lastCheckedAt": "2026-10-28T18:55:59.791Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -351,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T17:55:59.606Z",
+      "lastCheckedAt": "2026-10-28T18:56:00.955Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -375,7 +375,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
