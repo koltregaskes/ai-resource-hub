@@ -1,19 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 28 Oct 2026, 09:56 UTC
+Generated: 28 Oct 2026, 10:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 28 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,050 open roles across 10 tracked companies. | `/jobs/` |
-| 28 Oct 2026, 12:00 UTC | digest | Published the 2026-10-28 daily digest | 1 stories captured from 1 sources. | `/news/` |
+| 28 Oct 2026, 12:00 UTC | digest | Legora is building the agentic operating system for legal work | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/legora-agentic-operating-system-for-legal-work) |
+| 28 Oct 2026, 12:00 UTC | digest | Published the 2026-10-28 daily digest | 2 stories captured from 2 sources. | `/news/` |
 | 28 Oct 2026, 12:00 UTC | digest | VCs will make billions on Anthropic&#8217;s IPO, but Amazon is set to make much (much) more | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/27/vcs-will-make-billions-on-anthropics-ipo-but-amazon-is-set-to-make-much-much-more/) |
-| 28 Oct 2026, 09:56 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 28 Oct 2026, 09:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 28 Oct 2026, 09:56 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 28 Oct 2026, 09:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 28 Oct 2026, 09:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 28 Oct 2026, 10:56 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 28 Oct 2026, 10:56 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 28 Oct 2026, 10:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 28 Oct 2026, 10:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 28 Oct 2026, 10:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
@@ -25,4 +26,3 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 22 Feb 2026, 10:00 UTC | site | Initial public launch of the hub | Published the first live version with model comparison, benchmarks, pricing, news, tools, and guides. | `/about/` |
 | 17 Feb 2026, 12:00 UTC | models | Claude Sonnet 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-sonnet-4.6/` |
 | 05 Feb 2026, 12:00 UTC | models | Claude Opus 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.6/` |
-| 10 Dec 2025, 12:00 UTC | models | GPT-5.2 added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2/` |
