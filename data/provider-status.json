@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T04:56:06.236Z",
+  "generatedAt": "2026-10-28T05:55:55.665Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T04:56:06.231Z",
+      "lastCheckedAt": "2026-10-28T05:55:55.658Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,31 +20,53 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-10-27T12:50:28.000Z",
-          "title": "Service Degradation for GLM 5.3 Flash",
+          "id": "fireworks-feed-0-2026-10-28T05:48:38.000Z",
+          "title": "Service Degradation for MiniMax M3.1 Flash",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-10-27T12:50:28.000Z",
-          "updatedAt": "2026-10-27T12:50:28.000Z",
+          "startedAt": "2026-10-28T05:48:38.000Z",
+          "updatedAt": "2026-10-28T05:48:38.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M5YN72RQ4WTP7264PMEPFG2Q",
+          "url": "https://status.fireworks.ai//incidents/01M60GNDED22W1A27ZNKSYKCXW",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-10-27T01:37:30.000Z",
-          "title": "Service Degradation for Kimi K3",
+          "id": "fireworks-feed-1-2026-10-28T05:39:34.000Z",
+          "title": "Service Degradation for MiniMax M3.1 Flash",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-10-27T01:37:30.000Z",
-          "updatedAt": "2026-10-27T01:37:30.000Z",
+          "startedAt": "2026-10-28T05:39:34.000Z",
+          "updatedAt": "2026-10-28T05:39:34.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M5XEBN3XAQDA3W9WD4GATWCC",
+          "url": "https://status.fireworks.ai//incidents/01M60G32VMQMW2WG4GXYT9B3FV",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-10-27T12:50:28.000Z",
+          "id": "fireworks-feed-0-2026-10-28T05:48:38.000Z",
+          "title": "Service Degradation for MiniMax M3.1 Flash",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-10-28T05:48:38.000Z",
+          "updatedAt": "2026-10-28T05:48:38.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M60GNDED22W1A27ZNKSYKCXW",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-10-28T05:39:34.000Z",
+          "title": "Service Degradation for MiniMax M3.1 Flash",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-10-28T05:39:34.000Z",
+          "updatedAt": "2026-10-28T05:39:34.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M60G32VMQMW2WG4GXYT9B3FV",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-2-2026-10-27T12:50:28.000Z",
           "title": "Service Degradation for GLM 5.3 Flash",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-10-27T01:37:30.000Z",
+          "id": "fireworks-feed-3-2026-10-27T01:37:30.000Z",
           "title": "Service Degradation for Kimi K3",
           "status": "reported",
           "impact": "unknown",
@@ -63,28 +85,6 @@
           "updatedAt": "2026-10-27T01:37:30.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M5XEBN3XAQDA3W9WD4GATWCC",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-2-2026-10-26T23:56:28.000Z",
-          "title": "Service Degradation for Kimi K3",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-10-26T23:56:28.000Z",
-          "updatedAt": "2026-10-26T23:56:28.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M5X9WTZFY7GV374ZYNVWNEP2",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-10-26T23:26:35.000Z",
-          "title": "Service Degradation for GLM 5.3 Flash",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-10-26T23:26:35.000Z",
-          "updatedAt": "2026-10-26T23:26:35.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M5X78V6A284K8HS7EBR6SNN9",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,23 +100,15 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T04:56:04.158Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
-      "summary": "1 active incident across 6 tracked components.",
+      "lastCheckedAt": "2026-10-28T05:55:54.268Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Code",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Claude Cowork",
-          "status": "degraded_performance"
+          "status": "operational"
         },
         {
           "name": "Claude Console (platform.claude.com)",
@@ -127,34 +119,30 @@
           "status": "operational"
         },
         {
+          "name": "Claude Code",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Cowork",
+          "status": "operational"
+        },
+        {
           "name": "Claude for Government",
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "9ftx658xtd5z",
-          "title": "Elevated errors affecting the Gmail connector",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-10-28T03:59:32.234Z",
-          "updatedAt": "2026-10-28T04:06:55.352Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/j86c100s8tqm",
-          "summary": "We are investigating elevated errors when searching and reading email with the Gmail connector. This issue does not affect other connectors."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "9ftx658xtd5z",
           "title": "Elevated errors affecting the Gmail connector",
-          "status": "investigating",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-10-28T03:59:32.234Z",
-          "updatedAt": "2026-10-28T04:06:55.352Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-10-28T05:48:13.158Z",
+          "resolvedAt": "2026-10-28T05:48:13.126Z",
           "url": "https://stspg.io/j86c100s8tqm",
-          "summary": "We are investigating elevated errors when searching and reading email with the Gmail connector. This issue does not affect other connectors."
+          "summary": "The issue affecting the Gmail connector on claude.ai, Claude Code, and Claude Cowork has been resolved. Impact occurred from 16:00 PT / 23:00 UTC on October 27 to 22:29 PT on Octo..."
         },
         {
           "id": "lqhknfdjrcst",
@@ -202,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T04:56:04.878Z",
+      "lastCheckedAt": "2026-10-28T05:55:54.969Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T04:56:04.476Z",
+      "lastCheckedAt": "2026-10-28T05:55:54.552Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -265,7 +253,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T04:56:04.150Z",
+      "lastCheckedAt": "2026-10-28T05:55:54.260Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -351,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-28T04:56:05.070Z",
+      "lastCheckedAt": "2026-10-28T05:55:55.060Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -375,7 +363,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
