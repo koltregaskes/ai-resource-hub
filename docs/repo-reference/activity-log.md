@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 28 Oct 2026, 20:56 UTC
+Generated: 28 Oct 2026, 21:01 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 28 Oct 2026, 20:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 28 Oct 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 28 Oct 2026, 20:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 28 Oct 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 28 Oct 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 28 Oct 2026, 21:00 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 28 Oct 2026, 21:00 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 28 Oct 2026, 21:00 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 28 Oct 2026, 21:00 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 28 Oct 2026, 21:00 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 28 Oct 2026, 12:00 UTC | digest | Anthropic just launched tools to show companies what their AI spending is buying | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/) |
 | 28 Oct 2026, 12:00 UTC | digest | Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecurity | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier) |
 | 28 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,049 open roles across 10 tracked companies. | `/jobs/` |

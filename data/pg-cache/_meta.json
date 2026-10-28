@@ -3,11 +3,11 @@
     "status": "unknown",
     "reason": "missing_config",
     "routingMode": "fallback",
-    "checkedAt": "2026-10-28T20:56:14.367Z",
+    "checkedAt": "2026-10-28T21:01:12.737Z",
     "sourceVerifiedAt": null,
     "siteFiltersSha256": null
   },
-  "generated_at": "2026-10-28T20:56:15.435Z",
+  "generated_at": "2026-10-28T21:01:13.805Z",
   "source": "local sqlite + shared postgres",
   "sqlite_storage": "local-only",
   "shared_postgres_available": false
