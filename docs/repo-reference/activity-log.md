@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 29 Oct 2026, 13:56 UTC
+Generated: 29 Oct 2026, 14:13 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 29 Oct 2026, 13:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 29 Oct 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 29 Oct 2026, 13:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 29 Oct 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 29 Oct 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 29 Oct 2026, 14:13 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 29 Oct 2026, 14:13 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 29 Oct 2026, 14:13 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 29 Oct 2026, 14:13 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 29 Oct 2026, 14:13 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 29 Oct 2026, 12:00 UTC | digest | AI has come for Arizona’s water | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc) |
 | 29 Oct 2026, 12:00 UTC | digest | Amazon updates Alexa to help you manage shopping lists, subscriptions, and update delivery instructions | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/29/amazon-updates-alexa-to-help-you-manage-shopping-lists-subscriptions-and-update-delivery-instructions/) |
 | 29 Oct 2026, 12:00 UTC | digest | Deepgram acquires Pipecat-maker Daily to bolster its voice AI infrastructure | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/) |
-| 29 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,049 open roles across 10 tracked companies. | `/jobs/` |
+| 29 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,048 open roles across 10 tracked companies. | `/jobs/` |
 | 29 Oct 2026, 12:00 UTC | digest | Published the 2026-10-29 daily digest | 3 stories captured from 2 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
