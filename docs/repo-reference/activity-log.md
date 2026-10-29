@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 29 Oct 2026, 18:56 UTC
+Generated: 29 Oct 2026, 19:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 29 Oct 2026, 18:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 29 Oct 2026, 18:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 29 Oct 2026, 18:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 29 Oct 2026, 18:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 29 Oct 2026, 18:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 29 Oct 2026, 19:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 29 Oct 2026, 19:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 29 Oct 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 29 Oct 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 29 Oct 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 29 Oct 2026, 12:00 UTC | digest | Granola crunches up a dictation feature to compete with Wispr | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/29/granola-crunches-up-a-dictation-feature-to-compete-with-wispr/) |
-| 29 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,038 open roles across 10 tracked companies. | `/jobs/` |
-| 29 Oct 2026, 12:00 UTC | digest | Mistral releases weights for its trillion-parameter AI model, targeting cybersecurity | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity/) |
-| 29 Oct 2026, 12:00 UTC | digest | Published the 2026-10-29 daily digest | 16 stories captured from 3 sources. | `/news/` |
+| 29 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,039 open roles across 10 tracked companies. | `/jobs/` |
+| 29 Oct 2026, 12:00 UTC | digest | Meta quietly launches an AI fashion app called Style Sketch | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/29/meta-quietly-launches-an-ai-fashion-app-called-style-sketch/) |
+| 29 Oct 2026, 12:00 UTC | digest | Published the 2026-10-29 daily digest | 17 stories captured from 3 sources. | `/news/` |
 | 29 Oct 2026, 12:00 UTC | digest | You can generate and edit Google Docs files directly in Gemini chats now | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
