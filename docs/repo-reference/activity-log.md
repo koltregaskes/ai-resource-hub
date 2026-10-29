@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 29 Oct 2026, 20:15 UTC
+Generated: 29 Oct 2026, 21:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 29 Oct 2026, 20:15 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 29 Oct 2026, 20:15 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 29 Oct 2026, 20:15 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 29 Oct 2026, 20:15 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 29 Oct 2026, 20:15 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 29 Oct 2026, 21:57 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 29 Oct 2026, 21:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 29 Oct 2026, 21:57 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 29 Oct 2026, 21:57 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 29 Oct 2026, 21:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 29 Oct 2026, 12:00 UTC | digest | As search traffic dries up, Reddit announces it&#8217;s shifting to a logged-in experience | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/) |
 | 29 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,039 open roles across 10 tracked companies. | `/jobs/` |
 | 29 Oct 2026, 12:00 UTC | digest | OpenAI-backed Thrive Holdings acquires ADT | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/) |
