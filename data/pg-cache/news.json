@@ -1,7 +1,31 @@
 [
   {
+    "id": "news-a39d2cb266f9545065a6",
+    "title": "Granola crunches up a dictation feature to compete with Wispr",
+    "url": "https://techcrunch.com/2026/10/29/granola-crunches-up-a-dictation-feature-to-compete-with-wispr/",
+    "source": "TechCrunch",
+    "summary": "Uno reverse! After Wispr added meeting notes to its dictation app, Granola is adding dictation to its meeting notetaker. The voice AI wars are getting interesting.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-29T17:54:38.000Z",
+    "discovered_at": "2026-10-29 17:55:38"
+  },
+  {
+    "id": "news-7bf0065ceb1646f57aed",
+    "title": "An updated Model Spec for more capable and beneficial AI",
+    "url": "https://openai.com/index/updated-model-spec",
+    "source": "OpenAI",
+    "summary": "OpenAI’s updated Model Spec outlines five core values to guide more capable AI toward sound judgment, human agency, and faithfulness to human intent.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-29T17:00:00.000Z",
+    "discovered_at": "2026-10-29 17:55:38"
+  },
+  {
     "id": "news-7610575f95441b581cef",
-    "title": "U.S. investigated Chinese spy plot aimed at Nvidia CEO",
+    "title": "US investigated Chinese spy plot aimed at Nvidia CEO",
     "url": "https://techcrunch.com/2026/10/29/u-s-investigated-chinese-spy-plot-aimed-at-nvidia-ceo/",
     "source": "TechCrunch",
     "summary": "A top executive of a Singapore AI cloud company that was accused of illegally selling Nvidia chips to China could also have been a Chinese spy, sources have told the New York Times.",
@@ -9,19 +33,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T16:42:32.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-88294416a4cb107945da",
     "title": "Ex-Palantir execs launch Dream with $17M from a16z to build AI world models for construction",
     "url": "https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction/",
     "source": "TechCrunch",
-    "summary": "rained on 100 million square feet of building permits, dream wants to disrupt Autodesk with AI.",
+    "summary": "Dream is grounded in real physics and construction standards. Just as LLMs learn from text, Dream's world model is trained on more than 100 million square feet of building data gathered from permit archives across the United States.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T16:21:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-45b4ef0b726f6d169aa4",
@@ -33,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T16:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:49"
+    "discovered_at": "2026-10-29 17:55:48"
   },
   {
     "id": "news-9d92d4ec6e5e3635af2d",
@@ -45,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T14:39:37.000Z",
-    "discovered_at": "2026-10-29 16:55:49"
+    "discovered_at": "2026-10-29 17:55:48"
   },
   {
     "id": "news-60c269dfa54ed7c51860",
@@ -57,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T14:35:26.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-079251699e8ed6eae1b1",
@@ -69,7 +93,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T14:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:49"
+    "discovered_at": "2026-10-29 17:55:48"
+  },
+  {
+    "id": "news-bcae5e5bffd4de8a0071",
+    "title": "Mistral releases weights for its trillion-parameter AI model, targeting cybersecurity",
+    "url": "https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity/",
+    "source": "TechCrunch",
+    "summary": "Mistral says its new model can afford organizations a kind of control over its cyber defenses that closed models can't.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-29T14:00:00.000Z",
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-0b3918620b863475f71c",
@@ -81,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T13:30:00.000Z",
-    "discovered_at": "2026-10-29 16:55:49"
+    "discovered_at": "2026-10-29 17:55:48"
   },
   {
     "id": "news-fd92a529665f18a759b1",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T13:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-c546a70dbf994e9cbf43",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T13:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-9cd5509199bff9261265",
@@ -117,7 +153,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T10:00:04.000Z",
-    "discovered_at": "2026-10-29 16:55:49"
+    "discovered_at": "2026-10-29 17:55:48"
+  },
+  {
+    "id": "news-d28967fce9c692cd06ec",
+    "title": "How we detect frontier model misalignment",
+    "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+    "source": "OpenAI",
+    "summary": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-29T09:00:00.000Z",
+    "discovered_at": "2026-10-29 17:55:38"
+  },
+  {
+    "id": "news-2d9928289658e98658f7",
+    "title": "How Ropes & Gray is developing AI for transactional diligence",
+    "url": "https://openai.com/index/ropes-gray-ai-diligence",
+    "source": "OpenAI",
+    "summary": "Ropes & Gray is developing AI for transactional diligence with OpenAI. Lawyers review grouped documents, summaries, and reports before advising clients.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-29T07:00:00.000Z",
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-09f762edab0d4f1948b6",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T23:05:39.000Z",
-    "discovered_at": "2026-10-29 16:55:49"
+    "discovered_at": "2026-10-29 17:55:48"
   },
   {
     "id": "news-b126d7721238eea7de00",
@@ -141,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T21:58:32.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-f348c6db37d87fbea6e4",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T21:48:37.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-90b267becbf2eaa801ac",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T21:34:30.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-e4867209a9cdfe0b1578",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T21:34:04.000Z",
-    "discovered_at": "2026-10-29 16:55:49"
+    "discovered_at": "2026-10-29 17:55:48"
   },
   {
     "id": "news-f7041d98b5619cae9d73",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T21:25:30.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-fc7d1d71bde9a18e24ca",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T20:03:00.000Z",
-    "discovered_at": "2026-10-29 16:55:49"
+    "discovered_at": "2026-10-29 17:55:48"
   },
   {
     "id": "news-2ede9b7f343197b453df",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T19:19:58.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-66c9055b3cf21443e3d9",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T19:05:46.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-24b289310b1971f470c3",
@@ -237,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T18:50:39.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-d0753be868cc7807af0c",
@@ -249,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T18:36:26.000Z",
-    "discovered_at": "2026-10-29 16:55:49"
+    "discovered_at": "2026-10-29 17:55:48"
   },
   {
     "id": "news-c802108aab79694f5d98",
@@ -261,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T17:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:49"
+    "discovered_at": "2026-10-29 17:55:48"
   },
   {
     "id": "news-1e8ba9106ed897eba936",
@@ -273,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T17:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-765a5a74d2443b200e79",
@@ -285,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T17:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-d0407e5d8c6e4e865bac",
@@ -297,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T15:53:52.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-feda3ad530f5eea07f7c",
@@ -309,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T15:41:18.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
-  },
-  {
-    "id": "news-f1ebb512d4e04c571037",
-    "title": "Voice AI in vogue: Nvidia releases new open transcription model",
-    "url": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/",
-    "source": "TechCrunch",
-    "summary": "Nvidia just released a free speech-to-text model that can transcribe up to 40 languages, but it only works on recordings, not live audio, so it’s a big step for meeting and medical transcription tools while still leaving real-time use to rivals like ElevenLabs.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-28T15:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-75e2017ed4c5a2ecbacf",
@@ -333,19 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T13:15:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
-  },
-  {
-    "id": "news-11933a85bc5f9fa36ca5",
-    "title": "7 days until TechCrunch Founder Summit: Save up to $100 on your pass before doors open",
-    "url": "https://techcrunch.com/2026/10/28/7-days-until-techcrunch-founder-summit-save-up-to-100-before-doors-open/",
-    "source": "TechCrunch",
-    "summary": "In just 7 days, TechCrunch Founder Summit takes over Boston’s SoWa Power Station on November 4. Your chance to save up to $100 on tickets is running out, and the opportunity to learn and connect directly with experienced founders, investors, and startup leaders is almost here.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-28T13:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-0dc3cf0b7c98dcde7cee",
@@ -357,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T10:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-41c97fe8dc29ac4a3866",
@@ -369,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T09:30:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-d42fb1eb3362412fc304",
@@ -381,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T15:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-a3a879144b2984ac94bf",
@@ -393,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T07:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-8cb333260a17a3244327",
@@ -405,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T00:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-250e5d8f302445e732f1",
@@ -417,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T22:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -429,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-f16aefe89a6e3f3b8efe",
@@ -441,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T14:30:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-1a1d4bf2fc111eb84688",
@@ -453,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T13:45:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-64d59b55a8fb866695c8",
@@ -465,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T10:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-8f2f08b6e197805b4e59",
@@ -477,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T07:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-eb7708c5f537ab79bfe6",
@@ -489,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T07:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-1758535ac6be3e6bbbbd",
@@ -501,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T00:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-298c8de07d18f423dad3",
@@ -513,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T17:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-48e2274fdf2ba9fe48db",
@@ -525,43 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T10:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
-  },
-  {
-    "id": "news-15c1f8ef7a582594bf05",
-    "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
-    "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
-    "source": "OpenAI",
-    "summary": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-23T00:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
-  },
-  {
-    "id": "news-c6099fc8919f3d5469ae",
-    "title": "Anima helps clinics cut call waits by 75% with GPT-6 and GPT-Live",
-    "url": "https://openai.com/index/anima",
-    "source": "OpenAI",
-    "summary": "Anima expands what care teams can do with OpenAI models, giving them more capacity to respond to patients.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-23T00:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
-  },
-  {
-    "id": "news-27825e300358401234fc",
-    "title": "Build more responsive apps with the Decisions API",
-    "url": "https://openai.com/index/decisions-api",
-    "source": "OpenAI",
-    "summary": "Fast, focused, low-cost decisions for any application.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-22T19:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-10-29 16:55:49"
+    "discovered_at": "2026-10-29 17:55:49"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-10-29 16:55:49"
+    "discovered_at": "2026-10-29 17:55:49"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   },
   {
     "id": "news-307bfda48464106bf8e3",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:21:53.000Z",
-    "discovered_at": "2026-10-29 16:55:49"
+    "discovered_at": "2026-10-29 17:55:49"
   },
   {
     "id": "news-aaf1cc502a6b16035865",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T22:26:35.000Z",
-    "discovered_at": "2026-10-29 16:55:49"
+    "discovered_at": "2026-10-29 17:55:49"
   },
   {
     "id": "news-6ee8ae0821d338b723f5",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T23:03:16.000Z",
-    "discovered_at": "2026-10-29 16:55:49"
+    "discovered_at": "2026-10-29 17:55:49"
   },
   {
     "id": "news-1122627a66dfc215a84f",
@@ -669,6 +669,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T15:00:00.000Z",
-    "discovered_at": "2026-10-29 16:55:38"
+    "discovered_at": "2026-10-29 17:55:38"
   }
 ]
