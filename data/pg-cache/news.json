@@ -1,27 +1,63 @@
 [
   {
+    "id": "news-7610575f95441b581cef",
+    "title": "U.S. investigated Chinese spy plot aimed at Nvidia CEO",
+    "url": "https://techcrunch.com/2026/10/29/u-s-investigated-chinese-spy-plot-aimed-at-nvidia-ceo/",
+    "source": "TechCrunch",
+    "summary": "A top executive of a Singapore AI cloud company that was accused of illegally selling Nvidia chips to China could also have been a Chinese spy, sources have told the New York Times.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-29T16:42:32.000Z",
+    "discovered_at": "2026-10-29 16:55:38"
+  },
+  {
+    "id": "news-88294416a4cb107945da",
+    "title": "Ex-Palantir execs launch Dream with $17M from a16z to build AI world models for construction",
+    "url": "https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction/",
+    "source": "TechCrunch",
+    "summary": "rained on 100 million square feet of building permits, dream wants to disrupt Autodesk with AI.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-29T16:21:00.000Z",
+    "discovered_at": "2026-10-29 16:55:38"
+  },
+  {
+    "id": "news-45b4ef0b726f6d169aa4",
+    "title": "Microsoft’s AI future has fewer jobs",
+    "url": "https://www.theverge.com/tech/1022023/microsoft-exit-offer-layoffs-notepad",
+    "source": "The Verge",
+    "summary": "To anyone listening closely to what Microsoft CEO Satya Nadella has been saying over the past couple of years, this week felt like the clearest sign yet that AI is about to fundamentally change the size of Microsoft's workforce. Microsoft is now offering voluntary buyouts to around 60,000 employees across the US, UK,…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-10-29T16:00:00.000Z",
+    "discovered_at": "2026-10-29 16:55:49"
+  },
+  {
     "id": "news-9d92d4ec6e5e3635af2d",
     "title": "The NYT Cooking app is testing AI recipe modifications",
     "url": "https://www.theverge.com/ai-artificial-intelligence/1022193/nyt-cooking-app-ai-recipe-modification-tool",
     "source": "The Verge",
-    "summary": "The New York Times is testing a new AI feature for its Cooking app that helps users to modify recipes, and it's sparked some drama among users. NYT Cooking senior editor Genevieve Ko announced the feature last Friday, which can be used to recommend substitutions for ingredients and cooking equipment, scale recipes to…",
+    "summary": "The New York Times is testing a new AI feature for its Cooking app that helps users to modify recipes, and it has sparked some drama among users. Last Friday, NYT Cooking senior editor Genevieve Ko announced the feature, which can be used to recommend substitutions for ingredients and cooking equipment, scale recipes…",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T14:39:37.000Z",
-    "discovered_at": "2026-10-29 15:55:49"
+    "discovered_at": "2026-10-29 16:55:49"
   },
   {
     "id": "news-60c269dfa54ed7c51860",
     "title": "Wabi, the AI agent that builds mini apps, now valued at $1.25B after latest round",
     "url": "https://techcrunch.com/2026/10/29/wabi-the-ai-agent-that-builds-mini-apps-now-valued-at-1-25b-after-latest-round/",
     "source": "TechCrunch",
-    "summary": "On Thursday, AI app, Wabi, now describing itself as a \"personal agent,\" said it has raised $55 million at a $1.25 billion valuation.",
+    "summary": "On Thursday, AI app Wabi, now describing itself as a \"personal agent,\" said it has raised $55 million at a $1.25 billion valuation.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T14:35:26.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-079251699e8ed6eae1b1",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T14:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:49"
+    "discovered_at": "2026-10-29 16:55:49"
   },
   {
     "id": "news-0b3918620b863475f71c",
@@ -45,31 +81,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T13:30:00.000Z",
-    "discovered_at": "2026-10-29 15:55:49"
+    "discovered_at": "2026-10-29 16:55:49"
   },
   {
-    "id": "news-29b969cf35c53a9d0eea",
-    "title": "Amazon updates Alexa to help you manage shopping lists, subscriptions, and update delivery instructions",
-    "url": "https://techcrunch.com/2026/10/29/amazon-updates-alexa-to-help-you-manage-shopping-lists-subscriptions-and-update-delivery-instructions/",
+    "id": "news-fd92a529665f18a759b1",
+    "title": "Amazon updates Alexa to help you manage shopping lists and subscriptions and update delivery instructions",
+    "url": "https://techcrunch.com/2026/10/29/amazon-updates-alexa-to-help-you-manage-shopping-lists-and-subscriptions-and-update-delivery-instructions/",
     "source": "TechCrunch",
-    "summary": "The update allows you to use Alexa to create lists, register them, see what's on them, and add or edit items. You can also manage subscriptions with the AI bot.",
+    "summary": "The update allows you to use Alexa to create lists, register them, see what's on them, and add or edit items. You can also manage subscriptions.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T13:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-c546a70dbf994e9cbf43",
     "title": "Deepgram acquires Pipecat-maker Daily to bolster its voice AI infrastructure",
     "url": "https://techcrunch.com/2026/10/29/deepgram-acquires-pipecat-maker-daily-to-bolster-its-voice-ai-infrastructure/",
     "source": "TechCrunch",
-    "summary": "Deepgram said that it is committed to keep Pipecat open source.",
+    "summary": "With Pipecat, Deepgram will likely gain a deeper understanding of real-time voice and video infrastructure.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T13:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-9cd5509199bff9261265",
@@ -81,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T10:00:04.000Z",
-    "discovered_at": "2026-10-29 15:55:49"
+    "discovered_at": "2026-10-29 16:55:49"
   },
   {
     "id": "news-09f762edab0d4f1948b6",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T23:05:39.000Z",
-    "discovered_at": "2026-10-29 15:55:49"
+    "discovered_at": "2026-10-29 16:55:49"
   },
   {
     "id": "news-b126d7721238eea7de00",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T21:58:32.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-f348c6db37d87fbea6e4",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T21:48:37.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-90b267becbf2eaa801ac",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T21:34:30.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-e4867209a9cdfe0b1578",
@@ -141,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T21:34:04.000Z",
-    "discovered_at": "2026-10-29 15:55:49"
+    "discovered_at": "2026-10-29 16:55:49"
   },
   {
     "id": "news-f7041d98b5619cae9d73",
@@ -153,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T21:25:30.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-fc7d1d71bde9a18e24ca",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T20:03:00.000Z",
-    "discovered_at": "2026-10-29 15:55:49"
+    "discovered_at": "2026-10-29 16:55:49"
   },
   {
     "id": "news-2ede9b7f343197b453df",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T19:19:58.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-66c9055b3cf21443e3d9",
@@ -189,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T19:05:46.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-24b289310b1971f470c3",
@@ -201,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T18:50:39.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-d0753be868cc7807af0c",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T18:36:26.000Z",
-    "discovered_at": "2026-10-29 15:55:49"
+    "discovered_at": "2026-10-29 16:55:49"
   },
   {
     "id": "news-c802108aab79694f5d98",
@@ -225,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T17:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:49"
+    "discovered_at": "2026-10-29 16:55:49"
   },
   {
     "id": "news-1e8ba9106ed897eba936",
@@ -237,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T17:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-765a5a74d2443b200e79",
@@ -249,19 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T17:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
-  },
-  {
-    "id": "news-1739307690c34a287cf1",
-    "title": "Meta says it&#8217;ll probably delay its controversial new business terms again",
-    "url": "https://www.theverge.com/tech/1020769/meta-updated-business-terms-delay-indefinitely",
-    "source": "The Verge",
-    "summary": "Meta says it may push the implementation of its new business terms past November 20th as it faces backlash from publishers over concerns about AI training. In a post on X, Meta communications head Andy Stone said the company does \"not plan to make policy changes without a full consultation with industry groups and lea…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-28T16:15:30.000Z",
-    "discovered_at": "2026-10-29 15:55:49"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-d0407e5d8c6e4e865bac",
@@ -273,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T15:53:52.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-feda3ad530f5eea07f7c",
@@ -285,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T15:41:18.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-f1ebb512d4e04c571037",
@@ -297,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T15:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-75e2017ed4c5a2ecbacf",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T13:15:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-11933a85bc5f9fa36ca5",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T13:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-0dc3cf0b7c98dcde7cee",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T10:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-41c97fe8dc29ac4a3866",
@@ -345,31 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T09:30:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
-  },
-  {
-    "id": "news-0a7119608b55c94e6b0e",
-    "title": "VCs will make billions on Anthropic&#8217;s IPO, but Amazon is set to make much (much) more",
-    "url": "https://techcrunch.com/2026/10/27/vcs-will-make-billions-on-anthropics-ipo-but-amazon-is-set-to-make-much-much-more/",
-    "source": "TechCrunch",
-    "summary": "Massive note conversions reveal the true extent of Amazon's ownership in Anthropic.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-28T01:15:28.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
-  },
-  {
-    "id": "news-6210b5315dda5af848ea",
-    "title": "Parents sue OpenAI, alleging GPT-4o coached their daughter off seizure medication",
-    "url": "https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/",
-    "source": "TechCrunch",
-    "summary": "A family is suing OpenAI, saying ChatGPT coached their daughter to quietly taper off her seizure medication and keep it from her doctors before she died in February.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-27T23:34:27.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-d42fb1eb3362412fc304",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T15:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-a3a879144b2984ac94bf",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T07:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-8cb333260a17a3244327",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T00:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-250e5d8f302445e732f1",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T22:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-f16aefe89a6e3f3b8efe",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T14:30:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-1a1d4bf2fc111eb84688",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T13:45:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-64d59b55a8fb866695c8",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T10:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-8f2f08b6e197805b4e59",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T07:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-eb7708c5f537ab79bfe6",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T07:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-1758535ac6be3e6bbbbd",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T00:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-298c8de07d18f423dad3",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T17:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-48e2274fdf2ba9fe48db",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T10:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-15c1f8ef7a582594bf05",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T00:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-c6099fc8919f3d5469ae",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-23T00:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-27825e300358401234fc",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-22T19:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-10-29 15:55:49"
+    "discovered_at": "2026-10-29 16:55:49"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-10-29 15:55:49"
+    "discovered_at": "2026-10-29 16:55:49"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   },
   {
     "id": "news-307bfda48464106bf8e3",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:21:53.000Z",
-    "discovered_at": "2026-10-29 15:55:49"
+    "discovered_at": "2026-10-29 16:55:49"
   },
   {
     "id": "news-aaf1cc502a6b16035865",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T22:26:35.000Z",
-    "discovered_at": "2026-10-29 15:55:49"
+    "discovered_at": "2026-10-29 16:55:49"
   },
   {
     "id": "news-6ee8ae0821d338b723f5",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T23:03:16.000Z",
-    "discovered_at": "2026-10-29 15:55:49"
+    "discovered_at": "2026-10-29 16:55:49"
   },
   {
     "id": "news-1122627a66dfc215a84f",
@@ -669,6 +669,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-02T15:00:00.000Z",
-    "discovered_at": "2026-10-29 15:55:39"
+    "discovered_at": "2026-10-29 16:55:38"
   }
 ]

@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 29 Oct 2026, 15:56 UTC
+Generated: 29 Oct 2026, 16:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 29 Oct 2026, 15:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 29 Oct 2026, 15:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 29 Oct 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 29 Oct 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 29 Oct 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 29 Oct 2026, 12:00 UTC | digest | Anthropic is asking Wall Street to believe in AGI | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/podcast/1021322/anthropic-ipo-filing-s-1-claude-semianalysis-joey-brookhart-interview) |
+| 29 Oct 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 29 Oct 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 29 Oct 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 29 Oct 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 29 Oct 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 29 Oct 2026, 12:00 UTC | digest | Ex-Palantir execs launch Dream with $17M from a16z to build AI world models for construction | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/29/ex-palantir-execs-launch-dream-with-17m-from-a16z-to-build-ai-world-models-for-construction/) |
 | 29 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,046 open roles across 10 tracked companies. | `/jobs/` |
-| 29 Oct 2026, 12:00 UTC | digest | Published the 2026-10-29 daily digest | 7 stories captured from 2 sources. | `/news/` |
-| 29 Oct 2026, 12:00 UTC | digest | The NYT Cooking app is testing AI recipe modifications | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1022193/nyt-cooking-app-ai-recipe-modification-tool) |
-| 29 Oct 2026, 12:00 UTC | digest | Wabi, the AI agent that builds mini apps, now valued at $1.25B after latest round | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/29/wabi-the-ai-agent-that-builds-mini-apps-now-valued-at-1-25b-after-latest-round/) |
+| 29 Oct 2026, 12:00 UTC | digest | Microsoft’s AI future has fewer jobs | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1022023/microsoft-exit-offer-layoffs-notepad) |
+| 29 Oct 2026, 12:00 UTC | digest | Published the 2026-10-29 daily digest | 10 stories captured from 2 sources. | `/news/` |
+| 29 Oct 2026, 12:00 UTC | digest | U.S. investigated Chinese spy plot aimed at Nvidia CEO | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/29/u-s-investigated-chinese-spy-plot-aimed-at-nvidia-ceo/) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
