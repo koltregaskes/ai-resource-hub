@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 30 Oct 2026, 20:55 UTC
+Generated: 30 Oct 2026, 21:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 30 Oct 2026, 20:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 30 Oct 2026, 20:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 30 Oct 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 30 Oct 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 30 Oct 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 30 Oct 2026, 12:00 UTC | digest | Google&#8217;s satellite AI server transmits its first response to Earth | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission) |
-| 30 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,042 open roles across 10 tracked companies. | `/jobs/` |
-| 30 Oct 2026, 12:00 UTC | digest | Published the 2026-10-30 daily digest | 19 stories captured from 3 sources. | `/news/` |
-| 30 Oct 2026, 12:00 UTC | digest | Sam Altman says it’s better for RAM to be in a data center than on your desk | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1023820/sam-altman-ram-shortage-cloud-servers) |
-| 30 Oct 2026, 12:00 UTC | digest | The biggest names in AI are backing a new way to opt out of scraping | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out) |
+| 30 Oct 2026, 21:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 30 Oct 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 30 Oct 2026, 21:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 30 Oct 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 30 Oct 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 30 Oct 2026, 12:00 UTC | digest | Anthropic expected to receive high &#8216;junk&#8217; rating from credit agencies following IPO, report says | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/) |
+| 30 Oct 2026, 12:00 UTC | digest | Intel&#8217;s stock crashes, knocking $12B from government&#8217;s stake | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake/) |
+| 30 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,044 open roles across 10 tracked companies. | `/jobs/` |
+| 30 Oct 2026, 12:00 UTC | digest | Last-minute Halloween costumes for tech nerds | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/30/last-minute-halloween-costumes-for-tech-nerds/) |
+| 30 Oct 2026, 12:00 UTC | digest | Published the 2026-10-30 daily digest | 20 stories captured from 3 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
