@@ -1,18 +1,18 @@
 # Recent Activity Snapshot
 
-Generated: 30 Oct 2026, 14:04 UTC
+Generated: 30 Oct 2026, 14:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 30 Oct 2026, 14:04 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 30 Oct 2026, 14:04 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 30 Oct 2026, 14:04 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 30 Oct 2026, 14:04 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 30 Oct 2026, 14:04 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 30 Oct 2026, 14:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 30 Oct 2026, 14:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 30 Oct 2026, 14:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 30 Oct 2026, 14:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 30 Oct 2026, 14:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 30 Oct 2026, 12:00 UTC | digest | DoorDash said it&#8217;s only received &#8216;several hundred&#8217; orders from AI agents | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/) |
-| 30 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,034 open roles across 10 tracked companies. | `/jobs/` |
+| 30 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,036 open roles across 10 tracked companies. | `/jobs/` |
 | 30 Oct 2026, 12:00 UTC | digest | Published the 2026-10-30 daily digest | 9 stories captured from 2 sources. | `/news/` |
 | 30 Oct 2026, 12:00 UTC | digest | Silicon Valley wants you to invest in miracles | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1023070/anthropic-ipo-risk-factors-filing-miracles) |
 | 30 Oct 2026, 12:00 UTC | digest | Skip the small talk: Make game-changing connections at TechCrunch Founder Summit with Braindate | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/30/skip-the-small-talk-make-game-changing-connections-at-techcrunch-founder-summit-with-braindate/) |
