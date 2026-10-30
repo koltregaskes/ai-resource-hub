@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 30 Oct 2026, 16:55 UTC
+Generated: 30 Oct 2026, 17:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 30 Oct 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 30 Oct 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 30 Oct 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 30 Oct 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 30 Oct 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 30 Oct 2026, 17:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 30 Oct 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 30 Oct 2026, 17:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 30 Oct 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 30 Oct 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 30 Oct 2026, 12:00 UTC | digest | Google&#8217;s first data center satellite is online and writing poetry | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/) |
 | 30 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,040 open roles across 10 tracked companies. | `/jobs/` |
-| 30 Oct 2026, 12:00 UTC | digest | Pope Leo calls for the disarmament of AI: ‘Machines are tools, not persons’ | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai) |
-| 30 Oct 2026, 12:00 UTC | digest | Published the 2026-10-30 daily digest | 12 stories captured from 3 sources. | `/news/` |
-| 30 Oct 2026, 12:00 UTC | digest | Skip the small talk: Make game-changing connections at TechCrunch Founder Summit with Braindate | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/30/skip-the-small-talk-make-game-changing-connections-at-techcrunch-founder-summit-with-braindate/) |
+| 30 Oct 2026, 12:00 UTC | digest | Published the 2026-10-30 daily digest | 14 stories captured from 3 sources. | `/news/` |
 | 30 Oct 2026, 12:00 UTC | digest | Theranos whistleblower Tyler Shultz warns that the AI boom is &#8216;a great opportunity to go deceive people&#8217; | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/30/theranos-whistleblower-tyler-shultz-warns-that-the-ai-boom-is-a-great-opportunity-to-go-deceive-people/) |
+| 30 Oct 2026, 12:00 UTC | digest | Zest&#8217;s new AI agent finds restaurants and books reservations over text | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/30/zests-new-ai-agent-finds-restaurants-and-books-reservations-over-text/) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
