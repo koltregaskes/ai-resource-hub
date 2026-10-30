@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 29 Oct 2026, 23:55 UTC
+Generated: 30 Oct 2026, 00:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 29 Oct 2026, 23:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 29 Oct 2026, 23:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 29 Oct 2026, 23:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 29 Oct 2026, 23:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 29 Oct 2026, 23:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 30 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,040 open roles across 10 tracked companies. | `/jobs/` |
+| 30 Oct 2026, 00:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 30 Oct 2026, 00:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 30 Oct 2026, 00:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 30 Oct 2026, 00:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 30 Oct 2026, 00:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 29 Oct 2026, 12:00 UTC | digest | As search traffic dries up, Reddit announces it&#8217;s shifting to a logged-in experience | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/) |
 | 29 Oct 2026, 12:00 UTC | digest | AWS will be a $1T business, Jassy says. But first, it will spend big. | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/) |
-| 29 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,041 open roles across 10 tracked companies. | `/jobs/` |
 | 29 Oct 2026, 12:00 UTC | digest | Published the 2026-10-29 daily digest | 20 stories captured from 3 sources. | `/news/` |
 | 29 Oct 2026, 12:00 UTC | digest | Rivian expands joint venture with VW to include AI assistant | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/29/rivian-expands-joint-venture-with-vw-to-include-ai-assistant/) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
