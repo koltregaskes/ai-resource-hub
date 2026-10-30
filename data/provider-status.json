@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T15:55:48.247Z",
+  "generatedAt": "2026-10-30T16:55:45.033Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-30T15:55:48.241Z",
+      "lastCheckedAt": "2026-10-30T16:55:45.028Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-30T15:55:46.718Z",
+      "lastCheckedAt": "2026-10-30T16:55:42.448Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -135,24 +135,24 @@
         {
           "id": "01M66KSDH67V5BQ73PE8AD2W8S",
           "title": "Elevated errors for GPT Image 2 API image edits",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-10-30T14:35:28.000Z",
-          "updatedAt": "2026-10-30T14:35:28.000Z",
+          "updatedAt": "2026-10-30T16:06:34.000Z",
           "resolvedAt": null,
-          "summary": "We are experiencing elevated errors for some GPT Image 2 API image edit requests. We have identified the issue and are working on a fix"
+          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
         }
       ],
       "recentIncidents": [
         {
           "id": "01M66KSDH67V5BQ73PE8AD2W8S",
           "title": "Elevated errors for GPT Image 2 API image edits",
-          "status": "identified",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-10-30T14:35:28.000Z",
-          "updatedAt": "2026-10-30T14:35:28.000Z",
+          "updatedAt": "2026-10-30T16:06:34.000Z",
           "resolvedAt": null,
-          "summary": "We are experiencing elevated errors for some GPT Image 2 API image edit requests. We have identified the issue and are working on a fix"
+          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
         },
         {
           "id": "01M5YY4A3TQETEQ53DVSK8SW10",
@@ -187,26 +187,6 @@
       ]
     },
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-10-30T15:55:47.623Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -217,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-30T15:55:46.666Z",
+      "lastCheckedAt": "2026-10-30T16:55:42.453Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -307,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-30T15:55:47.485Z",
+      "lastCheckedAt": "2026-10-30T16:55:43.270Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -327,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-30T15:55:46.958Z",
+      "lastCheckedAt": "2026-10-30T16:55:42.643Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -358,6 +338,26 @@
           "summary": "# Incident Report\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models experienced increased error rates. Impacted services incl..."
         }
       ]
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-10-30T16:55:43.364Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
     },
     {
       "id": "deepseek",
