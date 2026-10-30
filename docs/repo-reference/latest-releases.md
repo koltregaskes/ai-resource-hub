@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 30 Oct 2026, 17:56 UTC
+Generated: 30 Oct 2026, 18:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -14,7 +14,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 15 Oct 2026 | Muse Spark Open | Meta | tracking | high | watch only | 0 | 0 | n/a |
 | 15 Oct 2026 | Nemotron 3.5 Super VL | NVIDIA | tracking | high | watch only | 0 | 0 | n/a |
 | 12 Oct 2026 | Muse Wonder | Meta | tracking | high | watch only | 0 | 0 | n/a |
-| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 2 | [official](https://www.anthropic.com/glasswing) |
+| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 1 | [official](https://www.anthropic.com/glasswing) |
 | 6 Oct 2026 | Mistral Large 4 | Mistral | tracking | watch | watch only | 0 | 1 | n/a |
 | 6 Oct 2026 | Nano Banana 2.1 | Google | tracking | watch | watch only | 0 | 1 | n/a |
 | 23 Sept 2026 | GLM 5.3 Prime | Zhipu AI | tracking | watch | watch only | 0 | 0 | n/a |
