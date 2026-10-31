@@ -1,6 +1,6 @@
 # Recent Activity Snapshot
 
-Generated: 31 Oct 2026, 06:56 UTC
+Generated: 31 Oct 2026, 07:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
@@ -9,11 +9,11 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 31 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,044 open roles across 10 tracked companies. | `/jobs/` |
 | 31 Oct 2026, 12:00 UTC | digest | Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/) |
 | 31 Oct 2026, 12:00 UTC | digest | Published the 2026-10-31 daily digest | 1 stories captured from 1 sources. | `/news/` |
-| 31 Oct 2026, 06:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 31 Oct 2026, 06:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 31 Oct 2026, 06:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 31 Oct 2026, 06:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 31 Oct 2026, 06:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 31 Oct 2026, 07:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 31 Oct 2026, 07:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 31 Oct 2026, 07:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 31 Oct 2026, 07:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 31 Oct 2026, 07:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
