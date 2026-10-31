@@ -1,0 +1,30 @@
+---
+// Same-site hop. The address names the Hub page, then the browser opens it.
+// GitHub Pages serves this file as-is, so the hop itself is not stored as a count.
+---
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Opening the page</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://theairesourcehub.com/">
+</head>
+<body>
+  <p>Opening the page on the AI Resource Hub.</p>
+  <p><a id="go" href="/">Continue</a></p>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const to = params.get("to") || "/";
+    const safe = to.startsWith("/") && !to.startsWith("//") && !to.includes("\\") && !to.includes("://");
+    const dest = new URL(safe ? to : "/", location.origin);
+    for (const key of ["ref", "e", "s"]) {
+      const value = params.get(key);
+      if (value) dest.searchParams.set(key, value);
+    }
+    const link = document.getElementById("go");
+    const next = dest.pathname + dest.search + dest.hash;
+    if (link) link.setAttribute("href", next);
+    location.replace(next);
+  </script>
+</body>
+</html>

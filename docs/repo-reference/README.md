@@ -8,20 +8,20 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 09 Oct 2026, 21:56 UTC |
+| Generated | 31 Oct 2026, 21:29 UTC |
 | Providers tracked | 40 |
-| Public models | 344 |
-| Active models | 107 |
-| Tracking models | 236 |
+| Public models | 345 |
+| Active models | 104 |
+| Tracking models | 240 |
 | Preview models | 1 |
 | Benchmarks | 34 |
-| News items in cache | 70 |
-| Release-desk entries | 49 |
+| News items in cache | 56 |
+| Release-desk entries | 52 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 09 Oct 2026, 21:55 UTC |
+| Latest visible refresh | 31 Oct 2026, 21:29 UTC |
 | Current evaluated composite leader | GPT-5.2 (52.1) |
-| Latest tracked release | Mistral Large 4 (6 Oct 2026) |
+| Latest tracked release | Kimi K3.1 Pro (23 Oct 2026) |
 
 ## Reference Files
 

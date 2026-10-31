@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { benchmarkFreshness } from './benchmark-freshness';
+import { blogPostHref, blogPosts } from './blog-posts';
 
 import {
   getAIJobsOverview,
@@ -138,7 +139,7 @@ export interface DataPulseEntry {
   href: string;
 }
 
-export type ActivityCategory = 'site' | 'models' | 'data' | 'digest' | 'jobs';
+export type ActivityCategory = 'site' | 'models' | 'data' | 'digest' | 'jobs' | 'blog';
 
 export interface ActivityEntry {
   id: string;
@@ -147,6 +148,29 @@ export interface ActivityEntry {
   title: string;
   detail: string;
   href: string | null;
+  /** Visible ticker chip. Editorial posts use Essay, Explainer, and the other blog types. */
+  typeLabel?: string;
+}
+
+export const ACTIVITY_TYPE_LABELS: Record<ActivityCategory, string> = {
+  site: 'Site',
+  models: 'Models',
+  data: 'Data',
+  digest: 'Digest',
+  jobs: 'Jobs',
+  blog: 'Blog',
+};
+
+export function activityTypeLabel(entry: Pick<ActivityEntry, 'category' | 'typeLabel'>): string {
+  return entry.typeLabel ?? ACTIVITY_TYPE_LABELS[entry.category];
+}
+
+export function pinActivity<T extends { href: string | null }>(items: T[], pinned: T | null, limit: number): T[] {
+  const trimmed = items.slice(0, limit);
+  if (!pinned?.href) return trimmed;
+  if (trimmed.some((item) => item.href === pinned.href)) return trimmed;
+  if (trimmed.length < limit) return [...trimmed, pinned];
+  return [...trimmed.slice(0, limit - 1), pinned];
 }
 
 const CACHE_DIR = path.join(process.cwd(), 'data', 'pg-cache');
@@ -935,6 +959,22 @@ function jobsActivities(basePath: string, jobsOverview: JobsOverview): ActivityE
   ];
 }
 
+function blogActivities(basePath: string): ActivityEntry[] {
+  return blogPosts.slice(0, 3).map((post) => ({
+    id: `blog-${post.slug}`,
+    date: normaliseDateTime(post.date) ?? new Date(0).toISOString(),
+    category: 'blog' as const,
+    typeLabel: post.type,
+    title: post.title,
+    detail: `${post.type} · ${post.readTime} read.`,
+    href: blogPostHref(basePath, post.slug),
+  }));
+}
+
+export function getNewestBlogActivity(basePath = '/'): ActivityEntry | null {
+  return blogActivities(basePath)[0] ?? null;
+}
+
 function reportActivities(basePath: string): ActivityEntry[] {
   const reports = readCacheArray<CacheReport>('reports').slice(0, 2);
   const events = readCacheArray<CacheEvent>('events').slice(0, 2);
@@ -971,6 +1011,7 @@ export function getLatestActivities(limit = 18, basePath = '/'): ActivityEntry[]
     ...latestScrapeActivities(basePath),
     ...digestActivities(basePath),
     ...jobsActivities(basePath, jobsOverview),
+    ...blogActivities(basePath),
     ...reportActivities(basePath),
   ];
 

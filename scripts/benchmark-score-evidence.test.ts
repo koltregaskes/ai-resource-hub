@@ -52,12 +52,15 @@ test('unresolved evidence scope covers label-only rows and generic Arena discove
   const unresolvedKeySet = new Set(unresolvedKeys);
 
   assert.equal(VERIFIED_BENCHMARK_SCORE_EVIDENCE.length, 41);
-  assert.equal(UNRESOLVED_BENCHMARK_SCORE_REVIEWS.length, 97);
+  assert.equal(UNRESOLVED_BENCHMARK_SCORE_REVIEWS.length, 92);
   assert.equal(unresolvedKeySet.size, unresolvedKeys.length);
   assert.equal(VERIFIED_LABEL_ONLY_REMEDIATION_KEYS.size, 23);
 
   const arenaRows = cachedScores.filter((row) => row.benchmark_id === 'chatbot-arena-elo');
-  assert.equal(arenaRows.length, 51);
+  // 46 = the Arena rows in scripts/seed-db.ts. Since #35 the historical fallback in
+  // scripts/scrapers/benchmarks.ts no longer upserts, so the five fallback-only rows
+  // (deepseek-v3, gemini-2.0-flash, gpt-4.1, mistral-small-3.1, qwen-2.5-72b) left the cache.
+  assert.equal(arenaRows.length, 46);
   for (const row of arenaRows) {
     const key = benchmarkScoreKey(row.model_id, row.benchmark_id);
     assert.ok(unresolvedKeySet.has(key), `${key} must have an explicit unresolved review`);

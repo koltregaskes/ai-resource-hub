@@ -3,6 +3,7 @@
  * Generates an RSS 2.0 feed with recent model additions, price changes, and blog posts.
  */
 import type { APIRoute } from 'astro';
+import { blogPosts } from '../data/blog-posts';
 import { getRecentModels } from '../db/queries';
 
 export const GET: APIRoute = ({ site }) => {
@@ -11,63 +12,7 @@ export const GET: APIRoute = ({ site }) => {
 
   const recentModels = getRecentModels(20);
 
-  // Blog posts (static list — matches blog/index.astro)
-  const blogPosts = [
-    {
-      title: 'What Is RAG? Retrieval-Augmented Generation Explained',
-      slug: 'what-is-rag',
-      date: '2026-02-27',
-      description: 'A plain-English guide to RAG — when to use it, when not to, and how it actually works.',
-    },
-    {
-      title: 'Context Windows Explained: Why Bigger Is Not Always Better',
-      slug: 'context-windows-explained',
-      date: '2026-02-26',
-      description: 'What context windows actually are and how to think about them when choosing a model.',
-    },
-    {
-      title: 'Bench-Maxing and Why You Should Test AI Models on Your Actual Work',
-      slug: 'bench-maxing-personal-benchmarks',
-      date: '2026-02-25',
-      description: 'The case for building a personal test suite based on the work you actually do.',
-    },
-    {
-      title: 'Temperature, Top-p, and the Inference Settings Nobody Explains',
-      slug: 'temperature-top-p-and-inference-settings',
-      date: '2026-02-24',
-      description: 'A practical guide to temperature, top-p, and other generation settings.',
-    },
-    {
-      title: 'AI Agents Explained: What They Are and How They Work',
-      slug: 'ai-agents-explained',
-      date: '2026-02-22',
-      description: 'AI agents that plan, use tools, and take actions — what this means in practice.',
-    },
-    {
-      title: 'How AI Benchmarks Work (And Why You Should Care)',
-      slug: 'how-ai-benchmarks-work',
-      date: '2026-02-20',
-      description: 'A plain-English guide to MMLU, GPQA, HumanEval, SWE-bench, and Chatbot Arena.',
-    },
-    {
-      title: 'The AI Pricing Race to Zero',
-      slug: 'ai-pricing-race-to-zero',
-      date: '2026-02-15',
-      description: 'AI model pricing has dropped over 90% in two years.',
-    },
-    {
-      title: 'Open Source vs Closed AI Models in 2026',
-      slug: 'open-source-vs-closed-ai',
-      date: '2026-02-10',
-      description: 'DeepSeek, Llama, Mistral, and Qwen are closing the gap.',
-    },
-    {
-      title: 'What Is an LLM? A Non-Technical Guide',
-      slug: 'what-is-an-llm',
-      date: '2026-02-05',
-      description: 'Large Language Models explained for everyone.',
-    },
-  ];
+  const posts = blogPosts;
 
   const categoryLabels: Record<string, string> = {
     llm: 'LLM',
@@ -81,7 +26,7 @@ export const GET: APIRoute = ({ site }) => {
   const items: string[] = [];
 
   // Blog posts first
-  for (const post of blogPosts) {
+  for (const post of posts) {
     items.push(`
     <item>
       <title>${escapeXml(post.title)}</title>
