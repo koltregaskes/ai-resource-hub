@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import GlobalSearch from '../components/GlobalSearch.astro';
-import { getLatestActivities } from '../data/hub-dashboard';
+import { activityTypeLabel, getLatestActivities, getNewestBlogActivity, pinActivity } from '../data/hub-dashboard';
 import { getSearchIndex } from '../data/search-index';
 import {
   buildAlternateTranslations,
@@ -122,6 +122,7 @@ const primaryNav = [
     href: `${base}guides/`,
     children: [
       { href: `${base}guides/`, label: 'Guides Overview', note: 'Start here for learning paths' },
+      { href: `${base}blog/`, label: 'Blog', note: 'Essays, explainers, and analysis' },
       { href: `${base}academy/`, label: 'AI Academy', note: 'Structured learning for all levels' },
       { href: `${base}glossary/`, label: 'Glossary', note: 'Plain-English AI terminology' },
       { href: `${base}prompts/`, label: 'Prompt Library', note: 'Tested prompts across use cases' },
@@ -187,6 +188,7 @@ const mobileSections = [
     title: 'Learn and sources',
     links: [
       { href: `${base}guides/`, label: 'Guides' },
+      { href: `${base}blog/`, label: 'Blog' },
       { href: `${base}academy/`, label: 'AI Academy' },
       { href: `${base}glossary/`, label: 'Glossary' },
       { href: `${base}quiz/`, label: 'Which AI?' },
@@ -287,6 +289,7 @@ const compactNav = [
     href: `${base}guides/`,
     children: [
       { href: `${base}guides/`, label: 'Guides', note: 'Practical explainers and buying decisions' },
+      { href: `${base}blog/`, label: 'Blog', note: 'Essays, explainers, and analysis' },
       { href: `${base}academy/`, label: 'AI Academy', note: 'Structured learning path' },
       { href: `${base}prompts/`, label: 'Prompt Library', note: 'Reusable prompt patterns' },
     ],
@@ -312,11 +315,13 @@ function formatTickerTime(value: string): string {
 }
 
 const latestActivities = getLatestActivities(10, base);
-const globalTickerItems = latestActivities.map((item) => ({
+const newestBlogActivity = getNewestBlogActivity(base);
+const tickerActivities = pinActivity(latestActivities, newestBlogActivity, 10);
+const globalTickerItems = tickerActivities.map((item) => ({
   href: item.href ?? `${base}updates/`,
   time: formatTickerTime(item.date),
   title: item.title,
-  category: item.category,
+  category: activityTypeLabel(item),
 }));
 const latestTickerDate = latestActivities[0]?.date ?? null;
 const routeSegments = currentPath
@@ -509,7 +514,7 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
               {[...globalTickerItems, ...globalTickerItems].map((item) => (
                 <a href={item.href} class="airh-site-ticker-item">
                   <span>{item.time}</span>
-                  <b>{item.category}</b>
+                  <b data-ticker-type={item.category.toLowerCase()}>{item.category}</b>
                   {item.title}
                 </a>
               ))}

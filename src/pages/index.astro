@@ -3,7 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getNews } from '../db/queries';
 import {
   getDataPulse,
+  activityTypeLabel,
   getLatestActivities,
+  getNewestBlogActivity,
+  pinActivity,
   getLatestDigest,
   getMetaLeaderboard,
   normaliseDateTime,
@@ -314,15 +317,29 @@ const latestTimestamp = [
   .filter((value): value is string => Boolean(value))
   .sort((a, b) => Date.parse(b) - Date.parse(a))[0] ?? null;
 
-const tickerItems = [
-  ...activities.slice(0, 8).map((entry) => ({
+const tickerItems = pinActivity(
+  activities.map((entry) => ({
     time: formatRelativeTime(entry.date),
     label: entry.title,
     detail: entry.detail,
     href: entry.href ?? `${base}changelog/`,
     type: entry.category,
+    typeLabel: activityTypeLabel(entry),
   })),
-].slice(0, 10);
+  (() => {
+    const essay = getNewestBlogActivity(base);
+    if (!essay) return null;
+    return {
+      time: formatRelativeTime(essay.date),
+      label: essay.title,
+      detail: essay.detail,
+      href: essay.href ?? `${base}blog/`,
+      type: essay.category,
+      typeLabel: activityTypeLabel(essay),
+    };
+  })(),
+  10,
+);
 
 const duplicatedTickerItems = [...tickerItems, ...tickerItems];
 const initialRows = rows.slice(0, 12);
@@ -394,6 +411,7 @@ const tableLinks = [
               {duplicatedTickerItems.map((item) => (
                 <a href={item.href} class="airh-ticker-item">
                   <span class="airh-ticker-time">{item.time}</span>
+                  <span class="airh-ticker-type" data-ticker-type={item.typeLabel.toLowerCase()}>{item.typeLabel}</span>
                   <strong>{item.label}</strong>
                   <span>{item.detail}</span>
                 </a>

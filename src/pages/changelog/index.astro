@@ -14,9 +14,10 @@ const categoryLabels: Record<'all' | ActivityCategory, string> = {
   data: 'Data refreshes',
   digest: 'Digest',
   jobs: 'Jobs',
+  blog: 'Blog',
 };
 
-const categoryOrder: Array<'all' | ActivityCategory> = ['all', 'site', 'models', 'data', 'digest', 'jobs'];
+const categoryOrder: Array<'all' | ActivityCategory> = ['all', 'site', 'models', 'data', 'digest', 'jobs', 'blog'];
 
 const counts = categoryOrder.map((category) => ({
   category,

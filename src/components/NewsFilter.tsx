@@ -145,6 +145,14 @@ export default function NewsFilter({ news }: Props) {
     } catch {
       // Ignore local storage failures in strict privacy contexts.
     }
+
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q');
+    const from = params.get('from');
+    const to = params.get('to');
+    if (q) setSearchQuery(q);
+    if (from) setCustomFrom(from);
+    if (to) setCustomTo(to);
   }, []);
 
   const archiveMonths = useMemo(() => {
@@ -550,6 +558,7 @@ function NewsCard({
 }) {
   return (
     <div
+      id={item.id}
       className="group relative rounded-xl p-4 transition-colors"
       style={{
         backgroundColor: 'var(--color-bg-card)',
