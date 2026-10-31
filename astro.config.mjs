@@ -14,7 +14,9 @@ export default defineConfig({
   },
   integrations: [
     react(),
-    sitemap(),
+    sitemap({
+      filter: (page) => !page.includes('/go'),
+    }),
   ],
   vite: {
     plugins: [tailwindcss()],
