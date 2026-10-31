@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T14:56:08.291Z",
+  "generatedAt": "2026-10-31T21:29:03.568Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T14:56:07.729Z",
+      "lastCheckedAt": "2026-10-31T21:29:03.563Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,71 +20,71 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-10-08T22:36:42.000Z",
-          "title": "Service Degradation for GLM 5.3 Flash",
+          "id": "fireworks-feed-0-2026-10-31T18:26:49.000Z",
+          "title": "Service Degradation for Kimi K3",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-10-08T22:36:42.000Z",
-          "updatedAt": "2026-10-08T22:36:42.000Z",
+          "startedAt": "2026-10-31T18:26:49.000Z",
+          "updatedAt": "2026-10-31T18:26:49.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M4EME5D6VSR3ZGVXSNVDPSX0",
-          "summary": "Status: Resolved The performance issue affecting GLM 5.3 Flash has been resolved. Affected components GLM 5.3 Flash (Operational)"
+          "url": "https://status.fireworks.ai//incidents/01M69K3V00WQTJN1RN2HKVEVDH",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-10-08T19:30:48.000Z",
-          "title": "Service Degradation for GLM 5.3 Flash",
+          "id": "fireworks-feed-1-2026-10-30T20:51:04.000Z",
+          "title": "Service degradation",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-10-08T19:30:48.000Z",
-          "updatedAt": "2026-10-08T19:30:48.000Z",
+          "startedAt": "2026-10-30T20:51:04.000Z",
+          "updatedAt": "2026-10-30T20:51:04.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M4EF6AEMPHAR8R6YGFAE6CB4",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+          "url": "https://status.fireworks.ai//incidents/01M679955DA5K8S2HMEXDPCBR3",
+          "summary": "Status: Identified We are experiencing service degradation impacting deployment creation, dedicated training, and batch inference services. We are working to resolve these issues..."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-10-08T22:36:42.000Z",
-          "title": "Service Degradation for GLM 5.3 Flash",
+          "id": "fireworks-feed-0-2026-10-31T18:26:49.000Z",
+          "title": "Service Degradation for Kimi K3",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-10-08T22:36:42.000Z",
-          "updatedAt": "2026-10-08T22:36:42.000Z",
+          "startedAt": "2026-10-31T18:26:49.000Z",
+          "updatedAt": "2026-10-31T18:26:49.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M4EME5D6VSR3ZGVXSNVDPSX0",
-          "summary": "Status: Resolved The performance issue affecting GLM 5.3 Flash has been resolved. Affected components GLM 5.3 Flash (Operational)"
-        },
-        {
-          "id": "fireworks-feed-1-2026-10-08T19:30:48.000Z",
-          "title": "Service Degradation for GLM 5.3 Flash",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-10-08T19:30:48.000Z",
-          "updatedAt": "2026-10-08T19:30:48.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M4EF6AEMPHAR8R6YGFAE6CB4",
+          "url": "https://status.fireworks.ai//incidents/01M69K3V00WQTJN1RN2HKVEVDH",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-10-07T21:40:18.000Z",
-          "title": "Service Degradation for GLM 5.3",
+          "id": "fireworks-feed-1-2026-10-30T20:51:04.000Z",
+          "title": "Service degradation",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-10-07T21:40:18.000Z",
-          "updatedAt": "2026-10-07T21:40:18.000Z",
+          "startedAt": "2026-10-30T20:51:04.000Z",
+          "updatedAt": "2026-10-30T20:51:04.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M4C4AP4HEGH7XXJHRDVCCFB3",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+          "url": "https://status.fireworks.ai//incidents/01M679955DA5K8S2HMEXDPCBR3",
+          "summary": "Status: Identified We are experiencing service degradation impacting deployment creation, dedicated training, and batch inference services. We are working to resolve these issues..."
         },
         {
-          "id": "fireworks-feed-3-2026-10-07T19:13:40.000Z",
+          "id": "fireworks-feed-2-2026-10-30T20:13:36.000Z",
           "title": "Service Degradation for Qwen 3.8 Max",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-10-07T19:13:40.000Z",
-          "updatedAt": "2026-10-07T19:13:40.000Z",
+          "startedAt": "2026-10-30T20:13:36.000Z",
+          "updatedAt": "2026-10-30T20:13:36.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M4BVY4DXQT3EMCD2JGDPFEE4",
+          "url": "https://status.fireworks.ai//incidents/01M6752F3ZBDTVVMZ6DTXAA68A",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-3-2026-10-30T11:00:11.000Z",
+          "title": "Service Degradation for Qwen 3.8 Max",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-10-30T11:00:11.000Z",
+          "updatedAt": "2026-10-30T11:00:11.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M665N15B8YK2VT3T27S9NQQX",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,18 +100,18 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T14:56:07.090Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
-      "summary": "1 active incident across 6 tracked components.",
+      "lastCheckedAt": "2026-10-31T21:29:02.000Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 6 tracked components.",
       "notes": null,
       "components": [
         {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "degraded_performance"
+          "name": "claude.ai",
+          "status": "operational"
         },
         {
-          "name": "claude.ai",
+          "name": "Claude Console (platform.claude.com)",
           "status": "operational"
         },
         {
@@ -131,63 +131,51 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "978mjkgw6mh7",
-          "title": "Elevated errors on platform.claude.com",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-10-07T13:25:04.163Z",
-          "updatedAt": "2026-10-07T21:45:27.699Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/sjkw7njwf0mt",
-          "summary": "We've mitigated the errors loading usage data on platform.claude.com and in the Admin API usage report. While we work on a full fix, the most recent ~30 minutes of usage may take..."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "vmys9qn874h4",
-          "title": "Issue with spend limits",
+          "id": "phg1y2yh07n2",
+          "title": "Elevated errors affecting the Google Calendar connector",
           "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-10-07T21:23:29.603Z",
-          "updatedAt": "2026-10-07T21:23:29.665Z",
-          "resolvedAt": "2026-10-07T21:23:29.656Z",
-          "url": "https://stspg.io/frlrjsqqn605",
-          "summary": "We have identified an issue which resulted in some organizations to be incorrectly paused for having reached their spend limit, resulting in refused requests on the Claude API, Cl..."
+          "impact": "minor",
+          "startedAt": "2026-10-28T16:19:09.946Z",
+          "updatedAt": "2026-10-28T20:05:18.230Z",
+          "resolvedAt": "2026-10-28T20:05:18.208Z",
+          "url": "https://stspg.io/75qq31h8672d",
+          "summary": "The issue affecting the Google Calendar connector on claude.ai, Claude Code, and Claude Cowork has been resolved. Impact occurred from 04:07 PT / 11:07 UTC on October 26 to 11:52..."
         },
         {
-          "id": "978mjkgw6mh7",
-          "title": "Elevated errors on platform.claude.com",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-10-07T13:25:04.163Z",
-          "updatedAt": "2026-10-07T21:45:27.699Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/sjkw7njwf0mt",
-          "summary": "We've mitigated the errors loading usage data on platform.claude.com and in the Admin API usage report. While we work on a full fix, the most recent ~30 minutes of usage may take..."
+          "id": "9ftx658xtd5z",
+          "title": "Elevated errors affecting the Gmail connector",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-28T03:59:32.234Z",
+          "updatedAt": "2026-10-28T05:48:13.158Z",
+          "resolvedAt": "2026-10-28T05:48:13.126Z",
+          "url": "https://stspg.io/j86c100s8tqm",
+          "summary": "The issue affecting the Gmail connector on claude.ai, Claude Code, and Claude Cowork has been resolved. Impact occurred from 16:00 PT / 23:00 UTC on October 27 to 22:29 PT on Octo..."
         },
         {
-          "id": "wf2v8ms031sx",
-          "title": "Elevated errors loading usage data on platform.claude.com",
+          "id": "lqhknfdjrcst",
+          "title": "Elevated errors for Claude Sonnet 5.5",
           "status": "resolved",
           "impact": "major",
-          "startedAt": "2026-10-07T01:20:26.681Z",
-          "updatedAt": "2026-10-07T02:33:38.847Z",
-          "resolvedAt": "2026-10-07T02:33:38.815Z",
-          "url": "https://stspg.io/scdhhnplc2jn",
-          "summary": "This incident has been resolved. From 17:00 PT on October 6 / 00:00 UTC on October 7 to 18:40 PT on October 6 / 01:40 UTC on October 7, many requests to load usage data on the pla..."
+          "startedAt": "2026-10-27T15:09:08.936Z",
+          "updatedAt": "2026-10-27T15:50:17.725Z",
+          "resolvedAt": "2026-10-27T15:50:17.700Z",
+          "url": "https://stspg.io/39x7qh3sd7bd",
+          "summary": "The issue affecting claude.ai, the Claude API, Claude Code, and Claude Cowork has been resolved. Impact occurred from 07:42 PT / 14:42 UTC to 08:17 PT / 15:17 UTC."
         },
         {
-          "id": "ch27pb90bn85",
-          "title": "Elevated errors for Claude Opus 5.5",
+          "id": "0q89dylg9vjk",
+          "title": "Elevated errors for Claude Sonnet 5.5",
           "status": "resolved",
           "impact": "major",
-          "startedAt": "2026-10-06T12:24:32.630Z",
-          "updatedAt": "2026-10-06T12:43:03.020Z",
-          "resolvedAt": "2026-10-06T12:43:02.988Z",
-          "url": "https://stspg.io/bzc81gbv1b99",
-          "summary": "The issue affecting Claude Opus 5.5 has been resolved."
+          "startedAt": "2026-10-27T09:14:35.052Z",
+          "updatedAt": "2026-10-27T09:56:46.404Z",
+          "resolvedAt": "2026-10-27T09:56:46.355Z",
+          "url": "https://stspg.io/rql9h590npxd",
+          "summary": "The issue affecting Claude services has been resolved."
         }
       ]
     },
@@ -202,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T14:56:08.058Z",
+      "lastCheckedAt": "2026-10-31T21:29:02.683Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T14:56:07.145Z",
+      "lastCheckedAt": "2026-10-31T21:29:02.250Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -230,6 +218,17 @@
       "components": [],
       "activeIncidents": [],
       "recentIncidents": [
+        {
+          "id": "Xs2XTHzAVC9YnafnPyzj",
+          "title": "Multiple services were experiencing issues in the europe-west2 region.",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-20T06:00:00.000Z",
+          "updatedAt": "2026-10-27T15:13:38.000Z",
+          "resolvedAt": "2026-10-20T12:08:00.000Z",
+          "url": "https://status.cloud.google.com",
+          "summary": "## Incident Report\n### **Summary**\nOn Monday, 19 Oct 2026 (Tuesday, 20 Oct BST), a data center facility that hosts europe-west2-b, experienced an external electrical power disrupt..."
+        },
         {
           "id": "41E5S3mkTGDfkZuJZH5k",
           "title": "Vertex AI Gemini API customers experienced increased error rates when accessing the global endpoint.",
@@ -254,7 +253,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T14:56:07.155Z",
+      "lastCheckedAt": "2026-10-31T21:29:02.054Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -288,44 +287,44 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
-          "id": "01M4CR8GCAFC1RYQXZDXAZP2VT",
-          "title": "Some APAC users are seeing errors in ChatGPT Work, conversations, and GPTs.",
+          "id": "01M6754SR14HCQ3E9FX426E2N7",
+          "title": "Elevated errors with search in Dots, ChatGPT Work, and certain ChatGPT thinking experiences",
           "status": "resolved",
           "impact": "minor",
-          "startedAt": "2026-10-08T03:17:40.000Z",
-          "updatedAt": "2026-10-08T04:51:39.000Z",
-          "resolvedAt": "2026-10-08T04:51:39.000Z",
-          "summary": "All impacted services have now fully recovered."
+          "startedAt": "2026-10-30T19:38:47.000Z",
+          "updatedAt": "2026-10-30T21:14:12.000Z",
+          "resolvedAt": "2026-10-30T21:14:12.000Z",
+          "summary": "All affected services are operating normally again.\n\nWe’re sorry for the disruption, and we appreciate your patience."
         },
         {
-          "id": "01M4CBXZ62A9SVH8D74KVYQC8M",
-          "title": "Elevated errors with GPT-5.6 Instant in FedRAMP workspaces",
+          "id": "01M66KSDH67V5BQ73PE8AD2W8S",
+          "title": "Elevated errors for GPT Image 2 API image edits",
           "status": "resolved",
           "impact": "minor",
-          "startedAt": "2026-10-07T23:42:12.000Z",
-          "updatedAt": "2026-10-08T00:03:19.000Z",
-          "resolvedAt": "2026-10-08T00:03:18.000Z",
-          "summary": "All impacted services have now fully recovered."
+          "startedAt": "2026-10-30T14:35:28.000Z",
+          "updatedAt": "2026-10-30T18:36:55.000Z",
+          "resolvedAt": "2026-10-30T18:36:55.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
         },
         {
-          "id": "01M4BP5JE7DKJSP3VG2S2DCWF2",
-          "title": "Degraded performance in Codex and Work mode: Dot turn failures, delayed responses, and reduced proactivity",
+          "id": "01M5YY4A3TQETEQ53DVSK8SW10",
+          "title": "6.1 Sol Degraded Model Performance",
           "status": "resolved",
           "impact": "minor",
-          "startedAt": "2026-10-07T17:21:52.000Z",
-          "updatedAt": "2026-10-07T18:23:25.000Z",
-          "resolvedAt": "2026-10-07T18:23:25.000Z",
-          "summary": "All impacted services have now fully recovered."
+          "startedAt": "2026-10-27T15:02:15.000Z",
+          "updatedAt": "2026-10-27T16:20:06.000Z",
+          "resolvedAt": "2026-10-27T16:20:06.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
         },
         {
-          "id": "01M4BK9J2M83R4SSC71D9FXW45",
-          "title": "Dot in Codex may fail to create new threads",
+          "id": "01M5Y60NQGGN514EB3943V94EN",
+          "title": "Elevated error rates for most hosted Code Reviews and Security Reviews on private GitHub repositories",
           "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-07T16:31:37.000Z",
-          "updatedAt": "2026-10-07T18:06:37.000Z",
-          "resolvedAt": "2026-10-07T18:06:37.000Z",
-          "summary": "All impacted services have now fully recovered."
+          "impact": "none",
+          "startedAt": "2026-10-27T08:00:50.000Z",
+          "updatedAt": "2026-10-27T13:54:35.000Z",
+          "resolvedAt": "2026-10-27T08:30:00.000Z",
+          "summary": "The issue is now resolved."
         }
       ]
     },
@@ -340,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-10-09T14:56:08.284Z",
+      "lastCheckedAt": "2026-10-31T21:29:02.864Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
