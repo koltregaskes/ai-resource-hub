@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 30 Oct 2026, 23:42 UTC
+Generated: 31 Oct 2026, 00:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 30 Oct 2026, 23:42 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 30 Oct 2026, 23:42 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 30 Oct 2026, 23:42 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 30 Oct 2026, 23:42 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 30 Oct 2026, 23:42 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 31 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,044 open roles across 10 tracked companies. | `/jobs/` |
+| 31 Oct 2026, 00:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 31 Oct 2026, 00:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 31 Oct 2026, 00:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 31 Oct 2026, 00:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 31 Oct 2026, 00:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 30 Oct 2026, 12:00 UTC | digest | Apple Intelligence is finally coming to China with iOS 27.3 | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3) |
 | 30 Oct 2026, 12:00 UTC | digest | Intel&#8217;s stock crashes, knocking $12B from government&#8217;s stake | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake/) |
-| 30 Oct 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,045 open roles across 10 tracked companies. | `/jobs/` |
 | 30 Oct 2026, 12:00 UTC | digest | Ollie, a privacy-focused AI assistant, is shutting down | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/) |
 | 30 Oct 2026, 12:00 UTC | digest | Published the 2026-10-30 daily digest | 20 stories captured from 3 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
