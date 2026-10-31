@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { badgeInk } from '../../data/badge-ink';
 import { getProvidersWithCounts } from '../../db/queries';
 
 const providers = getProvidersWithCounts();
@@ -39,6 +40,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
         />
         <select
           id="provider-sort"
+          aria-label="Sort labs"
           class="mt-3 w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)"
         >
           <option value="models">Most models</option>
@@ -64,8 +66,8 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
         >
           <div class="flex items-start gap-3">
             <div
-              class="w-11 h-11 rounded-2xl flex items-center justify-center text-white font-bold text-sm shrink-0"
-              style={`background-color: ${provider.colour}`}
+              class="w-11 h-11 rounded-2xl flex items-center justify-center font-bold text-sm shrink-0"
+              style={`background-color: ${provider.colour}; color: ${badgeInk(provider.colour)}`}
             >
               {provider.name.slice(0, 2).toUpperCase()}
             </div>

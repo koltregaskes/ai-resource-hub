@@ -304,6 +304,7 @@ export default function LLMComparisonTable({ models, baseUrl = '/' }: Props) {
             />
           </div>
           <select
+            aria-label="Filter by provider"
             value={providerFilter}
             onChange={(e) => setProviderFilter(e.target.value)}
             className="px-4 py-2.5 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] text-[var(--color-text-primary)] text-sm focus:border-[var(--color-accent)] focus:outline-none min-w-[160px]"
@@ -316,6 +317,7 @@ export default function LLMComparisonTable({ models, baseUrl = '/' }: Props) {
             ))}
           </select>
           <select
+            aria-label="Filter by modality"
             value={modalityFilter}
             onChange={(e) => setModalityFilter(e.target.value)}
             className="px-4 py-2.5 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] text-[var(--color-text-primary)] text-sm focus:border-[var(--color-accent)] focus:outline-none min-w-[140px]"

@@ -141,11 +141,11 @@ function dsweTokens(entry: MetaBenchmarkLeaderboardEntry): string {
       <p>{overview.evidenceState}</p>
     </section>
 
-    <nav class="meta-tabs" aria-label="Benchmark leaderboards">
-      <button type="button" data-meta-tab="floor" aria-selected="true">Floor Capability</button>
-      <button type="button" data-meta-tab="operating" aria-selected="false">Operating Envelope</button>
-      <button type="button" data-meta-tab="frontier" aria-selected="false">Frontier Reality</button>
-      <button type="button" data-meta-tab="research" aria-selected="false">Research Trust</button>
+    <nav class="meta-tabs" aria-label="Benchmark leaderboards" role="tablist">
+      <button type="button" role="tab" data-meta-tab="floor" aria-selected="true">Floor Capability</button>
+      <button type="button" role="tab" data-meta-tab="operating" aria-selected="false">Operating Envelope</button>
+      <button type="button" role="tab" data-meta-tab="frontier" aria-selected="false">Frontier Reality</button>
+      <button type="button" role="tab" data-meta-tab="research" aria-selected="false">Research Trust</button>
     </nav>
 
     <section class="meta-help-strip" aria-label="Quick guide">
