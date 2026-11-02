@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 02 Nov 2026, 18:55 UTC
+Generated: 02 Nov 2026, 19:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 02 Nov 2026, 18:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 02 Nov 2026, 18:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 02 Nov 2026, 18:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 02 Nov 2026, 18:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 02 Nov 2026, 18:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 02 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,045 open roles across 10 tracked companies. | `/jobs/` |
+| 02 Nov 2026, 19:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 02 Nov 2026, 19:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 02 Nov 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 02 Nov 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 02 Nov 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 02 Nov 2026, 12:00 UTC | digest | Anthropic clamps down on Claude’s AI video game clones | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones) |
+| 02 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,043 open roles across 10 tracked companies. | `/jobs/` |
+| 02 Nov 2026, 12:00 UTC | digest | New York Times and other outlets sue web browser Brave over alleged content scraping | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/02/new-york-times-and-other-outlets-sue-web-browser-brave-over-alleged-content-scraping/) |
 | 02 Nov 2026, 12:00 UTC | digest | OpenAI pitches data center power plants as a way to protect nearby areas | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1024604/openai-data-center-grid-protection-program) |
-| 02 Nov 2026, 12:00 UTC | digest | Published the 2026-11-02 daily digest | 10 stories captured from 4 sources. | `/news/` |
-| 02 Nov 2026, 12:00 UTC | digest | The latest AI news we announced in October 2026 | Google featured in the latest daily brief. | [open](https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/) |
-| 02 Nov 2026, 12:00 UTC | digest | The New York Times sues Brave web browser for AI scraping and bypassing paywalls | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1024588/brave-lawsuit-ai-scraping-new-york-times) |
+| 02 Nov 2026, 12:00 UTC | digest | Published the 2026-11-02 daily digest | 13 stories captured from 4 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
