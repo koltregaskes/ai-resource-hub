@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 02 Nov 2026, 21:56 UTC
+Generated: 02 Nov 2026, 22:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 02 Nov 2026, 21:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 02 Nov 2026, 21:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 02 Nov 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 02 Nov 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 02 Nov 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 02 Nov 2026, 12:00 UTC | digest | Anthropic clamps down on Claude’s AI video game clones | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones) |
+| 02 Nov 2026, 22:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 02 Nov 2026, 22:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 02 Nov 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 02 Nov 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 02 Nov 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 02 Nov 2026, 12:00 UTC | digest | Anthropic warns that it&#8217;s very close to RSI capability, aka self-building AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/) |
 | 02 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,042 open roles across 10 tracked companies. | `/jobs/` |
 | 02 Nov 2026, 12:00 UTC | digest | New York Times and other outlets sue web browser Brave over alleged content scraping | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/02/new-york-times-and-other-outlets-sue-web-browser-brave-over-alleged-content-scraping/) |
-| 02 Nov 2026, 12:00 UTC | digest | Published the 2026-11-02 daily digest | 14 stories captured from 4 sources. | `/news/` |
+| 02 Nov 2026, 12:00 UTC | digest | Published the 2026-11-02 daily digest | 15 stories captured from 4 sources. | `/news/` |
 | 02 Nov 2026, 12:00 UTC | digest | Web host Squarespace lays off 19% of its employees | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/02/web-host-squarespace-lays-off-19-of-its-employees/) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
