@@ -1,20 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 02 Nov 2026, 12:56 UTC
+Generated: 02 Nov 2026, 14:12 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 02 Nov 2026, 12:56 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 02 Nov 2026, 12:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 02 Nov 2026, 12:56 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 02 Nov 2026, 12:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 02 Nov 2026, 12:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 02 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,048 open roles across 10 tracked companies. | `/jobs/` |
-| 01 Nov 2026, 12:00 UTC | digest | AI can make tech CEOs’ lives easier. What about everyone else? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/) |
-| 01 Nov 2026, 12:00 UTC | digest | OpenAI might rebrand its data centers as ‘AI compute campuses’ | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/) |
-| 01 Nov 2026, 12:00 UTC | digest | Published the 2026-11-01 daily digest | 2 stories captured from 1 sources. | `/news/` |
+| 02 Nov 2026, 14:11 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 02 Nov 2026, 14:11 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 02 Nov 2026, 14:11 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 02 Nov 2026, 14:11 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 02 Nov 2026, 14:11 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 02 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,049 open roles across 10 tracked companies. | `/jobs/` |
+| 02 Nov 2026, 12:00 UTC | digest | OpenAI is finally merging ChatGPT&#8217;s chat and Work tabs | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/) |
+| 02 Nov 2026, 12:00 UTC | digest | Published the 2026-11-02 daily digest | 1 stories captured from 1 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
@@ -26,3 +25,4 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 22 Feb 2026, 10:00 UTC | site | Initial public launch of the hub | Published the first live version with model comparison, benchmarks, pricing, news, tools, and guides. | `/about/` |
 | 17 Feb 2026, 12:00 UTC | models | Claude Sonnet 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-sonnet-4.6/` |
 | 05 Feb 2026, 12:00 UTC | models | Claude Opus 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.6/` |
+| 10 Dec 2025, 12:00 UTC | models | GPT-5.2 added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.2/` |
