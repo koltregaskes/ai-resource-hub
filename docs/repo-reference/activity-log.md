@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 02 Nov 2026, 15:41 UTC
+Generated: 02 Nov 2026, 16:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 02 Nov 2026, 15:40 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 02 Nov 2026, 15:40 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 02 Nov 2026, 15:40 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 02 Nov 2026, 15:40 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 02 Nov 2026, 15:40 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 02 Nov 2026, 12:00 UTC | digest | 2 days till TechCrunch Founder Summit: Boston founders don’t need a Silicon Valley address to build something big | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/02/2-days-till-techcrunch-founder-summit-boston-founders-dont-need-a-silicon-valley-address-to-build-something-big/) |
-| 02 Nov 2026, 12:00 UTC | digest | Introducing the Grid Protectors Program | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/grid-protectors-program) |
-| 02 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,052 open roles across 10 tracked companies. | `/jobs/` |
+| 02 Nov 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 02 Nov 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 02 Nov 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 02 Nov 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 02 Nov 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 02 Nov 2026, 12:00 UTC | digest | 42AI comes out of stealth with $62.5M and a world model that can &#8216;predict human behavior&#8217; | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior/) |
+| 02 Nov 2026, 12:00 UTC | digest | Elon Musk throttles Grok Bot limits due to &#8216;unsustainably high&#8217; costs | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs/) |
+| 02 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,051 open roles across 10 tracked companies. | `/jobs/` |
 | 02 Nov 2026, 12:00 UTC | digest | Omen AI adds liquid know-how in $16 million Aquatic Labs acquisition | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/02/omen-ai-adds-liquid-know-how-in-16-million-aquatic-labs-acquisition/) |
-| 02 Nov 2026, 12:00 UTC | digest | Published the 2026-11-02 daily digest | 4 stories captured from 2 sources. | `/news/` |
+| 02 Nov 2026, 12:00 UTC | digest | Published the 2026-11-02 daily digest | 6 stories captured from 2 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
