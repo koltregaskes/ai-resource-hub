@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 02 Nov 2026, 14:12 UTC
+Generated: 02 Nov 2026, 15:41 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,20 +8,20 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| AI milestones | Curated updates as research lands | Mixed | 02 Nov 2026, 14:12 UTC |
+| AI milestones | Curated updates as research lands | Mixed | 02 Nov 2026, 15:41 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 02 Nov 2026, 14:12 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 02 Nov 2026, 15:41 UTC |
 | Benchmarks and evals | Hourly collection attempts; measurement dates vary | Automated | 05 Feb 2026, 00:00 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 02 Nov 2026, 14:11 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 02 Nov 2026, 15:40 UTC |
 | News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 02 Nov 2026, 12:00 UTC |
-| Provider status | Hourly automated refresh | Automated | 02 Nov 2026, 14:12 UTC |
-| Guides and learning | Manual editorial review | Manual | 02 Nov 2026, 14:11 UTC |
+| Provider status | Hourly automated refresh | Automated | 02 Nov 2026, 15:41 UTC |
+| Guides and learning | Manual editorial review | Manual | 02 Nov 2026, 15:40 UTC |
 
 ## AI milestones
 
 - Cadence: Curated updates as research lands
 - Automation: Mixed
-- Last refreshed: 02 Nov 2026, 14:12 UTC
+- Last refreshed: 02 Nov 2026, 15:41 UTC
 - Category route: `/milestones/`
 - Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
 
@@ -34,7 +34,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 ### Last Visible Updates
 
 - 03 Nov 2026, 12:00 UTC: Grok announced - Next exact anniversary in 1 day. (`/milestones/`)
-- 02 Nov 2026, 14:12 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
+- 02 Nov 2026, 15:41 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -60,7 +60,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 02 Nov 2026, 14:12 UTC
+- Last refreshed: 02 Nov 2026, 15:41 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -98,7 +98,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 02 Nov 2026, 14:11 UTC
+- Last refreshed: 02 Nov 2026, 15:40 UTC
 - Category route: `/compare/llm/`
 
 
@@ -110,9 +110,9 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 02 Nov 2026, 14:11 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
-- 02 Nov 2026, 14:11 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 02 Nov 2026, 14:11 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 02 Nov 2026, 15:40 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
+- 02 Nov 2026, 15:40 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 02 Nov 2026, 15:40 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
@@ -130,15 +130,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 02 Nov 2026, 13:57 UTC: OpenAI is finally merging ChatGPT&#8217;s chat and Work tabs - TechCrunch (industry) ([source](https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/))
-- 01 Nov 2026, 21:55 UTC: OpenAI might rebrand its data centers as ‘AI compute campuses’ - TechCrunch (industry) ([source](https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/))
-- 01 Nov 2026, 20:57 UTC: AI can make tech CEOs’ lives easier. What about everyone else? - TechCrunch (industry) ([source](https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/))
+- 02 Nov 2026, 15:00 UTC: Omen AI adds liquid know-how in $16 million Aquatic Labs acquisition - TechCrunch (industry) ([source](https://techcrunch.com/2026/11/02/omen-ai-adds-liquid-know-how-in-16-million-aquatic-labs-acquisition/))
+- 02 Nov 2026, 15:00 UTC: Introducing the Grid Protectors Program - OpenAI (models) ([source](https://openai.com/index/grid-protectors-program))
+- 02 Nov 2026, 14:00 UTC: 2 days till TechCrunch Founder Summit: Boston founders don’t need a Silicon Valley address to build something big - TechCrunch (industry) ([source](https://techcrunch.com/2026/11/02/2-days-till-techcrunch-founder-summit-boston-founders-dont-need-a-silicon-valley-address-to-build-something-big/))
 
 ## Provider status
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 02 Nov 2026, 14:12 UTC
+- Last refreshed: 02 Nov 2026, 15:41 UTC
 - Category route: `/status/`
 
 
@@ -149,15 +149,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 02 Nov 2026, 14:12 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
-- 02 Nov 2026, 14:12 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
-- 02 Nov 2026, 14:12 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
+- 02 Nov 2026, 15:41 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
+- 02 Nov 2026, 15:41 UTC: Anthropic - All Systems Operational ([source](https://status.claude.com))
+- 02 Nov 2026, 15:41 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
 
 ## Guides and learning
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 02 Nov 2026, 14:11 UTC
+- Last refreshed: 02 Nov 2026, 15:40 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -169,6 +169,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 02 Nov 2026, 14:11 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
-- 02 Nov 2026, 14:11 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 02 Nov 2026, 14:11 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 02 Nov 2026, 15:40 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
+- 02 Nov 2026, 15:40 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 02 Nov 2026, 15:40 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
