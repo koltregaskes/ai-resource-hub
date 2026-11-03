@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T04:55:42.107Z",
+  "generatedAt": "2026-11-03T05:55:47.964Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-03T04:55:42.102Z",
+      "lastCheckedAt": "2026-11-03T05:55:47.957Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,103 +90,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-11-03T04:55:40.558Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "File uploads",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Chat Completions",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Agents",
-          "status": "operational"
-        },
-        {
-          "name": "Decisions",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01M6FDZ89W4PKDS19K496J307G",
-          "title": "File upload errors in ChatGPT",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-11-03T00:46:58.000Z",
-          "updatedAt": "2026-11-03T02:51:29.000Z",
-          "resolvedAt": null,
-          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01M6FDZ89W4PKDS19K496J307G",
-          "title": "File upload errors in ChatGPT",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-11-03T00:46:58.000Z",
-          "updatedAt": "2026-11-03T02:51:29.000Z",
-          "resolvedAt": null,
-          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
-        },
-        {
-          "id": "01M6754SR14HCQ3E9FX426E2N7",
-          "title": "Elevated errors with search in Dots, ChatGPT Work, and certain ChatGPT thinking experiences",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-30T19:38:47.000Z",
-          "updatedAt": "2026-10-30T21:14:12.000Z",
-          "resolvedAt": "2026-10-30T21:14:12.000Z",
-          "summary": "All affected services are operating normally again.\n\nWe’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M66KSDH67V5BQ73PE8AD2W8S",
-          "title": "Elevated errors for GPT Image 2 API image edits",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-30T14:35:28.000Z",
-          "updatedAt": "2026-10-30T18:36:55.000Z",
-          "resolvedAt": "2026-10-30T18:36:55.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M5YY4A3TQETEQ53DVSK8SW10",
-          "title": "6.1 Sol Degraded Model Performance",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-27T15:02:15.000Z",
-          "updatedAt": "2026-10-27T16:20:06.000Z",
-          "resolvedAt": "2026-10-27T16:20:06.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        }
-      ]
-    },
-    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -197,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-03T04:55:40.605Z",
+      "lastCheckedAt": "2026-11-03T05:55:46.567Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-03T04:55:41.522Z",
+      "lastCheckedAt": "2026-11-03T05:55:47.217Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-03T04:55:40.738Z",
+      "lastCheckedAt": "2026-11-03T05:55:46.655Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -340,6 +243,92 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-11-03T05:55:46.565Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Chat Completions",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Agents",
+          "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Embeddings",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01M6FDZ89W4PKDS19K496J307G",
+          "title": "File upload errors in ChatGPT",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-03T00:46:58.000Z",
+          "updatedAt": "2026-11-03T05:39:36.000Z",
+          "resolvedAt": "2026-11-03T05:39:36.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M6754SR14HCQ3E9FX426E2N7",
+          "title": "Elevated errors with search in Dots, ChatGPT Work, and certain ChatGPT thinking experiences",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-30T19:38:47.000Z",
+          "updatedAt": "2026-10-30T21:14:12.000Z",
+          "resolvedAt": "2026-10-30T21:14:12.000Z",
+          "summary": "All affected services are operating normally again.\n\nWe’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M66KSDH67V5BQ73PE8AD2W8S",
+          "title": "Elevated errors for GPT Image 2 API image edits",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-30T14:35:28.000Z",
+          "updatedAt": "2026-10-30T18:36:55.000Z",
+          "resolvedAt": "2026-10-30T18:36:55.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M5YY4A3TQETEQ53DVSK8SW10",
+          "title": "6.1 Sol Degraded Model Performance",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-27T15:02:15.000Z",
+          "updatedAt": "2026-10-27T16:20:06.000Z",
+          "resolvedAt": "2026-10-27T16:20:06.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        }
+      ]
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -350,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-03T04:55:41.578Z",
+      "lastCheckedAt": "2026-11-03T05:55:47.270Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
