@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 03 Nov 2026, 20:56 UTC
+Generated: 03 Nov 2026, 20:57 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 03 Nov 2026, 20:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 03 Nov 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 03 Nov 2026, 20:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 03 Nov 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 03 Nov 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 03 Nov 2026, 20:57 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 03 Nov 2026, 20:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 03 Nov 2026, 20:57 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 03 Nov 2026, 20:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 03 Nov 2026, 20:57 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 03 Nov 2026, 12:00 UTC | digest | AI inference startup Fal doubles its valuation to $16B as demand surges | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/) |
 | 03 Nov 2026, 12:00 UTC | digest | Apple starts giving Siri AI access to third-party apps | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps) |
 | 03 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,042 open roles across 10 tracked companies. | `/jobs/` |
