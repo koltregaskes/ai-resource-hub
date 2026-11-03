@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 03 Nov 2026, 22:56 UTC
+Generated: 03 Nov 2026, 23:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 03 Nov 2026, 22:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 03 Nov 2026, 22:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 03 Nov 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 03 Nov 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 03 Nov 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 03 Nov 2026, 23:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 03 Nov 2026, 23:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 03 Nov 2026, 23:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 03 Nov 2026, 23:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 03 Nov 2026, 23:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 03 Nov 2026, 12:00 UTC | digest | Anthropic is working on a system to prove AI models&#8217; identity | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/) |
 | 03 Nov 2026, 12:00 UTC | digest | Data centers are turning to old jet engines as the wait for power grows | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/) |
-| 03 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,043 open roles across 10 tracked companies. | `/jobs/` |
+| 03 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,044 open roles across 10 tracked companies. | `/jobs/` |
 | 03 Nov 2026, 12:00 UTC | digest | Published the 2026-11-03 daily digest | 20 stories captured from 2 sources. | `/news/` |
 | 03 Nov 2026, 12:00 UTC | digest | Ted Schlein&#8217;s Ballistic Ventures seeks $490M for new funds amid AI-driven cybersecurity boom | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
