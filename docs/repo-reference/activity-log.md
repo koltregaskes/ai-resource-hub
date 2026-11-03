@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 03 Nov 2026, 18:56 UTC
+Generated: 03 Nov 2026, 19:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 03 Nov 2026, 18:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 03 Nov 2026, 18:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 03 Nov 2026, 18:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 03 Nov 2026, 18:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 03 Nov 2026, 18:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 03 Nov 2026, 19:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 03 Nov 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 03 Nov 2026, 19:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 03 Nov 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 03 Nov 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 03 Nov 2026, 12:00 UTC | digest | AI inference startup Fal doubles its valuation to $16B as demand surges | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/) |
 | 03 Nov 2026, 12:00 UTC | digest | Apple’s latest watchOS beta includes its new always-on Audio Intelligence features | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1025002/apple-watch-audio-intelligence-watchos-beta) |
-| 03 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,037 open roles across 10 tracked companies. | `/jobs/` |
+| 03 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,039 open roles across 10 tracked companies. | `/jobs/` |
 | 03 Nov 2026, 12:00 UTC | digest | Netflix&#8217;s new AI Discover tab helps you find something to watch based on your mood | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/03/netflixs-new-ai-discover-tab-helps-you-find-something-to-watch-based-on-your-mood/) |
-| 03 Nov 2026, 12:00 UTC | digest | OpenAI says ChatGPT is catching up to Google in search | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1025482/openai-says-chatgpt-is-catching-up-to-google-in-search) |
 | 03 Nov 2026, 12:00 UTC | digest | Published the 2026-11-03 daily digest | 20 stories captured from 3 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
