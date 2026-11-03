@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 03 Nov 2026, 12:55 UTC
+Generated: 03 Nov 2026, 13:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 03 Nov 2026, 12:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 03 Nov 2026, 12:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 03 Nov 2026, 12:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 03 Nov 2026, 12:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 03 Nov 2026, 12:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 03 Nov 2026, 13:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 03 Nov 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 03 Nov 2026, 13:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 03 Nov 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 03 Nov 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 03 Nov 2026, 12:00 UTC | digest | Apple Watch&#8217;s AI features for rewinding and recapping conversations begin beta testing | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/02/apple-watchs-ai-features-for-rewinding-and-recapping-conversations-begin-beta-testing/) |
 | 03 Nov 2026, 12:00 UTC | digest | Google takes Dreambeans to India in bid to bring AI-generated personal stories to the masses | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/) |
 | 03 Nov 2026, 12:00 UTC | digest | Heimstaden is changing residential real estate management with AI | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/heimstaden) |
