@@ -9,7 +9,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T23:13:53.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-55dd7e97ced5d8729c32",
@@ -21,7 +21,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T22:14:50.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-f0d11490230013aae135",
@@ -33,7 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T19:25:59.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-8402594bed2479dc4b52",
@@ -45,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T19:19:17.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-e3f3f6c0c50f4c4d6d38",
@@ -57,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T18:56:02.000Z",
-    "discovered_at": "2026-11-02 23:28:27"
+    "discovered_at": "2026-11-03 00:55:38"
   },
   {
     "id": "news-16194c055af9d0c4040f",
@@ -69,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T18:01:30.000Z",
-    "discovered_at": "2026-11-02 23:28:27"
+    "discovered_at": "2026-11-03 00:55:38"
   },
   {
     "id": "news-dc6c7ef2ed74ce881cc2",
@@ -81,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:51:19.000Z",
-    "discovered_at": "2026-11-02 23:28:27"
+    "discovered_at": "2026-11-03 00:55:38"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -93,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-6e11dddc7a7cc4c3db7a",
@@ -105,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T16:30:00.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-3059ef1574cb12baae8a",
@@ -117,7 +117,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T16:23:21.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
+  },
+  {
+    "id": "news-de4cf53f9db96311cdf4",
+    "title": "Scaling Git at OpenAI",
+    "url": "https://openai.com/index/scaling-git-at-openai",
+    "source": "OpenAI",
+    "summary": "How OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-02T15:30:00.000Z",
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-a43a012fc6e71ef2ac2d",
@@ -129,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T15:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-19244c7aa2063fd3d4e1",
@@ -141,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T15:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-f7151c69ed83cd048bcb",
@@ -153,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T14:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-869219a7f13345d5b106",
@@ -165,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T13:57:53.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-ed4b58253682640ff970",
@@ -177,7 +189,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T09:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
+  },
+  {
+    "id": "news-ff138f709a7e7c378423",
+    "title": "OpenAI appoints Dan Driscoll as Senior Counselor for National Security Modernization",
+    "url": "https://openai.com/index/dan-driscoll-joins-openai",
+    "source": "OpenAI",
+    "summary": "OpenAI appoints Dan Driscoll to advise on responsible AI for national security modernization, cyber resilience, and collaboration with U.S. allies.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-02T00:00:00.000Z",
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-598c6194c0d34c2379ea",
@@ -189,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T00:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-33c086ca1438f5286ce4",
@@ -201,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-01T21:55:23.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-0ae10264665c48162897",
@@ -213,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-01T20:57:58.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-a8e3b1a57cd292df2170",
@@ -225,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-01T02:22:10.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-89c6cb6d297171130673",
@@ -237,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-31T21:41:00.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-cefcb0bd2478e838db5f",
@@ -249,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-31T21:36:07.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-bc398a80a0dffe88b299",
@@ -261,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-31T21:17:03.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-344dcf79744aa216bc08",
@@ -273,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-31T16:12:55.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-ed0268fa6e325c7b8e32",
@@ -285,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-31T16:05:00.000Z",
-    "discovered_at": "2026-11-02 23:28:27"
+    "discovered_at": "2026-11-03 00:55:38"
   },
   {
     "id": "news-6336aff37e57b820d2d0",
@@ -297,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-31T01:20:05.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-43523836c60442d994b3",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T22:56:13.000Z",
-    "discovered_at": "2026-11-02 23:28:17"
+    "discovered_at": "2026-11-03 00:55:30"
   },
   {
     "id": "news-011fdc062b2b84becf66",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T22:32:53.000Z",
-    "discovered_at": "2026-11-02 23:28:27"
+    "discovered_at": "2026-11-03 00:55:38"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-02 23:28:28"
+    "discovered_at": "2026-11-03 00:55:38"
   },
   {
     "id": "news-e6a83342c0c51d1efe3b",
@@ -345,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T20:48:43.000Z",
-    "discovered_at": "2026-11-02 23:28:27"
+    "discovered_at": "2026-11-03 00:55:38"
   },
   {
     "id": "news-25a528e218b1080ce941",
@@ -357,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T20:26:10.000Z",
-    "discovered_at": "2026-11-02 23:28:27"
+    "discovered_at": "2026-11-03 00:55:38"
   },
   {
     "id": "news-c4dbacf8aa2b8b7f3fde",
@@ -369,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T18:21:38.000Z",
-    "discovered_at": "2026-11-02 23:28:27"
+    "discovered_at": "2026-11-03 00:55:38"
   },
   {
     "id": "news-0de3f9697e499aeda4a6",
@@ -381,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T17:38:04.000Z",
-    "discovered_at": "2026-11-02 23:28:27"
+    "discovered_at": "2026-11-03 00:55:38"
   },
   {
     "id": "news-974d9b85c8fb969ac1e8",
@@ -393,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T14:58:06.000Z",
-    "discovered_at": "2026-11-02 23:28:27"
+    "discovered_at": "2026-11-03 00:55:38"
   },
   {
     "id": "news-25cc4c9bb2e3e7e535a0",
@@ -405,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T09:30:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-c7606af40dbb903f1458",
@@ -417,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T09:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-d2282bcce1625c643a8e",
@@ -429,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T00:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-7bf0065ceb1646f57aed",
@@ -441,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T17:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-d28967fce9c692cd06ec",
@@ -453,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T09:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-2d9928289658e98658f7",
@@ -465,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T07:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-6750c2461412185f050b",
@@ -477,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T00:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-75e2017ed4c5a2ecbacf",
@@ -489,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T13:15:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-0dc3cf0b7c98dcde7cee",
@@ -501,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T10:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-41c97fe8dc29ac4a3866",
@@ -513,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-28T09:30:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-d42fb1eb3362412fc304",
@@ -525,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T15:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-a3a879144b2984ac94bf",
@@ -537,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T07:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-8cb333260a17a3244327",
@@ -549,19 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-27T00:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
-  },
-  {
-    "id": "news-250e5d8f302445e732f1",
-    "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
-    "url": "https://openai.com/index/greptile-code-review-codex-astra",
-    "source": "OpenAI",
-    "summary": "How Greptile uses GPT-6 Astra to test user workflows, Daybreak to strengthen security, and Codex to reduce rework.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-26T22:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -573,19 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
-  },
-  {
-    "id": "news-f16aefe89a6e3f3b8efe",
-    "title": "Working with academic communities to build scientific understanding",
-    "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
-    "source": "OpenAI",
-    "summary": "OpenAI shares model results on the Kakeya conjecture, Exponential Time Hypothesis, and quantum chromodynamics—and how researchers can verify and build on them.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-26T14:30:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-11-02 23:28:28"
+    "discovered_at": "2026-11-03 00:55:38"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-11-02 23:28:28"
+    "discovered_at": "2026-11-03 00:55:38"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-11-02 23:28:16"
+    "discovered_at": "2026-11-03 00:55:29"
   },
   {
     "id": "news-307bfda48464106bf8e3",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:21:53.000Z",
-    "discovered_at": "2026-11-02 23:28:28"
+    "discovered_at": "2026-11-03 00:55:38"
   },
   {
     "id": "news-aaf1cc502a6b16035865",
@@ -669,6 +669,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-05T22:26:35.000Z",
-    "discovered_at": "2026-11-02 23:28:28"
+    "discovered_at": "2026-11-03 00:55:38"
   }
 ]

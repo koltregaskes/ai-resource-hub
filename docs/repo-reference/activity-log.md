@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 02 Nov 2026, 23:28 UTC
+Generated: 03 Nov 2026, 00:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 02 Nov 2026, 23:28 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 02 Nov 2026, 23:28 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 02 Nov 2026, 23:28 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 02 Nov 2026, 23:28 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 02 Nov 2026, 23:28 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 03 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,038 open roles across 10 tracked companies. | `/jobs/` |
+| 03 Nov 2026, 00:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 03 Nov 2026, 00:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 03 Nov 2026, 00:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 03 Nov 2026, 00:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 03 Nov 2026, 00:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 02 Nov 2026, 12:00 UTC | digest | Anthropic warns that it&#8217;s very close to RSI capability, aka self-building AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/) |
-| 02 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,042 open roles across 10 tracked companies. | `/jobs/` |
-| 02 Nov 2026, 12:00 UTC | digest | Published the 2026-11-02 daily digest | 16 stories captured from 4 sources. | `/news/` |
+| 02 Nov 2026, 12:00 UTC | digest | Published the 2026-11-02 daily digest | 18 stories captured from 4 sources. | `/news/` |
 | 02 Nov 2026, 12:00 UTC | digest | Trajectory raises $45M to make AI model training accessible to nontechnical experts | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts/) |
 | 02 Nov 2026, 12:00 UTC | digest | Web host Squarespace lays off 19% of its employees | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/02/web-host-squarespace-lays-off-19-of-its-employees/) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
