@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 03 Nov 2026, 14:55 UTC
+Generated: 03 Nov 2026, 15:03 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 03 Nov 2026, 14:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 03 Nov 2026, 14:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 03 Nov 2026, 14:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 03 Nov 2026, 14:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 03 Nov 2026, 14:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 03 Nov 2026, 12:00 UTC | digest | Heimstaden is changing residential real estate management with AI | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/heimstaden) |
+| 03 Nov 2026, 15:03 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 03 Nov 2026, 15:03 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 03 Nov 2026, 15:03 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 03 Nov 2026, 15:03 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 03 Nov 2026, 15:03 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 03 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,040 open roles across 10 tracked companies. | `/jobs/` |
-| 03 Nov 2026, 12:00 UTC | digest | Published the 2026-11-03 daily digest | 7 stories captured from 2 sources. | `/news/` |
+| 03 Nov 2026, 12:00 UTC | digest | OpenAI is quietly renaming data centers ‘compute campuses’ | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1025242/openai-quietly-renames-data-centers-as-compute-campuses) |
+| 03 Nov 2026, 12:00 UTC | digest | Published the 2026-11-03 daily digest | 8 stories captured from 3 sources. | `/news/` |
 | 03 Nov 2026, 12:00 UTC | digest | The TechCrunch Founder Summit agenda is only half the reason to be in Boston on Nov. 4 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/03/the-techcrunch-founder-summit-agenda-is-only-half-the-reason-to-be-in-boston-on-nov-4/) |
 | 03 Nov 2026, 12:00 UTC | digest | Tomorrow: TechCrunch Founder Summit takes over Boston and when pass rates increase | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/03/tomorrow-techcrunch-founder-summit-takes-over-boston-and-when-pass-rates-increase/) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
