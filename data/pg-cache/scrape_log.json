@@ -3,10 +3,10 @@
     "id": 11,
     "scraper": "jobs",
     "status": "success",
-    "models_updated": 1043,
+    "models_updated": 1044,
     "error_message": null,
-    "started_at": "2026-11-04 11:56:03",
-    "finished_at": "2026-11-04 11:56:03"
+    "started_at": "2026-11-04 12:58:24",
+    "finished_at": "2026-11-04 12:58:24"
   },
   {
     "id": 10,
@@ -14,17 +14,8 @@
     "status": "error",
     "models_updated": 68,
     "error_message": "VentureBeat: HTTP 429: Too Many Requests",
-    "started_at": "2026-11-04 11:55:59",
-    "finished_at": "2026-11-04 11:55:59"
-  },
-  {
-    "id": 8,
-    "scraper": "quality-scores",
-    "status": "computed",
-    "models_updated": 55,
-    "error_message": null,
-    "started_at": "2026-11-04 11:55:47",
-    "finished_at": "2026-11-04 11:55:47"
+    "started_at": "2026-11-04 12:58:20",
+    "finished_at": "2026-11-04 12:58:20"
   },
   {
     "id": 9,
@@ -32,8 +23,8 @@
     "status": "success",
     "models_updated": 132,
     "error_message": null,
-    "started_at": "2026-11-04 11:55:47",
-    "finished_at": "2026-11-04 11:55:47"
+    "started_at": "2026-11-04 12:58:09",
+    "finished_at": "2026-11-04 12:58:09"
   },
   {
     "id": 7,
@@ -41,8 +32,17 @@
     "status": "fallback",
     "models_updated": 16,
     "error_message": null,
-    "started_at": "2026-11-04 11:55:46",
-    "finished_at": "2026-11-04 11:55:46"
+    "started_at": "2026-11-04 12:58:08",
+    "finished_at": "2026-11-04 12:58:08"
+  },
+  {
+    "id": 8,
+    "scraper": "quality-scores",
+    "status": "computed",
+    "models_updated": 55,
+    "error_message": null,
+    "started_at": "2026-11-04 12:58:08",
+    "finished_at": "2026-11-04 12:58:08"
   },
   {
     "id": 6,
@@ -50,35 +50,17 @@
     "status": "success",
     "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-11-04 11:55:45",
-    "finished_at": "2026-11-04 11:55:45"
+    "started_at": "2026-11-04 12:58:07",
+    "finished_at": "2026-11-04 12:58:07"
   },
   {
     "id": 5,
     "scraper": "benchmarks:chatbot-arena",
     "status": "fallback",
     "models_updated": 0,
-    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-11-04T11:55:44.434Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
-    "started_at": "2026-11-04 11:55:44",
-    "finished_at": "2026-11-04 11:55:44"
-  },
-  {
-    "id": 4,
-    "scraper": "pricing:validator",
-    "status": "success",
-    "models_updated": 0,
-    "error_message": null,
-    "started_at": "2026-11-04 11:55:43",
-    "finished_at": "2026-11-04 11:55:43"
-  },
-  {
-    "id": 2,
-    "scraper": "pricing:openrouter",
-    "status": "success",
-    "models_updated": 329,
-    "error_message": null,
-    "started_at": "2026-11-04 11:55:42",
-    "finished_at": "2026-11-04 11:55:42"
+    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-11-04T12:58:06.711Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
+    "started_at": "2026-11-04 12:58:06",
+    "finished_at": "2026-11-04 12:58:06"
   },
   {
     "id": 3,
@@ -86,8 +68,26 @@
     "status": "success",
     "models_updated": 21,
     "error_message": null,
-    "started_at": "2026-11-04 11:55:42",
-    "finished_at": "2026-11-04 11:55:42"
+    "started_at": "2026-11-04 12:58:05",
+    "finished_at": "2026-11-04 12:58:05"
+  },
+  {
+    "id": 4,
+    "scraper": "pricing:validator",
+    "status": "success",
+    "models_updated": 0,
+    "error_message": null,
+    "started_at": "2026-11-04 12:58:05",
+    "finished_at": "2026-11-04 12:58:05"
+  },
+  {
+    "id": 2,
+    "scraper": "pricing:openrouter",
+    "status": "success",
+    "models_updated": 329,
+    "error_message": null,
+    "started_at": "2026-11-04 12:58:04",
+    "finished_at": "2026-11-04 12:58:04"
   },
   {
     "id": 1,
@@ -95,7 +95,7 @@
     "status": "success",
     "models_updated": 52,
     "error_message": null,
-    "started_at": "2026-11-04 11:55:41",
-    "finished_at": "2026-11-04 11:55:41"
+    "started_at": "2026-11-04 12:58:03",
+    "finished_at": "2026-11-04 12:58:03"
   }
 ]
