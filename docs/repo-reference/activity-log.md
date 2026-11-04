@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 04 Nov 2026, 16:56 UTC
+Generated: 04 Nov 2026, 17:10 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 04 Nov 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 04 Nov 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 04 Nov 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 04 Nov 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 04 Nov 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 04 Nov 2026, 17:10 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 04 Nov 2026, 17:10 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 04 Nov 2026, 17:10 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 04 Nov 2026, 17:10 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 04 Nov 2026, 17:10 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 04 Nov 2026, 12:00 UTC | digest | Data centers lost the midterms | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/1026365/data-centers-midterms-results) |
 | 04 Nov 2026, 12:00 UTC | digest | Google faces backlash for plan that would turn off Search for schools that restrict AI | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/04/google-faces-backlash-for-plan-that-would-turn-off-search-for-schools-that-restrict-ai/) |
 | 04 Nov 2026, 12:00 UTC | digest | I tried Apple&#8217;s Siri Recaps. They&#8217;re surprisingly useful — and a little unsettling | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/04/i-tried-apples-siri-recaps-theyre-surprisingly-useful-and-a-little-unsettling/) |
