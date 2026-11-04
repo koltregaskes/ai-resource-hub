@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-089b0efaf055aae153cd",
+    "title": "Building on open source AI? Hugging Face’s policy chief on the costs, risks, and trade-offs",
+    "url": "https://techcrunch.com/podcast/building-on-open-source-ai-hugging-faces-policy-chief-on-the-costs-risks-and-trade-offs/",
+    "source": "TechCrunch",
+    "summary": "Open source models are becoming more mainstream as enterprises, governments and startups alike rely on the promise of lower costs, more control, and more flexibility. But as increasingly capable models become more freely available, how do companies capture value? And with Chinese open models gaining ground, can Americ…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-04T18:44:57.000Z",
+    "discovered_at": "2026-11-04 18:55:39"
+  },
+  {
+    "id": "news-d0178f35064d57a66f5f",
+    "title": "Nothing teases a screen-free AI device ahead of launch next month",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei",
+    "source": "The Verge",
+    "summary": "Nothing CEO Carl Pei said in a post on X that the company's launching its first AI device in December. That's just a little over a year after Pei announced plans for \"AI-native\" devices and an AI operating system. He didn't give away much about what exactly the new device is, only that one feature [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-04T18:26:07.000Z",
+    "discovered_at": "2026-11-04 18:55:50"
+  },
+  {
+    "id": "news-026e4ebd4085d32ee7f2",
+    "title": "ChatGPT will now make you animated GIFs",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
+    "source": "The Verge",
+    "summary": "ChatGPT can now create GIFs using a prompt or a photo uploaded to the AI chatbot. The update, which is rolling out alongside OpenAI's new Images 2.6 model, allows you to adjust the GIF's animation speed, edit individual frames, and share it with others. Before this change, ChatGPT couldn't natively generate GIFs in a…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-04T18:00:00.000Z",
+    "discovered_at": "2026-11-04 18:55:50"
+  },
+  {
+    "id": "news-3fdace98b464eb084be9",
+    "title": "My therapist thinks I should chuck the Amazon Bee Frontier out a window",
+    "url": "https://www.theverge.com/column/1026464/optimizer-amazon-bee-frontier-ambient-listening-wearables",
+    "source": "The Verge",
+    "summary": "This is Optimizer, a weekly newsletter sent from Verge senior reviewer Victoria Song that dissects and discusses the latest gizmos and potions that swear they're going to change your life. Opt in for Optimizer here. \"How does that make you feel?\" I get asked this a lot in therapy. Plenty of life events, big and [&#823…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-04T18:00:00.000Z",
+    "discovered_at": "2026-11-04 18:55:50"
+  },
+  {
     "id": "news-58f69099baa4e2bf01a6",
     "title": "I tried Apple&#8217;s Siri Recaps. They&#8217;re surprisingly useful — and a little unsettling",
     "url": "https://techcrunch.com/2026/11/04/i-tried-apples-siri-recaps-theyre-surprisingly-useful-and-a-little-unsettling/",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T16:51:35.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-eeaf8afe464ebd80507a",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T16:17:22.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-0c9cbd4df150e7b2f2ec",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T16:05:39.000Z",
-    "discovered_at": "2026-11-04 17:10:31"
+    "discovered_at": "2026-11-04 18:55:50"
   },
   {
     "id": "news-e818c1486ecfa20dfd98",
@@ -45,11 +93,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T15:58:45.000Z",
-    "discovered_at": "2026-11-04 17:10:31"
+    "discovered_at": "2026-11-04 18:55:50"
   },
   {
     "id": "news-1eb19ba95d162c18a73f",
-    "title": "Sam Altman addresses RAM comments: people should &#8216;put as much as they want in their computers&#8217;",
+    "title": "Sam Altman addresses RAM comments: People should &#8216;put as much as they want in their computers&#8217;",
     "url": "https://www.theverge.com/ai-artificial-intelligence/1026292/sam-altman-ram-shortage-pcs-comments",
     "source": "The Verge",
     "summary": "OpenAI CEO Sam Altman spent election night defending his position on PC RAM purchases. He changed his name on X to \"Ram Altman\" in response to another user's comment, saying, \"i actually do want the world to have tons of memory and people to put as much as they want in their computers, and it [&#8230;]",
@@ -57,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T14:46:01.000Z",
-    "discovered_at": "2026-11-04 17:10:31"
+    "discovered_at": "2026-11-04 18:55:50"
   },
   {
     "id": "news-3a06f84c0f51a102b02f",
@@ -69,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T14:30:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-9629b9d628e692099814",
@@ -81,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T13:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-f11d9a22fb662eb7bba6",
@@ -93,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T12:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:31"
+    "discovered_at": "2026-11-04 18:55:50"
   },
   {
     "id": "news-75679f5aa60bfcf88cfe",
@@ -105,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T07:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-5d47252e76d42d679cfa",
@@ -117,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T00:42:10.000Z",
-    "discovered_at": "2026-11-04 17:10:31"
+    "discovered_at": "2026-11-04 18:55:50"
   },
   {
     "id": "news-64fbdbf83ed120a56da3",
@@ -129,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T23:37:45.000Z",
-    "discovered_at": "2026-11-04 17:10:31"
+    "discovered_at": "2026-11-04 18:55:50"
   },
   {
     "id": "news-f901cc10a3c48e36b7fb",
@@ -141,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T22:41:03.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-59cb8a96ca92b79ec61e",
@@ -153,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T22:19:53.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-d37889a9ebdda005e904",
@@ -165,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T21:43:08.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-dd34e5bf1c5e6fe6fefc",
@@ -177,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T21:05:55.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-39cfcbde58ede335eb0f",
@@ -189,19 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T21:01:07.000Z",
-    "discovered_at": "2026-11-04 17:10:31"
-  },
-  {
-    "id": "news-49792679d79fe36cfcef",
-    "title": "Apple starts giving Siri AI access to third-party apps",
-    "url": "https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps",
-    "source": "The Verge",
-    "summary": "Apple will now let Siri AI perform actions across third-party apps. As part of the iOS 27.3 update rolling out on Tuesday, Apple announced developers can now integrate Siri AI's new features in \"all apps,\" allowing the voice assistant to draw on a user's personal context, process natural language prompts, and use on-s…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-03T20:16:17.000Z",
-    "discovered_at": "2026-11-04 17:10:31"
+    "discovered_at": "2026-11-04 18:55:50"
   },
   {
     "id": "news-c69664e34de229c6697e",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T19:34:43.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-2023d4b1aafdb54ae122",
@@ -225,31 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T18:42:16.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
-  },
-  {
-    "id": "news-62af551153394ae1e07b",
-    "title": "Apple’s latest watchOS beta includes its new always-on Audio Intelligence features",
-    "url": "https://www.theverge.com/tech/1025002/apple-watch-audio-intelligence-watchos-beta",
-    "source": "The Verge",
-    "summary": "Starting today, Siri can tune into the Apple Watch's mic with Audio Intelligence features that are available in the new watchOS 27.3 developer beta rolling out now. The two new additions are Siri Recap, which uses \"ambient listening\" to generate summaries of your conversation, and Live Rewind, which generates text tra…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-03T18:31:00.000Z",
-    "discovered_at": "2026-11-04 17:10:31"
-  },
-  {
-    "id": "news-662bf89dbff24ba906fa",
-    "title": "OpenAI says ChatGPT is catching up to Google in search",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1025482/openai-says-chatgpt-is-catching-up-to-google-in-search",
-    "source": "The Verge",
-    "summary": "In many circles, \"Ask Chat\" has replaced \"Google it,\" and that's reflected in a new announcement from OpenAI: the volume of search queries run through ChatGPT now equals 20 percent of the volume run through Google. Adam Fry, OpenAI's consumer product lead for ChatGPT, made the announcement at a press event on Monday.…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-03T18:30:42.000Z",
-    "discovered_at": "2026-11-04 17:10:31"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-2437af63b2f85a1f78a0",
@@ -261,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T17:07:01.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-410d5c941f71a7aa107c",
@@ -273,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T16:30:34.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-f9c0c715eee2231e1764",
@@ -285,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T15:38:27.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-954137d8d070f957cead",
@@ -297,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T14:30:00.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-2b376a551173279bc3bf",
@@ -309,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T14:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-26c6032e1d2677657b70",
@@ -321,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T12:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-08b710f1e7801fa86cc9",
@@ -333,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T08:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-a2357e701f020223b310",
@@ -345,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T08:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-0e5b1d74afc987fe0cc2",
@@ -357,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T07:20:00.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-4c7d73c3037dd08e30b2",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T03:30:00.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-9c67c7267a5625d55a1f",
@@ -381,19 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T01:49:52.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
-  },
-  {
-    "id": "news-bd936fe1d4a26927f180",
-    "title": "Y Combinator&#8217;s Garry Tan uses AI agents so much, he spends up to $200K a year on tokens",
-    "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
-    "source": "TechCrunch",
-    "summary": "Y Combinator Garry Tan has jokingly admitted that he's suffered from \"cyber psychosis” and barely sleeps sometimes because he’s so excited to be working with his AI agents. On a new episode of Walter Isaacson’s podcast, The Builders, Tan put a price tag on his passion.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-03T00:35:52.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:39"
   },
   {
     "id": "news-3d509e27bae229a3dde1",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T00:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-262cfa35f4308cc0bcff",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T18:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-6fd6ad7938fa5bc51515",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T18:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-de4cf53f9db96311cdf4",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T15:30:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-19244c7aa2063fd3d4e1",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T15:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-ed4b58253682640ff970",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T09:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-598c6194c0d34c2379ea",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T00:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-ff138f709a7e7c378423",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T00:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-04 17:10:31"
+    "discovered_at": "2026-11-04 18:55:50"
   },
   {
     "id": "news-25cc4c9bb2e3e7e535a0",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T09:30:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-c7606af40dbb903f1458",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T09:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-d2282bcce1625c643a8e",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T00:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-7bf0065ceb1646f57aed",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T17:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-d28967fce9c692cd06ec",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-29T09:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:19"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-11-04 17:10:31"
+    "discovered_at": "2026-11-04 18:55:50"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-11-04 17:10:31"
+    "discovered_at": "2026-11-04 18:55:50"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-11-04 17:10:20"
+    "discovered_at": "2026-11-04 18:55:38"
   },
   {
     "id": "news-307bfda48464106bf8e3",
@@ -657,6 +657,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-06T12:21:53.000Z",
-    "discovered_at": "2026-11-04 17:10:31"
+    "discovered_at": "2026-11-04 18:55:50"
   }
 ]
