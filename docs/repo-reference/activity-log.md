@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 04 Nov 2026, 14:57 UTC
+Generated: 04 Nov 2026, 15:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 04 Nov 2026, 14:57 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 04 Nov 2026, 14:57 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 04 Nov 2026, 14:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 04 Nov 2026, 14:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 04 Nov 2026, 14:57 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 04 Nov 2026, 12:00 UTC | digest | Google hasn&#8217;t figured out how to make AI pay like its search engine | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1024862/google-search-ai-overviews-alphabet-earnings-q3) |
+| 04 Nov 2026, 15:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 04 Nov 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 04 Nov 2026, 15:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 04 Nov 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 04 Nov 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 04 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,044 open roles across 10 tracked companies. | `/jobs/` |
-| 04 Nov 2026, 12:00 UTC | digest | Published the 2026-11-04 daily digest | 3 stories captured from 2 sources. | `/news/` |
+| 04 Nov 2026, 12:00 UTC | digest | OpenAI to acquire Pierre Computer Company, Inc. | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/openai-to-acquire-pierre) |
+| 04 Nov 2026, 12:00 UTC | digest | Published the 2026-11-04 daily digest | 6 stories captured from 3 sources. | `/news/` |
+| 04 Nov 2026, 12:00 UTC | digest | Sam Altman addresses RAM comments: people should &#8216;put as much as they want in their computers&#8217; | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1026292/sam-altman-ram-shortage-pcs-comments) |
 | 04 Nov 2026, 12:00 UTC | digest | TechCrunch Founder Summit 2026: Doors open at 9 a.m. ET in Boston | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/04/techcrunch-founder-summit-2026-todays-the-day/) |
-| 04 Nov 2026, 12:00 UTC | digest | The biggest modding site in PC gaming is taking a stance on AI | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/games/1026085/nexus-mods-ai-disclosures) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
