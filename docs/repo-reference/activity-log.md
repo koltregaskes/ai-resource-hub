@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 04 Nov 2026, 22:37 UTC
+Generated: 04 Nov 2026, 23:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 04 Nov 2026, 22:37 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 04 Nov 2026, 22:37 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 04 Nov 2026, 22:37 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 04 Nov 2026, 22:37 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 04 Nov 2026, 22:37 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 04 Nov 2026, 12:00 UTC | digest | 17 better ways Elon Musk could have wasted $446 million | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1026878/not-even-good-at-being-rich) |
-| 04 Nov 2026, 12:00 UTC | digest | Almost no one uses AI agents to book their Uber, company says | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says/) |
+| 04 Nov 2026, 23:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 04 Nov 2026, 23:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 04 Nov 2026, 23:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 04 Nov 2026, 23:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 04 Nov 2026, 23:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 04 Nov 2026, 12:00 UTC | digest | AI PACs spent millions trying to shape Congress — here&#8217;s how they fared | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/) |
 | 04 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,041 open roles across 10 tracked companies. | `/jobs/` |
 | 04 Nov 2026, 12:00 UTC | digest | Nothing CEO says company&#8217;s mysterious AI-first device is dropping next month | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/04/nothing-ceo-says-companys-mysterious-ai-first-device-is-dropping-next-month/) |
 | 04 Nov 2026, 12:00 UTC | digest | Published the 2026-11-04 daily digest | 20 stories captured from 3 sources. | `/news/` |
+| 04 Nov 2026, 12:00 UTC | digest | Qualcomm is betting big on data centers as smartphone sales sink | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
