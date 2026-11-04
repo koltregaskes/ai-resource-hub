@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 04 Nov 2026, 18:56 UTC
+Generated: 04 Nov 2026, 19:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 04 Nov 2026, 18:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 04 Nov 2026, 18:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 04 Nov 2026, 18:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 04 Nov 2026, 18:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 04 Nov 2026, 18:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 04 Nov 2026, 19:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 04 Nov 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 04 Nov 2026, 19:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 04 Nov 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 04 Nov 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 04 Nov 2026, 12:00 UTC | digest | Building on open source AI? Hugging Face’s policy chief on the costs, risks, and trade-offs | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/podcast/building-on-open-source-ai-hugging-faces-policy-chief-on-the-costs-risks-and-trade-offs/) |
-| 04 Nov 2026, 12:00 UTC | digest | ChatGPT will now make you animated GIFs | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6) |
-| 04 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,045 open roles across 10 tracked companies. | `/jobs/` |
-| 04 Nov 2026, 12:00 UTC | digest | Nothing teases a screen-free AI device ahead of launch next month | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1026586/nothing-screen-free-ai-device-carl-pei) |
-| 04 Nov 2026, 12:00 UTC | digest | Published the 2026-11-04 daily digest | 14 stories captured from 3 sources. | `/news/` |
+| 04 Nov 2026, 12:00 UTC | digest | DuckDuckGo pitches itself to schools amid backlash over Google&#8217;s AI policy | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/04/duckduckgo-pitches-itself-to-schools-amid-backlash-over-googles-ai-policy/) |
+| 04 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,043 open roles across 10 tracked companies. | `/jobs/` |
+| 04 Nov 2026, 12:00 UTC | digest | Open source AI is booming. Hugging Face explains who profits. | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/video/open-source-ai-is-booming-hugging-face-explains-who-profits/) |
+| 04 Nov 2026, 12:00 UTC | digest | Published the 2026-11-04 daily digest | 16 stories captured from 3 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
