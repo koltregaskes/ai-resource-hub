@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 04 Nov 2026, 20:56 UTC
+Generated: 04 Nov 2026, 21:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 04 Nov 2026, 20:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 04 Nov 2026, 20:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 04 Nov 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 04 Nov 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 04 Nov 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 04 Nov 2026, 12:00 UTC | digest | DuckDuckGo pitches itself to schools amid backlash over Google&#8217;s AI policy | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/04/duckduckgo-pitches-itself-to-schools-amid-backlash-over-googles-ai-policy/) |
+| 04 Nov 2026, 21:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 04 Nov 2026, 21:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 04 Nov 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 04 Nov 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 04 Nov 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 04 Nov 2026, 12:00 UTC | digest | Gemini for Home now plugs into AT&#038;T’s smart security system | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1026787/att-gemini-for-home-connected-life-security-system) |
-| 04 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,044 open roles across 10 tracked companies. | `/jobs/` |
-| 04 Nov 2026, 12:00 UTC | digest | Open source AI is booming. Hugging Face explains who profits. | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/video/open-source-ai-is-booming-hugging-face-explains-who-profits/) |
-| 04 Nov 2026, 12:00 UTC | digest | Published the 2026-11-04 daily digest | 17 stories captured from 3 sources. | `/news/` |
+| 04 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,042 open roles across 10 tracked companies. | `/jobs/` |
+| 04 Nov 2026, 12:00 UTC | digest | Meta acquires AI coding startup Conductor | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/) |
+| 04 Nov 2026, 12:00 UTC | digest | OpenAI is already trying to shape the 2028 election | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/04/openai-is-already-trying-to-shape-the-2028-election/) |
+| 04 Nov 2026, 12:00 UTC | digest | Published the 2026-11-04 daily digest | 19 stories captured from 3 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
