@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 05 Nov 2026, 21:56 UTC
+Generated: 05 Nov 2026, 22:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 05 Nov 2026, 21:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 05 Nov 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 05 Nov 2026, 21:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 05 Nov 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 05 Nov 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 05 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,040 open roles across 10 tracked companies. | `/jobs/` |
+| 05 Nov 2026, 22:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 05 Nov 2026, 22:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 05 Nov 2026, 22:58 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 05 Nov 2026, 22:58 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 05 Nov 2026, 22:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 05 Nov 2026, 12:00 UTC | digest | Airbnb says it&#8217;s launching an AI travel agent in the first half of 2027 | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/) |
+| 05 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,041 open roles across 10 tracked companies. | `/jobs/` |
 | 05 Nov 2026, 12:00 UTC | digest | Meta says US users can now video chat with their Muse AI avatar | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/) |
-| 05 Nov 2026, 12:00 UTC | digest | Meta warns that election backlash against data centers could make AI expansion harder | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/) |
-| 05 Nov 2026, 12:00 UTC | digest | OpenAI released a new cybersecurity model. Is that enough? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/) |
+| 05 Nov 2026, 12:00 UTC | digest | Perplexity launches its own take on AI agents for work | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work) |
 | 05 Nov 2026, 12:00 UTC | digest | Published the 2026-11-05 daily digest | 20 stories captured from 3 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
