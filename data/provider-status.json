@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T15:56:04.678Z",
+  "generatedAt": "2026-11-05T17:55:58.510Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-05T15:56:04.673Z",
+      "lastCheckedAt": "2026-11-05T17:55:58.503Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,103 +90,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-11-05T15:56:02.623Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "ChatGPT Work",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Chat Completions",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Agents",
-          "status": "operational"
-        },
-        {
-          "name": "Decisions",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01M6P50GPP1V98EF8MJ9SH393R",
-          "title": "ChatGPT Issues",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-11-05T15:25:03.000Z",
-          "updatedAt": "2026-11-05T15:30:00.000Z",
-          "resolvedAt": null,
-          "summary": "We’re investigating a potential issue for the listed services and checking how it affects users. We’ll share an update when we know more."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01M6P50GPP1V98EF8MJ9SH393R",
-          "title": "ChatGPT Issues",
-          "status": "investigating",
-          "impact": "minor",
-          "startedAt": "2026-11-05T15:25:03.000Z",
-          "updatedAt": "2026-11-05T15:30:00.000Z",
-          "resolvedAt": null,
-          "summary": "We’re investigating a potential issue for the listed services and checking how it affects users. We’ll share an update when we know more."
-        },
-        {
-          "id": "01M6MBCX427A7113A3T4FJ1N6Y",
-          "title": "Elevated error rates across paid ChatGPT plans",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-04T22:38:12.000Z",
-          "updatedAt": "2026-11-05T00:32:37.000Z",
-          "resolvedAt": "2026-11-05T00:32:37.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M6FDZ89W4PKDS19K496J307G",
-          "title": "File upload errors in ChatGPT",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-03T00:46:58.000Z",
-          "updatedAt": "2026-11-03T05:39:36.000Z",
-          "resolvedAt": "2026-11-03T05:39:36.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M6754SR14HCQ3E9FX426E2N7",
-          "title": "Elevated errors with search in Dots, ChatGPT Work, and certain ChatGPT thinking experiences",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-30T19:38:47.000Z",
-          "updatedAt": "2026-10-30T21:14:12.000Z",
-          "resolvedAt": "2026-10-30T21:14:12.000Z",
-          "summary": "All affected services are operating normally again.\n\nWe’re sorry for the disruption, and we appreciate your patience."
-        }
-      ]
-    },
-    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -197,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-05T15:56:02.633Z",
+      "lastCheckedAt": "2026-11-05T17:55:57.318Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -287,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-05T15:56:03.586Z",
+      "lastCheckedAt": "2026-11-05T17:55:57.965Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-05T15:56:03.032Z",
+      "lastCheckedAt": "2026-11-05T17:55:57.299Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -340,6 +243,103 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-11-05T17:55:57.319Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Chat Completions",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Agents",
+          "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Embeddings",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01M6P50GPP1V98EF8MJ9SH393R",
+          "title": "ChatGPT Work and Dots Errors",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-11-05T15:25:03.000Z",
+          "updatedAt": "2026-11-05T17:05:56.000Z",
+          "resolvedAt": null,
+          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01M6P50GPP1V98EF8MJ9SH393R",
+          "title": "ChatGPT Work and Dots Errors",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-11-05T15:25:03.000Z",
+          "updatedAt": "2026-11-05T17:05:56.000Z",
+          "resolvedAt": null,
+          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
+        },
+        {
+          "id": "01M6MBCX427A7113A3T4FJ1N6Y",
+          "title": "Elevated error rates across paid ChatGPT plans",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-04T22:38:12.000Z",
+          "updatedAt": "2026-11-05T00:32:37.000Z",
+          "resolvedAt": "2026-11-05T00:32:37.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M6FDZ89W4PKDS19K496J307G",
+          "title": "File upload errors in ChatGPT",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-03T00:46:58.000Z",
+          "updatedAt": "2026-11-03T05:39:36.000Z",
+          "resolvedAt": "2026-11-03T05:39:36.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M6754SR14HCQ3E9FX426E2N7",
+          "title": "Elevated errors with search in Dots, ChatGPT Work, and certain ChatGPT thinking experiences",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-10-30T19:38:47.000Z",
+          "updatedAt": "2026-10-30T21:14:12.000Z",
+          "resolvedAt": "2026-10-30T21:14:12.000Z",
+          "summary": "All affected services are operating normally again.\n\nWe’re sorry for the disruption, and we appreciate your patience."
+        }
+      ]
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -350,7 +350,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-05T15:56:03.879Z",
+      "lastCheckedAt": "2026-11-05T17:55:58.314Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",

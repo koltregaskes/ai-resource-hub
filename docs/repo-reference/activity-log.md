@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 05 Nov 2026, 15:56 UTC
+Generated: 05 Nov 2026, 17:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 05 Nov 2026, 15:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 05 Nov 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 05 Nov 2026, 15:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 05 Nov 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 05 Nov 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 05 Nov 2026, 12:00 UTC | digest | Aina&#8217;s smart ring has a screen, a joystick and a mic so you can talk to AI agents | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/05/ainas-smart-ring-has-a-screen-a-joystick-and-a-mic-so-you-can-talk-to-ai-agents/) |
-| 05 Nov 2026, 12:00 UTC | digest | Box taps Nvidia’s Nemotron for new agent-first content retrieval system | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system/) |
-| 05 Nov 2026, 12:00 UTC | digest | Dropbox acquires Tigris Data for $350M to bolster its AI infrastructure | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/) |
+| 05 Nov 2026, 17:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 05 Nov 2026, 17:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 05 Nov 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 05 Nov 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 05 Nov 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 05 Nov 2026, 12:00 UTC | digest | ‘Total repudiation’: The blue wave is about to hit AI | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1026927/total-repudiation-the-blue-wave-is-about-to-hit-ai) |
+| 05 Nov 2026, 12:00 UTC | digest | Grimes is going to star in an AI movie that’s coming to theaters | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/entertainment/1026282/grimes-ai-movie) |
 | 05 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,044 open roles across 10 tracked companies. | `/jobs/` |
-| 05 Nov 2026, 12:00 UTC | digest | Published the 2026-11-05 daily digest | 9 stories captured from 3 sources. | `/news/` |
+| 05 Nov 2026, 12:00 UTC | digest | OpenAI says its new cybersecurity model is better at not hacking other companies | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1027599/openai-gpt-6-cyber-launch) |
+| 05 Nov 2026, 12:00 UTC | digest | Published the 2026-11-05 daily digest | 16 stories captured from 4 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |

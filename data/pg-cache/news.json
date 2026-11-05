@@ -1,5 +1,65 @@
 [
   {
+    "id": "news-23696f011bd98b05f7d3",
+    "title": "‘Total repudiation’: The blue wave is about to hit AI",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1026927/total-repudiation-the-blue-wave-is-about-to-hit-ai",
+    "source": "The Verge",
+    "summary": "On Tuesday night, Democrats made history as they took control of the House and the Senate, and a blue wave swept through traditionally red and swing states - with the nation's first Black woman governor elected in Georgia, the country's first Native American woman governor elected in New Mexico, and a Maine Senator ce…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-05T17:51:52.000Z",
+    "discovered_at": "2026-11-05 17:55:56"
+  },
+  {
+    "id": "news-b529285c262b3aff5c1f",
+    "title": "OpenAI says its new cybersecurity model is better at not hacking other companies",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1027599/openai-gpt-6-cyber-launch",
+    "source": "The Verge",
+    "summary": "OpenAI is launching GPT-6 Cyber, the latest version of its cybersecurity AI model, which it says is better at finding vulnerabilities and less likely to go rogue and hack other platforms in the process. OpenAI says that during testing, GPT-6 Cyber went out of bounds less than 1 percent of the time, down from around [&…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-05T17:00:00.000Z",
+    "discovered_at": "2026-11-05 17:55:56"
+  },
+  {
+    "id": "news-4dac3d0c60c6510eae78",
+    "title": "Grimes is going to star in an AI movie that’s coming to theaters",
+    "url": "https://www.theverge.com/entertainment/1026282/grimes-ai-movie",
+    "source": "The Verge",
+    "summary": "The AI-generated sci-fi film Gods Don't Give Gifts has added a bit of star power: Pop star Grimes is going to appear in the movie. Billed as \"the first AI film to come to theatres,\" Gods Don't Give Gifts is a notable test case for the commercial potential of AI films, and it releases on [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-05T17:00:00.000Z",
+    "discovered_at": "2026-11-05 17:55:56"
+  },
+  {
+    "id": "news-63c3d56bc72bc9e8d1c7",
+    "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+    "source": "Google",
+    "summary": "Gemini Omni 1.2 Flash brings native 15-second video generation and editing, stronger consistency, and 30% lower pricing.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-05T17:00:00.000Z",
+    "discovered_at": "2026-11-05 17:55:45"
+  },
+  {
+    "id": "news-c2788911aa715e520bc4",
+    "title": "Axiom Math wants to keep AI slop out of mathematics",
+    "url": "https://techcrunch.com/2026/11/05/axiom-math-wants-to-keep-ai-slop-out-of-mathematics/",
+    "source": "TechCrunch",
+    "summary": "As AI floods math with unchecked proofs, Axiom Math is betting on verification. The startup’s AI agents just formally verified the Stacks Project, one of the field’s biggest libraries.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-05T16:16:45.000Z",
+    "discovered_at": "2026-11-05 17:55:45"
+  },
+  {
     "id": "news-6dad7a604d398d82538b",
     "title": "Dropbox acquires Tigris Data for $350M to bolster its AI infrastructure",
     "url": "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/",
@@ -9,11 +69,35 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T15:19:05.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
+  },
+  {
+    "id": "news-f8f8c085e2e5be1c3c87",
+    "title": "You can post AI music straight to SoundCloud from ElevenLabs",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1027427/ai-music-soundcloud-elevenlabs",
+    "source": "The Verge",
+    "summary": "After partnering with Moises earlier this year, SoundCloud is now adding integration with another AI music platform, ElevenLabs. Now, rather than having to export and download your outputs from ElevenLabs and then upload them to SoundCloud, you can publish them directly. As part of the partnership, SoundCloud Artist P…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-05T15:00:00.000Z",
+    "discovered_at": "2026-11-05 17:55:56"
+  },
+  {
+    "id": "news-56c190950731d79b3384",
+    "title": "The hidden supply chain costs of the AI boom",
+    "url": "https://www.theverge.com/podcast/1024438/willy-shih-supply-chain-ai-chips-ram-where-does-my-stuff-come-from-book",
+    "source": "The Verge",
+    "summary": "Today, I’m talking with Willy Shih, an economist, a professor of management practice at Harvard Business School, and the author of the upcoming book, Where Does My Stuff Come From? The Powerful Economics Behind Global Supply Chains. Willy is one of my all-time favorite Decoder guests — his way of looking at the world…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-05T15:00:00.000Z",
+    "discovered_at": "2026-11-05 17:55:56"
   },
   {
     "id": "news-0f2052ea73f7a4c11ac6",
-    "title": "Aina&#8217;s smart ring has a screen, a joystick and a mic so you can talk to AI agents",
+    "title": "Aina&#8217;s smart ring has a screen, a joystick, and a mic so you can talk to AI agents",
     "url": "https://techcrunch.com/2026/11/05/ainas-smart-ring-has-a-screen-a-joystick-and-a-mic-so-you-can-talk-to-ai-agents/",
     "source": "TechCrunch",
     "summary": "Aina's ring can also take calls and help you dictate notes on your Mac.",
@@ -21,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T14:42:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-d51f62aa0d3ca8ee0b8f",
@@ -33,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T14:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-b06af2d45cd2abb56f1e",
@@ -45,19 +129,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T13:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-956cb223c580c4f0e9ff",
     "title": "Agility is the first pure humanoid robot company on the stock market. Are you buying?",
     "url": "https://techcrunch.com/2026/11/05/agility-is-the-first-pure-humanoid-robot-company-on-the-stock-market-are-you-buying/",
     "source": "TechCrunch",
-    "summary": "Agility arrives on the Nasdaq today as the first publicly-traded pure-play humanoid robotics company.",
+    "summary": "Agility arrives on the Nasdaq today as the first publicly traded pure-play humanoid robotics company.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T12:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-b8c0e66ba85503fb8eab",
@@ -69,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T10:45:00.000Z",
-    "discovered_at": "2026-11-05 15:56:01"
+    "discovered_at": "2026-11-05 17:55:56"
   },
   {
     "id": "news-f93567576105c7139347",
@@ -81,19 +165,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T02:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-1c7da4acfcdd25cb9b09",
     "title": "Apple is reportedly cutting budgets for its internal AI usage",
     "url": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/",
     "source": "TechCrunch",
-    "summary": "The company is said to be significantly dropping the amount it's spending on AI for its engineering teams.",
+    "summary": "The tokenmaxxing frenzy has been short-lived as bills for said tokens came due, and companies decided that token rationing might be a more fiscally sensible approach.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T01:26:22.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-2c368bf7ce92124498a2",
@@ -105,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T01:02:14.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-33a7076609087ff9ed30",
@@ -117,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T22:45:09.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-48d8c1552d58becdf0a6",
@@ -129,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T22:42:15.000Z",
-    "discovered_at": "2026-11-05 15:56:01"
+    "discovered_at": "2026-11-05 17:55:56"
   },
   {
     "id": "news-90248c1ffce43a9b9c96",
@@ -141,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T22:13:16.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-f3f4f568585b6de90295",
@@ -153,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T21:56:01.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-4c9b76bc0bf942e0bb6f",
@@ -165,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T21:45:00.000Z",
-    "discovered_at": "2026-11-05 15:56:01"
+    "discovered_at": "2026-11-05 17:55:56"
   },
   {
     "id": "news-6050c43be029e7506e60",
@@ -177,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T21:25:44.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-70e60e39b2082f35b72d",
@@ -189,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T21:10:56.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-b6ceabf91c49350fe5a2",
@@ -201,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T20:23:24.000Z",
-    "discovered_at": "2026-11-05 15:56:01"
+    "discovered_at": "2026-11-05 17:55:56"
   },
   {
     "id": "news-604513e69c2ae428fe75",
@@ -213,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T19:30:04.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-add91e24e3212a5f491b",
@@ -225,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T19:29:52.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-089b0efaf055aae153cd",
@@ -237,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T18:44:57.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-d0178f35064d57a66f5f",
@@ -249,31 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T18:26:07.000Z",
-    "discovered_at": "2026-11-05 15:56:01"
-  },
-  {
-    "id": "news-026e4ebd4085d32ee7f2",
-    "title": "ChatGPT will now make you animated GIFs",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
-    "source": "The Verge",
-    "summary": "ChatGPT can now create GIFs using a prompt or a photo uploaded to the AI chatbot. The update, which is rolling out alongside OpenAI's new Images 2.6 model, allows you to adjust the GIF's animation speed, edit individual frames, and share it with others. Before this change, ChatGPT couldn't natively generate GIFs in a…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-04T18:00:00.000Z",
-    "discovered_at": "2026-11-05 15:56:01"
-  },
-  {
-    "id": "news-3fdace98b464eb084be9",
-    "title": "My therapist thinks I should chuck the Amazon Bee Frontier out a window",
-    "url": "https://www.theverge.com/column/1026464/optimizer-amazon-bee-frontier-ambient-listening-wearables",
-    "source": "The Verge",
-    "summary": "This is Optimizer, a weekly newsletter sent from Verge senior reviewer Victoria Song that dissects and discusses the latest gizmos and potions that swear they're going to change your life. Opt in for Optimizer here. \"How does that make you feel?\" I get asked this a lot in therapy. Plenty of life events, big and [&#823…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-04T18:00:00.000Z",
-    "discovered_at": "2026-11-05 15:56:01"
+    "discovered_at": "2026-11-05 17:55:56"
   },
   {
     "id": "news-58f69099baa4e2bf01a6",
@@ -285,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T16:51:35.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-eeaf8afe464ebd80507a",
@@ -297,43 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T16:17:22.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
-  },
-  {
-    "id": "news-0c9cbd4df150e7b2f2ec",
-    "title": "Data centers lost the midterms",
-    "url": "https://www.theverge.com/policy/1026365/data-centers-midterms-results",
-    "source": "The Verge",
-    "summary": "Data center developers are poised to face a more restrictive building environment after voters across the country voted in candidates who favor moratoriums and ballot measures that put more obstacles on their expansion, delivering a stinging blow to a central pillar of the AI industry. Of voters polled by NBC News on…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-04T16:05:39.000Z",
-    "discovered_at": "2026-11-05 15:56:01"
-  },
-  {
-    "id": "news-e818c1486ecfa20dfd98",
-    "title": "Uber only fulfilled 4 rides from AI agents last quarter",
-    "url": "https://www.theverge.com/transportation/1026306/uber-ai-agents-q3-earnings-disintermediation",
-    "source": "The Verge",
-    "summary": "AI agents won't be stealing Uber's lunch any time soon. Only four rides were arranged by third-party AI agents during the third quarter of 2026, Uber executives disclosed during an earnings call this morning. The volume of Uber Eats orders fulfilled by AI agents was a little higher, with the company recording \"around…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-04T15:58:45.000Z",
-    "discovered_at": "2026-11-05 15:56:01"
-  },
-  {
-    "id": "news-1eb19ba95d162c18a73f",
-    "title": "Sam Altman addresses RAM comments: People should &#8216;put as much as they want in their computers&#8217;",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1026292/sam-altman-ram-shortage-pcs-comments",
-    "source": "The Verge",
-    "summary": "OpenAI CEO Sam Altman spent election night defending his position on PC RAM purchases. He changed his name on X to \"Ram Altman\" in response to another user's comment, saying, \"i actually do want the world to have tons of memory and people to put as much as they want in their computers, and it [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-04T14:46:01.000Z",
-    "discovered_at": "2026-11-05 15:56:01"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-3a06f84c0f51a102b02f",
@@ -345,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T14:30:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
-  },
-  {
-    "id": "news-9629b9d628e692099814",
-    "title": "TechCrunch Founder Summit 2026: Doors open at 9 a.m. ET in Boston",
-    "url": "https://techcrunch.com/2026/11/04/techcrunch-founder-summit-2026-todays-the-day/",
-    "source": "TechCrunch",
-    "summary": "Today is the day to join TechCrunch Founder Summit 2026 in Boston's SoWa Power Station. Register now to join this founder-focused conference today.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-04T13:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-a4f4c423c54260333db7",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T08:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-75679f5aa60bfcf88cfe",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T07:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-bf25be8f87794d7d4a5b",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T00:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-0a437d67f2effbc5f98d",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T00:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-26c6032e1d2677657b70",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T12:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-08b710f1e7801fa86cc9",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T08:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-a2357e701f020223b310",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T08:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-3d509e27bae229a3dde1",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T00:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-262cfa35f4308cc0bcff",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T18:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-6fd6ad7938fa5bc51515",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T18:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-de4cf53f9db96311cdf4",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T15:30:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-19244c7aa2063fd3d4e1",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T15:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-ed4b58253682640ff970",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T09:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-ff138f709a7e7c378423",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T00:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-598c6194c0d34c2379ea",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T00:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-05 15:56:01"
+    "discovered_at": "2026-11-05 17:55:56"
   },
   {
     "id": "news-25cc4c9bb2e3e7e535a0",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T09:30:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-11-05 15:56:01"
+    "discovered_at": "2026-11-05 17:55:56"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-11-05 15:56:01"
+    "discovered_at": "2026-11-05 17:55:56"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -633,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -645,6 +657,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-11-05 15:55:52"
+    "discovered_at": "2026-11-05 17:55:45"
   }
 ]
