@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 05 Nov 2026, 20:38 UTC
+Generated: 05 Nov 2026, 21:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 05 Nov 2026, 20:37 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 05 Nov 2026, 20:37 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 05 Nov 2026, 20:37 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 05 Nov 2026, 20:37 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 05 Nov 2026, 20:37 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 05 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,041 open roles across 10 tracked companies. | `/jobs/` |
+| 05 Nov 2026, 21:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 05 Nov 2026, 21:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 05 Nov 2026, 21:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 05 Nov 2026, 21:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 05 Nov 2026, 21:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 05 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,040 open roles across 10 tracked companies. | `/jobs/` |
 | 05 Nov 2026, 12:00 UTC | digest | Meta says US users can now video chat with their Muse AI avatar | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/) |
 | 05 Nov 2026, 12:00 UTC | digest | Meta warns that election backlash against data centers could make AI expansion harder | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/) |
 | 05 Nov 2026, 12:00 UTC | digest | OpenAI released a new cybersecurity model. Is that enough? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/) |
