@@ -1,21 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 05 Nov 2026, 00:56 UTC
+Generated: 05 Nov 2026, 01:57 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
+| 05 Nov 2026, 12:00 UTC | digest | After the midterms, a bigger clash over data centers could be coming | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming/) |
+| 05 Nov 2026, 12:00 UTC | digest | Apple is reportedly cutting budgets for its internal AI usage | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/) |
 | 05 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,042 open roles across 10 tracked companies. | `/jobs/` |
-| 05 Nov 2026, 00:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 05 Nov 2026, 00:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 05 Nov 2026, 00:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 05 Nov 2026, 00:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 05 Nov 2026, 00:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 04 Nov 2026, 12:00 UTC | digest | AI PACs spent millions trying to shape Congress — here&#8217;s how they fared | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/) |
-| 04 Nov 2026, 12:00 UTC | digest | Nothing CEO says company&#8217;s mysterious AI-first device is dropping next month | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/04/nothing-ceo-says-companys-mysterious-ai-first-device-is-dropping-next-month/) |
-| 04 Nov 2026, 12:00 UTC | digest | Published the 2026-11-04 daily digest | 20 stories captured from 3 sources. | `/news/` |
-| 04 Nov 2026, 12:00 UTC | digest | Qualcomm is betting big on data centers as smartphone sales sink | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers) |
+| 05 Nov 2026, 12:00 UTC | digest | Published the 2026-11-05 daily digest | 2 stories captured from 1 sources. | `/news/` |
+| 05 Nov 2026, 01:57 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 05 Nov 2026, 01:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 05 Nov 2026, 01:57 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 05 Nov 2026, 01:57 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 05 Nov 2026, 01:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
@@ -26,3 +25,4 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 24 Feb 2026, 10:00 UTC | site | Shipped specialist leaderboards and provider comparison routes | Added fastest, cheapest, best value, multimodal, context, reasoning, and provider comparison pages. | `/leaderboard/` |
 | 22 Feb 2026, 10:00 UTC | site | Initial public launch of the hub | Published the first live version with model comparison, benchmarks, pricing, news, tools, and guides. | `/about/` |
 | 17 Feb 2026, 12:00 UTC | models | Claude Sonnet 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-sonnet-4.6/` |
+| 05 Feb 2026, 12:00 UTC | models | Claude Opus 4.6 (batch) added to the comparison layer | Anthropic now appears in the live model index and ranking surfaces. | `/models/claude-opus-4.6/` |
