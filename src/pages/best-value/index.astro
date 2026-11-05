@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getMetaLeaderboard } from '../../data/hub-dashboard';
+import { COMPOSITE_MEASUREMENT_MAX_AGE_DAYS, OWN_BENCHMARK_FEED_NOTICE, getMetaLeaderboard } from '../../data/hub-dashboard';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -52,7 +52,7 @@ function formatTokens(n: number): string {
         Best Value AI Models
       </h1>
       <p class="text-(--color-text-secondary) max-w-2xl">
-        {valueModels.length} LLMs ranked by benchmark value using only models with enough current, row-level sourced evidence.
+        {valueModels.length} LLMs ranked by benchmark value. A model is included only when it has two measurements inside the last {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days. {OWN_BENCHMARK_FEED_NOTICE}
       </p>
       <p class="text-xs text-(--color-text-muted) mt-2">
         Value Score = (Rankable Benchmark Average / Blended Price) &times; 10. Higher is better. See our <a href={`${base}methodology/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">methodology</a>.
@@ -133,6 +133,9 @@ function formatTokens(n: number): string {
     <!-- Value bars -->
     <div class="mb-10">
       <h2 class="text-xl font-bold text-(--color-text-primary) mb-4">Value Ranking</h2>
+      {valueModels.length === 0 ? (
+        <p class="mb-4 text-sm text-(--color-text-secondary)">Nothing is ranked. Older measurements are withheld, and no value score is invented for them.</p>
+      ) : null}
       <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5 space-y-2">
         {valueModels.slice(0, 20).map((m, i) => {
           const pct = maxValue > 0 ? (m.valueScore / maxValue * 100) : 0;

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getModelsByCategory } from '../../db/queries';
-import { getMetaLeaderboard } from '../../data/hub-dashboard';
+import { COMPOSITE_MEASUREMENT_MAX_AGE_DAYS, OWN_BENCHMARK_FEED_NOTICE, getMetaLeaderboard } from '../../data/hub-dashboard';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -46,13 +46,13 @@ const baseJSON = safeJson(base);
         Which AI Should I Use?
       </h1>
       <p class="text-(--color-text-secondary) max-w-2xl">
-        Answer 8 quick questions and we'll recommend the best AI model for your specific needs.
-        No account needed, no data collected — just honest recommendations based on real model data.
+        Answer 8 quick questions and we'll match them to models inside the {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS}-day measurement window.
+        No account needed, no data collected. {evaluatedById.size === 0 ? OWN_BENCHMARK_FEED_NOTICE : 'Recommendations use real in-window measurements only.'}
       </p>
     </div>
 
     <!-- Progress bar -->
-    <div id="quiz-progress" class="mb-6">
+    <div id="quiz-progress" class:list={['mb-6', evaluatedById.size === 0 && 'hidden']}>
       <div class="flex items-center justify-between text-xs text-(--color-text-muted) mb-2">
         <span id="progress-label">Question 1 of 8</span>
         <span id="progress-pct">0%</span>
@@ -64,7 +64,11 @@ const baseJSON = safeJson(base);
 
     <!-- Quiz container -->
     <div id="quiz-container">
-      <!-- Questions are rendered by JS -->
+      {evaluatedById.size === 0 ? (
+        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-5 text-sm leading-6 text-(--color-text-secondary)">
+          No model has two benchmark measurements inside the last {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS} days, so this quiz has nothing to rank. {OWN_BENCHMARK_FEED_NOTICE}
+        </div>
+      ) : null}
     </div>
 
     <!-- Results container (hidden initially) -->
@@ -579,6 +583,6 @@ const baseJSON = safeJson(base);
     }
 
     /* ─── Start ───────────────────────────────────────────────── */
-    renderQuestion(0);
+    if (container && models.length > 0) renderQuestion(0);
   </script>
 </BaseLayout>

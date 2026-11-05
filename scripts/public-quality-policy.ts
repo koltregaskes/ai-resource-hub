@@ -1,12 +1,17 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { assessBenchmarkProvenance } from '../src/data/benchmark-provenance';
 import {
+  COMPOSITE_MEASUREMENT_MAX_AGE_DAYS,
   MIN_EVALUATED_BENCHMARKS,
+  OWN_BENCHMARK_RUNS_CONNECTED,
   getFrontierNow,
   getMetaLeaderboard,
+  getWithheldCompositeModels,
 } from '../src/data/hub-dashboard';
 import {
   getBenchmarkScores,
+  getBenchmarks,
   getLLMModelsFromDB,
   getModels,
 } from '../src/db/pg-cache';
@@ -78,6 +83,15 @@ export function getPublicQualityPolicyFailures(repoRoot = process.cwd()): string
     }
   }
 
+  if (OWN_BENCHMARK_RUNS_CONNECTED) {
+    failures.push('Own-benchmark runs are marked connected, but this repository has no Rooms OS benchmark feed.');
+  }
+
+  const benchmarkDefinitions = new Map(getBenchmarks().map((benchmark) => [benchmark.id, benchmark]));
+  if (benchmarkDefinitions.has('kol-floor')) {
+    failures.push('kol-floor is registered without a connected own-benchmark feed.');
+  }
+
   const rankableByModel = new Map<string, Set<string>>();
   for (const row of rankableScores) {
     const benchmarkIds = rankableByModel.get(row.model_id) ?? new Set<string>();
@@ -85,11 +99,29 @@ export function getPublicQualityPolicyFailures(repoRoot = process.cwd()): string
     rankableByModel.set(row.model_id, benchmarkIds);
   }
 
+  const withheldIds = new Set(getWithheldCompositeModels().map((model) => model.id));
+
   for (const model of leaderboard) {
     const distinctBenchmarks = rankableByModel.get(model.id)?.size ?? 0;
     if (distinctBenchmarks < MIN_EVALUATED_BENCHMARKS) {
       failures.push(
         `Evaluated composite admits thin evidence: ${model.id} has ${distinctBenchmarks} distinct rankable benchmark(s).`,
+      );
+    }
+    if (withheldIds.has(model.id)) {
+      failures.push(`Withheld model is still ranked: ${model.id}`);
+    }
+    const inWindow = new Set(
+      rankableScores
+        .filter((row) => row.model_id === model.id)
+        .filter((row) => assessBenchmarkProvenance(row, benchmarkDefinitions.get(row.benchmark_id), {
+          maxAgeDays: COMPOSITE_MEASUREMENT_MAX_AGE_DAYS,
+        }).rankable)
+        .map((row) => row.benchmark_id),
+    );
+    if (inWindow.size < MIN_EVALUATED_BENCHMARKS) {
+      failures.push(
+        `Evaluated composite ranks ${model.id} outside the ${COMPOSITE_MEASUREMENT_MAX_AGE_DAYS}-day window.`,
       );
     }
     if (model.qualityScore !== null) {

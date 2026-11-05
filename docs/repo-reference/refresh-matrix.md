@@ -82,7 +82,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 - Automation: Automated
 - Last refreshed: 05 Feb 2026, 00:00 UTC
 - Category route: `/benchmarks/`
-- Note: Raw evidence gaps remain quarantined. Collection health and source verification require separate evidence.
+- Note: Raw evidence gaps remain quarantined. Own-benchmark runs are not feeding this board. Rooms OS does not publish a benchmark feed this site can ingest, and this page does not invent scores. Collection health and source verification require separate evidence.
 
 ### Source Types
 
