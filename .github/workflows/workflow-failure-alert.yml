@@ -1,0 +1,60 @@
+# Records a failed watched workflow in the existing Rooms OS alert ledger (KOL-6328).
+# Destination: public.rooms_os_alert_events (rooms-os-cloud-postgres / neondb).
+# Reader: public.rooms_os_alert_feed_v, already used by Rooms OS NOW.
+# Does not open a GitHub Issue and does not change the repository Issues setting.
+# workflow_run fires only from the copy of this file on the default branch.
+# This workflow's own name is not in the list below, so it cannot trigger itself.
+name: Workflow failure alert
+
+on:
+  workflow_run:
+    workflows:
+      - "Validate"
+      - "Deploy to GitHub Pages"
+      - "Update data (scrape + rebuild)"
+      - "Refresh provider status"
+      - "alert-selftest"
+    types: [completed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: workflow-failure-alert
+  queue: max
+  cancel-in-progress: false
+
+jobs:
+  alert:
+    if: github.event.workflow_run.conclusion == 'failure' || github.event.workflow_run.conclusion == 'timed_out'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout the alert script
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install the database client
+        working-directory: .github/scripts
+        run: npm install --no-save --no-package-lock pg@8.16.3
+
+      - name: Record the failure in rooms_os_alert_events
+        env:
+          ROOMS_OS_DATABASE_URL: ${{ secrets.ROOMS_OS_DATABASE_URL }}
+          ALERT_RUN_ID: ${{ github.event.workflow_run.id }}
+          ALERT_REPOSITORY: ${{ github.repository }}
+          ALERT_WORKFLOW: ${{ github.event.workflow_run.name }}
+          ALERT_WORKFLOW_PATH: ${{ github.event.workflow_run.path }}
+          ALERT_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          ALERT_HTML_URL: ${{ github.event.workflow_run.html_url }}
+          ALERT_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          ALERT_HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          ALERT_EVENT: ${{ github.event.workflow_run.event }}
+          ALERT_ACTOR: ${{ github.event.workflow_run.actor.login }}
+          ALERT_TRIGGERING_ACTOR: ${{ github.event.workflow_run.triggering_actor.login }}
+          ALERT_OCCURRED_AT: ${{ github.event.workflow_run.run_started_at }}
+        run: node .github/scripts/record-workflow-alert.mjs
