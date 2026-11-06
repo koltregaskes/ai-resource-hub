@@ -5,6 +5,7 @@
  * SQLite directly, so builds and previews use the same source of truth.
  */
 import { blogPosts } from './blog-posts';
+import { guides as guideEntries } from './guides';
 import {
   getAllBenchmarkIds,
   getAllModelIds,
@@ -81,14 +82,7 @@ export function getSearchIndex(base: string): SearchItem[] {
     });
   }
 
-  const guides = [
-    { id: 'prompting-basics', title: 'Prompting Basics', description: 'Learn the fundamentals of writing effective AI prompts' },
-    { id: 'advanced-prompting', title: 'Advanced Prompting Techniques', description: 'Chain-of-thought, few-shot learning, and expert techniques' },
-    { id: 'choosing-an-ai-model', title: 'How to Choose an AI Model', description: 'Framework for selecting the right AI model for your needs' },
-    { id: 'understanding-ai-pricing', title: 'Understanding AI Pricing', description: 'How AI model pricing works — tokens, tiers, and cost optimisation' },
-    { id: 'ai-for-writing', title: 'AI for Writing', description: 'Using AI tools to enhance your writing workflow' },
-    { id: 'ai-for-research', title: 'AI for Research', description: 'Using AI to accelerate and improve your research' },
-  ];
+  const guides = guideEntries.map((g) => ({ id: g.slug, title: g.title, description: g.description }));
 
   for (const guide of guides) {
     items.push({

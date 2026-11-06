@@ -12,6 +12,15 @@ export interface BlogPost {
 /** Editorial posts, newest first. The blog index, search, RSS, and tickers share this list. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'hub-weekly-19-to-25-october-2026',
+    title: 'Hub weekly: 19 to 25 October 2026',
+    description:
+      'What changed on the Hub this week: five model rows, no new models, the 12 June benchmark snapshot still labelled as history, and why a page rebuilt today can hold a price from July.',
+    date: '2026-10-26',
+    type: 'News',
+    readTime: '8 min',
+  },
+  {
     slug: 'four-million-entrepreneurs',
     title: "What the OpenAI entrepreneurship report didn't say",
     description:

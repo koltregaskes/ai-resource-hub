@@ -1,0 +1,60 @@
+---
+import GuideArticle from '../../components/GuideArticle.astro';
+import HubModelTable from '../../components/HubModelTable.astro';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const sources = [
+  { label: 'Radford et al. (2022), Robust Speech Recognition via Large-Scale Weak Supervision (Whisper), arXiv:2212.04356', url: 'https://arxiv.org/abs/2212.04356' },
+  { label: 'OpenAI, Text to speech guide', url: 'https://platform.openai.com/docs/guides/text-to-speech' },
+  { label: 'OpenAI, Speech to text guide', url: 'https://platform.openai.com/docs/guides/speech-to-text' },
+];
+---
+<GuideArticle
+  title="AI Voice Models: Text to Speech and Speech to Text"
+  crumb="Voice Models"
+  description="The difference between text-to-speech, speech-to-text and music models, what to compare in each, and the consent rules for voice cloning."
+  intro="Voice models come in two directions. Text-to-speech turns writing into a spoken voice. Speech-to-text turns a recording into a transcript. The Hub lists them separately."
+  category="Practical"
+  readTime="7 min read"
+  updated="2026-10-26"
+  sources={sources}
+>
+  <h2>Text to speech</h2>
+  <p>
+    These models read text aloud in a chosen voice. They're used for narration, accessibility, voice assistants and phone systems. Many providers also offer voice cloning, which builds a voice from a sample recording.
+  </p>
+  <HubModelTable category="voice" limit={11} />
+  <h3>What to compare</h3>
+  <ul>
+    <li><strong>Naturalness.</strong> Listen to a long paragraph, not one sentence. Flat rhythm shows up over time.</li>
+    <li><strong>Latency.</strong> For live conversation, the delay before audio starts matters more than anything else. Providers often have a separate fast model for this.</li>
+    <li><strong>Languages and accents.</strong> Check the ones you need, including names and place names.</li>
+    <li><strong>Control.</strong> Can you change pace, emotion or pronunciation?</li>
+    <li><strong>Price,</strong> usually per character or per minute. See the <a href={`${base}compare/voice/`}>voice comparison page</a>, and treat our figures as dated.</li>
+  </ul>
+
+  <h2>Speech to text</h2>
+  <p>
+    Transcription models turn audio into text, often with timestamps and labels for who spoke. OpenAI's Whisper, released in 2022 with open weights, was trained on 680,000 hours of audio collected from the web, and it made accurate multilingual transcription widely available.
+  </p>
+  <HubModelTable category="speech" limit={7} />
+  <h3>What to compare</h3>
+  <ul>
+    <li><strong>Accuracy on your audio.</strong> Test with your own recordings: accents, background noise, jargon. Published error rates come from clean test sets.</li>
+    <li><strong>Speaker labels and timestamps,</strong> if you need minutes or subtitles.</li>
+    <li><strong>Live or batch.</strong> Real-time transcription is a different product from uploading a file.</li>
+    <li><strong>Privacy.</strong> Where the audio goes and how long it's kept. Whisper can run locally (see <a href={`${base}guides/local-models/`}>Local Models</a>).</li>
+  </ul>
+  <p>
+    The <a href={`${base}stt-models/`}>speech-to-text page</a> and the <a href={`${base}compare/speech/`}>speech comparison</a> have more detail.
+  </p>
+
+  <h2>Music and sound</h2>
+  <p>
+    We also list a handful of music and sound models on the <a href={`${base}compare/sound/`}>sound comparison page</a>. Check each provider's terms on commercial use and ownership before publishing anything made with them.
+  </p>
+
+  <h2>Consent and cloning</h2>
+  <p>
+    Only clone a voice you have permission to use, ideally in writing. Cloned voices have been used in scams, so if a call in a familiar voice asks for money or passwords, hang up and call back on a number you know. When you publish synthetic speech, say so.
+  </p>
+</GuideArticle>

@@ -1,0 +1,64 @@
+---
+import GuideArticle from '../../components/GuideArticle.astro';
+import modelsLatest from '../../../public/data/models-latest.json';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const policy = modelsLatest.benchmark_policy;
+const sources = [
+  { label: 'Hendrycks et al. (2020), Measuring Massive Multitask Language Understanding (MMLU), arXiv:2009.03300', url: 'https://arxiv.org/abs/2009.03300' },
+  { label: 'Jimenez et al. (2023), SWE-bench: Can Language Models Resolve Real-World GitHub Issues?, arXiv:2310.06770', url: 'https://arxiv.org/abs/2310.06770' },
+  { label: 'Chiang et al. (2024), Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference, arXiv:2403.04132', url: 'https://arxiv.org/abs/2403.04132' },
+  { label: 'Sainz et al. (2023), NLP Evaluation in trouble: On the Need to Measure LLM Data Contamination, arXiv:2310.18018', url: 'https://arxiv.org/abs/2310.18018' },
+];
+---
+<GuideArticle
+  title="How AI Benchmarks Work"
+  crumb="How Benchmarks Work"
+  description="What a benchmark measures, the main kinds, why scores can mislead, and how the Hub decides which scores it will rank."
+  intro="A benchmark is a fixed set of tasks with a marking scheme. Run a model through it and you get a score you can compare with other models on the same test."
+  category="Intermediate"
+  readTime="7 min read"
+  updated="2026-10-26"
+  sources={sources}
+>
+  <p>
+    The idea is old and simple. Everyone sits the same exam, so the marks are comparable. The trouble starts with the details: which exam, who ran it, with what settings, and whether the model saw the questions during training.
+  </p>
+
+  <h2>Three common kinds</h2>
+  <h3>Fixed question sets</h3>
+  <p>
+    MMLU, published in 2020 by Dan Hendrycks and colleagues, has multiple-choice questions across 57 subjects, from maths to law. Answers are right or wrong, so marking is automatic and cheap. Once most top models score highly, though, a test like this stops telling them apart.
+  </p>
+  <h3>Task benchmarks</h3>
+  <p>
+    SWE-bench takes real issues from open-source Python projects on GitHub and checks whether a model's code change makes the project's tests pass. It's closer to real work, but results depend heavily on the tooling wrapped around the model, so two scores for the same model can differ a lot.
+  </p>
+  <h3>Human preference</h3>
+  <p>
+    Chatbot Arena, now LMArena, shows people two anonymous answers to the same prompt and asks which is better. Thousands of these votes become a rating. It captures what people like, which isn't always the same as what's correct.
+  </p>
+
+  <h2>Why scores mislead</h2>
+  <ul>
+    <li><strong>Contamination.</strong> If test questions leaked into training data, a high score may reflect memory, not ability. Researchers have flagged this as a growing problem for public test sets.</li>
+    <li><strong>Different settings.</strong> Number of attempts, prompt wording, tools allowed and time limits all move scores. A lab's own number and an independent run often differ.</li>
+    <li><strong>Narrow tests.</strong> A model that's best at competition maths may not be best at your emails.</li>
+    <li><strong>Self-reported results.</strong> Launch posts pick the tests that look good.</li>
+  </ul>
+
+  <h2>How the Hub handles this</h2>
+  <p>
+    We only rank a score when we can trace it to an exact, reviewed row in a named source. In the current model export, that rule leaves {policy.rankable_score_count} of {policy.raw_score_count} raw benchmark scores rankable and {policy.quarantined_score_count} quarantined, and composite quality scores are switched off for every model because they can't yet be traced. The homepage's internal benchmark is a snapshot from 12 June 2026 and isn't a current ranking. We'd sooner show a gap than a number we can't back up. The <a href={`${base}methodology/`}>methodology page</a> has the full rules, and <a href={`${base}guides/reading-hub-tables/`}>How to Read the Hub's Tables</a> explains the labels.
+  </p>
+
+  <h2>Using benchmarks well</h2>
+  <ul>
+    <li>Pick the two or three tests closest to your own work and ignore the rest.</li>
+    <li>Prefer independent runs over launch-day claims.</li>
+    <li>Treat small gaps as ties.</li>
+    <li>Then try the models on your own tasks. Nothing beats that.</li>
+  </ul>
+  <p>
+    The <a href={`${base}benchmarks/`}>benchmarks section</a> lists every test we track, and the February post <a href={`${base}blog/how-ai-benchmarks-work/`}>How AI Benchmarks Work</a> has more background.
+  </p>
+</GuideArticle>
