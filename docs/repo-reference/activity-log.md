@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 06 Nov 2026, 22:56 UTC
+Generated: 06 Nov 2026, 23:04 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 06 Nov 2026, 22:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 06 Nov 2026, 22:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 06 Nov 2026, 22:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 06 Nov 2026, 22:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 06 Nov 2026, 22:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 06 Nov 2026, 23:03 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 06 Nov 2026, 23:03 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 06 Nov 2026, 23:03 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 06 Nov 2026, 23:03 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 06 Nov 2026, 23:03 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 06 Nov 2026, 12:00 UTC | digest | All the latest updates on AI data centers | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy) |
 | 06 Nov 2026, 12:00 UTC | digest | Chainalysis says hackers stole credentials and tokens for all of its customers | Ars Technica featured in the latest daily brief. | [open](https://arstechnica.com/security/2026/11/chainalysis-says-hackers-stole-credentials-and-tokens-for-all-of-its-customers/) |
 | 06 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,033 open roles across 10 tracked companies. | `/jobs/` |
