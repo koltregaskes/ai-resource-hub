@@ -385,26 +385,26 @@ function formatReleaseDate(value: string | null): string {
           placeholder="Search model or provider..."
           class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:outline-none focus:border-(--color-accent)"
         />
-        <select id="leaderboard-provider" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+        <select id="leaderboard-provider" aria-label="Filter by lab" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
           <option value="">All labs</option>
           {providerOptions.map((provider) => (
             <option value={provider}>{provider}</option>
           ))}
         </select>
-        <select id="leaderboard-use-case" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+        <select id="leaderboard-use-case" aria-label="Filter by use case" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
           <option value="">All use cases</option>
           {useCaseOptions.map((useCase) => (
             <option value={useCase}>{useCase}</option>
           ))}
         </select>
-        <select id="leaderboard-signal" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+        <select id="leaderboard-signal" aria-label="Filter by signal" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
           <option value="">All signals</option>
           <option value="open">Open source only</option>
           <option value="api">API available</option>
           <option value="high-coverage">High coverage (60%+)</option>
           <option value="recent">Released in the last 180 days</option>
         </select>
-        <select id="leaderboard-sort" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+        <select id="leaderboard-sort" aria-label="Sort leaderboard" class="w-full rounded-full border border-(--color-border) bg-(--color-bg-primary) px-4 py-3 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
           <option value="meta">Composite rank</option>
           <option value="value">Best value</option>
           <option value="cheap">Cheapest input</option>

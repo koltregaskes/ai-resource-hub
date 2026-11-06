@@ -292,6 +292,8 @@ export default function NewsFilter({ news }: Props) {
     <div className="relative flex gap-6">
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}
+        aria-label={sidebarOpen ? 'Close news filters' : 'Open news filters'}
+        aria-expanded={sidebarOpen}
         className="fixed bottom-4 right-4 z-50 rounded-full p-3 shadow-lg lg:hidden"
         style={{ backgroundColor: 'var(--color-accent)', color: '#fff' }}
       >
@@ -389,6 +391,7 @@ export default function NewsFilter({ news }: Props) {
             <div className="flex items-center gap-1 text-xs">
               <input
                 type="date"
+                aria-label="From date"
                 value={customFrom}
                 onChange={(event) => {
                   setCustomFrom(event.target.value);
@@ -400,6 +403,7 @@ export default function NewsFilter({ news }: Props) {
               <span style={{ color: 'var(--color-text-muted)' }}>to</span>
               <input
                 type="date"
+                aria-label="To date"
                 value={customTo}
                 onChange={(event) => {
                   setCustomTo(event.target.value);
@@ -414,6 +418,7 @@ export default function NewsFilter({ news }: Props) {
           <div>
             <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Archive</h3>
             <select
+              aria-label="Archive month"
               value={archiveMonth}
               onChange={(event) => {
                 setArchiveMonth(event.target.value);

@@ -355,6 +355,15 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
       content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
     />
     <link rel="canonical" href={canonicalURL} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: title,
+      description,
+      url: canonicalURL.href,
+      inLanguage: localeMeta.code,
+      isPartOf: { '@type': 'WebSite', name: 'The AI Resource Hub', url: new URL(base, Astro.site).href },
+    })} />
     {alternateLocaleLinks.map((link) => (
       <link rel="alternate" hreflang={link.hreflang} href={link.href} />
     ))}
@@ -499,7 +508,7 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
     )}
 
     {compactChrome && !isHomePage && globalTickerItems.length > 0 && (
-      <div class="airh-site-ticker" aria-label="Latest AI Resource Hub updates">
+      <div class="airh-site-ticker" role="region" aria-label="Latest AI Resource Hub updates">
         <div class="airh-site-ticker-inner">
           <a
             href={`${base}updates/`}
@@ -696,7 +705,7 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
       </div>
     )}
 
-    <main id="main-content" class:list={['flex-1', { 'airh-route-template-host': compactChrome && !isHomePage }]}>
+    <main id="main-content" tabindex="-1" class:list={['flex-1', { 'airh-route-template-host': compactChrome && !isHomePage }]}>
       {compactChrome && !isHomePage ? (
         <>
           <header class="airh-route-template-chrome airh-route-dossier-head" aria-hidden="true">
@@ -965,5 +974,40 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
       });
     </script>
     <script src={`${base}cross-site-nav.js`} defer></script>
+    <script is:inline>
+      // WCAG 2.1.1: a horizontally scrolling table or code block must be reachable
+      // by keyboard. Give each container that actually overflows a tab stop and a
+      // region name, and take them away again when it stops overflowing.
+      (function () {
+        const SELECTOR = '.overflow-x-auto, .table-scroll-container, pre';
+        const focusable = 'a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])';
+        function sync() {
+          document.querySelectorAll(SELECTOR).forEach(function (el) {
+            const overflows = el.scrollWidth > el.clientWidth + 1;
+            const marked = el.hasAttribute('data-airh-scroll-focus');
+            if (overflows && !marked && !el.hasAttribute('tabindex') && !el.querySelector(focusable)) {
+              const added = ['tabindex'];
+              el.setAttribute('tabindex', '0');
+              if (!el.hasAttribute('role')) { el.setAttribute('role', 'region'); added.push('role'); }
+              if (!el.hasAttribute('aria-label') && !el.hasAttribute('aria-labelledby')) {
+                el.setAttribute('aria-label', el.querySelector('table') ? 'Scrollable table' : 'Scrollable content');
+                added.push('aria-label');
+              }
+              el.setAttribute('data-airh-scroll-focus', added.join(' '));
+            } else if (!overflows && marked) {
+              // Remove only what this script added.
+              el.getAttribute('data-airh-scroll-focus').split(' ').forEach(function (a) { el.removeAttribute(a); });
+              el.removeAttribute('data-airh-scroll-focus');
+            }
+          });
+        }
+        let pending = 0;
+        const schedule = function () { cancelAnimationFrame(pending); pending = requestAnimationFrame(sync); };
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', schedule);
+        else schedule();
+        window.addEventListener('load', schedule);
+        window.addEventListener('resize', schedule);
+      })();
+    </script>
   </body>
 </html>

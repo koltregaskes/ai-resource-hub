@@ -81,7 +81,11 @@ export default function MiniPriceChart({ data, colour: _colour }: Props) {
   return (
     <div className="flex items-center gap-3">
       <div style={{ width: '200px', height: '60px', position: 'relative' }}>
-        <Line data={chartData} options={options} />
+        <Line
+          data={chartData}
+          options={options}
+          aria-label={`Price history chart: $${firstPrice.toFixed(2)} to $${lastPrice.toFixed(2)}`}
+        />
       </div>
       <div className="text-xs space-y-0.5">
         <div style={{ color: '#64748b' }}>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { badgeInk } from '../../data/badge-ink';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -226,7 +227,7 @@ curl http://localhost:11434/v1/chat/completions \\
       {providers.map((provider) => (
         <div id={provider.id} class="scroll-mt-20">
           <div class="flex items-center gap-3 mb-4">
-            <div class="w-8 h-8 rounded-lg flex items-center justify-center text-white font-bold text-xs" style={`background-color: ${provider.colour}`}>
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-xs" style={`background-color: ${provider.colour}; color: ${badgeInk(provider.colour)}`}>
               {provider.name.slice(0, 2).toUpperCase()}
             </div>
             <div>
