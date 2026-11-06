@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 06 Nov 2026, 11:57 UTC
+Generated: 06 Nov 2026, 12:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
+| 06 Nov 2026, 12:57 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 06 Nov 2026, 12:57 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 06 Nov 2026, 12:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 06 Nov 2026, 12:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 06 Nov 2026, 12:57 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 06 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,041 open roles across 10 tracked companies. | `/jobs/` |
 | 06 Nov 2026, 12:00 UTC | digest | OpenAI is stepping back from NDAs for data center projects | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda) |
 | 06 Nov 2026, 12:00 UTC | digest | Palo Alto Networks in talks to buy AI agent security startup Clutch for $500M | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/) |
 | 06 Nov 2026, 12:00 UTC | digest | Protesters break into Microsoft data center site in Amsterdam | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/news/1028549/protesters-microsoft-data-center-site-amsterdam) |
 | 06 Nov 2026, 12:00 UTC | digest | Published the 2026-11-06 daily digest | 4 stories captured from 2 sources. | `/news/` |
-| 06 Nov 2026, 11:56 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 06 Nov 2026, 11:56 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 06 Nov 2026, 11:56 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 06 Nov 2026, 11:56 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 06 Nov 2026, 11:56 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
