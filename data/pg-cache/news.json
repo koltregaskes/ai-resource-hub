@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-ead671d25881cf904ee0",
+    "title": "After the midterms, is the AI industry in for a rough two years?",
+    "url": "https://techcrunch.com/video/after-the-midterms-is-the-ai-industry-in-for-a-rough-two-years/",
+    "source": "TechCrunch",
+    "summary": "Democrats’ historic victories in this week’s U.S. midterm elections could also transform the tech industry. The public voted on 41 data center-related ballot measures on Tuesday — in all but one, the majority voted to impose more restrictions on data center development. And even when data centers weren’t on the ballot…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-06T17:23:52.000Z",
+    "discovered_at": "2026-11-06 17:27:31"
+  },
+  {
+    "id": "news-91f8d419f4fcff3536db",
+    "title": "AI is the new dating dealbreaker",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1028609/ai-dating-feelings-doomers-singularity",
+    "source": "The Verge",
+    "summary": "When Irene moved to San Francisco last year, she started using dating apps as a way to meet new people, get to know her new city, and connect with others who care about the things she does. After the 25-year-old analyst downloaded Hinge and started swiping, she noticed a trend. \"Hinge has a prompt where [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-06T17:00:00.000Z",
+    "discovered_at": "2026-11-06 17:27:43"
+  },
+  {
+    "id": "news-22815b4f725ebdf4fa61",
+    "title": "Big Tech lost big in the 2026 election",
+    "url": "https://www.theverge.com/podcast/1028731/2026-midterms-tech-ai-vergecast",
+    "source": "The Verge",
+    "summary": "On Tuesday, millions of American voters went to the polls and voted overwhelmingly for Democrats and against AI. The fight against Big Tech is about to come roaring back, and the fight over data centers is looking even harder for the folks trying to build them. On this episode of The Vergecast, Nilay and David [&#8230…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-06T16:38:02.000Z",
+    "discovered_at": "2026-11-06 17:27:43"
+  },
+  {
+    "id": "news-c821c11af1c22210112b",
+    "title": "How Akai and Moog are embracing vibe-coded mods",
+    "url": "https://www.theverge.com/tech/1028720/vibe-coding-open-source-inmusic-akai",
+    "source": "The Verge",
+    "summary": "inMusic, the parent company of Akai, Moog, Native Instruments, and more, has decided to embrace the modding community. In an interview with The Verge, inMusic CEO Jack O'Donnell said, \"We're going to provide a toolbox to the community, we're going to provide the inner workings of, say, an MPC or Sample so that people…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-06T16:34:39.000Z",
+    "discovered_at": "2026-11-06 17:27:43"
+  },
+  {
     "id": "news-d275be2a1267c8e7312f",
     "title": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
     "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T15:54:47.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-ab4846bbc512d7902016",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T14:10:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-35ab47bbc76cac8b8886",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T14:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:56"
+    "discovered_at": "2026-11-06 17:27:43"
   },
   {
     "id": "news-fbf575ba8ccde9feb964",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T13:02:16.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-f3bfec28682f8e7dcae9",
@@ -57,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T13:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-44766e97c42926fe8f27",
@@ -69,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T11:55:19.000Z",
-    "discovered_at": "2026-11-06 16:55:56"
+    "discovered_at": "2026-11-06 17:27:43"
   },
   {
     "id": "news-9889510bec40cd608e6f",
@@ -81,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T06:28:32.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-85f398082dadd860b70c",
@@ -93,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T00:37:56.000Z",
-    "discovered_at": "2026-11-06 16:55:56"
+    "discovered_at": "2026-11-06 17:27:43"
   },
   {
     "id": "news-cc48f8093c5bb1034d8c",
@@ -105,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T00:06:12.000Z",
-    "discovered_at": "2026-11-06 16:55:56"
+    "discovered_at": "2026-11-06 17:27:43"
   },
   {
     "id": "news-01af2f668adeb82b3308",
@@ -117,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T22:40:55.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-8e75ec02fc50e91f564b",
@@ -129,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T22:26:50.000Z",
-    "discovered_at": "2026-11-06 16:55:56"
+    "discovered_at": "2026-11-06 17:27:43"
   },
   {
     "id": "news-c88b52d0b21039c72dea",
@@ -141,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T20:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-9d6202c03434e451435a",
@@ -153,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T19:48:28.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-ea881b03ae961dac0fd3",
@@ -165,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T19:12:39.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-8f7798ef97e413356d77",
@@ -177,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T19:06:12.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-c6134d61030c25d12108",
@@ -189,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T19:03:04.000Z",
-    "discovered_at": "2026-11-06 16:55:56"
+    "discovered_at": "2026-11-06 17:27:43"
   },
   {
     "id": "news-bf7e9a38adde58876732",
@@ -201,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T18:02:27.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-f49d817c3fd35c35c529",
@@ -213,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T18:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:56"
+    "discovered_at": "2026-11-06 17:27:43"
   },
   {
     "id": "news-b0e121b3a461c115e0db",
@@ -225,43 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T18:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
-  },
-  {
-    "id": "news-23696f011bd98b05f7d3",
-    "title": "‘Total repudiation’: The blue wave is about to hit AI",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1026927/total-repudiation-the-blue-wave-is-about-to-hit-ai",
-    "source": "The Verge",
-    "summary": "On Tuesday night, Democrats made history as they took control of the House and the Senate, and a blue wave swept through traditionally red and swing states - with the nation's first Black woman governor elected in Georgia, the country's first Native American woman governor elected in New Mexico, and a Maine Senator ce…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-05T17:51:52.000Z",
-    "discovered_at": "2026-11-06 16:55:56"
-  },
-  {
-    "id": "news-b529285c262b3aff5c1f",
-    "title": "OpenAI says its new cybersecurity model is better at not hacking other companies",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1027599/openai-gpt-6-cyber-launch",
-    "source": "The Verge",
-    "summary": "OpenAI is launching GPT-6 Cyber, the latest version of its cybersecurity AI model, which it says is better at finding vulnerabilities and less likely to go rogue and hack other platforms in the process. OpenAI says that during testing, GPT-6 Cyber went out of bounds less than 1 percent of the time, down from around [&…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:56"
-  },
-  {
-    "id": "news-4dac3d0c60c6510eae78",
-    "title": "Grimes is going to star in an AI movie that’s coming to theaters",
-    "url": "https://www.theverge.com/entertainment/1026282/grimes-ai-movie",
-    "source": "The Verge",
-    "summary": "The AI-generated sci-fi film Gods Don't Give Gifts has added a bit of star power: Pop star Grimes is going to appear in the movie. Billed as \"the first AI film to come to theatres,\" Gods Don't Give Gifts is a notable test case for the commercial potential of AI films, and it releases on [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:56"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -273,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-b58fee4edbbb5f7a9c2c",
@@ -285,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-c2788911aa715e520bc4",
@@ -297,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T16:16:45.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-6dad7a604d398d82538b",
@@ -309,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T15:19:05.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-0f2052ea73f7a4c11ac6",
@@ -321,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T14:42:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-d51f62aa0d3ca8ee0b8f",
@@ -333,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T14:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-b06af2d45cd2abb56f1e",
@@ -345,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T13:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-956cb223c580c4f0e9ff",
@@ -357,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T12:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-53c56afbaf05f856eba5",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T09:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-300d91101f21ec1db57e",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T08:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-f93567576105c7139347",
@@ -393,19 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T02:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
-  },
-  {
-    "id": "news-1c7da4acfcdd25cb9b09",
-    "title": "Apple is reportedly cutting budgets for its internal AI usage",
-    "url": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/",
-    "source": "TechCrunch",
-    "summary": "The tokenmaxxing frenzy has been short-lived as bills for said tokens came due, and companies decided that token rationing might be a more fiscally sensible approach.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-05T01:26:22.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-1f9981de57006417a4eb",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T00:45:15.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-c0d7b0808284d1827cd1",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T00:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-3a06f84c0f51a102b02f",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T14:30:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-a4f4c423c54260333db7",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T08:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-75679f5aa60bfcf88cfe",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T07:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-bf25be8f87794d7d4a5b",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T00:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-0a437d67f2effbc5f98d",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T00:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-26c6032e1d2677657b70",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T12:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-08b710f1e7801fa86cc9",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T08:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-a2357e701f020223b310",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T08:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-3d509e27bae229a3dde1",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T00:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-de4cf53f9db96311cdf4",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T15:30:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-19244c7aa2063fd3d4e1",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T15:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-06 16:55:56"
+    "discovered_at": "2026-11-06 17:27:43"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-11-06 16:55:56"
+    "discovered_at": "2026-11-06 17:27:43"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-11-06 16:55:56"
+    "discovered_at": "2026-11-06 17:27:43"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -645,6 +645,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-11-06 16:55:43"
+    "discovered_at": "2026-11-06 17:27:31"
   }
 ]
