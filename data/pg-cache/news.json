@@ -1,5 +1,29 @@
 [
   {
+    "id": "news-85f398082dadd860b70c",
+    "title": "OpenAI is stepping back from NDAs for data center projects",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1028454/openai-data-center-nda",
+    "source": "The Verge",
+    "summary": "Following this week's midterms where voters resoundingly voiced their opposition to data center expansion, OpenAI today announced new commitments to communities where it is working on data center projects, including that it won't use non-disclosure agreements (NDAs) with public officials. Many data center projects hav…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-06T00:37:56.000Z",
+    "discovered_at": "2026-11-06 01:30:23"
+  },
+  {
+    "id": "news-cc48f8093c5bb1034d8c",
+    "title": "Airbnb is working on an AI travel agent",
+    "url": "https://www.theverge.com/tech/1028412/airbnb-ai-travel-agent-q3-2026-earnings",
+    "source": "The Verge",
+    "summary": "Airbnb plans to roll out an AI agent in the first half of 2027 that will help users plan and book travel, the company said in its Q3 2026 earnings shareholder letter released today. \"Today's AI agents are good at simple, routine tasks, like making a restaurant reservation or scheduling an appointment,\" Airbnb said. \"B…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-06T00:06:12.000Z",
+    "discovered_at": "2026-11-06 01:30:23"
+  },
+  {
     "id": "news-01af2f668adeb82b3308",
     "title": "Airbnb says it&#8217;s launching an AI travel agent in the first half of 2027",
     "url": "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/",
@@ -9,7 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T22:40:55.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-8e75ec02fc50e91f564b",
@@ -21,7 +45,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T22:26:50.000Z",
-    "discovered_at": "2026-11-06 00:55:54"
+    "discovered_at": "2026-11-06 01:30:23"
+  },
+  {
+    "id": "news-c88b52d0b21039c72dea",
+    "title": "Cult.fit builds operational muscle with Codex",
+    "url": "https://openai.com/index/cultfit-builds-with-codex",
+    "source": "OpenAI",
+    "summary": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-05T20:00:00.000Z",
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-9d6202c03434e451435a",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T19:48:28.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-ea881b03ae961dac0fd3",
@@ -45,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T19:12:39.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-8f7798ef97e413356d77",
@@ -57,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T19:06:12.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-c6134d61030c25d12108",
@@ -69,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T19:03:04.000Z",
-    "discovered_at": "2026-11-06 00:55:54"
+    "discovered_at": "2026-11-06 01:30:23"
   },
   {
     "id": "news-bf7e9a38adde58876732",
@@ -81,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T18:02:27.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-f49d817c3fd35c35c529",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T18:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:54"
+    "discovered_at": "2026-11-06 01:30:23"
   },
   {
     "id": "news-b0e121b3a461c115e0db",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T18:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-23696f011bd98b05f7d3",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:51:52.000Z",
-    "discovered_at": "2026-11-06 00:55:54"
+    "discovered_at": "2026-11-06 01:30:23"
   },
   {
     "id": "news-b529285c262b3aff5c1f",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:54"
+    "discovered_at": "2026-11-06 01:30:23"
   },
   {
     "id": "news-4dac3d0c60c6510eae78",
@@ -141,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:54"
+    "discovered_at": "2026-11-06 01:30:23"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -153,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-c2788911aa715e520bc4",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T16:16:45.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-6dad7a604d398d82538b",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T15:19:05.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-f8f8c085e2e5be1c3c87",
@@ -189,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T15:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:54"
+    "discovered_at": "2026-11-06 01:30:23"
   },
   {
     "id": "news-56c190950731d79b3384",
@@ -201,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T15:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:54"
+    "discovered_at": "2026-11-06 01:30:23"
   },
   {
     "id": "news-0f2052ea73f7a4c11ac6",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T14:42:00.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-d51f62aa0d3ca8ee0b8f",
@@ -225,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T14:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-b06af2d45cd2abb56f1e",
@@ -237,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T13:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-956cb223c580c4f0e9ff",
@@ -249,19 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T12:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
-  },
-  {
-    "id": "news-b8c0e66ba85503fb8eab",
-    "title": "Big Tech’s big AI buildout will not end until someone stops it",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1027344/amazon-microsoft-alphabet-google-meta-data-centers-earnings-q3",
-    "source": "The Verge",
-    "summary": "After four of the biggest competitors in the AI race held quarterly earnings calls late last month, two things are clear: Big Tech is not done spending record amounts on the AI data center buildout, and the AI data center buildout is not any closer to yielding its promised returns. A third thing is also [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-05T10:45:00.000Z",
-    "discovered_at": "2026-11-06 00:55:54"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-53c56afbaf05f856eba5",
@@ -273,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T09:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-300d91101f21ec1db57e",
@@ -285,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T08:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-f93567576105c7139347",
@@ -297,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T02:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-1c7da4acfcdd25cb9b09",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T01:26:22.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-2c368bf7ce92124498a2",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T01:02:14.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-1f9981de57006417a4eb",
@@ -333,7 +357,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T00:45:15.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
+  },
+  {
+    "id": "news-c0d7b0808284d1827cd1",
+    "title": "Franklin Templeton uses OpenAI to support investment research",
+    "url": "https://openai.com/index/franklin-templeton",
+    "source": "OpenAI",
+    "summary": "Starting with equity research, Franklin Templeton is developing AI workflows to help portfolio managers compare research views and examine investment risks.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-05T00:00:00.000Z",
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-33a7076609087ff9ed30",
@@ -345,19 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T22:45:09.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
-  },
-  {
-    "id": "news-48d8c1552d58becdf0a6",
-    "title": "Qualcomm is betting big on data centers as smartphone sales sink",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1026867/qualcomm-earnings-data-centers",
-    "source": "The Verge",
-    "summary": "With smartphone sales tanking by around 20 percent compared to 2025, Qualcomm is looking to data centers to help boost its bottom line. During its Q4 2026 earnings call, the company laid out its plans to make a splash in the AI data center business, through partnerships with companies like Amazon and Meta announced ea…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-04T22:42:15.000Z",
-    "discovered_at": "2026-11-06 00:55:54"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-90248c1ffce43a9b9c96",
@@ -369,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T22:13:16.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-f3f4f568585b6de90295",
@@ -381,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T21:56:01.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-6050c43be029e7506e60",
@@ -393,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T21:25:44.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-3a06f84c0f51a102b02f",
@@ -405,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T14:30:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-a4f4c423c54260333db7",
@@ -417,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T08:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-75679f5aa60bfcf88cfe",
@@ -429,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T07:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-bf25be8f87794d7d4a5b",
@@ -441,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T00:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-0a437d67f2effbc5f98d",
@@ -453,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T00:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-26c6032e1d2677657b70",
@@ -465,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T12:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-08b710f1e7801fa86cc9",
@@ -477,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T08:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-a2357e701f020223b310",
@@ -489,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T08:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-3d509e27bae229a3dde1",
@@ -501,19 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T00:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
-  },
-  {
-    "id": "news-6fd6ad7938fa5bc51515",
-    "title": "Rewarding defenders with bigger bug bounties",
-    "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
-    "source": "OpenAI",
-    "summary": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-02T18:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-262cfa35f4308cc0bcff",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T18:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-de4cf53f9db96311cdf4",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T15:30:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-19244c7aa2063fd3d4e1",
@@ -561,19 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T15:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
-  },
-  {
-    "id": "news-ed4b58253682640ff970",
-    "title": "LifeVal",
-    "url": "https://openai.com/index/lifeval",
-    "source": "OpenAI",
-    "summary": "Introducing LifeVal, a benchmark measuring how well AI helps people complete everyday tasks, from finding childcare to managing finances and government paperwork.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-02T09:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:41"
+    "discovered_at": "2026-11-06 01:30:13"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-06 00:55:54"
+    "discovered_at": "2026-11-06 01:30:23"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-11-06 00:55:54"
+    "discovered_at": "2026-11-06 01:30:23"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-11-06 00:55:54"
+    "discovered_at": "2026-11-06 01:30:23"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   },
   {
     "id": "news-22643d6fcb1952200807",
@@ -657,6 +657,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-07T12:00:00.000Z",
-    "discovered_at": "2026-11-06 00:55:42"
+    "discovered_at": "2026-11-06 01:30:14"
   }
 ]
