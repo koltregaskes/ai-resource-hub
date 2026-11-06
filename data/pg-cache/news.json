@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-4758b3e0840745310332",
+    "title": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
+    "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
+    "source": "TechCrunch",
+    "summary": "Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, allowing anyone access to the hacking tool.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-06T18:44:38.000Z",
+    "discovered_at": "2026-11-06 18:55:43"
+  },
+  {
+    "id": "news-46e88a02e03424f2e4ee",
+    "title": "Meta introduces Spaces, a new way to collaborate with your Muse agent",
+    "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+    "source": "TechCrunch",
+    "summary": "Meta's Muse agents continue to get new features and integrations. Spaces promises to be a new way to interact with the AI helpers.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-06T18:44:20.000Z",
+    "discovered_at": "2026-11-06 18:55:43"
+  },
+  {
+    "id": "news-52e0623fab799a2104d7",
+    "title": "Meta&#8217;s Muse AI can create custom &#8216;spaces&#8217; for the version of the app you need right now",
+    "url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces",
+    "source": "The Verge",
+    "summary": "Meta will now allow you to build customized, app-like experiences within its Muse AI assistant. The new feature, called \"spaces,\" allows Muse to build things like a shopping hub, school dashboard, music tracker, trivia game, and more, which you can interact with directly in the app. If you connect your space to a rele…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-06T18:10:10.000Z",
+    "discovered_at": "2026-11-06 18:55:54"
+  },
+  {
+    "id": "news-860444638104df4baec5",
+    "title": "How a Blue Wave midterm might reshape the AI industry",
+    "url": "https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry/",
+    "source": "TechCrunch",
+    "summary": "Democrats’ historic victories in this week’s U.S. midterm elections could also transform the tech industry. The public voted on 41 data center-related ballot measures on Tuesday — in all but one, the majority voted to impose more restrictions on data center development. And even when data centers weren’t on the ballot…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-06T18:00:00.000Z",
+    "discovered_at": "2026-11-06 18:55:43"
+  },
+  {
     "id": "news-ead671d25881cf904ee0",
     "title": "After the midterms, is the AI industry in for a rough two years?",
     "url": "https://techcrunch.com/video/after-the-midterms-is-the-ai-industry-in-for-a-rough-two-years/",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T17:23:52.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-91f8d419f4fcff3536db",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T17:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:43"
+    "discovered_at": "2026-11-06 18:55:54"
   },
   {
     "id": "news-22815b4f725ebdf4fa61",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T16:38:02.000Z",
-    "discovered_at": "2026-11-06 17:27:43"
+    "discovered_at": "2026-11-06 18:55:54"
   },
   {
     "id": "news-c821c11af1c22210112b",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T16:34:39.000Z",
-    "discovered_at": "2026-11-06 17:27:43"
+    "discovered_at": "2026-11-06 18:55:54"
   },
   {
     "id": "news-d275be2a1267c8e7312f",
@@ -57,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T15:54:47.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-ab4846bbc512d7902016",
@@ -69,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T14:10:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-35ab47bbc76cac8b8886",
@@ -81,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T14:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:43"
+    "discovered_at": "2026-11-06 18:55:54"
   },
   {
     "id": "news-fbf575ba8ccde9feb964",
@@ -93,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T13:02:16.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-f3bfec28682f8e7dcae9",
@@ -105,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T13:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-44766e97c42926fe8f27",
@@ -117,7 +165,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T11:55:19.000Z",
-    "discovered_at": "2026-11-06 17:27:43"
+    "discovered_at": "2026-11-06 18:55:54"
+  },
+  {
+    "id": "news-bc8f9eac19663ff628fb",
+    "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+    "url": "https://openai.com/index/partnering-with-hacktron",
+    "source": "OpenAI",
+    "summary": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-06T08:00:00.000Z",
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-9889510bec40cd608e6f",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T06:28:32.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-85f398082dadd860b70c",
@@ -141,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T00:37:56.000Z",
-    "discovered_at": "2026-11-06 17:27:43"
+    "discovered_at": "2026-11-06 18:55:54"
   },
   {
     "id": "news-cc48f8093c5bb1034d8c",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T00:06:12.000Z",
-    "discovered_at": "2026-11-06 17:27:43"
+    "discovered_at": "2026-11-06 18:55:54"
   },
   {
     "id": "news-01af2f668adeb82b3308",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T22:40:55.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-8e75ec02fc50e91f564b",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T22:26:50.000Z",
-    "discovered_at": "2026-11-06 17:27:43"
+    "discovered_at": "2026-11-06 18:55:54"
   },
   {
     "id": "news-c88b52d0b21039c72dea",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T20:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-9d6202c03434e451435a",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T19:48:28.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-ea881b03ae961dac0fd3",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T19:12:39.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-8f7798ef97e413356d77",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T19:06:12.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-c6134d61030c25d12108",
@@ -237,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T19:03:04.000Z",
-    "discovered_at": "2026-11-06 17:27:43"
+    "discovered_at": "2026-11-06 18:55:54"
   },
   {
     "id": "news-bf7e9a38adde58876732",
@@ -249,19 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T18:02:27.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
-  },
-  {
-    "id": "news-f49d817c3fd35c35c529",
-    "title": "Claude AI can plug directly into your bank account",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1027652/anthropic-claude-plaid-personal-finance",
-    "source": "The Verge",
-    "summary": "Anthropic has a new pitch for managing your personal finances: let Claude do it instead, with a new Personal Finance feature that connects it to your bank and card accounts via the Plaid bank bridging platform. You can ask the chatbot \"where did my money go this month,\" for example, and it'll create an overview [&#823…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-05T18:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:43"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-b0e121b3a461c115e0db",
@@ -273,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T18:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -285,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-b58fee4edbbb5f7a9c2c",
@@ -297,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-c2788911aa715e520bc4",
@@ -309,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T16:16:45.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-6dad7a604d398d82538b",
@@ -321,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T15:19:05.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-0f2052ea73f7a4c11ac6",
@@ -333,43 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T14:42:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
-  },
-  {
-    "id": "news-d51f62aa0d3ca8ee0b8f",
-    "title": "Box taps Nvidia’s Nemotron for new agent-first content retrieval system",
-    "url": "https://techcrunch.com/2026/11/05/box-taps-nvidias-nemotron-for-new-agent-first-content-retrieval-system/",
-    "source": "TechCrunch",
-    "summary": "The system can supposedly answer queries four times faster, with 20% fewer errors and 90% fewer tokens used.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-05T14:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
-  },
-  {
-    "id": "news-b06af2d45cd2abb56f1e",
-    "title": "A YC startup is putting $1M behind 5 unsolved materials science problems for AI",
-    "url": "https://techcrunch.com/2026/11/05/a-yc-startup-is-putting-1m-behind-five-unsolved-materials-science-problems-for-ai/",
-    "source": "TechCrunch",
-    "summary": "While frontier AI models have solved a remarkable series of outstanding mathematics problems and made progress in the life sciences, they have yet to truly plumb the complex physics in advanced materials.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-05T13:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
-  },
-  {
-    "id": "news-956cb223c580c4f0e9ff",
-    "title": "Agility is the first pure humanoid robot company on the stock market. Are you buying?",
-    "url": "https://techcrunch.com/2026/11/05/agility-is-the-first-pure-humanoid-robot-company-on-the-stock-market-are-you-buying/",
-    "source": "TechCrunch",
-    "summary": "Agility arrives on the Nasdaq today as the first publicly traded pure-play humanoid robotics company.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-05T12:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-53c56afbaf05f856eba5",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T09:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-300d91101f21ec1db57e",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T08:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-f93567576105c7139347",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T02:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-1f9981de57006417a4eb",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T00:45:15.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-c0d7b0808284d1827cd1",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T00:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-3a06f84c0f51a102b02f",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T14:30:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-a4f4c423c54260333db7",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T08:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-75679f5aa60bfcf88cfe",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T07:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-bf25be8f87794d7d4a5b",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T00:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-0a437d67f2effbc5f98d",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T00:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-26c6032e1d2677657b70",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T12:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-08b710f1e7801fa86cc9",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T08:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-a2357e701f020223b310",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T08:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-3d509e27bae229a3dde1",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T00:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-de4cf53f9db96311cdf4",
@@ -561,19 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T15:30:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
-  },
-  {
-    "id": "news-19244c7aa2063fd3d4e1",
-    "title": "Introducing the Grid Protectors Program",
-    "url": "https://openai.com/index/grid-protectors-program",
-    "source": "OpenAI",
-    "summary": "OpenAI’s Grid Protectors Program will work with utilities to help future compute campuses support grid reliability and protect consumer electricity costs.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-02T15:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-06 17:27:43"
+    "discovered_at": "2026-11-06 18:55:54"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-11-06 17:27:43"
+    "discovered_at": "2026-11-06 18:55:54"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-11-06 17:27:43"
+    "discovered_at": "2026-11-06 18:55:54"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -645,6 +645,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-11-06 17:27:31"
+    "discovered_at": "2026-11-06 18:55:43"
   }
 ]

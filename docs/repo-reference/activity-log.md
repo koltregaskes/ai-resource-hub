@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 06 Nov 2026, 17:28 UTC
+Generated: 06 Nov 2026, 18:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 06 Nov 2026, 17:27 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 06 Nov 2026, 17:27 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 06 Nov 2026, 17:27 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 06 Nov 2026, 17:27 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 06 Nov 2026, 17:27 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 06 Nov 2026, 12:00 UTC | digest | After the midterms, is the AI industry in for a rough two years? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/video/after-the-midterms-is-the-ai-industry-in-for-a-rough-two-years/) |
-| 06 Nov 2026, 12:00 UTC | digest | AI is the new dating dealbreaker | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1028609/ai-dating-feelings-doomers-singularity) |
-| 06 Nov 2026, 12:00 UTC | digest | Big Tech lost big in the 2026 election | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/podcast/1028731/2026-midterms-tech-ai-vergecast) |
-| 06 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,035 open roles across 10 tracked companies. | `/jobs/` |
-| 06 Nov 2026, 12:00 UTC | digest | Published the 2026-11-06 daily digest | 13 stories captured from 2 sources. | `/news/` |
+| 06 Nov 2026, 18:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 06 Nov 2026, 18:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 06 Nov 2026, 18:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 06 Nov 2026, 18:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 06 Nov 2026, 18:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 06 Nov 2026, 12:00 UTC | digest | Hundreds of Artex AI hacking tools found publicly exposed to the web | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/) |
+| 06 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,034 open roles across 10 tracked companies. | `/jobs/` |
+| 06 Nov 2026, 12:00 UTC | digest | Meta introduces Spaces, a new way to collaborate with your Muse agent | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/) |
+| 06 Nov 2026, 12:00 UTC | digest | Meta&#8217;s Muse AI can create custom &#8216;spaces&#8217; for the version of the app you need right now | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1028871/meta-muse-ai-spaces) |
+| 06 Nov 2026, 12:00 UTC | digest | Published the 2026-11-06 daily digest | 18 stories captured from 3 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
