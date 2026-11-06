@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 06 Nov 2026, 15:56 UTC
+Generated: 06 Nov 2026, 16:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 06 Nov 2026, 15:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 06 Nov 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 06 Nov 2026, 15:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 06 Nov 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 06 Nov 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 06 Nov 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 06 Nov 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 06 Nov 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 06 Nov 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 06 Nov 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 06 Nov 2026, 12:00 UTC | digest | After blocking Muse, Amazon now lets users text Alexa to help them shop | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/06/after-blocking-muse-amazon-now-lets-users-text-alexa-to-help-them-shop/) |
 | 06 Nov 2026, 12:00 UTC | digest | Amazon will let you text Alexa your shopping list | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1028587/amazon-alexa-shopping-ai-text-orders) |
-| 06 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,043 open roles across 10 tracked companies. | `/jobs/` |
+| 06 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,037 open roles across 10 tracked companies. | `/jobs/` |
 | 06 Nov 2026, 12:00 UTC | digest | Published the 2026-11-06 daily digest | 9 stories captured from 2 sources. | `/news/` |
 | 06 Nov 2026, 12:00 UTC | digest | Ramp data shows AI spending stalling just as Anthropic nears its IPO | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
