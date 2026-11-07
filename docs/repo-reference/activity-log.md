@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 07 Nov 2026, 19:55 UTC
+Generated: 07 Nov 2026, 20:51 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 07 Nov 2026, 19:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 07 Nov 2026, 19:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 07 Nov 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 07 Nov 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 07 Nov 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 07 Nov 2026, 20:51 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 07 Nov 2026, 20:51 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 07 Nov 2026, 20:51 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 07 Nov 2026, 20:51 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 07 Nov 2026, 20:51 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 07 Nov 2026, 12:00 UTC | digest | AI broke the cybersecurity world. What’s next? | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/podcast/1029038/ai-cybersecurity-hackers-data-breach-dark-age-alex-stamos) |
 | 07 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,033 open roles across 10 tracked companies. | `/jobs/` |
 | 07 Nov 2026, 12:00 UTC | digest | NYT Cooking’s AI assistant saved my weeknight chicken, but almost ruined my cake | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review) |
