@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 06 Nov 2026, 23:04 UTC
+Generated: 07 Nov 2026, 00:01 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -14,7 +14,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 23 Oct 2026 | Kimi K3.1 Pro | Moonshot AI | tracking | high | watch only | 0 | 0 | n/a |
 | 19 Oct 2026 | MiniMax M3.1 Flash | MiniMax | tracking | high | watch only | 0 | 0 | n/a |
 | 17 Oct 2026 | DeepSeek V4.1 Flash 1017 | DeepSeek | tracking | high | watch only | 0 | 0 | n/a |
-| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 4 | [official](https://www.anthropic.com/glasswing) |
+| 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 3 | [official](https://www.anthropic.com/glasswing) |
 | 15 Oct 2026 | Muse Spark Open | Meta | tracking | watch | watch only | 0 | 2 | n/a |
 | 15 Oct 2026 | Nemotron 3.5 Super VL | NVIDIA | tracking | watch | watch only | 0 | 0 | n/a |
 | 12 Oct 2026 | Muse Wonder | Meta | tracking | watch | watch only | 0 | 2 | n/a |

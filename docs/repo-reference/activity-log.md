@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 06 Nov 2026, 23:04 UTC
+Generated: 07 Nov 2026, 00:01 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 06 Nov 2026, 23:03 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 06 Nov 2026, 23:03 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 06 Nov 2026, 23:03 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 06 Nov 2026, 23:03 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 06 Nov 2026, 23:03 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 06 Nov 2026, 12:00 UTC | digest | All the latest updates on AI data centers | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy) |
+| 07 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,034 open roles across 10 tracked companies. | `/jobs/` |
+| 07 Nov 2026, 00:00 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 07 Nov 2026, 00:00 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 07 Nov 2026, 00:00 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 07 Nov 2026, 00:00 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 07 Nov 2026, 00:00 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 06 Nov 2026, 12:00 UTC | digest | Chainalysis says hackers stole credentials and tokens for all of its customers | Ars Technica featured in the latest daily brief. | [open](https://arstechnica.com/security/2026/11/chainalysis-says-hackers-stole-credentials-and-tokens-for-all-of-its-customers/) |
-| 06 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,033 open roles across 10 tracked companies. | `/jobs/` |
+| 06 Nov 2026, 12:00 UTC | digest | China reportedly recruited AI exec to spy on Jensen Huang | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy) |
 | 06 Nov 2026, 12:00 UTC | digest | OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/) |
 | 06 Nov 2026, 12:00 UTC | digest | Published the 2026-11-06 daily digest | 20 stories captured from 4 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |

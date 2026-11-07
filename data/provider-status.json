@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T23:04:08.721Z",
+  "generatedAt": "2026-11-07T00:00:46.291Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-06T23:04:08.716Z",
+      "lastCheckedAt": "2026-11-07T00:00:46.285Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-06T18:28:30.000Z",
+          "id": "fireworks-feed-0-2026-11-06T23:10:35.000Z",
+          "title": "Service Degradation for GLM 5.3 Flash",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-06T23:10:35.000Z",
+          "updatedAt": "2026-11-06T23:10:35.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M6SHPCY7HPJSAYERDK44E3KC",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-06T18:28:30.000Z",
           "title": "Service degradation",
           "status": "reported",
           "impact": "unknown",
@@ -29,22 +40,22 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M679955DA5K8S2HMEXDPCBR3",
           "summary": "Status: Monitoring Dedicated deployments, training, and batch inference services are restored. For questions or any issues, please contact your account team or support@fireworks.a..."
-        },
-        {
-          "id": "fireworks-feed-1-2026-11-06T12:44:30.000Z",
-          "title": "Service Degradation for GLM 5.3 Fast",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-06T12:44:30.000Z",
-          "updatedAt": "2026-11-06T12:44:30.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M6RDFCT1Q5R82478M21T8Z9Y",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-06T18:28:30.000Z",
+          "id": "fireworks-feed-0-2026-11-06T23:10:35.000Z",
+          "title": "Service Degradation for GLM 5.3 Flash",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-06T23:10:35.000Z",
+          "updatedAt": "2026-11-06T23:10:35.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M6SHPCY7HPJSAYERDK44E3KC",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-06T18:28:30.000Z",
           "title": "Service degradation",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Monitoring Dedicated deployments, training, and batch inference services are restored. For questions or any issues, please contact your account team or support@fireworks.a..."
         },
         {
-          "id": "fireworks-feed-1-2026-11-06T12:44:30.000Z",
+          "id": "fireworks-feed-2-2026-11-06T12:44:30.000Z",
           "title": "Service Degradation for GLM 5.3 Fast",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-11-05T22:40:32.000Z",
+          "id": "fireworks-feed-3-2026-11-05T22:40:32.000Z",
           "title": "Service Degradation for Muse Spark Open US",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-11-05T22:40:32.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M6PXPAYVDM8QA599BJ4JA9A8",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-11-05T04:18:20.000Z",
-          "title": "Service Degradation for Muse Spark Open US",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-05T04:18:20.000Z",
-          "updatedAt": "2026-11-05T04:18:20.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M6MYPBWMSRC17WYPJPDDRY5G",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-06T23:04:07.257Z",
+      "lastCheckedAt": "2026-11-07T00:00:44.864Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-06T23:04:08.296Z",
+      "lastCheckedAt": "2026-11-07T00:00:45.537Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-06T23:04:07.798Z",
+      "lastCheckedAt": "2026-11-07T00:00:45.099Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -253,7 +253,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-06T23:04:07.372Z",
+      "lastCheckedAt": "2026-11-07T00:00:44.878Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "1 active incident across 25 tracked components.",
@@ -350,7 +350,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-06T23:04:08.519Z",
+      "lastCheckedAt": "2026-11-07T00:00:45.910Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -374,7 +374,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
