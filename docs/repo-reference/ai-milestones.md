@@ -1,6 +1,6 @@
 # AI Milestones Snapshot
 
-Generated: 07 Nov 2026, 23:56 UTC
+Generated: 08 Nov 2026, 00:32 UTC
 
 Repo-readable mirror of the public AI Milestones page. This is the curated chronology layer for major model launches, lab founding dates, research breakthroughs, and milestone tracking gaps.
 
@@ -8,8 +8,8 @@ Repo-readable mirror of the public AI Milestones page. This is the curated chron
 
 | Metric | Value |
 | --- | --- |
-| Generated | 07 Nov 2026, 23:56 UTC |
-| Reference date | Saturday, 7 November 2026 |
+| Generated | 08 Nov 2026, 00:32 UTC |
+| Reference date | Sunday, 8 November 2026 |
 | Curated milestones | 37 |
 | Verified milestones | 35 |
 | Tracking milestones | 2 |
@@ -25,14 +25,14 @@ No exact anniversary lands on the current Europe/London date snapshot.
 
 | In | Date | Title | Source |
 | --- | --- | --- | --- |
-| 23d | 30 Nov 2026 | AlphaFold breakthrough at CASP14 | [Google DeepMind](https://deepmind.google/research/highlighted-research/alphafold/timeline-of-a-breakthrough/) |
-| 23d | 30 Nov 2026 | ChatGPT launched | [OpenAI](https://openai.com/blog/chatgpt/) |
-| 29d | 6 Dec 2026 | Gemini 1 introduced | [Google](https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/) |
-| 34d | 11 Dec 2026 | Mixtral 8x7B released | [Mistral AI](https://mistral.ai/news/mixtral-of-experts/) |
-| 34d | 11 Dec 2026 | OpenAI founded | [OpenAI](https://openai.com/index/introducing-openai/) |
-| 49d | 26 Dec 2026 | DeepSeek-V3 released | [DeepSeek API docs](https://api-docs.deepseek.com/news/news1226) |
-| 74d | 20 Jan 2027 | DeepSeek-R1 released | [DeepSeek API docs](https://api-docs.deepseek.com/news/news250120) |
-| 99d | 14 Feb 2027 | GPT-2 announced | [OpenAI](https://openai.com/blog/better-language-models/) |
+| 22d | 30 Nov 2026 | AlphaFold breakthrough at CASP14 | [Google DeepMind](https://deepmind.google/research/highlighted-research/alphafold/timeline-of-a-breakthrough/) |
+| 22d | 30 Nov 2026 | ChatGPT launched | [OpenAI](https://openai.com/blog/chatgpt/) |
+| 28d | 6 Dec 2026 | Gemini 1 introduced | [Google](https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/) |
+| 33d | 11 Dec 2026 | Mixtral 8x7B released | [Mistral AI](https://mistral.ai/news/mixtral-of-experts/) |
+| 33d | 11 Dec 2026 | OpenAI founded | [OpenAI](https://openai.com/index/introducing-openai/) |
+| 48d | 26 Dec 2026 | DeepSeek-V3 released | [DeepSeek API docs](https://api-docs.deepseek.com/news/news1226) |
+| 73d | 20 Jan 2027 | DeepSeek-R1 released | [DeepSeek API docs](https://api-docs.deepseek.com/news/news250120) |
+| 98d | 14 Feb 2027 | GPT-2 announced | [OpenAI](https://openai.com/blog/better-language-models/) |
 
 ## Recent Flagship Launches
 
