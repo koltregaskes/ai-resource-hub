@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T16:55:39.862Z",
+  "generatedAt": "2026-11-08T17:14:45.523Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-08T16:55:39.858Z",
+      "lastCheckedAt": "2026-11-08T17:14:45.516Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,113 +90,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-11-08T16:55:38.568Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "2 active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Image Generation",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Chat Completions",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Agents",
-          "status": "operational"
-        },
-        {
-          "name": "Decisions",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01M6XVDCKRT3PSB0YP8J30GTD5",
-          "title": "Elevated errors with image generation",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-11-08T15:11:15.000Z",
-          "updatedAt": "2026-11-08T15:43:50.000Z",
-          "resolvedAt": null,
-          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
-        },
-        {
-          "id": "01M6S2FV5TZWQ753NHRB7BF5K7",
-          "title": "Elevated error rates with some U.S. business Mastercards",
-          "status": "monitoring",
-          "impact": "none",
-          "startedAt": "2026-11-06T18:38:43.000Z",
-          "updatedAt": "2026-11-07T01:29:31.000Z",
-          "resolvedAt": null,
-          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01M6XVDCKRT3PSB0YP8J30GTD5",
-          "title": "Elevated errors with image generation",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-11-08T15:11:15.000Z",
-          "updatedAt": "2026-11-08T15:43:50.000Z",
-          "resolvedAt": null,
-          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
-        },
-        {
-          "id": "01M6S2FV5TZWQ753NHRB7BF5K7",
-          "title": "Elevated error rates with some U.S. business Mastercards",
-          "status": "monitoring",
-          "impact": "none",
-          "startedAt": "2026-11-06T18:38:43.000Z",
-          "updatedAt": "2026-11-07T01:29:31.000Z",
-          "resolvedAt": null,
-          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
-        },
-        {
-          "id": "01M6P50GPP1V98EF8MJ9SH393R",
-          "title": "ChatGPT Work and Dots Errors",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-05T15:25:03.000Z",
-          "updatedAt": "2026-11-06T04:31:37.000Z",
-          "resolvedAt": "2026-11-06T04:31:37.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M6MBCX427A7113A3T4FJ1N6Y",
-          "title": "Elevated error rates across paid ChatGPT plans",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-04T22:38:12.000Z",
-          "updatedAt": "2026-11-05T00:32:37.000Z",
-          "resolvedAt": "2026-11-05T00:32:37.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        }
-      ]
-    },
-    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -207,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-08T16:55:38.504Z",
+      "lastCheckedAt": "2026-11-08T17:14:44.544Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 6 tracked components.",
@@ -297,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-08T16:55:39.315Z",
+      "lastCheckedAt": "2026-11-08T17:14:45.164Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -317,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-08T16:55:38.788Z",
+      "lastCheckedAt": "2026-11-08T17:14:44.513Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -350,6 +243,103 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-11-08T17:14:44.583Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Chat Completions",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Agents",
+          "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Embeddings",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01M6S2FV5TZWQ753NHRB7BF5K7",
+          "title": "Elevated error rates with some U.S. business Mastercards",
+          "status": "monitoring",
+          "impact": "none",
+          "startedAt": "2026-11-06T18:38:43.000Z",
+          "updatedAt": "2026-11-07T01:29:31.000Z",
+          "resolvedAt": null,
+          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01M6XVDCKRT3PSB0YP8J30GTD5",
+          "title": "Elevated errors with image generation",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-08T15:11:15.000Z",
+          "updatedAt": "2026-11-08T17:00:42.000Z",
+          "resolvedAt": "2026-11-08T17:00:42.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M6S2FV5TZWQ753NHRB7BF5K7",
+          "title": "Elevated error rates with some U.S. business Mastercards",
+          "status": "monitoring",
+          "impact": "none",
+          "startedAt": "2026-11-06T18:38:43.000Z",
+          "updatedAt": "2026-11-07T01:29:31.000Z",
+          "resolvedAt": null,
+          "summary": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery."
+        },
+        {
+          "id": "01M6P50GPP1V98EF8MJ9SH393R",
+          "title": "ChatGPT Work and Dots Errors",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-05T15:25:03.000Z",
+          "updatedAt": "2026-11-06T04:31:37.000Z",
+          "resolvedAt": "2026-11-06T04:31:37.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M6MBCX427A7113A3T4FJ1N6Y",
+          "title": "Elevated error rates across paid ChatGPT plans",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-04T22:38:12.000Z",
+          "updatedAt": "2026-11-05T00:32:37.000Z",
+          "resolvedAt": "2026-11-05T00:32:37.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        }
+      ]
+    },
+    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -360,7 +350,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-08T16:55:39.534Z",
+      "lastCheckedAt": "2026-11-08T17:14:45.335Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
