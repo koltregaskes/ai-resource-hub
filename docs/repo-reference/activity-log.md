@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 08 Nov 2026, 09:55 UTC
+Generated: 08 Nov 2026, 10:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 08 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,033 open roles across 10 tracked companies. | `/jobs/` |
-| 08 Nov 2026, 09:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 08 Nov 2026, 09:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 08 Nov 2026, 09:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 08 Nov 2026, 09:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 08 Nov 2026, 09:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 08 Nov 2026, 10:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 08 Nov 2026, 10:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 08 Nov 2026, 10:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 08 Nov 2026, 10:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 08 Nov 2026, 10:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 07 Nov 2026, 12:00 UTC | digest | After the midterms, things are looking rocky for Elon Musk and data centers | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/) |
 | 07 Nov 2026, 12:00 UTC | digest | Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/) |
 | 07 Nov 2026, 12:00 UTC | digest | NYT Cooking’s AI assistant saved my weeknight chicken, but almost ruined my cake | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review) |
