@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 08 Nov 2026, 01:55 UTC
+Generated: 08 Nov 2026, 02:57 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -16,7 +16,7 @@ This table shows how much of each provider's public model surface is currently r
 | Stability AI | 4 | 0 | 0 | n/a | n/a | [docs](https://platform.stability.ai/docs) |
 | Alibaba | 3 | 42 | 0 | Qwen3.8 Max Prime (23 Sept 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | Mistral | 3 | 19 | 0 | Mistral Large 4 (6 Oct 2026) | [status](https://status.mistral.ai) | [docs](https://docs.mistral.ai) |
-| DeepSeek | 3 | 12 | 0 | DeepSeek V4.1 Flash 1017 (17 Oct 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
+| DeepSeek | 3 | 12 | 0 | DeepSeek V4 Flash Vision Exp (21 Aug 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
 | Deepgram | 3 | 0 | 0 | n/a | [status](https://status.deepgram.com) | [docs](https://developers.deepgram.com) |
 | ElevenLabs | 3 | 0 | 0 | n/a | [status](https://status.elevenlabs.io) | [docs](https://elevenlabs.io/docs) |
 | Runway | 3 | 0 | 0 | n/a | n/a | [docs](https://docs.runwayml.com) |
