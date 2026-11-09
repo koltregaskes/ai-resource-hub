@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 09 Nov 2026, 18:55 UTC
+Generated: 09 Nov 2026, 19:55 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -9,7 +9,7 @@ This table shows how much of each provider's public model surface is currently r
 | OpenAI | 24 | 46 | 0 | GPT-5.6 Sol (batch) (9 Jul 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
 | Google | 8 | 24 | 0 | Gemini Omni 1.2 Flash (5 Nov 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
 | Meta | 6 | 12 | 0 | Muse Ember (9 Nov 2026) | n/a | [docs](https://llama.meta.com/docs) |
-| Anthropic | 5 | 19 | 1 | Claude Opus 5 (batch) (24 Jul 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
+| Anthropic | 5 | 20 | 1 | Claude Fable 5.2 (9 Nov 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |
 | Cohere | 4 | 2 | 0 | Command A+ (22 Sept 2026) | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
 | Black Forest Labs | 4 | 0 | 0 | n/a | n/a | n/a |
