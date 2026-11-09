@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 09 Nov 2026, 16:55 UTC
+Generated: 09 Nov 2026, 17:26 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 09 Nov 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 09 Nov 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 09 Nov 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 09 Nov 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 09 Nov 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 09 Nov 2026, 12:00 UTC | digest | Disney and Adobe are building generative AI tools together | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1029773/disney-adobe-generative-ai-partnership) |
+| 09 Nov 2026, 17:26 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 09 Nov 2026, 17:26 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 09 Nov 2026, 17:26 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 09 Nov 2026, 17:25 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 09 Nov 2026, 17:25 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 09 Nov 2026, 12:00 UTC | digest | Anthropic joins AI’s natural gas frenzy, buys $3.4B worth of turbines | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/09/anthropic-joins-ais-natural-gas-frenzy-buys-3-4b-worth-of-turbines/) |
 | 09 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,033 open roles across 10 tracked companies. | `/jobs/` |
 | 09 Nov 2026, 12:00 UTC | digest | Medium&#8217;s new TK app brings AI assistance directly into the writing process | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/09/mediums-new-tk-app-brings-ai-assistance-directly-into-the-writing-process/) |
-| 09 Nov 2026, 12:00 UTC | digest | Published the 2026-11-09 daily digest | 7 stories captured from 2 sources. | `/news/` |
+| 09 Nov 2026, 12:00 UTC | digest | Published the 2026-11-09 daily digest | 8 stories captured from 2 sources. | `/news/` |
 | 09 Nov 2026, 12:00 UTC | digest | Trump’s 60 Minutes interview touched on AI safety, threat to arrest an AI exec | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1029802/trump-60-minutes-ai) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
