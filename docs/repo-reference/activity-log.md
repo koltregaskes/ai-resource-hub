@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 09 Nov 2026, 19:55 UTC
+Generated: 09 Nov 2026, 20:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 09 Nov 2026, 19:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 09 Nov 2026, 19:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 09 Nov 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 09 Nov 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 09 Nov 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 09 Nov 2026, 20:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 09 Nov 2026, 20:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 09 Nov 2026, 20:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 09 Nov 2026, 20:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 09 Nov 2026, 20:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 09 Nov 2026, 12:00 UTC | digest | Anthropic launches new Claude Fable and Mythos 5.2 models | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2) |
 | 09 Nov 2026, 12:00 UTC | digest | Anthropic releases new Mythos and Fable models amid RSI concerns | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/) |
-| 09 Nov 2026, 12:00 UTC | digest | Apple’s $50 Intelligence Usage Packs extend access to some AI features | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro) |
-| 09 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,036 open roles across 10 tracked companies. | `/jobs/` |
+| 09 Nov 2026, 12:00 UTC | digest | Jensen Huang pulls out of ElevenLabs Summit amid Nvidia controversy | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/09/jensen-huang-pulls-out-of-elevenlabs-summit-amid-nvidia-controversy/) |
+| 09 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,035 open roles across 10 tracked companies. | `/jobs/` |
 | 09 Nov 2026, 12:00 UTC | digest | Published the 2026-11-09 daily digest | 17 stories captured from 3 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
