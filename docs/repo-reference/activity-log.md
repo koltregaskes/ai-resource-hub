@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 09 Nov 2026, 14:55 UTC
+Generated: 09 Nov 2026, 15:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 09 Nov 2026, 14:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 09 Nov 2026, 14:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 09 Nov 2026, 14:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 09 Nov 2026, 14:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 09 Nov 2026, 14:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 09 Nov 2026, 12:00 UTC | digest | Automattic debuts a platform to deploy vibe coding apps amid a changing internet | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/09/automattic-debuts-a-platform-to-deploy-vibe-coding-apps-amid-a-changing-internet/) |
-| 09 Nov 2026, 12:00 UTC | digest | Is Jensen Huang’s job on the line? Yale’s Jeffrey Sonnenfeld estimates it’s “about a 50-50” | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50/) |
+| 09 Nov 2026, 15:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 09 Nov 2026, 15:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 09 Nov 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 09 Nov 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 09 Nov 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 09 Nov 2026, 12:00 UTC | digest | Disney and Adobe are building generative AI tools together | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1029773/disney-adobe-generative-ai-partnership) |
+| 09 Nov 2026, 12:00 UTC | digest | Hold up — I had a great time talking to the RIAA guy | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/podcast/1029684/riaa-mitch-glazier-napster-ai-labels-music) |
 | 09 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,034 open roles across 10 tracked companies. | `/jobs/` |
-| 09 Nov 2026, 12:00 UTC | digest | Jonathan Kanter is using AI to take on Big Tech | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/1029652/kanter-doj-biden-legal-tech) |
-| 09 Nov 2026, 12:00 UTC | digest | Published the 2026-11-09 daily digest | 3 stories captured from 2 sources. | `/news/` |
+| 09 Nov 2026, 12:00 UTC | digest | Published the 2026-11-09 daily digest | 6 stories captured from 2 sources. | `/news/` |
+| 09 Nov 2026, 12:00 UTC | digest | Trump’s 60 Minutes interview touched on AI safety, threat to arrest an AI exec | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1029802/trump-60-minutes-ai) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
