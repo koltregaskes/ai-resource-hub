@@ -8,7 +8,7 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 09 Nov 2026, 05:55 UTC |
+| Generated | 09 Nov 2026, 06:15 UTC |
 | Providers tracked | 40 |
 | Public models | 345 |
 | Active models | 104 |
