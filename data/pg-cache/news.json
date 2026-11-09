@@ -1,5 +1,41 @@
 [
   {
+    "id": "news-20ff528b54959b19ecf3",
+    "title": "Jensen Huang’s affair with alleged Chinese spy puts Nvidia’s China ambitions under scrutiny",
+    "url": "https://techcrunch.com/2026/11/09/jensen-huangs-affair-with-alleged-chinese-spy-puts-nvidias-china-ambitions-under-scrutiny/",
+    "source": "TechCrunch",
+    "summary": "Jensen Huang’s alleged affair with a suspected Chinese spy threatens to complicate Nvidia’s lobbying efforts to loosen U.S. chip export restrictions and maintain access to China’s lucrative AI market.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-09T18:09:52.000Z",
+    "discovered_at": "2026-11-09 18:55:30"
+  },
+  {
+    "id": "news-fe9001b06ea620d4de81",
+    "title": "Meta releases Muse Ember, a new lightweight model for agent execution",
+    "url": "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/",
+    "source": "TechCrunch",
+    "summary": "At 10 cents per million input tokens, Ember is significantly cheaper than frontier competitors like Haiku and Luna.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-09T18:00:00.000Z",
+    "discovered_at": "2026-11-09 18:55:30"
+  },
+  {
+    "id": "news-a06869aa80e569ca00b4",
+    "title": "The future of AI hinges on… Jensen Huang’s sex life?",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1029990/jensen-huang-the-spy-who-loved-me",
+    "source": "The Verge",
+    "summary": "I would prefer that these people's sex lives were none of my business but I guess we have to talk about Jensen Huang and the National Security Incident. Who could have guessed that the guy who was out here signing titties might not have great judgment about how to behave around women? Alice Huang - [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-09T17:36:08.000Z",
+    "discovered_at": "2026-11-09 18:55:42"
+  },
+  {
     "id": "news-ea1cff75717bdba91f56",
     "title": "Anthropic joins AI’s natural gas frenzy, buys $3.4B worth of turbines",
     "url": "https://techcrunch.com/2026/11/09/anthropic-joins-ais-natural-gas-frenzy-buys-3-4b-worth-of-turbines/",
@@ -9,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T16:56:54.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-ad058ec7fa053fd0bbf6",
@@ -21,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T16:12:28.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-67d134866a7d1897aa12",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T15:50:38.000Z",
-    "discovered_at": "2026-11-09 17:26:22"
+    "discovered_at": "2026-11-09 18:55:42"
   },
   {
     "id": "news-86961a9937fd8746d74a",
@@ -45,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T15:38:56.000Z",
-    "discovered_at": "2026-11-09 17:26:22"
+    "discovered_at": "2026-11-09 18:55:42"
   },
   {
     "id": "news-bce465cdb584c1861124",
@@ -57,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T15:30:00.000Z",
-    "discovered_at": "2026-11-09 17:26:22"
+    "discovered_at": "2026-11-09 18:55:42"
   },
   {
     "id": "news-cc49c1ae6860a64fc04a",
@@ -69,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T14:30:00.000Z",
-    "discovered_at": "2026-11-09 17:26:22"
+    "discovered_at": "2026-11-09 18:55:42"
   },
   {
     "id": "news-95c3c02be004506d86d1",
@@ -81,11 +117,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T14:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-fdfdfd60876dfdbc6b15",
-    "title": "Is Jensen Huang’s job on the line? Yale’s Jeffrey Sonnenfeld estimates it’s “about a 50-50”",
+    "title": "Is Jensen Huang’s job on the line? Yale’s Jeffrey Sonnenfeld estimates it’s &#8216;about a 50-50&#8217;",
     "url": "https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50/",
     "source": "TechCrunch",
     "summary": "Nvidia’s board is investigating Jensen Huang over his relationship with a suspected Chinese spy, and Yale’s Jeffrey Sonnenfeld thinks it’s roughly a coin flip whether Huang stays on as CEO.",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T05:26:29.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-67abd93f196f854c598d",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-08T22:54:50.000Z",
-    "discovered_at": "2026-11-09 17:26:22"
+    "discovered_at": "2026-11-09 18:55:42"
   },
   {
     "id": "news-bc55171edc52873bff32",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-08T21:00:11.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-ecd65815b585666dd249",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-08T20:22:39.000Z",
-    "discovered_at": "2026-11-09 17:26:22"
+    "discovered_at": "2026-11-09 18:55:42"
   },
   {
     "id": "news-53044e44b3aab431cb3b",
@@ -141,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-08T19:18:19.000Z",
-    "discovered_at": "2026-11-09 17:26:22"
+    "discovered_at": "2026-11-09 18:55:42"
   },
   {
     "id": "news-ae06ecf7187204d49f98",
@@ -153,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-08T17:23:19.000Z",
-    "discovered_at": "2026-11-09 17:26:22"
+    "discovered_at": "2026-11-09 18:55:42"
   },
   {
     "id": "news-ed263cbbe1a455238f5d",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-07T22:07:22.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-69c75581d56ff5e1da78",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-07T21:17:08.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-fa06ff8fdc83e25928ca",
@@ -189,19 +225,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-07T15:50:00.000Z",
-    "discovered_at": "2026-11-09 17:26:22"
+    "discovered_at": "2026-11-09 18:55:42"
   },
   {
-    "id": "news-73be1ddc7ff24f89939f",
-    "title": "The US let Nvidia sell chips to an empty office in China",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government",
-    "source": "The Verge",
-    "summary": "Concerns are being raised that neither the Commerce Department nor Nvidia are doing their due diligence when it comes to vetting Chinese firms cleared to handle the company's H200 AI chips. According to The New York Times, New Matrix is on the list of approved firms, yet its offices are empty, \"a hollow gray shell [&#…",
+    "id": "news-a556ec6077950a4f9004",
+    "title": "From the front row to the hot seat — what the midterms mean for Big Tech",
+    "url": "https://techcrunch.com/2026/11/06/from-the-front-row-to-the-hot-seat-what-the-midterms-mean-for-big-tech/",
+    "source": "TechCrunch",
+    "summary": "After spending two years getting cozy with the White House, Big Tech is suddenly trying to make friends with Democrats, and the open question is whether that image makeover can hold up against what states, local communities, and the markets are about to do.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-11-07T15:43:45.000Z",
-    "discovered_at": "2026-11-09 17:26:22"
+    "published_at": "2026-11-07T04:16:43.000Z",
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-36231604b2886429fe9b",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-07T01:40:28.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-314bd089789a099591d7",
@@ -225,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T22:53:46.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-a5eef3cf57a4e41068d1",
@@ -237,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T20:56:41.000Z",
-    "discovered_at": "2026-11-09 17:26:22"
+    "discovered_at": "2026-11-09 18:55:42"
   },
   {
     "id": "news-4758b3e0840745310332",
@@ -249,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T18:44:38.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-46e88a02e03424f2e4ee",
@@ -261,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T18:44:20.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-860444638104df4baec5",
@@ -273,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T18:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-ead671d25881cf904ee0",
@@ -285,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T17:23:52.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-d275be2a1267c8e7312f",
@@ -297,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T15:54:47.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-ab4846bbc512d7902016",
@@ -309,31 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T14:10:00.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
-  },
-  {
-    "id": "news-fbf575ba8ccde9feb964",
-    "title": "Underdog shows off a 32MB speech model in new demo",
-    "url": "https://techcrunch.com/2026/11/06/underdog-shows-off-a-32mb-speech-model-in-new-demo/",
-    "source": "TechCrunch",
-    "summary": "Despite its small size, Underdog's new model can generate both speech and music.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-06T13:02:16.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
-  },
-  {
-    "id": "news-f3bfec28682f8e7dcae9",
-    "title": "Physicl raises $10M to make the digital world real enough for robots",
-    "url": "https://techcrunch.com/2026/11/06/physicl-raises-10m-to-make-the-digital-world-real-enough-for-robots/",
-    "source": "TechCrunch",
-    "summary": "Physicl is trying to solve the sim-to-real gap with a pipeline originally built to market goods online.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-06T13:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-bc8f9eac19663ff628fb",
@@ -345,19 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T08:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
-  },
-  {
-    "id": "news-9889510bec40cd608e6f",
-    "title": "Palo Alto Networks in talks to buy AI agent security startup Clutch for $500M",
-    "url": "https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/",
-    "source": "TechCrunch",
-    "summary": "Clutch, backed by Lightspeed and SignalFire, was last valued at $85 million, according to a source.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-06T06:28:32.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-cfd4354afa14004ff8c1",
@@ -369,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T00:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-c88b52d0b21039c72dea",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T20:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-b58fee4edbbb5f7a9c2c",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-53c56afbaf05f856eba5",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T09:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-300d91101f21ec1db57e",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T08:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-f93567576105c7139347",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T02:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-1f9981de57006417a4eb",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T00:45:15.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-c0d7b0808284d1827cd1",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T00:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-3a06f84c0f51a102b02f",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T14:30:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-a4f4c423c54260333db7",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T08:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-75679f5aa60bfcf88cfe",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T07:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-bf25be8f87794d7d4a5b",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T00:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-0a437d67f2effbc5f98d",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T00:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-26c6032e1d2677657b70",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T12:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-08b710f1e7801fa86cc9",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T08:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-a2357e701f020223b310",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T08:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-3d509e27bae229a3dde1",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-03T00:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:09"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-09 17:26:22"
+    "discovered_at": "2026-11-09 18:55:42"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-11-09 17:26:22"
+    "discovered_at": "2026-11-09 18:55:42"
   },
   {
     "id": "news-7923e9fedadd3085c8aa",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-14T12:55:06.000Z",
-    "discovered_at": "2026-11-09 17:26:22"
+    "discovered_at": "2026-11-09 18:55:42"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -657,6 +657,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-11-09 17:26:10"
+    "discovered_at": "2026-11-09 18:55:30"
   }
 ]

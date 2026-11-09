@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 09 Nov 2026, 17:26 UTC
+Generated: 09 Nov 2026, 18:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,6 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 9 Nov 2026 | Muse Ember | Meta | tracking | high | watch only | 0 | 1 | n/a |
 | 5 Nov 2026 | Gemini Omni 1.2 Flash | Google | tracking | high | watch only | 0 | 0 | n/a |
 | 4 Nov 2026 | Gemini Omni 1.1 Flash | Google | tracking | high | watch only | 0 | 0 | n/a |
 | 2 Nov 2026 | GLM 5.3 FlashX Legal | Zhipu AI | tracking | high | watch only | 0 | 0 | n/a |
@@ -27,6 +28,5 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 2 Sept 2026 | Muse Spark 1.3 | Meta | tracking | backfill | watch only | 0 | 1 | n/a |
 | 2 Sept 2026 | Muse Spark 1.3 Contributor | Meta | tracking | backfill | watch only | 0 | 1 | n/a |
 | 26 Aug 2026 | Qwen3.8 Flash | Alibaba | tracking | backfill | watch only | 0 | 0 | n/a |
-| 21 Aug 2026 | DeepSeek V4 Flash Vision Exp | DeepSeek | tracking | backfill | watch only | 0 | 0 | n/a |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
