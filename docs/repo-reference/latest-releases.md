@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 10 Nov 2026, 17:45 UTC
+Generated: 10 Nov 2026, 18:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -8,7 +8,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 9 Nov 2026 | Muse Ember | Meta | tracking | high | watch only | 0 | 2 | n/a |
+| 9 Nov 2026 | Muse Ember | Meta | tracking | high | watch only | 0 | 1 | n/a |
 | 5 Nov 2026 | Gemini Omni 1.2 Flash | Google | tracking | high | watch only | 0 | 3 | n/a |
 | 4 Nov 2026 | Gemini Omni 1.1 Flash | Google | tracking | high | watch only | 0 | 3 | n/a |
 | 2 Nov 2026 | GLM 5.3 FlashX Legal | Zhipu AI | tracking | high | watch only | 0 | 0 | n/a |
