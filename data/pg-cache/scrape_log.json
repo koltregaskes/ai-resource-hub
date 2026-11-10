@@ -3,10 +3,10 @@
     "id": 11,
     "scraper": "jobs",
     "status": "success",
-    "models_updated": 1030,
+    "models_updated": 1031,
     "error_message": null,
-    "started_at": "2026-11-10 00:55:39",
-    "finished_at": "2026-11-10 00:55:39"
+    "started_at": "2026-11-10 01:29:03",
+    "finished_at": "2026-11-10 01:29:03"
   },
   {
     "id": 10,
@@ -14,26 +14,8 @@
     "status": "error",
     "models_updated": 67,
     "error_message": "VentureBeat: HTTP 429: Too Many Requests",
-    "started_at": "2026-11-10 00:55:34",
-    "finished_at": "2026-11-10 00:55:34"
-  },
-  {
-    "id": 9,
-    "scraper": "registry:normalise-status",
-    "status": "success",
-    "models_updated": 132,
-    "error_message": null,
-    "started_at": "2026-11-10 00:55:24",
-    "finished_at": "2026-11-10 00:55:24"
-  },
-  {
-    "id": 7,
-    "scraper": "creative-benchmarks",
-    "status": "fallback",
-    "models_updated": 16,
-    "error_message": null,
-    "started_at": "2026-11-10 00:55:23",
-    "finished_at": "2026-11-10 00:55:23"
+    "started_at": "2026-11-10 01:28:58",
+    "finished_at": "2026-11-10 01:28:58"
   },
   {
     "id": 8,
@@ -41,26 +23,35 @@
     "status": "computed",
     "models_updated": 55,
     "error_message": null,
-    "started_at": "2026-11-10 00:55:23",
-    "finished_at": "2026-11-10 00:55:23"
+    "started_at": "2026-11-10 01:28:47",
+    "finished_at": "2026-11-10 01:28:47"
   },
   {
-    "id": 4,
-    "scraper": "pricing:validator",
+    "id": 9,
+    "scraper": "registry:normalise-status",
     "status": "success",
-    "models_updated": 0,
+    "models_updated": 132,
     "error_message": null,
-    "started_at": "2026-11-10 00:55:22",
-    "finished_at": "2026-11-10 00:55:22"
+    "started_at": "2026-11-10 01:28:47",
+    "finished_at": "2026-11-10 01:28:47"
+  },
+  {
+    "id": 7,
+    "scraper": "creative-benchmarks",
+    "status": "fallback",
+    "models_updated": 16,
+    "error_message": null,
+    "started_at": "2026-11-10 01:28:46",
+    "finished_at": "2026-11-10 01:28:46"
   },
   {
     "id": 5,
     "scraper": "benchmarks:chatbot-arena",
     "status": "fallback",
     "models_updated": 0,
-    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-11-10T00:55:22.541Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
-    "started_at": "2026-11-10 00:55:22",
-    "finished_at": "2026-11-10 00:55:22"
+    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-11-10T01:28:45.403Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
+    "started_at": "2026-11-10 01:28:45",
+    "finished_at": "2026-11-10 01:28:45"
   },
   {
     "id": 6,
@@ -68,17 +59,8 @@
     "status": "success",
     "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-11-10 00:55:22",
-    "finished_at": "2026-11-10 00:55:22"
-  },
-  {
-    "id": 2,
-    "scraper": "pricing:openrouter",
-    "status": "success",
-    "models_updated": 336,
-    "error_message": null,
-    "started_at": "2026-11-10 00:55:21",
-    "finished_at": "2026-11-10 00:55:21"
+    "started_at": "2026-11-10 01:28:45",
+    "finished_at": "2026-11-10 01:28:45"
   },
   {
     "id": 3,
@@ -86,8 +68,17 @@
     "status": "success",
     "models_updated": 21,
     "error_message": null,
-    "started_at": "2026-11-10 00:55:21",
-    "finished_at": "2026-11-10 00:55:21"
+    "started_at": "2026-11-10 01:28:44",
+    "finished_at": "2026-11-10 01:28:44"
+  },
+  {
+    "id": 4,
+    "scraper": "pricing:validator",
+    "status": "success",
+    "models_updated": 0,
+    "error_message": null,
+    "started_at": "2026-11-10 01:28:44",
+    "finished_at": "2026-11-10 01:28:44"
   },
   {
     "id": 1,
@@ -95,7 +86,16 @@
     "status": "success",
     "models_updated": 52,
     "error_message": null,
-    "started_at": "2026-11-10 00:55:20",
-    "finished_at": "2026-11-10 00:55:20"
+    "started_at": "2026-11-10 01:28:43",
+    "finished_at": "2026-11-10 01:28:43"
+  },
+  {
+    "id": 2,
+    "scraper": "pricing:openrouter",
+    "status": "success",
+    "models_updated": 336,
+    "error_message": null,
+    "started_at": "2026-11-10 01:28:43",
+    "finished_at": "2026-11-10 01:28:43"
   }
 ]
