@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T20:55:46.794Z",
+  "generatedAt": "2026-11-10T21:55:50.333Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-10T20:55:46.789Z",
+      "lastCheckedAt": "2026-11-10T21:55:50.327Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-10T20:55:45.263Z",
+      "lastCheckedAt": "2026-11-10T21:55:48.734Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 10 tracked components.",
@@ -134,6 +134,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "pgz8r13pk4sm",
+          "title": "Elevated errors on Fable 52 and Mythos 52",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-11-10T21:47:48.748Z",
+          "updatedAt": "2026-11-10T21:47:48.895Z",
+          "resolvedAt": "2026-11-10T21:47:48.885Z",
+          "url": "https://stspg.io/pytn9v8p2zc7",
+          "summary": "Overloaded errors on Fable 5.2  and Mythos 5.2 for four minutes. Incident has been mitigated."
+        },
+        {
           "id": "kw2lxj1th04c",
           "title": "Degraded performance for Claude Fable 5.1",
           "status": "resolved",
@@ -165,17 +176,6 @@
           "resolvedAt": "2026-10-28T05:48:13.126Z",
           "url": "https://stspg.io/j86c100s8tqm",
           "summary": "The issue affecting the Gmail connector on claude.ai, Claude Code, and Claude Cowork has been resolved. Impact occurred from 16:00 PT / 23:00 UTC on October 27 to 22:29 PT on Octo..."
-        },
-        {
-          "id": "lqhknfdjrcst",
-          "title": "Elevated errors for Claude Sonnet 5.5",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-10-27T15:09:08.936Z",
-          "updatedAt": "2026-10-27T15:50:17.725Z",
-          "resolvedAt": "2026-10-27T15:50:17.700Z",
-          "url": "https://stspg.io/39x7qh3sd7bd",
-          "summary": "The issue affecting claude.ai, the Claude API, Claude Code, and Claude Cowork has been resolved. Impact occurred from 07:42 PT / 14:42 UTC to 08:17 PT / 15:17 UTC."
         }
       ]
     },
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-10T20:55:45.938Z",
+      "lastCheckedAt": "2026-11-10T21:55:49.423Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-10T20:55:45.390Z",
+      "lastCheckedAt": "2026-11-10T21:55:49.007Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -253,7 +253,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-10T20:55:45.285Z",
+      "lastCheckedAt": "2026-11-10T21:55:48.864Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -339,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-10T20:55:46.372Z",
+      "lastCheckedAt": "2026-11-10T21:55:49.528Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
