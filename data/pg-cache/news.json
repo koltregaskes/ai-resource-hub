@@ -1,5 +1,101 @@
 [
   {
+    "id": "news-0cd5e191c405cf8817d9",
+    "title": "Anthropic targets $1.4 trillion IPO",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1030703/anthropic-ipo-1-4-trillion",
+    "source": "The Verge",
+    "summary": "Anthropic confirmed on Tuesday that its IPO could be one of the biggest ever, even while falling short of previous expectations. Its IPO price is expected to be between $70.00 and $78.00 per share, which would put its valuation as high as $1.4 trillion, according to the New York Times. The Wall Street Journal reports…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-10T14:06:54.000Z",
+    "discovered_at": "2026-11-10 14:55:50"
+  },
+  {
+    "id": "news-d10ce5761f29e0216765",
+    "title": "Adobe brings AI agents and new creative tools to Photoshop, Premiere, and Firefly",
+    "url": "https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/",
+    "source": "TechCrunch",
+    "summary": "Adobe is taking on Figma with a new prototype builder tool in Firefly.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-10T14:05:10.000Z",
+    "discovered_at": "2026-11-10 14:55:38"
+  },
+  {
+    "id": "news-6f3953006a306e0b373a",
+    "title": "Anthropic sets IPO price range of $70 to $78 per share to reach an implied valuation of $1.404 trillion",
+    "url": "https://techcrunch.com/2026/11/10/anthropic-sets-ipo-price-range-of-70-to-78-per-share-to-reach-an-implied-valuation-of-1-404-trillion/",
+    "source": "TechCrunch",
+    "summary": "The company could end up being worth a hefty $1.404 trillion if its shares list at the top of the price range, on a fully diluted basis.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-10T14:01:39.000Z",
+    "discovered_at": "2026-11-10 14:55:38"
+  },
+  {
+    "id": "news-015cb2c6872b425f7b43",
+    "title": "Photoshop, Lightroom, and Premiere are making it easier to remove things",
+    "url": "https://www.theverge.com/tech/1030653/adobe-max-2026-photoshop-premiere-removal-updates",
+    "source": "The Verge",
+    "summary": "Adobe is expanding its Creative Cloud apps and Firefly AI platform with new capabilities that aim to make design and editing projects faster and less complicated. Some of the announcements from Adobe's Max event today include features for automatically removing objects, blemishes, and other unwanted distractions in Pr…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-10T14:00:00.000Z",
+    "discovered_at": "2026-11-10 14:55:50"
+  },
+  {
+    "id": "news-04566ece2f1b9bd7dbfa",
+    "title": "Adobe is going all in on agentic AI",
+    "url": "https://www.theverge.com/tech/1030593/adobe-max-ai-agents-mcp-firefly-assistant-updates",
+    "source": "The Verge",
+    "summary": "Adobe is committing itself to the notion that chatbots and AI agents could be your next design assistant, or even automate creative workflows and repetitive tasks on your behalf. Some of the tools and features announced today at Adobe's Max conference in Miami, Florida, include allowing your preferred third-party AI a…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-10T14:00:00.000Z",
+    "discovered_at": "2026-11-10 14:55:50"
+  },
+  {
+    "id": "news-c8072ec28f747b947c76",
+    "title": "Spotify&#8217;s AI DJ gets new voices, personalities, and an option for less chatter",
+    "url": "https://techcrunch.com/2026/11/10/spotifys-ai-dj-gets-new-voices-personalities-and-an-option-for-less-chatter/",
+    "source": "TechCrunch",
+    "summary": "Spotify Premium users can now customize their AI DJ with new voices with different personalities, or turn off the commentary between songs.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-10T14:00:00.000Z",
+    "discovered_at": "2026-11-10 14:55:38"
+  },
+  {
+    "id": "news-5cd056a31d5df370b0a1",
+    "title": "After challenging Google&#8217;s Android with Cyanogen, its co-founder takes aim at Windows for AI era",
+    "url": "https://techcrunch.com/2026/11/10/after-challenging-googles-android-with-cyanogen-its-co-founder-takes-aim-at-windows-for-ai-era/",
+    "source": "TechCrunch",
+    "summary": "Kora is set to launch as a free-to-use alternative to Windows, targeting users who rely heavily on AI models and agents.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-10T14:00:00.000Z",
+    "discovered_at": "2026-11-10 14:55:38"
+  },
+  {
+    "id": "news-c5fffc8a0cbdc3d45109",
+    "title": "We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps.",
+    "url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
+    "source": "Google",
+    "summary": "Google and Adobe are integrating creative and productivity tools. Edit PDFs in Drive and use Adobe AI in Gemini. See what’s new in this partnership.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-10T14:00:00.000Z",
+    "discovered_at": "2026-11-10 14:55:38"
+  },
+  {
     "id": "news-707c973eeceba7909bf6",
     "title": "Hands-on with Ring’s new AI drone camera for your home",
     "url": "https://www.theverge.com/tech/1030601/ring-drone-cam-hands-on-price-release-date-ai-pilot",
@@ -9,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T13:30:00.000Z",
-    "discovered_at": "2026-11-10 13:55:51"
+    "discovered_at": "2026-11-10 14:55:50"
   },
   {
     "id": "news-1c52468d7a994ee24a82",
@@ -21,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T13:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-155d33cae72679311e5a",
@@ -33,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T13:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-46ecb159c1535b093315",
@@ -45,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T12:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-01a8528fa117926a6942",
@@ -57,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T09:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-1b18832a8d2c83f7264d",
@@ -69,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T07:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-98071e4b97d92c7ec537",
@@ -81,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T01:27:12.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-8d28cfa5555a578e848b",
@@ -93,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T00:28:49.000Z",
-    "discovered_at": "2026-11-10 13:55:51"
+    "discovered_at": "2026-11-10 14:55:50"
   },
   {
     "id": "news-285987eab73127337e17",
@@ -105,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T23:51:58.000Z",
-    "discovered_at": "2026-11-10 13:55:51"
+    "discovered_at": "2026-11-10 14:55:50"
   },
   {
     "id": "news-fd48ce2874be788e4565",
@@ -117,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T23:47:46.000Z",
-    "discovered_at": "2026-11-10 13:55:51"
+    "discovered_at": "2026-11-10 14:55:50"
   },
   {
     "id": "news-13bdf291560a5d69a32e",
@@ -129,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T23:28:37.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-15c28179b2dc3ec9cbc8",
@@ -141,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T23:07:59.000Z",
-    "discovered_at": "2026-11-10 13:55:51"
+    "discovered_at": "2026-11-10 14:55:50"
   },
   {
     "id": "news-f469998b0ebdf825eea8",
@@ -153,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T22:46:09.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-05d31a5bc4a78da30a72",
@@ -165,7 +261,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T22:23:42.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
+  },
+  {
+    "id": "news-ad3fd33cd90bd470d62c",
+    "title": "The global pledge to use AI for climate good is a cruel joke",
+    "url": "https://www.theverge.com/science/1030252/ai-data-center-climate-pledge-united-nations-cop31",
+    "source": "The Verge",
+    "summary": "At this point, reading through the latest splashy pledge to use AI for the good of the environment feels like downing a nonalcoholic beer. Admittedly, I'm suspicious from the onset. How can this be good? But I love beer and our planet enough to give it a whirl - and hey, why not try a [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-09T21:13:16.000Z",
+    "discovered_at": "2026-11-10 14:55:50"
   },
   {
     "id": "news-39befa3379491d537c9b",
@@ -177,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T20:09:06.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-2b128ff095485e1c3bfe",
@@ -189,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T19:24:51.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-4a7141713ab5f9229af0",
@@ -201,19 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T19:09:58.000Z",
-    "discovered_at": "2026-11-10 13:55:51"
-  },
-  {
-    "id": "news-f1eea0a2781af6aa83cc",
-    "title": "Anthropic launches new Claude Fable and Mythos 5.2 models",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2",
-    "source": "The Verge",
-    "summary": "Anthropic is announcing two new models today: Claude Fable 5.2 and Claude Mythos 5.2, which it says are designed to take on \"daunting\" technical challenges. The company claims the new models show improvements in coding, reasoning, and vision, and can generate outputs faster than the 5.1 versions of the Fable and Mytho…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-09T19:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:51"
+    "discovered_at": "2026-11-10 14:55:50"
   },
   {
     "id": "news-9c331579e229757a7a39",
@@ -225,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T19:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-20ff528b54959b19ecf3",
@@ -237,19 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T18:09:52.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
-  },
-  {
-    "id": "news-9d5aee5d27ee2692311a",
-    "title": "Instagram’s Effect Builder makes new filters from AI prompts",
-    "url": "https://www.theverge.com/tech/1030061/instagram-ai-effect-builder-filters",
-    "source": "The Verge",
-    "summary": "After expanding its Edits app to macOS last week, Instagram's next move is launching this Effect Builder that generates custom filters for your Stories posts with AI. Available now for US residents who are over 18, it has a prompt box for describing your filter idea to the chatbot, with an option to attach style [&#82…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-09T18:07:23.000Z",
-    "discovered_at": "2026-11-10 13:55:51"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-fe9001b06ea620d4de81",
@@ -261,19 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T18:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
-  },
-  {
-    "id": "news-a06869aa80e569ca00b4",
-    "title": "The future of AI hinges on… Jensen Huang’s sex life?",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1029990/jensen-huang-the-spy-who-loved-me",
-    "source": "The Verge",
-    "summary": "I would prefer that these people's sex lives were none of my business but I guess we have to talk about Jensen Huang and the National Security Incident. Who could have guessed that the guy who was out here signing titties might not have great judgment about how to behave around women? Alice Huang - [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-09T17:36:08.000Z",
-    "discovered_at": "2026-11-10 13:55:51"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-ea1cff75717bdba91f56",
@@ -285,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T16:56:54.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-ad058ec7fa053fd0bbf6",
@@ -297,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T16:12:28.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
-  },
-  {
-    "id": "news-67d134866a7d1897aa12",
-    "title": "Trump’s 60 Minutes interview touched on AI safety, threat to arrest an AI exec",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1029802/trump-60-minutes-ai",
-    "source": "The Verge",
-    "summary": "Asked about AI executives' warnings about their models' safety on 60 Minutes, Trump said, \"I think that the risk is not nearly as real as it- as they talk, and I think the risk can be managed, and it's managed.\" He claimed the DOJ is managing that risk, saying, \"We had a situation where somebody [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-09T15:50:38.000Z",
-    "discovered_at": "2026-11-10 13:55:51"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-95c3c02be004506d86d1",
@@ -321,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T14:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-f37b680abcf7adcb8bec",
@@ -333,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T13:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-932fe34bad728f30ad4e",
@@ -345,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T08:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-23b94c697622500fcf7d",
@@ -357,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T08:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-fdfdfd60876dfdbc6b15",
@@ -369,55 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T05:26:29.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
-  },
-  {
-    "id": "news-bc55171edc52873bff32",
-    "title": "Nvidia will investigate CEO Jensen Huang’s relationship with possible Chinese spy",
-    "url": "https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/",
-    "source": "TechCrunch",
-    "summary": "In a memo to the company, Huang admitted that he had an affair.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-08T21:00:11.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
-  },
-  {
-    "id": "news-ed263cbbe1a455238f5d",
-    "title": "After the midterms, things are looking rocky for Elon Musk and data centers",
-    "url": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/",
-    "source": "TechCrunch",
-    "summary": "On Equity, we unpacked what the midterms mean for the tech industry.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-07T22:07:22.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
-  },
-  {
-    "id": "news-69c75581d56ff5e1da78",
-    "title": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo",
-    "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
-    "source": "TechCrunch",
-    "summary": "A memo circulated earlier this year reportedly claimed that China’s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-07T21:17:08.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
-  },
-  {
-    "id": "news-a556ec6077950a4f9004",
-    "title": "From the front row to the hot seat — what the midterms mean for Big Tech",
-    "url": "https://techcrunch.com/2026/11/06/from-the-front-row-to-the-hot-seat-what-the-midterms-mean-for-big-tech/",
-    "source": "TechCrunch",
-    "summary": "After spending two years getting cozy with the White House, Big Tech is suddenly trying to make friends with Democrats, and the open question is whether that image makeover can hold up against what states, local communities, and the markets are about to do.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-07T04:16:43.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-a5eef3cf57a4e41068d1",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T20:56:41.000Z",
-    "discovered_at": "2026-11-10 13:55:51"
+    "discovered_at": "2026-11-10 14:55:50"
   },
   {
     "id": "news-bc8f9eac19663ff628fb",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T08:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-cfd4354afa14004ff8c1",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T00:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-c88b52d0b21039c72dea",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T20:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-b58fee4edbbb5f7a9c2c",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-53c56afbaf05f856eba5",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T09:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-300d91101f21ec1db57e",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T08:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-f93567576105c7139347",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T02:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-1f9981de57006417a4eb",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T00:45:15.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-c0d7b0808284d1827cd1",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T00:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-3a06f84c0f51a102b02f",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T14:30:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-a4f4c423c54260333db7",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T08:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-75679f5aa60bfcf88cfe",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-04T07:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:37"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-10 13:55:51"
+    "discovered_at": "2026-11-10 14:55:50"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -633,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -645,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-11-10 13:55:51"
+    "discovered_at": "2026-11-10 14:55:50"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -657,6 +669,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-11-10 13:55:42"
+    "discovered_at": "2026-11-10 14:55:38"
   }
 ]
