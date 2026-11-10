@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T06:55:45.829Z",
+  "generatedAt": "2026-11-10T07:55:48.933Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-10T06:55:45.822Z",
+      "lastCheckedAt": "2026-11-10T07:55:48.929Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-10T06:01:04.000Z",
+          "id": "fireworks-feed-0-2026-11-10T06:56:12.000Z",
+          "title": "Service Degradation for Kimi K3 US",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-10T06:56:12.000Z",
+          "updatedAt": "2026-11-10T06:56:12.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M72040E6H95JDHRXK56F749G",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-10T06:01:04.000Z",
           "title": "Service Degradation for Kimi K3",
           "status": "reported",
           "impact": "unknown",
@@ -29,22 +40,22 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M720QD8Q2MVREC5H7G6DPSA6",
           "summary": "Status: Investigating We are seeing impacted performance for Kimi K3. We are actively investigating. Affected components Kimi K3 (Degraded performance)"
-        },
-        {
-          "id": "fireworks-feed-1-2026-11-10T05:50:28.000Z",
-          "title": "Service Degradation for Kimi K3 US",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-10T05:50:28.000Z",
-          "updatedAt": "2026-11-10T05:50:28.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M72040E6H95JDHRXK56F749G",
-          "summary": "Status: Investigating We are seeing impacted performance for Kimi K3 US. We are actively investigating. Affected components Kimi K3 US (Degraded performance)"
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-10T06:01:04.000Z",
+          "id": "fireworks-feed-0-2026-11-10T06:56:12.000Z",
+          "title": "Service Degradation for Kimi K3 US",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-10T06:56:12.000Z",
+          "updatedAt": "2026-11-10T06:56:12.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M72040E6H95JDHRXK56F749G",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-10T06:01:04.000Z",
           "title": "Service Degradation for Kimi K3",
           "status": "reported",
           "impact": "unknown",
@@ -53,17 +64,6 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M720QD8Q2MVREC5H7G6DPSA6",
           "summary": "Status: Investigating We are seeing impacted performance for Kimi K3. We are actively investigating. Affected components Kimi K3 (Degraded performance)"
-        },
-        {
-          "id": "fireworks-feed-1-2026-11-10T05:50:28.000Z",
-          "title": "Service Degradation for Kimi K3 US",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-10T05:50:28.000Z",
-          "updatedAt": "2026-11-10T05:50:28.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M72040E6H95JDHRXK56F749G",
-          "summary": "Status: Investigating We are seeing impacted performance for Kimi K3 US. We are actively investigating. Affected components Kimi K3 US (Degraded performance)"
         },
         {
           "id": "fireworks-feed-2-2026-11-08T02:42:45.000Z",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-10T06:55:43.738Z",
+      "lastCheckedAt": "2026-11-10T07:55:46.978Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 10 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-10T06:55:44.809Z",
+      "lastCheckedAt": "2026-11-10T07:55:48.058Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-10T06:55:44.168Z",
+      "lastCheckedAt": "2026-11-10T07:55:47.425Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -253,10 +253,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-10T06:55:43.752Z",
+      "lastCheckedAt": "2026-11-10T07:55:46.987Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "2 active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -286,16 +286,6 @@
       ],
       "activeIncidents": [
         {
-          "id": "01M71W79MAGEXEX93QTVTBYJ4K",
-          "title": "Incorrect cost data in Costs API exports",
-          "status": "monitoring",
-          "impact": "none",
-          "startedAt": "2026-11-10T04:42:21.000Z",
-          "updatedAt": "2026-11-10T04:42:21.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified an issue causing incorrect cost data in Costs API exports published between November 6 and 9. We are working to correct the affected records and will provide an..."
-        },
-        {
           "id": "01M6S2FV5TZWQ753NHRB7BF5K7",
           "title": "Elevated error rates with some U.S. business Mastercards",
           "status": "monitoring",
@@ -310,12 +300,12 @@
         {
           "id": "01M71W79MAGEXEX93QTVTBYJ4K",
           "title": "Incorrect cost data in Costs API exports",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "none",
           "startedAt": "2026-11-10T04:42:21.000Z",
-          "updatedAt": "2026-11-10T04:42:21.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified an issue causing incorrect cost data in Costs API exports published between November 6 and 9. We are working to correct the affected records and will provide an..."
+          "updatedAt": "2026-11-10T07:02:33.000Z",
+          "resolvedAt": "2026-11-10T07:02:33.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
         },
         {
           "id": "01M7193DWYRFWQM5W6E3VZ7TM7",
@@ -360,7 +350,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-10T06:55:44.970Z",
+      "lastCheckedAt": "2026-11-10T07:55:48.207Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
