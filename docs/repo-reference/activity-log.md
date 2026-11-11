@@ -1,6 +1,6 @@
 # Recent Activity Snapshot
 
-Generated: 11 Nov 2026, 20:58 UTC
+Generated: 11 Nov 2026, 21:25 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
@@ -8,11 +8,11 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | --- | --- | --- | --- | --- |
 | 12 Nov 2026, 12:00 UTC | digest | Gilbert + Tobin rethinks the business of law with AI | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/gilbert-tobin-sam-nickless) |
 | 12 Nov 2026, 12:00 UTC | digest | Published the 2026-11-12 daily digest | 1 stories captured from 1 sources. | `/news/` |
-| 11 Nov 2026, 20:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 11 Nov 2026, 20:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 11 Nov 2026, 20:58 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 11 Nov 2026, 20:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 11 Nov 2026, 20:57 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 11 Nov 2026, 21:24 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 11 Nov 2026, 21:24 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 11 Nov 2026, 21:24 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 11 Nov 2026, 21:24 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 11 Nov 2026, 21:24 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 11 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,035 open roles across 10 tracked companies. | `/jobs/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
