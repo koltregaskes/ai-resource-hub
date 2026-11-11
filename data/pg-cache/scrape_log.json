@@ -5,8 +5,8 @@
     "status": "success",
     "models_updated": 1037,
     "error_message": null,
-    "started_at": "2026-11-11 14:10:53",
-    "finished_at": "2026-11-11 14:10:53"
+    "started_at": "2026-11-11 15:55:42",
+    "finished_at": "2026-11-11 15:55:42"
   },
   {
     "id": 10,
@@ -14,26 +14,8 @@
     "status": "error",
     "models_updated": 68,
     "error_message": "VentureBeat: HTTP 429: Too Many Requests",
-    "started_at": "2026-11-11 14:10:50",
-    "finished_at": "2026-11-11 14:10:50"
-  },
-  {
-    "id": 9,
-    "scraper": "registry:normalise-status",
-    "status": "success",
-    "models_updated": 132,
-    "error_message": null,
-    "started_at": "2026-11-11 14:10:39",
-    "finished_at": "2026-11-11 14:10:39"
-  },
-  {
-    "id": 7,
-    "scraper": "creative-benchmarks",
-    "status": "fallback",
-    "models_updated": 16,
-    "error_message": null,
-    "started_at": "2026-11-11 14:10:38",
-    "finished_at": "2026-11-11 14:10:38"
+    "started_at": "2026-11-11 15:55:38",
+    "finished_at": "2026-11-11 15:55:38"
   },
   {
     "id": 8,
@@ -41,17 +23,35 @@
     "status": "computed",
     "models_updated": 55,
     "error_message": null,
-    "started_at": "2026-11-11 14:10:38",
-    "finished_at": "2026-11-11 14:10:38"
+    "started_at": "2026-11-11 15:55:26",
+    "finished_at": "2026-11-11 15:55:26"
+  },
+  {
+    "id": 9,
+    "scraper": "registry:normalise-status",
+    "status": "success",
+    "models_updated": 132,
+    "error_message": null,
+    "started_at": "2026-11-11 15:55:26",
+    "finished_at": "2026-11-11 15:55:26"
+  },
+  {
+    "id": 7,
+    "scraper": "creative-benchmarks",
+    "status": "fallback",
+    "models_updated": 16,
+    "error_message": null,
+    "started_at": "2026-11-11 15:55:25",
+    "finished_at": "2026-11-11 15:55:25"
   },
   {
     "id": 5,
     "scraper": "benchmarks:chatbot-arena",
     "status": "fallback",
     "models_updated": 0,
-    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-11-11T14:10:36.452Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
-    "started_at": "2026-11-11 14:10:36",
-    "finished_at": "2026-11-11 14:10:36"
+    "error_message": "{\"collectionStatus\":\"cached\",\"attemptedAt\":\"2026-11-11T15:55:24.472Z\",\"sourceRetrievedAt\":null,\"sourceVerifiedAt\":null}",
+    "started_at": "2026-11-11 15:55:24",
+    "finished_at": "2026-11-11 15:55:24"
   },
   {
     "id": 6,
@@ -59,8 +59,8 @@
     "status": "success",
     "models_updated": 31,
     "error_message": null,
-    "started_at": "2026-11-11 14:10:36",
-    "finished_at": "2026-11-11 14:10:36"
+    "started_at": "2026-11-11 15:55:24",
+    "finished_at": "2026-11-11 15:55:24"
   },
   {
     "id": 3,
@@ -68,8 +68,8 @@
     "status": "success",
     "models_updated": 21,
     "error_message": null,
-    "started_at": "2026-11-11 14:10:35",
-    "finished_at": "2026-11-11 14:10:35"
+    "started_at": "2026-11-11 15:55:23",
+    "finished_at": "2026-11-11 15:55:23"
   },
   {
     "id": 4,
@@ -77,8 +77,8 @@
     "status": "success",
     "models_updated": 0,
     "error_message": null,
-    "started_at": "2026-11-11 14:10:35",
-    "finished_at": "2026-11-11 14:10:35"
+    "started_at": "2026-11-11 15:55:23",
+    "finished_at": "2026-11-11 15:55:23"
   },
   {
     "id": 2,
@@ -86,8 +86,8 @@
     "status": "success",
     "models_updated": 337,
     "error_message": null,
-    "started_at": "2026-11-11 14:10:34",
-    "finished_at": "2026-11-11 14:10:34"
+    "started_at": "2026-11-11 15:55:22",
+    "finished_at": "2026-11-11 15:55:22"
   },
   {
     "id": 1,
@@ -95,7 +95,7 @@
     "status": "success",
     "models_updated": 52,
     "error_message": null,
-    "started_at": "2026-11-11 14:10:33",
-    "finished_at": "2026-11-11 14:10:33"
+    "started_at": "2026-11-11 15:55:21",
+    "finished_at": "2026-11-11 15:55:21"
   }
 ]
