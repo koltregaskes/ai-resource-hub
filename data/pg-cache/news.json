@@ -1,5 +1,41 @@
 [
   {
+    "id": "news-55d7d41513d8574ac5f8",
+    "title": "Democrats launch Nvidia investigation, write scathing letter on Huang&#8217;s &#8216;scheme&#8217; with Trump",
+    "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
+    "source": "TechCrunch",
+    "summary": "This Congressional investigation into Nvidia's China sales and its dealings with Trump is the second one, so far, since news of the alleged spy affair broke.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T22:42:51.000Z",
+    "discovered_at": "2026-11-12 22:55:37"
+  },
+  {
+    "id": "news-1a628d755dc37d52cf4e",
+    "title": "Muse can now place calls to U.S. businesses — if you pay",
+    "url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/",
+    "source": "TechCrunch",
+    "summary": "Muse's AI can now place outbound calls to US businesses — but it's not free.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T22:22:28.000Z",
+    "discovered_at": "2026-11-12 22:55:37"
+  },
+  {
+    "id": "news-3403360ccc1df753cef2",
+    "title": "Google’s new Gemini model is better at understanding complicated questions",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
+    "source": "The Verge",
+    "summary": "Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including \"questions with multiple parts, hard-to-understand typos, or highly specific requests.\" The new model can break down your questions and address each part in its responses. It's available starting today in search,…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T21:55:32.000Z",
+    "discovered_at": "2026-11-12 22:55:46"
+  },
+  {
     "id": "news-5e5f306d785f11574933",
     "title": "The unfolding Jensen Huang scandal: a timeline",
     "url": "https://techcrunch.com/2026/11/12/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
@@ -9,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T21:35:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-412b4e746837e240d98c",
@@ -21,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T21:27:10.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-e153c4dc0f7fcb2944a9",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T20:26:47.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-372847c9499451ebf765",
@@ -45,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T20:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-3b869b1138e3a082f2ba",
@@ -57,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T19:42:40.000Z",
-    "discovered_at": "2026-11-12 21:55:42"
+    "discovered_at": "2026-11-12 22:55:46"
   },
   {
     "id": "news-ce9a468b53e9785d338c",
@@ -69,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T19:27:45.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-f7effce2db920f5c6670",
@@ -81,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T19:11:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-baccdaa9b5505527e9f6",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T18:39:23.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-d545fdc617b9aefde9f6",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T18:06:54.000Z",
-    "discovered_at": "2026-11-12 21:55:42"
+    "discovered_at": "2026-11-12 22:55:46"
   },
   {
     "id": "news-459a57b4750adf481f4f",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T18:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-96892311de09e14b1fc8",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T17:44:33.000Z",
-    "discovered_at": "2026-11-12 21:55:42"
+    "discovered_at": "2026-11-12 22:55:46"
   },
   {
     "id": "news-deea79b353aff377bfe2",
@@ -141,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T17:36:40.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-f5707a3468d9b42ec474",
@@ -153,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T17:17:58.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-ddf7a6c150d0e1d19045",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T17:00:52.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-4213b9afeff9a7e6e0ad",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T17:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:42"
+    "discovered_at": "2026-11-12 22:55:46"
   },
   {
     "id": "news-32933935200c2839243a",
@@ -189,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T17:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:42"
+    "discovered_at": "2026-11-12 22:55:46"
   },
   {
     "id": "news-d0b6d30c7ec6bdd89182",
@@ -201,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T17:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-0fd7ae7044e59d7b5fa6",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T16:36:37.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-0ff22abf6100bfe97aca",
@@ -225,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T16:32:33.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-1d250e9233fe0f753f8c",
@@ -237,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T16:30:00.000Z",
-    "discovered_at": "2026-11-12 21:55:42"
+    "discovered_at": "2026-11-12 22:55:46"
   },
   {
     "id": "news-a5ee8976426905143d28",
@@ -249,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T16:12:44.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-830958e6e6f7f875c563",
@@ -261,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T15:48:12.000Z",
-    "discovered_at": "2026-11-12 21:55:42"
+    "discovered_at": "2026-11-12 22:55:46"
   },
   {
     "id": "news-15b0384fb53fdc16335b",
@@ -273,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T15:37:29.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-62c34abfa66e72c12433",
@@ -285,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T15:18:14.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-023d1c79ca20cb05e618",
@@ -297,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T15:02:28.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:37"
   },
   {
     "id": "news-15c28179b2dc3ec9cbc8",
@@ -309,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T15:01:31.000Z",
-    "discovered_at": "2026-11-12 21:55:42"
+    "discovered_at": "2026-11-12 22:55:46"
   },
   {
     "id": "news-39f4c129e4341242cbc5",
@@ -321,31 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T14:10:00.000Z",
-    "discovered_at": "2026-11-12 21:55:42"
-  },
-  {
-    "id": "news-426b199762db8714ebb8",
-    "title": "Nvidia CEO Jensen Huang resigns amid spy, affair scandals",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1031689/jensen-huang-nvidia-ceo-resigns",
-    "source": "The Verge",
-    "summary": "Nvidia's board announced that Jensen Huang - its longtime co-founder, president, and CEO - has resigned after reports of two extramarital affairs, one with an alleged Chinese spy and one with an Nvidia executive who reported to Huang. Following a late Wednesday night meeting, the board accepted Huang's letter of resig…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-12T13:53:16.000Z",
-    "discovered_at": "2026-11-12 21:55:42"
-  },
-  {
-    "id": "news-7ed9c1c82c2d456eb82c",
-    "title": "Nine Korean startups vie for a spot in Disrupt 2027&#8217;s Startup Battlefield 200 competition",
-    "url": "https://techcrunch.com/2026/11/12/nine-korean-startups-vie-for-a-spot-in-disrupt-2027s-startup-battlefield-200-competition/",
-    "source": "TechCrunch",
-    "summary": "The startups work across the deep tech sector, including healthcare, fintech, energy, semiconductors, and AI. All nine are looking to enter the U.S.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-12T13:26:25.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:46"
   },
   {
     "id": "news-0990939c7d6ea9f7b924",
@@ -357,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T09:30:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
-  },
-  {
-    "id": "news-48e6c412414232492377",
-    "title": "Who could replace Jensen Huang? A highly unscientific list of possible successors",
-    "url": "https://techcrunch.com/2026/11/11/who-could-replace-jensen-huang-a-highly-unscientific-list-of-possible-successors/",
-    "source": "TechCrunch",
-    "summary": "Nvidia has no succession plan and a CEO in hot water, so we’ve drafted a shortlist.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-12T03:13:10.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-f28f90d2895a812ca579",
@@ -381,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T00:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-b06379671ede1f625c58",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T00:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-8e4104a923ec61a4f8ae",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T18:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-97adab01dbf7344a4376",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-7e65614cc89aac7b14f8",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T09:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-80b38ea7da372c49e059",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T08:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-8c999d6885d24711e917",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T00:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-b686da68349e5f787ade",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T21:12:59.000Z",
-    "discovered_at": "2026-11-12 21:55:42"
+    "discovered_at": "2026-11-12 22:55:47"
   },
   {
     "id": "news-ac5a661efbfd509d2187",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T19:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-c5fffc8a0cbdc3d45109",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T14:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-155d33cae72679311e5a",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T13:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-46ecb159c1535b093315",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T12:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-5ca4dc7b6d88cb31d41f",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T10:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-01a8528fa117926a6942",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T09:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-4e3e5904c85ae763182d",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T08:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-3588ceed41552e465a0d",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T07:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-1ff74ee2cb1066374d17",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T00:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-9c331579e229757a7a39",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T19:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-f37b680abcf7adcb8bec",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T13:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-932fe34bad728f30ad4e",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T08:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-23b94c697622500fcf7d",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T08:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-a5eef3cf57a4e41068d1",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T20:56:41.000Z",
-    "discovered_at": "2026-11-12 21:55:42"
+    "discovered_at": "2026-11-12 22:55:47"
   },
   {
     "id": "news-bc8f9eac19663ff628fb",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T08:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-cfd4354afa14004ff8c1",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T00:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-12 21:55:42"
+    "discovered_at": "2026-11-12 22:55:47"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-12 21:55:32"
+    "discovered_at": "2026-11-12 22:55:36"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -729,6 +729,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-11-12 21:55:42"
+    "discovered_at": "2026-11-12 22:55:47"
   }
 ]
