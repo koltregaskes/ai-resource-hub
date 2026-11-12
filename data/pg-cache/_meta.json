@@ -3,11 +3,11 @@
     "status": "verified",
     "reason": "canonical_config_read",
     "routingMode": "configured",
-    "checkedAt": "2026-11-12T09:55:43.708Z",
-    "sourceVerifiedAt": "2026-11-12T09:55:43.708Z",
+    "checkedAt": "2026-11-12T10:55:48.605Z",
+    "sourceVerifiedAt": "2026-11-12T10:55:48.605Z",
     "siteFiltersSha256": "bad10f90faa07d54f4ce690f38214e0e06b7b46dbc1710c466d53bc45e7f5768"
   },
-  "generated_at": "2026-11-12T09:55:44.497Z",
+  "generated_at": "2026-11-12T10:55:49.728Z",
   "source": "local sqlite + shared postgres",
   "sqlite_storage": "local-only",
   "shared_postgres_available": false
