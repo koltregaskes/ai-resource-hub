@@ -39,6 +39,14 @@ function getRelativeDateLabel(dateStr: string): string {
 }
 
 const TAG_COLOURS: Record<string, string> = {
+  // Canonical reader categories (shared/news-categories.json)
+  Models: 'bg-sky-500/20 text-sky-300',
+  Tools: 'bg-emerald-500/20 text-emerald-300',
+  Agents: 'bg-violet-500/20 text-violet-300',
+  Research: 'bg-purple-500/20 text-purple-300',
+  Industry: 'bg-amber-500/20 text-amber-300',
+  Policy: 'bg-rose-500/20 text-rose-300',
+  Voices: 'bg-orange-500/20 text-orange-300',
   'Top Stories': 'bg-amber-500/20 text-amber-400',
   News: 'bg-gray-500/20 text-gray-400',
   YouTube: 'bg-red-500/20 text-red-400',

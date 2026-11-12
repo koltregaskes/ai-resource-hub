@@ -10,6 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { getNews } from '../db/queries';
 import { routeAiResourceHubNews } from './news-routing';
+import { classifyNewsItem, getNewsCategory, type NewsCategoryId, type NewsTagId } from './news-categories';
 
 export interface NewsItem {
   id: string;
@@ -19,7 +20,9 @@ export interface NewsItem {
   summary: string;
   date: string;         // ISO date string
   dateLabel: string;     // Human-readable: "Saturday 8 February 2026"
-  category: string;      // "Top Stories" | "News" | "YouTube"
+  category: string;      // Canonical reader category label, e.g. "Models" (shared/news-categories.json)
+  readerCategory: NewsCategoryId;
+  readerTags: NewsTagId[];
   tags: string[];
   digestDate: string;    // The digest file date
 }
@@ -129,7 +132,6 @@ function parseDigest(content: string, fileDate: string): NewsItem[] {
   const lines = content.split('\n');
   let isYouTubeSection = false;
   let articleCount = 0;
-  const TOP_STORIES_LIMIT = 5;
 
   const dateParts = fileDate.split('-').map(Number);
   const dateObj = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
@@ -167,6 +169,8 @@ function parseDigest(content: string, fileDate: string): NewsItem[] {
         seenUrls.add(url.trim());
         if (isJunk(title, url)) continue;
 
+        const simpleClass = classifyNewsItem({ title, summary, sourceCategory: isYouTubeSection ? 'YouTube' : 'News', vocabulary: 'legacyLabels' });
+        if (!simpleClass.category) continue;
         items.push({
           id: `${fileDate}-${slugify(title)}`,
           title: title.trim(),
@@ -175,7 +179,9 @@ function parseDigest(content: string, fileDate: string): NewsItem[] {
           summary: summary?.trim() || '',
           date: fileDate,
           dateLabel,
-          category: isYouTubeSection ? 'YouTube' : 'News',
+          category: getNewsCategory(simpleClass.category).label,
+          readerCategory: simpleClass.category,
+          readerTags: simpleClass.tags,
           tags: generateTags(title),
           digestDate: fileDate,
         });
@@ -205,11 +211,13 @@ function parseDigest(content: string, fileDate: string): NewsItem[] {
       if (isoMatch) articleDate = isoMatch[0];
     }
 
-    const category = isYouTubeSection
-      ? 'YouTube'
-      : articleCount <= TOP_STORIES_LIMIT
-        ? 'Top Stories'
-        : 'News';
+    const classification = classifyNewsItem({
+      title,
+      summary,
+      sourceCategory: isYouTubeSection ? 'YouTube' : 'News',
+      vocabulary: 'legacyLabels',
+    });
+    if (!classification.category) continue;
 
     items.push({
       id: `${fileDate}-${slugify(title)}`,
@@ -219,7 +227,9 @@ function parseDigest(content: string, fileDate: string): NewsItem[] {
       summary: summary.trim(),
       date: articleDate,
       dateLabel,
-      category,
+      category: getNewsCategory(classification.category).label,
+      readerCategory: classification.category,
+      readerTags: classification.tags,
       tags: generateTags(title),
       digestDate: fileDate,
     });
@@ -260,37 +270,23 @@ export function loadNewsDigests(): NewsItem[] {
   return allItems;
 }
 
-function categoryLabelFromDB(category: string): string {
-  switch (category) {
-    case 'models':
-      return 'Top Stories';
-    case 'research':
-      return 'Research';
-    case 'tools':
-      return 'Tools';
-    case 'industry':
-      return 'News';
-    case 'funding':
-      return 'Funding';
-    case 'policy':
-      return 'Policy';
-    case 'open-source':
-      return 'Open Source';
-    default:
-      return 'News';
-  }
-}
-
 function loadNewsFromDB(): NewsItem[] {
   const rows = getNews(250) as DBNewsItem[];
 
-  return rows.map((row) => {
+  return rows.flatMap((row): NewsItem[] => {
+    const classification = classifyNewsItem({
+      title: row.title,
+      summary: row.summary,
+      sourceCategory: row.category,
+      vocabulary: 'database',
+    });
+    if (!classification.category) return [];
     const dateSource = row.published_at ?? row.discovered_at ?? new Date().toISOString();
     const date = dateSource.slice(0, 10);
     const dateParts = date.split('-').map(Number);
     const dateObj = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
 
-    return {
+    return [{
       id: row.id,
       title: row.title,
       url: row.url,
@@ -303,10 +299,12 @@ function loadNewsFromDB(): NewsItem[] {
         month: 'long',
         day: 'numeric',
       }),
-      category: categoryLabelFromDB(row.category),
+      category: getNewsCategory(classification.category).label,
+      readerCategory: classification.category,
+      readerTags: classification.tags,
       tags: generateTags(`${row.title} ${row.summary ?? ''}`),
       digestDate: date,
-    };
+    }];
   });
 }
 

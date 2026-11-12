@@ -1,3 +1,4 @@
+import { getNewsCategory, mapLegacyCategory } from './news-categories';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -75,15 +76,14 @@ const BLOCKED_NEWS_KEYWORDS = /\b(bitcoin|crypto|cryptocurrency|ethereum|solana|
 const TRUSTED_AI_SOURCE_HINT = /\b(ai|artificial analysis|anthropic|openai|google|deepmind|hugging face|papers with code|marktechpost|venturebeat|ars technica|the verge|techcrunch|wired|mit technology review|hacker news|reuters|bloomberg|financial times|the information|simon willison)\b/i;
 const REQUIRED_AI_KEYWORDS = /\b(ai|artificial intelligence|model|models|llm|llms|gpt|chatgpt|claude|anthropic|openai|gemini|deepmind|deepseek|mistral|llama|xai|grok|agent|agents|benchmark|reasoning|inference|token|tokens|multimodal|embedding|embeddings|vector|gpu|tpu|nvidia|hugging face|diffusion|robotics|synthetic data|prompt|prompts|research paper|alignment|fine-tuning|safety|rlhf|rag)\b/i;
 
-const CATEGORY_META: Record<string, { label: string; className: string }> = {
-  ai_agents: { label: 'AI Agents', className: 'bg-violet-500/20 text-violet-300' },
-  ai_interviews: { label: 'Interviews', className: 'bg-amber-500/20 text-amber-300' },
-  ai_news: { label: 'AI News', className: 'bg-sky-500/20 text-sky-300' },
-  ai_research: { label: 'Research', className: 'bg-purple-500/20 text-purple-300' },
-  ai_tools: { label: 'Tools', className: 'bg-emerald-500/20 text-emerald-300' },
-  tech_dev: { label: 'Dev Tools', className: 'bg-cyan-500/20 text-cyan-300' },
-  tech_news: { label: 'Tech News', className: 'bg-slate-500/20 text-slate-300' },
-};
+// Creator categories map onto the canonical reader categories (shared/news-categories.json).
+const CATEGORY_META: Record<string, { label: string; className: string }> = Object.fromEntries(
+  ['ai_agents', 'ai_interviews', 'ai_news', 'ai_research', 'ai_tools', 'tech_dev', 'tech_news'].map((key) => {
+    const id = mapLegacyCategory(key, 'curationMeta');
+    const category = getNewsCategory(id ?? 'industry');
+    return [key, { label: category.label, className: category.className }];
+  }),
+);
 
 export const FALLBACK_GLOSSARY_TERMS: CuratedGlossaryTerm[] = [
   {

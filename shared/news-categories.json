@@ -1,0 +1,113 @@
+{
+  "$comment": "One canonical reader category set for AI Resource Hub news, the daily edition and the email picker. Agreed 12 Nov 2026 (hub #1495, #1497, #1498). Every legacy vocabulary maps here. Benchmark, pricing_change and open_source stay as tags, not categories. Used by src/data/news-categories.ts, scripts/backfill-news-categories.mjs and the newsletter Worker. Keep ids stable: subscriber preferences store them.",
+  "version": 1,
+  "categories": [
+    {
+      "id": "models",
+      "label": "Models",
+      "description": "New and updated AI models: launches, versions, open weights and model cards.",
+      "className": "bg-sky-500/20 text-sky-300"
+    },
+    {
+      "id": "tools",
+      "label": "Tools",
+      "description": "Products, apps, APIs and developer tools built on AI.",
+      "className": "bg-emerald-500/20 text-emerald-300"
+    },
+    {
+      "id": "agents",
+      "label": "Agents",
+      "description": "AI agents, computer use, tool calling and the protocols that connect them.",
+      "className": "bg-violet-500/20 text-violet-300"
+    },
+    {
+      "id": "research",
+      "label": "Research",
+      "description": "Papers, studies, datasets and findings from labs and universities.",
+      "className": "bg-purple-500/20 text-purple-300"
+    },
+    {
+      "id": "industry",
+      "label": "Industry",
+      "description": "Companies, funding, deals, chips, data centres and the people running them.",
+      "className": "bg-amber-500/20 text-amber-300"
+    },
+    {
+      "id": "policy",
+      "label": "Policy",
+      "description": "Law, regulation, courts, safety and government action on AI.",
+      "className": "bg-rose-500/20 text-rose-300"
+    },
+    {
+      "id": "voices",
+      "label": "Voices",
+      "description": "Interviews, podcasts, talks and opinion from people in AI.",
+      "className": "bg-orange-500/20 text-orange-300"
+    }
+  ],
+  "tags": ["benchmark", "pricing_change", "open_source"],
+  "legacyMap": {
+    "$comment": "Source vocabulary value -> canonical id. null means not AI news for this site (excluded from editions).",
+    "newsFeed": {
+      "ai_models": "models",
+      "ai_tools": "tools",
+      "ai_agents": "agents",
+      "ai_research": "research",
+      "ai_interviews": "voices",
+      "ai_news": "industry",
+      "tech_general": "industry",
+      "tech_news": "industry",
+      "tech_dev": "tools",
+      "creative_tools": "tools",
+      "health_research": "research",
+      "crypto": null,
+      "other": null
+    },
+    "database": {
+      "models": "models",
+      "industry": "industry",
+      "research": "research",
+      "tools": "tools",
+      "funding": "industry",
+      "policy": "policy",
+      "open-source": "models"
+    },
+    "curationMeta": {
+      "ai_agents": "agents",
+      "ai_interviews": "voices",
+      "ai_news": "industry",
+      "ai_research": "research",
+      "ai_tools": "tools",
+      "tech_dev": "tools",
+      "tech_news": "industry"
+    },
+    "legacyLabels": {
+      "Top Stories": null,
+      "News": "industry",
+      "Research": "research",
+      "Tools": "tools",
+      "Funding": "industry",
+      "Policy": "policy",
+      "Open Source": "models",
+      "YouTube": "voices"
+    }
+  },
+  "keywordRules": {
+    "$comment": "Matched against title + summary (case-insensitive). Order: policy, voices, agents, research keywords first; then the source label unless it is the catch-all industry; then industry, models, tools keywords; then the source label, else industry. See classifyNewsItem in src/data/news-categories.ts.",
+    "order": ["policy", "voices", "agents", "research", "industry", "models", "tools"],
+    "patterns": {
+      "policy": "\\b(regulat\\w*|legislat\\w*|lawsuit|sued|sues|court|judge|copyright|antitrust|senate|congress|parliament|ministry|government|white house|executive order|eu ai act|ai act|export control\\w*|ban(s|ned)?|ai policy|public policy|policymakers?|policy makers?|regulators?|safety institute|watchdog|ftc|ofcom)\\b",
+      "voices": "\\b(interview(ed)? (with|by)|in an interview|podcast|in conversation|fireside chat|q&a|op-ed|opinion:|keynote|sits down with)\\b",
+      "agents": "\\b(agent|agents|agentic|computer use|computer-use|mcp|model context protocol|tool calling|tool use|multi-agent|autonomous)\\b",
+      "research": "\\b(paper|arxiv|preprint|study|studies|researchers?|dataset|findings|peer-reviewed|journal|benchmark(s|ed|ing)?)\\b",
+      "industry": "\\b(raises|raised|funding|valuation|series [a-f]|ipo|acquir\\w*|acquisition|merger|layoffs?|revenue|earnings|profit|investors?|data cent(re|er)s?|chips?|gpus?|nvidia|semiconductor|ceo|hires|hiring|partnership|deal)\\b",
+      "models": "\\b(model|models|llm|weights|open-weight|gpt-?\\d|claude|gemini|llama|mistral|qwen|deepseek|grok|o\\d|reasoning model|frontier model|checkpoint)\\b",
+      "tools": "\\b(app|apps|api|sdk|plugin|extension|feature|launch(es|ed)?|rolls? out|copilot|ide|assistant|browser|update|beta|integration)\\b"
+    },
+    "tagPatterns": {
+      "benchmark": "\\b(benchmark\\w*|leaderboard|eval(s|uation)?|swe-bench|mmlu|arena)\\b",
+      "pricing_change": "\\b(price|prices|pricing|cheaper|per million tokens|free tier|subscription|cost cut\\w*)\\b",
+      "open_source": "\\b(open[- ]source|open[- ]weights?|apache 2\\.0|mit licen[cs]e|hugging ?face|github)\\b"
+    }
+  }
+}
