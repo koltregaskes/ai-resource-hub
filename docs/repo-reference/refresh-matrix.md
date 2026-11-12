@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 12 Nov 2026, 17:56 UTC
+Generated: 12 Nov 2026, 18:52 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,20 +8,20 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| AI milestones | Curated updates as research lands | Mixed | 12 Nov 2026, 17:56 UTC |
+| AI milestones | Curated updates as research lands | Mixed | 12 Nov 2026, 18:52 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 12 Nov 2026, 17:56 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 12 Nov 2026, 18:52 UTC |
 | Benchmarks and evals | Hourly collection attempts; measurement dates vary | Automated | 05 Feb 2026, 00:00 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 12 Nov 2026, 17:55 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 12 Nov 2026, 18:52 UTC |
 | News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 12 Nov 2026, 12:00 UTC |
-| Provider status | Hourly automated refresh | Automated | 12 Nov 2026, 17:55 UTC |
-| Guides and learning | Manual editorial review | Manual | 12 Nov 2026, 17:55 UTC |
+| Provider status | Hourly automated refresh | Automated | 12 Nov 2026, 18:52 UTC |
+| Guides and learning | Manual editorial review | Manual | 12 Nov 2026, 18:52 UTC |
 
 ## AI milestones
 
 - Cadence: Curated updates as research lands
 - Automation: Mixed
-- Last refreshed: 12 Nov 2026, 17:56 UTC
+- Last refreshed: 12 Nov 2026, 18:52 UTC
 - Category route: `/milestones/`
 - Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
 
@@ -34,7 +34,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 ### Last Visible Updates
 
 - 30 Nov 2026, 12:00 UTC: AlphaFold breakthrough at CASP14 - Next exact anniversary in 18 days. (`/milestones/`)
-- 12 Nov 2026, 17:56 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
+- 12 Nov 2026, 18:52 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -60,7 +60,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 12 Nov 2026, 17:56 UTC
+- Last refreshed: 12 Nov 2026, 18:52 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -73,8 +73,8 @@ This mirrors the public updates page in a repo-readable format so contributors c
 ### Last Visible Updates
 
 - 09 Nov 2026, 12:00 UTC: Muse Ember - Meta release desk entry is watch only with 0 related stories and 0 benchmark signals attached. (`/new/`)
-- 05 Nov 2026, 12:00 UTC: Gemini Omni 1.2 Flash - Google release desk entry is watch only with 1 related story and 0 benchmark signals attached. (`/new/`)
-- 04 Nov 2026, 12:00 UTC: Gemini Omni 1.1 Flash - Google release desk entry is watch only with 1 related story and 0 benchmark signals attached. (`/new/`)
+- 05 Nov 2026, 12:00 UTC: Gemini Omni 1.2 Flash - Google release desk entry is watch only with 2 related stories and 0 benchmark signals attached. (`/new/`)
+- 04 Nov 2026, 12:00 UTC: Gemini Omni 1.1 Flash - Google release desk entry is watch only with 2 related stories and 0 benchmark signals attached. (`/new/`)
 
 ## Benchmarks and evals
 
@@ -98,7 +98,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 12 Nov 2026, 17:55 UTC
+- Last refreshed: 12 Nov 2026, 18:52 UTC
 - Category route: `/compare/llm/`
 
 
@@ -110,9 +110,9 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 12 Nov 2026, 17:55 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
-- 12 Nov 2026, 17:55 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 12 Nov 2026, 17:55 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 12 Nov 2026, 18:52 UTC: Official provider pricing cross-check - Validated tracked price rows against official pricing pages. (`/compare/llm/`)
+- 12 Nov 2026, 18:52 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 12 Nov 2026, 18:52 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
@@ -130,15 +130,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 12 Nov 2026, 17:44 UTC: The Jensen Huang scandal is hardly over - The Verge (industry) ([source](https://www.theverge.com/ai-artificial-intelligence/1032069/jensen-huang-resignation-affair-chips-smuggling))
-- 12 Nov 2026, 17:36 UTC: Hugging Face CEO vows to keep fighting for open-source AI after Jensen Huang&#8217;s exit - TechCrunch (industry) ([source](https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit/))
-- 12 Nov 2026, 17:00 UTC: SoftBank’s billion-dollar loss may have put a cap on AI&#8217;s natural gas ambitions - TechCrunch (industry) ([source](https://techcrunch.com/2026/11/12/softbanks-billion-dollar-loss-may-have-put-a-cap-on-ais-natural-gas-ambitions/))
+- 12 Nov 2026, 18:39 UTC: Jensen Huang’s exit puts Nvidia’s support for open source in question - TechCrunch (industry) ([source](https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/))
+- 12 Nov 2026, 18:06 UTC: Oh, Palantir is ‘progressive’ now, is it? - The Verge (industry) ([source](https://www.theverge.com/ai-artificial-intelligence/1032126/alex-baby-you-were-recorded-on-video))
+- 12 Nov 2026, 18:00 UTC: Google Search gets a major upgrade with Gemini 4 Hydrogen - Google (models) ([source](https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/))
 
 ## Provider status
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 12 Nov 2026, 17:55 UTC
+- Last refreshed: 12 Nov 2026, 18:52 UTC
 - Category route: `/status/`
 
 
@@ -149,15 +149,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 12 Nov 2026, 17:55 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
-- 12 Nov 2026, 17:55 UTC: Anthropic - Minor Service Outage ([source](https://status.claude.com))
-- 12 Nov 2026, 17:55 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
+- 12 Nov 2026, 18:52 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
+- 12 Nov 2026, 18:52 UTC: Anthropic - Minor Service Outage ([source](https://status.claude.com))
+- 12 Nov 2026, 18:52 UTC: OpenAI - Partial System Degradation ([source](https://status.openai.com))
 
 ## Guides and learning
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 12 Nov 2026, 17:55 UTC
+- Last refreshed: 12 Nov 2026, 18:52 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -169,6 +169,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 12 Nov 2026, 17:55 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
-- 12 Nov 2026, 17:55 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 12 Nov 2026, 17:55 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 12 Nov 2026, 18:52 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 12 Nov 2026, 18:52 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 12 Nov 2026, 18:52 UTC: Choosing An Ai Model - Guide or learning page updated in the repository. (`/guides/choosing-an-ai-model/`)

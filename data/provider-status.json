@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T17:55:59.176Z",
+  "generatedAt": "2026-11-12T18:52:39.403Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T17:55:59.169Z",
+      "lastCheckedAt": "2026-11-12T18:52:39.396Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T17:55:57.103Z",
+      "lastCheckedAt": "2026-11-12T18:52:37.555Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "1 active incident across 10 tracked components.",
@@ -108,6 +108,10 @@
       "components": [
         {
           "name": "claude.ai",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Claude Cowork",
           "status": "partial_outage"
         },
         {
@@ -125,36 +129,32 @@
         {
           "name": "Claude API (api.anthropic.com)",
           "status": "operational"
-        },
-        {
-          "name": "Claude Models on Google Cloud (Anthropic managed)",
-          "status": "operational"
         }
       ],
       "activeIncidents": [
         {
           "id": "sqn3fg1l96dl",
           "title": "Elevated errors affecting the Microsoft 365 connector",
-          "status": "investigating",
+          "status": "identified",
           "impact": "major",
           "startedAt": "2026-11-12T17:52:44.934Z",
-          "updatedAt": "2026-11-12T17:52:45.046Z",
+          "updatedAt": "2026-11-12T18:34:20.062Z",
           "resolvedAt": null,
           "url": "https://stspg.io/m0rbx38nmy1c",
-          "summary": "We are investigating elevated errors and slow responses affecting the Microsoft 365 connector. Requests to mail, SharePoint, Teams chat and calendar through the connector may fail..."
+          "summary": "We have identified an issue with an upstream provider affecting the Microsoft 365 connector. Mail, calendar and search tools are failing for most requests, and new connections to..."
         }
       ],
       "recentIncidents": [
         {
           "id": "sqn3fg1l96dl",
           "title": "Elevated errors affecting the Microsoft 365 connector",
-          "status": "investigating",
+          "status": "identified",
           "impact": "major",
           "startedAt": "2026-11-12T17:52:44.934Z",
-          "updatedAt": "2026-11-12T17:52:45.046Z",
+          "updatedAt": "2026-11-12T18:34:20.062Z",
           "resolvedAt": null,
           "url": "https://stspg.io/m0rbx38nmy1c",
-          "summary": "We are investigating elevated errors and slow responses affecting the Microsoft 365 connector. Requests to mail, SharePoint, Teams chat and calendar through the connector may fail..."
+          "summary": "We have identified an issue with an upstream provider affecting the Microsoft 365 connector. Mail, calendar and search tools are failing for most requests, and new connections to..."
         },
         {
           "id": "pgz8r13pk4sm",
@@ -192,6 +192,103 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-11-12T18:52:37.520Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Chat Completions",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Agents",
+          "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Embeddings",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01M78GAT3AK9P9W8Z230KHFVE8",
+          "title": "Elevated errors affecting the Microsoft 365 connector",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-11-12T18:29:14.000Z",
+          "updatedAt": "2026-11-12T18:29:14.000Z",
+          "resolvedAt": null,
+          "summary": "We’re investigating an issue with Microsoft connectors where new connections may be broken and tools are not working as expected. We’ll share an update when we know more."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01M78GAT3AK9P9W8Z230KHFVE8",
+          "title": "Elevated errors affecting the Microsoft 365 connector",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-11-12T18:29:14.000Z",
+          "updatedAt": "2026-11-12T18:29:14.000Z",
+          "resolvedAt": null,
+          "summary": "We’re investigating an issue with Microsoft connectors where new connections may be broken and tools are not working as expected. We’ll share an update when we know more."
+        },
+        {
+          "id": "01M77FAXVFV338GY7G9VRENRS5",
+          "title": "GPT-image-2.5 and 2.6 Sunburst & Flare High error rate",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-12T08:52:35.000Z",
+          "updatedAt": "2026-11-12T09:25:12.000Z",
+          "resolvedAt": "2026-11-12T09:25:12.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M76CW2D7FM7K7F8NJ4W0G08N",
+          "title": "Unable to start new Workspace Agent runs",
+          "status": "resolved",
+          "impact": "critical",
+          "startedAt": "2026-11-11T22:50:17.000Z",
+          "updatedAt": "2026-11-12T08:32:37.000Z",
+          "resolvedAt": "2026-11-12T08:32:37.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M765MJQK7F85SC82RMTYN0V3",
+          "title": "Elevated errors affecting logins, sign-ups, and ChatGPT features",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-11T20:43:51.000Z",
+          "updatedAt": "2026-11-11T20:52:40.000Z",
+          "resolvedAt": "2026-11-11T20:52:40.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        }
+      ]
+    },
+    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -202,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T17:55:57.920Z",
+      "lastCheckedAt": "2026-11-12T18:52:38.089Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T17:55:57.435Z",
+      "lastCheckedAt": "2026-11-12T18:52:37.540Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -255,92 +352,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T17:55:57.172Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Chat Completions",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Agents",
-          "status": "operational"
-        },
-        {
-          "name": "Decisions",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01M77FAXVFV338GY7G9VRENRS5",
-          "title": "GPT-image-2.5 and 2.6 Sunburst & Flare High error rate",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-12T08:52:35.000Z",
-          "updatedAt": "2026-11-12T09:25:12.000Z",
-          "resolvedAt": "2026-11-12T09:25:12.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M76CW2D7FM7K7F8NJ4W0G08N",
-          "title": "Unable to start new Workspace Agent runs",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-11-11T22:50:17.000Z",
-          "updatedAt": "2026-11-12T08:32:37.000Z",
-          "resolvedAt": "2026-11-12T08:32:37.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M765MJQK7F85SC82RMTYN0V3",
-          "title": "Elevated errors affecting logins, sign-ups, and ChatGPT features",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-11T20:43:51.000Z",
-          "updatedAt": "2026-11-11T20:52:40.000Z",
-          "resolvedAt": "2026-11-11T20:52:40.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M6S2FV5TZWQ753NHRB7BF5K7",
-          "title": "Elevated error rates with some U.S. business Mastercards",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-11-06T18:38:43.000Z",
-          "updatedAt": "2026-11-10T16:06:18.000Z",
-          "resolvedAt": "2026-11-10T16:06:18.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -351,7 +362,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T17:55:58.090Z",
+      "lastCheckedAt": "2026-11-12T18:52:38.276Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
