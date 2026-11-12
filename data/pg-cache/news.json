@@ -1,5 +1,77 @@
 [
   {
+    "id": "news-96892311de09e14b1fc8",
+    "title": "The Jensen Huang scandal is hardly over",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1032069/jensen-huang-resignation-affair-chips-smuggling",
+    "source": "The Verge",
+    "summary": "I was certain, until the story of Jensen Huang's second affair hit, that Huang was bulletproof. After all, why wouldn't he be? He's placed himself indispensably at the center of the AI industry and famously had no succession plan at Nvidia. In fact, he's the only CEO Nvidia has ever had. L'&#233;tat c'est moi. Then [&…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T17:44:33.000Z",
+    "discovered_at": "2026-11-12 17:55:56"
+  },
+  {
+    "id": "news-deea79b353aff377bfe2",
+    "title": "Hugging Face CEO vows to keep fighting for open-source AI after Jensen Huang&#8217;s exit",
+    "url": "https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit/",
+    "source": "TechCrunch",
+    "summary": "Hugging Face's CEO pledged to keep fighting for open-source AI after Huang's exit, raising questions about Nvidia's $12.9B acquisition.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T17:36:40.000Z",
+    "discovered_at": "2026-11-12 17:55:46"
+  },
+  {
+    "id": "news-ddf7a6c150d0e1d19045",
+    "title": "SoftBank’s billion-dollar loss may have put a cap on AI&#8217;s natural gas ambitions",
+    "url": "https://techcrunch.com/2026/11/12/softbanks-billion-dollar-loss-may-have-put-a-cap-on-ais-natural-gas-ambitions/",
+    "source": "TechCrunch",
+    "summary": "SoftBank lost over $3 billion pre-ordering natural gas turbines to power AI data centers. Here's what the loss means to power markets.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T17:00:52.000Z",
+    "discovered_at": "2026-11-12 17:55:46"
+  },
+  {
+    "id": "news-4213b9afeff9a7e6e0ad",
+    "title": "More game developers are starting to use generative AI",
+    "url": "https://www.theverge.com/games/1032085/gdc-festival-of-gaming-annual-survey-ai-layoffs",
+    "source": "The Verge",
+    "summary": "More video game developers are using generative AI tools in their jobs compared to last year, according to the GDC Festival of Gaming's latest annual industry survey. Forty percent of developers surveyed say they use it \"as part of their job,\" an increase from 36 percent in 2025. Usage was higher with game developers…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T17:00:00.000Z",
+    "discovered_at": "2026-11-12 17:55:56"
+  },
+  {
+    "id": "news-32933935200c2839243a",
+    "title": "AI chatbots are recommending fake retail websites, study finds",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations",
+    "source": "The Verge",
+    "summary": "Shoppers using AI chatbots to research products or find places to buy items could be directed to imposters and other risky websites, a new study found. The study conducted by IP protection firm Podqi and shared exclusively with The Verge prompted ChatGPT, Gemini, and Perplexity with a handful of shopping-related quest…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T17:00:00.000Z",
+    "discovered_at": "2026-11-12 17:55:56"
+  },
+  {
+    "id": "news-d0b6d30c7ec6bdd89182",
+    "title": "Phota Labs uses AI to turn everyday photos into professional-looking shots",
+    "url": "https://techcrunch.com/2026/11/12/phota-labs-uses-ai-to-turn-everyday-photos-into-professional-looking-shots/",
+    "source": "TechCrunch",
+    "summary": "Rather than giving consumers yet another photo-editing tool, Phota Labs aims to use advances in AI to automate the editing process so it’s easier for anyone to turn everyday moments into better photos.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T17:00:00.000Z",
+    "discovered_at": "2026-11-12 17:55:46"
+  },
+  {
     "id": "news-0fd7ae7044e59d7b5fa6",
     "title": "Jensen Huang agrees to testify before Congress",
     "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/",
@@ -9,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T16:36:37.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-0ff22abf6100bfe97aca",
@@ -21,7 +93,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T16:32:33.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
+  },
+  {
+    "id": "news-1d250e9233fe0f753f8c",
+    "title": "Jensen Huang is out. What did China want from him?",
+    "url": "https://www.theverge.com/podcast/1031260/nvidia-jensen-huang-resign-china-spy-scandal-ai-chips-trump",
+    "source": "The Verge",
+    "summary": "Today, we’re talking about the Jensen Huang scandal at Nvidia, which is developing so quickly that we had to do an emergency update of this intro minutes before publishing this episode. Huang just resigned from his position as CEO of Nvidia as news of his affairs, including with an alleged Chinese spy, threatened to e…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T16:30:00.000Z",
+    "discovered_at": "2026-11-12 17:55:56"
   },
   {
     "id": "news-a5ee8976426905143d28",
@@ -33,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T16:12:44.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-830958e6e6f7f875c563",
@@ -45,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T15:48:12.000Z",
-    "discovered_at": "2026-11-12 16:55:48"
+    "discovered_at": "2026-11-12 17:55:56"
   },
   {
     "id": "news-15b0384fb53fdc16335b",
@@ -57,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T15:37:29.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-62c34abfa66e72c12433",
@@ -69,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T15:18:14.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-023d1c79ca20cb05e618",
@@ -81,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T15:02:28.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-15c28179b2dc3ec9cbc8",
@@ -93,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T15:01:31.000Z",
-    "discovered_at": "2026-11-12 16:55:48"
+    "discovered_at": "2026-11-12 17:55:56"
   },
   {
     "id": "news-5e5f306d785f11574933",
@@ -105,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T14:30:01.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-39f4c129e4341242cbc5",
@@ -117,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T14:10:00.000Z",
-    "discovered_at": "2026-11-12 16:55:48"
+    "discovered_at": "2026-11-12 17:55:56"
   },
   {
     "id": "news-426b199762db8714ebb8",
@@ -129,19 +213,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T13:53:16.000Z",
-    "discovered_at": "2026-11-12 16:55:48"
+    "discovered_at": "2026-11-12 17:55:56"
   },
   {
     "id": "news-7ed9c1c82c2d456eb82c",
     "title": "Nine Korean startups vie for a spot in Disrupt 2027&#8217;s Startup Battlefield 200 competition",
     "url": "https://techcrunch.com/2026/11/12/nine-korean-startups-vie-for-a-spot-in-disrupt-2027s-startup-battlefield-200-competition/",
     "source": "TechCrunch",
-    "summary": "The startups work across the deep tech sector, including healthcare, fintech, energy, semiconductors, and AI. All nine are looking to enter the US.",
+    "summary": "The startups work across the deep tech sector, including healthcare, fintech, energy, semiconductors, and AI. All nine are looking to enter the U.S.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T13:26:25.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-0990939c7d6ea9f7b924",
@@ -153,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T09:30:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-48e6c412414232492377",
@@ -165,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T03:13:10.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-f28f90d2895a812ca579",
@@ -177,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T00:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-b06379671ede1f625c58",
@@ -189,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T00:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-e9253ae6619ecd71e8c4",
@@ -201,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T23:28:45.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-0ca5cf57ee5146c09285",
@@ -213,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T23:17:05.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-4a6d92631407ef3c940b",
@@ -225,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T22:44:36.000Z",
-    "discovered_at": "2026-11-12 16:55:48"
+    "discovered_at": "2026-11-12 17:55:56"
   },
   {
     "id": "news-33bddd1c40023b58eaf4",
@@ -237,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T21:54:21.000Z",
-    "discovered_at": "2026-11-12 16:55:48"
+    "discovered_at": "2026-11-12 17:55:56"
   },
   {
     "id": "news-0d92f57c72e3e3cf0977",
@@ -249,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T20:15:15.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-6bc57b8d8016fc8de5e0",
@@ -261,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T20:12:01.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-984513ae1fc499f6da4e",
@@ -273,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T20:02:14.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-c063829a6185b4d7f3ba",
@@ -285,31 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T19:54:00.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
-  },
-  {
-    "id": "news-019cc9ec163bf85320c5",
-    "title": "With $720M round, Britain&#8217;s Fractile gets a leg up in the race for AI chips",
-    "url": "https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/",
-    "source": "TechCrunch",
-    "summary": "Fractile has now become one of the top-funded players in the race for purpose-built AI chips.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T19:34:55.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
-  },
-  {
-    "id": "news-90a2e60457e0b47e9a12",
-    "title": "Congress to call Jensen Huang in to answer for alleged Chinese spy affair",
-    "url": "https://techcrunch.com/2026/11/11/congress-to-call-jensen-huang-in-to-answer-for-alleged-chinese-spy-affair/",
-    "source": "TechCrunch",
-    "summary": "Nvidia CEO Jensen Huang has until the end of the day Wednesday to answer a call from House Republicans for a closed-door briefing on his affair with alleged Chinese spy.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T19:22:22.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-8e4104a923ec61a4f8ae",
@@ -321,31 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T18:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
-  },
-  {
-    "id": "news-32bc3a2f6211a8fe2f5c",
-    "title": "Is Jensen Huang’s bad behavior more commonplace than it seems?",
-    "url": "https://techcrunch.com/2026/11/11/is-jensen-huangs-bad-behavior-more-commonplace-than-it-seems/",
-    "source": "TechCrunch",
-    "summary": "“There are a lot of senior people in the industry that know this is happening, and are effectively condoning it,” an investment intel consultant said.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T16:16:07.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
-  },
-  {
-    "id": "news-2d8f602ac5a8eeadebc0",
-    "title": "Google’s Tabletop AI experiment lets you build custom collaboration apps",
-    "url": "https://www.theverge.com/tech/1031526/google-tabletop-ai-experiment-waitlist-availability",
-    "source": "The Verge",
-    "summary": "Google has cooked up a new experimental AI tool called Tabletop that generates customized collaborative hubs to help you coordinate with family, and friends. The Tabletop platform shares some visual similarities with workplace management apps like Asana and Monday, but with a built-in AI feature that allows you to vib…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T16:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:48"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-97adab01dbf7344a4376",
@@ -357,31 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
-  },
-  {
-    "id": "news-a86af765ffafecbaf7c6",
-    "title": "Google’s AlphaGenome 2 zooms in on the cellular roots of disease",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1031524/google-deepmind-alphagenome-2-genetic-ai-model",
-    "source": "The Verge",
-    "summary": "Researchers at Google DeepMind have unveiled a new AI model designed to unravel how changes in our DNA affect different cells, giving scientists a more detailed view of a notoriously difficult problem that could hold important clues to the causes of disease - and point the way to new treatments. AlphaGenome 2 is the s…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T15:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:48"
-  },
-  {
-    "id": "news-450a9863af999dabbda9",
-    "title": "Adobe’s AI experiments let you walk around in photos and interview your characters",
-    "url": "https://www.theverge.com/tech/1031505/adobe-max-2026-sneaks-experiments-ai",
-    "source": "The Verge",
-    "summary": "Some of the most impressive tech that Adobe showcases at its annual Max conference each year is the experimental features it's developing, and the latest of those tools are being announced today: they can transform images into explorable 3D scenes, design AI characters by talking to them, and turn photo editing into a…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T14:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:48"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-7e65614cc89aac7b14f8",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T09:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-80b38ea7da372c49e059",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T08:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-8c999d6885d24711e917",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T00:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-b686da68349e5f787ade",
@@ -429,19 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T21:12:59.000Z",
-    "discovered_at": "2026-11-12 16:55:48"
-  },
-  {
-    "id": "news-34a6071342ff5a88c61c",
-    "title": "The US is winning the AI race. Jensen Huang could have blown it",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1031063/jensen-huang-ai-race-us-china-spy",
-    "source": "The Verge",
-    "summary": "As espionage targets go, Jensen Huang is perhaps one of the least surprising on Earth. The Nvidia CEO runs one of the world's most valuable companies, controls the in-demand technology fueling the AI boom, and is cozy with presidents, CEOs, and all manner of important people. He also wears a cool leather jacket. Which…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-10T19:04:05.000Z",
-    "discovered_at": "2026-11-12 16:55:48"
+    "discovered_at": "2026-11-12 17:55:56"
   },
   {
     "id": "news-ac5a661efbfd509d2187",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T19:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-c5fffc8a0cbdc3d45109",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T14:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-155d33cae72679311e5a",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T13:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-46ecb159c1535b093315",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T12:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-5ca4dc7b6d88cb31d41f",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T10:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-01a8528fa117926a6942",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T09:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-4e3e5904c85ae763182d",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T08:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-3588ceed41552e465a0d",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T07:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-1ff74ee2cb1066374d17",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T00:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-9c331579e229757a7a39",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T19:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-f37b680abcf7adcb8bec",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T13:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-932fe34bad728f30ad4e",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T08:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-23b94c697622500fcf7d",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T08:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-a5eef3cf57a4e41068d1",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T20:56:41.000Z",
-    "discovered_at": "2026-11-12 16:55:48"
+    "discovered_at": "2026-11-12 17:55:56"
   },
   {
     "id": "news-bc8f9eac19663ff628fb",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T08:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-cfd4354afa14004ff8c1",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T00:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-b58fee4edbbb5f7a9c2c",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:35"
+    "discovered_at": "2026-11-12 17:55:45"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-12 16:55:48"
+    "discovered_at": "2026-11-12 17:55:56"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-12 16:55:36"
+    "discovered_at": "2026-11-12 17:55:46"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -717,6 +717,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-11-12 16:55:48"
+    "discovered_at": "2026-11-12 17:55:56"
   }
 ]

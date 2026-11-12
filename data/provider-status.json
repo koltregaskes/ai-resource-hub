@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T16:55:51.154Z",
+  "generatedAt": "2026-11-12T17:55:59.176Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T16:55:51.149Z",
+      "lastCheckedAt": "2026-11-12T17:55:59.169Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,15 +100,15 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T16:55:49.361Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 10 tracked components.",
+      "lastCheckedAt": "2026-11-12T17:55:57.103Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Minor Service Outage",
+      "summary": "1 active incident across 10 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "operational"
+          "status": "partial_outage"
         },
         {
           "name": "Claude Platform on AWS",
@@ -131,8 +131,31 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [],
+      "activeIncidents": [
+        {
+          "id": "sqn3fg1l96dl",
+          "title": "Elevated errors affecting the Microsoft 365 connector",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-11-12T17:52:44.934Z",
+          "updatedAt": "2026-11-12T17:52:45.046Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/m0rbx38nmy1c",
+          "summary": "We are investigating elevated errors and slow responses affecting the Microsoft 365 connector. Requests to mail, SharePoint, Teams chat and calendar through the connector may fail..."
+        }
+      ],
       "recentIncidents": [
+        {
+          "id": "sqn3fg1l96dl",
+          "title": "Elevated errors affecting the Microsoft 365 connector",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-11-12T17:52:44.934Z",
+          "updatedAt": "2026-11-12T17:52:45.046Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/m0rbx38nmy1c",
+          "summary": "We are investigating elevated errors and slow responses affecting the Microsoft 365 connector. Requests to mail, SharePoint, Teams chat and calendar through the connector may fail..."
+        },
         {
           "id": "pgz8r13pk4sm",
           "title": "Elevated errors on Fable 52 and Mythos 52",
@@ -165,17 +188,6 @@
           "resolvedAt": "2026-10-28T20:05:18.208Z",
           "url": "https://stspg.io/75qq31h8672d",
           "summary": "The issue affecting the Google Calendar connector on claude.ai, Claude Code, and Claude Cowork has been resolved. Impact occurred from 04:07 PT / 11:07 UTC on October 26 to 11:52..."
-        },
-        {
-          "id": "9ftx658xtd5z",
-          "title": "Elevated errors affecting the Gmail connector",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-28T03:59:32.234Z",
-          "updatedAt": "2026-10-28T05:48:13.158Z",
-          "resolvedAt": "2026-10-28T05:48:13.126Z",
-          "url": "https://stspg.io/j86c100s8tqm",
-          "summary": "The issue affecting the Gmail connector on claude.ai, Claude Code, and Claude Cowork has been resolved. Impact occurred from 16:00 PT / 23:00 UTC on October 27 to 22:29 PT on Octo..."
         }
       ]
     },
@@ -190,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T16:55:50.194Z",
+      "lastCheckedAt": "2026-11-12T17:55:57.920Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T16:55:50.085Z",
+      "lastCheckedAt": "2026-11-12T17:55:57.435Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -253,7 +265,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T16:55:49.300Z",
+      "lastCheckedAt": "2026-11-12T17:55:57.172Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -339,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T16:55:50.414Z",
+      "lastCheckedAt": "2026-11-12T17:55:58.090Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
