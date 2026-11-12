@@ -1,5 +1,65 @@
 [
   {
+    "id": "news-830958e6e6f7f875c563",
+    "title": "Read Nvidia’s internal emails about the ‘extraordinarily difficult period’ ahead",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang",
+    "source": "The Verge",
+    "summary": "Jensen Huang resigned as CEO of Nvidia this morning, a company he co-founded in 1993. The decision came following the company's board opening an investigation into multiple extramarital affairs Huang had with a direct report and an alleged Chinese spy. The new, and first, Chair of the Board, Harvey Jones, shared news…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T15:48:12.000Z",
+    "discovered_at": "2026-11-12 15:55:47"
+  },
+  {
+    "id": "news-15b0384fb53fdc16335b",
+    "title": "Jensen Huang is out at Nvidia — who is Colette Kress, his interim replacement?",
+    "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/",
+    "source": "TechCrunch",
+    "summary": "Nvidia CFO Colette Kress is taking over for as an interim replacement for longtime CEO Jensen Huang, who is embroiled in scandal.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T15:37:29.000Z",
+    "discovered_at": "2026-11-12 15:55:37"
+  },
+  {
+    "id": "news-62c34abfa66e72c12433",
+    "title": "Norwest pushes deeper into AI with new $4B fund",
+    "url": "https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund/",
+    "source": "TechCrunch",
+    "summary": "This is the investment firm's largest fund to date.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T15:18:14.000Z",
+    "discovered_at": "2026-11-12 15:55:37"
+  },
+  {
+    "id": "news-023d1c79ca20cb05e618",
+    "title": "Cyberattack on Fireworks AI allowed hackers to access Notion customers&#8217; chat transcripts",
+    "url": "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/",
+    "source": "TechCrunch",
+    "summary": "This is Fireworks' second data breach in as many months.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T15:02:28.000Z",
+    "discovered_at": "2026-11-12 15:55:37"
+  },
+  {
+    "id": "news-15c28179b2dc3ec9cbc8",
+    "title": "Nvidia CEO Jensen Huang has resigned. What happens next?",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
+    "source": "The Verge",
+    "summary": "After the leather-jacketed CEO, president, and co-founder of Nvidia, Jensen Huang, acknowledged an affair with Megaspeed exec Alice Huang, his company initially announced an investigation. However, The New York Times reported on Wednesday that there was evidence of another affair, this time with an Nvidia executive wh…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T15:01:31.000Z",
+    "discovered_at": "2026-11-12 15:55:47"
+  },
+  {
     "id": "news-5e5f306d785f11574933",
     "title": "The unfolding Jensen Huang scandal: a timeline",
     "url": "https://techcrunch.com/2026/11/12/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
@@ -9,19 +69,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T14:30:01.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
-    "id": "news-b5ca4e19eb54da53239c",
-    "title": "Nvidia CEO Jensen Huang resigns amid spy, affair scandals",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1031689/jensen-huang-fired-nvidia",
+    "id": "news-39f4c129e4341242cbc5",
+    "title": "I reviewed the Apple HomeView, ask me anything",
+    "url": "https://www.theverge.com/tech/1031868/i-reviewed-the-apple-homeview-ask-me-anything",
     "source": "The Verge",
-    "summary": "Nvidia's board has separated from Jensen Huang, its longtime co-founder, president, and CEO, after reports of two extramarital affairs - one with an alleged Chinese spy and one with an Nvidia executive who reported to Huang. A press release published Thursday following a late Wednesday night board meeting announced Hu…",
+    "summary": "Hi! I'm Jen Tuohy, The Verge's senior smart home reviewer. I've tested every smart display Amazon and Google have ever made, and for the past week I've been testing Apple's first: The $299 HomeView. I put the tabletop and wall-mounted versions through their paces, on my kitchen counter, bedside table, in my office, an…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T14:10:00.000Z",
+    "discovered_at": "2026-11-12 15:55:47"
+  },
+  {
+    "id": "news-426b199762db8714ebb8",
+    "title": "Nvidia CEO Jensen Huang resigns amid spy, affair scandals",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1031689/jensen-huang-nvidia-ceo-resigns",
+    "source": "The Verge",
+    "summary": "Nvidia's board announced that Jensen Huang - its longtime co-founder, president, and CEO - has resigned after reports of two extramarital affairs, one with an alleged Chinese spy and one with an Nvidia executive who reported to Huang. Following a late Wednesday night meeting, the board accepted Huang's letter of resig…",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T13:53:16.000Z",
-    "discovered_at": "2026-11-12 14:55:39"
+    "discovered_at": "2026-11-12 15:55:47"
   },
   {
     "id": "news-7ed9c1c82c2d456eb82c",
@@ -33,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T13:26:25.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-0990939c7d6ea9f7b924",
@@ -45,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T09:30:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-48e6c412414232492377",
@@ -57,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T03:13:10.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-f28f90d2895a812ca579",
@@ -69,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T00:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-b06379671ede1f625c58",
@@ -81,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T00:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-e9253ae6619ecd71e8c4",
@@ -93,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T23:28:45.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-0ca5cf57ee5146c09285",
@@ -105,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T23:17:05.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-4a6d92631407ef3c940b",
@@ -117,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T22:44:36.000Z",
-    "discovered_at": "2026-11-12 14:55:39"
+    "discovered_at": "2026-11-12 15:55:47"
   },
   {
     "id": "news-33bddd1c40023b58eaf4",
@@ -129,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T21:54:21.000Z",
-    "discovered_at": "2026-11-12 14:55:39"
+    "discovered_at": "2026-11-12 15:55:47"
   },
   {
     "id": "news-0d92f57c72e3e3cf0977",
@@ -141,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T20:15:15.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-6bc57b8d8016fc8de5e0",
@@ -153,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T20:12:01.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-984513ae1fc499f6da4e",
@@ -165,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T20:02:14.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-c063829a6185b4d7f3ba",
@@ -177,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T19:54:00.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-019cc9ec163bf85320c5",
@@ -189,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T19:34:55.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-90a2e60457e0b47e9a12",
@@ -201,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T19:22:22.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-8e4104a923ec61a4f8ae",
@@ -213,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T18:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-32bc3a2f6211a8fe2f5c",
@@ -225,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:16:07.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-29f521837a1e4833b10a",
@@ -237,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:14:44.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-2d8f602ac5a8eeadebc0",
@@ -249,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:39"
+    "discovered_at": "2026-11-12 15:55:47"
   },
   {
     "id": "news-97adab01dbf7344a4376",
@@ -261,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-a86af765ffafecbaf7c6",
@@ -273,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T15:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:39"
+    "discovered_at": "2026-11-12 15:55:47"
   },
   {
     "id": "news-7d4c517a6890da297444",
@@ -285,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T15:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-450a9863af999dabbda9",
@@ -297,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T14:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:39"
+    "discovered_at": "2026-11-12 15:55:47"
   },
   {
     "id": "news-7c021a2e6c5bb952458e",
@@ -309,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T14:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-7e65614cc89aac7b14f8",
@@ -321,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T09:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-80b38ea7da372c49e059",
@@ -333,19 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T08:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
-  },
-  {
-    "id": "news-a390f90d4604de897eef",
-    "title": "Nvidia’s crisis has corporate governance experts reaching for the popcorn",
-    "url": "https://techcrunch.com/2026/11/10/nvidias-crisis-has-corporate-governance-experts-reaching-for-the-popcorn/",
-    "source": "TechCrunch",
-    "summary": "The governance experts we talked to say nobody has seen anything like what's unfolding right now.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T07:30:51.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-8c999d6885d24711e917",
@@ -357,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T00:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-b686da68349e5f787ade",
@@ -369,31 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T21:12:59.000Z",
-    "discovered_at": "2026-11-12 14:55:40"
-  },
-  {
-    "id": "news-bd2a6830d8cf7795485d",
-    "title": "OpenAI acquires Odessia, travel startup created by Sonder founder",
-    "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
-    "source": "TechCrunch",
-    "summary": "OpenAI has not yet said what its plans are for the future of travel. But Sonder founder Francis Davidson is a well-known figure in the travel industry.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-10T21:08:52.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
-  },
-  {
-    "id": "news-91faed0650f0d054dbbe",
-    "title": "OpenAI, Anthropic face new oversight as New York’s AI safety law takes effect",
-    "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/",
-    "source": "TechCrunch",
-    "summary": "New York is preparing to enforce its sweeping AI safety law, requiring major developers like OpenAI and Anthropic to register, disclose safety practices, and report critical incidents or face fines.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-10T20:52:13.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:47"
   },
   {
     "id": "news-34a6071342ff5a88c61c",
@@ -405,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T19:04:05.000Z",
-    "discovered_at": "2026-11-12 14:55:39"
+    "discovered_at": "2026-11-12 15:55:47"
   },
   {
     "id": "news-ac5a661efbfd509d2187",
@@ -417,43 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T19:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
-  },
-  {
-    "id": "news-7396b577c72532a79434",
-    "title": "ChatGPT is getting verified AI ‘Business Agents’",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1030552/openai-chatgpt-business-agents-hub",
-    "source": "The Verge",
-    "summary": "ChatGPT is going to let you chat with verified \"Business Agents\" that represent a brand to help you with things like comparison shopping. The feature, available first to \"eligible\" e-commerce and online service businesses in the US, is launching as part of a suite of business-focused features in ChatGPT being announce…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-10T18:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:39"
-  },
-  {
-    "id": "news-7ac1a3b2939bf58c2068",
-    "title": "The indie game community is in disarray over AI and Big Walk",
-    "url": "https://www.theverge.com/games/1030994/big-walk-independent-games-festival-igf-ai",
-    "source": "The Verge",
-    "summary": "Some Independent Games Festival (IGF) jurors published a statement yesterday saying they would not vote for games that use generative AI in \"any capacity.\" Soon after, the developer of indie hit Big Walk has published a statement saying it \"sparingly\" used AI in the \"final stretch\" of the game's development to \"help w…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-10T17:32:47.000Z",
-    "discovered_at": "2026-11-12 14:55:39"
-  },
-  {
-    "id": "news-ec3f910d2a185a917865",
-    "title": "Anthropic has its own AI-powered office suite now",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now",
-    "source": "The Verge",
-    "summary": "For years, Anthropic has been known for its focus on enterprise and coding tools that attract high-flying corporate clients, inspiring competing frontier labs - like OpenAI, SpaceXSI, and Meta - to copy its strategies. Earlier this year, Claude Code went through its own particular hype cycle. And now, Anthropic is try…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-10T17:30:00.000Z",
-    "discovered_at": "2026-11-12 14:55:39"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-c5fffc8a0cbdc3d45109",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T14:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-155d33cae72679311e5a",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T13:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-46ecb159c1535b093315",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T12:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-5ca4dc7b6d88cb31d41f",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T10:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-01a8528fa117926a6942",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T09:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-4e3e5904c85ae763182d",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T08:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-3588ceed41552e465a0d",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T07:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-1ff74ee2cb1066374d17",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T00:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-9c331579e229757a7a39",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T19:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-f37b680abcf7adcb8bec",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T13:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-932fe34bad728f30ad4e",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T08:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-23b94c697622500fcf7d",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T08:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-a5eef3cf57a4e41068d1",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T20:56:41.000Z",
-    "discovered_at": "2026-11-12 14:55:40"
+    "discovered_at": "2026-11-12 15:55:47"
   },
   {
     "id": "news-bc8f9eac19663ff628fb",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T08:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-cfd4354afa14004ff8c1",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T00:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-b58fee4edbbb5f7a9c2c",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:30"
+    "discovered_at": "2026-11-12 15:55:36"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-12 14:55:40"
+    "discovered_at": "2026-11-12 15:55:47"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-11-12 14:55:40"
+    "discovered_at": "2026-11-12 15:55:47"
   },
   {
     "id": "news-c1e94fc831365c1377e6",
@@ -729,6 +729,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-11-12 14:55:31"
+    "discovered_at": "2026-11-12 15:55:37"
   }
 ]
