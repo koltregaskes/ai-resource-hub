@@ -1,0 +1,25 @@
+﻿# AI Resource Hub newsletter Worker.
+# NOT DEPLOYED. No account_id on purpose: deploying needs Kol's Cloudflare
+# account and his yes (hub #1497, #1417). Secrets are set with
+# `wrangler secret put <NAME>` at deploy time and never committed.
+#
+# Secrets: SIGNING_KEY, RESEND_API_KEY, DATABASE_URL, SEND_TOKEN,
+#          TURNSTILE_SECRET (optional)
+
+name = "airh-newsletter"
+main = "src/index.ts"
+compatibility_date = "2026-08-01"
+workers_dev = false
+
+[vars]
+ENVIRONMENT = "production"
+SITE_URL = "https://theairesourcehub.com"
+API_URL = "https://newsletter.theairesourcehub.com"   # placeholder; the custom domain needs a DNS yes
+FROM_EMAIL = "The AI Resource Hub <edition@mail.theairesourcehub.com>"  # placeholder; sending domain needs SPF/DKIM/DMARC (DNS yes)
+EDITION_JSON_URL = "https://theairesourcehub.com/newsletter/latest.json"
+# POSTAL_ADDRESS = ""        # [CHECK: Kol] sender address for the email footer (UK PECR / CAN-SPAM)
+# UNSUBSCRIBE_MAILTO = ""    # optional mailto target for List-Unsubscribe
+
+# Daily send at 07:15 UTC (07:15 UK in winter, 08:15 in summer). Enabled only on deploy.
+[triggers]
+crons = ["15 7 * * *"]

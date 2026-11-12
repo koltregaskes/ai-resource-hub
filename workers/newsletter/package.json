@@ -1,0 +1,18 @@
+{
+  "name": "airh-newsletter-worker",
+  "private": true,
+  "type": "module",
+  "description": "AI Resource Hub daily edition sign-up and send Worker. Local only until Kol approves accounts and deploy.",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --format=esm --platform=browser --conditions=workerd,worker,browser --target=es2022 --outfile=dist/worker.js",
+    "test": "npm run build && node --test test/worker.test.mjs"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "1.2.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "miniflare": "4.20260730.0",
+    "wrangler": "4.160.1"
+  }
+}

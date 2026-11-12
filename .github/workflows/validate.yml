@@ -39,3 +39,25 @@ jobs:
 
       - name: Build Astro site
         run: npm run build
+
+  newsletter-worker:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: workers/newsletter
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: workers/newsletter/package-lock.json
+
+      - name: Install Worker dependencies
+        run: npm ci
+
+      - name: Test Worker in Miniflare (no network, no deploy)
+        run: npm test
