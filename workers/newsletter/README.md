@@ -7,7 +7,7 @@ Sign-up, double opt-in, category preferences, one-click unsubscribe and the dail
 ## How it fits together
 1. **Sign-up.** A reader picks categories on the site and submits the form. `POST /subscribe` stores a `pending` row and sends a confirmation email through Resend.
 2. **Confirmation.** The reader clicks the signed link (`GET /confirm`), which marks them `subscribed`.
-3. **Daily send.** Every morning the cron trigger calls `sendDaily`. It reads `https://theairesourcehub.com/newsletter/latest.json`, builds one email per reader from only their categories, and sends them in batches of 100.
+3. **Daily send.** Every morning the cron trigger calls `sendDaily`. It reads `https://theairesourcehub.com/newsletter/latest.json`, which is the most recent complete UK day (normally yesterday), and sends nothing unless that edition is yesterday's. It builds one email per reader from only their categories and sends them in batches of 100. The 06:30 writer job (`editorial/writer/`) adds the "why it matters" notes before the 07:15 UTC send.
    - Each email has `List-Unsubscribe` and `List-Unsubscribe-Post: List-Unsubscribe=One-Click` (RFC 8058).
    - A `sends` row per reader per edition stops double sends.
 4. **Signed links.** Every email has signed links to `/manage` (change categories) and `/unsubscribe`. Tokens are HMAC-SHA256 and bound to one purpose. Confirmation links expire after 7 days. A `GET` on the unsubscribe link only shows a button, because mail scanners prefetch links; the unsubscribe happens on `POST`.

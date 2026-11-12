@@ -1,0 +1,30 @@
+{
+  "$comment": "Schedule-manifest entry for the daily edition notes writer (hub #1497). Codex registers the primary; Claude registers the backup. Approved by 000 CHIEF OF STAFF on 12 Nov 2026 under the standing rule that schedule design needs no separate yes.",
+  "id": "airh-daily-edition-notes",
+  "name": "AI Resource Hub daily edition notes (why it matters)",
+  "repo": "koltregaskes/ai-resource-hub",
+  "prompt_file": "editorial/writer/prompt.md",
+  "writes": ["src/data/newsletter-editorial/<YYYY-MM-DD>.json"],
+  "writes_nothing_else": true,
+  "timezone": "Europe/London",
+  "primary": {
+    "agent": "codex",
+    "when": "06:30 daily",
+    "cron": "30 6 * * *",
+    "model": "the cheapest Codex model on the plan (low reasoning effort is enough)"
+  },
+  "backup": {
+    "agent": "claude",
+    "when": "06:45 daily",
+    "cron": "45 6 * * *",
+    "model": "claude-sonnet-5-5, low effort (AGENTS.md: scheduled jobs may use Sonnet 5.5 low)",
+    "runs_only_if": "scripts/editorial-precheck.mjs reports ok:true, i.e. the day's file is still missing and the feed is fresh"
+  },
+  "gates": [
+    "scripts/editorial-precheck.mjs: skip if the newest story is more than 36 hours old (stale), if the latest complete edition is not yesterday, or if the file already exists",
+    "scripts/validate-editorial.mjs: reject unknown story URLs, lines over 30 words (120 for the day in 60 seconds), em dashes, stock AI phrases and any number not in the story's own text; CI runs it on every push"
+  ],
+  "downstream": "Site rebuilds on push to main (deploy.yml); the newsletter Worker's 07:15 UTC send reads /newsletter/latest.json with the notes included.",
+  "on_stale": "Write nothing; post one signed comment per date on hub #1497.",
+  "cost": "Subscription only. No API keys as environment variables."
+}

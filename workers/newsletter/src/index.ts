@@ -229,8 +229,12 @@ async function unsubscribe(request: Request, url: URL, env: Env, store: Store): 
   return page('Unsubscribed', "<h1>You're unsubscribed</h1><p>No more daily emails will be sent to this address.</p>");
 }
 
-function ukToday(): string {
-  return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+const ukDay = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' });
+
+/** The morning email covers the previous complete UK day. */
+function ukYesterday(now = new Date()): string {
+  const [y, m, d] = ukDay.format(now).split('-').map(Number);
+  return ukDay.format(new Date(Date.UTC(y, m - 1, d, 12) - 86_400_000));
 }
 
 export async function sendDaily(env: Env, store: Store, options: { force?: boolean } = {}) {
@@ -238,8 +242,8 @@ export async function sendDaily(env: Env, store: Store, options: { force?: boole
   const response = await fetch(source, { headers: { Accept: 'application/json' } });
   if (!response.ok) throw new Error(`Edition fetch failed: HTTP ${response.status} from ${source}`);
   const edition = (await response.json()) as EditionPayload;
-  if (!options.force && edition.date !== ukToday()) {
-    return { edition: edition.date, sent: 0, skipped: 0, reason: 'latest edition is not today; nothing sent' };
+  if (!options.force && edition.date !== ukYesterday()) {
+    return { edition: edition.date, sent: 0, skipped: 0, reason: "latest complete edition is not yesterday's; nothing sent" };
   }
 
   const resend = new ResendClient(env.RESEND_API_KEY, env.RESEND_API_BASE);
