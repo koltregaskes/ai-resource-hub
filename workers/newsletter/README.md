@@ -2,7 +2,7 @@
 
 Sign-up, double opt-in, category preferences, one-click unsubscribe and the daily send for the AI Resource Hub daily edition (hub #1497).
 
-**Status: built and tested locally only. Not deployed.** Nothing here has a Cloudflare account, a Resend key or a database behind it yet.
+**Status: built and tested locally only. Not deployed.** Kol has a free Resend account (12 Nov 2026). There is no sending domain, Worker, key or database behind this yet; see "Going live" below.
 
 ## How it fits together
 1. **Sign-up.** A reader picks categories on the site and submits the form. `POST /subscribe` stores a `pending` row and sends a confirmation email through Resend.
@@ -29,23 +29,26 @@ To preview an email built from a real edition (nothing is sent), run this from t
 npx tsx workers/newsletter/scripts/render-sample.ts 2026-11-11 models,agents,policy sample.html
 ```
 
-## What Kol needs to do before this goes live
-Each step needs Kol's yes, because it covers accounts, spending, DNS or going public.
-1. **Resend account.** Create a free account at resend.com.
-   - Add the sending domain, suggested `mail.theairesourcehub.com`.
-   - Create an API key with "sending access" only.
-2. **Cloudflare account.** This may already exist under the IONOS exit (#1413). We need Workers on the free plan, and optionally Turnstile for the form.
-3. **DNS.** Add the SPF, DKIM and DMARC records Resend shows for the sending domain. Add a route or custom domain for the Worker (suggested `newsletter.theairesourcehub.com`).
-4. **Neon.** Run `schema.sql` on the Rooms OS database, ideally with a role that can only touch the `newsletter` schema.
-5. **Secrets.** Set these with `wrangler secret put`, never in files:
-   - `SIGNING_KEY` (any random string of at least 32 characters);
-   - `RESEND_API_KEY`;
-   - `DATABASE_URL`;
-   - `SEND_TOKEN`;
-   - optionally `TURNSTILE_SECRET`.
-6. **Postal address.** Fill in `POSTAL_ADDRESS` in `wrangler.toml`. UK and US email rules expect a sender address in the footer. [CHECK: Kol, which address?]
-7. **Deploy and switch on.** Deploy with `wrangler deploy`. Then set `PUBLIC_NEWSLETTER_API` (and `PUBLIC_TURNSTILE_SITE_KEY` if used) in the site's deploy workflow, so the sign-up form appears and the page CSP allows the Worker.
+## Going live: the order, and who does what
+Each step needs Kol's yes, because it covers accounts, DNS, secrets or going public. **Secrets rule: Kol runs every `wrangler secret put` command himself and pastes the value into its prompt. No agent reads, types, relays or stores a secret, and none goes into chat, files, issues or commits.**
+
+1. **Resend account.** Done: Kol made a free account on 12 Nov 2026. Nothing more happens in Resend until step 3.
+2. **Move the domain to Cloudflare.** theairesourcehub.com becomes a Cloudflare zone in the IONOS exit (hub #1413; website domains move on 26 Nov). That way the email DNS records go into Cloudflare once, rather than into IONOS and then again into Cloudflare.
+3. **Sending domain.** Add `mail.theairesourcehub.com` in Resend. Kol does this himself, or an agent does it in his signed-in browser with his yes for that click. Then add the SPF, DKIM and return-path (MX) records Resend shows to the Cloudflare zone, plus a DMARC record. Wait until Resend shows the domain as verified.
+4. **Worker domain.** In Cloudflare, add a route or custom domain for the Worker. Suggested: `newsletter.theairesourcehub.com`, which matches `API_URL` in `wrangler.toml`.
+5. **Neon.** Run `schema.sql` on the Rooms OS database, ideally using a role that can only touch the `newsletter` schema.
+6. **Secrets.** Kol runs these himself, in `workers/newsletter`, after `npx wrangler login`. Each command prompts for the value; nothing is echoed or saved locally.
+   - **`npx wrangler secret put RESEND_API_KEY`.** Create the key in Resend at this point: "Sending access" only, restricted to `mail.theairesourcehub.com`. Paste it straight into the prompt.
+   - **`npx wrangler secret put DATABASE_URL`.** Paste the connection string for the `newsletter` role.
+   - **`npx wrangler secret put SIGNING_KEY`.** Paste any random string of at least 32 characters, for example from a password manager's generator. Changing it later breaks every link in emails already sent, so set it once.
+   - **`npx wrangler secret put SEND_TOKEN`.** Paste another random string. It protects the manual `POST /send-daily` trigger.
+   - **Optional: `npx wrangler secret put TURNSTILE_SECRET`**, if Turnstile is used on the form.
+7. **Postal address.** Kol chooses the sender address for the email footer (UK PECR and US CAN-SPAM). An agent puts it in `POSTAL_ADDRESS` in `wrangler.toml`. It's not a secret, but it is personal, so check with Kol before it goes into a public repo. [CHECK: Kol, which address, and is a PO box or business address fine?]
+8. **Deploy.** Run `npx wrangler deploy`, with Kol's yes, because it's a first public deploy.
+9. **Test send.** With Kol's yes, sign up with Kol's own address, confirm it, then call `POST /send-daily?force=1` once. Check the email arrives, renders properly, and that one-click unsubscribe works from Gmail's own "Unsubscribe" button.
+10. **Switch on the form.** Set `PUBLIC_NEWSLETTER_API` (and `PUBLIC_TURNSTILE_SITE_KEY` if used) in the site's deploy workflow, so the sign-up form appears and the page CSP allows the Worker. This is the "going public" moment for email.
+11. **After deploy:** add the Resend bounce and complaint webhook (see below).
 
 ## Not covered yet
-- **Bounce and complaint webhooks** from Resend. These should mark addresses `unsubscribed`. That's a small follow-up once the account exists.
+- **Bounce and complaint webhooks** from Resend. These should mark addresses `unsubscribed`. Add them after the deploy. The webhook signing secret follows the same rule: Kol sets it with `wrangler secret put`.
 - **Rate limiting** beyond Turnstile. Cloudflare's rate-limiting rules can do this at the edge once the account exists.

@@ -1,7 +1,8 @@
-﻿# AI Resource Hub newsletter Worker.
+# AI Resource Hub newsletter Worker.
 # NOT DEPLOYED. No account_id on purpose: deploying needs Kol's Cloudflare
-# account and his yes (hub #1497, #1417). Secrets are set with
-# `wrangler secret put <NAME>` at deploy time and never committed.
+# account and his yes (hub #1497, #1417). Secrets are set by KOL HIMSELF with
+# `wrangler secret put <NAME>` at deploy time. No agent sets, reads or relays them,
+# and they are never committed. See README.md, "Going live".
 #
 # Secrets: SIGNING_KEY, RESEND_API_KEY, DATABASE_URL, SEND_TOKEN,
 #          TURNSTILE_SECRET (optional)
