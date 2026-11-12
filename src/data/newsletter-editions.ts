@@ -3,7 +3,9 @@
  *
  * One edition per UK calendar day, built at build time from the site's news
  * store (every curated AI story, not only the tag-routed subset on /news/). The hourly rebuild refreshes
- * today's edition; earlier days are fixed once the day ends.
+ * today's edition. Earlier days are frozen once they settle: they come from
+ * snapshots in src/data/newsletter-archive/ (see buildEditions and
+ * scripts/snapshot-editions.ts), and only unsettled days use the cache.
  *
  * Data source: today this is the hourly-scraped news cache in this repo. When
  * the Rooms OS to Neon sync is back on (hub #920, #1418), swap loadSourceStories()
@@ -145,6 +147,166 @@ function loadSourceStories(): SourceStory[] {
   return (loadCuratedNewsItems() as SourceStory[]).filter((item) => item.publishedAt && item.readerCategory);
 }
 
+/**
+ * Closed editions are frozen. Once a UK day has been over for SETTLE_HOURS,
+ * scripts/snapshot-editions.ts (run by the hourly scrape) writes its picked
+ * stories to src/data/newsletter-archive/<date>.json and never rewrites it.
+ * Builds read those files first, so the rolling news cache (getNews(250))
+ * can drop or add stories without changing a published edition or its URL.
+ */
+export const SETTLE_HOURS = 6;
+export const ARCHIVE_DIR = path.join(process.cwd(), 'src', 'data', 'newsletter-archive');
+
+export interface ArchivedStory {
+  id: string;
+  title: string;
+  url: string;
+  source: string;
+  summary: string;
+  publishedAt: string;
+  category: NewsCategoryId;
+  tags: NewsTagId[];
+  importance: number;
+}
+
+export interface ArchivedDay {
+  version: 1;
+  date: string;
+  snapshotAt: string;
+  totalAvailable: number;
+  stories: ArchivedStory[];
+}
+
+/** True once `date` (a UK day) ended at least SETTLE_HOURS before `now`. */
+export function isSettled(date: string, now: Date): boolean {
+  return ukDate(new Date(now.getTime() - SETTLE_HOURS * 3_600_000)) > date;
+}
+
+const importanceOf = (story: SourceStory) => story.importanceScore ?? story.importance_score ?? 0;
+
+/** Group live stories by UK day and pick each day's top stories, before any editorial reordering. */
+export function pickDays(stories: SourceStory[], now: Date): Map<string, { picked: ArchivedStory[]; totalAvailable: number }> {
+  const today = ukDate(now);
+  const byDay = new Map<string, SourceStory[]>();
+  for (const story of stories) {
+    if (!story.publishedAt || !story.readerCategory) continue;
+    const day = ukDate(story.publishedAt);
+    if (day > today) continue;
+    if (!byDay.has(day)) byDay.set(day, []);
+    byDay.get(day)!.push(story);
+  }
+  const out = new Map<string, { picked: ArchivedStory[]; totalAvailable: number }>();
+  for (const [date, raw] of byDay) {
+    const picked = [...raw]
+      .sort((a, b) => importanceOf(b) - importanceOf(a) || b.publishedAt!.localeCompare(a.publishedAt!))
+      .slice(0, MAX_STORIES_PER_EDITION)
+      .map((story) => ({
+        id: story.id,
+        title: story.title,
+        url: story.url,
+        source: story.source,
+        summary: story.summary ?? '',
+        publishedAt: story.publishedAt!,
+        category: story.readerCategory,
+        tags: story.readerTags,
+        importance: importanceOf(story),
+      }));
+    out.set(date, { picked, totalAvailable: raw.length });
+  }
+  return out;
+}
+
+export function isArchivedDay(value: unknown, date?: string): value is ArchivedDay {
+  if (!value || typeof value !== 'object') return false;
+  const day = value as ArchivedDay;
+  return (
+    day.version === 1 &&
+    /^\d{4}-\d{2}-\d{2}$/.test(day.date) &&
+    (date === undefined || day.date === date) &&
+    Array.isArray(day.stories) &&
+    day.stories.length > 0 &&
+    day.stories.every((story) => typeof story?.url === 'string' && typeof story.title === 'string' && typeof story.publishedAt === 'string' && NEWS_CATEGORIES.some((c) => c.id === story.category))
+  );
+}
+
+/** Reads every archived edition. A malformed file fails the build rather than silently falling back to the cache. */
+export function loadArchive(dir: string = ARCHIVE_DIR): Map<string, ArchivedDay> {
+  const out = new Map<string, ArchivedDay>();
+  if (!fs.existsSync(dir)) return out;
+  for (const name of fs.readdirSync(dir)) {
+    const match = /^(\d{4}-\d{2}-\d{2})\.json$/.exec(name);
+    if (!match) continue;
+    const parsed = JSON.parse(fs.readFileSync(path.join(dir, name), 'utf8'));
+    if (!isArchivedDay(parsed, match[1])) throw new Error(`newsletter-archive/${name} is not a valid archived edition`);
+    out.set(match[1], parsed);
+  }
+  return out;
+}
+
+export interface BuildEditionsInput {
+  stories: SourceStory[];
+  archive: Map<string, ArchivedDay>;
+  now: Date;
+  editorialFor?: (date: string) => EditorialFile | null;
+}
+
+/** Pure: archived days win; live stories fill only days with no archive file. */
+export function buildEditions({ stories, archive, now, editorialFor = loadEditorial }: BuildEditionsInput): Edition[] {
+  const today = ukDate(now);
+  const days = pickDays(stories, now);
+  for (const [date, day] of archive) {
+    if (date > today) continue;
+    days.set(date, { picked: day.stories, totalAvailable: day.totalAvailable });
+  }
+
+  const editions: Edition[] = [];
+  for (const [date, day] of days) {
+    if (day.picked.length === 0) continue;
+    const editorial = editorialFor(date);
+    const sorted = [...day.picked];
+    if (editorial?.lead_url) {
+      const index = sorted.findIndex((story) => story.url === editorial.lead_url);
+      if (index > 0) sorted.unshift(...sorted.splice(index, 1));
+    }
+
+    const picked = sorted.map((story, index): EditionStory => ({
+      id: story.id,
+      rank: index,
+      title: decodeEntities(story.title),
+      url: story.url,
+      source: decodeEntities(story.source),
+      summary: decodeEntities(story.summary ?? ''),
+      publishedAt: story.publishedAt,
+      category: story.category,
+      categoryLabel: getNewsCategory(story.category).label,
+      tags: story.tags ?? [],
+      company: detectCompany(`${story.title} ${story.summary}`),
+      whyItMatters: typeof editorial?.why_it_matters?.[story.url] === 'string' ? editorial.why_it_matters[story.url].trim() || null : null,
+    }));
+
+    const sourceCount = new Set(picked.map((story) => story.source)).size;
+    const isToday = date === today;
+    const sixty = typeof editorial?.sixty_seconds === 'string' ? editorial.sixty_seconds.trim() : '';
+    editions.push({
+      date,
+      dateLabel: labelFor(date, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }),
+      shortLabel: labelFor(date, { day: 'numeric', month: 'short', year: 'numeric' }),
+      isToday,
+      publishedAt: picked.map((story) => story.publishedAt).sort().at(-1)!,
+      lead: picked[0],
+      stories: picked.slice(1),
+      sixtySeconds: sixty
+        ? { text: sixty, editorial: true }
+        : { text: buildSixtySeconds(picked, sourceCount, isToday), editorial: false },
+      categoryCounts: countCategories(picked),
+      sourceCount,
+      hasEditorialNotes: Boolean(editorial),
+      totalAvailable: day.totalAvailable,
+    });
+  }
+  return editions.sort((a, b) => b.date.localeCompare(a.date));
+}
+
 function countCategories(stories: EditionStory[]) {
   return NEWS_CATEGORIES.map((category) => ({
     id: category.id,
@@ -177,67 +339,14 @@ let cache: Edition[] | null = null;
 
 export function getEditions(now: Date = new Date()): Edition[] {
   if (cache) return cache;
-  const today = ukDate(now);
-  const byDay = new Map<string, SourceStory[]>();
-  for (const story of loadSourceStories()) {
-    const day = ukDate(story.publishedAt!);
-    if (day > today) continue;
-    if (!byDay.has(day)) byDay.set(day, []);
-    byDay.get(day)!.push(story);
-  }
-
-  const editions: Edition[] = [];
-  for (const [date, raw] of byDay) {
-    const editorial = loadEditorial(date);
-    const sorted = [...raw].sort(
-      (a, b) =>
-        (b.importanceScore ?? b.importance_score ?? 0) - (a.importanceScore ?? a.importance_score ?? 0) ||
-        b.publishedAt!.localeCompare(a.publishedAt!),
-    );
-    if (editorial?.lead_url) {
-      const index = sorted.findIndex((story) => story.url === editorial.lead_url);
-      if (index > 0) sorted.unshift(...sorted.splice(index, 1));
-    }
-
-    const picked = sorted.slice(0, MAX_STORIES_PER_EDITION).map((story, index): EditionStory => ({
-      id: story.id,
-      rank: index,
-      title: decodeEntities(story.title),
-      url: story.url,
-      source: decodeEntities(story.source),
-      summary: decodeEntities(story.summary ?? ''),
-      publishedAt: story.publishedAt!,
-      category: story.readerCategory,
-      categoryLabel: getNewsCategory(story.readerCategory).label,
-      tags: story.readerTags,
-      company: detectCompany(`${story.title} ${story.summary}`),
-      whyItMatters: editorial?.why_it_matters?.[story.url]?.trim() || null,
-    }));
-
-    const sourceCount = new Set(picked.map((story) => story.source)).size;
-    const isToday = date === today;
-    editions.push({
-      date,
-      dateLabel: labelFor(date, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }),
-      shortLabel: labelFor(date, { day: 'numeric', month: 'short', year: 'numeric' }),
-      isToday,
-      publishedAt: picked.map((story) => story.publishedAt).sort().at(-1)!,
-      lead: picked[0],
-      stories: picked.slice(1),
-      sixtySeconds: editorial?.sixty_seconds
-        ? { text: editorial.sixty_seconds.trim(), editorial: true }
-        : { text: buildSixtySeconds(picked, sourceCount, isToday), editorial: false },
-      categoryCounts: countCategories(picked),
-      sourceCount,
-      hasEditorialNotes: Boolean(editorial),
-      totalAvailable: raw.length,
-    });
-  }
-
-  cache = editions.sort((a, b) => b.date.localeCompare(a.date));
+  cache = buildEditions({ stories: loadSourceStories(), archive: loadArchive(), now });
   return cache;
 }
 
+/** For the snapshot script: live picks for every settled day. */
+export function settledLiveDays(now: Date = new Date()) {
+  return [...pickDays(loadSourceStories(), now)].filter(([date]) => isSettled(date, now));
+}
 export function getEdition(date: string): Edition | undefined {
   return getEditions().find((edition) => edition.date === date);
 }
