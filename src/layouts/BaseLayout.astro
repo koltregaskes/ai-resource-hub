@@ -58,6 +58,28 @@ const alternateLocaleLinks = buildAlternateTranslations(base, alternateTranslati
 }));
 const xDefaultHref = alternateTranslations['en-GB'] ? new URL(alternateTranslations['en-GB'], Astro.site).href : null;
 const translationMeta = getTranslationStateMeta(translationState);
+// The newsletter Worker (and optional Turnstile) are only allowed once PUBLIC_NEWSLETTER_API is set.
+const newsletterApiOrigin = (() => {
+  try {
+    return import.meta.env.PUBLIC_NEWSLETTER_API ? new URL(import.meta.env.PUBLIC_NEWSLETTER_API).origin : '';
+  } catch {
+    return '';
+  }
+})();
+const turnstileOrigin = newsletterApiOrigin && import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ? 'https://challenges.cloudflare.com' : '';
+const contentSecurityPolicy = [
+  "default-src 'self'",
+  "img-src 'self' data: https:",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  "font-src 'self' https://fonts.gstatic.com data:",
+  `script-src 'self' 'unsafe-inline'${turnstileOrigin ? ` ${turnstileOrigin}` : ''}`,
+  `connect-src 'self'${newsletterApiOrigin ? ` ${newsletterApiOrigin}` : ''}`,
+  ...(turnstileOrigin ? [`frame-src ${turnstileOrigin}`] : []),
+  "object-src 'none'",
+  "base-uri 'self'",
+  `form-action 'self'${newsletterApiOrigin ? ` ${newsletterApiOrigin}` : ''}`,
+  'upgrade-insecure-requests',
+].join('; ');
 const pathFromBase = `/${Astro.url.pathname.slice(new URL(base, Astro.site).pathname.length)}`;
 const ogCard = getOgCardForPath(pathFromBase);
 const ogImageUrl = ogImage
@@ -143,6 +165,7 @@ const primaryNav = [
     children: [
       { href: `${base}new/`, label: 'Release Desk', note: 'Latest model launches and editor-ready briefs' },
       { href: `${base}news/`, label: 'AI News', note: 'Rolling signal from tracked sources' },
+      { href: `${base}newsletter/`, label: 'Daily Edition', note: "The day's AI stories in one page, filterable by category" },
       { href: `${base}updates/`, label: 'Updates & Freshness', note: 'Categories, cadence, sources, and latest changes' },
       { href: `${base}changelog/`, label: 'Changelog', note: 'Recent website and data changes' },
       { href: `${base}status/`, label: 'Provider Status', note: 'Live API health and incidents' },
@@ -209,6 +232,7 @@ const mobileSections = [
     links: [
       { href: `${base}new/`, label: 'Release Desk' },
       { href: `${base}news/`, label: 'AI News' },
+      { href: `${base}newsletter/`, label: 'Daily Edition' },
       { href: `${base}updates/`, label: 'Updates & Freshness' },
       { href: `${base}changelog/`, label: 'Changelog' },
       { href: `${base}labs/`, label: 'Labs and Providers' },
@@ -385,7 +409,7 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
     {robots && <meta name="robots" content={robots} />}
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+      content={contentSecurityPolicy}
     />
     <link rel="canonical" href={canonicalURL} />
     {alternateLocaleLinks.map((link) => (

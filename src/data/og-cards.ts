@@ -23,6 +23,8 @@ export interface OgCard {
 
 const SECTION_CARDS: Array<Omit<OgCard, 'id' | 'alt'>> = [
   { pagePath: '/news/', title: 'AI news from tracked sources, updated through the day', kicker: 'AI News' },
+  { pagePath: '/newsletter/', title: 'The daily AI edition: the stories that mattered, in one page', kicker: 'Daily edition' },
+  { pagePath: '/newsletter/archive/', title: 'Every daily AI edition, newest first', kicker: 'Edition archive' },
   { pagePath: '/models/', title: 'Every tracked AI model, with prices, context and sources', kicker: 'Model directory' },
   { pagePath: '/leaderboard/', title: 'AI model leaderboard with the evidence behind each score', kicker: 'Leaderboard' },
   { pagePath: '/benchmarks/', title: 'AI benchmarks explained, with sources and caveats', kicker: 'Benchmarks' },
