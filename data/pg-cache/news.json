@@ -1,7 +1,43 @@
 [
   {
+    "id": "news-0fd7ae7044e59d7b5fa6",
+    "title": "Jensen Huang agrees to testify before Congress",
+    "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/",
+    "source": "TechCrunch",
+    "summary": "Huang, who was ousted as CEO following reports of an alleged affair with a woman suspected of spying for China, agreed to testify Wednesday after several senior lawmakers threatened to subpoena him.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T16:36:37.000Z",
+    "discovered_at": "2026-11-12 16:55:36"
+  },
+  {
+    "id": "news-0ff22abf6100bfe97aca",
+    "title": "Five ways Jensen Huang’s ouster from Nvidia could damage the AI industry",
+    "url": "https://techcrunch.com/2026/11/12/five-ways-jensen-huangs-ouster-from-nvidia-could-damage-the-ai-industry/",
+    "source": "TechCrunch",
+    "summary": "Nvidia's ousted CEO Jensen Huang's downfall isn’t just your run-of-the-mill salacious billionaire sex scandal. He was using his influence to push the AI industry in some very specific ways.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T16:32:33.000Z",
+    "discovered_at": "2026-11-12 16:55:36"
+  },
+  {
+    "id": "news-a5ee8976426905143d28",
+    "title": "Trump floats Apple chairman Tim Cook as Jensen Huang&#8217;s successor",
+    "url": "https://techcrunch.com/2026/11/12/trump-floats-apple-chairman-tim-cook-as-jensen-huangs-successor/",
+    "source": "TechCrunch",
+    "summary": "In a post on Truth Social, President Trump says only one man can take Jensen Huang's place as head of Nvidia: Tim Cook.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T16:12:44.000Z",
+    "discovered_at": "2026-11-12 16:55:36"
+  },
+  {
     "id": "news-830958e6e6f7f875c563",
-    "title": "Read Nvidia’s internal emails about the ‘extraordinarily difficult period’ ahead",
+    "title": "Read Nvidia’s internal emails about the ‘extraordinarily difficult period’ amid CEO shakeup",
     "url": "https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang",
     "source": "The Verge",
     "summary": "Jensen Huang resigned as CEO of Nvidia this morning, a company he co-founded in 1993. The decision came following the company's board opening an investigation into multiple extramarital affairs Huang had with a direct report and an alleged Chinese spy. The new, and first, Chair of the Board, Harvey Jones, shared news…",
@@ -9,19 +45,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T15:48:12.000Z",
-    "discovered_at": "2026-11-12 15:55:47"
+    "discovered_at": "2026-11-12 16:55:48"
   },
   {
     "id": "news-15b0384fb53fdc16335b",
     "title": "Jensen Huang is out at Nvidia — who is Colette Kress, his interim replacement?",
     "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/",
     "source": "TechCrunch",
-    "summary": "Nvidia CFO Colette Kress is taking over for as an interim replacement for longtime CEO Jensen Huang, who is embroiled in scandal.",
+    "summary": "Nvidia CFO Colette Kress is taking over as an interim replacement for longtime CEO Jensen Huang, who is embroiled in scandal.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T15:37:29.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-62c34abfa66e72c12433",
@@ -33,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T15:18:14.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-023d1c79ca20cb05e618",
@@ -45,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T15:02:28.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-15c28179b2dc3ec9cbc8",
@@ -57,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T15:01:31.000Z",
-    "discovered_at": "2026-11-12 15:55:47"
+    "discovered_at": "2026-11-12 16:55:48"
   },
   {
     "id": "news-5e5f306d785f11574933",
@@ -69,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T14:30:01.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-39f4c129e4341242cbc5",
@@ -81,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T14:10:00.000Z",
-    "discovered_at": "2026-11-12 15:55:47"
+    "discovered_at": "2026-11-12 16:55:48"
   },
   {
     "id": "news-426b199762db8714ebb8",
@@ -93,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T13:53:16.000Z",
-    "discovered_at": "2026-11-12 15:55:47"
+    "discovered_at": "2026-11-12 16:55:48"
   },
   {
     "id": "news-7ed9c1c82c2d456eb82c",
@@ -105,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T13:26:25.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-0990939c7d6ea9f7b924",
@@ -117,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T09:30:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-48e6c412414232492377",
@@ -129,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T03:13:10.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-f28f90d2895a812ca579",
@@ -141,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T00:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-b06379671ede1f625c58",
@@ -153,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T00:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-e9253ae6619ecd71e8c4",
@@ -165,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T23:28:45.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-0ca5cf57ee5146c09285",
@@ -177,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T23:17:05.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-4a6d92631407ef3c940b",
@@ -189,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T22:44:36.000Z",
-    "discovered_at": "2026-11-12 15:55:47"
+    "discovered_at": "2026-11-12 16:55:48"
   },
   {
     "id": "news-33bddd1c40023b58eaf4",
@@ -201,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T21:54:21.000Z",
-    "discovered_at": "2026-11-12 15:55:47"
+    "discovered_at": "2026-11-12 16:55:48"
   },
   {
     "id": "news-0d92f57c72e3e3cf0977",
@@ -213,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T20:15:15.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-6bc57b8d8016fc8de5e0",
@@ -225,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T20:12:01.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-984513ae1fc499f6da4e",
@@ -237,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T20:02:14.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-c063829a6185b4d7f3ba",
@@ -249,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T19:54:00.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-019cc9ec163bf85320c5",
@@ -261,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T19:34:55.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-90a2e60457e0b47e9a12",
@@ -273,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T19:22:22.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-8e4104a923ec61a4f8ae",
@@ -285,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T18:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-32bc3a2f6211a8fe2f5c",
@@ -297,19 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:16:07.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
-  },
-  {
-    "id": "news-29f521837a1e4833b10a",
-    "title": "OpenAI&#8217;s quarterly revenue reportedly crosses $10B for the first time",
-    "url": "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/",
-    "source": "TechCrunch",
-    "summary": "Sales of $10 billion represents an almost 50% jump from revenue of $6.7 billion the company recorded in the second quarter.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T16:14:44.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-2d8f602ac5a8eeadebc0",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:47"
+    "discovered_at": "2026-11-12 16:55:48"
   },
   {
     "id": "news-97adab01dbf7344a4376",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-a86af765ffafecbaf7c6",
@@ -345,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T15:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:47"
-  },
-  {
-    "id": "news-7d4c517a6890da297444",
-    "title": "Databricks&#8217; new AI agent tells CEO Ali Ghodsi the unvarnished truth",
-    "url": "https://techcrunch.com/2026/11/11/databricks-new-ai-agent-tells-ceo-ali-ghodsi-the-unvarnished-truth/",
-    "source": "TechCrunch",
-    "summary": "With Databricks at 12,000 employees, AI Ghodsi is the first to admit that he can't know everyone and that they are unlikely to confess the things that go wrong to him. But he doesn't need them to. He uses Databricks' newly revised Genie agent for that.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T15:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:48"
   },
   {
     "id": "news-450a9863af999dabbda9",
@@ -369,19 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T14:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:47"
-  },
-  {
-    "id": "news-7c021a2e6c5bb952458e",
-    "title": "Plurai wants to help AI agents work better using the same approach that helped get self-driving cars to roads",
-    "url": "https://techcrunch.com/2026/11/11/plurai-wants-to-help-ai-agents-work-better-using-the-same-approach-that-helped-get-self-driving-cars-to-roads/",
-    "source": "TechCrunch",
-    "summary": "Like the end-to-end models trained to drive cars, AI agents are probabilistic systems operating in unpredictable environments.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T14:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:48"
   },
   {
     "id": "news-7e65614cc89aac7b14f8",
@@ -393,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T09:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-80b38ea7da372c49e059",
@@ -405,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T08:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-8c999d6885d24711e917",
@@ -417,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T00:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-b686da68349e5f787ade",
@@ -429,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T21:12:59.000Z",
-    "discovered_at": "2026-11-12 15:55:47"
+    "discovered_at": "2026-11-12 16:55:48"
   },
   {
     "id": "news-34a6071342ff5a88c61c",
@@ -441,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T19:04:05.000Z",
-    "discovered_at": "2026-11-12 15:55:47"
+    "discovered_at": "2026-11-12 16:55:48"
   },
   {
     "id": "news-ac5a661efbfd509d2187",
@@ -453,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T19:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-c5fffc8a0cbdc3d45109",
@@ -465,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T14:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-155d33cae72679311e5a",
@@ -477,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T13:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-46ecb159c1535b093315",
@@ -489,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T12:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-5ca4dc7b6d88cb31d41f",
@@ -501,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T10:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-01a8528fa117926a6942",
@@ -513,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T09:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-4e3e5904c85ae763182d",
@@ -525,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T08:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-3588ceed41552e465a0d",
@@ -537,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T07:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-1ff74ee2cb1066374d17",
@@ -549,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T00:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-9c331579e229757a7a39",
@@ -561,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T19:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-f37b680abcf7adcb8bec",
@@ -573,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T13:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-932fe34bad728f30ad4e",
@@ -585,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T08:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-23b94c697622500fcf7d",
@@ -597,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T08:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-a5eef3cf57a4e41068d1",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T20:56:41.000Z",
-    "discovered_at": "2026-11-12 15:55:47"
+    "discovered_at": "2026-11-12 16:55:48"
   },
   {
     "id": "news-bc8f9eac19663ff628fb",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T08:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-cfd4354afa14004ff8c1",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T00:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-b58fee4edbbb5f7a9c2c",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:36"
+    "discovered_at": "2026-11-12 16:55:35"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-12 15:55:47"
+    "discovered_at": "2026-11-12 16:55:48"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:36"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -717,18 +717,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-11-12 15:55:47"
-  },
-  {
-    "id": "news-c1e94fc831365c1377e6",
-    "title": "Gemini 4 Argon: Built to solve your hardest problems",
-    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-    "source": "Google",
-    "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-11-12 15:55:37"
+    "discovered_at": "2026-11-12 16:55:48"
   }
 ]

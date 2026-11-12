@@ -1,21 +1,21 @@
 # Recent Activity Snapshot
 
-Generated: 12 Nov 2026, 15:55 UTC
+Generated: 12 Nov 2026, 16:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 12 Nov 2026, 15:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 12 Nov 2026, 15:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 12 Nov 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 12 Nov 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 12 Nov 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 12 Nov 2026, 12:00 UTC | digest | Jensen Huang is out at Nvidia — who is Colette Kress, his interim replacement? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/) |
+| 12 Nov 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 12 Nov 2026, 16:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 12 Nov 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 12 Nov 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 12 Nov 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 12 Nov 2026, 12:00 UTC | digest | Five ways Jensen Huang’s ouster from Nvidia could damage the AI industry | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/12/five-ways-jensen-huangs-ouster-from-nvidia-could-damage-the-ai-industry/) |
+| 12 Nov 2026, 12:00 UTC | digest | Jensen Huang agrees to testify before Congress | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/) |
 | 12 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,031 open roles across 10 tracked companies. | `/jobs/` |
-| 12 Nov 2026, 12:00 UTC | digest | Norwest pushes deeper into AI with new $4B fund | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund/) |
-| 12 Nov 2026, 12:00 UTC | digest | Published the 2026-11-12 daily digest | 13 stories captured from 3 sources. | `/news/` |
-| 12 Nov 2026, 12:00 UTC | digest | Read Nvidia’s internal emails about the ‘extraordinarily difficult period’ ahead | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang) |
+| 12 Nov 2026, 12:00 UTC | digest | Published the 2026-11-12 daily digest | 16 stories captured from 3 sources. | `/news/` |
+| 12 Nov 2026, 12:00 UTC | digest | Trump floats Apple chairman Tim Cook as Jensen Huang&#8217;s successor | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/12/trump-floats-apple-chairman-tim-cook-as-jensen-huangs-successor/) |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
 | 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
