@@ -9,15 +9,16 @@ You write **one file only**: `src/data/newsletter-editorial/<YYYY-MM-DD>.json` i
 2. Run `node scripts/editorial-precheck.mjs` and read the JSON it prints.
    - If `ok` is `false`, **write nothing** and stop. Put the JSON line in your run log.
    - If the reason is `stale`, also post one signed comment on hub #1497, unless one was already posted for this `date`: "Editorial writer skipped <date>: newest story is <ageHours> hours old (limit 36). The news feed may have stopped." A stale feed means the scrape has failed, and someone should know.
-   - For `already-written` or `not-yesterday`, stop quietly.
-3. Fetch `https://theairesourcehub.com/newsletter/latest.json`. Its `date` must equal the precheck's `date`. Use only the `stories` in this file: their `title`, `source`, `summary`, `category` and `url`. Don't browse the web or add anything from memory.
+   - For `already-written`, `not-yesterday` or `not-frozen`, stop quietly. (`not-frozen` means the hourly scrape hasn't frozen yesterday's edition yet; the 06:45 backup run tries again.)
+3. Read the frozen edition at the precheck's `archive` path (`src/data/newsletter-archive/<date>.json`). These are exactly the stories readers see, and the validator checks against them. Use only its `stories`: their `title`, `source`, `summary`, `category` and `url`. Don't browse the web or add anything from memory.
 4. Write the file (shape below) at the precheck's `path`.
 5. Run `node scripts/validate-editorial.mjs <path>`. If it fails, fix the lines it names and run it again. If it still fails after two fixes, don't commit the draft. Leave it uncommitted, push nothing, and log the validator output.
 6. Commit only that file:
    - `git add <path>`;
    - check that `git diff --cached --name-only` prints exactly `<path>`;
    - `git commit -m "chore: daily edition notes <date> [automated]"`;
-   - `git push origin main`. If the push is rejected, run `git pull --rebase` and push once more. If it fails again, stop and log it.
+   - `git push origin main`. If the push is rejected, run `git pull --rebase`, then run `node scripts/validate-editorial.mjs <path>` again and check `git diff --name-only origin/main..HEAD` still prints exactly `<path>`. Push once more only if both pass. If anything fails, stop and log it.
+   - The deploy workflow runs the same validator before publishing, so a file that fails it blocks the site deploy. Never push one.
 
 ## File shape
 ```json
@@ -36,7 +37,7 @@ You write **one file only**: `src/data/newsletter-editorial/<YYYY-MM-DD>.json` i
 
 ## What to write
 - **Grounding.** Every sentence must rest on that story's title and summary. Don't add facts, names, numbers, dates, quotes or motives that aren't in that text. If the summary is thin, say less.
-- **Numbers.** Only use numbers that appear in that story's title or summary. In `sixty_seconds` you may also give counts of stories. The validator rejects anything else.
+- **Numbers.** Only use numbers that appear in that story's title or summary, with the same size and unit: if the summary says "$40m", don't write "$40bn" or "$40 billion". Written-out numbers ("fifty billion") count as numbers too. In `sixty_seconds` you may also give story counts in plain count wording ("4 stories", "3 sources", "2 Models"), and they must match the edition. The validator rejects anything else.
 - **The day in 60 seconds.** Lead with the most important concrete thing that happened, then the next two or three. Name companies and products as the sources do. Close cleanly, with no moral and no question.
 - **Why it matters.** Say what changes for someone who builds with, buys or follows AI. Be concrete ("teams using X now have to...") rather than generic ("this could reshape the industry").
 

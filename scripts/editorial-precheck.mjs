@@ -9,6 +9,8 @@
  *   ok: false, reason: "stale"            newest story more than 36 hours old: write nothing, log it
  *   ok: false, reason: "not-yesterday"    latest complete edition is not yesterday (UK)
  *   ok: false, reason: "already-written"  src/data/newsletter-editorial/<date>.json exists
+ *   ok: false, reason: "not-frozen"       src/data/newsletter-archive/<date>.json isn't committed yet (the
+ *                                         hourly scrape freezes a day 6 hours after it ends); try later
  *   ok: false, reason: "no-edition" | "fetch-failed"
  */
 import { existsSync, readFileSync } from 'node:fs';
@@ -35,6 +37,7 @@ export function decide(edition, now, exists) {
   const base = {
     date: edition.date,
     path: `src/data/newsletter-editorial/${edition.date}.json`,
+    archive: `src/data/newsletter-archive/${edition.date}.json`,
     newestStoryAt: newest ?? null,
     ageHours: Number.isFinite(ageHours) ? Math.round(ageHours * 10) / 10 : null,
     storyCount: edition.stories.length,
@@ -42,6 +45,7 @@ export function decide(edition, now, exists) {
   if (!Number.isFinite(ageHours) || ageHours > MAX_AGE_HOURS) return { ok: false, reason: 'stale', ...base };
   if (edition.date !== ukYesterday(now)) return { ok: false, reason: 'not-yesterday', expected: ukYesterday(now), ...base };
   if (exists(base.path)) return { ok: false, reason: 'already-written', ...base };
+  if (!exists(base.archive)) return { ok: false, reason: 'not-frozen', ...base };
   return { ok: true, reason: 'ready', ...base };
 }
 
