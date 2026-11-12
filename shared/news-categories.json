@@ -98,11 +98,15 @@
     "patterns": {
       "policy": "\\b(regulat\\w*|legislat\\w*|lawsuit|sued|sues|court|judge|copyright|antitrust|senate|congress|parliament|ministry|government|white house|executive order|eu ai act|ai act|export control\\w*|ban(s|ned)?|ai policy|public policy|policymakers?|policy makers?|regulators?|safety institute|watchdog|ftc|ofcom)\\b",
       "voices": "\\b(interview(ed)? (with|by)|in an interview|podcast|in conversation|fireside chat|q&a|op-ed|opinion:|keynote|sits down with)\\b",
-      "agents": "\\b(agent|agents|agentic|computer use|computer-use|mcp|model context protocol|tool calling|tool use|multi-agent|autonomous)\\b",
-      "research": "\\b(paper|arxiv|preprint|study|studies|researchers?|dataset|findings|peer-reviewed|journal|benchmark(s|ed|ing)?)\\b",
+      "agents": "\\b(ai agents?|agentic|coding agents?|browser agents?|agent mode|agents? sdk|autonomous agents?|computer use|computer-use|mcp|model context protocol|tool calling|tool use|multi-agent)\\b",
+      "research": "\\b(paper|arxiv|preprint|study|studies|researchers?|dataset|findings|peer-reviewed|benchmark(s|ed|ing)?)\\b",
       "industry": "\\b(raises|raised|funding|valuation|series [a-f]|ipo|acquir\\w*|acquisition|merger|layoffs?|revenue|earnings|profit|investors?|data cent(re|er)s?|chips?|gpus?|nvidia|semiconductor|ceo|hires|hiring|partnership|deal)\\b",
       "models": "\\b(model|models|llm|weights|open-weight|gpt-?\\d|claude|gemini|llama|mistral|qwen|deepseek|grok|o\\d|reasoning model|frontier model|checkpoint)\\b",
       "tools": "\\b(app|apps|api|sdk|plugin|extension|feature|launch(es|ed)?|rolls? out|copilot|ide|assistant|browser|update|beta|integration)\\b"
+    },
+    "titlePatterns": {
+      "$comment": "Looser patterns checked against the title only, alongside the full-text rule for the same category.",
+      "agents": "\\b(agent|agents)\\b"
     },
     "tagPatterns": {
       "benchmark": "\\b(benchmark\\w*|leaderboard|eval(s|uation)?|swe-bench|mmlu|arena)\\b",
