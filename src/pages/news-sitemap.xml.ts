@@ -6,7 +6,7 @@
 import type { APIRoute } from 'astro';
 import { blogPosts } from '../data/blog-posts';
 import { getNewsletterEditionSummaries } from '../data/newsletter-editions';
-import { escapeXml, PUBLICATION_NAME, withinNewsWindow, type NewsSitemapEntry } from '../lib/seo-feeds';
+import { capNewsEntries, escapeXml, PUBLICATION_NAME, withinNewsWindow, type NewsSitemapEntry } from '../lib/seo-feeds';
 
 export const GET: APIRoute = ({ site }) => {
   const base = new URL(import.meta.env.BASE_URL, site ?? 'https://theairesourcehub.com');
@@ -24,7 +24,7 @@ export const GET: APIRoute = ({ site }) => {
     })),
   ];
 
-  const recent = withinNewsWindow(entries).sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+  const recent = capNewsEntries(withinNewsWindow(entries));
 
   const body = recent
     .map(
