@@ -32,6 +32,11 @@ const orderedPatterns: Array<[NewsCategoryId, RegExp]> = (rules.order as NewsCat
   id,
   new RegExp((rules.patterns as Record<string, string>)[id], 'i'),
 ]);
+const titlePatterns = new Map<NewsCategoryId, RegExp>(
+  Object.entries((rules as { titlePatterns?: Record<string, string> }).titlePatterns ?? {})
+    .filter(([id]) => id !== '$comment')
+    .map(([id, pattern]) => [id as NewsCategoryId, new RegExp(pattern, 'i')]),
+);
 const SPECIFIC = new Set<NewsCategoryId>(['policy', 'voices', 'agents', 'research']);
 const tagPatterns:Array<[NewsTagId, RegExp]> = Object.entries(rules.tagPatterns as Record<string, string>).map(
   ([id, pattern]) => [id as NewsTagId, new RegExp(pattern, 'i')],
@@ -94,7 +99,7 @@ export function classifyNewsItem({ title, summary, sourceCategory, vocabulary }:
 
   // Specific topics (policy, voices, agents, research) win over the source's own label.
   for (const [id, pattern] of orderedPatterns.filter(([id]) => SPECIFIC.has(id))) {
-    if (pattern.test(text)) return { category: id, tags, reason: 'keyword' };
+    if (pattern.test(text) || titlePatterns.get(id)?.test(title)) return { category: id, tags, reason: 'keyword' };
   }
 
   // A specific source label (e.g. an arXiv or lab-blog feed) beats generic keywords.
