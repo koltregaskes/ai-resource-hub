@@ -95,7 +95,7 @@ const siteStructuredData = isHomePage
           '@id': new URL(`${base}#organization`, Astro.site).href,
           name: 'The AI Resource Hub',
           url: new URL(base, Astro.site).href,
-          logo: new URL(`${base}${ogImagePathForCard(ogCard.id)}`, Astro.site).href,
+          logo: new URL(`${base}logo.png`, Astro.site).href,
         },
         {
           '@type': 'WebSite',
@@ -425,6 +425,7 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
     />
 
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="apple-touch-icon" href={`${base}apple-touch-icon.png`} />
     <link rel="alternate" type="application/rss+xml" title="The AI Resource Hub RSS" href={`${base}rss.xml`} />
     <meta name="generator" content={Astro.generator} />
 

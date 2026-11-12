@@ -41,7 +41,10 @@ function shell(body: string, footer: string): string {
   return `<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"></head>
 <body style="margin:0;padding:0;background:#f6f0e3;">
 <div style="max-width:620px;margin:0 auto;padding:24px 20px;font-family:Arial,Helvetica,sans-serif;color:#1d1915;line-height:1.5;">
-<p style="margin:0 0 16px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#b4561f;font-weight:bold;">The AI Resource Hub</p>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px;"><tr>
+<td style="padding:0 10px 0 0;vertical-align:middle;"><img src="https://theairesourcehub.com/logo-email.png" width="36" height="36" alt="" style="display:block;border:0;border-radius:8px;"></td>
+<td style="vertical-align:middle;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#b4561f;font-weight:bold;">The AI Resource Hub</td>
+</tr></table>
 ${body}
 <hr style="border:none;border-top:1px solid #d9cfbd;margin:28px 0 16px;">
 <div style="font-size:12px;color:#6b6155;">${footer}</div>

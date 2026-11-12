@@ -147,6 +147,30 @@ function loadSourceStories(): SourceStory[] {
   return (loadCuratedNewsItems() as SourceStory[]).filter((item) => item.publishedAt && item.readerCategory);
 }
 
+/** Every curated story in the live cache, as archive records, grouped by UK day (all of them, not just the edition picks). */
+export function liveStoriesByDay(now: Date = new Date()): Map<string, ArchivedStory[]> {
+  const today = ukDate(now);
+  const out = new Map<string, ArchivedStory[]>();
+  for (const story of loadSourceStories()) {
+    const day = ukDate(story.publishedAt!);
+    if (day > today) continue;
+    if (!out.has(day)) out.set(day, []);
+    out.get(day)!.push({
+      id: story.id,
+      title: story.title,
+      url: story.url,
+      source: story.source,
+      summary: story.summary ?? '',
+      publishedAt: story.publishedAt!,
+      category: story.readerCategory,
+      tags: story.readerTags,
+      importance: story.importanceScore ?? story.importance_score ?? 0,
+    });
+  }
+  for (const list of out.values()) list.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+  return out;
+}
+
 /**
  * Closed editions are frozen. Once a UK day has been over for SETTLE_HOURS,
  * scripts/snapshot-editions.ts (run by the hourly scrape) writes its picked

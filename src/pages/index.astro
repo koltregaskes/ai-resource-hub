@@ -15,6 +15,10 @@ import {
   getMetaBenchmarkOverview,
   type MetaBenchmarkLeaderboardEntry,
 } from '../data/internal-meta-benchmarks';
+import { getEditions } from '../data/newsletter-editions';
+import { storyPathForUrl } from '../data/news-stories';
+import { modelReleaseDesk } from '../data/model-release-desk.generated';
+import { getAllModelIds } from '../db/queries';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -377,6 +381,28 @@ const monitorWatchRows = (() => {
 })();
 const topValue = [...rows].filter((row) => row.valueScore > 0).sort((a, b) => b.valueScore - a.valueScore)[0] ?? null;
 
+// Front door (hub #614): the latest daily edition and provider-confirmed
+// releases. The 12 June meta benchmark snapshot moved off the front door to
+// /benchmarks/meta/, and rankings built from old benchmark scores are gone.
+// Early in the day today's edition is thin, so the front door shows the last
+// complete day until today has at least five stories.
+const editions = getEditions();
+const latestEdition = (editions[0]?.isToday && [editions[0].lead, ...editions[0].stories].length < 5 ? editions[1] : editions[0]) ?? editions[0] ?? null;
+const homeStories = latestEdition ? [latestEdition.lead, ...latestEdition.stories].slice(0, 6) : [];
+const homeTime = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+const storyHref = (url: string) => {
+  const hubPath = storyPathForUrl(url);
+  return hubPath ? `${base}${hubPath}` : url;
+};
+const publicModelIds = new Set(getAllModelIds());
+const officialReleases = modelReleaseDesk.releases
+  .filter((release) => release.verificationState === 'official' && release.officialUrl)
+  .sort((a, b) => b.releaseDate.localeCompare(a.releaseDate));
+const confirmedReleases = officialReleases.slice(0, 6);
+const confirmedLast30 = officialReleases.filter((release) => release.ageDays !== null && release.ageDays <= 30).length;
+const watchOnlyCount = modelReleaseDesk.releases.filter((release) => release.verificationState !== 'official').length;
+const pulseDate = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', day: 'numeric', month: 'short', year: 'numeric' });
+
 const tableLinks = [
   { href: `${base}cheapest/`, label: 'Cheapest credible (>= 70)' },
   { href: `${base}fastest/`, label: 'Fastest by tokens/sec' },
@@ -429,116 +455,75 @@ const tableLinks = [
       </div>
 
       <div class="airh-spreadsheet-wrap">
-        <div class="airh-view-row">
-          <div class="airh-view-tabs" role="tablist" aria-label="Meta benchmark leaderboards">
-            {metaLanes.map((lane, index) => (
-              <button
-                type="button"
-                class={`airh-view-tab${index === 0 ? ' is-active' : ''}`}
-                role="tab"
-                aria-selected={index === 0 ? 'true' : 'false'}
-                data-airh-meta-lane={lane.id}
-                data-airh-tip={lane.tip}
-              >
-                {lane.label} <span>{metaRanked.length}</span>
-              </button>
-            ))}
-          </div>
-
-          <span
-            class="airh-refresh-stamp"
-            id="airh-refresh-stamp"
-            data-airh-tip="The internal meta benchmark snapshot was captured on 12 June 2026 and is not a current ranking."
-          >
-            <span></span>
-            Snapshot 12 Jun 2026
-          </span>
-        </div>
-
         <div class="airh-data-grid airh-meta-grid">
-          <section class="airh-table-card" aria-labelledby="airh-meta-table-title">
+          <section class="airh-table-card" aria-labelledby="airh-home-title" data-edition-date={latestEdition?.date}>
             <div class="airh-table-card-head">
-              <h1 id="airh-meta-table-title" data-airh-meta-title>Floor Capability - historical benchmark snapshot</h1>
-              <span class="airh-table-meta" data-airh-tip={`Historical internal benchmark: ${metaRanked.length} provisional rows captured on 12 June 2026. ${metaPartialCount} rows had partial evidence.`}>{metaRanked.length} snapshot rows</span>
-              <a class="airh-meta-method-link" href={`${base}benchmarks/meta/`} data-airh-tip="Method, lane weightings, full citations, and partial-evidence rows.">How these scores work &rarr;</a>
+              <h1 id="airh-home-title">{latestEdition ? `AI today: ${latestEdition.dateLabel}` : 'AI today'}</h1>
+              {latestEdition && (
+                <span class="airh-table-meta" data-airh-tip="Picked from the hub's news feed. The page rebuilds every hour.">
+                  {`${homeStories.length} of ${latestEdition.totalAvailable} ${latestEdition.totalAvailable === 1 ? 'story' : 'stories'}`}
+                </span>
+              )}
+              <a class="airh-meta-method-link" href={`${base}newsletter/`}>Full daily edition &rarr;</a>
             </div>
 
-            <p class="airh-meta-stale-note">
-              Historical evidence only. These provisional scores were captured on 12 June 2026 and must not be read as a current model ranking.
-            </p>
-
-            {metaLaneRows.map(({ lane, rows: laneRows }, laneIndex) => (
-              <div class="airh-table-scroll" data-airh-meta-panel={lane.id} hidden={laneIndex !== 0}>
-                <table class="airh-leaderboard-table compact">
-                  <thead>
-                    <tr>
-                      <th data-airh-tip={`Rank inside the ${lane.label} leaderboard.`}>#</th>
-                      <th data-airh-tip="Model detail page with full sources, score components, and operating metrics.">Model</th>
-                      <th class="num" data-airh-tip="0-100 saturation scale. 100 means this lane is complete for the model: routine failures have effectively disappeared. If every model reaches 100, the lane is retired or made harder.">{lane.scoreLabel}</th>
-                      <th class="num" data-airh-tip="DeepSWE (Datacurve): long-horizon agentic coding. Pass@1, average cost, average time, and output tokens where reported.">DSWE</th>
-                      <th class="num" data-airh-tip="Evidence completeness behind the score - source coverage, not model quality.">Evidence %</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {laneRows.map((entry, index) => (
-                      <tr>
-                        <td class="rank">{index + 1}</td>
-                        <td class="model-cell">
-                          <a href={`${base}benchmarks/meta/${entry.modelId}/`}>
-                            <span class="airh-provider-swatch" style={`background:${entry.providerColour}`}></span>
-                            {entry.modelName}
-                            <span>{entry.providerName}</span>
-                          </a>
-                        </td>
-                        <td class="num score">
-                          <span class="score-bar accent"><span style={`width:${scoreWidth(lane.scoreOf(entry))}`}></span></span>
-                          <b>{lane.scoreOf(entry)}</b>
-                          <button type="button" class="airh-conf-mark" data-airh-tip={`Confidence: ${entry.scoreConfidence}. ${CONFIDENCE_TIP}`} aria-label={`Score confidence for ${entry.modelName}: ${entry.scoreConfidence}`}>?</button>
-                        </td>
-                        <td class="num">
-                          {entry.dsweMetrics
-                            ? <a href={DEEPSWE_URL} target="_blank" rel="noopener" data-airh-tip="DeepSWE Pass@1, average cost, average time, output tokens. Opens DeepSWE.">{dsweCompact(entry)}</a>
-                            : <span data-airh-tip="No DeepSWE row reported for this model yet.">pending</span>}
-                        </td>
-                        <td class="num">{entry.coverage}%</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            ))}
-
-            <div class="airh-meta-guide" aria-label="How to read the meta benchmark leaderboard">
-              <article>
-                <strong>Score</strong>
-                <p>0-100 saturation. 100 = the lane is complete for that model; a saturated lane gets retired or hardened.</p>
-              </article>
-              <article>
-                <strong>Evidence %</strong>
-                <p>Source coverage behind the score, not model quality.</p>
-              </article>
-              <article>
-                <strong>DSWE</strong>
-                <p>Agentic coding with cost, time, and output tokens, from <a href={DEEPSWE_URL} target="_blank" rel="noopener">DeepSWE</a>.</p>
-              </article>
-              <article>
-                <strong>Confidence</strong>
-                <p>Evidence strength, on the <span class="airh-conf-mark" data-airh-tip={CONFIDENCE_TIP}>?</span> beside each score. Never another model grade.</p>
-              </article>
-            </div>
+            {latestEdition ? (
+              <>
+                <p class="airh-home-sixty">{latestEdition.sixtySeconds.text}</p>
+                <ol class="airh-home-stories">
+                  {homeStories.map((story, index) => (
+                    <li data-story-id={story.id} data-category={story.category}>
+                      <span class="airh-home-story-rank">{index === 0 ? 'Lead' : String(index).padStart(2, '0')}</span>
+                      <span class="airh-home-story-body">
+                        <a href={storyHref(story.url)} {...(storyPathForUrl(story.url) ? {} : { rel: 'noopener', target: '_blank', 'data-outbound': 'story' })}>{story.title}</a>
+                        <span class="airh-home-story-meta">{story.categoryLabel} &middot; {story.source} &middot; {homeTime.format(new Date(story.publishedAt))} UK</span>
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              </>
+            ) : (
+              <p class="airh-home-sixty">No stories in the news feed yet today.</p>
+            )}
 
             <div class="airh-table-foot">
-              <span data-airh-meta-summary>{metaRanked.length} historical rows - snapshot from 12 June 2026</span>
-              <a href={`${base}benchmarks/meta/`}>Open the full Meta Benchmark Hub &rarr;</a>
+              <span>{latestEdition?.isToday ? 'Updating through the day' : 'Latest complete day'}</span>
+              <a href={`${base}newsletter/archive/`}>All editions &rarr;</a>
+            </div>
+          </section>
+
+          <section class="airh-table-card" aria-labelledby="airh-releases-title">
+            <div class="airh-table-card-head">
+              <h2 id="airh-releases-title">Officially confirmed releases</h2>
+              <span class="airh-table-meta" data-airh-tip="Each release here has a model-level source from the provider itself: a launch post, docs page or model card.">provider-sourced</span>
+              <a class="airh-meta-method-link" href={`${base}new/`}>Release desk &rarr;</a>
+            </div>
+            <ol class="airh-home-stories">
+              {confirmedReleases.map((release) => (
+                <li>
+                  <span class="airh-home-story-rank">{release.releaseDateLabel}</span>
+                  <span class="airh-home-story-body">
+                    {publicModelIds.has(release.id)
+                      ? <a href={`${base}models/${release.id}/`}>{release.modelName}</a>
+                      : <span>{release.modelName}</span>}
+                    <span class="airh-home-story-meta">
+                      {release.providerName} &middot; <a href={release.officialUrl} rel="noopener" target="_blank">provider source</a>
+                    </span>
+                  </span>
+                </li>
+              ))}
+            </ol>
+            <div class="airh-table-foot">
+              <span>{watchOnlyCount} newer {watchOnlyCount === 1 ? 'release waits' : 'releases wait'} for a provider source before they get a page</span>
+              <a href={`${base}benchmarks/meta/`} data-airh-tip="The internal meta benchmark from 12 June 2026. Historical evidence only, not a current ranking.">12 June benchmark snapshot &rarr;</a>
             </div>
           </section>
         </div>
-
         <section class="airh-bottom-strip" aria-label="More AI Resource Hub signals">
           <div class="airh-strip-card">
             <h2>Today on the hub</h2>
             <ul>
-              <li><span>{latestRows.length}</span><a href={`${base}new/`}>models released in the last 30 days</a></li>
+              <li><span>{confirmedLast30}</span><a href={`${base}new/`}>provider-confirmed releases in the last 30 days</a></li>
               <li><span>{dataPulse.length}</span><a href={`${base}updates/`}>freshness lanes reporting</a></li>
               <li><span>{digestEntries.length}</span><a href={`${base}news/`}>digest stories surfaced</a></li>
               <li><span>{headlineNews.length}</span><a href={`${base}news/`}>headline items captured</a></li>
@@ -546,13 +531,13 @@ const tableLinks = [
           </div>
 
           <div class="airh-strip-card">
-            <h2>Pulse - current table</h2>
-            <p class="airh-pulse-row"><strong>{rows.length}</strong><span>ranked public LLM rows</span></p>
-            <p class="airh-pulse-row"><strong>{openRows.length}</strong><span>open-weight rows</span></p>
-            <p class="airh-pulse-row"><strong>{speedRows.length}</strong><span>rows with speed data</span></p>
-            <p class="airh-strip-note">
-              {topValue ? `Value leader: ${topValue.name}` : 'Value leaders appear when price data is present.'}
-            </p>
+            <h2>Data freshness</h2>
+            {dataPulse.map((lane) => (
+              <p class="airh-pulse-row" data-airh-tip={lane.note}>
+                <strong>{lane.updatedAt ? pulseDate.format(new Date(lane.updatedAt)) : 'none yet'}</strong>
+                <a href={lane.href}>{lane.label}</a>
+              </p>
+            ))}
           </div>
 
           <div class="airh-strip-card">
@@ -673,6 +658,66 @@ const tableLinks = [
        warning, confidence marker, and quick guide. */
     .airh-meta-grid {
       grid-template-columns: 1fr;
+    }
+
+    /* Front door (hub #614): latest edition and confirmed releases. */
+    .airh-home-sixty {
+      margin: 0.25rem 1rem 0.75rem;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--color-text-secondary);
+    }
+
+    .airh-home-stories {
+      list-style: none;
+      margin: 0;
+      padding: 0 1rem 0.5rem;
+    }
+
+    .airh-home-stories li {
+      display: flex;
+      gap: 0.75rem;
+      align-items: baseline;
+      padding: 0.55rem 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .airh-home-story-rank {
+      flex: 0 0 4.5rem;
+      font-family: var(--font-mono, ui-monospace, monospace);
+      font-size: 0.72rem;
+      color: var(--color-text-muted);
+    }
+
+    .airh-home-story-body {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      min-width: 0;
+    }
+
+    .airh-home-story-body > a,
+    .airh-home-story-body > span:first-child {
+      font-weight: 600;
+      color: var(--color-text-primary);
+      overflow-wrap: anywhere;
+    }
+
+    .airh-home-story-body > a:hover {
+      color: var(--color-accent);
+    }
+
+    .airh-home-story-meta {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+    }
+
+    .airh-home-story-meta a {
+      color: var(--color-accent);
+    }
+
+    .airh-pulse-row a {
+      color: var(--color-text-secondary);
     }
 
     .airh-meta-method-link {
