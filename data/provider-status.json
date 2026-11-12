@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T07:55:42.862Z",
+  "generatedAt": "2026-11-12T08:55:42.687Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T07:55:42.856Z",
+      "lastCheckedAt": "2026-11-12T08:55:42.681Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,12 +100,16 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T07:55:41.833Z",
-      "overallStatus": "major_outage",
-      "overallLabel": "Major System Outage",
+      "lastCheckedAt": "2026-11-12T08:55:41.276Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Images",
+          "status": "degraded_performance"
+        },
         {
           "name": "Chat Completions",
           "status": "operational"
@@ -125,34 +129,40 @@
         {
           "name": "Fine-tuning",
           "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
         }
       ],
       "activeIncidents": [
         {
-          "id": "01M76CW2D7FM7K7F8NJ4W0G08N",
-          "title": "Unable to start new Workspace Agent runs",
-          "status": "investigating",
-          "impact": "critical",
-          "startedAt": "2026-11-11T22:50:17.000Z",
-          "updatedAt": "2026-11-11T22:50:17.000Z",
+          "id": "01M77FAXVFV338GY7G9VRENRS5",
+          "title": "GPT-image-2.5 High error rate",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-11-12T08:52:35.000Z",
+          "updatedAt": "2026-11-12T08:52:35.000Z",
           "resolvedAt": null,
-          "summary": "We are investigating an issue preventing users from starting new Workspace Agent runs. We will share another update as more information becomes available."
+          "summary": "We have identified that users are experiencing elevated errors for GPT-image-2.5 Sunburst and Flare. We are working on implementing a mitigation."
         }
       ],
       "recentIncidents": [
         {
+          "id": "01M77FAXVFV338GY7G9VRENRS5",
+          "title": "GPT-image-2.5 High error rate",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-11-12T08:52:35.000Z",
+          "updatedAt": "2026-11-12T08:52:35.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for GPT-image-2.5 Sunburst and Flare. We are working on implementing a mitigation."
+        },
+        {
           "id": "01M76CW2D7FM7K7F8NJ4W0G08N",
           "title": "Unable to start new Workspace Agent runs",
-          "status": "investigating",
+          "status": "resolved",
           "impact": "critical",
           "startedAt": "2026-11-11T22:50:17.000Z",
-          "updatedAt": "2026-11-11T22:50:17.000Z",
-          "resolvedAt": null,
-          "summary": "We are investigating an issue preventing users from starting new Workspace Agent runs. We will share another update as more information becomes available."
+          "updatedAt": "2026-11-12T08:32:37.000Z",
+          "resolvedAt": "2026-11-12T08:32:37.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
         },
         {
           "id": "01M765MJQK7F85SC82RMTYN0V3",
@@ -173,16 +183,6 @@
           "updatedAt": "2026-11-10T16:06:18.000Z",
           "resolvedAt": "2026-11-10T16:06:18.000Z",
           "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M71W79MAGEXEX93QTVTBYJ4K",
-          "title": "Incorrect cost data in Costs API exports",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-11-10T04:42:21.000Z",
-          "updatedAt": "2026-11-10T07:02:33.000Z",
-          "resolvedAt": "2026-11-10T07:02:33.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
         }
       ]
     },
@@ -197,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T07:55:41.821Z",
+      "lastCheckedAt": "2026-11-12T08:55:41.179Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 10 tracked components.",
@@ -287,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T07:55:42.437Z",
+      "lastCheckedAt": "2026-11-12T08:55:42.080Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T07:55:42.008Z",
+      "lastCheckedAt": "2026-11-12T08:55:41.487Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -350,7 +350,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T07:55:42.572Z",
+      "lastCheckedAt": "2026-11-12T08:55:42.283Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
