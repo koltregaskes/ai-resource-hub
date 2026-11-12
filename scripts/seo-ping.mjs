@@ -12,8 +12,9 @@
  *     IndexNow (Bing, Yandex and others) and the WebSub hub.
  *
  * Safeguards (fail closed):
- *   - If the live news sitemap or a live feed cannot be fetched, or does not
- *     parse as a sitemap/feed, nothing is planned for it. A failed fetch never
+ *   - If the live news sitemap or a live feed cannot be fetched, is not
+ *     well-formed XML, or does not have the expected sitemap/RSS structure
+ *     (checked by a strict parser, not by regex), nothing is planned for it. A failed fetch never
  *     counts as "everything is new", so existing URLs are not re-sent.
  *   - Only URLs in the built sitemap and missing from the live one are sent.
  *   - At most MAX_URLS per run, and the ping job only runs after a deploy.
@@ -31,16 +32,137 @@ const WEBSUB_HUB = 'https://pubsubhubbub.appspot.com/';
 export const FEEDS = [`${SITE}/rss.xml`, `${SITE}/newsletter/rss.xml`];
 export const MAX_URLS = 100;
 
-export function locs(xml) {
-  return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace(/&amp;/g, '&').trim());
+/**
+ * Strict, dependency-free XML parser (the ping job has no node_modules).
+ * Returns the root element as { name, children, text } or throws on anything
+ * that is not well-formed: unbalanced or mismatched tags, text or a second
+ * element outside the root, bad entities, unterminated comments/CDATA, '<' or
+ * '&' in the wrong place. Namespace prefixes are stripped from names.
+ */
+const ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'" };
+const NAME = /^[A-Za-z_][\w.:-]*/;
+
+function decodeText(raw) {
+  if (raw.includes('<')) throw new Error('stray "<" in text');
+  return raw.replace(/&([^;\s]{0,10});|&/g, (match, ref) => {
+    if (match === '&') throw new Error('bare "&" in text');
+    if (ref in ENTITIES) return ENTITIES[ref];
+    const num = /^#x([0-9a-f]+)$/i.exec(ref) ? parseInt(ref.slice(2), 16) : /^#(\d+)$/.exec(ref) ? parseInt(ref.slice(1), 10) : NaN;
+    if (!Number.isFinite(num) || num > 0x10ffff) throw new Error(`unknown entity &${ref};`);
+    return String.fromCodePoint(num);
+  });
 }
 
-export function guids(xml) {
-  return [...xml.matchAll(/<guid[^>]*>([^<]+)<\/guid>/g)].map((m) => m[1].trim()).sort();
+export function parseXml(xml) {
+  if (typeof xml !== 'string') throw new Error('not a string');
+  let i = 0;
+  const stack = [];
+  let root = null;
+  const outside = (text) => {
+    if (text.trim()) throw new Error('text outside the root element');
+  };
+  while (i < xml.length) {
+    const lt = xml.indexOf('<', i);
+    const text = xml.slice(i, lt === -1 ? xml.length : lt);
+    if (text) {
+      if (stack.length) stack.at(-1).text += decodeText(text);
+      else outside(text);
+    }
+    if (lt === -1) break;
+    i = lt;
+    if (xml.startsWith('<!--', i)) {
+      const end = xml.indexOf('-->', i + 4);
+      if (end === -1) throw new Error('unterminated comment');
+      i = end + 3;
+    } else if (xml.startsWith('<![CDATA[', i)) {
+      if (!stack.length) throw new Error('CDATA outside the root element');
+      const end = xml.indexOf(']]>', i + 9);
+      if (end === -1) throw new Error('unterminated CDATA');
+      stack.at(-1).text += xml.slice(i + 9, end);
+      i = end + 3;
+    } else if (xml.startsWith('<?', i)) {
+      const end = xml.indexOf('?>', i + 2);
+      if (end === -1) throw new Error('unterminated processing instruction');
+      i = end + 2;
+    } else if (xml.startsWith('<!', i)) {
+      throw new Error('DOCTYPE and other declarations are not accepted');
+    } else if (xml.startsWith('</', i)) {
+      const end = xml.indexOf('>', i);
+      if (end === -1) throw new Error('unterminated end tag');
+      const name = xml.slice(i + 2, end).trim();
+      const open = stack.pop();
+      if (!open || open.qname !== name) throw new Error(`mismatched end tag </${name}>`);
+      i = end + 1;
+    } else {
+      const nameMatch = NAME.exec(xml.slice(i + 1));
+      if (!nameMatch) throw new Error('bad start tag');
+      const qname = nameMatch[0];
+      let j = i + 1 + qname.length;
+      // attributes: name="value" or name='value'
+      for (;;) {
+        const ws = /^\s*/.exec(xml.slice(j))[0];
+        j += ws.length;
+        if (xml.startsWith('/>', j) || xml[j] === '>') break;
+        if (!ws) throw new Error(`bad attribute in <${qname}>`);
+        const attr = /^([A-Za-z_][\w.:-]*)\s*=\s*("[^"<]*"|'[^'<]*')/.exec(xml.slice(j));
+        if (!attr) throw new Error(`bad attribute in <${qname}>`);
+        decodeText(attr[2].slice(1, -1));
+        j += attr[0].length;
+      }
+      const selfClosing = xml.startsWith('/>', j);
+      const el = { qname, name: qname.replace(/^.*:/, ''), children: [], text: '' };
+      if (stack.length) stack.at(-1).children.push(el);
+      else if (root) throw new Error('more than one root element');
+      else root = el;
+      if (!selfClosing) stack.push(el);
+      i = j + (selfClosing ? 2 : 1);
+    }
+  }
+  if (stack.length) throw new Error(`unclosed <${stack.at(-1).qname}>`);
+  if (!root) throw new Error('no root element');
+  return root;
 }
 
-const isSitemap = (xml) => typeof xml === 'string' && /<urlset[\s>]/.test(xml) && /<\/urlset>/.test(xml);
-const isFeed = (xml) => typeof xml === 'string' && /<rss[\s>]/.test(xml) && /<\/rss>/.test(xml);
+const childrenNamed = (el, name) => el.children.filter((child) => child.name === name);
+
+/** URL list of a sitemap, or null when it is not a well-formed <urlset> whose every <url> has exactly one non-empty <loc>. */
+export function sitemapLocs(xml) {
+  let root;
+  try {
+    root = parseXml(xml);
+  } catch {
+    return null;
+  }
+  if (root.name !== 'urlset') return null;
+  const out = [];
+  for (const url of root.children) {
+    if (url.name !== 'url') return null;
+    const loc = childrenNamed(url, 'loc');
+    if (loc.length !== 1 || !/^https?:\/\/\S+$/.test(loc[0].text.trim())) return null;
+    out.push(loc[0].text.trim());
+  }
+  return out;
+}
+
+/** Sorted item ids (guid, else link) of an RSS feed, or null when it is not a well-formed rss > channel feed with an id on every item. */
+export function feedIds(xml) {
+  let root;
+  try {
+    root = parseXml(xml);
+  } catch {
+    return null;
+  }
+  if (root.name !== 'rss') return null;
+  const channels = childrenNamed(root, 'channel');
+  if (channels.length !== 1) return null;
+  const out = [];
+  for (const item of childrenNamed(channels[0], 'item')) {
+    const id = (childrenNamed(item, 'guid')[0] ?? childrenNamed(item, 'link')[0])?.text.trim();
+    if (!id) return null;
+    out.push(id);
+  }
+  return out.sort();
+}
 
 /**
  * Pure planning step. `liveNews` and each feed's `live` are the fetched text,
@@ -50,13 +172,15 @@ export function planPings({ builtNews, liveNews, feeds = [], max = MAX_URLS }) {
   const notes = [];
   let indexnow = [];
 
-  if (!isSitemap(builtNews)) {
+  const builtLocs = sitemapLocs(builtNews);
+  const liveLocs = sitemapLocs(liveNews);
+  if (!builtLocs) {
     notes.push('built news sitemap missing or invalid: no IndexNow ping');
-  } else if (!isSitemap(liveNews)) {
+  } else if (!liveLocs) {
     notes.push('live news sitemap unavailable or invalid: no IndexNow ping (fail closed)');
   } else {
-    const live = new Set(locs(liveNews));
-    indexnow = [...new Set(locs(builtNews).filter((url) => url.startsWith(`${SITE}/`) && !live.has(url)))];
+    const live = new Set(liveLocs);
+    indexnow = [...new Set(builtLocs.filter((url) => url.startsWith(`${SITE}/`) && !live.has(url)))];
     if (indexnow.length > max) {
       notes.push(`capped IndexNow list from ${indexnow.length} to ${max}`);
       indexnow = indexnow.slice(0, max);
@@ -65,12 +189,18 @@ export function planPings({ builtNews, liveNews, feeds = [], max = MAX_URLS }) {
 
   const websub = [];
   for (const feed of feeds) {
-    if (!isFeed(feed.built)) continue; // feed not part of this build
-    if (!isFeed(feed.live)) {
+    if (feed.built == null) continue; // feed not part of this build
+    const builtIds = feedIds(feed.built);
+    if (!builtIds) {
+      notes.push(`${feed.url}: built feed invalid: no WebSub ping`);
+      continue;
+    }
+    const liveIds = feedIds(feed.live);
+    if (!liveIds) {
       notes.push(`${feed.url}: live feed unavailable or invalid: no WebSub ping (fail closed)`);
       continue;
     }
-    if (guids(feed.live).join('\n') !== guids(feed.built).join('\n')) websub.push(feed.url);
+    if (liveIds.join('\n') !== builtIds.join('\n')) websub.push(feed.url);
   }
 
   return { indexnow, websub, notes };
