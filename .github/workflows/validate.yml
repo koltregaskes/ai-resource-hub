@@ -37,6 +37,9 @@ jobs:
       - name: Test and validate daily edition notes
         run: npm run test:editorial
 
+      - name: Test frozen daily editions
+        run: npm run test:editions
+
       - name: Test news routing provenance
         run: node --test scripts/news-pipeline-provenance.test.mjs scripts/lib/news-routing-config.test.mjs
 

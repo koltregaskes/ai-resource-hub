@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "date": "2026-10-30",
+  "snapshotAt": "2026-11-12T20:36:42.774Z",
+  "totalAvailable": 1,
+  "stories": [
+    {
+      "id": "news-ce0cce9f3bc5563cb51b",
+      "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
+      "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+      "source": "Ars Technica",
+      "summary": "It's still unknown how attackers got access to Anthropic's verified Cursor account.",
+      "publishedAt": "2026-10-30T21:09:54.000Z",
+      "category": "research",
+      "tags": [],
+      "importance": 0.4
+    }
+  ]
+}

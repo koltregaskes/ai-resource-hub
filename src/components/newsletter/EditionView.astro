@@ -118,11 +118,31 @@ const tagLabel: Record<string, string> = { benchmark: 'Benchmark', pricing_chang
     var stories = Array.prototype.slice.call(document.querySelectorAll('[data-edition-stories] > li'));
     var empty = document.querySelector('[data-filter-empty]');
     var KEY = 'airh:edition-categories';
+    var valid = buttons.map(function (button) { return button.getAttribute('data-filter'); }).filter(function (id) { return id !== 'all'; });
+    var clean = function (list) {
+      return list.filter(function (id, index) { return valid.indexOf(id) !== -1 && list.indexOf(id) === index; });
+    };
+    // Shareable state: ?c=models,agents picks those; ?c=all (or an explicit
+    // empty ?c=) shows everything; no ?c at all falls back to this reader's
+    // saved picks. Clicking a chip writes the choice back to the URL.
     var picked = [];
     try {
-      var fromUrl = new URLSearchParams(location.search).get('c');
-      picked = (fromUrl || localStorage.getItem(KEY) || '').split(',').filter(Boolean);
+      var params = new URLSearchParams(location.search);
+      if (params.has('c')) {
+        var fromUrl = params.get('c') || '';
+        picked = fromUrl === 'all' ? [] : clean(fromUrl.split(','));
+      } else {
+        picked = clean((localStorage.getItem(KEY) || '').split(','));
+      }
     } catch (_) {}
+
+    function syncUrl() {
+      try {
+        var url = new URL(location.href);
+        url.searchParams.set('c', picked.length ? picked.join(',') : 'all');
+        history.replaceState(history.state, '', url.pathname + '?' + url.searchParams.toString().replace(/%2C/gi, ',') + url.hash);
+      } catch (_) {}
+    }
 
     function apply() {
       var shown = 0;
@@ -148,6 +168,7 @@ const tagLabel: Record<string, string> = { benchmark: 'Benchmark', pricing_chang
         else if (picked.indexOf(id) === -1) picked.push(id);
         else picked = picked.filter(function (value) { return value !== id; });
         apply();
+        syncUrl();
       });
     });
     apply();
