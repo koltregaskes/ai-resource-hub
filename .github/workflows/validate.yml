@@ -34,6 +34,9 @@ jobs:
       - name: Test SEO sitemaps and ping safeguards
         run: npm run test:seo
 
+      - name: Test frozen daily editions
+        run: npm run test:editions
+
       - name: Test news routing provenance
         run: node --test scripts/news-pipeline-provenance.test.mjs scripts/lib/news-routing-config.test.mjs
 
