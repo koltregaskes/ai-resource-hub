@@ -16,8 +16,8 @@
 import categoriesConfig from '../../../shared/news-categories.json';
 import { buildConfirmEmail, buildDailyEmail, type EditionPayload } from './email';
 import { ResendClient, type OutgoingEmail } from './resend';
-import { memoryStore, memorySnapshot, neonStore, type Store, type Subscriber } from './store';
-import { signToken, verifyToken } from './tokens';
+import { memorySeed, memoryStore, memorySnapshot, neonStore, type Store, type Subscriber } from './store';
+import { keyedHash, sha256Hex, signToken, verifyToken } from './tokens';
 
 export interface Env {
   ENVIRONMENT: 'production' | 'test';
@@ -33,11 +33,33 @@ export interface Env {
   POSTAL_ADDRESS?: string;
   UNSUBSCRIBE_MAILTO?: string;
   EDITION_JSON_URL?: string;
+  /** Optional overrides for the sign-up limits below (whole numbers). */
+  RATE_IP_PER_HOUR?: string;
+  RATE_GLOBAL_PER_HOUR?: string;
 }
 
 const CATEGORY_IDS: string[] = categoriesConfig.categories.map((category) => category.id);
 const CATEGORY_LABELS: Record<string, string> = Object.fromEntries(categoriesConfig.categories.map((c) => [c.id, c.label]));
 const CONFIRM_TTL_SECONDS = 7 * 24 * 60 * 60;
+/** Manage links in emails work for 45 days and stop at once on unsubscribe. Unsubscribe links never expire. */
+const MANAGE_TTL_SECONDS = 45 * 24 * 60 * 60;
+/**
+ * Sign-up limits, enforced in the database before anything is stored or sent:
+ * - per address: at most 1 confirmation email per 15 minutes and 5 per day
+ *   (further requests get the same "check your inbox" answer but send nothing);
+ * - per IP (keyed hash): RATE_IP_PER_HOUR sign-up attempts an hour, default 10;
+ * - whole site: RATE_GLOBAL_PER_HOUR an hour, default 300.
+ * The IP and site limits answer HTTP 429. Turnstile, when on, runs first.
+ */
+const ADDRESS_COOLDOWN_SECONDS = 15 * 60;
+const ADDRESS_PER_DAY = 5;
+const limit = (value: string | undefined, fallback: number) => (value && /^\d+$/.test(value) ? Number(value) : fallback);
+
+/** Wall clock. Tests (ENVIRONMENT=test only) can move it with an x-test-now header in ms. */
+function clock(request: Request | null, env: Env): number {
+  const forced = env.ENVIRONMENT === 'test' ? request?.headers.get('x-test-now') : null;
+  return forced && /^\d+$/.test(forced) ? Number(forced) : Date.now();
+}
 const EMAIL_PATTERN = /^[^\s@<>()[\]\\,;:"]+@[^\s@<>()[\]\\,;:"]+\.[a-z]{2,}$/i;
 
 function storeFor(env: Env): Store {
@@ -115,8 +137,11 @@ async function turnstileOk(env: Env, token: string, ip: string | null): Promise<
   return result.success === true;
 }
 
-async function linksFor(env: Env, subscriber: Subscriber) {
-  const manage = await signToken({ p: 'manage', sid: subscriber.id }, env.SIGNING_KEY);
+async function linksFor(env: Env, subscriber: Subscriber, nowMs: number) {
+  const manage = await signToken(
+    { p: 'manage', sid: subscriber.id, g: subscriber.tokenGen, exp: Math.floor(nowMs / 1000) + MANAGE_TTL_SECONDS },
+    env.SIGNING_KEY,
+  );
   const unsubscribe = await signToken({ p: 'unsubscribe', sid: subscriber.id }, env.SIGNING_KEY);
   return {
     manageUrl: `${env.API_URL}/manage?t=${manage}`,
@@ -146,41 +171,77 @@ async function subscribe(request: Request, env: Env, store: Store): Promise<Resp
     return json({ ok: false, error: 'The spam check failed. Please try again.' }, 400, env);
   }
 
-  const subscriber = await store.upsertPending(email, categories, source);
-  await store.logEvent(subscriber.id, 'subscribe', { categories, source, status: subscriber.status });
-
-  if (subscriber.status !== 'subscribed') {
-    const confirmToken = await signToken(
-      { p: 'confirm', sid: subscriber.id, exp: Math.floor(Date.now() / 1000) + CONFIRM_TTL_SECONDS },
-      env.SIGNING_KEY,
-    );
-    const built = buildConfirmEmail(`${env.API_URL}/confirm?t=${confirmToken}`, categories.map((id) => CATEGORY_LABELS[id]));
-    const resend = new ResendClient(env.RESEND_API_KEY, env.RESEND_API_BASE);
-    await resend.send({ from: env.FROM_EMAIL, to: [email], ...built, tags: [{ name: 'type', value: 'confirm' }] });
-    await store.logEvent(subscriber.id, 'confirm-sent');
-  }
-
   // Same answer whether or not the address was already on the list, so the form can't be used to probe.
   const message = 'Check your inbox for a confirmation email. Nothing else arrives until you click it.';
-  if (wantsJson) return json({ ok: true, message }, 200, env);
-  return Response.redirect(`${env.SITE_URL}/newsletter/confirm/?status=check-email`, 303);
+  const accepted = () => (wantsJson ? json({ ok: true, message }, 200, env) : Response.redirect(`${env.SITE_URL}/newsletter/confirm/?status=check-email`, 303));
+
+  // Limits come before anything is stored or sent.
+  const now = clock(request, env);
+  const ip = request.headers.get('CF-Connecting-IP') ?? 'unknown';
+  const tooMany = () => json({ ok: false, error: 'Too many sign-ups right now. Please try again in an hour.' }, 429, env);
+  if ((await store.hit(`ip:${await keyedHash(`ip:${ip}`, env.SIGNING_KEY)}`, 3600, now)) > limit(env.RATE_IP_PER_HOUR, 10)) {
+    await store.logEvent(null, 'subscribe-limited', { scope: 'ip' });
+    return tooMany();
+  }
+  if ((await store.hit('global', 3600, now)) > limit(env.RATE_GLOBAL_PER_HOUR, 300)) {
+    await store.logEvent(null, 'subscribe-limited', { scope: 'global' });
+    return tooMany();
+  }
+  const address = await keyedHash(`email:${email}`, env.SIGNING_KEY);
+  const recent = await store.hit(`addr:${address}`, ADDRESS_COOLDOWN_SECONDS, now);
+  const today = await store.hit(`addr-day:${address}`, 24 * 3600, now);
+  if (recent > 1 || today > ADDRESS_PER_DAY) {
+    await store.logEvent(null, 'subscribe-limited', { scope: 'address' });
+    return accepted(); // nothing stored, nothing sent, the earlier confirmation link stays valid
+  }
+
+  const nonce = crypto.randomUUID();
+  const subscriber = await store.upsertPending(email, categories, source, nonce);
+  const change = subscriber.status === 'subscribed';
+  await store.logEvent(subscriber.id, change ? 'preferences-requested' : 'subscribe', { categories, source, status: subscriber.status });
+
+  const confirmToken = await signToken(
+    { p: 'confirm', sid: subscriber.id, n: nonce, exp: Math.floor(now / 1000) + CONFIRM_TTL_SECONDS },
+    env.SIGNING_KEY,
+  );
+  const built = buildConfirmEmail(`${env.API_URL}/confirm?t=${confirmToken}`, categories.map((id) => CATEGORY_LABELS[id]));
+  const resend = new ResendClient(env.RESEND_API_KEY, env.RESEND_API_BASE);
+  await resend.send({ from: env.FROM_EMAIL, to: [email], ...built, tags: [{ name: 'type', value: change ? 'confirm-change' : 'confirm' }] });
+  await store.logEvent(subscriber.id, 'confirm-sent');
+  return accepted();
 }
 
-async function confirm(url: URL, env: Env, store: Store): Promise<Response> {
-  const payload = await verifyToken(url.searchParams.get('t'), 'confirm', env.SIGNING_KEY);
-  if (!payload) return Response.redirect(`${env.SITE_URL}/newsletter/confirm/?status=expired`, 303);
-  const subscriber = await store.confirm(payload.sid);
-  if (!subscriber) return Response.redirect(`${env.SITE_URL}/newsletter/confirm/?status=expired`, 303);
+async function confirm(request: Request, url: URL, env: Env, store: Store): Promise<Response> {
+  const now = clock(request, env);
+  const expired = Response.redirect(`${env.SITE_URL}/newsletter/confirm/?status=expired`, 303);
+  const payload = await verifyToken(url.searchParams.get('t'), 'confirm', env.SIGNING_KEY, Math.floor(now / 1000));
+  if (!payload?.n) return expired;
+  const subscriber = await store.confirm(payload.sid, payload.n);
+  if (!subscriber) {
+    // A used or superseded link changes nothing. If the reader is already
+    // active with nothing pending, a second click just says so (no new link).
+    const current = await store.get(payload.sid);
+    if (current?.status === 'subscribed' && !current.pendingCategories) return Response.redirect(`${env.SITE_URL}/newsletter/confirm/?status=confirmed`, 303);
+    return expired;
+  }
   await store.logEvent(subscriber.id, 'confirmed');
-  const { manageUrl } = await linksFor(env, subscriber);
+  const { manageUrl } = await linksFor(env, subscriber, now);
   return Response.redirect(`${env.SITE_URL}/newsletter/confirm/?status=confirmed&manage=${encodeURIComponent(manageUrl)}`, 303);
 }
 
 async function manage(request: Request, url: URL, env: Env, store: Store): Promise<Response> {
+  const now = clock(request, env);
   const token = url.searchParams.get('t');
-  const payload = await verifyToken(token, 'manage', env.SIGNING_KEY);
-  const subscriber = payload ? await store.get(payload.sid) : null;
-  if (!subscriber) return page('Link not valid', '<h1>That link has expired or isn\'t valid</h1><p>Use the link in your most recent email.</p>', 400);
+  const payload = await verifyToken(token, 'manage', env.SIGNING_KEY, Math.floor(now / 1000));
+  const found = payload?.exp !== undefined ? await store.get(payload.sid) : null;
+  const subscriber = found && found.status === 'subscribed' && payload?.g === found.tokenGen ? found : null;
+  if (!subscriber) {
+    return page(
+      'Link not valid',
+      `<h1>That link has expired or isn't valid</h1><p>Category links last 45 days and stop working when you unsubscribe. Use the link in your most recent email.</p><p>No recent email? <a href="${esc(env.SITE_URL)}/newsletter/">Sign up again</a> with the same address and pick your categories. We'll email you a link to confirm them.</p>`,
+      400,
+    );
+  }
 
   let notice = '';
   if (request.method === 'POST') {
@@ -196,7 +257,7 @@ async function manage(request: Request, url: URL, env: Env, store: Store): Promi
     }
   }
 
-  const { unsubscribeUrl } = await linksFor(env, subscriber);
+  const { unsubscribeUrl } = await linksFor(env, subscriber, now);
   const boxes = categoriesConfig.categories
     .map(
       (category) =>
@@ -237,7 +298,7 @@ function ukYesterday(now = new Date()): string {
   return ukDay.format(new Date(Date.UTC(y, m - 1, d, 12) - 86_400_000));
 }
 
-export async function sendDaily(env: Env, store: Store, options: { force?: boolean } = {}) {
+export async function sendDaily(env: Env, store: Store, options: { force?: boolean; nowMs?: number } = {}) {
   const source = env.EDITION_JSON_URL ?? `${env.SITE_URL}/newsletter/latest.json`;
   const response = await fetch(source, { headers: { Accept: 'application/json' } });
   if (!response.ok) throw new Error(`Edition fetch failed: HTTP ${response.status} from ${source}`);
@@ -247,20 +308,46 @@ export async function sendDaily(env: Env, store: Store, options: { force?: boole
   }
 
   const resend = new ResendClient(env.RESEND_API_KEY, env.RESEND_API_BASE);
+  const now = options.nowMs ?? Date.now();
   const subscribers = await store.listSubscribed();
-  const queue: Array<{ subscriber: Subscriber; email: OutgoingEmail }> = [];
+  let sent = 0;
   let skipped = 0;
 
+  // Readers are claimed one batch at a time, just before that batch is sent.
+  // If a batch fails, only its own claims are released; later readers were
+  // never claimed, so a retry picks everyone up. A run that dies between claim
+  // and send leaves claims with no provider id, which a later run reclaims
+  // after SEND_LEASE_SECONDS.
+  let chunk: Array<{ subscriber: Subscriber; email: OutgoingEmail }> = [];
+  const flush = async () => {
+    if (chunk.length === 0) return;
+    const batch = chunk;
+    chunk = [];
+    // Stable key: the same edition and the same set of readers give the same key on a retry.
+    const key = `daily-${edition.date}-${(await sha256Hex(batch.map((entry) => entry.subscriber.id).sort().join(','))).slice(0, 32)}`;
+    try {
+      const ids = await resend.sendBatch(batch.map((entry) => entry.email), key);
+      for (const [index, entry] of batch.entries()) {
+        await store.recordSend(entry.subscriber.id, edition.date, ids[index]);
+        await store.logEvent(entry.subscriber.id, 'sent', { edition: edition.date, id: ids[index] });
+      }
+      sent += batch.length;
+    } catch (error) {
+      for (const entry of batch) await store.releaseSend(entry.subscriber.id, edition.date);
+      throw error;
+    }
+  };
+
   for (const subscriber of subscribers) {
-    if (!(await store.claimSend(subscriber.id, edition.date))) continue; // already sent this edition
-    const links = await linksFor(env, subscriber);
+    if (!(await store.claimSend(subscriber.id, edition.date, now))) continue; // sent, or claimed by a live run
+    const links = await linksFor(env, subscriber, now);
     const built = buildDailyEmail(edition, subscriber.categories, CATEGORY_LABELS, { ...links, postalAddress: env.POSTAL_ADDRESS });
     if (!built) {
       await store.recordSend(subscriber.id, edition.date, 'skipped:no-matching-stories');
       skipped++;
       continue;
     }
-    queue.push({
+    chunk.push({
       subscriber,
       email: {
         from: env.FROM_EMAIL,
@@ -273,23 +360,9 @@ export async function sendDaily(env: Env, store: Store, options: { force?: boole
         ],
       },
     });
+    if (chunk.length === 100) await flush();
   }
-
-  let sent = 0;
-  for (let i = 0; i < queue.length; i += 100) {
-    const chunk = queue.slice(i, i + 100);
-    try {
-      const ids = await resend.sendBatch(chunk.map((entry) => entry.email), `daily-${edition.date}-${i / 100}`);
-      for (const [index, entry] of chunk.entries()) {
-        await store.recordSend(entry.subscriber.id, edition.date, ids[index]);
-        await store.logEvent(entry.subscriber.id, 'sent', { edition: edition.date, id: ids[index] });
-      }
-      sent += chunk.length;
-    } catch (error) {
-      for (const entry of chunk) await store.releaseSend(entry.subscriber.id, edition.date);
-      throw error;
-    }
-  }
+  await flush();
   return { edition: edition.date, sent, skipped };
 }
 
@@ -302,15 +375,19 @@ export default {
 
       const store = storeFor(env);
       if (url.pathname === '/subscribe' && request.method === 'POST') return await subscribe(request, env, store);
-      if (url.pathname === '/confirm' && request.method === 'GET') return await confirm(url, env, store);
+      if (url.pathname === '/confirm' && request.method === 'GET') return await confirm(request, url, env, store);
       if (url.pathname === '/manage' && (request.method === 'GET' || request.method === 'POST')) return await manage(request, url, env, store);
       if (url.pathname === '/unsubscribe' && (request.method === 'GET' || request.method === 'POST')) return await unsubscribe(request, url, env, store);
       if (url.pathname === '/send-daily' && request.method === 'POST') {
         if (!env.SEND_TOKEN || request.headers.get('Authorization') !== `Bearer ${env.SEND_TOKEN}`) return json({ ok: false }, 401, env);
-        const result = await sendDaily(env, store, { force: url.searchParams.get('force') === '1' });
+        const result = await sendDaily(env, store, { force: url.searchParams.get('force') === '1', nowMs: clock(request, env) });
         return json({ ok: true, ...result }, 200, env);
       }
-      if (url.pathname === '/__test/state' && env.ENVIRONMENT === 'test') return json(memorySnapshot(), 200, env);
+      if (url.pathname === '/__test/state' && env.ENVIRONMENT === 'test' && !env.DATABASE_URL) return json(memorySnapshot(), 200, env);
+      if (url.pathname === '/__test/seed' && request.method === 'POST' && env.ENVIRONMENT === 'test' && !env.DATABASE_URL) {
+        const body = (await request.json()) as { count: number; categories: string[]; prefix: string };
+        return json({ ok: true, seeded: memorySeed(Math.min(body.count, 1000), cleanCategories(body.categories), String(body.prefix)) }, 200, env);
+      }
       return json({ ok: false, error: 'Not found' }, 404, env);
     } catch (error) {
       console.error(error);

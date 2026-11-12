@@ -8,7 +8,9 @@ export type TokenPurpose = 'confirm' | 'manage' | 'unsubscribe';
 export interface TokenPayload {
   p: TokenPurpose;
   sid: string; // subscriber id
-  exp?: number; // unix seconds; confirm links expire, manage/unsubscribe links do not
+  exp?: number; // unix seconds; confirm and manage links expire, unsubscribe links do not
+  n?: string; // confirm: single-use nonce, must match the reader's current pending confirmation
+  g?: number; // manage: token generation, bumped on unsubscribe so old manage links stop working
 }
 
 const encoder = new TextEncoder();
@@ -60,4 +62,16 @@ export async function verifyToken(
   } catch {
     return null;
   }
+}
+
+/** Keyed hash for rate-limit buckets, so raw addresses and IPs are never stored. */
+export async function keyedHash(value: string, secret: string): Promise<string> {
+  const signature = await crypto.subtle.sign('HMAC', await hmacKey(secret), encoder.encode(value));
+  return [...new Uint8Array(signature)].slice(0, 16).map((byte) => byte.toString(16).padStart(2, '0')).join('');
+}
+
+/** SHA-256 hex, used for stable provider idempotency keys. */
+export async function sha256Hex(value: string): Promise<string> {
+  const digest = await crypto.subtle.digest('SHA-256', encoder.encode(value));
+  return [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, '0')).join('');
 }

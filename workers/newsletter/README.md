@@ -10,7 +10,9 @@ Sign-up, double opt-in, category preferences, one-click unsubscribe and the dail
 3. **Daily send.** Every morning the cron trigger calls `sendDaily`. It reads `https://theairesourcehub.com/newsletter/latest.json`, which is the most recent complete UK day (normally yesterday), and sends nothing unless that edition is yesterday's. It builds one email per reader from only their categories and sends them in batches of 100. The 06:30 writer job (`editorial/writer/`) adds the "why it matters" notes before the 07:15 UTC send.
    - Each email has `List-Unsubscribe` and `List-Unsubscribe-Post: List-Unsubscribe=One-Click` (RFC 8058).
    - A `sends` row per reader per edition stops double sends.
-4. **Signed links.** Every email has signed links to `/manage` (change categories) and `/unsubscribe`. Tokens are HMAC-SHA256 and bound to one purpose. Confirmation links expire after 7 days. A `GET` on the unsubscribe link only shows a button, because mail scanners prefetch links; the unsubscribe happens on `POST`.
+4. **Sign-up limits.** Checked in Neon before anything is stored or sent: one confirmation email per address per 15 minutes and five a day (extra requests get the same answer but nothing happens), 10 attempts per IP an hour and 300 for the whole site (both answer HTTP 429). Buckets store keyed hashes, never raw addresses or IPs. `RATE_IP_PER_HOUR` and `RATE_GLOBAL_PER_HOUR` override the two hourly limits.
+5. **Consent.** Every sign-up gets a fresh single-use confirmation link; confirming uses it up and unsubscribing kills it, so an old link can't re-subscribe anyone. A sign-up from an address that is already subscribed doesn't touch its categories: it emails a link to confirm the new picks first.
+6. **Signed links.** Every email has signed links to `/manage` (change categories) and `/unsubscribe`. Tokens are HMAC-SHA256 and bound to one purpose. Confirmation links expire after 7 days. Manage links expire after 45 days and stop at once on unsubscribe; unsubscribe links never expire. A `GET` on the unsubscribe link only shows a button, because mail scanners prefetch links; the unsubscribe happens on `POST`.
 
 The categories come from `shared/news-categories.json`, the same file the site uses. The tables are in `schema.sql` (Neon, schema `newsletter`).
 
@@ -51,4 +53,4 @@ Each step needs Kol's yes, because it covers accounts, DNS, secrets or going pub
 
 ## Not covered yet
 - **Bounce and complaint webhooks** from Resend. These should mark addresses `unsubscribed`. Add them after the deploy. The webhook signing secret follows the same rule: Kol sets it with `wrangler secret put`.
-- **Rate limiting** beyond Turnstile. Cloudflare's rate-limiting rules can do this at the edge once the account exists.
+- **Edge rate limiting.** The Worker already limits sign-ups in the database (see below). Cloudflare's edge rules can add a cheaper first layer once the account exists.
