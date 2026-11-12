@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 12 Nov 2026, 18:52 UTC
+Generated: 12 Nov 2026, 19:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 12 Nov 2026, 18:52 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 12 Nov 2026, 18:52 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 12 Nov 2026, 18:52 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 12 Nov 2026, 18:52 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 12 Nov 2026, 18:52 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 12 Nov 2026, 12:00 UTC | digest | Google Search gets a major upgrade with Gemini 4 Hydrogen | Google featured in the latest daily brief. | [open](https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/) |
-| 12 Nov 2026, 12:00 UTC | digest | Jensen Huang’s exit puts Nvidia’s support for open source in question | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/) |
-| 12 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,032 open roles across 10 tracked companies. | `/jobs/` |
-| 12 Nov 2026, 12:00 UTC | digest | Oh, Palantir is ‘progressive’ now, is it? | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1032126/alex-baby-you-were-recorded-on-video) |
+| 12 Nov 2026, 19:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 12 Nov 2026, 19:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 12 Nov 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 12 Nov 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 12 Nov 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 12 Nov 2026, 12:00 UTC | digest | Google&#8217;s latest Search upgrade promises better answers to your most complicated questions | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/) |
+| 12 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,030 open roles across 10 tracked companies. | `/jobs/` |
+| 12 Nov 2026, 12:00 UTC | digest | Nectar launches an AI agent to automate creator discovery and outreach for brands | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/12/nectar-launches-an-ai-agent-to-automate-creator-discovery-and-outreach-for-brands/) |
+| 12 Nov 2026, 12:00 UTC | digest | No, AI agents did not discover a previously unknown Maya site | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1032125/ai-agents-maya-site-archeology-discovery) |
 | 12 Nov 2026, 12:00 UTC | digest | Published the 2026-11-12 daily digest | 20 stories captured from 3 sources. | `/news/` |
 | 05 May 2026, 12:00 UTC | blog | What the OpenAI entrepreneurship report didn't say | Essay · 8 min read. | `/blog/four-million-entrepreneurs/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
