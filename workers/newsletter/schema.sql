@@ -75,3 +75,9 @@ CREATE TABLE IF NOT EXISTS newsletter.send_batch_recipients (
   batch_key TEXT NOT NULL REFERENCES newsletter.send_batches(batch_key),
   PRIMARY KEY (subscriber_id, edition_date)
 );
+
+-- Upgrade existing outboxes too; closure does not fabricate provider acceptance.
+ALTER TABLE newsletter.send_batches DROP CONSTRAINT IF EXISTS send_batches_state_check;
+ALTER TABLE newsletter.send_batches DROP CONSTRAINT IF EXISTS send_batches_check;
+ALTER TABLE newsletter.send_batches ADD CONSTRAINT send_batches_state_check CHECK (state IN ('prepared','accepted','complete','closed'));
+ALTER TABLE newsletter.send_batches ADD CONSTRAINT send_batches_check CHECK (state='closed' OR (state='prepared' AND provider_ids IS NULL) OR (state IN ('accepted','complete') AND provider_ids IS NOT NULL));
