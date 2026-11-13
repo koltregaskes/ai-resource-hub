@@ -19,14 +19,14 @@ function display(key: string, value: string | number | boolean | null) {
     <a href={import.meta.env.BASE_URL + 'models/'}>All models</a>
     <h1 class="text-3xl font-bold mt-4 mb-4">{name}</h1>
     <p class="mb-4">{confirmed ? 'Vendor-confirmed model. Each field below has its own source and check date.' : 'Discovery only. This exact model has not been verified from a readable vendor page.'}</p>
-    {review.fields.status.value === 'retired' && <p class="mb-4">Retired model. Its replacement?s specifications and prices are not attributed to this release.</p>}
+    {review.fields.status.value === 'retired' && <p class="mb-4">Retired model. Its replacement's specifications and prices are not attributed to this release.</p>}
     <p class="mb-6">No score yet. No benchmark result was verified in this catalogue review.</p>
     <dl class="grid gap-4">
       {Object.entries(review.fields).map(([key, field]) => <div class="rounded-lg border border-(--color-border) p-4 min-w-0" data-model-field={key} data-verification={field.verification}>
         <dt class="font-semibold">{labels[key] ?? key}</dt>
         <dd class="mt-1 break-words">{display(key,field.value)}</dd>
         {field.reason && <dd class="text-sm mt-1">{field.reason}</dd>}
-        <dd class="text-sm mt-2"><a href={field.sourceUrl} target="_blank" rel="noopener noreferrer">{field.verification === 'verified' ? 'Vendor source' : 'Vendor page checked'}</a> ? Checked {field.checkedAt}</dd>
+        <dd class="text-sm mt-2"><a href={field.sourceUrl} target="_blank" rel="noopener noreferrer">{field.verification === 'verified' ? 'Vendor source' : 'Vendor page checked'}</a> - Checked {field.checkedAt}</dd>
       </div>)}
     </dl>
   </section>

@@ -99,7 +99,7 @@ function formatPrice(value: number): string {
       <h2 id="reviewed-models-title">Vendor field reviews</h2>
       <p>Specifications and prices have individual source links and check dates. Missing values are marked unverified.</p>
       <ul>
-        {MODEL_FIELD_REVIEWS.map(review => <li><a href={base + 'models/' + review.id + '/'}>{String(review.fields.name.value ?? review.id)}</a> ? {review.fields.name.verification === 'verified' ? (review.fields.status.value === 'retired' ? 'Retired' : 'Vendor-confirmed identity') : 'Discovery only, unverified'}</li>)}
+        {MODEL_FIELD_REVIEWS.map(review => <li><a href={base + 'models/' + review.id + '/'}>{String(review.fields.name.value ?? review.id)}</a> - {review.fields.name.verification === 'verified' ? (review.fields.status.value === 'retired' ? 'Retired' : 'Vendor-confirmed identity') : 'Discovery only, unverified'}</li>)}
       </ul>
     </section>
 

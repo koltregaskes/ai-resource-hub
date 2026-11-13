@@ -953,7 +953,7 @@
         "checkedAt": "2026-11-13"
       },
       "pricingConditions": {
-        "value": "Off-peak input $0.66, output $1.98, cached input $0.022; peak input $1.32, output $3.96, cached input $0.044. Peak: 01:00?04:00 and 06:00?10:00 UTC Monday?Friday excluding Chinese public holidays.",
+        "value": "Off-peak input $0.66, output $1.98, cached input $0.022; peak input $1.32, output $3.96, cached input $0.044. Peak: 01:00-04:00 and 06:00-10:00 UTC Monday to Friday excluding Chinese public holidays.",
         "verification": "verified",
         "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
         "checkedAt": "2026-11-13"
