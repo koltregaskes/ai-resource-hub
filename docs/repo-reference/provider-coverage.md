@@ -1,22 +1,22 @@
 # Provider Coverage Snapshot
 
-Generated: 13 Nov 2026, 06:55 UTC
+Generated: 13 Nov 2026, 12:55 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
 | Provider | Active | Tracking | Preview | Latest release | Status page | Docs |
 | --- | --- | --- | --- | --- | --- | --- |
-| OpenAI | 24 | 46 | 0 | GPT-5.6 Sol (batch) (9 Jul 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
-| Google | 8 | 26 | 0 | Gemini Omni 1.2 Flash (5 Nov 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
-| Meta | 6 | 12 | 0 | Muse Ember (9 Nov 2026) | n/a | [docs](https://llama.meta.com/docs) |
-| Anthropic | 5 | 20 | 1 | Claude Opus 5 (batch) (24 Jul 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
+| OpenAI | 31 | 38 | 0 | GPT-6.1 Terra (26 Oct 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
+| Google | 15 | 19 | 0 | Gemini 4 Hydrogen (12 Nov 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
+| Anthropic | 12 | 13 | 1 | Claude Fable 5.2 (9 Nov 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
+| Meta | 7 | 11 | 0 | Muse Ember (9 Nov 2026) | n/a | [docs](https://llama.meta.com/docs) |
+| Mistral | 4 | 18 | 0 | n/a | [status](https://status.mistral.ai) | [docs](https://docs.mistral.ai) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |
-| Cohere | 4 | 2 | 0 | Command A+ (22 Sept 2026) | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
+| Cohere | 4 | 2 | 0 | n/a | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
 | Black Forest Labs | 4 | 0 | 0 | n/a | n/a | n/a |
 | Stability AI | 4 | 0 | 0 | n/a | n/a | [docs](https://platform.stability.ai/docs) |
 | Alibaba | 3 | 41 | 0 | Qwen3.8 Max Prime (23 Sept 2026) | n/a | [docs](https://help.aliyun.com/zh/model-studio/model-pricing) |
-| Mistral | 3 | 19 | 0 | Mistral Large 4 (6 Oct 2026) | [status](https://status.mistral.ai) | [docs](https://docs.mistral.ai) |
-| DeepSeek | 3 | 12 | 0 | DeepSeek V4 Flash Vision Exp (21 Aug 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
+| DeepSeek | 3 | 11 | 0 | DeepSeek V4.1 Flash 1017 (17 Oct 2026) | [status](https://status.deepseek.com) | [docs](https://api-docs.deepseek.com) |
 | Deepgram | 3 | 0 | 0 | n/a | [status](https://status.deepgram.com) | [docs](https://developers.deepgram.com) |
 | ElevenLabs | 3 | 0 | 0 | n/a | [status](https://status.elevenlabs.io) | [docs](https://elevenlabs.io/docs) |
 | Runway | 3 | 0 | 0 | n/a | n/a | [docs](https://docs.runwayml.com) |
@@ -30,16 +30,16 @@ This table shows how much of each provider's public model surface is currently r
 | Pika | 2 | 0 | 0 | n/a | n/a | n/a |
 | Suno | 2 | 0 | 0 | n/a | n/a | n/a |
 | Udio | 2 | 0 | 0 | n/a | n/a | n/a |
-| Zhipu AI | 1 | 17 | 0 | GLM 5.3 FlashX Legal (2 Nov 2026) | n/a | [docs](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
+| Zhipu AI | 1 | 17 | 0 | GLM 5.3 Prime (23 Sept 2026) | n/a | [docs](https://docs.bigmodel.cn/cn/guide/models/text/glm-5) |
 | Perplexity | 1 | 4 | 0 | n/a | n/a | [docs](https://docs.perplexity.ai) |
 | Microsoft | 1 | 2 | 0 | n/a | n/a | [docs](https://learn.microsoft.com/azure/ai-foundry/model-inference/concepts/models) |
 | Hailuo AI | 1 | 0 | 0 | n/a | n/a | n/a |
 | Leonardo AI | 1 | 0 | 0 | n/a | n/a | n/a |
 | PlayHT | 1 | 0 | 0 | n/a | n/a | [docs](https://docs.play.ht) |
 | Resemble AI | 1 | 0 | 0 | n/a | n/a | [docs](https://docs.resemble.ai) |
-| xAI | 0 | 13 | 0 | Grok 4.20 (31 Mar 2026) | [status](https://status.x.ai) | [docs](https://docs.x.ai/developers/models) |
+| xAI | 0 | 13 | 0 | Grok 4.7 (21 Sept 2026) | [status](https://status.x.ai) | [docs](https://docs.x.ai/developers/models) |
 | NVIDIA | 0 | 8 | 0 | Nemotron 3.5 Super VL (15 Oct 2026) | n/a | [docs](https://docs.api.nvidia.com) |
-| Moonshot AI | 0 | 6 | 0 | Kimi K2 0711 (28 Mar 2026) | n/a | [docs](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
+| Moonshot AI | 0 | 6 | 0 | Kimi K3.1 Pro (23 Oct 2026) | n/a | [docs](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
 | MiniMax | 0 | 5 | 0 | MiniMax M3.1 Flash (19 Oct 2026) | n/a | [docs](https://platform.minimaxi.com/docs/api-reference/api-overview) |
 | 01.AI | 0 | 3 | 0 | n/a | n/a | n/a |
 | AI21 Labs | 0 | 2 | 0 | n/a | n/a | [docs](https://docs.ai21.com) |

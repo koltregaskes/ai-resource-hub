@@ -16,12 +16,12 @@
  *     well-formed XML, or does not have the expected sitemap/RSS structure
  *     (checked by a strict parser, not by regex), nothing is planned for it. A failed fetch never
  *     counts as "everything is new", so existing URLs are not re-sent.
- *   - Only URLs in the built sitemap and missing from the live one are sent.
+ *   - New URLs and the deployed backlog are sent; overflow survives the next deploy.
  *   - At most MAX_URLS per run, and the ping job only runs after a deploy.
  *
  * The IndexNow key is public by design: it is served at /<key>.txt.
  */
-import { appendFileSync, existsSync, readFileSync } from 'node:fs';
+import { appendFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
@@ -31,6 +31,7 @@ const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
 const WEBSUB_HUB = 'https://pubsubhubbub.appspot.com/';
 export const FEEDS = [`${SITE}/rss.xml`, `${SITE}/newsletter/rss.xml`];
 export const MAX_URLS = 100;
+export const PENDING_FILE = 'seo-ping-pending.json';
 
 /**
  * Strict, dependency-free XML parser (the ping job has no node_modules).
@@ -144,8 +145,8 @@ export function sitemapLocs(xml) {
   return out;
 }
 
-/** Sorted item ids (guid, else link) of an RSS feed, or null when it is not a well-formed rss > channel feed with an id on every item. */
-export function feedIds(xml) {
+/** Items from a well-formed RSS feed, with an id on every item. */
+function feedItems(xml) {
   let root;
   try {
     root = parseXml(xml);
@@ -159,18 +160,30 @@ export function feedIds(xml) {
   for (const item of childrenNamed(channels[0], 'item')) {
     const id = (childrenNamed(item, 'guid')[0] ?? childrenNamed(item, 'link')[0])?.text.trim();
     if (!id) return null;
-    out.push(id);
+    out.push({ id, item });
   }
-  return out.sort();
+  return out;
+}
+
+/** Sorted item ids (guid, else link), or null for an invalid feed. */
+export function feedIds(xml) {
+  return feedItems(xml)?.map(({ id }) => id).sort() ?? null;
+}
+
+/** Compare item content only: channel build dates change on every build. */
+function feedSignatures(xml) {
+  const content = (el) => [el.name, el.text.trim(), el.children.map(content)];
+  return feedItems(xml)?.map(({ id, item }) => JSON.stringify([id, content(item)])).sort() ?? null;
 }
 
 /**
  * Pure planning step. `liveNews` and each feed's `live` are the fetched text,
  * or null when the fetch failed (network error or non-200).
  */
-export function planPings({ builtNews, liveNews, feeds = [], max = MAX_URLS }) {
+export function planPings({ builtNews, liveNews, feeds = [], pending = [], max = MAX_URLS }) {
   const notes = [];
   let indexnow = [];
+  let remaining = pending;
 
   const builtLocs = sitemapLocs(builtNews);
   const liveLocs = sitemapLocs(liveNews);
@@ -180,7 +193,8 @@ export function planPings({ builtNews, liveNews, feeds = [], max = MAX_URLS }) {
     notes.push('live news sitemap unavailable or invalid: no IndexNow ping (fail closed)');
   } else {
     const live = new Set(liveLocs);
-    indexnow = [...new Set(builtLocs.filter((url) => url.startsWith(`${SITE}/`) && !live.has(url)))];
+    indexnow = [...new Set([...pending, ...builtLocs.filter((url) => !live.has(url))])].filter((url) => url.startsWith(`${SITE}/`));
+    remaining = indexnow.slice(max);
     if (indexnow.length > max) {
       notes.push(`capped IndexNow list from ${indexnow.length} to ${max}`);
       indexnow = indexnow.slice(0, max);
@@ -190,12 +204,12 @@ export function planPings({ builtNews, liveNews, feeds = [], max = MAX_URLS }) {
   const websub = [];
   for (const feed of feeds) {
     if (feed.built == null) continue; // feed not part of this build
-    const builtIds = feedIds(feed.built);
+    const builtIds = feedSignatures(feed.built);
     if (!builtIds) {
       notes.push(`${feed.url}: built feed invalid: no WebSub ping`);
       continue;
     }
-    const liveIds = feedIds(feed.live);
+    const liveIds = feedSignatures(feed.live);
     if (!liveIds) {
       notes.push(`${feed.url}: live feed unavailable or invalid: no WebSub ping (fail closed)`);
       continue;
@@ -203,17 +217,7 @@ export function planPings({ builtNews, liveNews, feeds = [], max = MAX_URLS }) {
     if (liveIds.join('\n') !== builtIds.join('\n')) websub.push(feed.url);
   }
 
-  return { indexnow, websub, notes };
-}
-
-async function fetchText(url) {
-  try {
-    const res = await fetch(url, { headers: { 'User-Agent': 'airh-seo-ping/1.1' }, signal: AbortSignal.timeout(15000) });
-    if (!res.ok) return null;
-    return await res.text();
-  } catch {
-    return null;
-  }
+  return { indexnow, websub, notes, pending: remaining };
 }
 
 function writeOutput(name, value) {
@@ -222,7 +226,23 @@ function writeOutput(name, value) {
   else process.stdout.write(line);
 }
 
-async function plan(distDir) {
+export async function plan(distDir, { fetchImpl = fetch, writeOutputImpl = writeOutput } = {}) {
+  // The deployed backlog survives replacement of the live news sitemap.
+  // Only a missing file (first deployment) counts as an empty backlog.
+  const response = await fetchImpl(SITE + '/' + PENDING_FILE, { signal: AbortSignal.timeout(15000) });
+  if (!response.ok && response.status !== 404) throw new Error('seo-ping: cannot read live IndexNow backlog');
+  const pending = response.status === 404 ? [] : await response.json();
+  if (!Array.isArray(pending) || pending.some((url) => typeof url !== 'string' || !url.startsWith(SITE + '/'))) {
+    throw new Error('seo-ping: invalid live IndexNow backlog');
+  }
+  const readLive = async (url) => {
+    try {
+      const res = await fetchImpl(url, { headers: { 'User-Agent': 'airh-seo-ping/1.1' }, signal: AbortSignal.timeout(15000) });
+      return res.ok ? await res.text() : null;
+    } catch {
+      return null;
+    }
+  };
   const readDist = (rel) => {
     const file = resolve(distDir, rel);
     return existsSync(file) ? readFileSync(file, 'utf8') : null;
@@ -230,17 +250,19 @@ async function plan(distDir) {
   const feeds = [];
   for (const url of FEEDS) {
     const built = readDist(url.slice(SITE.length + 1));
-    feeds.push({ url, built, live: built ? await fetchText(url) : null });
+    feeds.push({ url, built, live: built ? await readLive(url) : null });
   }
   const result = planPings({
     builtNews: readDist('news-sitemap.xml'),
-    liveNews: await fetchText(`${SITE}/news-sitemap.xml`),
+    liveNews: await readLive(`${SITE}/news-sitemap.xml`),
     feeds,
+    pending,
   });
+  writeFileSync(resolve(distDir, PENDING_FILE), JSON.stringify(result.pending) + '\n');
   for (const note of result.notes) console.error(`seo-ping: ${note}`);
   console.error(`seo-ping plan: ${result.indexnow.length} new URL(s) for IndexNow; ${result.websub.length} changed feed(s) for WebSub`);
-  writeOutput('indexnow_urls', JSON.stringify(result.indexnow));
-  writeOutput('websub_feeds', JSON.stringify(result.websub));
+  writeOutputImpl('indexnow_urls', JSON.stringify(result.indexnow));
+  writeOutputImpl('websub_feeds', JSON.stringify(result.websub));
 }
 
 function parseList(value) {
@@ -252,15 +274,18 @@ function parseList(value) {
   }
 }
 
-async function ping(dryRun) {
-  const urls = parseList(process.env.INDEXNOW_URLS).slice(0, MAX_URLS);
-  const feeds = parseList(process.env.WEBSUB_FEEDS).filter((url) => FEEDS.includes(url));
+export async function ping(dryRun, { env = process.env, fetchImpl = fetch } = {}) {
+  if (!dryRun && (env.GITHUB_ACTIONS !== 'true' || env.GITHUB_REF !== 'refs/heads/main' || env.GITHUB_EVENT_NAME === 'pull_request')) {
+    throw new Error('seo-ping: refusing to send: requires GitHub Actions on main (GITHUB_ACTIONS=true, GITHUB_REF=refs/heads/main), outside pull_request');
+  }
+  const urls = parseList(env.INDEXNOW_URLS).slice(0, MAX_URLS);
+  const feeds = parseList(env.WEBSUB_FEEDS).filter((url) => FEEDS.includes(url));
 
   if (urls.length > 0) {
     const payload = { host: new URL(SITE).host, key: INDEXNOW_KEY, keyLocation: `${SITE}/${INDEXNOW_KEY}.txt`, urlList: urls };
     if (dryRun) console.log(`[dry-run] POST ${INDEXNOW_ENDPOINT}\n${JSON.stringify(payload, null, 2)}`);
     else {
-      const res = await fetch(INDEXNOW_ENDPOINT, {
+      const res = await fetchImpl(INDEXNOW_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json; charset=utf-8' },
         body: JSON.stringify(payload),
@@ -277,7 +302,7 @@ async function ping(dryRun) {
       console.log(`[dry-run] POST ${WEBSUB_HUB} ${body.toString()}`);
       continue;
     }
-    const res = await fetch(WEBSUB_HUB, { method: 'POST', body });
+    const res = await fetchImpl(WEBSUB_HUB, { method: 'POST', body });
     console.log(`WebSub: HTTP ${res.status} for ${feed}`);
   }
   if (feeds.length === 0) console.log('WebSub: feeds unchanged');
