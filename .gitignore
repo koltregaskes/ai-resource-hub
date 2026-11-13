@@ -62,5 +62,8 @@ tools/esbuild/
 # Internal editorial release drafts (manager-only WIP)
 editorial/release-drafts/
 
+workers/newsletter/node_modules/
+workers/newsletter/dist/
+workers/newsletter/.wrangler/
 # Local test fixtures and review logs
 .review/
