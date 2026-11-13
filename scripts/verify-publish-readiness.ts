@@ -84,6 +84,7 @@ interface SpreadsheetExport {
   models?: Array<{
     id?: string;
     status?: string | null;
+    field_states?: Record<string, string>;
     benchmarks?: Record<string, unknown> | null;
     benchmark_evidence?: Record<string, {
       score?: unknown;
@@ -292,7 +293,8 @@ function main() {
       failures.push(`Public model spreadsheet is out of sync: export=${spreadsheetCount}/${spreadsheetRows}, db=${dbCounts.models}`);
     }
 
-    if ((spreadsheet.models ?? []).some((model) => !model.status)) {
+    // A blank status is allowed only where the field review marks it unverified (#614).
+    if ((spreadsheet.models ?? []).some((model) => !model.status && model.field_states?.status !== 'unverified')) {
       failures.push('Public model spreadsheet is missing status values on one or more rows.');
     }
 

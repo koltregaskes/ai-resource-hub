@@ -1,5 +1,77 @@
 [
   {
+    "id": "news-c231d25e54b9ad3f2848",
+    "title": "ChatGPT&#8217;s new Wallet lets AI agents shop and check out for you",
+    "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+    "source": "TechCrunch",
+    "summary": "ChatGPT Wallet lets AI agents shop and check out on users' behalf, starting with a limited rollout to U.S. Pro subscribers.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-13T16:00:12.000Z",
+    "discovered_at": "2026-11-13 17:55:28"
+  },
+  {
+    "id": "news-59c58e3f39cc6e58a783",
+    "title": "The unfolding Jensen Huang scandal: a timeline",
+    "url": "https://techcrunch.com/2026/11/13/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+    "source": "TechCrunch",
+    "summary": "Jensen Huang has resigned from Nvidia following an affair, which could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-13T15:58:00.000Z",
+    "discovered_at": "2026-11-13 17:55:28"
+  },
+  {
+    "id": "news-5bf4951adbe9698dd9e4",
+    "title": "Introducing ChatGPT Wallet",
+    "url": "https://openai.com/index/introducing-chatgpt-wallet",
+    "source": "OpenAI",
+    "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-13T15:00:00.000Z",
+    "discovered_at": "2026-11-13 17:55:28"
+  },
+  {
+    "id": "news-627c324df106de1bc688",
+    "title": "What&#8217;s really at stake in the Jensen Huang saga",
+    "url": "https://www.theverge.com/podcast/1032866/jensen-huang-nvidia-china-trump-vergecast",
+    "source": "The Verge",
+    "summary": "One part of the saga surrounding Nvidia CEO Jensen Huang ended on Thursday, when Huang resigned from his position at the top of AI's most important company. But in the coming weeks and months, a much bigger story may be about to unfold. A story about Nvidia's dealings in China, about the US government's willingness [&…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-13T14:47:16.000Z",
+    "discovered_at": "2026-11-13 17:55:38"
+  },
+  {
+    "id": "news-744da6a2871c93b3ee8c",
+    "title": "ElevenLabs&#8217; new app combines meeting note-taking and dictation for teams",
+    "url": "https://techcrunch.com/2026/11/13/elevenlabs-new-app-combines-meeting-note-taking-and-dictation-for-teams/",
+    "source": "TechCrunch",
+    "summary": "ElevenAI is a new meeting notetaker and dictation app aimed at teams and enterprises.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-13T14:44:48.000Z",
+    "discovered_at": "2026-11-13 17:55:28"
+  },
+  {
+    "id": "news-cd9d1a105b69dd290c13",
+    "title": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+    "source": "The Verge",
+    "summary": "Normally, the products I test don't offer to help me write up my experience with them. Duet is different. Claude Duet is Anthropic's AI agent for consumers, the latest attempt by an AI company to try to convince us that agents can be useful for people who don't write code. It's been an interesting couple [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-13T14:00:00.000Z",
+    "discovered_at": "2026-11-13 17:55:38"
+  },
+  {
     "id": "news-f240bb31094b1ee35ea9",
     "title": "Israel&#8217;s VCs see opportunity for challengers in Nvidia&#8217;s turmoil",
     "url": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/",
@@ -9,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-13T12:52:19.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-025949940b1ff6f30fad",
@@ -21,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-13T12:28:23.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-71dad9da95c2fbfe808e",
@@ -33,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-13T12:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:41"
+    "discovered_at": "2026-11-13 17:55:38"
   },
   {
     "id": "news-55d7d41513d8574ac5f8",
@@ -45,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T22:42:51.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-1a628d755dc37d52cf4e",
@@ -57,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T22:22:28.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-3403360ccc1df753cef2",
@@ -69,19 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T21:55:32.000Z",
-    "discovered_at": "2026-11-13 12:55:41"
-  },
-  {
-    "id": "news-5e5f306d785f11574933",
-    "title": "The unfolding Jensen Huang scandal: a timeline",
-    "url": "https://techcrunch.com/2026/11/12/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
-    "source": "TechCrunch",
-    "summary": "Jensen Huang has resigned from Nvidia following an affair, which could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-12T21:35:00.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:38"
   },
   {
     "id": "news-412b4e746837e240d98c",
@@ -93,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T21:27:10.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-e153c4dc0f7fcb2944a9",
@@ -105,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T20:26:47.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-5b0f73df89a6e31055ee",
@@ -117,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T20:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-3b869b1138e3a082f2ba",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T19:42:40.000Z",
-    "discovered_at": "2026-11-13 12:55:41"
+    "discovered_at": "2026-11-13 17:55:38"
   },
   {
     "id": "news-ce9a468b53e9785d338c",
@@ -141,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T19:27:45.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-f7effce2db920f5c6670",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T19:11:00.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-baccdaa9b5505527e9f6",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T18:39:23.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-d545fdc617b9aefde9f6",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T18:06:54.000Z",
-    "discovered_at": "2026-11-13 12:55:41"
+    "discovered_at": "2026-11-13 17:55:38"
   },
   {
     "id": "news-459a57b4750adf481f4f",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T18:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-96892311de09e14b1fc8",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T17:44:33.000Z",
-    "discovered_at": "2026-11-13 12:55:41"
+    "discovered_at": "2026-11-13 17:55:38"
   },
   {
     "id": "news-deea79b353aff377bfe2",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T17:36:40.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-f5707a3468d9b42ec474",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T17:17:58.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-ddf7a6c150d0e1d19045",
@@ -237,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T17:00:52.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-4213b9afeff9a7e6e0ad",
@@ -249,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T17:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:41"
+    "discovered_at": "2026-11-13 17:55:38"
   },
   {
     "id": "news-32933935200c2839243a",
@@ -261,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T17:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:41"
+    "discovered_at": "2026-11-13 17:55:38"
   },
   {
     "id": "news-d0b6d30c7ec6bdd89182",
@@ -273,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T17:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-0fd7ae7044e59d7b5fa6",
@@ -285,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T16:36:37.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-0ff22abf6100bfe97aca",
@@ -297,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T16:32:33.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-1d250e9233fe0f753f8c",
@@ -309,55 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T16:30:00.000Z",
-    "discovered_at": "2026-11-13 12:55:41"
-  },
-  {
-    "id": "news-a5ee8976426905143d28",
-    "title": "Trump floats Apple chairman Tim Cook as Jensen Huang&#8217;s successor",
-    "url": "https://techcrunch.com/2026/11/12/trump-floats-apple-chairman-tim-cook-as-jensen-huangs-successor/",
-    "source": "TechCrunch",
-    "summary": "In a post on Truth Social, President Trump says only one man can take Jensen Huang's place as head of Nvidia: Tim Cook.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-12T16:12:44.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
-  },
-  {
-    "id": "news-830958e6e6f7f875c563",
-    "title": "Read Nvidia’s internal emails about the ‘extraordinarily difficult period’ amid CEO shakeup",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang",
-    "source": "The Verge",
-    "summary": "Jensen Huang resigned as CEO of Nvidia this morning, a company he co-founded in 1993. The decision came following the company's board opening an investigation into multiple extramarital affairs Huang had with a direct report and an alleged Chinese spy. The new, and first, Chair of the Board, Harvey Jones, shared news…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-12T15:48:12.000Z",
-    "discovered_at": "2026-11-13 12:55:41"
-  },
-  {
-    "id": "news-15b0384fb53fdc16335b",
-    "title": "Jensen Huang is out at Nvidia — who is Colette Kress, his interim replacement?",
-    "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/",
-    "source": "TechCrunch",
-    "summary": "Nvidia CFO Colette Kress is taking over as an interim replacement for longtime CEO Jensen Huang, who is embroiled in scandal.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-12T15:37:29.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
-  },
-  {
-    "id": "news-15c28179b2dc3ec9cbc8",
-    "title": "Nvidia CEO Jensen Huang has resigned. What happens next?",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
-    "source": "The Verge",
-    "summary": "After the leather-jacketed CEO, president, and co-founder of Nvidia, Jensen Huang, acknowledged an affair with Megaspeed exec Alice Huang, his company initially announced an investigation. However, The New York Times reported on Wednesday that there was evidence of another affair, this time with an Nvidia executive wh…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-12T15:01:31.000Z",
-    "discovered_at": "2026-11-13 12:55:41"
+    "discovered_at": "2026-11-13 17:55:38"
   },
   {
     "id": "news-90d79223706ea3abe78d",
@@ -369,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T12:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-0990939c7d6ea9f7b924",
@@ -381,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T09:30:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-f28f90d2895a812ca579",
@@ -393,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T00:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-b06379671ede1f625c58",
@@ -405,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T00:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-8e4104a923ec61a4f8ae",
@@ -417,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T18:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-97adab01dbf7344a4376",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-7e65614cc89aac7b14f8",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T09:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-80b38ea7da372c49e059",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T08:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-8c999d6885d24711e917",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T00:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-b686da68349e5f787ade",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T21:12:59.000Z",
-    "discovered_at": "2026-11-13 12:55:41"
+    "discovered_at": "2026-11-13 17:55:38"
   },
   {
     "id": "news-ac5a661efbfd509d2187",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T19:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-c5fffc8a0cbdc3d45109",
@@ -501,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T14:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-155d33cae72679311e5a",
@@ -513,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T13:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-46ecb159c1535b093315",
@@ -525,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T12:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-5ca4dc7b6d88cb31d41f",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T10:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-01a8528fa117926a6942",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T09:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-4e3e5904c85ae763182d",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T08:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-3588ceed41552e465a0d",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T07:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-1ff74ee2cb1066374d17",
@@ -585,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T00:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-9c331579e229757a7a39",
@@ -597,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T19:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-f37b680abcf7adcb8bec",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T13:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-932fe34bad728f30ad4e",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T08:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-23b94c697622500fcf7d",
@@ -633,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T08:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-a5eef3cf57a4e41068d1",
@@ -645,19 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T20:56:41.000Z",
-    "discovered_at": "2026-11-13 12:55:41"
-  },
-  {
-    "id": "news-bc8f9eac19663ff628fb",
-    "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
-    "url": "https://openai.com/index/partnering-with-hacktron",
-    "source": "OpenAI",
-    "summary": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-06T08:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:29"
+    "discovered_at": "2026-11-13 17:55:38"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-13 12:55:41"
+    "discovered_at": "2026-11-13 17:55:38"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-13 12:55:30"
+    "discovered_at": "2026-11-13 17:55:28"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -729,6 +729,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-11-13 12:55:41"
+    "discovered_at": "2026-11-13 17:55:38"
   }
 ]
