@@ -1,4 +1,5 @@
 ---
+import { serializeJsonLd } from '../../lib/json-ld';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getAllBenchmarkIds, getBenchmarkById, getScoresForBenchmark } from '../../db/queries';
 
@@ -415,5 +416,5 @@ const structuredData = {
     </a>
   </section>
 
-  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <script type="application/ld+json" set:html={serializeJsonLd(structuredData)} />
 </BaseLayout>

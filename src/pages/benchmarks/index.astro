@@ -1,4 +1,5 @@
 ---
+import { serializeJsonLd } from '../../lib/json-ld';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Tooltip from '../../components/Tooltip.astro';
 import BenchmarkTable from '../../components/BenchmarkTable';
@@ -169,7 +170,7 @@ const benchmarkResources = BENCHMARK_RESOURCES;
     </div>
   </section>
 
-  <script type="application/ld+json" set:html={JSON.stringify({
+  <script type="application/ld+json" set:html={serializeJsonLd({
     '@context': 'https://schema.org',
     '@type': 'Dataset',
     name: 'AI Model Benchmarks',

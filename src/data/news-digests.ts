@@ -10,6 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { getNews } from '../db/queries';
 import { routeAiResourceHubNews } from './news-routing';
+import { curateNewsItems } from './content-curation';
 import { classifyNewsItem, getNewsCategory, type NewsCategoryId, type NewsTagId } from './news-categories';
 
 export interface NewsItem {
@@ -23,6 +24,9 @@ export interface NewsItem {
   category: string;      // Canonical reader category label, e.g. "Models" (shared/news-categories.json)
   readerCategory: NewsCategoryId;
   readerTags: NewsTagId[];
+  /** Full ISO timestamp when known (database rows); digest rows only have a date. */
+  publishedAt?: string;
+  importance_score?: number | null;
   tags: string[];
   digestDate: string;    // The digest file date
 }
@@ -36,6 +40,7 @@ interface DBNewsItem {
   published_at: string | null;
   discovered_at?: string | null;
   category: string;
+  importance_score?: number | string | null;
 }
 
 const TAG_PATTERNS: Record<string, RegExp> = {
@@ -304,6 +309,8 @@ function loadNewsFromDB(): NewsItem[] {
       readerTags: classification.tags,
       tags: generateTags(`${row.title} ${row.summary ?? ''}`),
       digestDate: date,
+      publishedAt: new Date(dateSource.includes('T') ? dateSource : `${dateSource.replace(' ', 'T')}Z`).toISOString(),
+      importance_score: row.importance_score == null ? null : Number(row.importance_score),
     }];
   });
 }
@@ -316,4 +323,13 @@ export function loadNewsItems(): NewsItem[] {
   const dbItems = routeAiResourceHubNews(loadNewsFromDB());
   if (dbItems.length > 0) return dbItems;
   return routeAiResourceHubNews(loadNewsDigests());
+}
+
+/**
+ * Every AI story in the live news store after de-duplication and source
+ * blocking, without the /news/ page's tag routing. The daily edition uses this
+ * wider set so a day's edition is not cut to one or two stories.
+ */
+export function loadCuratedNewsItems(): NewsItem[] {
+  return curateNewsItems(loadNewsFromDB() as never) as unknown as NewsItem[];
 }

@@ -1,4 +1,5 @@
 ---
+import { serializeJsonLd } from '../../lib/json-ld';
 import ReviewedModelPage from '../../components/ReviewedModelPage.astro';
 import { MODEL_FIELD_REVIEWS, getModelFieldReview } from '../../../scripts/lib/model-field-reviews';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -561,5 +562,5 @@ const structuredData = {
     </div>
   </section>
 
-  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <script type="application/ld+json" set:html={serializeJsonLd(structuredData)} />
 </BaseLayout>}
