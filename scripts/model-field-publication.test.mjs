@@ -20,7 +20,8 @@ const contaminated = id => ({
 
 test('real sync merge clears omitted discovery specs and conditional prices on promotion', () => {
   const merged = mergeModel(contaminated('muse-ember'), catalog.get('muse-ember'));
-  assert.equal(merged.status, 'active');
+  // Since #91 the Ember field review marks status unverified, so it stays 'tracking' (not promoted to active).
+  assert.equal(merged.status, 'tracking');
   assert.equal(merged.max_output, 0);
   assert.equal(merged.input_price, -1);
   assert.equal(merged.output_price, -1);

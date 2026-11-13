@@ -1,14 +1,14 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-13T12:37:56.822Z",
+  "generatedAt": "2026-11-13T12:41:56.529Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
-    "totalReleases": 45,
-    "highPriority": 4,
-    "readyForEditor": 14,
-    "officiallyVerified": 30,
-    "watchOnly": 15,
-    "openSource": 2
+    "totalReleases": 62,
+    "highPriority": 5,
+    "readyForEditor": 17,
+    "officiallyVerified": 29,
+    "watchOnly": 33,
+    "openSource": 5
   },
   "releases": [
     {
@@ -21,10 +21,16 @@ export const modelReleaseDesk = {
       "releaseDate": "2026-11-09",
       "releaseDateLabel": "9 Nov 2026",
       "ageDays": 4,
-      "status": "tracking",
+      "status": null,
       "fieldStates": {
+        "released": "verified",
         "context_window": "unverified",
         "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "verified",
+        "api_available": "verified",
+        "status": "unverified",
+        "category": "verified",
         "input_price": "unverified",
         "output_price": "unverified",
         "cached_input_price": "unverified"
@@ -32,14 +38,14 @@ export const modelReleaseDesk = {
       "verificationState": "official",
       "priority": "high",
       "draftStatus": "needs_research",
-      "officialUrl": "https://research.meta.ai/blog/muse-ember",
+      "officialUrl": "https://dev.meta.ai/docs/models",
       "providerStatusUrl": null,
       "providerDocsUrl": "https://llama.meta.com/docs",
-      "openSource": false,
-      "openSourceState": "unreviewed",
+      "openSource": null,
+      "openSourceState": "unverified",
       "apiAvailable": true,
-      "apiAvailableState": "unreviewed",
-      "modality": "text,vision,audio",
+      "apiAvailableState": "verified",
+      "modality": "text,vision,video,audio",
       "contextWindow": null,
       "contextWindowState": "unverified",
       "maxOutput": null,
@@ -52,7 +58,7 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Muse Ember is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Auto-tracked from OpenRouter discovery (meta/muse-ember); awaiting official verification. A model-level official source is attached, so this can enter source-first editorial review.",
+      "summary": "Muse Ember is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Meta's Muse Ember is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -79,51 +85,57 @@ export const modelReleaseDesk = {
       "sourceCount": 1
     },
     {
-      "id": "glm-5.3-flashx-legal",
-      "fileSlug": "2026-11-02-glm-5-3-flashx-legal-release-brief",
-      "modelName": "GLM 5.3 FlashX Legal",
-      "providerId": "zhipu",
-      "providerName": "Zhipu AI",
-      "providerColour": "#00b4d8",
-      "releaseDate": "2026-11-02",
-      "releaseDateLabel": "2 Nov 2026",
-      "ageDays": 11,
-      "status": "tracking",
+      "id": "gemini-omni-1.2-flash",
+      "fileSlug": "2026-11-05-gemini-omni-1-2-flash-release-brief",
+      "modelName": "Gemini Omni 1.2 Flash",
+      "providerId": "google",
+      "providerName": "Google",
+      "providerColour": "#4285f4",
+      "releaseDate": "2026-11-05",
+      "releaseDateLabel": "5 Nov 2026",
+      "ageDays": 8,
+      "status": "active",
       "fieldStates": {
+        "released": "verified",
         "context_window": "unverified",
-        "max_output": "unverified",
-        "input_price": "verified",
-        "output_price": "verified",
+        "max_output": "verified",
+        "open_source": "unverified",
+        "modality": "verified",
+        "api_available": "verified",
+        "status": "verified",
+        "category": "verified",
+        "input_price": "unverified",
+        "output_price": "unverified",
         "cached_input_price": "unverified"
       },
       "verificationState": "official",
       "priority": "high",
-      "draftStatus": "needs_research",
-      "officialUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
-      "providerStatusUrl": null,
-      "providerDocsUrl": "https://docs.bigmodel.cn/cn/guide/models/text/glm-5",
-      "openSource": false,
-      "openSourceState": "unreviewed",
+      "draftStatus": "ready_for_editor",
+      "officialUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+      "providerStatusUrl": "https://status.cloud.google.com",
+      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
       "apiAvailable": true,
-      "apiAvailableState": "unreviewed",
-      "modality": "text,vision",
+      "apiAvailableState": "verified",
+      "modality": "text,vision,video",
       "contextWindow": null,
       "contextWindowState": "unverified",
-      "maxOutput": null,
-      "maxOutputState": "unverified",
+      "maxOutput": 260640,
+      "maxOutputState": "verified",
       "qualityScore": null,
       "qualityScoreState": "suppressed_untraceable",
-      "inputPrice": 0.37,
-      "inputPriceState": "verified",
-      "outputPrice": 1.25,
-      "outputPriceState": "verified",
-      "pricingSource": "Z.ai (official)",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "GLM 5.3 FlashX Legal is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Current tracked pricing: $0.37 in / $1.25 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5.3-flashx-legal); awaiting official verification. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Zhipu AI's GLM 5.3 FlashX Legal is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "summary": "Gemini Omni 1.2 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Google's Gemini Omni 1.2 Flash is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -132,18 +144,29 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Zhipu AI actually launched with GLM 5.3 FlashX Legal, and why it matters now.",
+        "Lead with the hook: what Google actually launched with Gemini Omni 1.2 Flash, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
-        "Keep the chronology explicit: this release landed on 2 Nov 2026 and should be framed against the models it is replacing or competing with."
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 5 Nov 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-02-glm-5-3-flashx-legal-release-brief.md",
+      "relatedStories": [
+        {
+          "title": "Google Cloud launches Gemini for healthcare.",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+          "source": "Google",
+          "date": "2026-11-10",
+          "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
+          "routingTags": [
+            "model_release"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-05-gemini-omni-1-2-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "muse-wonder",
@@ -192,7 +215,7 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Muse Wonder is a preview-stage release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Auto-tracked from OpenRouter discovery (meta/muse-wonder); awaiting official verification. A model-level official source is attached, so this can enter source-first editorial review.",
+      "summary": "Muse Wonder is a preview-stage release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Meta's Muse Wonder is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Preview status means the launch narrative matters before long-run benchmark coverage is complete.",
@@ -218,6 +241,91 @@ export const modelReleaseDesk = {
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 1
+    },
+    {
+      "id": "gemini-omni-1.1-flash",
+      "fileSlug": "2026-08-27-gemini-omni-1-1-flash-release-brief",
+      "modelName": "Gemini Omni 1.1 Flash",
+      "providerId": "google",
+      "providerName": "Google",
+      "providerColour": "#4285f4",
+      "releaseDate": "2026-08-27",
+      "releaseDateLabel": "27 Aug 2026",
+      "ageDays": 78,
+      "status": "preview",
+      "fieldStates": {
+        "released": "verified",
+        "context_window": "unverified",
+        "max_output": "verified",
+        "open_source": "unverified",
+        "modality": "verified",
+        "api_available": "verified",
+        "status": "verified",
+        "category": "verified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "official",
+      "priority": "high",
+      "draftStatus": "ready_for_editor",
+      "officialUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+      "providerStatusUrl": "https://status.cloud.google.com",
+      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": true,
+      "apiAvailableState": "verified",
+      "modality": "text,vision,video",
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": 57920,
+      "maxOutputState": "verified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Gemini Omni 1.1 Flash is a preview-stage release from Google. It is positioned as an API-available model rather than a local-only release. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Google's Gemini Omni 1.1 Flash is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Preview status means the launch narrative matters before long-run benchmark coverage is complete.",
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Google actually launched with Gemini Omni 1.1 Flash, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 27 Aug 2026 and should be framed against the models it is replacing or competing with."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Google Cloud launches Gemini for healthcare.",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+          "source": "Google",
+          "date": "2026-11-10",
+          "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
+          "routingTags": [
+            "model_release"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-08-27-gemini-omni-1-1-flash-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "claude-mythos-preview",
@@ -303,6 +411,158 @@ export const modelReleaseDesk = {
       "sourceCount": 2
     },
     {
+      "id": "minimax-m3.1-flash",
+      "fileSlug": "2026-10-19-minimax-m3-1-flash-release-brief",
+      "modelName": "MiniMax M3.1 Flash",
+      "providerId": "minimax",
+      "providerName": "MiniMax",
+      "providerColour": "#e040fb",
+      "releaseDate": "2026-10-19",
+      "releaseDateLabel": "19 Oct 2026",
+      "ageDays": 25,
+      "status": null,
+      "fieldStates": {
+        "released": "verified",
+        "context_window": "verified",
+        "max_output": "unverified",
+        "open_source": "verified",
+        "modality": "verified",
+        "api_available": "verified",
+        "status": "unverified",
+        "category": "verified",
+        "input_price": "verified",
+        "output_price": "verified",
+        "cached_input_price": "verified"
+      },
+      "verificationState": "official",
+      "priority": "watch",
+      "draftStatus": "needs_research",
+      "officialUrl": "https://platform.minimax.io/docs/guides/text-generation",
+      "providerStatusUrl": null,
+      "providerDocsUrl": "https://platform.minimaxi.com/docs/api-reference/api-overview",
+      "openSource": true,
+      "openSourceState": "verified",
+      "apiAvailable": true,
+      "apiAvailableState": "verified",
+      "modality": "text,vision,video",
+      "contextWindow": 1000000,
+      "contextWindowState": "verified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": 0.15,
+      "inputPriceState": "verified",
+      "outputPrice": 0.6,
+      "outputPriceState": "verified",
+      "pricingSource": "Vendor (official, checked 2026-11-13)",
+      "pricingUpdated": "2026-11-13 11:55:24",
+      "summary": "MiniMax M3.1 Flash is a currently tracked release from MiniMax. It belongs in the open-weight / local-model conversation. Tracked context window: 1M tokens. Current tracked pricing: $0.15 in / $0.60 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "MiniMax's MiniMax M3.1 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+      ],
+      "checklist": [
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups.",
+        "Add local-running context: LM Studio, Ollama, GGUF, MLX, or device notes where relevant."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what MiniMax actually launched with MiniMax M3.1 Flash, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Include the local-model angle: LM Studio, Ollama, GGUF, MLX, or on-device relevance where appropriate.",
+        "Keep the chronology explicit: this release landed on 19 Oct 2026 and should be framed against the models it is replacing or competing with."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [],
+      "draftPath": "editorial/release-drafts/2026-10-19-minimax-m3-1-flash-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 0,
+      "sourceCount": 1
+    },
+    {
+      "id": "muse-spark-open",
+      "fileSlug": "2026-10-15-muse-spark-open-release-brief",
+      "modelName": "Muse Spark Open",
+      "providerId": "meta",
+      "providerName": "Meta",
+      "providerColour": "#0a66ff",
+      "releaseDate": "2026-10-15",
+      "releaseDateLabel": "15 Oct 2026",
+      "ageDays": 29,
+      "status": null,
+      "fieldStates": {
+        "released": "verified",
+        "context_window": "verified",
+        "max_output": "unverified",
+        "open_source": "verified",
+        "modality": "verified",
+        "api_available": "verified",
+        "status": "unverified",
+        "category": "verified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "official",
+      "priority": "watch",
+      "draftStatus": "needs_research",
+      "officialUrl": "https://dev.meta.ai/docs/muse-spark-open",
+      "providerStatusUrl": null,
+      "providerDocsUrl": "https://llama.meta.com/docs",
+      "openSource": true,
+      "openSourceState": "verified",
+      "apiAvailable": true,
+      "apiAvailableState": "verified",
+      "modality": "text,vision,video,audio",
+      "contextWindow": 1048576,
+      "contextWindowState": "verified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Muse Spark Open is a currently tracked release from Meta. It belongs in the open-weight / local-model conversation. Tracked context window: 1.0M tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Meta's Muse Spark Open is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+      ],
+      "checklist": [
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups.",
+        "Add local-running context: LM Studio, Ollama, GGUF, MLX, or device notes where relevant."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Meta actually launched with Muse Spark Open, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Include the local-model angle: LM Studio, Ollama, GGUF, MLX, or on-device relevance where appropriate.",
+        "Keep the chronology explicit: this release landed on 15 Oct 2026 and should be framed against the models it is replacing or competing with."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [],
+      "draftPath": "editorial/release-drafts/2026-10-15-muse-spark-open-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 0,
+      "sourceCount": 1
+    },
+    {
       "id": "nemotron-3.5-super-vl",
       "fileSlug": "2026-10-15-nemotron-3-5-super-vl-release-brief",
       "modelName": "Nemotron 3.5 Super VL",
@@ -349,7 +609,7 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Nemotron 3.5 Super VL is a currently tracked release from NVIDIA. It belongs in the open-weight / local-model conversation. Auto-tracked from OpenRouter discovery (nvidia/nemotron-3.5-super-vl); awaiting official verification. A model-level official source is attached, so this can enter source-first editorial review.",
+      "summary": "Nemotron 3.5 Super VL is a currently tracked release from NVIDIA. It belongs in the open-weight / local-model conversation. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "NVIDIA's Nemotron 3.5 Super VL is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
@@ -428,207 +688,6 @@ export const modelReleaseDesk = {
       "sourceCount": 4
     },
     {
-      "id": "mistral-large-4-0",
-      "fileSlug": "2026-10-06-mistral-large-4-release-brief",
-      "modelName": "Mistral Large 4",
-      "providerId": "mistral",
-      "providerName": "Mistral",
-      "providerColour": "#111827",
-      "releaseDate": "2026-10-06",
-      "releaseDateLabel": "6 Oct 2026",
-      "ageDays": 38,
-      "status": "tracking",
-      "fieldStates": {
-        "context_window": "unverified",
-        "max_output": "unverified",
-        "input_price": "verified",
-        "output_price": "verified",
-        "cached_input_price": "unverified"
-      },
-      "verificationState": "official",
-      "priority": "watch",
-      "draftStatus": "needs_research",
-      "officialUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
-      "providerStatusUrl": "https://status.mistral.ai",
-      "providerDocsUrl": "https://docs.mistral.ai",
-      "openSource": false,
-      "openSourceState": "unreviewed",
-      "apiAvailable": true,
-      "apiAvailableState": "unreviewed",
-      "modality": "text,vision",
-      "contextWindow": null,
-      "contextWindowState": "unverified",
-      "maxOutput": null,
-      "maxOutputState": "unverified",
-      "qualityScore": null,
-      "qualityScoreState": "suppressed_untraceable",
-      "inputPrice": 0.7,
-      "inputPriceState": "verified",
-      "outputPrice": 2.1,
-      "outputPriceState": "verified",
-      "pricingSource": "Mistral (official)",
-      "pricingUpdated": null,
-      "summary": "Mistral Large 4 is a currently tracked release from Mistral. It is positioned as an API-available model rather than a local-only release. Current tracked pricing: $0.70 in / $2.10 out per million tokens. Auto-tracked from OpenRouter discovery (mistralai/mistral-large-4-0); awaiting official verification. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Mistral's Mistral Large 4 is on the release desk with 0 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
-      ],
-      "checklist": [
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what Mistral actually launched with Mistral Large 4, and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
-        "Keep the chronology explicit: this release landed on 6 Oct 2026 and should be framed against the models it is replacing or competing with."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-10-06-mistral-large-4-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
-    },
-    {
-      "id": "qwen3.8-omni-flash",
-      "fileSlug": "2026-09-21-qwen3-8-omni-flash-release-brief",
-      "modelName": "Qwen3.8 Omni Flash",
-      "providerId": "alibaba",
-      "providerName": "Alibaba",
-      "providerColour": "#ff6a00",
-      "releaseDate": "2026-09-21",
-      "releaseDateLabel": "21 Sept 2026",
-      "ageDays": 53,
-      "status": "tracking",
-      "fieldStates": {
-        "context_window": "unverified",
-        "max_output": "verified",
-        "input_price": "unverified",
-        "output_price": "unverified",
-        "cached_input_price": "unverified"
-      },
-      "verificationState": "official",
-      "priority": "watch",
-      "draftStatus": "needs_research",
-      "officialUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
-      "providerStatusUrl": null,
-      "providerDocsUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
-      "openSource": false,
-      "openSourceState": "unreviewed",
-      "apiAvailable": true,
-      "apiAvailableState": "unreviewed",
-      "modality": "text,vision,audio",
-      "contextWindow": null,
-      "contextWindowState": "unverified",
-      "maxOutput": 131072,
-      "maxOutputState": "verified",
-      "qualityScore": null,
-      "qualityScoreState": "suppressed_untraceable",
-      "inputPrice": null,
-      "inputPriceState": "unverified",
-      "outputPrice": null,
-      "outputPriceState": "unverified",
-      "pricingSource": null,
-      "pricingUpdated": null,
-      "summary": "Qwen3.8 Omni Flash is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Auto-tracked from OpenRouter discovery (qwen/qwen3.8-omni-flash); awaiting official verification. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Alibaba's Qwen3.8 Omni Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
-      ],
-      "checklist": [
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what Alibaba actually launched with Qwen3.8 Omni Flash, and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
-        "Keep the chronology explicit: this release landed on 21 Sept 2026 and should be framed against the models it is replacing or competing with."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-09-21-qwen3-8-omni-flash-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
-    },
-    {
-      "id": "glm-5.3-flashx",
-      "fileSlug": "2026-09-18-glm-5-3-flashx-release-brief",
-      "modelName": "GLM 5.3 FlashX",
-      "providerId": "zhipu",
-      "providerName": "Zhipu AI",
-      "providerColour": "#00b4d8",
-      "releaseDate": "2026-09-18",
-      "releaseDateLabel": "18 Sept 2026",
-      "ageDays": 56,
-      "status": "tracking",
-      "fieldStates": {
-        "context_window": "unverified",
-        "max_output": "unverified",
-        "input_price": "verified",
-        "output_price": "verified",
-        "cached_input_price": "unverified"
-      },
-      "verificationState": "official",
-      "priority": "watch",
-      "draftStatus": "needs_research",
-      "officialUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
-      "providerStatusUrl": null,
-      "providerDocsUrl": "https://docs.bigmodel.cn/cn/guide/models/text/glm-5",
-      "openSource": false,
-      "openSourceState": "unreviewed",
-      "apiAvailable": true,
-      "apiAvailableState": "unreviewed",
-      "modality": "text,vision",
-      "contextWindow": null,
-      "contextWindowState": "unverified",
-      "maxOutput": null,
-      "maxOutputState": "unverified",
-      "qualityScore": null,
-      "qualityScoreState": "suppressed_untraceable",
-      "inputPrice": 0.37,
-      "inputPriceState": "verified",
-      "outputPrice": 1.25,
-      "outputPriceState": "verified",
-      "pricingSource": "Z.ai (official)",
-      "pricingUpdated": null,
-      "summary": "GLM 5.3 FlashX is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Current tracked pricing: $0.37 in / $1.25 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5.3-flashx); awaiting official verification. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Zhipu AI's GLM 5.3 FlashX is on the release desk with 0 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
-      ],
-      "checklist": [
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what Zhipu AI actually launched with GLM 5.3 FlashX, and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
-        "Keep the chronology explicit: this release landed on 18 Sept 2026 and should be framed against the models it is replacing or competing with."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-09-18-glm-5-3-flashx-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
-    },
-    {
       "id": "muse-spark-1.3",
       "fileSlug": "2026-09-02-muse-spark-1-3-release-brief",
       "modelName": "Muse Spark 1.3",
@@ -675,7 +734,7 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Muse Spark 1.3 is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Auto-tracked from OpenRouter discovery (meta/muse-spark-1.3); awaiting official verification. A model-level official source is attached, so this can enter source-first editorial review.",
+      "summary": "Muse Spark 1.3 is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Meta's Muse Spark 1.3 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -702,34 +761,40 @@ export const modelReleaseDesk = {
       "sourceCount": 1
     },
     {
-      "id": "qwen3.8-flash",
-      "fileSlug": "2026-08-26-qwen3-8-flash-release-brief",
-      "modelName": "Qwen3.8 Flash",
-      "providerId": "alibaba",
-      "providerName": "Alibaba",
-      "providerColour": "#ff6a00",
-      "releaseDate": "2026-08-26",
-      "releaseDateLabel": "26 Aug 2026",
-      "ageDays": 79,
-      "status": "tracking",
+      "id": "nemotron-3.5-lightning",
+      "fileSlug": "2026-08-11-nemotron-3-5-lightning-release-brief",
+      "modelName": "Nemotron 3.5 Lightning",
+      "providerId": "nvidia",
+      "providerName": "NVIDIA",
+      "providerColour": "#76b900",
+      "releaseDate": "2026-08-11",
+      "releaseDateLabel": "11 Aug 2026",
+      "ageDays": 94,
+      "status": null,
       "fieldStates": {
+        "released": "verified",
         "context_window": "unverified",
         "max_output": "unverified",
+        "open_source": "verified",
+        "modality": "unverified",
+        "api_available": "verified",
+        "status": "unverified",
+        "category": "verified",
         "input_price": "unverified",
         "output_price": "unverified",
         "cached_input_price": "unverified"
       },
       "verificationState": "official",
       "priority": "backfill",
-      "draftStatus": "needs_research",
-      "officialUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+      "draftStatus": "ready_for_editor",
+      "officialUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
       "providerStatusUrl": null,
-      "providerDocsUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
-      "openSource": false,
-      "openSourceState": "unreviewed",
+      "providerDocsUrl": "https://docs.api.nvidia.com",
+      "openSource": true,
+      "openSourceState": "verified",
       "apiAvailable": true,
-      "apiAvailableState": "unreviewed",
-      "modality": "text,vision",
+      "apiAvailableState": "verified",
+      "modality": null,
       "contextWindow": null,
       "contextWindowState": "unverified",
       "maxOutput": null,
@@ -742,31 +807,83 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Qwen3.8 Flash is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Auto-tracked from OpenRouter discovery (qwen/qwen3.8-flash); awaiting official verification. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Alibaba's Qwen3.8 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "summary": "Nemotron 3.5 Lightning is a currently tracked release from NVIDIA. It belongs in the open-weight / local-model conversation. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "NVIDIA's Nemotron 3.5 Lightning is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
+        "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
         "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
         "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups.",
+        "Add local-running context: LM Studio, Ollama, GGUF, MLX, or device notes where relevant."
       ],
       "threadPlan": [
-        "Lead with the hook: what Alibaba actually launched with Qwen3.8 Flash, and why it matters now.",
+        "Lead with the hook: what NVIDIA actually launched with Nemotron 3.5 Lightning, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
-        "Keep the chronology explicit: this release landed on 26 Aug 2026 and should be framed against the models it is replacing or competing with."
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Include the local-model angle: LM Studio, Ollama, GGUF, MLX, or on-device relevance where appropriate.",
+        "Keep the chronology explicit: this release landed on 11 Aug 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-08-26-qwen3-8-flash-release-brief.md",
+      "relatedStories": [
+        {
+          "title": "Democrats launch Nvidia investigation, write scathing letter on Huang&#8217;s &#8216;scheme&#8217; with Trump",
+          "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
+          "source": "TechCrunch",
+          "date": "2026-11-12",
+          "summary": "This Congressional investigation into Nvidia's China sales and its dealings with Trump is the second one, so far, since news of the alleged spy affair broke.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release",
+            "hardware"
+          ]
+        },
+        {
+          "title": "Jensen Huang’s exit puts Nvidia’s support for open source in question",
+          "url": "https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/",
+          "source": "TechCrunch",
+          "date": "2026-11-12",
+          "summary": "Jensen Huang's resignation raises questions about Nvidia's commitment to open source AI, including its Hugging Face acquisition, open-weight models, and advocacy against restrictions, as the company navigates a leadership transition.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "hardware",
+            "open_source"
+          ]
+        },
+        {
+          "title": "Hugging Face CEO vows to keep fighting for open source AI after Jensen Huang&#8217;s exit",
+          "url": "https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit/",
+          "source": "TechCrunch",
+          "date": "2026-11-12",
+          "summary": "Hugging Face's CEO pledged to keep fighting for open source AI after Huang's exit, raising questions about Nvidia's $12.9 billion acquisition.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "hardware",
+            "open_source"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-08-11-nemotron-3-5-lightning-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "muse-spark-1.2",
@@ -815,7 +932,7 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Muse Spark 1.2 is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Auto-tracked from OpenRouter discovery (meta/muse-spark-1.2); awaiting official verification. A model-level official source is attached, so this can enter source-first editorial review.",
+      "summary": "Muse Spark 1.2 is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Meta's Muse Spark 1.2 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -843,15 +960,15 @@ export const modelReleaseDesk = {
     },
     {
       "id": "claude-opus-5",
-      "fileSlug": "2026-07-24-claude-opus-5-batch-release-brief",
-      "modelName": "Claude Opus 5 (batch)",
+      "fileSlug": "2026-07-24-claude-opus-5-release-brief",
+      "modelName": "Claude Opus 5",
       "providerId": "anthropic",
       "providerName": "Anthropic",
       "providerColour": "#d97706",
       "releaseDate": "2026-07-24",
       "releaseDateLabel": "24 Jul 2026",
       "ageDays": 112,
-      "status": "tracking",
+      "status": "active",
       "fieldStates": {
         "context_window": "verified",
         "max_output": "verified",
@@ -881,9 +998,9 @@ export const modelReleaseDesk = {
       "outputPrice": 25,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-13 06:55:33",
-      "summary": "Claude Opus 5 (batch) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Current generally available Opus model. Some safeguarded requests can fall back to Opus 4.8. Tracking only until benchmark and quality coverage is available. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Anthropic's Claude Opus 5 (batch) is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "pricingUpdated": "2026-11-13 11:55:24",
+      "summary": "Claude Opus 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Current generally available Opus model. Some safeguarded requests can fall back to Opus 4.8. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Anthropic's Claude Opus 5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -895,7 +1012,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Anthropic actually launched with Claude Opus 5 (batch), and why it matters now.",
+        "Lead with the hook: what Anthropic actually launched with Claude Opus 5, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
@@ -917,7 +1034,7 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-07-24-claude-opus-5-batch-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-07-24-claude-opus-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 1,
       "sourceCount": 2
@@ -932,7 +1049,7 @@ export const modelReleaseDesk = {
       "releaseDate": "2026-07-24",
       "releaseDateLabel": "24 Jul 2026",
       "ageDays": 112,
-      "status": "tracking",
+      "status": "active",
       "fieldStates": {
         "context_window": "unverified",
         "max_output": "unverified",
@@ -962,8 +1079,8 @@ export const modelReleaseDesk = {
       "outputPrice": 50,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-13 06:55:33",
-      "summary": "Claude Opus 5 Fast is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Official faster Opus 5 mode, priced at twice the base token rate. Tracking only until benchmark and quality coverage is available. A model-level official source is attached, so this can enter source-first editorial review.",
+      "pricingUpdated": "2026-11-13 11:55:24",
+      "summary": "Claude Opus 5 Fast is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Official faster Opus 5 mode, priced at twice the base token rate. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 5 Fast is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -1005,15 +1122,15 @@ export const modelReleaseDesk = {
     },
     {
       "id": "gemini-3.5-flash-lite",
-      "fileSlug": "2026-07-21-gemini-3-5-flash-lite-batch-release-brief",
-      "modelName": "Gemini 3.5 Flash Lite (batch)",
+      "fileSlug": "2026-07-21-gemini-3-5-flash-lite-release-brief",
+      "modelName": "Gemini 3.5 Flash-Lite",
       "providerId": "google",
       "providerName": "Google",
       "providerColour": "#4285f4",
       "releaseDate": "2026-07-21",
       "releaseDateLabel": "21 Jul 2026",
       "ageDays": 115,
-      "status": "tracking",
+      "status": "active",
       "fieldStates": {
         "context_window": "verified",
         "max_output": "verified",
@@ -1043,9 +1160,9 @@ export const modelReleaseDesk = {
       "outputPrice": 2.5,
       "outputPriceState": "verified",
       "pricingSource": "Google AI (official)",
-      "pricingUpdated": "2026-11-13 06:55:33",
-      "summary": "Gemini 3.5 Flash Lite (batch) is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.30 in / $2.50 out per million tokens. Current generally available low-cost Gemini Flash-Lite model. Tracking only until benchmark and quality coverage is available. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.5 Flash Lite (batch) is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "pricingUpdated": "2026-11-13 11:55:24",
+      "summary": "Gemini 3.5 Flash-Lite is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.30 in / $2.50 out per million tokens. Current generally available low-cost Gemini Flash-Lite model. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Google's Gemini 3.5 Flash-Lite is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1057,7 +1174,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Google actually launched with Gemini 3.5 Flash Lite (batch), and why it matters now.",
+        "Lead with the hook: what Google actually launched with Gemini 3.5 Flash-Lite, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
@@ -1065,45 +1182,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "Google’s new Gemini model is better at understanding complicated questions",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
-          "source": "The Verge",
-          "date": "2026-11-12",
-          "summary": "Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including \"questions with multiple parts, hard-to-understand typos, or highly specific requests.\" The new model can break down your questions and address each part in its responses. It's available starting today in search,…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google&#8217;s latest Search upgrade promises better answers to your most complicated questions",
-          "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
-          "source": "TechCrunch",
-          "date": "2026-11-12",
-          "summary": "Powered by Gemini 4 Hydrogen, Google's AI Mode is getting better at understanding complex queries, surfacing relevant links, and delivering richer visual responses.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
-          "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
-          "source": "Google",
-          "date": "2026-11-12",
-          "summary": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive responses.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
         {
           "title": "Google Cloud launches Gemini for healthcare.",
           "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
@@ -1115,22 +1193,22 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-5-flash-lite-batch-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-5-flash-lite-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "gemini-3.6-flash",
-      "fileSlug": "2026-07-21-gemini-3-6-flash-batch-release-brief",
-      "modelName": "Gemini 3.6 Flash (batch)",
+      "fileSlug": "2026-07-21-gemini-3-6-flash-release-brief",
+      "modelName": "Gemini 3.6 Flash",
       "providerId": "google",
       "providerName": "Google",
       "providerColour": "#4285f4",
       "releaseDate": "2026-07-21",
       "releaseDateLabel": "21 Jul 2026",
       "ageDays": 115,
-      "status": "tracking",
+      "status": "active",
       "fieldStates": {
         "context_window": "verified",
         "max_output": "verified",
@@ -1160,9 +1238,9 @@ export const modelReleaseDesk = {
       "outputPrice": 7.5,
       "outputPriceState": "verified",
       "pricingSource": "Google AI (official)",
-      "pricingUpdated": "2026-11-13 06:55:33",
-      "summary": "Gemini 3.6 Flash (batch) is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Current generally available Gemini Flash model. Tracking only until benchmark and quality coverage is available. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.6 Flash (batch) is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "pricingUpdated": "2026-11-13 11:55:24",
+      "summary": "Gemini 3.6 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Current generally available Gemini Flash model. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Google's Gemini 3.6 Flash is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1174,7 +1252,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Google actually launched with Gemini 3.6 Flash (batch), and why it matters now.",
+        "Lead with the hook: what Google actually launched with Gemini 3.6 Flash, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
@@ -1182,45 +1260,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "Google’s new Gemini model is better at understanding complicated questions",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
-          "source": "The Verge",
-          "date": "2026-11-12",
-          "summary": "Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including \"questions with multiple parts, hard-to-understand typos, or highly specific requests.\" The new model can break down your questions and address each part in its responses. It's available starting today in search,…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google&#8217;s latest Search upgrade promises better answers to your most complicated questions",
-          "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
-          "source": "TechCrunch",
-          "date": "2026-11-12",
-          "summary": "Powered by Gemini 4 Hydrogen, Google's AI Mode is getting better at understanding complex queries, surfacing relevant links, and delivering richer visual responses.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
-          "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
-          "source": "Google",
-          "date": "2026-11-12",
-          "summary": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive responses.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
         {
           "title": "Google Cloud launches Gemini for healthcare.",
           "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
@@ -1232,22 +1271,22 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-6-flash-batch-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-6-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "gpt-5.6-sol",
-      "fileSlug": "2026-07-09-gpt-5-6-sol-batch-release-brief",
-      "modelName": "GPT-5.6 Sol (batch)",
+      "fileSlug": "2026-07-09-gpt-5-6-sol-release-brief",
+      "modelName": "GPT-5.6 Sol",
       "providerId": "openai",
       "providerName": "OpenAI",
       "providerColour": "#10a37f",
       "releaseDate": "2026-07-09",
       "releaseDateLabel": "9 Jul 2026",
       "ageDays": 127,
-      "status": "tracking",
+      "status": "active",
       "fieldStates": {
         "context_window": "verified",
         "max_output": "verified",
@@ -1277,9 +1316,9 @@ export const modelReleaseDesk = {
       "outputPrice": 30,
       "outputPriceState": "verified",
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-11-13 06:55:33",
-      "summary": "GPT-5.6 Sol (batch) is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Current frontier GPT-5.6 model; the gpt-5.6 alias routes to Sol. Tracking only until benchmark and quality coverage is available. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "OpenAI's GPT-5.6 Sol (batch) is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "pricingUpdated": "2026-11-13 11:55:24",
+      "summary": "GPT-5.6 Sol is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Current frontier GPT-5.6 model; the gpt-5.6 alias routes to Sol. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1291,7 +1330,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what OpenAI actually launched with GPT-5.6 Sol (batch), and why it matters now.",
+        "Lead with the hook: what OpenAI actually launched with GPT-5.6 Sol, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
@@ -1320,95 +1359,22 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-07-09-gpt-5-6-sol-batch-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-07-09-gpt-5-6-sol-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 2,
       "sourceCount": 3
     },
     {
-      "id": "muse-spark-1.1",
-      "fileSlug": "2026-07-09-muse-spark-1-1-release-brief",
-      "modelName": "Muse Spark 1.1",
-      "providerId": "meta",
-      "providerName": "Meta",
-      "providerColour": "#0a66ff",
-      "releaseDate": "2026-07-09",
-      "releaseDateLabel": "9 Jul 2026",
-      "ageDays": 127,
-      "status": null,
-      "fieldStates": {
-        "released": "verified",
-        "context_window": "verified",
-        "max_output": "unverified",
-        "open_source": "unverified",
-        "modality": "verified",
-        "api_available": "verified",
-        "status": "unverified",
-        "category": "verified",
-        "input_price": "unverified",
-        "output_price": "unverified",
-        "cached_input_price": "unverified"
-      },
-      "verificationState": "official",
-      "priority": "backfill",
-      "draftStatus": "needs_research",
-      "officialUrl": "https://dev.meta.ai/docs/models",
-      "providerStatusUrl": null,
-      "providerDocsUrl": "https://llama.meta.com/docs",
-      "openSource": null,
-      "openSourceState": "unverified",
-      "apiAvailable": true,
-      "apiAvailableState": "verified",
-      "modality": "text,vision,video,audio",
-      "contextWindow": 1048576,
-      "contextWindowState": "verified",
-      "maxOutput": null,
-      "maxOutputState": "unverified",
-      "qualityScore": null,
-      "qualityScoreState": "suppressed_untraceable",
-      "inputPrice": null,
-      "inputPriceState": "unverified",
-      "outputPrice": null,
-      "outputPriceState": "unverified",
-      "pricingSource": null,
-      "pricingUpdated": null,
-      "summary": "Muse Spark 1.1 is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Auto-tracked from OpenRouter discovery (meta/muse-spark-1.1); awaiting official verification. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Meta's Muse Spark 1.1 is on the release desk with 0 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
-      ],
-      "checklist": [
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what Meta actually launched with Muse Spark 1.1, and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
-        "Keep the chronology explicit: this release landed on 9 Jul 2026 and should be framed against the models it is replacing or competing with."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-07-09-muse-spark-1-1-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
-    },
-    {
       "id": "claude-sonnet-5",
-      "fileSlug": "2026-06-30-claude-sonnet-5-batch-release-brief",
-      "modelName": "Claude Sonnet 5 (batch)",
+      "fileSlug": "2026-06-30-claude-sonnet-5-release-brief",
+      "modelName": "Claude Sonnet 5",
       "providerId": "anthropic",
       "providerName": "Anthropic",
       "providerColour": "#d97706",
       "releaseDate": "2026-06-30",
       "releaseDateLabel": "30 Jun 2026",
       "ageDays": 136,
-      "status": "tracking",
+      "status": "active",
       "fieldStates": {
         "context_window": "verified",
         "max_output": "verified",
@@ -1438,9 +1404,9 @@ export const modelReleaseDesk = {
       "outputPrice": 10,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official, introductory through 2026-08-31)",
-      "pricingUpdated": "2026-11-13 06:55:33",
-      "summary": "Claude Sonnet 5 (batch) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Generally available Sonnet model. Introductory pricing applies through 31 August 2026. Tracking only until benchmark and quality coverage is available. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Anthropic's Claude Sonnet 5 (batch) is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "pricingUpdated": "2026-11-13 11:55:24",
+      "summary": "Claude Sonnet 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Generally available Sonnet model. Introductory pricing applies through 31 August 2026. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Anthropic's Claude Sonnet 5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1452,7 +1418,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Anthropic actually launched with Claude Sonnet 5 (batch), and why it matters now.",
+        "Lead with the hook: what Anthropic actually launched with Claude Sonnet 5, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
@@ -1474,22 +1440,22 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-06-30-claude-sonnet-5-batch-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-06-30-claude-sonnet-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 1,
       "sourceCount": 2
     },
     {
       "id": "claude-fable-5",
-      "fileSlug": "2026-06-09-claude-fable-5-batch-release-brief",
-      "modelName": "Claude Fable 5 (batch)",
+      "fileSlug": "2026-06-09-claude-fable-5-release-brief",
+      "modelName": "Claude Fable 5",
       "providerId": "anthropic",
       "providerName": "Anthropic",
       "providerColour": "#d97706",
       "releaseDate": "2026-06-09",
       "releaseDateLabel": "9 Jun 2026",
       "ageDays": 157,
-      "status": "tracking",
+      "status": "active",
       "fieldStates": {
         "context_window": "verified",
         "max_output": "verified",
@@ -1519,9 +1485,9 @@ export const modelReleaseDesk = {
       "outputPrice": 50,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-13 06:55:33",
-      "summary": "Claude Fable 5 (batch) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Generally available Mythos-class model. Safeguarded topics can fall back to Opus 4.8 or Opus 5. Tracking only until benchmark and quality coverage is available. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Anthropic's Claude Fable 5 (batch) is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "pricingUpdated": "2026-11-13 11:55:24",
+      "summary": "Claude Fable 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Generally available Mythos-class model. Safeguarded topics can fall back to Opus 4.8 or Opus 5. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Anthropic's Claude Fable 5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1533,7 +1499,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Anthropic actually launched with Claude Fable 5 (batch), and why it matters now.",
+        "Lead with the hook: what Anthropic actually launched with Claude Fable 5, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
@@ -1555,15 +1521,15 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-06-09-claude-fable-5-batch-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-06-09-claude-fable-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 1,
       "sourceCount": 2
     },
     {
       "id": "gemma-4",
-      "fileSlug": "2026-04-02-gemma-4-31b-release-brief",
-      "modelName": "Gemma 4 31B",
+      "fileSlug": "2026-04-02-gemma-4-release-brief",
+      "modelName": "Gemma 4",
       "providerId": "google",
       "providerName": "Google",
       "providerColour": "#4285f4",
@@ -1601,8 +1567,8 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Gemma 4 31B is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 131.1K tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemma 4 31B is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "summary": "Gemma 4 is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 131.1K tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Google's Gemma 4 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -1616,7 +1582,7 @@ export const modelReleaseDesk = {
         "Add local-running context: LM Studio, Ollama, GGUF, MLX, or device notes where relevant."
       ],
       "threadPlan": [
-        "Lead with the hook: what Google actually launched with Gemma 4 31B, and why it matters now.",
+        "Lead with the hook: what Google actually launched with Gemma 4, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
@@ -1625,45 +1591,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "Google’s new Gemini model is better at understanding complicated questions",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
-          "source": "The Verge",
-          "date": "2026-11-12",
-          "summary": "Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including \"questions with multiple parts, hard-to-understand typos, or highly specific requests.\" The new model can break down your questions and address each part in its responses. It's available starting today in search,…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google&#8217;s latest Search upgrade promises better answers to your most complicated questions",
-          "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
-          "source": "TechCrunch",
-          "date": "2026-11-12",
-          "summary": "Powered by Gemini 4 Hydrogen, Google's AI Mode is getting better at understanding complex queries, surfacing relevant links, and delivering richer visual responses.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
-          "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
-          "source": "Google",
-          "date": "2026-11-12",
-          "summary": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive responses.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
         {
           "title": "Google Cloud launches Gemini for healthcare.",
           "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
@@ -1675,15 +1602,15 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-04-02-gemma-4-31b-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-04-02-gemma-4-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "qwen3.6-plus",
-      "fileSlug": "2026-04-02-qwen3-6-plus-release-brief",
-      "modelName": "Qwen3.6 Plus",
+      "fileSlug": "2026-04-02-qwen-3-6-plus-release-brief",
+      "modelName": "Qwen 3.6 Plus",
       "providerId": "alibaba",
       "providerName": "Alibaba",
       "providerColour": "#ff6a00",
@@ -1721,8 +1648,8 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Qwen3.6 Plus is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Latest Qwen Plus line in Model Studio pricing. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Alibaba's Qwen3.6 Plus is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "summary": "Qwen 3.6 Plus is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Latest Qwen Plus line in Model Studio pricing. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Alibaba's Qwen 3.6 Plus is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -1734,7 +1661,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Alibaba actually launched with Qwen3.6 Plus, and why it matters now.",
+        "Lead with the hook: what Alibaba actually launched with Qwen 3.6 Plus, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
@@ -1742,7 +1669,7 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-04-02-qwen3-6-plus-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-04-02-qwen-3-6-plus-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 1
@@ -1816,8 +1743,8 @@ export const modelReleaseDesk = {
     },
     {
       "id": "kimi-k2.5",
-      "fileSlug": "2026-03-28-kimi-k2-0711-release-brief",
-      "modelName": "Kimi K2 0711",
+      "fileSlug": "2026-03-28-kimi-k2-5-release-brief",
+      "modelName": "Kimi K2.5",
       "providerId": "moonshot",
       "providerName": "Moonshot AI",
       "providerColour": "#f59e0b",
@@ -1855,8 +1782,8 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Kimi K2 0711 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Current Kimi family line in Moonshot platform docs. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Moonshot AI's Kimi K2 0711 is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "summary": "Kimi K2.5 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Current Kimi family line in Moonshot platform docs. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Moonshot AI's Kimi K2.5 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -1868,7 +1795,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Moonshot AI actually launched with Kimi K2 0711, and why it matters now.",
+        "Lead with the hook: what Moonshot AI actually launched with Kimi K2.5, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
@@ -1876,7 +1803,7 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-03-28-kimi-k2-0711-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-03-28-kimi-k2-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 1
@@ -1951,7 +1878,7 @@ export const modelReleaseDesk = {
     {
       "id": "glm-5-turbo",
       "fileSlug": "2026-03-15-glm-5-turbo-release-brief",
-      "modelName": "GLM 5 Turbo",
+      "modelName": "GLM-5 Turbo",
       "providerId": "zhipu",
       "providerName": "Zhipu AI",
       "providerColour": "#00b4d8",
@@ -1989,8 +1916,8 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "GLM 5 Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Lower-cost GLM 5 line. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Zhipu AI's GLM 5 Turbo is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "summary": "GLM-5 Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Lower-cost GLM 5 line. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Zhipu AI's GLM-5 Turbo is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -2002,7 +1929,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Zhipu AI actually launched with GLM 5 Turbo, and why it matters now.",
+        "Lead with the hook: what Zhipu AI actually launched with GLM-5 Turbo, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
@@ -2017,15 +1944,15 @@ export const modelReleaseDesk = {
     },
     {
       "id": "gpt-5.4",
-      "fileSlug": "2026-03-05-gpt-5-4-batch-release-brief",
-      "modelName": "GPT-5.4 (batch)",
+      "fileSlug": "2026-03-05-gpt-5-4-release-brief",
+      "modelName": "GPT-5.4",
       "providerId": "openai",
       "providerName": "OpenAI",
       "providerColour": "#10a37f",
       "releaseDate": "2026-03-05",
       "releaseDateLabel": "5 Mar 2026",
       "ageDays": 253,
-      "status": "tracking",
+      "status": "active",
       "fieldStates": {
         "context_window": "verified",
         "max_output": "verified",
@@ -2055,9 +1982,9 @@ export const modelReleaseDesk = {
       "outputPrice": 15,
       "outputPriceState": "verified",
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-11-13 06:55:33",
-      "summary": "GPT-5.4 (batch) is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Official GPT-5.4 API model; superseded as the current flagship by GPT-5.6. Tracking only until benchmark and quality coverage is available. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "OpenAI's GPT-5.4 (batch) is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "pricingUpdated": "2026-11-13 11:55:24",
+      "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Official GPT-5.4 API model; superseded as the current flagship by GPT-5.6. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "OpenAI's GPT-5.4 is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2069,7 +1996,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what OpenAI actually launched with GPT-5.4 (batch), and why it matters now.",
+        "Lead with the hook: what OpenAI actually launched with GPT-5.4, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
@@ -2098,15 +2025,15 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-03-05-gpt-5-4-batch-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-03-05-gpt-5-4-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 2,
       "sourceCount": 3
     },
     {
       "id": "gemini-3.1-pro",
-      "fileSlug": "2026-02-19-gemini-3-1-pro-preview-batch-release-brief",
-      "modelName": "Gemini 3.1 Pro Preview (batch)",
+      "fileSlug": "2026-02-19-gemini-3-1-pro-release-brief",
+      "modelName": "Gemini 3.1 Pro",
       "providerId": "google",
       "providerName": "Google",
       "providerColour": "#4285f4",
@@ -2144,8 +2071,8 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Gemini 3.1 Pro Preview (batch) is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.1 Pro Preview (batch) is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "summary": "Gemini 3.1 Pro is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Google's Gemini 3.1 Pro is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2157,7 +2084,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Google actually launched with Gemini 3.1 Pro Preview (batch), and why it matters now.",
+        "Lead with the hook: what Google actually launched with Gemini 3.1 Pro, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
@@ -2165,45 +2092,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "Google’s new Gemini model is better at understanding complicated questions",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
-          "source": "The Verge",
-          "date": "2026-11-12",
-          "summary": "Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including \"questions with multiple parts, hard-to-understand typos, or highly specific requests.\" The new model can break down your questions and address each part in its responses. It's available starting today in search,…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google&#8217;s latest Search upgrade promises better answers to your most complicated questions",
-          "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
-          "source": "TechCrunch",
-          "date": "2026-11-12",
-          "summary": "Powered by Gemini 4 Hydrogen, Google's AI Mode is getting better at understanding complex queries, surfacing relevant links, and delivering richer visual responses.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
-          "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
-          "source": "Google",
-          "date": "2026-11-12",
-          "summary": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive responses.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
         {
           "title": "Google Cloud launches Gemini for healthcare.",
           "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
@@ -2215,15 +2103,15 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-02-19-gemini-3-1-pro-preview-batch-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-02-19-gemini-3-1-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "claude-sonnet-4.6",
-      "fileSlug": "2026-02-17-claude-sonnet-4-6-batch-release-brief",
-      "modelName": "Claude Sonnet 4.6 (batch)",
+      "fileSlug": "2026-02-17-claude-sonnet-4-6-release-brief",
+      "modelName": "Claude Sonnet 4.6",
       "providerId": "anthropic",
       "providerName": "Anthropic",
       "providerColour": "#d97706",
@@ -2260,9 +2148,9 @@ export const modelReleaseDesk = {
       "outputPrice": 15,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-13 06:55:33",
-      "summary": "Claude Sonnet 4.6 (batch) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 200K tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Anthropic's Claude Sonnet 4.6 (batch) is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "pricingUpdated": "2026-11-13 11:55:24",
+      "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 200K tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2274,7 +2162,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Anthropic actually launched with Claude Sonnet 4.6 (batch), and why it matters now.",
+        "Lead with the hook: what Anthropic actually launched with Claude Sonnet 4.6, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
@@ -2296,7 +2184,7 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-02-17-claude-sonnet-4-6-batch-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-02-17-claude-sonnet-4-6-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 1,
       "sourceCount": 2
@@ -2304,7 +2192,7 @@ export const modelReleaseDesk = {
     {
       "id": "glm-5",
       "fileSlug": "2026-02-12-glm-5-release-brief",
-      "modelName": "GLM 5",
+      "modelName": "GLM-5",
       "providerId": "zhipu",
       "providerName": "Zhipu AI",
       "providerColour": "#00b4d8",
@@ -2342,8 +2230,8 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "GLM 5 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Zhipu flagship GLM 5 line. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Zhipu AI's GLM 5 is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "summary": "GLM-5 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 128K tokens. Zhipu flagship GLM 5 line. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Zhipu AI's GLM-5 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -2355,7 +2243,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Zhipu AI actually launched with GLM 5, and why it matters now.",
+        "Lead with the hook: what Zhipu AI actually launched with GLM-5, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
@@ -2370,8 +2258,8 @@ export const modelReleaseDesk = {
     },
     {
       "id": "claude-opus-4.6",
-      "fileSlug": "2026-02-05-claude-opus-4-6-batch-release-brief",
-      "modelName": "Claude Opus 4.6 (batch)",
+      "fileSlug": "2026-02-05-claude-opus-4-6-release-brief",
+      "modelName": "Claude Opus 4.6",
       "providerId": "anthropic",
       "providerName": "Anthropic",
       "providerColour": "#d97706",
@@ -2408,9 +2296,9 @@ export const modelReleaseDesk = {
       "outputPrice": 25,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-13 06:55:33",
-      "summary": "Claude Opus 4.6 (batch) is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Official Opus release retained for historical comparisons. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Anthropic's Claude Opus 4.6 (batch) is on the release desk with 1 related story and 1 benchmark signal to review.",
+      "pricingUpdated": "2026-11-13 11:55:24",
+      "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Official Opus release retained for historical comparisons. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 1 related story and 1 benchmark signal to review.",
       "whyItMatters": [
         "There are already 1 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2422,7 +2310,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Anthropic actually launched with Claude Opus 4.6 (batch), and why it matters now.",
+        "Lead with the hook: what Anthropic actually launched with Claude Opus 4.6, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Add the benchmark and eval slide next so readers can separate launch claims from measured evidence.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
@@ -2457,18 +2345,18 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-02-05-claude-opus-4-6-batch-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-02-05-claude-opus-4-6-release-brief.md",
       "benchmarkCount": 1,
       "storyCount": 1,
       "sourceCount": 2
     },
     {
-      "id": "command-a-plus",
-      "fileSlug": "2026-11-13-command-a-release-brief",
-      "modelName": "Command A+",
-      "providerId": "cohere",
-      "providerName": "Cohere",
-      "providerColour": "#2563eb",
+      "id": "claude-fable-5.1",
+      "fileSlug": "2026-11-13-claude-fable-5-1-release-brief",
+      "modelName": "Claude Fable 5.1",
+      "providerId": "anthropic",
+      "providerName": "Anthropic",
+      "providerColour": "#d97706",
       "releaseDate": null,
       "releaseDateLabel": "Unknown",
       "ageDays": null,
@@ -2490,8 +2378,8 @@ export const modelReleaseDesk = {
       "priority": "backfill",
       "draftStatus": "watch_only",
       "officialUrl": null,
-      "providerStatusUrl": "https://status.cohere.com",
-      "providerDocsUrl": "https://docs.cohere.com",
+      "providerStatusUrl": "https://status.claude.com",
+      "providerDocsUrl": "https://docs.anthropic.com",
       "openSource": null,
       "openSourceState": "unverified",
       "apiAvailable": null,
@@ -2509,11 +2397,11 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Command A+ is a currently tracked release from Cohere. Auto-tracked from OpenRouter discovery (cohere/command-a-plus); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Cohere's Command A+ is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "summary": "Claude Fable 5.1 is a currently tracked release from Anthropic. Auto-tracked from OpenRouter discovery (anthropic/claude-fable-5.1); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Anthropic's Claude Fable 5.1 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Confirm the model exists using a model-level provider source before drafting any release claim.",
@@ -2523,22 +2411,384 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Cohere actually launched with Command A+, and why it matters now.",
+        "Lead with the hook: what Anthropic actually launched with Claude Fable 5.1, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-13-command-a-release-brief.md",
+      "relatedStories": [
+        {
+          "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
+          "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+          "source": "Ars Technica",
+          "date": "2026-10-30",
+          "summary": "It's still unknown how attackers got access to Anthropic's verified Cursor account.",
+          "routingTags": [
+            "research_paper",
+            "open_source",
+            "hardware",
+            "policy"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-claude-fable-5-1-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 0
+      "storyCount": 1,
+      "sourceCount": 1
     },
     {
-      "id": "deepseek-v4-flash-vision-exp",
-      "fileSlug": "2026-11-13-deepseek-v4-flash-vision-exp-release-brief",
-      "modelName": "DeepSeek V4 Flash Vision Exp",
+      "id": "claude-fable-5.2",
+      "fileSlug": "2026-11-13-claude-fable-5-2-release-brief",
+      "modelName": "Claude Fable 5.2",
+      "providerId": "anthropic",
+      "providerName": "Anthropic",
+      "providerColour": "#d97706",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.claude.com",
+      "providerDocsUrl": "https://docs.anthropic.com",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Claude Fable 5.2 is a currently tracked release from Anthropic. Auto-tracked from OpenRouter discovery (anthropic/claude-fable-5.2); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Anthropic's Claude Fable 5.2 is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Anthropic actually launched with Claude Fable 5.2, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
+          "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+          "source": "Ars Technica",
+          "date": "2026-10-30",
+          "summary": "It's still unknown how attackers got access to Anthropic's verified Cursor account.",
+          "routingTags": [
+            "research_paper",
+            "open_source",
+            "hardware",
+            "policy"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-claude-fable-5-2-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 1,
+      "sourceCount": 1
+    },
+    {
+      "id": "claude-haiku-5.5",
+      "fileSlug": "2026-11-13-claude-haiku-5-5-release-brief",
+      "modelName": "Claude Haiku 5.5",
+      "providerId": "anthropic",
+      "providerName": "Anthropic",
+      "providerColour": "#d97706",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.claude.com",
+      "providerDocsUrl": "https://docs.anthropic.com",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Claude Haiku 5.5 is a currently tracked release from Anthropic. Auto-tracked from OpenRouter discovery (anthropic/claude-haiku-5.5); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Anthropic's Claude Haiku 5.5 is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Anthropic actually launched with Claude Haiku 5.5, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
+          "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+          "source": "Ars Technica",
+          "date": "2026-10-30",
+          "summary": "It's still unknown how attackers got access to Anthropic's verified Cursor account.",
+          "routingTags": [
+            "research_paper",
+            "open_source",
+            "hardware",
+            "policy"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-claude-haiku-5-5-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 1,
+      "sourceCount": 1
+    },
+    {
+      "id": "claude-opus-5.5",
+      "fileSlug": "2026-11-13-claude-opus-5-5-release-brief",
+      "modelName": "Claude Opus 5.5",
+      "providerId": "anthropic",
+      "providerName": "Anthropic",
+      "providerColour": "#d97706",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.claude.com",
+      "providerDocsUrl": "https://docs.anthropic.com",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Claude Opus 5.5 is a currently tracked release from Anthropic. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-5.5); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Anthropic's Claude Opus 5.5 is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Anthropic actually launched with Claude Opus 5.5, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
+          "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+          "source": "Ars Technica",
+          "date": "2026-10-30",
+          "summary": "It's still unknown how attackers got access to Anthropic's verified Cursor account.",
+          "routingTags": [
+            "research_paper",
+            "open_source",
+            "hardware",
+            "policy"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-claude-opus-5-5-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 1,
+      "sourceCount": 1
+    },
+    {
+      "id": "claude-sonnet-5.5",
+      "fileSlug": "2026-11-13-claude-sonnet-5-5-release-brief",
+      "modelName": "Claude Sonnet 5.5",
+      "providerId": "anthropic",
+      "providerName": "Anthropic",
+      "providerColour": "#d97706",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.claude.com",
+      "providerDocsUrl": "https://docs.anthropic.com",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Claude Sonnet 5.5 is a currently tracked release from Anthropic. Auto-tracked from OpenRouter discovery (anthropic/claude-sonnet-5.5); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Anthropic's Claude Sonnet 5.5 is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Anthropic actually launched with Claude Sonnet 5.5, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
+          "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+          "source": "Ars Technica",
+          "date": "2026-10-30",
+          "summary": "It's still unknown how attackers got access to Anthropic's verified Cursor account.",
+          "routingTags": [
+            "research_paper",
+            "open_source",
+            "hardware",
+            "policy"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-claude-sonnet-5-5-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 1,
+      "sourceCount": 1
+    },
+    {
+      "id": "deepseek-v4-flash-0731",
+      "fileSlug": "2026-11-13-deepseek-v4-flash-0731-release-brief",
+      "modelName": "DeepSeek V4 Flash 0731",
       "providerId": "deepseek",
       "providerName": "DeepSeek",
       "providerColour": "#2563eb",
@@ -2582,8 +2832,8 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "DeepSeek V4 Flash Vision Exp is a currently tracked release from DeepSeek. Auto-tracked from OpenRouter discovery (deepseek/deepseek-v4-flash-vision-exp); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "DeepSeek's DeepSeek V4 Flash Vision Exp is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "summary": "DeepSeek V4 Flash 0731 is a currently tracked release from DeepSeek. Auto-tracked from OpenRouter discovery (deepseek/deepseek-v4-flash-0731); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "DeepSeek's DeepSeek V4 Flash 0731 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -2596,22 +2846,22 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what DeepSeek actually launched with DeepSeek V4 Flash Vision Exp, and why it matters now.",
+        "Lead with the hook: what DeepSeek actually launched with DeepSeek V4 Flash 0731, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-13-deepseek-v4-flash-vision-exp-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-13-deepseek-v4-flash-0731-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
-      "id": "deepseek-v4-pro-0813",
-      "fileSlug": "2026-11-13-deepseek-v4-pro-0813-release-brief",
-      "modelName": "DeepSeek V4 Pro 0813",
+      "id": "deepseek-v4.1-flash",
+      "fileSlug": "2026-11-13-deepseek-v4-1-flash-release-brief",
+      "modelName": "DeepSeek V4.1 Flash",
       "providerId": "deepseek",
       "providerName": "DeepSeek",
       "providerColour": "#2563eb",
@@ -2655,8 +2905,8 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "DeepSeek V4 Pro 0813 is a currently tracked release from DeepSeek. Auto-tracked from OpenRouter discovery (deepseek/deepseek-v4-pro-0813); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "DeepSeek's DeepSeek V4 Pro 0813 is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "summary": "DeepSeek V4.1 Flash is a currently tracked release from DeepSeek. Auto-tracked from OpenRouter discovery (deepseek/deepseek-v4.1-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "DeepSeek's DeepSeek V4.1 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -2669,22 +2919,95 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what DeepSeek actually launched with DeepSeek V4 Pro 0813, and why it matters now.",
+        "Lead with the hook: what DeepSeek actually launched with DeepSeek V4.1 Flash, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-13-deepseek-v4-pro-0813-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-13-deepseek-v4-1-flash-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
-      "id": "gemini-omni-1.1-flash",
-      "fileSlug": "2026-11-13-gemini-omni-1-1-flash-release-brief",
-      "modelName": "Gemini Omni 1.1 Flash",
+      "id": "deepseek-v4.1-flash-1017",
+      "fileSlug": "2026-11-13-deepseek-v4-1-flash-1017-release-brief",
+      "modelName": "DeepSeek V4.1 Flash 1017",
+      "providerId": "deepseek",
+      "providerName": "DeepSeek",
+      "providerColour": "#2563eb",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.deepseek.com",
+      "providerDocsUrl": "https://api-docs.deepseek.com",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "DeepSeek V4.1 Flash 1017 is a currently tracked release from DeepSeek. Auto-tracked from OpenRouter discovery (deepseek/deepseek-v4.1-flash-1017); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "DeepSeek's DeepSeek V4.1 Flash 1017 is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what DeepSeek actually launched with DeepSeek V4.1 Flash 1017, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [],
+      "draftPath": "editorial/release-drafts/2026-11-13-deepseek-v4-1-flash-1017-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 0,
+      "sourceCount": 0
+    },
+    {
+      "id": "gemini-3.7-flash",
+      "fileSlug": "2026-11-13-gemini-3-7-flash-release-brief",
+      "modelName": "Gemini 3.7 Flash",
       "providerId": "google",
       "providerName": "Google",
       "providerColour": "#4285f4",
@@ -2728,8 +3051,8 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Gemini Omni 1.1 Flash is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-omni-1.1-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini Omni 1.1 Flash is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "summary": "Gemini 3.7 Flash is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-3.7-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Google's Gemini 3.7 Flash is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2742,7 +3065,259 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Google actually launched with Gemini Omni 1.1 Flash, and why it matters now.",
+        "Lead with the hook: what Google actually launched with Gemini 3.7 Flash, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Google Cloud launches Gemini for healthcare.",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+          "source": "Google",
+          "date": "2026-11-10",
+          "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
+          "routingTags": [
+            "model_release"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-gemini-3-7-flash-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 1,
+      "sourceCount": 1
+    },
+    {
+      "id": "gemini-3.8-flash",
+      "fileSlug": "2026-11-13-gemini-3-8-flash-release-brief",
+      "modelName": "Gemini 3.8 Flash",
+      "providerId": "google",
+      "providerName": "Google",
+      "providerColour": "#4285f4",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.cloud.google.com",
+      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Gemini 3.8 Flash is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-3.8-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Google's Gemini 3.8 Flash is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Google actually launched with Gemini 3.8 Flash, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Google Cloud launches Gemini for healthcare.",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+          "source": "Google",
+          "date": "2026-11-10",
+          "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
+          "routingTags": [
+            "model_release"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-gemini-3-8-flash-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 1,
+      "sourceCount": 1
+    },
+    {
+      "id": "gemini-4-carbon",
+      "fileSlug": "2026-11-13-gemini-4-carbon-release-brief",
+      "modelName": "Gemini 4 Carbon",
+      "providerId": "google",
+      "providerName": "Google",
+      "providerColour": "#4285f4",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.cloud.google.com",
+      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Gemini 4 Carbon is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-4-carbon); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Google's Gemini 4 Carbon is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Google actually launched with Gemini 4 Carbon, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Google Cloud launches Gemini for healthcare.",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+          "source": "Google",
+          "date": "2026-11-10",
+          "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
+          "routingTags": [
+            "model_release"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-gemini-4-carbon-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 1,
+      "sourceCount": 1
+    },
+    {
+      "id": "gemini-4-hydrogen",
+      "fileSlug": "2026-11-13-gemini-4-hydrogen-release-brief",
+      "modelName": "Gemini 4 Hydrogen",
+      "providerId": "google",
+      "providerName": "Google",
+      "providerColour": "#4285f4",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.cloud.google.com",
+      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Gemini 4 Hydrogen is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-4-hydrogen); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Google's Gemini 4 Hydrogen is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Google actually launched with Gemini 4 Hydrogen, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
@@ -2799,18 +3374,18 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-13-gemini-omni-1-1-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-13-gemini-4-hydrogen-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
-      "id": "gemini-omni-1.2-flash",
-      "fileSlug": "2026-11-13-gemini-omni-1-2-flash-release-brief",
-      "modelName": "Gemini Omni 1.2 Flash",
-      "providerId": "google",
-      "providerName": "Google",
-      "providerColour": "#4285f4",
+      "id": "glm-5.3",
+      "fileSlug": "2026-11-13-glm-5-3-release-brief",
+      "modelName": "GLM 5.3",
+      "providerId": "zhipu",
+      "providerName": "Zhipu AI",
+      "providerColour": "#00b4d8",
       "releaseDate": null,
       "releaseDateLabel": "Unknown",
       "ageDays": null,
@@ -2832,8 +3407,8 @@ export const modelReleaseDesk = {
       "priority": "backfill",
       "draftStatus": "watch_only",
       "officialUrl": null,
-      "providerStatusUrl": "https://status.cloud.google.com",
-      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
+      "providerStatusUrl": null,
+      "providerDocsUrl": "https://docs.bigmodel.cn/cn/guide/models/text/glm-5",
       "openSource": null,
       "openSourceState": "unverified",
       "apiAvailable": null,
@@ -2851,11 +3426,11 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Gemini Omni 1.2 Flash is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-omni-1.2-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini Omni 1.2 Flash is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "summary": "GLM 5.3 is a currently tracked release from Zhipu AI. Auto-tracked from OpenRouter discovery (z-ai/glm-5.3); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Zhipu AI's GLM 5.3 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Confirm the model exists using a model-level provider source before drafting any release claim.",
@@ -2865,67 +3440,90 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Google actually launched with Gemini Omni 1.2 Flash, and why it matters now.",
+        "Lead with the hook: what Zhipu AI actually launched with GLM 5.3, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Google’s new Gemini model is better at understanding complicated questions",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
-          "source": "The Verge",
-          "date": "2026-11-12",
-          "summary": "Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including \"questions with multiple parts, hard-to-understand typos, or highly specific requests.\" The new model can break down your questions and address each part in its responses. It's available starting today in search,…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google&#8217;s latest Search upgrade promises better answers to your most complicated questions",
-          "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
-          "source": "TechCrunch",
-          "date": "2026-11-12",
-          "summary": "Powered by Gemini 4 Hydrogen, Google's AI Mode is getting better at understanding complex queries, surfacing relevant links, and delivering richer visual responses.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
-          "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
-          "source": "Google",
-          "date": "2026-11-12",
-          "summary": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive responses.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google Cloud launches Gemini for healthcare.",
-          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
-          "source": "Google",
-          "date": "2026-11-10",
-          "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
-          "routingTags": [
-            "model_release"
-          ]
-        }
-      ],
-      "draftPath": "editorial/release-drafts/2026-11-13-gemini-omni-1-2-flash-release-brief.md",
+      "relatedStories": [],
+      "draftPath": "editorial/release-drafts/2026-11-13-glm-5-3-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 0,
+      "sourceCount": 0
+    },
+    {
+      "id": "glm-5.3-flash",
+      "fileSlug": "2026-11-13-glm-5-3-flash-release-brief",
+      "modelName": "GLM 5.3 Flash",
+      "providerId": "zhipu",
+      "providerName": "Zhipu AI",
+      "providerColour": "#00b4d8",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": null,
+      "providerDocsUrl": "https://docs.bigmodel.cn/cn/guide/models/text/glm-5",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "GLM 5.3 Flash is a currently tracked release from Zhipu AI. Auto-tracked from OpenRouter discovery (z-ai/glm-5.3-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Zhipu AI's GLM 5.3 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Zhipu AI actually launched with GLM 5.3 Flash, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [],
+      "draftPath": "editorial/release-drafts/2026-11-13-glm-5-3-flash-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 0,
+      "sourceCount": 0
     },
     {
       "id": "glm-5.3-prime",
@@ -3001,12 +3599,12 @@ export const modelReleaseDesk = {
       "sourceCount": 0
     },
     {
-      "id": "minimax-m3.1-flash",
-      "fileSlug": "2026-11-13-minimax-m3-1-flash-release-brief",
-      "modelName": "MiniMax M3.1 Flash",
-      "providerId": "minimax",
-      "providerName": "MiniMax",
-      "providerColour": "#e040fb",
+      "id": "gpt-6-astra",
+      "fileSlug": "2026-11-13-gpt-6-astra-release-brief",
+      "modelName": "GPT-6 Astra",
+      "providerId": "openai",
+      "providerName": "OpenAI",
+      "providerColour": "#10a37f",
       "releaseDate": null,
       "releaseDateLabel": "Unknown",
       "ageDays": null,
@@ -3028,8 +3626,8 @@ export const modelReleaseDesk = {
       "priority": "backfill",
       "draftStatus": "watch_only",
       "officialUrl": null,
-      "providerStatusUrl": null,
-      "providerDocsUrl": "https://platform.minimaxi.com/docs/api-reference/api-overview",
+      "providerStatusUrl": "https://status.openai.com",
+      "providerDocsUrl": "https://platform.openai.com/docs/models",
       "openSource": null,
       "openSourceState": "unverified",
       "apiAvailable": null,
@@ -3047,300 +3645,8 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "MiniMax M3.1 Flash is a currently tracked release from MiniMax. Auto-tracked from OpenRouter discovery (minimax/minimax-m3.1-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "MiniMax's MiniMax M3.1 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
-      ],
-      "checklist": [
-        "Confirm the model exists using a model-level provider source before drafting any release claim.",
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what MiniMax actually launched with MiniMax M3.1 Flash, and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-13-minimax-m3-1-flash-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 0
-    },
-    {
-      "id": "muse-spark-1.2-contributor",
-      "fileSlug": "2026-11-13-muse-spark-1-2-contributor-release-brief",
-      "modelName": "Muse Spark 1.2 Contributor",
-      "providerId": "meta",
-      "providerName": "Meta",
-      "providerColour": "#0a66ff",
-      "releaseDate": null,
-      "releaseDateLabel": "Unknown",
-      "ageDays": null,
-      "status": null,
-      "fieldStates": {
-        "released": "unverified",
-        "context_window": "unverified",
-        "max_output": "unverified",
-        "open_source": "unverified",
-        "modality": "unverified",
-        "api_available": "unverified",
-        "status": "unverified",
-        "category": "unverified",
-        "input_price": "unverified",
-        "output_price": "unverified",
-        "cached_input_price": "unverified"
-      },
-      "verificationState": "discovery_only",
-      "priority": "backfill",
-      "draftStatus": "watch_only",
-      "officialUrl": null,
-      "providerStatusUrl": null,
-      "providerDocsUrl": "https://llama.meta.com/docs",
-      "openSource": null,
-      "openSourceState": "unverified",
-      "apiAvailable": null,
-      "apiAvailableState": "unverified",
-      "modality": null,
-      "contextWindow": null,
-      "contextWindowState": "unverified",
-      "maxOutput": null,
-      "maxOutputState": "unverified",
-      "qualityScore": null,
-      "qualityScoreState": "suppressed_untraceable",
-      "inputPrice": null,
-      "inputPriceState": "unverified",
-      "outputPrice": null,
-      "outputPriceState": "unverified",
-      "pricingSource": null,
-      "pricingUpdated": null,
-      "summary": "Muse Spark 1.2 Contributor is a currently tracked release from Meta. Auto-tracked from OpenRouter discovery (meta/muse-spark-1.2-contributor); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Meta's Muse Spark 1.2 Contributor is on the release desk with 0 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
-      ],
-      "checklist": [
-        "Confirm the model exists using a model-level provider source before drafting any release claim.",
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what Meta actually launched with Muse Spark 1.2 Contributor, and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-13-muse-spark-1-2-contributor-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 0
-    },
-    {
-      "id": "muse-spark-1.3-contributor",
-      "fileSlug": "2026-11-13-muse-spark-1-3-contributor-release-brief",
-      "modelName": "Muse Spark 1.3 Contributor",
-      "providerId": "meta",
-      "providerName": "Meta",
-      "providerColour": "#0a66ff",
-      "releaseDate": null,
-      "releaseDateLabel": "Unknown",
-      "ageDays": null,
-      "status": null,
-      "fieldStates": {
-        "released": "unverified",
-        "context_window": "unverified",
-        "max_output": "unverified",
-        "open_source": "unverified",
-        "modality": "unverified",
-        "api_available": "unverified",
-        "status": "unverified",
-        "category": "unverified",
-        "input_price": "unverified",
-        "output_price": "unverified",
-        "cached_input_price": "unverified"
-      },
-      "verificationState": "discovery_only",
-      "priority": "backfill",
-      "draftStatus": "watch_only",
-      "officialUrl": null,
-      "providerStatusUrl": null,
-      "providerDocsUrl": "https://llama.meta.com/docs",
-      "openSource": null,
-      "openSourceState": "unverified",
-      "apiAvailable": null,
-      "apiAvailableState": "unverified",
-      "modality": null,
-      "contextWindow": null,
-      "contextWindowState": "unverified",
-      "maxOutput": null,
-      "maxOutputState": "unverified",
-      "qualityScore": null,
-      "qualityScoreState": "suppressed_untraceable",
-      "inputPrice": null,
-      "inputPriceState": "unverified",
-      "outputPrice": null,
-      "outputPriceState": "unverified",
-      "pricingSource": null,
-      "pricingUpdated": null,
-      "summary": "Muse Spark 1.3 Contributor is a currently tracked release from Meta. Auto-tracked from OpenRouter discovery (meta/muse-spark-1.3-contributor); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Meta's Muse Spark 1.3 Contributor is on the release desk with 0 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
-      ],
-      "checklist": [
-        "Confirm the model exists using a model-level provider source before drafting any release claim.",
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what Meta actually launched with Muse Spark 1.3 Contributor, and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-13-muse-spark-1-3-contributor-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 0
-    },
-    {
-      "id": "muse-spark-open",
-      "fileSlug": "2026-11-13-muse-spark-open-release-brief",
-      "modelName": "Muse Spark Open",
-      "providerId": "meta",
-      "providerName": "Meta",
-      "providerColour": "#0a66ff",
-      "releaseDate": null,
-      "releaseDateLabel": "Unknown",
-      "ageDays": null,
-      "status": null,
-      "fieldStates": {
-        "released": "unverified",
-        "context_window": "unverified",
-        "max_output": "unverified",
-        "open_source": "unverified",
-        "modality": "unverified",
-        "api_available": "unverified",
-        "status": "unverified",
-        "category": "unverified",
-        "input_price": "unverified",
-        "output_price": "unverified",
-        "cached_input_price": "unverified"
-      },
-      "verificationState": "discovery_only",
-      "priority": "backfill",
-      "draftStatus": "watch_only",
-      "officialUrl": null,
-      "providerStatusUrl": null,
-      "providerDocsUrl": "https://llama.meta.com/docs",
-      "openSource": null,
-      "openSourceState": "unverified",
-      "apiAvailable": null,
-      "apiAvailableState": "unverified",
-      "modality": null,
-      "contextWindow": null,
-      "contextWindowState": "unverified",
-      "maxOutput": null,
-      "maxOutputState": "unverified",
-      "qualityScore": null,
-      "qualityScoreState": "suppressed_untraceable",
-      "inputPrice": null,
-      "inputPriceState": "unverified",
-      "outputPrice": null,
-      "outputPriceState": "unverified",
-      "pricingSource": null,
-      "pricingUpdated": null,
-      "summary": "Muse Spark Open is a currently tracked release from Meta. Auto-tracked from OpenRouter discovery (meta/muse-spark-open); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Meta's Muse Spark Open is on the release desk with 0 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
-      ],
-      "checklist": [
-        "Confirm the model exists using a model-level provider source before drafting any release claim.",
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what Meta actually launched with Muse Spark Open, and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-13-muse-spark-open-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 0
-    },
-    {
-      "id": "gemini-nano-banana-2.1",
-      "fileSlug": "2026-11-13-nano-banana-2-1-release-brief",
-      "modelName": "Nano Banana 2.1",
-      "providerId": "google",
-      "providerName": "Google",
-      "providerColour": "#4285f4",
-      "releaseDate": null,
-      "releaseDateLabel": "Unknown",
-      "ageDays": null,
-      "status": null,
-      "fieldStates": {
-        "released": "unverified",
-        "context_window": "unverified",
-        "max_output": "unverified",
-        "open_source": "unverified",
-        "modality": "unverified",
-        "api_available": "unverified",
-        "status": "unverified",
-        "category": "unverified",
-        "input_price": "unverified",
-        "output_price": "unverified",
-        "cached_input_price": "unverified"
-      },
-      "verificationState": "discovery_only",
-      "priority": "backfill",
-      "draftStatus": "watch_only",
-      "officialUrl": null,
-      "providerStatusUrl": "https://status.cloud.google.com",
-      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
-      "openSource": null,
-      "openSourceState": "unverified",
-      "apiAvailable": null,
-      "apiAvailableState": "unverified",
-      "modality": null,
-      "contextWindow": null,
-      "contextWindowState": "unverified",
-      "maxOutput": null,
-      "maxOutputState": "unverified",
-      "qualityScore": null,
-      "qualityScoreState": "suppressed_untraceable",
-      "inputPrice": null,
-      "inputPriceState": "unverified",
-      "outputPrice": null,
-      "outputPriceState": "unverified",
-      "pricingSource": null,
-      "pricingUpdated": null,
-      "summary": "Nano Banana 2.1 is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-nano-banana-2.1); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Nano Banana 2.1 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "summary": "GPT-6 Astra is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-astra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "OpenAI's GPT-6 Astra is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3353,7 +3659,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Google actually launched with Nano Banana 2.1, and why it matters now.",
+        "Lead with the hook: what OpenAI actually launched with GPT-6 Astra, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
@@ -3361,67 +3667,38 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Google’s new Gemini model is better at understanding complicated questions",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
-          "source": "The Verge",
-          "date": "2026-11-12",
-          "summary": "Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including \"questions with multiple parts, hard-to-understand typos, or highly specific requests.\" The new model can break down your questions and address each part in its responses. It's available starting today in search,…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google&#8217;s latest Search upgrade promises better answers to your most complicated questions",
-          "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
-          "source": "TechCrunch",
-          "date": "2026-11-12",
-          "summary": "Powered by Gemini 4 Hydrogen, Google's AI Mode is getting better at understanding complex queries, surfacing relevant links, and delivering richer visual responses.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
-          "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
-          "source": "Google",
-          "date": "2026-11-12",
-          "summary": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive responses.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google Cloud launches Gemini for healthcare.",
-          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
-          "source": "Google",
+          "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+          "url": "https://openai.com/index/singapore-airlines-travel-work",
+          "source": "OpenAI",
           "date": "2026-11-10",
-          "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
+          "summary": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
           "routingTags": [
-            "model_release"
+            "api_update"
+          ]
+        },
+        {
+          "title": "Kuken Industries searches 70 years of drawings in minutes",
+          "url": "https://openai.com/index/kuken",
+          "source": "OpenAI",
+          "date": "2026-11-09",
+          "summary": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
+          "routingTags": [
+            "api_update"
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-13-nano-banana-2-1-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-13-gpt-6-astra-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 2,
+      "sourceCount": 2
     },
     {
-      "id": "nemotron-3.5-lightning",
-      "fileSlug": "2026-11-13-nemotron-3-5-lightning-release-brief",
-      "modelName": "Nemotron 3.5 Lightning",
-      "providerId": "nvidia",
-      "providerName": "NVIDIA",
-      "providerColour": "#76b900",
+      "id": "gpt-6-astra-pro",
+      "fileSlug": "2026-11-13-gpt-6-astra-pro-release-brief",
+      "modelName": "GPT-6 Astra Pro",
+      "providerId": "openai",
+      "providerName": "OpenAI",
+      "providerColour": "#10a37f",
       "releaseDate": null,
       "releaseDateLabel": "Unknown",
       "ageDays": null,
@@ -3443,8 +3720,8 @@ export const modelReleaseDesk = {
       "priority": "backfill",
       "draftStatus": "watch_only",
       "officialUrl": null,
-      "providerStatusUrl": null,
-      "providerDocsUrl": "https://docs.api.nvidia.com",
+      "providerStatusUrl": "https://status.openai.com",
+      "providerDocsUrl": "https://platform.openai.com/docs/models",
       "openSource": null,
       "openSourceState": "unverified",
       "apiAvailable": null,
@@ -3462,8 +3739,8 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Nemotron 3.5 Lightning is a currently tracked release from NVIDIA. Auto-tracked from OpenRouter discovery (nvidia/nemotron-3.5-lightning); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "NVIDIA's Nemotron 3.5 Lightning is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "summary": "GPT-6 Astra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-astra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "OpenAI's GPT-6 Astra Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3476,7 +3753,7 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what NVIDIA actually launched with Nemotron 3.5 Lightning, and why it matters now.",
+        "Lead with the hook: what OpenAI actually launched with GPT-6 Astra Pro, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
@@ -3484,66 +3761,38 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "Democrats launch Nvidia investigation, write scathing letter on Huang&#8217;s &#8216;scheme&#8217; with Trump",
-          "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
-          "source": "TechCrunch",
-          "date": "2026-11-12",
-          "summary": "This Congressional investigation into Nvidia's China sales and its dealings with Trump is the second one, so far, since news of the alleged spy affair broke.",
+          "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+          "url": "https://openai.com/index/singapore-airlines-travel-work",
+          "source": "OpenAI",
+          "date": "2026-11-10",
+          "summary": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
           "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release",
-            "hardware"
+            "api_update"
           ]
         },
         {
-          "title": "Jensen Huang’s exit puts Nvidia’s support for open source in question",
-          "url": "https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/",
-          "source": "TechCrunch",
-          "date": "2026-11-12",
-          "summary": "Jensen Huang's resignation raises questions about Nvidia's commitment to open source AI, including its Hugging Face acquisition, open-weight models, and advocacy against restrictions, as the company navigates a leadership transition.",
+          "title": "Kuken Industries searches 70 years of drawings in minutes",
+          "url": "https://openai.com/index/kuken",
+          "source": "OpenAI",
+          "date": "2026-11-09",
+          "summary": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
           "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "hardware",
-            "open_source"
-          ]
-        },
-        {
-          "title": "Hugging Face CEO vows to keep fighting for open source AI after Jensen Huang&#8217;s exit",
-          "url": "https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit/",
-          "source": "TechCrunch",
-          "date": "2026-11-12",
-          "summary": "Hugging Face's CEO pledged to keep fighting for open source AI after Huang's exit, raising questions about Nvidia's $12.9 billion acquisition.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "hardware",
-            "open_source"
+            "api_update"
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-13-nemotron-3-5-lightning-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-13-gpt-6-astra-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 3
+      "storyCount": 2,
+      "sourceCount": 2
     },
     {
-      "id": "qwen3.7-flash",
-      "fileSlug": "2026-11-13-qwen3-7-flash-release-brief",
-      "modelName": "Qwen3.7 Flash",
-      "providerId": "alibaba",
-      "providerName": "Alibaba",
-      "providerColour": "#ff6a00",
+      "id": "gpt-6-luna",
+      "fileSlug": "2026-11-13-gpt-6-luna-release-brief",
+      "modelName": "GPT-6 Luna",
+      "providerId": "openai",
+      "providerName": "OpenAI",
+      "providerColour": "#10a37f",
       "releaseDate": null,
       "releaseDateLabel": "Unknown",
       "ageDays": null,
@@ -3565,8 +3814,8 @@ export const modelReleaseDesk = {
       "priority": "backfill",
       "draftStatus": "watch_only",
       "officialUrl": null,
-      "providerStatusUrl": null,
-      "providerDocsUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "providerStatusUrl": "https://status.openai.com",
+      "providerDocsUrl": "https://platform.openai.com/docs/models",
       "openSource": null,
       "openSourceState": "unverified",
       "apiAvailable": null,
@@ -3584,8 +3833,760 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Qwen3.7 Flash is a currently tracked release from Alibaba. Auto-tracked from OpenRouter discovery (qwen/qwen3.7-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Alibaba's Qwen3.7 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "summary": "GPT-6 Luna is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-luna); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "OpenAI's GPT-6 Luna is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-6 Luna, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+          "url": "https://openai.com/index/singapore-airlines-travel-work",
+          "source": "OpenAI",
+          "date": "2026-11-10",
+          "summary": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
+          "routingTags": [
+            "api_update"
+          ]
+        },
+        {
+          "title": "Kuken Industries searches 70 years of drawings in minutes",
+          "url": "https://openai.com/index/kuken",
+          "source": "OpenAI",
+          "date": "2026-11-09",
+          "summary": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
+          "routingTags": [
+            "api_update"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-gpt-6-luna-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 2,
+      "sourceCount": 2
+    },
+    {
+      "id": "gpt-6-luna-pro",
+      "fileSlug": "2026-11-13-gpt-6-luna-pro-release-brief",
+      "modelName": "GPT-6 Luna Pro",
+      "providerId": "openai",
+      "providerName": "OpenAI",
+      "providerColour": "#10a37f",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.openai.com",
+      "providerDocsUrl": "https://platform.openai.com/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "GPT-6 Luna Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-luna-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "OpenAI's GPT-6 Luna Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-6 Luna Pro, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+          "url": "https://openai.com/index/singapore-airlines-travel-work",
+          "source": "OpenAI",
+          "date": "2026-11-10",
+          "summary": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
+          "routingTags": [
+            "api_update"
+          ]
+        },
+        {
+          "title": "Kuken Industries searches 70 years of drawings in minutes",
+          "url": "https://openai.com/index/kuken",
+          "source": "OpenAI",
+          "date": "2026-11-09",
+          "summary": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
+          "routingTags": [
+            "api_update"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-gpt-6-luna-pro-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 2,
+      "sourceCount": 2
+    },
+    {
+      "id": "gpt-6-sol",
+      "fileSlug": "2026-11-13-gpt-6-sol-release-brief",
+      "modelName": "GPT-6 Sol",
+      "providerId": "openai",
+      "providerName": "OpenAI",
+      "providerColour": "#10a37f",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.openai.com",
+      "providerDocsUrl": "https://platform.openai.com/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "GPT-6 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "OpenAI's GPT-6 Sol is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-6 Sol, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+          "url": "https://openai.com/index/singapore-airlines-travel-work",
+          "source": "OpenAI",
+          "date": "2026-11-10",
+          "summary": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
+          "routingTags": [
+            "api_update"
+          ]
+        },
+        {
+          "title": "Kuken Industries searches 70 years of drawings in minutes",
+          "url": "https://openai.com/index/kuken",
+          "source": "OpenAI",
+          "date": "2026-11-09",
+          "summary": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
+          "routingTags": [
+            "api_update"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-gpt-6-sol-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 2,
+      "sourceCount": 2
+    },
+    {
+      "id": "gpt-6-sol-pro",
+      "fileSlug": "2026-11-13-gpt-6-sol-pro-release-brief",
+      "modelName": "GPT-6 Sol Pro",
+      "providerId": "openai",
+      "providerName": "OpenAI",
+      "providerColour": "#10a37f",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.openai.com",
+      "providerDocsUrl": "https://platform.openai.com/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "GPT-6 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "OpenAI's GPT-6 Sol Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-6 Sol Pro, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+          "url": "https://openai.com/index/singapore-airlines-travel-work",
+          "source": "OpenAI",
+          "date": "2026-11-10",
+          "summary": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
+          "routingTags": [
+            "api_update"
+          ]
+        },
+        {
+          "title": "Kuken Industries searches 70 years of drawings in minutes",
+          "url": "https://openai.com/index/kuken",
+          "source": "OpenAI",
+          "date": "2026-11-09",
+          "summary": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
+          "routingTags": [
+            "api_update"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-gpt-6-sol-pro-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 2,
+      "sourceCount": 2
+    },
+    {
+      "id": "gpt-6.1-sol",
+      "fileSlug": "2026-11-13-gpt-6-1-sol-release-brief",
+      "modelName": "GPT-6.1 Sol",
+      "providerId": "openai",
+      "providerName": "OpenAI",
+      "providerColour": "#10a37f",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.openai.com",
+      "providerDocsUrl": "https://platform.openai.com/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "GPT-6.1 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "OpenAI's GPT-6.1 Sol is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-6.1 Sol, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+          "url": "https://openai.com/index/singapore-airlines-travel-work",
+          "source": "OpenAI",
+          "date": "2026-11-10",
+          "summary": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
+          "routingTags": [
+            "api_update"
+          ]
+        },
+        {
+          "title": "Kuken Industries searches 70 years of drawings in minutes",
+          "url": "https://openai.com/index/kuken",
+          "source": "OpenAI",
+          "date": "2026-11-09",
+          "summary": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
+          "routingTags": [
+            "api_update"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-gpt-6-1-sol-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 2,
+      "sourceCount": 2
+    },
+    {
+      "id": "gpt-6.1-sol-pro",
+      "fileSlug": "2026-11-13-gpt-6-1-sol-pro-release-brief",
+      "modelName": "GPT-6.1 Sol Pro",
+      "providerId": "openai",
+      "providerName": "OpenAI",
+      "providerColour": "#10a37f",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.openai.com",
+      "providerDocsUrl": "https://platform.openai.com/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "GPT-6.1 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "OpenAI's GPT-6.1 Sol Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-6.1 Sol Pro, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+          "url": "https://openai.com/index/singapore-airlines-travel-work",
+          "source": "OpenAI",
+          "date": "2026-11-10",
+          "summary": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
+          "routingTags": [
+            "api_update"
+          ]
+        },
+        {
+          "title": "Kuken Industries searches 70 years of drawings in minutes",
+          "url": "https://openai.com/index/kuken",
+          "source": "OpenAI",
+          "date": "2026-11-09",
+          "summary": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
+          "routingTags": [
+            "api_update"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-gpt-6-1-sol-pro-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 2,
+      "sourceCount": 2
+    },
+    {
+      "id": "gpt-6.1-terra",
+      "fileSlug": "2026-11-13-gpt-6-1-terra-release-brief",
+      "modelName": "GPT-6.1 Terra",
+      "providerId": "openai",
+      "providerName": "OpenAI",
+      "providerColour": "#10a37f",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.openai.com",
+      "providerDocsUrl": "https://platform.openai.com/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "GPT-6.1 Terra is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-terra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "OpenAI's GPT-6.1 Terra is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-6.1 Terra, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+          "url": "https://openai.com/index/singapore-airlines-travel-work",
+          "source": "OpenAI",
+          "date": "2026-11-10",
+          "summary": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
+          "routingTags": [
+            "api_update"
+          ]
+        },
+        {
+          "title": "Kuken Industries searches 70 years of drawings in minutes",
+          "url": "https://openai.com/index/kuken",
+          "source": "OpenAI",
+          "date": "2026-11-09",
+          "summary": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
+          "routingTags": [
+            "api_update"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-gpt-6-1-terra-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 2,
+      "sourceCount": 2
+    },
+    {
+      "id": "gpt-6.1-terra-pro",
+      "fileSlug": "2026-11-13-gpt-6-1-terra-pro-release-brief",
+      "modelName": "GPT-6.1 Terra Pro",
+      "providerId": "openai",
+      "providerName": "OpenAI",
+      "providerColour": "#10a37f",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.openai.com",
+      "providerDocsUrl": "https://platform.openai.com/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "GPT-6.1 Terra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-terra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "OpenAI's GPT-6.1 Terra Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-6.1 Terra Pro, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+          "url": "https://openai.com/index/singapore-airlines-travel-work",
+          "source": "OpenAI",
+          "date": "2026-11-10",
+          "summary": "Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.",
+          "routingTags": [
+            "api_update"
+          ]
+        },
+        {
+          "title": "Kuken Industries searches 70 years of drawings in minutes",
+          "url": "https://openai.com/index/kuken",
+          "source": "OpenAI",
+          "date": "2026-11-09",
+          "summary": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
+          "routingTags": [
+            "api_update"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-13-gpt-6-1-terra-pro-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 2,
+      "sourceCount": 2
+    },
+    {
+      "id": "grok-4.6",
+      "fileSlug": "2026-11-13-grok-4-6-release-brief",
+      "modelName": "Grok 4.6",
+      "providerId": "xai",
+      "providerName": "xAI",
+      "providerColour": "#1da1f2",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.x.ai",
+      "providerDocsUrl": "https://docs.x.ai/developers/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Grok 4.6 is a currently tracked release from xAI. Auto-tracked from OpenRouter discovery (x-ai/grok-4.6); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "xAI's Grok 4.6 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -3598,22 +4599,314 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Alibaba actually launched with Qwen3.7 Flash, and why it matters now.",
+        "Lead with the hook: what xAI actually launched with Grok 4.6, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-13-qwen3-7-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-13-grok-4-6-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
-      "id": "qwen3.8-2.4t-a95b",
-      "fileSlug": "2026-11-13-qwen3-8-2-4t-a95b-release-brief",
-      "modelName": "Qwen3.8 2.4T A95B",
+      "id": "grok-4.7",
+      "fileSlug": "2026-11-13-grok-4-7-release-brief",
+      "modelName": "Grok 4.7",
+      "providerId": "xai",
+      "providerName": "xAI",
+      "providerColour": "#1da1f2",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.x.ai",
+      "providerDocsUrl": "https://docs.x.ai/developers/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Grok 4.7 is a currently tracked release from xAI. Auto-tracked from OpenRouter discovery (x-ai/grok-4.7); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "xAI's Grok 4.7 is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what xAI actually launched with Grok 4.7, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [],
+      "draftPath": "editorial/release-drafts/2026-11-13-grok-4-7-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 0,
+      "sourceCount": 0
+    },
+    {
+      "id": "kimi-k3",
+      "fileSlug": "2026-11-13-kimi-k3-release-brief",
+      "modelName": "Kimi K3",
+      "providerId": "moonshot",
+      "providerName": "Moonshot AI",
+      "providerColour": "#f59e0b",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": null,
+      "providerDocsUrl": "https://platform.moonshot.ai/docs/pricing/tools.en-US",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Kimi K3 is a currently tracked release from Moonshot AI. Auto-tracked from OpenRouter discovery (moonshotai/kimi-k3); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Moonshot AI's Kimi K3 is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Moonshot AI actually launched with Kimi K3, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [],
+      "draftPath": "editorial/release-drafts/2026-11-13-kimi-k3-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 0,
+      "sourceCount": 0
+    },
+    {
+      "id": "kimi-k3.1-pro",
+      "fileSlug": "2026-11-13-kimi-k3-1-pro-release-brief",
+      "modelName": "Kimi K3.1 Pro",
+      "providerId": "moonshot",
+      "providerName": "Moonshot AI",
+      "providerColour": "#f59e0b",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": null,
+      "providerDocsUrl": "https://platform.moonshot.ai/docs/pricing/tools.en-US",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Kimi K3.1 Pro is a currently tracked release from Moonshot AI. Auto-tracked from OpenRouter discovery (moonshotai/kimi-k3.1-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Moonshot AI's Kimi K3.1 Pro is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Moonshot AI actually launched with Kimi K3.1 Pro, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [],
+      "draftPath": "editorial/release-drafts/2026-11-13-kimi-k3-1-pro-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 0,
+      "sourceCount": 0
+    },
+    {
+      "id": "muse-glimmer-30b",
+      "fileSlug": "2026-11-13-muse-glimmer-30b-release-brief",
+      "modelName": "Muse Glimmer 30B",
+      "providerId": "meta",
+      "providerName": "Meta",
+      "providerColour": "#0a66ff",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": null,
+      "providerDocsUrl": "https://llama.meta.com/docs",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Muse Glimmer 30B is a currently tracked release from Meta. Auto-tracked from OpenRouter discovery (meta/muse-glimmer-30b); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Meta's Muse Glimmer 30B is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Meta actually launched with Muse Glimmer 30B, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [],
+      "draftPath": "editorial/release-drafts/2026-11-13-muse-glimmer-30b-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 0,
+      "sourceCount": 0
+    },
+    {
+      "id": "qwen3.8-27b",
+      "fileSlug": "2026-11-13-qwen3-8-27b-release-brief",
+      "modelName": "Qwen3.8 27B",
       "providerId": "alibaba",
       "providerName": "Alibaba",
       "providerColour": "#ff6a00",
@@ -3657,8 +4950,8 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "Qwen3.8 2.4T A95B is a currently tracked release from Alibaba. Auto-tracked from OpenRouter discovery (qwen/qwen3.8-2.4t-a95b); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Alibaba's Qwen3.8 2.4T A95B is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "summary": "Qwen3.8 27B is a currently tracked release from Alibaba. Auto-tracked from OpenRouter discovery (qwen/qwen3.8-27b); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Alibaba's Qwen3.8 27B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
@@ -3671,14 +4964,87 @@ export const modelReleaseDesk = {
         "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
       ],
       "threadPlan": [
-        "Lead with the hook: what Alibaba actually launched with Qwen3.8 2.4T A95B, and why it matters now.",
+        "Lead with the hook: what Alibaba actually launched with Qwen3.8 27B, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
         "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-13-qwen3-8-2-4t-a95b-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-13-qwen3-8-27b-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 0,
+      "sourceCount": 0
+    },
+    {
+      "id": "qwen3.8-max-0902",
+      "fileSlug": "2026-11-13-qwen3-8-max-0902-release-brief",
+      "modelName": "Qwen3.8 Max (0902)",
+      "providerId": "alibaba",
+      "providerName": "Alibaba",
+      "providerColour": "#ff6a00",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": null,
+      "providerDocsUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Qwen3.8 Max (0902) is a currently tracked release from Alibaba. Auto-tracked from OpenRouter discovery (qwen/qwen3.8-max-0902); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Alibaba's Qwen3.8 Max (0902) is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Alibaba actually launched with Qwen3.8 Max (0902), and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [],
+      "draftPath": "editorial/release-drafts/2026-11-13-qwen3-8-max-0902-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
