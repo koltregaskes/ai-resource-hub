@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T09:43:13.022Z",
+  "generatedAt": "2026-11-13T10:55:36.220Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T09:43:13.016Z",
+      "lastCheckedAt": "2026-11-13T10:55:36.216Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,15 +100,23 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T09:43:11.209Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
-      "summary": "1 active incident across 10 tracked components.",
+      "lastCheckedAt": "2026-11-13T10:55:34.352Z",
+      "overallStatus": "partial_outage",
+      "overallLabel": "Partial System Outage",
+      "summary": "2 active incidents across 10 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "degraded_performance"
+          "status": "major_outage"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Claude Code",
+          "status": "partial_outage"
         },
         {
           "name": "Claude Cowork",
@@ -119,19 +127,22 @@
           "status": "operational"
         },
         {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
-        },
-        {
           "name": "Claude in Microsoft Foundry",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
           "status": "operational"
         }
       ],
       "activeIncidents": [
+        {
+          "id": "nn11wk485zfn",
+          "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-11-13T09:58:58.057Z",
+          "updatedAt": "2026-11-13T09:58:58.258Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/6kqyd0c5b1gr",
+          "summary": "We are investigating an issue with users authenticating to Claude.ai and Claude Code. We will provide an update as soon as possible."
+        },
         {
           "id": "sqn3fg1l96dl",
           "title": "Elevated errors affecting the Microsoft 365 connector",
@@ -145,6 +156,17 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "nn11wk485zfn",
+          "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-11-13T09:58:58.057Z",
+          "updatedAt": "2026-11-13T09:58:58.258Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/6kqyd0c5b1gr",
+          "summary": "We are investigating an issue with users authenticating to Claude.ai and Claude Code. We will provide an update as soon as possible."
+        },
         {
           "id": "sqn3fg1l96dl",
           "title": "Elevated errors affecting the Microsoft 365 connector",
@@ -177,17 +199,6 @@
           "resolvedAt": "2026-11-08T08:54:43.667Z",
           "url": "https://stspg.io/3m3q1nwb142k",
           "summary": "The issue affecting claude.ai, the Claude API, Claude Code, and Claude Cowork has been resolved. Impact occurred from 00:18 PT / 08:18 UTC on Nov 8 to 00:32 PT / 08:32 UTC on Nov..."
-        },
-        {
-          "id": "phg1y2yh07n2",
-          "title": "Elevated errors affecting the Google Calendar connector",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-10-28T16:19:09.946Z",
-          "updatedAt": "2026-10-28T20:05:18.230Z",
-          "resolvedAt": "2026-10-28T20:05:18.208Z",
-          "url": "https://stspg.io/75qq31h8672d",
-          "summary": "The issue affecting the Google Calendar connector on claude.ai, Claude Code, and Claude Cowork has been resolved. Impact occurred from 04:07 PT / 11:07 UTC on October 26 to 11:52..."
         }
       ]
     },
@@ -202,7 +213,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T09:43:11.219Z",
+      "lastCheckedAt": "2026-11-13T10:55:34.369Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -299,7 +310,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T09:43:11.844Z",
+      "lastCheckedAt": "2026-11-13T10:55:35.257Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +330,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T09:43:11.278Z",
+      "lastCheckedAt": "2026-11-13T10:55:34.848Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -362,7 +373,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T09:43:12.021Z",
+      "lastCheckedAt": "2026-11-13T10:55:35.460Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -386,7 +397,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
