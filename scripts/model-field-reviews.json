@@ -2251,5 +2251,540 @@
         "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
       }
     }
+  },
+  {
+    "id": "minimax-m3.1-flash",
+    "fields": {
+      "name": {
+        "value": "MiniMax M3.1 Flash",
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "minimax",
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": "2026-10-19",
+        "verification": "verified",
+        "sourceUrl": "https://www.minimax.io/blog/minimax-m31f",
+        "checkedAt": "2026-11-13"
+      },
+      "contextWindow": {
+        "value": 1000000,
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13"
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13",
+        "reason": "No maximum output or lifecycle status is explicitly stated."
+      },
+      "modality": {
+        "value": "text,vision,video",
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13"
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13",
+        "reason": "No maximum output or lifecycle status is explicitly stated."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 0.15,
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/pricing/overview",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 0.6,
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/pricing/overview",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.015,
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/pricing/overview",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/pricing/overview",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/pricing/overview",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13",
+        "reason": "No maximum output or lifecycle status is explicitly stated."
+      }
+    }
+  },
+  {
+    "id": "gemini-nano-banana-2.1",
+    "fields": {
+      "name": {
+        "value": "Nano Banana 2.1",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "google",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact combined context or release date is stated. The model card publication date is not treated as release. Output has separate text and image rates, so a single output price is not set."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact combined context or release date is stated. The model card publication date is not treated as release. Output has separate text and image rates, so a single output price is not set."
+      },
+      "maxOutput": {
+        "value": 32768,
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "modality": {
+        "value": "text,vision,video,image",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact combined context or release date is stated. The model card publication date is not treated as release. Output has separate text and image rates, so a single output price is not set."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": "active",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "category": {
+        "value": "image",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 1.5,
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing#gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact combined context or release date is stated. The model card publication date is not treated as release. Output has separate text and image rates, so a single output price is not set."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact combined context or release date is stated. The model card publication date is not treated as release. Output has separate text and image rates, so a single output price is not set."
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing#gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing#gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "Standard API: input $1.50; text/thinking output $7.50 and image output $30 per million tokens. Image costs vary with resolution. API input limit 131072 is not a combined context window.",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing#gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "qwen3.7-flash",
+    "fields": {
+      "name": {
+        "value": "Qwen3.7 Flash",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "alibaba",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "No release date, licence or lifecycle state is stated. Updated at is not a release date."
+      },
+      "contextWindow": {
+        "value": 1000000,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "maxOutput": {
+        "value": 131072,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "modality": {
+        "value": "text,vision,video",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "No release date, licence or lifecycle state is stated. Updated at is not a release date."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "No release date, licence or lifecycle state is stated. Updated at is not a release date."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 0.028,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 0.11,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.006,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "China (Beijing), input up to 32K, implicit cached input; other input tiers and regions differ.",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "qwen3.8-2.4t-a95b",
+    "fields": {
+      "name": {
+        "value": "Qwen3.8 2.4T A95B",
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "alibaba",
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13",
+        "reason": "Release month only, not an exact day. Context differs between the managed service and native checkpoint; no single deployment-independent value is set. No lifecycle state is stated."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13",
+        "reason": "Release month only, not an exact day. Context differs between the managed service and native checkpoint; no single deployment-independent value is set. No lifecycle state is stated."
+      },
+      "maxOutput": {
+        "value": 131072,
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "modality": {
+        "value": "text",
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13",
+        "reason": "Release month only, not an exact day. Context differs between the managed service and native checkpoint; no single deployment-independent value is set. No lifecycle state is stated."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 12,
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 36,
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 1.5,
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "CNY",
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "China (Beijing), implicit cache-hit price. Managed context is 1000000; native checkpoint context is 262144, extensible to 1010000. These deployment scopes must not be conflated.",
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "qwen3.8-max-prime",
+    "fields": {
+      "name": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "providerId": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "modality": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "apiAvailable": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "category": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "currency": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "pricingUnit": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      }
+    }
   }
 ]
