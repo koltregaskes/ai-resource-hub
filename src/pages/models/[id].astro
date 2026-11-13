@@ -54,21 +54,23 @@ const statusLabel = model.status === 'preview'
 // Computed values
 const inputPrice = model.input_price;
 const outputPrice = model.output_price;
-const blendedCostPer1M = (inputPrice + 3 * outputPrice) / 4;
-const modalities = model.modality.split(',').map((m: string) => m.trim());
+const blendedCostPer1M = inputPrice == null || outputPrice == null ? null : (inputPrice + 3 * outputPrice) / 4;
+const modalities = (model.modality ?? '').split(',').map((m: string) => m.trim());
 const releaseDateFormatted = model.released
   ? new Date(model.released).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
   : 'Unknown';
 
 // Format price
-function formatPrice(price: number): string {
+function formatPrice(price: number | null): string {
+  if (price == null) return 'Unverified';
   if (price === 0) return 'Free';
   if (price < 0.01) return `$${price.toFixed(4)}`;
   if (price < 1) return `$${price.toFixed(3)}`;
   return `$${price.toFixed(2)}`;
 }
 
-function formatTokens(n: number): string {
+function formatTokens(n: number | null): string {
+  if (n == null) return 'Unverified';
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(n % 1_000_000 === 0 ? 0 : 1)}M`;
   if (n >= 1_000) return `${(n / 1_000).toFixed(n % 1_000 === 0 ? 0 : 1)}K`;
   return n.toString();
@@ -81,12 +83,12 @@ const structuredData = {
   name: model.name,
   applicationCategory: 'AI Language Model',
   operatingSystem: 'Cloud',
-  offers: {
+  ...(blendedCostPer1M == null ? {} : { offers: {
     '@type': 'Offer',
     price: blendedCostPer1M.toFixed(2),
     priceCurrency: 'USD',
     description: `Input: ${formatPrice(inputPrice)}/1M tokens, Output: ${formatPrice(outputPrice)}/1M tokens`,
-  },
+  } }),
   author: {
     '@type': 'Organization',
     name: model.provider_name,
@@ -268,11 +270,11 @@ const structuredData = {
           <dl class="space-y-3">
             <div class="flex justify-between">
               <dt class="text-sm text-(--color-text-muted)">Input (1K tokens)</dt>
-              <dd class="text-sm text-(--color-text-primary)">{formatPrice(inputPrice / 1000)}</dd>
+              <dd class="text-sm text-(--color-text-primary)">{formatPrice(inputPrice == null ? null : inputPrice / 1000)}</dd>
             </div>
             <div class="flex justify-between">
               <dt class="text-sm text-(--color-text-muted)">Output (1K tokens)</dt>
-              <dd class="text-sm text-(--color-text-primary)">{formatPrice(outputPrice / 1000)}</dd>
+              <dd class="text-sm text-(--color-text-primary)">{formatPrice(outputPrice == null ? null : outputPrice / 1000)}</dd>
             </div>
             <div class="flex justify-between">
               <dt class="text-sm text-(--color-text-muted)">Blended (1M tokens)</dt>
@@ -281,7 +283,7 @@ const structuredData = {
             <div class="flex justify-between">
               <dt class="text-sm text-(--color-text-muted)">Est. cost per 1K requests</dt>
               <dd class="text-sm text-(--color-text-primary)">
-                {formatPrice(((inputPrice * 2000 + outputPrice * 1000) / 1_000_000) * 1000)}
+                {formatPrice(inputPrice == null || outputPrice == null ? null : ((inputPrice * 2000 + outputPrice * 1000) / 1_000_000) * 1000)}
               </dd>
             </div>
           </dl>

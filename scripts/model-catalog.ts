@@ -45,6 +45,7 @@ export interface CatalogModelEntry {
     aliases?: string[];
   };
   officialPricing?: OfficialPricingDefinition;
+  pricingConditions?: string;
 }
 
 export interface FrontierModelRequirement {
@@ -945,7 +946,7 @@ const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
   /*
    * Hub #614 part 2 (12 Nov 2026): releases that were discovery-only, each
    * checked first-hand on the maker's own page. A field is set only when that
-   * page states it; anything else keeps its existing value. Prices are set
+   * page states it; omitted specs must not inherit discovery values. Prices are set
    * only where the maker quotes an exact, single global price.
    */
   {
@@ -977,13 +978,7 @@ const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     notes: 'Meta API id muse-ember-1.0. Requests over 200K input tokens are billed at $0.30/$1.50 per million.',
     officialUrl: 'https://research.meta.ai/blog/muse-ember',
     openRouterIds: ['meta/muse-ember'],
-    officialPricing: {
-      inputPrice: 0.1,
-      outputPrice: 0.5,
-      cachedInputPrice: 0.004,
-      source: 'Meta (official, up to 200K input tokens)',
-      sourceUrl: 'https://dev.meta.ai/docs/pricing-rate-limits',
-    },
+    pricingConditions: 'Tiered by input length: up to 200K tokens is $0.10 input, $0.50 output and $0.004 cached input per million; above 200K is $0.30 input and $1.50 output per million. No global scalar price.',
   },
   {
     id: 'muse-wonder',
