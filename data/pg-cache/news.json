@@ -1,15 +1,387 @@
 [
   {
-    "id": "news-48e6c412414232492377",
-    "title": "Who could replace Jensen Huang? A highly unscientific list of possible successors",
-    "url": "https://techcrunch.com/2026/11/11/who-could-replace-jensen-huang-a-highly-unscientific-list-of-possible-successors/",
+    "id": "news-55d7d41513d8574ac5f8",
+    "title": "Democrats launch Nvidia investigation, write scathing letter on Huang&#8217;s &#8216;scheme&#8217; with Trump",
+    "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
     "source": "TechCrunch",
-    "summary": "Nvidia has no succession plan and a CEO in hot water, so we’ve drafted a shortlist.",
+    "summary": "This Congressional investigation into Nvidia's China sales and its dealings with Trump is the second one, so far, since news of the alleged spy affair broke.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-11-12T03:13:10.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
+    "published_at": "2026-11-12T22:42:51.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-1a628d755dc37d52cf4e",
+    "title": "Muse can now place calls to US businesses — if you pay",
+    "url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/",
+    "source": "TechCrunch",
+    "summary": "Muse's AI can now place outbound calls to U.S. businesses — but it's not free.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T22:22:28.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-3403360ccc1df753cef2",
+    "title": "Google’s new Gemini model is better at understanding complicated questions",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
+    "source": "The Verge",
+    "summary": "Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including \"questions with multiple parts, hard-to-understand typos, or highly specific requests.\" The new model can break down your questions and address each part in its responses. It's available starting today in search,…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T21:55:32.000Z",
+    "discovered_at": "2026-11-13 06:55:49"
+  },
+  {
+    "id": "news-5e5f306d785f11574933",
+    "title": "The unfolding Jensen Huang scandal: a timeline",
+    "url": "https://techcrunch.com/2026/11/12/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+    "source": "TechCrunch",
+    "summary": "Jensen Huang has resigned from Nvidia following an affair, which could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T21:35:00.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-412b4e746837e240d98c",
+    "title": "Nebius tests the neocloud playbook with $40 billion in planned spending",
+    "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/",
+    "source": "TechCrunch",
+    "summary": "Nebius plans to fund its $40 billion AI infrastructure expansion through customer prepayments and loans, even as delays at a Microsoft data center raise questions about its financing model.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T21:27:10.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-e153c4dc0f7fcb2944a9",
+    "title": "Jensen Huang was having a third affair, Reuters reports",
+    "url": "https://techcrunch.com/2026/11/12/jensen-huang-was-having-a-third-affair-reuters-reports/",
+    "source": "TechCrunch",
+    "summary": "Reuters is withholding the name of the new employee linked to Huang, but says she is an employee of Nvidia.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T20:26:47.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-5b0f73df89a6e31055ee",
+    "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+    "url": "https://openai.com/business/customer-stories/amplitude",
+    "source": "OpenAI",
+    "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T20:00:00.000Z",
+    "discovered_at": "2026-11-13 06:55:38"
+  },
+  {
+    "id": "news-3b869b1138e3a082f2ba",
+    "title": "No, AI agents did not discover a previously unknown Maya site",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1032125/ai-agents-maya-site-archeology-discovery",
+    "source": "The Verge",
+    "summary": "Armed with a team of AI agents, Google researcher Pietro Miotti claimed earlier this week to have discovered a potentially unmapped Maya site in Mexico. There was just one problem: The site had already been discovered and was published in an academic journal last year. The incident, which sparked criticism among arche…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T19:42:40.000Z",
+    "discovered_at": "2026-11-13 06:55:49"
+  },
+  {
+    "id": "news-ce9a468b53e9785d338c",
+    "title": "Google&#8217;s latest Search upgrade promises better answers to your most complicated questions",
+    "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
+    "source": "TechCrunch",
+    "summary": "Powered by Gemini 4 Hydrogen, Google's AI Mode is getting better at understanding complex queries, surfacing relevant links, and delivering richer visual responses.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T19:27:45.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-f7effce2db920f5c6670",
+    "title": "Nectar launches an AI agent to automate creator discovery and outreach for brands",
+    "url": "https://techcrunch.com/2026/11/12/nectar-launches-an-ai-agent-to-automate-creator-discovery-and-outreach-for-brands/",
+    "source": "TechCrunch",
+    "summary": "Nectar's new AI agent automates influencer marketing, helping brands discover creators, manage outreach and partnerships, and track campaign results.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T19:11:00.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-baccdaa9b5505527e9f6",
+    "title": "Jensen Huang’s exit puts Nvidia’s support for open source in question",
+    "url": "https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/",
+    "source": "TechCrunch",
+    "summary": "Jensen Huang’s resignation raises questions about Nvidia’s commitment to open source AI, including its Hugging Face acquisition, open-weight models, and advocacy against restrictions, as the company navigates a leadership transition.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T18:39:23.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-d545fdc617b9aefde9f6",
+    "title": "Oh, Palantir is ‘progressive’ now, is it?",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1032126/alex-baby-you-were-recorded-on-video",
+    "source": "The Verge",
+    "summary": "I had other things to do today, but Alex Karp's pathetic attempt to pivot back to the left gave me no choice but to put them on hold. Last week's elections were a bloodbath for the right, a problem for all the wannabe fash founders who had tied their political fortunes to a \"vibe shift\" [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T18:06:54.000Z",
+    "discovered_at": "2026-11-13 06:55:49"
+  },
+  {
+    "id": "news-459a57b4750adf481f4f",
+    "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+    "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+    "source": "Google",
+    "summary": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive responses.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T18:00:00.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-96892311de09e14b1fc8",
+    "title": "The Jensen Huang scandal is hardly over",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1032069/jensen-huang-resignation-affair-chips-smuggling",
+    "source": "The Verge",
+    "summary": "I was certain, until the story of Jensen Huang's second affair hit, that Huang was bulletproof. After all, why wouldn't he be? He's placed himself indispensably at the center of the AI industry and famously had no succession plan at Nvidia. In fact, he's the only CEO Nvidia has ever had. L'&#233;tat c'est moi. Then [&…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T17:44:33.000Z",
+    "discovered_at": "2026-11-13 06:55:49"
+  },
+  {
+    "id": "news-deea79b353aff377bfe2",
+    "title": "Hugging Face CEO vows to keep fighting for open source AI after Jensen Huang&#8217;s exit",
+    "url": "https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit/",
+    "source": "TechCrunch",
+    "summary": "Hugging Face's CEO pledged to keep fighting for open source AI after Huang's exit, raising questions about Nvidia's $12.9 billion acquisition.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T17:36:40.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-f5707a3468d9b42ec474",
+    "title": "United Airlines blocks AI agents from booking flights, citing cybersecurity risks",
+    "url": "https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/",
+    "source": "TechCrunch",
+    "summary": "The airline said it will not allow customers to use AI agents to book flights and manage reservations.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T17:17:58.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-ddf7a6c150d0e1d19045",
+    "title": "SoftBank’s billion-dollar loss may have put a cap on AI&#8217;s natural gas ambitions",
+    "url": "https://techcrunch.com/2026/11/12/softbanks-billion-dollar-loss-may-have-put-a-cap-on-ais-natural-gas-ambitions/",
+    "source": "TechCrunch",
+    "summary": "SoftBank lost over $3 billion preordering natural gas turbines to power AI data centers. Here's what the loss means to power markets.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T17:00:52.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-4213b9afeff9a7e6e0ad",
+    "title": "More game developers are starting to use generative AI",
+    "url": "https://www.theverge.com/games/1032085/gdc-festival-of-gaming-annual-survey-ai-layoffs",
+    "source": "The Verge",
+    "summary": "More video game developers are using generative AI tools in their jobs compared to last year, according to the GDC Festival of Gaming's latest annual industry survey. Forty percent of developers surveyed say they use it \"as part of their job,\" an increase from 36 percent in 2025. Usage was higher with game developers…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T17:00:00.000Z",
+    "discovered_at": "2026-11-13 06:55:49"
+  },
+  {
+    "id": "news-32933935200c2839243a",
+    "title": "AI chatbots are recommending fake retail websites, study finds",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations",
+    "source": "The Verge",
+    "summary": "Shoppers using AI chatbots to research products or find places to buy items could be directed to imposters and other risky websites, a new study found. The study conducted by IP protection firm Podqi and shared exclusively with The Verge prompted ChatGPT, Gemini, and Perplexity with a handful of shopping-related quest…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T17:00:00.000Z",
+    "discovered_at": "2026-11-13 06:55:49"
+  },
+  {
+    "id": "news-d0b6d30c7ec6bdd89182",
+    "title": "Phota Labs uses AI to turn everyday photos into professional-looking shots",
+    "url": "https://techcrunch.com/2026/11/12/phota-labs-uses-ai-to-turn-everyday-photos-into-professional-looking-shots/",
+    "source": "TechCrunch",
+    "summary": "Rather than giving consumers yet another photo-editing tool, Phota Labs aims to use advances in AI to automate the editing process so it’s easier for anyone to turn everyday moments into better photos.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T17:00:00.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-0fd7ae7044e59d7b5fa6",
+    "title": "Jensen Huang agrees to testify before Congress",
+    "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/",
+    "source": "TechCrunch",
+    "summary": "Huang, who was ousted as CEO following reports of an alleged affair with a woman suspected of spying for China, agreed to testify Wednesday after several senior lawmakers threatened to subpoena him.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T16:36:37.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-0ff22abf6100bfe97aca",
+    "title": "Five ways Jensen Huang’s ouster from Nvidia could damage the AI industry",
+    "url": "https://techcrunch.com/2026/11/12/five-ways-jensen-huangs-ouster-from-nvidia-could-damage-the-ai-industry/",
+    "source": "TechCrunch",
+    "summary": "Nvidia's ousted CEO Jensen Huang's downfall isn’t just your run-of-the-mill salacious billionaire sex scandal. He was using his influence to push the AI industry in some very specific ways.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T16:32:33.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-1d250e9233fe0f753f8c",
+    "title": "Jensen Huang is out. What did China want from him?",
+    "url": "https://www.theverge.com/podcast/1031260/nvidia-jensen-huang-resign-china-spy-scandal-ai-chips-trump",
+    "source": "The Verge",
+    "summary": "Today, we’re talking about the Jensen Huang scandal at Nvidia, which is developing so quickly that we had to do an emergency update of this intro minutes before publishing this episode. Huang just resigned from his position as CEO of Nvidia as news of his affairs, including with an alleged Chinese spy, threatened to e…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T16:30:00.000Z",
+    "discovered_at": "2026-11-13 06:55:49"
+  },
+  {
+    "id": "news-a5ee8976426905143d28",
+    "title": "Trump floats Apple chairman Tim Cook as Jensen Huang&#8217;s successor",
+    "url": "https://techcrunch.com/2026/11/12/trump-floats-apple-chairman-tim-cook-as-jensen-huangs-successor/",
+    "source": "TechCrunch",
+    "summary": "In a post on Truth Social, President Trump says only one man can take Jensen Huang's place as head of Nvidia: Tim Cook.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T16:12:44.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-830958e6e6f7f875c563",
+    "title": "Read Nvidia’s internal emails about the ‘extraordinarily difficult period’ amid CEO shakeup",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang",
+    "source": "The Verge",
+    "summary": "Jensen Huang resigned as CEO of Nvidia this morning, a company he co-founded in 1993. The decision came following the company's board opening an investigation into multiple extramarital affairs Huang had with a direct report and an alleged Chinese spy. The new, and first, Chair of the Board, Harvey Jones, shared news…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T15:48:12.000Z",
+    "discovered_at": "2026-11-13 06:55:49"
+  },
+  {
+    "id": "news-15b0384fb53fdc16335b",
+    "title": "Jensen Huang is out at Nvidia — who is Colette Kress, his interim replacement?",
+    "url": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/",
+    "source": "TechCrunch",
+    "summary": "Nvidia CFO Colette Kress is taking over as an interim replacement for longtime CEO Jensen Huang, who is embroiled in scandal.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T15:37:29.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-62c34abfa66e72c12433",
+    "title": "Norwest pushes deeper into AI with new $4B fund",
+    "url": "https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund/",
+    "source": "TechCrunch",
+    "summary": "This is the investment firm's largest fund to date.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T15:18:14.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-023d1c79ca20cb05e618",
+    "title": "Cyberattack on Fireworks AI allowed hackers to access Notion customers&#8217; chat transcripts",
+    "url": "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/",
+    "source": "TechCrunch",
+    "summary": "This is Fireworks' second data breach in as many months.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T15:02:28.000Z",
+    "discovered_at": "2026-11-13 06:55:39"
+  },
+  {
+    "id": "news-15c28179b2dc3ec9cbc8",
+    "title": "Nvidia CEO Jensen Huang has resigned. What happens next?",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
+    "source": "The Verge",
+    "summary": "After the leather-jacketed CEO, president, and co-founder of Nvidia, Jensen Huang, acknowledged an affair with Megaspeed exec Alice Huang, his company initially announced an investigation. However, The New York Times reported on Wednesday that there was evidence of another affair, this time with an Nvidia executive wh…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T15:01:31.000Z",
+    "discovered_at": "2026-11-13 06:55:49"
+  },
+  {
+    "id": "news-39f4c129e4341242cbc5",
+    "title": "I reviewed the Apple HomeView, ask me anything",
+    "url": "https://www.theverge.com/tech/1031868/i-reviewed-the-apple-homeview-ask-me-anything",
+    "source": "The Verge",
+    "summary": "Hi! I'm Jen Tuohy, The Verge's senior smart home reviewer. I've tested every smart display Amazon and Google have ever made, and for the past week I've been testing Apple's first: The $299 HomeView. I put the tabletop and wall-mounted versions through their paces, on my kitchen counter, bedside table, in my office, an…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T14:10:00.000Z",
+    "discovered_at": "2026-11-13 06:55:49"
+  },
+  {
+    "id": "news-90d79223706ea3abe78d",
+    "title": "Gondola doubles revenue as its team builds more with Codex",
+    "url": "https://openai.com/business/customer-stories/gondola",
+    "source": "OpenAI",
+    "summary": "Gondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and ChatGPT simplifying daily work.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T12:00:00.000Z",
+    "discovered_at": "2026-11-13 06:55:38"
+  },
+  {
+    "id": "news-0990939c7d6ea9f7b924",
+    "title": "Holiday Extras is rethinking what it can build with Codex",
+    "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+    "source": "OpenAI",
+    "summary": "With Codex, Holiday Extras is turning customer expertise into better apps, higher booking conversion and new possibilities for growth.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-12T09:30:00.000Z",
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
     "id": "news-f28f90d2895a812ca579",
@@ -21,139 +393,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T00:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
-    "id": "news-c2f163e5b083bf5fcd95",
-    "title": "The unfolding Jensen Huang scandal: a timeline",
-    "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
-    "source": "TechCrunch",
-    "summary": "The affair could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
-    "category": "industry",
+    "id": "news-b06379671ede1f625c58",
+    "title": "Supporting research on AI and children’s safety",
+    "url": "https://openai.com/index/children-first-declaration",
+    "source": "OpenAI",
+    "summary": "OpenAI commits $2 million to research on AI and children’s safety. The work supports shared tools to measure risks and opportunities for young people.",
+    "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-11-11T23:50:00.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-e9253ae6619ecd71e8c4",
-    "title": "Nvidia’s stock drops as board reportedly preps to oust CEO Jensen Huang",
-    "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/",
-    "source": "TechCrunch",
-    "summary": "As soon as Wednesday evening, Nvidia's board could decide to remove its founder and CEO of 33 years.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T23:28:45.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-0ca5cf57ee5146c09285",
-    "title": "Jensen Huang accused of having another affair — with an Nvidia exec",
-    "url": "https://techcrunch.com/2026/11/11/jensen-huang-accused-of-having-another-affair-with-a-nvidia-exec/",
-    "source": "TechCrunch",
-    "summary": "Jensen Huang, who has come under fire for admitting to an affair with a woman accused of being a Chinese intelligence agent, has been accused of having a separate affair with an Nvidia subordinate.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T23:17:05.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-4a6d92631407ef3c940b",
-    "title": "Nvidia is reportedly preparing to fire Jensen Huang",
-    "url": "https://www.theverge.com/tech/1031652/jensen-huang-rumor",
-    "source": "The Verge",
-    "summary": "Nvidia's board is preparing to dismiss CEO Jensen Huang following a report from the New York Times about a second alleged extramarital affair, just days after he admitted to a separate affair with a woman alleged to be a Chinese spy, The Wall Street Journal reports. The second alleged affair was with an executive who…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T22:44:36.000Z",
-    "discovered_at": "2026-11-12 07:55:41"
-  },
-  {
-    "id": "news-33bddd1c40023b58eaf4",
-    "title": "United won’t let your AI agent book your flight",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
-    "source": "The Verge",
-    "summary": "United says it won't let personal AI assistants book tickets on the airline, citing both privacy and regulatory concerns. The company says it hasn't yet seen many people try to use AI agents to book their flights, The Wall Street Journal reports, in line with observations from other businesses like Doordash. But Unite…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T21:54:21.000Z",
-    "discovered_at": "2026-11-12 07:55:41"
-  },
-  {
-    "id": "news-0d92f57c72e3e3cf0977",
-    "title": "Why the data center you dread might never even be built",
-    "url": "https://techcrunch.com/video/why-the-data-center-you-dread-might-never-even-be-built/",
-    "source": "TechCrunch",
-    "summary": "The data center boom is running into serious real-world obstacles, from widespread local opposition and permitting delays to a scramble for electricity.&#160;Before those challenges even come into play, though, there&#8217;s a more basic problem: A lot of the projects being announced may never get built in the first p…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T20:15:15.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-6bc57b8d8016fc8de5e0",
-    "title": "Meta is losing its longtime head of infrastructure",
-    "url": "https://techcrunch.com/2026/11/11/meta-is-losing-its-longtime-head-of-infrastructure/",
-    "source": "TechCrunch",
-    "summary": "Santosh Janardhan, who originally joined the company in 2009, will be stepping down from his role.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T20:12:01.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-984513ae1fc499f6da4e",
-    "title": "How backlash and red tape continue to slow data centers post-Blue Wave",
-    "url": "https://techcrunch.com/podcast/how-backlash-and-red-tape-continue-to-slow-data-centers-post-blue-wave/",
-    "source": "TechCrunch",
-    "summary": "The data center boom is running into serious real-world obstacles, from widespread local opposition and permitting delays to a scramble for electricity.&#160;Before those challenges even come into play, though, there&#8217;s a more basic problem: A lot of the projects being announced may never get built in the first p…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T20:02:14.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-c063829a6185b4d7f3ba",
-    "title": "CoreWeave turns to customer prepayments, shorter contracts to fund AI growth",
-    "url": "https://techcrunch.com/2026/11/11/coreweave-turns-to-customer-prepayments-shorter-contracts-to-fund-ai-growth/",
-    "source": "TechCrunch",
-    "summary": "CoreWeave is increasingly asking customers to pay up front, borrowing against specific contracts, and even looking to short-term deals that could lead to higher prices, according to the company’s third-quarter earnings.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T19:54:00.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-019cc9ec163bf85320c5",
-    "title": "With $720M round, Britain&#8217;s Fractile gets a leg up in the race for AI chips",
-    "url": "https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/",
-    "source": "TechCrunch",
-    "summary": "Fractile has now become one of the top-funded players in the race for purpose-built AI chips.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T19:34:55.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-90a2e60457e0b47e9a12",
-    "title": "Congress to call Jensen Huang in to answer for alleged Chinese spy affair",
-    "url": "https://techcrunch.com/2026/11/11/congress-to-call-jensen-huang-in-to-answer-for-alleged-chinese-spy-affair/",
-    "source": "TechCrunch",
-    "summary": "Nvidia CEO Jensen Huang has until the end of the day Wednesday to answer a call from House Republicans for a closed-door briefing on his affair with alleged Chinese spy.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T19:22:22.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
+    "published_at": "2026-11-12T00:00:00.000Z",
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
     "id": "news-8e4104a923ec61a4f8ae",
@@ -165,43 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T18:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-32bc3a2f6211a8fe2f5c",
-    "title": "Is Jensen Huang’s bad behavior more commonplace than it seems?",
-    "url": "https://techcrunch.com/2026/11/11/is-jensen-huangs-bad-behavior-more-commonplace-than-it-seems/",
-    "source": "TechCrunch",
-    "summary": "“There are a lot of senior people in the industry that know this is happening, and are effectively condoning it,” an investment intel consultant said.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T16:16:07.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-29f521837a1e4833b10a",
-    "title": "OpenAI&#8217;s quarterly revenue reportedly crosses $10B for the first time",
-    "url": "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/",
-    "source": "TechCrunch",
-    "summary": "Sales of $10 billion represents an almost 50% jump from revenue of $6.7 billion the company recorded in the second quarter.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T16:14:44.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-2d8f602ac5a8eeadebc0",
-    "title": "Google’s Tabletop AI experiment lets you build custom collaboration apps",
-    "url": "https://www.theverge.com/tech/1031526/google-tabletop-ai-experiment-waitlist-availability",
-    "source": "The Verge",
-    "summary": "Google has cooked up a new experimental AI tool called Tabletop that generates customized collaborative hubs to help you coordinate with family, and friends. The Tabletop platform shares some visual similarities with workplace management apps like Asana and Monday, but with a built-in AI feature that allows you to vib…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T16:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:41"
+    "discovered_at": "2026-11-13 06:55:39"
   },
   {
     "id": "news-97adab01dbf7344a4376",
@@ -213,55 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-a86af765ffafecbaf7c6",
-    "title": "Google’s AlphaGenome 2 zooms in on the cellular roots of disease",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1031524/google-deepmind-alphagenome-2-genetic-ai-model",
-    "source": "The Verge",
-    "summary": "Researchers at Google DeepMind have unveiled a new AI model designed to unravel how changes in our DNA affect different cells, giving scientists a more detailed view of a notoriously difficult problem that could hold important clues to the causes of disease - and point the way to new treatments. AlphaGenome 2 is the s…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T15:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:41"
-  },
-  {
-    "id": "news-7d4c517a6890da297444",
-    "title": "Databricks&#8217; new AI agent tells CEO Ali Ghodsi the unvarnished truth",
-    "url": "https://techcrunch.com/2026/11/11/databricks-new-ai-agent-tells-ceo-ali-ghodsi-the-unvarnished-truth/",
-    "source": "TechCrunch",
-    "summary": "With Databricks at 12,000 employees, AI Ghodsi is the first to admit that he can't know everyone and that they are unlikely to confess the things that go wrong to him. But he doesn't need them to. He uses Databricks' newly revised Genie agent for that.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T15:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-450a9863af999dabbda9",
-    "title": "Adobe’s AI experiments let you walk around in photos and interview your characters",
-    "url": "https://www.theverge.com/tech/1031505/adobe-max-2026-sneaks-experiments-ai",
-    "source": "The Verge",
-    "summary": "Some of the most impressive tech that Adobe showcases at its annual Max conference each year is the experimental features it's developing, and the latest of those tools are being announced today: they can transform images into explorable 3D scenes, design AI characters by talking to them, and turn photo editing into a…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T14:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:41"
-  },
-  {
-    "id": "news-7c021a2e6c5bb952458e",
-    "title": "Plurai wants to help AI agents work better using the same approach that helped get self-driving cars to roads",
-    "url": "https://techcrunch.com/2026/11/11/plurai-wants-to-help-ai-agents-work-better-using-the-same-approach-that-helped-get-self-driving-cars-to-roads/",
-    "source": "TechCrunch",
-    "summary": "Like the end-to-end models trained to drive cars, AI agents are probabilistic systems operating in unpredictable environments.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T14:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
+    "discovered_at": "2026-11-13 06:55:39"
   },
   {
     "id": "news-7e65614cc89aac7b14f8",
@@ -273,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T09:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
+    "discovered_at": "2026-11-13 06:55:39"
   },
   {
     "id": "news-80b38ea7da372c49e059",
@@ -285,19 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T08:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
-  },
-  {
-    "id": "news-a390f90d4604de897eef",
-    "title": "Nvidia’s crisis has corporate governance experts reaching for the popcorn",
-    "url": "https://techcrunch.com/2026/11/10/nvidias-crisis-has-corporate-governance-experts-reaching-for-the-popcorn/",
-    "source": "TechCrunch",
-    "summary": "The governance experts we talked to say nobody has seen anything like what's unfolding right now.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T07:30:51.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
     "id": "news-8c999d6885d24711e917",
@@ -309,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T00:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
     "id": "news-b686da68349e5f787ade",
@@ -321,55 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T21:12:59.000Z",
-    "discovered_at": "2026-11-12 07:55:41"
-  },
-  {
-    "id": "news-bd2a6830d8cf7795485d",
-    "title": "OpenAI acquires Odessia, travel startup created by Sonder founder",
-    "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
-    "source": "TechCrunch",
-    "summary": "OpenAI has not yet said what its plans are for the future of travel. But Sonder founder Francis Davidson is a well-known figure in the travel industry.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-10T21:08:52.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-91faed0650f0d054dbbe",
-    "title": "OpenAI, Anthropic face new oversight as New York’s AI safety law takes effect",
-    "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/",
-    "source": "TechCrunch",
-    "summary": "New York is preparing to enforce its sweeping AI safety law, requiring major developers like OpenAI and Anthropic to register, disclose safety practices, and report critical incidents or face fines.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-10T20:52:13.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-9a5bae24e02d25cd63d5",
-    "title": "All 7 Anthropic founders will each cash out about $250M in IPO",
-    "url": "https://techcrunch.com/2026/11/10/all-7-anthropic-founders-will-each-cash-out-about-250m-in-ipo/",
-    "source": "TechCrunch",
-    "summary": "Each of the seven co-founders plans to sell exactly the same number of shares in the IPO, which would bring each of them about $250 million in cash at the midpoint of the price range while leaving the group in control of the company.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-10T19:57:52.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-34a6071342ff5a88c61c",
-    "title": "The US is winning the AI race. Jensen Huang could have blown it",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1031063/jensen-huang-ai-race-us-china-spy",
-    "source": "The Verge",
-    "summary": "As espionage targets go, Jensen Huang is perhaps one of the least surprising on Earth. The Nvidia CEO runs one of the world's most valuable companies, controls the in-demand technology fueling the AI boom, and is cozy with presidents, CEOs, and all manner of important people. He also wears a cool leather jacket. Which…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-10T19:04:05.000Z",
-    "discovered_at": "2026-11-12 07:55:41"
+    "discovered_at": "2026-11-13 06:55:49"
   },
   {
     "id": "news-ac5a661efbfd509d2187",
@@ -381,55 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T19:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-7396b577c72532a79434",
-    "title": "ChatGPT is getting verified AI ‘Business Agents’",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1030552/openai-chatgpt-business-agents-hub",
-    "source": "The Verge",
-    "summary": "ChatGPT is going to let you chat with verified \"Business Agents\" that represent a brand to help you with things like comparison shopping. The feature, available first to \"eligible\" e-commerce and online service businesses in the US, is launching as part of a suite of business-focused features in ChatGPT being announce…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-10T18:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:41"
-  },
-  {
-    "id": "news-7ac1a3b2939bf58c2068",
-    "title": "The indie game community is in disarray over AI and Big Walk",
-    "url": "https://www.theverge.com/games/1030994/big-walk-independent-games-festival-igf-ai",
-    "source": "The Verge",
-    "summary": "Some Independent Games Festival (IGF) jurors published a statement yesterday saying they would not vote for games that use generative AI in \"any capacity.\" Soon after, the developer of indie hit Big Walk has published a statement saying it \"sparingly\" used AI in the \"final stretch\" of the game's development to \"help w…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-10T17:32:47.000Z",
-    "discovered_at": "2026-11-12 07:55:41"
-  },
-  {
-    "id": "news-ec3f910d2a185a917865",
-    "title": "Anthropic has its own AI-powered office suite now",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now",
-    "source": "The Verge",
-    "summary": "For years, Anthropic has been known for its focus on enterprise and coding tools that attract high-flying corporate clients, inspiring competing frontier labs - like OpenAI, SpaceXSI, and Meta - to copy its strategies. Earlier this year, Claude Code went through its own particular hype cycle. And now, Anthropic is try…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-10T17:30:00.000Z",
-    "discovered_at": "2026-11-12 07:55:41"
-  },
-  {
-    "id": "news-3e50515c6d1fc8ccf1d8",
-    "title": "eBay appears to have shut the door on third-party AI agents",
-    "url": "https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping",
-    "source": "The Verge",
-    "summary": "eBay appears to have blocked AI agents, including Meta's Muse, from browsing on the platform - the latest speed bump in the AI agent race. A reader tells The Verge that for several weeks he's had his Muse agent browse and curate a daily digest of watches for sale on platforms like eBay, including a [&#8230;]",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-10T16:20:30.000Z",
-    "discovered_at": "2026-11-12 07:55:41"
+    "discovered_at": "2026-11-13 06:55:39"
   },
   {
     "id": "news-c5fffc8a0cbdc3d45109",
@@ -441,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T14:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
+    "discovered_at": "2026-11-13 06:55:39"
   },
   {
     "id": "news-155d33cae72679311e5a",
@@ -453,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T13:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
+    "discovered_at": "2026-11-13 06:55:39"
   },
   {
     "id": "news-46ecb159c1535b093315",
@@ -465,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T12:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
     "id": "news-5ca4dc7b6d88cb31d41f",
@@ -477,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T10:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
     "id": "news-01a8528fa117926a6942",
@@ -489,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T09:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
     "id": "news-4e3e5904c85ae763182d",
@@ -501,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T08:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
     "id": "news-3588ceed41552e465a0d",
@@ -513,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T07:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
     "id": "news-1ff74ee2cb1066374d17",
@@ -525,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T00:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
     "id": "news-9c331579e229757a7a39",
@@ -537,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T19:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
     "id": "news-f37b680abcf7adcb8bec",
@@ -549,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T13:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
     "id": "news-932fe34bad728f30ad4e",
@@ -561,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T08:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
     "id": "news-23b94c697622500fcf7d",
@@ -573,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-09T08:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
     "id": "news-a5eef3cf57a4e41068d1",
@@ -585,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T20:56:41.000Z",
-    "discovered_at": "2026-11-12 07:55:41"
+    "discovered_at": "2026-11-13 06:55:49"
   },
   {
     "id": "news-bc8f9eac19663ff628fb",
@@ -597,31 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T08:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
-  },
-  {
-    "id": "news-cfd4354afa14004ff8c1",
-    "title": "Measuring how AI agents handle everyday wet-lab science",
-    "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
-    "source": "OpenAI",
-    "summary": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-06T00:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
-  },
-  {
-    "id": "news-c88b52d0b21039c72dea",
-    "title": "Cult.fit builds operational muscle with Codex",
-    "url": "https://openai.com/index/cultfit-builds-with-codex",
-    "source": "OpenAI",
-    "summary": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-05T20:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
+    "discovered_at": "2026-11-13 06:55:38"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -633,31 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
-  },
-  {
-    "id": "news-b58fee4edbbb5f7a9c2c",
-    "title": "Australian universities are creating AI-native graduates",
-    "url": "https://openai.com/index/australian-universities-ai-native-graduates",
-    "source": "OpenAI",
-    "summary": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare students for an AI-enabled workforce.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
-  },
-  {
-    "id": "news-53c56afbaf05f856eba5",
-    "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
-    "url": "https://openai.com/index/introducing-gpt-6-cyber",
-    "source": "OpenAI",
-    "summary": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, trained to stay within authorized scope.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-05T09:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:29"
+    "discovered_at": "2026-11-13 06:55:39"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -669,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
+    "discovered_at": "2026-11-13 06:55:39"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -681,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-12 07:55:41"
+    "discovered_at": "2026-11-13 06:55:49"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -693,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
+    "discovered_at": "2026-11-13 06:55:39"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -705,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
+    "discovered_at": "2026-11-13 06:55:39"
   },
   {
     "id": "news-b140e0bf691ca1441f98",
@@ -717,18 +729,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-16T20:59:01.000Z",
-    "discovered_at": "2026-11-12 07:55:41"
-  },
-  {
-    "id": "news-c1e94fc831365c1377e6",
-    "title": "Gemini 4 Argon: Built to solve your hardest problems",
-    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-    "source": "Google",
-    "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-10-13T16:00:00.000Z",
-    "discovered_at": "2026-11-12 07:55:30"
+    "discovered_at": "2026-11-13 06:55:49"
   }
 ]

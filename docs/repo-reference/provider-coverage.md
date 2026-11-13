@@ -1,13 +1,13 @@
 # Provider Coverage Snapshot
 
-Generated: 12 Nov 2026, 07:55 UTC
+Generated: 13 Nov 2026, 06:55 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
 | Provider | Active | Tracking | Preview | Latest release | Status page | Docs |
 | --- | --- | --- | --- | --- | --- | --- |
 | OpenAI | 24 | 46 | 0 | GPT-5.6 Sol (batch) (9 Jul 2026) | [status](https://status.openai.com) | [docs](https://platform.openai.com/docs/models) |
-| Google | 8 | 25 | 0 | Gemini Omni 1.2 Flash (5 Nov 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
+| Google | 8 | 26 | 0 | Gemini Omni 1.2 Flash (5 Nov 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
 | Meta | 6 | 12 | 0 | Muse Ember (9 Nov 2026) | n/a | [docs](https://llama.meta.com/docs) |
 | Anthropic | 5 | 20 | 1 | Claude Opus 5 (batch) (24 Jul 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |
