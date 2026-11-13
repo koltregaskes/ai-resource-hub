@@ -54,7 +54,8 @@ function formatTokens(tokens: number): string {
   return String(tokens);
 }
 
-function formatPrice(inputPrice: number, outputPrice: number): string {
+function formatPrice(inputPrice: number | null, outputPrice: number | null): string {
+  if (inputPrice == null || outputPrice == null) return 'Pricing unverified';
   if (inputPrice <= 0 && outputPrice <= 0) return 'Pricing not tracked yet';
   return `$${inputPrice.toFixed(2)} in / $${outputPrice.toFixed(2)} out per 1M`;
 }
@@ -178,7 +179,7 @@ function formatCountLabel(value: number, singular: string, pluralForm = `${singu
                       <span class="rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1 text-[11px] text-emerald-100">Open / local angle</span>
                     )}
                     {!release.apiAvailable && (
-                      <span class="rounded-full border border-amber-500/25 bg-amber-500/10 px-3 py-1 text-[11px] text-amber-100">Limited access</span>
+                      <span class="rounded-full border border-amber-500/25 bg-amber-500/10 px-3 py-1 text-[11px] text-amber-100">{release.apiAvailable == null ? 'API unverified' : 'Limited access'}</span>
                     )}
                   </div>
                 </div>

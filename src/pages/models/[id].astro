@@ -55,21 +55,23 @@ const statusLabel = model.status === 'preview'
 // Computed values
 const inputPrice = model.input_price;
 const outputPrice = model.output_price;
-const blendedCostPer1M = (inputPrice + 3 * outputPrice) / 4;
-const modalities = model.modality.split(',').map((m: string) => m.trim());
+const blendedCostPer1M = inputPrice == null || outputPrice == null ? null : (inputPrice + 3 * outputPrice) / 4;
+const modalities = (model.modality ?? '').split(',').map((m: string) => m.trim());
 const releaseDateFormatted = model.released
   ? new Date(model.released).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
   : 'Unknown';
 
 // Format price
-function formatPrice(price: number): string {
-  if (price === 0) return 'Free';
+function formatPrice(price: number | null, state?: string): string {
+  if (price == null || !Number.isFinite(price) || price < 0) return 'Unverified';
+  if (price === 0) return state === 'verified' ? 'Free' : 'Unverified';
   if (price < 0.01) return `$${price.toFixed(4)}`;
   if (price < 1) return `$${price.toFixed(3)}`;
   return `$${price.toFixed(2)}`;
 }
 
-function formatTokens(n: number): string {
+function formatTokens(n: number | null): string {
+  if (n == null) return 'Unverified';
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(n % 1_000_000 === 0 ? 0 : 1)}M`;
   if (n >= 1_000) return `${(n / 1_000).toFixed(n % 1_000 === 0 ? 0 : 1)}K`;
   return n.toString();
@@ -82,12 +84,12 @@ const structuredData = {
   name: model.name,
   applicationCategory: 'AI Language Model',
   operatingSystem: 'Cloud',
-  offers: {
+  ...(blendedCostPer1M == null ? {} : { offers: {
     '@type': 'Offer',
     price: blendedCostPer1M.toFixed(2),
     priceCurrency: 'USD',
-    description: `Input: ${formatPrice(inputPrice)}/1M tokens, Output: ${formatPrice(outputPrice)}/1M tokens`,
-  },
+    description: `Input: ${formatPrice(inputPrice, model.field_states?.input_price)}/1M tokens, Output: ${formatPrice(outputPrice, model.field_states?.output_price)}/1M tokens`,
+  } }),
   author: {
     '@type': 'Organization',
     name: model.provider_name,
@@ -99,7 +101,7 @@ const structuredData = {
   title={`${model.name} - The AI Resource Hub`}
   description={isTrackedModel
     ? `${model.name} by ${model.provider_name}. Tracked release page with pricing, context window, availability, and source notes while benchmark coverage is still being collected.`
-    : `${model.name} by ${model.provider_name}. Pricing: ${formatPrice(inputPrice)}/${formatPrice(outputPrice)} per 1M tokens. Context: ${formatTokens(model.context_window)} tokens. Benchmark evidence is shown only when it has a current row-level source.`}
+    : `${model.name} by ${model.provider_name}. Pricing: ${formatPrice(inputPrice, model.field_states?.input_price)}/${formatPrice(outputPrice, model.field_states?.output_price)} per 1M tokens. Context: ${formatTokens(model.context_window)} tokens. Benchmark evidence is shown only when it has a current row-level source.`}
 >
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <!-- Breadcrumb -->
@@ -165,7 +167,7 @@ const structuredData = {
         </p>
         <p class="mt-2 text-sm leading-relaxed text-(--color-text-secondary)">
           This page is live so the release is discoverable quickly, but it is not treated as a fully evaluated ranked model yet.
-          Pricing, context, availability, and source notes may already be present while rankable benchmark evidence is still being collected.
+          Verified specifications are shown where available. Unverified fields are labelled while rankable benchmark evidence is still being collected.
         </p>
       </div>
     )}
@@ -174,12 +176,12 @@ const structuredData = {
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
         <p class="text-xs text-(--color-text-muted) mb-1">Input Price</p>
-        <p class="text-xl font-bold text-(--color-text-primary)">{formatPrice(inputPrice)}</p>
+        <p class="text-xl font-bold text-(--color-text-primary)">{formatPrice(inputPrice, model.field_states?.input_price)}</p>
         <p class="text-xs text-(--color-text-muted)">per 1M tokens</p>
       </div>
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
         <p class="text-xs text-(--color-text-muted) mb-1">Output Price</p>
-        <p class="text-xl font-bold text-(--color-text-primary)">{formatPrice(outputPrice)}</p>
+        <p class="text-xl font-bold text-(--color-text-primary)">{formatPrice(outputPrice, model.field_states?.output_price)}</p>
         <p class="text-xs text-(--color-text-muted)">per 1M tokens</p>
       </div>
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
@@ -269,11 +271,11 @@ const structuredData = {
           <dl class="space-y-3">
             <div class="flex justify-between">
               <dt class="text-sm text-(--color-text-muted)">Input (1K tokens)</dt>
-              <dd class="text-sm text-(--color-text-primary)">{formatPrice(inputPrice / 1000)}</dd>
+              <dd class="text-sm text-(--color-text-primary)">{formatPrice(inputPrice == null ? null : inputPrice / 1000, model.field_states?.input_price)}</dd>
             </div>
             <div class="flex justify-between">
               <dt class="text-sm text-(--color-text-muted)">Output (1K tokens)</dt>
-              <dd class="text-sm text-(--color-text-primary)">{formatPrice(outputPrice / 1000)}</dd>
+              <dd class="text-sm text-(--color-text-primary)">{formatPrice(outputPrice == null ? null : outputPrice / 1000, model.field_states?.output_price)}</dd>
             </div>
             <div class="flex justify-between">
               <dt class="text-sm text-(--color-text-muted)">Blended (1M tokens)</dt>
@@ -282,7 +284,7 @@ const structuredData = {
             <div class="flex justify-between">
               <dt class="text-sm text-(--color-text-muted)">Est. cost per 1K requests</dt>
               <dd class="text-sm text-(--color-text-primary)">
-                {formatPrice(((inputPrice * 2000 + outputPrice * 1000) / 1_000_000) * 1000)}
+                {formatPrice(inputPrice == null || outputPrice == null ? null : ((inputPrice * 2000 + outputPrice * 1000) / 1_000_000) * 1000)}
               </dd>
             </div>
           </dl>

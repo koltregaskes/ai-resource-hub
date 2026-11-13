@@ -1,3 +1,4 @@
+import { applyModelFieldEvidence } from '../../scripts/lib/public-model-fields';
 /**
  * Database query functions for The AI Resource Hub.
  * Now reads from Postgres JSON cache (data/pg-cache/*.json) instead of SQLite.
@@ -307,7 +308,7 @@ type CompatModel = DBModelDetail & CategoryModel & {
 };
 
 function normalizeCompatModel(model: any): CompatModel {
-  return {
+  const result = {
     ...model,
     provider: model.provider ?? model.provider_name,
     providerColour: model.providerColour ?? model.provider_colour,
@@ -327,6 +328,11 @@ function normalizeCompatModel(model: any): CompatModel {
     open_source: Boolean(model.open_source ?? model.openSource),
     api_available: Boolean(model.api_available ?? model.apiAvailable),
   };
+  const guarded = applyModelFieldEvidence(result);
+  for (const [camel, snake] of Object.entries({ inputPrice: 'input_price', outputPrice: 'output_price', contextWindow: 'context_window', maxOutput: 'max_output', openSource: 'open_source', apiAvailable: 'api_available' })) {
+    if (guarded.field_states[snake]) (guarded as Record<string, unknown>)[camel] = (guarded as Record<string, unknown>)[snake];
+  }
+  return guarded;
 }
 
 export interface DBYouTubeCreator {
