@@ -1,3 +1,4 @@
+import { getModelFieldReview } from '../../scripts/lib/model-field-reviews';
 /**
  * Postgres cache reader — replaces SQLite for build-time data access.
  *
@@ -340,12 +341,12 @@ export function getModels(): CachedModel[] {
   }));
 }
 
-export function getModelsByCategory(category: string): CachedModel[] {
-  return getModels().filter(m => m.category === category && m.status === 'active');
+export function getModelsByCategory(category: string, models: CachedModel[] = getModels()): CachedModel[] {
+  return models.filter(m => !getModelFieldReview(m.id) && m.category === category && m.status === 'active');
 }
 
-export function getPublicModelsByCategory(category: string): CachedModel[] {
-  return getModels().filter((model) => model.category === category && isPubliclyVerifiedModel(model));
+export function getPublicModelsByCategory(category: string, models: CachedModel[] = getModels()): CachedModel[] {
+  return models.filter((model) => !getModelFieldReview(model.id) && model.category === category && isPubliclyVerifiedModel(model));
 }
 
 export function getModelById(id: string): CachedModel | null {

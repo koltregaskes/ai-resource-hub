@@ -9,7 +9,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { getCatalogModelsById, VERIFIED_MODEL_CATALOG } from './model-catalog';
-import { buildDemotions, cleanOpenRouterName, isOpenRouterVariant, nameForMatchedModel, stripDemotionReasons } from './lib/registry-guards';
+import { buildDemotions, cleanOpenRouterName, isOpenRouterVariant, nameForMatchedModel, splitZeroQuality, stripDemotionReasons } from './lib/registry-guards';
 
 const catalog = getCatalogModelsById();
 const catalogNames = new Map([...catalog].map(([id, model]) => [id, model.name]));
@@ -86,4 +86,14 @@ test('old demotion sentences are removed from catalogue notes (live text for Cla
   assert.equal(stripDemotionReasons(live), 'Current generally available Opus model. Some safeguarded requests can fall back to Opus 4.8.');
   assert.equal(stripDemotionReasons('Tracking only until benchmark coverage is available.'), null);
   assert.equal(stripDemotionReasons(null), null);
+});
+test('zero-quality catalogue models are warnings, so they no longer block the scrape (13 Nov runs failed on these 19)', () => {
+  // The 19 models listed as critical in scrape run 43396995886 (13 Nov 2026, 08:55 UTC).
+  const flagged = ['GPT-5.4', 'GPT-5.4 Pro', 'GPT-5.4 Mini', 'GPT-5.4 Nano', 'GPT-5.5', 'GPT-5.5 Pro', 'GPT-5.6 Sol', 'GPT-5.6 Terra', 'GPT-5.6 Luna', 'Claude Opus 5', 'Claude Opus 5 Fast', 'Claude Fable 5', 'Claude Sonnet 5', 'Claude Opus 4.8', 'Claude Opus 4.8 Fast', 'Claude Opus 4.7', 'Gemini 3.6 Flash', 'Gemini 3.5 Flash', 'Gemini 3.5 Flash-Lite'];
+  const byName = new Map(VERIFIED_MODEL_CATALOG.map((model) => [model.name, model.id]));
+  const rows = flagged.map((name) => ({ id: byName.get(name) ?? `missing:${name}`, name }));
+  assert.deepEqual(rows.filter((row) => row.id.startsWith('missing:')), [], 'every flagged name is a catalogue model');
+  const split = splitZeroQuality([...rows, { id: 'some-unverified-model', name: 'Unverified' }], verifiedIds);
+  assert.equal(split.catalogue.length, 19);
+  assert.deepEqual(split.critical.map((row) => row.id), ['some-unverified-model'], 'non-catalogue models are still critical');
 });
