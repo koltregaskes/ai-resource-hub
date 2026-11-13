@@ -629,5 +629,549 @@
         "checkedAt": "2026-11-13"
       }
     }
+  },
+  {
+    "id": "command-a-plus",
+    "fields": {
+      "name": {
+        "value": "Command A+",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "cohere",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": "2026-05-20",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "contextWindow": {
+        "value": 128000,
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "maxOutput": {
+        "value": 64000,
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "modality": {
+        "value": "text,vision",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13",
+        "reason": "The model card does not state this value. Free rate-limited access is conditional, not an unrestricted token price."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13",
+        "reason": "The model card does not state this value. Free rate-limited access is conditional, not an unrestricted token price."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13",
+        "reason": "The model card does not state this value. Free rate-limited access is conditional, not an unrestricted token price."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13",
+        "reason": "The model card does not state this value. Free rate-limited access is conditional, not an unrestricted token price."
+      },
+      "currency": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13",
+        "reason": "The model card does not state this value. Free rate-limited access is conditional, not an unrestricted token price."
+      },
+      "pricingUnit": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13",
+        "reason": "The model card does not state this value. Free rate-limited access is conditional, not an unrestricted token price."
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13",
+        "reason": "The model card does not state this value. Free rate-limited access is conditional, not an unrestricted token price."
+      }
+    }
+  },
+  {
+    "id": "deepseek-v4-flash-vision-exp",
+    "fields": {
+      "name": {
+        "value": "DeepSeek V4 Flash Vision Exp",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "deepseek",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "modality": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "apiAvailable": {
+        "value": false,
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": "retired",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "category": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "currency": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "pricingUnit": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      }
+    }
+  },
+  {
+    "id": "deepseek-v4-pro-0813",
+    "fields": {
+      "name": {
+        "value": "DeepSeek V4 Pro 0813",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "deepseek",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "modality": {
+        "value": "text",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "currency": {
+        "value": "$",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "Off-peak input $0.66, output $1.98, cached input $0.022; peak input $1.32, output $3.96, cached input $0.044. Peak: 01:00?04:00 and 06:00?10:00 UTC Monday?Friday excluding Chinese public holidays.",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "glm-5.3-flashx",
+    "fields": {
+      "name": {
+        "value": "GLM 5.3 FlashX",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "zhipu",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "modality": {
+        "value": "text,vision,video",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 0.37,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 1.25,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.075,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      }
+    }
+  },
+  {
+    "id": "glm-5.3-flashx-legal",
+    "fields": {
+      "name": {
+        "value": "GLM 5.3 FlashX Legal",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "zhipu",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "modality": {
+        "value": "text,vision,video",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 0.37,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 1.25,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.075,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      }
+    }
   }
 ]
