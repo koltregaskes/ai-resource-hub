@@ -12,6 +12,8 @@ export interface OutgoingEmail {
   tags?: Array<{ name: string; value: string }>;
 }
 
+export class ProviderRejection extends Error {}
+
 export class ResendClient {
   constructor(
     private readonly apiKey: string,
@@ -29,7 +31,7 @@ export class ResendClient {
       body,
     });
     const payload = await response.json().catch(() => ({}));
-    if (!response.ok) throw new Error(`Resend ${path} failed: HTTP ${response.status} ${JSON.stringify(payload).slice(0, 200)}`);
+    if (!response.ok) throw new ([400,401,403,404,405,413,415,422].includes(response.status) ? ProviderRejection : Error)(`Resend ${path} failed: HTTP ${response.status} ${JSON.stringify(payload).slice(0, 200)}`);
     return payload;
   }
 

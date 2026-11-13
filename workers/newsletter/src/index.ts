@@ -15,7 +15,7 @@
  */
 import categoriesConfig from '../../../shared/news-categories.json';
 import { buildConfirmEmail, buildDailyEmail, type EditionPayload } from './email';
-import { ResendClient, type OutgoingEmail } from './resend';
+import { ProviderRejection, ResendClient, type OutgoingEmail } from './resend';
 import { memorySeed, memoryStore, memorySnapshot, neonStore, type Store, type Subscriber, type SendBatch } from './store';
 import { keyedHash, sha256Hex, signToken, verifyToken } from './tokens';
 
@@ -297,6 +297,8 @@ function ukToday(): string {
 export async function sendDaily(env: Env, store: Store, options: { force?: boolean; nowMs?: number } = {}) {
   const now = options.nowMs ?? Date.now();
   const resend = new ResendClient(env.RESEND_API_KEY, env.RESEND_API_BASE);
+  await store.purgeBatchBodies(now);
+  const recoveryFailures: Array<{key: string; reason: string}> = [];
   let sent = 0;
   let skipped = 0;
 
@@ -324,6 +326,7 @@ export async function sendDaily(env: Env, store: Store, options: { force?: boole
       }
       await store.completeBatch(batch.key, token);
     } catch (error) {
+      if (error instanceof ProviderRejection) await store.closeBatch(batch.key, token);
       // Claims may be released, but durable reservations always survive. A retry
       // resumes this exact batch, even if the feed or saved preferences changed.
       for (const id of batch.recipientIds) await store.releaseSend(id, batch.editionDate);
@@ -335,14 +338,17 @@ export async function sendDaily(env: Env, store: Store, options: { force?: boole
 
   // Recover all outstanding editions even when the latest feed has rolled forward
   // or is unavailable. Accepted batches need no provider call or fresh feed.
-  for (const batch of await store.listPendingBatches()) await recover(batch);
+  for (const batch of await store.listPendingBatches()) {
+    try { await recover(batch); }
+    catch { recoveryFailures.push({ key: batch.key, reason: 'Recovery failed; reconcile this batch separately' }); }
+  }
 
   const source = env.EDITION_JSON_URL ?? `${env.SITE_URL}/newsletter/latest.json`;
   const response = await fetch(source, { headers: { Accept: 'application/json' } });
   if (!response.ok) throw new Error(`Edition fetch failed: HTTP ${response.status} from ${source}`);
   const edition = (await response.json()) as EditionPayload;
   if (!options.force && edition.date !== ukToday()) {
-    return { edition: edition.date, sent, skipped, reason: 'latest edition is not today; nothing sent' };
+    return { edition: edition.date, sent, skipped, recoveryFailures, reason: 'latest edition is not today; nothing sent' };
   }
 
   const subscribers = await store.listSubscribed();
@@ -386,7 +392,7 @@ export async function sendDaily(env: Env, store: Store, options: { force?: boole
     if (chunk.length === 100) await flush();
   }
   await flush();
-  return { edition: edition.date, sent, skipped };
+  return { edition: edition.date, sent, skipped, recoveryFailures };
 }
 
 export default {

@@ -9,7 +9,7 @@ export default {
   async fetch(request: Request, env: any) {
     const store = memoryStore();
     if (!seeded) { memorySeed(2, ['models'], 'recovery'); seeded = true; }
-    if (new URL(request.url).pathname === '/state') return Response.json({ pending: await store.listPendingBatches(), sends: memorySnapshot().sends, writes });
+    if (new URL(request.url).pathname === '/state') return Response.json({ pending: await store.listPendingBatches(), batches: memorySnapshot().batches, sends: memorySnapshot().sends, writes });
     const faultStore = { ...store,
       async recordSend(id: string, date: string, provider: string | null) {
         calls++;

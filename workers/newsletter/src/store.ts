@@ -38,9 +38,12 @@ export interface SendBatch {
   createdAtMs: number;
   providerIds: string[] | null;
   complete: boolean;
+  closed?: boolean;
 }
 
 export interface Store {
+  closeBatch(key: string, token: string): Promise<void>;
+  purgeBatchBodies(nowMs: number): Promise<void>;
   saveBatch(batch: SendBatch): Promise<void>;
   listPendingBatches(): Promise<SendBatch[]>;
   claimBatch(key: string, nowMs: number, token: string): Promise<SendBatch | null>;
@@ -98,7 +101,7 @@ const fromRow = (row: Row | undefined): Subscriber | null =>
 function batchFromRow(row: any): SendBatch {
   return { key: row.batch_key, editionDate: String(row.edition_date).slice(0, 10), recipientIds: row.recipient_ids,
     requestBody: row.request_body, createdAtMs: Number(row.created_at_ms), providerIds: row.provider_ids,
-    complete: row.state === 'complete' };
+    closed: row.state === 'closed', complete: row.state === 'complete' };
 }
 const batchCols = "batch_key, edition_date::text, recipient_ids, request_body, extract(epoch from created_at)*1000 AS created_at_ms, provider_ids, state";
 
@@ -107,6 +110,13 @@ export function neonStore(databaseUrl: string): Store {
   const cols = 'id, email, status, categories, pending_categories, consent_at, confirmed_at, token_gen';
   const S = 'newsletter.subscribers';
   return {
+    async closeBatch(key, token) {
+      const rows = await sql.query("UPDATE newsletter.send_batches SET state='closed', request_body='' WHERE batch_key=$1 AND lease_token=$2 AND site=$3 RETURNING batch_key", [key, token, SITE]);
+      if (!rows.length) throw new Error('Batch lease lost before closure');
+    },
+    async purgeBatchBodies(nowMs) {
+      await sql.query("UPDATE newsletter.send_batches SET request_body='' WHERE site=$1 AND (state IN ('complete','closed') OR created_at <= to_timestamp($2)-interval '24 hours')", [SITE, nowMs/1000]);
+    },
     async saveBatch(batch) {
       // One transaction: the immutable request and every unique recipient reservation.
       // A competing batch for any (reader, edition) rolls the whole transaction back.
@@ -119,12 +129,12 @@ export function neonStore(databaseUrl: string): Store {
       ]);
     },
     async listPendingBatches() {
-      const rows = await sql.query(`SELECT ${batchCols} FROM newsletter.send_batches WHERE site=$1 AND state <> 'complete' ORDER BY created_at, batch_key`, [SITE]);
+      const rows = await sql.query(`SELECT ${batchCols} FROM newsletter.send_batches WHERE site=$1 AND state IN ('prepared','accepted') ORDER BY created_at, batch_key`, [SITE]);
       return rows.map(batchFromRow);
     },
     async claimBatch(key, nowMs, token) {
       const rows = await sql.query(`UPDATE newsletter.send_batches SET lease_token=$3, lease_until=to_timestamp($2)+make_interval(secs => $4)
-        WHERE batch_key=$1 AND site=$5 AND state <> 'complete' AND (lease_until IS NULL OR lease_until <= to_timestamp($2))
+        WHERE batch_key=$1 AND site=$5 AND state IN ('prepared','accepted') AND (lease_until IS NULL OR lease_until <= to_timestamp($2))
         RETURNING ${batchCols}`, [key, nowMs / 1000, token, SEND_LEASE_SECONDS, SITE]);
       return rows[0] ? batchFromRow(rows[0]) : null;
     },
@@ -134,7 +144,7 @@ export function neonStore(databaseUrl: string): Store {
       if (!rows.length) throw new Error('Batch lease lost before acceptance was recorded');
     },
     async completeBatch(key, token) {
-      const rows = await sql.query(`UPDATE newsletter.send_batches SET state='complete'
+      const rows = await sql.query(`UPDATE newsletter.send_batches SET state='complete', request_body=''
         WHERE batch_key=$1 AND lease_token=$2 AND site=$3 AND state='accepted' RETURNING batch_key`, [key, token, SITE]);
       if (!rows.length) throw new Error('Batch lease lost before completion');
     },
@@ -269,16 +279,24 @@ export function memoryStore(): Store {
     return publicView(next);
   };
   return {
+    async closeBatch(key, token) {
+      const batch = memory.batches.get(key)!;
+      if (batch.leaseToken !== token) throw new Error('Batch lease lost before closure');
+      batch.closed = true; batch.requestBody = '';
+    },
+    async purgeBatchBodies(nowMs) {
+      for (const batch of memory.batches.values()) if (batch.complete || batch.closed || nowMs-batch.createdAtMs >= 24*3600000) batch.requestBody = '';
+    },
     async saveBatch(batch) {
       if (memory.batches.has(batch.key) || [...memory.batches.values()].some(b => b.editionDate === batch.editionDate && b.recipientIds.some(id => batch.recipientIds.includes(id)))) throw new Error('Batch recipients already reserved');
       memory.batches.set(batch.key, { ...structuredClone(batch), leaseToken: null, leaseUntilMs: 0 });
     },
     async listPendingBatches() {
-      return structuredClone([...memory.batches.values()].filter(b => !b.complete));
+      return structuredClone([...memory.batches.values()].filter(b => !b.complete && !b.closed));
     },
     async claimBatch(key, nowMs, token) {
       const batch = memory.batches.get(key);
-      if (!batch || batch.complete || (batch.leaseToken && batch.leaseUntilMs > nowMs)) return null;
+      if (!batch || batch.complete || batch.closed || (batch.leaseToken && batch.leaseUntilMs > nowMs)) return null;
       batch.leaseToken = token; batch.leaseUntilMs = nowMs + SEND_LEASE_SECONDS * 1000;
       return structuredClone(batch);
     },
@@ -290,7 +308,7 @@ export function memoryStore(): Store {
     async completeBatch(key, token) {
       const batch = memory.batches.get(key)!;
       if (batch.leaseToken !== token || !batch.providerIds) throw new Error('Batch lease lost before completion');
-      batch.complete = true;
+      batch.complete = true; batch.requestBody = '';
     },
     async releaseBatch(key, token) {
       const batch = memory.batches.get(key)!;
@@ -401,6 +419,7 @@ export function memorySeed(count: number, categories: string[], prefix: string):
 /** Test-only view of the in-memory store. */
 export function memorySnapshot() {
   return {
+    batches: structuredClone([...memory.batches.values()]),
     subscribers: [...memory.subscribers.values()].map(publicView),
     sends: [...memory.sends.entries()].map(([key, value]) => [key, value.providerId]),
     events: memory.events.map((entry) => entry.event),
