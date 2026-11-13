@@ -7,6 +7,7 @@ import {
   getLatestActivities,
   getNewestBlogActivity,
   pinActivity,
+  COMPOSITE_MEASUREMENT_MAX_AGE_DAYS,
   getLatestDigest,
   getMetaLeaderboard,
   normaliseDateTime,
@@ -540,11 +541,15 @@ const tableLinks = [
 
           <div class="airh-strip-card">
             <h2>Pulse - current table</h2>
-            <p class="airh-pulse-row"><strong>{rows.length}</strong><span>ranked public LLM rows</span></p>
-            <p class="airh-pulse-row"><strong>{openRows.length}</strong><span>open-weight rows</span></p>
-            <p class="airh-pulse-row"><strong>{speedRows.length}</strong><span>rows with speed data</span></p>
+            <p class="airh-pulse-row"><strong>{rows.length}</strong><span>LLMs inside the {COMPOSITE_MEASUREMENT_MAX_AGE_DAYS}-day composite window</span></p>
+            <p class="airh-pulse-row"><strong>{openRows.length}</strong><span>open-weight rows in that window</span></p>
+            <p class="airh-pulse-row"><strong>{speedRows.length}</strong><span>windowed rows with speed data</span></p>
             <p class="airh-strip-note">
-              {topValue ? `Value leader: ${topValue.name}` : 'Value leaders appear when price data is present.'}
+              {rows.length === 0
+                ? 'Own-benchmark runs are not feeding the composite. Older measurements stay withheld.'
+                : topValue
+                  ? `Value leader: ${topValue.name}`
+                  : 'Value leaders appear when price data is present.'}
             </p>
           </div>
 

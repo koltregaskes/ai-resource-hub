@@ -8,6 +8,13 @@ const DAY_IN_MS = 24 * 60 * 60 * 1000;
 export const BENCHMARK_EVIDENCE_MAX_AGE_DAYS = 365;
 export const BENCHMARK_EVIDENCE_FUTURE_TOLERANCE_DAYS = 1;
 
+/**
+ * A measurement may stay publicly citeable for a year. The evaluated composite
+ * is a current ordering, so it admits only this shorter window. `updated_at`
+ * is not a measurement and must not move a row inside the window.
+ */
+export const COMPOSITE_MEASUREMENT_MAX_AGE_DAYS = 90;
+
 export type BenchmarkTraceability =
   | 'url-backed'
   | 'inherited-traceable'
