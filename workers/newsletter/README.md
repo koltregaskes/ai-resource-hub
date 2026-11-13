@@ -57,3 +57,13 @@ Each step needs Kol's yes, because it covers accounts, DNS, secrets or going pub
 ## Not covered yet
 - **Bounce and complaint webhooks** from Resend. These should mark addresses `unsubscribed`. Add them after the deploy. The webhook signing secret follows the same rule: Kol sets it with `wrangler secret put`.
 - **Edge rate limiting.** The Worker already limits sign-ups in the database (see below). Cloudflare's edge rules can add a cheaper first layer once the account exists.
+
+### Closing a reconciled batch
+
+A definite provider rejection closes its batch and preserves recipient reservations for that edition only. Recovery failures are reported in recoveryFailures, one batch at a time, without preventing a later edition. Ambiguous acceptance remains reserved and must never be retried after the safe key window. After checking the provider dashboard, an operator can close that exact batch in one SQL statement (replace the batch key, never invent provider IDs):
+
+```sql
+UPDATE newsletter.send_batches SET state='closed', request_body='', lease_token=NULL, lease_until=NULL WHERE site='ai-resource-hub' AND batch_key='<reconciled-batch-key>' AND state IN ('prepared','accepted');
+```
+
+Apply the updated schema at approved database setup before deploying this Worker. Completed or rejected requests have their sensitive request body erased immediately. Each send run also erases bodies at least 24 hours old, including ambiguous and accepted batches; accepted IDs and reservations survive. Run the sender regularly for this expiry sweep; it is not a database TTL when the Worker is stopped. No live schema or provider changes are performed by tests.

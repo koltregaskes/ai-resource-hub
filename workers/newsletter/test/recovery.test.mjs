@@ -14,6 +14,7 @@ async function fixture(mode, loseResponse = false, holdResponse = false) {
       assert.equal(request.url, 'https://provider.example.test/emails/batch', 'no live destinations');
       const key = request.headers.get('Idempotency-Key'), body = await request.text();
       requests.push({ key, body });
+      if(mode === 'reject' && edition.date === '2026-11-12') return Response.json({message:'rejected'}, {status:422});
       const existing = accepted.get(key);
       if (existing) {
         if (existing.body !== body) return Response.json({ message: 'different payload for same key' }, { status: 409 });
@@ -65,7 +66,7 @@ test('uncertain acceptance past the safe recovery window fails closed without an
   const f = await fixture('', true);
   try {
     assert.equal((await f.run(NOW)).status, 500);
-    const retry = await f.run(NOW + 24 * 3600000); assert.equal(retry.status, 500); assert.match((await retry.json()).error, /manual reconciliation/);
+    const retry = await f.run(NOW + 24 * 3600000); assert.equal(retry.status, 200); assert.equal((await retry.json()).recoveryFailures.length, 1);
     assert.equal(f.requests.length, 1); assert.equal((await f.state()).pending.length, 1);
   } finally { await f.mf.dispose(); }
 });
@@ -81,4 +82,22 @@ test('concurrent runs retain one reserved batch while its provider request is in
     assert.equal(f.requests.length, 1, 'live batch lease and reservations prevent another send');
     f.release(); assert.equal((await first).status, 200); assert.deepEqual([...f.deliveries.values()], [1, 1]);
   } finally { f.release(); if (first) await first; await f.mf.dispose(); }
+});
+
+
+test('422 on day one closes only that edition; days two and three deliver normally', async()=>{
+ const f=await fixture('reject');try{
+  assert.equal((await f.run(NOW)).status,500);
+  let state=await f.state();assert.equal(state.pending.length,0);assert.equal(state.batches[0].closed,true);assert.equal(state.batches[0].requestBody,'');
+  for(const day of [13,14]){f.edition.date='2026-11-'+day;const r=await f.run(NOW+(day-12)*86400000);assert.equal(r.status,200);assert.equal((await r.json()).sent,2);}
+  assert.deepEqual([...f.deliveries.values()],[2,2]);
+  assert.ok((await f.state()).batches.every(b=>b.requestBody===''));
+ }finally{await f.mf.dispose();}
+});
+test('expired uncertain batch body is erased and cannot block a new edition',async()=>{
+ const f=await fixture('',true);try{
+  assert.equal((await f.run(NOW)).status,500);assert.ok((await f.state()).batches[0].requestBody.includes('@example.com'));
+  f.edition.date='2026-11-13';const r=await f.run(NOW+86400000);assert.equal(r.status,200);const result=await r.json();assert.equal(result.sent,2);assert.equal(result.recoveryFailures.length,1);
+  const state=await f.state();assert.equal(state.batches[0].requestBody,'');assert.equal(state.pending.length,1);assert.ok(state.batches[1].complete);assert.equal(state.batches[1].requestBody,'');
+ }finally{await f.mf.dispose();}
 });
