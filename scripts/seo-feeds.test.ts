@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { capNewsEntries, NEWS_SITEMAP_MAX_URLS, withinNewsWindow } from '../src/lib/seo-feeds';
+import { capNewsEntries, newsPublicationDate, NEWS_SITEMAP_MAX_URLS, withinNewsWindow } from '../src/lib/seo-feeds';
 
 test('news sitemap entries are capped at the Google News limit, newest first', () => {
   const base = Date.parse('2026-11-12T12:00:00Z');
@@ -24,4 +24,23 @@ test('only the last 48 hours are kept', () => {
     now,
   );
   assert.equal(kept.length, 2);
+});
+test('news publication dates preserve real timestamps and date-only precision', () => {
+  assert.equal(newsPublicationDate('2026-11-12'), '2026-11-12');
+  assert.equal(newsPublicationDate('2026-11-12T14:37:12Z'), '2026-11-12T14:37:12.000Z');
+  assert.equal(newsPublicationDate('2026-11-12T14:37:12+02:00'), '2026-11-12T12:37:12.000Z');
+});
+
+test('date-only news remains eligible until 48 hours after the end of its UTC day', () => {
+  const entry = { publishedAt: '2026-11-10' };
+  assert.deepEqual(withinNewsWindow([entry], new Date('2026-11-12T23:59:59.999Z')), [entry]);
+  assert.deepEqual(withinNewsWindow([entry], new Date('2026-11-13T00:00:00Z')), []);
+  assert.deepEqual(withinNewsWindow([entry], new Date('2026-11-10T12:00:00Z')), [entry]);
+  assert.deepEqual(withinNewsWindow([entry], new Date('2026-11-09T12:00:00Z')), []);
+});
+
+test('real publication timestamps control the exact 48-hour boundary', () => {
+  const entry = { publishedAt: '2026-11-10T14:37:12+02:00' };
+  assert.deepEqual(withinNewsWindow([entry], new Date('2026-11-12T12:37:12Z')), [entry]);
+  assert.deepEqual(withinNewsWindow([entry], new Date('2026-11-12T12:37:12.001Z')), []);
 });

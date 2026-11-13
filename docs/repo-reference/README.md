@@ -8,20 +8,20 @@ These files exist for people who prefer reading GitHub directly. They are rebuil
 
 | Metric | Value |
 | --- | --- |
-| Generated | 13 Nov 2026, 06:55 UTC |
+| Generated | 13 Nov 2026, 12:55 UTC |
 | Providers tracked | 40 |
-| Public models | 347 |
-| Active models | 104 |
-| Tracking models | 242 |
+| Public models | 345 |
+| Active models | 127 |
+| Tracking models | 217 |
 | Preview models | 1 |
 | Benchmarks | 34 |
 | News items in cache | 61 |
-| Release-desk entries | 45 |
+| Release-desk entries | 62 |
 | Configured news sources | 14 |
 | Availability rules | 4 |
-| Latest visible refresh | 13 Nov 2026, 06:55 UTC |
+| Latest visible refresh | 13 Nov 2026, 12:55 UTC |
 | Current evaluated composite leader | GPT-5.2 (52.1) |
-| Latest tracked release | Muse Ember (9 Nov 2026) |
+| Latest tracked release | Gemini 4 Hydrogen (12 Nov 2026) |
 
 ## Reference Files
 
