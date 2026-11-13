@@ -3,6 +3,7 @@ import '../styles/global.css';
 import GlobalSearch from '../components/GlobalSearch.astro';
 import { activityTypeLabel, getLatestActivities, getNewestBlogActivity, pinActivity } from '../data/hub-dashboard';
 import { getSearchIndex } from '../data/search-index';
+import { getOgCardForPath, ogImagePathForCard } from '../data/og-cards';
 import {
   buildAlternateTranslations,
   buildLocaleSwitcherLinks,
@@ -17,6 +18,7 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   locale?: SupportedLocale;
   localeMenuLinks?: Partial<Record<SupportedLocale, string>>;
   alternateTranslations?: Partial<Record<SupportedLocale, string>>;
@@ -30,6 +32,7 @@ const {
   title,
   description = 'Independent AI model comparison for pricing, benchmarks, tools, and live news across the AI landscape.',
   ogImage,
+  ogImageAlt,
   locale = DEFAULT_LOCALE,
   localeMenuLinks = {},
   alternateTranslations = {},
@@ -48,11 +51,41 @@ const currentPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${A
 const isHomePage = currentPath === basePath;
 const localeMeta = getLocaleMeta(locale);
 const localeSwitcherLinks = buildLocaleSwitcherLinks(base, locale, localeMenuLinks);
-const alternateLocaleLinks = buildAlternateTranslations(base, alternateTranslations);
+// hreflang targets must be fully qualified URLs (Google ignores relative ones).
+const alternateLocaleLinks = buildAlternateTranslations(base, alternateTranslations).map((link) => ({
+  ...link,
+  href: new URL(link.href, Astro.site).href,
+}));
+const xDefaultHref = alternateTranslations['en-GB'] ? new URL(alternateTranslations['en-GB'], Astro.site).href : null;
 const translationMeta = getTranslationStateMeta(translationState);
+const pathFromBase = `/${Astro.url.pathname.slice(new URL(base, Astro.site).pathname.length)}`;
+const ogCard = getOgCardForPath(pathFromBase);
 const ogImageUrl = ogImage
   ? new URL(ogImage, Astro.site).href
-  : new URL(`${base}og-default.svg`, Astro.site).href;
+  : new URL(`${base}${ogImagePathForCard(ogCard.id)}`, Astro.site).href;
+const ogImageAltText = ogImageAlt ?? (ogImage ? title : ogCard.alt);
+const siteStructuredData = isHomePage
+  ? {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'Organization',
+          '@id': new URL(`${base}#organization`, Astro.site).href,
+          name: 'The AI Resource Hub',
+          url: new URL(base, Astro.site).href,
+          logo: new URL(`${base}${ogImagePathForCard(ogCard.id)}`, Astro.site).href,
+        },
+        {
+          '@type': 'WebSite',
+          '@id': new URL(`${base}#website`, Astro.site).href,
+          name: 'The AI Resource Hub',
+          url: new URL(base, Astro.site).href,
+          inLanguage: 'en-GB',
+          publisher: { '@id': new URL(`${base}#organization`, Astro.site).href },
+        },
+      ],
+    }
+  : null;
 
 const primaryNav = [
   {
@@ -358,7 +391,7 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
     {alternateLocaleLinks.map((link) => (
       <link rel="alternate" hreflang={link.hreflang} href={link.href} />
     ))}
-    {alternateTranslations['en-GB'] && <link rel="alternate" hreflang="x-default" href={alternateTranslations['en-GB']} />}
+    {xDefaultHref && <link rel="alternate" hreflang="x-default" href={xDefaultHref} />}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -378,12 +411,16 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    {ogImageUrl.endsWith('.png') && <meta property="og:image:type" content="image/png" />}
+    <meta property="og:image:alt" content={ogImageAltText} />
     <meta property="og:site_name" content="The AI Resource Hub" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content={ogImageAltText} />
+    {siteStructuredData && <script type="application/ld+json" set:html={JSON.stringify(siteStructuredData)} />}
 
     <title>{title}</title>
 

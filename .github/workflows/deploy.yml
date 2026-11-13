@@ -25,6 +25,9 @@ concurrency:
 
 jobs:
   build:
+    outputs:
+      indexnow_urls: ${{ steps.seo_plan.outputs.indexnow_urls }}
+      websub_feeds: ${{ steps.seo_plan.outputs.websub_feeds }}
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
@@ -48,6 +51,13 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
+      - name: Plan IndexNow and WebSub pings
+        id: seo_plan
+        # Pings are best effort: a planning failure must never block the deploy.
+        # If planning fails, this run sends nothing and any IndexNow backlog is lost.
+        continue-on-error: true
+        run: node scripts/seo-ping.mjs plan --dist dist
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
@@ -63,3 +73,29 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+  # Tell search engines and feed readers about new pages once they are live.
+  # New URLs and any overflow retained by the previous deployment are sent.
+  ping:
+    needs: [build, deploy]
+    if: ${{ needs.build.outputs.indexnow_urls != '' && (needs.build.outputs.indexnow_urls != '[]' || needs.build.outputs.websub_feeds != '[]') }}
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Checkout ping script
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          sparse-checkout: scripts/seo-ping.mjs
+          sparse-checkout-cone-mode: false
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+
+      - name: Send IndexNow and WebSub pings
+        run: node scripts/seo-ping.mjs ping
+        env:
+          INDEXNOW_URLS: ${{ needs.build.outputs.indexnow_urls }}
+          WEBSUB_FEEDS: ${{ needs.build.outputs.websub_feeds }}

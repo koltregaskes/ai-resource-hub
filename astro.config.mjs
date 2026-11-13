@@ -15,7 +15,12 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
-      filter: (page) => !page.includes('/go'),
+      filter: (page) => !page.includes('/go') && !page.includes('/og/'),
+      // Hand-built sitemaps listed in sitemap-index.xml alongside the generated one.
+      customSitemaps: [
+        'https://theairesourcehub.com/news-sitemap.xml',
+        'https://theairesourcehub.com/image-sitemap.xml',
+      ],
     }),
   ],
   vite: {
