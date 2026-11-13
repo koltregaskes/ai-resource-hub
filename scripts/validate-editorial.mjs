@@ -57,10 +57,16 @@ const BANNED = [
 
 const ukDay = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit' });
 
+function decodeCodePoint(match, code) {
+  return Number.isInteger(code) && code >= 0 && code <= 0x10ffff && !(code >= 0xd800 && code <= 0xdfff)
+    ? String.fromCodePoint(code)
+    : match;
+}
+
 function decode(value) {
   return String(value ?? '')
-    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
-    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(parseInt(code, 16)))
+    .replace(/&#(\d+);/g, (match, code) => decodeCodePoint(match, Number(code)))
+    .replace(/&#x([0-9a-f]+);/gi, (match, code) => decodeCodePoint(match, parseInt(code, 16)))
     .replace(/&amp;/g, '&');
 }
 

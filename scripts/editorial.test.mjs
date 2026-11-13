@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { validateEditorial, numbersIn, storiesByDay, quantitiesIn } from './validate-editorial.mjs';
+import { validateEditorial, numbersIn, storiesByDay, storiesFromArchive, quantitiesIn } from './validate-editorial.mjs';
 import { spawnSync } from 'node:child_process';
 import { mkdtempSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -158,3 +158,20 @@ test('[P2] the CLI exits 1 with a schema error (no uncaught TypeError) for a nul
   assert.match(run.stderr, /why_it_matters must be an object/);
   assert.doesNotMatch(run.stderr, /TypeError/);
 });
+const invalidEntities = ['&#1114112;', '&#x110000;', '&#55296;', '&#57343;', '&#xD800;', '&#xDFFF;', '&#999999999999999999999999999999999999;'];
+for (const [name, makeStories] of [
+  ['live', (title, summary) => storiesByDay([{ published_at: '2026-11-12T12:00:00Z', url: A, title, summary }]).get('2026-11-12')],
+  ['archive', (title, summary) => storiesFromArchive({ stories: [{ url: A, title, summary }] })],
+]) {
+  test(name + ' source text preserves invalid numeric entities without crashing validation', () => {
+    for (const entity of invalidEntities) {
+      const sources = makeStories(entity, entity);
+      assert.equal(sources.get(A).text, entity + ' ' + entity);
+      assert.deepEqual(validateEditorial('2026-11-12', { why_it_matters: { [A]: 'Source context remains available.' } }, sources), []);
+    }
+  });
+  test(name + ' source text decodes valid scalar boundaries and ordinary entities', () => {
+    const sources = makeStories('&#0;&#x10FFFF;', '&#60;&#x3e;&#128512;&amp;');
+    assert.equal(sources.get(A).text, '\u0000\u{10ffff} <>\u{1f600}&');
+  });
+}
