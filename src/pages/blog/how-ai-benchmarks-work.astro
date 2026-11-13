@@ -1,4 +1,5 @@
 ---
+import { serializeJsonLd } from '../../lib/json-ld';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getBenchmarks } from '../../db/queries';
 
@@ -142,5 +143,5 @@ const structuredData = {
     </div>
   </article>
 
-  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <script type="application/ld+json" set:html={serializeJsonLd(structuredData)} />
 </BaseLayout>
