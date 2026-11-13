@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T20:55:57.635Z",
+  "generatedAt": "2026-11-13T00:16:50.959Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T20:55:57.630Z",
+      "lastCheckedAt": "2026-11-13T00:16:50.952Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,31 +20,53 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-12T20:51:35.000Z",
+          "id": "fireworks-feed-0-2026-11-12T23:20:41.000Z",
           "title": "Service Degradation for DeepSeek V4.1 Flash 1017",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-11-12T20:51:35.000Z",
-          "updatedAt": "2026-11-12T20:51:35.000Z",
+          "startedAt": "2026-11-12T23:20:41.000Z",
+          "updatedAt": "2026-11-12T23:20:41.000Z",
           "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M78QS7FF6ZZG766MPN791KX7",
+          "url": "https://status.fireworks.ai//incidents/01M7906CWJ4G47XGK6VTSC3JRY",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-11-12T20:33:24.000Z",
+          "id": "fireworks-feed-1-2026-11-12T21:26:40.000Z",
           "title": "Service Degradation for DeepSeek V4.1 Flash 1017",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-11-12T20:33:24.000Z",
-          "updatedAt": "2026-11-12T20:33:24.000Z",
+          "startedAt": "2026-11-12T21:26:40.000Z",
+          "updatedAt": "2026-11-12T21:26:40.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M78QE4QA5Y7GGFCG945HESCT",
-          "summary": "Status: Investigating We are seeing impacted performance for DeepSeek V4.1 Flash 1017. We are actively investigating. Affected components DeepSeek V4.1 Flash 1017 (Degraded perfor..."
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-12T20:51:35.000Z",
+          "id": "fireworks-feed-0-2026-11-12T23:20:41.000Z",
+          "title": "Service Degradation for DeepSeek V4.1 Flash 1017",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-12T23:20:41.000Z",
+          "updatedAt": "2026-11-12T23:20:41.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M7906CWJ4G47XGK6VTSC3JRY",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-12T21:26:40.000Z",
+          "title": "Service Degradation for DeepSeek V4.1 Flash 1017",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-12T21:26:40.000Z",
+          "updatedAt": "2026-11-12T21:26:40.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M78QE4QA5Y7GGFCG945HESCT",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-2-2026-11-12T20:51:35.000Z",
           "title": "Service Degradation for DeepSeek V4.1 Flash 1017",
           "status": "reported",
           "impact": "unknown",
@@ -55,18 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-11-12T20:33:24.000Z",
-          "title": "Service Degradation for DeepSeek V4.1 Flash 1017",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-12T20:33:24.000Z",
-          "updatedAt": "2026-11-12T20:33:24.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M78QE4QA5Y7GGFCG945HESCT",
-          "summary": "Status: Investigating We are seeing impacted performance for DeepSeek V4.1 Flash 1017. We are actively investigating. Affected components DeepSeek V4.1 Flash 1017 (Degraded perfor..."
-        },
-        {
-          "id": "fireworks-feed-2-2026-11-12T15:19:48.000Z",
+          "id": "fireworks-feed-3-2026-11-12T15:19:48.000Z",
           "title": "Service Degradation for GLM 5.3 Fast",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-11-12T15:19:48.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M784NNAS3WCYQNX4SACETKK3",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-11-12T05:00:53.000Z",
-          "title": "Service Degradation for GLM 5.3 Fast",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-12T05:00:53.000Z",
-          "updatedAt": "2026-11-12T05:00:53.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M770AY4DSAP38KCNWN4MHH6N",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,19 +100,19 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T20:55:55.998Z",
+      "lastCheckedAt": "2026-11-13T00:16:49.674Z",
       "overallStatus": "degraded",
-      "overallLabel": "Minor Service Outage",
+      "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "partial_outage"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Cowork",
-          "status": "partial_outage"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Platform on AWS",
@@ -138,10 +138,10 @@
           "status": "identified",
           "impact": "major",
           "startedAt": "2026-11-12T17:52:44.934Z",
-          "updatedAt": "2026-11-12T20:28:28.216Z",
+          "updatedAt": "2026-11-12T23:54:26.992Z",
           "resolvedAt": null,
           "url": "https://stspg.io/m0rbx38nmy1c",
-          "summary": "We are continuing to work with our upstream provider on this issue. Mail, calendar and search tools in the Microsoft 365 connector are still failing for most requests. Claude for..."
+          "summary": "This issue is caused by a Microsoft 365 service incident, and mail, calendar and search tools in the Microsoft 365 connector are still failing for most requests. Claude for Outloo..."
         }
       ],
       "recentIncidents": [
@@ -151,10 +151,10 @@
           "status": "identified",
           "impact": "major",
           "startedAt": "2026-11-12T17:52:44.934Z",
-          "updatedAt": "2026-11-12T20:28:28.216Z",
+          "updatedAt": "2026-11-12T23:54:26.992Z",
           "resolvedAt": null,
           "url": "https://stspg.io/m0rbx38nmy1c",
-          "summary": "We are continuing to work with our upstream provider on this issue. Mail, calendar and search tools in the Microsoft 365 connector are still failing for most requests. Claude for..."
+          "summary": "This issue is caused by a Microsoft 365 service incident, and mail, calendar and search tools in the Microsoft 365 connector are still failing for most requests. Claude for Outloo..."
         },
         {
           "id": "pgz8r13pk4sm",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T20:55:56.032Z",
+      "lastCheckedAt": "2026-11-13T00:16:49.694Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -299,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T20:55:57.010Z",
+      "lastCheckedAt": "2026-11-13T00:16:50.343Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T20:55:56.327Z",
+      "lastCheckedAt": "2026-11-13T00:16:49.794Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -362,7 +362,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-12T20:55:57.206Z",
+      "lastCheckedAt": "2026-11-13T00:16:50.530Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -386,7 +386,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
