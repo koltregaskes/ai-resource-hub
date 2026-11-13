@@ -117,11 +117,17 @@ function labelFor(date: string, options: Intl.DateTimeFormatOptions): string {
 
 const NAMED_ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
 
+function decodeCodePoint(match: string, code: number): string {
+  return Number.isInteger(code) && code >= 0 && code <= 0x10ffff && !(code >= 0xd800 && code <= 0xdfff)
+    ? String.fromCodePoint(code)
+    : match;
+}
+
 /** Feed titles and summaries sometimes arrive with HTML entities still encoded. */
 export function decodeEntities(value: string): string {
   return value
-    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
-    .replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(parseInt(code, 16)))
+    .replace(/&#(\d+);/g, (match, code) => decodeCodePoint(match, Number(code)))
+    .replace(/&#x([0-9a-f]+);/gi, (match, code) => decodeCodePoint(match, parseInt(code, 16)))
     .replace(/&([a-z]+);/gi, (match, name: string) => NAMED_ENTITIES[name.toLowerCase()] ?? match)
     .replace(/ /g, ' ');
 }
