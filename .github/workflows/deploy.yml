@@ -58,6 +58,8 @@ jobs:
 
       - name: Plan IndexNow and WebSub pings
         id: seo_plan
+        # Pings are best effort: a planning failure must never block the deploy.
+        # If planning fails, this run sends nothing and any IndexNow backlog is lost.
         continue-on-error: true
         run: node scripts/seo-ping.mjs plan --dist dist
 
@@ -78,7 +80,7 @@ jobs:
         uses: actions/deploy-pages@v5
 
   # Tell search engines and feed readers about new pages once they are live.
-  # Only URLs missing from the previous live news sitemap are sent.
+  # New URLs and any overflow retained by the previous deployment are sent.
   ping:
     needs: [build, deploy]
     if: ${{ needs.build.outputs.indexnow_urls != '' && (needs.build.outputs.indexnow_urls != '[]' || needs.build.outputs.websub_feeds != '[]') }}

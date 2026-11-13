@@ -1,16 +1,19 @@
 ---
+import ReviewedModelPage from '../../components/ReviewedModelPage.astro';
+import { MODEL_FIELD_REVIEWS, getModelFieldReview } from '../../../scripts/lib/model-field-reviews';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MiniPriceChart from '../../components/MiniPriceChart';
 import { getAllModelIds, getModelById, getModelBenchmarks, getModelPriceHistory, getProviderEndpoints, getModelMessageLimits } from '../../db/queries';
 import { getAvailabilityForModel, formatAvailabilityDate } from '../../data/model-availability';
 
 export function getStaticPaths() {
-  const ids = getAllModelIds();
+  const ids = [...new Set([...getAllModelIds(), ...MODEL_FIELD_REVIEWS.map(row => row.id)])];
   return ids.map((id) => ({ params: { id } }));
 }
 
 const { id } = Astro.params;
 const model = getModelById(id);
+const review = getModelFieldReview(id!);
 
 if (!model) {
   return Astro.redirect(`${import.meta.env.BASE_URL}404`);
@@ -91,7 +94,7 @@ const structuredData = {
 };
 ---
 
-<BaseLayout
+{review ? <ReviewedModelPage review={review} discoveryName={model.name} /> : <BaseLayout
   title={`${model.name} - The AI Resource Hub`}
   description={isTrackedModel
     ? `${model.name} by ${model.provider_name}. Tracked release page with pricing, context window, availability, and source notes while benchmark coverage is still being collected.`
@@ -557,4 +560,4 @@ const structuredData = {
   </section>
 
   <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
-</BaseLayout>
+</BaseLayout>}

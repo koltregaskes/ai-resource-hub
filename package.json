@@ -47,7 +47,8 @@
     "snapshot:editions": "tsx scripts/snapshot-editions.ts",
     "backfill:news-categories": "tsx scripts/backfill-news-categories.ts",
     "test:seo": "node --test scripts/seo-ping.test.mjs && tsx --test scripts/seo-feeds.test.ts",
-    "test:editorial": "node --test scripts/editorial.test.mjs && node scripts/validate-editorial.mjs"
+    "test:editorial": "node --test scripts/editorial.test.mjs && node scripts/validate-editorial.mjs",
+    "test:model-fields": "tsx --test scripts/model-field-reviews.test.ts"
   },
   "dependencies": {
     "@astrojs/prism": "^4.0.1",

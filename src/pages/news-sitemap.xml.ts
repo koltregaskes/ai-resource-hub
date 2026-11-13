@@ -6,7 +6,7 @@
 import type { APIRoute } from 'astro';
 import { blogPosts } from '../data/blog-posts';
 import { getNewsletterEditionSummaries } from '../data/newsletter-editions';
-import { capNewsEntries, escapeXml, PUBLICATION_NAME, withinNewsWindow, type NewsSitemapEntry } from '../lib/seo-feeds';
+import { capNewsEntries, escapeXml, newsPublicationDate, PUBLICATION_NAME, withinNewsWindow, type NewsSitemapEntry } from '../lib/seo-feeds';
 
 export const GET: APIRoute = ({ site }) => {
   const base = new URL(import.meta.env.BASE_URL, site ?? 'https://theairesourcehub.com');
@@ -20,7 +20,7 @@ export const GET: APIRoute = ({ site }) => {
     ...blogPosts.map((post) => ({
       url: new URL(`blog/${post.slug}/`, base).href,
       title: post.title,
-      publishedAt: `${post.date}T09:00:00Z`,
+      publishedAt: post.date,
     })),
   ];
 
@@ -35,7 +35,7 @@ export const GET: APIRoute = ({ site }) => {
         <news:name>${escapeXml(PUBLICATION_NAME)}</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>${new Date(entry.publishedAt).toISOString()}</news:publication_date>
+      <news:publication_date>${newsPublicationDate(entry.publishedAt)}</news:publication_date>
       <news:title>${escapeXml(entry.title)}</news:title>
     </news:news>
   </url>`,

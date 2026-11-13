@@ -52,6 +52,9 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
+      - name: Verify catalogue fields and rendered pages
+        run: npm run test:model-fields
+
   newsletter-worker:
     runs-on: ubuntu-latest
     defaults:
