@@ -1,0 +1,138 @@
+---
+/**
+ * Hub story page (hub #614). Shows the source's own title and summary, links
+ * out to the source, and links to Hub pages that already exist: the daily
+ * edition, verified model pages and related stories. No text is written here.
+ *
+ * Indexing: a page is indexable only when an editor note ("why it matters")
+ * adds something of ours; otherwise it is noindex,follow, so search engines
+ * don't see thin copies of other sites' summaries. Story pages are left out of
+ * the XML sitemaps for the same reason (astro.config.mjs).
+ *
+ * Analytics hooks: data-story-id, data-category, data-outbound="story".
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getAllModelIds, getModelById } from '../../../db/queries';
+import { NEWS_CATEGORIES } from '../../../data/news-categories';
+import { editionFor, getHubStories, modelsNamedIn, type HubStory } from '../../../data/news-stories';
+
+export function getStaticPaths() {
+  return getHubStories().map((story) => ({ params: { date: story.date, slug: story.slug }, props: { story } }));
+}
+
+interface Props {
+  story: HubStory;
+}
+
+const { story } = Astro.props;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const all = getHubStories();
+const edition = editionFor(story);
+const classFor = (id: string) => NEWS_CATEGORIES.find((category) => category.id === id)?.className ?? '';
+const tagLabel: Record<string, string> = { benchmark: 'Benchmark', pricing_change: 'Pricing', open_source: 'Open source' };
+const when = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+  .format(new Date(story.publishedAt))
+  .replace(' at ', ', ');
+
+// Verified model pages named in the story's own title or summary.
+const publicModels = getAllModelIds()
+  .map((id) => getModelById(id))
+  .filter((model): model is NonNullable<typeof model> => Boolean(model));
+const models = modelsNamedIn(`${story.title} ${story.summary}`, publicModels);
+
+const sameDay = all.filter((other) => other.date === story.date && other.path !== story.path).slice(0, 5);
+const sameCompany = story.company
+  ? all.filter((other) => other.company === story.company && other.path !== story.path && other.date !== story.date).slice(0, 5)
+  : [];
+const indexable = Boolean(edition?.whyItMatters);
+const description = (story.summary || story.title).slice(0, 155);
+---
+
+<BaseLayout
+  title={`${story.title} | AI news, ${story.source} | The AI Resource Hub`}
+  description={description}
+  robots={indexable ? undefined : 'noindex, follow'}
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12" data-story-id={story.id} data-category={story.category}>
+    <nav class="text-xs text-(--color-text-muted)" aria-label="Breadcrumb">
+      <a class="hover:text-(--color-text-primary)" href={`${base}news/`}>News</a>
+      <span aria-hidden="true"> / </span>
+      {edition
+        ? <a class="hover:text-(--color-text-primary)" href={`${base}newsletter/${edition.date}/`}>{edition.dateLabel}</a>
+        : <span>{story.date}</span>}
+    </nav>
+
+    <header class="mt-4 border-b border-(--color-border) pb-6">
+      <div class="flex flex-wrap items-center gap-2 text-xs">
+        <span class={`rounded px-1.5 py-0.5 font-medium ${classFor(story.category)}`}>{story.categoryLabel}</span>
+        {story.company && <span class="rounded bg-(--color-bg-tertiary) px-1.5 py-0.5 font-medium text-(--color-text-secondary)">{story.company}</span>}
+        {story.tags.map((tag) => <span class="rounded border border-(--color-border) px-1.5 py-0.5 text-(--color-text-muted)">{tagLabel[tag] ?? tag}</span>)}
+      </div>
+      <h1 class="mt-3 text-2xl sm:text-3xl font-black font-display text-(--color-text-primary)">{story.title}</h1>
+      <p class="mt-3 text-sm text-(--color-text-secondary)">
+        Reported by <strong class="text-(--color-text-primary)">{story.source}</strong>, {when} UK time.
+      </p>
+    </header>
+
+    {story.summary && (
+      <section class="mt-6" aria-labelledby="source-summary">
+        <h2 id="source-summary" class="text-xs font-semibold uppercase tracking-[0.22em] text-(--color-text-muted)">{story.source}'s summary</h2>
+        <blockquote class="mt-3 border-l-2 border-(--color-border) pl-4 text-base leading-relaxed text-(--color-text-primary)">{story.summary}</blockquote>
+      </section>
+    )}
+
+    {edition?.whyItMatters && (
+      <section class="mt-6 rounded-2xl border border-(--color-accent)/40 bg-(--color-bg-secondary) p-5" aria-labelledby="why-it-matters">
+        <h2 id="why-it-matters" class="text-xs font-semibold uppercase tracking-[0.22em] text-(--color-accent)">Why it matters</h2>
+        <p class="mt-2 text-base text-(--color-text-primary)">{edition.whyItMatters}</p>
+        <p class="mt-2 text-xs text-(--color-text-muted)">From the Hub's editor notes for <a class="text-(--color-accent)" href={`${base}newsletter/${edition.date}/`}>{edition.dateLabel}</a>.</p>
+      </section>
+    )}
+
+    <p class="mt-6">
+      <a href={story.url} rel="noopener" target="_blank" data-outbound="story" class="inline-flex items-center gap-2 rounded-full bg-(--color-accent) px-4 py-2 text-sm font-semibold text-(--color-bg-primary) hover:bg-(--color-accent-hover)">
+        Read the full story at {story.source} &rarr;
+      </a>
+    </p>
+
+    {edition && (
+      <p class="mt-4 text-sm text-(--color-text-secondary)">
+        This story is in the <a class="text-(--color-accent) hover:text-(--color-accent-hover)" href={`${base}newsletter/${edition.date}/`}>daily edition for {edition.dateLabel}</a>.
+      </p>
+    )}
+
+    {models.length > 0 && (
+      <section class="mt-8" aria-labelledby="models-mentioned">
+        <h2 id="models-mentioned" class="text-xs font-semibold uppercase tracking-[0.22em] text-(--color-text-muted)">Models named in this story</h2>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          {models.map((model) => (
+            <li><a class="inline-block rounded-full border border-(--color-border) px-3 py-1 text-sm text-(--color-text-primary) hover:border-(--color-accent)" href={`${base}models/${model.id}/`}>{model.name}</a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {sameDay.length > 0 && (
+      <section class="mt-8" aria-labelledby="same-day">
+        <h2 id="same-day" class="text-xs font-semibold uppercase tracking-[0.22em] text-(--color-text-muted)">More AI news from the same day</h2>
+        <ul class="mt-3 space-y-2">
+          {sameDay.map((other) => (
+            <li class="text-sm"><a class="text-(--color-text-primary) hover:text-(--color-accent)" href={`${base}${other.path}`}>{other.title}</a> <span class="text-(--color-text-muted)">({other.source})</span></li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {sameCompany.length > 0 && (
+      <section class="mt-8" aria-labelledby="same-company">
+        <h2 id="same-company" class="text-xs font-semibold uppercase tracking-[0.22em] text-(--color-text-muted)">Earlier stories about {story.company}</h2>
+        <ul class="mt-3 space-y-2">
+          {sameCompany.map((other) => (
+            <li class="text-sm"><a class="text-(--color-text-primary) hover:text-(--color-accent)" href={`${base}${other.path}`}>{other.title}</a> <span class="text-(--color-text-muted)">({other.source}, {other.date})</span></li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </article>
+</BaseLayout>

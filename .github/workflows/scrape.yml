@@ -111,7 +111,7 @@ jobs:
           shopt -s nullglob
           digest_files=(src/data/digest-*.md)
           news_feed_files=(src/data/news-feed-latest.json)
-          git add data/pg-cache data/provider-status.json data/events-source-status.json public/data src/data/model-release-desk.generated.ts src/data/news-pipeline.generated.ts src/data/newsletter-archive docs/repo-reference "${digest_files[@]}" "${news_feed_files[@]}"
+          git add data/pg-cache data/provider-status.json data/events-source-status.json public/data src/data/model-release-desk.generated.ts src/data/news-pipeline.generated.ts src/data/newsletter-archive src/data/news-archive docs/repo-reference "${digest_files[@]}" "${news_feed_files[@]}"
           git diff --cached --quiet || echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit updated data
@@ -122,7 +122,7 @@ jobs:
           shopt -s nullglob
           digest_files=(src/data/digest-*.md)
           news_feed_files=(src/data/news-feed-latest.json)
-          git add data/pg-cache data/provider-status.json data/events-source-status.json public/data src/data/model-release-desk.generated.ts src/data/news-pipeline.generated.ts src/data/newsletter-archive docs/repo-reference "${digest_files[@]}" "${news_feed_files[@]}"
+          git add data/pg-cache data/provider-status.json data/events-source-status.json public/data src/data/model-release-desk.generated.ts src/data/news-pipeline.generated.ts src/data/newsletter-archive src/data/news-archive docs/repo-reference "${digest_files[@]}" "${news_feed_files[@]}"
           git diff --staged --quiet || git commit -m "chore: update pricing & benchmark data $(date +%Y-%m-%d) [automated]"
           git push
 
