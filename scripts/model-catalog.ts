@@ -502,6 +502,9 @@ const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Claude Opus 5',
     providerId: 'anthropic',
     released: '2026-07-24',
+    // Vendor specs: https://platform.claude.com/docs/en/models/overview
+    contextWindow: 1_000_000,
+    maxOutput: 128_000,
     modality: 'text,vision',
     apiAvailable: true,
     notes: 'Current generally available Opus model. Some safeguarded requests can fall back to Opus 4.8.',
@@ -543,6 +546,9 @@ const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Claude Fable 5',
     providerId: 'anthropic',
     released: '2026-06-09',
+    // Vendor specs: https://platform.claude.com/docs/en/models/overview
+    contextWindow: 1_000_000,
+    maxOutput: 128_000,
     modality: 'text,vision',
     apiAvailable: true,
     notes: 'Generally available Mythos-class model. Safeguarded topics can fall back to Opus 4.8 or Opus 5.',
@@ -565,6 +571,9 @@ const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Claude Sonnet 5',
     providerId: 'anthropic',
     released: '2026-06-30',
+    // Vendor specs: https://platform.claude.com/docs/en/models/overview
+    contextWindow: 1_000_000,
+    maxOutput: 128_000,
     modality: 'text,vision',
     apiAvailable: true,
     notes: 'Generally available Sonnet model. Introductory pricing applies through 31 August 2026.',
@@ -587,6 +596,9 @@ const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Claude Opus 4.8',
     providerId: 'anthropic',
     released: '2026-05-28',
+    // Vendor specs: https://platform.claude.com/docs/en/models/overview
+    contextWindow: 1_000_000,
+    maxOutput: 128_000,
     modality: 'text,vision',
     apiAvailable: true,
     notes: 'Official Opus release retained for comparisons and fallback-routing context.',
@@ -625,6 +637,9 @@ const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Claude Opus 4.7',
     providerId: 'anthropic',
     released: '2026-04-16',
+    // Vendor specs: https://platform.claude.com/docs/en/models/overview
+    contextWindow: 1_000_000,
+    maxOutput: 128_000,
     modality: 'text,vision',
     apiAvailable: true,
     notes: 'Official generally available Opus release retained for historical comparisons.',

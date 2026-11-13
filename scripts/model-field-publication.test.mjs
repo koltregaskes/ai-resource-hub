@@ -22,8 +22,8 @@ test('real sync merge clears omitted discovery specs and conditional prices on p
   const merged = mergeModel(contaminated('muse-ember'), catalog.get('muse-ember'));
   assert.equal(merged.status, 'active');
   assert.equal(merged.max_output, 0);
-  assert.equal(merged.input_price, 0);
-  assert.equal(merged.output_price, 0);
+  assert.equal(merged.input_price, -1);
+  assert.equal(merged.output_price, -1);
   const nemotron = mergeModel(contaminated('nemotron-3.5-super-vl'), catalog.get('nemotron-3.5-super-vl'));
   assert.equal(nemotron.max_output, 0);
   assert.equal(nemotron.api_available, 0);
@@ -54,6 +54,7 @@ test('release desk exports null and explicit unverified states without discovery
   for (const table of ['benchmarks', 'benchmark_scores']) fs.copyFileSync(`data/pg-cache/${table}.json`, path.join(cache, `${table}.json`));
   fs.writeFileSync(path.join(cache, 'models.json'), JSON.stringify([
     contaminated('nemotron-3.5-super-vl'), contaminated('muse-ember'),
+    contaminated('qwen3.8-flash'), contaminated('qwen3.8-omni-flash'),
     { ...contaminated('discovery-regression'), notes: 'awaiting official verification' },
   ]));
   const run = spawnSync(process.execPath, ['--import', pathToFileURL(path.resolve('scripts/lib/register-typescript.mjs')).href, path.resolve('scripts/generate-release-desk.ts'), '--public-only'], { cwd: fixture, encoding: 'utf8' });

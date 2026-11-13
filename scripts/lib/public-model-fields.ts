@@ -34,7 +34,18 @@ export function applyModelFieldEvidence<T extends { id: string; notes?: string |
       result.field_states[column] = values[column] === null ? 'unverified' : 'verified';
     }
   }
-  if ((review && !entry?.officialPricing) || entry?.pricingConditions || (!entry && isDiscoveryOnlyModel(model))) {
+  // Catalogue identity does not verify cached discovery prices.
+  if (entry?.officialPricing && !review) {
+    if (values.pricing_source !== entry.officialPricing.source
+      || values.input_price !== entry.officialPricing.inputPrice
+      || values.output_price !== entry.officialPricing.outputPrice) values.pricing_updated = null;
+    values.pricing_source = entry.officialPricing.source;
+    values.input_price = entry.officialPricing.inputPrice;
+    values.output_price = entry.officialPricing.outputPrice;
+    result.field_states.input_price = 'verified';
+    result.field_states.output_price = 'verified';
+  }
+  if (((entry || review) && !entry?.officialPricing) || entry?.pricingConditions || (!entry && isDiscoveryOnlyModel(model))) {
     for (const column of ['input_price', 'output_price', 'cached_input_price']) {
       values[column] = null;
       result.field_states[column] = 'unverified';
@@ -42,10 +53,19 @@ export function applyModelFieldEvidence<T extends { id: string; notes?: string |
     values.pricing_source = null;
     values.pricing_updated = null;
   }
+  for (const column of ['input_price', 'output_price', 'cached_input_price']) {
+    const value = values[column];
+    if (value == null || !Number.isFinite(Number(value)) || Number(value) < 0
+      || (Number(value) === 0 && result.field_states[column] !== 'verified')) {
+      values[column] = null;
+      result.field_states[column] = 'unverified';
+    }
+  }
   return result;
 }
 
 // Legacy comparison tables assume one global price and complete scalar specs.
 export function hasScopedModelFields(id: string): boolean {
-  return Boolean(getModelFieldReview(id) || catalog.get(id)?.pricingConditions);
+  const entry = catalog.get(id);
+  return Boolean(getModelFieldReview(id) || (entry && !entry.officialPricing) || entry?.pricingConditions);
 }

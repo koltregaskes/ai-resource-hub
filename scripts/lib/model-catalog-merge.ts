@@ -59,14 +59,14 @@ export function mergeModel(existing: ExistingModel | undefined, model: CatalogMo
   const pricing = model.officialPricing;
   const pricingChanged = hasPricingChanged(existing, model);
 
-  // SQLite uses NOT NULL columns: zero means unknown here. Public selectors
-  // apply field evidence and emit null plus an unverified state.
+  // SQLite price columns are NOT NULL. Reserve -1 for unknown; zero is a
+  // real free price. Public boundaries project the sentinel to null/unverified.
   return {
     id: model.id,
     name: model.name,
     provider_id: model.providerId,
-    input_price: pricing?.inputPrice ?? 0,
-    output_price: pricing?.outputPrice ?? 0,
+    input_price: pricing?.inputPrice ?? -1,
+    output_price: pricing?.outputPrice ?? -1,
     context_window: model.contextWindow ?? 0,
     max_output: model.maxOutput ?? 0,
     speed: existing?.speed ?? 0,
