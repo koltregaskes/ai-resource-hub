@@ -46,13 +46,13 @@
   },
   "dependencies": {
     "@astrojs/prism": "^4.0.1",
-    "@astrojs/react": "^5.0.5",
-    "@astrojs/sitemap": "^3.7.2",
+    "@astrojs/react": "^7.1.2",
+    "@astrojs/sitemap": "^3.7.4",
     "@tailwindcss/vite": "^4.2.2",
     "@types/pg": "^8.20.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^6.4.6",
+    "astro": "^7.4.5",
     "better-sqlite3": "^12.8.0",
     "chart.js": "^4.5.1",
     "pg": "^8.20.0",
@@ -64,15 +64,15 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.8",
+    "@astrojs/check": "^0.9.12",
     "@types/better-sqlite3": "^7.6.13",
     "tsx": "^4.21.0"
   },
   "overrides": {
     "esbuild": "^0.28.1",
-    "vite": "^7.3.5",
+    "vite": "^8.3.5",
     "rollup": "^4.59.0",
-    "devalue": "^5.9.4",
+    "devalue": "^6.0.2",
     "fast-uri": "^3.1.8",
     "h3": "^1.15.9",
     "defu": "^6.1.5",
