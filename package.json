@@ -45,7 +45,7 @@
     "test:news-categories": "tsx --test scripts/news-categories.test.ts",
     "backfill:news-categories": "tsx scripts/backfill-news-categories.ts",
     "test:seo": "node --test scripts/seo-ping.test.mjs && tsx --test scripts/seo-feeds.test.ts",
-    "test:model-fields": "tsx --test scripts/model-field-reviews.test.ts"
+    "test:model-fields": "node --test scripts/model-field-publication.test.mjs scripts/pr89-regressions.test.mjs && tsx --test scripts/model-field-reviews.test.ts"
   },
   "dependencies": {
     "@astrojs/prism": "^4.0.1",

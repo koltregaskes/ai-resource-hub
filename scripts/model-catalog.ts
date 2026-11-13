@@ -45,6 +45,7 @@ export interface CatalogModelEntry {
     aliases?: string[];
   };
   officialPricing?: OfficialPricingDefinition;
+  pricingConditions?: string;
 }
 
 export interface FrontierModelRequirement {
@@ -501,6 +502,9 @@ const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Claude Opus 5',
     providerId: 'anthropic',
     released: '2026-07-24',
+    // Vendor specs: https://platform.claude.com/docs/en/models/overview
+    contextWindow: 1_000_000,
+    maxOutput: 128_000,
     modality: 'text,vision',
     apiAvailable: true,
     notes: 'Current generally available Opus model. Some safeguarded requests can fall back to Opus 4.8.',
@@ -542,6 +546,9 @@ const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Claude Fable 5',
     providerId: 'anthropic',
     released: '2026-06-09',
+    // Vendor specs: https://platform.claude.com/docs/en/models/overview
+    contextWindow: 1_000_000,
+    maxOutput: 128_000,
     modality: 'text,vision',
     apiAvailable: true,
     notes: 'Generally available Mythos-class model. Safeguarded topics can fall back to Opus 4.8 or Opus 5.',
@@ -564,6 +571,9 @@ const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Claude Sonnet 5',
     providerId: 'anthropic',
     released: '2026-06-30',
+    // Vendor specs: https://platform.claude.com/docs/en/models/overview
+    contextWindow: 1_000_000,
+    maxOutput: 128_000,
     modality: 'text,vision',
     apiAvailable: true,
     notes: 'Generally available Sonnet model. Introductory pricing applies through 31 August 2026.',
@@ -586,6 +596,9 @@ const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Claude Opus 4.8',
     providerId: 'anthropic',
     released: '2026-05-28',
+    // Vendor specs: https://platform.claude.com/docs/en/models/overview
+    contextWindow: 1_000_000,
+    maxOutput: 128_000,
     modality: 'text,vision',
     apiAvailable: true,
     notes: 'Official Opus release retained for comparisons and fallback-routing context.',
@@ -624,6 +637,9 @@ const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Claude Opus 4.7',
     providerId: 'anthropic',
     released: '2026-04-16',
+    // Vendor specs: https://platform.claude.com/docs/en/models/overview
+    contextWindow: 1_000_000,
+    maxOutput: 128_000,
     modality: 'text,vision',
     apiAvailable: true,
     notes: 'Official generally available Opus release retained for historical comparisons.',
@@ -945,7 +961,7 @@ const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
   /*
    * Hub #614 part 2 (12 Nov 2026): releases that were discovery-only, each
    * checked first-hand on the maker's own page. A field is set only when that
-   * page states it; anything else keeps its existing value. Prices are set
+   * page states it; omitted specs must not inherit discovery values. Prices are set
    * only where the maker quotes an exact, single global price.
    */
   {
@@ -977,13 +993,7 @@ const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     notes: 'Meta API id muse-ember-1.0. Requests over 200K input tokens are billed at $0.30/$1.50 per million.',
     officialUrl: 'https://research.meta.ai/blog/muse-ember',
     openRouterIds: ['meta/muse-ember'],
-    officialPricing: {
-      inputPrice: 0.1,
-      outputPrice: 0.5,
-      cachedInputPrice: 0.004,
-      source: 'Meta (official, up to 200K input tokens)',
-      sourceUrl: 'https://dev.meta.ai/docs/pricing-rate-limits',
-    },
+    pricingConditions: 'Tiered by input length: up to 200K tokens is $0.10 input, $0.50 output and $0.004 cached input per million; above 200K is $0.30 input and $1.50 output per million. No global scalar price.',
   },
   {
     id: 'muse-wonder',

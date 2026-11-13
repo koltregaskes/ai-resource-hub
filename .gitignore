@@ -61,3 +61,6 @@ tools/esbuild/
 
 # Internal editorial release drafts (manager-only WIP)
 editorial/release-drafts/
+
+# Local test fixtures and review logs
+.review/

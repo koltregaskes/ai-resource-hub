@@ -1,4 +1,4 @@
-import { getModelFieldReview } from '../../scripts/lib/model-field-reviews';
+import { applyModelFieldEvidence, hasScopedModelFields } from '../../scripts/lib/public-model-fields';
 /**
  * Postgres cache reader — replaces SQLite for build-time data access.
  *
@@ -37,6 +37,7 @@ function loadCache<T = Record<string, unknown>>(name: string): T[] {
 // ─── Type helpers ───────────────────────────────────────────────
 
 interface CachedModel {
+  field_states?: Record<string, 'verified' | 'unverified'>;
   id: string;
   name: string;
   provider_id: string;
@@ -323,11 +324,11 @@ function toNumber(value: number | string | null | undefined): number {
 // ─── Public API (drop-in replacements for queries.ts functions) ─
 
 export function getModels(): CachedModel[] {
-  return loadCache<CachedModel>('models').map((model) => ({
+  return loadCache<CachedModel>('models').map((model) => applyModelFieldEvidence({
     ...model,
     name: getDisplayModelName(model.id, model.name),
-    input_price: toNumber(model.input_price),
-    output_price: toNumber(model.output_price),
+    input_price: model.input_price == null ? null : toNumber(model.input_price),
+    output_price: model.output_price == null ? null : toNumber(model.output_price),
     speed: toNumber(model.speed),
     ttft: toNumber(model.ttft),
     // The stored score has no row-level method, source set or measurement date.
@@ -342,11 +343,11 @@ export function getModels(): CachedModel[] {
 }
 
 export function getModelsByCategory(category: string, models: CachedModel[] = getModels()): CachedModel[] {
-  return models.filter(m => !getModelFieldReview(m.id) && m.category === category && m.status === 'active');
+  return models.map(applyModelFieldEvidence).filter(m => !hasScopedModelFields(m.id) && m.input_price != null && m.output_price != null && m.category === category && m.status === 'active');
 }
 
 export function getPublicModelsByCategory(category: string, models: CachedModel[] = getModels()): CachedModel[] {
-  return models.filter((model) => !getModelFieldReview(model.id) && model.category === category && isPubliclyVerifiedModel(model));
+  return models.map(applyModelFieldEvidence).filter((model) => !hasScopedModelFields(model.id) && model.input_price != null && model.output_price != null && model.category === category && isPubliclyVerifiedModel(model));
 }
 
 export function getModelById(id: string): CachedModel | null {
@@ -534,8 +535,8 @@ export function getLLMModelsFromDB() {
       name: m.name,
       provider: m.provider_name,
       providerColour: m.provider_colour,
-      inputPrice: Number(m.input_price),
-      outputPrice: Number(m.output_price),
+      inputPrice: m.input_price,
+      outputPrice: m.output_price,
       contextWindow: Number(m.context_window),
       maxOutput: Number(m.max_output),
       speed: Number(m.speed),
@@ -721,8 +722,9 @@ export function getModelsWithTTFT() {
       provider: m.provider_name,
       provider_colour: m.provider_colour,
       quality_score: null,
-      input_price: Number(m.input_price),
-      output_price: Number(m.output_price),
+      input_price: m.input_price,
+      field_states: m.field_states,
+      output_price: m.output_price,
       speed_source: m.speed_source,
     }))
     .sort((a, b) => a.ttft - b.ttft);
@@ -731,7 +733,7 @@ export function getModelsByProvider(providerId: string) {
   return getModelsByCategory('llm').filter(m => m.provider_id === providerId);
 }
 export function getModelsByProviderGrouped(providerId: string) {
-  const models = getModels().filter(m => m.provider_id === providerId && m.status === 'active');
+  const models = getModels().filter(m => !hasScopedModelFields(m.id) && m.input_price != null && m.output_price != null && m.provider_id === providerId && m.status === 'active');
   const grouped: Record<string, typeof models> = {};
   for (const m of models) {
     if (!grouped[m.category]) grouped[m.category] = [];
