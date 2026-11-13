@@ -1,4 +1,5 @@
 ---
+import { MODEL_FIELD_REVIEWS } from '../../../scripts/lib/model-field-reviews';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getBenchmarkScores, getLastScrapeTime, getPublicModelsByCategory } from '../../db/queries';
 
@@ -7,6 +8,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const categories = ['llm', 'image', 'video', 'voice', 'speech', 'sound'];
 const models = categories
   .flatMap((category) => getPublicModelsByCategory(category))
+  .filter(model => !MODEL_FIELD_REVIEWS.some(review => review.id === model.id))
   .sort((a, b) => {
     const releasedDelta = Date.parse(b.released ?? '') - Date.parse(a.released ?? '');
     return releasedDelta || a.provider_name.localeCompare(b.provider_name) || a.name.localeCompare(b.name);
@@ -92,6 +94,14 @@ function formatPrice(value: number): string {
       <a href={`${base}leaderboard/`}>the leaderboard desk</a>, <a href={`${base}reliability-floor/`}>Reliability Floor</a>,
       or <a href={`${base}compare/head-to-head/`}>head-to-head comparison</a>.
     </div>
+
+    <section class="desk-section" aria-labelledby="reviewed-models-title">
+      <h2 id="reviewed-models-title">Vendor field reviews</h2>
+      <p>Specifications and prices have individual source links and check dates. Missing values are marked unverified.</p>
+      <ul>
+        {MODEL_FIELD_REVIEWS.map(review => <li><a href={base + 'models/' + review.id + '/'}>{String(review.fields.name.value ?? review.id)}</a> ? {review.fields.name.verification === 'verified' ? (review.fields.status.value === 'retired' ? 'Retired' : 'Vendor-confirmed identity') : 'Discovery only, unverified'}</li>)}
+      </ul>
+    </section>
 
     <section class="desk-section">
       <div class="desk-section-head">
