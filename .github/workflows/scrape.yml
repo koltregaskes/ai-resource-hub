@@ -29,6 +29,8 @@ concurrency:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    env:
+      WEBSITES_ESTATE_ROOT: ${{ github.workspace }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -79,6 +81,9 @@ jobs:
 
       - name: Sync news pipeline snapshot
         run: npm run sync:news-pipeline
+
+      - name: Verify canonical news configuration freshness
+        run: node scripts/verify-news-pipeline.mjs
 
       - name: Generate regional availability export
         run: npm run generate:availability
