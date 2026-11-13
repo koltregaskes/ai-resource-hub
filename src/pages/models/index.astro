@@ -121,15 +121,15 @@ function formatPrice(value: number): string {
           placeholder="Search model, lab, modality..."
           class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:outline-none focus:border-(--color-accent)"
         />
-        <select id="model-provider" class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+        <select id="model-provider" aria-label="Filter by provider" class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
           <option value="">All providers</option>
           {providerOptions.map((provider) => <option value={provider}>{provider}</option>)}
         </select>
-        <select id="model-category" class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+        <select id="model-category" aria-label="Filter by category" class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
           <option value="">All categories</option>
           {categoryOptions.map((category) => <option value={category}>{category.toUpperCase()}</option>)}
         </select>
-        <select id="model-sort" class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+        <select id="model-sort" aria-label="Sort models" class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
           <option value="released">Newest release</option>
           <option value="name">Model A-Z</option>
           <option value="provider">Provider A-Z</option>

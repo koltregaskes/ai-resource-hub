@@ -122,6 +122,7 @@ export default function BenchmarkTable({ benchmarks, models }: Props) {
           />
         </div>
         <select
+          aria-label="Filter by benchmark category"
           value={categoryFilter}
           onChange={(e) => setCategoryFilter(e.target.value)}
           className="px-4 py-2.5 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] text-[var(--color-text-primary)] text-sm focus:border-[var(--color-accent)] focus:outline-none min-w-[160px]"

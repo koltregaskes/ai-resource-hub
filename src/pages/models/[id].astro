@@ -2,6 +2,7 @@
 import ReviewedModelPage from '../../components/ReviewedModelPage.astro';
 import { MODEL_FIELD_REVIEWS, getModelFieldReview } from '../../../scripts/lib/model-field-reviews';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { badgeInk } from '../../data/badge-ink';
 import MiniPriceChart from '../../components/MiniPriceChart';
 import { getAllModelIds, getModelById, getModelBenchmarks, getModelPriceHistory, getProviderEndpoints, getModelMessageLimits } from '../../db/queries';
 import { getAvailabilityForModel, formatAvailabilityDate } from '../../data/model-availability';
@@ -113,8 +114,8 @@ const structuredData = {
     <!-- Header -->
     <div class="flex flex-col sm:flex-row items-start gap-4 mb-8">
       <div
-        class="w-14 h-14 rounded-xl flex items-center justify-center text-white font-bold text-lg shrink-0"
-        style={`background-color: ${model.provider_colour}`}
+        class="w-14 h-14 rounded-xl flex items-center justify-center font-bold text-lg shrink-0"
+        style={`background-color: ${model.provider_colour}; color: ${badgeInk(model.provider_colour)}`}
       >
         {model.provider_name.slice(0, 2).toUpperCase()}
       </div>
