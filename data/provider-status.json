@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T15:55:45.689Z",
+  "generatedAt": "2026-11-13T16:15:41.137Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T15:55:45.682Z",
+      "lastCheckedAt": "2026-11-13T16:15:41.130Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T15:55:44.318Z",
+      "lastCheckedAt": "2026-11-13T16:15:39.635Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
@@ -202,12 +202,16 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T15:55:44.381Z",
+      "lastCheckedAt": "2026-11-13T16:15:39.568Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
+        {
+          "name": "Compliance API",
+          "status": "degraded_performance"
+        },
         {
           "name": "Chat Completions",
           "status": "operational"
@@ -227,13 +231,19 @@
         {
           "name": "Fine-tuning",
           "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
         }
       ],
       "activeIncidents": [
+        {
+          "id": "01M7ATRS6BMZ61E4JDHJGM79Y0",
+          "title": "Delayed Costs Data in the Compliance API",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-11-13T16:10:07.000Z",
+          "updatedAt": "2026-11-13T16:10:07.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified an issue causing delays in publishing Organization cost data through the Costs API. API and ChatGPT usage are not affected. We are working to restore normal dat..."
+        },
         {
           "id": "01M78GAT3AK9P9W8Z230KHFVE8",
           "title": "Elevated errors affecting the Microsoft 365 connector",
@@ -246,6 +256,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01M7ATRS6BMZ61E4JDHJGM79Y0",
+          "title": "Delayed Costs Data in the Compliance API",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-11-13T16:10:07.000Z",
+          "updatedAt": "2026-11-13T16:10:07.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified an issue causing delays in publishing Organization cost data through the Costs API. API and ChatGPT usage are not affected. We are working to restore normal dat..."
+        },
         {
           "id": "01M79GYA0GA772Y6D089AH5478",
           "title": "Sites: Publishing failing",
@@ -275,16 +295,6 @@
           "updatedAt": "2026-11-12T09:25:12.000Z",
           "resolvedAt": "2026-11-12T09:25:12.000Z",
           "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M76CW2D7FM7K7F8NJ4W0G08N",
-          "title": "Unable to start new Workspace Agent runs",
-          "status": "resolved",
-          "impact": "critical",
-          "startedAt": "2026-11-11T22:50:17.000Z",
-          "updatedAt": "2026-11-12T08:32:37.000Z",
-          "resolvedAt": "2026-11-12T08:32:37.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
         }
       ]
     },
@@ -299,7 +309,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T15:55:45.089Z",
+      "lastCheckedAt": "2026-11-13T16:15:40.358Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +329,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T15:55:44.720Z",
+      "lastCheckedAt": "2026-11-13T16:15:39.768Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -362,7 +372,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T15:55:45.222Z",
+      "lastCheckedAt": "2026-11-13T16:15:40.599Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -386,7 +396,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
