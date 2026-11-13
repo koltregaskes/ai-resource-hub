@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T13:56:05.812Z",
+  "generatedAt": "2026-11-13T14:55:40.517Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T13:55:41.577Z",
+      "lastCheckedAt": "2026-11-13T14:55:40.511Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-13T11:56:49.000Z",
+          "id": "fireworks-feed-0-2026-11-13T14:21:54.000Z",
+          "title": "Service Degradation for Kimi K3 Fast",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-13T14:21:54.000Z",
+          "updatedAt": "2026-11-13T14:21:54.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M7AM6T4ZJ1YGHJ9F5S7PYVF3",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-13T11:56:49.000Z",
           "title": "Service Degradation for DeepSeek V4.1 Flash 1017",
           "status": "reported",
           "impact": "unknown",
@@ -28,23 +39,23 @@
           "updatedAt": "2026-11-13T11:56:49.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M7A9QQAKDCHWHFR679S35Q16",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-11-13T02:44:51.000Z",
-          "title": "Service Degradation for GLM 5.3 Fast",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-13T02:44:51.000Z",
-          "updatedAt": "2026-11-13T02:44:51.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M79CAJME1AJ4K1SDKQ5MVJBF",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-13T11:56:49.000Z",
+          "id": "fireworks-feed-0-2026-11-13T14:21:54.000Z",
+          "title": "Service Degradation for Kimi K3 Fast",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-13T14:21:54.000Z",
+          "updatedAt": "2026-11-13T14:21:54.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M7AM6T4ZJ1YGHJ9F5S7PYVF3",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-13T11:56:49.000Z",
           "title": "Service Degradation for DeepSeek V4.1 Flash 1017",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-11-13T02:44:51.000Z",
+          "id": "fireworks-feed-2-2026-11-13T02:44:51.000Z",
           "title": "Service Degradation for GLM 5.3 Fast",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-11-13T02:13:21.000Z",
+          "id": "fireworks-feed-3-2026-11-13T02:13:21.000Z",
           "title": "Service Degradation for GLM 5.3",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-11-13T02:13:21.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M79ASB1F28156WKZFKWZG48D",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-11-13T01:32:39.000Z",
-          "title": "Service Degradation for GLM 5.3",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-13T01:32:39.000Z",
-          "updatedAt": "2026-11-13T01:32:39.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M796HKVM502P1SGZXGJ5QG7V",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,15 +100,15 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T13:56:05.806Z",
-      "overallStatus": "partial_outage",
-      "overallLabel": "Partial System Outage",
+      "lastCheckedAt": "2026-11-13T14:55:38.935Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Minor Service Outage",
       "summary": "2 active incidents across 10 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "major_outage"
+          "status": "partial_outage"
         },
         {
           "name": "Claude API (api.anthropic.com)",
@@ -138,10 +138,10 @@
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-11-13T13:09:50.199Z",
-          "updatedAt": "2026-11-13T13:52:05.522Z",
+          "updatedAt": "2026-11-13T14:36:13.854Z",
           "resolvedAt": null,
           "url": "https://stspg.io/264r547qtkky",
-          "summary": "We are investigating reports of degraded performance affecting claude.ai, the Claude API, Claude Code, and connectors (including Claude Docs and Claude Sheets)."
+          "summary": "We're seeing recovery on claude.ai and the Claude API, though errors may return while we continue working on this. Connectors, including Docs and Sheets, remain degraded, as do Cl..."
         },
         {
           "id": "sqn3fg1l96dl",
@@ -162,10 +162,10 @@
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-11-13T13:09:50.199Z",
-          "updatedAt": "2026-11-13T13:52:05.522Z",
+          "updatedAt": "2026-11-13T14:36:13.854Z",
           "resolvedAt": null,
           "url": "https://stspg.io/264r547qtkky",
-          "summary": "We are investigating reports of degraded performance affecting claude.ai, the Claude API, Claude Code, and connectors (including Claude Docs and Claude Sheets)."
+          "summary": "We're seeing recovery on claude.ai and the Claude API, though errors may return while we continue working on this. Connectors, including Docs and Sheets, remain degraded, as do Cl..."
         },
         {
           "id": "nn11wk485zfn",
@@ -213,7 +213,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T13:55:40.317Z",
+      "lastCheckedAt": "2026-11-13T14:55:38.907Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -310,7 +310,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T13:55:40.890Z",
+      "lastCheckedAt": "2026-11-13T14:55:39.555Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -330,7 +330,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T13:55:40.308Z",
+      "lastCheckedAt": "2026-11-13T14:55:39.114Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -373,7 +373,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T13:55:41.081Z",
+      "lastCheckedAt": "2026-11-13T14:55:39.667Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
