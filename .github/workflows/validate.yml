@@ -34,6 +34,9 @@ jobs:
       - name: Test SEO sitemaps and ping safeguards
         run: npm run test:seo
 
+      - name: Test and validate daily edition notes
+        run: npm run test:editorial
+
       - name: Test frozen daily editions
         run: npm run test:editions
 

@@ -7,7 +7,7 @@ Sign-up, double opt-in, category preferences, one-click unsubscribe and the dail
 ## How it fits together
 1. **Sign-up.** A reader picks categories on the site and submits the form. `POST /subscribe` stores a `pending` row and sends a confirmation email through Resend.
 2. **Confirmation.** The reader clicks the signed link (`GET /confirm`), which marks them `subscribed`.
-3. **Daily send.** Every morning the cron trigger calls `sendDaily`. It reads `https://theairesourcehub.com/newsletter/latest.json`, builds one email per reader from only their categories, and sends them in batches of 100.
+3. **Daily send.** Every morning the cron trigger calls `sendDaily`. It reads `https://theairesourcehub.com/newsletter/latest.json`, which is the most recent complete UK day (normally yesterday), and sends nothing unless that edition is yesterday's. It builds one email per reader from only their categories and sends them in batches of 100. The 06:30 writer job (`editorial/writer/`) adds the "why it matters" notes before the 07:15 UTC send.
    - Each email has `List-Unsubscribe` and `List-Unsubscribe-Post: List-Unsubscribe=One-Click` (RFC 8058).
    - Before any daily provider call, an immutable outbox batch stores the exact JSON body, ordered recipients and idempotency key. A transaction reserves each reader/edition uniquely; a lease prevents concurrent recovery.
    - Accepted provider IDs are saved before per-reader send records. Recovery completes only missing records without another send. If acceptance was uncertain, recovery replays the original bytes and key, including the original tokens, even if the feed changes.

@@ -48,6 +48,11 @@ jobs:
       - name: Verify publish readiness
         run: npm run verify:publish
 
+      # Gate: editor notes are pushed straight to main by the writer job, so the
+      # deploy itself must refuse to publish notes that fail validation.
+      - name: Validate daily edition notes
+        run: node scripts/validate-editorial.mjs
+
       - name: Build Astro site
         run: npm run build
 
