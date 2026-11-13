@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-13T06:55:59.356Z",
+  "generatedAt": "2026-11-13T12:55:51.955Z",
   "overview": {
-    "generatedAt": "2026-11-13T06:55:59.369Z",
+    "generatedAt": "2026-11-13T12:55:51.966Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
-    "surfacedModels": 72,
+    "surfacedModels": 76,
     "latestVerification": "2026-04-09T20:49:00Z"
   },
   "entries": [
@@ -105,26 +105,26 @@
         "claude-sonnet-5"
       ],
       "matchingModelNames": [
-        "Claude Opus 4.6 (batch)",
-        "Claude Opus 4.5 (batch)",
-        "Claude Sonnet 4.6 (batch)",
-        "Claude Sonnet 4.5 (batch)",
+        "Claude Opus 4.6",
+        "Claude Opus 4.5",
+        "Claude Sonnet 4.6",
+        "Claude Sonnet 4.5",
         "Claude Opus 4",
         "Claude Haiku 4",
         "Claude Sonnet 4",
         "Claude 3.5 Haiku",
         "Claude 3.7 Sonnet",
-        "Claude Haiku 4.5 (batch)",
+        "Claude Haiku 4.5",
         "Claude 3.5 Sonnet",
         "Claude 3 Opus",
-        "Claude Fable 5 (batch)",
+        "Claude Fable 5",
         "Claude Mythos Preview",
-        "Claude Opus 4.7 (batch)",
-        "Claude Opus 4.8 (batch)",
+        "Claude Opus 4.7",
+        "Claude Opus 4.8",
         "Claude Opus 4.8 Fast",
-        "Claude Opus 5 (batch)",
+        "Claude Opus 5",
         "Claude Opus 5 Fast",
-        "Claude Sonnet 5 (batch)"
+        "Claude Sonnet 5"
       ],
       "surfaceLabel": "Web + App"
     },
@@ -159,7 +159,7 @@
           "gemma-"
         ]
       },
-      "matchingModelCount": 16,
+      "matchingModelCount": 20,
       "matchingModelIds": [
         "gemini-3.1-pro",
         "veo-3",
@@ -176,7 +176,11 @@
         "gemini-2.5-flash-lite",
         "gemini-3.5-flash",
         "gemini-3.5-flash-lite",
-        "gemini-3.6-flash"
+        "gemini-3.6-flash",
+        "gemini-4-argon",
+        "gemini-omni-1.1-flash",
+        "gemini-omni-1.2-flash",
+        "gemini-nano-banana-2.1"
       ],
       "matchingModelNames": [
         "Gemini 3.1 Pro",
@@ -189,12 +193,16 @@
         "Gemini 2.5 Pro",
         "Gemini 1.5 Flash",
         "Gemini 2.5 Flash",
-        "Gemini 3 Flash Preview (batch)",
+        "Gemini 3 Flash",
         "Gemini 1.5 Pro",
         "Gemini 2.5 Flash Lite",
-        "Gemini 3.5 Flash (batch)",
-        "Gemini 3.5 Flash Lite (batch)",
-        "Gemini 3.6 Flash (batch)"
+        "Gemini 3.5 Flash",
+        "Gemini 3.5 Flash-Lite",
+        "Gemini 3.6 Flash",
+        "Gemini 4 Argon",
+        "Gemini Omni 1.1 Flash",
+        "Gemini Omni 1.2 Flash",
+        "Nano Banana 2.1"
       ],
       "surfaceLabel": "API + Web"
     },
@@ -266,40 +274,40 @@
         "gpt-5.6-terra"
       ],
       "matchingModelNames": [
-        "GPT-5.2 Pro (batch)",
+        "GPT-5.2 Pro",
         "GPT-4o Transcribe",
         "GPT-5.2",
         "GPT Image 1",
-        "GPT-5 Pro (batch)",
+        "GPT-5 Pro",
         "O4 Mini",
         "Whisper Large v3",
         "O3",
         "O3 Pro",
-        "GPT-5 (batch)",
+        "GPT-5",
         "GPT-4o Mini TTS",
         "DALL-E 3 HD",
         "o1",
-        "o3 Mini (batch)",
+        "o3-mini",
         "OpenAI TTS-1 HD",
         "DALL-E 3",
         "GPT-4.5",
-        "GPT-5 Nano (batch)",
+        "GPT-5 Nano",
         "OpenAI TTS-1",
-        "GPT-4.1 (batch)",
+        "GPT-4.1",
         "o1-mini",
-        "GPT-4.1 Mini (batch)",
-        "GPT-4.1 Nano (batch)",
-        "GPT-4o (batch)",
-        "GPT-4o-mini (batch)",
+        "GPT-4.1 Mini",
+        "GPT-4.1 Nano",
+        "GPT-4o (2024-05-13)",
+        "GPT-4o-mini (2024-07-18)",
         "GPT-5.4",
         "GPT-5.4 Mini",
         "GPT-5.4 Nano",
         "GPT-5.4 Pro",
-        "GPT-5.5 (batch)",
-        "GPT-5.5 Pro (batch)",
-        "GPT-5.6 Luna (batch)",
-        "GPT-5.6 Sol (batch)",
-        "GPT-5.6 Terra (batch)"
+        "GPT-5.5",
+        "GPT-5.5 Pro",
+        "GPT-5.6 Luna",
+        "GPT-5.6 Sol",
+        "GPT-5.6 Terra"
       ],
       "surfaceLabel": "API"
     }

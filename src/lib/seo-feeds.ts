@@ -27,11 +27,18 @@ export interface NewsSitemapEntry {
   publishedAt: string; // ISO 8601
 }
 
-/** Keeps entries published within the window ending at `now`. */
+/** Preserve date-only precision; normalize real timestamps without inventing a time. */
+export function newsPublicationDate(publishedAt: string): string {
+  return /^\d{4}-\d{2}-\d{2}$/.test(publishedAt) ? publishedAt : new Date(publishedAt).toISOString();
+}
+
+/** Keeps entries published within the window; date-only entries use the end of their UTC day. */
 export function withinNewsWindow<T extends { publishedAt: string }>(entries: T[], now: Date = new Date()): T[] {
   const cutoff = now.getTime() - NEWS_SITEMAP_WINDOW_HOURS * 60 * 60 * 1000;
   return entries.filter((entry) => {
-    const time = Date.parse(entry.publishedAt);
-    return Number.isFinite(time) && time >= cutoff && time <= now.getTime() + 60 * 60 * 1000;
+    const dateOnly = /^\d{4}-\d{2}-\d{2}$/.test(entry.publishedAt);
+    const time = Date.parse(dateOnly ? entry.publishedAt + 'T23:59:59.999Z' : entry.publishedAt);
+    const notFuture = dateOnly ? entry.publishedAt <= now.toISOString().slice(0, 10) : time <= now.getTime() + 60 * 60 * 1000;
+    return Number.isFinite(time) && time >= cutoff && notFuture;
   });
 }
