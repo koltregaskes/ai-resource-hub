@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T12:55:44.200Z",
+  "generatedAt": "2026-11-13T13:56:05.812Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T12:55:44.194Z",
+      "lastCheckedAt": "2026-11-13T13:55:41.577Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,15 +100,23 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T12:55:42.709Z",
+      "lastCheckedAt": "2026-11-13T13:56:05.806Z",
       "overallStatus": "partial_outage",
       "overallLabel": "Partial System Outage",
-      "summary": "1 active incident across 10 tracked components.",
+      "summary": "2 active incidents across 10 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
           "status": "major_outage"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "partial_outage"
+        },
+        {
+          "name": "Claude Code",
+          "status": "partial_outage"
         },
         {
           "name": "Claude Cowork",
@@ -121,17 +129,20 @@
         {
           "name": "Claude Console (platform.claude.com)",
           "status": "operational"
-        },
-        {
-          "name": "Claude in Microsoft Foundry",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
         }
       ],
       "activeIncidents": [
+        {
+          "id": "34wq7gxnxvvm",
+          "title": "Elevated errors on claude.ai, the Claude API, and Claude Code",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-11-13T13:09:50.199Z",
+          "updatedAt": "2026-11-13T13:52:05.522Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/264r547qtkky",
+          "summary": "We are investigating reports of degraded performance affecting claude.ai, the Claude API, Claude Code, and connectors (including Claude Docs and Claude Sheets)."
+        },
         {
           "id": "sqn3fg1l96dl",
           "title": "Elevated errors affecting the Microsoft 365 connector",
@@ -145,6 +156,17 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "34wq7gxnxvvm",
+          "title": "Elevated errors on claude.ai, the Claude API, and Claude Code",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-11-13T13:09:50.199Z",
+          "updatedAt": "2026-11-13T13:52:05.522Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/264r547qtkky",
+          "summary": "We are investigating reports of degraded performance affecting claude.ai, the Claude API, Claude Code, and connectors (including Claude Docs and Claude Sheets)."
+        },
         {
           "id": "nn11wk485zfn",
           "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
@@ -177,17 +199,6 @@
           "resolvedAt": "2026-11-10T21:47:48.885Z",
           "url": "https://stspg.io/pytn9v8p2zc7",
           "summary": "Overloaded errors on Fable 5.2  and Mythos 5.2 for four minutes. Incident has been mitigated."
-        },
-        {
-          "id": "kw2lxj1th04c",
-          "title": "Degraded performance for Claude Fable 5.1",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-08T08:28:32.818Z",
-          "updatedAt": "2026-11-08T08:54:43.776Z",
-          "resolvedAt": "2026-11-08T08:54:43.667Z",
-          "url": "https://stspg.io/3m3q1nwb142k",
-          "summary": "The issue affecting claude.ai, the Claude API, Claude Code, and Claude Cowork has been resolved. Impact occurred from 00:18 PT / 08:18 UTC on Nov 8 to 00:32 PT / 08:32 UTC on Nov..."
         }
       ]
     },
@@ -202,7 +213,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T12:55:42.746Z",
+      "lastCheckedAt": "2026-11-13T13:55:40.317Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -299,7 +310,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T12:55:43.500Z",
+      "lastCheckedAt": "2026-11-13T13:55:40.890Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +330,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T12:55:42.960Z",
+      "lastCheckedAt": "2026-11-13T13:55:40.308Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -362,7 +373,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T12:55:43.602Z",
+      "lastCheckedAt": "2026-11-13T13:55:41.081Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
