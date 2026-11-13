@@ -1,4 +1,5 @@
 ---
+import { serializeJsonLd } from '../../lib/json-ld';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EditionView from '../../components/newsletter/EditionView.astro';
 import { getEditions, isoWeekId, type Edition } from '../../data/newsletter-editions';
@@ -35,5 +36,5 @@ const structuredData = editionStructuredData(edition, Astro.site!, base);
   <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <EditionView edition={edition} next={next} previous={previous} weekId={isoWeekId(edition.date).id} />
   </article>
-  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <script type="application/ld+json" set:html={serializeJsonLd(structuredData)} />
 </BaseLayout>

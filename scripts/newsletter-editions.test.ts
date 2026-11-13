@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { buildEditions, isSettled, loadArchive, pickDays, type ArchivedDay } from '../src/data/newsletter-editions';
+import { buildEditions, decodeEntities, isSettled, loadArchive, pickDays, type ArchivedDay } from '../src/data/newsletter-editions';
+import { editionStructuredData } from '../src/lib/edition-jsonld';
+import { serializeJsonLd } from '../src/lib/json-ld';
 
 const CATEGORIES = ['models', 'tools', 'agents', 'research', 'industry', 'policy', 'voices'] as const;
 
@@ -96,4 +98,32 @@ test('the committed archive loads and every file matches its date', () => {
     assert.equal(day.date, date);
     assert.ok(day.stories.length > 0 && day.stories.length <= 15);
   }
+});
+
+test('encoded feed titles cannot break out of edition JSON-LD', () => {
+  const title = '&#60;/script&#62;&#60;script&#62;alert(1)&#60;/script&#62;';
+  const [edition] = buildEditions({
+    stories: [story(1, NOW.toISOString(), { title, summary: title })],
+    archive: new Map(), now: NOW, editorialFor: noEditorial,
+  });
+  assert.equal(edition.lead.title, '</script><script>alert(1)</script>');
+  const data = editionStructuredData(edition, new URL('https://example.com'), '/');
+  const serialized = serializeJsonLd(data);
+  assert.doesNotMatch(serialized, /<\/?script/i);
+  assert.deepEqual(JSON.parse(serialized), data);
+});
+
+test('JSON-LD escapes HTML characters and Unicode line separators losslessly', () => {
+  const data = { text: '<>&\u2028\u2029' };
+  const serialized = serializeJsonLd(data);
+  assert.equal(serialized, '{"text":"\\u003c\\u003e\\u0026\\u2028\\u2029"}');
+  assert.deepEqual(JSON.parse(serialized), data);
+});
+
+test('invalid numeric entities remain unchanged without throwing', () => {
+  for (const entity of ['&#1114112;', '&#x110000;', '&#55296;', '&#57343;', '&#xD800;', '&#xDFFF;', '&#999999999999999999999999999999999999;']) {
+    assert.equal(decodeEntities(entity), entity);
+  }
+  assert.equal(decodeEntities('&#0;&#x10FFFF;'), '\u0000\u{10ffff}');
+  assert.equal(decodeEntities('&#60;&#x3e;&#128512;'), '<>\u{1f600}');
 });
