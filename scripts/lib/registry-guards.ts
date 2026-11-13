@@ -35,6 +35,19 @@ export const DEMOTION_REASONS = {
   unsourcedPricing: 'Tracking only until pricing is refreshed from a live or official source.',
 } as const;
 
+/**
+ * Splits active LLMs with quality_score = 0 for the staleness check.
+ * Catalogue models have a model-level official source and show "no score yet"
+ * when benchmarks are missing, so they are warnings. Anything else is still a
+ * critical issue (the normaliser should have demoted it).
+ */
+export function splitZeroQuality<T extends { id: string }>(rows: T[], verifiedIds: ReadonlySet<string>): { critical: T[]; catalogue: T[] } {
+  return {
+    critical: rows.filter((row) => !verifiedIds.has(row.id)),
+    catalogue: rows.filter((row) => verifiedIds.has(row.id)),
+  };
+}
+
 /** Removes the normaliser's demotion sentences from a notes string (for catalogue models). */
 export function stripDemotionReasons(notes: string | null | undefined): string | null {
   let out = notes ?? '';
