@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T03:55:53.688Z",
+  "generatedAt": "2026-11-13T04:55:42.970Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T03:55:53.681Z",
+      "lastCheckedAt": "2026-11-13T04:55:42.965Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T03:55:51.760Z",
+      "lastCheckedAt": "2026-11-13T04:55:41.567Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
@@ -202,10 +202,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T03:55:51.942Z",
+      "lastCheckedAt": "2026-11-13T04:55:41.565Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
+      "summary": "2 active incidents across 25 tracked components.",
       "notes": null,
       "components": [
         {
@@ -235,6 +235,16 @@
       ],
       "activeIncidents": [
         {
+          "id": "01M79GYA0GA772Y6D089AH5478",
+          "title": "Sites: Publishing failing",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-11-13T03:59:08.000Z",
+          "updatedAt": "2026-11-13T03:59:08.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
+        {
           "id": "01M78GAT3AK9P9W8Z230KHFVE8",
           "title": "Elevated errors affecting the Microsoft 365 connector",
           "status": "investigating",
@@ -246,6 +256,16 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "01M79GYA0GA772Y6D089AH5478",
+          "title": "Sites: Publishing failing",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-11-13T03:59:08.000Z",
+          "updatedAt": "2026-11-13T03:59:08.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+        },
         {
           "id": "01M78GAT3AK9P9W8Z230KHFVE8",
           "title": "Elevated errors affecting the Microsoft 365 connector",
@@ -275,16 +295,6 @@
           "updatedAt": "2026-11-12T08:32:37.000Z",
           "resolvedAt": "2026-11-12T08:32:37.000Z",
           "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M765MJQK7F85SC82RMTYN0V3",
-          "title": "Elevated errors affecting logins, sign-ups, and ChatGPT features",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-11T20:43:51.000Z",
-          "updatedAt": "2026-11-11T20:52:40.000Z",
-          "resolvedAt": "2026-11-11T20:52:40.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
         }
       ]
     },
@@ -299,7 +309,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T03:55:52.779Z",
+      "lastCheckedAt": "2026-11-13T04:55:42.459Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +329,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T03:55:51.911Z",
+      "lastCheckedAt": "2026-11-13T04:55:41.739Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -362,7 +372,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T03:55:52.874Z",
+      "lastCheckedAt": "2026-11-13T04:55:42.671Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -386,7 +396,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
