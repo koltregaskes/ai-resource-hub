@@ -2786,5 +2786,122 @@
         "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
       }
     }
+  },
+  {
+    "id": "glm-5.3-prime",
+    "fields": {
+      "name": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "providerId": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "modality": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "apiAvailable": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "category": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "currency": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "pricingUnit": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      }
+    }
   }
 ]
