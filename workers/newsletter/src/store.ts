@@ -29,7 +29,25 @@ export interface Subscriber {
 /** Stale send claims (no provider id after this long) can be reclaimed by a later run. */
 export const SEND_LEASE_SECONDS = 15 * 60;
 
+/** Immutable provider request, persisted before the first outbound attempt. */
+export interface SendBatch {
+  key: string;
+  editionDate: string;
+  recipientIds: string[];
+  requestBody: string;
+  createdAtMs: number;
+  providerIds: string[] | null;
+  complete: boolean;
+}
+
 export interface Store {
+  saveBatch(batch: SendBatch): Promise<void>;
+  listPendingBatches(): Promise<SendBatch[]>;
+  claimBatch(key: string, nowMs: number, token: string): Promise<SendBatch | null>;
+  acceptBatch(key: string, token: string, providerIds: string[]): Promise<void>;
+  completeBatch(key: string, token: string): Promise<void>;
+  releaseBatch(key: string, token: string): Promise<void>;
+  isSendRecorded(id: string, editionDate: string): Promise<boolean>;
   /** Records a sign-up with a fresh confirmation nonce (see the consent rules above). */
   upsertPending(email: string, categories: string[], source: string, nonce: string): Promise<Subscriber>;
   get(id: string): Promise<Subscriber | null>;
@@ -77,11 +95,55 @@ const fromRow = (row: Row | undefined): Subscriber | null =>
       }
     : null;
 
+function batchFromRow(row: any): SendBatch {
+  return { key: row.batch_key, editionDate: String(row.edition_date).slice(0, 10), recipientIds: row.recipient_ids,
+    requestBody: row.request_body, createdAtMs: Number(row.created_at_ms), providerIds: row.provider_ids,
+    complete: row.state === 'complete' };
+}
+const batchCols = "batch_key, edition_date::text, recipient_ids, request_body, extract(epoch from created_at)*1000 AS created_at_ms, provider_ids, state";
+
 export function neonStore(databaseUrl: string): Store {
   const sql = neon(databaseUrl);
   const cols = 'id, email, status, categories, pending_categories, consent_at, confirmed_at, token_gen';
   const S = 'newsletter.subscribers';
   return {
+    async saveBatch(batch) {
+      // One transaction: the immutable request and every unique recipient reservation.
+      // A competing batch for any (reader, edition) rolls the whole transaction back.
+      await sql.transaction([
+        sql.query(`INSERT INTO newsletter.send_batches (batch_key, site, edition_date, recipient_ids, request_body, created_at)
+          VALUES ($1,$2,$3,$4,$5,to_timestamp($6))`,
+          [batch.key, SITE, batch.editionDate, batch.recipientIds, batch.requestBody, batch.createdAtMs / 1000]),
+        sql.query(`INSERT INTO newsletter.send_batch_recipients (subscriber_id, edition_date, batch_key)
+          SELECT unnest($1::uuid[]), $2::date, $3`, [batch.recipientIds, batch.editionDate, batch.key]),
+      ]);
+    },
+    async listPendingBatches() {
+      const rows = await sql.query(`SELECT ${batchCols} FROM newsletter.send_batches WHERE site=$1 AND state <> 'complete' ORDER BY created_at, batch_key`, [SITE]);
+      return rows.map(batchFromRow);
+    },
+    async claimBatch(key, nowMs, token) {
+      const rows = await sql.query(`UPDATE newsletter.send_batches SET lease_token=$3, lease_until=to_timestamp($2)+make_interval(secs => $4)
+        WHERE batch_key=$1 AND site=$5 AND state <> 'complete' AND (lease_until IS NULL OR lease_until <= to_timestamp($2))
+        RETURNING ${batchCols}`, [key, nowMs / 1000, token, SEND_LEASE_SECONDS, SITE]);
+      return rows[0] ? batchFromRow(rows[0]) : null;
+    },
+    async acceptBatch(key, token, ids) {
+      const rows = await sql.query(`UPDATE newsletter.send_batches SET provider_ids=$3::jsonb, state='accepted'
+        WHERE batch_key=$1 AND lease_token=$2 AND site=$4 RETURNING batch_key`, [key, token, JSON.stringify(ids), SITE]);
+      if (!rows.length) throw new Error('Batch lease lost before acceptance was recorded');
+    },
+    async completeBatch(key, token) {
+      const rows = await sql.query(`UPDATE newsletter.send_batches SET state='complete'
+        WHERE batch_key=$1 AND lease_token=$2 AND site=$3 AND state='accepted' RETURNING batch_key`, [key, token, SITE]);
+      if (!rows.length) throw new Error('Batch lease lost before completion');
+    },
+    async releaseBatch(key, token) {
+      await sql.query(`UPDATE newsletter.send_batches SET lease_token=NULL, lease_until=NULL WHERE batch_key=$1 AND lease_token=$2 AND site=$3`, [key, token, SITE]);
+    },
+    async isSendRecorded(id, date) {
+      return (await sql.query('SELECT 1 FROM newsletter.sends WHERE subscriber_id=$1 AND edition_date=$2 AND provider_id IS NOT NULL', [id, date])).length > 0;
+    },
     async upsertPending(email, categories, source, nonce) {
       const rows = (await sql.query(
         `INSERT INTO ${S} (site, email, categories, consent_source, confirm_nonce)
@@ -152,7 +214,8 @@ export function neonStore(databaseUrl: string): Store {
     },
     async claimSend(id, editionDate, nowMs) {
       const rows = (await sql.query(
-        `INSERT INTO newsletter.sends (subscriber_id, edition_date, claimed_at) VALUES ($1, $2, to_timestamp($3))
+        `INSERT INTO newsletter.sends (subscriber_id, edition_date, claimed_at) SELECT $1, $2, to_timestamp($3)
+         WHERE NOT EXISTS (SELECT 1 FROM newsletter.send_batch_recipients WHERE subscriber_id=$1 AND edition_date=$2)
          ON CONFLICT (subscriber_id, edition_date) DO UPDATE SET claimed_at = EXCLUDED.claimed_at
            WHERE newsletter.sends.provider_id IS NULL
              AND newsletter.sends.claimed_at < EXCLUDED.claimed_at - make_interval(secs => $4)
@@ -162,7 +225,8 @@ export function neonStore(databaseUrl: string): Store {
       return rows.length > 0;
     },
     async recordSend(id, editionDate, providerId) {
-      await sql.query(`UPDATE newsletter.sends SET provider_id = $3, sent_at = now() WHERE subscriber_id = $1 AND edition_date = $2`, [
+      await sql.query(`INSERT INTO newsletter.sends (subscriber_id, edition_date, provider_id, sent_at) VALUES ($1,$2,$3,now())
+        ON CONFLICT (subscriber_id, edition_date) DO UPDATE SET provider_id=EXCLUDED.provider_id, sent_at=EXCLUDED.sent_at`, [
         id,
         editionDate,
         providerId,
@@ -186,6 +250,7 @@ export function neonStore(databaseUrl: string): Store {
 type MemoryRecord = Subscriber & { confirmNonce: string | null };
 
 const memory = {
+  batches: new Map<string, SendBatch & { leaseToken: string | null; leaseUntilMs: number }>(),
   subscribers: new Map<string, MemoryRecord>(),
   sends: new Map<string, { providerId: string | null; claimedAt: number }>(),
   buckets: new Map<string, number>(),
@@ -204,6 +269,36 @@ export function memoryStore(): Store {
     return publicView(next);
   };
   return {
+    async saveBatch(batch) {
+      if (memory.batches.has(batch.key) || [...memory.batches.values()].some(b => b.editionDate === batch.editionDate && b.recipientIds.some(id => batch.recipientIds.includes(id)))) throw new Error('Batch recipients already reserved');
+      memory.batches.set(batch.key, { ...structuredClone(batch), leaseToken: null, leaseUntilMs: 0 });
+    },
+    async listPendingBatches() {
+      return structuredClone([...memory.batches.values()].filter(b => !b.complete));
+    },
+    async claimBatch(key, nowMs, token) {
+      const batch = memory.batches.get(key);
+      if (!batch || batch.complete || (batch.leaseToken && batch.leaseUntilMs > nowMs)) return null;
+      batch.leaseToken = token; batch.leaseUntilMs = nowMs + SEND_LEASE_SECONDS * 1000;
+      return structuredClone(batch);
+    },
+    async acceptBatch(key, token, ids) {
+      const batch = memory.batches.get(key)!;
+      if (batch.leaseToken !== token) throw new Error('Batch lease lost before acceptance was recorded');
+      batch.providerIds = [...ids];
+    },
+    async completeBatch(key, token) {
+      const batch = memory.batches.get(key)!;
+      if (batch.leaseToken !== token || !batch.providerIds) throw new Error('Batch lease lost before completion');
+      batch.complete = true;
+    },
+    async releaseBatch(key, token) {
+      const batch = memory.batches.get(key)!;
+      if (batch.leaseToken === token) { batch.leaseToken = null; batch.leaseUntilMs = 0; }
+    },
+    async isSendRecorded(id, date) {
+      return memory.sends.get(id + ':' + date)?.providerId != null;
+    },
     async upsertPending(email, categories, _source, nonce) {
       const existing = byEmail(email);
       if (existing) {
@@ -263,6 +358,7 @@ export function memoryStore(): Store {
       return hits;
     },
     async claimSend(id, editionDate, nowMs) {
+      if ([...memory.batches.values()].some(b => b.editionDate === editionDate && b.recipientIds.includes(id))) return false;
       const key = `${id}:${editionDate}`;
       const existing = memory.sends.get(key);
       if (existing && (existing.providerId !== null || nowMs - existing.claimedAt < SEND_LEASE_SECONDS * 1000)) return false;

@@ -49,7 +49,7 @@ export async function verifyToken(
   if (!body || !signature) return null;
   let valid = false;
   try {
-    valid = await crypto.subtle.verify('HMAC', await hmacKey(secret), fromBase64Url(signature), encoder.encode(body));
+    valid = await crypto.subtle.verify('HMAC', await hmacKey(secret), new Uint8Array(fromBase64Url(signature)), encoder.encode(body));
   } catch {
     return null;
   }

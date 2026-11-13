@@ -16,7 +16,7 @@
 import categoriesConfig from '../../../shared/news-categories.json';
 import { buildConfirmEmail, buildDailyEmail, type EditionPayload } from './email';
 import { ResendClient, type OutgoingEmail } from './resend';
-import { memorySeed, memoryStore, memorySnapshot, neonStore, type Store, type Subscriber } from './store';
+import { memorySeed, memoryStore, memorySnapshot, neonStore, type Store, type Subscriber, type SendBatch } from './store';
 import { keyedHash, sha256Hex, signToken, verifyToken } from './tokens';
 
 export interface Env {
@@ -295,43 +295,70 @@ function ukToday(): string {
 }
 
 export async function sendDaily(env: Env, store: Store, options: { force?: boolean; nowMs?: number } = {}) {
+  const now = options.nowMs ?? Date.now();
+  const resend = new ResendClient(env.RESEND_API_KEY, env.RESEND_API_BASE);
+  let sent = 0;
+  let skipped = 0;
+
+  const recover = async (pending: SendBatch) => {
+    const token = crypto.randomUUID();
+    const batch = await store.claimBatch(pending.key, now, token);
+    if (!batch) return;
+    try {
+      let ids = batch.providerIds;
+      if (!ids) {
+        // Resend keeps keys for 24h. Leave a margin and fail closed after 23h:
+        // an uncertain old attempt needs provider reconciliation, never a fresh send.
+        if (now - batch.createdAtMs >= 23 * 3_600_000) throw new Error('Batch recovery window expired; manual reconciliation required: ' + batch.key);
+        for (const id of batch.recipientIds) {
+          if (await store.isSendRecorded(id, batch.editionDate)) throw new Error('Uncertain batch has recorded recipients; manual reconciliation required: ' + batch.key);
+        }
+        ids = await resend.sendStoredBatch(batch.requestBody, batch.key);
+        await store.acceptBatch(batch.key, token, ids);
+      }
+      for (const [index, id] of batch.recipientIds.entries()) {
+        if (await store.isSendRecorded(id, batch.editionDate)) continue;
+        await store.recordSend(id, batch.editionDate, ids[index]);
+        await store.logEvent(id, 'sent', { edition: batch.editionDate, id: ids[index] });
+        sent++;
+      }
+      await store.completeBatch(batch.key, token);
+    } catch (error) {
+      // Claims may be released, but durable reservations always survive. A retry
+      // resumes this exact batch, even if the feed or saved preferences changed.
+      for (const id of batch.recipientIds) await store.releaseSend(id, batch.editionDate);
+      throw error;
+    } finally {
+      await store.releaseBatch(batch.key, token);
+    }
+  };
+
+  // Recover all outstanding editions even when the latest feed has rolled forward
+  // or is unavailable. Accepted batches need no provider call or fresh feed.
+  for (const batch of await store.listPendingBatches()) await recover(batch);
+
   const source = env.EDITION_JSON_URL ?? `${env.SITE_URL}/newsletter/latest.json`;
   const response = await fetch(source, { headers: { Accept: 'application/json' } });
   if (!response.ok) throw new Error(`Edition fetch failed: HTTP ${response.status} from ${source}`);
   const edition = (await response.json()) as EditionPayload;
   if (!options.force && edition.date !== ukToday()) {
-    return { edition: edition.date, sent: 0, skipped: 0, reason: 'latest edition is not today; nothing sent' };
+    return { edition: edition.date, sent, skipped, reason: 'latest edition is not today; nothing sent' };
   }
 
-  const resend = new ResendClient(env.RESEND_API_KEY, env.RESEND_API_BASE);
-  const now = options.nowMs ?? Date.now();
   const subscribers = await store.listSubscribed();
-  let sent = 0;
-  let skipped = 0;
-
-  // Readers are claimed one batch at a time, just before that batch is sent.
-  // If a batch fails, only its own claims are released; later readers were
-  // never claimed, so a retry picks everyone up. A run that dies between claim
-  // and send leaves claims with no provider id, which a later run reclaims
-  // after SEND_LEASE_SECONDS.
   let chunk: Array<{ subscriber: Subscriber; email: OutgoingEmail }> = [];
   const flush = async () => {
-    if (chunk.length === 0) return;
-    const batch = chunk;
+    if (!chunk.length) return;
+    const entries = chunk;
     chunk = [];
-    // Stable key: the same edition and the same set of readers give the same key on a retry.
-    const key = `daily-${edition.date}-${(await sha256Hex(batch.map((entry) => entry.subscriber.id).sort().join(','))).slice(0, 32)}`;
-    try {
-      const ids = await resend.sendBatch(batch.map((entry) => entry.email), key);
-      for (const [index, entry] of batch.entries()) {
-        await store.recordSend(entry.subscriber.id, edition.date, ids[index]);
-        await store.logEvent(entry.subscriber.id, 'sent', { edition: edition.date, id: ids[index] });
-      }
-      sent += batch.length;
-    } catch (error) {
-      for (const entry of batch) await store.releaseSend(entry.subscriber.id, edition.date);
-      throw error;
-    }
+    const key = `daily-${edition.date}-${(await sha256Hex(entries.map(entry => entry.subscriber.id).sort().join(','))).slice(0, 32)}`;
+    const batch: SendBatch = {
+      key, editionDate: edition.date, recipientIds: entries.map(entry => entry.subscriber.id),
+      requestBody: JSON.stringify(entries.map(entry => entry.email)), createdAtMs: now,
+      providerIds: null, complete: false,
+    };
+    await store.saveBatch(batch); // Atomic request + reservations, before any provider call.
+    await recover(batch);
   };
 
   for (const subscriber of subscribers) {
