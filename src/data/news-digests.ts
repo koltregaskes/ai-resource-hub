@@ -9,6 +9,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { getNews } from '../db/queries';
+import { loadRoutedNewsCards } from './routed-news';
 import { routeAiResourceHubNews } from './news-routing';
 
 export interface NewsItem {
@@ -312,9 +313,12 @@ function loadNewsFromDB(): NewsItem[] {
 
 /**
  * Canonical news loader for public pages.
- * Prefers the live SQLite news store, then falls back to archived digest files.
+ * Prefers a non-empty shared gatherer feed. An empty gatherer file keeps the
+ * database feed, then the archived digest files.
  */
 export function loadNewsItems(): NewsItem[] {
+  const routed = loadRoutedNewsCards();
+  if (routed.length > 0) return routed;
   const dbItems = routeAiResourceHubNews(loadNewsFromDB());
   if (dbItems.length > 0) return dbItems;
   return routeAiResourceHubNews(loadNewsDigests());

@@ -1,118 +1,315 @@
 {
-  "generated": "2026-05-25T13:38:21.766Z",
+  "generated": "2026-10-26T02:06:58.865Z",
   "site": "AI Resource Hub",
-  "article_count": 7,
+  "article_count": 20,
   "articles": [
     {
-      "title": "Workbench Launches Open Source BullMQ Dashboard For Node Backends",
-      "url": "https://x.com/pontusab/status/2058588422001029549",
-      "source": "Aligned News (Scoble)",
+      "title": "Resin offers reusable building blocks for LLM inference engines",
+      "url": "https://www.digg.com/ai/ny5yjra0",
+      "source": "Digg AI",
       "tags": [
-        "model_release",
-        "open_source"
+        "inference"
       ],
       "matching_tags": [
-        "model_release",
-        "open_source"
+        "inference"
       ],
-      "importance": 0.74,
-      "date": "2026-05-25T01:21:33.840Z",
-      "summary": "Workbench launched as an open-source BullMQ dashboard with flows, metrics, schedulers, and search for Node backends.",
-      "category": "ai_tools"
+      "importance": 0.5,
+      "date": "2026-10-26T00:56:32.719Z",
+      "summary": "The developer says its Rust core handles scheduling and caching, leaving model-specific forward passes and kernels to be written.",
+      "category": "industry-media"
     },
     {
-      "title": "SpecBench Tests Reward Hacking In Long Horizon Coding Agents",
-      "url": "https://x.com/WecoAI/status/2057503162945118637",
-      "source": "Aligned News (Scoble)",
+      "title": "How Claude and ChatGPT plugins could sideline other software",
+      "url": "https://www.digg.com/ai/3ag7mdcb",
+      "source": "Digg AI",
       "tags": [
-        "benchmark",
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-26T00:02:19.624Z",
+      "summary": "One commenter argues that using software through AI assistants could eventually let those platforms cut out its makers.",
+      "category": "industry-media"
+    },
+    {
+      "title": "Transformer Lead Times Top 160 Weeks for US AI Data Centers",
+      "url": "https://huggingnews.com/ai/transformer-lead-times-top-160-weeks-for-us-ai-data-centers-b0250047",
+      "source": "HuggingNews",
+      "tags": [
+        "architecture"
+      ],
+      "matching_tags": [
+        "architecture"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-25T23:54:11.753Z",
+      "summary": "",
+      "category": "curated-digest"
+    },
+    {
+      "title": "Eight-video course on building reasoning models is online",
+      "url": "https://www.digg.com/ai/qjwaj81v",
+      "source": "Digg AI",
+      "tags": [
         "evaluation"
       ],
       "matching_tags": [
-        "benchmark",
         "evaluation"
       ],
-      "importance": 0.6599999999999999,
-      "date": "2026-05-24T18:23:12.339Z",
-      "summary": "SpecBench is a benchmark for measuring reward hacking in long horizon coding agents, a useful anomaly in the agent evaluation stack.",
-      "category": "ai_tools"
+      "importance": 0.5,
+      "date": "2026-10-25T22:42:49.472Z",
+      "summary": "Sebastian Raschka says the course offers over 11 hours of Python and PyTorch coding on evaluation, reinforcement learning and distillation.",
+      "category": "industry-media"
     },
     {
-      "title": "OpenGuardrails: An Open-Source Context-Aware AI Guardrails Platform",
-      "url": "https://paperswithcode.com/papers/2510.19169",
-      "source": "Papers With Code",
+      "title": "Grok releases the first seven minutes of its AI-generated ‘Odyssey’",
+      "url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
+      "source": "TechCrunch AI",
       "tags": [
-        "research_paper",
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-25T21:31:16.000Z",
+      "summary": "The footage looks okay, as long as you're not seeking artistry, inspiration, or human interest.",
+      "category": "industry-media"
+    },
+    {
+      "title": "One-time reset restores 25% of monthly quota for Kimi subscribers",
+      "url": "https://www.digg.com/ai/p8tafiis",
+      "source": "Digg AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-25T21:24:50.895Z",
+      "summary": "Kimi apologized for K3.1 Pro rate limits and unnecessary quota use, saying it is reducing unnecessary subagent calls.",
+      "category": "industry-media"
+    },
+    {
+      "title": "Softmax and cross-entropy implementations reportedly contain two subtle bugs",
+      "url": "https://www.digg.com/ai/we3n4mdl",
+      "source": "Digg AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-25T21:01:18.506Z",
+      "summary": "On X, @jon_barron claims a simple rewrite fixes both bugs and eliminates slingshots during grokking.",
+      "category": "industry-media"
+    },
+    {
+      "title": "Anthropic Token Volume on OpenRouter Jumps 3.6x After Opus 5.5 Launch",
+      "url": "https://huggingnews.com/ai/anthropic-token-volume-on-openrouter-jumps-36x-after-opus-55-launch-7a69b364",
+      "source": "HuggingNews",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-25T18:08:04.867Z",
+      "summary": "",
+      "category": "curated-digest"
+    },
+    {
+      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+      "url": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release"
+      ],
+      "matching_tags": [
+        "model_release"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-24T19:00:00.000Z",
+      "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+      "category": "industry-media"
+    },
+    {
+      "title": "Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats.",
+      "url": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "matching_tags": [
+        "model_release",
+        "research_paper"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-24T15:00:00.000Z",
+      "summary": "A new study found Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, with the two AI models disagreeing in more than 90% of nearly 500 election races.",
+      "category": "industry-media"
+    },
+    {
+      "title": "Hottest toy for Christmas? Nvidia CEO plays with adorable Microduck robots, 20,000 sell",
+      "url": "https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "hardware"
+      ],
+      "matching_tags": [
+        "hardware"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-23T21:59:19.000Z",
+      "summary": "The robots, stomping their little feet and making tiny R2-D2 noises, sat, fell down dead for a \"nap,\" and summersaulted on voice command.",
+      "category": "industry-media"
+    },
+    {
+      "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+      "url": "https://huggingface.co/blog/allenai/litpivot",
+      "source": "Hugging Face Blog",
+      "tags": [
         "open_source"
       ],
       "matching_tags": [
-        "research_paper",
         "open_source"
       ],
-      "importance": 0.64,
-      "date": "2026-05-25T06:00:24.397Z",
-      "summary": null,
-      "category": "ai_research"
+      "importance": 0.5,
+      "date": "2026-10-23T16:15:50.000Z",
+      "summary": "",
+      "category": "platform-blog"
     },
     {
-      "title": "The Real AI Question Is Whether Product Behavior Beats Press Releases",
-      "url": "https://x.com/aiedge_/status/2058384253042467194",
-      "source": "Aligned News (Scoble)",
+      "title": "Uber rival inDrive eyes 2027 robotaxi tests in Central Asia with Pony AI and Nvidia",
+      "url": "https://techcrunch.com/2026/10/22/uber-rival-indrive-eyes-2027-robotaxi-tests-in-central-asia-with-pony-ai-and-nvidia/",
+      "source": "TechCrunch AI",
       "tags": [
-        "model_release"
+        "hardware"
       ],
       "matching_tags": [
-        "model_release"
+        "hardware"
       ],
-      "importance": 0.6599999999999999,
-      "date": "2026-05-24T18:23:13.327Z",
-      "summary": "Claude Mythos appearing in product surfaces raises the question of whether AI news now breaks through interfaces before announcements.",
-      "category": "ai_tools"
+      "importance": 0.5,
+      "date": "2026-10-23T04:00:00.000Z",
+      "summary": "The company plans to begin testing Pony.ai's robotaxis in Kazakhstan's capital in the first half of 2027.",
+      "category": "industry-media"
     },
     {
-      "title": "Relaunching PapersWithCode with new features    nielsr • about 17 hours ago •  4",
-      "url": "https://huggingface.co/blog/nielsr/paperswithcode-launch",
+      "title": "Does Your Model Run on AWS Trainium? Look It Up",
+      "url": "https://huggingface.co/blog/torch-neuronx-model-support",
       "source": "Hugging Face Blog",
       "tags": [
-        "model_release"
+        "open_source"
       ],
       "matching_tags": [
-        "model_release"
+        "open_source"
       ],
-      "importance": 0.5800000000000001,
-      "date": "2026-05-25T06:00:10.763Z",
-      "summary": null,
-      "category": "ai_models"
+      "importance": 0.5,
+      "date": "2026-10-23T00:00:00.000Z",
+      "summary": "",
+      "category": "platform-blog"
     },
     {
-      "title": "Deriving the PPO Loss from First Principles    garg-aayush • Dec 25, 2025 •  44",
-      "url": "https://huggingface.co/blog/garg-aayush/ppo-from-first-principle",
+      "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
       "source": "Hugging Face Blog",
+      "tags": [
+        "training",
+        "open_source"
+      ],
+      "matching_tags": [
+        "training",
+        "open_source"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-22T22:24:34.000Z",
+      "summary": "",
+      "category": "platform-blog"
+    },
+    {
+      "title": "Designing an AI serving harness built to last",
+      "url": "https://www.technologyreview.com/2026/10/22/1146109/designing-an-ai-serving-harness-built-to-last/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "benchmark",
+        "evaluation",
+        "inference"
+      ],
+      "matching_tags": [
+        "benchmark",
+        "evaluation",
+        "inference"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-22T21:17:29.000Z",
+      "summary": "The next competitive advantage in enterprise AI has less to do with which model you choose than with what you build around it. That’s an important shift. For the past several years, much of the AI conversation has centered on model capability: bigger models, better reasoning, larger context windows, higher benchmark scores. Those advances have…",
+      "category": "industry-media"
+    },
+    {
+      "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
+      "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+      "source": "TechCrunch AI",
       "tags": [
         "model_release"
       ],
       "matching_tags": [
         "model_release"
       ],
-      "importance": 0.5800000000000001,
-      "date": "2026-05-24T18:00:13.987Z",
-      "summary": null,
-      "category": "ai_models"
+      "importance": 0.5,
+      "date": "2026-10-22T19:07:09.000Z",
+      "summary": "The new feature allows agents to log into a customer's personal accounts while still protecting the private credentials that secure those accounts.",
+      "category": "industry-media"
     },
     {
-      "title": "DataFlow: An LLM-Driven Framework for Unified Data Preparation and Workflow Automation in the Era of Data-Centric AI",
-      "url": "https://paperswithcode.com/papers/2512.16676",
-      "source": "Papers With Code",
+      "title": "Microsoft’s Mustafa Suleyman says its AI outperforms doctors on hard cases as he chases ‘medical superintelligence’",
+      "url": "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/",
+      "source": "TechCrunch AI",
       "tags": [
         "research_paper"
       ],
       "matching_tags": [
         "research_paper"
       ],
-      "importance": 0.5599999999999999,
-      "date": "2026-05-24T18:00:25.659Z",
-      "summary": null,
-      "category": "ai_research"
+      "importance": 0.5,
+      "date": "2026-10-22T18:43:53.000Z",
+      "summary": "Microsoft’s new AI diagnostic system beat generalist doctors on hard cases, according to a study in Science. But most of the improvement seems to come from the AI models underneath, not from Microsoft’s system itself.",
+      "category": "industry-media"
+    },
+    {
+      "title": "AI’s hidden storage bill: What inference leaves behind",
+      "url": "https://www.technologyreview.com/2026/10/22/1146948/ais-hidden-storage-bill-what-inference-leaves-behind/",
+      "source": "MIT Technology Review AI",
+      "tags": [
+        "inference"
+      ],
+      "matching_tags": [
+        "inference"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-22T08:41:18.000Z",
+      "summary": "Ask most executives to picture the cost of AI and they’ll likely see GPUs—racks of accelerators with gigawatts of power—and a waitlist for silicon. But that picture leaves something out: Data storage costs. What happens to data after a model responds? Much of the back-end data that’s generated—from billions of daily prompts, images, and videos—needs…",
+      "category": "industry-media"
+    },
+    {
+      "title": "Ensemble forecasting with IBM Granite time-series models",
+      "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.5,
+      "date": "2026-10-22T07:51:31.000Z",
+      "summary": "",
+      "category": "platform-blog"
     }
   ]
 }
