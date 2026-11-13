@@ -28,6 +28,9 @@ jobs:
       - name: Test benchmark provenance
         run: npm run test:benchmark-provenance
 
+      - name: Test SEO sitemaps and ping safeguards
+        run: npm run test:seo
+
       - name: Test model registry guards (catalogue names, tier variants, demotions)
         run: npm run test:registry
 

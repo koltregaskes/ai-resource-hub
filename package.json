@@ -42,6 +42,7 @@
     "test:registry": "tsx --test scripts/registry-guards.test.ts",
     "test:benchmark-provenance": "tsx --test scripts/events-publication-gate.test.ts scripts/staleness-publication-gate.test.ts scripts/benchmark-collection.test.ts scripts/benchmark-provenance.test.ts scripts/benchmark-score-evidence.test.ts scripts/public-benchmark-selector.test.ts scripts/public-quality-policy.test.ts",
     "verify:routes": "tsx scripts/verify-route-smoke.ts",
+    "test:seo": "node --test scripts/seo-ping.test.mjs && tsx --test scripts/seo-feeds.test.ts",
     "test:model-fields": "node --test scripts/model-field-publication.test.mjs scripts/pr89-regressions.test.mjs && tsx --test scripts/model-field-reviews.test.ts"
   },
   "dependencies": {
@@ -60,6 +61,7 @@
     "react": "^19.2.5",
     "react-chartjs-2": "^5.3.1",
     "react-dom": "^19.2.5",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3"
   },
