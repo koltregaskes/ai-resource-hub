@@ -1,5 +1,5 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-13T11:55:48.118Z",
+  "generatedAt": "2026-11-13T12:55:51.257Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -38,7 +38,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.5,
       "outputPrice": 7.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Gemini 4 Hydrogen is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-4-hydrogen); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Google's Gemini 4 Hydrogen is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -133,7 +133,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 10,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Gemini 4 Carbon is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-4-carbon); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Google's Gemini 4 Carbon is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -199,7 +199,7 @@ export const modelReleaseDesk = {
       "inputPrice": 8,
       "outputPrice": 40,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Claude Fable 5.2 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $8.00 in / $40.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-fable-5.2); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Anthropic's Claude Fable 5.2 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -254,7 +254,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.1,
       "outputPrice": 0.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Muse Ember is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.10 in / $0.50 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Meta's Muse Ember is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -308,7 +308,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.5,
       "outputPrice": 9,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Gemini Omni 1.2 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $1.50 in / $9.00 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Google's Gemini Omni 1.2 Flash is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -373,7 +373,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1,
       "outputPrice": 5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GPT-6.1 Terra is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $1.00 in / $5.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-terra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "OpenAI's GPT-6.1 Terra is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -449,7 +449,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1,
       "outputPrice": 5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GPT-6.1 Terra Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $1.00 in / $5.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-terra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "OpenAI's GPT-6.1 Terra Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -525,7 +525,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 10,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Kimi K3.1 Pro is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Auto-tracked from OpenRouter discovery (moonshotai/kimi-k3.1-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Moonshot AI's Kimi K3.1 Pro is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -650,7 +650,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.15,
       "outputPrice": 0.6,
       "pricingSource": "Vendor (official, checked 2026-11-13)",
-      "pricingUpdated": "2026-11-13 11:55:24",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "MiniMax M3.1 Flash is a currently tracked release from MiniMax. It belongs in the open-weight / local-model conversation. Tracked context window: 1.0M tokens. Current tracked pricing: $0.15 in / $0.60 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "MiniMax's MiniMax M3.1 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -707,7 +707,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.038,
       "outputPrice": 0.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "DeepSeek V4.1 Flash 1017 is a currently tracked release from DeepSeek. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.04 in / $0.50 out per million tokens. Auto-tracked from OpenRouter discovery (deepseek/deepseek-v4.1-flash-1017); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "DeepSeek's DeepSeek V4.1 Flash 1017 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -762,7 +762,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.25,
       "outputPrice": 4.25,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Muse Spark Open is a currently tracked release from Meta. It belongs in the open-weight / local-model conversation. Tracked context window: 1.0M tokens. Current tracked pricing: $1.25 in / $4.25 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Meta's Muse Spark Open is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -819,7 +819,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.15,
       "outputPrice": 0.47,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Nemotron 3.5 Super VL is a currently tracked release from NVIDIA. It belongs in the open-weight / local-model conversation. Tracked context window: 1.0M tokens. Current tracked pricing: $0.15 in / $0.47 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "NVIDIA's Nemotron 3.5 Super VL is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -925,7 +925,7 @@ export const modelReleaseDesk = {
       "inputPrice": 4,
       "outputPrice": 20,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Muse Wonder is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $4.00 in / $20.00 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Meta's Muse Wonder is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -979,7 +979,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.1,
       "outputPrice": 0.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Claude Haiku 5.5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.10 in / $0.50 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-haiku-5.5); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Anthropic's Claude Haiku 5.5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1048,7 +1048,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 10,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GPT-6.1 Sol is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "OpenAI's GPT-6.1 Sol is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1124,7 +1124,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 10,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GPT-6.1 Sol Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "OpenAI's GPT-6.1 Sol Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1200,7 +1200,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 10,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Claude Sonnet 5.5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-sonnet-5.5); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Anthropic's Claude Sonnet 5.5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1269,7 +1269,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2.8,
       "outputPrice": 8.8,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GLM 5.3 Prime is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $2.80 in / $8.80 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5.3-prime); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Zhipu AI's GLM 5.3 Prime is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1324,7 +1324,7 @@ export const modelReleaseDesk = {
       "inputPrice": 4,
       "outputPrice": 12,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Qwen3.8 Max Prime is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $4.00 in / $12.00 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.8-max-prime); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Alibaba's Qwen3.8 Max Prime is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1379,7 +1379,7 @@ export const modelReleaseDesk = {
       "inputPrice": 4,
       "outputPrice": 20,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Claude Opus 5.5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $4.00 in / $20.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-5.5); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Anthropic's Claude Opus 5.5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1448,7 +1448,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.1,
       "outputPrice": 0.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GPT-6 Luna is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $0.10 in / $0.50 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-6-luna); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "OpenAI's GPT-6 Luna is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1524,7 +1524,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.1,
       "outputPrice": 0.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GPT-6 Luna Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $0.10 in / $0.50 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-6-luna-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "OpenAI's GPT-6 Luna Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1600,7 +1600,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 10,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GPT-6 Sol is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-6-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "OpenAI's GPT-6 Sol is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1676,7 +1676,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 10,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GPT-6 Sol Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-6-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "OpenAI's GPT-6 Sol Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1752,7 +1752,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Grok 4.7 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 500K tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. Auto-tracked from OpenRouter discovery (x-ai/grok-4.7); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "xAI's Grok 4.7 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1807,7 +1807,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.3,
       "outputPrice": 1.2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "DeepSeek V4.1 Flash is a currently tracked release from DeepSeek. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.30 in / $1.20 out per million tokens. Auto-tracked from OpenRouter discovery (deepseek/deepseek-v4.1-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "DeepSeek's DeepSeek V4.1 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1862,7 +1862,7 @@ export const modelReleaseDesk = {
       "inputPrice": 10,
       "outputPrice": 50,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GPT-6 Astra is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-6-astra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "OpenAI's GPT-6 Astra is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1938,7 +1938,7 @@ export const modelReleaseDesk = {
       "inputPrice": 10,
       "outputPrice": 50,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GPT-6 Astra Pro is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Auto-tracked from OpenRouter discovery (openai/gpt-6-astra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "OpenAI's GPT-6 Astra Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2014,7 +2014,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Qwen3.8 Max (0902) is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.8-max-0902); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Alibaba's Qwen3.8 Max (0902) is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2069,7 +2069,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.825,
       "outputPrice": 4.125,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Gemini 3.8 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.82 in / $4.13 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-3.8-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Google's Gemini 3.8 Flash is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2135,7 +2135,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.25,
       "outputPrice": 4.25,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Muse Spark 1.3 is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.25 in / $4.25 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Meta's Muse Spark 1.3 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2189,7 +2189,7 @@ export const modelReleaseDesk = {
       "inputPrice": 10,
       "outputPrice": 50,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Claude Fable 5.1 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Auto-tracked from OpenRouter discovery (anthropic/claude-fable-5.1); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Anthropic's Claude Fable 5.1 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2258,7 +2258,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.5,
       "outputPrice": 9,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Gemini Omni 1.1 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $1.50 in / $9.00 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Google's Gemini Omni 1.1 Flash is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2323,7 +2323,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.04,
       "outputPrice": 0.078,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GLM 5.3 Flash is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.04 in / $0.08 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5.3-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Zhipu AI's GLM 5.3 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2378,7 +2378,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.084,
       "outputPrice": 3.6,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GLM 5.3 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.08 in / $3.60 out per million tokens. Auto-tracked from OpenRouter discovery (z-ai/glm-5.3); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Zhipu AI's GLM 5.3 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2433,7 +2433,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.15,
       "outputPrice": 1.875,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Qwen3.8 27B is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.15 in / $1.88 out per million tokens. Auto-tracked from OpenRouter discovery (qwen/qwen3.8-27b); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Alibaba's Qwen3.8 27B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2488,7 +2488,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.75,
       "outputPrice": 3.75,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Gemini 3.7 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.75 in / $3.75 out per million tokens. Auto-tracked from OpenRouter discovery (google/gemini-3.7-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Google's Gemini 3.7 Flash is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2554,7 +2554,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 6,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Grok 4.6 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 500K tokens. Current tracked pricing: $2.00 in / $6.00 out per million tokens. Auto-tracked from OpenRouter discovery (x-ai/grok-4.6); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "xAI's Grok 4.6 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2609,7 +2609,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.07,
       "outputPrice": 0.2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Nemotron 3.5 Lightning is a currently tracked release from NVIDIA. It belongs in the open-weight / local-model conversation. Tracked context window: 262.1K tokens. Current tracked pricing: $0.07 in / $0.20 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "NVIDIA's Nemotron 3.5 Lightning is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2715,7 +2715,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.3,
       "outputPrice": 1.2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Muse Glimmer 30B is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $0.30 in / $1.20 out per million tokens. Auto-tracked from OpenRouter discovery (meta/muse-glimmer-30b); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Meta's Muse Glimmer 30B is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2770,7 +2770,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.25,
       "outputPrice": 4.25,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Muse Spark 1.2 is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.25 in / $4.25 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Meta's Muse Spark 1.2 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2824,7 +2824,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.043,
       "outputPrice": 0.3,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "DeepSeek V4 Flash 0731 is a currently tracked release from DeepSeek. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.04 in / $0.30 out per million tokens. Auto-tracked from OpenRouter discovery (deepseek/deepseek-v4-flash-0731); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "DeepSeek's DeepSeek V4 Flash 0731 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2879,7 +2879,7 @@ export const modelReleaseDesk = {
       "inputPrice": 5,
       "outputPrice": 25,
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-13 11:55:24",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Claude Opus 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Current generally available Opus model. Some safeguarded requests can fall back to Opus 4.8. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2947,7 +2947,7 @@ export const modelReleaseDesk = {
       "inputPrice": 10,
       "outputPrice": 50,
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-13 11:55:24",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Claude Opus 5 Fast is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Official faster Opus 5 mode, priced at twice the base token rate. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 5 Fast is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3015,7 +3015,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.3,
       "outputPrice": 2.5,
       "pricingSource": "Google AI (official)",
-      "pricingUpdated": "2026-11-13 11:55:24",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Gemini 3.5 Flash-Lite is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.30 in / $2.50 out per million tokens. Current generally available low-cost Gemini Flash-Lite model. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Google's Gemini 3.5 Flash-Lite is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3080,7 +3080,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.5,
       "outputPrice": 7.5,
       "pricingSource": "Google AI (official)",
-      "pricingUpdated": "2026-11-13 11:55:24",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Gemini 3.6 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Current generally available Gemini Flash model. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Google's Gemini 3.6 Flash is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3145,7 +3145,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.192,
       "outputPrice": 16,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Kimi K3 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.19 in / $16.00 out per million tokens. Auto-tracked from OpenRouter discovery (moonshotai/kimi-k3); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "Moonshot AI's Kimi K3 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3200,7 +3200,7 @@ export const modelReleaseDesk = {
       "inputPrice": 5,
       "outputPrice": 30,
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-11-13 11:55:24",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GPT-5.6 Sol is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Current frontier GPT-5.6 model; the gpt-5.6 alias routes to Sol. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3275,7 +3275,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 10,
       "pricingSource": "Anthropic (official, introductory through 2026-08-31)",
-      "pricingUpdated": "2026-11-13 11:55:24",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Claude Sonnet 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Generally available Sonnet model. Introductory pricing applies through 31 August 2026. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Sonnet 5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3343,7 +3343,7 @@ export const modelReleaseDesk = {
       "inputPrice": 10,
       "outputPrice": 50,
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-13 11:55:24",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Claude Fable 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Generally available Mythos-class model. Safeguarded topics can fall back to Opus 4.8 or Opus 5. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Fable 5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3411,7 +3411,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.2,
       "outputPrice": 0.4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Gemma 4 is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 262.1K tokens. Current tracked pricing: $0.20 in / $0.40 out per million tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Google's Gemma 4 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3479,7 +3479,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.325,
       "outputPrice": 1.95,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Qwen 3.6 Plus is a currently tracked release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $0.33 in / $1.95 out per million tokens. Latest Qwen Plus line in Model Studio pricing. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Alibaba's Qwen 3.6 Plus is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3533,7 +3533,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.25,
       "outputPrice": 2.5,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Grok 4.20 is a currently tracked release from xAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 2M tokens. Current tracked pricing: $1.25 in / $2.50 out per million tokens. xAI flagship model. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "xAI's Grok 4.20 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3587,7 +3587,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.57,
       "outputPrice": 2.3,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Kimi K2.5 is a currently tracked release from Moonshot AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 131.1K tokens. Current tracked pricing: $0.57 in / $2.30 out per million tokens. Current Kimi family line in Moonshot platform docs. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Moonshot AI's Kimi K2.5 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3641,7 +3641,7 @@ export const modelReleaseDesk = {
       "inputPrice": 0.21,
       "outputPrice": 0.84,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "MiniMax M2.7 is a currently tracked release from MiniMax. It is positioned as an API-available model rather than a local-only release. Tracked context window: 196.6K tokens. Current tracked pricing: $0.21 in / $0.84 out per million tokens. Current MiniMax flagship family line. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "MiniMax's MiniMax M2.7 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3695,7 +3695,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1.2,
       "outputPrice": 4,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GLM-5 Turbo is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 202.8K tokens. Current tracked pricing: $1.20 in / $4.00 out per million tokens. Lower-cost GLM 5 line. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Zhipu AI's GLM-5 Turbo is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3749,7 +3749,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2.5,
       "outputPrice": 15,
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-11-13 11:55:24",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Official GPT-5.4 API model; superseded as the current flagship by GPT-5.6. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "OpenAI's GPT-5.4 is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3824,7 +3824,7 @@ export const modelReleaseDesk = {
       "inputPrice": 2,
       "outputPrice": 12,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Gemini 3.1 Pro is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $2.00 in / $12.00 out per million tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Google's Gemini 3.1 Pro is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3889,7 +3889,7 @@ export const modelReleaseDesk = {
       "inputPrice": 3,
       "outputPrice": 15,
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-13 11:55:24",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -3957,7 +3957,7 @@ export const modelReleaseDesk = {
       "inputPrice": 1,
       "outputPrice": 3.2,
       "pricingSource": "openrouter.ai/api/v1/models",
-      "pricingUpdated": "2026-11-13 11:55:23",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "GLM-5 is a currently tracked release from Zhipu AI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 204.8K tokens. Current tracked pricing: $1.00 in / $3.20 out per million tokens. Zhipu flagship GLM 5 line. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Zhipu AI's GLM-5 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -4011,7 +4011,7 @@ export const modelReleaseDesk = {
       "inputPrice": 5,
       "outputPrice": 25,
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-13 11:55:24",
+      "pricingUpdated": "2026-11-13 12:55:24",
       "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Official Opus release retained for historical comparisons. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 1 related story and 1 benchmark signal to review.",
       "whyItMatters": [
