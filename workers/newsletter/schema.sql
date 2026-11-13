@@ -53,3 +53,25 @@ CREATE TABLE IF NOT EXISTS newsletter.email_events (
 );
 
 CREATE INDEX IF NOT EXISTS email_events_subscriber_idx ON newsletter.email_events (subscriber_id, created_at DESC);
+
+-- Immutable outbox: persist BEFORE calling Resend. Apply at the approved schema setup, not from a build.
+CREATE TABLE IF NOT EXISTS newsletter.send_batches (
+  batch_key TEXT PRIMARY KEY,
+  site TEXT NOT NULL,
+  edition_date DATE NOT NULL,
+  recipient_ids UUID[] NOT NULL,
+  request_body TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL,
+  state TEXT NOT NULL DEFAULT 'prepared' CHECK (state IN ('prepared','accepted','complete')),
+  provider_ids JSONB,
+  lease_token TEXT,
+  lease_until TIMESTAMPTZ,
+  CHECK ((state = 'prepared' AND provider_ids IS NULL) OR (state <> 'prepared' AND provider_ids IS NOT NULL))
+);
+CREATE INDEX IF NOT EXISTS send_batches_pending_idx ON newsletter.send_batches (site, created_at) WHERE state <> 'complete';
+CREATE TABLE IF NOT EXISTS newsletter.send_batch_recipients (
+  subscriber_id UUID NOT NULL REFERENCES newsletter.subscribers(id),
+  edition_date DATE NOT NULL,
+  batch_key TEXT NOT NULL REFERENCES newsletter.send_batches(batch_key),
+  PRIMARY KEY (subscriber_id, edition_date)
+);

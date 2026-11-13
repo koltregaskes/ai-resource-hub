@@ -18,7 +18,7 @@ export class ResendClient {
     private readonly base = 'https://api.resend.com',
   ) {}
 
-  private async post(path: string, body: unknown, idempotencyKey?: string): Promise<any> {
+  private async post(path: string, body: string, idempotencyKey?: string): Promise<any> {
     const response = await fetch(`${this.base}${path}`, {
       method: 'POST',
       headers: {
@@ -26,7 +26,7 @@ export class ResendClient {
         'Content-Type': 'application/json',
         ...(idempotencyKey ? { 'Idempotency-Key': idempotencyKey } : {}),
       },
-      body: JSON.stringify(body),
+      body,
     });
     const payload = await response.json().catch(() => ({}));
     if (!response.ok) throw new Error(`Resend ${path} failed: HTTP ${response.status} ${JSON.stringify(payload).slice(0, 200)}`);
@@ -34,14 +34,20 @@ export class ResendClient {
   }
 
   async send(email: OutgoingEmail, idempotencyKey?: string): Promise<string | null> {
-    const result = await this.post('/emails', email, idempotencyKey);
+    const result = await this.post('/emails', JSON.stringify(email), idempotencyKey);
     return result?.id ?? null;
   }
 
   /** Up to 100 emails per call. Returns provider ids in the same order. */
   async sendBatch(emails: OutgoingEmail[], idempotencyKey?: string): Promise<Array<string | null>> {
-    const result = await this.post('/emails/batch', emails, idempotencyKey);
+    return this.sendStoredBatch(JSON.stringify(emails), idempotencyKey);
+  }
+
+  /** Replay the exact bytes persisted before the first attempt. */
+  async sendStoredBatch(body: string, idempotencyKey?: string): Promise<string[]> {
+    const result = await this.post('/emails/batch', body, idempotencyKey);
     const data: Array<{ id?: string }> = Array.isArray(result?.data) ? result.data : [];
-    return emails.map((_, index) => data[index]?.id ?? null);
+    if (data.length !== JSON.parse(body).length || data.some(row => typeof row.id !== 'string' || !row.id)) throw new Error('Resend batch response is incomplete; retain request for recovery');
+    return data.map(row => row.id!);
   }
 }
