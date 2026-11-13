@@ -1,0 +1,2907 @@
+[
+  {
+    "id": "muse-wonder",
+    "fields": {
+      "name": {
+        "value": "Muse Wonder",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "meta",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": "2026-10-12",
+        "verification": "verified",
+        "sourceUrl": "https://research.meta.ai/blog/muse-wonder",
+        "checkedAt": "2026-11-13"
+      },
+      "contextWindow": {
+        "value": 1048576,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "modality": {
+        "value": "text,vision,video,audio",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": "preview",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 4,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 20,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.2,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "$",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "Standard mode.",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "muse-spark-1.2",
+    "fields": {
+      "name": {
+        "value": "Muse Spark 1.2",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "meta",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": "2026-08-05",
+        "verification": "verified",
+        "sourceUrl": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+        "checkedAt": "2026-11-13"
+      },
+      "contextWindow": {
+        "value": 1048576,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "modality": {
+        "value": "text,vision,video,audio",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 1.25,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 4.25,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.15,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "$",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "Standard mode.",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "muse-spark-1.3",
+    "fields": {
+      "name": {
+        "value": "Muse Spark 1.3",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "meta",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": "2026-09-02",
+        "verification": "verified",
+        "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+        "checkedAt": "2026-11-13"
+      },
+      "contextWindow": {
+        "value": 1048576,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "modality": {
+        "value": "text,vision,video,audio",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 1.25,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 4.25,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.15,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "$",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "Standard mode.",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "nemotron-3.5-super-vl",
+    "fields": {
+      "name": {
+        "value": "Nemotron 3.5 Super VL",
+        "verification": "verified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "nvidia",
+        "verification": "verified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": "2026-10-15",
+        "verification": "verified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13"
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state this specification, an API availability guarantee or a vendor API price."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state this specification, an API availability guarantee or a vendor API price."
+      },
+      "modality": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state this specification, an API availability guarantee or a vendor API price."
+      },
+      "openSource": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13"
+      },
+      "apiAvailable": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state this specification, an API availability guarantee or a vendor API price."
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state this specification, an API availability guarantee or a vendor API price."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state this specification, an API availability guarantee or a vendor API price."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state this specification, an API availability guarantee or a vendor API price."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state this specification, an API availability guarantee or a vendor API price."
+      },
+      "currency": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state this specification, an API availability guarantee or a vendor API price."
+      },
+      "pricingUnit": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state this specification, an API availability guarantee or a vendor API price."
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state this specification, an API availability guarantee or a vendor API price."
+      }
+    }
+  },
+  {
+    "id": "gemini-4-argon",
+    "fields": {
+      "name": {
+        "value": "Gemini 4 Argon",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "google",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor does not state an exact release date or an open-weight licence."
+      },
+      "contextWindow": {
+        "value": 1048576,
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+        "checkedAt": "2026-11-13"
+      },
+      "maxOutput": {
+        "value": 65536,
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+        "checkedAt": "2026-11-13",
+        "reason": "65,536 is the default synchronous output limit. Long decode supports up to 1,048,576 output tokens within the unified context."
+      },
+      "modality": {
+        "value": "text,vision,video,audio",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor does not state an exact release date or an open-weight licence."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": "active",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+        "checkedAt": "2026-11-13"
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 2,
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing#gemini-4-argon",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 10,
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing#gemini-4-argon",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.1,
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing#gemini-4-argon",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing#gemini-4-argon",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing#gemini-4-argon",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "Standard API pricing through 30 November 2026. From 1 December: USD 4 input, 20 output, 0.20 cached input per 1M tokens. Follow-up: https://github.com/koltregaskes/rooms-os-hub/issues/1535",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing#gemini-4-argon",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "muse-spark-1.1",
+    "fields": {
+      "name": {
+        "value": "Muse Spark 1.1",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "meta",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": "2026-07-09",
+        "verification": "verified",
+        "sourceUrl": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+        "checkedAt": "2026-11-13"
+      },
+      "contextWindow": {
+        "value": 1048576,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives no maximum output token count, model lifecycle label or open-weight licence. Discovery values are not inherited."
+      },
+      "modality": {
+        "value": "text,vision,video,audio",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives no maximum output token count, model lifecycle label or open-weight licence. Discovery values are not inherited."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives no maximum output token count, model lifecycle label or open-weight licence. Discovery values are not inherited."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 1.25,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 4.25,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.15,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "$",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "Standard mode. The launch post describes the API public preview; it does not provide a model lifecycle label.",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "command-a-plus",
+    "fields": {
+      "name": {
+        "value": "Command A+",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "cohere",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": "2026-05-20",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "contextWindow": {
+        "value": 128000,
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "maxOutput": {
+        "value": 64000,
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "modality": {
+        "value": "text,vision",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13",
+        "reason": "The model card does not state this value. Free rate-limited access is conditional, not an unrestricted token price."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13",
+        "reason": "The model card does not state this value. Free rate-limited access is conditional, not an unrestricted token price."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13",
+        "reason": "The model card does not state this value. Free rate-limited access is conditional, not an unrestricted token price."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13",
+        "reason": "The model card does not state this value. Free rate-limited access is conditional, not an unrestricted token price."
+      },
+      "currency": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13",
+        "reason": "The model card does not state this value. Free rate-limited access is conditional, not an unrestricted token price."
+      },
+      "pricingUnit": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13",
+        "reason": "The model card does not state this value. Free rate-limited access is conditional, not an unrestricted token price."
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cohere.com/v1/docs/command-a-plus",
+        "checkedAt": "2026-11-13",
+        "reason": "The model card does not state this value. Free rate-limited access is conditional, not an unrestricted token price."
+      }
+    }
+  },
+  {
+    "id": "deepseek-v4-flash-vision-exp",
+    "fields": {
+      "name": {
+        "value": "DeepSeek V4 Flash Vision Exp",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "deepseek",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "modality": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "apiAvailable": {
+        "value": false,
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": "retired",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "category": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "currency": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "pricingUnit": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "The original model is retired; current Flash specifications and prices describe its replacement, not this model."
+      }
+    }
+  },
+  {
+    "id": "deepseek-v4-pro-0813",
+    "fields": {
+      "name": {
+        "value": "DeepSeek V4 Pro 0813",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "deepseek",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "modality": {
+        "value": "text",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13",
+        "reason": "No single unconditional price is published. Context 1M and output 384K are not exact token counts; no release date or licence is stated."
+      },
+      "currency": {
+        "value": "$",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "Off-peak input $0.66, output $1.98, cached input $0.022; peak input $1.32, output $3.96, cached input $0.044. Peak: 01:00-04:00 and 06:00-10:00 UTC Monday to Friday excluding Chinese public holidays.",
+        "verification": "verified",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing/",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "glm-5.3-flashx",
+    "fields": {
+      "name": {
+        "value": "GLM 5.3 FlashX",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "zhipu",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "modality": {
+        "value": "text,vision,video",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 0.37,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 1.25,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.075,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      }
+    }
+  },
+  {
+    "id": "glm-5.3-flashx-legal",
+    "fields": {
+      "name": {
+        "value": "GLM 5.3 FlashX Legal",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "zhipu",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "modality": {
+        "value": "text,vision,video",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 0.37,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 1.25,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.075,
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://docs.z.ai/guides/overview/pricing",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page does not state a release date or variant-specific licence. Context 1M and output 128K are not exact token counts."
+      }
+    }
+  },
+  {
+    "id": "muse-ember",
+    "fields": {
+      "name": {
+        "value": "Muse Ember",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "meta",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": "2026-11-09",
+        "verification": "verified",
+        "sourceUrl": "https://research.meta.ai/blog/muse-ember",
+        "checkedAt": "2026-11-13"
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "modality": {
+        "value": "text,vision,video,audio",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 0.1,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 0.5,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.004,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "$",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "Up to 200K input tokens. Above 200K, all tokens billed at input $0.30, output $1.50, cached input $0.012.",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "muse-spark-1.2-contributor",
+    "fields": {
+      "name": {
+        "value": "Muse Spark 1.2 Contributor",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "meta",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "modality": {
+        "value": "text,vision,video,audio",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact value for this field is stated on the cited vendor pages. Contributor variants have no separately confirmed release date or context specification."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/models",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 0.1,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 0.2,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.002,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "$",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "Contributor mode of Muse Spark 1.2; discounted API variant, not a distinct model. Content may be used for training.",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "mistral-large-4-0",
+    "fields": {
+      "name": {
+        "value": "Mistral Large 4",
+        "verification": "verified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "mistral",
+        "verification": "verified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13",
+        "reason": "The page gives context as 1M, not an exact token count. The displayed date is not labelled as a release date; maximum output and precise modalities are not stated."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13",
+        "reason": "The page gives context as 1M, not an exact token count. The displayed date is not labelled as a release date; maximum output and precise modalities are not stated."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13",
+        "reason": "The page gives context as 1M, not an exact token count. The displayed date is not labelled as a release date; maximum output and precise modalities are not stated."
+      },
+      "modality": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13",
+        "reason": "The page gives context as 1M, not an exact token count. The displayed date is not labelled as a release date; maximum output and precise modalities are not stated."
+      },
+      "openSource": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13"
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": "active",
+        "verification": "verified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13"
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 0.7,
+        "verification": "verified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 2.1,
+        "verification": "verified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.07,
+        "verification": "verified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "checkedAt": "2026-11-13",
+        "reason": "The page gives context as 1M, not an exact token count. The displayed date is not labelled as a release date; maximum output and precise modalities are not stated."
+      }
+    }
+  },
+  {
+    "id": "nemotron-3.5-lightning",
+    "fields": {
+      "name": {
+        "value": "Nemotron 3.5 Lightning",
+        "verification": "verified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "nvidia",
+        "verification": "verified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": "2026-08-11",
+        "verification": "verified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13"
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state exact token limits, modalities or API prices."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state exact token limits, modalities or API prices."
+      },
+      "modality": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state exact token limits, modalities or API prices."
+      },
+      "openSource": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13"
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state exact token limits, modalities or API prices."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state exact token limits, modalities or API prices."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state exact token limits, modalities or API prices."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state exact token limits, modalities or API prices."
+      },
+      "currency": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state exact token limits, modalities or API prices."
+      },
+      "pricingUnit": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state exact token limits, modalities or API prices."
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+        "checkedAt": "2026-11-13",
+        "reason": "The release post does not state exact token limits, modalities or API prices."
+      }
+    }
+  },
+  {
+    "id": "qwen3.8-flash",
+    "fields": {
+      "name": {
+        "value": "Qwen3.8 Flash",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "alibaba",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "No release date, licence or lifecycle state is stated; Updated at is not a release date."
+      },
+      "contextWindow": {
+        "value": 1000000,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "maxOutput": {
+        "value": 131072,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "modality": {
+        "value": "text,vision,video",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "No release date, licence or lifecycle state is stated; Updated at is not a release date."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "No release date, licence or lifecycle state is stated; Updated at is not a release date."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 0.113,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 0.382,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.014,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "China (Beijing) list prices; implicit cached input. Other regions have different prices.",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "qwen3.8-omni-flash",
+    "fields": {
+      "name": {
+        "value": "Qwen3.8 Omni Flash",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "alibaba",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page gives context as 1M, not an exact token count; it links pricing separately. No release date, licence or lifecycle state is stated."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page gives context as 1M, not an exact token count; it links pricing separately. No release date, licence or lifecycle state is stated."
+      },
+      "maxOutput": {
+        "value": 131072,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "modality": {
+        "value": "text,vision,audio,video",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page gives context as 1M, not an exact token count; it links pricing separately. No release date, licence or lifecycle state is stated."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page gives context as 1M, not an exact token count; it links pricing separately. No release date, licence or lifecycle state is stated."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page gives context as 1M, not an exact token count; it links pricing separately. No release date, licence or lifecycle state is stated."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page gives context as 1M, not an exact token count; it links pricing separately. No release date, licence or lifecycle state is stated."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page gives context as 1M, not an exact token count; it links pricing separately. No release date, licence or lifecycle state is stated."
+      },
+      "currency": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page gives context as 1M, not an exact token count; it links pricing separately. No release date, licence or lifecycle state is stated."
+      },
+      "pricingUnit": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page gives context as 1M, not an exact token count; it links pricing separately. No release date, licence or lifecycle state is stated."
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The page gives context as 1M, not an exact token count; it links pricing separately. No release date, licence or lifecycle state is stated."
+      }
+    }
+  },
+  {
+    "id": "muse-spark-open",
+    "fields": {
+      "name": {
+        "value": "Muse Spark Open",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/muse-spark-open",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "meta",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/muse-spark-open",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": "2026-10-15",
+        "verification": "verified",
+        "sourceUrl": "https://research.meta.ai/blog/muse-spark-open",
+        "checkedAt": "2026-11-13"
+      },
+      "contextWindow": {
+        "value": 1048576,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/muse-spark-open",
+        "checkedAt": "2026-11-13"
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/muse-spark-open",
+        "checkedAt": "2026-11-13",
+        "reason": "Vendor documents open weights and partner hosting, but no vendor API price, maximum output or lifecycle state."
+      },
+      "modality": {
+        "value": "text,vision,video,audio",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/muse-spark-open",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/muse-spark-open",
+        "checkedAt": "2026-11-13"
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/muse-spark-open",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/muse-spark-open",
+        "checkedAt": "2026-11-13",
+        "reason": "Vendor documents open weights and partner hosting, but no vendor API price, maximum output or lifecycle state."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/muse-spark-open",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/muse-spark-open",
+        "checkedAt": "2026-11-13",
+        "reason": "Vendor documents open weights and partner hosting, but no vendor API price, maximum output or lifecycle state."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/muse-spark-open",
+        "checkedAt": "2026-11-13",
+        "reason": "Vendor documents open weights and partner hosting, but no vendor API price, maximum output or lifecycle state."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/muse-spark-open",
+        "checkedAt": "2026-11-13",
+        "reason": "Vendor documents open weights and partner hosting, but no vendor API price, maximum output or lifecycle state."
+      },
+      "currency": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/muse-spark-open",
+        "checkedAt": "2026-11-13",
+        "reason": "Vendor documents open weights and partner hosting, but no vendor API price, maximum output or lifecycle state."
+      },
+      "pricingUnit": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/muse-spark-open",
+        "checkedAt": "2026-11-13",
+        "reason": "Vendor documents open weights and partner hosting, but no vendor API price, maximum output or lifecycle state."
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/muse-spark-open",
+        "checkedAt": "2026-11-13",
+        "reason": "Vendor documents open weights and partner hosting, but no vendor API price, maximum output or lifecycle state."
+      }
+    }
+  },
+  {
+    "id": "muse-spark-1.3-contributor",
+    "fields": {
+      "name": {
+        "value": "Muse Spark 1.3 Contributor",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "meta",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13",
+        "reason": "No separate variant release date or specifications are stated; base model limits are not assumed."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13",
+        "reason": "No separate variant release date or specifications are stated; base model limits are not assumed."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13",
+        "reason": "No separate variant release date or specifications are stated; base model limits are not assumed."
+      },
+      "modality": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13",
+        "reason": "No separate variant release date or specifications are stated; base model limits are not assumed."
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13",
+        "reason": "No separate variant release date or specifications are stated; base model limits are not assumed."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13",
+        "reason": "No separate variant release date or specifications are stated; base model limits are not assumed."
+      },
+      "category": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13",
+        "reason": "No separate variant release date or specifications are stated; base model limits are not assumed."
+      },
+      "inputPrice": {
+        "value": 0.1,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 0.2,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.002,
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "$",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "Contributor mode of Muse Spark 1.3, not a distinct model; content may be used for training.",
+        "verification": "verified",
+        "sourceUrl": "https://dev.meta.ai/docs/pricing-rate-limits",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "gemini-omni-1.1-flash",
+    "fields": {
+      "name": {
+        "value": "Gemini Omni 1.1 Flash",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "google",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": "2026-08-27",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      },
+      "maxOutput": {
+        "value": 57920,
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "modality": {
+        "value": "text,vision,video",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": "preview",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "category": {
+        "value": "video",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      },
+      "currency": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      },
+      "pricingUnit": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      }
+    }
+  },
+  {
+    "id": "gemini-omni-1.2-flash",
+    "fields": {
+      "name": {
+        "value": "Gemini Omni 1.2 Flash",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "google",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": "2026-11-05",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      },
+      "maxOutput": {
+        "value": 260640,
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "modality": {
+        "value": "text,vision,video",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": "active",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "category": {
+        "value": "video",
+        "verification": "verified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      },
+      "currency": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      },
+      "pricingUnit": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "The vendor gives an input token limit, not a combined context window. No token price or licence is stated. Video pricing must not be represented as a text-token price."
+      }
+    }
+  },
+  {
+    "id": "minimax-m3.1-flash",
+    "fields": {
+      "name": {
+        "value": "MiniMax M3.1 Flash",
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "minimax",
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": "2026-10-19",
+        "verification": "verified",
+        "sourceUrl": "https://www.minimax.io/blog/minimax-m31f",
+        "checkedAt": "2026-11-13"
+      },
+      "contextWindow": {
+        "value": 1000000,
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13"
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13",
+        "reason": "No maximum output or lifecycle status is explicitly stated."
+      },
+      "modality": {
+        "value": "text,vision,video",
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13"
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13",
+        "reason": "No maximum output or lifecycle status is explicitly stated."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 0.15,
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/pricing/overview",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 0.6,
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/pricing/overview",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.015,
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/pricing/overview",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/pricing/overview",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://platform.minimax.io/docs/pricing/overview",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation",
+        "checkedAt": "2026-11-13",
+        "reason": "No maximum output or lifecycle status is explicitly stated."
+      }
+    }
+  },
+  {
+    "id": "gemini-nano-banana-2.1",
+    "fields": {
+      "name": {
+        "value": "Nano Banana 2.1",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "google",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact combined context or release date is stated. The model card publication date is not treated as release. Output has separate text and image rates, so a single output price is not set."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact combined context or release date is stated. The model card publication date is not treated as release. Output has separate text and image rates, so a single output price is not set."
+      },
+      "maxOutput": {
+        "value": 32768,
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "modality": {
+        "value": "text,vision,video,image",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact combined context or release date is stated. The model card publication date is not treated as release. Output has separate text and image rates, so a single output price is not set."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": "active",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "category": {
+        "value": "image",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 1.5,
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing#gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact combined context or release date is stated. The model card publication date is not treated as release. Output has separate text and image rates, so a single output price is not set."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13",
+        "reason": "No exact combined context or release date is stated. The model card publication date is not treated as release. Output has separate text and image rates, so a single output price is not set."
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing#gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing#gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "Standard API: input $1.50; text/thinking output $7.50 and image output $30 per million tokens. Image costs vary with resolution. API input limit 131072 is not a combined context window.",
+        "verification": "verified",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing#gemini-nano-banana-2.1",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "qwen3.7-flash",
+    "fields": {
+      "name": {
+        "value": "Qwen3.7 Flash",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "alibaba",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "No release date, licence or lifecycle state is stated. Updated at is not a release date."
+      },
+      "contextWindow": {
+        "value": 1000000,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "maxOutput": {
+        "value": 131072,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "modality": {
+        "value": "text,vision,video",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "No release date, licence or lifecycle state is stated. Updated at is not a release date."
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13",
+        "reason": "No release date, licence or lifecycle state is stated. Updated at is not a release date."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 0.028,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 0.11,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 0.006,
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "China (Beijing), input up to 32K, implicit cached input; other input tiers and regions differ.",
+        "verification": "verified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/qwen3-7-flash",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "qwen3.8-2.4t-a95b",
+    "fields": {
+      "name": {
+        "value": "Qwen3.8 2.4T A95B",
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "providerId": {
+        "value": "alibaba",
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13",
+        "reason": "Release month only, not an exact day. Context differs between the managed service and native checkpoint; no single deployment-independent value is set. No lifecycle state is stated."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13",
+        "reason": "Release month only, not an exact day. Context differs between the managed service and native checkpoint; no single deployment-independent value is set. No lifecycle state is stated."
+      },
+      "maxOutput": {
+        "value": 131072,
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "modality": {
+        "value": "text",
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "openSource": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "apiAvailable": {
+        "value": true,
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13",
+        "reason": "Release month only, not an exact day. Context differs between the managed service and native checkpoint; no single deployment-independent value is set. No lifecycle state is stated."
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "inputPrice": {
+        "value": 12,
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "outputPrice": {
+        "value": 36,
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "cachedInputPrice": {
+        "value": 1.5,
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "currency": {
+        "value": "CNY",
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      },
+      "pricingConditions": {
+        "value": "China (Beijing), implicit cache-hit price. Managed context is 1000000; native checkpoint context is 262144, extensible to 1010000. These deployment scopes must not be conflated.",
+        "verification": "verified",
+        "sourceUrl": "https://help.aliyun.com/en/model-studio/qwen3-8-2-4t-a95b",
+        "checkedAt": "2026-11-13"
+      }
+    }
+  },
+  {
+    "id": "qwen3.8-max-prime",
+    "fields": {
+      "name": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "providerId": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "modality": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "apiAvailable": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "category": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "currency": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "pricingUnit": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: vendor pricing page repeatedly timed out and the exact model page was inaccessible. Search results are leads only; no fields promoted without reading the source."
+      }
+    }
+  },
+  {
+    "id": "glm-5.3-prime",
+    "fields": {
+      "name": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "providerId": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "contextWindow": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "maxOutput": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "modality": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "apiAvailable": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "status": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "category": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "inputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "outputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "cachedInputPrice": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "currency": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "pricingUnit": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      },
+      "pricingConditions": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://docs.z.ai/llms.txt",
+        "checkedAt": "2026-11-13",
+        "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
+      }
+    }
+  }
+]
