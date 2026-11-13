@@ -1,4 +1,5 @@
 #!/usr/bin/env npx tsx
+import { applyModelFieldEvidence } from './lib/public-model-fields';
 /**
  * Generates a downloadable CSV/TSV spreadsheet of all model data.
  * Like Alan D. Thompson's model table — filterable, sortable, comprehensive.
@@ -297,7 +298,8 @@ function main() {
   const rows: string[][] = [];
   const jsonRows: any[] = [];
 
-  for (const m of models) {
+  for (const rawModel of models) {
+    const m = applyModelFieldEvidence(rawModel);
     const scores = scoreMap.get(m.id) || {};
     const evidence = evidenceMap.get(m.id) || {};
     const speed = speedMap.get(m.id);
@@ -316,9 +318,9 @@ function main() {
       String(m.max_output ?? ''),
       speed?.tps ? String(Math.round(speed.tps)) : '',
       speed?.ttft ? String(Math.round(speed.ttft)) : '',
-      toBoolean(m.open_source) ? 'Yes' : 'No',
-      m.modality || 'text',
-      toBoolean(m.api_available) === true ? 'Yes' : (toBoolean(m.api_available) === false ? 'No' : ''),
+      m.open_source == null ? 'Unverified' : toBoolean(m.open_source) ? 'Yes' : 'No',
+      m.modality ?? 'Unverified',
+      toBoolean(m.api_available) === true ? 'Yes' : (toBoolean(m.api_available) === false ? 'No' : 'Unverified'),
       m.released || '',
       ...benchmarkIds.map(b => scores[b] != null ? String(scores[b]) : ''),
       Object.keys(evidence).length > 0 ? JSON.stringify(evidence) : '',
@@ -342,10 +344,11 @@ function main() {
       output_price: outputPrice,
       context_window: m.context_window,
       max_output: m.max_output,
+      field_states: m.field_states,
       speed_tps: speed?.tps ? Math.round(speed.tps) : null,
       ttft_ms: speed?.ttft ? Math.round(speed.ttft) : null,
-      open_source: toBoolean(m.open_source) === true,
-      modality: m.modality || 'text',
+      open_source: m.open_source == null ? null : toBoolean(m.open_source) === true,
+      modality: m.modality ?? null,
       api_available: toBoolean(m.api_available),
       released: m.released,
       benchmarks: Object.keys(scores).length > 0 ? scores : null,

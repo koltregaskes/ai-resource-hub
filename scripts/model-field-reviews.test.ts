@@ -52,7 +52,7 @@ test('all 27 built pages render each field, source, check date and unknown reaso
 
 test('post-sync discovery values never enter legacy category or head-to-head comparisons', () => {
   const cached = getModels();
-  const unaffected = cached.find(model => !MODEL_FIELD_REVIEWS.some(row => row.id === model.id) && model.status === 'active' && !model.notes?.includes('awaiting official verification'))!;
+  const unaffected = cached.find(model => !MODEL_FIELD_REVIEWS.some(row => row.id === model.id) && model.status === 'active' && model.input_price != null && model.output_price != null && !model.notes?.includes('awaiting official verification'))!;
   assert.ok(unaffected, 'test needs an unaffected active model');
   const synced = MODEL_FIELD_REVIEWS.map(review => {
     const previous = cached.find(model => model.id === review.id)!;
