@@ -69,3 +69,25 @@ test('post-sync discovery values never enter legacy category or head-to-head com
     }
   }
 });
+
+// CI runs test:model-fields after building the site in validate.yml.
+test('built reviewed model pages and index have no corrupted punctuation', () => {
+  const pages = ['index', ...MODEL_FIELD_REVIEWS.map(row => row.id)];
+  for (const id of pages) {
+    const path = id === 'index' ? '../dist/models/index.html' : '../dist/models/' + id + '/index.html';
+    const file = new URL(path, import.meta.url);
+    assert.ok(existsSync(file), id + ' missing page; run npm run build first');
+    const text = readFileSync(file, 'utf8')
+      .replace(/<!--[^]*?-->/g, '')
+      .replace(/<(script|style)\b[^>]*>[^]*?<\/\1>/gi, '')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/&#(x[0-9a-f]+|[0-9]+);/gi, (_, code) =>
+        String.fromCodePoint(code.toLowerCase().startsWith('x') ? parseInt(code.slice(1), 16) : Number(code)))
+      .replace(/&quest;/g, '?')
+      .replace(/&nbsp;/g, ' ')
+      .replace(/\s+/g, ' ');
+    for (const pattern of [/ \? /, /\w\?s\b/, /\d\?\d/]) {
+      assert.doesNotMatch(text, pattern, id + ' contains corrupted punctuation');
+    }
+  }
+});
