@@ -1,6 +1,9 @@
+import { spawnSync } from 'node:child_process';
+import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { planPings, sitemapLocs, feedIds, SITE, MAX_URLS } from './seo-ping.mjs';
+import { plan, PENDING_FILE, ping, planPings, sitemapLocs, feedIds, SITE, MAX_URLS } from './seo-ping.mjs';
 
 const sitemap = (urls) => `<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((u) => `<url><loc>${u}</loc></url>`).join('')}</urlset>`;
 const feed = (ids) => `<?xml version="1.0"?><rss version="2.0"><channel>${ids.map((id) => `<item><guid>${id}</guid></item>`).join('')}</channel></rss>`;
@@ -124,4 +127,100 @@ test('real-world shapes parse: namespaces, CDATA, entities, comments, link-only 
   assert.deepEqual(sitemapLocs(news), [`${A}?a=1&b=2`]);
   const rss = `<?xml version="1.0"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><atom:link href="${SITE}/rss.xml" rel="self"/><title>T &#38; &#x41;</title><item><link>${A}</link></item><item><guid isPermaLink='false'>b</guid></item></channel></rss>`;
   assert.deepEqual(feedIds(rss), [A, 'b'].sort());
+});
+const allowedEnv = { GITHUB_ACTIONS: 'true', GITHUB_REF: 'refs/heads/main', GITHUB_EVENT_NAME: 'push', INDEXNOW_URLS: JSON.stringify([A]), WEBSUB_FEEDS: JSON.stringify([SITE + '/rss.xml']) };
+
+test('ping refuses outside GitHub Actions on main and for pull requests before fetching', async () => {
+  for (const overrides of [
+    { GITHUB_ACTIONS: undefined },
+    { GITHUB_ACTIONS: 'false' },
+    { GITHUB_REF: 'refs/heads/feature' },
+    { GITHUB_REF: undefined },
+    { GITHUB_EVENT_NAME: 'pull_request' },
+  ]) {
+    let calls = 0;
+    await assert.rejects(ping(false, { env: { ...allowedEnv, ...overrides }, fetchImpl: async () => { calls++; } }), /refusing to send.*GitHub Actions on main/);
+    assert.equal(calls, 0);
+  }
+});
+
+test('ping sends IndexNow and WebSub in GitHub Actions on main', async () => {
+  const calls = [];
+  await ping(false, { env: allowedEnv, fetchImpl: async (...args) => { calls.push(args); return { status: 200 }; } });
+  assert.equal(calls.length, 2);
+  assert.deepEqual(JSON.parse(calls[0][1].body).urlList, [A]);
+  assert.equal(calls[1][1].body.get('hub.url'), SITE + '/rss.xml');
+});
+
+test('dry-run works anywhere without fetching', async () => {
+  await ping(true, { env: { INDEXNOW_URLS: allowedEnv.INDEXNOW_URLS, WEBSUB_FEEDS: allowedEnv.WEBSUB_FEEDS }, fetchImpl: async () => assert.fail('dry-run must not fetch') });
+});
+
+test('101 URLs survive deployment: first run sends 100, second sends the remaining one', async () => {
+  mkdirSync('.review', { recursive: true });
+  const dist = mkdtempSync(resolve('.review/seo-overflow-'));
+  const urls = Array.from({ length: 101 }, (_, i) => SITE + '/newsletter/overflow-' + i + '/');
+  const built = sitemap(urls);
+  writeFileSync(resolve(dist, 'news-sitemap.xml'), built);
+  let liveNews = sitemap([]);
+  let pending = null;
+  let planned;
+  const fetchImpl = async (url) => url.endsWith(PENDING_FILE)
+    ? { ok: pending !== null, status: pending === null ? 404 : 200, json: async () => pending }
+    : { ok: true, text: async () => liveNews };
+  const writeOutputImpl = (name, value) => { if (name === 'indexnow_urls') planned = JSON.parse(value); };
+  const sent = [];
+  for (const count of [100, 1]) {
+    await plan(dist, { fetchImpl, writeOutputImpl });
+    assert.equal(planned.length, count);
+    await ping(false, { env: { ...allowedEnv, INDEXNOW_URLS: JSON.stringify(planned), WEBSUB_FEEDS: '[]' }, fetchImpl: async (_url, options) => {
+      sent.push(...JSON.parse(options.body).urlList);
+      return { status: 200 };
+    } });
+    // Deploy the entire sitemap and the generated backlog, not just the sent URLs.
+    liveNews = built;
+    pending = JSON.parse(readFileSync(resolve(dist, PENDING_FILE), 'utf8'));
+  }
+  assert.deepEqual(sent, urls);
+  assert.deepEqual(pending, []);
+  await plan(dist, { fetchImpl, writeOutputImpl });
+  assert.deepEqual(planned, []);
+});
+
+test('an unreadable backlog aborts planning without writing state or outputs', async () => {
+  for (const response of [
+    { ok: false, status: 503 },
+    { ok: true, status: 200, json: async () => ({ invalid: true }) },
+  ]) {
+    await assert.rejects(plan('.review/must-not-write', { fetchImpl: async () => response, writeOutputImpl: () => assert.fail('no outputs') }), /live IndexNow backlog/);
+  }
+});
+
+test('WebSub detects title, description and updated date edits with unchanged GUID or link', () => {
+  const url = SITE + '/rss.xml';
+  for (const identity of ['<guid>same-id</guid>', '<link>' + A + '</link>']) {
+    const fields = { title: 'Original title', description: 'Original description', updated: '2026-11-12T10:00:00Z', pubDate: 'Thu, 12 Nov 2026 10:00:00 GMT' };
+    const rss = (values, build = 'today') => '<rss><channel><lastBuildDate>' + build + '</lastBuildDate><item>' + identity + Object.entries(values).map(([key, value]) => '<' + key + '>' + value + '</' + key + '>').join('') + '</item></channel></rss>';
+    const planned = (built, live) => planPings({ builtNews: sitemap([]), liveNews: sitemap([]), feeds: [{ url, built, live }] }).websub;
+    for (const field of Object.keys(fields)) {
+      assert.deepEqual(planned(rss({ ...fields, [field]: 'Changed' }), rss(fields)), [url], field);
+    }
+    assert.deepEqual(planned(rss(fields, 'tomorrow'), rss(fields, 'today')), []);
+  }
+});
+
+test('ping CLI exits non-zero with a clear refusal outside GitHub Actions', () => {
+  const result = spawnSync(process.execPath, ['--import', 'data:text/javascript,globalThis.fetch=()=>{throw new Error("unexpected fetch")}', 'scripts/seo-ping.mjs', 'ping'], {
+    env: { ...process.env, ...allowedEnv, GITHUB_ACTIONS: 'false' },
+    encoding: 'utf8',
+  });
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /refusing to send.*GitHub Actions on main/);
+  assert.doesNotMatch(result.stderr, /unexpected fetch/);
+});
+
+test('a failed live sitemap preserves the pending backlog without sending', () => {
+  const result = planPings({ builtNews: sitemap([A]), liveNews: null, pending: [B] });
+  assert.deepEqual(result.indexnow, []);
+  assert.deepEqual(result.pending, [B]);
 });

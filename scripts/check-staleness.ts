@@ -20,6 +20,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { REQUIRED_FRONTIER_MODELS, type FrontierModelRequirement } from './frontier-registry.ts';
 import { getAiResourceHubSqlitePath } from './sqlite-path';
+import { VERIFIED_MODEL_CATALOG } from './model-catalog';
+import { splitZeroQuality } from './lib/registry-guards';
 import {
   getBenchmarkProvenanceGateFailures,
   summariseBenchmarkProvenance,
@@ -166,13 +168,18 @@ function main() {
       AND quality_score = 0
   `).all() as Array<{ id: string; name: string }>;
 
+  // Hub #1534: catalogue models stay active with "no score yet" when benchmark
+  // evidence is missing (the normaliser no longer demotes them), so they are
+  // warnings here. Non-catalogue models with no score are still critical.
+  const zeroSplit = splitZeroQuality(zeroQuality, new Set(VERIFIED_MODEL_CATALOG.map((model) => model.id)));
   if (zeroQuality.length > 0) {
-    console.log(`WARN ZERO QUALITY: ${zeroQuality.length} active LLMs with quality_score = 0`);
+    console.log(`WARN ZERO QUALITY: ${zeroQuality.length} active LLMs with quality_score = 0 (${zeroSplit.catalogue.length} verified catalogue models shown as "no score yet"; ${zeroSplit.critical.length} critical)`);
     for (const model of zeroQuality) {
-      console.log(`    ${model.name}`);
+      console.log(`    ${model.name}${zeroSplit.catalogue.includes(model) ? ' (catalogue: warning)' : ''}`);
       issues.push({ id: model.id, name: model.name, issue: 'zero-quality', detail: 'Quality score is 0' });
     }
-    criticals += zeroQuality.length;
+    criticals += zeroSplit.critical.length;
+    warnings += zeroSplit.catalogue.length;
   } else {
     console.log('OK All active LLMs have quality scores');
   }
