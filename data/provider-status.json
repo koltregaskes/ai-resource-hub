@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T10:55:36.220Z",
+  "generatedAt": "2026-11-13T11:55:41.272Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T10:55:36.216Z",
+      "lastCheckedAt": "2026-11-13T11:55:41.266Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-13T02:44:51.000Z",
+          "id": "fireworks-feed-0-2026-11-13T11:12:27.000Z",
+          "title": "Service Degradation for DeepSeek V4.1 Flash 1017",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-13T11:12:27.000Z",
+          "updatedAt": "2026-11-13T11:12:27.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M7A9QQAKDCHWHFR679S35Q16",
+          "summary": "Status: Investigating We are seeing impacted performance for DeepSeek V4.1 Flash 1017. We are actively investigating. Affected components DeepSeek V4.1 Flash 1017 (Degraded perfor..."
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-13T02:44:51.000Z",
           "title": "Service Degradation for GLM 5.3 Fast",
           "status": "reported",
           "impact": "unknown",
@@ -28,23 +39,23 @@
           "updatedAt": "2026-11-13T02:44:51.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M79CAJME1AJ4K1SDKQ5MVJBF",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-11-13T02:13:21.000Z",
-          "title": "Service Degradation for GLM 5.3",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-13T02:13:21.000Z",
-          "updatedAt": "2026-11-13T02:13:21.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M79ASB1F28156WKZFKWZG48D",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-13T02:44:51.000Z",
+          "id": "fireworks-feed-0-2026-11-13T11:12:27.000Z",
+          "title": "Service Degradation for DeepSeek V4.1 Flash 1017",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-13T11:12:27.000Z",
+          "updatedAt": "2026-11-13T11:12:27.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M7A9QQAKDCHWHFR679S35Q16",
+          "summary": "Status: Investigating We are seeing impacted performance for DeepSeek V4.1 Flash 1017. We are actively investigating. Affected components DeepSeek V4.1 Flash 1017 (Degraded perfor..."
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-13T02:44:51.000Z",
           "title": "Service Degradation for GLM 5.3 Fast",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-11-13T02:13:21.000Z",
+          "id": "fireworks-feed-2-2026-11-13T02:13:21.000Z",
           "title": "Service Degradation for GLM 5.3",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-11-13T01:32:39.000Z",
+          "id": "fireworks-feed-3-2026-11-13T01:32:39.000Z",
           "title": "Service Degradation for GLM 5.3",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-11-13T01:32:39.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M796HKVM502P1SGZXGJ5QG7V",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-11-13T01:24:35.000Z",
-          "title": "Service Degradation for GLM 5.3 Fast",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-13T01:24:35.000Z",
-          "updatedAt": "2026-11-13T01:24:35.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M797GR9J4WV67CX093FCW481",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T10:55:34.352Z",
+      "lastCheckedAt": "2026-11-13T11:55:39.290Z",
       "overallStatus": "partial_outage",
       "overallLabel": "Partial System Outage",
       "summary": "2 active incidents across 10 tracked components.",
@@ -111,14 +111,6 @@
           "status": "major_outage"
         },
         {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "partial_outage"
-        },
-        {
-          "name": "Claude Code",
-          "status": "partial_outage"
-        },
-        {
           "name": "Claude Cowork",
           "status": "degraded_performance"
         },
@@ -127,7 +119,15 @@
           "status": "operational"
         },
         {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
           "name": "Claude in Microsoft Foundry",
+          "status": "operational"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
           "status": "operational"
         }
       ],
@@ -135,13 +135,13 @@
         {
           "id": "nn11wk485zfn",
           "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "major",
           "startedAt": "2026-11-13T09:58:58.057Z",
-          "updatedAt": "2026-11-13T09:58:58.258Z",
+          "updatedAt": "2026-11-13T11:05:23.683Z",
           "resolvedAt": null,
           "url": "https://stspg.io/6kqyd0c5b1gr",
-          "summary": "We are investigating an issue with users authenticating to Claude.ai and Claude Code. We will provide an update as soon as possible."
+          "summary": "A fix has been deployed for the issue affecting Claude services and we are monitoring for recovery."
         },
         {
           "id": "sqn3fg1l96dl",
@@ -159,13 +159,13 @@
         {
           "id": "nn11wk485zfn",
           "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "major",
           "startedAt": "2026-11-13T09:58:58.057Z",
-          "updatedAt": "2026-11-13T09:58:58.258Z",
+          "updatedAt": "2026-11-13T11:05:23.683Z",
           "resolvedAt": null,
           "url": "https://stspg.io/6kqyd0c5b1gr",
-          "summary": "We are investigating an issue with users authenticating to Claude.ai and Claude Code. We will provide an update as soon as possible."
+          "summary": "A fix has been deployed for the issue affecting Claude services and we are monitoring for recovery."
         },
         {
           "id": "sqn3fg1l96dl",
@@ -213,7 +213,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T10:55:34.369Z",
+      "lastCheckedAt": "2026-11-13T11:55:39.199Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -300,6 +300,26 @@
       ]
     },
     {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-11-13T11:55:40.242Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -310,7 +330,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T10:55:35.257Z",
+      "lastCheckedAt": "2026-11-13T11:55:40.081Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -330,7 +350,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T10:55:34.848Z",
+      "lastCheckedAt": "2026-11-13T11:55:39.472Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -361,26 +381,6 @@
           "summary": "# Incident Report\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models experienced increased error rates. Impacted services incl..."
         }
       ]
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-11-13T10:55:35.460Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
     },
     {
       "id": "deepseek",
