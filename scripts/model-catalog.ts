@@ -1,3 +1,5 @@
+import { MODEL_FIELD_REVIEWS, getReviewedCatalogEntries } from './lib/model-field-reviews';
+
 export interface ProviderCatalogEntry {
   id: string;
   name: string;
@@ -297,7 +299,7 @@ export const PROVIDER_CATALOG: ProviderCatalogEntry[] = [
   },
 ];
 
-export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
+const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
   {
     id: 'gpt-5.4',
     name: 'GPT-5.4',
@@ -951,9 +953,10 @@ export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Gemini 4 Argon',
     providerId: 'google',
     contextWindow: 1_048_576,
+    maxOutput: 65_536,
     apiAvailable: true,
     status: 'active',
-    notes: 'Stable. Google lists $2/$10 per million tokens through 30 November 2026, rising to $4/$20 from 1 December 2026.',
+    notes: 'Stable. Google lists $2/$10 per million tokens through 30 November 2026, rising to $4/$20 from 1 December 2026 (hub #1535). Default synchronous output is 65,536; long decode allows up to 1,048,576.',
     officialUrl: 'https://ai.google.dev/gemini-api/docs/models/gemini-4-argon',
     openRouterIds: ['google/gemini-4-argon'],
     officialPricing: {
@@ -989,7 +992,7 @@ export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     released: '2026-10-12',
     contextWindow: 1_048_576,
     apiAvailable: true,
-    status: 'active',
+    status: 'preview',
     notes: 'Meta API id muse-wonder-1.0.',
     officialUrl: 'https://research.meta.ai/blog/muse-wonder',
     openRouterIds: ['meta/muse-wonder'],
@@ -1012,7 +1015,8 @@ export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     released,
     contextWindow: 1_048_576,
     apiAvailable: true,
-    status: 'active',
+    status: 'tracking',
+    notes: 'Vendor lifecycle status unverified; Meta gives no model lifecycle label. See field review.',
     officialUrl,
     openRouterIds: [`meta/${id}`],
     officialPricing: {
@@ -1066,9 +1070,8 @@ export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     providerId: 'nvidia',
     released: '2026-10-15',
     openSource: true,
-    apiAvailable: true,
     status: 'active',
-    notes: 'Open 120-billion-parameter model. NVIDIA publishes no API price; prices shown come from hosting providers.',
+    notes: 'Open 120-billion-parameter model. NVIDIA publishes no API price or API availability guarantee; API availability is unverified.',
     officialUrl: 'https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/',
     openRouterIds: ['nvidia/nemotron-3.5-super-vl'],
   },
@@ -1093,6 +1096,11 @@ export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     officialUrl: 'https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash',
     openRouterIds: ['qwen/qwen3.8-flash'],
   },
+];
+
+export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
+  ...BASE_VERIFIED_MODEL_CATALOG.filter(model => !MODEL_FIELD_REVIEWS.some(review => review.id === model.id)),
+  ...getReviewedCatalogEntries(),
 ];
 
 const EXTRA_PROVIDER_PREFIX_MAP: Record<string, string> = {
