@@ -8,6 +8,7 @@ import {
   type ProviderCatalogEntry,
 } from './model-catalog';
 import { stripDiscoveryOnlyNote } from '../src/data/model-verification';
+import { stripDemotionReasons } from './lib/registry-guards';
 
 type ExistingProvider = {
   id: string;
@@ -48,7 +49,9 @@ type ExistingModel = {
 };
 
 function mergeNotes(existing: string | null, next: string | null | undefined): string | null {
-  const parts = [stripDiscoveryOnlyNote(existing), next]
+  // Catalogue models are never "tracking only" (hub #1534), so drop any
+  // demotion sentence an earlier normaliser run appended.
+  const parts = [stripDemotionReasons(stripDiscoveryOnlyNote(existing)), next]
     .map((value) => value?.trim())
     .filter((value): value is string => Boolean(value));
   if (parts.length === 0) return null;
