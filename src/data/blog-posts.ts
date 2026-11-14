@@ -12,6 +12,15 @@ export interface BlogPost {
 /** Editorial posts, newest first. The blog index, search, RSS, and tickers share this list. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'how-to-read-an-ai-price-list',
+    title: 'How to read an AI price list',
+    description:
+      'A worked guide to AI model pricing: input and output tokens, reasoning, caching and batch discounts, with one example job priced on four models and four ways.',
+    date: '2026-11-14',
+    type: 'Explainer',
+    readTime: '8 min',
+  },
+  {
     slug: 'output-tokens-cost-five-times-input',
     title: 'AI models now charge five times more to write than to read',
     description:

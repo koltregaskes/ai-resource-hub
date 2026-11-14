@@ -1,0 +1,211 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import LogBarChart from '../../components/insights/LogBarChart.astro';
+import DataNote from '../../components/insights/DataNote.astro';
+import insights from '../../data/insights/2026-11-14.json';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const snapDate = new Date(insights.snapshotDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const rows = insights.priceSpread.all;
+const pick = (name: string) => rows.find((m) => m.name === name)!;
+const money = (v: number) =>
+  Number.isInteger(v) || v >= 1000 ? `$${Math.round(v).toLocaleString('en-GB')}` : `$${v.toFixed(2)}`;
+const n = (v: number) => v.toLocaleString('en-GB');
+const ratioNow = insights.outputInputRatio.series[insights.outputInputRatio.series.length - 1].median;
+
+// The example job. These are assumptions chosen to show the arithmetic, not measurements.
+const job = { requests: 10_000, tokensIn: 3_000, tokensOut: 500 };
+const totalIn = job.requests * job.tokensIn;
+const totalOut = job.requests * job.tokensOut;
+const bill = (m: { input: number; output: number }) => ({
+  input: (totalIn / 1_000_000) * m.input,
+  output: (totalOut / 1_000_000) * m.output,
+});
+const models = ['Mistral Nemo', 'Claude Haiku 4.5', 'GPT-5.5', 'GPT-5.5 Pro'].map(pick);
+const bills = models.map((m) => {
+  const cost = bill(m);
+  return { ...m, costIn: cost.input, costOut: cost.output, total: cost.input + cost.output };
+});
+
+// Four ways the same job changes, priced on one model.
+const ref = pick('GPT-5.5');
+const base0 = bill(ref);
+const plain = base0.input + base0.output;
+// Caching: 2,500 of the 3,000 input tokens are a repeated opening, read back at 0.1 times the input price.
+const cachedTokens = 2_500;
+const cacheRate = 0.1;
+const cachedInput =
+  (job.requests * ((job.tokensIn - cachedTokens) * ref.input + cachedTokens * ref.input * cacheRate)) / 1_000_000;
+const withCache = cachedInput + base0.output;
+// Batch: half price on the whole request.
+const withBatch = plain * 0.5;
+// Reasoning: 2,000 extra output tokens per request that you never see.
+const reasoningTokens = 2_000;
+const reasoningCost = ((job.requests * reasoningTokens) / 1_000_000) * ref.output;
+const withReasoning = plain + reasoningCost;
+const scenarios = [
+  { label: 'As listed', total: plain, note: 'Input and output at list price' },
+  { label: 'With a cached opening', total: withCache, note: `${n(cachedTokens)} of the ${n(job.tokensIn)} input tokens repeat and are read back at ${cacheRate} times the input price` },
+  { label: 'Sent as a batch', total: withBatch, note: 'Half price, answer within 24 hours' },
+  { label: 'With reasoning switched on', total: withReasoning, note: `${n(reasoningTokens)} reasoning tokens per request, billed as output` },
+];
+---
+
+<InsightArticle
+  title="How to read an AI price list"
+  description="A worked guide to AI model pricing: input and output tokens, reasoning, caching and batch discounts, with one example job priced on four models and four ways."
+  date="2026-11-14"
+  type="Explainer"
+  readTime="8 min"
+  snapshot={insights.snapshotDate} standfirst="An AI price list shows two numbers per model and hides at least three more. This guide takes one job, prices it on four models, then shows how reasoning, caching and batching move the bill."
+>
+  <p>
+    Open any AI lab's pricing page and each model has two prices, both quoted per million tokens. {ref.name} is listed at
+    ${ref.input} for input and ${ref.output} for output. That looks simple, and for a rough estimate it is. The trouble starts
+    when the bill arrives and does not match the estimate. This guide explains the parts of a price list in the order they
+    affect what you pay.
+  </p>
+
+  <h2>1. Tokens, not words</h2>
+  <p>
+    Models count text in tokens, which are chunks of a word. OpenAI's <a href="https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them" rel="noopener">guide to tokens</a> (read on 14 November 2026) gives the rule of thumb that 100 tokens is about 75 words of English. So a million tokens is
+    roughly 750,000 words, and a 1,500-word report is about 2,000 tokens.
+  </p>
+  <p>
+    The rule is for English prose. Code, tables and other languages come out differently, so count a real sample of your own
+    text with a <a href={`${base}token-counter/`}>token counter</a> before you trust an estimate.
+  </p>
+
+  <h2>2. Input and output are priced apart</h2>
+  <p>
+    The input price covers everything you send: your instructions, any documents, and the whole conversation so far. The
+    output price covers what the model writes back. Output is usually dearer. Among models released since July, the typical
+    output price is {ratioNow} times the input price, up from three times in late 2024. We looked at that in <a href={`${base}blog/output-tokens-cost-five-times-input/`}>a separate article</a>.
+  </p>
+  <p>
+    One detail catches people out. A chat does not send only your latest message. It sends the conversation again on every
+    turn, so the input side of a long chat grows with each reply.
+  </p>
+
+  <h2>3. One job on four models</h2>
+  <p>
+    Here is a made-up but ordinary job: {n(job.requests)} requests in a month, each sending {n(job.tokensIn)} tokens and
+    getting {n(job.tokensOut)} back. That is {n(totalIn / 1_000_000)} million input tokens and {n(totalOut / 1_000_000)} million output tokens. The token counts are assumptions to show the sums. The prices are real.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>
+        Prices: AI Resource Hub catalogue, snapshot of {snapDate}, US dollars per million tokens. Job size is an assumption:{' '}
+        {n(job.requests)} requests of {n(job.tokensIn)} tokens in and {n(job.tokensOut)} out.
+      </caption>
+      <thead>
+        <tr>
+          <th>Model</th><th class="num">Input price</th><th class="num">Output price</th><th class="num">Input cost</th><th class="num">Output cost</th><th class="num">Month's bill</th>
+        </tr>
+      </thead>
+      <tbody>
+        {bills.map((b) => (
+          <tr>
+            <td>{b.name} <span style="color:var(--color-text-muted)">({b.provider})</span></td>
+            <td class="num">${b.input}</td>
+            <td class="num">${b.output}</td>
+            <td class="num">{money(b.costIn)}</td>
+            <td class="num">{money(b.costOut)}</td>
+            <td class="num"><strong>{money(b.total)}</strong></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <LogBarChart
+    title="The same month of work on four models"
+    summary={`Monthly bill for the example job: ${bills.map((b) => `${b.name} ${money(b.total)}`).join(', ')}.`} ticks={[1, 10, 100, 1000, 10000]} data={bills.map((b, i) => ({ label: b.name, value: b.total, valueLabel: money(b.total), highlight: i === bills.length - 1 }))} caption={`Prices: AI Resource Hub catalogue, snapshot of ${snapDate}. US dollars. Logarithmic scale: each gridline is ten times the one before. Job size is an assumption.`}
+  />
+
+  <p>
+    The same work costs about a dollar or about {money(bills[bills.length - 1].total)}. That is the 6,000-fold spread we
+    wrote about in <a href={`${base}blog/ai-price-spread-6000x/`}>another piece</a>, turned into a monthly bill. Notice too
+    that on {ref.name} the output side costs as much as the input side, even though the job sends six times more tokens than
+    it receives.
+  </p>
+
+  <h2>4. The numbers the list hides</h2>
+  <p>
+    Now keep the model fixed at {ref.name} and change how the job is run. The list price gives {money(plain)} a month. Three
+    changes move that a long way.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>
+        Illustration. {ref.name} list prices from the snapshot of {snapDate}; token counts and the share of input that repeats
+        are assumptions. Cache-write charges are left out, so the cached figure is a best case.
+      </caption>
+      <thead>
+        <tr><th>How the job is run</th><th class="num">Month's bill</th><th class="num">Against list</th></tr>
+      </thead>
+      <tbody>
+        {scenarios.map((s) => (
+          <tr>
+            <td>{s.label}<br /><span style="color:var(--color-text-muted);font-weight:400;font-size:0.8rem">{s.note}</span></td>
+            <td class="num"><strong>{money(s.total)}</strong></td>
+            <td class="num">{s.total === plain ? 'n/a' : `${s.total > plain ? '+' : '−'}${Math.abs(Math.round(((s.total - plain) / plain) * 100))}%`}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>Reasoning.</strong> Some models can think before they answer. OpenAI's <a href="https://developers.openai.com/api/docs/guides/reasoning" rel="noopener">documentation</a> (read on 14 November 2026) says those thinking tokens are not shown to you but "are billed as output tokens", and that one response can use tens of thousands. In the table, {n(reasoningTokens)} of them per request triple the bill. If you switch a reasoning mode on, measure it on a few real requests before you budget.</p>
+
+  <p><strong>Caching.</strong> If every request starts with the same long instructions or the same document, the provider can keep that opening ready and charge much less to read it back. OpenAI's <a href="https://developers.openai.com/api/docs/guides/prompt-caching" rel="noopener">caching guide</a> says this is on by default for supported models and that reads cost a tenth of the normal input rate on most of them. Anthropic's <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" rel="noopener">caching guide</a> says a cached read costs a tenth of the base input price as standard and less on its newest models, that writing to the cache costs 25% more than normal input, and that the cache lasts five minutes unless it is used again. Both pages were read on 14 November 2026. Caching only helps when the repeated text comes first and the requests arrive close together.</p>
+
+  <p><strong>Batch.</strong> If you do not need the answer at once, you can hand over a file of requests and collect the results later. OpenAI's <a href="https://developers.openai.com/api/docs/guides/batch" rel="noopener">Batch API guide</a> (read on 14 November 2026) gives a 50% discount for this, with each batch finished within 24 hours. It suits overnight jobs such as tagging a back catalogue. It is no use for a chat window.</p>
+
+  <h2>5. Whose price is it?</h2>
+  <p>
+    The last thing to check is who is quoting. A model that anyone may host, such as Mistral Nemo or the Llama family, is sold
+    by many hosting companies at different prices, and our tables show the cheapest one that OpenRouter lists. A model sold only by its maker has
+    one list price. Our own tables mix the two, and each row says which it is. Our <a href={`${base}transparency/#source-openrouter-models`}>transparency page</a> explains where each price comes from.
+  </p>
+  <p>
+    A single "blended" price per million tokens is a third thing again. It assumes a fixed mix of input and output. Ours
+    assumes one part input to three parts output, and <a href={`${base}transparency/#calc-blended-price`}>the formula is published</a>. The example job in this guide is six parts input to one part output, so a blended price would
+    overstate it badly.
+  </p>
+
+  <h2>A short checklist</h2>
+  <ol>
+    <li>Count the tokens in a real request and a real answer. Do not guess from word counts alone.</li>
+    <li>Multiply by your monthly volume, input and output separately.</li>
+    <li>If you use a reasoning mode, add its tokens to the output side.</li>
+    <li>If your requests share a long opening, check the provider's caching rules and price the repeated part at the cached rate.</li>
+    <li>If the work can wait a day, price it as a batch.</li>
+    <li>Check whether the price is the maker's list price or a reseller's.</li>
+    <li>Run a small real test and read the usage report before you commit.</li>
+  </ol>
+  <p>
+    The <a href={`${base}calculator/`}>cost calculator</a> does steps one and two for any model we track, and the <a href={`${base}guides/understanding-ai-pricing/`}>pricing guide</a> goes over the basics.
+  </p>
+
+  <DataNote anchor="calc-price-spread" snapshot={`${snapDate} (catalogue rebuilt ${insights.cacheGeneratedAt.slice(11, 16)} UTC)`}>
+    <ul>
+      <li>
+        <strong>Prices.</strong> From our catalogue snapshot. Mistral Nemo and Claude Haiku 4.5 are priced from OpenRouter's
+        public list; GPT-5.5 and GPT-5.5 Pro are OpenAI's own list prices, entered by hand.
+      </li>
+      <li>
+        <strong>The job is invented.</strong> Request counts, token counts, the share of input that repeats and the number of
+        reasoning tokens are round numbers chosen to show the arithmetic. Your own figures will differ.
+      </li>
+      <li>
+        <strong>Discount rules are the providers' own.</strong> The caching and batch rates are quoted from each provider's
+        documentation on the date shown and can change. The cached example applies a tenth-of-input read rate to {ref.name}; OpenAI's guide gives that rate for most of its models, not all, so check the model's own page.
+      </li>
+    </ul>
+  </DataNote>
+</InsightArticle>
