@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 14 Nov 2026, 01:55 UTC
+Generated: 14 Nov 2026, 03:09 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 14 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,033 open roles across 10 tracked companies. | `/jobs/` |
-| 14 Nov 2026, 01:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 14 Nov 2026, 01:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 14 Nov 2026, 01:55 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
-| 14 Nov 2026, 01:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 14 Nov 2026, 01:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 14 Nov 2026, 03:09 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 14 Nov 2026, 03:09 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 14 Nov 2026, 03:09 UTC | data | Attempted Chatbot Arena collection | Collection attempt only; cached scores and transport success do not verify measurements. | `/benchmarks/` |
+| 14 Nov 2026, 03:09 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 14 Nov 2026, 03:09 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 13 Nov 2026, 12:00 UTC | digest | Amazon has a plan to index the world’s online shopping data | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search) |
 | 13 Nov 2026, 12:00 UTC | digest | ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet) |
 | 13 Nov 2026, 12:00 UTC | digest | Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/) |

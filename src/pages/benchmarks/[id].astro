@@ -12,7 +12,7 @@ const { id } = Astro.params;
 const benchmark = getBenchmarkById(id);
 
 if (!benchmark) {
-  return Astro.redirect(`${import.meta.env.BASE_URL}404`);
+  return Astro.redirect(`${import.meta.env.BASE_URL}404.html`);
 }
 
 const scores = getScoresForBenchmark(id);

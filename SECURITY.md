@@ -39,3 +39,12 @@ We will aim to acknowledge valid reports promptly and handle fixes privately bef
 The baseline root audit reported six vulnerable packages, including a critical Astro advisory. Updating to Astro 7.4.12 requires its matching React integration and Vite 8; see https://docs.astro.build/en/guides/upgrade-to/v7/. Sharp and fast-uri are patched too. Both root and newsletter test-tool audits now report zero vulnerabilities. Miniflare 4 keeps its existing API while its sharp and undici dependencies are overridden to patched releases; Worker regression tests exercise that combination. No Worker deployment is included.
 
 The phone-check PR also adds root development dependencies. Merge it before this dependency PR, reconcile the lockfile while retaining Playwright/axe, then rerun the launch workflows. Do not overwrite either dependency set.
+## Launch host-policy follow-up
+
+The deploy workflow publishes a static build to GitHub Pages. On 2026-11-14 the root, model and newsletter routes returned HTTP 200 from GitHub.com without CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy or Permissions-Policy response headers. No cookie or raw response data is retained here.
+
+The actual Astro build now hashes the final inline script bytes into each document CSP, replacing executable unsafe-inline. Self-hosted scripts and explicitly configured newsletter/Turnstile origins remain allowed; unsafe-eval is not introduced. Styles still require inline declarations. Referrer metadata remains strict-origin-when-cross-origin. CI checks every built HTML document and exercises four routes in installed Edge plus a planted blocked-inline negative.
+
+Metadata CSP and referrer policy do not supply HTTP-only protections. GitHub Pages does not apply a Cloudflare/Netlify _headers file; none is invented. HSTS, frame-ancestors/framing, nosniff and Permissions-Policy remain a launch mitigation decision with the existing hosting/domain owner. This PR neither changes hosting/DNS nor claims approval of those gaps. Existing domain work is tracked under rooms-os-hub#1413 and launch acceptance under #1513.
+
+No Worker is deployed. Newsletter API configuration remains opt-in; account, verified-domain, real delivery and consent acceptance retain their existing gates. Sources: https://docs.github.com/en/pages and https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy (checked 2026-11-14).

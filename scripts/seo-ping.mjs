@@ -26,7 +26,9 @@ import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 export const SITE = 'https://theairesourcehub.com';
-export const INDEXNOW_KEY = '9fae2741396ea0c8db9365eb8eb4134f';
+// Public IndexNow ownership proof, deliberately served in public/<key>.txt, not an API credential.
+// The regression test binds this one-line scanner exception to that published file.
+export const INDEXNOW_KEY = '9fae2741396ea0c8db9365eb8eb4134f'; // gitleaks:allow
 const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
 const WEBSUB_HUB = 'https://pubsubhubbub.appspot.com/';
 export const FEEDS = [`${SITE}/rss.xml`, `${SITE}/newsletter/rss.xml`];

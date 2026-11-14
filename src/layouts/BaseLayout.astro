@@ -43,7 +43,7 @@ const {
   compactChrome = true,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname === "/404/" ? "/404.html" : Astro.url.pathname, Astro.site);
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const searchIndex = getSearchIndex(base);
@@ -108,7 +108,12 @@ const siteStructuredData = isHomePage
         },
       ],
     }
-  : null;
+  : {
+      '@context': 'https://schema.org', '@type': 'WebPage',
+      '@id': canonicalURL.href + '#webpage', url: canonicalURL.href,
+      name: title, description,
+      isPartOf: { '@type': 'WebSite', url: new URL(base, Astro.site).href },
+    };
 
 const primaryNav = [
   {

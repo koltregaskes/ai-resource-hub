@@ -41,7 +41,8 @@ before(async () => {
       SITE_URL: SITE,
       API_URL: API,
       FROM_EMAIL: 'The AI Resource Hub <edition@example.test>',
-      SIGNING_KEY: 'test-signing-key-0123456789abcdef0123456789',
+      // Deliberately generated non-secret Miniflare fixture, never a deployed signing key.
+      SIGNING_KEY: 'local-test-only-'.repeat(4),
       RESEND_API_KEY: 're_test_not_a_real_key',
       SEND_TOKEN: 'send-token-for-tests',
       EDITION_JSON_URL: 'https://edition.example.test/latest.json',
