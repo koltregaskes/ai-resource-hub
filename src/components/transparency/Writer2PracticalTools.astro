@@ -1,0 +1,22 @@
+---
+import snapshot from '../../data/insights/2026-11-14.json';
+---
+<section id="writer2-practical-tools" class="my-12">
+<h2 class="text-2xl font-bold">Practical tools: coding, business admin and local laptop models</h2>
+<p>These three guides use the existing frozen AIRH snapshot dated {snapshot.snapshotDate}, not a new collection or tool benchmark. The source file is <a href="https://github.com/koltregaskes/ai-resource-hub/blob/main/src/data/insights/2026-11-14.json">2026-11-14.json</a>. Its recorded input SHA-256 is <code>{snapshot.inputSha256}</code>; that identifies the input recorded by the snapshot, not independent verification of upstream facts. Source provenance and terms status remain as recorded elsewhere on this page. This batch makes no new source admission.</p>
+<p>Coding guide table: coverage.llmEntries = {snapshot.coverage.llmEntries}; coverage.afterVariantRemoval = {snapshot.coverage.afterVariantRemoval}; coverage.withReleaseDateAndContext = {snapshot.coverage.withReleaseDateAndContext}. The filter removes identifiers ending in the snapshot's date-shaped suffixes or -fast; it is not family deduplication. The last count requires both a truthy release field and a positive context window. It is a selection, not proof that the values are accurate.</p>
+<p>Admin guide table: the filtered selection is {snapshot.coverage.afterVariantRemoval}; priceSpread.all.length = {snapshot.priceSpread.all.length}, the separate selection of active models with positive input and output token prices. This does not count office subscriptions or business applications.</p>
+<p>Laptop guide table: coverage.pricingSourceCounts groups the filtered records by recorded source: {Object.entries(snapshot.coverage.pricingSourceCounts).map(([name,count])=>`${name}: ${count}`).join('; ')}. Sum of these groups = {Object.values(snapshot.coverage.pricingSourceCounts).reduce((a,b)=>a+b,0)}. Missing provenance is not a free-price, open-licence or local-hardware classification. No open-versus-closed count is derived.</p>
+<p>Tables are rendered from the snapshot by scripts/writer2-draft.mjs. No new prices, performance scores, savings, memory requirements or battery estimates are asserted. The business and coding exercises are suggested workflows, not observations. No application was installed or tested for these guides, and no contract or hardware audit is claimed.</p>
+<h3>Outside sources read on 14 November 2026</h3>
+<ul>
+<li><a href="https://cursor.com/docs">Cursor documentation</a>: code understanding, planning, editing and review; no quality ranking inferred.</li>
+<li><a href="https://code.claude.com/docs/en/overview">Claude Code overview</a>: repository reading, edits, commands and interfaces.</li>
+<li><a href="https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github">GitHub Copilot on GitHub.com and Mobile</a>: repository conversation, changes and review; plan and policy qualifications retained.</li>
+<li><a href="https://support.microsoft.com/en-gb/microsoft-365-copilot/">Microsoft Copilot help centre</a>: route to product-specific guidance only; no common entitlement or privacy guarantee inferred.</li>
+<li><a href="https://lmstudio.ai/docs/app/offline">LM Studio offline operation</a>: downloaded-model, document and server operation; discovery/download connectivity distinction.</li>
+<li><a href="https://docs.ollama.com/faq">Ollama local FAQ</a>: loaded-model inspection and context configuration.</li>
+<li><a href="https://docs.ollama.com/gpu">Ollama hardware support</a>: compatibility and driver guidance, without recommending a change on any reader's machine.</li>
+</ul>
+<p>These are linked documentation references paraphrased for these guides, not copied datasets. Documentation may change after the read date. No paid tools, detector services or external accounts were used.</p>
+</section>
