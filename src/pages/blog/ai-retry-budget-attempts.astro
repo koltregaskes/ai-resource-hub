@@ -1,0 +1,30 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import WorkedTable from '../../components/insights/WorkedTable.astro';
+import PractitionerNote from '../../components/insights/PractitionerNote.astro';
+import { practitionerB5 } from '../../data/practitioner-b5';
+import examples from '../../data/insights/2026-11-14-b5.json';
+const e = practitionerB5.find(p => p.slug === 'ai-retry-budget-attempts')!;
+---
+<InsightArticle title={e.title} description={e.description} date="2026-11-14" type={e.type as 'Analysis' | 'Explainer'} readTime="5 min" standfirst="In this invented ledger, 100 jobs require 125 attempts and cost $1.25. A three-attempt cap would require a $3 worst-case reserve at the same assumed rate. Those figures answer different questions.">
+
+<p>A retry policy is part of the workflow you are buying. If the budget assumes one request per job while the application can make three, the estimate describes a different application. Write the attempt cap and recovery conditions beside the model configuration.</p>
+<p>The <a href={e.sources[0].url}>Claude error guide</a>, read on 14 November 2026, distinguishes several kinds of error and recommends exponential backoff for internal API errors. It does not make every failed request worth repeating. Decide what can change on the next attempt before sending it.</p>
+<h2>Keep a ledger by original job</h2>
+<p>Assign one job identifier before the first attempt. Give attempts their own numbers and keep their outcomes. When a later attempt succeeds, mark the original job accepted once. This prevents a recovery run from inflating the apparent amount of work completed.</p>
+<WorkedTable headers={["Attempt number","Requests sent","New accepted jobs","Assumed spend"]} rows={examples['ai-retry-budget-attempts']} caption="Synthetic recovery ledger. One original job is accepted at most once. Each attempt is assumed to cost $0.01; this is not a provider billing rule." />
+<p>In the example, eighty jobs pass initially. Fifteen more pass on the second attempt and two on the third, leaving three unresolved. The total is 125 requests and 97 accepted jobs. At the assumed cent per attempt, the bill is $1.25. No real requests were sent.</p>
+<h2>A reserve is not an expected bill</h2>
+<p>With a maximum of three attempts on each of 100 jobs, the fixed-price worst case is 300 attempts and $3. That reserve does not predict how often the later attempts will be needed. The invented ledger costs less because most jobs stop earlier.</p>
+<p>For a real estimate, keep token usage and charges for unsuccessful attempts when available. A fixed cent per attempt is only the teaching assumption here. Some failures may occur before generation, others after useful processing has already happened. Use the service's billing record rather than inferring cost from a status code alone.</p>
+<p>Keep the budget for external tools and human review apart from model calls. A retry can repeat more than text generation if your workflow lets it. The overall job reserve needs to cover the operations it can actually trigger.</p>
+<h2>Recover according to the failure</h2>
+<p>A request rejected for its shape needs a correction. A capacity problem may need a wait. A completed but wrong answer needs a task-level decision about whether another attempt is useful. Preserve those categories instead of sending each through one generic repeat loop.</p>
+<p>Set a deadline as well as an attempt count. Backoff can keep requests polite while making the final answer too late for the user. When time runs out, record the unresolved result and the reason. Do not convert it into an empty successful answer to clear the queue.</p>
+<p>Account for retries in the SDK, application and job runner. If each independently repeats the operation, the effective attempt count can exceed the limit you thought you set. Inspect the actual request log in a controlled trial and identify which component owns recovery.</p>
+<h2>Do not repeat an uncertain write blindly</h2>
+<p>If a tool request changes something and its response is lost, first check the destination using the job identifier or an appropriate receipt. A missing response is not evidence that the operation never happened. Use a deduplication mechanism where the receiving service supports one, and verify its documented scope.</p>
+<p>Keep this separate from a claim that a model API supplies exactly-once execution. We make no such claim. The application needs to manage its own downstream actions and recovery evidence.</p>
+<p>Your tracker should show original jobs, total attempts, accepted jobs, unresolved jobs, actual spend and the enforced caps. Then a model comparison includes the recovery policy that produced the result.</p>
+<PractitionerNote evidence={e} />
+</InsightArticle>
