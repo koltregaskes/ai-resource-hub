@@ -74,7 +74,7 @@ Business scale has weight 0 in v1, following the review: Epoch covers only some 
 - **Formula:** score = 100 × log(1 + lab value) ÷ log(1 + best lab value).
   - All terms are ≥ 0, so the score is between 0 and 100 and keeps the ordering.
 - **Edge cases:**
-  - The floor can't be established (the same cases that make capability missing: no eligible model by the floor date, or leader ≤ floor): value is **missing for every lab** that week. This is kept separate from a known floor where every value is 0.
+  - The floor can't be established (no eligible model released by the floor date): value is **missing for every lab** that week. A floor that exists but is at or above the leader isn't this case: every model value is then 0, so the all-zero rule below applies.
   - A lab with no eligible models: value is **missing**.
   - Every eligible lab has value 0 (no model above the floor): every eligible lab scores **0**.
   - The log softens extremes but doesn't stop one very cheap model from compressing everyone else's scores. The page shows the raw value next to the score.
@@ -228,7 +228,7 @@ AIRH's existing use of Artificial Analysis and Arena data is being removed in ko
 
 ## Changes from v0.2 (Codex re-review, 14 Nov 2026)
 
-1. **Value:** missing for every lab when the floor can't be established, kept apart from the all-zero case.
+1. **Value:** missing for every lab when the floor can't be established (no eligible model by the floor date), kept apart from the all-zero case. A floor at or above the leader gives every lab 0, not missing.
 2. **Usage:** all 28 days are now required (no partial-window scores); the "not in top 50" label says "on any day in the window".
 3. **Usage:** the tokeniser caveat is restored.
 4. **Terms:** the OpenRouter scraping clause is quoted, and the Polymarket summary is corrected (tool-based scraping is prohibited, and manual copying is restricted).
