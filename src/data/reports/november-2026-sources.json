@@ -1,0 +1,132 @@
+{
+  "checkedAt": "2026-11-14",
+  "method": "Web retrieval and source text inspection. AP filing account verified through indexed article text; direct article retrieval failed. Sources published earlier are retained with their original dates. No benchmark data is extracted.",
+  "sources": [
+    {
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://openai.com/index/gpt-6-for-everyone/",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://api-docs.deepseek.com/news/news260424/",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://api-docs.deepseek.com/news/news261017/",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.02770",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://www.mertdemirer.com/Papers/Demirer_AI_productivity.pdf",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://newsroom.amd.com/news/amd-advances-instinct-mi400-series-ai-scientific-computing/",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://www.anthropic.com/news/series-h",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://apnews.com/article/0cbd1a649a4cce904be59af8f6b30179",
+      "checkedAt": "2026-11-14",
+      "evidence": "Indexed AP article, 2 November 2026; direct fetch unavailable",
+      "usedFor": "Reported quarterly revenue and loss, attributed to AP"
+    },
+    {
+      "url": "https://www.gov.uk/government/publications/cyber-security-and-resilience-network-and-information-systems-bill-factsheets/agentic-ai-resilience-measures",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://www.whitehouse.gov/wp-content/uploads/2026/06/eo-14409.pdf",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://digital.gov/topics/artificial-intelligence",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://www.bankofengland.co.uk/agents-summary/2026/october-2026",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Attributed release, policy or research context"
+    },
+    {
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/default.aspx",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Reported revenue table and product update"
+    },
+    {
+      "url": "https://www.gov.uk/government/publications/ai-adoption-survey-2026/ai-adoption-survey-report-2026-executive-summary",
+      "checkedAt": "2026-11-14",
+      "evidence": "Primary publisher page or research paper retrieved",
+      "usedFor": "Survey waves, population and fieldwork dates"
+    }
+  ]
+}

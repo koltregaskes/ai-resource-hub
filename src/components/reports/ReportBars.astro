@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  unit: string;
+  rows: { label: string; value: number }[];
+  note: string;
+  source: string;
+}
+const { title, unit, rows, note, source } = Astro.props;
+const max = Math.max(...rows.map(row => row.value), 1);
+---
+<figure>
+  <figcaption><strong>{title}</strong><p>{note} <a href={source}>Source</a>.</p></figcaption>
+  <table>
+    <thead><tr><th scope="col">Measure</th><th scope="col">{unit}</th><th scope="col">Relative scale (zero baseline)</th></tr></thead>
+    <tbody>{rows.map(row => <tr><th scope="row">{row.label}</th><td>{row.value.toLocaleString('en-GB')}</td><td><svg viewBox="0 0 200 16" width="200" height="16" aria-hidden="true"><rect width={200 * row.value / max} height="16" rx="3" fill="currentColor" /></svg></td></tr>)}</tbody>
+  </table>
+</figure>
+<style>
+figure{margin:2rem 0;padding:1.4rem;background:#102329;border:1px solid #35545a;border-radius:.5rem}figcaption p{font-size:.85rem;color:#b4c7cc}a{color:#87dfc9;text-underline-offset:3px}table{width:100%;border-collapse:collapse;font-size:.85rem}th,td{text-align:left;padding:.7rem .3rem;border-bottom:1px solid #35545a}td:last-child{width:40%;color:#65d4b5}svg{width:100%;max-width:200px}thead{color:#b4c7cc} @media(max-width:500px){figure{padding:.7rem}th,td{font-size:.75rem}}
+</style>
