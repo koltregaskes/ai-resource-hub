@@ -1,0 +1,137 @@
+{
+  "readDate": "2026-11-14",
+  "unit": "US dollars per million tokens",
+  "cachedRead": [
+    {
+      "provider": "OpenAI",
+      "model": "GPT-5.5",
+      "base": 5,
+      "cached": 0.5,
+      "page": "https://developers.openai.com/api/docs/models/gpt-5.5",
+      "ratio": 0.1,
+      "read": "2026-11-14"
+    },
+    {
+      "provider": "Anthropic",
+      "model": "Claude Opus 5.5",
+      "base": 4,
+      "cached": 0.2,
+      "page": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "ratio": 0.05,
+      "read": "2026-11-14"
+    },
+    {
+      "provider": "Anthropic",
+      "model": "Claude Sonnet 5.5",
+      "base": 2,
+      "cached": 0.1,
+      "page": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "ratio": 0.05,
+      "read": "2026-11-14"
+    },
+    {
+      "provider": "Anthropic",
+      "model": "Claude Fable 5.2",
+      "base": 8,
+      "cached": 0.2,
+      "page": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "ratio": 0.025,
+      "read": "2026-11-14"
+    },
+    {
+      "provider": "Google",
+      "model": "Gemini 3.1 Pro Preview (prompts up to 200k tokens)",
+      "base": 2,
+      "cached": 0.2,
+      "page": "https://aistudio.google.com/docs/pricing",
+      "ratio": 0.1,
+      "read": "2026-11-14"
+    }
+  ],
+  "cacheWrite": [
+    {
+      "label": "5-minute write",
+      "price": 5,
+      "model": "Claude Opus 5.5",
+      "base": 4,
+      "ratio": 1.25,
+      "page": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "read": "2026-11-14"
+    },
+    {
+      "label": "1-hour write",
+      "price": 8,
+      "model": "Claude Opus 5.5",
+      "base": 4,
+      "ratio": 2,
+      "page": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "read": "2026-11-14"
+    }
+  ],
+  "longContext": [
+    {
+      "provider": "OpenAI",
+      "model": "GPT-5.5",
+      "threshold": "272K input tokens",
+      "inputRatio": 2,
+      "outputRatio": 1.5,
+      "page": "https://developers.openai.com/api/docs/models/gpt-5.5",
+      "note": "Stated by the page as multipliers on the full session; base $5 input and $30 output per million.",
+      "read": "2026-11-14"
+    },
+    {
+      "provider": "Anthropic",
+      "model": "Claude Haiku 5.5",
+      "threshold": "100,000 prompt tokens",
+      "inBase": 0.1,
+      "inOver": 0.5,
+      "outBase": 0.5,
+      "outOver": 2.5,
+      "page": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "inputRatio": 5,
+      "outputRatio": 5,
+      "read": "2026-11-14"
+    },
+    {
+      "provider": "Google",
+      "model": "Gemini 3.1 Pro Preview",
+      "threshold": "200k prompt tokens",
+      "inBase": 2,
+      "inOver": 4,
+      "outBase": 12,
+      "outOver": 18,
+      "page": "https://aistudio.google.com/docs/pricing",
+      "inputRatio": 2,
+      "outputRatio": 1.5,
+      "read": "2026-11-14"
+    },
+    {
+      "provider": "Google",
+      "model": "Gemini 2.5 Pro",
+      "threshold": "200k prompt tokens",
+      "inBase": 1.25,
+      "inOver": 2.5,
+      "outBase": 10,
+      "outOver": 15,
+      "page": "https://aistudio.google.com/docs/pricing",
+      "inputRatio": 2,
+      "outputRatio": 1.5,
+      "read": "2026-11-14"
+    }
+  ],
+  "fast": {
+    "model": "Claude Opus 5.5",
+    "standard": {
+      "input": 4,
+      "output": 20
+    },
+    "fast": {
+      "input": 8,
+      "output": 40
+    },
+    "inputRatio": 2,
+    "outputRatio": 2,
+    "page": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "read": "2026-11-14"
+  }
+}
