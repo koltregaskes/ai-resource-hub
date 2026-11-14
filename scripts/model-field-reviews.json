@@ -2903,5 +2903,1226 @@
         "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
       }
     }
+  },
+  {
+    "id": "gpt-4.1",
+    "fields": {
+      "name": {
+        "value": "GPT-4.1",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14"
+      },
+      "providerId": {
+        "value": "openai",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14"
+      },
+      "released": {
+        "value": "2025-04-14",
+        "verification": "verified",
+        "sourceUrl": "https://openai.com/index/gpt-4-1/",
+        "checkedAt": "2026-11-14"
+      },
+      "snapshot": {
+        "value": "gpt-4.1-2025-04-14",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14"
+      },
+      "contextWindow": {
+        "value": 1047576,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14"
+      },
+      "maxOutput": {
+        "value": 32768,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14"
+      },
+      "modality": {
+        "value": "text,vision",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence or weight distribution is established by the checked model page."
+      },
+      "licence": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence is stated on the checked page. API service terms are distinct from a licence to model weights."
+      },
+      "apiAvailable": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14",
+        "reason": "Deprecated model: documented endpoint support is not proof of account, tier or region access. Current access was not tested."
+      },
+      "status": {
+        "value": "superseded",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14"
+      },
+      "vendorLifecycle": {
+        "value": "Deprecated",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14"
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14"
+      },
+      "inputPrice": {
+        "value": 2,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14"
+      },
+      "outputPrice": {
+        "value": 8,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14"
+      },
+      "cachedInputPrice": {
+        "value": 0.5,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingConditions": {
+        "value": "Listed text-token rates on the model page; not a current offer for shut-down models. Excludes tools, batch discounts and other modalities. Deprecated availability is unverified.",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1",
+        "checkedAt": "2026-11-14"
+      }
+    }
+  },
+  {
+    "id": "gpt-4.1-mini",
+    "fields": {
+      "name": {
+        "value": "GPT-4.1 mini",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "providerId": {
+        "value": "openai",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "released": {
+        "value": "2025-04-14",
+        "verification": "verified",
+        "sourceUrl": "https://openai.com/index/gpt-4-1/",
+        "checkedAt": "2026-11-14"
+      },
+      "snapshot": {
+        "value": "gpt-4.1-mini-2025-04-14",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "contextWindow": {
+        "value": 1047576,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "maxOutput": {
+        "value": 32768,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "modality": {
+        "value": "text,vision",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence or weight distribution is established by the checked model page."
+      },
+      "licence": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence is stated on the checked page. API service terms are distinct from a licence to model weights."
+      },
+      "apiAvailable": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14",
+        "reason": "Deprecated model: documented endpoint support is not proof of account, tier or region access. Current access was not tested."
+      },
+      "status": {
+        "value": "superseded",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "vendorLifecycle": {
+        "value": "Deprecated",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "inputPrice": {
+        "value": 0.4,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "outputPrice": {
+        "value": 1.6,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "cachedInputPrice": {
+        "value": 0.1,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingConditions": {
+        "value": "Listed text-token rates on the model page; not a current offer for shut-down models. Excludes tools, batch discounts and other modalities. Deprecated availability is unverified.",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "checkedAt": "2026-11-14"
+      }
+    }
+  },
+  {
+    "id": "gpt-4.1-nano",
+    "fields": {
+      "name": {
+        "value": "GPT-4.1 nano",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14"
+      },
+      "providerId": {
+        "value": "openai",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14"
+      },
+      "released": {
+        "value": "2025-04-14",
+        "verification": "verified",
+        "sourceUrl": "https://openai.com/index/gpt-4-1/",
+        "checkedAt": "2026-11-14"
+      },
+      "snapshot": {
+        "value": "gpt-4.1-nano-2025-04-14",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14"
+      },
+      "contextWindow": {
+        "value": 1047576,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14"
+      },
+      "maxOutput": {
+        "value": 32768,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14"
+      },
+      "modality": {
+        "value": "text,vision",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence or weight distribution is established by the checked model page."
+      },
+      "licence": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence is stated on the checked page. API service terms are distinct from a licence to model weights."
+      },
+      "apiAvailable": {
+        "value": false,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14",
+        "reason": "Vendor lifecycle is Shut down; endpoint compatibility tables do not establish current availability."
+      },
+      "status": {
+        "value": "retired",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14"
+      },
+      "vendorLifecycle": {
+        "value": "Shut down",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14"
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14"
+      },
+      "inputPrice": {
+        "value": 0.1,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14"
+      },
+      "outputPrice": {
+        "value": 0.4,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14"
+      },
+      "cachedInputPrice": {
+        "value": 0.025,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingConditions": {
+        "value": "Listed text-token rates on the model page; not a current offer for shut-down models. Excludes tools, batch discounts and other modalities. Deprecated availability is unverified.",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4.1-nano",
+        "checkedAt": "2026-11-14"
+      }
+    }
+  },
+  {
+    "id": "gpt-4o",
+    "fields": {
+      "name": {
+        "value": "GPT-4o",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14"
+      },
+      "providerId": {
+        "value": "openai",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14"
+      },
+      "released": {
+        "value": "2024-05-13",
+        "verification": "verified",
+        "sourceUrl": "https://openai.com/index/hello-gpt-4o/",
+        "checkedAt": "2026-11-14"
+      },
+      "snapshot": {
+        "value": "gpt-4o-2024-08-06",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14"
+      },
+      "contextWindow": {
+        "value": 128000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14"
+      },
+      "maxOutput": {
+        "value": 16384,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14"
+      },
+      "modality": {
+        "value": "text,vision",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence or weight distribution is established by the checked model page."
+      },
+      "licence": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence is stated on the checked page. API service terms are distinct from a licence to model weights."
+      },
+      "apiAvailable": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14",
+        "reason": "Deprecated model: documented endpoint support is not proof of account, tier or region access. Current access was not tested."
+      },
+      "status": {
+        "value": "superseded",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14"
+      },
+      "vendorLifecycle": {
+        "value": "Deprecated",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14"
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14"
+      },
+      "inputPrice": {
+        "value": 2.5,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14"
+      },
+      "outputPrice": {
+        "value": 10,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14"
+      },
+      "cachedInputPrice": {
+        "value": 1.25,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingConditions": {
+        "value": "Listed text-token rates on the model page; not a current offer for shut-down models. Excludes tools, batch discounts and other modalities. Deprecated availability is unverified.",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o",
+        "checkedAt": "2026-11-14"
+      }
+    }
+  },
+  {
+    "id": "gpt-4o-mini",
+    "fields": {
+      "name": {
+        "value": "GPT-4o mini",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "providerId": {
+        "value": "openai",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "released": {
+        "value": "2024-07-18",
+        "verification": "verified",
+        "sourceUrl": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
+        "checkedAt": "2026-11-14"
+      },
+      "snapshot": {
+        "value": "gpt-4o-mini-2024-07-18",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "contextWindow": {
+        "value": 128000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "maxOutput": {
+        "value": 16384,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "modality": {
+        "value": "text,vision",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence or weight distribution is established by the checked model page."
+      },
+      "licence": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence is stated on the checked page. API service terms are distinct from a licence to model weights."
+      },
+      "apiAvailable": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14",
+        "reason": "Deprecated model: documented endpoint support is not proof of account, tier or region access. Current access was not tested."
+      },
+      "status": {
+        "value": "superseded",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "vendorLifecycle": {
+        "value": "Deprecated",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "inputPrice": {
+        "value": 0.15,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "outputPrice": {
+        "value": 0.6,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "cachedInputPrice": {
+        "value": 0.075,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingConditions": {
+        "value": "Listed text-token rates on the model page; not a current offer for shut-down models. Excludes tools, batch discounts and other modalities. Deprecated availability is unverified.",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "checkedAt": "2026-11-14"
+      }
+    }
+  },
+  {
+    "id": "o1",
+    "fields": {
+      "name": {
+        "value": "o1",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14"
+      },
+      "providerId": {
+        "value": "openai",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14"
+      },
+      "released": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14",
+        "reason": "The checked model page gives snapshot identifiers, not an explicit initial launch date. Snapshot dates are not used as release dates."
+      },
+      "snapshot": {
+        "value": "o1-2024-12-17",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14"
+      },
+      "contextWindow": {
+        "value": 200000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14"
+      },
+      "maxOutput": {
+        "value": 100000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14"
+      },
+      "modality": {
+        "value": "text,vision",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence or weight distribution is established by the checked model page."
+      },
+      "licence": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence is stated on the checked page. API service terms are distinct from a licence to model weights."
+      },
+      "apiAvailable": {
+        "value": false,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14",
+        "reason": "Vendor lifecycle is Shut down; endpoint compatibility tables do not establish current availability."
+      },
+      "status": {
+        "value": "retired",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14"
+      },
+      "vendorLifecycle": {
+        "value": "Shut down",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14"
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14"
+      },
+      "inputPrice": {
+        "value": 15,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14"
+      },
+      "outputPrice": {
+        "value": 60,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14"
+      },
+      "cachedInputPrice": {
+        "value": 7.5,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingConditions": {
+        "value": "Listed text-token rates on the model page; not a current offer for shut-down models. Excludes tools, batch discounts and other modalities. Deprecated availability is unverified.",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1",
+        "checkedAt": "2026-11-14"
+      }
+    }
+  },
+  {
+    "id": "o1-mini",
+    "fields": {
+      "name": {
+        "value": "o1-mini",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "providerId": {
+        "value": "openai",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "released": {
+        "value": "2024-09-12",
+        "verification": "verified",
+        "sourceUrl": "https://openai.com/index/introducing-openai-o1-preview/",
+        "checkedAt": "2026-11-14"
+      },
+      "snapshot": {
+        "value": "o1-mini-2024-09-12",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "contextWindow": {
+        "value": 128000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "maxOutput": {
+        "value": 65536,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "modality": {
+        "value": "text",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence or weight distribution is established by the checked model page."
+      },
+      "licence": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence is stated on the checked page. API service terms are distinct from a licence to model weights."
+      },
+      "apiAvailable": {
+        "value": false,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14",
+        "reason": "Vendor lifecycle is Shut down; endpoint compatibility tables do not establish current availability."
+      },
+      "status": {
+        "value": "retired",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "vendorLifecycle": {
+        "value": "Shut down",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "inputPrice": {
+        "value": 1.1,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "outputPrice": {
+        "value": 4.4,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "cachedInputPrice": {
+        "value": 0.55,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingConditions": {
+        "value": "Listed text-token rates on the model page; not a current offer for shut-down models. Excludes tools, batch discounts and other modalities. Deprecated availability is unverified.",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o1-mini",
+        "checkedAt": "2026-11-14"
+      }
+    }
+  },
+  {
+    "id": "o3",
+    "fields": {
+      "name": {
+        "value": "o3",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14"
+      },
+      "providerId": {
+        "value": "openai",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14"
+      },
+      "released": {
+        "value": "2025-04-16",
+        "verification": "verified",
+        "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+        "checkedAt": "2026-11-14"
+      },
+      "snapshot": {
+        "value": "o3-2025-04-16",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14"
+      },
+      "contextWindow": {
+        "value": 200000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14"
+      },
+      "maxOutput": {
+        "value": 100000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14"
+      },
+      "modality": {
+        "value": "text,vision",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence or weight distribution is established by the checked model page."
+      },
+      "licence": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence is stated on the checked page. API service terms are distinct from a licence to model weights."
+      },
+      "apiAvailable": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14",
+        "reason": "Deprecated model: documented endpoint support is not proof of account, tier or region access. Current access was not tested."
+      },
+      "status": {
+        "value": "superseded",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14"
+      },
+      "vendorLifecycle": {
+        "value": "Deprecated",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14"
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14"
+      },
+      "inputPrice": {
+        "value": 2,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14"
+      },
+      "outputPrice": {
+        "value": 8,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14"
+      },
+      "cachedInputPrice": {
+        "value": 0.5,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingConditions": {
+        "value": "Listed text-token rates on the model page; not a current offer for shut-down models. Excludes tools, batch discounts and other modalities. Deprecated availability is unverified.",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3",
+        "checkedAt": "2026-11-14"
+      }
+    }
+  },
+  {
+    "id": "o3-mini",
+    "fields": {
+      "name": {
+        "value": "o3-mini",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "providerId": {
+        "value": "openai",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "released": {
+        "value": "2025-01-31",
+        "verification": "verified",
+        "sourceUrl": "https://openai.com/index/openai-o3-mini/",
+        "checkedAt": "2026-11-14"
+      },
+      "snapshot": {
+        "value": "o3-mini-2025-01-31",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "contextWindow": {
+        "value": 200000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "maxOutput": {
+        "value": 100000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "modality": {
+        "value": "text",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence or weight distribution is established by the checked model page."
+      },
+      "licence": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence is stated on the checked page. API service terms are distinct from a licence to model weights."
+      },
+      "apiAvailable": {
+        "value": false,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14",
+        "reason": "Vendor lifecycle is Shut down; endpoint compatibility tables do not establish current availability."
+      },
+      "status": {
+        "value": "retired",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "vendorLifecycle": {
+        "value": "Shut down",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "inputPrice": {
+        "value": 1.1,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "outputPrice": {
+        "value": 4.4,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "cachedInputPrice": {
+        "value": 0.55,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingConditions": {
+        "value": "Listed text-token rates on the model page; not a current offer for shut-down models. Excludes tools, batch discounts and other modalities. Deprecated availability is unverified.",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o3-mini",
+        "checkedAt": "2026-11-14"
+      }
+    }
+  },
+  {
+    "id": "o4-mini",
+    "fields": {
+      "name": {
+        "value": "o4-mini",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "providerId": {
+        "value": "openai",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "released": {
+        "value": "2025-04-16",
+        "verification": "verified",
+        "sourceUrl": "https://openai.com/index/introducing-o3-and-o4-mini/",
+        "checkedAt": "2026-11-14"
+      },
+      "snapshot": {
+        "value": "o4-mini-2025-04-16",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "contextWindow": {
+        "value": 200000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "maxOutput": {
+        "value": 100000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "modality": {
+        "value": "text,vision",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "openSource": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence or weight distribution is established by the checked model page."
+      },
+      "licence": {
+        "value": null,
+        "verification": "unverified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14",
+        "reason": "No model-weight licence is stated on the checked page. API service terms are distinct from a licence to model weights."
+      },
+      "apiAvailable": {
+        "value": false,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14",
+        "reason": "Vendor lifecycle is Shut down; endpoint compatibility tables do not establish current availability."
+      },
+      "status": {
+        "value": "retired",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "vendorLifecycle": {
+        "value": "Shut down",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "category": {
+        "value": "llm",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "inputPrice": {
+        "value": 1.1,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "outputPrice": {
+        "value": 4.4,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "cachedInputPrice": {
+        "value": 0.275,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14"
+      },
+      "pricingConditions": {
+        "value": "Listed text-token rates on the model page; not a current offer for shut-down models. Excludes tools, batch discounts and other modalities. Deprecated availability is unverified.",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/o4-mini",
+        "checkedAt": "2026-11-14"
+      }
+    }
   }
 ]
