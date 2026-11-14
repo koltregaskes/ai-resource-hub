@@ -1,6 +1,6 @@
-# Lab Standings: method (draft v0.2)
+# Lab Standings: method (draft v0.3)
 
-Status: draft for review. Nothing here is built yet. v0.2 answers the Codex review of v0.1 (PR 105, 14 Nov 2026).
+Status: draft for review. Nothing here is built yet. v0.2 answered the Codex review of v0.1; v0.3 answers the re-review of v0.2 (PR 105, 14 Nov 2026).
 Owner: Claude (AI Resource Hub session). Hub issue: koltregaskes/rooms-os-hub#1568.
 Terms checked: 14 Nov 2026, first-hand, by reading each source's current terms page.
 
@@ -74,6 +74,7 @@ Business scale has weight 0 in v1, following the review: Epoch covers only some 
 - **Formula:** score = 100 × log(1 + lab value) ÷ log(1 + best lab value).
   - All terms are ≥ 0, so the score is between 0 and 100 and keeps the ordering.
 - **Edge cases:**
+  - The floor can't be established (the same cases that make capability missing: no eligible model by the floor date, or leader ≤ floor): value is **missing for every lab** that week. This is kept separate from a known floor where every value is 0.
   - A lab with no eligible models: value is **missing**.
   - Every eligible lab has value 0 (no model above the floor): every eligible lab scores **0**.
   - The log softens extremes but doesn't stop one very cheap model from compressing everyone else's scores. The page shows the raw value next to the score.
@@ -112,9 +113,10 @@ Business scale has weight 0 in v1, following the review: Epoch covers only some 
 - **Lab observed volume:** the sum of tokens over the 28 days for the lab's models that appear in the daily top-50 rows.
 - **Formula:** score = 100 × √(lab observed volume ÷ highest lab observed volume).
   - The denominator cancels in that ratio, so the `other` row doesn't fix incomplete lab coverage. We don't claim it does.
+- **Token counts aren't directly comparable across providers.** OpenRouter's documentation says each provider's tokens come from that provider's own tokeniser, so one lab's token isn't the same unit of work as another's. Square-root damping doesn't remove this. The page states the caveat next to the usage score.
 - **Edge cases:**
-  - Fewer than 20 of the 28 days available: missing for all labs.
-  - A lab never appears in the top 50 across the window: **0**, labelled "not in top 50", which is an observation rather than missing.
+  - **All 28 days are required.** If any day in the window is missing from the dataset, usage is missing for every lab that week, labelled "usage data incomplete (n/28 days)". We don't score on partial windows, because missing days could hold any lab's traffic.
+  - A lab never appears in the top 50 on any of the 28 days: **0**, labelled "not in top 50 on any day in the window", which is an observation rather than missing.
   - Every lab at 0: every lab scores 0.
   - Negative counts: rejected.
 - **Republishing:** keep the dataset's response metadata (as-of date) with the snapshot, and cite: "Source: OpenRouter (openrouter.ai/rankings), as of {as_of}. Licensed under CC BY 4.0."
@@ -178,8 +180,8 @@ Business scale has weight 0 in v1, following the review: Epoch covers only some 
 |---|---|---|
 | Arena (arena.ai, formerly LMArena) | Terms of Use, updated 23 Feb 2026, User Conduct section: users may not access the services by programmatic or automated means (vi), may not use manual or automated processes to scrape, extract or download data (vii), and may not reproduce or commercially exploit the service or its output (i). | **Out, including manual snapshots.** We can link to Arena, but we don't copy its numbers. |
 | Artificial Analysis | **Data Platform Terms**, revised 19 Aug 2026, which also cover the free API. Section 2.5 bars using its data in any product whose primary purpose is benchmarking, ranking or comparison, without written consent. Section 2.4 bars redistribution. **Website Terms of Use**, revised 15 Sep 2026: 2.2(c) bars using the site to build a similar or competitive site, and 3.3(b)(vi) bars automated requests and scraping. | **Out of the score.** The one narrow allowance is Data Platform Terms 2.3: a brief citation of a single data point in editorial text, credited "Source: Artificial Analysis (artificialanalysis.ai)", and never in tables. It doesn't override the restrictions above. |
-| OpenRouter website pages | Terms of Service, 31 Aug 2026: no scraping or automated copying of the Site. | **Pages out; the CC BY 4.0 Data API is in** (part 5), with its response metadata and licence wording kept. |
-| Polymarket | Terms of Use, effective 11 Aug 2026: the UK is a restricted jurisdiction for trading. The data clauses restrict collecting information for unauthorised purposes, and restrict redistributing data to capital-markets clients **and market-data distributors**. | **Not in v1.** Odds are never scored. Showing them at all is Kol's call later, and only after a fresh check of those data clauses (being outside capital markets doesn't by itself permit redistribution), with a clear "not betting advice" line. |
+| OpenRouter website pages | Terms of Service, last updated 31 Aug 2026, user restrictions: users may not use "crawlers, browser plugins, add-ons or any other automated technology" to scrape or copy any information on the Site or the Services. Read first-hand on 14 Nov 2026; the exact clause is in the restrictions list of that page. | **Pages out; the CC BY 4.0 Data API is in** (part 5), with its response metadata and licence wording kept. |
+| Polymarket | Terms of Use, effective 11 Aug 2026: the UK is a restricted jurisdiction for trading. The terms prohibit data-mining tools, robots, crawlers and similar tools for scraping or removing data, restrict manual copying and unauthorised collection, and restrict redistributing data to capital-markets clients **and market-data distributors**. | **Not in v1.** Odds are never scored. Showing them at all is Kol's call later, and only after a fresh check of those data clauses (being outside capital markets doesn't by itself permit redistribution), with a clear "not betting advice" line. |
 
 AIRH's existing use of Artificial Analysis and Arena data is being removed in koltregaskes/ai-resource-hub#107 (hub #1569). None of the five scored parts above depends on either source.
 
@@ -223,3 +225,11 @@ AIRH's existing use of Artificial Analysis and Arena data is being removed in ko
 6. **Drop-one:** global removal, fixed cohort, baseline included, and the warning is based on range width.
 7. **Terms:** the Artificial Analysis website terms date is corrected to 15 Sep 2026, the citation allowance is attributed to Data Platform Terms 2.3, and the Polymarket summary is corrected.
 8. **Openness:** unknown licences are excluded rather than scored 0, and the grouped-release rule is defined.
+
+## Changes from v0.2 (Codex re-review, 14 Nov 2026)
+
+1. **Value:** missing for every lab when the floor can't be established, kept apart from the all-zero case.
+2. **Usage:** all 28 days are now required (no partial-window scores); the "not in top 50" label says "on any day in the window".
+3. **Usage:** the tokeniser caveat is restored.
+4. **Terms:** the OpenRouter scraping clause is quoted, and the Polymarket summary is corrected (tool-based scraping is prohibited, and manual copying is restricted).
+5. **Before build:** the provenance check on Epoch's downloaded rows stays.
