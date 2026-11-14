@@ -209,13 +209,17 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
 ## Keys and safety
 
 - Kol creates the two API keys himself. No agent reads, types or stores a key.
-- **The one allowed route:** the existing launcher (`W:\scripts\credit-keys\with-credit-keys.ps1`, recorded on hub #270) starts the harness as a single child process and places the key in that process's environment only, under a bench-specific name (`AIRH_BENCH_OPENAI_KEY` or `AIRH_BENCH_ANTHROPIC_KEY`).
+- **The one allowed route (Kol's instruction, 14 Nov 2026):** the keys sit in Kol's private key file on the run machine, which only he edits. At run time the harness loads exactly two named entries from it into its own memory.
+  - The file's path is given with `--key-file`. It's never hard-coded or committed.
+  - The two entry names are set in the run config: one for the OpenAI key and one for the Anthropic key.
+  - The loader reads the file line by line and keeps only those two names. Every other line is discarded unread, and nothing from the file is logged.
+  - If a name isn't there, the harness stops with `key not found: <name>`. It doesn't guess another name.
+  - The keys are held in variables and passed straight to the HTTP client. **They're never put in an environment variable,** not even for the harness's own process, so no other tool can pick them up.
 - **What the harness refuses:**
-  - a key found in a user-level or machine-level environment variable;
-  - the standard `OPENAI_API_KEY` or `ANTHROPIC_API_KEY` names, which other tools read and which would switch them to paid billing;
-  - a key in a file, a command-line argument or a config.
-- Where the launcher gets the key from (the Windows credential store, or a named entry in a file only Kol edits) is the launcher's concern. The harness never opens that source.
-- Keys are never written to logs, run records or error messages, and the grading sandbox gets no environment variables at all.
+  - starting while `OPENAI_API_KEY` or `ANTHROPIC_API_KEY` is set in its environment (those names switch other tools to paid billing, and a set value means something exported a key);
+  - a key passed as a command-line argument or written in a config.
+- No agent opens the key file. Agents write and review the loader's code; only the running harness process reads the two entries.
+- Keys are never written to logs, run records or error messages, and the grading sandbox gets no environment variables and no access to the key file.
 - `--live` stays refused until this doc and the harness are both reviewed and merged, and Kol's keys exist.
 
 ## New models
@@ -247,7 +251,7 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
 4. **Bootstrap fully specified** (stratified by family, 20,000 resamples, percentile, fixed seed), with degenerate cases flagged. The "±8 to ±12" claim is removed.
 5. **Interval overlap is a display label only.** There are no tied rank groups from overlap; comparisons stay descriptive.
 6. **Budget:** dated price receipts from providers' own pages; worst-case reservation in place of an average estimate; judges inside the caps; OpenAI judging before 20 Nov. The $18 example is removed.
-7. **Keys:** the launcher's process-scoped delivery is the one allowed route, under bench-specific names; ambient and standard-name keys are refused.
+7. **Keys:** per Kol's instruction, the harness loads exactly two named entries from his private key file into memory at run time. Keys never enter an environment variable, and a missing name stops the run with "key not found".
 8. **Rotation arithmetic fixed** (10 public tasks retire each quarter, so the set stays 40 and 20). Private and public run records are separated by an allowlist, and the leak claim is narrowed.
 9. **Harness contract:** timeout scope, output-limit mapping, truncation, tools policy, missing usage, and cost and time definitions.
 10. **Review answers adopted:** 60 tasks × 3 repeats; one frozen default configuration; disputed checks count as failed; the stratified bootstrap stays.
