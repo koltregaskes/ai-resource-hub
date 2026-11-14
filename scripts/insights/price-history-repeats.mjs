@@ -7,8 +7,9 @@
  *
  * Definition (also on /transparency/ under "Price-history repeats"):
  *  - Language models only (category "llm" in models.json).
- *  - Only rows whose source is NOT OpenRouter, because those are the rows written by the official-pricing
- *    importer, which copies hand-entered list prices. OpenRouter rows are ignored.
+ *  - Only rows whose source is NOT OpenRouter. OpenRouter rows are cheapest-host prices that can legitimately
+ *    move, so they are ignored. Rows labelled "(official)" are the ones the official-pricing importer writes
+ *    (verified in its code); how the other non-OpenRouter rows are written has not been traced.
  *  - For each model, order its rows by time. The first row is the starting point and is not counted.
  *    Each later row "repeats" if its input and output prices equal the previous row's.
  *

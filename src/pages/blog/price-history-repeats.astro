@@ -27,10 +27,10 @@ const relabelDay = relabelDays.length === 1 ? day(relabelDays[0] + ' 00:00:00') 
   type="Analysis"
   readTime="5 min"
   snapshot={h.snapshotDate}
-  standfirst="A price history should show when prices moved. Ours mostly shows a price that did not. The few real moves in it cannot yet be told apart from relabelling and corrections."
+  standfirst="A price history should show when prices moved. Ours mostly records the same price again. The few recorded differences in it cannot yet be told apart from relabelling and corrections."
 >
   <p>
-    {ex.name} has {ex.rows} rows in our price history between {day(ex.firstAt!)} and {day(ex.lastAt!)}. All {ex.rows} say the same thing: {dollars(ex.price!)}. OpenAI's own <a href="https://developers.openai.com/api/docs/models/gpt-5.5" rel="noopener">model page</a>, read on 14 November 2026, lists the same prices, so the price itself is right. It is just a lot of rows for a price that never moved.
+    {ex.name} has {ex.rows} rows in our price history between {day(ex.firstAt!)} and {day(ex.lastAt!)}. All {ex.rows} say the same thing: {dollars(ex.price!)}. OpenAI's own <a href="https://developers.openai.com/api/docs/models/gpt-5.5" rel="noopener">model page</a>, read on 14 November 2026, lists the same prices, so the price itself is right. It is just a lot of rows for a recorded price that never changed.
   </p>
   <p>
     The pattern is general. Across {h.models} language models with prices from sources other than OpenRouter, we hold {n(h.labRows)} rows. Take the first row of each model as the starting point, and {n(h.rowsCounted)} remain. Of those, {n(h.repeats)} ({pct}%) have exactly the same input and output prices as the row before. {h.changes} do not.
@@ -44,7 +44,7 @@ const relabelDay = relabelDays.length === 1 ? day(relabelDays[0] + ' 00:00:00') 
     The other {n(web.rows)} rows are labelled with a website address, such as a lab's pricing page. We have not traced which collector writes those. They show the same pattern: {n(web.repeats)} of {n(web.counted)} later rows repeat the price before, against {n(off.repeats)} of {n(off.counted)} for the "(official)" rows.
   </p>
   <p>
-    So a row in this history tells you a script ran. It does not tell you that anyone looked at the lab's page that day. The same is true of the "pricing updated" time on a model page. Our <a href={`${base}transparency/#source-official-pricing`}>transparency page</a> lists this as a known fault.
+    So an "(official)" row tells you the importer ran. It does not tell you that anyone looked at the lab's page that day, and the "pricing updated" time that importer writes is no better evidence. We do not know what triggers the other rows. Our <a href={`${base}transparency/#source-official-pricing`}>transparency page</a> lists this as a known fault.
   </p>
 
   <h2>The {h.changes} rows that changed</h2>
@@ -83,7 +83,7 @@ const relabelDay = relabelDays.length === 1 ? day(relabelDays[0] + ' 00:00:00') 
 
   <h2>Why this blocks a "how often do prices change" story</h2>
   <p>
-    A claim such as "most models never get cheaper" is tempting and easy to produce from a table like this one. It would also be hard to defend. {pct}% of the rows are repeats made by a script, the handful of moves cannot be separated from relabelling, and the rows before and after the relabelling carry different source names. Counting changes in it would measure how the data was kept, not how prices behave.
+    A claim such as "most models never get cheaper" is tempting and easy to produce from a table like this one. It would also be hard to defend. {pct}% of the rows are repeats, the handful of moves cannot be separated from relabelling, and the rows before and after the relabelling carry different source names. Counting changes in it would measure how the data was kept, not how prices behave.
   </p>
   <p>
     That is why we have not published a price-cut article. We think a usable one needs a single source per model, a "last checked" date that only a person or a real fetch can set, and the lab's effective date kept apart from both. Until then, the fair reading of our history is that it records what our catalogue said on each run.
