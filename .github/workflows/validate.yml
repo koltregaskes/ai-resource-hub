@@ -49,6 +49,12 @@ jobs:
       - name: Test Lab Standings method
         run: node --test scripts/lab-standings.test.mjs
 
+      - name: Validate AI and jobs evidence, rights and immutable history
+        run: |
+          node --test scripts/ai-and-jobs.test.mjs
+          node scripts/validate-ai-and-jobs.mjs
+          python scripts/check-jobs-schema.py
+
       - name: Test news routing provenance
         run: node --test scripts/news-pipeline-provenance.test.mjs scripts/lib/news-routing-config.test.mjs scripts/verify-news-pipeline.test.mjs
 
@@ -57,6 +63,9 @@ jobs:
 
       - name: Build Astro site
         run: npm run build
+
+      - name: Verify AI and jobs rendered evidence labels and exports
+        run: node --test scripts/ai-and-jobs-built.test.mjs
 
       - name: Verify catalogue fields and rendered pages
         run: npm run test:model-fields

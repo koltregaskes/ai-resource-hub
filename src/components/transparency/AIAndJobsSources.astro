@@ -1,0 +1,11 @@
+---
+import {publicationRows,KIND_LABELS,isStale} from '../../lib/ai-and-jobs.mjs';
+const snapshots=Object.values(import.meta.glob('../../../data/ai-and-jobs/*.json',{eager:true,import:'default'})) as any[];
+const base=import.meta.env.BASE_URL;
+---
+<section id="ai-and-jobs" class="my-12"><h2 class="text-2xl font-bold">AI and jobs: figure-level receipts</h2>
+<p>Indeed Hiring Lab's AI Tracker, CC BY 4.0. The pinned repository README and licence were read first-hand on 14 November 2026. Daily observations use a seven-day trailing average; source refresh is monthly. Only Indeed postings are covered; these are keyword mentions, not employment effects. No uncertainty published by the source. Every displayed percentage is selected directly from the pinned CSV and rounded for display; the export retains original precision.</p>
+{snapshots.map(s=><><p>Retrieved {s.retrieved_at} · <a href={`${base}ai-and-jobs/archive/${s.retrieved_at}.json`}>Immutable snapshot, method versions, source commit and raw SHA-256</a></p>
+<div class="overflow-x-auto"><table class="w-full text-sm"><caption>All published observations: evidence kind, date, method and rights</caption><thead><tr><th>Country / kind</th><th>Period / percentage</th><th>Vintage / uncertainty</th><th>Source / method / rights</th></tr></thead><tbody>{publicationRows(s).map((r:any)=><tr data-kind={r.kind}><td>{r.series.geography} · {KIND_LABELS[r.kind as keyof typeof KIND_LABELS]}</td><td>{r.period} · {r.value}%</td><td>{r.vintage} · No uncertainty published by the source · {isStale(r,r.source)?'Stale':'Within refresh window'}</td><td><a href={r.source_url}>CSV</a> · <a href={r.version.methodology_url}>Method version</a> · <a href={r.rights.licence_url}>{r.rights.licence}</a></td></tr>)}</tbody></table></div></>)}
+<p>Rights remain unconfirmed for unused sources until the specific dataset's terms are read. No ONS, BLS, Anthropic, Eurostat, OECD, ILO or company-claim figures are copied into this section. <a href="https://github.com/koltregaskes/ai-resource-hub/blob/main/docs/AI-AND-JOBS-METHOD.md">Reviewed source policy and data model</a>.</p>
+</section>
