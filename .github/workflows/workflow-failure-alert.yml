@@ -1,0 +1,102 @@
+# Opens or updates ONE "Workflow failure" issue when a listed workflow fails (KOL-6328).
+# workflow_run only fires from the copy of this file on the default branch.
+# This workflow does not check out code and does not touch any publish/deploy path.
+# Its own name is deliberately not in the list below, so it can never trigger itself.
+name: Workflow failure alert
+
+on:
+  workflow_run:
+    workflows:
+      - "Deploy to GitHub Pages"
+      - "Update data (scrape + rebuild)"
+      - "Refresh provider status"
+      - "Validate"
+      - "alert-selftest"
+    types: [completed]
+
+permissions:
+  contents: read
+  issues: write
+
+# Same queue pattern as ai-resource-hub's scrape/status workflows: runs wait in
+# line (up to 100 pending) instead of replacing each other, so no failure is dropped.
+concurrency:
+  group: workflow-failure-alert
+  queue: max
+  cancel-in-progress: false
+
+jobs:
+  alert:
+    if: github.event.workflow_run.conclusion == 'failure' || github.event.workflow_run.conclusion == 'timed_out'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Open or update the Workflow failure issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const run = context.payload.workflow_run;
+            const { owner, repo } = context.repo;
+            const label = 'workflow-failure';
+            const title = 'Workflow failure';
+            const when = new Date(run.updated_at || run.run_started_at || Date.now()).toISOString().replace('T', ' ').replace(/\.\d+Z$/, ' UTC');
+            const details = [
+              `- Workflow: **${run.name}**`,
+              `- Conclusion: \`${run.conclusion}\``,
+              `- Run: ${run.html_url}`,
+              `- Branch: \`${run.head_branch}\``,
+              `- Head SHA: \`${(run.head_sha || '').slice(0, 7)}\``,
+              `- Event: \`${run.event}\``,
+              `- Triggering actor: \`${(run.triggering_actor || run.actor || {}).login || 'unknown'}\``,
+              `- Time: ${when}`,
+            ].join('\n');
+
+            // Undelivered alerts must not look green: write a NOT DELIVERED summary and fail this run.
+            async function notDelivered(reason) {
+              await core.summary
+                .addHeading('NOT DELIVERED: workflow failure alert')
+                .addRaw(`Reason: ${reason}\n\n`)
+                .addRaw(details)
+                .write();
+              core.setFailed(`NOT DELIVERED: ${reason}. Failed run: ${run.html_url}`);
+            }
+
+            if (context.payload.repository && context.payload.repository.has_issues === false) {
+              await notDelivered(`Issues are disabled in ${owner}/${repo}, so the Workflow failure issue could not be opened or updated`);
+              return;
+            }
+
+            try {
+              try {
+                await github.rest.issues.getLabel({ owner, repo, name: label });
+              } catch (e) {
+                if (e.status !== 404) throw e;
+                await github.rest.issues.createLabel({ owner, repo, name: label, color: 'B60205', description: 'Opened automatically when a GitHub Actions workflow fails' });
+              }
+
+              const listOpen = async () => (await github.paginate(github.rest.issues.listForRepo, { owner, repo, state: 'open', labels: label, per_page: 100 }))
+                .filter((i) => !i.pull_request && i.title === title)
+                .sort((a, b) => a.number - b.number);
+
+              const open = await listOpen();
+              if (open.length > 0) {
+                await github.rest.issues.createComment({ owner, repo, issue_number: open[0].number, body: `@koltregaskes another workflow failed.\n\n${details}` });
+                core.info(`Commented on #${open[0].number}`);
+              } else {
+                const created = await github.rest.issues.create({
+                  owner, repo, title, labels: [label], assignees: ['koltregaskes'],
+                  body: `@koltregaskes a GitHub Actions workflow failed in ${owner}/${repo}.\n\n${details}\n\nLater failures are added as comments here. Close this issue once fixed; the next failure opens a new one.`,
+                });
+                core.info(`Opened #${created.data.number}`);
+                // Race guard: if another alert run opened an issue at the same moment, keep the oldest and close the newer one.
+                const after = await listOpen();
+                if (after.length > 1 && after[0].number !== created.data.number) {
+                  await github.rest.issues.createComment({ owner, repo, issue_number: after[0].number, body: `@koltregaskes another workflow failed.\n\n${details}` });
+                  await github.rest.issues.createComment({ owner, repo, issue_number: created.data.number, body: `Duplicate of #${after[0].number}; details copied there.` });
+                  await github.rest.issues.update({ owner, repo, issue_number: created.data.number, state: 'closed', state_reason: 'not_planned' });
+                  core.info(`Closed duplicate #${created.data.number}; kept #${after[0].number}`);
+                }
+              }
+            } catch (e) {
+              await notDelivered(`GitHub API error ${e.status || ''} ${e.message}`.trim());
+            }
