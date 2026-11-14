@@ -759,7 +759,7 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
       </div>
     )}
 
-    <main id="main-content" class:list={['flex-1', { 'airh-route-template-host': compactChrome && !isHomePage }]}>
+    <main id="main-content" tabindex="-1" class:list={['flex-1', { 'airh-route-template-host': compactChrome && !isHomePage }]}>
       {compactChrome && !isHomePage ? (
         <>
           <header class="airh-route-template-chrome airh-route-dossier-head" aria-hidden="true">
@@ -1028,5 +1028,9 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
       });
     </script>
     <script src={`${base}cross-site-nav.js`} defer></script>
-  </body>
+  <script>
+ const markTables=()=>{document.querySelectorAll('table').forEach(table=>{if(table.parentElement?.hasAttribute('data-airh-scroll-region'))return;const region=document.createElement('div');region.className='airh-table-scroll';region.tabIndex=0;region.setAttribute('role','region');region.setAttribute('aria-label','Scrollable data table');region.dataset.airhScrollRegion='true';table.before(region);region.append(table);});};
+ markTables();new MutationObserver(markTables).observe(document.body,{childList:true,subtree:true});
+</script>
+</body>
 </html>

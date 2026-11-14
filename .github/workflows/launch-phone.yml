@@ -1,0 +1,43 @@
+name: Launch phone geometry and accessibility
+on: [pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  phone:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        width: [320, 390, 1280]
+        shard: [1, 2, 3, 4]
+    env:
+      PLAYWRIGHT_CHANNEL: msedge
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: node scripts/launch/phone.mjs --width=${{ matrix.width }} --shard=${{ matrix.shard }}/4
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phone-${{ matrix.width }}-${{ matrix.shard }}
+          path: test-results/
+  keyboard:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    env:
+      PLAYWRIGHT_CHANNEL: msedge
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: node scripts/launch/keyboard.mjs
