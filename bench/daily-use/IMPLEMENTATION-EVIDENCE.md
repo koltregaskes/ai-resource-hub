@@ -66,3 +66,16 @@ whose full text was reread. Stable implementation remains scoped to the frozen
 5127575 source plus Kol's continuation instruction; new task-set/judge counts
 are not silently applied to the synthetic fixtures. Latest owner receipt
 hub #1578/6880948754 reports 60 drafted, 0 admitted. No method acceptance inferred.
+
+## Narrow fixture filename compliance correction
+
+The three synthetic key-file fixtures now use synthetic-key-fixture.txt, complying
+with the ban on any .env file, including fake files. Fixture bytes, parser and
+assertions are unchanged. The 25 Python regressions remain **UNEXECUTED**, not
+passed. No real keys or .env files were read; no variables were exported. No local
+Core, Node or Python execution was attempted for this correction.
+
+Mini PC is the intended paid-run/private-checker host, not an admitted offline
+test runner. Explicit runner acceptance and a supported execution route remain
+OPEN; its reported 1.5 GB snapshot is below the 3 GB new-builder floor. Existing
+method/B10/live-refusal/no-merge holds remain; PR122 stays open.

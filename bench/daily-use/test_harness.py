@@ -186,7 +186,7 @@ class BenchTests(unittest.TestCase):
 
     def test_key_file_found_case_matching_and_explicit_alternative(self):
         with tempfile.TemporaryDirectory() as tmp:
-            file = Path(tmp)/'fake.env'
+            file = Path(tmp)/'synthetic-key-fixture.txt'
             file.write_text('UNRELATED=do-not-retain\nopenai_api_key=fake-o\nCLAUDE_API="fake-a"\n')
             before = dict(os.environ)
             self.assertEqual(c.load_keys(file, self.config), {'openai':'fake-o','anthropic':'fake-a'})
@@ -197,7 +197,7 @@ class BenchTests(unittest.TestCase):
 
     def test_missing_key_name_only_and_no_guessing(self):
         with tempfile.TemporaryDirectory() as tmp:
-            file = Path(tmp)/'fake.env'
+            file = Path(tmp)/'synthetic-key-fixture.txt'
             file.write_text('OTHER=private-unrelated\nCLAUDE_API=fake-a\n')
             output = io.StringIO()
             with redirect_stdout(output), redirect_stderr(output):
@@ -209,7 +209,7 @@ class BenchTests(unittest.TestCase):
 
     def test_duplicate_missing_empty_ambiguous_keys(self):
         with tempfile.TemporaryDirectory() as tmp:
-            file = Path(tmp)/'fake.env'
+            file = Path(tmp)/'synthetic-key-fixture.txt'
             for content in ['OPENAI_API_KEY=a\nopenai_api_key=b\nCLAUDE_API=c',
                             'OPENAI_API_KEY=\nCLAUDE_API=c',
                             'OPENAI_API_KEY="unfinished\nCLAUDE_API=c']:
