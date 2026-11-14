@@ -13,11 +13,12 @@ const usd = (v: number) => {
   return `$${whole}.${frac.padEnd(2, '0')}`;
 };
 const num = (v: number) => v.toLocaleString('en-GB');
-const sourceLabel = (s: string) => (/openrouter/i.test(s) ? 'OpenRouter listing (cheapest host)' : s.replace(/ \(official.*\)/i, ' list price').replace('Vendor list price', 'Vendor list price'));
+const sourceLabel = (s: string) => (/openrouter/i.test(s) ? 'OpenRouter listing (cheapest host)' : /introductory/i.test(s) ? 'Anthropic list price (introductory through 2026-08-31, which the Anthropic page now says is the standard price)' : s.replace(/ \(official.*\)/i, ' list price'));
 const rows = data.rows;
 const g = data.gpt55;
 const gem = data.gemini25Pro;
 const anthropicRows = rows.filter((r) => r.provider === 'Anthropic');
+const anthropicFullWindow = anthropicRows.filter((r) => r.contextWindow === 1000000);
 const gptRows = rows.filter((r) => r.provider === 'OpenAI');
 const googleRows = rows.filter((r) => r.provider === 'Google');
 const tiedCheap = data.cheapest.tied.join(', ');
@@ -33,7 +34,7 @@ const tiedDear = data.dearest.tied.join(' and ');
     <div class="stat"><b>{usd(data.dearest.fill)}</b><span>dearest full prompt ({tiedDear} tie)</span></div>
   </div>
 
-  <p>The price here is the input price per million tokens multiplied by one, so it is simply the listed input price. A 1,000-token answer adds the output price multiplied by 0.001, which moves the totals by pennies at most. The cheapest total, with that answer included, is {usd(data.cheapestTotal)} and the dearest is {usd(data.dearestTotal)}.</p>
+  <p>The price here is the input price per million tokens multiplied by one, so it is simply the listed input price. A 1,000-token answer adds the output price multiplied by 0.001, which moves the totals by pennies at most. One limit applies to those totals. For the {anthropicFullWindow.length} Anthropic rows whose recorded window is exactly 1,000,000 tokens, a prompt of 1,000,000 tokens leaves no room for a reply, because Anthropic's <a href="https://platform.claude.com/docs/en/build-with-claude/context-windows" rel="noopener">context windows page</a> (read on 14 November 2026) counts the model's own output within the window ("including the response itself"). Their totals are arithmetic for a full window, not a request that could be sent as written. The cheapest total, with that answer included, is {usd(data.cheapestTotal)} and the dearest is {usd(data.dearestTotal)}.</p>
 
   <h2>All {data.count} models, cheapest first</h2>
   <p>{data.underOneDollar} of the {data.count} cost under $1 to fill once, and {data.fiveDollarsOrMore} cost $5 or more. Anthropic has {anthropicRows.length} rows, OpenAI {gptRows.length} and Google {googleRows.length}; the rest come from Meta and Mistral. The chart uses a logarithmic scale, where each gridline is ten times the one before.</p>

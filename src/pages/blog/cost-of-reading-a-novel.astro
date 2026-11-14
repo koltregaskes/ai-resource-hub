@@ -22,7 +22,7 @@ const highRatio = rows.reduce((m, r) => (ratioOf(r) > ratioOf(m) ? r : m), rows[
 const snapDate = '14 November 2026';
 const notFit = data.notFit;
 const dear = data.dearOnes;
-const dearSmall = dear.list.filter((m) => m.novelsThatFit < 2);
+const dearSub1M = dear.list.filter((m) => m.contextWindow < 1000000);
 const dearRead = dear.list.map((m) => m.readCost);
 const joinList = (xs: string[]) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
 const bigWindow = dear.list.filter((m) => m.contextWindow >= 1000000).length;
@@ -91,7 +91,7 @@ const priceFromLabel = (p: string) => (p === 'openrouter' ? 'Cheapest host on Op
   <p>Our <a href={`${base}blog/context-windows-explained/`}>context windows explainer</a> covers what the window is and how it has grown.</p>
 
   <h2>The dear models all have room, and some cheap ones barely do</h2>
-  <p>There are {dear.count} models with an input price of $5 or more per million tokens, and every one of them fits the novel. Reading it costs between {money(Math.min(...dearRead))} and {money(Math.max(...dearRead))} on those. {bigWindow} of the {dear.count} have a window of 1,000,000 tokens or more, which is room for more than eight copies of the book. The exceptions are {joinList(dearSmall.map((m) => `${m.name} (${nf(m.contextWindow)} tokens, ${novels(m.novelsThatFit)} novels)`))}.</p>
+  <p>There are {dear.count} models with an input price of $5 or more per million tokens, and every one of them fits the novel. Reading it costs between {money(Math.min(...dearRead))} and {money(Math.max(...dearRead))} on those. {bigWindow} of the {dear.count} have a window of 1,000,000 tokens or more, which is room for more than eight copies of the book. The exceptions, with windows under 1,000,000 tokens, are {joinList(dearSub1M.map((m) => `${m.name} (${nf(m.contextWindow)} tokens, ${novels(m.novelsThatFit)} novels)`))}.</p>
   <p>At the other end, fitting is not the same as having room. {data.tightFit.count} of the {data.fitCount} models that fit leave less than {nf(data.tightFit.limitTokens)} tokens spare, about a tenth of the novel. The tightest is {data.smallestFitting.name}, with a {nf(data.smallestFitting.contextWindow)}-token window and {nf(data.smallestFitting.headroom)} tokens to spare. A question about the book has to go into the same window, and a lab may count the reply against it as well; we have not checked each model's rule. A second novel would not fit on any of these {data.tightFit.count}.</p>
 
   <h2>Writing the same length costs up to {money(dearest.writeCost)}</h2>

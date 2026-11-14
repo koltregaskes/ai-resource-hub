@@ -35,15 +35,17 @@ for (const slug of process.argv.slice(2)) {
     if (/[—–]/.test(r)) fix.push('dash in record');
   }
   if (!src.includes(`data/studio/${slug}`)) fix.push('page does not import its record');
-  if (!/StudioNote/.test(src)) fix.push('page does not render <StudioNote>');
-  if (!/InsightArticle/.test(src)) fix.push('page does not use InsightArticle');
+  // The tags themselves must be rendered; an import alone is not enough.
+  if (!/<StudioNote\b[^>]*article=\{/.test(body)) fix.push('page does not render <StudioNote article={...}>');
+  if (!/<InsightArticle\b/.test(body)) fix.push('page does not render <InsightArticle>');
 
   if (/[—–]/.test(src)) fix.push('em or en dash in page');
   const bad = text.match(/\b(pivotal|crucial|game-changer|landscape|ecosystem|delve|robust|leverag\w*|seamless|unlock\w*|showcase|underscore\w*|tapestry|testament|revolution\w*|cutting-edge|empower\w*|supercharg\w*)\b/gi);
   if (bad) fix.push(`banned words: ${[...new Set(bad.map((x) => x.toLowerCase()))].join(', ')}`);
   const frames = text.match(/\b(the real (story|question|issue)|this matters because|here's (the|what)|the takeaway|in conclusion|worth noting|it's worth|at the end of the day|the key is|the trick is|let's (dive|explore|look)|in today's|game changer|buckle up)\b/gi);
   if (frames) fix.push(`stock frames: ${[...new Set(frames.map((x) => x.toLowerCase()))].join(', ')}`);
-  if (/\b(artificial[\s-]?analysis|lmarena|lmsys|chatbot arena|arena elo|arena\.ai)\b/i.test(src)) fix.push('mentions a blocked data source (Artificial Analysis / Arena): remove or quote only as a name with no figures');
+  const recText = existsSync(rec) ? readFileSync(rec, 'utf8') : '';
+  if (/\b(artificial[\s-]?analysis|lmarena|lmsys|chatbot arena|arena elo|arena\.ai)\b/i.test(`${src} ${recText}`)) fix.push('mentions a blocked data source (Artificial Analysis / Arena) in the page or its record: remove it, or use it only as a name with no figures');
   if (/(MMLU|GPQA|SWE-bench|HumanEval|benchmark score)/i.test(text)) warn.push('mentions benchmark scores: only allowed if each is quoted from the lab with a link');
   if (/\b(experts say|studies show|many believe|it is widely|research shows|analysts say)\b/i.test(text)) fix.push('vague attribution');
 
@@ -55,7 +57,10 @@ for (const slug of process.argv.slice(2)) {
   const imp = sentences.filter((s) => /^(Keep|Record|Do not|Use|Check|Report|Preserve|Write|Add|Name|Show|Choose|Give|Count|Start|Separate|Compare|Treat|Avoid|Put|Make|Store|Save|Hold|Decide|Define|Include|Label|Pick|Run|Test|Reserve|Try|Take|Read|Look|Ask|Open|Copy|Paste)\b/.test(s)).length;
   const share = Math.round((imp / Math.max(1, sentences.length)) * 100);
   if (share > 20) fix.push(`instruction-led sentences ${share}% (keep under 20%; a how-to may use some)`);
-  const open = text.replace(/^.*?(<\/InsightArticle>)?/, '').split(/\s+/).slice(0, 2).join(' ');
+  const firstP = (body.match(/<InsightArticle\b[\s\S]*?>\s*<p[^>]*>([\s\S]*?)<\/p>/) || [])[1] || '';
+  const openWords = firstP.replace(/<[^>]+>/g, ' ').replace(/\{[^}]*\}/g, ' ').trim().split(/\s+/).slice(0, 2).join(' ');
+  if (/^(Suppose|Imagine|In today|Picture|Consider)\b/.test(openWords)) fix.push(`template opening: "${openWords}"`);
+  else if (/^(A|An|You|Say|Take)\b/.test(openWords)) warn.push(`opening starts "${openWords}": open with the finding if you can`);
   if (words < 900) fix.push(`too short: ${words} words (aim for 1,000 to 1,800)`);
   if (words > 2400) warn.push(`long: ${words} words`);
   if (/\b(tracker|results log)\b/i.test(text)) warn.push('uses "tracker"/"results log": explain it or cut it');
