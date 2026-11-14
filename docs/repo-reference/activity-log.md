@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 14 Nov 2026, 13:55 UTC
+Generated: 14 Nov 2026, 14:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 14 Nov 2026, 13:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 14 Nov 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 14 Nov 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 14 Nov 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 14 Nov 2026, 14:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 14 Nov 2026, 14:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 14 Nov 2026, 14:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 14 Nov 2026, 14:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | digest | Jensen Huang and the decline of the visionary showman founder CEO | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo) |
-| 14 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,035 open roles across 10 tracked companies. | `/jobs/` |
+| 14 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,034 open roles across 10 tracked companies. | `/jobs/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
 | 14 Nov 2026, 12:00 UTC | digest | Published the 2026-11-14 daily digest | 1 stories captured from 1 sources. | `/news/` |
 | 05 Nov 2026, 12:00 UTC | models | Gemini Omni 1.2 Flash added to the comparison layer | Google now appears in the live model index and ranking surfaces. | `/models/gemini-omni-1.2-flash/` |
