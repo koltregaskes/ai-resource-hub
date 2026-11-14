@@ -43,7 +43,7 @@ const {
   compactChrome = true,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname === "/404/" ? "/404.html" : Astro.url.pathname, Astro.site);
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const searchIndex = getSearchIndex(base);

@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+import publicLinks from './scripts/contracts/public-links.mjs';
 
 export default defineConfig({
   site: 'https://theairesourcehub.com',
@@ -14,6 +15,7 @@ export default defineConfig({
   },
   integrations: [
     react(),
+    publicLinks(),
     sitemap({
       // Story pages (/news/YYYY-MM-DD/<slug>/) are reached through editions and
       // the news page; most are noindex because they carry a source's summary.

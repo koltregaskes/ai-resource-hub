@@ -11,7 +11,7 @@ const { id } = Astro.params;
 const tool = getCLIToolById(id);
 
 if (!tool) {
-  return Astro.redirect(`${import.meta.env.BASE_URL}404`);
+  return Astro.redirect(`${import.meta.env.BASE_URL}404.html`);
 }
 
 const rawBase = import.meta.env.BASE_URL;
