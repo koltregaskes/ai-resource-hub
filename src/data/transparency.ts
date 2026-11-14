@@ -313,6 +313,19 @@ export const calculations: Calculation[] = [
       'Uses today\'s prices grouped by release period, not the price on launch day. A few rows have extreme ratios that look like data errors; the median is not moved by them.',
   },
   {
+    id: 'calc-price-history-repeats',
+    group: 'articles',
+    name: 'Price-history repeats',
+    meaning: 'How many price-history rows for lab-priced language models are the previous price written down again.',
+    formula:
+      'Take language models only, and rows whose source is not OpenRouter. For each model, order the rows by time and leave out the first. A later row repeats when its input and output prices both equal the previous row of the same model. Rows labelled with a lab name and "(official)" and rows labelled with a website address are also counted separately. Repeat share = repeats ÷ rows counted.',
+    inputs: 'Rows of price_history.json and models.json in the committed cache; the script records the SHA-256 of both.',
+    code: 'scripts/insights/price-history-repeats.mjs',
+    usedOn: 'The data article on price-history repeats.',
+    limits:
+      'Describes our records, not how often labs change prices. A change between two rows can be a real move, a correction or a change of source label; the history cannot tell them apart.',
+  },
+  {
     id: 'calc-blended-price',
     group: 'site',
     name: 'Blended price',
