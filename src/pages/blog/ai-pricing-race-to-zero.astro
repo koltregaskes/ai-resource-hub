@@ -1,133 +1,104 @@
 ---
-import { serializeJsonLd } from '../../lib/json-ld';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import StudioNote from '../../components/insights/StudioNote.astro';
+import ColumnChart from '../../components/insights/ColumnChart.astro';
+import { article } from '../../data/studio/ai-pricing-race-to-zero';
+import data from '../../data/insights/2026-11-14-ai-pricing-race-to-zero.json';
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
-const structuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
-  headline: 'The AI Pricing Race to Zero',
-  datePublished: '2026-02-15',
-  author: { '@type': 'Organization', name: 'The AI Resource Hub' },
-};
+type Row = { version: string; input: number; output: number; status: string | null; dateOnPage: string | null; url: string; read: string; promo?: string };
+type Step = { from: string; to: string; inputPct: number; outputPct: number; direction: string };
+type Line = { key: string; rows: Row[]; steps: Step[] };
+const usd = (v: number) => (Number.isInteger(v) ? `$${v}` : `$${v.toFixed(2)}`);
+const pair = (r: { input: number; output: number }) => `${usd(r.input)} / ${usd(r.output)}`;
+const abs = (v: number) => `${Math.abs(v)}%`;
+const signed = (v: number) => (v > 0 ? `+${v}%` : `${v}%`);
+const longDate = (iso: string | null) => (iso ? new Date(iso + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }) : 'None given');
+const lines = data.lines as unknown as Line[];
+const line = (k: string) => lines.find((l) => l.key === k)!;
+const opus = line('opus');
+const fable = line('fable');
+const main = line('openai-main');
+const astra = line('astra').rows[0];
+const row = (l: Line, v: string) => l.rows.find((r) => r.version === v)!;
+const stepTo = (l: Line, v: string) => l.steps.find((s) => s.to === v)!;
+const h = data.headline;
+const o4 = row(opus, 'Claude Opus 4');
+const o45 = row(opus, 'Claude Opus 4.5');
+const o55 = row(opus, 'Claude Opus 5.5');
+const f5 = row(fable, 'Claude Fable 5');
+const f52 = row(fable, 'Claude Fable 5.2');
+const g5 = row(main, 'GPT-5');
+const g55 = row(main, 'GPT-5.5');
+const sol56 = row(main, 'GPT-5.6 Sol');
+const sol6 = row(main, 'GPT-6 Sol');
+const sol61 = row(main, 'GPT-6.1 Sol');
+const s52 = stepTo(main, 'GPT-5.2');
+const s54 = stepTo(main, 'GPT-5.4');
+const s56 = stepTo(main, 'GPT-5.6 Sol');
+const s6 = stepTo(main, 'GPT-6 Sol');
+const oDown = stepTo(opus, 'Claude Opus 4.5');
+const oDown2 = stepTo(opus, 'Claude Opus 5.5');
+const fDown = stepTo(fable, 'Claude Fable 5.2');
+const opusHeld = opus.steps.filter((s) => s.direction === 'flat').length;
+const opusFell = opus.steps.filter((s) => s.direction === 'down').length;
+const mainRose = main.steps.filter((s) => s.direction === 'up').length;
+const short = (v: string) => v.replace('Claude ', '');
+const opusChart = opus.rows.map((r) => ({ label: short(r.version), value: r.output, valueLabel: usd(r.output), sub: `in ${usd(r.input)}`, highlight: r.version === o55.version }));
+const mainChart = main.rows.map((r) => ({ label: r.version.replace('GPT-', ''), value: r.output, valueLabel: usd(r.output), sub: `in ${usd(r.input)}`, highlight: r.version === g55.version }));
+const anthUrl = 'https://platform.claude.com/docs/en/about-claude/pricing';
+const deprecUrl = 'https://platform.claude.com/docs/en/about-claude/model-deprecations';
+const overviewUrl = 'https://platform.claude.com/docs/en/about-claude/models/overview';
+const oai = (id: string) => `https://developers.openai.com/api/docs/models/${id}`;
+const pageName = (u: string) => (u.includes('claude.com') ? 'Anthropic pricing' : `OpenAI ${u.split('/').pop()}`);
 ---
+<InsightArticle title={article.title} description={article.description} date={article.date} type={article.type} readTime={article.readTime} snapshot="2026-11-14" standfirst="On their own price lists, Anthropic's Opus line never rose between versions, while OpenAI's main line rose for three versions in a row before falling back.">
+  <p>Claude Opus has {opus.rows.length} versions on <a href={anthUrl} rel="noopener">Anthropic's pricing page</a>, and its list price has never gone up from one to the next. It went from {pair(o4)} per million input and output tokens for Opus 4 to {pair(o55)} for Opus 5.5, {abs(h.opusFirstToLast.inputPct)} lower. OpenAI's main line went the other way first: from {pair(g5)} for GPT-5 to {pair(g55)} for GPT-5.5, {h.openaiPeakVsGpt5.inputMultiple} times the input price and {h.openaiPeakVsGpt5.outputMultiple} times the output price, before its Sol models brought it down to {pair(sol61)}.</p>
+  <p>Every price here was read on 14 November 2026 on the lab's own pages, at the standard rate for short, uncached prompts, in US dollars per million tokens. This page replaces an older article of ours that said AI prices had fallen by more than 90% in two years. It gave no sources, and our own <a href={`${base}blog/price-history-repeats/`}>price history</a> cannot back a claim like that, so we started again from the price lists themselves.</p>
 
-<BaseLayout
-  title="The AI Pricing Race to Zero — Blog — The AI Resource Hub"
-  description="AI model pricing has dropped over 90% in two years. We tracked every price change and here is what the data shows."
->
-  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
-      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
-      <span class="mx-2">/</span>
-      <a href={`${base}blog/`} class="hover:text-(--color-text-secondary) transition-colors">Blog</a>
-      <span class="mx-2">/</span>
-      <span class="text-(--color-text-secondary)">The AI Pricing Race to Zero</span>
-    </nav>
+  <h2>Anthropic's Opus price has fallen twice and never risen</h2>
+  <p>Across {opus.steps.length} steps from Opus 4 to Opus 5.5, the price held {opusHeld} times and fell {opusFell} times. The big cut came at Opus 4.5, {abs(oDown.inputPct)} off both input and output. The second was Opus 5.5, {abs(oDown2.inputPct)} off both.</p>
 
-    <div class="mb-8">
-      <div class="flex items-center gap-3 mb-3">
-        <span class="text-xs px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-400 font-medium">Analysis</span>
-        <span class="text-xs text-(--color-text-muted)">15 Feb 2026</span>
-        <span class="text-xs text-(--color-text-muted)">6 min read</span>
-      </div>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3 leading-tight">
-        The AI Pricing Race to Zero
-      </h1>
-    </div>
+  <div class="table-wrap"><table><caption>Source: Anthropic pricing page and model deprecations page, both read 14 November 2026. US dollars per million tokens, base input and output. "Date on page" is the date inside the model ID where Anthropic gives one.</caption><thead><tr><th>Version</th><th class="num">Input</th><th class="num">Output</th><th>Status</th><th>Date on page</th><th>Source</th><th>Read</th></tr></thead><tbody>
+    {[...opus.rows, ...fable.rows].map((r) => (<tr><td>{r.version}</td><td class="num">{usd(r.input)}</td><td class="num">{usd(r.output)}</td><td>{r.status}</td><td>{longDate(r.dateOnPage)}</td><td><a href={r.url} rel="noopener">{pageName(r.url)}</a></td><td>{r.read}</td></tr>))}
+  </tbody></table></div>
 
-    <div class="prose prose-invert max-w-none space-y-6 text-(--color-text-secondary) leading-relaxed">
-      <p class="text-lg">
-        In early 2024, GPT-4 cost $30 per million input tokens. Today, models of comparable quality cost under $1. That's a 97% price drop in two years. Here's what happened and where pricing is heading.
-      </p>
+  <ColumnChart title="Claude Opus output price by version" data={opusChart} maxValue={80} height={300} caption="Source: Anthropic pricing page, read 14 November 2026. US dollars per million output tokens; input price under each label." summary={`Opus output price per million tokens: ${opus.rows.map((r) => `${short(r.version)} ${usd(r.output)}`).join(', ')}.`} />
 
-      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">The Price Collapse Timeline</h2>
-      <p>
-        The great AI price war started in earnest in mid-2024 when several things happened simultaneously:
-      </p>
-      <ul class="list-disc pl-6 space-y-2">
-        <li><strong class="text-(--color-text-primary)">GPT-4o launched at $5/$15</strong> — less than half the price of GPT-4 Turbo, with better performance.</li>
-        <li><strong class="text-(--color-text-primary)">DeepSeek V2 showed that efficiency wins</strong> — by using a Mixture of Experts architecture, they achieved GPT-4 class performance at 1/10th the cost.</li>
-        <li><strong class="text-(--color-text-primary)">Google made Gemini Flash nearly free</strong> — aggressively pricing their fastest model to gain market share.</li>
-        <li><strong class="text-(--color-text-primary)">Open-source models reached GPT-4 level</strong> — Llama 3.1 70B matched GPT-4 on many benchmarks, available for free.</li>
-      </ul>
+  <p>Anthropic gives a date for only three of these versions, and only inside model IDs on its <a href={deprecUrl} rel="noopener">deprecations page</a>: claude-opus-4-20250514, claude-opus-4-1-20250805 and claude-opus-4-5-20251101. The same page lists Opus 4 and Opus 4.1 as retired, on 15 June 2026 and 5 August 2026, and names claude-opus-4-8 as the recommended replacement for both. Anyone who followed that advice moved from {pair(o4)} to {pair(o45)}.</p>
+  <p>A flat price does not mean the product stood still. The <a href={overviewUrl} rel="noopener">models overview</a> lists a 200K context window for Opus 4.5 and 1M for Opus 4.6 and each later Opus, all at {pair(o45)}. The price list tracks what Anthropic charges for a version, and the version itself keeps changing.</p>
 
-      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">Where Are We Now?</h2>
-      <p>
-        The current pricing landscape looks remarkably different from even a year ago:
-      </p>
+  <h2>Fable costs twice as much as Opus, and also got cheaper</h2>
+  <p>Fable is listed above Opus on the same page. Fable 5 and Fable 5.1 cost {pair(f5)}; Fable 5.2 costs {pair(f52)}, a {abs(fDown.inputPct)} cut on both. That makes Fable 5.2 {h.topTiers[0].vsMainLine.inputMultiple} times the price of Opus 5.5 on input and on output.</p>
+  <p>Anthropic's documentation treats these as separate lines. Its Models API returns a line field, with values that include opus and fable, and the overview suggests starting with Opus 5.5 for most work and using Fable 5.2 for demanding reasoning. Nothing we read says Fable replaced Opus, so we have not joined the two into one series. Joining them would turn a cheaper Opus into a dearer "top model" overnight, which would say more about the joining than about the prices.</p>
 
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm border border-(--color-border) rounded-lg overflow-hidden">
-          <thead>
-            <tr class="bg-(--color-bg-tertiary)">
-              <th class="text-left py-2 px-3 text-(--color-text-muted)">Tier</th>
-              <th class="text-right py-2 px-3 text-(--color-text-muted)">Input/1M</th>
-              <th class="text-right py-2 px-3 text-(--color-text-muted)">Output/1M</th>
-              <th class="text-left py-2 px-3 text-(--color-text-muted)">Models</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-t border-(--color-border)/50">
-              <td class="py-2 px-3 font-medium text-(--color-text-primary)">Ultra Premium</td>
-              <td class="py-2 px-3 text-right">$15-20</td>
-              <td class="py-2 px-3 text-right">$60-80</td>
-              <td class="py-2 px-3">Claude Opus 4, o3-pro</td>
-            </tr>
-            <tr class="border-t border-(--color-border)/50">
-              <td class="py-2 px-3 font-medium text-(--color-text-primary)">Premium</td>
-              <td class="py-2 px-3 text-right">$2-10</td>
-              <td class="py-2 px-3 text-right">$8-40</td>
-              <td class="py-2 px-3">Claude Sonnet 4, GPT-4o, o3</td>
-            </tr>
-            <tr class="border-t border-(--color-border)/50">
-              <td class="py-2 px-3 font-medium text-(--color-text-primary)">Value</td>
-              <td class="py-2 px-3 text-right">$0.10-1</td>
-              <td class="py-2 px-3 text-right">$0.40-4</td>
-              <td class="py-2 px-3">GPT-4.1 Nano, Gemini Flash, DeepSeek V3</td>
-            </tr>
-            <tr class="border-t border-(--color-border)/50">
-              <td class="py-2 px-3 font-medium text-(--color-text-primary)">Free tier</td>
-              <td class="py-2 px-3 text-right">$0</td>
-              <td class="py-2 px-3 text-right">$0</td>
-              <td class="py-2 px-3">Gemini Flash (free tier), open-source self-hosted</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  <h2>OpenAI's main line rose for {mainRose} versions in a row</h2>
+  <p>OpenAI's pages give a dated snapshot name for each version from GPT-5 to GPT-5.5, so these can be placed in order with dates. GPT-5.1 kept GPT-5's price. GPT-5.2 added {s52.inputPct}% to both input and output. GPT-5.4 added {s54.inputPct}% to input and {s54.outputPct}% to output. GPT-5.5 then doubled both.</p>
 
-      <h2 class="text-2xl font-bold text-(--color-text-primary) mt-10 mb-4">What This Means for You</h2>
-      <p>
-        If you're building with AI or choosing a model:
-      </p>
-      <ol class="list-decimal pl-6 space-y-2">
-        <li><strong class="text-(--color-text-primary)">Don't overpay for tasks that cheap models handle well.</strong> Simple text generation, summarisation, and classification can often be done by $0.10/1M models.</li>
-        <li><strong class="text-(--color-text-primary)">Use premium models only where quality matters.</strong> Complex reasoning, creative writing, and coding tasks benefit from the best models.</li>
-        <li><strong class="text-(--color-text-primary)">Watch the open-source gap closing.</strong> Self-hosting is becoming cost-effective for high-volume use cases.</li>
-        <li><strong class="text-(--color-text-primary)">Expect prices to keep falling.</strong> Hardware improvements (Nvidia Blackwell, custom chips from Google/Amazon) will push costs lower.</li>
-      </ol>
+  <div class="table-wrap"><table><caption>Source: OpenAI model page for each version and the OpenAI pricing page, read 14 November 2026. US dollars per million tokens, standard rate, short prompts. "Date on page" is the date inside the default snapshot name where OpenAI gives one.</caption><thead><tr><th>Version</th><th class="num">Input</th><th class="num">Output</th><th>Status</th><th>Date on page</th><th>Source</th><th>Read</th></tr></thead><tbody>
+    {[...main.rows, astra].map((r) => (<tr><td>{r.version}{r.promo ? ' (promotional)' : ''}</td><td class="num">{usd(r.input)}</td><td class="num">{usd(r.output)}</td><td>{r.status ?? 'Not marked'}</td><td>{longDate(r.dateOnPage)}</td><td><a href={r.url} rel="noopener">{pageName(r.url)}</a></td><td>{r.read}</td></tr>))}
+  </tbody></table></div>
 
-      <div class="mt-10 p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-        <h3 class="text-lg font-semibold text-(--color-text-primary) mb-3">Track AI Pricing in Real Time</h3>
-        <p class="text-sm mb-3">Our comparison tables are updated automatically. See current pricing across all providers.</p>
-        <a href={`${base}compare/llm/`} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">View LLM pricing comparison &rarr;</a>
-      </div>
-    </div>
+  <ColumnChart title="OpenAI main line output price by version" data={mainChart} maxValue={32} height={300} caption="Source: OpenAI model pages, read 14 November 2026. US dollars per million output tokens for GPT-5 to GPT-6.1 Sol; input price under each label. The GPT-5.6 Sol price is promotional." summary={`OpenAI main line output price per million tokens: ${main.rows.map((r) => `${r.version} ${usd(r.output)}`).join(', ')}.`} />
 
-    <div class="mt-8">
-      <a
-        href={`${base}blog/`}
-        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
-      >
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
-        Back to Blog
-      </a>
-    </div>
-  </article>
+  <p>Those rises did not come with the same model each time. The <a href={oai('gpt-5')} rel="noopener">GPT-5</a>, GPT-5.1 and <a href={oai('gpt-5.2')} rel="noopener">GPT-5.2</a> pages list a 400,000-token context window; <a href={oai('gpt-5.4')} rel="noopener">GPT-5.4</a> and <a href={oai('gpt-5.5')} rel="noopener">GPT-5.5</a> list 1,050,000. The price list cannot tell us how much of each rise, if any, pays for that.</p>
 
-  <script type="application/ld+json" set:html={serializeJsonLd(structuredData)} />
-</BaseLayout>
+  <h2>Where the Sol models take the line</h2>
+  <p>After GPT-5.5 the names change. The <a href={oai('gpt-5.6-sol')} rel="noopener">GPT-5.6 Sol page</a> says Sol roughly corresponds to the unsuffixed tier in earlier GPT-5 families, which is why we treat it as the next step in the same line. It lists {pair(sol56)} and calls that a 20% reduction in input pricing and a 33% reduction in output pricing. Those figures match a move from GPT-5.5's {pair(g55)} ({signed(s56.inputPct)} and {signed(s56.outputPct)}), though the page does not name what it is comparing with. The price is promotional until 30 November 2026, and neither that page nor the pricing page says what it becomes afterwards.</p>
+  <p><a href={oai('gpt-6-sol')} rel="noopener">GPT-6 Sol</a> halves that again to {pair(sol6)} ({signed(s6.inputPct)} on both), and its page points to <a href={oai('gpt-6.1-sol')} rel="noopener">GPT-6.1 Sol</a> as the newer Sol model, which stays at {pair(sol61)}. From the GPT-5.5 peak to GPT-6.1 Sol, input is down {abs(h.openaiPeakToLatest.inputPct)} and output {abs(h.openaiPeakToLatest.outputPct)}. Set against GPT-5, where the line started, GPT-6.1 Sol's input price is still {h.openaiGpt5ToLatest.inputPct}% higher and its output price is the same.</p>
+
+  <h2>Is the dearest OpenAI model a new tier or a replacement?</h2>
+  <p>OpenAI also lists <a href={oai('gpt-6-astra')} rel="noopener">GPT-6 Astra</a> at {pair(astra)}, {h.topTiers[1].vsMainLine.inputMultiple} times GPT-6.1 Sol on both input and output. Its page gives no snapshot date and does not say it replaces another model. The GPT-5 and GPT-5.2 pages, though, both recommend moving to GPT-6 Astra. On list price alone, that move costs {h.astraVsGpt5.inputMultiple} times GPT-5's input price and {h.astraVsGpt5.outputMultiple} times its output price.</p>
+  <p>So the answer depends on which model counts as the top one. Follow the Sol line and OpenAI's price has fallen sharply since GPT-5.5. Follow the model OpenAI's older pages point to and it has risen. Anthropic has a similar shape, with Fable at twice Opus, but neither Fable nor Opus has risen between its own versions.</p>
+
+  <h2>What the price lists do not show</h2>
+  <p>These are list prices per token for named versions. They are not the price of a fixed level of capability, since a later version at the same price may do more or less, and we make no judgement on that. They are not the cost of a task either, because two models can use very different numbers of tokens on the same job. They say nothing about the wider market or any other lab.</p>
+  <p>Discounts and surcharges are left out. Both labs list a 50% batch discount and cheaper cached input, and both charge more for fast modes. OpenAI's pages for GPT-5.4 and later price prompts over 272K input tokens at 2x input and 1.5x output. Any of these can move a real bill further than the version-to-version changes above.</p>
+  <p>Dates are thin. Only the dates inside model and snapshot names appear here, and the pages do not say these are launch dates. For the Sol and Astra models and for Opus 4.6 onwards, the pages we read give none, so the order rests on version numbers.</p>
+
+  <h2>How the rows were collected</h2>
+  <p>We fetched each page as raw HTML on 14 November 2026 and searched its text for the price rows, rather than relying on a summary. The rows, with their URLs and read dates, are stored in <code>{article.frozen}</code>, and the percentages are worked out by <code>{article.code}</code>. A step change is the new price minus the old, divided by the old, for input and output separately. Opus 4 and Opus 4.1 are retired but still listed with prices on Anthropic's page; GPT-5 and GPT-5.1 are marked deprecated on OpenAI's. We found no OpenAI model page at the GPT-5.3 address, so the line skips from GPT-5.2 to GPT-5.4.</p>
+
+  <StudioNote article={article} snapshot="14 November 2026" />
+</InsightArticle>

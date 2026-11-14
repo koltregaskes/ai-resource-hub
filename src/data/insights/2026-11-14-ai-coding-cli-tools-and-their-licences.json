@@ -1,0 +1,512 @@
+{
+  "snapshotDate": "2026-11-14",
+  "inputs": {
+    "cliToolsSha256": "f68c01a6de200d60f8fcde430c5094727e069847539e5dab269c2cf539603e80",
+    "records": 13
+  },
+  "method": {
+    "read": "Each licence file was fetched as raw text with curl on 14 November 2026; the address, the first line as read and the SHA-256 of the fetched file are in rows[].read.files. For tools with no repository address in the catalogue, the repository was found by us and is marked addressFromCatalogue false.",
+    "rule": "A tool counts as open source by an OSI-style licence as the file states when the file names MIT, Apache-2.0 or AGPL-3.0 (pages for each read on opensource.org on 14 November 2026). FSL-1.1-MIT and \"All rights reserved\" do not count. A licence applies to the code in that repository only."
+  },
+  "counts": {
+    "tools": 13,
+    "withLicenceFileRead": 12,
+    "noPublicLicenceFound": 1,
+    "osiStyle": 10,
+    "notOsiStyle": 2,
+    "catalogueFlagAgrees": 8,
+    "catalogueFlagDisagrees": 4,
+    "catalogueNamedALicence": 8,
+    "catalogueNameAgrees": 5,
+    "catalogueNameDisagrees": 3,
+    "catalogueAddressBlank": 5,
+    "catalogueFlaggedOpen": 8
+  },
+  "flagDisagreements": [
+    "amazon-q-cli",
+    "codebuff",
+    "crush-cli",
+    "warp"
+  ],
+  "nameDisagreements": [
+    {
+      "id": "crush-cli",
+      "catalogue": "MIT",
+      "file": "FSL-1.1-MIT"
+    },
+    {
+      "id": "firecrawl-cli",
+      "catalogue": "Apache-2.0",
+      "file": "AGPL-3.0"
+    },
+    {
+      "id": "plandex",
+      "catalogue": "AGPL-3.0",
+      "file": "MIT"
+    }
+  ],
+  "notOsiStyle": [
+    "claude-code",
+    "crush-cli"
+  ],
+  "noLicenceFound": [
+    "coderabbit-cli"
+  ],
+  "pricingTypeOfOsiStyleTools": {
+    "free": 4,
+    "freemium": 5,
+    "subscription": 1
+  },
+  "rows": [
+    {
+      "id": "aider",
+      "name": "Aider",
+      "maker": "Paul Gauthier",
+      "catalogue": {
+        "openSource": 1,
+        "license": "Apache-2.0",
+        "githubUrl": "https://github.com/Aider-AI/aider",
+        "pricingType": "free",
+        "status": "active"
+      },
+      "read": {
+        "date": "2026-11-14",
+        "repo": "https://github.com/Aider-AI/aider",
+        "branch": "main",
+        "addressFromCatalogue": true,
+        "licence": "Apache-2.0",
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/Aider-AI/aider/main/LICENSE.txt",
+            "firstLine": "Apache License / Version 2.0, January 2004",
+            "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+          }
+        ],
+        "readme": null,
+        "extra": null,
+        "checked": null
+      },
+      "verified": true,
+      "osiStyle": true,
+      "flagAgrees": true,
+      "nameAgrees": true
+    },
+    {
+      "id": "amazon-q-cli",
+      "name": "Amazon Q Developer CLI",
+      "maker": "Amazon",
+      "catalogue": {
+        "openSource": 0,
+        "license": null,
+        "githubUrl": null,
+        "pricingType": "freemium",
+        "status": "active"
+      },
+      "read": {
+        "date": "2026-11-14",
+        "repo": "https://github.com/aws/amazon-q-developer-cli",
+        "branch": "main",
+        "addressFromCatalogue": false,
+        "licence": "MIT and Apache-2.0",
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/aws/amazon-q-developer-cli/main/LICENSE.APACHE",
+            "firstLine": "Apache License / Version 2.0, January 2004",
+            "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/aws/amazon-q-developer-cli/main/LICENSE.MIT",
+            "firstLine": "MIT License",
+            "sha256": "2b96c4c28ee2d49ba1b87f0bf8b2a92b098ef2b1ff8fe69e5f5426a9c14daaaa"
+          }
+        ],
+        "readme": {
+          "url": "https://raw.githubusercontent.com/aws/amazon-q-developer-cli/main/README.md",
+          "quote": "no longer being actively maintained",
+          "note": "README says the project only receives critical security fixes and that Amazon Q Developer CLI is now Kiro CLI, a closed-source product."
+        },
+        "extra": null,
+        "checked": null
+      },
+      "verified": true,
+      "osiStyle": true,
+      "flagAgrees": false,
+      "nameAgrees": null
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "maker": "Anthropic",
+      "catalogue": {
+        "openSource": 0,
+        "license": null,
+        "githubUrl": null,
+        "pricingType": "subscription",
+        "status": "active"
+      },
+      "read": {
+        "date": "2026-11-14",
+        "repo": "https://github.com/anthropics/claude-code",
+        "branch": "main",
+        "addressFromCatalogue": false,
+        "licence": "All rights reserved",
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/LICENSE.md",
+            "firstLine": "© Anthropic PBC. All rights reserved. (the file is this one line, which goes on to point to Anthropic Commercial Terms of Service)",
+            "sha256": "728158fd1037143fad6907e8fa34804177e598b7326519503fe83cafdef849e6"
+          }
+        ],
+        "readme": null,
+        "extra": null,
+        "checked": null
+      },
+      "verified": true,
+      "osiStyle": false,
+      "flagAgrees": true,
+      "nameAgrees": null
+    },
+    {
+      "id": "coderabbit-cli",
+      "name": "CodeRabbit CLI",
+      "maker": "CodeRabbit",
+      "catalogue": {
+        "openSource": 0,
+        "license": null,
+        "githubUrl": null,
+        "pricingType": "freemium",
+        "status": "active"
+      },
+      "read": {
+        "date": "2026-11-14",
+        "repo": null,
+        "branch": null,
+        "addressFromCatalogue": false,
+        "licence": null,
+        "files": [],
+        "readme": null,
+        "extra": null,
+        "checked": "The catalogue has no repository address. We read https://www.coderabbit.ai/cli (no github.com link in the page) and the repository list of the coderabbitai organisation on GitHub through api.github.com/orgs/coderabbitai/repos (40 repositories, none whose name or description says it is the command-line tool)."
+      },
+      "verified": false,
+      "osiStyle": null,
+      "flagAgrees": null,
+      "nameAgrees": null
+    },
+    {
+      "id": "codebuff",
+      "name": "Codebuff",
+      "maker": "Codebuff",
+      "catalogue": {
+        "openSource": 0,
+        "license": null,
+        "githubUrl": null,
+        "pricingType": "freemium",
+        "status": "active"
+      },
+      "read": {
+        "date": "2026-11-14",
+        "repo": "https://github.com/CodebuffAI/codebuff",
+        "branch": "main",
+        "addressFromCatalogue": false,
+        "licence": "Apache-2.0",
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/CodebuffAI/codebuff/main/LICENSE",
+            "firstLine": "Apache License / Version 2.0, January 2004",
+            "sha256": "9c4dbb2a50bff1fa68a3f9ce758c374c5e47d57aea2b08013de2f2a3caea7469"
+          }
+        ],
+        "readme": {
+          "url": "https://raw.githubusercontent.com/CodebuffAI/codebuff/main/README.md",
+          "note": "The address redirects to a repository now named freebuff, and its README is titled Freebuff."
+        },
+        "extra": null,
+        "checked": null
+      },
+      "verified": true,
+      "osiStyle": true,
+      "flagAgrees": false,
+      "nameAgrees": null
+    },
+    {
+      "id": "openai-codex",
+      "name": "Codex CLI",
+      "maker": "OpenAI",
+      "catalogue": {
+        "openSource": 1,
+        "license": "Apache-2.0",
+        "githubUrl": "https://github.com/openai/codex",
+        "pricingType": "subscription",
+        "status": "active"
+      },
+      "read": {
+        "date": "2026-11-14",
+        "repo": "https://github.com/openai/codex",
+        "branch": "main",
+        "addressFromCatalogue": true,
+        "licence": "Apache-2.0",
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/openai/codex/main/LICENSE",
+            "firstLine": "Apache License / Version 2.0, January 2004",
+            "sha256": "d17f227e4df5da1600391338865ce0f3055211760a36688f816941d58232d8dc"
+          }
+        ],
+        "readme": null,
+        "extra": null,
+        "checked": null
+      },
+      "verified": true,
+      "osiStyle": true,
+      "flagAgrees": true,
+      "nameAgrees": true
+    },
+    {
+      "id": "crush-cli",
+      "name": "Crush",
+      "maker": "Charmbracelet",
+      "catalogue": {
+        "openSource": 1,
+        "license": "MIT",
+        "githubUrl": "https://github.com/charmbracelet/crush",
+        "pricingType": "free",
+        "status": "active"
+      },
+      "read": {
+        "date": "2026-11-14",
+        "repo": "https://github.com/charmbracelet/crush",
+        "branch": "main",
+        "addressFromCatalogue": true,
+        "licence": "FSL-1.1-MIT",
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/charmbracelet/crush/main/LICENSE.md",
+            "firstLine": "# Functional Source License, Version 1.1, MIT Future License",
+            "sha256": "3faa5d4f3a51f07e4963b993f27af4b9344d7c509fa20aa856dd878788ba5f18"
+          }
+        ],
+        "readme": null,
+        "extra": null,
+        "checked": null
+      },
+      "verified": true,
+      "osiStyle": false,
+      "flagAgrees": false,
+      "nameAgrees": false
+    },
+    {
+      "id": "firecrawl-cli",
+      "name": "Firecrawl CLI",
+      "maker": "Firecrawl",
+      "catalogue": {
+        "openSource": 1,
+        "license": "Apache-2.0",
+        "githubUrl": "https://github.com/firecrawl/firecrawl",
+        "pricingType": "freemium",
+        "status": "active"
+      },
+      "read": {
+        "date": "2026-11-14",
+        "repo": "https://github.com/firecrawl/firecrawl",
+        "branch": "main",
+        "addressFromCatalogue": true,
+        "licence": "AGPL-3.0",
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/firecrawl/firecrawl/main/LICENSE",
+            "firstLine": "GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007",
+            "sha256": "9b4649365c4f29d8f41301f4cda1e5bd9da51cf1bbb19ab9d568ff57d56e3b33"
+          }
+        ],
+        "readme": null,
+        "extra": {
+          "repo": "https://github.com/firecrawl/cli",
+          "note": "The command-line tool has its own repository. Its top level holds no licence file (listing read through api.github.com), and its package.json has \"license\": \"ISC\".",
+          "packageJson": "https://raw.githubusercontent.com/firecrawl/cli/main/package.json",
+          "packageJsonSha256": "84955b0ba03c216bb8aebd078a51438a5a24d4bc21eb7a46b1932e184e5999a5"
+        },
+        "checked": null
+      },
+      "verified": true,
+      "osiStyle": true,
+      "flagAgrees": true,
+      "nameAgrees": false
+    },
+    {
+      "id": "gemini-cli",
+      "name": "Gemini CLI",
+      "maker": "Google",
+      "catalogue": {
+        "openSource": 1,
+        "license": "Apache-2.0",
+        "githubUrl": "https://github.com/google-gemini/gemini-cli",
+        "pricingType": "free",
+        "status": "active"
+      },
+      "read": {
+        "date": "2026-11-14",
+        "repo": "https://github.com/google-gemini/gemini-cli",
+        "branch": "main",
+        "addressFromCatalogue": true,
+        "licence": "Apache-2.0",
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/google-gemini/gemini-cli/main/LICENSE",
+            "firstLine": "Apache License / Version 2.0, January 2004",
+            "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+          }
+        ],
+        "readme": null,
+        "extra": null,
+        "checked": null
+      },
+      "verified": true,
+      "osiStyle": true,
+      "flagAgrees": true,
+      "nameAgrees": true
+    },
+    {
+      "id": "goose",
+      "name": "Goose",
+      "maker": "Block (Square)",
+      "catalogue": {
+        "openSource": 1,
+        "license": "Apache-2.0",
+        "githubUrl": "https://github.com/block/goose",
+        "pricingType": "free",
+        "status": "active"
+      },
+      "read": {
+        "date": "2026-11-14",
+        "repo": "https://github.com/block/goose",
+        "branch": "main",
+        "addressFromCatalogue": true,
+        "licence": "Apache-2.0",
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/block/goose/main/LICENSE",
+            "firstLine": "Apache License / Version 2.0, January 2004",
+            "sha256": "44459b86c2e96fdbfd8a6b5c33d30d4b04b5293fcb2ec96fe4dcc4e0f90b8962"
+          }
+        ],
+        "readme": null,
+        "extra": {
+          "note": "The address now redirects to github.com/aaif-goose/goose; the file there has the same SHA-256."
+        },
+        "checked": null
+      },
+      "verified": true,
+      "osiStyle": true,
+      "flagAgrees": true,
+      "nameAgrees": true
+    },
+    {
+      "id": "plandex",
+      "name": "Plandex",
+      "maker": "Plandex",
+      "catalogue": {
+        "openSource": 1,
+        "license": "AGPL-3.0",
+        "githubUrl": "https://github.com/plandex-ai/plandex",
+        "pricingType": "freemium",
+        "status": "active"
+      },
+      "read": {
+        "date": "2026-11-14",
+        "repo": "https://github.com/plandex-ai/plandex",
+        "branch": "main",
+        "addressFromCatalogue": true,
+        "licence": "MIT",
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/plandex-ai/plandex/main/LICENSE",
+            "firstLine": "MIT License",
+            "sha256": "eda5a26207e5a30cbad304444ea650a588c54f7404368cbefdb7b9a3e206bcd0"
+          }
+        ],
+        "readme": null,
+        "extra": null,
+        "checked": null
+      },
+      "verified": true,
+      "osiStyle": true,
+      "flagAgrees": true,
+      "nameAgrees": false
+    },
+    {
+      "id": "qwen-code",
+      "name": "Qwen Code",
+      "maker": "Alibaba",
+      "catalogue": {
+        "openSource": 1,
+        "license": "Apache-2.0",
+        "githubUrl": "https://github.com/QwenLM/qwen-code",
+        "pricingType": "free",
+        "status": "active"
+      },
+      "read": {
+        "date": "2026-11-14",
+        "repo": "https://github.com/QwenLM/qwen-code",
+        "branch": "main",
+        "addressFromCatalogue": true,
+        "licence": "Apache-2.0",
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/QwenLM/qwen-code/main/LICENSE",
+            "firstLine": "Apache License / Version 2.0, January 2004",
+            "sha256": "55367b61ccd2a016a0159ad886bd66a3ee6cb5e873d0c75c803c897dd245b075"
+          }
+        ],
+        "readme": null,
+        "extra": null,
+        "checked": null
+      },
+      "verified": true,
+      "osiStyle": true,
+      "flagAgrees": true,
+      "nameAgrees": true
+    },
+    {
+      "id": "warp",
+      "name": "Warp",
+      "maker": "Warp",
+      "catalogue": {
+        "openSource": 0,
+        "license": null,
+        "githubUrl": null,
+        "pricingType": "freemium",
+        "status": "active"
+      },
+      "read": {
+        "date": "2026-11-14",
+        "repo": "https://github.com/warpdotdev/warp",
+        "branch": "master",
+        "addressFromCatalogue": false,
+        "licence": "AGPL-3.0 and MIT",
+        "files": [
+          {
+            "url": "https://raw.githubusercontent.com/warpdotdev/warp/master/LICENSE-AGPL",
+            "firstLine": "Copyright (C) 2020-2026 Denver Technologies, Inc. / GNU AFFERO GENERAL PUBLIC LICENSE / Version 3, 19 November 2007",
+            "sha256": "16f8dac5fd5755d74ba05cb377c23f49e794252d200548fb3b227e1c5dcbfaec"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/warpdotdev/warp/master/LICENSE-MIT",
+            "firstLine": "Copyright (C) 2020-2026 Denver Technologies, Inc. / then the MIT permission text (no title line)",
+            "sha256": "0cb5f8a282734dd41844fc3bdc28bda274cc71db8de289a9959263b61210daa9"
+          }
+        ],
+        "readme": {
+          "url": "https://raw.githubusercontent.com/warpdotdev/warp/master/README.md",
+          "note": "README: the warpui_core and warpui crates are MIT; the rest of the code in the repository is AGPL v3."
+        },
+        "extra": null,
+        "checked": null
+      },
+      "verified": true,
+      "osiStyle": true,
+      "flagAgrees": false,
+      "nameAgrees": null
+    }
+  ]
+}

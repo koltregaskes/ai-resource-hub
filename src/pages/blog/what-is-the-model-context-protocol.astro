@@ -1,0 +1,99 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import StudioNote from '../../components/insights/StudioNote.astro';
+import { article } from '../../data/studio/what-is-the-model-context-protocol';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const site = 'https://modelcontextprotocol.io';
+const pages = {
+  arch: `${site}/docs/2026-07-28/learn/architecture`,
+  spec: `${site}/specification/2026-07-28`,
+  trans: `${site}/specification/2026-07-28/basic/transports`,
+  http: `${site}/specification/2026-07-28/basic/transports/streamable-http`,
+  stdio: `${site}/specification/2026-07-28/basic/transports/stdio`,
+  tools: `${site}/specification/2026-07-28/server/tools`,
+  res: `${site}/specification/2026-07-28/server/resources`,
+  prompts: `${site}/specification/2026-07-28/server/prompts`,
+  ver: `${site}/docs/2026-07-28/learn/versioning`,
+  intro: `${site}/docs/2026-07-28/getting-started/intro`,
+  gov: `${site}/community/governance`,
+  sep: `${site}/seps/932-model-context-protocol-governance`,
+};
+const show = (u: string) => u.replace('https://', '');
+const concepts = [
+  { term: 'Host', says: 'The AI application that coordinates and manages one or more MCP clients.', page: pages.arch },
+  { term: 'Client', says: 'A component that keeps a connection to one MCP server and gets context from it for the host to use.', page: pages.arch },
+  { term: 'Server', says: 'A program that provides context to MCP clients. It can run locally or remotely.', page: pages.arch },
+  { term: 'Tools', says: 'Functions for the AI model to execute.', page: pages.spec },
+  { term: 'Resources', says: 'Context and data, for the user or the AI model to use.', page: pages.spec },
+  { term: 'Prompts', says: 'Templated messages and workflows for users.', page: pages.spec },
+  { term: 'Elicitation', says: 'A feature a client may offer: server-initiated requests for additional information from users.', page: pages.spec },
+  { term: 'stdio', says: 'Newline-delimited messages over the standard streams of a subprocess that the client launches.', page: pages.trans },
+  { term: 'Streamable HTTP', says: 'Each message is an HTTP POST to a single MCP endpoint. Replies arrive as a JSON object or a request-scoped SSE stream.', page: pages.trans },
+  { term: 'server/discover', says: 'A request every server must implement. It returns the supported protocol versions, capabilities and identity, and a client may send it before any other request.', page: pages.arch },
+  { term: 'Protocol version', says: 'A YYYY-MM-DD string giving the last date backwards incompatible changes were made. The current one is 2026-07-28.', page: pages.ver },
+];
+---
+<InsightArticle title={article.title} description={article.description} date={article.date} type={article.type} readTime={article.readTime} snapshot="2026-11-14" standfirst="MCP is an agreed set of messages for an AI application to ask an outside program what it can do, and the official pages say it does not dictate how the model is used and cannot enforce its own security principles.">
+  <p>The Model Context Protocol (MCP) is a standard for connecting an AI application to outside programs. Its specification is currently at revision 2026-07-28, which defines two standard transports (ways of carrying the messages) and lets a server offer three kinds of thing: tools, resources and prompts. Everything below comes from the official pages at modelcontextprotocol.io, read on 14 November 2026, and each claim keeps the wording strength of the page it comes from.</p>
+
+  <div class="stat-row">
+    <div class="stat"><b>2026-07-28</b><span>current protocol version</span></div>
+    <div class="stat"><b>2</b><span>standard transports: stdio and Streamable HTTP</span></div>
+    <div class="stat"><b>3</b><span>kinds of thing a server can offer</span></div>
+  </div>
+
+  <h2>What does MCP add to a chatbot?</h2>
+  <p>A chatbot on its own works from what it learned in training and whatever you type or upload. MCP is described on its <a href={pages.intro} rel="noopener">introduction page</a> as "an open-source standard for connecting AI applications to external systems". The page names three kinds of target: data sources such as local files and databases, tools such as search engines and calculators, and workflows such as specialised prompts.</p>
+  <p>The same page compares MCP to a USB-C port: as USB-C is a standard way to connect electronic devices, MCP is a standard way to connect AI applications to external systems. The <a href={pages.arch} rel="noopener">architecture overview</a> sets the boundary. MCP focuses only on the protocol for exchanging context, and it does not dictate how an AI application uses a language model or manages the context it is given.</p>
+  <p>In practice that means MCP is the socket and not the decision about what to plug in. Whether a particular chatbot or coding tool supports MCP is a question for that product's own documentation. Our <a href={`${base}tools/`}>tools page</a> lists chat, coding and developer tools, and it does not record MCP support.</p>
+
+  <h2>Three roles: host, client and server</h2>
+  <p>The architecture page names three participants. The host is the AI application, and its examples are Claude Code, Claude Desktop and Visual Studio Code. The server is a program that provides context. The client sits between them: the host creates one client for each server, and each client keeps its own connection to its own server.</p>
+  <p>The page's worked example is Visual Studio Code as the host. When it connects to the Sentry server it creates one client object, and when it then connects to the local filesystem server it creates another. A server counts as "local" or "remote" by where it runs. When Claude Desktop launches the filesystem server, the server runs on the same machine, while the official Sentry server runs on Sentry's platform. Local servers using the stdio transport typically serve a single client, according to the page, whereas remote servers using Streamable HTTP will typically serve many.</p>
+
+  <h2>A server can offer tools, resources and prompts</h2>
+  <p>The specification overview says servers offer any of three features. Tools are functions for the AI model to run, and the architecture page's examples are file operations, API calls and database queries. Resources are context and data, such as file contents or database records. Prompts are reusable templates, such as system prompts or worked examples.</p>
+  <p>The page gives one combined case. A server about a database could expose tools for querying it, a resource holding its schema, and a prompt with example interactions. The three differ in who is meant to decide when each is used. The <a href={pages.tools} rel="noopener">tools page</a> says tools are designed to be model-controlled, meaning the language model can discover and invoke them automatically, based on its understanding of the context and the user's prompts. The <a href={pages.res} rel="noopener">resources page</a> says resources are application-driven, with the host application deciding how to bring the context in. The <a href={pages.prompts} rel="noopener">prompts page</a> says prompts are user-controlled, and it adds that this describes who decides when a prompt is used, not who wrote its content.</p>
+  <p>All three pages also say implementations are free to expose these through any interface pattern, so the split is a design intent and not a rule about screens. Clients can offer something back to servers too. The specification overview lists elicitation, where a server asks the user for more information. The architecture page marks two other client features, sampling and logging, as deprecated as of version 2026-07-28.</p>
+
+  <h2>How does a client learn what a server supports?</h2>
+  <p>In this revision, each request carries the protocol version and the capabilities relevant to it in a field called _meta, and the architecture page calls the protocol stateless for that reason: a server can process each request on its own. A client that wants to know a server's supported versions, capabilities and identity in one go can send a server/discover request, which every server must implement. Sending it is optional, because a client may send any request directly and deal with a version error if one comes back.</p>
+  <p>The error route works like this, per the <a href={pages.ver} rel="noopener">versioning page</a>. If the server does not support the requested version, it replies with an error listing the versions it does support, and the client retries with one both sides share, or reports an error to the user if there is none. The architecture page's example discovery reply shows a server declaring that it supports tools, with change notifications, and resources. That declaration is how the client knows which operations the server can handle.</p>
+  <p>The same versioning page says that earlier revisions, 2025-11-25 and before, were handshake-based. The Streamable HTTP page records that revision 2026-07-28 removed protocol-level sessions and the GET stream endpoint. A tutorial that describes an opening handshake may therefore be written for an older revision, and the date on the page is worth checking. The version string itself is a date for the last backwards incompatible change, not the date of the latest edit, and the page says the current revision may continue to receive backwards compatible changes.</p>
+
+  <h2>Two standard transports, and custom ones are allowed</h2>
+  <p>The <a href={pages.trans} rel="noopener">transports page</a> states that protocol meaning is identical on every transport. A transport only decides how messages are framed and delivered. It names two standard ones and says clients and servers can also implement custom transports.</p>
+  <p>With <a href={pages.stdio} rel="noopener">stdio</a>, the client launches the server as a subprocess and they exchange messages, one per line, over the process's standard input and output. With <a href={pages.http} rel="noopener">Streamable HTTP</a>, each message from the client is an HTTP POST to a single endpoint, and the reply comes back as a JSON object or as a stream scoped to that request. The architecture page adds that Streamable HTTP supports standard HTTP authentication, including bearer tokens, API keys and custom headers, and that MCP recommends using OAuth to obtain tokens.</p>
+
+  <h2>Each term and what the specification says it is</h2>
+  <div class="table-wrap">
+    <table>
+      <caption>Source: Model Context Protocol documentation and specification, revision 2026-07-28, read 14 November 2026. Wording is paraphrased from each page.</caption>
+      <thead><tr><th>Concept</th><th>What the page says it is</th><th>Page</th></tr></thead>
+      <tbody>
+        {concepts.map((c) => (
+          <tr>
+            <td><strong>{c.term}</strong></td>
+            <td>{c.says}</td>
+            <td style="word-break:break-all"><a href={c.page} rel="noopener">{show(c.page)}</a></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Who looks after the specification</h2>
+  <p>The <a href={pages.gov} rel="noopener">governance page</a> says the project has been established as a Series of LF Projects, LLC. The page does not expand "LF", so we have not either. It adds that governance changes made under the page must also be approved by LF Projects, LLC, and that trademark and other project policies are kept at lfprojects.org.</p>
+  <p>Inside the project, the page describes four roles: Contributors, Maintainers, Core Maintainers and Lead Maintainers, with the Lead Maintainers holding final decision authority. Membership belongs to individuals and not companies, and the page says no seats are reserved for specific companies. Code and specification contributions are made under the Apache 2.0 licence, and documentation outside the specification is under Creative Commons Attribution 4.0.</p>
+  <p>The governance page gives no date for the LF Projects arrangement. The nearest dated page is <a href={pages.sep} rel="noopener">SEP-932</a>, the proposal that set up the project's formal governance model. It has status Final and was created on 2025-07-08. That is the date of the proposal, and the pages we read do not say it is the date the LF Projects entity was formed.</p>
+
+  <h2>What MCP leaves open</h2>
+  <p>The official pages are direct about the limits. On the model, the architecture page says MCP does not dictate how applications use language models or manage the context they receive. On security, the <a href={pages.spec} rel="noopener">specification overview</a> says MCP itself cannot enforce its security principles at the protocol level, and it asks implementors to build consent and authorisation flows and to document the security implications. Those principles say users must explicitly consent to data access and operations, hosts must get consent before exposing user data to servers, and tools represent arbitrary code execution and must be treated with appropriate caution. Descriptions of tool behaviour, such as annotations, should be considered untrusted unless they come from a trusted server.</p>
+  <p>On approval, the two pages use different strengths. The overview says hosts must obtain explicit user consent before invoking any tool. The tools page says there SHOULD always be a human in the loop with the ability to deny tool invocations, and that applications SHOULD show which tools are exposed, mark when they run and ask for confirmation. It also says the protocol does not mandate any interaction model, so how that confirmation looks is up to each application.</p>
+  <p>On money, the pages are silent. We searched the text of the fourteen pages we downloaded for pay, billing, price, cost, fee and charge, and none appears in a sense about money. The pages we read do not say who pays for running a server, for the model usage a tool call triggers, or for any hosted service a server connects to. We also did not summarise the specification's separate authorization pages, which cover the OAuth side that the architecture page recommends for HTTP.</p>
+
+  <StudioNote article={article} snapshot="14 November 2026" />
+</InsightArticle>
