@@ -46,8 +46,8 @@ export const BLOCKED_DATA_SOURCES: readonly BlockedDataSource[] = [
     domains: ['artificialanalysis.ai', 'artificialanalysiscdn.com'],
     reason:
       'Data Platform Terms (revised 19 Aug 2026), section 2.5, bar use of its data in ranking or comparison products '
-      + 'without written consent, and 2.4 bars redistribution; its Terms of Use (revised 28 Apr 2024) bar automated '
-      + 'requests to the site (3.3) and building a competitive site (2.2(c)).',
+      + 'without written consent, and 2.4 bars redistribution; its website Terms of Use (revised 15 Sep 2026) bar '
+      + 'automated requests to the site (3.3(b)(vi)) and building a competitive site (2.2(c)).',
     termsUrl: 'https://artificialanalysiscdn.com/legal/ProDataPlatformTerms.pdf',
     termsCheckedOn: '2026-11-14',
   },
