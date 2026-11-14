@@ -1,0 +1,19 @@
+# Deliberate failure used to prove KOL-6328 after this file is on the default branch.
+# workflow_dispatch only. It does not run on push or pull request.
+name: alert-selftest
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fail:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Deliberate failure for the Rooms OS alert route
+        run: |
+          echo "Deliberate failure so Workflow failure alert can record this run in rooms_os_alert_events."
+          exit 1
