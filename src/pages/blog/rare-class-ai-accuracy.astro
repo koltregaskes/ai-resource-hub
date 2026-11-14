@@ -1,0 +1,31 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import WorkedTable from '../../components/insights/WorkedTable.astro';
+import PractitionerNote from '../../components/insights/PractitionerNote.astro';
+import { practitionerB8 } from '../../data/practitioner-b8';
+import examples from '../../data/insights/2026-11-14-b8.json';
+const e = practitionerB8.find(p => p.slug === 'rare-class-ai-accuracy')!;
+---
+<InsightArticle title={e.title} description={e.description} date="2026-11-14" type={e.type as 'Analysis' | 'Explainer'} readTime="5 min" standfirst="If only ten of a thousand cases need attention, labelling everything negative scores 99% accuracy and finds none of them. Keep the confusion matrix beside the headline score.">
+
+<p>Suppose an assistant flags documents that need a particular review. In a fictional queue of a thousand documents, only ten qualify. A classifier that says “no review needed” every time gets 990 decisions right. Its 99% accuracy sounds reassuring while its useful detection count is zero.</p>
+<p>Google's <a href={e.sources[0].url}>classification metrics guide</a>, read on 14 November 2026, defines accuracy, precision and recall and discusses imbalanced data. We use those definitions to build a small example, without claiming a result for any real AI model.</p>
+<WorkedTable headers={["Synthetic candidate","True positives","False negatives","False positives","True negatives","Accuracy"]} rows={examples['rare-class-ai-accuracy']} caption="Constructed predictions for 1,000 cases: ten positives and 990 negatives. No named model was evaluated." />
+<p>The second candidate finds eight relevant documents and misses two. It also flags twenty irrelevant documents. Its accuracy is lower, at 97.8%, while its recall is 80%. Twenty-eight documents enter the review queue and eight are relevant, giving precision of about 28.6%.</p>
+<h2>Decide which error creates work</h2>
+<p>A false positive sends an irrelevant document for review. A false negative leaves a relevant document unflagged. Those consequences belong in the acceptance rule. They cannot be recovered from overall accuracy after the counts have been discarded.</p>
+<p>Keep the four counts: true positives, false negatives, false positives and true negatives. Give the positive label a plain definition. “Positive” means the condition you chose to detect, not necessarily a desirable outcome.</p>
+<p>For the always-negative candidate, precision has a zero denominator because it predicts no positives. Show it as undefined or not applicable under your stated convention. Printing 100% would make a detector that detects nothing look perfect.</p>
+<h2>The review queue is part of the comparison</h2>
+<p>If a person must inspect flagged documents, record the queue size and observed review time. A candidate that finds more relevant cases can still require more checking. Present both outcomes so the decision can reflect the actual workflow.</p>
+<p>Do not assign a money value to missed cases without a stated assumption and a reason it fits the job. The example deliberately leaves those consequences unpriced. Practitioners should choose an acceptance rule with the people responsible for handling the errors.</p>
+<p>If the classifier exposes a score and threshold, preserve the chosen threshold with the result. Changing it creates a different decision configuration. Compare candidates at the conditions you would actually deploy rather than selecting a favourable threshold after seeing the test labels.</p>
+<h2>Keep the test mix visible</h2>
+<p>Report how many positive and negative examples the set contains. A deliberately balanced diagnostic set can help inspect failure types, but its precision need not describe the natural incoming queue. Keep diagnostic and workload-representative results separately labelled.</p>
+<p>When rare positives are important, collect enough reviewed examples to inspect their variety. Do not claim broad coverage from a handful of near-duplicates. Preserve a held-back group that was not used to improve the prompt.</p>
+<p>Check ambiguous labels before blaming the model. If reviewers disagree about whether a document qualifies, clarify the rule and keep an adjudication note. A changing reference label makes the comparison difficult to reproduce.</p>
+<h2>Choose the tracker headline from the job</h2>
+<p>For a screening workflow, lead with detected relevant cases and missed relevant cases, then show false alarms and review load. For another task, a different ordering may be appropriate. Keep the raw counts available whichever headline you choose.</p>
+<p>A model tracker should help somebody decide how the system will behave on their queue. A large accuracy percentage is useful only when it remains attached to the class mix and the errors it contains.</p>
+<PractitionerNote evidence={e} />
+</InsightArticle>
