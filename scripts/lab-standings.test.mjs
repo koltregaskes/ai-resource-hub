@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import { scoreSnapshot, composite, rank, sensitivity, historyChanges, selectListedLabs, selectCurrentSnapshot } from '../src/lib/lab-standings.mjs';
+import { scoreSnapshot, composite, rank, sensitivity, historyChanges, selectListedLabs, selectCurrentSnapshot, expandMappedEpoch } from '../src/lib/lab-standings.mjs';
 const model = (lab,eci,released='2026-10-01',extra={})=>({lab,eci,released,...extra});
 const input = {date:'2026-11-14',labs:[{id:'a'},{id:'b'}],models:[model('a',10,'2025-01-01'),model('a',20),model('b',15)]};
 test('same-vintage floor, leaders, negative ECI and missing prices',()=>{
@@ -89,4 +89,25 @@ test('corrected default keeps the original separate and correction visible',()=>
  const component=readFileSync('src/components/LabStandings.astro','utf8');
  assert.match(component,/Value scores are under correction/);
  assert.match(component,/as published/);
+});
+
+test('expanded cohort has sourced frontiers for eleven labs, without invented prices',()=>{
+ const original=JSON.parse(readFileSync('data/lab-standings/snapshots/2026-11-14.json','utf8'));
+ const expanded=JSON.parse(readFileSync('data/lab-standings/rescored/0.3.2/2026-11-14.json','utf8'));
+ assert.equal(expanded.rows.length,11);
+ for(const [id,best] of [['meta',161.68],['moonshot',161.37],['zhipu',157.1],['nvidia',146.95],['alibaba',157.59]]) {
+   const row=expanded.rows.find(r=>r.id===id);
+   assert.equal(row.best,best); assert.equal(row.eligible,false);
+ }
+ for(const m of expanded.input.models.filter(m=>!original.input.models.some(old=>old.id===m.id))) {
+   assert.equal(m.inputPrice,null); assert.equal(m.outputPrice,null); assert.equal(m.priceSource,null);
+   assert.equal(m.receipt.version,original.input.models[0].receipt.version);
+   assert.equal(m.receipt.licence,'CC BY 4.0');
+ }
+ assert.deepEqual(JSON.parse(JSON.stringify(scoreSnapshot(expanded.input).rows)),expanded.rows);
+ const mapped=expandMappedEpoch(original.input,readFileSync('data/lab-standings/raw/eci-2026-11-14.csv','utf8'),
+   JSON.parse(readFileSync('data/lab-standings/model-map.json','utf8')),
+   JSON.parse(readFileSync('data/lab-standings/lab-map.json','utf8')));
+ assert.deepEqual(mapped.models,expanded.input.models);
+ assert.equal(selectCurrentSnapshot([original],[expanded,JSON.parse(readFileSync('data/lab-standings/rescored/0.3.1/2026-11-14.json','utf8'))]),expanded);
 });

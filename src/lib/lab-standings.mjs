@@ -1,6 +1,6 @@
 export const PARTS = ['capability', 'value', 'shipping', 'openness', 'usage'];
 export const DEFAULT_WEIGHTS = [35, 20, 15, 10, 20];
-export const METHOD = '0.3.1';
+export const METHOD = '0.3.2';
 const finite = x => typeof x === 'number' && Number.isFinite(x);
 const nonnegative = x => finite(x) && x >= 0;
 const max = xs => xs.length ? Math.max(...xs) : null;
@@ -110,4 +110,30 @@ export function selectCurrentSnapshot(published, rescored = []) {
   const latest = [...published].sort((a,b)=>b.date.localeCompare(a.date))[0];
   return rescored.filter(s=>s.date===latest?.date && s.correction)
     .sort((a,b)=>b.method.localeCompare(a.method,undefined,{numeric:true}))[0] ?? latest;
+}
+
+/** Expand exact checked identities from the same archived Epoch vintage; never infer prices or licences. */
+export function expandMappedEpoch(input, csv, mapping, labMapping) {
+  const lines = csv.trim().split(/\r?\n/).map(line => (line.match(/("(?:[^"]|"")*"|[^,]*)(,|$)/g) ?? []).slice(0,-1)
+    .map(s=>s.replace(/,$/,'').replace(/^"|"$/g,'').replace(/""/g,'"')));
+  const headers=lines.shift();
+  const rows=lines.map(values=>Object.fromEntries(headers.map((h,i)=>[h,values[i]])));
+  const models=[...input.models], unmatched=[];
+  const receipt=input.models[0]?.receipt;
+  if(!receipt?.version || receipt.licence!=='CC BY 4.0') throw Error('Missing licensed Epoch vintage');
+  for(const row of rows) {
+    if(row['Model accessibility']==='Unreleased') continue;
+    const id=mapping[row.Model], lab=labMapping[row.Organization];
+    if(!id || !lab) {unmatched.push(row.Model);continue;}
+    const existing=models.find(m=>m.id===id);
+    if(existing) {
+      if(existing.lab!==lab || existing.name!==row.Model) throw Error('Conflicting Epoch identity: '+row.Model);
+      continue;
+    }
+    const eci=Number(row.eci);
+    if(!row.eci?.trim() || !Number.isFinite(eci)) throw Error('Invalid ECI: '+row.Model);
+    models.push({id,name:row.Model,lab,eci,released:row.date,inputPrice:null,outputPrice:null,priceSource:null,
+      identitySource:receipt.url,receipt:{...receipt}});
+  }
+  return {...input,models,unmatched};
 }
