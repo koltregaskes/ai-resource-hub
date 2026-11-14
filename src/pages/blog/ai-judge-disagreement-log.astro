@@ -6,26 +6,26 @@ import { practitionerB8 } from '../../data/practitioner-b8';
 import examples from '../../data/insights/2026-11-14-b8.json';
 const e = practitionerB8.find(p => p.slug === 'ai-judge-disagreement-log')!;
 ---
-<InsightArticle title={e.title} description={e.description} date="2026-11-14" type={e.type as 'Analysis' | 'Explainer'} readTime="5 min" standfirst="An invented judge agrees with the reference on 85 of 100 answers. It also accepts half of the answers the reference rejects. Inspect disagreements by outcome before trusting the average.">
+<InsightArticle title={e.title} description={e.description} date="2026-11-14" type={e.type as 'Analysis' | 'Explainer'} readTime="5 min" standfirst="An automated judge that agrees with a human-reviewed reference 85 times in 100 can still accept half of the answers the reference rejects, so look at the disagreements, not just the average.">
 
-<p>An automated judge can make a large evaluation practical. Before using its pass count to compare models, check what it accepts and rejects against a reviewed reference set. The grader is another component of the test, with a configuration and failure modes of its own.</p>
-<p>Anthropic's <a href={e.sources[0].url}>evaluation guide</a>, read on 14 November 2026, describes several grading methods and recommends testing LLM-grading reliability before scaling. Our proposed starting point is a disagreement log containing the answer, rubric, reference decision and judge decision.</p>
-<h2>Inspect the four outcomes</h2>
-<p>The table uses one hundred invented answers. A reviewed reference accepts ninety and rejects ten. The automated judge accepts eighty-five and rejects fifteen. Keeping only those totals would conceal which answers changed category.</p>
+<p>Using an automated judge makes a large evaluation practical, but its pass count shouldn't be trusted for comparing models until it has been checked against a reviewed reference set. The grader is one more part of the test, with its own configuration and its own ways of going wrong.</p>
+<p>Anthropic's <a href={e.sources[0].url}>evaluation guide</a>, read on 14 November 2026, describes several grading methods and recommends testing LLM-grading reliability before scaling. Our proposed starting point is a disagreement log: one row per case, holding the answer, the rubric, the reference decision and the judge decision.</p>
+<h2>Where do the judge and the reference part ways?</h2>
+<p>The table uses one hundred invented answers. A reviewed reference accepts ninety and rejects ten. The automated judge accepts eighty-five and rejects fifteen. Those two totals alone would hide which answers changed category.</p>
 <WorkedTable headers={["Reviewed reference","Automated judge","Invented cases"]} rows={examples['ai-judge-disagreement-log']} caption="Synthetic binary judging comparison. Reference labels are the trial standard and may themselves need adjudication. No real judge performance is claimed." />
-<p>Eighty answers are accepted by both and five rejected by both, giving 85% agreement. The fifteen disagreements split into ten reference passes rejected by the judge and five reference failures accepted by it. Among the ten reference failures, the judge accepts half.</p>
-<p>That does not make the reference infallible. It makes the disagreement worth inspecting. The table describes a chosen trial standard, not an independent measurement of truth or a result for a real judge.</p>
-<h2>Make the rubric checkable</h2>
-<p>State the conditions that earn a pass and the failures that override otherwise good work. If an answer must cite supplied evidence, give the judge that evidence and define what support means. Asking whether an answer is “good” leaves too much of the standard implicit.</p>
-<p>Use ordinary code for exact conditions when it suits the task, such as checking a required field or comparing an unambiguous value. Reserve judgement for the conditions that need it. Preserve the intermediate checks so that a final label can be explained.</p>
-<p>Keep the judge's model identifier, prompt, settings and rubric version. A new grader release or revised instruction can change the score without the candidate answers changing at all. Re-score a fixed reference set when the judging configuration changes.</p>
-<h2>Review the disagreements before tuning</h2>
-<p>For each disagreement, decide whether the reference label, rubric or judge needs correction. Save the reason. If you change the reference, preserve the earlier version so that a previous model comparison can still be interpreted.</p>
-<p>Include difficult but legitimate answers, concise correct answers and polished wrong answers in the reference set where they fit the task. This is a proposed coverage plan. We have not measured whether any judge favours a particular style or length.</p>
-<p>Hold back some reviewed cases while improving the rubric. If the judge is repeatedly tuned against the same examples, a good agreement score on those examples does not show that the repair generalises. Report tuning and held-back results separately.</p>
-<h2>Keep the important minority visible</h2>
-<p>The invented example contains many reference passes and few reference failures. Overall agreement is dominated by the larger group. Report false accepts and false rejects with their own denominators when either kind of error affects the decision.</p>
-<p>If the release policy treats an unsupported critical answer as a blocker, inspect that category explicitly. Do not let a high aggregate agreement rate waive the condition. The judge helps apply the release rule; it should not silently rewrite it.</p>
-<p>Your tracker should identify which judge scored the run and how it agreed with reviewed labels. A disagreement log gives the next reviewer something concrete to inspect when a model's score changes.</p>
+<p>Eighty answers are accepted by both and five rejected by both, which gives 85% agreement. The fifteen disagreements split into ten reference passes rejected by the judge and five reference failures accepted by it. Of the ten reference failures, the judge accepts half.</p>
+<p>That does not make the reference infallible, only worth comparing against. The table describes a chosen trial standard. It is not an independent measurement of truth or a result for a real judge.</p>
+<h2>A rubric the judge can actually check</h2>
+<p>A good rubric (the written marking scheme the judge applies) states what earns a pass and which failures override otherwise good work. If an answer must cite supplied evidence, the judge needs that evidence and a definition of what counts as support. Asking whether an answer is “good” leaves too much of the standard unsaid.</p>
+<p>Exact conditions, such as a required field or an unambiguous value, are often better handled by ordinary code, with judgement kept for the conditions that need it. Saving the intermediate checks lets a final label be explained afterwards.</p>
+<p>The judge's model identifier, prompt, settings and rubric version also need recording. A new grader release or a revised instruction can change the score while the candidate answers stay exactly the same, so a fixed reference set should be re-scored whenever the judging setup changes.</p>
+<h2>Reading the disagreements before changing anything</h2>
+<p>Each disagreement ends in one of three decisions: the reference label, the rubric or the judge needs correcting. The reason should be saved. A changed reference label should leave the earlier version in place, so a previous model comparison can still be interpreted.</p>
+<p>Where they fit the task, the reference set should also hold difficult but legitimate answers, concise correct answers and polished wrong answers. That coverage plan is our proposal. We have not measured whether any judge favours a particular style or length.</p>
+<p>Some reviewed cases should be held back while the rubric is improved. A judge tuned repeatedly against the same examples will agree well on them without showing that the repair generalises, so tuning and held-back results belong in separate columns.</p>
+<h2>Why the smaller group needs its own numbers</h2>
+<p>The invented example has many reference passes and few reference failures, so overall agreement is dominated by the larger group. When either kind of error affects the decision, false accepts and false rejects each need their own denominators.</p>
+<p>Suppose the release policy treats an unsupported critical answer as a blocker. That category then gets inspected explicitly, and a high aggregate agreement rate does not waive the condition. The judge helps apply the release rule and should not quietly rewrite it.</p>
+<p>Your own results log should say which judge scored each run and how it agreed with the reviewed labels. When a model's score changes, the disagreement log gives the next reviewer something concrete to inspect.</p>
 <PractitionerNote evidence={e} />
 </InsightArticle>

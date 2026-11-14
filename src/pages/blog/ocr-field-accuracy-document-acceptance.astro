@@ -6,25 +6,25 @@ import { practitionerB7 } from '../../data/practitioner-b7';
 import examples from '../../data/insights/2026-11-14-b7.json';
 const e = practitionerB7.find(p => p.slug === 'ocr-field-accuracy-document-acceptance')!;
 ---
-<InsightArticle title={e.title} description={e.description} date="2026-11-14" type={e.type as 'Analysis' | 'Explainer'} readTime="5 min" standfirst="Two invented OCR runs both get 98% of fields right. One leaves two documents needing repair; the other leaves twenty. A field-level score does not tell you how much work is ready to use.">
+<InsightArticle title={e.title} description={e.description} date="2026-11-14" type={e.type as 'Analysis' | 'Explainer'} readTime="5 min" standfirst="Two invented OCR runs both get 98% of fields right, yet one leaves two documents needing repair and the other leaves twenty, so a field-level score does not say how much work is ready to use.">
 
-<p>You receive an extraction score of 98%. Before deciding it is good enough, ask what was counted. Correct characters, words, fields and complete documents describe different outcomes. The number that matters to the person processing the queue may be how many documents can proceed without repair.</p>
-<p>Google's <a href={e.sources[0].url}>Document AI response guide</a>, read on 14 November 2026, describes structured output and text anchors. Those give a reviewer material to inspect. They do not decide which fields your workflow considers critical or when a complete document is acceptable.</p>
-<h2>Give the document a pass rule</h2>
-<p>Our example contains 100 fictional documents with ten fields each. Each field counts equally, and a document passes only when all ten are right. We arrange twenty wrong fields in two ways while leaving the total number of errors unchanged.</p>
+<p>Whether a 98% extraction score is good depends on what was counted. Correct characters, words, fields and complete documents describe different outcomes. For the person working through the queue, the number that matters may be how many documents can go ahead without repair.</p>
+<p>Google's <a href={e.sources[0].url}>Document AI response guide</a>, read on 14 November 2026, describes structured output and text anchors. They give a reviewer material to inspect. They do not decide which fields your workflow treats as critical, or when a whole document is acceptable.</p>
+<h2>One rule decides whether a document passes</h2>
+<p>Our example has 100 fictional documents with ten fields each. Every field counts equally, and a document passes only when all ten are right. We arrange twenty wrong fields in two ways, with the total number of errors unchanged.</p>
 <WorkedTable headers={["Distribution of twenty wrong fields","Correct fields","Field accuracy","Documents fully correct"]} rows={examples['ocr-field-accuracy-document-acceptance']} caption="Synthetic 100-document collection with ten fields per document. A whole-document pass requires all ten fields to be correct." />
-<p>There are 1,000 fields and 980 correct values in either case. If all twenty errors sit in two documents, ninety-eight documents pass. If one error sits in each of twenty documents, eighty pass. The same 98% field accuracy therefore describes quite different review queues.</p>
-<h2>Do not assume errors arrive independently</h2>
-<p>A blurred or badly laid-out page may deserve its own group in a test. Do not turn the field score into a document pass forecast by assuming independent errors without evidence. The two arrangements in the table are constructed precisely to show why the distribution matters.</p>
-<p>For a real collection, keep the document identifier with each field result. Then derive both the field total and the document acceptance total from the same reviewed record. You can inspect which files concentrate the errors instead of guessing from an aggregate score.</p>
-<p>Record the document type and the relevant input condition, such as a rotated page or a table continued across pages, when you have that evidence. Describe those as categories in your own test. Do not infer a general failure mode from one awkward file.</p>
-<h2>Mark critical values separately</h2>
-<p>A wrong reference code may stop a workflow while a missing optional note does not. Define those consequences before evaluating the extractor. Report the critical-field results alongside overall field accuracy so that a large number of easy fields cannot conceal failures in the few values needed to continue.</p>
-<p>Keep normalisation distinct from recognition. If the source contains a value in one date or decimal format, record the original text and the normalised result during testing. That lets you distinguish a reading error from an incorrect conversion.</p>
-<p>Missing fields also need a rule. A field absent from the source may correctly return an explicit absence state. Counting it as an error merely because the schema expected a value would test the schema design as much as the extractor.</p>
-<h2>Count the repair work you actually perform</h2>
-<p>Measure review time if it affects the decision. Keep the timed work and any assumed hourly rate separate. A field count cannot establish a labour saving without observing how the documents are checked and repaired.</p>
-<p>Retain the original version of the file, extraction configuration and reviewed values in an authorised evidence store. Use synthetic or cleared documents for public fixtures. Do not publish real names, account details or private forms to make an OCR example feel realistic.</p>
-<p>A useful tracker entry shows field accuracy, critical-field acceptance, complete documents accepted and review time under a stated rule. That tells a practitioner what the score leaves ready for the next step.</p>
+<p>Either way there are 1,000 fields and 980 correct values. If all twenty errors sit in two documents, ninety-eight documents pass. If one error sits in each of twenty documents, eighty pass. The same 98% field accuracy describes two quite different review queues.</p>
+<h2>Errors do not arrive independently</h2>
+<p>A blurred or badly laid-out page may deserve its own group in a test. Turning a field score into a forecast of document passes by assuming independent errors, without evidence, gets it wrong, and the two arrangements in the table are built to show why the distribution matters.</p>
+<p>In a real collection, the document identifier stays attached to each field result. The field total and the document acceptance total then come from the same reviewed record, and you can see which files concentrate the errors without guessing from an aggregate.</p>
+<p>The document type and the input condition, such as a rotated page or a table continued across pages, are worth recording when you have that evidence. They are categories in your own test, and one awkward file does not reveal a general failure mode.</p>
+<h2>Critical values need their own count</h2>
+<p>A wrong reference code may stop a workflow while a missing optional note does not, so those consequences are defined before the extractor is evaluated. Critical-field results sit alongside overall field accuracy, so that a large number of easy fields cannot hide failures in the few values needed to continue.</p>
+<p>Normalisation is a separate step from recognition. When the source holds a value in one date or decimal format, recording the original text and the normalised result during testing separates a reading error from a wrong conversion.</p>
+<p>Missing fields need a rule too. A field absent from the source may correctly return an explicit absence state, and counting that as an error because the schema expected a value would test the schema design as much as the extractor.</p>
+<h2>Repair work is the real cost</h2>
+<p>Review time is worth measuring if it affects the decision, with the timed work and any assumed hourly rate kept apart. A field count cannot establish a labour saving without watching how the documents are checked and repaired.</p>
+<p>The original file, the extraction configuration and the reviewed values belong in an authorised evidence store. Public fixtures should be synthetic or cleared documents, because real names, account details or private forms should not be published to make an OCR example feel realistic.</p>
+<p>Your own results log is most useful when it shows field accuracy, critical-field acceptance, complete documents accepted and review time under a stated rule. That tells a practitioner what the score leaves ready for the next step.</p>
 <PractitionerNote evidence={e} />
 </InsightArticle>
