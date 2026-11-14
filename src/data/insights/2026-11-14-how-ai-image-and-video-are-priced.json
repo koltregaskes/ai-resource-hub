@@ -97,7 +97,7 @@
     {
       "key": "flux2-pro",
       "perItem": "no",
-      "perItemWhy": "You know your image size, but the page does not say how a part-megapixel is rounded.",
+      "perItemWhy": "For a whole number of megapixels the rates give a price (one megapixel is $0.03), but the page does not say how a part-megapixel is rounded, so any other image size rests on a guess.",
       "unitFamily": "per megapixel",
       "page": "bfl",
       "provider": "Black Forest Labs",

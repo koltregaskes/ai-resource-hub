@@ -2,7 +2,7 @@ import type { StudioArticle } from "./types";
 export const article: StudioArticle = {
   slug: "how-ai-image-and-video-are-priced",
   title: "Ten AI image, video, voice and music prices, seven different units",
-  description: "Image, video, voice and music models are not priced per token like chat models. We read ten official price pages and found seven units, four of which stop short of a price per item.",
+  description: "Ten products from seven official pricing pages use seven pricing units. Four rows lack information needed for the conversions discussed.",
   type: "Explainer",
   readTime: "7 min",
   date: "2026-11-14",

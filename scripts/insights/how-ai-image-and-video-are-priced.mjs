@@ -75,7 +75,7 @@ const PRICES = [
     checked: '1K $0.048 /img', at768: 0.041, at4k: 0.607,
   },
   {
-    key: 'flux2-pro', perItem: 'no', perItemWhy: 'You know your image size, but the page does not say how a part-megapixel is rounded.', unitFamily: 'per megapixel', page: 'bfl', provider: 'Black Forest Labs', kind: 'Image',
+    key: 'flux2-pro', perItem: 'no', perItemWhy: 'For a whole number of megapixels the rates give a price (one megapixel is $0.03), but the page does not say how a part-megapixel is rounded, so any other image size rests on a guess.', unitFamily: 'per megapixel', page: 'bfl', provider: 'Black Forest Labs', kind: 'Image',
     product: 'FLUX.2 [pro]', unit: 'per megapixel (first, then each additional)',
     shown: '$0.03 first MP, $0.015 each additional MP', value: 0.03, condition: 'Reference images $0.015 per MP. The page does not say how part-megapixels are rounded.',
     checked: "1st MP $0.03 Add'l MP $0.015",

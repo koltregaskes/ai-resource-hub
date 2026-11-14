@@ -36,7 +36,7 @@ const cap = (w: string) => w[0].toUpperCase() + w.slice(1);
   <div class="stat-row">
     <div class="stat"><b>{data.products}</b><span>products, read on 14 November 2026</span></div>
     <div class="stat"><b>{data.unitCount}</b><span>different units of price</span></div>
-    <div class="stat"><b>{data.perItemNo}</b><span>cannot be turned into a price per item from the page alone</span></div>
+    <div class="stat"><b>{data.perItemNo}</b><span>lack something the page does not give for the conversion we tried</span></div>
   </div>
 
   <h2>{cap(words[data.products])} prices, {words[data.unitCount]} units</h2>
@@ -52,7 +52,7 @@ const cap = (w: string) => w[0].toUpperCase() + w.slice(1);
   <p>A token is the chunk a model reads and writes. For text there are rules of thumb for counting them. For pictures and video, Google's page shows the count changing with resolution, so the token price alone does not fix the cost of one output.</p>
   <p>OpenAI's page lists {oai.product} at {oai.shown} per million image output tokens on the standard tier, and says prices are per million tokens unless noted. It does not say how many tokens one image uses. For an estimate it sends readers to a calculator in its image generation guide. So from the pricing page alone we cannot turn {oai.shown} into a cost per picture.</p>
   <p>Google's Gemini API page prices {gImg.product} the same way, at {gImg.shown} per million image output tokens, but then does the conversion for you: a 1K image (1024 by 1024 pixels) uses {n(gImg.tokensPer1kImage)} tokens, which the page calls equivalent to {usd(gImg.pageEquivalentPer1kImage, 3)} per image. Our own sum, {c.geminiImagePer1k.sum}, gives {usd(c.geminiImagePer1k.perImage, 4)}, which matches the page once rounded. The unit is the same as OpenAI's, but one page gives you the tokens per image and the other does not, so the two prices cannot be set side by side.</p>
-  <p>Black Forest Labs skips tokens. {flux3.product} is priced per image, and the price climbs with resolution, from {usd(flux3.at768, 3)} at 768 by 768 to {usd(flux3.value, 3)} at 1K and {usd(flux3.at4k, 3)} at 4K. On the same page, {flux2.product} is priced per megapixel: {flux2.shown}. You know how many pixels your own image has, but the page does not say how a part-megapixel is rounded, so any per-image figure for it would rest on our guess about that rounding.</p>
+  <p>Black Forest Labs skips tokens. {flux3.product} is priced per image, and the price climbs with resolution, from {usd(flux3.at768, 3)} at 768 by 768 to {usd(flux3.value, 3)} at 1K and {usd(flux3.at4k, 3)} at 4K. On the same page, {flux2.product} is priced per megapixel: {flux2.shown}. You know how many pixels your own image has, but the page does not say how a part-megapixel is rounded, so for an image whose size is not a whole number of megapixels any per-image figure would rest on our guess about that rounding. For exactly one megapixel the stated rates give $0.03 without any rounding.</p>
   <p>Google and Black Forest Labs both use the label 1K, and the two numbers look easy to compare. They are not, on what the pages say: Google defines 1K as 1024 by 1024 pixels, and the Black Forest Labs table does not give pixel sizes for its 1K column.</p>
 
   <h2>Video is sold by the second, once the page does the sums</h2>
