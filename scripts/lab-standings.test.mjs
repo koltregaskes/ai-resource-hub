@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import { scoreSnapshot, composite, rank, sensitivity, historyChanges } from '../src/lib/lab-standings.mjs';
+import { scoreSnapshot, composite, rank, sensitivity, historyChanges, selectListedLabs, selectCurrentSnapshot } from '../src/lib/lab-standings.mjs';
 const model = (lab,eci,released='2026-10-01',extra={})=>({lab,eci,released,...extra});
 const input = {date:'2026-11-14',labs:[{id:'a'},{id:'b'}],models:[model('a',10,'2025-01-01'),model('a',20),model('b',15)]};
 test('same-vintage floor, leaders, negative ECI and missing prices',()=>{
@@ -51,4 +51,42 @@ test('published snapshot reproduces exactly and maps every listed lab frontier',
  assert.ok(raw.includes('Claude Fable 5.2'));
  assert.equal(s.rows.find(r=>r.id==='anthropic').best,173.44);
  assert.equal(s.floor,151.23);
+});
+
+test('listing uses Epoch release dates when catalogue date is missing',()=>{
+ const providers=[{id:'mistral',name:'Mistral'},{id:'old'},{id:'future'},{id:'unreleased'},{id:'catalogue'}];
+ const models=[model('mistral',154.62,'2026-10-29',{id:'mistral-large-4-0'}),
+   model('old',1,'2025-05-13'),model('future',2,'2026-11-15'),model('unreleased',3,'2026-10-01',{accessibility:'Unreleased'})];
+ const catalogue=[{id:'mistral-large-4-0',providerId:'mistral',officialUrl:'https://docs.mistral.ai/models/mistral-large-4-0'},
+   {providerId:'catalogue',released:'2025-05-14',officialUrl:'https://example.org/release'},
+   {providerId:'future',released:'2026-10-01'}];
+ assert.deepEqual(selectListedLabs('2026-11-14',providers,models,catalogue).map(p=>p.id),['mistral','catalogue']);
+});
+test('unranked Mistral sets the value denominator for every listed lab',()=>{
+ const original=JSON.parse(readFileSync('data/lab-standings/snapshots/2026-11-14.json','utf8'));
+ const providers=[...original.input.labs,...['mistral','deepseek','xai','alibaba'].map(id=>({id,name:id,releases:[],catalogueCheckedThrough:null}))];
+ const labs=selectListedLabs(original.date,providers,original.input.models,[]);
+ const s=scoreSnapshot({...original.input,labs});
+ assert.equal(labs.length,7);
+ assert.equal(s.rows.find(r=>r.id==='mistral').parts.value,100);
+ for(const [id,value] of [['openai',85.2],['anthropic',61.5],['google',58.6]]) {
+   const row=s.rows.find(r=>r.id===id);
+   assert.ok(Math.abs(row.parts.value-value)<0.1);
+   assert.equal(row.eligible,false); assert.equal(row.coverage,2); assert.equal(row.observedWeight,55);
+ }
+ assert.equal(s.floor,151.23); assert.equal(s.leader,173.44);
+});
+test('corrected default keeps the original separate and correction visible',()=>{
+ const original=JSON.parse(readFileSync('data/lab-standings/snapshots/2026-11-14.json','utf8'));
+ const corrected=JSON.parse(readFileSync('data/lab-standings/rescored/0.3.1/2026-11-14.json','utf8'));
+ assert.equal(original.rows.length,3); assert.equal(corrected.rows.length,7);
+ assert.equal(corrected.correction.originalMethod,original.method);
+ assert.match(corrected.correction.note,/catalogue.*date/i);
+ assert.deepEqual(corrected.input.models,original.input.models);
+ assert.deepEqual(JSON.parse(JSON.stringify(scoreSnapshot(corrected.input).rows)),corrected.rows);
+ assert.equal(selectCurrentSnapshot([original],[corrected]),corrected);
+ assert.equal(selectCurrentSnapshot([{...original,date:'2026-11-21'}],[corrected]).date,'2026-11-21');
+ const component=readFileSync('src/components/LabStandings.astro','utf8');
+ assert.match(component,/Value scores are under correction/);
+ assert.match(component,/as published/);
 });
