@@ -1,0 +1,182 @@
+{
+  "inputs": {
+    "providerStatusSha256": "00a8b5ad8f397676871c2aa7c159caa3f62edb006e817795947a80ff16a07879"
+  },
+  "generatedAt": "2026-11-14T15:55:45.418Z",
+  "method": "Read data/provider-status.json as committed. Count providers by fetchState; for live providers count entries in activeIncidents. No re-fetching.",
+  "providers": 9,
+  "live": 6,
+  "notLive": 3,
+  "byFetchState": {
+    "live": 6,
+    "error": 2,
+    "link_only": 1
+  },
+  "liveWithActiveIncidents": 3,
+  "liveWithNoActiveIncidents": 3,
+  "activeIncidentsTotal": 4,
+  "rows": [
+    {
+      "id": "fireworks",
+      "name": "Fireworks AI",
+      "statusPageUrl": "https://status.fireworks.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceMeaning": "status page headline plus RSS feed",
+      "fetchState": "live",
+      "overallStatus": "major_outage",
+      "overallLabel": "Partial outage",
+      "activeIncidentCount": 2,
+      "activeIncidents": [
+        {
+          "title": "Service Degradation for GLM 5.3 Flash",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-14T15:02:48.000Z"
+        },
+        {
+          "title": "Service Degradation for GLM 5.3",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-14T12:56:52.000Z"
+        }
+      ],
+      "componentsListed": 0,
+      "readNote": null,
+      "mappingDiffersFromLabel": true
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceMeaning": "status page JSON summary (Statuspage-style v2 API)",
+      "fetchState": "live",
+      "overallStatus": "degraded",
+      "overallLabel": "Partially Degraded Service",
+      "activeIncidentCount": 1,
+      "activeIncidents": [
+        {
+          "title": "Some users unable to sign up with Apple on the Claude iOS app",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-11-14T07:11:36.117Z"
+        }
+      ],
+      "componentsListed": 6,
+      "readNote": null,
+      "mappingDiffersFromLabel": false
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceMeaning": "status page JSON summary (Statuspage-style v2 API)",
+      "fetchState": "live",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "activeIncidentCount": 1,
+      "activeIncidents": [
+        {
+          "title": "Delayed Costs Data in the Compliance API",
+          "status": "monitoring",
+          "impact": "minor",
+          "startedAt": "2026-11-13T16:10:07.000Z"
+        }
+      ],
+      "componentsListed": 6,
+      "readNote": null,
+      "mappingDiffersFromLabel": false
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere",
+      "statusPageUrl": "https://status.cohere.io",
+      "sourceKind": "betterstack_page_rss",
+      "sourceMeaning": "status page headline plus RSS feed",
+      "fetchState": "live",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "activeIncidentCount": 0,
+      "activeIncidents": [],
+      "componentsListed": 0,
+      "readNote": null,
+      "mappingDiffersFromLabel": false
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "statusPageUrl": "https://status.cloud.google.com",
+      "sourceKind": "google_incidents",
+      "sourceMeaning": "Google Cloud public incident feed, filtered by us to Gemini and Vertex AI terms",
+      "fetchState": "live",
+      "overallStatus": "operational",
+      "overallLabel": "No active Gemini or Vertex AI incidents",
+      "activeIncidentCount": 0,
+      "activeIncidents": [],
+      "componentsListed": 0,
+      "readNote": null,
+      "mappingDiffersFromLabel": false
+    },
+    {
+      "id": "together",
+      "name": "Together AI",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceMeaning": "status page headline plus RSS feed",
+      "fetchState": "live",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "activeIncidentCount": 0,
+      "activeIncidents": [],
+      "componentsListed": 0,
+      "readNote": null,
+      "mappingDiffersFromLabel": false
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "statusPageUrl": "https://status.deepseek.com",
+      "sourceKind": "statuspage_json",
+      "sourceMeaning": "status page JSON summary (Statuspage-style v2 API)",
+      "fetchState": "error",
+      "overallStatus": "unknown",
+      "overallLabel": null,
+      "activeIncidentCount": null,
+      "activeIncidents": [],
+      "componentsListed": 0,
+      "readNote": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "mappingDiffersFromLabel": false
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral",
+      "statusPageUrl": "https://status.mistral.ai",
+      "sourceKind": "checkly_page",
+      "sourceMeaning": "status page headline only",
+      "fetchState": "error",
+      "overallStatus": "unknown",
+      "overallLabel": null,
+      "activeIncidentCount": null,
+      "activeIncidents": [],
+      "componentsListed": 0,
+      "readNote": "Current summary comes from the official status page headline. Mistral does not expose a public RSS or JSON incident feed that we could verify. HTTP 403 for https://status.mistral.ai",
+      "mappingDiffersFromLabel": false
+    },
+    {
+      "id": "xai",
+      "name": "xAI",
+      "statusPageUrl": "https://status.x.ai",
+      "sourceKind": "link_only",
+      "sourceMeaning": "link only, nothing read",
+      "fetchState": "link_only",
+      "overallStatus": "unknown",
+      "overallLabel": null,
+      "activeIncidentCount": null,
+      "activeIncidents": [],
+      "componentsListed": 0,
+      "readNote": "xAI blocks automated requests to its public status page, so this entry is link-only for now.",
+      "mappingDiffersFromLabel": false
+    }
+  ]
+}
