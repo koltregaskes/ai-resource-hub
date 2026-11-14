@@ -1,0 +1,1010 @@
+{
+  "email-01": {
+    "text": "Hi Alex, please could you send the invoice by Monday? Thank you.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "email-02": {
+    "text": "Hi Sam, please could you send the draft by Tuesday? Thank you.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "email-03": {
+    "text": "Hi Jo, please could you send the quote by Wednesday? Thank you.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "email-04": {
+    "text": "Hi Pat, please could you send the agenda by Thursday? Thank you.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "email-05": {
+    "text": "Hi Lee, please could you send the contract by Friday? Thank you.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "email-06": {
+    "text": "Hi Kim, please could you send the photos by Saturday? Thank you.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "summary-01": {
+    "text": "The launch is on 12 May; Mina owns delivery.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "summary-02": {
+    "text": "The audit is on 4 June; Omar owns delivery.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "summary-03": {
+    "text": "The move is on 8 July; Beth owns delivery.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "summary-04": {
+    "text": "The demo is on 2 August; Tom owns delivery.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "summary-05": {
+    "text": "The review is on 9 September; Ali owns delivery.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "summary-06": {
+    "text": "The workshop is on 3 October; Sue owns delivery.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "formula-01": {
+    "text": "=SUM(B2:B20)",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "formula-02": {
+    "text": "=AVERAGE(C2:C10)",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "formula-03": {
+    "text": "=COUNT(A1:A9)",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "formula-04": {
+    "text": "=MAX(D2:D12)",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "formula-05": {
+    "text": "=MIN(E1:E8)",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "formula-06": {
+    "text": "=ROUND(B2,2)",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "travel-01": {
+    "text": "10:30",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "travel-02": {
+    "text": "12:00",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "travel-03": {
+    "text": "15:10",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "travel-04": {
+    "text": "09:55",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "travel-05": {
+    "text": "17:35",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "travel-06": {
+    "text": "19:15",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "receipt-01": {
+    "text": "{\"merchant\": \"Corner Shop\", \"total\": \"12.45\"}",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "receipt-02": {
+    "text": "{\"merchant\": \"Cafe North\", \"total\": \"8.90\"}",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "receipt-03": {
+    "text": "{\"merchant\": \"Station Kiosk\", \"total\": \"4.25\"}",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "receipt-04": {
+    "text": "{\"merchant\": \"Book Room\", \"total\": \"19.99\"}",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "receipt-05": {
+    "text": "{\"merchant\": \"Green Grocer\", \"total\": \"6.80\"}",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "receipt-06": {
+    "text": "{\"merchant\": \"Lunch Box\", \"total\": \"11.50\"}",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "rewrite-01": {
+    "text": "Please do this soon.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "rewrite-02": {
+    "text": "We need more information.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "rewrite-03": {
+    "text": "The meeting is now on Friday.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "rewrite-04": {
+    "text": "Please pay by Monday.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "rewrite-05": {
+    "text": "You need approval for access.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "rewrite-06": {
+    "text": "Tell us if you cannot attend.",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125,
+    "judges": {
+      "fixture-judge-o": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      },
+      "fixture-judge-a": {
+        "checklist": [
+          {
+            "item": "Preserve each required fact or phrase",
+            "passed": true
+          },
+          {
+            "item": "Stay within the word limit",
+            "passed": true
+          },
+          {
+            "item": "Do not add unsupported facts",
+            "passed": true
+          }
+        ],
+        "simulated_cost_usd": "0.0001"
+      }
+    }
+  },
+  "code-01": {
+    "text": "def calculate():\n    return 2 + 3",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "code-02": {
+    "text": "def calculate():\n    return 7 - 2",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "code-03": {
+    "text": "def calculate():\n    return 4 * 3",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "code-04": {
+    "text": "def calculate():\n    return 12 // 3",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "code-05": {
+    "text": "def calculate():\n    return 9 % 4",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "code-06": {
+    "text": "def calculate():\n    return 2 ** 3",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "uk-facts-01": {
+    "text": "Edinburgh",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "uk-facts-02": {
+    "text": "Cardiff",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "uk-facts-03": {
+    "text": "Belfast",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "uk-facts-04": {
+    "text": "GBP",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "uk-facts-05": {
+    "text": "100",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "uk-facts-06": {
+    "text": "England",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "calendar-01": {
+    "text": "2026-02-02",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "calendar-02": {
+    "text": "2024-03-01",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "calendar-03": {
+    "text": "2027-01-01",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "calendar-04": {
+    "text": "2026-05-01",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "calendar-05": {
+    "text": "2026-06-08",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "calendar-06": {
+    "text": "2026-10-30",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "arithmetic-01": {
+    "text": "I don't know",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "arithmetic-02": {
+    "text": "I don't know",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "arithmetic-03": {
+    "text": "I don't know",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "arithmetic-04": {
+    "text": "I don't know",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "arithmetic-05": {
+    "text": "I don't know",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  },
+  "arithmetic-06": {
+    "text": "I don't know",
+    "input_tokens": 80,
+    "output_tokens": 30,
+    "latency_ms": 125
+  }
+}
