@@ -122,10 +122,36 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
 - **Prompt:** an empty system prompt, no worked examples, and **no tools** (no web search, no code execution).
 - **Access route:** each lab's own API. Results describe the API model, not the chat app.
 - **Recorded per request:**
-  - the raw prompt and raw answer;
-  - input, output, reasoning and cached tokens as the provider reports them (if usage is missing, the slot is flagged and its cost is the reserved maximum);
+  - the raw prompt and raw answer, and the provider's finish reason;
+  - the usage fields exactly as the provider reports them, each stored under the provider's own field name;
   - the charge at the frozen price;
-  - time to first token (from send to the first content byte) and total time.
+  - timings (below).
+- **Token and charge accounting:**
+  - **Reasoning tokens:** where a provider reports them as a part of output tokens, they're billed once, as output, and stored as a breakdown. Where a provider reports them separately, they're billed at its stated rate for them. The run config says which case applies to each model.
+  - **Cached input:** billed at the provider's cached rate from the price receipt. Every slot is a fresh conversation with no shared prefix beyond the empty system prompt, so cached tokens are expected to be zero; any non-zero figure is recorded as reported.
+  - **Missing usage:** the request is flagged and charged at its reserved maximum until the provider's console figure is reconciled.
+- **Timings,** all measured by the harness's own monotonic clock:
+  - time to first token: from the moment the request is sent to the first content byte received (for non-streaming calls this isn't available and is left empty);
+  - request time: from send to the last byte;
+  - slot time: the request time of the request that produced the graded answer, retries and waits excluded.
+  - "Time per attempt" in the scores is the median slot time.
+
+## Run records
+
+- **Identity:**
+  - A run id is `<UTC date>T<UTC time>-<8 random hex characters>`, allocated once when the run starts.
+  - A slot id is `<run id>/<model id>/<task id>/<repeat 1 to 3>`.
+  - A request id is the slot id plus the request number (1 to 3).
+  - Ids are never reused.
+- **Staging:** a run writes into `runs/_staging/<run id>/`. Before each request is sent, the harness appends a line to the run's ledger with the request id and its reservation, and flushes it to disk. The response is appended when it arrives. So a crash leaves a record of what was in flight.
+- **Finalising:** when every slot has a final outcome and pass, and no check is pending, the harness:
+  1. computes the scores;
+  2. writes a manifest with a SHA-256 hash of every file, computed from the bytes as written;
+  3. moves the folder to `runs/<run id>/`, in the private store;
+  4. builds the public record from it through the allowlist.
+  A finalised folder is never written to again.
+- **Not finalised:** an interrupted run, or one with pending judging, stays in staging with its status, and is never published as a result.
+- **Amendments:** if a grading mistake is found later, the original record stays as it is. A correction is a new record, `runs/<run id>/amendments/<n>/`, holding the changed verdicts, the reason, who made the change, and the recomputed scores. The page shows the amended scores, with a visible "corrected on" note linking both versions.
 
 ## Grading
 
@@ -143,13 +169,25 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
 - **Judge panel:** two judge models from two different labs, named in the run config with their settings. No answer is judged only by a model from its own lab.
 - **One call per judge per answer,** returning a JSON verdict with one true or false and a one-line reason per check.
 - **A model-judged check passes** only if both judges pass it. Disagreement marks the check `disputed`, which counts as failed in the main score.
+- **The slot's `pass` is the AND of every check on the task,** script checks and model-judged checks alike. One failed or disputed check fails the slot. While any check is `judge_unresolved`, the slot's pass is pending and the run can't be finalised.
 - **Dispute rate** = disputed model-judged checks ÷ all model-judged checks, published per model, with the score recomputed excluding disputed checks shown beside it as a sensitivity figure.
 - **Judge failures aren't the model's failures.** A malformed verdict or a judge timeout is retried once. If it still fails, the check is `judge_unresolved`, and the slot's pass is left **pending**. A run with pending slots isn't published until the judging is completed.
 - **Judge qualification, before the first run:**
-  - 40 sample answers with reference verdicts, written and frozen before any judge sees them;
-  - balanced: 20 that should pass their task and 20 that should fail;
+  - 40 sample answers to checklist tasks, each with a reference verdict (true or false) for every model-judged check, written and frozen before any judge sees them;
+  - **balanced at the item level:** across the set, at least 40% of the reference item verdicts are false and at least 40% are true;
   - agreement is measured per checklist item;
-  - a judge needs at least 90% agreement overall, and at least 85% on both the pass half and the fail half.
+  - a judge needs at least 90% agreement overall, at least 85% on the items whose reference is true, and at least 85% on the items whose reference is false. A judge that always says true therefore fails.
+
+### Outcome classification by the judges
+
+Used only when the script's pattern list can't tell whether a reply is `answered`, `abstained` or `refused`.
+
+- **One call per judge per reply,** returning JSON: `{"outcome": "answered" | "abstained" | "refused", "reason": "…"}`. The judge sees the prompt, the reply and the method's precedence rules. It doesn't see the answer key.
+- **Agreement:** if both judges give the same outcome, that's the outcome. If they disagree, the outcome is `answered`. That's the stricter reading: on an unanswerable task it fails the slot, and on an answerable task the reply then goes to the task's normal grader.
+- **Judge failure:** a malformed verdict or timeout is retried once, then the slot's outcome is `judge_unresolved` and its pass is pending, exactly as for checklist checks.
+- **Qualification:** the judges also classify 20 frozen sample replies (at least 6 of each outcome, including hedged answers and quoted abstention phrases). A judge needs at least 90% agreement with the reference outcomes.
+- **Budget:** these calls, and their retries, are reserved and counted in the same provider ledgers as all other judge calls. The pre-flight worst case assumes every slot in families 2 and 3 needs one classification call per judge.
+- The share of slots that needed judge classification is published per model.
 
 ## Scores
 
@@ -175,14 +213,19 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
 
 ### Intervals
 
-- **Method:** a percentile bootstrap, 20,000 resamples, seed 20261114.
-  - Tasks are resampled with replacement **within each family**, keeping the family sizes (10, 10, 8, 8, 8, 8, 8).
-  - A task's 3 slots stay together.
+- **Method:** a percentile bootstrap, 20,000 resamples.
+  - **Random numbers:** NumPy's `default_rng(20261114)` (the PCG64 generator), created once per report.
+  - **Sampling order:** for each resample, families are taken in order 1 to 7. Within a family, tasks are sorted by id, and `rng.integers(0, n, size=n)` draws n indices with replacement, where n is the family size (10, 10, 8, 8, 8, 8, 8).
+  - **The same index draws are used for every model,** so paired differences use the same resampled tasks.
+  - A task's 3 slots stay together: the unit resampled is the task score.
   - The equal-family score is recomputed on each resample.
-  - The interval is the 2.5th to 97.5th percentile.
+  - The interval is the 2.5th to 97.5th percentile, using NumPy's default linear interpolation.
 - **Public-only and held-out-only scores** get their own intervals from their own family counts.
 - **No promised width.** The width depends on how much task scores vary. In the reviewer's worked case (half of every family always passing and half always failing), the interval was about 37% to 63%.
-- **Degenerate cases:** when every task score in a family is identical, the bootstrap gives a zero-width interval. That's shown as "not enough variation to estimate", never as certainty.
+- **Degenerate cases:**
+  - When every task score in a family is identical, that **family's** interval has zero width. It's shown as "not enough variation to estimate", never as certainty.
+  - The headline interval can still have width in that case, because other families vary. It's shown as normal, with a note naming the families that had no variation.
+  - Only when every family is degenerate is the headline interval itself shown as "not enough variation to estimate".
 - **What the interval covers:** variation from which tasks happened to be in the set. It doesn't cover how we wrote or graded the tasks, model changes over time, or run-to-run variation beyond the 3 repeats. The page says so.
 
 ### Comparing models
@@ -200,9 +243,13 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
   - It keeps one ledger per provider, shared by model calls and judge calls, covering requests in flight.
   - It refuses to send a request that would take reserved plus spent above the cap, and reconciles to the actual charge afterwards.
 - **`--max-usd`** sets a lower cap for one run and can't raise a provider cap.
-- **Pre-flight:** before any call, the harness prints the worst-case cost of the whole run, next to an expected cost from a planning figure for output size. The worst case is every slot once at its task's output limit, plus a 15% allowance for retries, plus judge qualification and judging. The harness refuses to start if the worst case is above the remaining cap. The fix is then a shorter model list in the run config, never a silently lower limit.
+- **Pre-flight:** before any call, the harness prints three figures for the whole plan (canary, full run, judge qualification, checklist judging and outcome classification):
+  - **Expected:** from a planning figure for output size.
+  - **Planning bound:** every request once at its task's output limit, plus a 15% allowance for retries. The harness refuses to start if this is above the remaining cap. The fix is then a shorter model list in the run config, never a silently lower limit.
+  - **Absolute bound:** every slot using all 3 permitted requests at the output limit. This is printed for information only.
+- **The 15% is a planning allowance, not a guarantee.** If retries run above it, the per-request reservation still stops spending at the cap, and the run ends as "interrupted by cap", with its unstarted slots listed. We accept that risk in exchange for not reserving three requests for every slot. An interrupted run isn't published as a result.
   - Why the default limit is 4,096: the first review put four OpenAI models at about $101 worst case at 8,192 output tokens, above the $90 cap before judges or retries.
-- **Canary first:** the first paid step is 2 public tasks per model with 1 repeat, inside the same ledger. It isn't a result and isn't published. The adapters, usage fields, finish reasons and charges are reviewed before the full run starts.
+- **Canary first:** the first paid step is 2 public tasks per model with 1 repeat, inside the same ledger and counted in the pre-flight figures above, with its permitted retries. It isn't a result and isn't published. The adapters, usage fields, finish reasons and charges are reviewed before the full run starts.
 - **Judging:** 10 tasks × 3 slots × 2 judges per model, plus 80 qualification calls, all reserved the same way. Judge cost is reported separately from model cost.
 - **Order:** every call that spends OpenAI credit finishes before 20 Nov 2026, including OpenAI judging of Anthropic answers. So the Anthropic model runs that need an OpenAI judge are scheduled before that date too.
 
@@ -256,4 +303,11 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
 8. **Rotation arithmetic fixed** (10 public tasks retire each quarter, so the set stays 40 and 20). Private and public run records are separated by an allowlist, and the leak claim is narrowed.
 9. **Harness contract:** timeout scope, output-limit mapping, truncation, tools policy, missing usage, and cost and time definitions.
 10. **Review answers adopted:** 60 tasks × 3 repeats; one frozen default configuration; disputed checks count as failed; the stratified bootstrap stays.
+12. **Third review pass (at 5127575):**
+    - a slot's pass is the AND of all its checks, and pending checks block finalising;
+    - outcome classification by judges has its own section (schema, disagreement, failure, qualification, budget);
+    - judge qualification is balanced by item verdict, so an always-true judge fails;
+    - the bootstrap names its generator, sampling order and interpolation, and the degenerate rule is corrected;
+    - the 15% retry figure is a planning allowance, with the absolute bound printed, and the canary is in the pre-flight;
+    - a new "Run records" section covers ids, staging, finalising and amendments, with token accounting and timing conventions.
 11. **Added after checking the first candidate tasks:** a default output limit of 4,096 (so the worst case fits the caps), retries reserved only when dispatched, a canary stage before the full run, the floor quota, and no abstention hints in unanswerable tasks.
