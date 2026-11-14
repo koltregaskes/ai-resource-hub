@@ -12,7 +12,17 @@ export interface OutgoingEmail {
   tags?: Array<{ name: string; value: string }>;
 }
 
-export class ProviderRejection extends Error {}
+export class ProviderHttpError extends Error {
+  constructor(public readonly status: number) { super('Resend request failed: HTTP ' + status); }
+}
+export class ProviderRejection extends ProviderHttpError {}
+export class ProviderSetupError extends ProviderHttpError {}
+
+/** Allowlisted metadata only; never retain provider messages, bodies, addresses or tokens. */
+export function safeSendError(error: unknown): { errorClass: string; status: number | null } {
+  if (error instanceof ProviderHttpError) return {errorClass: error instanceof ProviderSetupError ? 'ProviderSetupError' : error instanceof ProviderRejection ? 'ProviderRejection' : 'ProviderHttpError', status: error.status};
+  return {errorClass: error instanceof TypeError ? 'TypeError' : error instanceof SyntaxError ? 'SyntaxError' : 'Error', status: null};
+}
 
 export class ResendClient {
   constructor(
@@ -30,8 +40,18 @@ export class ResendClient {
       },
       body,
     });
+    if (!response.ok) {
+      await response.body?.cancel();
+      // Checked 2026-11-14: https://resend.com/docs/api-reference/errors
+      // Sending 401/403 may be key/permission/domain setup faults. Keep the exact
+      // request recoverable within our existing 23h window; 400/422 are terminal.
+      if ([401,403].includes(response.status)) {
+        console.error('Newsletter operator action required: Resend HTTP ' + response.status + '. Check key, permissions and verified sending domain; retry the same batch within 23 hours.');
+        throw new ProviderSetupError(response.status);
+      }
+      throw new ([400,404,405,413,415,422].includes(response.status) ? ProviderRejection : ProviderHttpError)(response.status);
+    }
     const payload = await response.json().catch(() => ({}));
-    if (!response.ok) throw new ([400,401,403,404,405,413,415,422].includes(response.status) ? ProviderRejection : Error)(`Resend ${path} failed: HTTP ${response.status} ${JSON.stringify(payload).slice(0, 200)}`);
     return payload;
   }
 
