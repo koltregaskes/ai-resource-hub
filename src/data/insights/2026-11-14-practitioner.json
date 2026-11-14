@@ -4,25 +4,25 @@
       "Label messages",
       2000,
       50,
-      "$0.00"
+      "$0.00225"
     ],
     [
       "Extract document fields",
       8000,
       400,
-      "$0.01"
+      "$0.01000"
     ],
     [
       "Draft a report",
       2000,
       4000,
-      "$0.02"
+      "$0.02200"
     ],
     [
       "Read a long dossier",
       100000,
       1000,
-      "$0.10"
+      "$0.10500"
     ]
   ],
   "acceptance": [

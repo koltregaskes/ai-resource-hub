@@ -16,7 +16,7 @@ const e = practitionerB1[1];
   <p>For judgement-heavy work, preserve the review note. “Good enough” becomes hard to compare when one reviewer means readable and another means ready to send. If the definition changes halfway through the test, mark the change and review the earlier examples again.</p>
   <h2>Charge failed attempts to the job</h2>
   <p>Use the total API spend for the test, including attempts that produced nothing usable. Dividing only the spend on successful requests by the successful count quietly removes the price of failure. If the application retries, include that spend too.</p>
-  <p>Choose the denominator carefully. For a workflow that retries one document three times, those are three attempts at one job. If the final result is accepted, count one accepted job. For a comparison with no retries, one attempt per case is simpler. Do not mix the two definitions and call the result an improvement.</p>
+  <p>Choose the denominator carefully. For a workflow that tries one document three times, those are three attempts at one job. If the final result is accepted, count one accepted job. For a comparison with no retries, one attempt per case is simpler. Do not mix the two definitions and call the result an improvement.</p>
   <p>A test with zero accepted results has no finite cost per accepted result. Show that plainly. Turning it into $0 because a division failed would make the worst candidate look free.</p>
   <h2>Keep the other limits visible</h2>
   <p>A lower cost per accepted result can still be unsuitable. You may need a response within a particular time, or have one kind of error you will not accept. Put those conditions beside the cost. Do not trade them away through an average.</p>

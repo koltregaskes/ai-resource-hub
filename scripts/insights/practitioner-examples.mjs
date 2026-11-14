@@ -5,7 +5,7 @@ const target = fileURLToPath(new URL('../../src/data/insights/2026-11-14-practit
 const money = n => `$${n.toFixed(2)}`;
 const selection = [
   ['Label messages', 2000, 50], ['Extract document fields', 8000, 400], ['Draft a report', 2000, 4000], ['Read a long dossier', 100000, 1000],
-].map(([job, input, output]) => [job, input, output, money((input + output * 5) / 1e6)]);
+].map(([job, input, output]) => [job, input, output, `$${((input + output * 5) / 1e6).toFixed(5)}`]);
 const acceptance = [
   ['Candidate A', 1000, 8, 800], ['Candidate B', 1000, 12, 960], ['Candidate C', 1000, 8, 500],
 ].map(([name, attempts, spend, accepted]) => [name, attempts, money(spend), accepted, money(spend / accepted * 1000)]);
