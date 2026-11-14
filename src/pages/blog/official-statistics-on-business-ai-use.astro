@@ -1,0 +1,129 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import StudioNote from '../../components/insights/StudioNote.astro';
+import ColumnChart from '../../components/insights/ColumnChart.astro';
+import { article } from '../../data/studio/official-statistics-on-business-ai-use';
+import data from '../../data/insights/2026-11-14-official-statistics-on-business-ai-use.json';
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Every number below is read from the frozen output of scripts/insights/official-statistics-on-business-ai-use.mjs.
+const fmt = (iso: string) => new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const short = (iso: string) => new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+const pct = (v: number) => `${v.toFixed(1)}%`;
+const us = data.us;
+const usL = us.latest;
+const usF = us.first;
+const usPrev = us.series[us.series.length - 2];
+const uk = data.uk;
+const NOT_USE = 'Business does not currently use artificial intelligence technologies';
+const ukAll = uk.allBusinesses.values;
+const uk10 = uk.tenPlus.values;
+const ci = (v: { estimate: number; ci95: { lower: number; upper: number } }) => `${pct(v.estimate)} (95% CI ${pct(v.ci95.lower)} to ${pct(v.ci95.upper)})`;
+const ukOptions = uk.options.filter((o: string) => o !== NOT_USE && o !== 'Not sure');
+const released = uk.released.replace(/^Released\s*/, '');
+const live = uk.livePeriod.replace(/^Survey live period:\s*/, '');
+const responses = uk.responses.match(/\(([\d,]+)\)/)?.[1] ?? '';
+const euUpdated = fmt(data.eu.updated.slice(0, 10));
+const usQuestion = us.question.split('? (')[0] + '?';
+const ukLabel = 'Survey estimate';
+---
+<InsightArticle title={article.title} description={article.description} date={article.date} type={article.type} readTime={article.readTime} snapshot="2026-11-14" standfirst="Three official statistics offices publish how many businesses use AI, but each asks a different question of a different set of businesses about a different period, so their figures cannot be lined up against each other.">
+  <p>In the US Census Bureau's latest survey round, {pct(usL.yes)} of employer businesses said they had used AI in the two weeks from {fmt(usL.reference.start)} to {fmt(usL.reference.end)} (survey estimate; standard error {usL.standardError} points). The UK's Office for National Statistics (ONS) does not publish a single "uses AI" share at all: it asks which AI technologies a business uses, and its headline answer for businesses with 10 or more employees is that {ci(uk10[NOT_USE])} use none of them.</p>
+  <p>Those two numbers come from questions with different wording, put to different groups of businesses, about different stretches of time. A third office, Eurostat, defines AI use differently again. This piece sets out what each office actually asks and counts, using only their own pages and data files as read on 14 November 2026. Every figure here is a <strong>survey estimate</strong>: a share worked out from a weighted sample of businesses, not a count of every business.</p>
+
+  <div class="stat-row">
+    <div class="stat"><b>{pct(usL.yes)}</b><span>{us.kind}: US employer businesses that used AI, two weeks to {fmt(usL.reference.end)} (Census Bureau, BTOS)</span></div>
+    <div class="stat"><b>{pct(uk10[NOT_USE].estimate)}</b><span>{uk.kind}: UK businesses with 10+ employees using none of the listed AI technologies, {live} (ONS, BICS)</span></div>
+    <div class="stat"><b>Not shown</b><span>Eurostat's EU figure: uncertainty not yet checked by us</span></div>
+  </div>
+
+  <h2>Three offices, three questions</h2>
+  <div class="table-wrap">
+    <table>
+      <caption>Sources: US Census Bureau, Business Trends and Outlook Survey, National.xlsx; ONS, Business Insights and Conditions Survey wave 165 dataset and confidence intervals (Open Government Licence v3.0); Eurostat, isoc_eb_ai and Statistics Explained. All read 14 November 2026. Every figure is a survey estimate.</caption>
+      <thead><tr><th>Publisher and survey</th><th>Question or definition, as worded by the publisher</th><th>Population</th><th>Reference period</th><th>Latest figure (date)</th><th>Uncertainty</th><th>Method and reuse statement</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>US Census Bureau, Business Trends and Outlook Survey (BTOS)</td>
+          <td>"{usQuestion}" Answers: Yes, No, Do not know.</td>
+          <td>Employer businesses in the US, DC and Puerto Rico, all sizes, excluding farms, railroads, the Postal Service, public administration and some other industries</td>
+          <td>The previous two weeks: {fmt(usL.reference.start)} to {fmt(usL.reference.end)}</td>
+          <td>Survey estimate: {pct(usL.yes)} answered Yes (published {fmt(usL.published)})</td>
+          <td>Standard error {usL.standardError} points, published. 90% interval {pct(usL.ci90.lower)} to {pct(usL.ci90.upper)} (our calculation, using the method's 1.645 multiplier)</td>
+          <td><a href="https://www2.census.gov/data/experimental-data-products/business-trends-and-outlook-survey/methodology.pdf" rel="noopener">Methodology, Version 5</a>. The Census Bureau asks users to cite it as the source of the original data</td>
+        </tr>
+        <tr>
+          <td>ONS, Business Insights and Conditions Survey (BICS), wave 165</td>
+          <td>"{uk.question}" A list of {ukOptions.length} options plus "Not sure" and "does not currently use"; businesses could select more than one.</td>
+          <td>UK businesses not permanently stopped trading, in the survey's industries (finance and insurance, agriculture and public administration are excluded); figure shown is for 10 or more employees</td>
+          <td>At the time of answering: {live}</td>
+          <td>Survey estimate: {pct(uk10[NOT_USE].estimate)} use none of the listed technologies (released {released})</td>
+          <td>95% confidence interval {pct(uk10[NOT_USE].ci95.lower)} to {pct(uk10[NOT_USE].ci95.upper)}, published</td>
+          <td><a href="https://www.ons.gov.uk/economy/economicoutputandproductivity/output/methodologies/businessinsightsandconditionssurveybicsqmi" rel="noopener">BICS quality and methodology note</a>. Open Government Licence v3.0</td>
+        </tr>
+        <tr>
+          <td>Eurostat, ICT usage and e-commerce in enterprises (dataset isoc_eb_ai)</td>
+          <td>Enterprises using "at least one of the AI technologies" in a list of eight, from text mining to machines that move autonomously</td>
+          <td>Enterprises in the EU with 10 or more employees and self-employed persons, in listed sectors, without the financial sector</td>
+          <td>Generally the situation during the survey period, in the first months of 2025</td>
+          <td>Not shown here (dataset updated {euUpdated})</td>
+          <td>No standard error in the dataset; Eurostat says it publishes EU standard errors for a selection of indicators, which we could not open</td>
+          <td><a href="https://ec.europa.eu/eurostat/cache/metadata/en/isoc_e_esms.htm" rel="noopener">Reference metadata</a>. Reuse allowed with the source acknowledged</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Why the US and UK numbers cannot be subtracted from each other</h2>
+  <p>The wording is the first gap. The Census Bureau asks a yes or no question about "any of its business functions" over a fixed two-week window. The ONS shows a list of technologies (machine learning for data or images, robotics, text generation using large language models, visual content creation, autonomous vehicles, other) and asks which, if any, the business uses now. Neither survey shows how the same business would answer the other's question.</p>
+  <p>The answer options differ too. The US question offers "Do not know", and {pct(usL.doNotKnow)} chose it in the latest round, against {pct(usPrev.doNotKnow)} in the round before. The UK list offers "Not sure", chosen by {ci(uk10['Not sure'])} of businesses with 10 or more employees. So the US Yes share is not simply 100 minus the No share, and for the UK we do not take {pct(uk10[NOT_USE].estimate)} from 100 to get a "uses AI" share. Businesses could tick several options, the "Not sure" group sits in the gap, and ONS publishes no such figure itself.</p>
+  <p>Then there is who gets asked. The BTOS covers employer businesses of every size, including those with four or fewer employees. The UK figure in the table is for businesses with 10 or more employees; for all businesses, including those with fewer than 10, the ONS estimate is {ci(ukAll[NOT_USE])} using none of the listed technologies. Eurostat starts at 10 people employed and leaves out the financial sector. The ONS also excludes finance and insurance, while the BTOS excludes only parts of finance (central banks, and funds and trusts). Each survey leaves out a different list of industries.</p>
+  <p>Last, the periods. The latest US figure covers {fmt(usL.reference.start)} to {fmt(usL.reference.end)} by its own reference dates. The UK figure describes businesses as they answered between {live}. Eurostat's latest year is 2025, collected in the first months of that year. Even with identical questions, three windows this far apart would not describe the same moment.</p>
+
+  <h2>What the UK figure breaks down into</h2>
+  <p>Because the ONS asks about technologies, it can say which ones businesses tick. These are its published estimates for wave 165, for businesses with 10 or more employees and for all businesses, each with the 95% confidence interval ONS publishes. Some cells are suppressed by ONS for confidentiality and are marked as such.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Survey estimate. Source: ONS, Business Insights and Conditions Survey, wave 165 ({live}), released {released}, and the matching confidence-interval dataset. Percentage of businesses not permanently stopped trading, weighted by count, UK. Businesses could select more than one option. Source: Office for National Statistics licensed under the Open Government Licence v.3.0.</caption>
+      <thead><tr><th>Answer</th><th class="num">10+ employees</th><th class="num">95% CI</th><th class="num">All businesses</th><th class="num">95% CI</th><th>Evidence kind</th></tr></thead>
+      <tbody>
+        {uk.options.map((o: string) => {
+          const a = uk10[o]; const b = ukAll[o];
+          return (
+            <tr>
+              <td>{o}</td>
+              <td class="num">{a.estimate === null ? 'suppressed' : pct(a.estimate)}</td>
+              <td class="num">{a.estimate === null ? '' : `${pct(a.ci95.lower)} to ${pct(a.ci95.upper)}`}</td>
+              <td class="num">{b.estimate === null ? 'suppressed' : pct(b.estimate)}</td>
+              <td class="num">{b.estimate === null ? '' : `${pct(b.ci95.lower)} to ${pct(b.ci95.upper)}`}</td>
+              <td>{ukLabel}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+  <p>Text generation using large language models has the largest point estimate of the listed technologies in both groups: {ci(uk10['Text generation using Large Language Models'])} of businesses with 10 or more employees. For that group its interval overlaps the one for visual content creation, {ci(uk10['Visual content creation'])}, so the survey does not settle which of the two is more common. The responses behind the whole wave came from {responses} businesses, about a quarter of the roughly 39,000 sent the survey, which the ONS notes is a limited number. The survey is voluntary, and the ONS classes its results as official statistics in development. The AI question appears every six waves in its question log, so wave 165 is the latest edition with it among the waves we read, 165 to 167.</p>
+
+  <h2>Twenty-five rounds of the US question</h2>
+  <p>The Census Bureau has asked its current core AI question since November 2025, when, according to its <a href="https://www.census.gov/library/stories/2026/05/ai-use-businesses.html" rel="noopener">May 2026 article</a>, it changed the wording from AI used "in producing goods or services" to AI used "in any business function". The national file holds {us.periods} rounds under that question, from {fmt(usF.reference.start)} onwards.</p>
+  <ColumnChart
+    title="US employer businesses answering Yes to the BTOS AI use question, by two-week reference period"
+    summary={`Survey estimates from ${pct(usF.yes)} for the two weeks starting ${fmt(usF.reference.start)} to ${pct(usL.yes)} for the two weeks starting ${fmt(usL.reference.start)}, ${us.periods} periods.`} data={us.series.map((s: any) => ({ label: short(s.reference.start), value: s.yes, valueLabel: s.yes.toFixed(1), highlight: s.period === usL.period }))} caption={`Survey estimate. Source: U.S. Census Bureau, Business Trends and Outlook Survey, National.xlsx, read 14 November 2026. Per cent of responding businesses answering Yes to question 7; label is the first day of each two-week reference period. Standard errors range from ${Math.min(...us.series.map((s: any) => s.standardError))} to ${Math.max(...us.series.map((s: any) => s.standardError))} points. No data gap within these periods.`}
+    height={300}
+  />
+  <p>The estimate was {pct(usF.yes)} for the first of these rounds (standard error {usF.standardError} points) and {pct(usL.yes)} for the latest ({usL.standardError} points). The latest round's standard error is the largest of the {us.periods}, and its "Do not know" share of {pct(usL.doNotKnow)} is also above the earlier rounds. The file does not say why, and we do not guess. The Census Bureau's methodology notes that standard errors measure sampling variability only, not systematic bias.</p>
+  <p>The wording in the file needs a note of its own. As downloaded on 14 November 2026, question 7 reads "Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI)", and the questionnaire for the next content year uses the same term. The Census Bureau's May 2026 article describes the same question using "AI". The data file attaches one wording to all {us.periods} rounds, so it cannot show in which round, if any, respondents first saw the new term. Per the method rules for our <a href={`${base}ai-and-jobs/`}>AI and jobs</a> section, that would count as a new version of the question once its date is known; for now we quote the wording the file gives.</p>
+
+  <h2>Why the EU figure is missing</h2>
+  <p>Eurostat publishes an EU share of enterprises using AI technologies for 2025 in dataset isoc_eb_ai, and its definition is the most detailed of the three: an enterprise counts if it used at least one of eight listed technologies, including text mining, speech recognition, generating language or code, generating images or sound, image recognition, machine learning for data analysis, AI-based workflow automation, and machines that move on their own. Its 2025 survey reached 157,000 of 1.53 million enterprises, according to the Statistics Explained article.</p>
+  <p>The dataset itself carries no standard error. Eurostat's reference metadata says national offices send standard errors for a selection of indicators and that Eurostat has published EU standard errors since 2011, but the library where those sit would not open for us. Under the rules our site uses for figures about work and business, a number whose uncertainty we have not yet checked is not published. So the table describes Eurostat's question, population and period but leaves its figure out until that check is done. Eurostat's reuse terms, which we did read, allow reuse with the source acknowledged.</p>
+
+  <h2>What these surveys measure, and what they leave out</h2>
+  <p>All three ask whether a business uses AI, as the person answering for it understands the question. None measures how many staff use it, how often, or for what share of their work. The ONS question is closest to naming tools, but a tick next to "text generation using large language models" covers anything from one person drafting emails to a product built on a model.</p>
+  <p>The figures also say nothing about effects on jobs, pay or output, and nothing here is a forecast. A share of businesses is not a share of workers or of the economy either: the BTOS and the ONS "all businesses" figure weight each business equally, so a sole trader and a large employer count the same.</p>
+  <p>Further detail on how we handle job-related data, including evidence kinds and uncertainty rules, is on the <a href={`${base}transparency/`}>transparency page</a>. Our earlier piece on <a href={`${base}blog/job-ads-that-mention-ai/`}>job ads that mention AI</a> uses a different kind of evidence, counts of postings on one job site, and is labelled accordingly.</p>
+
+  <StudioNote article={article} snapshot="14 November 2026" />
+</InsightArticle>
