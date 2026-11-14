@@ -46,6 +46,19 @@ test('Arena-Hard (the open benchmark) is never treated as the Arena service', ()
   }
 });
 
+// Cases from the Codex re-review at f829f85.
+test('blocked domains and AA names win over the Arena-Hard exemption', () => {
+  assert.equal(blockedSourceFor('Artificial Analysis Arena-Hard results')?.id, 'artificial-analysis');
+  assert.equal(blockedSourceFor('https://artificialanalysis.ai/evaluations/arena-hard')?.id, 'artificial-analysis');
+  assert.equal(blockedSourceFor('https://arena.ai/arena-hard')?.id, 'arena');
+});
+
+test('every Hugging Face Arena path we have cited is caught', () => {
+  for (const label of ['https://huggingface.co/spaces/lmarena/chatbot-arena-leaderboard/tree/main', 'https://huggingface.co/spaces/lmarena-ai/arena-leaderboard', 'https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard']) {
+    assert.equal(blockedSourceFor(label)?.id, 'arena', label);
+  }
+});
+
 test('other hosts are judged by host, not by words in the path', () => {
   assert.equal(isBlockedSource('https://github.com/lmsys/some-other-repo'), false);
   assert.equal(isBlockedSource('https://example.com/artificial-analysis-review'), false);

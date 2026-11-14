@@ -65,7 +65,13 @@ export const BLOCKED_DATA_SOURCES: readonly BlockedDataSource[] = [
       'arena-ai',
     ],
     domains: ['lmarena.ai', 'arena.ai', 'chat.lmsys.org'],
-    pathPrefixes: ['huggingface.co/spaces/lmarena-ai/', 'huggingface.co/spaces/lmsys/'],
+    pathPrefixes: [
+      'huggingface.co/spaces/lmarena-ai/',
+      'huggingface.co/spaces/lmarena/',
+      'huggingface.co/spaces/lmsys/',
+      'huggingface.co/datasets/lmarena-ai/',
+      'huggingface.co/datasets/lmarena/',
+    ],
     reason:
       'Terms of Use (updated 23 Feb 2026) bar programmatic access, manual or automated extraction of data, '
       + 'and reproduction or commercial use of the service output.',
@@ -96,8 +102,10 @@ function hasAlias(normalised: string, alias: string): boolean {
 
 function matchOne(label: string): BlockedDataSource | null {
   const normalised = normaliseSourceLabel(label);
-  if (!normalised || isArenaHard(normalised)) return null;
+  if (!normalised) return null;
 
+  // 1. Blocked domains and hosted paths always win, whatever the path or name says
+  //    (so artificialanalysis.ai/evaluations/arena-hard and arena.ai/arena-hard are blocked).
   const url = hostAndPath(label);
   if (url) {
     const full = `${url.host}${url.path}`;
@@ -105,9 +113,17 @@ function matchOne(label: string): BlockedDataSource | null {
       if (source.domains.some((domain) => url.host === domain || url.host.endsWith(`.${domain}`))) return source;
       if (source.pathPrefixes?.some((prefix) => full.startsWith(prefix))) return source;
     }
-    // A URL on some other host is judged by its host only (so github.com/lmsys/... is not Arena).
+    // A URL on some other host is judged by its host only (so github.com/lmsys/arena-hard-auto is not Arena).
     if (/^(https?:\/\/|[a-z0-9.-]+\.[a-z]{2,}\/)/i.test(label.trim())) return null;
   }
+
+  // 2. Artificial Analysis names are blocked even when the label mentions Arena-Hard
+  //    (for example "Artificial Analysis Arena-Hard results").
+  const aa = BLOCKED_DATA_SOURCES.find((source) => source.id === 'artificial-analysis');
+  if (aa && aa.aliases.some((alias) => hasAlias(normalised, alias))) return aa;
+
+  // 3. Arena-Hard, the open benchmark, is not the Arena service.
+  if (isArenaHard(normalised)) return null;
 
   return BLOCKED_DATA_SOURCES.find((source) => source.aliases.some((alias) => hasAlias(normalised, alias))) ?? null;
 }
