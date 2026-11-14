@@ -1,4 +1,5 @@
 ---
+import {relativeSnapshotAge} from "../lib/snapshot-age.mjs";
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getNews } from '../db/queries';
 import {
@@ -147,16 +148,7 @@ function formatDateLabel(value: string | null | undefined): string {
   });
 }
 
-function formatRelativeTime(value: string | null | undefined): string {
-  const normalised = normaliseDateTime(value);
-  if (!normalised) return 'awaiting refresh';
-  const diffMinutes = Math.max(0, Math.round((Date.now() - Date.parse(normalised)) / 60000));
-  if (diffMinutes < 1) return 'just now';
-  if (diffMinutes < 60) return `${diffMinutes}m ago`;
-  const diffHours = Math.round(diffMinutes / 60);
-  if (diffHours < 48) return `${diffHours}h ago`;
-  return `${Math.round(diffHours / 24)}d ago`;
-}
+function formatRelativeTime(value: string | null | undefined): string { return relativeSnapshotAge(normaliseDateTime(value)); }
 
 function daysSince(value: string | null | undefined): number | null {
   const normalised = normaliseDateTime(value);
@@ -416,7 +408,7 @@ const tableLinks = [
 
 <BaseLayout
   title="AI Resource Hub - Live Model Leaderboard, Pricing, Benchmarks, and AI News"
-  description="A dense, hourly refreshed reference desk for AI models, prices, benchmark-backed rankings, releases, and live AI updates."
+  description="An evidence-led reference desk with hourly collection attempts for AI models, prices, benchmark-backed rankings, releases, and live AI updates."
   compactChrome
   locale="en-GB"
   alternateTranslations={{
@@ -531,10 +523,11 @@ const tableLinks = [
           </div>
 
           <div class="airh-strip-card">
-            <h2>Data freshness</h2>
+            <h2>Data timestamps</h2>
+            <p>Hourly collection attempts do not prove fresh measurements. Check each source and its observation date; cached or failed collections retain the original dates.</p>
             {dataPulse.map((lane) => (
               <p class="airh-pulse-row" data-airh-tip={lane.note}>
-                <strong>{lane.updatedAt ? pulseDate.format(new Date(lane.updatedAt)) : 'none yet'}</strong>
+                <strong>{lane.updatedAt ? pulseDate.format(new Date(lane.updatedAt)) : 'none yet'}<small style="display:block">{formatRelativeTime(lane.updatedAt)}</small></strong>
                 <a href={lane.href}>{lane.label}</a>
               </p>
             ))}
