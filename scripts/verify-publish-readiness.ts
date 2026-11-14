@@ -17,6 +17,7 @@ import {
 } from './benchmark-provenance';
 import { getPublicQualityPolicyFailures } from './public-quality-policy';
 import { findVerifiedBenchmarkScoreEvidence } from './benchmark-score-evidence';
+import { isBlockedSource } from '../src/data/source-policy';
 import { getUpcomingEvents, getUpcomingEventWarnings } from './events-publication-gate';
 
 const repoRoot = process.cwd();
@@ -85,6 +86,8 @@ interface SpreadsheetExport {
     id?: string;
     status?: string | null;
     field_states?: Record<string, string>;
+    speed_tps?: number | null;
+    ttft_ms?: number | null;
     benchmarks?: Record<string, unknown> | null;
     benchmark_evidence?: Record<string, {
       score?: unknown;
@@ -227,7 +230,9 @@ function main() {
     cacheBenchmarkDefinitions.map((benchmark) => [benchmark.id, benchmark]),
   );
   const exactRankableBenchmarkScores = cacheBenchmarkScores.filter((score) => (
-    findVerifiedBenchmarkScoreEvidence(score) !== null
+    // Hub #1569: rows from a blocked source are never rankable, whatever their evidence.
+    !isBlockedSource(score.source, score.source_url)
+    && findVerifiedBenchmarkScoreEvidence(score) !== null
     && assessBenchmarkProvenance(
       score,
       benchmarkDefinitionsById.get(score.benchmark_id),
@@ -355,6 +360,29 @@ function main() {
         !== cacheBenchmarkScores.length - exportedBenchmarkCount
     ) {
       failures.push('Public spreadsheet benchmark policy counts or evidence state are stale.');
+    }
+  }
+
+  // Hub #1569: no speed cell in a public export may come from a blocked source.
+  // Exported speed comes from each model's latest speed_history row.
+  {
+    const latestSpeedSource = new Map<string, { id: number; source: string | null }>();
+    for (const row of loadJson<{ id?: number | string; model_id: string; source?: string | null }>('speed_history')) {
+      const id = Number(row.id ?? 0);
+      const current = latestSpeedSource.get(row.model_id);
+      if (!current || id > current.id) latestSpeedSource.set(row.model_id, { id, source: row.source ?? null });
+    }
+    for (const [label, exportFile] of [['ai-models-comparison.json', spreadsheet], ['models-latest.json', latestSpreadsheet]] as const) {
+      const offenders = (exportFile?.models ?? []).filter((model) => (
+        (model.speed_tps != null || model.ttft_ms != null)
+        && isBlockedSource(latestSpeedSource.get(String(model.id))?.source)
+      ));
+      if (offenders.length > 0) {
+        failures.push(
+          `${label} carries speed from a blocked source for ${offenders.length} models `
+          + `(e.g. ${offenders.slice(0, 3).map((model) => model.id).join(', ')}). Regenerate the export.`,
+        );
+      }
     }
   }
 

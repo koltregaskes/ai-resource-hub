@@ -9,6 +9,8 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { blockedSourceFor, isBlockedSource } from '../src/data/source-policy';
 import { getBenchmarkScores, getModels, getModelsWithTTFT, getModelsWithMultipleEndpoints } from '../src/db/pg-cache';
+import { META_BENCHMARK_LEADERBOARD, getMetaBenchmarkOverview, metaEntryCitesBlockedSource } from '../src/data/internal-meta-benchmarks';
+import { AI_FINDS as RESEARCH_FINDS } from '../src/data/research-finds';
 
 test('real Artificial Analysis labels are blocked', () => {
   for (const label of ['artificialanalysis.ai (validated)', 'artificial-analysis', 'Artificial Analysis', 'https://artificialanalysis.ai/leaderboards/models']) {
@@ -25,6 +27,58 @@ test('real Arena labels are blocked', () => {
 test('licensed and first-party sources are not blocked', () => {
   for (const label of ['OpenAI', 'Anthropic evaluation', 'Expert Review', 'openrouter.ai/api/v1/models', 'https://epoch.ai/benchmarks', 'arena-hard', 'Arena-Hard', null, undefined, '']) {
     assert.equal(isBlockedSource(label), false, String(label));
+  }
+});
+
+// Cases from the Codex review of PR 107.
+test('aliases match across case and separators', () => {
+  for (const label of ['artificial_analysis', 'ARTIFICIAL ANALYSIS', 'aa-intelligence-index', 'AA Intelligence Index', 'AA Index 64.9 (#1)', 'AA-Omniscience', 'GDPval-AA', 'https://www.artificialanalysis.ai/x']) {
+    assert.equal(blockedSourceFor(label)?.id, 'artificial-analysis', label);
+  }
+  for (const label of ['chatbot_arena', 'Chatbot Arena', 'lm_arena', 'LM Arena', 'Arena Text', 'Arena Agent', 'https://huggingface.co/spaces/lmarena-ai/arena-leaderboard', 'https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard']) {
+    assert.equal(blockedSourceFor(label)?.id, 'arena', label);
+  }
+});
+
+test('Arena-Hard (the open benchmark) is never treated as the Arena service', () => {
+  for (const label of ['LMSYS Arena-Hard-Auto', 'https://github.com/lmsys/arena-hard-auto', 'arena_hard', 'Arena Hard Auto v2']) {
+    assert.equal(isBlockedSource(label), false, label);
+  }
+});
+
+test('other hosts are judged by host, not by words in the path', () => {
+  assert.equal(isBlockedSource('https://github.com/lmsys/some-other-repo'), false);
+  assert.equal(isBlockedSource('https://example.com/artificial-analysis-review'), false);
+});
+
+test('meta-benchmark rows built on blocked sources are withheld from public output', () => {
+  const withheld = META_BENCHMARK_LEADERBOARD.filter(metaEntryCitesBlockedSource);
+  assert.ok(withheld.length > 0, 'fixture should contain AA-based rows');
+  const published = getMetaBenchmarkOverview().leaderboard;
+  for (const entry of published) {
+    assert.equal(metaEntryCitesBlockedSource(entry), false, entry.modelId);
+    assert.doesNotMatch(`${entry.primaryMetric} ${entry.sourceSummary ?? ''}`, /\bAA\b|Artificial Analysis|Arena/i, entry.modelId);
+  }
+  assert.equal(published.length, META_BENCHMARK_LEADERBOARD.length - withheld.length);
+});
+
+test('research finds carry no Arena Elo figures', () => {
+  for (const find of RESEARCH_FINDS) {
+    const text = JSON.stringify(find);
+    assert.doesNotMatch(text, /\d{3,4}\s*Elo\b.*(LMArena|Arena)|(LMArena|Chatbot Arena)[^"]*\d{3,4}/i, find.name);
+  }
+});
+
+test('committed public exports carry no speed from a blocked source', () => {
+  const speed = JSON.parse(readFileSync(path.join(process.cwd(), 'data', 'pg-cache', 'speed_history.json'), 'utf8')) as Array<{ id: number; model_id: string; source: string }>;
+  const latest = new Map<string, { id: number; source: string }>();
+  for (const row of speed) { const cur = latest.get(row.model_id); if (!cur || Number(row.id) > cur.id) latest.set(row.model_id, { id: Number(row.id), source: row.source }); }
+  for (const file of ['models-latest.json', 'ai-models-comparison.json']) {
+    const exported = JSON.parse(readFileSync(path.join(process.cwd(), 'public', 'data', file), 'utf8')) as { models: Array<{ id: string; speed_tps: number | null; ttft_ms: number | null }>; benchmark_policy: { raw_score_count: number } };
+    const offenders = exported.models.filter((m) => (m.speed_tps != null || m.ttft_ms != null) && isBlockedSource(latest.get(m.id)?.source));
+    assert.deepEqual(offenders.map((m) => m.id), [], file);
+    const rawScores = JSON.parse(readFileSync(path.join(process.cwd(), 'data', 'pg-cache', 'benchmark_scores.json'), 'utf8')) as unknown[];
+    assert.equal(exported.benchmark_policy.raw_score_count, rawScores.length, `${file} raw_score_count keeps blocked rows in the total`);
   }
 });
 

@@ -23,7 +23,7 @@ const dataSources = [
     category: 'Benchmark Scores',
     frequency: 'As published',
     sources: [
-      { name: 'LMSYS Chatbot Arena', url: 'https://lmarena.ai', description: 'Crowdsourced Elo ratings from 5M+ human preference votes.' },
+      { name: 'Arena (formerly LMSYS Chatbot Arena)', url: 'https://arena.ai', description: 'Crowdsourced ratings from human preference votes. Linked for reference only: its terms do not allow its rankings to be republished, so none appear on this site.' },
       { name: 'Papers With Code', url: 'https://paperswithcode.com/sota', description: 'Aggregated benchmark leaderboards across ML tasks.' },
       { name: 'HuggingFace Open LLM Leaderboard', url: 'https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard', description: 'Standardised evaluations for open-weight models.' },
       { name: 'Stanford HELM', url: 'https://crfm.stanford.edu/helm/', description: 'Holistic Evaluation of Language Models.' },
@@ -33,7 +33,7 @@ const dataSources = [
       { name: 'SWE-bench Verified', url: 'https://www.swebench.com', description: 'Real-world GitHub issue resolution benchmark.' },
       { name: 'SWE-bench Pro (Scale AI SEAL)', url: 'https://scale.com/leaderboard/swe_bench_pro_public', description: '1,865 long-horizon tasks across 41 repos; harder successor to SWE-bench.' },
       { name: 'BigCodeBench', url: 'https://github.com/bigcode-project/bigcodebench', description: 'Code generation benchmark with complex instructions.' },
-      { name: 'Artificial Analysis', url: 'https://artificialanalysis.ai', description: 'Independent speed and quality benchmarks; source for TTFT and output speed data.' },
+      { name: 'Artificial Analysis', url: 'https://artificialanalysis.ai', description: 'Independent speed and quality benchmarks. Linked for reference only: its terms do not allow its data to be used on comparison sites, so we do not republish it.' },
       { name: 'Scale AI SEAL', url: 'https://scale.com/leaderboard', description: 'Expert-driven evaluations and safety benchmarks.' },
     ],
   },
@@ -41,7 +41,7 @@ const dataSources = [
     category: 'Speed & Latency',
     frequency: 'Hourly',
     sources: [
-      { name: 'Artificial Analysis', url: 'https://artificialanalysis.ai', description: 'Primary source for TTFT (time to first token) and output speed measurements.' },
+      { name: 'Artificial Analysis', url: 'https://artificialanalysis.ai', description: 'Publishes live speed measurements on its own site. Not used here: its terms do not allow republishing, so our speed data is paused until we have a licensed source.' },
       { name: 'Provider benchmarks', url: '', description: 'Official performance data published by OpenAI, Anthropic, Google, and others.' },
     ],
   },
@@ -247,7 +247,7 @@ const papers = [
           <ul class="text-sm text-(--color-text-secondary) space-y-1.5 list-disc list-inside">
             <li><strong>OpenRouter API</strong> — public endpoint, no authentication required. We use their <code>/api/v1/models</code> endpoint which is explicitly designed for programmatic access.</li>
             <li><strong>OpenAI API</strong> — we optionally use the models list endpoint to verify model availability. Requires an API key when configured.</li>
-            <li><strong>HuggingFace Spaces</strong> — we access public Gradio API endpoints for Chatbot Arena and Open LLM Leaderboard data.</li>
+            <li><strong>HuggingFace Spaces</strong> — we access public Gradio API endpoints for Open LLM Leaderboard data. We no longer collect Chatbot Arena data.</li>
             <li><strong>News collection</strong> — we prioritise public APIs, RSS and Atom feeds, official provider blogs, newsroom pages, and other clearly public source surfaces rather than scraping full article bodies.</li>
           </ul>
         </div>

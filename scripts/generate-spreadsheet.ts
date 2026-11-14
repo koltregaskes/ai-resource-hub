@@ -418,9 +418,11 @@ function main() {
     benchmark_types: benchmarkIds,
     benchmark_policy: {
       evidence_state: 'exact-reviewed-row',
-      raw_score_count: benchmarkScores.length,
+      // Counts cover every raw row, including rows held back because their source is
+      // blocked (hub #1569), so the publication gate's cache totals still match.
+      raw_score_count: source.benchmarkScores.length,
       rankable_score_count: publicBenchmarkScores.length,
-      quarantined_score_count: benchmarkScores.length - publicBenchmarkScores.length,
+      quarantined_score_count: source.benchmarkScores.length - publicBenchmarkScores.length,
     },
     models: jsonRows,
   };
