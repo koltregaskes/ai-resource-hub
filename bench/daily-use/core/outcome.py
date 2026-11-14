@@ -5,8 +5,8 @@ the model did) and ``pass`` (whether that was right). This module works out
 both from a reply, by script.
 
 ``classify_outcome(reply, task)`` returns ``answered``, ``abstained``,
-``refused`` or ``malformed``, or ``needs_judge`` when the published patterns
-below can't decide. ``execution_error`` is set by the runner, never here.
+``refused`` or ``malformed``, or ``needs_judge`` when the script can't be
+sure. ``execution_error`` is set by the runner, never here.
 
 ``decide(task, reply)`` combines the task's grader with the outcome, following
 the method's mapping table.
@@ -19,29 +19,60 @@ Precedence for a mixed reply, from the method:
 4. a substantive answer is present, even hedged: ``answered``;
 5. only a decline: ``abstained``.
 
-How the script applies it, in order:
+THE SCRIPT DECIDES ONLY THE CLEAR CASES. Everything else goes to the judges.
+A substantive answer must never be passed as an abstention, so the script
+says ``abstained`` only when the reply holds a decline and nothing that could
+possibly be an answer. In order:
 
 a. An empty reply, JSON that doesn't parse on a ``json`` task, or Python with
    a syntax error on a ``python_tests`` task is ``malformed``.
-b. Quotations of the prompt are removed first, so a decline phrase quoted from
-   the question or the document doesn't count.
-c. A refusal phrase and no abstention phrase: ``refused``. Both: ``needs_judge``.
-d. No abstention phrase at all: ``answered``.
-e. An abstention phrase, plus a clause that commits to one candidate
-   ("probably London", "my best guess is"): ``answered``. The hedge doesn't
-   make it an abstention.
-f. An abstention phrase and nothing that offers a candidate: ``abstained``.
-   Giving the reason for declining, or naming several candidates without
-   choosing one, is still an abstention.
-g. Anything else, such as a weaker sign of a candidate, a very short stray
-   sentence beside the decline, or a long reply: ``needs_judge``.
+b. The reply is normalised (``normalise``): Unicode NFKC, every kind of
+   Unicode space turned into a plain space, typographic quotation marks and
+   apostrophes turned into ASCII ones, zero-width characters removed.
+c. Quotations are taken out before any phrase is looked for: Markdown
+   block-quote lines, text inside quotation marks, and sentences copied word
+   for word from the prompt.
+d. No abstention, refusal or unclear-decline phrase outside quotations:
+   ``answered``. (If such a phrase sits inside a quotation that is NOT from
+   the prompt, the script can't tell whose words they are: ``needs_judge``.
+   A reply that is nothing but one quotation is read as the model's own
+   words.)
+e. Wording that may be a decline or may be a statement of fact ("no price
+   has been agreed", "the date is yet to be set": ``UNCLEAR_DECLINE_PATTERNS``)
+   always goes to the judges.
+f. An abstention phrase is present. ``abstained`` only if ALL of these hold;
+   otherwise ``needs_judge``:
 
-The patterns are deliberately published here as plain constants. They are
-matched without regard to case, after curly apostrophes are straightened.
+   * there is no refusal phrase;
+   * the reply has no quotation of any kind;
+   * with the abstention phrases themselves blanked out, nothing left is a
+     candidate answer. A candidate answer is, conservatively: any digit,
+     money sign or percent sign; any match of ``CANDIDATE_PATTERNS`` (a clause
+     introduced by "probably", "I think", "my guess", "it is", "the answer
+     is", "should be" and the like, or several candidates named without
+     choosing); or ANY word that isn't in ``SAFE_WORDS``, a short list of
+     function words and words about the source ("the", "document", "from").
+     That last rule catches every name, day, month, number word and other
+     content word, whether or not it is in the prompt.
+
+   So "I don't know." and "The minutes don't say." are ``abstained`` by
+   script, and "I don't know, probably London", "I don't know. The meeting
+   starts at ten o'clock." and a decline that goes on to explain itself all
+   go to the judges. Naming two or more candidates without choosing also goes
+   to the judges, never to a script verdict.
+g. A refusal phrase is present and no abstention phrase. ``refused`` only if
+   nothing else is in the reply (the same test, with a few more safe words
+   such as "help" and "request"); otherwise ``needs_judge``.
+
+The script never returns ``answered`` for a reply that has an abstention or
+refusal phrase of its own, and never returns ``abstained`` for one that has
+anything else in it. The patterns and word lists are published below as plain
+constants. They are English only.
 """
 from __future__ import annotations
 
 import re
+import unicodedata
 from typing import Any, Mapping, Optional
 
 from . import graders
@@ -52,22 +83,15 @@ REFUSED = "refused"
 MALFORMED = "malformed"
 EXECUTION_ERROR = "execution_error"  # set by the runner only
 NEEDS_JUDGE = "needs_judge"
+# Not an outcome: a python_tests reply that wasn't run because there is no
+# proven sandbox. The slot stays pending.
+SANDBOX_UNAVAILABLE = "sandbox_unavailable"
 
 OUTCOMES = (ANSWERED, ABSTAINED, REFUSED, MALFORMED, EXECUTION_ERROR)
+JUDGED_OUTCOMES = (ANSWERED, ABSTAINED, REFUSED)
 
-# A reply longer than this that contains an abstention phrase goes to the
-# judges: a real abstention is short, and a long reply may hold an answer.
-LONG_REPLY_WORDS = 120
-
-# A sentence or clause of at most this many words, with no pattern in it,
-# standing beside an abstention ("Not recorded. Sunday.") might be a bare
-# answer: judge it.
-BARE_FRAGMENT_MAX_WORDS = 3
-
-# A sentence or quoted span copied from the prompt is ignored when it has at
-# least this many words (sentences) or characters (quoted spans).
+# A sentence copied from the prompt is ignored when it has at least this many words.
 QUOTED_SENTENCE_MIN_WORDS = 5
-QUOTED_SPAN_MIN_CHARS = 8
 
 # ---------------------------------------------------------------- published patterns
 
@@ -101,15 +125,7 @@ ABSTENTION_PATTERNS = (
     r"|haven't been|have not been|has never been|have never been)\s+"
     r"(?:(?:actually|really|explicitly|specifically|clearly|ever|been|directly|officially|reliably|definitively)\s+)*"
     r"(?:known|recorded|stated|specified|given|mentioned|documented|determined|provided|listed|identified"
-    r"|named|shown|disclosed|included|clear|certain|settled|said|established|determinable|knowable|answerable"
-    r"|set|fixed|agreed|decided|arranged|confirmed|chosen|scheduled|announced|booked|finalised|finalized|published)\b",
-    # "no winner has been named", "no price has yet been agreed"
-    r"\bno (?:\w+ ){1,3}(?:has|have|had) (?:yet |ever |so far )?been (?:set|fixed|agreed|decided|arranged|confirmed"
-    r"|given|recorded|chosen|made|named|scheduled|announced|settled|stated|specified|booked|published|determined"
-    r"|finalised|finalized|kept|found)\b",
-    # "yet to be decided", "still to be confirmed"
-    r"\b(?:yet|still|remains?|remaining) to be (?:set|fixed|agreed|decided|arranged|confirmed|determined|announced"
-    r"|scheduled|booked|finalised|finalized|settled|known|seen)\b",
+    r"|named|shown|disclosed|included|clear|certain|said|established|determinable|knowable|answerable)\b",
     # "the minutes don't say", "does not state", "never mentions", "fails to specify"
     r"\b(?:don't|doesn't|didn't|do not|does not|did not|never|fails? to|won't|will not)\s+"
     r"(?:(?:actually|explicitly|specifically|clearly|ever|directly|really)\s+)*"
@@ -126,7 +142,7 @@ ABSTENTION_PATTERNS = (
     # single words
     r"\b(?:unknown|unknowable|undetermined|indeterminate|unrecorded|unspecified|unclear|uncertain|unstated)\b",
     # "I don't know", "I'm not sure", "I have no information"
-    r"\bI (?:really |honestly |simply )?(?:don't|do not) (?:know|have (?:enough |that |this |any |the )?(?:information|data|details?|record))\b",
+    r"\bI (?:really |honestly |simply )?(?:don't|do not) (?:really |actually |honestly |quite |exactly )?(?:know|have (?:enough |that |this |any |the )?(?:information|data|details?|record))\b",
     r"\bI(?:'m| am) (?:not (?:sure|certain|aware)|unsure|uncertain)\b",
     r"\bI have no (?:information|record|way|data|knowledge)\b",
     r"\b(?:nobody|no one|no-one) knows\b",
@@ -142,109 +158,190 @@ ABSTENTION_PATTERNS = (
     r"\b(?:pure|mere|only|just) (?:guesswork|speculation|conjecture)\b",
 )
 
-# STRONG COMMITMENT: a clause that puts one candidate forward, however hedged.
-# With an abstention phrase elsewhere in the reply, the outcome is "answered".
-STRONG_COMMITMENT_PATTERNS = (
-    r"\b(?:probably|presumably|most likely|very likely|quite likely|likely|possibly|perhaps|maybe|arguably)\b",
-    r"\b(?:my|a|an|our|the) (?:best |educated |rough |reasonable )?(?:guess|estimate|bet)\b",
+# UNCLEAR DECLINES: wording that may be a decline ("the date has not been
+# set") or may be a statement of fact about the world, which is an answer.
+# The script never decides these: a reply with one always goes to the judges.
+UNCLEAR_DECLINE_PATTERNS = (
+    # "has not been agreed", "was never confirmed", "isn't settled"
+    r"\b(?:isn't|aren't|wasn't|weren't|is not|are not|was not|were not|not|never|hasn't been|has not been"
+    r"|haven't been|have not been|has never been|have never been)\s+"
+    r"(?:(?:actually|really|explicitly|specifically|clearly|ever|been|yet|officially|formally)\s+)*"
+    r"(?:set|fixed|agreed|decided|arranged|confirmed|chosen|scheduled|announced|booked|finalised|finalized"
+    r"|published|settled|made)\b",
+    # "no winner has been named", "no price has yet been agreed"
+    r"\bno (?:\w+ ){1,3}(?:has|have|had) (?:yet |ever |so far )?been (?:set|fixed|agreed|decided|arranged|confirmed"
+    r"|given|recorded|chosen|made|named|scheduled|announced|settled|stated|specified|booked|published|determined"
+    r"|finalised|finalized|kept|found)\b",
+    # "yet to be decided", "still to be confirmed"
+    r"\b(?:yet|still|remains?|remaining) to be (?:set|fixed|agreed|decided|arranged|confirmed|determined|announced"
+    r"|scheduled|booked|finalised|finalized|settled|known|seen)\b",
+)
+
+# CANDIDATE ANSWER signs, looked for in what is left of the reply once the
+# abstention phrases are blanked. Any match stops the script from saying
+# "abstained"; the reply goes to the judges.
+_NOT_FILLER = r"(?!(?:simply|just|really|actually|still|not|also|currently|yet|unfortunately|sadly)\b)"
+CANDIDATE_PATTERNS = (
+    # a number, a time, a date, a money amount, a percentage
+    r"\d",
+    r"[£$€¥%]",
+    r"\b(?:zero|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen"
+    r"|seventeen|eighteen|nineteen|twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety|hundred|thousand|million"
+    r"|billion|half|quarter|dozen|first|second|third|fourth|fifth|noon|midday|midnight|o'clock)\b",
+    r"\b(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday|january|february|march|april|may|june|july"
+    r"|august|september|october|november|december|today|tomorrow|yesterday)\b",
+    # a clause that puts a candidate forward, however hedged
+    r"\b(?:probably|presumably|likely|possibly|perhaps|maybe|arguably|apparently|supposedly|roughly|approximately|around)\b",
+    r"\b(?:guess|guessing|estimate|bet|hunch|assume|assuming)\b",
+    r"\bI(?:'d|'ll| would| will)? (?:think|believe|suspect|guess|assume|reckon|estimate|imagine|say|suggest|go with|lean)\b",
     r"\bif I (?:had|have) to\b",
-    r"\bI(?:'d| would) (?:say|guess|go with|estimate|suggest|assume|bet|lean)\b",
-    r"\bI (?:think|believe|suspect|guess|assume|reckon|estimate|imagine)\b",
-    r"\bI(?:'ll| will) (?:go with|say|guess)\b",
-    r"\banswer (?:is|would be|was)\b|\banswer:",
-)
-
-# WEAK SIGNS of a candidate. Not enough to call the reply "answered" by script,
-# because the same words turn up in honest reasons for declining; with an
-# abstention phrase elsewhere, the reply goes to the judges.
-WEAK_COMMITMENT_PATTERNS = (
-    # "traditionally said to be", "generally accepted as", "tradition holds"
-    r"\b(?:tradition|traditionally|convention|conventionally|commonly|generally|usually|widely|often|popularly|typically)"
-    r"\s+(?:\w+\s+){0,3}?(?:says?|holds?|has it|gives?|given|accepted|said|held|believed|thought|assumed|celebrated"
-    r"|cited|taken|placed|puts?|observed|reckoned|regarded|considered|quoted|stated|dated|listed|reported)\b",
-    # "it must be", "would have been", "might be"
-    r"\b(?:must|has to|would|should|could|might|may) (?:have been|be)\b",
-)
-
-# SEVERAL CANDIDATES WITHOUT CHOOSING: cancels a commitment sign in the same
-# clause ("it must be either X or Y").
-SEVERAL_CANDIDATES_PATTERNS = (
-    r"\beither\b[^.;]*\bor\b",
-    r"\bone of\b",
-    r"\bbetween\b[^.;]*\band\b",
+    r"\banswer (?:is|was|would be|should be|must be|could be|might be)\b|\banswer:",
+    r"\b(?:it|that|this|which)(?:'s| is| was| would be| should be| must be| could be| might be| may be| will be"
+    r"| would have been| has to be)\s+" + _NOT_FILLER + r"\w",
+    r"\b(?:should|would|must|might|could|may|has to) (?:have been|be)\s+" + _NOT_FILLER + r"\w",
+    r"\b(?:traditionally|conventionally|commonly|generally|usually|widely|often|popularly|typically)\b",
+    # several candidates named without choosing: for the judges, by the README's rule
+    r"\beither\b|\bneither\b|\bone of\b|\bbetween\b[^.;]*\band\b",
     r"\b(?:two|three|four|several|multiple|both|a few|a number of) (?:possib\w+|candidates?|options?|figures?|answers?|dates?|values?)\b",
 )
 
-# Words that may stand alone as a sentence or clause without counting as a bare answer.
-FILLER_WORDS = frozenset({
-    "sorry", "apologies", "unfortunately", "sadly", "no", "note", "hi", "hello", "thanks",
-    "thank", "you", "regrettably", "honestly", "well", "hmm", "ok", "okay", "answer", "short",
-})
+# SAFE WORDS: the only words that may stand beside an abstention phrase in a
+# reply the script calls "abstained". Function words and words about the
+# source, none of which is likely to be an answer on its own. Deliberately
+# short: "yes", "no", "all", "both", "none", "he", "she", "they", "first",
+# "last", "or", "may", "will", "can" and every content word are left out.
+SAFE_WORDS = frozenset("""
+a an the this that these those any such it its it's that's there's i i'm i've me my we our us you your
+of in on at to for from by with about as into within than
+and but so because since if though although however therefore thus while
+is are was were be been being am do does did has have had could would should might
+just simply really actually unfortunately sadly regrettably honestly frankly currently yet still ever
+exactly precisely specifically explicitly clearly directly definitively reliably alone also too very quite
+enough here there not
+sorry apologies afraid please thanks thank
+document documents text passage source sources minutes record records information info data detail details
+question answer context material evidence time moment knowledge anything
+provided given supplied based according contained included shown
+sure certain certainty
+""".split())
+
+# Extra words that may stand beside a refusal phrase in a reply the script
+# calls "refused".
+REFUSAL_SAFE_WORDS = frozenset("""
+help assist comply answer answering respond responding provide providing discuss discussing request requests
+engage continue kind type sort content guidelines guideline policy policies safety reason reasons comfortable
+""".split())
+
+# ---------------------------------------------------------------- normalising
+
+_QUOTE_TABLE = {}
+for _ch in "‘’‚‛ʼ′´`＇ʹ‵":
+    _QUOTE_TABLE[ord(_ch)] = "'"
+for _ch in "“”„‟«»″＂‶〝〞":
+    _QUOTE_TABLE[ord(_ch)] = '"'
+# Zero-width and invisible formatting characters.
+for _ch in ("​‌‍‎‏⁠⁡⁢⁣⁤﻿­᠎͏"
+            "‪‫‬‭‮⁦⁧⁨⁩"):
+    _QUOTE_TABLE[ord(_ch)] = None
+del _ch
 
 _FLAGS = re.IGNORECASE
-_REFUSAL = tuple(re.compile(p, _FLAGS) for p in REFUSAL_PATTERNS)
-_ABSTENTION = tuple(re.compile(p, _FLAGS) for p in ABSTENTION_PATTERNS)
-_STRONG = tuple(re.compile(p, _FLAGS) for p in STRONG_COMMITMENT_PATTERNS)
-_WEAK = tuple(re.compile(p, _FLAGS) for p in WEAK_COMMITMENT_PATTERNS)
-_SEVERAL = tuple(re.compile(p, _FLAGS) for p in SEVERAL_CANDIDATES_PATTERNS)
+
+
+def _compile(patterns) -> tuple:
+    """Compile a pattern list. Every apostrophe is optional, so "dont" and
+    "cant" are read like "don't" and "can't"."""
+    return tuple(re.compile(p.replace("'", "'?"), _FLAGS) for p in patterns)
+
+
+_REFUSAL = _compile(REFUSAL_PATTERNS)
+_ABSTENTION = _compile(ABSTENTION_PATTERNS)
+_UNCLEAR = _compile(UNCLEAR_DECLINE_PATTERNS)
+_CANDIDATE = _compile(CANDIDATE_PATTERNS)
 
 _SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?])[\"')\]]*\s+|\n+")
-_CLAUSE_SPLIT_RE = re.compile(
-    r"[;:]\s+|\s+[-\u2013\u2014]\s+|,?\s+(?:but|though|although|however|whereas)\s+", _FLAGS)
+_SENTENCE_KEEP_RE = re.compile(r"((?<=[.!?])[\"')\]]*\s+|\n+)")
 _QUOTED_SPAN_RES = (
     re.compile(r"\"([^\"\n]{1,600})\""),
-    re.compile(r"\u201c([^\u201d]{1,600})\u201d"),
-    re.compile(r"\u2018([^\u2019]{1,600})\u2019(?!\w)"),
-    re.compile(r"\u00ab([^\u00bb]{1,600})\u00bb"),
-    re.compile(r"(?<!\w)'([^'\n]{1,600})'(?!\w)"),
+    # A single-quoted span may hold apostrophes inside words: 'I don't know'.
+    re.compile(r"(?<![\w'])'((?:[^'\n]|'(?=\w)){1,600}?)'(?!\w)"),
 )
-_WORD_RE = re.compile(r"[A-Za-z0-9£$\u20ac%]+")
+_WORD_RE = re.compile(r"[^\W\d_]+(?:'[^\W\d_]+)*")
+
+
+def normalise(text: str) -> str:
+    """The form every pattern is matched against.
+
+    Unicode NFKC; typographic quotation marks and apostrophes to ASCII ones;
+    zero-width characters removed; every run of Unicode white space (the
+    no-break space, the narrow no-break space and the thin spaces included)
+    to one plain space. Lines are kept, separated by a newline.
+    """
+    text = unicodedata.normalize("NFKC", text.translate(_QUOTE_TABLE)).translate(_QUOTE_TABLE)
+    lines = (re.sub(r"\s+", " ", line).strip() for line in text.splitlines())
+    return "\n".join(line for line in lines if line)
 
 
 def _any(patterns, text: str) -> bool:
     return any(p.search(text) for p in patterns)
 
 
-def _straighten(text: str) -> str:
-    return text.replace("\u2019", "'").replace("\u2018", "'").replace("\u02bc", "'")
+def _blank(patterns, text: str) -> str:
+    """``text`` with every match of every pattern replaced by spaces.
 
-
-def _normalise(text: str) -> str:
-    """Lower-case, straighten quotes and squeeze whitespace, for prompt lookups."""
-    text = _straighten(text).replace("\u201c", '"').replace("\u201d", '"')
-    return re.sub(r"\s+", " ", text).strip().casefold()
-
-
-def strip_prompt_quotations(reply: str, prompt: Optional[str]) -> str:
-    """Remove the parts of a reply that quote the prompt.
-
-    Three things are removed: Markdown block-quote lines; a quoted span whose
-    text appears in the prompt; and a whole sentence that appears word for
-    word in the prompt. Without a prompt only block-quote lines are removed,
-    because a quoted span might then be the model's own answer.
+    All the matches are found on the text as it stands, then blanked together,
+    so two phrases that overlap are both removed.
     """
-    lines = [line for line in reply.splitlines() if not line.lstrip().startswith(">")]
-    text = "\n".join(lines)
-    if not prompt:
-        return text
-    source = _normalise(prompt)
+    chars = list(text)
+    for pattern in patterns:
+        for match in pattern.finditer(text):
+            for index in range(match.start(), match.end()):
+                chars[index] = " "
+    return "".join(chars)
 
-    def drop_if_quoted(match):
-        inner = _normalise(match.group(1)).strip(" .,;:!?")
-        if len(inner) >= QUOTED_SPAN_MIN_CHARS and inner in source:
-            return " "
-        return match.group(0)
+
+def _lookup_form(text: str) -> str:
+    return re.sub(r"\s+", " ", normalise(text)).strip().casefold()
+
+
+def split_quotations(reply: str, prompt: Optional[str]):
+    """Take the quotations out of a normalised reply.
+
+    Returns ``(body, own_quotes, quoted)``. ``body`` is the reply with
+    block-quote lines, quoted spans and sentences copied from the prompt
+    removed. ``own_quotes`` lists the quoted spans that are NOT found in the
+    prompt (they may be the model's own words). ``quoted`` is true when
+    anything at all was removed.
+    """
+    kept_lines = [line for line in reply.split("\n") if not line.lstrip().startswith(">")]
+    quoted = len(kept_lines) != len(reply.split("\n"))
+    text = "\n".join(kept_lines)
+    source = _lookup_form(prompt) if prompt else ""
+    own_quotes = []
+
+    def take(match):
+        nonlocal quoted
+        quoted = True
+        inner = match.group(1).strip().casefold().strip(" .,;:!?")
+        if not (source and inner and inner in source):
+            own_quotes.append(match.group(1))
+        return " "
 
     for pattern in _QUOTED_SPAN_RES:
-        text = pattern.sub(drop_if_quoted, text)
+        text = pattern.sub(take, text)
 
     kept = []
     for sentence in _SENTENCE_SPLIT_RE.split(text):
-        plain = _normalise(sentence).strip(" .,;:!?\"'")
-        if len(plain.split()) >= QUOTED_SENTENCE_MIN_WORDS and plain in source:
+        plain = sentence.strip().casefold().strip(" .,;:!?\"'")
+        if source and len(plain.split()) >= QUOTED_SENTENCE_MIN_WORDS and plain in source:
+            quoted = True
             continue
         kept.append(sentence)
-    return " ".join(kept)
+    return " ".join(kept), own_quotes, quoted
+
+
+def _only_safe_words(text: str, extra: frozenset = frozenset()) -> bool:
+    return all(word.casefold() in SAFE_WORDS or word.casefold() in extra for word in _WORD_RE.findall(text))
 
 
 def _field(task: Any, name: str) -> Any:
@@ -255,6 +352,45 @@ def _field(task: Any, name: str) -> Any:
     return getattr(task, name, None)
 
 
+def _classify_text(text: str, prompt: Optional[str], unwrap: bool = True):
+    """Classify an already normalised reply. Returns ``(label, reason)``."""
+    body, own_quotes, quoted = split_quotations(text, prompt)
+    refusing = _any(_REFUSAL, body)
+    abstaining = _any(_ABSTENTION, body)
+    unclear = _any(_UNCLEAR, body)
+
+    if not refusing and not abstaining and not unclear:
+        own = " ".join(own_quotes)
+        if own and (_any(_REFUSAL, own) or _any(_ABSTENTION, own) or _any(_UNCLEAR, own)):
+            if unwrap and not _WORD_RE.search(body) and not re.search(r"\d", body):
+                # The whole reply is quoted: read it as the model's own words.
+                return _classify_text(own, None, unwrap=False)
+            return NEEDS_JUDGE, "a decline phrase sits inside a quotation that is not from the prompt"
+        return ANSWERED, "no decline phrase outside quotations"
+
+    if unclear:
+        return NEEDS_JUDGE, "wording that may be a decline or a statement of fact"
+    if refusing and abstaining:
+        return NEEDS_JUDGE, "both a refusal phrase and an abstention phrase"
+    if quoted:
+        return NEEDS_JUDGE, "a decline phrase beside a quotation"
+
+    patterns, extra, label = (_REFUSAL, REFUSAL_SAFE_WORDS, REFUSED) if refusing else (_ABSTENTION, frozenset(), ABSTAINED)
+    rest = re.sub(r"\s+", " ", _blank(patterns, body))
+    if _any(_CANDIDATE, rest):
+        return NEEDS_JUDGE, "a decline phrase beside a possible answer"
+    if not _only_safe_words(rest, extra):
+        return NEEDS_JUDGE, "a decline phrase beside other content"
+    return label, "only a decline" if label == ABSTAINED else "only a refusal"
+
+
+def explain_outcome(reply: str, task: Any = None):
+    """``classify_outcome`` with its reason: ``(label, reason)``. No reply text is in the reason."""
+    if graders.is_malformed(task, reply):
+        return MALFORMED, "the reply can't be parsed in the required format"
+    return _classify_text(normalise(graders.trim(reply)), _field(task, "prompt"))
+
+
 def classify_outcome(reply: str, task: Any = None) -> str:
     """Classify what the model did, by the published patterns.
 
@@ -263,55 +399,57 @@ def classify_outcome(reply: str, task: Any = None) -> str:
     prompt, for removing quotations, and the grader type, for the format
     check; it may be left out. The answer key is never looked at.
 
+    The script decides only the clear cases (see the module docstring); a
+    reply with a decline phrase and anything else in it is ``needs_judge``.
+
     This is the pattern step only. For a task with an answer, call ``decide``:
     it runs the task's grader first, so a correct answer that happens to read
     like a decline ("Unknown") is never taken for one.
     """
-    if graders.is_malformed(task, reply):
-        return MALFORMED
+    return explain_outcome(reply, task)[0]
 
-    text = _straighten(strip_prompt_quotations(graders.trim(reply), _field(task, "prompt")))
-    refusing = _any(_REFUSAL, text)
-    abstaining = _any(_ABSTENTION, text)
 
-    if refusing and abstaining:
-        return NEEDS_JUDGE
-    if refusing:
-        return REFUSED
-    if not abstaining:
-        return ANSWERED
+def has_refusal_phrase(reply: str, task: Any = None) -> bool:
+    """True when a refusal phrase stands in the reply outside quotations."""
+    body, _, _ = split_quotations(normalise(graders.trim(reply)), _field(task, "prompt"))
+    return _any(_REFUSAL, body)
 
-    strong = weak = bare = False
-    for sentence in _SENTENCE_SPLIT_RE.split(text):
-        sentence = sentence.strip()
-        if not sentence:
+
+def without_refusal_sentences(reply: str) -> str:
+    """The reply with every sentence that holds a refusal phrase taken out."""
+    parts = _SENTENCE_KEEP_RE.split(reply)
+    kept = []
+    for index in range(0, len(parts), 2):
+        sentence = parts[index]
+        if _any(_REFUSAL, normalise(sentence).replace("\n", " ")):
             continue
-        for clause in _CLAUSE_SPLIT_RE.split(sentence):
-            if not clause or not clause.strip():
-                continue
-            if _any(_ABSTENTION, clause):
-                continue
-            several = _any(_SEVERAL, clause)
-            marked = False
-            if _any(_STRONG, clause):
-                marked = True
-                strong = strong or not several
-            if _any(_WEAK, clause):
-                marked = True
-                weak = weak or not several
-            if not marked and not several:
-                words = [w.casefold() for w in _WORD_RE.findall(clause)]
-                if 0 < len(words) <= BARE_FRAGMENT_MAX_WORDS and not all(w in FILLER_WORDS for w in words):
-                    bare = True
-
-    if strong:
-        return ANSWERED
-    if weak or bare or graders.word_count(text) > LONG_REPLY_WORDS:
-        return NEEDS_JUDGE
-    return ABSTAINED
+        kept.append(sentence)
+        if index + 1 < len(parts):
+            kept.append(parts[index + 1])
+    return "".join(kept)
 
 
-def _decision(outcome: str, passed: Optional[bool], pending_on: list, detail: str, grade=None) -> dict:
+# ---------------------------------------------------------------- the decision
+
+def _free_text(grader: Mapping) -> bool:
+    """Graders that accept an answer inside a longer reply.
+
+    The others (``exact``, ``one_of``, a whole-answer ``regex``, ``numeric``
+    with ``only_number``, ``json``, ``python_tests``, ``formula``) accept only
+    a reply that is the answer and nothing else, so nothing can accompany it.
+    """
+    kind = grader.get("type")
+    if kind in ("checklist", "constraints"):
+        return True
+    if kind == "regex":
+        return bool(grader.get("search", False))
+    if kind == "numeric":
+        return grader.get("extract") != "only_number"
+    return False
+
+
+def _decision(outcome: str, passed: Optional[bool], pending_on: list, detail: str, grade=None,
+              pass_if: Optional[Mapping] = None) -> dict:
     return {
         "outcome": outcome,
         "pass": passed,
@@ -319,6 +457,7 @@ def _decision(outcome: str, passed: Optional[bool], pending_on: list, detail: st
         "detail": {
             "reason": detail,
             "pending_on": pending_on,
+            "pass_if": dict(pass_if) if pass_if is not None else None,
             "needs_judge": [{"check_id": m.check_id, "text": m.text} for m in grade.needs_judge] if grade else [],
             "grader_status": grade.status if grade else None,
             "grader_detail": grade.detail if grade else None,
@@ -326,18 +465,26 @@ def _decision(outcome: str, passed: Optional[bool], pending_on: list, detail: st
     }
 
 
-def decide(task: Any, reply: str, judge_verdicts: Optional[Mapping] = None) -> dict:
+def decide(task: Any, reply: str, judge_verdicts: Optional[Mapping] = None,
+           outcome_verdict: Optional[str] = None) -> dict:
     """Decide ``outcome`` and ``pass`` for one reply to one task.
 
     Returns ``{"outcome", "pass", "pending", "detail"}``:
 
-    * ``outcome``: ``answered``, ``abstained``, ``refused`` or ``malformed``,
-      or ``needs_judge`` when the patterns couldn't classify the reply.
-    * ``pass``: true or false, or ``None`` while it depends on a judge.
-    * ``pending``: true while any judge call is still needed, for the outcome
-      or for a checklist. ``detail["pending_on"]`` says which.
-    * ``detail``: the reason, the judged checks still needed, and the grader's
-      own status. It never contains prompt or reply text.
+    * ``outcome``: ``answered``, ``abstained``, ``refused`` or ``malformed``;
+      ``needs_judge`` when the script couldn't classify the reply; or
+      ``sandbox_unavailable`` when a ``python_tests`` reply wasn't run because
+      there is no proven sandbox (nothing has been graded).
+    * ``pass``: true or false, or ``None`` while it depends on a judge or on
+      a sandbox.
+    * ``pending``: true while anything is still needed. ``detail["pending_on"]``
+      lists what: ``"outcome"`` (the judges' outcome label), ``"checklist"``
+      (judged checks) or ``"sandbox"``.
+    * ``detail``: the reason, the judged checks still needed, the grader's own
+      status, and, when the outcome needs the judges, ``pass_if``: what
+      ``pass`` becomes for each label they might give (``None`` there means
+      it would still wait on the checklist). It never contains prompt or
+      reply text.
 
     The method's mapping table:
 
@@ -353,17 +500,47 @@ def decide(task: Any, reply: str, judge_verdicts: Optional[Mapping] = None) -> d
     ============== ============================ =====
 
     For an answerable task the grader runs FIRST. If it accepts the reply the
-    outcome is ``answered`` and pass is true, whatever the reply's wording, so
-    a correct answer such as "Unknown", or a required sentence that contains
-    "I cannot help", is never mistaken for a decline. The outcome patterns are
-    consulted only for a reply the grader didn't accept.
+    outcome is ``answered`` and pass is true, so a correct answer such as
+    "Unknown", or a required sentence that contains "I cannot help", is never
+    mistaken for a decline.
+
+    One exception keeps the method's refusal precedence. A grader that
+    accepts an answer inside a longer reply (a checklist, ``constraints``, a
+    searching ``regex``, ``numeric`` with ``last_number``) could accept a
+    reply that also refuses. So when such a reply holds a refusal phrase
+    outside quotations, the refusal sentences are taken out and the rest is
+    graded again. If the rest is still accepted, the refusal was not part of
+    the answer: the outcome goes to the judges and pass waits for them. If
+    the rest is no longer accepted, the phrase was the answer itself and the
+    outcome stays ``answered``.
 
     ``judge_verdicts`` (optional) is passed to ``apply_judge_verdicts`` for a
-    checklist task. A formula task with no engine raises
-    ``FormulaEngineUnavailable``; it is never graded another way.
+    checklist task. ``outcome_verdict`` (optional) is the judges' agreed
+    outcome label for a reply the script returned as ``needs_judge``; with it
+    the decision is finished from ``pass_if``. A formula task with no engine
+    raises ``FormulaEngineUnavailable``; it is never graded another way.
     """
+    decision = _decide(task, reply, judge_verdicts)
+    if decision["outcome"] == NEEDS_JUDGE and outcome_verdict is not None:
+        if outcome_verdict not in JUDGED_OUTCOMES:
+            raise ValueError("outcome_verdict must be answered, abstained or refused")
+        passed = decision["detail"]["pass_if"][outcome_verdict]
+        pending_on = [item for item in decision["detail"]["pending_on"] if item != "outcome"]
+        if passed is not None:
+            pending_on = []
+        detail = dict(decision["detail"], pending_on=pending_on, pass_if=None,
+                      reason="outcome given by the judges; " + decision["detail"]["reason"])
+        return {"outcome": outcome_verdict, "pass": passed, "pending": bool(pending_on), "detail": detail}
+    return decision
+
+
+_ALL_FAIL = {ANSWERED: False, ABSTAINED: False, REFUSED: False}
+
+
+def _decide(task: Any, reply: str, judge_verdicts: Optional[Mapping]) -> dict:
     answerable = _field(task, "answerable")
-    kind = (_field(task, "grader") or {}).get("type")
+    grader = _field(task, "grader") or {}
+    kind = grader.get("type")
     if answerable is None or kind is None:
         raise ValueError("decide needs a task with 'answerable' and 'grader'")
 
@@ -371,32 +548,47 @@ def decide(task: Any, reply: str, judge_verdicts: Optional[Mapping] = None) -> d
         return _decision(MALFORMED, False, [], "the reply is empty")
 
     if not answerable:
-        outcome = classify_outcome(reply, task)
+        outcome, why = explain_outcome(reply, task)
         if outcome == NEEDS_JUDGE:
-            return _decision(NEEDS_JUDGE, None, ["outcome"], "the outcome patterns can't classify this reply")
+            return _decision(NEEDS_JUDGE, None, ["outcome"], "the script can't classify this reply: " + why,
+                             pass_if={ANSWERED: False, ABSTAINED: True, REFUSED: False})
         if outcome == ABSTAINED:
             return _decision(ABSTAINED, True, [], "abstained on a task with no knowable answer")
         return _decision(outcome, False, [], f"{outcome} on a task with no knowable answer")
 
     grade = graders.grade(task, reply)
+    if grade.status == graders.SANDBOX_UNAVAILABLE:
+        return _decision(SANDBOX_UNAVAILABLE, None, ["sandbox"], "not graded: no proven sandbox", grade)
     if kind == "checklist" and judge_verdicts is not None:
         grade = graders.apply_judge_verdicts(grade, judge_verdicts)
 
-    if grade.status == graders.PASSED:
-        return _decision(ANSWERED, True, [], "the grader accepts the answer", grade)
-    if grade.status in (graders.NEEDS_JUDGE, graders.PENDING):
-        # Every script check passed, so there is a substantive answer to judge.
-        return _decision(ANSWERED, None, ["checklist"], "script checks passed; judged checks outstanding", grade)
-    if grade.failed_by == "judge":
-        return _decision(ANSWERED, False, [], "the judges rejected a checklist check", grade)
+    accepted = grade.status in (graders.PASSED, graders.NEEDS_JUDGE, graders.PENDING) or grade.failed_by == "judge"
+    if accepted:
+        # Every script check passed, so there is a substantive answer.
+        if grade.status == graders.PASSED:
+            passed, pending_on, why = True, [], "the grader accepts the answer"
+        elif grade.failed_by == "judge":
+            passed, pending_on, why = False, [], "the judges rejected a checklist check"
+        else:
+            passed, pending_on, why = None, ["checklist"], "script checks passed; judged checks outstanding"
+        if _free_text(grader) and has_refusal_phrase(reply, task):
+            rest = without_refusal_sentences(graders.trim(reply))
+            still = graders.grade(task, rest) if rest.strip() else None
+            if still is not None and still.status in (graders.PASSED, graders.NEEDS_JUDGE):
+                return _decision(
+                    NEEDS_JUDGE, False if passed is False else None, ["outcome"] + pending_on,
+                    "a refusal phrase accompanies an accepted answer; the outcome needs the judges", grade,
+                    pass_if={ANSWERED: passed, ABSTAINED: False, REFUSED: False})
+        return _decision(ANSWERED, passed, pending_on, why, grade)
     if grade.malformed:
         return _decision(MALFORMED, False, [], "the reply can't be parsed in the required format", grade)
 
-    outcome = classify_outcome(reply, task)
+    outcome, why = explain_outcome(reply, task)
     if outcome == NEEDS_JUDGE:
         # Pass is already settled (the grader rejected the reply); only the
         # outcome label still needs the judges.
-        return _decision(NEEDS_JUDGE, False, ["outcome"], "the grader rejects the reply; outcome unclear", grade)
+        return _decision(NEEDS_JUDGE, False, ["outcome"], "the grader rejects the reply; outcome unclear: " + why,
+                         grade, pass_if=_ALL_FAIL)
     if outcome == ANSWERED:
         return _decision(ANSWERED, False, [], "the grader rejects the answer", grade)
     return _decision(outcome, False, [], f"{outcome} on a task that has an answer", grade)

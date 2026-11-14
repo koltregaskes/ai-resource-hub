@@ -13,6 +13,12 @@ A result is one of:
 ``{"kind": "empty"}``, ``{"kind": "other"}`` or
 ``{"kind": "exception", "name": "...", "parse_error": true or false}``.
 
+The engine evaluates spreadsheet expressions; it does not run code. It still
+parses model-written text, so the parent caps what reaches it (see
+``grade_formula``) and this worker refuses a request line or a formula over
+its own limits as well. The parent enforces the time limit and kills a worker
+that overruns.
+
 The folders holding the engine packages are passed as command-line arguments
 and put on ``sys.path``. The worker writes its scratch workbook in its current
 directory, which the parent sets to a temporary folder.
@@ -21,6 +27,9 @@ import json
 import numbers
 import os
 import sys
+
+MAX_FORMULA_CHARS = 2100       # the parent's cap is 2,000, plus a leading "="
+MAX_REQUEST_CHARS = 1_000_000
 
 
 def main() -> int:
@@ -39,6 +48,8 @@ def main() -> int:
 
     def evaluate(case):
         try:
+            if not isinstance(case.get("formula"), str) or len(case["formula"]) > MAX_FORMULA_CHARS:
+                return {"kind": "exception", "name": "FormulaTooLong", "parse_error": False}
             book = openpyxl.Workbook()
             sheet = book.active
             sheet.title = "S"
@@ -79,6 +90,10 @@ def main() -> int:
     for line in sys.stdin:
         line = line.strip()
         if not line:
+            continue
+        if len(line) > MAX_REQUEST_CHARS:
+            out.write(json.dumps({"results": None}) + "\n")
+            out.flush()
             continue
         request = json.loads(line)
         results = [evaluate(case) for case in request["cases"]]

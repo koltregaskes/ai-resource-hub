@@ -135,6 +135,16 @@ class NumericTest(unittest.TestCase):
         self.assertTrue(passed(graders.grade_numeric("the change is -14", negative)))
 
 
+class ExtremeNumericTest(unittest.TestCase):
+    def test_a_very_long_number_fails_and_never_raises(self):
+        params = {"type": "numeric", "value": 14, "tolerance": 0, "extract": "only_number"}
+        last = dict(params, extract="last_number")
+        for answer in ("9" * 500, "9" * 1100000, "0." + "0" * 500 + "1", "-" + "9" * 2000):
+            self.assertTrue(failed(graders.grade_numeric(answer, params)), answer[:20])
+            self.assertTrue(failed(graders.grade_numeric("about " + answer, last)), answer[:20])
+        self.assertTrue(passed(graders.grade_numeric("14", params)))
+
+
 class JsonTest(unittest.TestCase):
     BASE = {"type": "json", "expected": {"status": "ready", "count": 3}, "numeric_tolerance": 0}
 
@@ -231,6 +241,41 @@ class JsonTest(unittest.TestCase):
         for answer in ('{"nets": 10.2, "litres": 33}', '{"nets": 9.6, "litres": 33}', '{"nets": 11, "litres": 33}',
                        '{"nets": "10", "litres": 33}', '{"nets": true, "litres": 33}'):
             self.assertTrue(failed(graders.grade_json(answer, params)), answer)
+
+    def test_extreme_numbers_fail_and_never_raise(self):
+        # The review's finding 5: a short reply must not abort grading.
+        params = {"type": "json", "expected": {"kwh": 1.5, "cost_gbp": 0.9}, "numeric_tolerance": 0.01,
+                  "integer_keys": ["count"]}
+        task = {"id": "f6-pub-99", "answerable": True, "prompt": "A made-up task.", "grader": params}
+        for number in ("1e1000000", "-1e1000000", "1e999999999999999999999", "1e-999999999999999999999",
+                       "1E+401", "1e-401", "9" * 5000, "-" + "9" * 5000, "0." + "0" * 500 + "1",
+                       "1e400000000000000000000000000000000000000"):
+            answer = '{"kwh": %s, "cost_gbp": 0.9}' % number
+            result = graders.grade_json(answer, params)
+            self.assertTrue(failed(result), number[:30])
+            self.assertFalse(result.malformed, number[:30])
+            decision = _support.outcome.decide(task, answer)
+            self.assertEqual((decision["outcome"], decision["pass"]), ("answered", False), number[:30])
+            flipped = graders.grade_json('{"kwh": 1.5, "cost_gbp": %s}' % number, params)
+            self.assertTrue(failed(flipped), number[:30])
+        whole = dict(params, expected={"count": 3})
+        for number in ("1e1000000", "9" * 5000, "1e999999999999999999999"):
+            self.assertTrue(failed(graders.grade_json('{"count": %s}' % number, whole)), number[:30])
+        # Inside the supported range nothing changes.
+        self.assertTrue(passed(graders.grade_json('{"kwh": 1.5e0, "cost_gbp": 9e-1}', params)))
+        big = {"type": "json", "expected": {"n": 10 ** 30}}
+        self.assertTrue(passed(graders.grade_json('{"n": 1%s}' % ("0" * 30), big)))
+        self.assertTrue(passed(graders.grade_json('{"n": 1e30}', big)))
+        self.assertTrue(failed(graders.grade_json('{"n": 1%s1}' % ("0" * 29), big)))
+
+    def test_an_extreme_number_in_an_ignored_place_is_harmless(self):
+        params = {"type": "json", "expected": {"a": 1}, "allow_extra_keys": True}
+        self.assertTrue(passed(graders.grade_json('{"a": 1, "extra": 1e1000000}', params)))
+
+    def test_very_deep_json_fails_and_never_raises(self):
+        params = {"type": "json", "expected": {"a": 1}}
+        for answer in ("[" * 100000 + "]" * 100000, '{"a":' * 50000 + "1" + "}" * 50000):
+            self.assertTrue(failed(graders.grade_json(answer, params)))
 
     def test_a_top_level_value_other_than_an_object(self):
         params = {"type": "json", "expected": [1, 2]}

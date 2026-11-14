@@ -66,6 +66,48 @@ class HomeCellTest(unittest.TestCase):
         with self.assertRaises(graders.GraderConfigError):
             graders.formula_home_cell(occupied, "Put a formula in cell J1 or in cell K1.")
 
+    def test_the_prompt_names_it_even_when_c2_is_free(self):
+        # The review's finding 6: a named home cell comes before the C2 default.
+        for prompt in ("Write a formula in D2 that adds the two amounts.", "Reply with the formula for D2.",
+                       "I want the total in cell D2.", "Type the formula into cell $D$2."):
+            self.assertEqual(graders.formula_home_cell(SUM_READY, prompt), "D2", prompt)
+        # A cell that holds data is where the inputs are, not where the formula goes.
+        self.assertEqual(graders.formula_home_cell(SUM_READY, "The status is in cell A2. Give one formula."), "C2")
+        self.assertEqual(graders.formula_home_cell(SUM_READY, "The total goes in cell C2."), "C2")
+        self.assertEqual(graders.formula_home_cell(SUM_READY, "Add up B2:B5. Return only the formula."), "C2")
+        # The grader's own home_cell still wins, and two named cells are an error.
+        self.assertEqual(graders.formula_home_cell(dict(SUM_READY, home_cell="E9"), "Write a formula in D2."), "E9")
+        with self.assertRaises(graders.GraderConfigError):
+            graders.formula_home_cell(SUM_READY, "Write a formula in D2, then another in cell E2.")
+
+
+class InputLimitTest(unittest.TestCase):
+    """Refused before the engine is asked anything. No engine is needed."""
+
+    def grade(self, formula):
+        with mock.patch.object(graders._FormulaEngine, "_package_folders", return_value=[]), \
+                mock.patch.object(graders._ENGINE, "evaluate", side_effect=AssertionError("reached the engine")):
+            return graders.grade_formula(formula, SUM_READY)
+
+    def test_the_length_cap(self):
+        self.assertEqual(graders.MAX_FORMULA_CHARS, 2000)
+        result = self.grade("=" + "+".join(["B2"] * 700))
+        self.assertTrue(failed(result))
+        self.assertIn("longer than 2000 characters", result.detail)
+
+    def test_other_sheets_and_workbooks_are_refused(self):
+        for formula in ("=Sheet2!A1", "='C:\\Users\\x\\[book.xlsx]Sheet1'!A1", "=[book.xlsx]Sheet1!A1",
+                        "=SUM('Other sheet'!B2:B5)", "=Table1[Amount]", "=B2+\x01B3"):
+            result = self.grade(formula)
+            self.assertTrue(failed(result), formula)
+            self.assertFalse(result.malformed, formula)
+
+    def test_marks_inside_text_and_error_values_are_fine(self):
+        for formula in ('=IF(B2>5,"Yes!","[none]")', "=IFERROR(B2/0,#DIV/0!)", '=IF(ISNA(B2),#N/A,"a ""b!"" c")',
+                        "=SUM(B2:B5)\n+0"):
+            self.assertIsNone(graders.formula_out_of_scope(formula), formula)
+        self.assertIsNotNone(graders.formula_out_of_scope('="x"&Sheet2!A1'))
+
 
 @NEEDS_ENGINE
 class EngineTest(unittest.TestCase):

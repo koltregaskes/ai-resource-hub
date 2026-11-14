@@ -22,31 +22,36 @@ import json
 import os
 import queue
 import re
-import secrets
 import subprocess
 import sys
 import tempfile
 import threading
-import time
 from dataclasses import dataclass, field
-from decimal import Decimal, InvalidOperation
+from decimal import Decimal, DecimalException
 from pathlib import Path
 from typing import Any, Mapping, Optional
 
+from . import sandbox
 from .tasks import TaskSetError, compile_flags
 
 SANDBOX_TIMEOUT_SECONDS = 10
-PROCESS_START_SECONDS = 60
 FORMULA_TOLERANCE = Decimal("0.005")
 FORMULA_DEFAULT_CELL = "C2"
 FORMULA_ENGINE_START_SECONDS = 180
-MAX_FORMULA_CHARS = 8192
+MAX_FORMULA_CHARS = 2000
+# A JSON number further from zero than 10**400, or closer to it than 10**-400,
+# is outside the supported range and is rejected.
+MAX_NUMBER_EXPONENT = 400
+MAX_INT_DIGITS = 4000
 MIN_JUDGES = 2
 
 PASSED = "passed"
 FAILED = "failed"
 NEEDS_JUDGE = "needs_judge"
 PENDING = "pending"
+# A python_tests reply that could not be run because there is no proven
+# sandbox. It is not a verdict: the task has not been graded.
+SANDBOX_UNAVAILABLE = "sandbox_unavailable"
 
 # States of one checklist check.
 CHECK_PASSED = "passed"
@@ -97,6 +102,8 @@ class GradeResult:
       (an abstain task).
     * ``pending``: verdicts were supplied but at least one check is
       ``judge_unresolved``.
+    * ``sandbox_unavailable``: a ``python_tests`` reply was not run because
+      there is no proven sandbox. The task has not been graded.
 
     ``malformed`` is true when the reply couldn't be parsed in the format the
     task requires (JSON that doesn't parse, Python with a syntax error, a
@@ -215,6 +222,13 @@ def _decimal_of(value: Any) -> Decimal:
     return Decimal(str(value))
 
 
+def _supported_number(number: Decimal) -> bool:
+    """Finite, and within 10**-400 to 10**400 in size (or zero)."""
+    if not number.is_finite():
+        return False
+    return number == 0 or -MAX_NUMBER_EXPONENT <= number.adjusted() <= MAX_NUMBER_EXPONENT
+
+
 def grade_numeric(reply: str, params: Mapping) -> GradeResult:
     """A number within ``tolerance`` of ``value``, compared as decimals.
 
@@ -241,11 +255,12 @@ def grade_numeric(reply: str, params: Mapping) -> GradeResult:
         text = found[-1]
     try:
         number = _to_decimal(text)
-    except InvalidOperation:
+        if not _supported_number(number):
+            return _fail("the number is outside the supported range")
+        close = abs(number - _decimal_of(params["value"])) <= _decimal_of(params["tolerance"])
+    except DecimalException:
         return _fail("the number could not be read")
-    if abs(number - _decimal_of(params["value"])) <= _decimal_of(params["tolerance"]):
-        return _ok()
-    return _fail("the number is outside the tolerance")
+    return _ok() if close else _fail("the number is outside the tolerance")
 
 
 # ---------------------------------------------------------------- json
@@ -254,14 +269,35 @@ def _refuse_constant(name: str):
     raise ValueError(name)
 
 
+_OUT_OF_RANGE = Decimal("Infinity")
+
+
+def _json_float(text: str) -> Decimal:
+    try:
+        number = Decimal(text)
+    except DecimalException:
+        return _OUT_OF_RANGE
+    return number if _supported_number(number) else _OUT_OF_RANGE
+
+
+def _json_int(text: str):
+    if len(text) > MAX_INT_DIGITS:
+        return _OUT_OF_RANGE
+    return int(text)
+
+
 def parse_json_answer(answer: str):
     """Parse the answer as one JSON value. Returns ``(ok, value)``.
 
     Decimal numbers are read as ``Decimal`` so that they compare as written.
+    A number outside the supported range (see ``MAX_NUMBER_EXPONENT`` and
+    ``MAX_INT_DIGITS``) is still valid JSON: it is read as a marker that never
+    equals an expected number, so the answer fails and nothing is raised.
     """
     try:
-        return True, json.loads(unwrap_fence(answer), parse_float=Decimal, parse_constant=_refuse_constant)
-    except (ValueError, RecursionError):
+        return True, json.loads(unwrap_fence(answer), parse_float=_json_float, parse_int=_json_int,
+                                parse_constant=_refuse_constant)
+    except (ValueError, RecursionError, DecimalException, MemoryError):
         return False, None
 
 
@@ -278,13 +314,18 @@ def _json_equal(got: Any, want: Any, params: Mapping, key: Optional[str], path: 
     if _is_json_number(want):
         if not _is_json_number(got):
             return f"{path}: expected a number"
-        got_d, want_d = _decimal_of(got), _decimal_of(want)
-        if key is not None and key in (params.get("integer_keys") or []):
-            if got_d != got_d.to_integral_value() or got_d != want_d:
-                return f"{path}: expected an exact whole number"
-            return None
-        if abs(got_d - want_d) > _decimal_of(params.get("numeric_tolerance", 0)):
-            return f"{path}: number outside the tolerance"
+        try:
+            got_d, want_d = _decimal_of(got), _decimal_of(want)
+            if not _supported_number(got_d):
+                return f"{path}: number outside the supported range"
+            if key is not None and key in (params.get("integer_keys") or []):
+                if got_d != got_d.to_integral_value() or got_d != want_d:
+                    return f"{path}: expected an exact whole number"
+                return None
+            if abs(got_d - want_d) > _decimal_of(params.get("numeric_tolerance", 0)):
+                return f"{path}: number outside the tolerance"
+        except DecimalException:
+            return f"{path}: number outside the supported range"
         return None
     if isinstance(want, str):
         if not isinstance(got, str):
@@ -329,7 +370,10 @@ def grade_json(reply: str, params: Mapping) -> GradeResult:
     ok, value = parse_json_answer(trim(reply))
     if not ok:
         return _fail("the answer is not one JSON value", malformed=True)
-    reason = _json_equal(value, params["expected"], params, None, "$")
+    try:
+        reason = _json_equal(value, params["expected"], params, None, "$")
+    except RecursionError:
+        reason = "$: nested too deeply"
     return _fail(reason) if reason else _ok()
 
 
@@ -396,6 +440,9 @@ _BANNED_OS_ATTRS = frozenset({
     "listdir", "scandir", "walk", "fwalk", "open", "fdopen", "pipe", "dup", "dup2", "mkdir",
     "makedirs", "link", "symlink", "truncate", "getcwd", "getcwdb", "access", "stat", "lstat",
     "add_dll_directory", "get_exec_path", "getlogin", "urandom",
+    "spawnl", "spawnle", "spawnlp", "spawnlpe", "spawnv", "spawnve", "spawnvp", "spawnvpe",
+    "execl", "execle", "execlp", "execlpe", "execv", "execve", "execvp", "execvpe",
+    "posix_spawn", "posix_spawnp", "readlink", "chroot",
 })
 # Attributes refused on any object, because they reach the environment, a
 # shell or a file whatever they hang off.
@@ -420,18 +467,16 @@ def _safe_open_target(node: ast.Call) -> bool:
 def static_source_problems(source: str) -> list:
     """List the reasons the pre-run check refuses ``source`` (empty when it's fine).
 
-    The check walks the syntax tree and refuses code that imports or names
-    networking, ``subprocess``, ``ctypes``, ``socket`` or similar modules, that
-    touches ``os.environ`` or the other process and file calls on ``os``, that
-    reaches for ``eval``, ``exec`` or ``__import__``, or that opens a file by
-    anything other than a literal relative path inside the working folder.
+    A cheap pre-filter, run before the sandbox is started. It walks the syntax
+    tree and refuses code that is obviously outside a small scripting task:
+    networking, ``subprocess``, ``ctypes`` or similar imports, ``os.environ``
+    and the process and file calls on ``os``, ``eval``, ``exec`` or
+    ``__import__``, or opening a file by anything other than a literal
+    relative path. Its use is the clear failure message it gives.
 
-    THIS IS NOT A SECURITY BOUNDARY. It is a guard for honest model output: it
-    catches an answer that wanders off the task, and it keeps the grader from
-    running such an answer by accident. A program written to get round it can
-    do so. Never run code from an untrusted or hostile source on the strength
-    of this check; that needs a real sandbox (a container or a locked-down
-    account), which this module does not provide.
+    THIS IS NOT A SECURITY BOUNDARY. A program written to get round it can do
+    so. The boundary is the sandbox in ``sandbox.py``: source that passes
+    this check still runs only inside it, and never on the host.
     """
     try:
         tree = ast.parse(source)
@@ -439,6 +484,10 @@ def static_source_problems(source: str) -> list:
         return ["syntax error"]
     problems = []
     open_calls = set()
+    os_names = {"os", "_os"}
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Import):
+            os_names.update(alias.asname for alias in node.names if alias.name == "os" and alias.asname)
     for node in ast.walk(tree):
         if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == "open":
             open_calls.add(id(node.func))
@@ -461,7 +510,7 @@ def static_source_problems(source: str) -> list:
         elif isinstance(node, ast.Attribute):
             if node.attr in _BANNED_DUNDERS:
                 problems.append(f"uses {node.attr}")
-            elif node.attr in _BANNED_OS_ATTRS and isinstance(node.value, ast.Name) and node.value.id in ("os", "_os"):
+            elif node.attr in _BANNED_OS_ATTRS and isinstance(node.value, ast.Name) and node.value.id in os_names:
                 problems.append(f"uses os.{node.attr}")
             elif node.attr in _BANNED_ATTRS:
                 problems.append(f"uses .{node.attr}")
@@ -473,205 +522,76 @@ def static_source_problems(source: str) -> list:
     return sorted(set(problems))
 
 
-# The script that runs inside the child process. It loads the submitted code,
-# calls the entry function once per test and reports only pass or fail.
-_RUNNER_SOURCE = r'''
-import io
-import json
-import sys
-
-
-def same(a, b):
-    """Python ==, with bool never equal to int, at any depth."""
-    if isinstance(a, bool) or isinstance(b, bool):
-        return type(a) is type(b) and a == b
-    if isinstance(a, (list, tuple)) and isinstance(b, (list, tuple)):
-        return type(a) is type(b) and len(a) == len(b) and all(same(x, y) for x, y in zip(a, b))
-    if isinstance(a, dict) and isinstance(b, dict):
-        return len(a) == len(b) and all(k in a and same(a[k], v) for k, v in b.items())
-    try:
-        return bool(a == b)
-    except Exception:
-        return False
-
-
-def main():
-    nonce = sys.argv[1]
-    channel = sys.stdout
-    sys.stdout = io.StringIO()
-    sys.stderr = io.StringIO()
-    channel.write(nonce + "STARTED\n")
-    channel.flush()
-    with open("job.json", encoding="utf-8") as handle:
-        job = json.load(handle)
-    try:
-        with open("submission.py", encoding="utf-8") as handle:
-            source = handle.read()
-        namespace = {"__name__": "submission"}
-        exec(compile(source, "submission.py", "exec"), namespace)
-        entry = namespace[job["entry"]]
-        if not callable(entry):
-            raise TypeError("entry is not callable")
-    except BaseException as exc:
-        report = {"load_error": type(exc).__name__}
-    else:
-        results = []
-        for test in job["tests"]:
-            try:
-                got = entry(*test["args"])
-            except BaseException as exc:
-                wanted = test.get("raises")
-                ok = wanted is not None and any(c.__name__ == wanted for c in type(exc).__mro__)
-                results.append({"ok": ok, "why": "raised " + type(exc).__name__})
-            else:
-                if "raises" in test:
-                    results.append({"ok": False, "why": "no exception"})
-                else:
-                    ok = same(got, test["expect"])
-                    results.append({"ok": ok, "why": "" if ok else "wrong result"})
-        report = {"results": results}
-    channel.write(nonce + json.dumps(report) + "\n")
-    channel.flush()
-
-
-main()
-'''
-
-
 def _child_environment() -> dict:
-    """An empty environment, plus only what Windows needs to start a process."""
+    """An empty environment, plus only what Windows needs to start a process.
+
+    Used for the formula worker. Model-written Python never runs in a host
+    process at all (see ``sandbox.py``).
+    """
     env = {}
     if os.name == "nt":
         env["SYSTEMROOT"] = os.environ.get("SYSTEMROOT", r"C:\Windows")
     return env
 
 
-_TIMED_OUT = object()
+def grade_python_tests(reply: str, params: Mapping, timeout: float = SANDBOX_TIMEOUT_SECONDS,
+                       backend: Any = None) -> GradeResult:
+    """Run the reply as Python inside the sandbox and call ``entry`` once per test.
 
+    No model-written code runs on the host. How it goes:
 
-def _pump_lines(process, lines) -> None:
-    """Thread body: pass the child's output on, line by line, then None."""
-    try:
-        for raw in process.stdout:
-            lines.put(raw)
-    except (OSError, ValueError):
-        pass
-    lines.put(None)
-
-
-def _next_marked_line(lines, nonce: str, timeout: float):
-    """The next line that starts with ``nonce`` (without it), None at the end of
-    output, or ``_TIMED_OUT``."""
-    deadline = time.monotonic() + timeout
-    while True:
-        try:
-            raw = lines.get(timeout=max(0.0, deadline - time.monotonic()))
-        except queue.Empty:
-            return _TIMED_OUT
-        if raw is None:
-            return None
-        line = raw.decode("utf-8", "replace").rstrip("\r\n")
-        if line.startswith(nonce):
-            return line[len(nonce):]
-
-
-def _kill(process) -> None:
-    try:
-        process.kill()
-    except OSError:
-        pass
-    try:
-        process.wait(timeout=10)
-    except (OSError, subprocess.SubprocessError):
-        pass
-    try:
-        process.stdout.close()
-    except (OSError, ValueError, AttributeError):
-        pass
-
-
-def grade_python_tests(reply: str, params: Mapping, timeout: float = SANDBOX_TIMEOUT_SECONDS) -> GradeResult:
-    """Run the reply as Python and call ``entry`` once per test.
-
-    How it runs:
-
-    * the source goes through ``static_source_problems`` first, and is not run
-      at all if that check refuses it;
-    * it runs in a SEPARATE Python process started with ``-I -S`` (isolated
-      mode, no site packages), with an empty environment (on Windows only
-      ``SYSTEMROOT``, which the interpreter needs to start), with a fresh
-      temporary folder as its working directory, and with no access to this
-      process's objects: tests go in and verdicts come out as JSON;
+    * a reply that isn't valid Python fails as malformed, and source the
+      static pre-filter refuses (``static_source_problems``) fails with the
+      reason. Neither is run anywhere;
+    * the source runs only inside a real sandbox (``sandbox.py``: a Docker
+      container or bubblewrap under WSL, chosen with ``DTD_SANDBOX``), with no
+      network, no host files, no host environment and limits on processes,
+      memory and disk. The sandbox must have passed its self-test in this
+      process. If there is no such sandbox the result is
+      ``sandbox_unavailable``: the task is NOT graded, here or any other way;
+    * only the source, the entry name and each test's arguments go in. The
+      expected values stay on the host. What each call returned comes back
+      with explicit type tags and is compared here;
+    * results compare with Python ``==``, with ``bool`` never equal to a
+      number, at any depth and in dictionary keys; integers of any size are
+      exact;
     * one wall-clock limit of 10 seconds covers loading the code and running
-      every test. The clock starts when the child reports that its interpreter
-      is up, so a slow process start on a busy machine isn't charged to the
-      answer; a child that never starts raises an error and nothing is graded;
-    * results compare with Python ``==`` and with ``bool`` never equal to
-      ``int``; integers of any size are exact;
-    * any exception, timeout or syntax error fails the task.
+      every test, counted from the moment the sandboxed interpreter is up;
+    * output is capped at 64 KB per test and 1 MB in all;
+    * any exception, timeout, overrun or syntax error fails the task.
 
-    THIS IS NOT A SECURITY BOUNDARY. The static check and the bare process are
-    a guard for honest model output, not a defence against a hostile program:
-    the child can still read files the user can read and use the network if it
-    gets past the static check. Run real benchmarks on a machine and account
-    where that is acceptable, and never point this at untrusted code.
+    ``backend`` is for tests; real runs leave it out.
     """
     source = unwrap_fence(trim(reply))
     try:
         ast.parse(source)
     except (SyntaxError, ValueError, RecursionError, MemoryError):
         return _fail("syntax error", malformed=True)
+    if len(source) > sandbox.MAX_SOURCE_CHARS:
+        return _fail("the code is too long to run")
     problems = static_source_problems(source)
     if problems:
         return _fail("refused before running: " + "; ".join(problems))
 
-    nonce = "DTD-" + secrets.token_hex(16) + ":"
-    job = {"entry": params["entry"], "tests": [
-        {k: test[k] for k in ("args", "expect", "raises") if k in test} for test in params["tests"]]}
-    with tempfile.TemporaryDirectory(prefix="dtd-py-", ignore_cleanup_errors=True) as folder:
-        work = Path(folder)
-        (work / "submission.py").write_text(source, encoding="utf-8")
-        (work / "job.json").write_text(json.dumps(job), encoding="utf-8")
-        (work / "runner.py").write_text(_RUNNER_SOURCE, encoding="utf-8")
-        try:
-            process = subprocess.Popen(
-                [sys.executable, "-I", "-S", "runner.py", nonce],
-                cwd=str(work), env=_child_environment(), stdin=subprocess.DEVNULL,
-                stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
-                creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
-            )
-        except OSError as exc:
-            raise RuntimeError(f"could not start the test process: {type(exc).__name__}") from None
-        lines = queue.Queue()
-        threading.Thread(target=_pump_lines, args=(process, lines), daemon=True).start()
-        try:
-            started = _next_marked_line(lines, nonce, PROCESS_START_SECONDS)
-            if started is _TIMED_OUT:
-                raise RuntimeError("the test process did not start; nothing was graded")
-            if started != "STARTED":
-                return _fail("the test process ended without a report")
-            # The 10 second limit runs from here: it covers loading the
-            # submitted code and every test, not the interpreter starting up.
-            text = _next_marked_line(lines, nonce, timeout)
-        finally:
-            _kill(process)
-    if text is _TIMED_OUT:
-        return _fail(f"timed out after {timeout:g} seconds")
+    tests = params["tests"]
     try:
-        report = json.loads(text) if text is not None else None
-    except ValueError:
-        report = None
-    if not isinstance(report, dict):
-        return _fail("the test process ended without a report")
-    if "load_error" in report:
-        return _fail(f"the code could not be loaded: {report['load_error']}")
-    results = report.get("results")
-    if not isinstance(results, list) or len(results) != len(params["tests"]):
-        return _fail("the test process gave an incomplete report")
-    failed = [f"{n} ({r.get('why') or 'failed'})" for n, r in enumerate(results, 1) if r.get("ok") is not True]
+        if backend is None:
+            backend = sandbox.ready_backend()
+        run = sandbox.run_tests(backend, source, params["entry"], tests, timeout)
+    except sandbox.SandboxUnavailable as exc:
+        return GradeResult(SANDBOX_UNAVAILABLE, f"not graded: {exc}")
+    if run.status == "timeout":
+        return _fail(f"timed out after {timeout:g} seconds")
+    if run.status == "output_cap":
+        return _fail("the output went over the cap")
+    if run.status == "load_error":
+        return _fail(f"the code could not be loaded: {run.detail}")
+    if run.status != "ok":
+        return _fail("the sandboxed run ended without a report")
+    failed = [f"{n} ({why or 'failed'})" for n, (ok, why) in enumerate(zip(run.passed, run.why), 1) if ok is not True]
     if failed:
         return _fail("failed test(s): " + ", ".join(failed))
-    return _ok(f"{len(results)} tests passed")
+    return _ok(f"{len(tests)} tests passed")
 
 
 # ---------------------------------------------------------------- formula
@@ -810,28 +730,54 @@ def close_formula_engine() -> None:
 
 
 _PROMPT_CELL_RE = re.compile(
-    r"\b(?:formula\s+(?:for|in)|(?:in|into|for)\s+cell)\s+\$?([A-Z]{1,3})\$?([1-9][0-9]{0,6})\b")
+    r"\b(?:formula\s+(?:for|in|into)|(?:in|into|for)\s+cell)\s+\$?([A-Z]{1,3})\$?([1-9][0-9]{0,6})\b")
 
 
 def formula_home_cell(params: Mapping, prompt: Optional[str] = None) -> str:
     """The cell the submitted formula is written for.
 
     The README's rule is "C2 unless the task's prompt names another". In
-    order: the grader's own ``home_cell`` if it has one; otherwise C2, unless
-    a case puts data in C2; otherwise the one cell the prompt names with
-    "formula for X", "formula in X" or "in cell X" that isn't a data cell. If
-    that doesn't give exactly one cell the task can't be graded as written.
+    order:
+
+    1. the grader's own ``home_cell``, if it has one;
+    2. the cell the prompt names with "formula for X", "formula in X" or
+       "in cell X", leaving out cells that a case fills with data. One such
+       cell is the home cell, whether or not C2 is free;
+    3. C2, when the prompt names no such cell and no case puts data in C2.
+
+    If the prompt names more than one such cell, or names none while C2 holds
+    data, the task can't be graded as written and ``home_cell`` must be added
+    to its grader.
     """
     if params.get("home_cell"):
         return params["home_cell"]
     data_cells = {cell for case in params["cases"] for cell in case["cells"]}
-    if FORMULA_DEFAULT_CELL not in data_cells:
-        return FORMULA_DEFAULT_CELL
     named = {a + b for a, b in _PROMPT_CELL_RE.findall(prompt or "")} - data_cells
     if len(named) == 1:
         return named.pop()
+    if not named and FORMULA_DEFAULT_CELL not in data_cells:
+        return FORMULA_DEFAULT_CELL
     raise GraderConfigError(
-        "formula grader: C2 holds data and the home cell is not clear; add 'home_cell' to the grader")
+        "formula grader: the home cell is not clear from the prompt; add 'home_cell' to the grader")
+
+
+_FORMULA_STRING_RE = re.compile(r'"(?:[^"]|"")*"')
+_FORMULA_ERROR_RE = re.compile(r"#(?:DIV/0|REF|VALUE|NUM|NULL|N/A|NAME\?|GETTING_DATA|SPILL|CALC)!?", re.IGNORECASE)
+
+
+def formula_out_of_scope(formula: str) -> Optional[str]:
+    """A reason to refuse a formula before the engine sees it, or None.
+
+    A task formula works on one sheet. A reference to another sheet or
+    workbook (``!`` or square brackets outside a text literal) is refused, so
+    the engine is never asked to open another file.
+    """
+    bare = _FORMULA_ERROR_RE.sub("", _FORMULA_STRING_RE.sub('""', formula))
+    if "!" in bare or "[" in bare or "]" in bare:
+        return "the formula refers to another sheet or workbook"
+    if any(ord(ch) < 32 and ch not in "\t\r\n" for ch in formula):
+        return "the formula contains a control character"
+    return None
 
 
 def _translate_formula(formula: str, home: str, target: str) -> str:
@@ -845,9 +791,15 @@ def grade_formula(reply: str, params: Mapping, prompt: Optional[str] = None,
     """Evaluate the reply, one Excel formula, in a real formula engine.
 
     The engine is the ``formulas`` package (with ``openpyxl``), found lazily
-    and run in a child process with an empty environment. If it isn't
-    importable this raises ``FormulaEngineUnavailable`` and the task is NOT
-    graded. A formula is never judged by matching its text.
+    and run in a separate worker process with an empty environment. If it
+    isn't importable this raises ``FormulaEngineUnavailable`` and the task is
+    NOT graded. A formula is never judged by matching its text.
+
+    The engine evaluates spreadsheet expressions; it does not run code. It
+    does still parse model-written text, in a host process, so the input is
+    kept small: at most 2,000 characters, no reference to another
+    sheet or workbook, and 10 seconds for all the cases. The remaining risk
+    is a fault in the engine's own parser; see the README.
 
     For each case the listed cells are set, every other cell is empty, and the
     formula is evaluated in its home cell (see ``formula_home_cell``). A case
@@ -858,8 +810,13 @@ def grade_formula(reply: str, params: Mapping, prompt: Optional[str] = None,
     """
     _FormulaEngine._package_folders()  # raises FormulaEngineUnavailable before anything is graded
     formula = unwrap_fence(trim(reply))
-    if formula == "" or len(formula) > MAX_FORMULA_CHARS:
+    if formula == "":
         return _fail("no formula in the answer", malformed=True)
+    if len(formula) > MAX_FORMULA_CHARS:
+        return _fail(f"the formula is longer than {MAX_FORMULA_CHARS} characters")
+    refused = formula_out_of_scope(formula)
+    if refused:
+        return _fail(refused)
     if not formula.startswith("="):
         formula = "=" + formula
     home = formula_home_cell(params, prompt)
