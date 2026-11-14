@@ -491,7 +491,7 @@ export function curateNewsItems<T extends CuratedNewsItem>(items: T[]): T[] {
 }
 
 export function getRenderableGlossaryTerms(terms: CuratedGlossaryTerm[]): CuratedGlossaryTerm[] {
-  const source = terms.length > 0 ? terms : FALLBACK_GLOSSARY_TERMS;
+  const source = [...new Map([...FALLBACK_GLOSSARY_TERMS, ...terms].map(term => [term.id, term])).values()];
   return [...source].sort((a, b) => a.term.localeCompare(b.term));
 }
 

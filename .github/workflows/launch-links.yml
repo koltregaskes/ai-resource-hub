@@ -1,0 +1,29 @@
+name: Launch links and redirects
+on: [pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+      - run: npm ci
+      - run: node --import tsx --test scripts/contracts/glossary-links.test.ts
+      - run: npm run build
+      - run: node --test scripts/contracts/redirect-policy.test.mjs scripts/contracts/public-links.test.mjs
+      - run: python scripts/contracts/links-built.py
+      - run: node scripts/contracts/crawl-external.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-link-report
+          path: .review/link-report.json
+          include-hidden-files: true
