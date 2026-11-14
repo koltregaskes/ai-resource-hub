@@ -49,7 +49,7 @@ export function validateJobs(data, previous=null) {
   requireFields(version,['version_label','population','methodology_url','methodology_version','definition']);
   const series=data.jobs_series.find(s=>s.id===version.series_id); if(!series || !KINDS.includes(series.kind)) throw Error('Missing evidence kind');
   const source=data.jobs_sources.find(s=>s.id===series.source_id);if(!source) throw Error('Missing source');
-  rightsFor(data,series.rights_id??source.rights_id);uncertainty(row);
+  requireFields(series,['unit']);rightsForSeries(data,series,source);uncertainty(row);
   if(!/^https:\/\//.test(row.source_url)) throw Error('Invalid source URL');
  }
  for(const result of data.jobs_study_results) {
@@ -80,10 +80,121 @@ export function validateJobs(data, previous=null) {
 }
 export function publicationRows(data, section='happening') {
  validateJobs(data);
- const permitted=section==='exposure'?['modelled_exposure']:section==='projections'?['projection']:['measured','survey_estimate','model_derived_estimate'];
+ const permitted=SECTION_KINDS[section];if(!permitted) throw Error('Unknown section');
  return currentObservations(data).map(row=>{
   const series=data.jobs_series.find(s=>s.id===row.version.series_id);
   const source=data.jobs_sources.find(s=>s.id===series.source_id);
-  return {...row,series,source,kind:series.kind,rights:data.jobs_rights.find(r=>r.id===(series.rights_id??source.rights_id))};
+  return {...row,series,source,kind:series.kind,rights:rightsForSeries(data,series,source)};
  }).filter(row=>permitted.includes(row.kind));
+}
+// Per-series rendering. Everything a page or export prints about a figure comes from that
+// figure's own series, observation and rights record, never from a page-wide assumption.
+export const EXPOSURE_NOTE = 'Exposure is not impact';
+export const NO_UNCERTAINTY = 'No uncertainty published by the source';
+// The method's placement rule: which evidence kinds each block of the page (and its export) may hold.
+export const SECTION_KINDS = {happening:['measured','survey_estimate','model_derived_estimate'],exposure:['modelled_exposure'],projections:['projection']};
+const SCOPE_RANK = {publication:0,dataset:1,source:2};
+const INTERVAL_LABELS = {confidence:'confidence interval',prediction:'prediction interval',credible:'credible interval',scenario_range:'scenario range'};
+const CADENCE_WORDS = {1:'daily',7:'weekly',14:'fortnightly',30:'monthly',90:'quarterly',365:'annual'};
+
+export function kindLabel(kind) { if(!KINDS.includes(kind)) throw Error('Missing evidence kind'); return KIND_LABELS[kind]; }
+export function kindWord(kind) { return kindLabel(kind).toLowerCase(); }
+// The label to print beside a figure. Exposure figures always carry the note.
+export function kindCaption(kind) { const label=kindLabel(kind); return kind==='modelled_exposure'?`${label} \u00b7 ${EXPOSURE_NOTE}`:label; }
+
+// The rights record that applies to one series: the narrowest scope it references
+// (publication, then dataset, then source). It must be confirmed, allow commercial use
+// and be admitted for publication, or nothing from the series is published.
+export function rightsForSeries(data, series, source) {
+ const ids=[...new Set([series.rights_id,source.rights_id].filter(id=>id!=null))];
+ if(!ids.length) throw Error('Unconfirmed rights');
+ const records=ids.map(id=>{
+  const record=data.jobs_rights.find(r=>r.id===id);
+  if(!record || !(record.scope in SCOPE_RANK)) throw Error('Unconfirmed rights');
+  return record;
+ }).sort((a,b)=>SCOPE_RANK[a.scope]-SCOPE_RANK[b.scope]);
+ if(records[0].admitted_for_publication===false) throw Error('Rights record not admitted for publication');
+ return rightsFor(data,records[0].id);
+}
+// Distinct rights records behind a set of published rows, in first-use order.
+// A rights record that no published series uses is never returned, so it renders nothing.
+export function rightsInUse(rows) {
+ const used=new Map();
+ for(const row of rows) if(!used.has(row.rights.id)) used.set(row.rights.id,row.rights);
+ return [...used.values()];
+}
+export function assertPlacement(rows, section) {
+ const permitted=SECTION_KINDS[section];if(!permitted) throw Error('Unknown section');
+ for(const row of rows) if(!permitted.includes(row.kind) || row.kind!==row.series?.kind) throw Error(`Kind ${row.kind} is not allowed in section ${section}`);
+ return rows;
+}
+
+// A figure in its series' own unit. "percent" and "percent of ..." print as "4.87%"; any other unit is written out in full.
+export function formatValue(value, unit, digits) {
+ if(!Number.isFinite(value)) throw Error('Non-finite figure');
+ if(typeof unit!=='string' || !unit.trim()) throw Error('Missing unit');
+ const number=digits==null?String(value):value.toFixed(digits);
+ return /^(percent|per cent|%)(\s+of\s.*)?$/i.test(unit.trim())?`${number}%`:`${number} ${unit.trim()}`;
+}
+// What to print about uncertainty, from the observation's own status.
+export function uncertaintyText(row, unit) {
+ if(row.uncertainty_status==='not_published') return NO_UNCERTAINTY;
+ if(row.uncertainty_status!=='published') throw Error('Unchecked uncertainty');
+ const parts=[];
+ if(Number.isFinite(row.interval_lower) && Number.isFinite(row.interval_upper)) {
+  const type=INTERVAL_LABELS[row.interval_type];if(!type) throw Error('Invalid interval');
+  const hasLevel=row.confidence_level>0 && row.confidence_level<1;
+  if(!hasLevel && row.interval_type!=='scenario_range') throw Error('Invalid interval');
+  const range=`${formatValue(row.interval_lower,unit)} to ${formatValue(row.interval_upper,unit)}`;
+  parts.push(hasLevel?`${Number((row.confidence_level*100).toFixed(2))}% ${type}: ${range}`:`${type[0].toUpperCase()+type.slice(1)}: ${range}`);
+ }
+ if(Number.isFinite(row.standard_error)) parts.push(`Standard error (in the figure's unit): ${row.standard_error}`);
+ if(Number.isFinite(row.relative_standard_error)) parts.push(`Relative standard error (as published): ${row.relative_standard_error}`);
+ if(!parts.length) throw Error('Missing published uncertainty');
+ return parts.join('; ');
+}
+// Every label a card, table row or caption needs for one published row.
+export function displayRow(row, digits) {
+ return {
+  value_text:formatValue(row.value,row.series.unit,digits),
+  kind_label:kindLabel(row.kind),kind_word:kindWord(row.kind),kind_caption:kindCaption(row.kind),
+  uncertainty_text:uncertaintyText(row,row.series.unit),
+  credit:row.rights.attribution_text,licence:row.rights.licence,licence_url:row.rights.licence_url,rights_id:row.rights.id,
+ };
+}
+export function latestPerSeries(rows) {
+ return [...new Set(rows.map(r=>r.series.id))].map(id=>rows.filter(r=>r.series.id===id).sort((a,b)=>b.period.localeCompare(a.period))[0]);
+}
+// Latest row per series, grouped so that one chart or card set never mixes sources, units or kinds.
+export function displayGroups(rows) {
+ const groups=new Map();
+ for(const row of latestPerSeries(rows)) {
+  const key=[row.source.id,row.series.unit,row.kind].join('|');
+  const group=groups.get(key)??{key,source:row.source,unit:row.series.unit,kind:row.kind,rows:[]};
+  group.rows.push(row);groups.set(key,group);
+ }
+ return [...groups.values()].map(group=>({...group,max:Math.max(...group.rows.map(r=>r.value)),
+  all_uncertainty_not_published:group.rows.every(r=>r.uncertainty_status==='not_published')}));
+}
+export function cadenceWord(days) { return CADENCE_WORDS[days]??`every ${days} days`; }
+export function sourceFormat(url) { return /\.csv($|[?#])/i.test(url)?'CSV':'file'; }
+
+// Rights register: records for sources whose terms have been read but which have no admitted
+// series yet. A record here is not a licence to publish: every entry is flagged
+// admitted_for_publication:false, and rightsForSeries refuses any series that points at one.
+export function validateRightsRegister(register) {
+ const seen=new Set();
+ for(const record of register.jobs_rights) {
+  requireFields(record,['id','scope','covers','licence','licence_url','attribution_text','commercial_use','verified_on','verified_by','evidence_url','evidence_quote','status']);
+  if(seen.has(record.id)) throw Error('Duplicate rights record');seen.add(record.id);
+  if(!(record.scope in SCOPE_RANK)) throw Error('Invalid rights scope');
+  if(!['confirmed','partial','unconfirmed'].includes(record.status)) throw Error('Invalid rights status');
+  if(!['allowed','not_allowed','unknown'].includes(record.commercial_use)) throw Error('Invalid commercial use');
+  if(record.status==='confirmed' && record.commercial_use!=='allowed') throw Error('Confirmed rights must allow commercial use');
+  if(record.admitted_for_publication!==false) throw Error('Register records must not be admitted for publication');
+  if(record.evidence_quote.trim().split(/\s+/).length>=25) throw Error('Evidence quote too long');
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(record.verified_on)) throw Error('Invalid verified_on');
+  for(const field of ['licence_url','evidence_url']) if(!/^https:\/\//.test(record[field])) throw Error('Invalid rights URL');
+ }
+ return register;
 }
