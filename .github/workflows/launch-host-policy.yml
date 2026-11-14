@@ -25,20 +25,24 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
       - uses: actions/setup-node@v6
         with:
           node-version: '22'
           cache: npm
       - run: npm ci
       - run: npm run build
-      - name: Scan source history and public build (aggregate only)
+      - name: Scan tracked source and public build (aggregate only)
         shell: bash
         run: |
           result=0
-          docker run --rm -v "$PWD:/repo:ro" zricethezav/gitleaks:v8.30.0 git /repo --redact=100 --exit-code 2 --no-banner --log-opts="--all -- . :(exclude)**/.env :(exclude)**/.env.* :(exclude).env :(exclude).env.*" > "$RUNNER_TEMP/history-scan.log" 2>&1 || result=$?
+          mkdir -p "$RUNNER_TEMP/source-scan"
+          git ls-files -z -- . ':(exclude)**/.env' ':(exclude)**/.env.*' ':(exclude).env' ':(exclude).env.*' | while IFS= read -r -d '' file; do
+            if [ -L "$file" ]; then echo "Refusing a tracked symbolic link"; exit 1; fi
+            mkdir -p "$RUNNER_TEMP/source-scan/$(dirname "$file")"
+            cp -- "$file" "$RUNNER_TEMP/source-scan/$file"
+          done
+          docker run --rm -v "$RUNNER_TEMP/source-scan:/source:ro" zricethezav/gitleaks:v8.30.0 dir /source --redact=100 --exit-code 2 --no-banner > "$RUNNER_TEMP/source-scan.log" 2>&1 || result=$?
           if [ "$result" -ne 0 ]; then echo "Source scan failed (exit $result); values and matching lines withheld"; exit "$result"; fi
           docker run --rm -v "$PWD:/repo:ro" zricethezav/gitleaks:v8.30.0 dir /repo/dist --redact=100 --exit-code 2 --no-banner > "$RUNNER_TEMP/public-scan.log" 2>&1 || result=$?
           if [ "$result" -ne 0 ]; then echo "Public build scan failed (exit $result); values and matching lines withheld"; exit "$result"; fi
-          echo "Source history and public build secret scans passed (aggregate only)"
+          echo "Tracked source and public build secret scans passed (aggregate only)"
