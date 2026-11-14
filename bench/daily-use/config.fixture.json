@@ -1,9 +1,9 @@
 {
-  "task_set_version": "daily-use-v1",
+  "task_set_version": "daily-use-development-fixtures-v2",
   "repeats": 3,
   "caps_usd": {
-    "openai": "10",
-    "anthropic": "10"
+    "openai": "30",
+    "anthropic": "30"
   },
   "judge_panel": [
     {
@@ -19,10 +19,10 @@
     {
       "provider": "openai",
       "model": "fixture-openai",
-      "effort": "none",
-      "temperature": 0,
-      "max_output_tokens": 512,
-      "context_tokens": 4096,
+      "effort": "provider_default",
+      "temperature": "provider_default",
+      "max_output_tokens": 8192,
+      "context_tokens": 16384,
       "input_usd_per_million": "1",
       "output_usd_per_million": "4",
       "system_prompt": "",
@@ -31,10 +31,10 @@
     {
       "provider": "anthropic",
       "model": "fixture-anthropic",
-      "effort": "none",
-      "temperature": 0,
-      "max_output_tokens": 512,
-      "context_tokens": 4096,
+      "effort": "provider_default",
+      "temperature": "provider_default",
+      "max_output_tokens": 8192,
+      "context_tokens": 16384,
       "input_usd_per_million": "1",
       "output_usd_per_million": "4",
       "system_prompt": "",

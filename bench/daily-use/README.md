@@ -4,7 +4,7 @@ Run from this directory with Python 3.11+ (standard library only):
 
 ```powershell
 python -m unittest -v
-python harness.py --dry-run --out runs/my-unique-run --max-usd 20
+python harness.py --dry-run --out runs/my-unique-run --max-usd 60
 ```
 
 60 original public tasks, ten categories, three repeats per model by default.
@@ -35,7 +35,7 @@ hash detects a dirty-tree mismatch. Archive runs externally for durable immutabi
 
 Hard caps are per provider and per invocation, plus `--max-usd`. All three possible
 transport attempts reserve full configured context and output cost. Reservations
-are not released. There are no retries for HTTP errors, refusal, format or grading.
+are not released. Connection failures and HTTP 429 retry twice; timeouts, other HTTP errors, refusal, format and grading never retry.
 Preflight prints the worst-case reservation before dispatch. Multiple independent
 runs do not share an account-wide budget.
 
@@ -60,3 +60,5 @@ No live benchmark or judge calls are enabled in this release.
 Held-out prompts must live outside this public repository. The `held-out/` folder
 contains only policy; there is no held-out loader yet. Future integration must
 publish ids and scores only, and keep raw held-out run archives private.
+
+Method settings (PR 110, commit 1d860b4): 120-second hard wall-clock deadline per request; timed-out attempts fail without retry. Fixed output maximum 8,192; reasoning and temperature are explicitly recorded as provider_default and omitted from API request bodies. Every row includes its UTC run date. The default settings policy is validated; unsupported-model fallback settings require a later reviewed integration. Existing fixture-baseline records retain their historical settings; fixture-method-v2 records the new policy. These development fixtures do not claim admission as the method's 40-public/20-held-out task set.
