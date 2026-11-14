@@ -4,43 +4,73 @@ Two adapters, `OpenAIResponses` and `AnthropicMessages`, sit on an injectable
 `transport(request) -> response`. Tests and dry runs pass a fake transport,
 so nothing here touches the network unless the runner's live gate is open.
 
-REQUEST SHAPES. TO VERIFY AGAINST THE PROVIDER REFERENCE BEFORE THE CANARY.
-Nothing below has been sent to a provider.
+REQUEST SHAPES. Read against the providers' own API references on
+14 November 2026 (the pages are listed in RUNNER.md). Nothing below has been
+sent to a provider: the canary is still the first real exchange.
 
 OpenAI Responses API
     POST https://api.openai.com/v1/responses
     headers: Authorization: Bearer <key>, Content-Type: application/json
+    No version header exists; the config records `api_version` as text.
     body: {"model": <id>, "input": <prompt text>,
            "max_output_tokens": <task limit>, "store": false,
+           "prompt_cache_options": {"mode": "explicit"},
            "reasoning": {"effort": <value>}   (only if send_reasoning_effort)
            "temperature": <value>}            (only if send_temperature)
+    `max_output_tokens` covers reasoning tokens as well as the visible
+    answer (minimum 16). `prompt_cache_options.mode` "explicit" with no
+    breakpoint turns prompt caching off: on GPT-5.6 and later the default
+    ("implicit") writes any prompt of 1,024 tokens or more to the cache and
+    bills those tokens at 1.25 times the input rate, which the price receipt
+    does not hold. The GPT-6 family rejects `temperature` unless the effort
+    is "none"; config.py refuses that combination.
     No `instructions` field (empty system prompt) and no `tools` field.
     Reply text: output[] items of type "message", content[] parts of type
-    "output_text" (a "refusal" part is kept as text so it can be graded).
+    "output_text" (a "refusal" part is kept as text so it can be graded, and
+    the result is flagged "refusal").
     Finish: status "completed", or "incomplete" with
-    incomplete_details.reason; reason "max_output_tokens" means truncated.
+    incomplete_details.reason; reason "max_output_tokens" means truncated,
+    "content_filter" is flagged "refusal". Status "failed", "cancelled",
+    "queued" or "in_progress" on a 200 is a provider error.
     Usage: usage.input_tokens, usage.output_tokens,
-    usage.input_tokens_details.cached_tokens (a part of input_tokens),
-    usage.output_tokens_details.reasoning_tokens (a part of output_tokens).
+    usage.input_tokens_details.cached_tokens and .cache_write_tokens (both a
+    part of input_tokens), usage.output_tokens_details.reasoning_tokens (a
+    part of output_tokens, billed as output). Cache-write tokens are not
+    priced here, so a reply that reports any keeps its full reservation.
 
 Anthropic Messages API
     POST https://api.anthropic.com/v1/messages
     headers: x-api-key: <key>, anthropic-version: <api_version from config>,
              Content-Type: application/json
+    `anthropic-version` is "2026-10-21" (current) or "2023-06-01". The
+    reference now lists `Authorization: Bearer` first and calls `x-api-key`
+    a legacy form that is still supported.
     body: {"model": <id>, "max_tokens": <task limit>,
            "messages": [{"role": "user", "content": <prompt text>}],
            "output_config": {"effort": <value>}  (only if send_reasoning_effort)
            "temperature": <value>}               (only if send_temperature)
+    `max_tokens` covers thinking tokens as well as the answer. No `thinking`
+    field is sent, so the model's default applies (adaptive thinking, on).
+    Version 2026-10-21 rejects `temperature` on every model; config.py
+    allows it only with 2023-06-01.
     No `system` field (empty system prompt) and no `tools` field.
-    Reply text: content[] blocks of type "text".
-    Finish: stop_reason; "max_tokens" means truncated.
-    Usage: usage.input_tokens (excludes cache reads), usage.output_tokens,
-    usage.cache_read_input_tokens, usage.cache_creation_input_tokens.
+    Reply text: content[] blocks of type "text" (thinking blocks are skipped).
+    Finish: stop_reason; "max_tokens" or "model_context_window_exceeded"
+    means truncated; "refusal" is an HTTP 200 with empty content, flagged
+    "refusal".
+    Usage: usage.input_tokens (excludes cache reads and cache writes),
+    usage.output_tokens (includes thinking),
+    usage.cache_read_input_tokens, usage.cache_creation_input_tokens,
+    usage.output_tokens_details.thinking_tokens (a part of output_tokens).
 
 Failure classes
-    transport error: connection failure, HTTP 429, HTTP 5xx. Retryable.
-    provider error:  any other non-200 status, or a 200 that cannot be
-                     parsed. Not retryable.
+    transport error: connection failure, HTTP 429, HTTP 5xx (Anthropic's 529
+                     "overloaded" included). Retryable. A `Retry-After`
+                     header in seconds lengthens the wait; one longer than
+                     60 s ends the attempt.
+    provider error:  any other non-200 status, a 429 that says the account
+                     is out of credit or over a spend limit (retrying cannot
+                     help), or a 200 that cannot be used. Not retryable.
     timeout:         120 s from send to the last byte. Not retried.
 """
 
@@ -55,6 +85,13 @@ from dataclasses import dataclass, field
 TIMEOUT_SECONDS = 120
 MAX_REQUESTS_PER_SLOT = 3
 RETRY_WAITS_SECONDS = (2, 8)
+RETRY_AFTER_MAX_SECONDS = 60
+# A 429 carrying one of these is about money or quota, not pace. OpenAI:
+# error.type or error.code. Anthropic: error.details.error_code.
+PERMANENT_429_CODES = frozenset({
+    "insufficient_quota", "credit_balance_exhausted",
+    "organization_spend_limit_exceeded", "project_spend_limit_exceeded",
+    "organization_usage_limit_exceeded", "enforced_spend_limit_reached"})
 LIVE_HOSTS = {"openai": "api.openai.com", "anthropic": "api.anthropic.com"}
 
 OK = "ok"
@@ -73,6 +110,10 @@ class TransportFailure(Exception):
 
 class TransportTimeout(Exception):
     """The request passed the 120 s deadline and was cancelled."""
+
+
+class ReplyNotUsable(Exception):
+    """An HTTP 200 whose body says the request did not produce a reply."""
 
 
 class Request:
@@ -107,6 +148,7 @@ class Response:
     body: object = b""
     elapsed_seconds: object = None
     first_byte_seconds: object = None
+    retry_after_seconds: object = None
 
 
 @dataclass
@@ -124,6 +166,7 @@ class Result:
     request_time_seconds: object = None
     first_token_seconds: object = None
     flags: list = field(default_factory=list)
+    retry_after_seconds: object = None
 
     def to_record(self):
         return {
@@ -141,17 +184,35 @@ def _whole(value):
     return isinstance(value, int) and not isinstance(value, bool) and value >= 0
 
 
-def _error_kind(payload):
-    """A short provider error type or code. The message text is dropped,
-    because providers can echo part of a key in an error message."""
+def _error_codes(payload):
+    """The short provider error type and codes, in order. The message text
+    is dropped, because providers can echo part of a key in an error
+    message."""
     error = payload.get("error") if isinstance(payload, dict) else None
-    if isinstance(error, dict):
-        for name in ("type", "code"):
-            value = error.get(name)
-            if isinstance(value, str) and 0 < len(value) <= 60 and \
-                    all(c.isalnum() or c in "_-." for c in value):
-                return value
-    return None
+    if not isinstance(error, dict):
+        return []
+    details = error.get("details") if isinstance(error.get("details"), dict) else {}
+    found = []
+    for value in (error.get("type"), error.get("code"), details.get("error_code")):
+        if isinstance(value, str) and 0 < len(value) <= 60 and \
+                all(c.isalnum() or c in "_-." for c in value):
+            found.append(value)
+    return found
+
+
+def _error_kind(payload):
+    codes = _error_codes(payload)
+    return codes[0] if codes else None
+
+
+def retry_after_seconds(value):
+    """A `Retry-After` header as seconds, or None. Both providers send a
+    number of seconds; any other form is ignored."""
+    try:
+        seconds = float(str(value).strip())
+    except (TypeError, ValueError):
+        return None
+    return seconds if math.isfinite(seconds) and seconds >= 0 else None
 
 
 class _Adapter:
@@ -178,6 +239,9 @@ class _Adapter:
 
     def billable(self, usage):
         raise NotImplementedError
+
+    def reply_flags(self, payload):
+        return []
 
     def call(self, transport, prompt, max_output_tokens, secret, clock=time.monotonic):
         """Send one request and classify what came back. Never retries."""
@@ -208,8 +272,14 @@ class _Adapter:
             payload = None
         base = dict(http_status=status, request_time_seconds=elapsed,
                     first_token_seconds=response.first_byte_seconds)
+        if status == 429:
+            permanent = [code for code in _error_codes(payload) if code in PERMANENT_429_CODES]
+            if permanent:
+                return Result(PROVIDER_ERROR, error="HTTP 429 " + permanent[0], **base)
         if status == 429 or (isinstance(status, int) and 500 <= status <= 599):
-            return Result(TRANSPORT_ERROR, retryable=True, error="HTTP %d" % status, **base)
+            return Result(TRANSPORT_ERROR, retryable=True, error="HTTP %d" % status,
+                          retry_after_seconds=retry_after_seconds(response.retry_after_seconds),
+                          **base)
         if status != 200:
             kind = _error_kind(payload)
             return Result(PROVIDER_ERROR, error="HTTP %s%s" % (
@@ -218,6 +288,9 @@ class _Adapter:
             return Result(PROVIDER_ERROR, error="HTTP 200 with an unreadable body", **base)
         try:
             text, finish, truncated = self.parse_success(payload)
+            flags = self.reply_flags(payload)
+        except ReplyNotUsable as unusable:
+            return Result(PROVIDER_ERROR, error="HTTP 200 " + str(unusable), **base)
         except (KeyError, TypeError, ValueError, AttributeError):
             return Result(PROVIDER_ERROR, error="HTTP 200 with an unexpected shape", **base)
         usage = payload.get("usage") if isinstance(payload.get("usage"), dict) else None
@@ -225,6 +298,7 @@ class _Adapter:
                         usage=usage, billable=self.billable(usage), **base)
         if truncated:
             result.flags.append("truncated")
+        result.flags.extend(flags)
         if usage is None or result.billable is None:
             result.flags.append("missing_usage")
         return result
@@ -236,7 +310,8 @@ class OpenAIResponses(_Adapter):
 
     def build_request(self, prompt, max_output_tokens, secret):
         body = {"model": self.spec.model_id, "input": prompt,
-                self.spec.output_limit_parameter: max_output_tokens, "store": False}
+                self.spec.output_limit_parameter: max_output_tokens, "store": False,
+                "prompt_cache_options": {"mode": "explicit"}}
         if self.spec.send_reasoning_effort:
             body["reasoning"] = {"effort": self.spec.reasoning_effort}
         if self.spec.send_temperature:
@@ -245,6 +320,9 @@ class OpenAIResponses(_Adapter):
         return Request(self.provider, self.url, headers, body, "Authorization", "Bearer ", secret)
 
     def parse_success(self, payload):
+        if payload.get("status") in ("failed", "cancelled", "queued", "in_progress"):
+            kind = _error_kind(payload)
+            raise ReplyNotUsable("status %s%s" % (payload["status"], " " + kind if kind else ""))
         parts = []
         for item in payload["output"]:
             if item.get("type") != "message":
@@ -259,18 +337,29 @@ class OpenAIResponses(_Adapter):
         finish = "%s:%s" % (status, reason) if reason else status
         return "".join(parts), finish, reason == "max_output_tokens"
 
+    def reply_flags(self, payload):
+        refused = (payload.get("incomplete_details") or {}).get("reason") == "content_filter"
+        for item in payload["output"]:
+            if item.get("type") == "message":
+                refused = refused or any(part.get("type") == "refusal"
+                                         for part in item.get("content") or [])
+        return ["refusal"] if refused else []
+
     def billable(self, usage):
         if not usage or not _whole(usage.get("input_tokens")) \
                 or not _whole(usage.get("output_tokens")):
             return None
-        cached = (usage.get("input_tokens_details") or {}).get("cached_tokens", 0)
+        details = usage.get("input_tokens_details") or {}
+        cached = details.get("cached_tokens") or 0
+        written = details.get("cache_write_tokens") or 0
         reasoning = (usage.get("output_tokens_details") or {}).get("reasoning_tokens")
-        if not _whole(cached) or cached > usage["input_tokens"]:
+        if not _whole(cached) or not _whole(written) \
+                or cached + written > usage["input_tokens"]:
             return None
-        return {"input_uncached": usage["input_tokens"] - cached, "cached_input": cached,
-                "output": usage["output_tokens"],
+        return {"input_uncached": usage["input_tokens"] - cached - written,
+                "cached_input": cached, "output": usage["output_tokens"],
                 "reasoning": reasoning if _whole(reasoning) else None,
-                "unpriced": []}
+                "unpriced": ["cache_write_tokens"] if written else []}
 
 
 class AnthropicMessages(_Adapter):
@@ -292,7 +381,10 @@ class AnthropicMessages(_Adapter):
     def parse_success(self, payload):
         parts = [block["text"] for block in payload["content"] if block.get("type") == "text"]
         finish = payload.get("stop_reason")
-        return "".join(parts), finish, finish == "max_tokens"
+        return "".join(parts), finish, finish in ("max_tokens", "model_context_window_exceeded")
+
+    def reply_flags(self, payload):
+        return ["refusal"] if payload.get("stop_reason") == "refusal" else []
 
     def billable(self, usage):
         if not usage or not _whole(usage.get("input_tokens")) \
@@ -300,10 +392,12 @@ class AnthropicMessages(_Adapter):
             return None
         cached = usage.get("cache_read_input_tokens") or 0
         created = usage.get("cache_creation_input_tokens") or 0
+        thinking = (usage.get("output_tokens_details") or {}).get("thinking_tokens")
         if not _whole(cached) or not _whole(created):
             return None
         return {"input_uncached": usage["input_tokens"], "cached_input": cached,
-                "output": usage["output_tokens"], "reasoning": None,
+                "output": usage["output_tokens"],
+                "reasoning": thinking if _whole(thinking) else None,
                 "unpriced": ["cache_creation_input_tokens"] if created else []}
 
 
@@ -319,6 +413,8 @@ def call_with_retries(adapter, transport, prompt, max_output_tokens, secret, *,
                       after_result=None, sleep=None, clock=time.monotonic):
     """Up to `max_requests` requests: the first, then retries of transport
     errors only. A timeout or a provider error ends the attempt at once.
+    The wait before a retry is 2 s, then 8 s, or the provider's `Retry-After`
+    if that is longer; a `Retry-After` above 60 s ends the attempt instead.
 
     `before_send(n)` runs before request n is sent (the runner reserves money
     and writes the record there; if it raises, nothing is sent).
@@ -335,8 +431,15 @@ def call_with_retries(adapter, transport, prompt, max_output_tokens, secret, *,
             after_result(number, result)
         if result.status == OK or not result.retryable:
             break
-        if number < max_requests and sleep:
-            sleep(RETRY_WAITS_SECONDS[min(number - 1, len(RETRY_WAITS_SECONDS) - 1)])
+        if number < max_requests:
+            wait = RETRY_WAITS_SECONDS[min(number - 1, len(RETRY_WAITS_SECONDS) - 1)]
+            asked = result.retry_after_seconds
+            if asked is not None:
+                if asked > RETRY_AFTER_MAX_SECONDS:
+                    break
+                wait = max(wait, asked)
+            if sleep:
+                sleep(wait)
     return results
 
 
@@ -418,8 +521,11 @@ class UrllibTransport:
                     box["timeout"] = True
                     return
             status = getattr(stream, "status", None) or stream.getcode()
+            reply_headers = getattr(stream, "headers", None)
+            wait_hint = reply_headers.get("Retry-After") if reply_headers is not None else None
             stream.close()
-            box["response"] = Response(status=status, body=b"".join(chunks))
+            box["response"] = Response(status=status, body=b"".join(chunks),
+                                       retry_after_seconds=retry_after_seconds(wait_hint))
         except TimeoutError:
             box["timeout"] = True
         except urllib.error.URLError as url_error:

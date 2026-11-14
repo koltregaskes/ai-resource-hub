@@ -33,6 +33,17 @@ PROVIDERS = ("openai", "anthropic")
 OUTPUT_LIMIT_PARAMETER = {"openai": "max_output_tokens", "anthropic": "max_tokens"}
 REASONING_BILLING = ("in_output", "separate")
 OUTPUT_LIMITS = (4096, 8192)
+# Read from the provider references on 14 November 2026 (see RUNNER.md).
+# Anthropic: the `anthropic-version` header values. 2026-10-21 rejects
+# `temperature` on every model; 2023-06-01 still takes it.
+ANTHROPIC_API_VERSIONS = ("2026-10-21", "2023-06-01")
+ANTHROPIC_TEMPERATURE_VERSION = "2023-06-01"
+# The effort values each API accepts. Not every model takes every value:
+# check the model page when pinning.
+EFFORT_VALUES = {
+    "openai": ("none", "minimal", "low", "medium", "high", "xhigh", "max"),
+    "anthropic": ("low", "medium", "high", "xhigh", "max"),
+}
 
 _TOP_LEVEL = {
     "task_set_version", "live_approved", "approved_by", "key_names",
@@ -323,6 +334,34 @@ def _price(raw, where, problems, blockers, today):
     )
 
 
+def _provider_rules(raw, provider, api_version, effort, where, problems):
+    """What each API accepts, so a setting it would reject is caught here
+    and not as an HTTP 400 in a paid run. A value still to be pinned is
+    left alone: it blocks a live run anyway."""
+    if provider not in PROVIDERS:
+        return
+    sends_temperature = raw.get("send_temperature") is True
+    if raw.get("send_reasoning_effort") is True and effort and not _is_placeholder(effort) \
+            and effort not in EFFORT_VALUES[provider]:
+        problems.append("%s.reasoning_effort must be one of %s for %s" % (
+            where, ", ".join(EFFORT_VALUES[provider]), provider))
+    if provider == "anthropic":
+        if api_version and not _is_placeholder(api_version) \
+                and api_version not in ANTHROPIC_API_VERSIONS:
+            problems.append("%s.api_version must be %s for anthropic" % (
+                where, " or ".join(ANTHROPIC_API_VERSIONS)))
+        if sends_temperature and not _is_placeholder(api_version) \
+                and api_version != ANTHROPIC_TEMPERATURE_VERSION:
+            problems.append(
+                "%s.send_temperature must be false: anthropic API version 2026-10-21 "
+                "rejects temperature" % where)
+    elif sends_temperature and not _is_placeholder(effort) \
+            and not (raw.get("send_reasoning_effort") is True and effort == "none"):
+        problems.append(
+            "%s.send_temperature must be false: the openai models reject temperature "
+            "unless reasoning_effort none is sent" % where)
+
+
 def _spec(raw, role, where, problems, blockers, today):
     if not isinstance(raw, dict):
         problems.append(where + " must be an object")
@@ -352,6 +391,7 @@ def _spec(raw, role, where, problems, blockers, today):
     for name in ("send_reasoning_effort", "send_temperature"):
         if not isinstance(raw.get(name), bool):
             problems.append("%s.%s must be true or false" % (where, name))
+    _provider_rules(raw, provider, api_version, effort, where, problems)
     parameter = raw.get("output_limit_parameter")
     if provider in PROVIDERS and parameter != OUTPUT_LIMIT_PARAMETER[provider]:
         problems.append("%s.output_limit_parameter must be %s for %s" % (

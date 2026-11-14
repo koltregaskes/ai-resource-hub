@@ -1,5 +1,5 @@
 {
-  "_comment": "EXAMPLE ONLY. This is not the frozen run config. Copy it to run-config.json, pin every value marked TO PIN BEFORE RUN from the provider reference, re-read every price, and have it reviewed. A config never holds a key: key_names lists entry names in the owner's key file, not values.",
+  "_comment": "EXAMPLE ONLY. This is not the frozen run config. Copy it to run-config.json, pin every value marked TO PIN BEFORE RUN from the provider reference, re-read every price, and have it reviewed. The model ids, API versions, prices and cached rates here were read from the providers' model and pricing pages on 14 November 2026. temperature is the value in effect (1, the default) and is not sent: the Anthropic API version 2026-10-21 rejects it and the GPT-6 models reject it unless the effort is none. A config never holds a key: key_names lists entry names in the owner's key file, not values.",
   "task_set_version": "v1",
   "live_approved": false,
   "approved_by": "",
@@ -29,11 +29,11 @@
     {
       "provider": "openai",
       "model_id": "gpt-6-astra",
-      "api_version": "TO PIN BEFORE RUN",
+      "api_version": "v1",
       "reasoning_effort": "TO PIN BEFORE RUN",
       "send_reasoning_effort": true,
-      "temperature": "TO PIN BEFORE RUN",
-      "send_temperature": true,
+      "temperature": 1,
+      "send_temperature": false,
       "output_limit_parameter": "max_output_tokens",
       "data_retention": "TO PIN BEFORE RUN",
       "price": {
@@ -45,17 +45,17 @@
         "source_url": "https://developers.openai.com/api/docs/pricing",
         "read_on": "2026-11-14",
         "promo_ends": null,
-        "note": "standard tier, USD per million tokens"
+        "note": "standard tier, USD per million tokens, for prompts up to 272,000 input tokens; longer prompts cost more"
       }
     },
     {
       "provider": "openai",
       "model_id": "gpt-6.1-sol",
-      "api_version": "TO PIN BEFORE RUN",
+      "api_version": "v1",
       "reasoning_effort": "TO PIN BEFORE RUN",
       "send_reasoning_effort": true,
-      "temperature": "TO PIN BEFORE RUN",
-      "send_temperature": true,
+      "temperature": 1,
+      "send_temperature": false,
       "output_limit_parameter": "max_output_tokens",
       "data_retention": "TO PIN BEFORE RUN",
       "price": {
@@ -67,17 +67,17 @@
         "source_url": "https://developers.openai.com/api/docs/pricing",
         "read_on": "2026-11-14",
         "promo_ends": null,
-        "note": "standard tier, USD per million tokens"
+        "note": "standard tier, USD per million tokens, for prompts up to 272,000 input tokens; longer prompts cost more"
       }
     },
     {
       "provider": "openai",
       "model_id": "gpt-6.1-terra",
-      "api_version": "TO PIN BEFORE RUN",
+      "api_version": "v1",
       "reasoning_effort": "TO PIN BEFORE RUN",
       "send_reasoning_effort": true,
-      "temperature": "TO PIN BEFORE RUN",
-      "send_temperature": true,
+      "temperature": 1,
+      "send_temperature": false,
       "output_limit_parameter": "max_output_tokens",
       "data_retention": "TO PIN BEFORE RUN",
       "price": {
@@ -89,17 +89,17 @@
         "source_url": "https://developers.openai.com/api/docs/pricing",
         "read_on": "2026-11-14",
         "promo_ends": null,
-        "note": "standard tier, USD per million tokens"
+        "note": "standard tier, USD per million tokens, for prompts up to 272,000 input tokens; longer prompts cost more"
       }
     },
     {
       "provider": "openai",
       "model_id": "gpt-6-luna",
-      "api_version": "TO PIN BEFORE RUN",
+      "api_version": "v1",
       "reasoning_effort": "TO PIN BEFORE RUN",
       "send_reasoning_effort": true,
-      "temperature": "TO PIN BEFORE RUN",
-      "send_temperature": true,
+      "temperature": 1,
+      "send_temperature": false,
       "output_limit_parameter": "max_output_tokens",
       "data_retention": "TO PIN BEFORE RUN",
       "price": {
@@ -111,73 +111,73 @@
         "source_url": "https://developers.openai.com/api/docs/pricing",
         "read_on": "2026-11-14",
         "promo_ends": null,
-        "note": "standard tier, USD per million tokens"
+        "note": "standard tier, USD per million tokens, for prompts up to 272,000 input tokens; longer prompts cost more"
       }
     },
     {
       "provider": "anthropic",
       "model_id": "claude-opus-5-5",
-      "api_version": "TO PIN BEFORE RUN",
+      "api_version": "2026-10-21",
       "reasoning_effort": "TO PIN BEFORE RUN",
       "send_reasoning_effort": true,
-      "temperature": "TO PIN BEFORE RUN",
-      "send_temperature": true,
+      "temperature": 1,
+      "send_temperature": false,
       "output_limit_parameter": "max_tokens",
       "data_retention": "TO PIN BEFORE RUN",
       "price": {
         "input_per_mtok": 4,
         "output_per_mtok": 20,
-        "cached_input_per_mtok": null,
+        "cached_input_per_mtok": 0.20,
         "reasoning_billing": "in_output",
         "reasoning_per_mtok": null,
         "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
         "read_on": "2026-11-14",
         "promo_ends": null,
-        "note": "USD per million tokens; cached rate not recorded: re-read before the run"
+        "note": "USD per million tokens; cached rate is the cache-read rate"
       }
     },
     {
       "provider": "anthropic",
       "model_id": "claude-sonnet-5-5",
-      "api_version": "TO PIN BEFORE RUN",
+      "api_version": "2026-10-21",
       "reasoning_effort": "TO PIN BEFORE RUN",
       "send_reasoning_effort": true,
-      "temperature": "TO PIN BEFORE RUN",
-      "send_temperature": true,
+      "temperature": 1,
+      "send_temperature": false,
       "output_limit_parameter": "max_tokens",
       "data_retention": "TO PIN BEFORE RUN",
       "price": {
         "input_per_mtok": 2,
         "output_per_mtok": 10,
-        "cached_input_per_mtok": null,
+        "cached_input_per_mtok": 0.10,
         "reasoning_billing": "in_output",
         "reasoning_per_mtok": null,
         "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
         "read_on": "2026-11-14",
         "promo_ends": null,
-        "note": "USD per million tokens; cached rate not recorded: re-read before the run"
+        "note": "USD per million tokens; cached rate is the cache-read rate"
       }
     },
     {
       "provider": "anthropic",
       "model_id": "claude-haiku-5-5",
-      "api_version": "TO PIN BEFORE RUN",
+      "api_version": "2026-10-21",
       "reasoning_effort": "TO PIN BEFORE RUN",
       "send_reasoning_effort": true,
-      "temperature": "TO PIN BEFORE RUN",
-      "send_temperature": true,
+      "temperature": 1,
+      "send_temperature": false,
       "output_limit_parameter": "max_tokens",
       "data_retention": "TO PIN BEFORE RUN",
       "price": {
         "input_per_mtok": 0.10,
         "output_per_mtok": 0.50,
-        "cached_input_per_mtok": null,
+        "cached_input_per_mtok": 0.01,
         "reasoning_billing": "in_output",
         "reasoning_per_mtok": null,
         "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
         "read_on": "2026-11-14",
         "promo_ends": null,
-        "note": "USD per million tokens; cached rate not recorded: re-read before the run"
+        "note": "USD per million tokens, for prompts up to 100,000 tokens; longer prompts cost five times as much; cached rate is the cache-read rate"
       }
     }
   ],
@@ -187,11 +187,11 @@
       {
         "provider": "openai",
         "model_id": "gpt-6-luna",
-        "api_version": "TO PIN BEFORE RUN",
+        "api_version": "v1",
         "reasoning_effort": "TO PIN BEFORE RUN",
         "send_reasoning_effort": true,
-        "temperature": "TO PIN BEFORE RUN",
-        "send_temperature": true,
+        "temperature": 1,
+        "send_temperature": false,
         "output_limit_parameter": "max_output_tokens",
         "data_retention": "TO PIN BEFORE RUN",
         "max_output_tokens": 400,
@@ -204,17 +204,17 @@
           "source_url": "https://developers.openai.com/api/docs/pricing",
           "read_on": "2026-11-14",
           "promo_ends": null,
-          "note": "standard tier, USD per million tokens"
+          "note": "standard tier, USD per million tokens, for prompts up to 272,000 input tokens; longer prompts cost more"
         }
       },
       {
         "provider": "openai",
         "model_id": "gpt-6.1-terra",
-        "api_version": "TO PIN BEFORE RUN",
+        "api_version": "v1",
         "reasoning_effort": "TO PIN BEFORE RUN",
         "send_reasoning_effort": true,
-        "temperature": "TO PIN BEFORE RUN",
-        "send_temperature": true,
+        "temperature": 1,
+        "send_temperature": false,
         "output_limit_parameter": "max_output_tokens",
         "data_retention": "TO PIN BEFORE RUN",
         "max_output_tokens": 400,
@@ -227,17 +227,17 @@
           "source_url": "https://developers.openai.com/api/docs/pricing",
           "read_on": "2026-11-14",
           "promo_ends": null,
-          "note": "standard tier, USD per million tokens"
+          "note": "standard tier, USD per million tokens, for prompts up to 272,000 input tokens; longer prompts cost more"
         }
       },
       {
         "provider": "openai",
         "model_id": "gpt-6.1-sol",
-        "api_version": "TO PIN BEFORE RUN",
+        "api_version": "v1",
         "reasoning_effort": "TO PIN BEFORE RUN",
         "send_reasoning_effort": true,
-        "temperature": "TO PIN BEFORE RUN",
-        "send_temperature": true,
+        "temperature": 1,
+        "send_temperature": false,
         "output_limit_parameter": "max_output_tokens",
         "data_retention": "TO PIN BEFORE RUN",
         "max_output_tokens": 400,
@@ -250,7 +250,7 @@
           "source_url": "https://developers.openai.com/api/docs/pricing",
           "read_on": "2026-11-14",
           "promo_ends": null,
-          "note": "standard tier, USD per million tokens"
+          "note": "standard tier, USD per million tokens, for prompts up to 272,000 input tokens; longer prompts cost more"
         }
       }
     ],
@@ -258,47 +258,47 @@
       {
         "provider": "anthropic",
         "model_id": "claude-haiku-5-5",
-        "api_version": "TO PIN BEFORE RUN",
+        "api_version": "2026-10-21",
         "reasoning_effort": "TO PIN BEFORE RUN",
         "send_reasoning_effort": true,
-        "temperature": "TO PIN BEFORE RUN",
-        "send_temperature": true,
+        "temperature": 1,
+        "send_temperature": false,
         "output_limit_parameter": "max_tokens",
         "data_retention": "TO PIN BEFORE RUN",
         "max_output_tokens": 400,
         "price": {
           "input_per_mtok": 0.10,
           "output_per_mtok": 0.50,
-          "cached_input_per_mtok": null,
+          "cached_input_per_mtok": 0.01,
           "reasoning_billing": "in_output",
           "reasoning_per_mtok": null,
           "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
           "read_on": "2026-11-14",
           "promo_ends": null,
-          "note": "USD per million tokens; cached rate not recorded: re-read before the run"
+          "note": "USD per million tokens, for prompts up to 100,000 tokens; longer prompts cost five times as much; cached rate is the cache-read rate"
         }
       },
       {
         "provider": "anthropic",
         "model_id": "claude-sonnet-5-5",
-        "api_version": "TO PIN BEFORE RUN",
+        "api_version": "2026-10-21",
         "reasoning_effort": "TO PIN BEFORE RUN",
         "send_reasoning_effort": true,
-        "temperature": "TO PIN BEFORE RUN",
-        "send_temperature": true,
+        "temperature": 1,
+        "send_temperature": false,
         "output_limit_parameter": "max_tokens",
         "data_retention": "TO PIN BEFORE RUN",
         "max_output_tokens": 400,
         "price": {
           "input_per_mtok": 2,
           "output_per_mtok": 10,
-          "cached_input_per_mtok": null,
+          "cached_input_per_mtok": 0.10,
           "reasoning_billing": "in_output",
           "reasoning_per_mtok": null,
           "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
           "read_on": "2026-11-14",
           "promo_ends": null,
-          "note": "USD per million tokens; cached rate not recorded: re-read before the run"
+          "note": "USD per million tokens; cached rate is the cache-read rate"
         }
       }
     ]
@@ -308,11 +308,11 @@
     {
       "provider": "openai",
       "model_id": "gpt-6.1-sol",
-      "api_version": "TO PIN BEFORE RUN",
+      "api_version": "v1",
       "reasoning_effort": "TO PIN BEFORE RUN",
       "send_reasoning_effort": true,
-      "temperature": "TO PIN BEFORE RUN",
-      "send_temperature": true,
+      "temperature": 1,
+      "send_temperature": false,
       "output_limit_parameter": "max_output_tokens",
       "data_retention": "TO PIN BEFORE RUN",
       "max_output_tokens": 400,
@@ -325,30 +325,30 @@
         "source_url": "https://developers.openai.com/api/docs/pricing",
         "read_on": "2026-11-14",
         "promo_ends": null,
-        "note": "standard tier, USD per million tokens"
+        "note": "standard tier, USD per million tokens, for prompts up to 272,000 input tokens; longer prompts cost more"
       }
     },
     {
       "provider": "anthropic",
       "model_id": "claude-sonnet-5-5",
-      "api_version": "TO PIN BEFORE RUN",
+      "api_version": "2026-10-21",
       "reasoning_effort": "TO PIN BEFORE RUN",
       "send_reasoning_effort": true,
-      "temperature": "TO PIN BEFORE RUN",
-      "send_temperature": true,
+      "temperature": 1,
+      "send_temperature": false,
       "output_limit_parameter": "max_tokens",
       "data_retention": "TO PIN BEFORE RUN",
       "max_output_tokens": 400,
       "price": {
         "input_per_mtok": 2,
         "output_per_mtok": 10,
-        "cached_input_per_mtok": null,
+        "cached_input_per_mtok": 0.10,
         "reasoning_billing": "in_output",
         "reasoning_per_mtok": null,
         "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
         "read_on": "2026-11-14",
         "promo_ends": null,
-        "note": "USD per million tokens; cached rate not recorded: re-read before the run"
+        "note": "USD per million tokens; cached rate is the cache-read rate"
       }
     }
   ]

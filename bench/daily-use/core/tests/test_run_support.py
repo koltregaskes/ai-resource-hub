@@ -20,6 +20,9 @@ FAKE_OPENAI_KEY = "FAKE-OPENAI-VALUE-not-a-real-key-0001"
 FAKE_ANTHROPIC_KEY = "FAKE-ANTHROPIC-VALUE-not-a-real-key-0002"
 FAKE_UNRELATED = "FAKE-UNRELATED-VALUE-must-never-be-kept-0003"
 FAKE_VALUES = (FAKE_OPENAI_KEY, FAKE_ANTHROPIC_KEY, FAKE_UNRELATED)
+# OpenAI sends no version header, so its value is a note. Anthropic's is the
+# `anthropic-version` header.
+API_VERSION = {"openai": "v1", "anthropic": "2026-10-21"}
 KEY_NAMES = {"openai": ["OPENAI_API_KEY"], "anthropic": ["CLAUDE_API", "CLAUDE_API_KEY"]}
 
 
@@ -42,8 +45,8 @@ def write_key_file(folder, lines=None):
 def spec_dict(provider, model_id, price_in, price_out, cached="0", judge=False, **over):
     item = {
         "provider": provider, "model_id": model_id,
-        "api_version": "2026-01-01", "reasoning_effort": "medium",
-        "send_reasoning_effort": True, "temperature": 1, "send_temperature": True,
+        "api_version": API_VERSION[provider], "reasoning_effort": "medium",
+        "send_reasoning_effort": True, "temperature": 1, "send_temperature": False,
         "output_limit_parameter": config.OUTPUT_LIMIT_PARAMETER[provider],
         "data_retention": "30 days, no training",
         "price": {
@@ -95,7 +98,7 @@ def task(task_id, family=1, split="public", prompt=None, limit=4096, checks=0,
 
 
 def openai_body(text, input_tokens=10, output_tokens=5, status="completed", reason=None,
-                cached=0, reasoning=0, usage=True):
+                cached=0, reasoning=0, usage=True, cache_write=0):
     body = {"status": status, "output": [
         {"type": "reasoning", "summary": []},
         {"type": "message", "content": [{"type": "output_text", "text": text}]}]}
@@ -104,14 +107,16 @@ def openai_body(text, input_tokens=10, output_tokens=5, status="completed", reas
     if usage:
         body["usage"] = {"input_tokens": input_tokens, "output_tokens": output_tokens,
                          "total_tokens": input_tokens + output_tokens,
-                         "input_tokens_details": {"cached_tokens": cached},
+                         "input_tokens_details": {"cached_tokens": cached,
+                                                  "cache_write_tokens": cache_write},
                          "output_tokens_details": {"reasoning_tokens": reasoning}}
     return body
 
 
 def anthropic_body(text, input_tokens=10, output_tokens=5, stop_reason="end_turn",
                    cache_read=0, cache_creation=0, usage=True):
-    body = {"content": [{"type": "text", "text": text}], "stop_reason": stop_reason}
+    body = {"content": [{"type": "text", "text": text}] if text else [],
+            "stop_reason": stop_reason}
     if usage:
         body["usage"] = {"input_tokens": input_tokens, "output_tokens": output_tokens,
                          "cache_read_input_tokens": cache_read,

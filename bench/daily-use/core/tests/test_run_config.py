@@ -30,7 +30,8 @@ class ExampleConfigTests(unittest.TestCase):
         self.assertEqual(loaded.key_names, support.KEY_NAMES)
         self.assertEqual(loaded.caps_usd, {"openai": Decimal("90"), "anthropic": Decimal("60")})
 
-    def test_example_prices_match_the_brief(self):
+    def test_example_prices_match_the_price_pages(self):
+        # As read on 14 November 2026 from the two pricing pages named below.
         loaded = config.load_config(EXAMPLE, mode="dry", today=TODAY)
         prices = {m.model_id: (m.price.input_per_mtok, m.price.output_per_mtok,
                                m.price.cached_input_per_mtok) for m in loaded.models}
@@ -40,9 +41,9 @@ class ExampleConfigTests(unittest.TestCase):
             "gpt-6.1-sol": (D("2"), D("10"), D("0.10")),
             "gpt-6.1-terra": (D("1"), D("5"), D("0.05")),
             "gpt-6-luna": (D("0.10"), D("0.50"), D("0.01")),
-            "claude-opus-5-5": (D("4"), D("20"), None),
-            "claude-sonnet-5-5": (D("2"), D("10"), None),
-            "claude-haiku-5-5": (D("0.10"), D("0.50"), None),
+            "claude-opus-5-5": (D("4"), D("20"), D("0.20")),
+            "claude-sonnet-5-5": (D("2"), D("10"), D("0.10")),
+            "claude-haiku-5-5": (D("0.10"), D("0.50"), D("0.01")),
         })
         for model in loaded.models:
             self.assertEqual(model.price.read_on, "2026-11-14")
@@ -50,8 +51,11 @@ class ExampleConfigTests(unittest.TestCase):
                         if model.provider == "openai"
                         else "https://platform.claude.com/docs/en/about-claude/pricing")
             self.assertEqual(model.price.source_url, expected)
-            if model.provider == "anthropic":
-                self.assertIn("re-read before the run", model.price.note)
+            self.assertEqual(model.price.reasoning_billing, "in_output")
+        # Both cheap tiers have a dearer rate for long prompts; the note says so.
+        notes = {m.model_id: m.price.note for m in loaded.models}
+        self.assertIn("up to 100,000 tokens", notes["claude-haiku-5-5"])
+        self.assertIn("up to 272,000 input tokens", notes["gpt-6-luna"])
         # 0.10 stays exact: it never passes through a binary float.
         self.assertEqual(str(prices["gpt-6-luna"][0]), "0.10")
 
@@ -60,7 +64,18 @@ class ExampleConfigTests(unittest.TestCase):
             config.load_config(EXAMPLE, mode="live", today=TODAY)
         message = str(caught.exception)
         self.assertIn("TO PIN BEFORE RUN", message)
-        self.assertIn("cached_input_per_mtok is null", message)
+        self.assertNotIn("cached_input_per_mtok is null", message)
+
+    def test_example_settings_are_ones_the_providers_accept(self):
+        loaded = config.load_config(EXAMPLE, mode="dry", today=TODAY)
+        for spec in loaded.models + loaded.judges + loaded.all_judge_candidates():
+            self.assertIs(spec.send_temperature, False)
+            self.assertEqual(spec.temperature, Decimal("1"))
+            self.assertEqual(spec.api_version,
+                             "v1" if spec.provider == "openai" else "2026-10-21")
+        # Effort and data retention are still the owner's to pin.
+        self.assertTrue(all("reasoning_effort" in place or "data_retention" in place
+                            for place in loaded.placeholders))
 
     def test_example_judges_come_from_two_providers(self):
         loaded = config.load_config(EXAMPLE, mode="dry", today=TODAY)
@@ -117,6 +132,38 @@ class ValidationTests(unittest.TestCase):
             with self.assertRaises(config.ConfigError):
                 loaded.require_live_ready()
             self.rejects("TO PIN BEFORE RUN", mode="live", models=models)
+
+    def test_settings_a_provider_would_reject_are_refused(self):
+        def model(provider, **over):
+            other = "anthropic" if provider == "openai" else "openai"
+            return [support.spec_dict(provider, "m-x", "3", "30", **over),
+                    support.spec_dict(other, "m-y", "3", "15")]
+        # Anthropic: the version header has two values, and the current one
+        # rejects temperature on every model.
+        self.rejects("api_version must be 2026-10-21 or 2023-06-01",
+                     models=model("anthropic", api_version="2026-01-01"))
+        self.rejects("send_temperature must be false",
+                     models=model("anthropic", send_temperature=True))
+        self.check(models=model("anthropic", api_version="2023-06-01", send_temperature=True))
+        # OpenAI: temperature only goes with reasoning effort "none".
+        self.rejects("send_temperature must be false",
+                     models=model("openai", send_temperature=True))
+        self.rejects("send_temperature must be false",
+                     models=model("openai", send_temperature=True, reasoning_effort="none",
+                                  send_reasoning_effort=False))
+        self.check(models=model("openai", send_temperature=True, reasoning_effort="none"))
+        # Effort values are per API.
+        self.rejects("reasoning_effort must be one of low, medium, high, xhigh, max",
+                     models=model("anthropic", reasoning_effort="none"))
+        self.rejects("reasoning_effort must be one of",
+                     models=model("openai", reasoning_effort="extreme"))
+        for effort in ("none", "minimal", "low", "medium", "high", "xhigh", "max"):
+            self.check(models=model("openai", reasoning_effort=effort))
+        # A value still to be pinned is not second-guessed; it blocks a live run.
+        self.check(models=model("anthropic", api_version=config.PLACEHOLDER,
+                                send_temperature=True))
+        self.check(models=model("openai", reasoning_effort=config.PLACEHOLDER,
+                                send_temperature=True))
 
     def test_default_is_not_an_actual_value(self):
         for field in ("api_version", "reasoning_effort"):
@@ -211,7 +258,7 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(len(base.settings_sha256()), 64)
         for field, value in (("reasoning_effort", "high"), ("temperature", 0),
                              ("max_output_tokens", 400), ("api_version", "2026-06-01"),
-                             ("send_temperature", False)):
+                             ("send_reasoning_effort", False)):
             other = support.spec_dict("openai", "j-oa", "6", "12", judge=True, **{field: value})
             moved = self.check(judges=[other, support.spec_dict("anthropic", "j-an", "9", "18",
                                                                 judge=True)]).judges[0]

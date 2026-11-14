@@ -1,6 +1,6 @@
 # Day-to-Day Bench: the run path
 
-Status: built and tested offline only. Nothing here has called a model provider. `LIVE_ENABLED` in `runner.py` ships as `False`, so every run is a dry run on a fake transport until that line is changed in a reviewed commit.
+Status: built and tested offline only. Nothing here has called a model provider. The request and reply shapes were read against the providers' API references on 14 November 2026 (see below). `LIVE_ENABLED` in `runner.py` ships as `False`, so every run is a dry run on a fake transport until that line is changed in a reviewed commit.
 
 The method is `docs/DAY-TO-DAY-BENCH-METHOD.md`. This page says how the code carries it out.
 
@@ -9,8 +9,8 @@ The method is `docs/DAY-TO-DAY-BENCH-METHOD.md`. This page says how the code car
 | File | Job |
 |---|---|
 | `keys.py` | Reads the owner's key file line by line and keeps only the first listed name per provider. Values live in `Secret` objects that never print. Refuses to start while `OPENAI_API_KEY` or `ANTHROPIC_API_KEY` is set. |
-| `config.py` | Loads and checks `run-config.json`: every setting as an actual value, a dated price receipt per model, two judges from two providers, the judge candidates per provider, caps, key names. Rejects anything that looks like a secret. `TO PIN BEFORE RUN` values pass a dry run and block a live one. |
-| `providers.py` | `OpenAIResponses` and `AnthropicMessages` on an injectable transport. Builds the request, reads the answer, the finish reason and the raw usage, and sorts failures into transport error (retried), provider error and timeout (not retried). Holds the real `UrllibTransport`, which only the live gate can build. |
+| `config.py` | Loads and checks `run-config.json`: every setting as an actual value, a dated price receipt per model, two judges from two providers, the judge candidates per provider, caps, key names. Rejects anything that looks like a secret. `TO PIN BEFORE RUN` values pass a dry run and block a live one. Settings a provider would reject (temperature where it is not accepted, an unknown Anthropic API version, an effort value the API does not have) are refused outright. |
+| `providers.py` | `OpenAIResponses` and `AnthropicMessages` on an injectable transport. Builds the request, reads the answer, the finish reason and the raw usage, and sorts failures into transport error (retried, waiting for a `Retry-After` of up to 60 seconds), provider error and timeout (not retried). A 429 that says the account is out of credit or over a spend limit is a provider error. Holds the real `UrllibTransport`, which only the live gate can build. |
 | `ledger.py` | One durable ledger per provider, shared by model and judge calls. Reserve the worst case before each request, settle to the actual charge after it, refuse at the cap. Money is `Decimal`. |
 | `preflight.py` | Prints expected, planning bound and absolute bound for the whole plan, whether or not the run is refused, and refuses when the planning bound is above a remaining cap. Counts qualification for every judge candidate and says how the judging was costed. |
 | `judges.py` | Judge prompts, JSON verdicts with one retry, the combine rules, qualification scoring and the choice of panel. |
@@ -99,18 +99,43 @@ A live stage runs only if all of these hold, checked in this order:
 
 With `LIVE_ENABLED = False`, `--live` is refused before the config, the key file or any transport is touched. Without `--live`, a `--key-file` path is ignored and never opened.
 
-## Verify against the provider references before the first paid step
+## Checked against the provider references on 14 November 2026
 
-None of the following has been checked against live documentation or a live call. The request and reply shapes are written out at the top of `providers.py`.
+The request and reply shapes at the top of `providers.py` were read against the pages below. This was reading only: no request has been sent, so the canary is still the first real exchange.
 
-- **OpenAI Responses API:** `POST /v1/responses`; `input` as a plain string; that `max_output_tokens` caps reasoning plus visible output; `store: false`; the `reasoning.effort` values and whether each model accepts `temperature`; the `output[]` message shape; `status` and `incomplete_details.reason`; the usage field names; that cached tokens are a part of `input_tokens` and reasoning tokens a part of `output_tokens`; what `api_version` should record, since no version header is sent.
-- **Anthropic Messages API:** `POST /v1/messages`; the `anthropic-version` value; that `max_tokens` includes thinking tokens; the name and values of the effort setting (sent here as `output_config.effort`); whether `temperature` may be sent with it; the `stop_reason` values; the usage field names; that thinking tokens are inside `output_tokens`.
-- **Prices:** re-read every price, for the models and for every judge candidate; fill the Anthropic cached rates; confirm how reasoning tokens are billed and that no long-prompt surcharge applies.
-- **The judge output limit of 400 tokens:** a verdict is a small JSON object, but on both APIs the limit also covers reasoning or thinking tokens. Confirm, at the effort pinned for each candidate, that a verdict for the task with the most judged checks fits. A cut-off verdict is malformed, is retried once and then leaves the check unresolved, and in qualification it counts as disagreement.
-- **Billing assumptions in the ledger:** a request answered with an HTTP error status is settled at zero. A timeout or a connection failure keeps its full reservation until the console figure is entered with `ProviderLedger.reconcile`. Cache-creation tokens on Anthropic are not priced, so any such request keeps its full reservation.
-- **Timeout:** calls are not streamed, so time to first token is left empty. Confirm that a full-length answer returns inside 120 seconds without streaming.
-- **The real transport:** `UrllibTransport` has never been exercised. It allows only the two provider hosts over https, follows no redirects and uses no proxy.
-- **Data retention:** write each provider's setting into the config.
+**OpenAI Responses API.** Sources: [create a response](https://developers.openai.com/api/reference/resources/responses/methods/create), [reasoning](https://developers.openai.com/api/docs/guides/reasoning), [prompt caching](https://developers.openai.com/api/docs/guides/prompt-caching), [error codes](https://developers.openai.com/api/docs/guides/error-codes), [rate limits](https://developers.openai.com/api/docs/guides/rate-limits), [using GPT-6](https://developers.openai.com/api/docs/guides/latest-model), [your data](https://developers.openai.com/api/docs/guides/your-data).
+
+- Confirmed: `POST https://api.openai.com/v1/responses` with `Authorization: Bearer`; `input` as a plain string; `store: false` (the default is true); `max_output_tokens` covers reasoning plus visible output, minimum 16; `reasoning.effort`; the `output[]` message shape with `output_text` and `refusal` parts; `status` and `incomplete_details.reason` (`max_output_tokens`, `content_filter`, `max_messages`, `steered`); usage field names; cached tokens are a part of `input_tokens` and reasoning tokens a part of `output_tokens`, billed as output.
+- Changed: **temperature is no longer sent.** The GPT-6 guide says to remove `temperature` and `top_p` when the effort is not `none`. The config refuses `send_temperature: true` unless effort `none` is sent.
+- Changed: **prompt caching is turned off** with `prompt_cache_options: {"mode": "explicit"}` and no breakpoint. On GPT-5.6 and later the default mode writes any prompt of 1,024 tokens or more to the cache and bills those tokens at 1.25 times the input rate. The price receipt has no cache-write rate and the worst-case reservation assumes the plain input rate. If a reply still reports `cache_write_tokens`, that request keeps its full reservation.
+- Changed: a 200 whose `status` is `failed`, `cancelled`, `queued` or `in_progress` is a provider error, not an empty answer.
+- Changed: a 429 with `insufficient_quota`, `credit_balance_exhausted`, `organization_spend_limit_exceeded`, `project_spend_limit_exceeded` or `organization_usage_limit_exceeded` is not retried. The docs say retrying cannot help.
+- Effort values differ by model: `gpt-6-astra` and `gpt-6.1-sol` take `low` to `max` and reject `none`; `gpt-6.1-terra` and `gpt-6-luna` also take `none`. The default is `medium` on Sol, Terra and Luna. The Astra page does not name its default; the API reference gives `medium` as the general default.
+- `api_version`: there is no version header. The example records `v1`.
+
+**Anthropic Messages API.** Sources: [create a message](https://platform.claude.com/docs/en/api/messages/create), [API versions](https://platform.claude.com/docs/en/api/versioning), [migrating to 2026-10-21](https://platform.claude.com/docs/en/api/migration-2026-10-21), [effort](https://platform.claude.com/docs/en/build-with-claude/effort), [thinking](https://platform.claude.com/docs/en/build-with-claude/thinking), [errors](https://platform.claude.com/docs/en/api/errors), [rate limits](https://platform.claude.com/docs/en/api/rate-limits), [stop reasons](https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons), [refusals](https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback), [API overview](https://platform.claude.com/docs/en/api/overview).
+
+- Confirmed: `POST https://api.anthropic.com/v1/messages`; `x-api-key` (now described as a legacy form, still supported; `Authorization: Bearer` is listed first); `anthropic-version` is required; `max_tokens` covers thinking tokens; `output_config.effort` with `low`, `medium`, `high`, `xhigh`, `max`, no beta header; text in `content[]` blocks of type `text`; `stop_reason`; `usage.input_tokens` excludes cache reads and writes; thinking tokens are inside `output_tokens`.
+- Changed: **the `anthropic-version` value is `2026-10-21`** (current) or `2023-06-01`. The config refuses anything else.
+- Changed: **temperature is no longer sent.** Version `2026-10-21` returns a 400 for `temperature`, `top_p` or `top_k` on every model. The config allows `send_temperature: true` only with `2023-06-01`, where Claude 4.7 and later accept only the default anyway.
+- Changed: `stop_reason` `model_context_window_exceeded` counts as truncated, as the docs say to treat it. `refusal` is an HTTP 200 with empty content and is flagged `refusal`.
+- Changed: `usage.output_tokens_details.thinking_tokens` is read as the reasoning count. It is a part of `output_tokens`.
+- Changed: a 429 whose `error.details.error_code` is `enforced_spend_limit_reached` (the monthly tier cap) is not retried. It has no `Retry-After` and keeps failing until the next month.
+- No `thinking` field is sent, so each model's default applies: adaptive thinking, on. Opus 5.5 cannot turn thinking off; Sonnet 5.5 rejects `disabled`; Haiku 5.5 accepts `disabled` at effort `high` or below. Default effort: `medium` on Opus 5.5 and Haiku 5.5, `high` on Sonnet 5.5.
+
+**Retries.** 429 and 5xx are retried on both APIs, which matches the docs (Anthropic: 429 `rate_limit_error`, 500 `api_error`, 504 `timeout_error`, 529 `overloaded_error`; OpenAI: 429 rate limit or `slow_down`, 500, 503 `server_is_overloaded`). Both send `Retry-After` in seconds on some 429 and 503 replies. The wait before a retry is now the longer of the fixed wait (2 s, then 8 s) and `Retry-After`; a `Retry-After` above 60 seconds ends the attempt.
+
+**Model ids and prices.** All seven ids in the example exist on the model pages with those exact strings ([OpenAI models](https://developers.openai.com/api/docs/models), [OpenAI pricing](https://developers.openai.com/api/docs/pricing), [Claude models](https://platform.claude.com/docs/en/about-claude/models/overview), [Claude pricing](https://platform.claude.com/docs/en/about-claude/pricing)). Every price in the example matched the page. The Anthropic cache-read rates are now filled in: 0.20 (Opus 5.5), 0.10 (Sonnet 5.5), 0.01 (Haiku 5.5). Two long-prompt rates exist and are not modelled: OpenAI charges 2 times input and 1.5 times output above 272,000 input tokens, and Haiku 5.5 charges five times as much above 100,000 prompt tokens. The task prompts are far below both.
+
+## Still to verify before the first paid step
+
+- **The judge output limit of 400 tokens.** On both APIs the limit also covers reasoning or thinking tokens, and thinking is on by default on all three Claude models. OpenAI's own advice is to leave at least 25,000 tokens for reasoning and output when starting out. Confirm, at the effort pinned for each candidate, that a verdict for the task with the most judged checks fits. A cut-off verdict is malformed, is retried once and then leaves the check unresolved, and in qualification it counts as disagreement.
+- **The task limits of 4,096 and 8,192 tokens** cover reasoning as well, for the same reason. An answer can be cut off, or come back empty, with the whole limit spent on reasoning. The canary should show the truncation rate at the pinned effort.
+- **Effort and data retention** are still `TO PIN BEFORE RUN` in the example. They are the owner's choices.
+- **Prices:** re-read on the day of the run. OpenAI lists a 10% uplift for regional processing; the receipts assume the global endpoint.
+- **Billing assumptions in the ledger:** a request answered with an HTTP error status is settled at zero. A timeout or a connection failure keeps its full reservation until the console figure is entered with `ProviderLedger.reconcile`. Cache-creation tokens (Anthropic) and cache-write tokens (OpenAI) are not priced, so any such request keeps its full reservation. An Anthropic refusal before any output is not billed in most categories, though usage is reported; the ledger charges it, which errs on the safe side.
+- **Timeout:** calls are not streamed, so time to first token is left empty. Confirm that a full-length answer returns inside 120 seconds without streaming. Anthropic advises streaming for long requests.
+- **The real transport:** `UrllibTransport` has never been exercised, including its reading of `Retry-After`. It allows only the two provider hosts over https, follows no redirects and uses no proxy.
 - **Remaining credit:** confirm it in each provider console; the caps are planned figures.
 
 ## Command sequence
@@ -157,4 +182,3 @@ Exit codes: 0 finished; 2 refused (the reason is printed after `REFUSED:`); 3 in
 - Grading a slot that was left pending because the grader could not run. The answer is kept; there is no command to grade it later.
 - Streaming, and so time to first token.
 - A command for console reconciliation; only the ledger function exists.
-- Pacing from a provider's `Retry-After` header. Retries wait a fixed 2 then 8 seconds.
