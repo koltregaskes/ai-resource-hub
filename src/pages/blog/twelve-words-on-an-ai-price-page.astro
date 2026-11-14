@@ -1,0 +1,101 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import StudioNote from '../../components/insights/StudioNote.astro';
+import { article } from '../../data/studio/twelve-words-on-an-ai-price-page';
+import data from '../../data/insights/2026-11-14-twelve-words-on-an-ai-price-page.json';
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const pct = (r: number) => `${Number((r * 100).toFixed(1))}%`;
+const usd = (v: number) => `$${v}`;
+const lc = data.longContext;
+const w5 = data.cacheWrite[0];
+const w1 = data.cacheWrite[1];
+const fast = data.fast;
+const step = (base: number | undefined, over: number | undefined, ratio: number) =>
+  base === undefined || over === undefined ? `${ratio}x` : `${usd(base)} to ${usd(over)} (${ratio}x)`;
+---
+<InsightArticle title={article.title} description={article.description} date={article.date} type={article.type} readTime={article.readTime} snapshot="2026-11-14" standfirst="Twelve words from the pricing and documentation pages of OpenAI, Anthropic and Google, explained in plain English, with what each provider's own page says about them.">
+  <p>Four of the twelve words below mean different things depending on whose price page you are reading: cached input, cache write, long-context pricing and rate limit. We compared OpenAI, Anthropic and Google on those four. For the other eight, the providers agree on what we read, or we did not compare all three, and each entry says which.</p>
+  <p>Every entry rests on a provider page that we read on 14 November 2026, linked where it is used. Pricing a whole job from these parts is done in our <a href={`${base}blog/how-to-read-an-ai-price-list/`}>guide to reading an AI price list</a>, so we do not repeat that here.</p>
+
+  <h2>A token is about four characters, on Google's count</h2>
+  <p>A token is the chunk of text a model reads or writes at one step. Prices, limits and windows are all counted in tokens, not words.</p>
+  <p>Google's <a href="https://aistudio.google.com/docs/tokens" rel="noopener">token guide</a> says that for Gemini models a token is about 4 characters, and that 100 tokens is about 60 to 80 English words. It also notes that "Tokens can be single characters like z or whole words like cat." We did not check whether OpenAI and Anthropic publish the same ratio.</p>
+
+  <h2>Thinking tokens are billed and you cannot see them</h2>
+  <p>Some models work through a problem before they answer. The text of that work is counted in reasoning tokens (OpenAI's name) or thinking tokens (the name Anthropic and Google use), and it is charged like output.</p>
+  <p>OpenAI's <a href="https://developers.openai.com/api/docs/guides/reasoning" rel="noopener">reasoning guide</a> says the tokens are not visible through the API, yet they are "billed as output tokens". It adds that a response may use anywhere from a few hundred to tens of thousands of them, and that the count appears in the usage object as reasoning_tokens. Anthropic's <a href="https://platform.claude.com/docs/en/build-with-claude/context-windows" rel="noopener">context window page</a> says thinking tokens are billed as output tokens too, and Google's <a href="https://aistudio.google.com/docs/pricing" rel="noopener">pricing page</a> labels its output price as including thinking tokens. On this word the three agree.</p>
+  <p>OpenAI says a response that hits its cap can end before any visible text appears, which means you pay for input and reasoning tokens and get nothing back.</p>
+
+  <h2>Cached input: one discount, several sizes</h2>
+  <p>When the start of a request repeats an earlier one, the provider can reuse its earlier work and charge a lower rate for those repeated tokens. That lower rate is the cached input price, which Anthropic calls a cache hit or cache read.</p>
+  <p>OpenAI's <a href="https://developers.openai.com/api/docs/guides/prompt-caching" rel="noopener">caching guide</a> says "Prompt caching is enabled by default for supported OpenAI models." It gives reads at 0.1 times the ordinary input rate on most GPT-5.6 and later models, and 0.05 times on GPT-6.1 Sol and GPT-6.1 Terra. Anthropic's <a href="https://platform.claude.com/docs/en/about-claude/pricing" rel="noopener">pricing page</a> sets hits at 0.1 times base input for most models, 0.05 times on Claude Opus 5.5 and Claude Sonnet 5.5, and 0.025 times on Claude Fable 5.2. Google's pricing page lists a caching price for each model, plus an hourly storage price on some. The table shows what that means for the models named.</p>
+
+  <div class="table-wrap"><table>
+    <caption>Source: each provider's page as linked above, read 14 November 2026. US dollars per million tokens. The last column is cached read divided by input. The Google row is for prompts up to 200k tokens; the same row lists a storage price of $4.50 per million tokens per hour.</caption>
+    <thead><tr><th>Provider and model</th><th class="num">Input</th><th class="num">Cached read</th><th class="num">Cached read as a share of input</th></tr></thead>
+    <tbody>
+      {data.cachedRead.map((x) => (
+        <tr><td>{x.provider}: {x.model}</td><td class="num">{usd(x.base)}</td><td class="num">{usd(x.cached)}</td><td class="num"><strong>{pct(x.ratio)}</strong></td></tr>
+      ))}
+    </tbody>
+  </table></div>
+
+  <p>The size of the discount depends on the model, not only the provider: two Anthropic models sit at 5% and a third at 2.5%. OpenAI also says keeping a session open does not guarantee a cache hit.</p>
+
+  <h2>Cache write</h2>
+  <p>A cache write is the first time a provider stores the start of your prompt. Some providers charge more than the normal input rate for it, in return for cheap reads afterwards.</p>
+  <p>Anthropic's pricing page defines a 5-minute cache write as "Writing a prompt prefix to the 5-minute prompt cache." On Claude Opus 5.5 the input price is {usd(w5.base)}, the 5-minute write is {usd(w5.price)} ({w5.ratio} times) and the 1-hour write is {usd(w1.price)} ({w1.ratio} times). OpenAI's caching guide gives, for GPT-5.6 and later, a write rate of 1.25 times standard input for the default 30-minute lifetime, and 2.5 times for a 12-hour minimum lifetime in the Responses API. Google's pricing page, on the rows we read, shows an hourly storage price in place of a write multiplier.</p>
+  <p>OpenAI's guide says cache-write pricing is not an extra fee on top: each input token is billed at the uncached, cached or cache-write rate.</p>
+
+  <h2>Batch: half price if the answer can wait</h2>
+  <p>Batch means handing over a pile of requests and collecting the results later, in return for a lower price.</p>
+  <p>OpenAI's <a href="https://developers.openai.com/api/docs/guides/batch" rel="noopener">batch guide</a> gives a 50% discount and says "Each batch completes within 24 hours (and often more quickly)." Requests still unfinished at the end are cancelled, and you are charged for the completed ones. Anthropic's pricing page gives the same 50% on both input and output, and Google's pricing page lists a 50% cost reduction for its Batch API on its paid card. On the discount, the three agree. The 24 hours is a ceiling.</p>
+
+  <h2>Flex trades speed for a lower rate</h2>
+  <p>Flex is a middle option: you send an ordinary request but accept that it may be slow or refused when the provider is busy.</p>
+  <p>OpenAI's <a href="https://developers.openai.com/api/docs/guides/flex-processing" rel="noopener">flex guide</a> says Flex tokens are priced at Batch API rates, "in exchange for slower response times and occasional resource unavailability". A refusal returns a 429 Resource Unavailable error, and you are not charged for it. Google's <a href="https://aistudio.google.com/docs/flex-inference" rel="noopener">flex page</a> describes a tier at 50% of standard rates with variable latency, where requests can be preempted and the API does not fall back to Standard for you, so retries are your job. We did not check Anthropic for a flex tier.</p>
+
+  <h2>Fast mode is the one that costs more</h2>
+  <p>Fast mode pays a premium to get answers back sooner.</p>
+  <p>On Anthropic's pricing page, Claude Opus 5.5 is {usd(fast.standard.input)} input and {usd(fast.standard.output)} output at standard rates and {usd(fast.fast.input)} and {usd(fast.fast.output)} in fast mode, which is {fast.inputRatio} times on both sides. The page says fast mode is not available with the Batch API. OpenAI's pricing page says "Priority processing was renamed Fast mode on July 30, 2026", and shows Fast and Ultrafast tabs beside Standard and Flex/Batch. Anthropic's <a href="https://platform.claude.com/docs/en/api/rate-limits" rel="noopener">rate limits page</a> also has headers for a separate Priority Tier, and we did not read what that tier covers.</p>
+
+  <h2>Context window</h2>
+  <p>The context window is the most text a model can hold in view in one request, counting everything: your instructions, the conversation so far, any documents and the answer.</p>
+  <p>OpenAI's <a href="https://developers.openai.com/api/docs/models/gpt-5.5" rel="noopener">GPT-5.5 page</a> lists 1,050,000 for it. Anthropic's context window page counts the system prompt, every message, tool definitions and "including the response itself". Google's token guide says Gemini 4 models share one window across input, thinking and output. A prompt that fills the window therefore leaves no room for a reply.</p>
+
+  <h2>Maximum output is a cap on one reply</h2>
+  <p>Maximum output is the most tokens a model may produce in one response, inside the context window.</p>
+  <p>OpenAI's GPT-5.5 page lists 128,000 max output tokens. Its reasoning guide says the max_output_tokens setting caps reasoning, visible output and formatting tokens together, and recommends reserving at least 25,000 tokens for reasoning and output when you start out. Anthropic's context window page says thinking tokens are a subset of the max_tokens setting. So a cap set for a short answer can be eaten by thinking, and the visible reply gets cut or never appears.</p>
+
+  <h2>Rate limit: three providers, three shapes</h2>
+  <p>A rate limit is a ceiling on how much you may send in a stretch of time, set separately from price.</p>
+  <p>OpenAI's <a href="https://developers.openai.com/api/docs/guides/rate-limits" rel="noopener">rate limit guide</a> measures requests and tokens per minute and per day, plus images per minute, at organisation and project level rather than per user, and says any one can be hit first. Anthropic's rate limits page measures requests per minute, input tokens per minute and output tokens per minute for each model class, set by usage tier. Its default input limit counts uncached input tokens and cache writes, not cache reads. Google's <a href="https://aistudio.google.com/docs/rate-limits" rel="noopener">rate limit page</a> uses requests per minute, input tokens per minute and requests per day. It says "Rate limits are applied per project, not per API key."</p>
+  <p>On Anthropic's page, a 429 error can also mean the monthly spend cap has been reached. That response carries no retry-after header, and the page says retrying fails until access resumes.</p>
+
+  <h2>Data residency costs 10% more at OpenAI and Anthropic</h2>
+  <p>Data residency, which OpenAI calls regional processing, means choosing where your requests are processed, at a surcharge.</p>
+  <p>OpenAI's pricing page says regional processing endpoints carry a 10% uplift for models released on or after 5 March 2026, and its GPT-5.5 page confirms 10% for that model. Anthropic's pricing page sets a 1.1 times multiplier on all token categories for US-only inference on Claude 4.6 and later models, chosen with the inference_geo parameter. "Global routing (the default) uses standard pricing." The sizes match; the switches differ. Models before 4.6 return a 400 error if the parameter is sent, and the page says Amazon Bedrock and Google-managed Claude deployments have their own regional pricing. We did not read Google's position.</p>
+
+  <h2>Long-context pricing starts at three different lengths</h2>
+  <p>Some models charge a higher rate once a prompt passes a set length. The line sits in a different place at each provider, and among the Anthropic models listed it applies only to Claude Haiku 5.5.</p>
+
+  <div class="table-wrap"><table>
+    <caption>Source: OpenAI's GPT-5.5 page, Anthropic's pricing page and Google's pricing page, read 14 November 2026. US dollars per million tokens where a price is shown. Gemini 2.5 Pro is marked deprecated on Google's page.</caption>
+    <thead><tr><th>Provider and model</th><th>Higher rate applies above</th><th class="num">Input</th><th class="num">Output</th></tr></thead>
+    <tbody>
+      {lc.map((x) => (
+        <tr><td>{x.provider}: {x.model}</td><td>{x.threshold}</td><td class="num">{step(x.inBase, x.inOver, x.inputRatio)}</td><td class="num">{step(x.outBase, x.outOver, x.outputRatio)}</td></tr>
+      ))}
+    </tbody>
+  </table></div>
+
+  <p>On OpenAI's GPT-5.5 page, prompts over the line are "priced at 2x input and 1.5x output for the full session". Anthropic says its Claude 4.6 and later models, except Claude Haiku 5.5, include the full 1M-token window at standard pricing. For Haiku 5.5, the page counts cache reads and writes toward prompt length, and a request over the line pays the higher prices even when part of it is a cache hit.</p>
+
+  <h2>What we did not compare</h2>
+  <p>For the eight words outside the four, the gaps are: no Anthropic flex tier, no Google data residency, no check of the Priority Tier. Google's pages now redirect to aistudio.google.com, and the links above point there. We could not load OpenAI's help article on tokens, so no OpenAI token ratio appears here. Prices change, so one read on 14 November 2026 may not hold into the new year.</p>
+  <p>The prices in our own tables come from a different source and are described on our <a href={`${base}transparency/`}>transparency page</a>; nothing quoted above comes from them.</p>
+
+  <StudioNote article={article} snapshot="14 November 2026" />
+</InsightArticle>
