@@ -6,6 +6,11 @@
  * `reviewed` is the date a person or agent last checked the entry against the
  * code and the source, not the date the data last refreshed (the page reads
  * refresh times from the scrape log at build time).
+ *
+ * The Artificial Analysis and Arena entries mirror src/data/source-policy.ts
+ * (the blocked-source list added for hub #1569). Once that file is on main,
+ * read their reason, terms URL and checked date from it instead of repeating
+ * them here.
  */
 
 export type SourceState =
@@ -116,7 +121,7 @@ export const sources: TransparencySource[] = [
     state: 'on-hold',
     terms: 'restricted',
     termsNote:
-      'On 14 November 2026 we read Artificial Analysis\'s Data Platform Terms (dated 19 August 2026). Section 2.5 restricts using the data in ranking and comparison products. We are removing these figures from the site until we have permission or a licensed alternative.',
+      'On 14 November 2026 we read Artificial Analysis's Data Platform Terms (revised 19 August 2026). Section 2.5 bars use of its data in ranking or comparison products without written consent, and its Terms of Use bar automated requests to the site. We are removing these figures from the site until we have permission or a licensed alternative.',
     shownOn: ['Speed', 'Fastest', 'Creative model ratings'],
     caveat:
       'These numbers are about nine months old and should not be read as current. No article on this site is built on them.',
@@ -124,8 +129,8 @@ export const sources: TransparencySource[] = [
   },
   {
     id: 'arena',
-    name: 'LMArena (formerly LMSYS Chatbot Arena)',
-    url: 'https://lmarena.ai/',
+    name: 'Arena (formerly LMArena and LMSYS Chatbot Arena)',
+    url: 'https://arena.ai/',
     takes: 'Arena Elo ratings for language models.',
     how: 'A set of ratings entered by hand in the past. The automatic collector has not written any new ratings.',
     collector: 'benchmarks:chatbot-arena',
@@ -133,7 +138,7 @@ export const sources: TransparencySource[] = [
     state: 'on-hold',
     terms: 'restricted',
     termsNote:
-      'On 14 November 2026 we read the Arena Terms of Use (dated 23 February 2026). Clause (vii) bars manual or automated extraction. We are removing these ratings from the site and from our composite scores.',
+      'On 14 November 2026 we read the Arena Terms of Use (updated 23 February 2026). They bar programmatic access, manual or automated extraction of data, and reproduction of the service's output. We are removing these ratings from the site and from our composite scores.',
     shownOn: ['Benchmarks', 'Leaderboard'],
     caveat: 'No article on this site is built on Arena ratings.',
     reviewed: REVIEWED,
