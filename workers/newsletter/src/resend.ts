@@ -41,11 +41,13 @@ export class ResendClient {
       body,
     });
     if (!response.ok) {
-      await response.body?.cancel();
+      // Inspect only this documented discriminator; never log/store the error payload.
+      const invalidKey400 = response.status === 400 && await response.json().then(value => value?.message === 'API key is invalid').catch(() => false);
+      if (response.status !== 400) await response.body?.cancel();
       // Checked 2026-11-14: https://resend.com/docs/api-reference/errors
       // Sending 401/403 may be key/permission/domain setup faults. Keep the exact
-      // request recoverable within our existing 23h window; 400/422 are terminal.
-      if ([401,403].includes(response.status)) {
+      // request recoverable within our existing 23h window; other 400/422 are terminal.
+      if (invalidKey400 || [401,403].includes(response.status)) {
         console.error('Newsletter operator action required: Resend HTTP ' + response.status + '. Check key, permissions and verified sending domain; retry the same batch within 23 hours.');
         throw new ProviderSetupError(response.status);
       }
