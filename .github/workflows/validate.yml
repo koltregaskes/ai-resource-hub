@@ -46,6 +46,9 @@ jobs:
       - name: Test source policy (no numbers from sources whose terms bar our use)
         run: npm run test:source-policy
 
+      - name: Test Lab Standings method
+        run: node --test scripts/lab-standings.test.mjs
+
       - name: Validate AI and jobs evidence, rights and immutable history
         run: |
           node --test scripts/ai-and-jobs.test.mjs

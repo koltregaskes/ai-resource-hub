@@ -1,0 +1,8 @@
+---
+import LabStandings from '../../../components/LabStandings.astro';
+export function getStaticPaths() {
+ const files=import.meta.glob('../../../../data/lab-standings/snapshots/*.json',{eager:true,import:'default'});
+ return Object.values(files).map((snapshot:any)=>({params:{date:snapshot.date},props:{snapshot,history:Object.values(files)}}));
+}
+---
+<LabStandings snapshot={Astro.props.snapshot} archive dates={[Astro.props.snapshot.date]} history={Astro.props.history} />

@@ -1,0 +1,29 @@
+name: Prepare weekly Lab Standings snapshot
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Download licensed Epoch vintage and freeze scores
+        shell: bash
+        run: |
+          day=$(date -u +%F)
+          curl --fail --location https://epoch.ai/data/eci_scores.csv --output "data/lab-standings/raw/eci-${day}.csv"
+          npx tsx scripts/build-lab-standings.ts "$day"
+          node --test scripts/lab-standings.test.mjs
+      - uses: actions/upload-artifact@v7
+        with:
+          name: lab-standings-review-candidate
+          path: data/lab-standings/
+      # Candidate only: reviewed PR publication, never a direct push or deploy.

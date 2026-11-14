@@ -1,0 +1,7 @@
+---
+import LabStandings from '../../../components/LabStandings.astro';
+const files = import.meta.glob('../../../../data/lab-standings/snapshots/*.json', {eager:true,import:'default'});
+const snapshots = Object.values(files) as any[];
+snapshots.sort((a,b)=>b.date.localeCompare(a.date));
+---
+<LabStandings snapshot={snapshots[0]} dates={snapshots.map(s=>s.date)} history={snapshots} />
