@@ -1,0 +1,461 @@
+{
+  "snapshotDate": "2026-11-14",
+  "cacheGeneratedAt": "2026-11-14T15:55:50.637Z",
+  "inputs": {
+    "modelsSha256": "a13a9dec6ed6f736079fef57ccf544db6e68cba575ea94a71a29e4caf8e0b788"
+  },
+  "assumptions": {
+    "words": 90000,
+    "wordsNote": "ASSUMPTION: a 90,000-word English novel. Real books vary.",
+    "ruleOfThumb": "100 tokens is about 75 words (OpenAI Help Center, read 14 November 2026)",
+    "tokensPerWord": 1.3333333333333333,
+    "tokens": 120000,
+    "writeNote": "ASSUMPTION: the model writes the same number of tokens as the novel it read."
+  },
+  "method": {
+    "set": "Category llm, status active, input and output price above zero, variants removed by suffix rule (id ends in a date stamp or -fast).",
+    "spread": "10 models at evenly spaced ranks of the set sorted by input price, cheapest first.",
+    "readCost": "tokens / 1,000,000 x input price per million tokens",
+    "writeCost": "tokens / 1,000,000 x output price per million tokens",
+    "fits": "context_window recorded in the catalogue >= tokens. The reply also has to fit in the same window."
+  },
+  "n": 65,
+  "cheapest": {
+    "id": "llama-3.1-8b",
+    "name": "Llama 3.1 8B Instruct",
+    "provider": "Meta",
+    "input": 0.02,
+    "output": 0.04,
+    "contextWindow": 131072,
+    "fits": true,
+    "novelsThatFit": 1.09,
+    "readCost": 0.0024,
+    "writeCost": 0.0048,
+    "headroom": 11072,
+    "priceFrom": "openrouter",
+    "pricingSource": "openrouter.ai/api/v1/models"
+  },
+  "dearest": {
+    "id": "gpt-5.5-pro",
+    "name": "GPT-5.5 Pro",
+    "provider": "OpenAI",
+    "input": 30,
+    "output": 180,
+    "contextWindow": 1050000,
+    "fits": true,
+    "novelsThatFit": 8.75,
+    "readCost": 3.6,
+    "writeCost": 21.6,
+    "headroom": 930000,
+    "priceFrom": "lab",
+    "pricingSource": "OpenAI (official)"
+  },
+  "readCostRatio": 1500.0000000000002,
+  "medianReadCost": 0.15,
+  "notFitCount": 5,
+  "notFit": [
+    {
+      "name": "Phi 4",
+      "contextWindow": 16384,
+      "input": 0.07,
+      "priceFrom": "openrouter"
+    },
+    {
+      "name": "Reka Flash 3",
+      "contextWindow": 65536,
+      "input": 0.1,
+      "priceFrom": "openrouter"
+    },
+    {
+      "name": "Qwen2.5 72B Instruct",
+      "contextWindow": 32768,
+      "input": 0.36,
+      "priceFrom": "openrouter"
+    },
+    {
+      "name": "Qwen2.5 Coder 32B Instruct",
+      "contextWindow": 32768,
+      "input": 0.66,
+      "priceFrom": "openrouter"
+    },
+    {
+      "name": "Nano Banana 2.1",
+      "contextWindow": 65536,
+      "input": 1.5,
+      "priceFrom": "openrouter"
+    }
+  ],
+  "fitCount": 60,
+  "dearestNotFitInput": 1.5,
+  "pricedAboveDearestNotFit": 27,
+  "tightFit": {
+    "limitTokens": 12000,
+    "count": 15,
+    "list": [
+      {
+        "name": "Llama 3.1 8B Instruct",
+        "contextWindow": 131072,
+        "headroom": 11072
+      },
+      {
+        "name": "Mistral Nemo",
+        "contextWindow": 131072,
+        "headroom": 11072
+      },
+      {
+        "name": "Nova Micro 1.0",
+        "contextWindow": 128000,
+        "headroom": 8000
+      },
+      {
+        "name": "Command R7B (12-2024)",
+        "contextWindow": 128000,
+        "headroom": 8000
+      },
+      {
+        "name": "Command R (08-2024)",
+        "contextWindow": 128000,
+        "headroom": 8000
+      },
+      {
+        "name": "GPT-4o-mini (2024-07-18)",
+        "contextWindow": 128000,
+        "headroom": 8000
+      },
+      {
+        "name": "Mistral Small 3.1 24B",
+        "contextWindow": 128000,
+        "headroom": 8000
+      },
+      {
+        "name": "Llama 3.3 70B Instruct",
+        "contextWindow": 131072,
+        "headroom": 11072
+      },
+      {
+        "name": "Llama 3.1 70B Instruct",
+        "contextWindow": 131072,
+        "headroom": 11072
+      },
+      {
+        "name": "Sonar",
+        "contextWindow": 127072,
+        "headroom": 7072
+      },
+      {
+        "name": "Gemini Omni 1.1 Flash",
+        "contextWindow": 131072,
+        "headroom": 11072
+      },
+      {
+        "name": "Gemini Omni 1.2 Flash",
+        "contextWindow": 131072,
+        "headroom": 11072
+      },
+      {
+        "name": "Mistral Large",
+        "contextWindow": 128000,
+        "headroom": 8000
+      },
+      {
+        "name": "Command R+ (08-2024)",
+        "contextWindow": 128000,
+        "headroom": 8000
+      },
+      {
+        "name": "GPT-4o (2024-05-13)",
+        "contextWindow": 128000,
+        "headroom": 8000
+      }
+    ]
+  },
+  "smallestFitting": {
+    "id": "sonar",
+    "name": "Sonar",
+    "provider": "Perplexity",
+    "input": 1,
+    "output": 1,
+    "contextWindow": 127072,
+    "fits": true,
+    "novelsThatFit": 1.06,
+    "readCost": 0.12,
+    "writeCost": 0.12,
+    "headroom": 7072,
+    "priceFrom": "openrouter",
+    "pricingSource": "openrouter.ai/api/v1/models"
+  },
+  "dearOnes": {
+    "thresholdInput": 5,
+    "count": 14,
+    "fitCount": 14,
+    "list": [
+      {
+        "name": "GPT-4o (2024-05-13)",
+        "input": 5,
+        "contextWindow": 128000,
+        "novelsThatFit": 1.07,
+        "fits": true,
+        "readCost": 0.6
+      },
+      {
+        "name": "Claude Opus 4.5",
+        "input": 5,
+        "contextWindow": 200000,
+        "novelsThatFit": 1.67,
+        "fits": true,
+        "readCost": 0.6
+      },
+      {
+        "name": "Claude Opus 4.6",
+        "input": 5,
+        "contextWindow": 1000000,
+        "novelsThatFit": 8.33,
+        "fits": true,
+        "readCost": 0.6
+      },
+      {
+        "name": "Claude Opus 4.7",
+        "input": 5,
+        "contextWindow": 1000000,
+        "novelsThatFit": 8.33,
+        "fits": true,
+        "readCost": 0.6
+      },
+      {
+        "name": "Claude Opus 4.8",
+        "input": 5,
+        "contextWindow": 1000000,
+        "novelsThatFit": 8.33,
+        "fits": true,
+        "readCost": 0.6
+      },
+      {
+        "name": "Claude Opus 5",
+        "input": 5,
+        "contextWindow": 1000000,
+        "novelsThatFit": 8.33,
+        "fits": true,
+        "readCost": 0.6
+      },
+      {
+        "name": "GPT-5.5",
+        "input": 5,
+        "contextWindow": 1050000,
+        "novelsThatFit": 8.75,
+        "fits": true,
+        "readCost": 0.6
+      },
+      {
+        "name": "GPT-5.6 Sol",
+        "input": 5,
+        "contextWindow": 1050000,
+        "novelsThatFit": 8.75,
+        "fits": true,
+        "readCost": 0.6
+      },
+      {
+        "name": "Claude Fable 5",
+        "input": 10,
+        "contextWindow": 1000000,
+        "novelsThatFit": 8.33,
+        "fits": true,
+        "readCost": 1.2
+      },
+      {
+        "name": "GPT-5 Pro",
+        "input": 15,
+        "contextWindow": 400000,
+        "novelsThatFit": 3.33,
+        "fits": true,
+        "readCost": 1.8
+      },
+      {
+        "name": "o3 Pro",
+        "input": 20,
+        "contextWindow": 200000,
+        "novelsThatFit": 1.67,
+        "fits": true,
+        "readCost": 2.4
+      },
+      {
+        "name": "GPT-5.2 Pro",
+        "input": 21,
+        "contextWindow": 400000,
+        "novelsThatFit": 3.33,
+        "fits": true,
+        "readCost": 2.52
+      },
+      {
+        "name": "GPT-5.4 Pro",
+        "input": 30,
+        "contextWindow": 1050000,
+        "novelsThatFit": 8.75,
+        "fits": true,
+        "readCost": 3.6
+      },
+      {
+        "name": "GPT-5.5 Pro",
+        "input": 30,
+        "contextWindow": 1050000,
+        "novelsThatFit": 8.75,
+        "fits": true,
+        "readCost": 3.6
+      }
+    ]
+  },
+  "fiveOrMoreNovels": 28,
+  "fromOpenRouter": 45,
+  "fromLab": 20,
+  "spread": [
+    {
+      "id": "llama-3.1-8b",
+      "name": "Llama 3.1 8B Instruct",
+      "provider": "Meta",
+      "input": 0.02,
+      "output": 0.04,
+      "contextWindow": 131072,
+      "fits": true,
+      "novelsThatFit": 1.09,
+      "readCost": 0.0024,
+      "writeCost": 0.0048,
+      "headroom": 11072,
+      "priceFrom": "openrouter",
+      "pricingSource": "openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "reka-flash-3",
+      "name": "Reka Flash 3",
+      "provider": "Reka",
+      "input": 0.1,
+      "output": 0.2,
+      "contextWindow": 65536,
+      "fits": false,
+      "novelsThatFit": 0.55,
+      "readCost": 0.012,
+      "writeCost": 0.024,
+      "headroom": -54464,
+      "priceFrom": "openrouter",
+      "pricingSource": "openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "deepseek-v3",
+      "name": "DeepSeek V3",
+      "provider": "DeepSeek",
+      "input": 0.257,
+      "output": 1.029,
+      "contextWindow": 163840,
+      "fits": true,
+      "novelsThatFit": 1.37,
+      "readCost": 0.03084,
+      "writeCost": 0.12348,
+      "headroom": 43840,
+      "priceFrom": "openrouter",
+      "pricingSource": "openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "gpt-4.1-mini",
+      "name": "GPT-4.1 Mini",
+      "provider": "OpenAI",
+      "input": 0.4,
+      "output": 1.6,
+      "contextWindow": 1047576,
+      "fits": true,
+      "novelsThatFit": 8.73,
+      "readCost": 0.048,
+      "writeCost": 0.192,
+      "headroom": 927576,
+      "priceFrom": "openrouter",
+      "pricingSource": "openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "sonar",
+      "name": "Sonar",
+      "provider": "Perplexity",
+      "input": 1,
+      "output": 1,
+      "contextWindow": 127072,
+      "fits": true,
+      "novelsThatFit": 1.06,
+      "readCost": 0.12,
+      "writeCost": 0.12,
+      "headroom": 7072,
+      "priceFrom": "openrouter",
+      "pricingSource": "openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "gemini-omni-1.1-flash",
+      "name": "Gemini Omni 1.1 Flash",
+      "provider": "Google",
+      "input": 1.5,
+      "output": 9,
+      "contextWindow": 131072,
+      "fits": true,
+      "novelsThatFit": 1.09,
+      "readCost": 0.18,
+      "writeCost": 1.08,
+      "headroom": 11072,
+      "priceFrom": "openrouter",
+      "pricingSource": "openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "provider": "Google",
+      "input": 2,
+      "output": 10,
+      "contextWindow": 1048576,
+      "fits": true,
+      "novelsThatFit": 8.74,
+      "readCost": 0.24,
+      "writeCost": 1.2,
+      "headroom": 928576,
+      "priceFrom": "openrouter",
+      "pricingSource": "openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "muse-wonder",
+      "name": "Muse Wonder",
+      "provider": "Meta",
+      "input": 4,
+      "output": 20,
+      "contextWindow": 1048576,
+      "fits": true,
+      "novelsThatFit": 8.74,
+      "readCost": 0.48,
+      "writeCost": 2.4,
+      "headroom": 928576,
+      "priceFrom": "openrouter",
+      "pricingSource": "openrouter.ai/api/v1/models"
+    },
+    {
+      "id": "gpt-5.5",
+      "name": "GPT-5.5",
+      "provider": "OpenAI",
+      "input": 5,
+      "output": 30,
+      "contextWindow": 1050000,
+      "fits": true,
+      "novelsThatFit": 8.75,
+      "readCost": 0.6,
+      "writeCost": 3.6,
+      "headroom": 930000,
+      "priceFrom": "lab",
+      "pricingSource": "OpenAI (official)"
+    },
+    {
+      "id": "gpt-5.5-pro",
+      "name": "GPT-5.5 Pro",
+      "provider": "OpenAI",
+      "input": 30,
+      "output": 180,
+      "contextWindow": 1050000,
+      "fits": true,
+      "novelsThatFit": 8.75,
+      "readCost": 3.6,
+      "writeCost": 21.6,
+      "headroom": 930000,
+      "priceFrom": "lab",
+      "pricingSource": "OpenAI (official)"
+    }
+  ]
+}

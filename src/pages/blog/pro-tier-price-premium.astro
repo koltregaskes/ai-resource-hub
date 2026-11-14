@@ -1,0 +1,83 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import StudioNote from '../../components/insights/StudioNote.astro';
+import ColumnChart from '../../components/insights/ColumnChart.astro';
+import { article } from '../../data/studio/pro-tier-price-premium';
+import data from '../../data/insights/2026-11-14-pro-tier-price-premium.json';
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const usd = (v: number) => (v < 1 ? `$${v.toFixed(2)}` : `$${Number.isInteger(v) ? v : v.toFixed(2)}`);
+const x = (v: number) => `${Number.isInteger(v) ? v : v.toFixed(2).replace(/0+$/, '').replace(/\.$/, '')}x`;
+const live = data.live;
+const lp = data.livePairs;
+const all = data.all;
+const pairs = data.pairs;
+const diffs = data.liveDifferences;
+const worked = data.worked;
+const w55 = worked.find((w) => w.pair === 'GPT-5.5')!;
+const w54 = worked.find((w) => w.pair === 'GPT-5.4')!;
+const equal = data.equalPrice.length;
+const below = data.belowOne.length;
+const noLivePro = equal + below;
+const chart = live.map((l) => ({ label: l.pair, value: l.outputMultiple, valueLabel: x(l.outputMultiple), sub: `${usd(l.base.output)} to ${usd(l.pro.output)}` }));
+const srcLabel = (s: string) => (s === 'official' ? 'lab list' : 'OpenRouter');
+---
+<InsightArticle title={article.title} description={article.description} date={article.date} type={article.type} readTime={article.readTime} snapshot="2026-11-14" standfirst="Where OpenAI lists a model next to its Pro version, Pro costs 6 to 12 times as much per token, on input and output alike.">
+  <p>On OpenAI's own pages, read on 14 November 2026, the Pro version of a model costs between {lp.input.min} and {lp.input.max} times as much per token as the standard one, with a median of {lp.input.median}. That holds for {lp.n} pairs where both members are listed, and the multiple is the same for input and for output in every one of them. Our catalogue holds {data.pairCount} pairs, so this article also covers the ten we could not confirm that way.</p>
+
+  <p>A pair here means two language models in our catalogue where one name is exactly the other plus " Pro", for example GPT-5.5 and GPT-5.5 Pro. Both must have an input and an output price above zero. Names such as GPT-5.6 Sol and GPT-5.6 Sol Pro count under the same rule, because "GPT-5.6 Sol" is the base name. The script that finds them is <code>{article.code}</code>, and its output is frozen in <code>{article.frozen}</code>.</p>
+
+  <h2>Four pairs confirmed on OpenAI's pages</h2>
+  <p>We read OpenAI's pricing page and its model pages on 14 November 2026 for four pairs. Prices are US dollars per million tokens, the standard rate for short prompts. In all four the catalogue already held the same numbers, so none needed correcting.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Source: OpenAI pricing and model pages, read 14 November 2026. Multiples computed by scripts/insights/pro-tier-price-premium.mjs.</caption>
+      <thead><tr><th>Pair</th><th class="num">Base input / output</th><th class="num">Pro input / output</th><th class="num">Multiple</th></tr></thead>
+      <tbody>
+        {live.map((l) => (
+          <tr><td>{l.pair} and {l.pair} Pro</td><td class="num">{usd(l.base.input)} / {usd(l.base.output)}</td><td class="num">{usd(l.pro.input)} / {usd(l.pro.output)}</td><td class="num">{x(l.inputMultiple)}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <ColumnChart title="Pro price as a multiple of the standard price, output tokens" data={chart} caption="Source: OpenAI pricing and model pages, read 14 November 2026. Output price per million tokens, Pro divided by base. The input multiple is identical for each pair." summary="Four OpenAI pairs: GPT-5.5 Pro costs 6 times its base model, o3 Pro 10 times, GPT-5 Pro and GPT-5.4 Pro 12 times." />
+  <p>The multiple is not constant. GPT-5.5 Pro is {x(live[0].outputMultiple)} its base model, while GPT-5.4 Pro is {x(live[1].outputMultiple)} its base. The reason is that GPT-5.5's base price is twice GPT-5.4's, but the two Pro models cost the same, {usd(live[0].pro.input)} in and {usd(live[0].pro.output)} out. The two newest Pro prices in the table are identical, while the base prices differ.</p>
+
+  <h2>What does OpenAI say a Pro model is for?</h2>
+  <p>OpenAI's page for GPT-5.5 Pro says the model <a href="https://developers.openai.com/api/docs/models/gpt-5.5-pro" rel="noopener">"uses more compute to think harder and provide consistently better answers"</a>, and that some requests may take several minutes to finish. The GPT-5.4 Pro page <a href="https://developers.openai.com/api/docs/models/gpt-5.4-pro" rel="noopener">uses the same sentence</a> for its model, and the o3 Pro page describes <a href="https://developers.openai.com/api/docs/models/o3-pro" rel="noopener">a version of o3 "with more compute"</a>. That is the lab's description of its own product. We did not test any model, so we make no comparison of answer quality here.</p>
+  <p>The pages do not say how the Pro price was set or how many more tokens a Pro model uses per request. We do not know why the price is higher, and a price multiple tells you nothing about the cost of a finished job. The more compute explanation is OpenAI's wording, not a cost breakdown.</p>
+
+  <h2>Ten catalogue pairs fall outside that range</h2>
+  <p>Of the {data.pairCount} pairs, {lp.n} are confirmed above. The other ten split into three groups, and two of the groups look odd enough that we would not repeat their numbers.</p>
+  <ul>
+    <li>{below} pairs (GPT-5.6 Sol, Terra and Luna) show a Pro price lower than the base price, from {x(Math.min(...pairs.map((p) => p.outputMultiple)))} to {x(Math.max(...pairs.filter((q) => q.outputMultiple < 1).map((q) => q.outputMultiple)))}. All three Pro rows come from OpenRouter, the cheapest host's price, while the base rows are typed-in lab prices. The live pricing page lists no Pro row for GPT-5.6, and the address we tried for a Sol Pro model page returned a 404.</li>
+    <li>{equal} pairs (GPT-6 Astra, Luna and Sol, and GPT-6.1 Sol and Terra) show a Pro price identical to the base price. Both rows in each pair come from OpenRouter. OpenAI's pricing page lists the base models at those prices and lists no Pro rows for them.</li>
+    <li>GPT-5.2 Pro ($21 in, $168 out) matches OpenAI's pricing page, but that page does not list the GPT-5.2 base model, so we could not confirm the base price. Sonar and Sonar Pro, the one Perplexity pair, could not be checked because Perplexity's pricing page did not load for us.</li>
+  </ul>
+  <p>The GPT-5.6 rows deserve a closer look. OpenAI's live page lists GPT-5.6 Sol at {usd(diffs[0].live.input)} in and {usd(diffs[0].live.output)} out, Terra at {usd(diffs[1].live.input)} and {usd(diffs[1].live.output)}, and Luna at {usd(diffs[2].live.input)} and {usd(diffs[2].live.output)}. Our catalogue holds {usd(diffs[0].catalogue.input)} and {usd(diffs[0].catalogue.output)} for Sol, {usd(diffs[1].catalogue.input)} and {usd(diffs[1].catalogue.output)} for Terra, and {usd(diffs[2].catalogue.input)} and {usd(diffs[2].catalogue.output)} for Luna, so those base prices are out of date. The catalogue's "Pro" prices for the three models are exactly the live prices of the base models. Those rows may be mislabelled, but we have not established what OpenRouter lists, so we treat them as unconfirmed rather than as evidence of a discount.</p>
+  <p>Taken at face value, all {data.pairCount} catalogue pairs give a median multiple of {all.output.median}, with a range from {x(all.output.min)} to {x(all.output.max)} on output. That number is a product of unconfirmed rows, and we do not use it as a finding. The {x(lp.input.median)} median above, from the {lp.n} confirmed pairs, is the figure we stand behind, and it rests on four pairs only.</p>
+
+  <h2>What a 6 to 12 times price does to one job</h2>
+  <p>Take a job of {data.assumedJob.inputTokens.toLocaleString('en-GB')} input tokens and {data.assumedJob.outputTokens.toLocaleString('en-GB')} output tokens. This is an assumption chosen for the arithmetic, not a measured workload. At list prices it costs ${w55.base.toFixed(2)} on GPT-5.5 and ${w55.pro.toFixed(2)} on GPT-5.5 Pro. On GPT-5.4 it costs ${w54.base.toFixed(2)} and on GPT-5.4 Pro ${w54.pro.toFixed(2)}. Because input and output carry the same multiple in each pair, the job's multiple equals the price multiple whatever mix of tokens you pick.</p>
+  <p>If a Pro model produced a different number of tokens for the same job, the real bill would move with it. We did not measure that, and OpenAI's pages do not give a figure. The o3 Pro page also shows a status of deprecated on the day we read it, which means a Pro name in a price list can refer to a model that is on its way out.</p>
+
+  <h2>Which labs have pairs</h2>
+  <p>{data.pairsByProvider.OpenAI} of the {data.pairCount} pairs belong to OpenAI and {data.pairsByProvider.Perplexity} to Perplexity. No other lab has a pair in our catalogue under this naming rule. The rule leaves out Pro-named models with no base-name partner. Our list has {data.unpairedProNames.length} such entries, among them Gemini 3.1 Pro, Gemini 3 Pro and Kimi K3.1 Pro, which the rule leaves out because no model with the base name is in the catalogue.</p>
+
+  <h2>All {data.pairCount} catalogue pairs</h2>
+  <p>The table lists every pair the script found, sorted by output multiple. "Source" is where the catalogue got each price: "lab list" means a price typed in from the lab's list, "OpenRouter" means the cheapest host on that marketplace. Status is the catalogue's own label, where "tracking" means we watch the model but have not confirmed it against the lab.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Source: data/pg-cache/models.json, snapshot 14 November 2026. Only the four pairs marked "confirmed" were checked against OpenAI's pages.</caption>
+      <thead><tr><th>Pro model</th><th class="num">Base in / out</th><th class="num">Pro in / out</th><th class="num">Input multiple</th><th class="num">Output multiple</th><th>Base source, Pro source</th><th>Status</th></tr></thead>
+      <tbody>
+        {pairs.map((p) => (
+          <tr><td>{p.pro.name}{live.some((l) => l.pair + ' Pro' === p.pro.name) ? ' (confirmed)' : ''}</td><td class="num">{usd(p.base.input)} / {usd(p.base.output)}</td><td class="num">{usd(p.pro.input)} / {usd(p.pro.output)}</td><td class="num">{x(p.inputMultiple)}</td><td class="num">{x(p.outputMultiple)}</td><td>{srcLabel(p.base.source)}, {srcLabel(p.pro.source)}</td><td>{p.base.status}, {p.pro.status}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p>For how list prices and their sources are recorded, see <a href={`${base}blog/how-to-read-an-ai-price-list/`}>how to read an AI price list</a>. The spread across all priced models is in <a href={`${base}blog/ai-price-spread-6000x/`}>the 6,000 times price gap</a>.</p>
+  <StudioNote article={article} snapshot="14 November 2026" />
+</InsightArticle>
