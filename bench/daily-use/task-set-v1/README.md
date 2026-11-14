@@ -29,7 +29,7 @@ These are the 40 public tasks for the Day-to-Day Bench. The method is `docs/DAY-
 - `accept_examples` and `reject_examples`: answers that must pass and must fail. The harness's unit tests run every one of them through the grader before any model run.
 - `sources`: family 2 only. The official page each fact was checked against, with a short quote and the date.
 - `why_hard`, `verification`, `author`, `written_on`.
-- On tasks changed after review: `version` 2 and `changed_in_v2` (one sentence on what changed). `engine_validated` (formula tasks: engine, version and date of a passed engine check). `reject_notes` (checklist tasks: for a reject example that passes every script check, which judge check rejects it). It takes one of two forms: an object keyed `R1`, `R2`... by the example's position, or an array in step with `reject_examples`, with `null` where no note is needed.
+- On tasks changed after review: `version` goes up by one for each round (2, then 3), with `changed_in_v2` and `changed_in_v3` each giving one sentence on what changed in that round. `engine_validated` (formula tasks: engine, version and date of a passed engine check). `reject_notes` (checklist tasks: for a reject example that passes every script check, which judge check rejects it). It takes one of two forms: an object keyed `R1`, `R2`... by the example's position, or an array in step with `reject_examples`, with `null` where no note is needed.
 - A family 2 `sources` entry may also carry `version_note`, `supports` (what the source establishes) and `scope_of_unknown` (for an unanswerable task: exactly what the source says isn't recorded).
 
 ## Grader rules
@@ -78,6 +78,7 @@ These are binding on the harness. Where a task's author assumed something, it's 
 - `entry` is called once per test with `args`. The result must equal `expect`, with Python `==` and the same type for `bool` versus `int`.
 - A test with `"raises": "ValueError"` passes only if that exception is raised.
 - Any exception, timeout or syntax error fails the task.
+- Integers in `args` and `expect` can be larger than 2^53. The harness must read task files with a JSON reader that keeps integers exact (Python's `json` does). A reader that turns them into floating-point numbers would grade wrongly.
 
 **`formula`:**
 - The reply is one Excel formula, with or without the leading `=`.
@@ -93,7 +94,7 @@ These are binding on the harness. Where a task's author assumed something, it's 
 - A reply that gives one answer, even hedged, is `answered` and fails.
 - Detection is by the published pattern list first. A reply the patterns can't classify goes to the judge panel.
 
-**`checklist`:** every check must pass.
+**`checklist`:** every check must pass. Any family may use it. Family 1 tasks use it when a rule is about meaning, such as "give no reason for the absence", which a script can't decide.
 - `by: "script"` checks use the `constraints` check types above and are final.
 - `by: "judge"` checks go to the judge panel, under the method's rules.
 

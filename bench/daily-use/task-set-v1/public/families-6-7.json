@@ -372,8 +372,9 @@
   },
   {
     "id": "f7-pub-04",
-    "version": 2,
+    "version": 3,
     "changed_in_v2": "The reference solution and accept example A1 now parse pounds and pence as integers (no floats); two regression tests were added (£70,368,744,177,664.01 must give 7036874417766401 pence, and its refund), the old round(float) key is now a reject example, and the prompt says 'however large the amounts are'.",
+    "changed_in_v3": "Accept example A2 (Decimal under the default 28-digit context, which rounds very large amounts) is replaced by a Decimal solution that sets a local context precision from the length of each amount and sums as an int; three tests were added (£100000000000000000000000000.01 must give 10000000000000000000000000001 pence, a refund of that size, and a sum of two), and the old A2 is now a reject example.",
     "family": 7,
     "split": "public",
     "answerable": true,
@@ -480,23 +481,51 @@
             ]
           ],
           "expect": -7036874417766399
+        },
+        {
+          "args": [
+            [
+              "£100000000000000000000000000.01"
+            ]
+          ],
+          "expect": 10000000000000000000000000001
+        },
+        {
+          "args": [
+            [
+              "-£100,000,000,000,000,000,000,000,000.01",
+              "£0.02"
+            ]
+          ],
+          "expect": -9999999999999999999999999999
+        },
+        {
+          "args": [
+            [
+              "£100000000000000000000000000.01",
+              "£100000000000000000000000000.01",
+              "£0.98"
+            ]
+          ],
+          "expect": 20000000000000000000000000100
         }
       ]
     },
     "expected": "def total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        sign = -1 if a.startswith(\"-\") else 1\n        pounds, _, pence = a.lstrip(\"+-\").partition(\".\")\n        pence = (pence + \"00\")[:2]\n        total += sign * (int(pounds or \"0\") * 100 + int(pence))\n    return total",
     "accept_examples": [
       "def total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        sign = -1 if a.startswith(\"-\") else 1\n        pounds, _, pence = a.lstrip(\"+-\").partition(\".\")\n        pence = (pence + \"00\")[:2]\n        total += sign * (int(pounds or \"0\") * 100 + int(pence))\n    return total",
-      "from decimal import Decimal\n\ndef total_pence(amounts):\n    total = Decimal(0)\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\").replace(\" \", \"\")\n        if not a:\n            continue\n        total += Decimal(a) * 100\n    return int(total)"
+      "from decimal import Decimal, localcontext\n\ndef total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\").replace(\" \", \"\")\n        if not a:\n            continue\n        with localcontext() as ctx:\n            ctx.prec = len(a) + 10\n            total += int(Decimal(a) * 100)\n    return total"
     ],
     "reject_examples": [
       "def total_pence(amounts):\n    \"\"\"Add up money strings such as \"£1,234.50\" and return the total in pence as an int.\n\n    Blank entries are skipped. A leading minus sign, as in \"-£12.00\", is a refund.\n    \"\"\"\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += int(float(a) * 100)\n    return total",
       "def total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += int(float(a) * 100 + 0.5)\n    return total",
       "import math\n\ndef total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += math.ceil(float(a) * 100)\n    return total",
-      "def total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += round(float(a) * 100)\n    return total"
+      "def total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += round(float(a) * 100)\n    return total",
+      "from decimal import Decimal\n\ndef total_pence(amounts):\n    total = Decimal(0)\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\").replace(\" \", \"\")\n        if not a:\n            continue\n        total += Decimal(a) * 100\n    return int(total)"
     ],
     "sources": [],
-    "why_hard": "int() truncates binary floating-point values such as 19.99 * 100 = 1998.9999999999998; the obvious patch of adding 0.5 before int() still gets negative refunds wrong, and round(float(a) * 100) is still not exact for very large amounts, so only integer or Decimal parsing is right for every amount.",
-    "verification": "v2: ran under Python 3.15.2 through _verify/fixes/check_fixes.py (each solution in its own subprocess): the integer-parsing key and the Decimal solution pass 11 of 11 tests; the original function, the add-0.5 patch, math.ceil and the old round(float(a) * 100) key each fail (the last only on the two new large-amount tests, where it returns 7036874417766402).",
+    "why_hard": "int() truncates binary floating-point values such as 19.99 * 100 = 1998.9999999999998; the obvious patch of adding 0.5 before int() still gets negative refunds wrong, and round(float(a) * 100) is still not exact for very large amounts, so only integer or Decimal parsing is right for every amount. Decimal is exact only if its precision is large enough: under the default 28-digit context, Decimal(a) * 100 silently rounds a 29-digit amount.",
+    "verification": "v2: ran under Python 3.15.2 through _verify/fixes/check_fixes.py (each solution in its own subprocess): the integer-parsing key and the Decimal solution pass 11 of 11 tests; the original function, the add-0.5 patch, math.ceil and the old round(float(a) * 100) key each fail (the last only on the two new large-amount tests, where it returns 7036874417766402). v3: ran under the same Python through _verify/fixes2/check_fixes2.py: the integer-parsing key (A1) and the new local-context Decimal solution (A2) pass 14 of 14 tests; all five rejects fail, the old A2 (R5) only on the three new tests, where the default Decimal context rounds £100000000000000000000000000.01 to 10000000000000000000000000000 pence.",
     "author": "Claude (AIRH task agent)",
     "written_on": "2026-11-14"
   },
