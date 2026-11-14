@@ -121,7 +121,7 @@ export const sources: TransparencySource[] = [
     state: 'on-hold',
     terms: 'restricted',
     termsNote:
-      'On 14 November 2026 we read Artificial Analysis's Data Platform Terms (revised 19 August 2026). Section 2.5 bars use of its data in ranking or comparison products without written consent, and its Terms of Use bar automated requests to the site. We are removing these figures from the site until we have permission or a licensed alternative.',
+      "On 14 November 2026 we read Artificial Analysis's Data Platform Terms (revised 19 August 2026). Section 2.5 bars use of its data in ranking or comparison products without written consent, and its Terms of Use bar automated requests to the site. We are removing these figures from the site until we have permission or a licensed alternative.",
     shownOn: ['Speed', 'Fastest', 'Creative model ratings'],
     caveat:
       'These numbers are about nine months old and should not be read as current. No article on this site is built on them.',
@@ -138,7 +138,7 @@ export const sources: TransparencySource[] = [
     state: 'on-hold',
     terms: 'restricted',
     termsNote:
-      'On 14 November 2026 we read the Arena Terms of Use (updated 23 February 2026). They bar programmatic access, manual or automated extraction of data, and reproduction of the service's output. We are removing these ratings from the site and from our composite scores.',
+      "On 14 November 2026 we read the Arena Terms of Use (updated 23 February 2026). They bar programmatic access, manual or automated extraction of data, and reproduction of the service's output. We are removing these ratings from the site and from our composite scores.",
     shownOn: ['Benchmarks', 'Leaderboard'],
     caveat: 'No article on this site is built on Arena ratings.',
     reviewed: REVIEWED,
