@@ -1,0 +1,584 @@
+[
+  {
+    "id": "f3-pub-03",
+    "version": 1,
+    "family": 3,
+    "split": "public",
+    "answerable": true,
+    "prompt": "My letting agent has sent me the letter below. On what date is my first rent payment at the new, higher amount due?\n\n--- DOCUMENT START ---\nMarlowe & Finch Lettings\n14 Tanner Row, Shrewsbury SY1 4QD\n\n20 March 2026\n\nMs R. Okafor\nFlat 3, 27 Coldbath Lane\nShrewsbury SY2 6BN\n\nDear Ms Okafor,\n\nFlat 3, 27 Coldbath Lane: rent review and other matters\n\nI am writing on behalf of your landlord, Mr D. Penhale, following the annual review of your tenancy.\n\n1. Rent. Your rent is currently £845 per calendar month, payable in advance on the 12th of each month. Mr Penhale has decided to increase the rent to £880 per calendar month. In line with clause 9 of your tenancy agreement, an increase cannot take effect until at least two full months have passed from the date of the letter giving notice of it. The new rent will therefore apply from the first rent payment date that falls after that two-month period has ended. Until then, please continue to pay £845 on each rent day as usual.\n\n2. Standing order. If you pay by standing order, you will need to change the amount yourself; we cannot do this for you. Please make the change in good time, but not before your last payment at the old rent has left your account.\n\n3. Boiler service. The annual gas safety check is booked for Tuesday 12 May 2026 between 8am and 1pm. The engineer from Severnside Heating will need access to the kitchen and the airing cupboard. If that date is inconvenient, please ring us by 1 May so that we can rearrange it.\n\n4. Communal garden. From 1 April 2026 the grass will be cut fortnightly rather than monthly. There is no change to your service charge as a result.\n\n5. Deposit. Your deposit of £975 remains protected with the same scheme, and the rent increase does not affect it.\n\n6. Inspection. Our next routine inspection of the flat will take place in the week beginning 20 July 2026. We will write again nearer the time to agree a day.\n\nIf you have any questions about this letter, please contact me on 01743 555 0142 or at lettings@marlowefinch.example. Our office is open Monday to Friday, 9am to 5.30pm.\n\nYours sincerely,\n\nHelen Astley\nProperty Manager\n--- DOCUMENT END ---\n\nAnswer with the date only, in the form D Month YYYY (for example 3 August 2026).",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "regex",
+      "pattern": "\\s*(the\\s+)?(friday,?\\s+)?12(th)?\\s+(of\\s+)?June,?\\s+2026\\.?\\s*",
+      "flags": "i"
+    },
+    "expected": "12 June 2026",
+    "accept_examples": [
+      "12 June 2026",
+      "12th June 2026"
+    ],
+    "reject_examples": [
+      "12 May 2026",
+      "20 May 2026",
+      "12 April 2026"
+    ],
+    "sources": [],
+    "why_hard": "The start date is never stated: it must be worked out from the letter date (20 March), the two-full-months rule and the rent day (12th), and 12 May appears in the letter as a distractor for a different matter.",
+    "verification": "Recomputed twice: 20 March + 2 months = 20 May 2026; rent days are the 12th, so 12 May is too early and the first rent day after 20 May is 12 June 2026. Checked with Python date arithmetic in the build script.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f3-pub-04",
+    "version": 1,
+    "family": 3,
+    "split": "public",
+    "answerable": true,
+    "prompt": "Below is the contract summary for my broadband. I'm not moving house and I have no complaint about the speed or the price; I've simply found a cheaper deal elsewhere. If I give notice so that my service end date is 14 January 2027, and the router gets back to them within a week of that date, how much will Brightline charge me for leaving early?\n\n--- DOCUMENT START ---\nBRIGHTLINE BROADBAND – CONTRACT SUMMARY\nCustomer: Mr T. Varga, 8 Orchard Close, Kettering NN15 7LP\nAccount: BL-7730418\n\nService. Fibre 150 (average download speed 150 Mbps, minimum guaranteed speed 75 Mbps), with a Brightline Hub 2 router on loan.\n\nStart date and length. Your service started on 14 August 2025. The minimum term is 24 months, so it ends on 14 August 2027. After that the contract continues from month to month until either of us ends it.\n\nPrice. £31.00 a month for the minimum term, taken by Direct Debit on or around the 14th. Each April the monthly price goes up by £3.00; this increase is part of your contract and was explained when you ordered. Outside the minimum term our standard price, currently £44.00 a month, applies.\n\nEnding the contract. You must give us 30 days' notice. Your service end date is the date on which your notice runs out.\n\nEarly termination charge. If your service end date is before the end of the minimum term, we charge £11.50 for each full month left between your service end date and the end of the minimum term. Part months are not charged. The charge does not depend on the monthly price you are paying at the time.\n\nWhen the early termination charge does not apply. You will not pay it if:\n(a) we raise your price by more than the £3.00 April increase described above and you tell us you want to leave within 30 days of our notice; or\n(b) your download speed stays below the minimum guaranteed speed for 30 days after you report it and we have not fixed it.\nIf you move to an address that we cannot serve, the charge is halved.\n\nEquipment. The router remains ours. When the service ends we send you a prepaid returns bag. If we have not received the router within 21 days of your service end date, we charge a £45.00 non-return fee. There is no charge if it reaches us within that time.\n\nFinal bill. Your final bill includes any early termination charge and any equipment fee, less any credit on the account. We take it by Direct Debit about 10 days after the service end date.\n\nComplaints. Call 0330 555 0199 or write to Brightline Customer Relations, PO Box 412, Leicester LE1 9ZZ. If we cannot resolve a complaint within eight weeks you can take it to our dispute resolution scheme free of charge.\n--- DOCUMENT END ---\n\nReply with the amount only, in pounds and pence (for example £12.34).",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "numeric",
+      "value": 80.5,
+      "tolerance": 0.005,
+      "extract": "last_number"
+    },
+    "expected": "£80.50 (7 full months left at £11.50; no router fee because it is returned within 21 days)",
+    "accept_examples": [
+      "£80.50",
+      "80.50"
+    ],
+    "reject_examples": [
+      "£125.50",
+      "£92.00",
+      "£40.25"
+    ],
+    "sources": [],
+    "why_hard": "Needs the month count worked out from two dates, the £45 router fee excluded because of its exception, and the halving and no-charge exceptions recognised as not applying.",
+    "verification": "Two routes: 14 Jan 2027 to 14 Aug 2027 is 7 full months, 7 x 11.50 = 80.50; and 24-month term minus 17 months used (14 Aug 2025 to 14 Jan 2027) = 7, x 11.50 = 80.50. Asserted in Python.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f3-pub-05",
+    "version": 1,
+    "family": 3,
+    "split": "public",
+    "answerable": false,
+    "prompt": "These are the minutes of our parish council's September meeting. How much, excluding VAT, did the council agree to pay Hartwell Play Ltd for the new swings?\n\n--- DOCUMENT START ---\nLITTLE WENBURY PARISH COUNCIL\nMinutes of the meeting held on Tuesday 8 September 2026 at 7.30pm in the Village Hall\n\nPresent: Cllr J. Ashdown (Chair), Cllr M. Bhatt, Cllr S. Corrigan, Cllr P. Dunmore, Cllr E. Fairweather. In attendance: Mrs L. Hobbs (Clerk) and four members of the public.\n\n1. Apologies. Apologies were received and accepted from Cllr R. Green (holiday).\n\n2. Declarations of interest. Cllr Dunmore declared an interest in item 6 as a neighbour of the recreation ground and took no part in the vote.\n\n3. Minutes. The minutes of the meeting held on 14 July 2026 were approved and signed.\n\n4. Public participation. A resident asked when the broken swings on the recreation ground would be replaced. The Chair said the matter was on the agenda at item 6.\n\n5. Finance. The Clerk reported a bank balance of £31,482.16 at 31 August. Payments totalling £1,906.40 were approved. The Clerk confirmed that £12,000 is held in the earmarked play equipment reserve.\n\n6. Recreation ground play equipment. The Clerk reported that three quotations had been received for removing the old swings and supplying and fitting a new four-seat swing frame with safety surfacing. The quotations were for £8,400, £9,150 and £10,020, all excluding VAT. The firms quoting were Hartwell Play Ltd, Greenfield Leisure Installations and T. Marsh & Sons. Members discussed the guarantees offered and the references supplied. Cllr Bhatt noted that Hartwell Play Ltd had fitted the equipment at Upper Wenbury and offered a ten-year guarantee on the frame. The Clerk pointed out that Hartwell's was not the cheapest quotation. After discussion it was RESOLVED (four in favour, none against) to accept the quotation from Hartwell Play Ltd, the cost to be met from the play equipment reserve, and to ask the firm to start work before the October half-term if possible. The Clerk is to place the order.\n\n7. Grass cutting contract. The contract for 2027 will go out to tender in November. The Clerk will circulate the specification before the next meeting.\n\n8. Planning. No objection was raised to application 26/01187 (single-storey rear extension at 4 Mill Lane).\n\n9. Date of next meeting. Tuesday 13 October 2026 at 7.30pm.\n\nThe meeting closed at 8.52pm.\n--- DOCUMENT END ---\n\nPlease keep the answer short.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "abstain"
+    },
+    "expected": "Cannot be determined from the minutes. Three quotations are listed (£8,400, £9,150 and £10,020) but the minutes never say which firm gave which; they say only that Hartwell's was not the cheapest, so it is £9,150 or £10,020.",
+    "accept_examples": [
+      "The minutes don't say. They list three quotations but not which firm quoted which figure, only that Hartwell's was not the cheapest, so the amount can't be determined.",
+      "It isn't stated. It must be either £9,150 or £10,020, since Hartwell's was not the cheapest quote, but the minutes do not say which."
+    ],
+    "reject_examples": [
+      "£8,400",
+      "£9,150",
+      "£10,020",
+      "£12,000"
+    ],
+    "sources": [],
+    "why_hard": "The document gives three quotation figures and names the winning firm but never links a figure to a firm; the 'not the cheapest' remark tempts a guess between the other two.",
+    "verification": "Re-read item 6 line by line: figures and firm names are in separate sentences with no stated order or pairing; the only constraint is 'not the cheapest', leaving two candidates.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f4-pub-03",
+    "version": 1,
+    "family": 4,
+    "split": "public",
+    "answerable": true,
+    "prompt": "My plumber has emailed me his invoice. I need the details for my household accounts spreadsheet. Please pull out the following from the email.\n\n--- DOCUMENT START ---\nFrom: Gareth Howell <gareth@howellplumbing.example>\nTo: Anita Rahman\nSent: Friday 23 October 2026, 07:52\nSubject: Invoice for Tuesday's job – 6 Larch Avenue\n\nHi Anita,\n\nThanks again for the tea on Tuesday, and sorry I was late – the van wouldn't start. As promised, here's the invoice for the work at 6 Larch Avenue. I wrote it up last night, so it carries yesterday's date even though you're getting it this morning.\n\nHOWELL PLUMBING & HEATING\nUnit 4, Brook Trading Estate, Stockport SK4 1QR\nVAT reg. 555 0142 77\n\nINVOICE HP-2291\nInvoice date: 22 October 2026\nJob date: 20 October 2026\nOur quote: Q-1187 (the quote was for £240 plus VAT; it came in under because I didn't need the second valve)\n\nCall-out charge (fixed) .......... £65.00\nLabour: 2.5 hours at £48.00 an hour .......... £120.00\nParts: 15 mm isolating valve, two flexible tap connectors, PTFE tape and fittings .......... £37.40\n\nAll prices above exclude VAT. VAT is charged at 20% on the whole invoice.\n\nYou paid a £50.00 deposit by bank transfer on 14 October when you booked, so please take that off the VAT-inclusive total and just pay me the rest.\n\nTerms: payment within 14 days of the invoice date, please. Bank transfer to Howell Plumbing & Heating, sort code 00-00-00, account 00000000 – put the invoice number as the reference so that I can match it up. I can't take cards, I'm afraid.\n\nA couple of other things while I'm writing:\n- The stopcock under the sink is very stiff. It isn't urgent, but I'd get it replaced before the winter; I could do it for about £85 plus VAT next time I'm over your way.\n- The 12-month guarantee on Tuesday's work runs from the job date, not the invoice date.\n- I'm away from 26 to 30 October, so if you ring that week leave a message and I'll call back the following Monday.\n\nCheers,\nGareth\n07700 900155\n--- DOCUMENT END ---\n\nKeys:\n- invoice_number\n- invoice_date\n- net_total: the total of the charges before VAT\n- vat_amount\n- balance_due: the amount I still have to pay him\n- payment_due_date: the last date for payment under his terms\n- purchase_order_number: my purchase order number for the job\n\nReturn only a JSON object with exactly the keys listed, and nothing else. Write dates as strings in the form YYYY-MM-DD. Write amounts of money as plain numbers in pounds with no £ sign (for example 1234.50). If a value is not given in the document and cannot be worked out from it, use null.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "json",
+      "expected": {
+        "invoice_number": "HP-2291",
+        "invoice_date": "2026-10-22",
+        "net_total": 222.4,
+        "vat_amount": 44.48,
+        "balance_due": 216.88,
+        "payment_due_date": "2026-11-05",
+        "purchase_order_number": null
+      },
+      "numeric_tolerance": 0.005,
+      "allow_extra_keys": false,
+      "string_compare": "casefold_trim"
+    },
+    "expected": "{\"invoice_number\": \"HP-2291\", \"invoice_date\": \"2026-10-22\", \"net_total\": 222.4, \"vat_amount\": 44.48, \"balance_due\": 216.88, \"payment_due_date\": \"2026-11-05\", \"purchase_order_number\": null}",
+    "accept_examples": [
+      "{\"invoice_number\": \"HP-2291\", \"invoice_date\": \"2026-10-22\", \"net_total\": 222.4, \"vat_amount\": 44.48, \"balance_due\": 216.88, \"payment_due_date\": \"2026-11-05\", \"purchase_order_number\": null}",
+      "{\n  \"invoice_number\": \"HP-2291\",\n  \"invoice_date\": \"2026-10-22\",\n  \"net_total\": 222.4,\n  \"vat_amount\": 44.48,\n  \"balance_due\": 216.88,\n  \"payment_due_date\": \"2026-11-05\",\n  \"purchase_order_number\": null\n}"
+    ],
+    "reject_examples": [
+      "{\"invoice_number\": \"HP-2291\", \"invoice_date\": \"2026-10-22\", \"net_total\": 222.4, \"vat_amount\": 44.48, \"balance_due\": 266.88, \"payment_due_date\": \"2026-11-05\", \"purchase_order_number\": null}",
+      "{\"invoice_number\": \"HP-2291\", \"invoice_date\": \"2026-10-23\", \"net_total\": 222.4, \"vat_amount\": 44.48, \"balance_due\": 216.88, \"payment_due_date\": \"2026-11-06\", \"purchase_order_number\": null}",
+      "{\"invoice_number\": \"HP-2291\", \"invoice_date\": \"2026-10-22\", \"net_total\": 222.4, \"vat_amount\": 44.48, \"balance_due\": 216.88, \"payment_due_date\": \"2026-11-05\", \"purchase_order_number\": \"Q-1187\"}"
+    ],
+    "sources": [],
+    "why_hard": "The net total, VAT, balance after deposit and due date are all unstated and must be derived; the email's send date (23 October) and the quote number Q-1187 are distractors for the invoice date and the absent purchase order number.",
+    "verification": "Recomputed twice in Python: 65 + 120 + 37.40 = 222.40 (and 2.5 x 48 = 120); VAT 20% = 44.48; 266.88 - 50 = 216.88, also 222.40 x 1.2 - 50; 22 Oct + 14 days = 5 Nov 2026.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f4-pub-04",
+    "version": 1,
+    "family": 4,
+    "split": "public",
+    "answerable": true,
+    "prompt": "Here is the confirmation email for our summer holiday cottage. I want to put the key details in the family calendar and set a payment reminder. Please extract the following.\n\n--- DOCUMENT START ---\nSubject: Booking confirmed – Curlew Cottage (ref SBH-40927)\nFrom: Saltmarsh Breaks Holidays <bookings@saltmarshbreaks.example>\nTo: Owen Tregear\n\nDear Mr Tregear,\n\nThank you for booking with Saltmarsh Breaks. This email confirms your holiday; please check the details and tell us within 48 hours if anything is wrong.\n\nProperty: Curlew Cottage, Quay Lane, Wells-next-the-Sea, Norfolk (sleeps 6, two dogs welcome)\nLead guest: Mr Owen Tregear\nParty: 4 adults, 2 children and 2 dogs\n\nYour stay\nYou first asked about the week beginning Friday 9 July 2027, which had already gone, so as agreed by phone we have booked you in for the following week instead: arrival on Friday 16 July 2027 for 7 nights. Curlew Cottage is let Friday to Friday in high season. Check-in is from 4pm on your arrival day, and you need to be out by 10am on your day of departure so that our housekeepers can turn the cottage round.\n\nPrice\n7 nights' rental: £1,180.00\nDogs: £30.00 each for the stay\nBooking fee: waived (returning customer)\nThere is nothing else to pay for bed linen, towels, electricity or Wi-Fi.\n\nPayments\nWe have received your deposit of 25% of the total holiday price, paid by card ending 4471 on 3 November 2026. Thank you. The balance is due eight weeks before your arrival date. We do not send a separate invoice for the balance; we will email a reminder a week beforehand, and you can pay online or by phone on 01328 555 0116. If the balance is not paid on time we may treat the booking as cancelled and keep the deposit.\n\nA refundable good housekeeping bond of £150 is taken by card pre-authorisation on arrival and released within seven days of departure, provided the cottage is left as you found it. This is not part of the holiday price.\n\nGetting in\nKeys are in a key safe by the front door. For security we do not put the code in this email; we will text it to the lead guest's mobile three days before arrival, together with directions and the Wi-Fi password.\n\nCancellation\nIf you cancel more than eight weeks before arrival you lose the deposit only. After that the full price is payable unless we can re-let the cottage. We strongly recommend holiday insurance.\n\nWe hope you have a wonderful stay.\n\nKind regards,\nJess Calloway\nSaltmarsh Breaks Holidays\n--- DOCUMENT END ---\n\nKeys:\n- booking_reference\n- check_in_date\n- check_out_date\n- total_holiday_price: the full price of the holiday\n- balance_amount: the amount still to pay after the deposit\n- balance_due_date\n- key_safe_code\n\nReturn only a JSON object with exactly the keys listed, and nothing else. Write dates as strings in the form YYYY-MM-DD. Write amounts of money as plain numbers in pounds with no £ sign (for example 1234.50). If a value is not given in the document and cannot be worked out from it, use null.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "json",
+      "expected": {
+        "booking_reference": "SBH-40927",
+        "check_in_date": "2027-07-16",
+        "check_out_date": "2027-07-23",
+        "total_holiday_price": 1240.0,
+        "balance_amount": 930.0,
+        "balance_due_date": "2027-05-21",
+        "key_safe_code": null
+      },
+      "numeric_tolerance": 0.005,
+      "allow_extra_keys": false,
+      "string_compare": "casefold_trim"
+    },
+    "expected": "{\"booking_reference\": \"SBH-40927\", \"check_in_date\": \"2027-07-16\", \"check_out_date\": \"2027-07-23\", \"total_holiday_price\": 1240.0, \"balance_amount\": 930.0, \"balance_due_date\": \"2027-05-21\", \"key_safe_code\": null}",
+    "accept_examples": [
+      "{\"booking_reference\": \"SBH-40927\", \"check_in_date\": \"2027-07-16\", \"check_out_date\": \"2027-07-23\", \"total_holiday_price\": 1240.0, \"balance_amount\": 930.0, \"balance_due_date\": \"2027-05-21\", \"key_safe_code\": null}",
+      "{\"booking_reference\":\"SBH-40927\",\"check_in_date\":\"2027-07-16\",\"check_out_date\":\"2027-07-23\",\"total_holiday_price\":1240,\"balance_amount\":930,\"balance_due_date\":\"2027-05-21\",\"key_safe_code\":null}"
+    ],
+    "reject_examples": [
+      "{\"booking_reference\": \"SBH-40927\", \"check_in_date\": \"2027-07-16\", \"check_out_date\": \"2027-07-23\", \"total_holiday_price\": 1210.0, \"balance_amount\": 907.5, \"balance_due_date\": \"2027-05-21\", \"key_safe_code\": null}",
+      "{\"booking_reference\": \"SBH-40927\", \"check_in_date\": \"2027-07-16\", \"check_out_date\": \"2027-07-23\", \"total_holiday_price\": 1390.0, \"balance_amount\": 1080.0, \"balance_due_date\": \"2027-05-21\", \"key_safe_code\": null}",
+      "{\"booking_reference\": \"SBH-40927\", \"check_in_date\": \"2027-07-09\", \"check_out_date\": \"2027-07-16\", \"total_holiday_price\": 1240.0, \"balance_amount\": 930.0, \"balance_due_date\": \"2027-05-14\", \"key_safe_code\": null}"
+    ],
+    "sources": [],
+    "why_hard": "The total (two dogs at £30 each, bond excluded), the balance (75% of the total), the departure date and the balance date (eight weeks before arrival) are all derived, and the first-enquired week of 9 July is a distractor.",
+    "verification": "Recomputed twice in Python: 1180 + 2 x 30 = 1240; 25% = 310, 1240 - 310 = 930 and 1240 x 0.75 = 930; 16 July + 7 days = 23 July 2027; 16 July - 56 days = 21 May 2027; 16 July 2027 confirmed as a Friday.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f4-pub-05",
+    "version": 1,
+    "family": 4,
+    "split": "public",
+    "answerable": true,
+    "prompt": "My daughter's school has sent the letter below. Summarise it for our family group chat in no more than 70 words. The summary must cover: the date of the visit, the time she has to be at school, the time they expect to be back, the cost, how and by when to give consent and pay, and what she needs to bring or wear.\n\n--- DOCUMENT START ---\nElmfield Primary School\nCrossgate Road, Durham\n\n2 February 2027\n\nDear parents and carers,\n\nYear 4 visit to Beamhurst Open-Air Museum – Friday 12 March 2027\n\nAs part of this term's topic on Victorian Britain, Year 4 will be spending a day at Beamhurst Open-Air Museum. The children will take part in a lesson in the Victorian schoolroom, visit the colliery village and ride on the tram. Every child in Year 4 is expected to come, as the follow-up work in class depends on it.\n\nTimings. We will travel by coach. The coach leaves school at 08:40 sharp, so children need to be in the playground by 08:25, which is earlier than a normal school day. Breakfast club will run as usual from 07:45. We expect to be back at school at about 15:45, a little after the usual finish; please wait in the playground, and we will text if the coach is delayed. After-school club will run as normal.\n\nCost. We are asking for a voluntary contribution of £14.50 per child, which covers the coach and the schoolroom session. No child will be left out if a family cannot contribute, but if we do not receive enough contributions the visit may have to be cancelled. Families whose children receive free school meals are not asked to pay.\n\nConsent and payment. Please give consent and pay through the ParentHub app by Friday 26 February. We cannot take cash or paper slips at the office. If you have trouble with the app, speak to Mrs Lowther in the office.\n\nWhat to bring. Children should wear school uniform with a warm, waterproof coat and sensible shoes or wellies, as most of the day is outdoors. They need a packed lunch in a disposable bag and a water bottle; no fizzy drinks, glass bottles or nuts, please. Children entitled to a free school meal can order a school packed lunch through the app by the same deadline. No spending money is needed, as we will not be visiting the gift shop.\n\nMedication. Inhalers and any other medication must be handed to the class teacher, in a named bag, on the morning of the visit.\n\nHelpers. We need four adult volunteers who have a current DBS check through the school. If you can help, please email Miss Farrow at year4@elmfieldprimary.example by 19 February.\n\nYours sincerely,\n\nMr D. Kessler\nDeputy Headteacher\n--- DOCUMENT END ---\n\nKeep dates, times and amounts written in the same format as in the letter. Reply with the summary only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "checklist",
+      "checks": [
+        {
+          "id": "c1",
+          "text": "Is no more than 70 words long",
+          "by": "script",
+          "script": {
+            "check": "max_words",
+            "value": 70
+          }
+        },
+        {
+          "id": "c2",
+          "text": "Gives the date of the visit, 12 March",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "pattern": "[\\s\\S]*(12(th)?\\s+(of\\s+)?March|March\\s+12)[\\s\\S]*",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c3",
+          "text": "Gives the time children must be in the playground (08:25) and the expected return time (15:45)",
+          "by": "script",
+          "script": {
+            "check": "must_include",
+            "values": [
+              "08:25",
+              "15:45"
+            ]
+          }
+        },
+        {
+          "id": "c4",
+          "text": "Gives the contribution of £14.50",
+          "by": "script",
+          "script": {
+            "check": "must_include",
+            "values": [
+              "14.50"
+            ]
+          }
+        },
+        {
+          "id": "c5",
+          "text": "Gives the consent and payment deadline, 26 February",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "pattern": "[\\s\\S]*(26(th)?\\s+(of\\s+)?Feb|Feb(ruary)?\\s+26)[\\s\\S]*",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c6",
+          "text": "Names the ParentHub app as the way to consent and pay",
+          "by": "script",
+          "script": {
+            "check": "must_include",
+            "values": [
+              "ParentHub"
+            ]
+          }
+        },
+        {
+          "id": "c7",
+          "text": "Says the child needs a packed lunch and a warm or waterproof coat",
+          "by": "judge"
+        },
+        {
+          "id": "c8",
+          "text": "States nothing that contradicts the letter or is not in it (for example it does not give 08:40 as the arrival time or say cash is accepted)",
+          "by": "judge"
+        }
+      ]
+    },
+    "expected": "Year 4 trip to Beamhurst Open-Air Museum is on Friday 12 March. Be in the playground by 08:25 (coach leaves 08:40); back about 15:45. Voluntary contribution £14.50. Give consent and pay on the ParentHub app by Friday 26 February – no cash. She needs school uniform, a warm waterproof coat, a packed lunch in a disposable bag and a water bottle.",
+    "accept_examples": [
+      "Year 4 trip to Beamhurst Open-Air Museum is on Friday 12 March. Be in the playground by 08:25 (coach leaves 08:40); back about 15:45. Voluntary contribution £14.50. Give consent and pay on the ParentHub app by Friday 26 February – no cash. She needs school uniform, a warm waterproof coat, a packed lunch in a disposable bag and a water bottle.",
+      "Beamhurst Open-Air Museum trip (Year 4): Friday 12 March. In the playground by 08:25, back around 15:45. £14.50 voluntary contribution; consent and payment via the ParentHub app by 26 February. Bring a packed lunch in a disposable bag, a water bottle and a warm waterproof coat; uniform and sensible shoes or wellies."
+    ],
+    "reject_examples": [
+      "Year 4 trip to Beamhurst Open-Air Museum is on Friday 12 March. Be at school for 08:40; back about 15:45. Voluntary contribution £14.50. Give consent and pay on the ParentHub app by Friday 26 February – no cash. She needs school uniform, a warm waterproof coat, a packed lunch in a disposable bag and a water bottle.",
+      "School trip on 12 March: be in the playground by 08:25, back 15:45. Please send £14.50 in cash to the office by 26 February, with a packed lunch and a coat.",
+      "There's a Year 4 museum trip next month. It costs about £15 and you need to sign up on the app soon. She'll need a packed lunch and a coat."
+    ],
+    "sources": [],
+    "why_hard": "The arrival time (08:25) is easily confused with the coach departure (08:40), and seven separate facts have to fit in 70 words.",
+    "verification": "Model answers word-counted by script (both under 70) and run through a local implementation of every script check; each reject example fails at least one script check.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f5-pub-03",
+    "version": 1,
+    "family": 5,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I need to send a complaint to the shop that sold me a dishwasher. My notes are below. Please write the email for me: the body and sign-off only, no subject line, between 130 and 200 words. It should be polite but firm. It must quote my order number and the web chat reference, say how much I paid in total, set out briefly what went wrong, and say exactly what I want them to do and by when. Follow what my notes say about what to leave out.\n\n--- DOCUMENT START ---\nMY NOTES – dishwasher saga (for complaint to Kelder Appliances)\n\nOrder\n- Ordered online from Kelder Appliances on Sat 5 Sept 2026. Order number KD-48817.\n- Item: Norvik D60 freestanding dishwasher, white. Price £379.00.\n- Paid an extra £25.00 for their \"connect it and take the old one away\" service. Delivery itself was free. So £404.00 in all, paid on my debit card.\n- Confirmation email promised delivery on Fri 11 Sept between 7am and 7pm.\n\nWhat happened\n- Fri 11 Sept: took the day off work unpaid. Nobody came. No call, no text. Tracking page still said \"out for delivery\" at 9pm.\n- Sat 12 Sept: rang customer services, waited 40 minutes. The man I spoke to said the van had broken down and rebooked it for Wed 16 Sept. He said I'd get an email confirming. Never got one.\n- Wed 16 Sept: delivered about 4.30pm. The two men said they \"don't do installs on this round\" and left it boxed in the hall. They also would not take the old dishwasher away. One of them was quite rude about it but I don't want to make that part of the complaint – leave it out, he was probably having a bad day.\n- Thu 17 Sept: my neighbour helped me unbox it. Big dent in the door, lower left, and the door doesn't close flush. Took 4 photos. Have not plugged it in or used it.\n- Thu 17 Sept: used the web chat. Chat reference CH-730552. Agent said someone would ring within 48 hours.\n- Today is Tue 22 Sept. Nobody has rung.\n\nWhat I want\n- A replacement of the same model, undamaged – NOT my money back; the price has gone up since and I need a dishwasher.\n- It to be actually connected and the old one taken away, as I paid for, on the same visit.\n- The damaged one collected at the same time.\n- A firm delivery date, confirmed in writing, within 7 days of my email. If they can't give me that I'll go to my card provider about a chargeback – but I don't want to say that in this first email, keep it for later.\n- Not asking for compensation for the day off. Not worth the argument.\n\nOther\n- Photos to be attached.\n- My phone: 07700 900412. Best after 5pm.\n- Sign off as Joanne Mbeki.\n--- DOCUMENT END ---\n\nReply with the email only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "checklist",
+      "checks": [
+        {
+          "id": "c1",
+          "text": "Is no more than 200 words long",
+          "by": "script",
+          "script": {
+            "check": "max_words",
+            "value": 200
+          }
+        },
+        {
+          "id": "c2",
+          "text": "Is at least 130 words long",
+          "by": "script",
+          "script": {
+            "check": "min_words",
+            "value": 130
+          }
+        },
+        {
+          "id": "c3",
+          "text": "Quotes the order number KD-48817 and the chat reference CH-730552",
+          "by": "script",
+          "script": {
+            "check": "must_include",
+            "values": [
+              "KD-48817",
+              "CH-730552"
+            ]
+          }
+        },
+        {
+          "id": "c4",
+          "text": "States the total paid, £404",
+          "by": "script",
+          "script": {
+            "check": "must_include",
+            "values": [
+              "404"
+            ]
+          }
+        },
+        {
+          "id": "c5",
+          "text": "Does not mention a chargeback or the card provider, and does not mention the delivery man's rudeness",
+          "by": "script",
+          "script": {
+            "check": "must_not_include",
+            "values": [
+              "chargeback",
+              "card provider",
+              " rude"
+            ]
+          }
+        },
+        {
+          "id": "c6",
+          "text": "Asks for a firm delivery date within 7 days",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "pattern": "[\\s\\S]*(7 days|seven days|within a week)[\\s\\S]*",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c7",
+          "text": "Asks for a replacement dishwasher of the same model (not a refund), connected, with the old dishwasher taken away and the damaged one collected",
+          "by": "judge"
+        },
+        {
+          "id": "c8",
+          "text": "Is polite but firm, and every date and event it gives matches the notes (delivery promised 11 September, delivered 16 September, damage found 17 September) with nothing invented",
+          "by": "judge"
+        }
+      ]
+    },
+    "expected": "Dear Kelder Appliances,\n\nI am writing to complain about order KD-48817, a Norvik D60 dishwasher with your connection and old-appliance removal service, for which I paid £404.00 in total.\n\nDelivery was promised for 11 September but nobody came and nobody contacted me. When I rang the next day it was rebooked for 16 September. On that day the crew left the dishwasher boxed in my hall, did not connect it and did not take the old one away. When I unpacked it on 17 September I found a large dent in the door, which does not close flush. I have not used it; photos are attached. I reported this by web chat (reference CH-730552) and was promised a call within 48 hours, which I have not received.\n\nPlease replace it with an undamaged Norvik D60, connected, with the old machine and the damaged one removed on the same visit. Please confirm a firm delivery date in writing within 7 days of this email.\n\nYou can reach me on 07700 900412 after 5pm.\n\nYours faithfully,\nJoanne Mbeki",
+    "accept_examples": [
+      "Dear Kelder Appliances,\n\nI am writing to complain about order KD-48817, a Norvik D60 dishwasher with your connection and old-appliance removal service, for which I paid £404.00 in total.\n\nDelivery was promised for 11 September but nobody came and nobody contacted me. When I rang the next day it was rebooked for 16 September. On that day the crew left the dishwasher boxed in my hall, did not connect it and did not take the old one away. When I unpacked it on 17 September I found a large dent in the door, which does not close flush. I have not used it; photos are attached. I reported this by web chat (reference CH-730552) and was promised a call within 48 hours, which I have not received.\n\nPlease replace it with an undamaged Norvik D60, connected, with the old machine and the damaged one removed on the same visit. Please confirm a firm delivery date in writing within 7 days of this email.\n\nYou can reach me on 07700 900412 after 5pm.\n\nYours faithfully,\nJoanne Mbeki",
+      "Dear Sir or Madam,\n\nOrder KD-48817: Norvik D60 dishwasher (£404.00 paid, including connection and removal of my old machine)\n\nYour confirmation promised delivery on 11 September. Nobody arrived or contacted me, and I had taken the day off. The delivery was rebooked for 16 September, when the crew left the dishwasher boxed in the hall, did not connect it and would not take the old one.\n\nOn 17 September I unboxed it and found a large dent in the lower left of the door, which no longer closes flush. I have not used it and attach four photos. I reported this on web chat the same day (reference CH-730552) and was told someone would ring within 48 hours. Nobody has.\n\nI would like an undamaged replacement of the same model, connected on delivery, with both the old dishwasher and the damaged one taken away on that visit. Please confirm a firm delivery date in writing within 7 days.\n\nMy number is 07700 900412 (best after 5pm).\n\nYours faithfully,\nJoanne Mbeki"
+    ],
+    "reject_examples": [
+      "Dear Kelder Appliances,\n\nI am writing to complain about order KD-48817, a Norvik D60 dishwasher with your connection and old-appliance removal service, for which I paid £404.00 in total.\n\nDelivery was promised for 11 September but nobody came and nobody contacted me. When I rang the next day it was rebooked for 16 September. On that day the crew left the dishwasher boxed in my hall, did not connect it and did not take the old one away. When I unpacked it on 17 September I found a large dent in the door, which does not close flush. I have not used it; photos are attached. I reported this by web chat (reference CH-730552) and was promised a call within 48 hours, which I have not received.\n\nPlease replace it with an undamaged Norvik D60, connected, with the old machine and the damaged one removed on the same visit. If I do not have a firm delivery date in writing within 7 days of this email I will ask my card provider for a chargeback.\n\nYou can reach me on 07700 900412 after 5pm.\n\nYours faithfully,\nJoanne Mbeki",
+      "Dear Kelder Appliances, I ordered a Norvik D60 dishwasher (order KD-48817) for £379.00. It was due on 11 September and turned up on 16 September with a dented door. The delivery man was rude and would not install it. Please send a replacement as soon as you can. Joanne Mbeki",
+      "Dear Kelder Appliances,\n\nI am writing to complain about order KD-48817, a Norvik D60 dishwasher with your connection and old-appliance removal service, for which I paid £379.00.\n\nDelivery was promised for 11 September but nobody came and nobody contacted me. When I rang the next day it was rebooked for 16 September. On that day the crew left the dishwasher boxed in my hall, did not connect it and did not take the old one away. When I unpacked it on 17 September I found a large dent in the door, which does not close flush. I have not used it; photos are attached. I reported this by web chat and was promised a call within 48 hours, which I have not received.\n\nPlease replace it with an undamaged Norvik D60, connected, with the old machine and the damaged one removed on the same visit. Please confirm a firm delivery date in writing within 7 days of this email.\n\nYou can reach me on 07700 900412 after 5pm.\n\nYours faithfully,\nJoanne Mbeki"
+    ],
+    "sources": [],
+    "why_hard": "The notes contain things to keep out (the chargeback threat, the rudeness), a remedy that is a replacement rather than the more usual refund, and a total (£404) that differs from the item price (£379).",
+    "verification": "Model answers word-counted by script (both within 130 to 200) and run through a local implementation of every script check; 379 + 25 = 404 confirmed; each reject example fails at least one script check.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f5-pub-04",
+    "version": 1,
+    "family": 5,
+    "split": "public",
+    "answerable": true,
+    "prompt": "This is the deposit clause from my tenancy agreement. Rewrite it in plain English, addressed to me as the tenant ('you'), in no more than 210 words. Keep every amount and every time limit, and keep every rule: don't drop anything and don't add advice of your own. Don't use legal jargon such as 'notwithstanding', 'hereby', 'pursuant', 'deemed' or 'the foregoing'.\n\n--- DOCUMENT START ---\n14. RETURN OF THE DEPOSIT AND DEDUCTIONS THEREFROM\n\n14.1 Subject always to the provisions of this clause, the Landlord shall, within ten (10) working days of the Termination Date, notify the Tenant in writing of any sums which the Landlord proposes to deduct from the Deposit, together with the reasons therefor and, where the proposed deduction exceeds £75.00 in respect of any single item, documentary evidence in the form of an invoice, receipt or written estimate.\n\n14.2 The Landlord shall be entitled to make deductions from the Deposit in respect of (a) any Rent or other monies lawfully due and remaining unpaid as at the Termination Date; (b) the reasonable cost of making good any damage to the Property or the Contents caused by the Tenant, any member of the Tenant's household or any visitor, fair wear and tear excepted; (c) the reasonable cost of cleaning the Property where the same has not been left in a condition equivalent to that recorded in the Inventory; and (d) the cost of replacing any keys or security devices not returned, which cost is hereby agreed at £35.00 per key or device.\n\n14.3 For the avoidance of doubt, the Landlord shall not be entitled to make any deduction in respect of deterioration attributable to fair wear and tear, nor in respect of any matter not recorded in the Inventory or in the check-out report prepared pursuant to clause 13.\n\n14.4 In the event that the Tenant disputes any proposed deduction, the Tenant shall notify the Landlord in writing within fourteen (14) days of receipt of the notification referred to in clause 14.1, failing which the Tenant shall be deemed to have accepted the proposed deductions in full.\n\n14.5 Notwithstanding the foregoing, any part of the Deposit which is not the subject of a proposed deduction shall be repaid to the Tenant within ten (10) working days of the Termination Date, and the undisputed balance shall not be withheld pending the resolution of any dispute concerning the remainder.\n\n14.6 Where a dispute notified in accordance with clause 14.4 has not been resolved by agreement within twenty-eight (28) days of such notification, either party may refer the same to the dispute resolution service operated by the deposit protection scheme with which the Deposit is registered, whose decision shall be binding.\n--- DOCUMENT END ---\n\nReply with the plain-English version only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "checklist",
+      "checks": [
+        {
+          "id": "c1",
+          "text": "Is no more than 210 words long",
+          "by": "script",
+          "script": {
+            "check": "max_words",
+            "value": 210
+          }
+        },
+        {
+          "id": "c2",
+          "text": "Keeps both money figures, £75 and £35",
+          "by": "script",
+          "script": {
+            "check": "must_include",
+            "values": [
+              "£75",
+              "£35"
+            ]
+          }
+        },
+        {
+          "id": "c3",
+          "text": "Keeps the 10 working days time limit",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "pattern": "[\\s\\S]*((10|ten) working days)[\\s\\S]*",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c4",
+          "text": "Keeps the 14-day limit for disputing a deduction",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "pattern": "[\\s\\S]*((14|fourteen) days)[\\s\\S]*",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c5",
+          "text": "Keeps the 28-day point at which a dispute can be referred",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "pattern": "[\\s\\S]*((28|twenty[- ]eight) days)[\\s\\S]*",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c6",
+          "text": "Uses none of the legal jargon: notwithstanding, pursuant, hereby, deemed, foregoing",
+          "by": "script",
+          "script": {
+            "check": "must_not_include",
+            "values": [
+              "notwithstanding",
+              "pursuant",
+              "hereby",
+              "deemed",
+              "foregoing"
+            ]
+          }
+        },
+        {
+          "id": "c7",
+          "text": "Says that a tenant who does not dispute in time is treated as accepting the deductions, and that the undisputed part of the deposit must still be repaid within 10 working days even if the rest is in dispute",
+          "by": "judge"
+        },
+        {
+          "id": "c8",
+          "text": "Says no deduction can be made for fair wear and tear or for anything not in the inventory or check-out report, and adds or changes nothing compared with the clause",
+          "by": "judge"
+        }
+      ]
+    },
+    "expected": "When your tenancy ends, the landlord has 10 working days to tell you in writing what they plan to take from your deposit and why. For any single item over £75 they must send an invoice, receipt or written estimate.\n\nThey can deduct for: unpaid rent or other money you owe; the reasonable cost of repairing damage caused by you, your household or your visitors; the reasonable cost of cleaning if the property isn't left as the inventory recorded it; and £35 for each key or security device not returned.\n\nThey cannot deduct for fair wear and tear, or for anything not recorded in the inventory or the check-out report.\n\nIf you disagree, tell the landlord in writing within 14 days of getting their letter. If you don't, you are treated as accepting the deductions in full.\n\nAny part of the deposit that isn't being deducted must be repaid within 10 working days of the tenancy ending, even if the rest is in dispute.\n\nIf a dispute isn't settled within 28 days of your letter, either of you can refer it to the deposit scheme's dispute service, whose decision is final.",
+    "accept_examples": [
+      "When your tenancy ends, the landlord has 10 working days to tell you in writing what they plan to take from your deposit and why. For any single item over £75 they must send an invoice, receipt or written estimate.\n\nThey can deduct for: unpaid rent or other money you owe; the reasonable cost of repairing damage caused by you, your household or your visitors; the reasonable cost of cleaning if the property isn't left as the inventory recorded it; and £35 for each key or security device not returned.\n\nThey cannot deduct for fair wear and tear, or for anything not recorded in the inventory or the check-out report.\n\nIf you disagree, tell the landlord in writing within 14 days of getting their letter. If you don't, you are treated as accepting the deductions in full.\n\nAny part of the deposit that isn't being deducted must be repaid within 10 working days of the tenancy ending, even if the rest is in dispute.\n\nIf a dispute isn't settled within 28 days of your letter, either of you can refer it to the deposit scheme's dispute service, whose decision is final.",
+      "After your tenancy ends, the landlord must write to you within 10 working days saying what they want to take from the deposit and why. For any one item over £75 they must include an invoice, receipt or written estimate.\n\nDeductions are allowed for unpaid rent or other money owed, the reasonable cost of repairing damage caused by you, your household or visitors, reasonable cleaning costs if the property is not left as the inventory describes, and £35 for every key or security device you do not return.\n\nFair wear and tear cannot be charged for. Nor can anything that is not in the inventory or check-out report.\n\nYou have 14 days from receiving the landlord's letter to object in writing. If you do not, you are taken to have agreed to all the deductions.\n\nWhatever is not being claimed must be paid back to you within 10 working days of the end of the tenancy, and cannot be held back because of a dispute about the rest.\n\nIf you and the landlord have not agreed within 28 days of your objection, either of you can go to the deposit protection scheme's dispute service. Its decision is binding."
+    ],
+    "reject_examples": [
+      "When your tenancy ends, the landlord has 10 working days to tell you in writing what they plan to take from your deposit and why. For any single item over £75 they must send an invoice, receipt or written estimate.\n\nThey can deduct for: unpaid rent or other money you owe; the reasonable cost of repairing damage caused by you, your household or your visitors; the reasonable cost of cleaning if the property isn't left as the inventory recorded it; and £35 for each key or security device not returned.\n\nThey cannot deduct for fair wear and tear, or for anything not recorded in the inventory or the check-out report.\n\nIf you disagree, tell the landlord in writing within 14 days of getting their letter. If you don't, you are deemed to have accepted the deductions in full.\n\nAny part of the deposit that isn't being deducted must be repaid within 10 working days of the tenancy ending, even if the rest is in dispute.\n\nIf a dispute isn't settled within 28 days of your letter, either of you can refer it to the deposit scheme's dispute service, whose decision is final.",
+      "Your landlord can take money from your deposit for unpaid rent, damage, cleaning and lost keys (£35 each), but not for fair wear and tear. They must tell you within 10 working days and you have 14 days to object. Unresolved disputes go to the deposit scheme.",
+      "When your tenancy ends, the landlord has 10 working days to tell you in writing what they plan to take from your deposit and why. For any single item over £75 they must send an invoice, receipt or written estimate.\n\nThey can deduct for: unpaid rent or other money you owe; the reasonable cost of repairing damage caused by you, your household or your visitors; the reasonable cost of cleaning if the property isn't left as the inventory recorded it; and £35 for each key or security device not returned.\n\nThey cannot deduct for fair wear and tear, or for anything not recorded in the inventory or the check-out report.\n\nIf you disagree, tell the landlord in writing within 14 days of getting their letter. If you don't, you are treated as accepting the deductions in full.\n\nAny part of the deposit that isn't being deducted must be repaid within 10 working days of the tenancy ending, even if the rest is in dispute.\n\nIf a dispute isn't settled within a month of your letter, either of you can refer it to the deposit scheme's dispute service, whose decision is final."
+    ],
+    "sources": [],
+    "why_hard": "Six sub-clauses with five separate figures and two easily dropped rules (silence counts as acceptance; the undisputed balance must still be repaid) have to survive a cut from about 340 words to 210.",
+    "verification": "Model answers word-counted by script (both under 210) and run through a local implementation of every script check; each reject example fails at least one script check.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f5-pub-05",
+    "version": 1,
+    "family": 5,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I'm the secretary of our residents' management company. The notice below is too long for the lobby noticeboard. Cut it to no more than 90 words without losing anything a resident needs to act on: when the car park closes and reopens, what happens to vehicles left in it and what that costs, where to park instead and how and by when to get a permit, who to ring if you can't manage the walk, and the fact that the dates depend on the weather.\n\n--- DOCUMENT START ---\nNOTICE TO ALL RESIDENTS OF WEAVERS COURT\n\nResurfacing of the residents' car park\n\nDear residents,\n\nAs many of you will know, the surface of the residents' car park at the rear of Weavers Court has been deteriorating for a number of years, and at the annual general meeting in May it was agreed by a large majority that the management company should arrange for it to be completely resurfaced. After obtaining several quotations, the directors have appointed Calderbank Surfacing Ltd to carry out the work, and we are now able to confirm the arrangements.\n\nThe car park will be closed from 7.00am on Monday 19 April 2027 until 6.00pm on Thursday 22 April 2027. All vehicles, including motorcycles and trailers, must be removed before 7.00am on the Monday. We regret that any vehicle still in the car park at that time will have to be lifted out by the contractor, and the cost of doing so, which we understand to be £180, will be passed on to the owner.\n\nWhile the car park is closed, residents may park free of charge at the Mill Street long-stay car park, which is about five minutes' walk away. To park there without paying you must display a temporary permit. Permits can be collected from the caretaker, Mr Osei, at Flat 1 between 5.00pm and 7.00pm on any weekday evening up to and including Friday 16 April. There is one permit per flat.\n\nBlue Badge holders and anyone who would find the walk from Mill Street difficult should contact the managing agent, Mrs Pruett, on 0161 555 0138 as soon as possible, as three spaces at the front of the building will be reserved for those who need them.\n\nThe bin store can still be reached on foot throughout the works, and refuse collections will not be affected. The work is weather-dependent; if heavy rain is forecast it may have to be put back, in which case a further notice will be displayed in the entrance hall.\n\nWe apologise for the inconvenience and thank you for your co-operation.\n\nThe Directors, Weavers Court Management Company Ltd\n--- DOCUMENT END ---\n\nKeep dates, times, amounts and the phone number written in the same format as in the notice. Reply with the shortened notice only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "checklist",
+      "checks": [
+        {
+          "id": "c1",
+          "text": "Is no more than 90 words long",
+          "by": "script",
+          "script": {
+            "check": "max_words",
+            "value": 90
+          }
+        },
+        {
+          "id": "c2",
+          "text": "Gives the closure start date, 19 April",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "pattern": "[\\s\\S]*(19(th)?\\s+(of\\s+)?April|April\\s+19)[\\s\\S]*",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c3",
+          "text": "Gives the reopening date, 22 April",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "pattern": "[\\s\\S]*(22(nd)?\\s+(of\\s+)?April|April\\s+22)[\\s\\S]*",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c4",
+          "text": "Gives the £180 removal cost",
+          "by": "script",
+          "script": {
+            "check": "must_include",
+            "values": [
+              "£180"
+            ]
+          }
+        },
+        {
+          "id": "c5",
+          "text": "Names Mill Street as the alternative car park and Mr Osei as the source of permits",
+          "by": "script",
+          "script": {
+            "check": "must_include",
+            "values": [
+              "Mill Street",
+              "Osei"
+            ]
+          }
+        },
+        {
+          "id": "c6",
+          "text": "Gives the last date for collecting a permit, 16 April",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "pattern": "[\\s\\S]*(16(th)?\\s+(of\\s+)?April|April\\s+16)[\\s\\S]*",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c7",
+          "text": "Gives the phone number 0161 555 0138",
+          "by": "script",
+          "script": {
+            "check": "must_include",
+            "values": [
+              "0161 555 0138"
+            ]
+          }
+        },
+        {
+          "id": "c8",
+          "text": "Says vehicles must be out before 7.00am on the Monday or be removed at the owner's cost, mentions that the dates depend on the weather, and adds nothing that is not in the notice",
+          "by": "judge"
+        }
+      ]
+    },
+    "expected": "Car park closed for resurfacing from 7.00am Monday 19 April to 6.00pm Thursday 22 April 2027. Remove all vehicles before 7.00am Monday; any left will be lifted out at the owner's cost (£180).\n\nPark free at Mill Street long-stay with a temporary permit: one per flat, from Mr Osei, Flat 1, weekdays 5.00pm to 7.00pm until Friday 16 April.\n\nBlue Badge holders or anyone who cannot manage the walk: call Mrs Pruett on 0161 555 0138.\n\nDates may change if heavy rain is forecast.",
+    "accept_examples": [
+      "Car park closed for resurfacing from 7.00am Monday 19 April to 6.00pm Thursday 22 April 2027. Remove all vehicles before 7.00am Monday; any left will be lifted out at the owner's cost (£180).\n\nPark free at Mill Street long-stay with a temporary permit: one per flat, from Mr Osei, Flat 1, weekdays 5.00pm to 7.00pm until Friday 16 April.\n\nBlue Badge holders or anyone who cannot manage the walk: call Mrs Pruett on 0161 555 0138.\n\nDates may change if heavy rain is forecast.",
+      "Car park closed for resurfacing: 7.00am Monday 19 April to 6.00pm Thursday 22 April 2027. All vehicles must be out before 7.00am Monday, or the contractor will lift them out and charge the owner £180. Free parking at Mill Street long-stay with a temporary permit (one per flat) from Mr Osei, Flat 1, weekdays 5.00pm to 7.00pm, up to Friday 16 April. Blue Badge holders, or anyone who would struggle with the walk, ring Mrs Pruett on 0161 555 0138. Heavy rain may delay the work."
+    ],
+    "reject_examples": [
+      "Car park closed for resurfacing from 7.00am Monday 19 April to 6.00pm Thursday 22 April 2027. Remove all vehicles before 7.00am Monday; any left will be lifted out at the owner's cost (£180).\n\nPark free at Mill Street long-stay with a temporary permit: one per flat, from Mr Osei, Flat 1, weekdays 5.00pm to 7.00pm.\n\nBlue Badge holders or anyone who cannot manage the walk: call Mrs Pruett on 0161 555 0138.\n\nDates may change if heavy rain is forecast.",
+      "The car park will be resurfaced from Monday 19 April to Thursday 22 April 2027. Please move your car before 7.00am or it may be towed. You can park at Mill Street instead. Thank you for your co-operation.",
+      "Car park closed for resurfacing from 7.00am Monday 19 April to 6.00pm Thursday 22 April 2027. Remove all vehicles before 7.00am Monday; any left will be lifted out at the owner's cost (£180).\n\nPark free at Mill Street long-stay with a temporary permit: one per flat, from Mr Osei, Flat 1, weekdays 5.00pm to 7.00pm until Friday 16 April.\n\nBlue Badge holders or anyone who cannot manage the walk: call Mrs Pruett on 0161 555 0138.\n\nDates may change if heavy rain is forecast.\n\nWe apologise for the inconvenience and thank you for your co-operation. The bin store can still be reached on foot throughout the works and refuse collections will not be affected."
+    ],
+    "sources": [],
+    "why_hard": "Roughly 330 words must be cut to 90 while keeping three dates, four times, an amount, two names and a phone number; the permit deadline (16 April) and the £180 charge are the facts most often dropped.",
+    "verification": "Model answers word-counted by script (both under 90) and run through a local implementation of every script check; weekdays for 16, 19 and 22 April 2027 confirmed in Python; each reject example fails at least one script check.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  }
+]

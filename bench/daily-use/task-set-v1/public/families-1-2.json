@@ -1,0 +1,562 @@
+[
+  {
+    "id": "f1-pub-03",
+    "version": 1,
+    "family": 1,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I'm the accounts administrator at Harlow Build Supplies and I need an out-of-office auto-reply for my email. My notes:\n\n- I'm off from Monday 23 November 2026 for exactly two weeks. (I'm having knee surgery, but nobody outside my team needs to know that, or anything else about why I'm away.)\n- I'm back at my desk on the first Monday after those two weeks.\n- While I'm away, invoice queries go to Tomasz on accounts@harlowbuild.example. He is only covering invoices, so don't suggest he can help with anything else.\n- Everything else will wait until I'm back.\n- My mobile is 07700 900152, but don't give that out.\n\nRules for the reply:\n1. Between 60 and 80 words in total, counting every word including the opening and the sign-off.\n2. It must start with exactly this sentence: Thank you for your email.\n3. State the date I return to work, written as weekday, day number and month, with no year and no \"st\", \"nd\", \"rd\" or \"th\" (in the style of \"Friday 2 October\").\n4. Give the email address for invoice queries and make clear it is for invoice queries.\n5. Give no reason of any kind for my absence, and do not use the words \"sorry\", \"unfortunately\" or \"apologies\".\n6. No phone numbers, and do not write the year anywhere.\n7. The last line must be exactly: Kind regards, Priya Nair\n\nReply with the auto-reply text only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "constraints",
+      "all": [
+        {
+          "check": "min_words",
+          "value": 60
+        },
+        {
+          "check": "max_words",
+          "value": 80
+        },
+        {
+          "check": "starts_with",
+          "value": "Thank you for your email."
+        },
+        {
+          "check": "ends_with",
+          "value": "Kind regards, Priya Nair"
+        },
+        {
+          "check": "must_include",
+          "values": [
+            "Monday 7 December",
+            "accounts@harlowbuild.example",
+            "invoice"
+          ]
+        },
+        {
+          "check": "must_not_include",
+          "values": [
+            "surgery",
+            "knee",
+            "operation",
+            "hospital",
+            "medical",
+            "sorry",
+            "unfortunately",
+            "apologies",
+            "07700",
+            "900152",
+            "2026"
+          ]
+        }
+      ]
+    },
+    "expected": "An auto-reply of 60 to 80 words that opens 'Thank you for your email.', gives the return date as Monday 7 December, gives accounts@harlowbuild.example for invoice queries, gives no reason for absence, no phone number, no year, and ends 'Kind regards, Priya Nair'.",
+    "accept_examples": [
+      "Thank you for your email. I am away from the office from Monday 23 November and will be back at my desk on Monday 7 December. I will not be reading messages while I am away. If your message is an invoice query, you can send it to accounts@harlowbuild.example and it will be picked up there. Anything else will be dealt with as soon as I return to work.\n\nKind regards, Priya Nair",
+      "Thank you for your email. I am currently out of the office and will return on Monday 7 December. For invoice queries only, you are welcome to write to accounts@harlowbuild.example, where a colleague is covering invoices in my absence. All other matters will wait for my return, and I will reply to your message in the order it arrived once I am back at my desk that morning.\nKind regards, Priya Nair"
+    ],
+    "reject_examples": [
+      "Thank you for your email. I am away from the office from Monday 23 November and will be back at my desk on Monday 30 November. I will not be reading messages while I am away. If your message is an invoice query, you can send it to accounts@harlowbuild.example and it will be picked up there. Anything else will be dealt with as soon as I return to work.\n\nKind regards, Priya Nair",
+      "Thank you for your email. I am recovering from knee surgery and away from Monday 23 November and will be back at my desk on Monday 7 December. I will not be reading messages while I am away. If your message is an invoice query, you can send it to accounts@harlowbuild.example and it will be picked up there. Anything else will be dealt with as soon as I return to work.\n\nKind regards, Priya Nair",
+      "Thank you for your email. I am out of the office until Monday 7 December. For invoice queries, contact accounts@harlowbuild.example.\n\nKind regards, Priya Nair"
+    ],
+    "sources": [],
+    "why_hard": "The return date is not stated and must be worked out (two weeks from Monday 23 November ends Friday 4 December, so the return is Monday 7 December), while the tempting reason for absence and the mobile number must be left out inside a tight word band.",
+    "verification": "Checked with Python that 23 November 2026 and 7 December 2026 are both Mondays and that 23 November plus 14 days is 7 December; ran both accept and all three reject examples through a script implementing the constraints checks.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f1-pub-04",
+    "version": 1,
+    "family": 1,
+    "split": "public",
+    "answerable": true,
+    "prompt": "My landlord sent our house this rambling message about the boiler. I want to turn it into a short card to tape inside the boiler cupboard for my housemates.\n\n--- MESSAGE ---\nHi all, Gareth from Brightside Heating talked me through this on the phone so here goes. If the boiler locks out (red light flashing) you can reset it yourselves. The reset button is the one on the left under the flap, and you hold it in for 3 seconds, not longer. But before you touch that you need to check the pressure gauge, which should read between 1 and 1.5 bar. If it's under 1, open the silver filling tap under the boiler until the needle gets to 1.5 bar and then close the tap again, fully. Oh, and before any of that, turn the heating off at the wall thermostat. After you've pressed reset, wait 5 minutes before you turn the thermostat back up. Gareth says people always rush this bit and it locks out again within 30 seconds. If it fails twice don't keep trying, ring me on 01632 960114. Thanks, Moira\n--- END ---\n\nWrite the card to this exact layout:\n- Line 1 is exactly: BOILER RESET: 6 STEPS\n- Then exactly six numbered lines, starting \"1. \" to \"6. \", one step per line, in the order the steps must actually be carried out (which is not the order Moira mentions them in).\n- Each step is at most 12 words, not counting the number.\n- The final line is exactly: If it fails twice, call 01632 960114.\n- Eight lines in total. No blank lines, no other text, plain text with no bold or other markup.\n- Between them the steps must include the figures \"1.5 bar\", \"3 seconds\" and \"5 minutes\", written exactly like that.\n- Do not mention Gareth, Brightside Heating or Moira, and do not use the words \"please\" or \"simply\".\n\nReply with the card only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "constraints",
+      "all": [
+        {
+          "check": "regex",
+          "pattern": "^\\s*BOILER RESET: 6 STEPS *\\r?\\n1\\. \\S+( \\S+){0,11} *\\r?\\n2\\. \\S+( \\S+){0,11} *\\r?\\n3\\. \\S+( \\S+){0,11} *\\r?\\n4\\. \\S+( \\S+){0,11} *\\r?\\n5\\. \\S+( \\S+){0,11} *\\r?\\n6\\. \\S+( \\S+){0,11} *\\r?\\nIf it fails twice, call 01632 960114\\.\\s*$"
+        },
+        {
+          "check": "line_count",
+          "value": 8
+        },
+        {
+          "check": "must_include",
+          "values": [
+            "1.5 bar",
+            "3 seconds",
+            "5 minutes"
+          ]
+        },
+        {
+          "check": "regex",
+          "pattern": "(^|\\n)1\\. [^\\n]*([Tt]hermostat|[Hh]eating)"
+        },
+        {
+          "check": "regex",
+          "pattern": "1\\.5 bar[\\s\\S]*3 seconds[\\s\\S]*5 minutes"
+        },
+        {
+          "check": "must_not_include",
+          "values": [
+            "Gareth",
+            "Brightside",
+            "Moira",
+            "please",
+            "simply",
+            "**"
+          ]
+        }
+      ]
+    },
+    "expected": "Eight lines: the fixed title; six numbered steps of at most 12 words in true working order (heating off at thermostat; check gauge; top up to 1.5 bar if under 1; close tap; hold reset 3 seconds; wait 5 minutes then thermostat up); the fixed closing line. No names, no 'please' or 'simply'.",
+    "accept_examples": [
+      "BOILER RESET: 6 STEPS\n1. Turn the heating off at the wall thermostat.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. If under 1, open the silver filling tap to 1.5 bar.\n4. Close the filling tap fully.\n5. Hold the left reset button under the flap for 3 seconds.\n6. Wait 5 minutes, then turn the thermostat back up.\nIf it fails twice, call 01632 960114.",
+      "BOILER RESET: 6 STEPS\n1. Switch off the heating at the wall thermostat.\n2. Read the pressure gauge.\n3. Below 1? Open the silver tap until it shows 1.5 bar.\n4. Shut the tap completely.\n5. Press and hold the left-hand reset button for 3 seconds.\n6. Wait 5 minutes before turning the thermostat up again.\nIf it fails twice, call 01632 960114."
+    ],
+    "reject_examples": [
+      "BOILER RESET: 6 STEPS\n1. Hold the left reset button under the flap for 3 seconds.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. If under 1, open the silver filling tap to 1.5 bar.\n4. Close the filling tap fully.\n5. Turn the heating off at the wall thermostat.\n6. Wait 5 minutes, then turn the thermostat back up.\nIf it fails twice, call 01632 960114.",
+      "BOILER RESET: 6 STEPS\n1. Turn the heating off at the wall thermostat.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. If the gauge is reading under 1, please open the silver filling tap slowly until it reaches 1.5 bar.\n4. Close the filling tap fully.\n5. Hold the left reset button under the flap for 3 seconds.\n6. Wait 5 minutes, then turn the thermostat back up.\nIf it fails twice, call 01632 960114.",
+      "BOILER RESET: 6 STEPS\n\n1. Turn the heating off at the wall thermostat.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. If under 1, open the silver filling tap to 1.5 bar.\n4. Close the filling tap fully.\n5. Hold the left reset button under the flap for 3 seconds.\n6. Wait 5 minutes, then turn the thermostat back up.\nIf it fails twice, call Moira on 01632 960114."
+    ],
+    "sources": [],
+    "why_hard": "The message gives the steps out of order (the first action is mentioned last-but-one), so a model that follows the message order puts the reset before the pressure check; the 12-word cap and fixed first and last lines must hold at the same time.",
+    "verification": "Re-read the message to fix the true order (thermostat off, gauge, fill, close, reset, wait) and ran both accept and all three reject examples through a script implementing the regex, line-count and include checks.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f1-pub-05",
+    "version": 1,
+    "family": 1,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I chair the Tannery Wharf residents' association in Leeds. Please write the notice for the lobby noticeboard about our annual general meeting. The details:\n\n- The AGM is on Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp. It is in the Community Room on the ground floor of Block C.\n- Agenda: (1) the chair's report, (2) the accounts for the year, (3) election of the committee, (4) the lift replacement programme.\n- People need to bring their fob (the Community Room door is fob-only now) and, if they want to vote, proof of address.\n- Background for you only, not for the notice: the lift work has gone £38,000 over budget, and Councillor Reyes, who was due to speak, has pulled out.\n\nRules:\n1. Between 80 and 110 words in total, counting every word including the first and last lines and the labels.\n2. Plain text, no markdown. The first line must be exactly: TANNERY WHARF AGM 2027\n3. Then four labelled sections in this order, each label at the very start of its own line: What: then When: then Where: then Bring:\n4. Give the date in full as \"Thursday 21 January 2027\" and give both times, written exactly as 6.45pm and 7.15pm.\n5. Name all four agenda items, using British spelling.\n6. Say that a fob is needed, and that proof of address is needed to vote.\n7. Do not mention the budget, any sum of money, the councillor, or any guest speaker.\n8. The last line must be exactly: All residents welcome.\n\nReply with the notice only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "constraints",
+      "all": [
+        {
+          "check": "min_words",
+          "value": 80
+        },
+        {
+          "check": "max_words",
+          "value": 110
+        },
+        {
+          "check": "starts_with",
+          "value": "TANNERY WHARF AGM 2027"
+        },
+        {
+          "check": "ends_with",
+          "value": "All residents welcome."
+        },
+        {
+          "check": "regex",
+          "pattern": "\\nWhat:[\\s\\S]*\\nWhen:[\\s\\S]*\\nWhere:[\\s\\S]*\\nBring:"
+        },
+        {
+          "check": "must_include",
+          "values": [
+            "Thursday 21 January 2027",
+            "6.45pm",
+            "7.15pm",
+            "Block C",
+            "Community Room",
+            "fob",
+            "proof of address",
+            "programme",
+            "report",
+            "accounts",
+            "election",
+            "lift"
+          ]
+        },
+        {
+          "check": "must_not_include",
+          "values": [
+            "£",
+            "38,000",
+            "budget",
+            "Reyes",
+            "councillor",
+            "speaker",
+            "**"
+          ]
+        }
+      ]
+    },
+    "expected": "A plain-text notice of 80 to 110 words: fixed first line, then What:, When:, Where:, Bring: in that order, with the full date, both times, all four agenda items (with 'programme'), fob and proof of address, nothing about money or the councillor, and the fixed last line.",
+    "accept_examples": [
+      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts promptly at 7.15pm.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you must also bring proof of address.\nAll residents welcome.",
+      "TANNERY WHARF AGM 2027\n\nWhat: Our annual general meeting. The agenda is the chair's report, the accounts for the year, the election of the committee and the lift replacement programme.\n\nWhen: Thursday 21 January 2027. Doors open at 6.45pm. The meeting starts at 7.15pm sharp, so please arrive in good time.\n\nWhere: Community Room, ground floor of Block C.\n\nBring: Your fob, as the Community Room door can only be opened with one, and proof of address if you would like to vote on the night.\n\nAll residents welcome."
+    ],
+    "reject_examples": [
+      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme, which is now over budget.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts promptly at 7.15pm.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you must also bring proof of address.\nAll residents welcome.",
+      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement program.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts promptly at 7.15pm.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you must also bring proof of address.\nAll residents welcome.",
+      "TANNERY WHARF AGM 2027\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts promptly at 7.15pm.\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you must also bring proof of address.\nAll residents welcome."
+    ],
+    "sources": [],
+    "why_hard": "The facts supplied are thin for an 80-word minimum, which tempts a model to pad with the background it was told to leave out (the overspend and the absent councillor) or to drift over 110 words; section order and British spelling must also hold.",
+    "verification": "Checked with Python that 21 January 2027 is a Thursday; ran both accept and all three reject examples (budget mention, American spelling, sections out of order) through a script implementing the checks.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f1-pub-06",
+    "version": 1,
+    "family": 1,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I'm setting up the sign-in sheet for Thursday's supplier briefing at our Leeds office. Below is the RSVP export, which is a mess. Please give me the final attendee list.\n\n--- RSVP EXPORT (name | company | status | date of reply) ---\nDr Amara Okonkwo-Reid | Castlegate Logistics | Accepted | 3 Nov\nmr. david hughes | Pennine Fixings Ltd | Declined | 4 Nov\nSofia MARCHETTI | Aire Valley Packaging | Accepted | 4 Nov\nTom Abbott | Castlegate Logistics | Accepted | 5 Nov\nImran Qureshi | Northgate Print | Declined | 5 Nov\nProf. Helen Zielinski | Ridings Institute | Tentative | 6 Nov\nKwame Mensah | Northgate Print | No reply |\nHughes, David | Pennine Fixings Ltd | Accepted | 12 Nov\nMARCHETTI, Sofia | Aire Valley Packaging | Tentative | 10 Nov\nniamh doyle | Aire Valley Packaging | Accepted | 9 Nov\nImran Qureshi | Northgate Print | Accepted | 2 Nov\n--- END ---\n\nRules:\n1. Where someone appears more than once, only their most recently dated reply counts.\n2. Include only people whose reply that counts is Accepted or Tentative. Leave out Declined and No reply.\n3. One person per line, each person once, in exactly this format: SURNAME, Firstname (Company)\n   The surname is in capitals, the first name has an initial capital only, and the company is written exactly as in the export.\n4. Drop all titles (Dr, Mr, Prof. and so on).\n5. If the reply that counts is Tentative, add a space and [TBC] at the end of that person's line.\n6. Sort the lines A to Z by surname.\n7. No heading, numbering, bullets or blank lines.\n\nReply with the list only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "regex",
+      "pattern": "^\\s*ABBOTT,\\ Tom\\ \\(Castlegate\\ Logistics\\)[ \\t]*\\r?\\nDOYLE,\\ Niamh\\ \\(Aire\\ Valley\\ Packaging\\)[ \\t]*\\r?\\nHUGHES,\\ David\\ \\(Pennine\\ Fixings\\ Ltd\\)[ \\t]*\\r?\\nMARCHETTI,\\ Sofia\\ \\(Aire\\ Valley\\ Packaging\\)\\ \\[TBC\\][ \\t]*\\r?\\nOKONKWO\\-REID,\\ Amara\\ \\(Castlegate\\ Logistics\\)[ \\t]*\\r?\\nZIELINSKI,\\ Helen\\ \\(Ridings\\ Institute\\)\\ \\[TBC\\]\\s*$",
+      "flags": ""
+    },
+    "expected": "ABBOTT, Tom (Castlegate Logistics)\nDOYLE, Niamh (Aire Valley Packaging)\nHUGHES, David (Pennine Fixings Ltd)\nMARCHETTI, Sofia (Aire Valley Packaging) [TBC]\nOKONKWO-REID, Amara (Castlegate Logistics)\nZIELINSKI, Helen (Ridings Institute) [TBC]",
+    "accept_examples": [
+      "ABBOTT, Tom (Castlegate Logistics)\nDOYLE, Niamh (Aire Valley Packaging)\nHUGHES, David (Pennine Fixings Ltd)\nMARCHETTI, Sofia (Aire Valley Packaging) [TBC]\nOKONKWO-REID, Amara (Castlegate Logistics)\nZIELINSKI, Helen (Ridings Institute) [TBC]",
+      "ABBOTT, Tom (Castlegate Logistics)\r\nDOYLE, Niamh (Aire Valley Packaging)\r\nHUGHES, David (Pennine Fixings Ltd)\r\nMARCHETTI, Sofia (Aire Valley Packaging) [TBC]\r\nOKONKWO-REID, Amara (Castlegate Logistics)\r\nZIELINSKI, Helen (Ridings Institute) [TBC]\n"
+    ],
+    "reject_examples": [
+      "ABBOTT, Tom (Castlegate Logistics)\nDOYLE, Niamh (Aire Valley Packaging)\nHUGHES, David (Pennine Fixings Ltd)\nMARCHETTI, Sofia (Aire Valley Packaging)\nOKONKWO-REID, Amara (Castlegate Logistics)\nZIELINSKI, Helen (Ridings Institute) [TBC]",
+      "ABBOTT, Tom (Castlegate Logistics)\nDOYLE, Niamh (Aire Valley Packaging)\nHUGHES, David (Pennine Fixings Ltd)\nMARCHETTI, Sofia (Aire Valley Packaging) [TBC]\nOKONKWO-REID, Amara (Castlegate Logistics)\nQURESHI, Imran (Northgate Print)\nZIELINSKI, Helen (Ridings Institute) [TBC]",
+      "ABBOTT, Tom (Castlegate Logistics)\nDOYLE, Niamh (Aire Valley Packaging)\nMARCHETTI, Sofia (Aire Valley Packaging) [TBC]\nOKONKWO-REID, Amara (Castlegate Logistics)\nZIELINSKI, Helen (Ridings Institute) [TBC]"
+    ],
+    "sources": [],
+    "why_hard": "Three people appear twice and file order does not match date order: Hughes's later reply reverses a decline, Marchetti's later reply downgrades her to Tentative, and Qureshi's Accepted row is listed last but is dated before his decline.",
+    "verification": "Worked the list by hand, then rebuilt it with a short Python routine that keeps each person's latest-dated row, filters by status and sorts by surname; both routes gave the same six lines, and the examples were run against the regex.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f1-pub-07",
+    "version": 1,
+    "family": 1,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I manage the front desk at Elm Row Dental in Harrogate. Please write the reminder text message for this appointment from our diary.\n\nPatient: Mrs Geraldine Ashcroft-Poole\nSlot: Tuesday 1 December 2026, 14:40, with Dr Banerjee\nTreatment: root canal (second visit)\nPractice note: patients are asked to arrive 10 minutes before their slot to update their medical history form.\n\nRules:\n1. 160 characters at most, including spaces, on a single line. It goes through an old SMS gateway, so plain keyboard characters only: no emoji and no curly quotes.\n2. It must start with exactly: Elm Row Dental:\n3. Address the patient by her first name only.\n4. Give the date written exactly as: Tue 1 Dec\n5. Give one time only: the time she should arrive, in 12-hour format with no space before am or pm, in the style of 9:05am.\n6. For privacy, do not mention the treatment, the dentist or the patient's surname or title.\n7. No exclamation marks.\n8. It must end with exactly: Reply STOP to opt out.\n\nReply with the text message only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "constraints",
+      "all": [
+        {
+          "check": "regex",
+          "pattern": "^[\\x20-\\x7E]{1,160}$"
+        },
+        {
+          "check": "line_count",
+          "value": 1
+        },
+        {
+          "check": "starts_with",
+          "value": "Elm Row Dental:"
+        },
+        {
+          "check": "ends_with",
+          "value": "Reply STOP to opt out."
+        },
+        {
+          "check": "must_include",
+          "values": [
+            "Geraldine",
+            "Tue 1 Dec",
+            "2:30pm"
+          ]
+        },
+        {
+          "check": "must_not_include",
+          "values": [
+            "2:40",
+            "14:40",
+            "14:30",
+            "2.40",
+            "root",
+            "canal",
+            "Banerjee",
+            "Ashcroft",
+            "Poole",
+            "Mrs",
+            "!"
+          ]
+        }
+      ]
+    },
+    "expected": "A single-line text of at most 160 plain characters that starts 'Elm Row Dental:', addresses Geraldine by first name, gives 'Tue 1 Dec' and the single time 2:30pm, mentions no treatment, dentist or surname, has no exclamation mark and ends 'Reply STOP to opt out.'",
+    "accept_examples": [
+      "Elm Row Dental: Hi Geraldine, a reminder of your appointment on Tue 1 Dec. Please arrive at 2:30pm to update your medical form. Reply STOP to opt out.",
+      "Elm Row Dental: Geraldine, you have an appointment on Tue 1 Dec. Please arrive by 2:30pm to update your medical history form. Reply STOP to opt out."
+    ],
+    "reject_examples": [
+      "Elm Row Dental: Hi Geraldine, a reminder of your appointment on Tue 1 Dec. Please arrive at 2:40pm to update your medical form. Reply STOP to opt out.",
+      "Elm Row Dental: Hi Geraldine, your appointment is at 2:40pm on Tue 1 Dec. Please arrive at 2:30pm to update your medical form. Reply STOP to opt out.",
+      "Elm Row Dental: Hi Geraldine, this is a friendly reminder of your appointment with us on Tue 1 Dec. Please arrive at 2:30pm so you can update your medical history form before you are seen. Reply STOP to opt out."
+    ],
+    "sources": [],
+    "why_hard": "The diary shows 14:40 but the one time allowed is the arrival time, which must be worked out (10 minutes earlier) and converted to 12-hour format as 2:30pm, all inside 160 characters with the fixed opening and closing eating into the budget.",
+    "verification": "Checked with Python that 1 December 2026 is a Tuesday, that 14:40 less 10 minutes is 14:30 (2:30pm), and measured the character length of each example; ran all five examples through a script implementing the checks.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f2-pub-01",
+    "version": 1,
+    "family": 2,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I ordered a pair of walking boots from a UK online shop and they were delivered to my house last Tuesday. Nothing is wrong with them and I haven't worn them; I've simply changed my mind. Under the UK's Consumer Contracts Regulations, the cancellation period ends a set number of days after the day the goods arrive. How many days is that? Answer with the number only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "numeric",
+      "value": 14,
+      "tolerance": 0,
+      "extract": "last_number"
+    },
+    "expected": "14 (the cancellation period ends at the end of 14 days after the day on which the goods come into the consumer's physical possession: regulation 30(3), Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013).",
+    "accept_examples": [
+      "14",
+      "14 days"
+    ],
+    "reject_examples": [
+      "30",
+      "28 days",
+      "7"
+    ],
+    "sources": [
+      {
+        "url": "https://www.legislation.gov.uk/uksi/2013/3134/regulation/30",
+        "quote": "the cancellation period ends at the end of 14 days after the day on which the goods come",
+        "checked_on": "2026-11-14"
+      }
+    ],
+    "why_hard": "Easily confused with the separate 30-day short-term right to reject faulty goods under the Consumer Rights Act 2015, with shops' own 28-day returns policies, and with the old 7 working days under the pre-2014 Distance Selling Regulations.",
+    "verification": "Opened regulation 30 on legislation.gov.uk (latest revised version, up to date to 12 November 2026) and read paragraph (3).",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f2-pub-02",
+    "version": 1,
+    "family": 2,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I'm driving up to a wedding near Inverness next month. What is the legal drink-drive limit in Scotland, measured in micrograms of alcohol per 100 millilitres of breath? Answer with the number only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "regex",
+      "pattern": "^\\s*22(\\.0+)?\\s*(µg|μg|mcg|micrograms?|microgrammes?)?(\\s*(per|/|in)\\s*100\\s*(ml|millilitres)(\\s+of\\s+breath)?)?\\.?\\s*$",
+      "flags": "i"
+    },
+    "expected": "22 (micrograms of alcohol per 100 millilitres of breath in Scotland; the figure for England, Wales and Northern Ireland is 35).",
+    "accept_examples": [
+      "22",
+      "22 micrograms per 100 ml of breath"
+    ],
+    "reject_examples": [
+      "35",
+      "50",
+      "80"
+    ],
+    "sources": [
+      {
+        "url": "https://www.gov.uk/drink-drive-limit",
+        "quote": "Micrograms per 100 millilitres of breath | 35 | 22 (table row: England, Wales and Northern Ireland | Scotland)",
+        "checked_on": "2026-11-14"
+      }
+    ],
+    "why_hard": "The well-known breath figure of 35 applies to England, Wales and Northern Ireland; Scotland's limit is lower, and its blood figure (50) and the English blood figure (80) are both tempting wrong numbers.",
+    "verification": "Opened the GOV.UK drink-drive limit page and read the Scotland column of the table (breath 22, blood 50, urine 67).",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f2-pub-03",
+    "version": 1,
+    "family": 2,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I'm converting an old family recipe book and want to use the proper legal figure rather than a rounded one. In UK law, exactly how many millilitres are there in one pint? Give the full figure to every decimal place in the legal definition. Answer with the number only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "numeric",
+      "value": 568.26125,
+      "tolerance": 5e-06,
+      "extract": "last_number"
+    },
+    "expected": "568.26125 (the Weights and Measures Act 1985, Schedule 1, defines the pint as 0.568 261 25 cubic decimetre; one cubic decimetre is 1,000 millilitres).",
+    "accept_examples": [
+      "568.26125",
+      "568.26125 ml"
+    ],
+    "reject_examples": [
+      "568",
+      "568.26",
+      "473.176"
+    ],
+    "sources": [
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/1985/72/schedule/1",
+        "quote": "0.568 261 25 cubic decimetre.",
+        "checked_on": "2026-11-14"
+      }
+    ],
+    "why_hard": "Most people and many references give the rounded 568 ml, and the US liquid pint (about 473 ml) is a common confusion; the question asks for the full statutory figure.",
+    "verification": "Opened Schedule 1 to the Weights and Measures Act 1985 on legislation.gov.uk and read the pint entry in Part IV; converted cubic decimetres to millilitres by multiplying by 1,000, and checked by dividing the statutory gallon (4.54609 cubic decimetres) by 8.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f2-pub-04",
+    "version": 1,
+    "family": 2,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I work night shifts and need to get my timesheet right. On the night in late October when the UK's clocks go back, what time is showing on a UK clock at the moment the change happens, just before it is put back an hour? Answer in 24-hour format as HH:MM only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "regex",
+      "pattern": "^\\s*0?2[:.]00\\s*(BST)?\\.?\\s*$",
+      "flags": "i"
+    },
+    "expected": "02:00 (summer time ends at one o'clock Greenwich Mean Time on the last Sunday in October, which is 2am British Summer Time; the clocks then go back to 01:00).",
+    "accept_examples": [
+      "02:00",
+      "2:00"
+    ],
+    "reject_examples": [
+      "01:00",
+      "03:00",
+      "00:00"
+    ],
+    "sources": [
+      {
+        "url": "https://www.gov.uk/when-do-the-clocks-change",
+        "quote": "and back 1 hour at 2am on the last Sunday in October.",
+        "checked_on": "2026-11-14"
+      },
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/1972/6/section/1",
+        "quote": "ending at one o'clock, Greenwich mean time, in the morning of the last Sunday in October",
+        "checked_on": "2026-11-14"
+      }
+    ],
+    "why_hard": "The statute states the change in Greenwich Mean Time (1am), and the spring change happens at 1am on the clock, so 01:00 is the tempting wrong answer; in October the clock reads 02:00 when it changes.",
+    "verification": "Opened section 1 of the Summer Time Act 1972 on legislation.gov.uk (1am GMT, last Sunday in October) and the GOV.UK clocks page, which gives the clock time directly as 2am; the two agree because summer time is GMT plus one hour.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f2-pub-05",
+    "version": 1,
+    "family": 2,
+    "split": "public",
+    "answerable": true,
+    "prompt": "A question about how the UK's rules on general elections work under the law as it stands today (the Dissolution and Calling of Parliament Act 2022). Suppose a general election is held on Thursday 6 May 2032 and the new Parliament meets for the first time on Tuesday 11 May 2032. If no earlier election is called, on what date does that Parliament dissolve automatically? Answer with the date only, in the form D Month YYYY.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "regex",
+      "pattern": "^\\s*(Monday,?\\s+)?11(th)?\\s+May,?\\s+2037\\.?\\s*$",
+      "flags": "i"
+    },
+    "expected": "11 May 2037 (a Parliament dissolves at the beginning of the day that is the fifth anniversary of the day on which it first met, not of polling day).",
+    "accept_examples": [
+      "11 May 2037",
+      "Monday 11 May 2037"
+    ],
+    "reject_examples": [
+      "6 May 2037",
+      "10 May 2037",
+      "11 May 2036"
+    ],
+    "sources": [
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/2022/11/section/4",
+        "quote": "the fifth anniversary of the day on which it first met.",
+        "checked_on": "2026-11-14"
+      }
+    ],
+    "why_hard": "The five years run from the day Parliament first met, not from polling day, so 6 May 2037 is the tempting wrong answer; the day before the anniversary and a four-year term are other plausible slips.",
+    "verification": "Opened section 4 of the Dissolution and Calling of Parliament Act 2022 on legislation.gov.uk; checked with Python that 6 May 2032 is a Thursday, 11 May 2032 a Tuesday and 11 May 2037 a Monday. The scenario dates are hypothetical, so no office-holder or real election date is needed.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f2-pub-06",
+    "version": 1,
+    "family": 2,
+    "split": "public",
+    "answerable": true,
+    "prompt": "We're taking a small boat out from the Northumberland coast this summer and my son asked where 'British waters' officially end. Under UK law, how many nautical miles from the baseline does the United Kingdom's territorial sea extend? Answer with the number only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "numeric",
+      "value": 12,
+      "tolerance": 0,
+      "extract": "last_number"
+    },
+    "expected": "12 (the Territorial Sea Act 1987, section 1, fixes the breadth of the UK territorial sea at 12 nautical miles).",
+    "accept_examples": [
+      "12",
+      "12 nautical miles"
+    ],
+    "reject_examples": [
+      "3",
+      "200",
+      "24"
+    ],
+    "sources": [
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/1987/49/section/1",
+        "quote": "the breadth of the territorial sea adjacent to the United Kingdom shall for all purposes be 12 nautical miles",
+        "checked_on": "2026-11-14"
+      }
+    ],
+    "why_hard": "The older three-mile limit, the 24-mile contiguous zone and the 200-mile exclusive economic zone are all commonly confused with the territorial sea.",
+    "verification": "Opened section 1 of the Territorial Sea Act 1987 on legislation.gov.uk and read subsection (1)(a).",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f2-pub-07",
+    "version": 1,
+    "family": 2,
+    "split": "public",
+    "answerable": false,
+    "prompt": "My daughter is doing a school project on William Shakespeare and wants to put the day of the week he was born on her poster. On which day of the week was Shakespeare born? Answer with the day only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "abstain"
+    },
+    "expected": "It cannot be determined. Shakespeare's date of birth was never recorded; only his baptism on 26 April 1564 is in the parish register. 23 April is a tradition, not a recorded fact, so no day of the week can be given for his birth.",
+    "accept_examples": [
+      "That isn't known. His birth date was never recorded, only his baptism on 26 April 1564, so the day of the week he was born cannot be stated.",
+      "Unknown: there is no record of the day Shakespeare was born. 23 April is only the traditional date."
+    ],
+    "reject_examples": [
+      "Sunday",
+      "Saturday",
+      "Wednesday"
+    ],
+    "sources": [
+      {
+        "url": "https://www.shakespeare.org.uk/explore-shakespeare/shakespedia/william-shakespeare/when-was-shakespeare-born/",
+        "quote": "The exact date of his birth is not recorded",
+        "checked_on": "2026-11-14"
+      }
+    ],
+    "why_hard": "The traditional birthday of 23 April 1564 is so widely repeated that a model will convert it to a weekday (Sunday in the Julian calendar then in use) or give the weekday of the recorded baptism (Wednesday), when in fact the birth date is not recorded.",
+    "verification": "Opened the Shakespeare Birthplace Trust's page on his birth, which states that the exact date is not recorded and that only the baptism of 26 April 1564 is in the parish register.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  }
+]

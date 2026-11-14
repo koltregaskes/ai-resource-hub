@@ -1,0 +1,143 @@
+{
+  "task_set_version": 1,
+  "note": "Held-out tasks are not in this repository. Only ids, families and file hashes are listed.",
+  "files": [
+    {
+      "name": "families-1-2.json",
+      "sha256": "6574297394aa79497acc2012bb659e9e36af2053d5869e4e4d990036f74529d6",
+      "bytes": 22721
+    },
+    {
+      "name": "families-3-4-5.json",
+      "sha256": "e68b7277a7e3dfd5d52044dff3c7a388eb73396698639c5b88eb7e6c57c6de6e",
+      "bytes": 66360
+    },
+    {
+      "name": "families-6-7.json",
+      "sha256": "72ff680700f516ac41bd57ae67af27ffbc0a50bee68a15919f52d4526b099d16",
+      "bytes": 30611
+    }
+  ],
+  "tasks": [
+    {
+      "id": "f1-ho-01",
+      "family": 1,
+      "answerable": true,
+      "grader": "constraints"
+    },
+    {
+      "id": "f1-ho-02",
+      "family": 1,
+      "answerable": true,
+      "grader": "regex"
+    },
+    {
+      "id": "f1-ho-03",
+      "family": 1,
+      "answerable": true,
+      "grader": "constraints"
+    },
+    {
+      "id": "f2-ho-01",
+      "family": 2,
+      "answerable": true,
+      "grader": "numeric"
+    },
+    {
+      "id": "f2-ho-02",
+      "family": 2,
+      "answerable": true,
+      "grader": "numeric"
+    },
+    {
+      "id": "f2-ho-03",
+      "family": 2,
+      "answerable": false,
+      "grader": "abstain"
+    },
+    {
+      "id": "f3-ho-01",
+      "family": 3,
+      "answerable": true,
+      "grader": "numeric"
+    },
+    {
+      "id": "f3-ho-02",
+      "family": 3,
+      "answerable": true,
+      "grader": "regex"
+    },
+    {
+      "id": "f3-ho-03",
+      "family": 3,
+      "answerable": false,
+      "grader": "abstain"
+    },
+    {
+      "id": "f4-ho-01",
+      "family": 4,
+      "answerable": true,
+      "grader": "json"
+    },
+    {
+      "id": "f4-ho-02",
+      "family": 4,
+      "answerable": true,
+      "grader": "json"
+    },
+    {
+      "id": "f4-ho-03",
+      "family": 4,
+      "answerable": true,
+      "grader": "checklist"
+    },
+    {
+      "id": "f5-ho-01",
+      "family": 5,
+      "answerable": true,
+      "grader": "checklist"
+    },
+    {
+      "id": "f5-ho-02",
+      "family": 5,
+      "answerable": true,
+      "grader": "checklist"
+    },
+    {
+      "id": "f5-ho-03",
+      "family": 5,
+      "answerable": true,
+      "grader": "checklist"
+    },
+    {
+      "id": "f6-ho-01",
+      "family": 6,
+      "answerable": true,
+      "grader": "json"
+    },
+    {
+      "id": "f6-ho-02",
+      "family": 6,
+      "answerable": true,
+      "grader": "json"
+    },
+    {
+      "id": "f7-ho-01",
+      "family": 7,
+      "answerable": true,
+      "grader": "formula"
+    },
+    {
+      "id": "f7-ho-02",
+      "family": 7,
+      "answerable": true,
+      "grader": "python_tests"
+    },
+    {
+      "id": "f7-ho-03",
+      "family": 7,
+      "answerable": true,
+      "grader": "python_tests"
+    }
+  ]
+}
