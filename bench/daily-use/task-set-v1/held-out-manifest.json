@@ -4,13 +4,13 @@
   "files": [
     {
       "name": "families-1-2.json",
-      "sha256": "2f66f0b4eda2f2729bdb55dd1fa0aeb137c9945b03d4a392e6575758f898086d",
-      "bytes": 41818
+      "sha256": "83df62c601abee67d7aa3fdff2e0d006b182d1299708aaa12656766cf74f543d",
+      "bytes": 56253
     },
     {
       "name": "families-3-4-5.json",
-      "sha256": "bb8431e8e1aeca4c5c3b40378a2f619d28cdec30c2376a3f64d2586823a52742",
-      "bytes": 77670
+      "sha256": "05c8e9e6d83fc4419b3ad32a3c06d88c83e7d21271baf2f95293fa41b8f45a0e",
+      "bytes": 80648
     },
     {
       "name": "families-6-7.json",
@@ -23,8 +23,8 @@
       "id": "f1-ho-01",
       "family": 1,
       "answerable": true,
-      "grader": "constraints",
-      "version": 2
+      "grader": "checklist",
+      "version": 3
     },
     {
       "id": "f1-ho-02",
@@ -37,8 +37,8 @@
       "id": "f1-ho-03",
       "family": 1,
       "answerable": true,
-      "grader": "constraints",
-      "version": 2
+      "grader": "checklist",
+      "version": 3
     },
     {
       "id": "f2-ho-01",
@@ -59,7 +59,7 @@
       "family": 2,
       "answerable": false,
       "grader": "abstain",
-      "version": 2
+      "version": 3
     },
     {
       "id": "f3-ho-01",
@@ -115,7 +115,7 @@
       "family": 5,
       "answerable": true,
       "grader": "checklist",
-      "version": 2
+      "version": 3
     },
     {
       "id": "f5-ho-03",
