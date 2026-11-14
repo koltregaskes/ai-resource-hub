@@ -23,7 +23,7 @@ The idea came from AI Race Scoreboard. We've kept the useful ideas (one composit
 
 ## Which labs are in
 
-- **Listed:** a lab with at least one active general-purpose language model in AIRH's verified catalogue, released in the last 18 months. Image, video, audio and speech-only companies are out of v1.
+- **Listed (v0.3.1 correction):** a lab with a mapped, released Epoch model in the last 18 calendar months (Epoch release date), or an active general-purpose language model with a verified catalogue release in that window. The window includes both endpoints. Value normalisation includes all listed labs with value data, regardless of ranking eligibility. Image, video, audio and speech-only companies are out of v1.
 - **Ranked:** a lab with data for at least **3 of the 5 scored parts**, one of which is capability, and whose observed default weights add up to at least 60.
 - Anything with less is still listed, under "Not enough data to rank", with its coverage shown.
 
