@@ -1,0 +1,30 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import WorkedTable from '../../components/insights/WorkedTable.astro';
+import PractitionerNote from '../../components/insights/PractitionerNote.astro';
+import { practitionerB7 } from '../../data/practitioner-b7';
+import examples from '../../data/insights/2026-11-14-b7.json';
+const e = practitionerB7.find(p => p.slug === 'translated-prompts-token-budget')!;
+---
+<InsightArticle title={e.title} description={e.description} date="2026-11-14" type={e.type as 'Analysis' | 'Explainer'} readTime="5 min" standfirst="If two prompt versions contain different numbers of tokens, their input bills differ even at the same price and request volume. Count the exact request for the chosen model before borrowing a budget from another language.">
+
+<p>You localise an assistant's prompt and keep the same monthly budget. The translated wording looks similar in length, so the old estimate stays in the spreadsheet. Replace that guess with a count of the actual request. The system instructions, examples and returned material belong in the count as well as the latest question.</p>
+<p>Anthropic's <a href={e.sources[0].url}>token-counting guide</a>, read on 14 November 2026, provides a way to estimate structured message input for a chosen model. Use the supported input form and compare the estimate with reported usage in a real trial. We do not claim that an estimate is an exact future bill.</p>
+<h2>Keep the language label out of an invented ratio</h2>
+<p>The table uses versions A, B and C with assumed lengths of 4,000, 7,000 and 12,000 tokens. They are not measurements for English or any other language. At the same invented input rate and monthly volume, their bills differ simply because their stated token counts differ.</p>
+<WorkedTable headers={["Fictional prompt version","Assumed input tokens/request","Monthly requests","Input-only bill, USD"]} rows={examples['translated-prompts-token-budget']} caption="Synthetic prompt lengths at an assumed $1 per million input tokens. No language-specific tokenisation or translation quality was measured." />
+<p>Ten thousand requests at 4,000 input tokens consume forty million input tokens. At 12,000 they consume 120 million. The resulting $40 and $120 bills are input-only illustrations. They establish no general ratio between languages or models.</p>
+<h2>Count a representative request</h2>
+<p>Version the complete localised prompt, including its examples. Count it with representative user input and documents in the form the application will actually send. A translation of the system instructions alone does not represent the full request.</p>
+<p>Save the target model identifier with the count. Do not transfer a count produced for one model into another model's budget without checking the relevant tokenisation. For unsupported input types, use the provider's documented method or an observed usage record rather than substituting a plain-text count.</p>
+<p>Keep several input sizes. A typical short question and a long attached document affect different parts of the request. Report the range you observed in the trial instead of giving a single count the appearance of a universal prompt size.</p>
+<h2>Check that the task survived translation</h2>
+<p>Give each language version reviewed acceptance examples. Preserve the intended constraints, such as which fields to extract and how to express missing information. A shorter prompt that loses a condition is a different task, not a free token saving.</p>
+<p>Include local date, number and address formats where they matter to the application. Review those outcomes with someone or a process qualified for the language and task. We propose that check; this article contains no evaluation of translation quality.</p>
+<p>Keep output measurements separate. A translated instruction can produce a differently sized answer, and an input-only estimate does not account for that. Count accepted answers and their actual output usage before forecasting the complete monthly workload.</p>
+<h2>Reconcile the estimate with usage</h2>
+<p>Run a small authorised trial, retain the request version and read the usage record. Explain any gap between the preflight estimate and observed input before scaling the budget. If the application adds tool definitions or other content later, include it in the next estimate.</p>
+<p>For public evidence, publish synthetic examples and aggregate counts. Avoid placing real customer messages or private translations in a repository merely to make the comparison reproducible.</p>
+<p>The useful tracker row names the localised version, model, counting method, request mix and date checked. It can then compare costs under clear assumptions while leaving language quality as a separate result that still needs review.</p>
+<PractitionerNote evidence={e} />
+</InsightArticle>
