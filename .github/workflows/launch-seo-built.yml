@@ -1,0 +1,21 @@
+name: Launch built SEO
+on: [pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+      - run: npm ci
+      - run: npm run build
+      - run: python scripts/contracts/seo-built.py
+      - run: python scripts/contracts/seo-mutations.py
