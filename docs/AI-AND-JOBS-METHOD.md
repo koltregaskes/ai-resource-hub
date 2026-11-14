@@ -1,6 +1,6 @@
-# AI and jobs: sources and data model (draft v0.2)
+# AI and jobs: sources and data model (draft v0.3)
 
-Status: draft for review. Nothing here is built yet. v0.2 answers the Codex review of v0.1 (PR 106, 14 Nov 2026).
+Status: draft for review. Nothing here is built yet. v0.2 answered the Codex review of v0.1; v0.3 answers the re-review of v0.2 (PR 106, 14 Nov 2026).
 Owner: Claude (AI Resource Hub session). Hub issue: koltregaskes/rooms-os-hub#1570.
 
 ## What it is
@@ -35,6 +35,7 @@ A section that answers one question with facts: **what is AI actually doing to w
    - **published:** the source gives a standard error, a relative standard error or an interval. We show it, with its type (confidence interval, prediction interval, credible interval or scenario range) and its level (for example 90% or 95%).
    - **not published:** we checked, and the source gives none. The page says "No uncertainty published by the source".
    - **not yet extracted:** the source has it but we haven't captured it yet. **Not publishable.**
+   - **not yet checked:** nobody has looked yet. **Not publishable.** This is the default for every new row.
 5. **Revisions are kept.** An observation is never overwritten: a new vintage is added. Questionnaires and methods are versioned too, so an old figure keeps the wording and method it was measured under.
 6. **Research:** peer review and evidence kind are separate attributes.
    - Peer-reviewed journal articles are labelled "Peer-reviewed".
@@ -145,7 +146,8 @@ Immutable. A change of wording or method makes a new row.
 |---|---|
 | id, series_id | |
 | version_label | The publisher's label, or our own date-based one |
-| valid_from, valid_to | |
+| valid_from, valid_to | The periods this version applies to |
+| backcast_of, backcast_periods | If this version re-estimates earlier periods: which version it revises, and the period range |
 | question_wording, questionnaire_url | For surveys: the exact question asked |
 | population | For example "UK businesses with 10+ employees, excluding finance" |
 | definition | The publisher's definition (quoted, 30 words at most) plus a link |
@@ -153,7 +155,14 @@ Immutable. A change of wording or method makes a new row.
 
 ### `jobs_observations`
 
-**Unique on (series_version_id, period, vintage).** The current value for a period is the row with the latest vintage among the series' current version.
+**Unique on (series_version_id, period, vintage).**
+
+**Current value for a period:**
+1. Find the series version that applies to that period: the one whose valid_from and valid_to cover it. A backcast version can declare the periods it covers.
+2. Take the row with the latest vintage within that version.
+3. If a backcast version explicitly covers the period, it supersedes the original version's value for that period. The original rows are kept, and the page notes "revised by backcast".
+
+Charts mark every method break (a change of series version) with a visible line and a note. Values from different versions are never joined into one line without that marker.
 
 | Field | Notes |
 |---|---|
@@ -164,7 +173,7 @@ Immutable. A change of wording or method makes a new row.
 | interval_lower, interval_upper | |
 | interval_type | `confidence`, `prediction`, `credible` or `scenario_range` |
 | confidence_level | For example 0.95 |
-| uncertainty_status | `published`, `not_published` or `not_yet_extracted` |
+| uncertainty_status | `published`, `not_published`, `not_yet_extracted` or `not_yet_checked` (the default) |
 | status | `provisional`, `final` or `revised` |
 | vintage | The release date |
 | retrieved_at, source_url | |
@@ -197,9 +206,9 @@ One study can have several results, each with its own kind.
 | kind | **Required.** One of the five kinds |
 | finding | Our plain-words summary |
 | effect, effect_unit | |
-| standard_error | |
+| standard_error, relative_standard_error | |
 | interval_lower, interval_upper, interval_type, confidence_level | |
-| uncertainty_status | |
+| uncertainty_status | The same four values as observations; defaults to `not_yet_checked` |
 
 ### `jobs_company_claims`
 
@@ -220,7 +229,8 @@ One study can have several results, each with its own kind.
 ## Checks that run in CI
 
 - **Required fields:** every observation and study result has a kind, an uncertainty status, a source version or revision, a period or date, a vintage or retrieval date, and a URL.
-- **No unextracted uncertainty:** `uncertainty_status = not_yet_extracted` can't be published.
+- **No unchecked uncertainty:** `uncertainty_status` of `not_yet_extracted` or `not_yet_checked` can't be published.
+- **One current value per period:** the current-value rule returns exactly one row per (series, period), and every method break in a chart has its marker.
 - **Kind placement:**
   - The "What's happening" sections and their exports contain only `measured`, `survey_estimate` and `model_derived_estimate`.
   - `modelled_exposure` appears only in the exposure section, and `projection` only in the projections block.
@@ -266,3 +276,8 @@ One study can have several results, each with its own kind.
   - ILO Working Paper 140: CC BY 4.0;
   - Eurostat: still unconfirmed.
 - **Company claims:** AI's role recorded, total and AI-attributed numbers kept apart, executive posts reconciled with the channel rule.
+
+## Changes from v0.2 (Codex re-review, 14 Nov 2026)
+
+- **Uncertainty:** study results gain `relative_standard_error`. A fourth status, `not_yet_checked`, is added as the default, and it blocks publication like `not_yet_extracted`.
+- **Current values:** each period now uses the series version that applies to it, so history isn't dropped after a method change. Backcasts are defined, and method breaks are marked in every chart.
