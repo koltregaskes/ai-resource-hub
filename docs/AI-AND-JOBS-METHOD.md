@@ -1,6 +1,6 @@
-# AI and jobs: sources and data model (draft v0.1)
+# AI and jobs: sources and data model (draft v0.2)
 
-Status: draft for review. Nothing here is built yet.
+Status: draft for review. Nothing here is built yet. v0.2 answers the Codex review of v0.1 (PR 106, 14 Nov 2026).
 Owner: Claude (AI Resource Hub session). Hub issue: koltregaskes/rooms-os-hub#1570.
 
 ## What it is
@@ -13,148 +13,256 @@ A section that answers one question with facts: **what is AI actually doing to w
    - national statistics offices;
    - international bodies (OECD, ILO);
    - central banks;
-   - peer-reviewed studies;
+   - published research (see rule 6);
    - established job-posting data, where the publisher documents its method.
    No news articles, vendor surveys or "AI will replace X% of jobs" headlines as evidence.
-2. **Every figure carries:** its source, the exact series or table name, the period it covers, the publication date, the date we fetched it, a link to the method, and a kind label (see below).
-3. **Measured and projected are never mixed.** Each figure is one of four kinds, and the label is shown on the page:
+2. **Every figure carries:** its source, the exact series or table name, the series version, the period it covers, the publication date (vintage), the date we fetched it, a link to the method, its evidence kind, and its uncertainty status.
+3. **Every number has an evidence kind, everywhere it appears.** That covers series observations, study results, cards, captions, summaries and exports. A kind is chosen per series or per result, by its method, never as a blanket label for a publisher.
 
    | Kind | Means | Example |
    |---|---|---|
-   | Measured | Counted from records | Employment by occupation, job-posting counts |
-   | Survey estimate | Estimated from a sample, with a sampling error | Share of firms using AI |
+   | Measured | Counted from records or a full administrative source | Job-posting counts on a documented platform |
+   | Survey estimate | Estimated from a sample, with a sampling error | Share of firms using AI; BLS OEWS employment by occupation |
+   | Model-derived estimate | Inferred by a model from observed data, but not a survey and not a forecast | Classified task categories or estimated task times in usage data |
    | Modelled exposure | Researchers' estimate of how much a job's tasks AI could do | ILO or OECD exposure indices |
    | Projection | A forecast of the future | Employment projections |
 
-   - Projections live in their own block with their range, never in the "what's happening" charts.
-   - Exposure is not impact: the page says so every time an exposure figure appears.
-4. **Show the uncertainty.**
-   - Where a source publishes a confidence interval, sampling error or range, we show it.
-   - Where it doesn't, we say "no uncertainty published".
-   - Revisions are kept: an observation is never overwritten, a new vintage is added.
-5. **Company claims are labelled as claims.**
-   - A layoff, hiring freeze or hiring change is recorded only when the company itself said AI was a reason, in its own channel: a press release, a filing, an earnings call transcript, or an official blog or post by a named executive.
-   - A media report that "AI was behind" cuts isn't enough.
-   - We quote the company's words, link the statement and date it, and label it "Company claim, not independently verified".
-6. **Studies:** peer-reviewed journal articles are labelled "Peer-reviewed". Working papers and preprints may be shown, labelled "Working paper (not yet peer-reviewed)". Each study shows its design, sample, country, period, headline effect with its uncertainty, and stated limitations.
-7. **No adjectives doing the work.** No "AI is destroying jobs" or "AI is creating jobs" framing. The headline of each card is the measured fact, in plain words.
+   - The **"What's happening" sections show only measured, survey-estimate and model-derived-estimate figures,** each with its label.
+   - Exposure results appear only in a section titled for exposure, with "Exposure is not impact" next to every figure.
+   - Projections live in their own block with their range.
+   - CI enforces all of this (see "Checks").
+4. **Show the uncertainty, and say why when we can't.** Each figure has an uncertainty status:
+   - **published:** the source gives a standard error, a relative standard error or an interval. We show it, with its type (confidence interval, prediction interval, credible interval or scenario range) and its level (for example 90% or 95%).
+   - **not published:** we checked, and the source gives none. The page says "No uncertainty published by the source".
+   - **not yet extracted:** the source has it but we haven't captured it yet. **Not publishable.**
+5. **Revisions are kept.** An observation is never overwritten: a new vintage is added. Questionnaires and methods are versioned too, so an old figure keeps the wording and method it was measured under.
+6. **Research:** peer review and evidence kind are separate attributes.
+   - Peer-reviewed journal articles are labelled "Peer-reviewed".
+   - Working papers and preprints may appear in the research section, labelled "Working paper (not yet peer-reviewed)", after we've checked their method, uncertainty and limitations.
+   - An exposure study belongs with exposure, whatever its publication status, and is never presented as measured employment impact.
+   - Each study shows its design, sample, country, period, headline result with its kind and uncertainty, and its stated limitations.
+7. **Company claims are claims.**
+   - **Channels:** a layoff, hiring freeze or hiring change is recorded only when the company itself said AI was a reason, in its own channel:
+     - a press release or official page on a company-owned domain;
+     - a regulatory filing (for example sec.gov, Companies House);
+     - an earnings-call transcript;
+     - a post by a named executive on their verified account, with their role recorded.
+     A media report that "AI was behind" cuts isn't enough.
+   - **What we record:**
+     - whether AI was the **sole stated reason** or **one of several**;
+     - the **total announced change**, separately from any number the company **explicitly attributed to AI** (with units and scope);
+     - a quote (30 words at most), plus a link to the full statement for context.
+   - **Attribution of numbers:** when AI is bundled with "efficiency" or other reasons, the whole headcount change is never attributed to AI.
+   - **Label:** every claim is labelled "Company claim, not independently verified".
+8. **Plain headlines.** No "AI is destroying jobs" or "AI is creating jobs" framing. Each card's headline states the figure and its kind in plain words, for example "Survey estimate: 20% of EU firms with 10+ staff used AI in 2025".
 
 ## Sources
 
-Terms read first-hand on 14 Nov 2026, from each publisher's own pages. A source whose licence isn't confirmed can't be published until it is (see "Checks").
+Terms read on 14 Nov 2026. "Checked by" says who read the terms page. A source whose rights aren't confirmed for the specific dataset can't be published until they are (see "Checks").
 
-**Licence confirmed: usable at launch**
+**Rights confirmed: usable at launch**
 
-| Source | Licence and attribution | Route | What it gives us | Kind |
+| Source | Rights and attribution | Checked by | Route | What it gives us (kind per series) |
 |---|---|---|---|---|
-| ONS (UK) | Open Government Licence v3.0. Reuse "whether commercially or privately" is allowed. Credit: "Source: Office for National Statistics licensed under the Open Government Licence v.3.0" | Website downloads (API to be confirmed) | Labour market statistics; AI-use questions in the Business Insights and Conditions Survey (exact series to be confirmed, because the bulletin page was failing on 14 Nov) | Measured; survey estimate |
-| US Bureau of Labor Statistics | Public domain. Cite "Bureau of Labor Statistics" as the source; don't use its logo | Public API | Employment by occupation. The 2025 to 2035 Employment Projections (27 Aug 2026) come with supplemental AI-exposure data | Measured; projection; modelled exposure |
-| Indeed Hiring Lab | CC BY 4.0. "freely available for public use, as long as Hiring Lab is cited as a source" | GitHub CSVs (hiring-lab/ai-tracker), refreshed monthly | Share of job postings mentioning AI and generative AI, by country | Measured (job postings) |
-| Anthropic Economic Index | CC BY for the data, per the dataset card. The Hugging Face licence field says MIT, so we treat it as CC BY and credit Anthropic | Hugging Face dataset Anthropic/EconomicIndex | How Claude is used for occupational tasks, split into automation and augmentation. Latest release 26 Jun 2026 | Measured (one company's usage). Labelled as one AI provider's own data |
+| ONS (UK) | Open Government Licence v3.0. Reuse "whether commercially or privately". Credit: "Source: Office for National Statistics licensed under the Open Government Licence v.3.0" | Claude (helper agent) | Website downloads (API to be confirmed) | Labour market statistics (survey estimate). AI-use questions in the Business Insights and Conditions Survey (survey estimate; series to be confirmed, because the bulletin was failing on 14 Nov) |
+| US Bureau of Labor Statistics | Public domain. Cite "Bureau of Labor Statistics"; don't use its logo | Claude (helper agent) | Public API | OEWS employment by occupation (survey estimate, with BLS's published relative standard errors). 2025 to 2035 Employment Projections (projection). Supplemental AI-exposure categories (modelled exposure) |
+| Indeed Hiring Lab | CC BY 4.0. "freely available for public use, as long as Hiring Lab is cited as a source" | Claude, first-hand | GitHub CSVs (hiring-lab/ai-tracker) | Share of job postings mentioning AI and generative AI, by country (measured, on Indeed's postings only). Daily values are 7-day trailing averages, refreshed monthly |
+| Anthropic Economic Index | CC BY for the data, per the dataset card. The Hugging Face licence field says MIT, so we treat it as CC BY and credit Anthropic | Claude (helper agent) | Hugging Face dataset Anthropic/EconomicIndex | How Claude is used for occupational tasks. **Kind per metric:** usage counts are measured (one company's platform); collaboration categories and task-time estimates are model-derived estimates. Labelled as one AI provider's own data |
+| ILO Working Paper 140, "Generative AI and Jobs: A Refined Global Index of Occupational Exposure" (20 May 2025) | CC BY 4.0, stated on the paper's own copyright page | Codex review | PDF | Exposure index (modelled exposure). Working paper. A separately downloaded index dataset needs its own rights check |
 
-**Licence not yet confirmed: re-check before use**
+**Rights partly confirmed: per-dataset check needed before use**
+
+| Source | What's confirmed (14 Nov) | Still needed |
+|---|---|---|
+| OECD | Official terms (checked by the Codex review): written content from 1 July 2024 is generally CC BY 4.0, subject to each work's notice. Data has separate terms allowing reuse, including commercial use, with the dataset citation (or source citation plus access date), subject to dataset restrictions and third-party rights. | The rights of the specific Employment Outlook item or dataset we use. Not all OECD data is automatically CC BY 4.0 |
+| ILO / ILOSTAT data | ILO rights page (checked by the Codex review): datasets and metadata published from 3 May 2023 are CC BY 4.0, excluding restricted microdata. Older material needs a separate check | The publication date and rights of each dataset we use |
+
+**Rights not yet confirmed**
 
 | Source | Status on 14 Nov | What it would give us |
 |---|---|---|
-| Eurostat | Reuse page down ("server temporarily unavailable") on two tries. The API works: dataset `isoc_eb_ai`, "Artificial intelligence by size class of enterprise", updated 15 Jun 2026 | EU firms using AI, by size: 19.95% of firms with 10+ staff in 2025 (55.03% for 250+). Survey estimate |
-| US Census Bureau, Business Trends and Outlook Survey | The citation page asks users to "cite the Census Bureau as the source". Public-domain status not stated on the pages read | Every-two-weeks share of US firms using AI. Survey estimate |
-| OECD | Terms page behind a bot check; not read. It's thought to be CC BY 4.0 for content from 1 July 2024, but that's unconfirmed | Employment Outlook AI analysis. Modelled exposure; projection |
-| ILO / ILOSTAT | Terms page behind a bot check; not read | Working Paper 140, "Generative AI and Jobs: A Refined Global Index of Occupational Exposure" (20 May 2025). A working paper, modelled exposure |
-| Challenger, Gray & Christmas | No reuse terms published, only a copyright line | Monthly US job cuts where employers cited AI. These are employer-reported reasons gathered by a private firm. If we use them at all: headline figures only, with credit, labelled "employer-cited reason", and never their tables |
+| Eurostat | Reuse page unavailable ("server temporarily unavailable") for us and for the Codex review. The API works: dataset `isoc_eb_ai`, updated 15 Jun 2026 | EU firms using AI, by size (survey estimate): 19.95% of firms with 10+ staff in 2025 |
+| US Census Bureau, Business Trends and Outlook Survey | The citation page asks for credit to the Census Bureau. Public-domain status not stated on the pages read | Every-two-weeks share of US firms using AI (survey estimate) |
+| Challenger, Gray & Christmas | No reuse terms published, only a copyright line | Monthly US job cuts where employers cited AI. These are employer-reported reasons gathered by a private firm. If used at all: headline figures only, credited, labelled "employer-cited reason", and never their tables |
 
-**Not used**
-- FRED as a general route. Many of its series carry third-party copyright that needs the owner's written permission for commercial use, so we go to the original publisher instead.
+**Not used:**
+- FRED as a general route: many of its series carry third-party copyright needing the owner's permission, so we go to the original publisher.
 - Vendor surveys, consultancy reports and news counts of "AI layoffs" (Rule 1).
 
-**Studies.** One confirmed so far: Brynjolfsson, Li and Raymond, "Generative AI at Work", *Quarterly Journal of Economics* 140(2), 2025 (peer-reviewed). It measured productivity at one firm's customer support team, not employment. The studies list will be built and checked before launch, and each entry needs its journal page read first-hand.
+**Studies:** one confirmed so far, Brynjolfsson, Li and Raymond, "Generative AI at Work", *Quarterly Journal of Economics* 140(2), 2025 (peer-reviewed). It measured productivity in one firm's customer support team, not employment. The studies list will be built and checked before launch, with each entry's journal page read first-hand.
 
 ## Data model
 
-Five tables. They're SQLite in the build, the same as the rest of AIRH, with JSON snapshots committed for the archive.
+Seven tables: SQLite in the build, the same as the rest of AIRH, with JSON snapshots committed for the archive.
 
-### `jobs_sources`
+### `jobs_rights`
+
+The licence record for anything we publish: a source, a dataset or a single paper.
+
 | Field | Notes |
 |---|---|
-| id | Slug, for example `ons-bics` |
-| publisher | For example "Office for National Statistics" |
-| name | The dataset or series family name, exactly as the publisher gives it |
-| source_type | `official_statistics`, `international_body`, `central_bank`, `peer_reviewed`, `working_paper`, `job_postings` or `company_statement` |
+| id | |
+| scope | `source`, `dataset` or `publication` |
+| covers | What it applies to, for example `oecd:employment-outlook-2026-ch3` |
 | licence, licence_url, attribution_text | `attribution_text` is the exact wording the licence asks for |
-| access_route | `api`, `bulk_download` or `manual` |
-| method_url | The publisher's methodology page |
-| refresh_cadence_days | Used for the staleness flag |
-| terms_checked_at | When we last read the terms ourselves |
+| commercial_use | `allowed`, `not_allowed` or `unknown` |
+| verified_on, verified_by, evidence_url | `verified_on` means the applicable terms were actually read and confirmed. A failed or blocked page doesn't count |
+| status | `confirmed`, `partial` or `unconfirmed` |
+
+### `jobs_sources`
+
+| Field | Notes |
+|---|---|
+| id | |
+| publisher | |
+| name | |
+| source_type | `official_statistics`, `international_body`, `central_bank`, `published_research`, `job_postings` or `company_statement` |
+| rights_id | → `jobs_rights` |
+| access_route | |
+| method_url | |
+| refresh_cadence_days | |
 
 ### `jobs_series`
+
+The stable identity of a series.
+
 | Field | Notes |
 |---|---|
 | id, source_id | |
 | title | The publisher's own series title |
-| geography | ISO country code, `EU27`, `OECD` or `WORLD` |
-| unit | For example `percent_of_firms`, `share_of_postings` or `employment_thousands` |
-| frequency | `monthly`, `quarterly`, `annual`, `fortnightly` or `one_off` |
-| kind | `measured`, `survey_estimate`, `modelled_exposure` or `projection` |
-| definition | The publisher's definition, quoted (30 words at most), plus a link |
-| question_wording | For surveys: the exact question asked, because "uses AI" means different things in different surveys |
+| geography | ISO code, `EU27`, `OECD` or `WORLD` |
+| unit | |
+| frequency | `daily`, `weekly`, `fortnightly`, `monthly`, `quarterly`, `annual` or `one_off` |
+| averaging_window_days | For example 7 for Indeed's trailing average. Null if none |
+| kind | `measured`, `survey_estimate`, `model_derived_estimate`, `modelled_exposure` or `projection` |
+| rights_id | Dataset-level rights, when they differ from the source's |
 
-### `jobs_observations`
+### `jobs_series_versions`
+
+Immutable. A change of wording or method makes a new row.
+
 | Field | Notes |
 |---|---|
-| series_id, period | `period` uses ISO form: `2026-09`, `2026-Q3` or `2026` |
-| value | |
-| lower, upper | The published interval, when there is one; null means none was published |
-| status | `provisional`, `final` or `revised` |
-| vintage | The release date. A revision adds a row; it never updates one |
-| released_at, retrieved_at, source_url | |
+| id, series_id | |
+| version_label | The publisher's label, or our own date-based one |
+| valid_from, valid_to | |
+| question_wording, questionnaire_url | For surveys: the exact question asked |
+| population | For example "UK businesses with 10+ employees, excluding finance" |
+| definition | The publisher's definition (quoted, 30 words at most) plus a link |
+| methodology_version, methodology_url | |
 
-### `jobs_studies`
+### `jobs_observations`
+
+**Unique on (series_version_id, period, vintage).** The current value for a period is the row with the latest vintage among the series' current version.
+
+| Field | Notes |
+|---|---|
+| series_version_id | |
+| period | ISO form: `2026-09-14` (daily), `2026-W37`, `2026-09`, `2026-Q3` or `2026` |
+| value | |
+| standard_error, relative_standard_error | |
+| interval_lower, interval_upper | |
+| interval_type | `confidence`, `prediction`, `credible` or `scenario_range` |
+| confidence_level | For example 0.95 |
+| uncertainty_status | `published`, `not_published` or `not_yet_extracted` |
+| status | `provisional`, `final` or `revised` |
+| vintage | The release date |
+| retrieved_at, source_url | |
+
+### `jobs_studies` and `jobs_study_results`
+
+One study can have several results, each with its own kind.
+
+**`jobs_studies`**
+
 | Field | Notes |
 |---|---|
 | id, title, authors | |
 | venue, doi | |
 | peer_reviewed | A boolean, plus `status_note` (for example "working paper, NBER") |
-| published_at, data_period | |
+| revision_id | The version or revision we read |
+| published_at, retrieved_at | |
+| data_period | |
 | design | `rct`, `natural_experiment`, `diff_in_diff`, `panel`, `survey` or `exposure_model` |
 | sample, geography | |
-| finding | Our own plain-words summary of the headline result |
-| effect, effect_lower, effect_upper, effect_unit | |
 | limitations | The study's stated limitations, in our words |
+| rights_id | → `jobs_rights`, for any numbers or figures we reproduce |
 | url | |
 
+**`jobs_study_results`**
+
+| Field | Notes |
+|---|---|
+| id, study_id | |
+| kind | **Required.** One of the five kinds |
+| finding | Our plain-words summary |
+| effect, effect_unit | |
+| standard_error | |
+| interval_lower, interval_upper, interval_type, confidence_level | |
+| uncertainty_status | |
+
 ### `jobs_company_claims`
+
 | Field | Notes |
 |---|---|
 | id, company | |
 | claim_type | `job_cuts`, `hiring_freeze`, `hiring_slowdown`, `hiring_increase` or `role_change` |
-| quote | The company's own words, 30 words at most |
-| number_stated | Null if the company gave no number. We never estimate one |
-| statement_url, statement_channel | The channel is `press_release`, `filing`, `earnings_call`, `official_post` or `executive_post` |
-| statement_date | |
+| ai_role | `sole_stated_reason` or `one_of_several_reasons` |
+| total_announced_change, total_unit, total_scope | Null if no number was given. We never estimate one |
+| ai_attributed_change, ai_attributed_unit | Only if the company explicitly attributed a number to AI; otherwise null |
+| quote | 30 words at most |
+| statement_url, statement_channel, statement_date | |
+| executive_name, executive_role | For `executive_post` |
+| context_url | A link to the full statement or transcript |
 | added_by, checked_by | Two different agents |
 | status | Always `company_claim` |
 
 ## Checks that run in CI
 
-- **Required fields:** every observation has a source, period, value, vintage, retrieved date and URL.
-- **No projections in the main charts:** no `projection` or `modelled_exposure` series appears in a "what's happening" chart. The page groups series by `kind`, and a test enforces it.
-- **Company claims:** every claim has a `statement_url` on a domain the company owns, or a regulator's filing domain (for example sec.gov, Companies House), and a quote of 30 words at most.
-- **Staleness:** a series older than its refresh cadence plus 50% is shown with a "stale" badge, and the build warns.
-- **Licences:** a source with no checked licence can't be published. The build fails.
+- **Required fields:** every observation and study result has a kind, an uncertainty status, a source version or revision, a period or date, a vintage or retrieval date, and a URL.
+- **No unextracted uncertainty:** `uncertainty_status = not_yet_extracted` can't be published.
+- **Kind placement:**
+  - The "What's happening" sections and their exports contain only `measured`, `survey_estimate` and `model_derived_estimate`.
+  - `modelled_exposure` appears only in the exposure section, and `projection` only in the projections block.
+  - Every card, caption and export row carries its kind label. Enforced by a test over the built pages and exports.
+- **Rights:** nothing is published unless its `jobs_rights` record is `confirmed`, at the narrowest applicable scope (publication, then dataset, then source).
+- **Company claims:**
+  - the channel matches the URL (a company-owned or regulator domain; for `executive_post`, a named executive and role);
+  - the quote is 30 words at most;
+  - `ai_attributed_change` is null unless the statement explicitly attributes a number to AI.
+- **Revisions:** an observation row is never updated in place (append-only, checked against the previous snapshot).
+- **Staleness:** a series older than its refresh cadence plus 50% shows a "stale" badge, and the build warns.
 
 ## On the page (first version)
 
-1. **How many firms use AI:** the official surveys side by side, each with its own question wording, because the definitions differ.
-2. **What's happening to jobs most exposed to AI:**
-   - measured employment and postings for exposed occupations against the rest;
-   - the exposure index used, and its source, shown next to it.
-3. **What the research has measured:** study cards, with peer-reviewed ones first.
-4. **What companies say:** claims, labelled as claims.
-5. **What forecasters expect:** projections, with their ranges, in a visibly separate block.
-6. **Sources and method:** every source, licence and refresh date.
+1. **How many firms use AI:** the official surveys side by side, each with its own question wording, population and uncertainty, because the definitions differ.
+2. **Job postings that mention AI:** Indeed Hiring Lab, by country, with its method note (7-day average, Indeed postings only).
+3. **What the research has found:** results grouped by kind, peer-reviewed first within each group, and working papers labelled.
+4. **Exposure (separate section):** exposure indices, each labelled "Exposure is not impact". **There's no occupation-by-exposure employment comparison at launch.** It waits until an index, version, occupation crosswalk, threshold and weights are documented and reproducible, with a sensitivity check against a second index or threshold.
+5. **What companies say:** claims, labelled as claims, with AI's stated role and the AI-attributed number kept apart from the total.
+6. **What forecasters expect:** projections, with their ranges, in a visibly separate block.
+7. **Sources and method:** every source, its rights record and its refresh date.
 
-## Open questions for the reviewer
+## Answers to v0.1's open questions (with the Codex review)
 
-1. Is the four-kind label (measured, survey estimate, modelled exposure, projection) the right split, or does it need a fifth?
-2. Should working papers appear at all at launch, given Kol's "no slop" bar, or only peer-reviewed work?
-3. For company claims, is "the company said AI was a reason" strict enough? Some statements bundle AI with "efficiency".
-4. Which exposure index should the occupation comparison use, if any, given they disagree?
+1. **Kinds:** four core kinds plus a fifth, "model-derived estimate", for inferred metrics such as usage classifications. "Company claim" stays a separate status, and peer review a separate attribute.
+2. **Working papers:** allowed in the research section, labelled, after a method check. Exposure working papers go with exposure.
+3. **Company claims:** a stricter rule. The data model now records AI's role (sole or one of several), with the total kept apart from the AI-attributed numbers, and a link to the context. Executive posts are allowed as a channel, with the executive named.
+4. **Exposure index:** none at launch. The occupation comparison waits for a documented, reproducible index and mapping, with a sensitivity check.
+
+## Changes from v0.1 (Codex review, 14 Nov 2026)
+
+- **Kinds:** a mandatory kind on every study result as well as every series. Kind placement is enforced across cards, captions and exports, with a fifth kind added.
+- **Uncertainty:** standard error, relative standard error, interval type, confidence level, and published / not published / not yet extracted.
+- **Versions:**
+  - immutable series versions holding questionnaire wording, population, definition and method;
+  - observations are unique on (series_version_id, period, vintage), with the current-vintage rule defined;
+  - studies get a revision id and a retrieval date.
+- **BLS OEWS:** reclassified as a survey estimate; kind is now chosen per series, not per publisher.
+- **Frequency:** daily added, with the averaging window kept apart from the refresh cadence.
+- **Rights:** a `jobs_rights` table covering sources, datasets and single papers, with `verified_on` meaning the terms were actually confirmed.
+- **Licence updates:**
+  - OECD and ILO: partly confirmed (from the Codex review);
+  - ILO Working Paper 140: CC BY 4.0;
+  - Eurostat: still unconfirmed.
+- **Company claims:** AI's role recorded, total and AI-attributed numbers kept apart, executive posts reconciled with the channel rule.
