@@ -1,0 +1,66 @@
+---
+import GuideArticle from '../../components/GuideArticle.astro';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const sources = [
+  { label: 'llama.cpp (ggml-org), GitHub repository', url: 'https://github.com/ggml-org/llama.cpp' },
+  { label: 'Ollama, GitHub repository and docs', url: 'https://github.com/ollama/ollama' },
+  { label: 'Hugging Face Hub documentation, GGUF', url: 'https://huggingface.co/docs/hub/gguf' },
+  { label: 'LM Studio', url: 'https://lmstudio.ai/' },
+];
+---
+<GuideArticle
+  title="Running AI Models Locally"
+  crumb="Local Models"
+  description="How to run an open-weights language model on your own computer: what hardware you need, what quantisation means, and which tools to start with."
+  intro="Running a model locally means the model file sits on your own computer and your prompts never leave it. It's free once you have the hardware, and slower and smaller than the big hosted models."
+  category="Practical"
+  readTime="8 min read"
+  updated="2026-10-26"
+  sources={sources}
+>
+  <p>
+    You can only run models whose weights are published, so this is the open-weights side of <a href={`${base}guides/open-vs-closed-models/`}>Open vs Closed</a>. The usual reasons people do it are privacy, working offline, avoiding per-token bills and wanting a fixed model version.
+  </p>
+
+  <h2>The tools</h2>
+  <ul>
+    <li><strong>Ollama</strong> is a command-line tool for macOS, Windows and Linux. You download a model with one command and chat with it or call it from code through a local API.</li>
+    <li><strong>LM Studio</strong> is a desktop app with a model browser and chat window, and it can also run a local server.</li>
+    <li><strong>llama.cpp</strong> is the open-source engine underneath much of this. It runs models on ordinary CPUs as well as Apple, Nvidia and AMD GPUs, and it introduced the GGUF file format most local models are shared in.</li>
+  </ul>
+  <p>
+    Our <a href={`${base}api-guides/`}>API getting started page</a> has an Ollama code example.
+  </p>
+
+  <h2>Will it run on my machine?</h2>
+  <p>
+    Memory is what matters most. The whole model has to fit in your graphics card's memory, or in system RAM on a Mac with unified memory, with some room left over for the conversation.
+  </p>
+  <p>
+    Quantisation is what makes this possible. A model's weights are normally stored at 16 bits each. Quantised versions store them at 8, 5 or 4 bits, which shrinks the file a lot at the cost of some quality. As rough arithmetic, a 4-bit model needs about half a byte per parameter, so an 8 billion parameter model is around 4 to 5 GB and a 70 billion parameter model is around 40 GB before overhead. Model pages on Hugging Face list the file size of each quantised version, which is the number to compare with your free memory.
+  </p>
+  <ul>
+    <li><strong>A laptop with 8 to 16 GB:</strong> small models, roughly 1 to 8 billion parameters, at 4 bits.</li>
+    <li><strong>A GPU with 16 to 24 GB, or a Mac with 32 GB or more:</strong> mid-size models in the teens and twenties of billions of parameters.</li>
+    <li><strong>Bigger than that:</strong> multiple GPUs or a high-memory Mac, or rent a cloud GPU.</li>
+  </ul>
+  <p>
+    These bands are estimates, not tested limits. If a model's too big it'll either refuse to load or run painfully slowly.
+  </p>
+
+  <h2>What to expect</h2>
+  <p>
+    Small local models are good at summarising, rewriting, simple coding help and chatting about documents you give them. They're noticeably weaker than the top hosted models at hard reasoning and long, careful writing, and they know less. They also can't search the web unless you connect a tool.
+  </p>
+
+  <h2>Getting started</h2>
+  <ol>
+    <li>Install Ollama or LM Studio.</li>
+    <li>Pick a small, recent instruction-tuned model and check its licence.</li>
+    <li>Try it on a real task you do every week.</li>
+    <li>Move up a size only if the small one falls short and your memory allows.</li>
+  </ol>
+  <p>
+    The <a href={`${base}open-source/`}>open-source page</a> lists the open-weights models in our catalogue. Read <a href={`${base}guides/reading-hub-tables/`}>How to Read the Hub's Tables</a> for how current that list is.
+  </p>
+</GuideArticle>

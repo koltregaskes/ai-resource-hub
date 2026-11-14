@@ -7,7 +7,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
 <BaseLayout
   title="Using AI for Research & Analysis — The AI Resource Hub"
-  description="How to use AI to research topics, summarise documents, analyse data, and fact-check — plus pitfalls to avoid."
+  description="How to use AI to research topics, summarise documents, analyse data and fact-check, plus the pitfalls to avoid."
 >
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
@@ -27,7 +27,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
         Using AI for Research & Analysis
       </h1>
       <p class="text-lg text-(--color-text-secondary)">
-        AI can be a powerful research assistant — summarising documents, finding patterns, and helping you
+        AI can be a useful research assistant, summarising documents, finding patterns, and helping you
         understand complex topics. But you need to know its limitations. Here's how to research effectively with AI.
       </p>
     </header>
@@ -39,29 +39,30 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
           <p class="text-(--color-text-primary) leading-relaxed">
             <strong>AI models can and do make things up.</strong> They can cite books that don't exist, invent
             statistics, and state falsehoods with complete confidence. Never treat AI research output as fact
-            without independent verification — especially for dates, statistics, quotes, and scientific claims.
+            without independent verification, especially dates, statistics, quotes, and scientific claims.
           </p>
         </div>
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Best Tools for Research</h2>
+        <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Tools Worth Trying for Research</h2>
+        <p class="text-sm text-(--color-text-muted) mb-3">Features as described on each provider's own site, checked 26 Oct 2026. They change often.</p>
         <div class="space-y-3">
           <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
             <h3 class="font-semibold text-(--color-text-primary) mb-1">Perplexity AI</h3>
-            <p class="text-sm text-(--color-text-secondary)">Purpose-built for research. Always cites sources. Best for fact-checking and quick research.</p>
+            <p class="text-sm text-(--color-text-secondary)">A search-based answer engine that shows the web sources behind each answer. Useful for quick research and for finding pages to check. <a href="https://www.perplexity.ai/" rel="noopener" class="text-(--color-accent)">perplexity.ai</a></p>
           </div>
           <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
             <h3 class="font-semibold text-(--color-text-primary) mb-1">Gemini Deep Research</h3>
-            <p class="text-sm text-(--color-text-secondary)">Browses hundreds of websites and produces multi-page reports with citations. Best for comprehensive research.</p>
+            <p class="text-sm text-(--color-text-secondary)">Google says it can browse hundreds of websites and write a multi-page report in minutes. Useful when you want a first survey of a topic, but check the citations. <a href="https://gemini.google/overview/deep-research/" rel="noopener" class="text-(--color-accent)">Google's overview</a></p>
           </div>
           <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-            <h3 class="font-semibold text-(--color-text-primary) mb-1">Claude (Long Context)</h3>
-            <p class="text-sm text-(--color-text-secondary)">Excellent at analysing long documents — upload a PDF and ask detailed questions. Best for document analysis.</p>
+            <h3 class="font-semibold text-(--color-text-primary) mb-1">Claude</h3>
+            <p class="text-sm text-(--color-text-secondary)">You can upload a PDF or other long document and ask detailed questions about it. Useful for document analysis. Limits per model are in our <a href={`${base}context-window/`} class="text-(--color-accent)">context window table</a>.</p>
           </div>
           <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
-            <h3 class="font-semibold text-(--color-text-primary) mb-1">ChatGPT with Browse</h3>
-            <p class="text-sm text-(--color-text-secondary)">Can search the web in real-time. Good for general research with current information.</p>
+            <h3 class="font-semibold text-(--color-text-primary) mb-1">ChatGPT search</h3>
+            <p class="text-sm text-(--color-text-secondary)">Searches the web from inside a chat and links its sources. Good for general research that needs recent information. <a href="https://openai.com/index/introducing-chatgpt-search/" rel="noopener" class="text-(--color-accent)">OpenAI's announcement</a></p>
           </div>
         </div>
       </section>
@@ -96,7 +97,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
             "I run a [type of business] in [location]. My main competitors are [list them].
             Analyse their strengths and weaknesses compared to us. Present as a comparison table
             with columns for: Company, Strengths, Weaknesses, Pricing, and Unique Selling Point.
-            Use information you know about these companies — and clearly flag anything you're not sure about."
+            Use information you know about these companies, and clearly flag anything you're not sure about."
           </p>
         </div>
       </section>
@@ -119,7 +120,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
               <li>Cross-reference key claims with real sources</li>
               <li>Ask AI to flag things it's uncertain about</li>
               <li>Use AI to find leads, then verify yourself</li>
-              <li>Prefer tools that cite sources (Perplexity, Gemini)</li>
+              <li>Prefer tools that show their sources, and open them</li>
             </ul>
           </div>
         </div>

@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: 'Hub weekly: 19 to 25 October 2026',
+  datePublished: '2026-10-26',
+  author: { '@type': 'Organization', name: 'The AI Resource Hub' },
+  description: 'What changed on the Hub in the week of 19 to 25 October 2026, and why a page rebuilt today can still hold a price from July.',
+};
+
+/*
+ * Week-on-week rows, taken from the git history of public/data/models-latest.json:
+ * "before" is the export generated 18 Oct 2026 22:55 UTC (commit 0bed446e5),
+ * "after" is the export generated 22 Oct 2026 23:20 UTC (commit a6f9c1c76),
+ * the last one committed before 26 Oct. The date column is the first export
+ * that showed the new value. Prices are USD per 1M tokens, input / output,
+ * exactly as the export listed them. They are not current prices.
+ */
+const changes = [
+  { id: 'llama-4-maverick', name: 'Llama 4 Maverick', field: 'Context window (tokens)', before: '1,048,576', after: '524,288', firstSeen: '19 Oct', source: 'openrouter.ai/api/v1/models' },
+  { id: 'deepseek-r1', name: 'DeepSeek R1 (was "R1")', field: 'Price, context, status', before: '$0.70 / $2.50, 64,000, active', after: '$0.55 / $2.19 (historical), 128,000, tracking', firstSeen: '19 Oct', source: 'deepseek.com/pricing (was OpenRouter)' },
+  { id: 'deepseek-v3', name: 'DeepSeek V3', field: 'Price', before: '$0.32 / $0.89', after: '$0.257 / $1.029', firstSeen: '20 Oct', source: 'openrouter.ai/api/v1/models' },
+  { id: 'gemini-2.5-flash', name: 'Gemini 2.5 Flash (was "(batch)")', field: 'Price', before: '$0.15 / $1.25', after: '$0.30 / $2.50', firstSeen: '20 Oct', source: 'openrouter.ai/api/v1/models' },
+  { id: 'gemini-2.5-flash-lite', name: 'Gemini 2.5 Flash Lite (was "(batch)")', field: 'Price', before: '$0.05 / $0.20', after: '$0.10 / $0.40', firstSeen: '21 Oct', source: 'openrouter.ai/api/v1/models' },
+];
+
+---
+
+<BaseLayout
+  title="Hub weekly: 19 to 25 October 2026 — Blog — The AI Resource Hub"
+  description={structuredData.description}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}blog/`} class="hover:text-(--color-text-secondary) transition-colors">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Hub weekly, 19 to 25 Oct</span>
+    </nav>
+
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs px-2 py-0.5 rounded-full bg-pink-500/20 text-pink-400 font-medium">News</span>
+        <span class="text-xs text-(--color-text-muted)">26 Oct 2026</span>
+        <span class="text-xs text-(--color-text-muted)">9 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3 leading-tight">
+        Hub weekly: 19 to 25 October 2026
+      </h1>
+    </div>
+
+    <div class="post-body space-y-5 text-(--color-text-secondary) leading-relaxed">
+      <h2>The week on the Hub</h2>
+      <div data-section="roundup" class="space-y-5">
+        <p class="text-lg">
+          The internal benchmark on the homepage is still the 12 June 2026 snapshot. It's labelled as history, not a ranking, and nothing below changes that.
+        </p>
+        <p>
+          This was a quiet week on the Hub, and most of what moved came from the automated data job. Between 19 and 25 October the repository took 141 commits, and 139 of those were the scheduled job that pulls prices and benchmark rows and rebuilds the model export. So when every model page tells you it was updated this week, that's the job talking. It doesn't mean every number was checked this week.
+        </p>
+        <p>
+          The catalogue sat at 182 models all week. Nothing new was added. The newest release date in it is still 24 July 2026, which means the launches people were talking about this month aren't on the Hub yet. I'd rather say that plainly than let a fresh-looking date suggest otherwise.
+        </p>
+        <p>
+          Five rows did change, and they're in the table below.
+        </p>
+        <p>
+          Two of them look like corrections more than price moves. The Gemini 2.5 Flash and Flash Lite rows lost their "(batch)" label and their listed prices doubled. Our reading, which the feed doesn't confirm, is that a batch price was swapped for the standard one: Google prices its Batch API at 50% of the standard cost, and the old prices were exactly half the new ones. If you'd been comparing Flash against other models on our table, you were looking at a discounted price next to full ones, and that's the kind of quiet error that ends up in someone's budget spreadsheet.
+        </p>
+        <p>
+          DeepSeek R1 moved from an OpenRouter price to one sourced to DeepSeek's pricing page, and from active to tracking. That page now lists only V4, so the $0.55 / $2.19 we show is a historical R1 price. That takes the active count from 106 to 105.
+        </p>
+        <p>
+          The benchmark rules didn't move either. In both the 18 October and 26 October exports, 12 of 365 raw scores are rankable and 353 stay quarantined. That's a lot of held-back numbers, and I'm fine with it.
+        </p>
+        <p>
+          Two commits on 25 October made three site changes. News links can now open that week's search on the news page, the new /go/ address forwards only to pages on this site, and the hub tickers show the editorial type of each blog post. Daily news digests were added for 19 to 22 October. There are none for 23 or 24 October, and the 25 October digest arrived just after midnight on the 26th.
+        </p>
+        <p>
+          There are no outside stories this week. The news pipeline's routing check still reports a missing configuration, and we'd sooner skip the section than pass on a feed we haven't checked.
+        </p>
+        <p>
+          Twelve new guides go up with this post on the <a href={`${base}guides/`}>guides page</a>, including <a href={`${base}guides/reading-hub-tables/`}>How to Read the Hub's Tables</a>. If you only read one, make it that one, because it explains how old each number on the site actually is.
+        </p>
+      </div>
+
+      <div class="my-8 overflow-x-auto rounded-xl border border-(--color-border) bg-(--color-bg-card)">
+        <table class="w-full text-sm">
+          <caption class="text-left text-xs text-(--color-text-muted) px-4 pt-3 pb-2">
+            Rows that changed in the Hub's model export between the 18 October and 22 October 2026 exports. None of the five changed again in the 26 October export. Prices are US dollars per million tokens (input / output) as the export listed them. They're dated, not current. Check the provider before you rely on any of them.
+          </caption>
+          <thead>
+            <tr class="text-left text-(--color-text-muted) border-b border-(--color-border)">
+              <th class="px-3 py-2 font-medium">Model</th>
+              <th class="px-3 py-2 font-medium">What changed</th>
+              <th class="px-3 py-2 font-medium">18 Oct export</th>
+              <th class="px-3 py-2 font-medium">22 Oct export</th>
+              <th class="px-3 py-2 font-medium">First seen</th>
+              <th class="px-3 py-2 font-medium">Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            {changes.map((c) => (
+              <tr class="border-b border-(--color-border) last:border-0 align-top">
+                <td class="px-3 py-2 text-(--color-text-primary)"><a href={`${base}models/${c.id}/`} class="hover:text-(--color-accent)">{c.name}</a></td>
+                <td class="px-3 py-2">{c.field}</td>
+                <td class="px-3 py-2">{c.before}</td>
+                <td class="px-3 py-2">{c.after}</td>
+                <td class="px-3 py-2 whitespace-nowrap">{c.firstSeen}</td>
+                <td class="px-3 py-2 text-xs">{c.source}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Why a page rebuilt today can hold a price from July</h2>
+      <div data-section="article" class="space-y-5">
+        <p>
+          Every model page on the Hub carries a fresh date. In the export generated at 13:56 UTC on 26 October, 85 of the 182 rows had a last-updated time from that same day. Glance at that and you'd assume someone checked the whole catalogue this morning. Nobody did, and the gap between what the date suggests and what it means is the most useful thing to understand about any data site, ours included.
+        </p>
+        <p>
+          I think most people treat a date on a web page as a promise. It usually isn't one.
+        </p>
+        <p>
+          The Hub runs on three clocks.
+        </p>
+        <p>
+          The first is the build clock, which is when the page was last generated. Our scheduled job runs many times a day and each run rebuilds the export, so this clock is nearly always recent.
+        </p>
+        <p>
+          The second is the source clock: when a price or a score was last read from the place it came from. Of the 85 rows with a fresh time, 64 are priced from OpenRouter's public models list, which the job reads on each run. Most rows priced from a provider's own pricing page have no last-updated time at all, and they're only as fresh as the last time someone or something read that page.
+        </p>
+        <p>
+          The third is the catalogue clock, meaning when a model was last added. That one stopped in the summer. The newest release date in the export is 24 July 2026.
+        </p>
+        <p>
+          Put those together and a single row can be rebuilt today, priced from a feed read today, and still describe a model that's three months old with nothing newer sitting beside it. None of that is wrong on its own. It only misleads if the page shows one date and lets readers assume it covers all three. And in a field where three months is a long time, that assumption costs people real money and real decisions.
+        </p>
+        <h3>What the five changes tell us</h3>
+        <p>
+          The table above is short. Each row shows a different way a number can move, though, which makes it more useful than its size suggests.
+        </p>
+        <p>
+          DeepSeek V3's input price went down and its output price went up on 20 October. The source is OpenRouter, which lists models served by several providers, so a change there can reflect which provider's price is listed as much as any change by DeepSeek itself. We report what the feed said. We don't know why it changed, and we won't guess.
+        </p>
+        <p>
+          The two Gemini rows look like a labelling fix. Until 20 October the Flash row was called "Gemini 2.5 Flash (batch)" and listed $0.15 in and $1.25 out per million tokens. After that it was plain "Gemini 2.5 Flash" at $0.30 and $2.50, exactly double. Flash Lite followed the next day, with $0.05 and $0.20 becoming $0.10 and $0.40. Both rows are priced from OpenRouter's feed, not from Google directly, and the feed doesn't say why the label changed. Our inference is that the old rows carried a batch price: Google's Batch API documentation says batch usage is priced at 50% of the standard interactive cost, which fits the halved numbers.
+        </p>
+        <p>
+          If that's right, anyone who compared Gemini 2.5 Flash on our table before 20 October was comparing a batch price with other models' standard prices. That's on us. I'd rather put it in writing than hope nobody noticed, because a comparison site that hides its own mistakes isn't worth much.
+        </p>
+        <p>
+          DeepSeek R1 changed the most. Its name went from "R1" to "DeepSeek R1", its price source moved from OpenRouter to DeepSeek's own pricing page, the listed context window went from 64,000 to 128,000 tokens, and its status changed from active to tracking. Tracking rows stay on the site but aren't ranked. DeepSeek's pricing page now lists only V4, so treat $0.55 in and $2.19 out as a historical R1 price, not one you can check there today.
+        </p>
+        <p>
+          Llama 4 Maverick's context window halved in the export on 19 October, from 1,048,576 to 524,288 tokens. Again the source is OpenRouter. A provider can serve a model with a shorter window than its maker announced, and an aggregated feed will show the serving figure. Both numbers can be true at once. That's why the model page names the source, and it's also why I'd check which provider you're actually going to use before planning around a big window.
+        </p>
+        <h3>What we're doing about it</h3>
+        <p>
+          Three things. Two are already in place.
+        </p>
+        <p>
+          Composite quality scores are off. In the 26 October export all 182 models have their quality score suppressed because we can't trace it to a reviewed source row, and of 365 raw benchmark scores only 12 meet our rule for ranking. That leaves a lot of blank cells. I know blank cells look worse than numbers, but a number nobody can trace is worse than a gap, and readers deserve to know which one they're looking at.
+        </p>
+        <p>
+          The homepage benchmark is labelled as a 12 June 2026 snapshot, in the table header and in the tooltip, so nobody reads it as this week's order.
+        </p>
+        <p>
+          The third is new this week. <a href={`${base}guides/reading-hub-tables/`}>How to Read the Hub's Tables</a> explains each column and the difference between a page date and a source date. The new image, video and voice guides also include tables built straight from the export, and those print its generated date and the newest release date right next to the rows.
+        </p>
+        <p>
+          What's still missing is the catalogue clock. Until new models are added with a verified source, the Hub can't tell you about this month's launches, and it won't pretend to. I want to fix that properly, even if it takes a while, because a rushed catalogue update would just recreate the problem this post is about.
+        </p>
+        <p>
+          Until then, if you're about to spend money on the strength of a number here, open the model page, look at the source and check the price where it came from. For the Gemini rows and DeepSeek V3 that's <a href="https://openrouter.ai/models" rel="noopener">OpenRouter's model list</a>, and Google's own rates are on its <a href="https://ai.google.dev/gemini-api/docs/pricing" rel="noopener">Gemini API pricing page</a>. For DeepSeek, <a href="https://api-docs.deepseek.com/quick_start/pricing" rel="noopener">DeepSeek's pricing page</a> now lists only V4, so the R1 row is a historical price.
+        </p>
+      </div>
+
+      <section class="mt-10 p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="!mt-0">Sources</h2>
+        <ul class="text-sm">
+          <li>Hub model export, <a href={`${base}data/models-latest.json`}>/data/models-latest.json</a>, and its history in the <a href="https://github.com/koltregaskes/ai-resource-hub/commits/main/public/data/models-latest.json" rel="noopener">public repository</a> (exports of 18 Oct 22:55 UTC and 22 Oct 23:20 UTC compared; counts in the article from the export of 26 Oct 13:56 UTC).</li>
+          <li>Google AI for Developers, <a href="https://ai.google.dev/gemini-api/docs/batch-mode" rel="noopener">Batch API</a> ("priced at 50% of the standard interactive API cost").</li>
+          <li>Site changes on 25 Oct 2026: commits <a href="https://github.com/koltregaskes/ai-resource-hub/commit/cc1f501d970c35ca9bd1fe8e077815d32d39d7fa" rel="noopener">cc1f501</a> and <a href="https://github.com/koltregaskes/ai-resource-hub/commit/39c3673f2fe6967dcdc13d02fe183a452de90be1" rel="noopener">39c3673</a>.</li>
+          <li><a href={`${base}methodology/`}>Hub methodology</a>.</li>
+        </ul>
+      </section>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .post-body :global(h2) { font-size: 1.5rem; font-weight: 700; color: var(--color-text-primary); margin-top: 2.5rem; }
+  .post-body :global(h3) { font-size: 1.125rem; font-weight: 600; color: var(--color-text-primary); margin-top: 1.5rem; }
+  .post-body :global(a) { color: var(--color-accent); }
+  .post-body :global(ul) { list-style: disc; padding-left: 1.5rem; }
+  .post-body :global(li) { margin-top: 0.4rem; }
+</style>
