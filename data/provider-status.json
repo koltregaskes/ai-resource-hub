@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T02:56:08.801Z",
+  "generatedAt": "2026-11-14T03:09:30.353Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-14T02:56:08.796Z",
+      "lastCheckedAt": "2026-11-14T03:09:30.347Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,15 +100,15 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-14T02:56:07.211Z",
+      "lastCheckedAt": "2026-11-14T03:09:28.774Z",
       "overallStatus": "degraded",
-      "overallLabel": "Minor Service Outage",
+      "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "partial_outage"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Platform on AWS",
@@ -135,26 +135,26 @@
         {
           "id": "qrpz8k79qm7x",
           "title": "Elevated purchasing errors on claude.ai",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "major",
           "startedAt": "2026-11-14T02:54:33.309Z",
-          "updatedAt": "2026-11-14T02:54:33.499Z",
+          "updatedAt": "2026-11-14T03:09:15.572Z",
           "resolvedAt": null,
           "url": "https://stspg.io/qqf00d9r7pm4",
-          "summary": "We are investigating elevated errors affecting purchases, plan upgrades and cancellations on claude.ai. Core functionality is not affected. We will provide an update as soon as po..."
+          "summary": "Purchases on claude.ai are working normally, and delayed plan changes and payments are now being applied. Some customers who recently paid may need to wait up to an hour for their..."
         }
       ],
       "recentIncidents": [
         {
           "id": "qrpz8k79qm7x",
           "title": "Elevated purchasing errors on claude.ai",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "major",
           "startedAt": "2026-11-14T02:54:33.309Z",
-          "updatedAt": "2026-11-14T02:54:33.499Z",
+          "updatedAt": "2026-11-14T03:09:15.572Z",
           "resolvedAt": null,
           "url": "https://stspg.io/qqf00d9r7pm4",
-          "summary": "We are investigating elevated errors affecting purchases, plan upgrades and cancellations on claude.ai. Core functionality is not affected. We will provide an update as soon as po..."
+          "summary": "Purchases on claude.ai are working normally, and delayed plan changes and payments are now being applied. Some customers who recently paid may need to wait up to an hour for their..."
         },
         {
           "id": "sqn3fg1l96dl",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-14T02:56:07.197Z",
+      "lastCheckedAt": "2026-11-14T03:09:28.704Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -299,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-14T02:56:07.972Z",
+      "lastCheckedAt": "2026-11-14T03:09:29.300Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-14T02:56:07.361Z",
+      "lastCheckedAt": "2026-11-14T03:09:28.737Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -362,7 +362,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-14T02:56:08.176Z",
+      "lastCheckedAt": "2026-11-14T03:09:29.551Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
