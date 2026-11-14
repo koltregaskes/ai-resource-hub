@@ -3,17 +3,18 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { Miniflare } from 'miniflare';
 const NOW = Date.UTC(2026, 10, 12, 9);
-async function fixture(mode, loseResponse = false, holdResponse = false) {
+async function fixture(mode, loseResponse = false, holdResponse = false, settings = {}) {
   let release, started; const waiting = new Promise(resolve => { release = resolve; }); const providerStarted = new Promise(resolve => { started = resolve; });
   const edition = { date: '2026-11-12', dateLabel: '12 November', url: 'https://site.example.test/newsletter/2026-11-12/', sixtySeconds: 'Model news.', stories: [{ rank: 0, title: 'A model update', summary: 'Source summary.', url: 'https://source.example.test/a', source: 'Example', category: 'models', categoryLabel: 'Models', company: null, whyItMatters: null }] };
   const accepted = new Map(), requests = [], deliveries = new Map();
   const mf = new Miniflare({ modules: true, script: readFileSync(new URL('../dist/recovery-test.js', import.meta.url), 'utf8'), compatibilityDate: '2026-08-01',
-    bindings: { ENVIRONMENT: 'test', FAIL_MODE: mode, SITE_URL: 'https://site.example.test', API_URL: 'https://worker.example.test', EDITION_JSON_URL: 'https://edition.example.test/latest.json', RESEND_API_BASE: 'https://provider.example.test', RESEND_API_KEY: 'test-only', SIGNING_KEY: 'test-only-local-recovery-signing-material', FROM_EMAIL: 'edition@example.test', POSTAL_ADDRESS: 'Test address' },
+    bindings: { TEST_READERS: settings.readers||2, ENVIRONMENT: 'test', FAIL_MODE: mode, SITE_URL: 'https://site.example.test', API_URL: 'https://worker.example.test', EDITION_JSON_URL: 'https://edition.example.test/latest.json', RESEND_API_BASE: 'https://provider.example.test', RESEND_API_KEY: 'test-only', SIGNING_KEY: 'test-only-local-recovery-signing-material', FROM_EMAIL: 'edition@example.test', POSTAL_ADDRESS: 'Test address' },
     outboundService: async request => {
       if (request.url === 'https://edition.example.test/latest.json') return Response.json(edition);
       assert.equal(request.url, 'https://provider.example.test/emails/batch', 'no live destinations');
       const key = request.headers.get('Idempotency-Key'), body = await request.text();
       requests.push({ key, body });
+      if(settings.status && requests.length <= (settings.failures||1)) return Response.json({message:'fixture-private-address@example.test fixture-private-token'}, {status:settings.status});
       if(mode === 'reject' && edition.date === '2026-11-12') return Response.json({message:'rejected'}, {status:422});
       const existing = accepted.get(key);
       if (existing) {
@@ -87,7 +88,7 @@ test('concurrent runs retain one reserved batch while its provider request is in
 
 test('422 on day one closes only that edition; days two and three deliver normally', async()=>{
  const f=await fixture('reject');try{
-  assert.equal((await f.run(NOW)).status,500);
+  assert.equal((await f.run(NOW)).status,200);
   let state=await f.state();assert.equal(state.pending.length,0);assert.equal(state.batches[0].closed,true);assert.equal(state.batches[0].requestBody,'');
   for(const day of [13,14]){f.edition.date='2026-11-'+day;const r=await f.run(NOW+(day-12)*86400000);assert.equal(r.status,200);assert.equal((await r.json()).sent,2);}
   assert.deepEqual([...f.deliveries.values()],[2,2]);
@@ -101,3 +102,7 @@ test('expired uncertain batch body is erased and cannot block a new edition',asy
   const state=await f.state();assert.equal(state.batches[0].requestBody,'');assert.equal(state.pending.length,1);assert.ok(state.batches[1].complete);assert.equal(state.batches[1].requestBody,'');
  }finally{await f.mf.dispose();}
 });
+
+for(const status of [401,403])test('setup HTTP '+status+' retains exact batch for retry within 23h',async()=>{const f=await fixture('',false,false,{status});try{assert.equal((await f.run(NOW)).status,500);const state=await f.state();assert.equal(state.pending.length,1);assert.ok(state.pending[0].requestBody);const retry=await f.run(NOW+3600000);assert.equal(retry.status,200);assert.equal((await retry.json()).sent,2);assert.deepEqual(f.requests[0],f.requests[1]);assert.deepEqual([...f.deliveries.values()],[1,1]);}finally{await f.mf.dispose();}});
+for(const status of [400,422])test('HTTP '+status+' closes only rejected chunk and sends remaining 50 readers',async()=>{const f=await fixture('',false,false,{status,readers:150});try{const r=await f.run(NOW);assert.equal(r.status,200);const result=await r.json();assert.equal(result.sent,50);assert.equal(result.batchFailures.length,1);assert.equal(f.requests.length,2);const state=await f.state();assert.equal(state.batches.filter(b=>b.closed).length,1);assert.equal(state.batches.filter(b=>b.complete).length,1);assert.ok(state.batches.every(b=>b.requestBody===''));assert.equal((await f.run(NOW+3600000)).status,200);assert.equal(f.requests.length,2);}finally{await f.mf.dispose();}});
+test('recovery failures retain redacted class/status without provider message or recipients',async()=>{const f=await fixture('',false,false,{status:503,failures:2});try{assert.equal((await f.run(NOW)).status,500);const result=await (await f.run(NOW+3600000)).json();assert.equal(result.recoveryFailures.length,1);assert.equal(result.recoveryFailures[0].errorClass,'ProviderHttpError');assert.equal(result.recoveryFailures[0].status,503);assert.doesNotMatch(JSON.stringify(result),/fixture-private|@|Bearer|test-only|unsubscribe/);assert.equal((await f.state()).pending.length,1);}finally{await f.mf.dispose();}});

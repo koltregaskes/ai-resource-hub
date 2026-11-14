@@ -67,3 +67,7 @@ UPDATE newsletter.send_batches SET state='closed', request_body='', lease_token=
 ```
 
 Apply the updated schema at approved database setup before deploying this Worker. Completed or rejected requests have their sensitive request body erased immediately. Each send run also erases bodies at least 24 hours old, including ambiguous and accepted batches; accepted IDs and reservations survive. Run the sender regularly for this expiry sweep; it is not a database TTL when the Worker is stopped. No live schema or provider changes are performed by tests.
+
+### Provider failure handling
+
+Resend 401/403 responses retain the prepared batch and emit a static operator-action log: check the key, permissions and verified sending domain, then retry within the existing 23-hour recovery window. No key, domain, recipient or provider response body is logged. See https://resend.com/docs/api-reference/errors (checked 2026-11-14). HTTP 400/422 remain definite rejections; only that chunk closes and the same run continues with other chunks. Reports expose allowlisted errorClass and numeric status (null for non-HTTP errors), never the raw provider error message. Reservations, exact-body replay and body erasure on closure/completion are unchanged. Account/domain repair and Worker deployment still require their existing approvals.

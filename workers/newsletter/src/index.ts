@@ -15,7 +15,7 @@
  */
 import categoriesConfig from '../../../shared/news-categories.json';
 import { buildConfirmEmail, buildDailyEmail, type EditionPayload } from './email';
-import { ProviderRejection, ResendClient, type OutgoingEmail } from './resend';
+import { safeSendError, ProviderRejection, ResendClient, type OutgoingEmail } from './resend';
 import { memorySeed, memoryStore, memorySnapshot, neonStore, type Store, type Subscriber, type SendBatch } from './store';
 import { keyedHash, sha256Hex, signToken, verifyToken } from './tokens';
 
@@ -302,7 +302,8 @@ export async function sendDaily(env: Env, store: Store, options: { force?: boole
   const now = options.nowMs ?? Date.now();
   const resend = new ResendClient(env.RESEND_API_KEY, env.RESEND_API_BASE);
   await store.purgeBatchBodies(now);
-  const recoveryFailures: Array<{key: string; reason: string}> = [];
+  const recoveryFailures: Array<{key: string; reason: string; errorClass: string; status: number | null}> = [];
+  const batchFailures: typeof recoveryFailures = [];
   let sent = 0;
   let skipped = 0;
 
@@ -344,7 +345,7 @@ export async function sendDaily(env: Env, store: Store, options: { force?: boole
   // or is unavailable. Accepted batches need no provider call or fresh feed.
   for (const batch of await store.listPendingBatches()) {
     try { await recover(batch); }
-    catch { recoveryFailures.push({ key: batch.key, reason: 'Recovery failed; reconcile this batch separately' }); }
+    catch (error) { recoveryFailures.push({ key: batch.key, reason: 'Recovery failed; reconcile this batch separately', ...safeSendError(error) }); }
   }
 
   const source = env.EDITION_JSON_URL ?? `${env.SITE_URL}/newsletter/latest.json`;
@@ -352,7 +353,7 @@ export async function sendDaily(env: Env, store: Store, options: { force?: boole
   if (!response.ok) throw new Error(`Edition fetch failed: HTTP ${response.status} from ${source}`);
   const edition = (await response.json()) as EditionPayload;
   if (!options.force && edition.date !== ukYesterday()) {
-    return { edition: edition.date, sent, skipped, recoveryFailures, reason: "latest complete edition is not yesterday's; nothing sent" };
+    return { edition: edition.date, sent, skipped, recoveryFailures, batchFailures, reason: "latest complete edition is not yesterday's; nothing sent" };
   }
 
   const subscribers = await store.listSubscribed();
@@ -368,7 +369,14 @@ export async function sendDaily(env: Env, store: Store, options: { force?: boole
       providerIds: null, complete: false,
     };
     await store.saveBatch(batch); // Atomic request + reservations, before any provider call.
-    await recover(batch);
+    try { await recover(batch); }
+    catch (error) {
+      if (!(error instanceof ProviderRejection)) throw error;
+      // recover() has closed only this rejected chunk and retained its reservations.
+      const failure = {key: batch.key, reason: 'Rejected chunk closed; remaining readers continue', ...safeSendError(error)};
+      batchFailures.push(failure);
+      console.warn('Newsletter chunk rejected', JSON.stringify(failure));
+    }
   };
 
   for (const subscriber of subscribers) {
@@ -396,7 +404,7 @@ export async function sendDaily(env: Env, store: Store, options: { force?: boole
     if (chunk.length === 100) await flush();
   }
   await flush();
-  return { edition: edition.date, sent, skipped, recoveryFailures };
+  return { edition: edition.date, sent, skipped, recoveryFailures, batchFailures };
 }
 
 export default {
