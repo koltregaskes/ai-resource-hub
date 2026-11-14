@@ -54,8 +54,8 @@ const medianInput = insights.priceSpread.medianInput;
 
   <h2>The numbers, year by year</h2>
   <p>
-    We took every language model in the catalogue that has a release date and a context window, removed duplicate entries for
-    the same model, and found the median for each year. The median is the middle value: half the models are above it and half
+    We took every language model in the catalogue that has a release date and a context window, removed entries whose names mark them as
+    dated snapshots or fast tiers, and found the median for each year. The median is the middle value: half the models are above it and half
     below. It suits this job better than an average, because one model with a four-million-token window would drag an average
     upwards on its own.
   </p>
@@ -219,8 +219,8 @@ const medianInput = insights.priceSpread.medianInput;
     <ul>
       <li>
         <strong>What we counted.</strong> {insights.coverage.withReleaseDateAndContext} language models with a release date and
-        a context window, after removing {insights.coverage.llmEntries - insights.coverage.afterVariantRemoval} duplicate
-        entries (dated snapshots and fast tiers of a model already listed).
+        a context window, after removing {insights.coverage.llmEntries - insights.coverage.afterVariantRemoval} entries
+        whose ids end in a date stamp or in "-fast" (a naming rule, not a check that another entry for the same model exists).
       </li>
       <li>
         <strong>Checked against the source.</strong> On {checkDate} we compared our figures with OpenRouter's live public

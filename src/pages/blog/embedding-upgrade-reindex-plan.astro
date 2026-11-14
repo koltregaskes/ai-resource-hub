@@ -6,25 +6,25 @@ import { practitionerB4 } from '../../data/practitioner-b4';
 import examples from '../../data/insights/2026-11-14-b4.json';
 const e = practitionerB4.find(p => p.slug === 'embedding-upgrade-reindex-plan')!;
 ---
-<InsightArticle title={e.title} description={e.description} date="2026-11-14" type={e.type as 'Analysis' | 'Explainer'} readTime="5 min" standfirst="A new embedding model changes how you represent documents and queries. Test it with a separate index and paired questions before pointing a working search tool at it.">
+<InsightArticle title={e.title} description={e.description} date="2026-11-14" type={e.type as 'Analysis' | 'Explainer'} readTime="5 min" standfirst="A new embedding model should go into a separate index and be tested on paired questions before a working search tool points at it.">
 
-<p>An embedding update can look like a configuration edit: replace a model name and continue. For a document search service, treat it as a migration of the representation you search. Keep the existing index available while you establish how the new configuration behaves.</p>
-<p>Google's <a href={e.sources[0].url}>embedding task-type documentation</a>, read on 14 November 2026, distinguishes retrieval queries from retrieval documents. Save those task settings with the model and dimensions. A model name on its own is not enough to reproduce the embedding request.</p>
-<h2>Freeze a collection and a query set</h2>
-<p>Use a dated source collection with stable document identifiers. Keep the same chunk boundaries for the first comparison if you want to isolate the embedding change. If you change chunking as well, give the combined configuration a new name and describe both changes.</p>
-<p>Mark which passage each test query needs. Include ordinary wording, exact identifiers and questions that need more than one document where those occur in your application. Keep the expected evidence independent of either index's first result.</p>
+<p>Swapping an embedding model can look like a configuration edit. For a document search service it is a migration of the representation you search, so the existing index should stay available while you find out how the new setup behaves.</p>
+<p>Google's <a href={e.sources[0].url}>embedding task-type documentation</a>, read on 14 November 2026, distinguishes retrieval queries from retrieval documents. Those task settings should be saved with the model and dimensions, because a model name alone does not let you reproduce the embedding request.</p>
+<h2>What a fair comparison holds fixed</h2>
+<p>Start from a dated source collection with stable document identifiers. Keeping the same chunk boundaries for the first comparison isolates the embedding change; if chunking changes too, the combined configuration gets a new name and a description of both changes.</p>
+<p>For each test query, mark which passage it needs. Include ordinary wording, exact identifiers and multi-document questions where your application sees them, and judge expected evidence independently of either index's first result.</p>
 <WorkedTable headers={["Invented retrieval outcome","Queries"]} rows={examples['embedding-upgrade-reindex-plan']} caption="Synthetic paired evidence-coverage outcomes for 50 fixed queries. A pass means the required passage is retrieved, not that a generated answer is correct." />
-<p>In this invented set, the old configuration retrieves evidence for 45 of 50 queries, or 90%. The new one reaches 42, or 84%. Six old successes are lost and three old failures improve. That paired record is more useful for a migration decision than the new total alone.</p>
-<h2>Build beside the working index</h2>
-<p>Give the candidate index its own identifier. Store the source snapshot, chunker version, embedding configuration and document count in a manifest. Route test queries to the matching candidate configuration. Do not assume that vectors from two models share a useful space because their lengths happen to match.</p>
-<p>Before switching a live route, check that the candidate collection is complete. Compare expected chunk identifiers with indexed identifiers, then inspect missing or duplicated entries. A retrieval test run against a half-built collection would mix migration completeness with search quality.</p>
-<p>Retain the earlier index for a rollback period suited to the application. This is a proposed deployment method, not a guarantee that a particular database supports an atomic alias switch. Verify the actual mechanism in your chosen system before relying on it.</p>
-<h2>Estimate the rebuild from text volume</h2>
-<p>Suppose a planning manifest contains 100,000 chunks averaging exactly 600 tokens. Re-embedding that text requires 60 million input tokens under the assumption. Multiply by a verified rate for the candidate service if you need a cost estimate. We have not supplied a price or sent those requests.</p>
-<p>That volume does not predict elapsed time. Request limits, batching and the indexing stage need their own observations. Measure a small representative run and record the conditions before extrapolating. Keep vector storage and temporary capacity separate from the token estimate.</p>
-<p>Plan how documents edited during the rebuild will reach both versions. One approach is a fixed snapshot followed by an explicit change log. Whatever you choose, give the candidate a clear cut-off and verify the final catch-up rather than treating an old rebuild as current.</p>
-<h2>Switch only after the evidence is readable</h2>
-<p>Keep the paired losses, gains, completeness check and rebuild record with the release decision. Test the downstream answer stage too if it depends on the retrieved passages. Better evidence coverage does not establish better answers without that check.</p>
-<p>An embedding release is a reason to test a candidate. The migration record should say which collection was rebuilt, which questions changed and which route can restore the previous behaviour.</p>
+<p>In this invented set, the old configuration retrieves evidence for 45 of 50 queries, or 90%. The new one reaches 42, or 84%. Six old successes are lost and three old failures improve. For a migration decision, that paired record says more than the new total alone.</p>
+<h2>The candidate index is built beside the live one</h2>
+<p>The candidate gets its own identifier, and a manifest records the source snapshot, chunker version, embedding configuration and document count. Test queries go to the matching candidate configuration. Vectors from two models should not be assumed to share a useful space just because their lengths match.</p>
+<p>Before a live route switches, check that the candidate collection is complete by comparing expected chunk identifiers with indexed ones and inspecting anything missing or duplicated. A retrieval test on a half-built collection mixes migration completeness with search quality.</p>
+<p>The earlier index stays for a rollback period suited to the application. That is a proposed method, not a guarantee that a particular database supports an atomic alias switch, so verify the actual mechanism in your chosen system.</p>
+<h2>A rebuild's size comes from its text volume</h2>
+<p>Take a planning manifest of 100,000 chunks averaging exactly 600 tokens. Re-embedding that text means 60 million input tokens under the assumption. A cost estimate multiplies that by a verified rate for the candidate service; we have not supplied a price or sent those requests.</p>
+<p>The volume says nothing about elapsed time. Request limits, batching and the indexing stage each need their own observations, so time a small representative run and record the conditions before extrapolating. Vector storage and temporary capacity sit outside the token estimate.</p>
+<p>Documents edited during the rebuild must reach both versions. One approach is a fixed snapshot followed by an explicit change log. Whatever you pick, the candidate needs a clear cut-off and a verified final catch-up, because an old rebuild is not a current one.</p>
+<h2>The switch waits until the evidence can be read</h2>
+<p>The release decision should come with the paired losses and gains, the completeness check and the rebuild record. If the downstream answer stage depends on the retrieved passages, test that too, since better evidence coverage does not by itself mean better answers.</p>
+<p>A new embedding release is a reason to test a candidate. The migration record should say which collection was rebuilt, which questions changed and which route restores the previous behaviour.</p>
 <PractitionerNote evidence={e} />
 </InsightArticle>

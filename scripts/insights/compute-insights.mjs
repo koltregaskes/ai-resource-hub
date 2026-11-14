@@ -43,10 +43,11 @@ export function halfYear(isoDate) {
 }
 
 /**
- * A "variant" is a second catalogue entry for a model that is already listed:
- * a dated snapshot (id ends in a date stamp such as -0528, -2512 or -20260420)
- * or a speed tier (id ends in -fast). Variants are removed before counting so
- * one model is not counted twice.
+ * A "variant" is, by naming rule only, an entry that looks like a second version
+ * of a model: an id that ends in a date stamp (such as -0528, -2512 or -20260420)
+ * or in -fast. The rule does not check that another entry for the same model
+ * exists, so it can drop an entry that has no sibling. Variants are removed
+ * before counting so the same model is less likely to be counted twice.
  */
 export function isVariant(id) {
   return /(-\d{4}|-\d{8}|-\d{4}-\d{2}-\d{2}|-fast)$/i.test(id);

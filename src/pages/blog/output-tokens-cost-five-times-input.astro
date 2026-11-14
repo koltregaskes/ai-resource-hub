@@ -221,7 +221,7 @@ const n = (v: number) => v.toLocaleString('en-GB');
     <ul>
       <li>
         <strong>What we counted.</strong> For the trend, every language model with a release date and both prices above zero,
-        duplicates removed, grouped by half-year of release. Groups with fewer than 10 models are left out, which removes
+        variant-filtered entries only, grouped by half-year of release. Groups with fewer than 10 models are left out, which removes
         everything before July 2024. For the second chart, the {active.length} models we mark as active.
       </li>
       <li>

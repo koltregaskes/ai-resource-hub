@@ -6,25 +6,25 @@ import { practitionerB6 } from '../../data/practitioner-b6';
 import examples from '../../data/insights/2026-11-14-b6.json';
 const e = practitionerB6.find(p => p.slug === 'tool-results-context-budget')!;
 ---
-<InsightArticle title={e.title} description={e.description} date="2026-11-14" type={e.type as 'Analysis' | 'Explainer'} readTime="5 min" standfirst="In the worked budget here, ten 2,000-token tool results fill the entire 20,000-token allowance. Ten 8,000-token results exceed it fourfold. Set the return contract before the agent starts browsing.">
+<InsightArticle title={e.title} description={e.description} date="2026-11-14" type={e.type as 'Analysis' | 'Explainer'} readTime="5 min" standfirst="In the worked budget here, ten 2,000-token tool results fill the entire 20,000-token allowance, and ten 8,000-token results exceed it fourfold, so each tool needs a return contract before the agent starts browsing.">
 
-<p>An agent asks a short question and receives a long result. Repeat that across a few tools and the return traffic can become the main part of the request. A context plan that counts only the user's instructions misses the material the application adds after each operation.</p>
-<p>Anthropic's <a href={e.sources[0].url}>tool-call handling guide</a>, read on 14 November 2026, describes returning client-tool content in tool-result blocks. We suggest giving each tool a return contract: what evidence it supplies, how much it may return and where the fuller record can be retrieved if needed.</p>
-<h2>Allocate the space before filling it</h2>
-<p>Take a hypothetical request budget of 32,000 tokens. Reserve 4,000 for fixed input and 8,000 for output. That leaves 20,000 for the ten tool results in this example. There is no other history or hidden overhead in the calculation.</p>
+<p>Ask an agent a short question and a tool can send back a very long answer. Across a few tools, the returned material can become most of the request. A context plan that counts only the user's instructions misses everything the application adds after each operation.</p>
+<p>Anthropic's <a href={e.sources[0].url}>tool-call handling guide</a>, read on 14 November 2026, describes returning client-tool content in tool-result blocks. We suggest giving each tool a return contract: the evidence it supplies, the most it may return, and where the fuller record can be fetched if needed.</p>
+<h2>Where the space goes</h2>
+<p>Take a hypothetical request budget of 32,000 tokens. Fixed input takes 4,000 and output takes 8,000, which leaves 20,000 for the ten tool results in this example. The calculation includes no other history or hidden overhead.</p>
 <WorkedTable headers={["Tokens per assumed result","Ten results, tokens","Share of 20,000-token allowance"]} rows={examples['tool-results-context-budget']} caption="Synthetic text budget. Ten results each included once. Fixed instructions, output reserve and other overhead are accounted for only as stated." />
-<p>Ten results at 500 tokens occupy a quarter of the allowance. At 2,000 tokens they fill it. At 8,000 they require four times the space available. These figures are assumed lengths, not observations about any tool or model.</p>
-<h2>Ask for evidence with a retrieval route</h2>
-<p>A useful result can include the relevant passage, its source identifier, a location and an explicit indication that more content exists. That gives the agent a way to request the missing detail rather than forcing every result to contain the entire source.</p>
-<p>Do not silently truncate the part that establishes a conclusion. If a tool returns a count and a few example rows, say which is which. If it returns only the beginning of a file, mark the result incomplete. The model should not have to infer that a cleanly formatted answer omits most of the evidence.</p>
-<p>For a search tool, retain enough context to distinguish a title match from supporting text. For a build tool, preserve the failing command and relevant error lines rather than an unexplained success flag. Choose the contract from the decisions the agent must make next.</p>
-<h2>Keep full records outside the prompt when appropriate</h2>
-<p>Store the fuller output in an authorised location and pass a stable reference with the excerpt. Apply the same access controls to retrieval as to the original tool. A short prompt does not justify making a private log public.</p>
-<p>When a result is a summary, label it as one and keep its source. Test questions that depend on details likely to be omitted. A smaller return is an observable saving in request size; preserving the task's required information needs a separate acceptance check.</p>
-<p>Version the result format. Changing a tool from full text to selected fields changes what the agent can see. Save that version beside the model and prompt so a later quality change can be traced to the right component.</p>
-<h2>Account for replay as well as the first inclusion</h2>
-<p>The table counts each result once. If your application resends prior tool results on later turns, add that repeated input to the job's bill. Keep per-request token usage so that one large returned file does not disappear inside an average.</p>
-<p>Before removing old results, define which facts the agent must retain and how it can recover the original evidence. A continuation summary should not become the sole authority for a decision that requires checking a source passage.</p>
-<p>Record returned tokens, included tokens and accepted task outcomes for a trial. Then reduce the largest avoidable returns first and rerun the difficult cases. The aim is enough evidence to finish the job, with the amount of text made visible and bounded.</p>
+<p>Ten results at 500 tokens occupy a quarter of the allowance. At 2,000 tokens they fill it, and at 8,000 they need four times the space available. These lengths are assumed, not observations about any tool or model.</p>
+<h2>What a result should carry</h2>
+<p>A good result can hold the relevant passage, its source identifier, a location, and a plain sign that more content exists. The agent can then ask for the missing detail, and no result has to contain the whole source.</p>
+<p>The part that establishes a conclusion should never be cut silently. A tool that returns a count and a few example rows should say which is which, and one that returns only the start of a file should mark the result incomplete. A cleanly formatted answer can omit most of the evidence, and the model has no way to know that unless told.</p>
+<p>A search tool should keep enough context to tell a title match from supporting text. A build tool should keep the failing command and the relevant error lines, not an unexplained success flag. The contract follows from the decisions the agent has to make next.</p>
+<h2>Full records can live outside the prompt</h2>
+<p>The fuller output can be stored in an authorised location, with a stable reference passed alongside the excerpt. Retrieval needs the same access controls as the original tool, since a short prompt is no reason to make a private log public.</p>
+<p>A result that is a summary should say so and keep its source. A smaller return is a saving you can see in request size, but whether it still holds what the task needs takes a separate acceptance check, with test questions that depend on the details most likely to be left out.</p>
+<p>The result format also needs a version. Moving a tool from full text to selected fields changes what the agent can see, so saving that version beside the model and prompt lets a later change in quality be traced to the right part.</p>
+<h2>Replay costs more than the first inclusion</h2>
+<p>The table counts each result once. If your application resends earlier tool results on later turns, that repeated input adds to the job's bill. Per-request token usage is worth keeping, so one large returned file does not vanish inside an average.</p>
+<p>Before old results are dropped, it has to be settled which facts the agent must retain and how it can recover the original evidence. A continuation summary should not become the only authority for a decision that needs a source passage checked.</p>
+<p>For a trial, your own results log can hold returned tokens, included tokens and accepted task outcomes. The largest avoidable returns go first, and the difficult cases are rerun afterwards. What you want is enough evidence to finish the job, with the amount of text kept visible and bounded.</p>
 <PractitionerNote evidence={e} />
 </InsightArticle>

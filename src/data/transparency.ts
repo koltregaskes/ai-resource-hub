@@ -279,14 +279,14 @@ export const calculations: Calculation[] = [
     id: 'calc-variant-rule',
     group: 'articles',
     name: 'Removing variants',
-    meaning: 'Stops one model being counted twice when the catalogue holds a dated snapshot or a faster tier of it.',
+    meaning: 'Leaves out catalogue entries whose names mark them as a dated snapshot or a fast tier, so that the same model is less likely to be counted more than once.',
     formula:
       'A catalogue entry is a variant if its id ends in a date stamp (-MMDD, -YYMM, -YYYYMMDD or -YYYY-MM-DD) or in -fast. Variants are dropped before any count or median.',
     inputs: 'Catalogue ids.',
     code: 'scripts/insights/compute-insights.mjs',
     usedOn: 'Every figure in the data articles.',
     limits:
-      'A simple naming rule. It removes 23 of 291 language-model entries in the 14 November 2026 snapshot. Point releases with their own name (for example 5.4 and 5.5) still count separately.',
+      'A simple naming rule, not a check that another entry for the same model exists: it can drop a "-fast" entry that has no standard sibling in the catalogue. It removes 23 of 291 language-model entries in the 14 November 2026 snapshot. Point releases with their own name (for example 5.4 and 5.5) still count separately.',
   },
   {
     id: 'calc-price-spread',
