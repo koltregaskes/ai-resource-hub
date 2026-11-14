@@ -1,0 +1,10 @@
+---
+import DataNote from './DataNote.astro';
+interface Props { evidence: { id: string; formula: string; assumptions: string; limits: string; sources: { title: string; url: string; checked: string; claim: string }[] }; }
+const { evidence } = Astro.props;
+---
+<DataNote anchor={evidence.id} snapshot="14 November 2026" title="Sources, sums and disclaimer">
+  <p><strong>Illustration, not a benchmark.</strong> {evidence.assumptions}</p>
+  <p>{evidence.limits} This is a working method, not a buying recommendation or a provider performance claim.</p>
+  <ul>{evidence.sources.map(s => <li><a href={s.url} rel="noopener">{s.title}</a> (read {s.checked}): {s.claim}</li>)}</ul>
+</DataNote>

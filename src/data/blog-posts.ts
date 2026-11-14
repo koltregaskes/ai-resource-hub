@@ -1,3 +1,4 @@
+import { practitionerB1 } from './practitioner-b1';
 export type BlogType = 'Explainer' | 'Analysis' | 'Comparison' | 'Beginner' | 'Essay' | 'News';
 
 export interface BlogPost {
@@ -11,6 +12,7 @@ export interface BlogPost {
 
 /** Editorial posts, newest first. The blog index, search, RSS, and tickers share this list. */
 export const blogPosts: BlogPost[] = [
+  ...practitionerB1.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: (p.slug === 'choose-an-ai-model-by-job' ? 'Explainer' : 'Analysis') as BlogType, readTime: '5 min' })),
   {
     slug: 'output-tokens-cost-five-times-input',
     title: 'AI models now charge five times more to write than to read',

@@ -1,0 +1,29 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import WorkedTable from '../../components/insights/WorkedTable.astro';
+import PractitionerNote from '../../components/insights/PractitionerNote.astro';
+import { practitionerB1 } from '../../data/practitioner-b1';
+import examples from '../../data/insights/2026-11-14-practitioner.json';
+const e = practitionerB1[2];
+---
+<InsightArticle title={e.title} description={e.description} date="2026-11-14" type="Analysis" readTime="5 min" standfirst="With the standard Claude cache rates used here, one five-minute write followed by one hit costs 1.35 base units instead of two. A write that is never reused costs extra.">
+  <p>Prompt caching makes an attractive line on a price list. The useful question is whether your requests reuse the same opening while the cache is available. A large document sent once gets no repeat-read saving. A frequently reused prefix is a different job.</p>
+  <p>Anthropic's <a href={e.sources[0].url}>caching guide</a>, read on 14 November 2026, gives standard multipliers of 1.25 for a five-minute write, 2 for a one-hour write and 0.1 for a read, relative to ordinary input. It lists lower read rates for selected models. We use the standard rates below; check the row for your exact model before applying them.</p>
+  <h2>Count uses, including the first write</h2>
+  <p>Let one base unit mean the ordinary input cost of your repeated prefix. It could be a short set of instructions or a large reference document. The arithmetic does not need a named model or a dollar price.</p>
+  <p>Without caching, N uses cost N units. With caching, the first use pays the write multiplier, then the remaining N minus one uses pay the read multiplier. The table assumes that each of those later uses is a successful hit before expiry. It excludes new input and output, which you still need to budget.</p>
+  <WorkedTable headers={['Total uses', 'Ordinary input', '5-minute write + hits', '1-hour write + hits']} rows={examples.cache} caption="Base-input cost units for one unchanged prefix. Standard Claude multipliers checked 14 November 2026. One write, all subsequent uses hit; no expiry or rewrite." />
+  <p>At two uses the five-minute option costs 1.35 units against two without caching. The one-hour option costs 2.10, so it is still dearer. At three uses the one-hour option would cost 2.20 against three. Duration changes the break-even point as well as the time available to reach it.</p>
+  <h2>Break-even is a count, not a promise</h2>
+  <p>For a write multiplier W and a read multiplier R, caching is cheaper when W + (N − 1) × R is less than N. Rearranging gives N greater than (W − R) divided by (1 − R). At the standard rates above, that means at least two total uses for the five-minute cache, or three for the one-hour cache.</p>
+  <p>That calculation answers a narrow question. It assumes a single write and reliable reuse. If you change the prefix, miss the eligible length or let the entry expire, the count of requests alone does not tell you the saving. Separate actual cache writes and actual cache reads in your usage record.</p>
+  <p>The documentation says a cache hit refreshes its lifetime. Your tracker should therefore record reuse timing, rather than assuming the expiry is a fixed interval after the first request. Test a typical pause between requests as well as a burst of requests sent together.</p>
+  <h2>Put stable material before changing material</h2>
+  <p>As a design exercise, split a prompt into the part shared by the job and the part unique to the request. Put the stable instructions and reference text together. Place the changing question afterwards. Check the provider's matching rules when implementing this; rearranging a prompt can also change its answer, so rerun your quality checks.</p>
+  <p>Keep a version for the prefix. If you edit the instructions, you need to be able to explain why the cache behaviour changed. Do not include account details or document contents in a public tracker. Aggregate token counts and a non-sensitive version label are enough for this comparison.</p>
+  <p>For a small trial, compare total spend with the uncached equivalent of the same repeated tokens. Keep the unmatched input and output outside that comparison so that a longer answer does not look like a cache failure. Then bring the parts back together for the full job bill.</p>
+  <h2>Choose the lifetime from observed use</h2>
+  <p>The one-hour option is worth pricing when a useful repeat arrives too late for the shorter lifetime. It does not become better merely because it lasts longer. Count how many writes each option would need under your actual request pattern, then compare the totals.</p>
+  <p>Record the model, prefix version, eligible tokens, writes, reads and time between requests. Those fields turn a claimed discount into a saving you can reproduce.</p>
+  <PractitionerNote evidence={e} />
+</InsightArticle>

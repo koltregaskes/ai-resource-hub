@@ -2,6 +2,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { practitionerB1 } from '../../data/practitioner-b1';
 import { serializeJsonLd } from '../../lib/json-ld';
 import { sources, calculations, stateLabels, termsLabels, REVIEWED, type SourceState } from '../../data/transparency';
 
@@ -276,11 +277,25 @@ const structuredData = {
       </div>
     </section>
 
+    <section id="practitioner-examples" class="mb-14 scroll-mt-24">
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Practitioner guides: sources and worked examples</h2>
+      <p class="text-(--color-text-secondary) mb-6">These guides propose working methods. Example workloads and outcomes are explicitly assumed, not model measurements. Reproduce their frozen tables with <code>node scripts/insights/practitioner-examples.mjs --check</code>. Documentation is linked and briefly paraphrased, not collected as a dataset; no additional data licence is claimed.</p>
+      <div class="space-y-4">{practitionerB1.map(e => (
+        <article id={e.id} class="rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-5 scroll-mt-24">
+          <h3 class="text-lg font-bold text-(--color-text-primary)"><a href={`${base}blog/${e.slug}/`}>{e.title}</a></h3>
+          <p class="text-(--color-text-secondary) my-3">{e.formula}</p>
+          <p class="text-sm text-(--color-text-secondary) mb-3"><strong>Inputs:</strong> {e.assumptions}</p>
+          <p class="text-sm text-(--color-text-secondary) mb-3"><strong>Limits:</strong> {e.limits}</p>
+          <ul class="text-sm text-(--color-text-secondary) space-y-2">{e.sources.map(s => <li><a href={s.url} class="text-(--color-accent) underline" rel="noopener">{s.title}</a>, read {s.checked}: {s.claim}</li>)}</ul>
+          <p class="text-xs text-(--color-text-muted) mt-3">Code: scripts/insights/practitioner-examples.mjs. Frozen tables: src/data/insights/2026-11-14-practitioner.json.</p>
+        </article>
+      ))}</div>
+    </section>
     <!-- Article figures -->
     <section id="article-figures" class="mb-14 scroll-mt-24">
       <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Figures in our articles</h2>
       <p class="text-(--color-text-secondary) mb-6 max-w-3xl leading-relaxed">
-        Every number we calculate for an article comes from one script, run against a dated copy of our catalogue. The output is
+        The catalogue-based analyses below use one script, run against a dated copy of our catalogue. The output is
         saved with the article, so the figures in a piece do not drift after it is published. Anyone can run the script and get
         the same answers: <code class="px-1.5 py-0.5 rounded bg-(--color-bg-tertiary) text-(--color-text-primary) text-[0.85em]">node scripts/insights/compute-insights.mjs</code>.
       </p>

@@ -1,0 +1,28 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import WorkedTable from '../../components/insights/WorkedTable.astro';
+import PractitionerNote from '../../components/insights/PractitionerNote.astro';
+import { practitionerB1 } from '../../data/practitioner-b1';
+import examples from '../../data/insights/2026-11-14-practitioner.json';
+const e = practitionerB1[0];
+---
+<InsightArticle title={e.title} description={e.description} date="2026-11-14" type="Explainer" readTime="5 min" standfirst="A model can be cheap to run and still be the wrong choice for your work. Start with a job you can mark, then use the price list to narrow the field.">
+  <p>Suppose you need to label messages, extract fields from a document and draft a report. Treating those as one buying decision hides the differences. The label might be a few tokens. The report might be longer than its instructions. The extraction needs to preserve a value exactly, even when the document is untidy. Give each job its own shortlist.</p>
+  <p>We suggest starting with a small written brief: what goes in, what must come out, what counts as a failure and how long the person waiting can reasonably wait. Keep it beside your model tracker. Otherwise a new release can become a reason to switch before anyone has said what it needs to improve.</p>
+  <h2>Price the shape of the work</h2>
+  <p>The table uses invented workloads and assumed rates of $1 per million input tokens and $5 per million output tokens. These are teaching rates, not a quote for a named model. The same pair of rates produces quite different bills depending on what you ask it to read and write.</p>
+  <WorkedTable headers={['Illustrative job', 'Input tokens', 'Output tokens', 'Cost per request']} rows={examples.selection} caption="Calculated from assumed workloads and rates. US dollars, shown to five decimal places. These are not measurements or model recommendations." />
+  <p>The dossier spends most of its budget on input. The report spends most on output. A ranking by output price alone would miss that distinction. Before choosing a cheaper model, count representative requests from your own application, including the instructions and documents it sends. Record a range as well as a typical case, so one unusually large file does not come as a surprise.</p>
+  <h2>Make a shortlist by excluding poor fits</h2>
+  <p>For extraction, start by checking whether the API supports the format you need, then test missing fields and ambiguous values. For drafting, decide what the editor will accept before comparing the prose. For coding, write down the command or test that proves the proposed change works. These are suggested pass conditions, not claims that one model family is better at a task.</p>
+  <p>For long documents, check capacity before running the comparison. Anthropic's <a href={e.sources[0].url}>context documentation</a>, read on 14 November 2026, counts the request and new output within the window, including tool definitions. A document that fits on its own may therefore leave too little room for the rest of your request. Reserve that space explicitly.</p>
+  <p>Capability support is a gate. It does not settle quality. A model can accept a long file without producing the answer you wanted. Keep separate columns for advertised support and a result you have checked yourself. Use “not tested” for the second column until you have evidence.</p>
+  <h2>Compare the failures, too</h2>
+  <p>Use the same inputs for each candidate and keep the prompt and settings with the results. Include cases that you expect to be awkward: an empty document, contradictory instructions in quoted material, a missing answer, a request that needs a refusal. Choose those cases because they matter to your application, rather than because they make a favourite model look good.</p>
+  <p>When a candidate fails, keep the example and classify what happened. A wrong value, a broken format and a slow but correct answer call for different fixes. A single total score makes them easy to overlook. If one failure would stop the job going live, make it a separate release condition.</p>
+  <p>For a close comparison, hide the model names while reviewing the output. If the decision needs judgement, write the reason for acceptance in a short note. That gives the next reviewer something more useful than a preference recorded as a percentage.</p>
+  <h2>Keep the decision small enough to reverse</h2>
+  <p>Your tracker entry should name the exact model, provider route, prompt version, test set and date checked. Add the token usage, measured waiting time and the number of results you accepted. A price table helps estimate spend; it cannot supply those observations.</p>
+  <p>Pick a candidate for this job, under these conditions. Keep the runner-up and the failed cases. When a new model appears, rerun the comparison against that record. You will have a concrete question to answer: does the replacement finish more of our work, within the limits we set?</p>
+  <PractitionerNote evidence={e} />
+</InsightArticle>
