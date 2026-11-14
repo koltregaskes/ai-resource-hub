@@ -43,6 +43,9 @@ jobs:
       - name: Test model registry guards (catalogue names, tier variants, demotions)
         run: npm run test:registry
 
+      - name: Test source policy (no numbers from sources whose terms bar our use)
+        run: npm run test:source-policy
+
       - name: Test news routing provenance
         run: node --test scripts/news-pipeline-provenance.test.mjs scripts/lib/news-routing-config.test.mjs scripts/verify-news-pipeline.test.mjs
 

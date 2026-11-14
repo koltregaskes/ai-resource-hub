@@ -21,6 +21,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { benchmarkCollectionReceipt } from '../../src/data/benchmark-freshness';
+import { blockedSourceById } from '../../src/data/source-policy';
 
 export interface ScrapedScore {
   modelId: string;
@@ -369,8 +370,14 @@ async function main() {
 
   let totalUpdated = 0;
 
+  // Hub #1569: sources whose current terms bar our use are skipped entirely.
+  const aaBlocked = blockedSourceById('artificial-analysis');
+  const arenaBlocked = blockedSourceById('arena');
+
   // 1. Artificial Analysis benchmark scores (from speed scraper data)
-  try {
+  if (aaBlocked) {
+    console.log(`  ⊘ Artificial Analysis benchmarks skipped: blocked source (${aaBlocked.termsUrl}).`);
+  } else try {
     const aaScores = loadAABenchmarks();
     if (aaScores.length > 0) {
       const updated = recordBenchmarkCollection(db, 'benchmarks:artificial-analysis', aaScores, false);
@@ -384,7 +391,9 @@ async function main() {
   }
 
   // 2. Chatbot Arena ELO
-  try {
+  if (arenaBlocked) {
+    console.log(`  ⊘ Chatbot Arena skipped: blocked source (${arenaBlocked.termsUrl}).`);
+  } else try {
     const { scores, isLive } = await scrapeChatbotArena(existingModels);
     if (scores.length > 0) {
       const updated = recordBenchmarkCollection(db, 'benchmarks:chatbot-arena', scores, isLive);
