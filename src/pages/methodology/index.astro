@@ -92,8 +92,8 @@ const benchmarks = getBenchmarks();
             <span class="text-xs px-2 py-0.5 rounded-full bg-(--color-accent)/15 text-(--color-accent)">As published</span>
           </div>
           <ul class="text-sm text-(--color-text-secondary) space-y-1.5">
-            <li><a href="https://lmarena.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">LMSYS Chatbot Arena</a> — preference data used only when a row has current, traceable provenance and a comparable configuration</li>
-            <li><a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Artificial Analysis</a> — real-time speed and quality benchmarks; referenced for speed data and Intelligence Index rankings</li>
+            <li><a href="https://arena.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Arena</a> (formerly LMSYS Chatbot Arena): linked for reference only. Its terms don't allow its rankings to be extracted or republished, so none of its numbers appear on this site.</li>
+            <li><a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Artificial Analysis</a>: linked for reference only. Its current terms don't allow its data to be used on comparison sites, so we've removed its speed and benchmark figures.</li>
             <li><a href="https://scale.com/leaderboard" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Scale AI SEAL</a> — expert-driven evaluations and safety benchmarks</li>
           </ul>
         </div>
@@ -423,7 +423,7 @@ const benchmarks = getBenchmarks();
           <h3 class="font-semibold text-(--color-text-primary) text-sm">Hourly (Automated)</h3>
           <ul class="text-xs text-(--color-text-secondary) mt-2 space-y-1 list-disc list-inside">
             <li>API pricing from OpenRouter + provider pages</li>
-            <li>Speed & TTFT data from Artificial Analysis</li>
+            <li>Speed & TTFT data: paused until we have a licensed source</li>
             <li>Benchmark score validation</li>
             <li>Cross-validation: provider vs OpenRouter pricing</li>
             <li>Data staleness report</li>
@@ -449,7 +449,8 @@ const benchmarks = getBenchmarks();
       <ul class="text-sm text-(--color-text-secondary) space-y-2 list-disc list-inside">
         <li><strong>Benchmarks have known issues</strong> — data contamination, narrow evaluation, and saturation effects mean no single benchmark tells the full story. We use multiple benchmarks and flag known issues.</li>
         <li><strong>Pricing changes frequently</strong> — AI model pricing can change without notice. We refresh hourly, but a provider page or upstream cache can still lag briefly before the site catches up.</li>
-        <li><strong>Speed data is limited</strong> — we track relative speed ratings rather than real-time latency measurements. For production speed data, we recommend <a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Artificial Analysis</a>.</li>
+        <li><strong>No speed data for now.</strong> We only publish numbers from sources whose terms let us republish them, and we don't have a licensed speed source yet. For live latency measurements, see <a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Artificial Analysis</a> on its own site.</li>
+        <li><strong>Licensed sources only.</strong> Before we use a data source, we check its terms. Sources whose terms bar reuse on a comparison site are listed in our source policy and kept out of every page, export and score.</li>
         <li><strong>Coverage is curated</strong> — we focus on models available via API and major consumer products. Some niche or regional models may not be listed.</li>
         <li><strong>Legacy model quality is suppressed</strong> — the raw catalogue field is retained for remediation but is not a public fact or ranking input until method, source and date are traceable.</li>
       </ul>

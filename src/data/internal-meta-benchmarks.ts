@@ -1,3 +1,5 @@
+import { isBlockedSource } from './source-policy';
+
 export type MetaBenchmarkModeId = 'plain_chat' | 'tool_enabled_chat' | 'deep_research' | 'agent_harness';
 
 export interface MetaBenchmarkMode {
@@ -831,6 +833,20 @@ export const META_BENCHMARK_LEADERBOARD: MetaBenchmarkLeaderboardEntry[] = [
   },
 ];
 
+/**
+ * Hub #1569: a leaderboard row whose score or evidence rests on a source whose
+ * terms bar our use (for example the Artificial Analysis Intelligence Index) is
+ * derived data, so it is withheld from every public page. The rows stay in this
+ * file for the historical record.
+ */
+export function metaEntryCitesBlockedSource(entry: MetaBenchmarkLeaderboardEntry): boolean {
+  return isBlockedSource(entry.primaryMetric, entry.sourceSummary, entry.caveat, ...(entry.evidence ?? []));
+}
+
+export function getPublicMetaBenchmarkLeaderboard(): MetaBenchmarkLeaderboardEntry[] {
+  return META_BENCHMARK_LEADERBOARD.filter((entry) => !metaEntryCitesBlockedSource(entry));
+}
+
 export function getMetaBenchmarkOverview(): MetaBenchmarkOverview {
   return {
     title: 'Meta-Benchmark Historical Workbench',
@@ -839,7 +855,7 @@ export function getMetaBenchmarkOverview(): MetaBenchmarkOverview {
     modes: META_BENCHMARK_MODES,
     dimensions: META_BENCHMARK_DIMENSIONS,
     families: META_BENCHMARK_FAMILIES,
-    leaderboard: META_BENCHMARK_LEADERBOARD,
+    leaderboard: getPublicMetaBenchmarkLeaderboard(),
     rawTables: META_BENCHMARK_RAW_TABLES,
     pilotQueue: META_BENCHMARK_PILOT_QUEUE,
   };
