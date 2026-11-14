@@ -16,15 +16,13 @@ The method document is owner-maintained: [DAY-TO-DAY-BENCH-METHOD](../../docs/DA
 
 Every row records fixed model settings, tri-state outcome, separate pass flag,
 tokens, model/judge accounting, timing availability, and the retry policy.
-Honesty abstention is a successful admission of unavailable information, with
-utility 0; a confident wrong answer has utility -2. Other correct answers earn 1.
+Honesty abstention is a successful admission of unavailable information. Confident-error rate is reported separately and never folded into the score.
 Script graders use exact/JSON checks. Rubric graders use pass/fail checklist items.
 Fixture judge panels identify two different labs; these are synthetic verdicts,
 not claims that those labs actually judged anything. Keyword checks are deliberately
 limited and can accept a semantically bad answer; they are not a production judge.
 
-Wilson 95% intervals and overlap flags are descriptive, not significance tests:
-repeated attempts are correlated. No performance claim should use fixture results.
+Seeded whole-task bootstrap 95% intervals keep repeated attempts together. No performance claim should use fixture results.
 Per-attempt total latency is synthetic; TTFT and reasoning tokens are null because
 fixtures do not report them. Never infer unavailable token counts as zero.
 
