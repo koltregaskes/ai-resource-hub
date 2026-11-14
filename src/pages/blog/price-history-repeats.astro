@@ -1,0 +1,108 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import DataNote from '../../components/insights/DataNote.astro';
+import h from '../../data/insights/2026-11-14.price-history.json';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const n = (v: number) => v.toLocaleString('en-GB');
+const day = (iso: string) => new Date(iso.replace(' ', 'T') + 'Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const dollars = (p: { input: number; output: number }) => `$${p.input} in, $${p.output} out`;
+const relabelled = h.changeList.filter((c) => c.from.source !== c.to.source).length;
+const sameLabel = h.changeList.length - relabelled;
+const ex = h.example;
+const off = h.byLabel.official;
+const web = h.byLabel.website;
+const pct = (h.repeatShare * 100).toFixed(1);
+const snapLong = day(h.snapshotDate + ' 00:00:00');
+const relabelDays = [...new Set(h.changeList.filter((c) => c.from.source !== c.to.source).map((c) => c.at.slice(0, 10)))];
+const relabelDay = relabelDays.length === 1 ? day(relabelDays[0] + ' 00:00:00') : null;
+---
+
+<InsightArticle
+  title={`Our price history has ${n(h.rowsCounted)} later records. ${n(h.repeats)} repeat the price before.`}
+  description={`Almost every row in our price history for lab-priced language models is the previous price written down again. What that means for any claim about how often AI prices change.`}
+  date="2026-11-14"
+  type="Analysis"
+  readTime="5 min"
+  snapshot={h.snapshotDate}
+  standfirst="A price history should show when prices moved. Ours mostly records the same price again. The few recorded differences in it cannot yet be told apart from relabelling and corrections."
+>
+  <p>
+    {ex.name} has {ex.rows} rows in our price history between {day(ex.firstAt!)} and {day(ex.lastAt!)}. All {ex.rows} say the same thing: {dollars(ex.price!)}. OpenAI's own <a href="https://developers.openai.com/api/docs/models/gpt-5.5" rel="noopener">model page</a>, read on 14 November 2026, lists the same prices, so the price itself is right. It is just a lot of rows for a recorded price that never changed.
+  </p>
+  <p>
+    The pattern is general. Across {h.models} language models with prices from sources other than OpenRouter, we hold {n(h.labRows)} rows. Take the first row of each model as the starting point, and {n(h.rowsCounted)} remain. Of those, {n(h.repeats)} ({pct}%) have exactly the same input and output prices as the row before. {h.changes} do not.
+  </p>
+
+  <h2>Why the history fills up with repeats</h2>
+  <p>
+    The rows come from two paths. {n(off.rows)} are labelled with a lab's name and "(official)", the labels used in the catalogue that our official-pricing importer copies from. That script copies prices typed into the catalogue by hand and, for every model in its list that already has a database record, writes the price, stamps the "pricing updated" time and adds a row to the price history, whether or not the price differs from the last run. We checked this in the <a href="https://github.com/koltregaskes/ai-resource-hub/blob/main/scripts/scrapers/official-pricing.ts" rel="noopener">script's code</a> on 14 November 2026. It makes no request to a lab's website. The only trigger for a new row is that the script ran.
+  </p>
+  <p>
+    The other {n(web.rows)} rows are labelled with a website address, such as a lab's pricing page. We have not traced which collector writes those. They show the same pattern: {n(web.repeats)} of {n(web.counted)} later rows repeat the price before, against {n(off.repeats)} of {n(off.counted)} for the "(official)" rows.
+  </p>
+  <p>
+    So an "(official)" row tells you the importer ran. It does not tell you that anyone looked at the lab's page that day, and the "pricing updated" time that importer writes is no better evidence. We do not know what triggers the other rows. Our <a href={`${base}transparency/#source-official-pricing`}>transparency page</a> lists this as a known fault.
+  </p>
+
+  <h2>The {h.changes} rows that changed</h2>
+  <p>
+    {h.changes} later rows differ from the one before. Each is listed below, with the source label on each side.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>
+        Source: AI Resource Hub price history for language models, rows not sourced from OpenRouter, cache of {snapLong}. US dollars per million tokens. "Label" is the source name recorded on the row.
+      </caption>
+      <thead>
+        <tr><th>Model</th><th>Date</th><th>Before</th><th>After</th><th>Label changed?</th></tr>
+      </thead>
+      <tbody>
+        {h.changeList.map((c) => (
+          <tr>
+            <td>{c.name}</td>
+            <td>{day(c.at)}</td>
+            <td>${c.from.input} / ${c.from.output}</td>
+            <td>${c.to.input} / ${c.to.output}</td>
+            <td>{c.from.source !== c.to.source ? 'Yes' : 'No'}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    {relabelled} of the {h.changes} came with a change in the source label{relabelDay ? `, all of them on ${relabelDay}` : ''}, when the name recorded on the row switched from a website address to a lab's name. A price that moves at the same moment as its label could be a real change, a correction to an earlier mistake or the result of switching from one reading of the lab's page to another. The history cannot say which.
+  </p>
+  <p>
+    The other {sameLabel} keep the same label. Claude Opus 4.6 moves from $15 / $75 to $5 / $25 in July, and o3 moves from $2 / $8 to $10 / $40 in February. We have not checked either against the lab's page at the time, so we cannot say whether they are corrections or real moves, and we have not counted them as cuts or rises.
+  </p>
+
+  <h2>Why this blocks a "how often do prices change" story</h2>
+  <p>
+    A claim such as "most models never get cheaper" is tempting and easy to produce from a table like this one. It would also be hard to defend. {pct}% of the rows are repeats, the handful of moves cannot be separated from relabelling, and the rows before and after the relabelling carry different source names. Counting changes in it would measure how the data was kept, not how prices behave.
+  </p>
+  <p>
+    That is why we have not published a price-cut article. We think a usable one needs a single source per model, a "last checked" date that only a person or a real fetch can set, and the lab's effective date kept apart from both. Until then, the fair reading of our history is that it records what our catalogue said on each run.
+  </p>
+
+  <DataNote anchor="calc-price-history-repeats" snapshot={`${snapLong} (cache rebuilt ${h.cacheGeneratedAt.slice(11, 16)} UTC)`}>
+    <ul>
+      <li>
+        <strong>What was counted.</strong> Language models only. Rows whose source is not OpenRouter. Rows run from {day(h.rowsFrom)} to {day(h.rowsTo)}. The first row for each model is the starting point and is not counted. A later row "repeats" when both prices equal the previous row of the same model.
+      </li>
+      <li>
+        <strong>Not counted.</strong> Rows from OpenRouter, which are cheapest-host prices that can legitimately move.
+      </li>
+      <li>
+        <strong>Not claimed.</strong> We have not counted price cuts or price rises, and these figures are not evidence of how often labs change prices. They describe our records.
+      </li>
+      <li>
+        <strong>Reproduce.</strong> The script is <code>scripts/insights/price-history-repeats.mjs</code>. It records the SHA-256 of the files it read.
+      </li>
+    </ul>
+  </DataNote>
+</InsightArticle>
