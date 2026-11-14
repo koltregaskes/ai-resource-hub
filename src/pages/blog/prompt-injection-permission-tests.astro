@@ -1,0 +1,30 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import WorkedTable from '../../components/insights/WorkedTable.astro';
+import PractitionerNote from '../../components/insights/PractitionerNote.astro';
+import { practitionerB6 } from '../../data/practitioner-b6';
+import examples from '../../data/insights/2026-11-14-b6.json';
+const e = practitionerB6.find(p => p.slug === 'prompt-injection-permission-tests')!;
+---
+<InsightArticle title={e.title} description={e.description} date="2026-11-14" type={e.type as 'Analysis' | 'Explainer'} readTime="5 min" standfirst="A detector missing an instruction and an executor allowing an unauthorised action are separate failures. Keep both gates in the test record instead of treating a detection score as the whole defence.">
+
+<p>An agent reads a retrieved page that tries to give it a new instruction. The original user asked for a summary. The page asks for an unrelated action. A useful defensive test checks what reaches the model, what the model proposes and what the application permits. Stopping at a detector's verdict leaves the last two questions unanswered.</p>
+<p>Anthropic's <a href={e.sources[0].url}>prompt-injection guidance</a>, read on 14 November 2026, describes indirect instructions arriving through third-party content. It recommends keeping untrusted material separate and limiting access to actions and sensitive data. We use a constructed example to explain how to report those boundaries, without claiming a security result.</p>
+<h2>Give the fixture a prohibited outcome</h2>
+<p>Write down the legitimate task and the action the fixture must not cause. Use synthetic documents and a simulated executor. A test can propose a harmless dummy operation and record whether it would be authorised, without sending messages, changing accounts or involving real secrets.</p>
+<WorkedTable headers={["Gate in a constructed test","Count"]} rows={examples['prompt-injection-permission-tests']} caption="Invented defensive test ledger, not observed attack results. All operations are assumed to use harmless fixtures and a simulated executor." />
+<p>Here the screen detects eighteen of twenty malicious fixtures. Two reach the model and produce prohibited proposals. The executor rejects both. Detection is 90% in the invented set; zero prohibited actions execute because the example assumes an independent denial gate. That zero is an assumption, not an observed defence rate.</p>
+<h2>Separate the proposal from permission</h2>
+<p>Define the permitted action from the user's task and the application's policy. Have the executor check the operation, target and scope before running it. A model producing a well-formed tool call does not establish that the user authorised the action.</p>
+<p>For consequential work, a proposed operation should be concrete enough to review: which target, which change and which evidence supports it. Keep approval tied to that operation. A vague permission to continue should not silently expand to a different destination or effect.</p>
+<p>Record denied proposals as evidence even when nothing executes. They help reveal how the model interpreted the untrusted text. Conversely, a screen passing a fixture does not prove the model followed it. Preserve the sequence rather than collapsing it into one success label.</p>
+<h2>Test useful work alongside the malicious fixtures</h2>
+<p>Include ordinary documents containing quotations, instructions for humans and examples of commands. A defence that blocks the legitimate task on these inputs has a usability cost. Keep benign-task acceptance separate from malicious-fixture outcomes, with a stated rule for each.</p>
+<p>Use cases from the actual workflow: retrieved pages for a research assistant, document text for an extractor, tool output for a coding helper. Keep the fixtures public only when they are synthetic or cleared for publication. The tracker needs outcomes and configuration, not private source content.</p>
+<p>Repeat after changing the model, prompt, tool wrapper or permission set. The same fixture may travel through a different boundary after an application change. Keep the version of the executor policy with the test, rather than assigning the result solely to the model name.</p>
+<h2>State what the test does not cover</h2>
+<p>Denied writes do not establish that no sensitive information was exposed in a response. A read operation can still retrieve material the task should not access. Review the data-access boundary separately and avoid giving the agent material it does not need.</p>
+<p>Likewise, a small fixture set cannot establish general resistance to prompt injection. Report the cases, assumptions and observed actions without turning a clean run into a claim of immunity.</p>
+<p>The useful release record says what the agent saw, what it proposed, which gate allowed or denied it and whether the legitimate task finished. That evidence supports a narrower and more actionable decision than a detector score alone.</p>
+<PractitionerNote evidence={e} />
+</InsightArticle>

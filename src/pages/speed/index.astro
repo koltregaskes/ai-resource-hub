@@ -51,6 +51,15 @@ const moderate = speedModels.filter(m => m.speed >= 20 && m.speed < 50);
       </p>
     </div>
 
+    {speedModels.length === 0 && ttftModels.length === 0 && (
+      <div class="rounded-xl bg-(--color-bg-card) border border-(--color-border) p-5 mb-8" data-testid="no-licensed-speed-source">
+        <h2 class="text-base font-semibold text-(--color-text-primary) mb-1">No licensed speed source yet</h2>
+        <p class="text-sm text-(--color-text-secondary)">
+          We've removed speed and time-to-first-token figures because our previous source's terms no longer allow us to republish them. We'll bring speed back when we have a source we're allowed to use, with its date and link on every number.
+        </p>
+      </div>
+    )}
+
     <!-- Stats summary -->
     <div class="grid sm:grid-cols-4 gap-3 mb-8">
       <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
@@ -233,7 +242,7 @@ const moderate = speedModels.filter(m => m.speed >= 20 && m.speed < 50);
           <strong>Output Speed (tok/s)</strong> — How many tokens the model generates per second once it starts responding. Important for long-form content generation.
         </p>
         <p>
-          Speed data sourced from <a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) underline">Artificial Analysis</a> and provider benchmarks. Actual speeds may vary based on load, region, and input complexity.
+          We only show speed figures from sources whose terms let us republish them. Our previous speed source, Artificial Analysis, no longer allows use on comparison sites, so its figures have been removed. You can still see its live measurements on <a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) underline">its own site</a>. Actual speeds vary with load, region and input length.
         </p>
       </div>
     </div>

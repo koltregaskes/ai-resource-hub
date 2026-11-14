@@ -1,0 +1,30 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import WorkedTable from '../../components/insights/WorkedTable.astro';
+import PractitionerNote from '../../components/insights/PractitionerNote.astro';
+import { practitionerB8 } from '../../data/practitioner-b8';
+import examples from '../../data/insights/2026-11-14-b8.json';
+const e = practitionerB8.find(p => p.slug === 'zero-failures-small-ai-test')!;
+---
+<InsightArticle title={e.title} description={e.description} date="2026-11-14" type={e.type as 'Analysis' | 'Explainer'} readTime="5 min" standfirst="A process that fails 1% of the time has about a 36.6% chance of showing no failures in 100 independent trials. A clean test run is evidence with limits, not a guarantee.">
+
+<p>You run a candidate through a hundred tests and see no failures. That is a useful observation. It does not establish that the next request cannot fail. Report the clean run with its size, the failure definition and how the cases were chosen.</p>
+<p>The <a href={e.sources[0].url}>NIST binomial reference</a>, read on 14 November 2026, gives the probability formula for repeated binary outcomes at a fixed probability. We use that model for a narrow calculation: how often could a process with a known hypothetical failure rate produce a clean sample?</p>
+<h2>Ask the question in the forward direction</h2>
+<p>Assume each trial fails with probability 1%, independently of the others. Its chance of passing is 99%. The chance that all n trials pass is 0.99 raised to n. That is a calculation under stated assumptions, not an estimate of any model's real behaviour.</p>
+<WorkedTable headers={["Independent trials","Chance of zero failures at p=1%","95% upper bound after zero failures"]} rows={examples['zero-failures-small-ai-test']} caption="Derived binomial calculations, rounded for display. The fixed-probability and independence assumptions are essential; no model failure rate is estimated from real data." />
+<p>At fifty trials, the hypothetical process has about a 60.5% chance of a clean run. At a hundred, it is about 36.6%. At three hundred, about 4.9%. A small clean sample is therefore compatible with failures being present at the assumed rate.</p>
+<h2>A bound needs its assumptions in the same paragraph</h2>
+<p>If zero failures are observed, invert the same zero-failure probability at 5% to obtain the one-sided exact 95% binomial upper bound: one minus 0.05 raised to one divided by n. At a hundred trials, that upper limit is about 2.95% under the trial model.</p>
+<p>This is a frequentist confidence procedure. It does not assign a 95% probability that a particular model's failure rate lies below the number. It also does not cover failures you did not define or workloads you did not sample. Keep those limitations beside the bound rather than burying them in a methodology link.</p>
+<p>For a high-consequence decision, use an appropriately designed evaluation and qualified statistical review. The teaching table is not a certification rule or a recommendation that three hundred tests are enough for deployment.</p>
+<h2>Count independent opportunities, not file names</h2>
+<p>A test set with many near-duplicate questions may provide less distinct coverage than its row count suggests. Repeated trials on the same easy case answer a different question from a varied sample of the intended workload. Record both the unique cases and the repetitions.</p>
+<p>Keep model, prompt, tool configuration and acceptance rule fixed within a run intended for this calculation. If you repair the prompt after a failure and continue counting, the combined record describes several configurations. Start a new version and preserve the earlier result.</p>
+<p>Track important categories separately. A clean set of short classification tasks does not establish behaviour on long documents. If a category contains only a handful of cases, say so even when the full set looks large.</p>
+<h2>Use clean runs to guide the next test</h2>
+<p>Retain the original cases and add coverage where the workflow exposes new failure opportunities. When an incident occurs, turn a cleared or synthetic version into a regression case. Avoid making the entire next set a collection of cases already used to tune the prompt.</p>
+<p>Report any excluded or inconclusive results. A timeout that prevents review is not evidence of a pass. Define how such outcomes enter the operational acceptance record, and keep that policy consistent across candidates.</p>
+<p>The useful tracker entry says “zero defined failures in this many trials under this configuration”. The denominator and assumptions make the observation usable. Removing them makes the number sound stronger than the evidence.</p>
+<PractitionerNote evidence={e} />
+</InsightArticle>

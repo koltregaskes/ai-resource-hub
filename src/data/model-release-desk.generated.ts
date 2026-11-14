@@ -1,5 +1,5 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-14T07:56:12.368Z",
+  "generatedAt": "2026-11-14T15:55:53.223Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -470,7 +470,7 @@ export const modelReleaseDesk = {
       "outputPrice": 0.6,
       "outputPriceState": "verified",
       "pricingSource": "Vendor (official, checked 2026-11-13)",
-      "pricingUpdated": "2026-11-14 07:55:44",
+      "pricingUpdated": "2026-11-14 15:55:28",
       "summary": "MiniMax M3.1 Flash is a currently tracked release from MiniMax. It belongs in the open-weight / local-model conversation. Tracked context window: 1M tokens. Current tracked pricing: $0.15 in / $0.60 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "MiniMax's MiniMax M3.1 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -624,7 +624,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Nemotron 3.5 Super VL is a currently tracked release from NVIDIA. It belongs in the open-weight / local-model conversation. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "NVIDIA's Nemotron 3.5 Super VL is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "dek": "NVIDIA's Nemotron 3.5 Super VL is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -664,6 +664,21 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "Jensen Huang and the decline of the visionary showman founder CEO",
+          "url": "https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
+          "source": "The Verge",
+          "date": "2026-11-14",
+          "summary": "On January 6th, 2025, Nvidia CEO Jensen Huang got his rockstar moment at last. He strode triumphantly onstage, hand raised in the air, to the claps and cheers of a 14,000-person arena absolutely packed with influencers and fans, their faces awash in blue glow, as he made his entrance in a black leather jacket that [&#…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "benchmark",
+            "hardware"
+          ]
+        },
+        {
           "title": "Jensen Huang’s exit puts Nvidia’s support for open source in question",
           "url": "https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/",
           "source": "TechCrunch",
@@ -698,8 +713,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-10-15-nemotron-3-5-super-vl-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 4
+      "storyCount": 4,
+      "sourceCount": 5
     },
     {
       "id": "muse-spark-1.3",
@@ -822,7 +837,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Nemotron 3.5 Lightning is a currently tracked release from NVIDIA. It belongs in the open-weight / local-model conversation. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "NVIDIA's Nemotron 3.5 Lightning is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "dek": "NVIDIA's Nemotron 3.5 Lightning is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -862,6 +877,21 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "Jensen Huang and the decline of the visionary showman founder CEO",
+          "url": "https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
+          "source": "The Verge",
+          "date": "2026-11-14",
+          "summary": "On January 6th, 2025, Nvidia CEO Jensen Huang got his rockstar moment at last. He strode triumphantly onstage, hand raised in the air, to the claps and cheers of a 14,000-person arena absolutely packed with influencers and fans, their faces awash in blue glow, as he made his entrance in a black leather jacket that [&#…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "benchmark",
+            "hardware"
+          ]
+        },
+        {
           "title": "Jensen Huang’s exit puts Nvidia’s support for open source in question",
           "url": "https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/",
           "source": "TechCrunch",
@@ -896,8 +926,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-08-11-nemotron-3-5-lightning-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 4
+      "storyCount": 4,
+      "sourceCount": 5
     },
     {
       "id": "muse-spark-1.2",
@@ -1012,7 +1042,7 @@ export const modelReleaseDesk = {
       "outputPrice": 25,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-14 07:55:44",
+      "pricingUpdated": "2026-11-14 15:55:28",
       "summary": "Claude Opus 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Current generally available Opus model. Some safeguarded requests can fall back to Opus 4.8. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 5 is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1107,7 +1137,7 @@ export const modelReleaseDesk = {
       "outputPrice": 50,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-14 07:55:44",
+      "pricingUpdated": "2026-11-14 15:55:28",
       "summary": "Claude Opus 5 Fast is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Official faster Opus 5 mode, priced at twice the base token rate. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 5 Fast is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1202,7 +1232,7 @@ export const modelReleaseDesk = {
       "outputPrice": 2.5,
       "outputPriceState": "verified",
       "pricingSource": "Google AI (official)",
-      "pricingUpdated": "2026-11-14 07:55:44",
+      "pricingUpdated": "2026-11-14 15:55:28",
       "summary": "Gemini 3.5 Flash-Lite is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.30 in / $2.50 out per million tokens. Current generally available low-cost Gemini Flash-Lite model. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Google's Gemini 3.5 Flash-Lite is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1280,7 +1310,7 @@ export const modelReleaseDesk = {
       "outputPrice": 7.5,
       "outputPriceState": "verified",
       "pricingSource": "Google AI (official)",
-      "pricingUpdated": "2026-11-14 07:55:44",
+      "pricingUpdated": "2026-11-14 15:55:28",
       "summary": "Gemini 3.6 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Current generally available Gemini Flash model. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Google's Gemini 3.6 Flash is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1358,7 +1388,7 @@ export const modelReleaseDesk = {
       "outputPrice": 30,
       "outputPriceState": "verified",
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-11-14 07:55:44",
+      "pricingUpdated": "2026-11-14 15:55:28",
       "summary": "GPT-5.6 Sol is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Current frontier GPT-5.6 model; the gpt-5.6 alias routes to Sol. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1436,7 +1466,7 @@ export const modelReleaseDesk = {
       "outputPrice": 10,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official, introductory through 2026-08-31)",
-      "pricingUpdated": "2026-11-14 07:55:44",
+      "pricingUpdated": "2026-11-14 15:55:28",
       "summary": "Claude Sonnet 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Generally available Sonnet model. Introductory pricing applies through 31 August 2026. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Sonnet 5 is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1531,7 +1561,7 @@ export const modelReleaseDesk = {
       "outputPrice": 50,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-14 07:55:44",
+      "pricingUpdated": "2026-11-14 15:55:28",
       "summary": "Claude Fable 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Generally available Mythos-class model. Safeguarded topics can fall back to Opus 4.8 or Opus 5. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Fable 5 is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2042,7 +2072,7 @@ export const modelReleaseDesk = {
       "outputPrice": 15,
       "outputPriceState": "verified",
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-11-14 07:55:44",
+      "pricingUpdated": "2026-11-14 15:55:28",
       "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Official GPT-5.4 API model; superseded as the current flagship by GPT-5.6. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "OpenAI's GPT-5.4 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2198,8 +2228,8 @@ export const modelReleaseDesk = {
       "outputPrice": 15,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-14 07:55:44",
-      "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 200K tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. A model-level official source is attached, so this can enter source-first editorial review.",
+      "pricingUpdated": "2026-11-14 15:55:28",
+      "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 200K tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. Speed data hidden until it is refreshed from a current live measurement source. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -2360,8 +2390,8 @@ export const modelReleaseDesk = {
       "outputPrice": 25,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-14 07:55:44",
-      "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Official Opus release retained for historical comparisons. A model-level official source is attached, so this can enter source-first editorial review.",
+      "pricingUpdated": "2026-11-14 15:55:28",
+      "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Official Opus release retained for historical comparisons. Speed data hidden until it is refreshed from a current live measurement source. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 2 related stories and 1 benchmark signal to review.",
       "whyItMatters": [
         "There are already 1 benchmark signal(s) attached, so we can compare claims against measured results quickly.",

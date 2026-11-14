@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 14 Nov 2026, 07:56 UTC
+Generated: 14 Nov 2026, 15:55 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -15,9 +15,9 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 2 | [official](https://www.anthropic.com/glasswing) |
 | 19 Oct 2026 | MiniMax M3.1 Flash | MiniMax |  | watch | needs research | 0 | 0 | [official](https://platform.minimax.io/docs/guides/text-generation) |
 | 15 Oct 2026 | Muse Spark Open | Meta |  | watch | needs research | 0 | 0 | [official](https://dev.meta.ai/docs/muse-spark-open) |
-| 15 Oct 2026 | Nemotron 3.5 Super VL | NVIDIA |  | watch | ready for editor | 0 | 3 | [official](https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/) |
+| 15 Oct 2026 | Nemotron 3.5 Super VL | NVIDIA |  | watch | ready for editor | 0 | 4 | [official](https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/) |
 | 2 Sept 2026 | Muse Spark 1.3 | Meta |  | backfill | needs research | 0 | 0 | [official](https://dev.meta.ai/docs/models) |
-| 11 Aug 2026 | Nemotron 3.5 Lightning | NVIDIA |  | backfill | ready for editor | 0 | 3 | [official](https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/) |
+| 11 Aug 2026 | Nemotron 3.5 Lightning | NVIDIA |  | backfill | ready for editor | 0 | 4 | [official](https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/) |
 | 5 Aug 2026 | Muse Spark 1.2 | Meta |  | backfill | needs research | 0 | 0 | [official](https://dev.meta.ai/docs/models) |
 | 24 Jul 2026 | Claude Opus 5 | Anthropic | active | backfill | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-opus-5) |
 | 24 Jul 2026 | Claude Opus 5 Fast | Anthropic | active | backfill | ready for editor | 0 | 2 | [official](https://www.anthropic.com/news/claude-opus-5) |

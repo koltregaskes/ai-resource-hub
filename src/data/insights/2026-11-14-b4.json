@@ -1,0 +1,59 @@
+{
+  "metrics": {
+    "missingEvidence": 20,
+    "conditionalAcceptance": 85,
+    "oldCoverage": 90,
+    "newCoverage": 84,
+    "rebuildTokens": 60000000
+  },
+  "rag-retrieval-before-answer-quality": [
+    [
+      "Evidence available",
+      80,
+      "80%"
+    ],
+    [
+      "Answer accepted",
+      68,
+      "68%"
+    ]
+  ],
+  "rag-chunk-overlap-budget": [
+    [
+      0,
+      10,
+      10000,
+      "0%"
+    ],
+    [
+      200,
+      13,
+      12400,
+      "24%"
+    ],
+    [
+      500,
+      19,
+      19000,
+      "90%"
+    ]
+  ],
+  "embedding-upgrade-reindex-plan": [
+    [
+      "Both retrieve evidence",
+      39
+    ],
+    [
+      "Old only",
+      6
+    ],
+    [
+      "New only",
+      3
+    ],
+    [
+      "Neither",
+      2
+    ]
+  ]
+}

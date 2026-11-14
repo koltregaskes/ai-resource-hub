@@ -7,7 +7,7 @@ This site is a reference resource for comparing AI models across pricing, qualit
 ## Key pages
 
 - [Model Comparison](/compare/llm/): Compare 139+ AI models by pricing, quality, speed, and context window
-- [Benchmarks](/benchmarks/): MMLU, GPQA, MATH-500, HumanEval, SWE-bench, Arena ELO scores
+- [Benchmarks](/benchmarks/): MMLU, GPQA, MATH-500, HumanEval and SWE-bench scores, each with a row-level source
 - [Leaderboard](/leaderboard/): Models ranked only when current source-backed benchmark evidence passes the provenance gate
 - [News](/news/): Daily AI news from 74 curated sources
 - [Pricing Trends](/pricing-trends/): How model costs are changing over time
@@ -24,7 +24,7 @@ This site is a reference resource for comparing AI models across pricing, qualit
 ## About
 
 Built and maintained by Kol Tregaskes. Updated daily via automated scrapers.
-Data sourced from OpenRouter, Artificial Analysis, LM Arena, and official provider pages.
+Data sourced from OpenRouter and official provider pages. We only republish numbers from sources whose terms allow it, so Artificial Analysis and Arena figures are not used.
 Independent and unaffiliated. UK-based.
 
 ## Contact

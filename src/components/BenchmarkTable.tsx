@@ -229,7 +229,7 @@ export default function BenchmarkTable({ benchmarks, models }: Props) {
       <div className="mt-4 flex flex-wrap gap-4 text-xs text-[var(--color-text-muted)]">
         <span>&#9733; = best score in column</span>
         <span>— = not yet measured</span>
-        <span>Scores from official reports and LMSYS Chatbot Arena</span>
+        <span>Scores from official reports, each linked to its source</span>
       </div>
     </div>
   );

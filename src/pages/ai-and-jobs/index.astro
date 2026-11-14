@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { publicationRows, KIND_LABELS, isStale } from '../../lib/ai-and-jobs.mjs';
+const files=import.meta.glob('../../../data/ai-and-jobs/*.json',{eager:true,import:'default'});
+const snapshots=(Object.values(files) as any[]).sort((a,b)=>b.retrieved_at.localeCompare(a.retrieved_at));
+const snapshot=snapshots[0];
+const rows=publicationRows(snapshot);
+const countries:Record<string,string>={AU:'Australia',CA:'Canada',DE:'Germany',FR:'France',GB:'United Kingdom',IE:'Ireland',IT:'Italy',NL:'Netherlands',US:'United States'};
+const latest=[...new Set(rows.map((r:any)=>r.series.id))].map(id=>rows.filter((r:any)=>r.series.id===id).sort((a:any,b:any)=>b.period.localeCompare(a.period))[0]);
+for(const r of latest) if(isStale(r,r.source)) console.warn(`STALE: ${r.series.id}; source vintage ${r.vintage}`);
+const max=Math.max(...latest.map((r:any)=>r.value));
+const base=import.meta.env.BASE_URL;
+---
+<BaseLayout title="AI and jobs: what the evidence shows — The AI Resource Hub" description="Measured AI job-posting shares, source methods, uncertainty and clear limits on what the data can say about work.">
+<section class="work-evidence"><header><p class="eyebrow">Work / an evidence desk</p><h1>AI and jobs.<br />What do we actually know?</h1>
+<p class="intro">Start with what was observed. Keep predictions, task exposure and company claims in their own lanes.</p>
+<p><a href={`${base}transparency/#ai-and-jobs`}>Sources, rights and every figure</a> · <a href={`${base}ai-and-jobs/data.json`}>Download labelled data</a> · <a href={`${base}jobs/`}>Open roles at AI labs</a></p></header>
+<aside class="boundary">A job advertisement mentioning AI is evidence of what an employer requested. It does not measure jobs created, jobs lost, AI adoption or the cause of a hiring change.</aside>
+<h2>What's happening: job postings mentioning AI</h2><p>Indeed's own platform, by country. Each value is a <strong>measured</strong> share of postings, averaged over a trailing seven-day window. This is keyword demand on Indeed, not an estimate of the whole labour market. No uncertainty published by the source.</p>
+<figure><figcaption>Measured · share of Indeed job postings mentioning AI-related terms. Bars start at zero; countries share the same scale.</figcaption>
+<div class="bars">{latest.map((r:any)=><div class="bar-row" data-kind={r.kind}><a href={`#${r.series.id}`}>{countries[r.series.geography]??r.series.geography}</a><div class="track"><div class="bar" style={`width:${100*r.value/max}%`}></div></div><strong>{r.value.toFixed(2)}%</strong></div>)}</div></figure>
+<div class="cards">{latest.map((r:any)=><article id={r.series.id} data-kind={r.kind} data-vintage={r.vintage} data-cadence={r.source.refresh_cadence_days}>
+<p class="eyebrow">{KIND_LABELS[r.kind as keyof typeof KIND_LABELS]} · {countries[r.series.geography]??r.series.geography}</p><h3>{r.value.toFixed(2)}% of Indeed postings mention AI</h3>
+<p>Observation: <time>{r.period}</time> · source release <time>{r.vintage}</time>. <span data-staleness class="freshness">{isStale(r,r.source)?'Stale: refresh overdue':'Within source refresh window'}</span></p>
+<p>No uncertainty published by the source. A platform-wide count can still carry coverage and keyword-classification error.</p>
+<details><summary>Source and method receipt</summary><p>Population: {r.version.population}. {r.version.definition} Method: {r.version.version_label}.</p>
+<p><a href={r.source_url}>Exact source CSV</a> · <a href={r.version.methodology_url}>Method</a> · <a href={r.rights.licence_url}>{r.rights.licence}</a>. Retrieved {r.retrieved_at}; refresh every {r.source.refresh_cadence_days} days. {r.rights.attribution_text}</p>
+<p>Earlier selected daily observation (same method, separate source vintage retained in export): {rows.filter((old:any)=>old.series.id===r.series.id&&old.period<r.period).map((old:any)=><span data-kind={old.kind}>{old.period}: {old.value.toFixed(2)}% · measured. </span>)}</p></details>
+</article>)}</div>
+<h2>How many firms use AI?</h2><p>No official adoption series is admitted yet. ONS question wording, population, series identity and uncertainty still need verification. BLS occupation counts are survey estimates and do not by themselves identify an AI effect.</p>
+<h2>What research has found</h2><p>No study result has passed this section's publication checks yet. Productivity in one workplace must not be reported as economy-wide employment impact.</p>
+<section class="separate" aria-labelledby="exposure"><h2 id="exposure">Modelled exposure</h2><p><strong>Exposure is not impact.</strong> No occupation-exposure comparison is published until its index, crosswalk, threshold and sensitivity are reproducible.</p></section>
+<h2>What companies say</h2><p>No claims admitted yet. A future entry must link to the company's own statement and distinguish the total announced change from any number explicitly attributed to AI. It will be labelled “Company claim, not independently verified”.</p>
+<section class="separate" aria-labelledby="projections"><h2 id="projections">What forecasters expect</h2><p>No projections admitted. Future forecasts will carry their projection label, period and published uncertainty range, separately from measured observations.</p></section>
+<footer><h2>Sources and refresh</h2><p>{snapshot.jobs_rights[0].attribution_text} Licence and methodology read on {snapshot.jobs_rights[0].verified_on}. Source refresh: monthly; check scheduled weekly through a review artefact. Staleness begins after the source release is older than its cadence plus half that cadence; fetching an old release does not make it fresh.</p>
+<p>Snapshot retrieved {snapshot.retrieved_at}; selected daily observations, not a continuous time series. No chart joins different methods. <a href={`${base}ai-and-jobs/archive/${snapshot.retrieved_at}.json`}>Frozen snapshot and source hash</a>.</p></footer>
+</section></BaseLayout>
+<script>
+import { isStale } from '../../lib/ai-and-jobs.mjs';
+for(const card of document.querySelectorAll<HTMLElement>('[data-vintage]')) {
+ const badge=card.querySelector('[data-staleness]');
+ if(badge) badge.textContent=isStale({vintage:card.dataset.vintage},{refresh_cadence_days:Number(card.dataset.cadence)})?'Stale: refresh overdue':'Within source refresh window';
+}
+</script>
+<style>
+.work-evidence{max-width:1100px;margin:auto;padding:3rem 1.5rem}header{max-width:800px}.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:.75rem;color:var(--color-accent)}h1{font:clamp(2.6rem,6vw,4.5rem)/1.1 var(--font-display);margin:1rem 0}.intro{font-size:1.25rem;max-width:650px}h2{font:2rem var(--font-display);margin:2.5rem 0 1rem}h3{font:1.5rem var(--font-display)}p{line-height:1.7;margin:.75rem 0}a{color:var(--color-accent);text-decoration:underline;text-underline-offset:3px}.boundary,.separate{border-left:4px solid var(--color-accent);padding:1rem 1.5rem;background:var(--color-bg-tertiary);margin:2rem 0}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1rem}article{padding:1.5rem;border:1px solid var(--color-border-strong);background:var(--color-bg-card);border-radius:8px}.freshness{font-size:.8rem;display:block}figure{border-top:1px solid var(--color-border-strong);border-bottom:1px solid var(--color-border-strong);margin:2rem 0;padding:1rem 0}figcaption{font-size:.85rem;margin-bottom:1rem}.bar-row{display:grid;grid-template-columns:minmax(100px,180px) 1fr 65px;align-items:center;gap:1rem;margin:.9rem 0}.track{height:14px;background:var(--color-bg-tertiary)}.bar{height:100%;background:var(--color-accent)}summary{cursor:pointer}details{font-size:.85rem}footer{border-top:1px solid var(--color-border-strong);margin-top:3rem}
+</style>

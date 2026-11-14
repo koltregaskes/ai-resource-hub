@@ -14,6 +14,7 @@ import { getRenderableCliTools } from '../data/cli-tools';
 import { isPubliclyVerifiedModel } from '../data/model-verification';
 import { assessBenchmarkProvenance } from '../data/benchmark-provenance';
 import { findVerifiedBenchmarkScoreEvidence } from '../../scripts/benchmark-score-evidence';
+import { isBlockedSource } from '../data/source-policy';
 
 const CACHE_DIR = path.join(process.cwd(), 'data', 'pg-cache');
 
@@ -324,13 +325,18 @@ function toNumber(value: number | string | null | undefined): number {
 // ─── Public API (drop-in replacements for queries.ts functions) ─
 
 export function getModels(): CachedModel[] {
-  return loadCache<CachedModel>('models').map((model) => applyModelFieldEvidence({
+  return loadCache<CachedModel>('models').map((model) => {
+    // Hub #1569: speed figures from a source whose terms bar our use are dropped here,
+    // before any page or export sees them. The raw cache row is left as it is.
+    const speedBlocked = isBlockedSource(model.speed_source);
+    return applyModelFieldEvidence({
     ...model,
     name: getDisplayModelName(model.id, model.name),
     input_price: model.input_price == null ? null : toNumber(model.input_price),
     output_price: model.output_price == null ? null : toNumber(model.output_price),
-    speed: toNumber(model.speed),
-    ttft: toNumber(model.ttft),
+    speed: speedBlocked ? 0 : toNumber(model.speed),
+    ttft: speedBlocked ? 0 : toNumber(model.ttft),
+    speed_source: speedBlocked ? null : model.speed_source,
     // The stored score has no row-level method, source set or measurement date.
     // Keep it in the raw cache for remediation, but never expose it publicly.
     quality_score: null,
@@ -339,7 +345,8 @@ export function getModels(): CachedModel[] {
     quality_score_measured_at: null,
     quality_score_source_urls: [],
     quality_score_evidence_count: 0,
-  }));
+    });
+  });
 }
 
 export function getModelsByCategory(category: string, models: CachedModel[] = getModels()): CachedModel[] {
@@ -417,7 +424,8 @@ export function getAllBenchmarkScores(): CachedBenchmarkScore[] {
 export function getBenchmarkScores(): CachedBenchmarkScore[] {
   const benchmarks = new Map(getBenchmarks().map((benchmark) => [benchmark.id, benchmark]));
   return getAllBenchmarkScores().filter((score) => (
-    findVerifiedBenchmarkScoreEvidence(score) !== null
+    !isBlockedSource(score.source, score.source_url)
+    && findVerifiedBenchmarkScoreEvidence(score) !== null
     && assessBenchmarkProvenance(score, benchmarks.get(score.benchmark_id)).rankable
   ));
 }
@@ -677,8 +685,14 @@ export function getAllSubscriptionPlans(): Array<CachedSubscriptionPlan & { limi
     }))
     .sort((a, b) => a.provider_name.localeCompare(b.provider_name) || a.tier_level - b.tier_level || a.plan_name.localeCompare(b.plan_name));
 }
-export function getProviderEndpoints(id: string): CachedProviderEndpoint[] {
+/** Endpoint rows from licensed sources only (hub #1569). */
+function getLicensedProviderEndpoints(): CachedProviderEndpoint[] {
   return loadCache<CachedProviderEndpoint>('provider_endpoints')
+    .filter((endpoint) => !isBlockedSource((endpoint as { source?: string | null }).source));
+}
+
+export function getProviderEndpoints(id: string): CachedProviderEndpoint[] {
+  return getLicensedProviderEndpoints()
     .filter((endpoint) => endpoint.model_id === id)
     .map((endpoint) => ({
       ...endpoint,
@@ -692,7 +706,7 @@ export function getProviderEndpoints(id: string): CachedProviderEndpoint[] {
 export function getModelsWithMultipleEndpoints(): Array<{ model_id: string; model_name: string; provider: string; provider_colour: string; endpoint_count: number }> {
   const modelMap = new Map(getModels().map((model) => [model.id, model]));
   const grouped = new Map<string, CachedProviderEndpoint[]>();
-  for (const endpoint of loadCache<CachedProviderEndpoint>('provider_endpoints')) {
+  for (const endpoint of getLicensedProviderEndpoints()) {
     const list = grouped.get(endpoint.model_id) ?? [];
     list.push(endpoint);
     grouped.set(endpoint.model_id, list);

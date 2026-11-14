@@ -15,6 +15,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { getAiResourceHubSqlitePath } from './sqlite-path';
 import { isPubliclyVerifiedModel } from '../src/data/model-verification';
+import { isBlockedSource } from '../src/data/source-policy';
 import { assessBenchmarkProvenance } from '../src/data/benchmark-provenance';
 import {
   findVerifiedBenchmarkScoreEvidence,
@@ -31,6 +32,7 @@ interface ModelRow {
   context_window?: number | string | null;
   max_output?: number | string | null;
   speed?: number | string | null;
+  speed_source?: string | null;
   quality_score?: number | string | null;
   released?: string | null;
   open_source?: boolean | number | null;
@@ -60,6 +62,7 @@ interface SpeedRow {
   tps?: number | string | null;
   provider_endpoint?: string | null;
   recorded_at?: string | null;
+  source?: string | null;
 }
 
 interface ProviderRow {
@@ -102,7 +105,7 @@ function readSqliteSource(): SpreadsheetSource | null {
         p.name as provider_name,
         m.input_price, m.output_price,
         m.context_window, m.max_output,
-        m.speed, m.quality_score,
+        m.speed, m.speed_source, m.quality_score,
         m.released, m.open_source,
         m.modality, m.api_available,
         m.category, m.status,
@@ -129,7 +132,7 @@ function readSqliteSource(): SpreadsheetSource | null {
     `).all() as BenchmarkScoreRow[];
 
     const speedData = db.prepare(`
-      SELECT model_id, ttft, speed as tps, provider_endpoint, recorded_at
+      SELECT model_id, ttft, speed as tps, provider_endpoint, recorded_at, source
       FROM speed_history
       WHERE id IN (
         SELECT MAX(id) FROM speed_history GROUP BY model_id
@@ -205,6 +208,7 @@ function readPgCacheSource(): SpreadsheetSource | null {
         tps: row.tps ?? row.speed,
         provider_endpoint: row.provider_endpoint,
         recorded_at: row.recorded_at,
+        source: row.source,
       });
     }
   }
@@ -249,9 +253,23 @@ function toNumber(value: unknown): number | null {
   return Number.isFinite(numberValue) ? numberValue : null;
 }
 
+/**
+ * Hub #1569: drop numbers from sources whose current terms bar our use, before
+ * anything is written to the public CSV/JSON.
+ */
+function licensedRowsOnly(source: Pick<SpreadsheetSource, 'models' | 'benchmarkScores' | 'speedData'>) {
+  return {
+    models: source.models.map((model) => (
+      isBlockedSource(model.speed_source) ? { ...model, speed: null, speed_source: null } : model
+    )),
+    benchmarkScores: source.benchmarkScores.filter((row) => !isBlockedSource(row.source, row.source_url)),
+    speedData: source.speedData.filter((row) => !isBlockedSource(row.source)),
+  };
+}
+
 function main() {
   const source = selectSpreadsheetSource();
-  const { models, benchmarkScores, speedData } = source;
+  const { models, benchmarkScores, speedData } = licensedRowsOnly(source);
   const publicBenchmarkScores = benchmarkScores.flatMap((row) => {
     const evidence = findVerifiedBenchmarkScoreEvidence(row);
     const provenance = assessBenchmarkProvenance(
@@ -400,9 +418,11 @@ function main() {
     benchmark_types: benchmarkIds,
     benchmark_policy: {
       evidence_state: 'exact-reviewed-row',
-      raw_score_count: benchmarkScores.length,
+      // Counts cover every raw row, including rows held back because their source is
+      // blocked (hub #1569), so the publication gate's cache totals still match.
+      raw_score_count: source.benchmarkScores.length,
       rankable_score_count: publicBenchmarkScores.length,
-      quarantined_score_count: benchmarkScores.length - publicBenchmarkScores.length,
+      quarantined_score_count: source.benchmarkScores.length - publicBenchmarkScores.length,
     },
     models: jsonRows,
   };
