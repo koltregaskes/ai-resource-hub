@@ -1,0 +1,80 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import StudioNote from '../../components/insights/StudioNote.astro';
+import { article } from '../../data/studio/reading-an-ai-status-page';
+import data from '../../data/insights/2026-11-14-reading-an-ai-status-page.json';
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const when = (iso: string) => {
+  const d = new Date(iso);
+  const hh = String(d.getUTCHours()).padStart(2, '0');
+  const mm = String(d.getUTCMinutes()).padStart(2, '0');
+  return `${hh}:${mm} UTC on ${d.getUTCDate()} ${months[d.getUTCMonth()]}`;
+};
+const stamp = when(data.generatedAt);
+const byId = Object.fromEntries(data.rows.map((r) => [r.id, r]));
+const stageWord = (s: string) => (s === 'reported' ? 'feed item, no stage in its title' : s);
+const liveWithIncidents = data.rows.filter((r) => r.fetchState === 'live' && r.activeIncidentCount > 0);
+const errText = (id: string) => (byId[id].readNote.match(/HTTP \d+ for \S+/) ?? ['no message'])[0];
+const deepseekErr = errText('deepseek');
+const mistralErr = errText('mistral');
+const readFail = (r) => (r.fetchState === 'error' ? 'could not be read' : 'not read: link only');
+---
+<InsightArticle title={article.title} description={article.description} date={article.date} type={article.type} readTime={article.readTime} snapshot="2026-11-14" standfirst="A status page reports states and stages that its owner sets, so reading one means knowing what each word means; this guide gives the definitions and one real snapshot of nine AI providers.">
+  <p>Our collector read nine AI providers' status pages at {stamp} on 14 November 2026. Six could be read, and {data.liveWithActiveIncidents} of those six listed at least one active incident, {data.activeIncidentsTotal} in all. The other {data.notLive} could not be read by a script at all: two returned an error and one is a link only.</p>
+  <p>This is a snapshot of one moment. It says nothing about how reliable any provider is, and we do not compare them. It does give real examples of the words a status page uses, which are worth knowing when an AI service is failing and you are trying to work out whether the fault is yours or theirs.</p>
+
+  <h2>Four component states and four incident stages</h2>
+  <p>Our collector reads three of the providers (OpenAI, Anthropic and DeepSeek) through a Statuspage-style JSON feed, so Atlassian's Statuspage documentation is the reference for the vocabulary. A page is divided into components, the parts of a service that users depend on. According to <a href="https://support.atlassian.com/statuspage/docs/what-is-a-component/" rel="noopener">Atlassian's page on components</a> (read 14 November 2026), each component has one of five statuses.</p>
+  <ul>
+    <li><strong>Operational</strong> means the component is working as expected and in a timely manner.</li>
+    <li><strong>Degraded performance</strong> means it is working but is slow or otherwise affected in a minor way.</li>
+    <li><strong>Partial outage</strong> is meant for a component that is "completely broken for a subset of customers", for example when only one data centre is down.</li>
+    <li><strong>Major outage</strong> is meant for a component that is completely unavailable.</li>
+    <li><strong>Under maintenance</strong> means the component is being worked on.</li>
+  </ul>
+  <p>The headline at the top of the page is worked out from the components. <a href="https://support.atlassian.com/statuspage/docs/top-level-status-and-incident-impact-calculations/" rel="noopener">Atlassian's calculation page</a> (read 14 November 2026) says that when any component is on degraded performance, the top-level status reads "Partially Degraded Service". A headline that sounds mild can therefore sit on top of a single affected component.</p>
+  <p>Incidents have their own stages, set when the page owner creates or updates the incident. <a href="https://support.atlassian.com/statuspage/docs/create-an-incident/" rel="noopener">Atlassian's incident page</a> (read 14 November 2026) lists four. Investigating means the symptoms are visible but the cause is not known. Identified means the cause has been found and a fix is under way. Monitoring means the owner believes a fix has worked and is waiting for the symptoms to subside. Resolved means the cause has been eliminated and the systems are back to full performance.</p>
+
+  <h2>The nine readings at {stamp}</h2>
+  <p>The table lists the nine providers in the order our collector wrote them. The headline column is the wording the collector captured from the provider's page or feed. The incident titles are the providers' own, shortened to the title only.</p>
+  <div class="table-wrap"><table>
+    <caption>Source: data/provider-status.json, generated at {stamp} 2026 by our collector from each provider's own status page or feed. A snapshot of one moment; it is not a measure of reliability.</caption>
+    <thead><tr><th>Provider</th><th>Reading</th><th>Headline</th><th class="num">Active incidents</th><th>Incident titles (stage as worded)</th></tr></thead>
+    <tbody>
+      {data.rows.map((r) => (
+        <tr>
+          <td><a href={r.statusPageUrl} rel="noopener">{r.name}</a></td>
+          <td>{r.fetchState === 'live' ? 'live' : readFail(r)}</td>
+          <td>{r.fetchState === 'live' ? r.overallLabel : 'none'}</td>
+          <td class="num">{r.fetchState === 'live' ? r.activeIncidentCount : 'n/a'}</td>
+          <td>{r.activeIncidents.length === 0 ? (r.fetchState === 'live' ? 'none listed' : 'n/a') : r.activeIncidents.map((i) => <div>{i.title} ({stageWord(i.status)}; opened {when(i.startedAt)})</div>)}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table></div>
+
+  <h2>Reading the three providers that listed incidents</h2>
+  <p>Anthropic's page headline was "{byId.anthropic.overallLabel}", which is the wording Atlassian's calculation page gives for one degraded component. In the file, claude.ai is the only component that was not operational, and the collector lists non-operational components first, so none was left off its short list. The incident, "{byId.anthropic.activeIncidents[0].title}", was at the {byId.anthropic.activeIncidents[0].status} stage. The file does not say which component the incident is attached to, so we do not link the two.</p>
+  <p>OpenAI's headline read "{byId.openai.overallLabel}". Its one incident, "{byId.openai.activeIncidents[0].title}", was at the {byId.openai.activeIncidents[0].status} stage, meaning the owner believed a fix was in and was watching. The Compliance API was the only non-operational component in the file, out of 25. The headline said the service was partly degraded, and the component list said which part.</p>
+  <p>Fireworks AI's headline read "{byId.fireworks.overallLabel}", with two incidents about service degradation for GLM 5.3 models. Its titles carry no stage word, so the collector records them as reported. Two things limit this row. First, Fireworks is read from a feed, and the collector keeps at most two feed items that are not titled as resolved, so two is a cap and not a count. Second, a feed title that lacks the word "resolved" is not proof that the incident is still open.</p>
+
+  <h2>Three providers we could not read</h2>
+  <ul>
+    <li><strong>DeepSeek</strong> returned an error. The collector expected a Statuspage-style JSON summary and the request came back as "{deepseekErr}".</li>
+    <li><strong>Mistral</strong> returned an error as well: "{mistralErr}". Our collector's note says Mistral publishes no public RSS or JSON incident feed that we could verify, so only the page headline is read, and that read was refused.</li>
+    <li><strong>xAI</strong> is a link only. Our collector's note says xAI blocks automated requests to its status page, so we read nothing from it.</li>
+  </ul>
+  <p>A missing reading is not a clean bill of health. For these three, the collector has no information either way.</p>
+
+  <h2>How our collector builds the labels</h2>
+  <p>The labels come from different places, and the file's field names hide that. For OpenAI, Anthropic and DeepSeek the collector reads a JSON summary in the Statuspage format. For Cohere, Together AI, Fireworks AI and Mistral it searches the page's HTML for a status marker and, for the first three, reads an RSS feed. For Google it reads Google Cloud's public incident feed and keeps incidents that mention Gemini, Vertex AI and a few related product names, so Google's "No active Gemini or Vertex AI incidents" is our own sentence about a keyword filter, not a headline Google wrote.</p>
+  <p>One field is also unreliable as a summary. The file has an overallStatus value that the collector derives from the label, and for Fireworks AI it says major outage while the label says partial outage. Reading the collector code shows the cause: it checks for the word "outage" before it checks for "partial". The label is the better guide, and the mismatch is ours to fix.</p>
+
+  <h2>What a status page can tell you</h2>
+  <p>In Atlassian's documentation, the page owner sets component statuses and chooses the stage of each incident, and has to mark a component as affected to get the option of notifying subscribers; notification itself is a choice (<a href="https://support.atlassian.com/statuspage/docs/create-an-incident/" rel="noopener">incident page</a>, read 14 November 2026). So a status page shows what its owner has entered. A page that shows everything operational therefore does not rule out a failing request, and it cannot say whether the fault is in your own code, your network or your account.</p>
+  <p>Atlassian describes subscribing in plain terms: users can subscribe to updates by email or text message and receive notifications when incidents are published (<a href="https://support.atlassian.com/statuspage/docs/what-is-statuspage/" rel="noopener">what is Statuspage</a>, read 14 November 2026). For a service you depend on, a subscription on the component you use means a change in its stage arrives without you checking the page. For the live readings of the providers we cover, see <a href={`${base}status/`}>our status page</a>.</p>
+  <StudioNote article={article} snapshot="14 November 2026" />
+</InsightArticle>
