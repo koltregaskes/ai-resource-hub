@@ -137,7 +137,7 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
 - Each grader is unit-tested with accepted, rejected, abstaining and malformed samples before any model run.
 - A script check's verdict is final. It never goes to a judge.
 
-### Checklist graders (summaries and rewrites: 16 tasks)
+### Checklist graders (summaries and rewrites: 10 tasks in task set v1)
 
 - Each task has 4 to 8 pass/fail checks. Script-checkable ones are done by script; the rest are "model-judged checks".
 - **Judge panel:** two judge models from two different labs, named in the run config with their settings. No answer is judged only by a model from its own lab.
@@ -203,7 +203,7 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
 - **Pre-flight:** before any call, the harness prints the worst-case cost of the whole run, next to an expected cost from a planning figure for output size. The worst case is every slot once at its task's output limit, plus a 15% allowance for retries, plus judge qualification and judging. The harness refuses to start if the worst case is above the remaining cap. The fix is then a shorter model list in the run config, never a silently lower limit.
   - Why the default limit is 4,096: the first review put four OpenAI models at about $101 worst case at 8,192 output tokens, above the $90 cap before judges or retries.
 - **Canary first:** the first paid step is 2 public tasks per model with 1 repeat, inside the same ledger. It isn't a result and isn't published. The adapters, usage fields, finish reasons and charges are reviewed before the full run starts.
-- **Judging:** about 16 tasks × 3 slots × 2 judges per model, plus 80 qualification calls, all reserved the same way. Judge cost is reported separately from model cost.
+- **Judging:** 10 tasks × 3 slots × 2 judges per model, plus 80 qualification calls, all reserved the same way. Judge cost is reported separately from model cost.
 - **Order:** every call that spends OpenAI credit finishes before 20 Nov 2026, including OpenAI judging of Anthropic answers. So the Anthropic model runs that need an OpenAI judge are scheduled before that date too.
 
 ## Keys and safety
