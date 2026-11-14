@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'model-count-is-not-the-market',
     title: 'We list 268 language models. That number describes our list, not the market.',
     description:
-      'Our catalogue holds 291 language-model entries, 268 after duplicates are removed, 252 with a release date and context window, and 65 that are active and priced. Why none of those is a count of all AI models.',
+      'Our catalogue holds 291 language-model entries, 268 after suffix-based variant filtering, 252 with a release date and context window, and 65 that are active and priced. Why none of those is a count of all AI models.',
     date: '2026-11-14',
     type: 'Analysis',
     readTime: '5 min',

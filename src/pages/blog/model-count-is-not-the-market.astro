@@ -19,7 +19,7 @@ const snapDate = new Date(insights.snapshotDate).toLocaleDateString('en-GB', { d
 
 <InsightArticle
   title="We list 268 language models. That number describes our list, not the market."
-  description="Our catalogue holds 291 language-model entries, 268 after duplicates are removed, 252 with a release date and context window, and 65 that are active and priced. Why none of those is a count of all AI models."
+  description="Our catalogue holds 291 language-model entries, 268 after suffix-based variant filtering, 252 with a release date and context window, and 65 that are active and priced. Why none of those is a count of all AI models."
   date="2026-11-14"
   type="Analysis"
   readTime="5 min"
@@ -27,7 +27,7 @@ const snapDate = new Date(insights.snapshotDate).toLocaleDateString('en-GB', { d
   standfirst="Four different counts come out of the same catalogue, from 291 down to 65, and none of them is the number of AI models in the world. Where each count comes from, and what it can and cannot tell you."
 >
   <p>
-    On {snapDate}, our catalogue held {all} language-model entries. Remove the duplicate versions and {afterVariants} remain. Those are fair numbers to quote about
+    On {snapDate}, our catalogue held {all} language-model entries. Apply our variant filter and {afterVariants} remain. Those are fair numbers to quote about
     the AI Resource Hub. They are poor numbers to quote about AI.
   </p>
   <p>
@@ -49,7 +49,7 @@ const snapDate = new Date(insights.snapshotDate).toLocaleDateString('en-GB', { d
       </thead>
       <tbody>
         <tr><td>Language-model entries</td><td class="num">{all}</td><td>Every record in the language-model category</td></tr>
-        <tr><td>After duplicates are removed</td><td class="num">{afterVariants}</td><td>Drops {removed} entries that are dated snapshots or fast tiers of a model already listed</td></tr>
+        <tr><td>After variant filtering</td><td class="num">{afterVariants}</td><td>Drops {removed} entries whose id ends in a date stamp or in "-fast"</td></tr>
         <tr><td>With a date and a context window</td><td class="num">{dated}</td><td>The records our context-window charts can use. {missing} of the {afterVariants} are missing a release date, a context window, or both.</td></tr>
         <tr><td>Active and priced</td><td class="num">{priced}</td><td>The records our price comparisons use: marked active, with input and output prices above zero</td></tr>
       </tbody>
@@ -58,11 +58,11 @@ const snapDate = new Date(insights.snapshotDate).toLocaleDateString('en-GB', { d
 
   <ColumnChart
     title="Four counts from one catalogue"
-    summary={`Language-model records: ${all}; after duplicates are removed ${afterVariants}; with a date and context window ${dated}; active and priced ${priced}.`}
+    summary={`Language-model records: ${all}; after variant filtering ${afterVariants}; with a date and context window ${dated}; active and priced ${priced}.`}
     height={280}
     data={[
       { label: 'All entries', value: all, valueLabel: String(all) },
-      { label: 'After duplicates', value: afterVariants, valueLabel: String(afterVariants) },
+      { label: 'After variant filter', value: afterVariants, valueLabel: String(afterVariants) },
       { label: 'Date and context', value: dated, valueLabel: String(dated), highlight: true },
       { label: 'Active and priced', value: priced, valueLabel: String(priced), highlight: true },
     ]}
@@ -114,7 +114,7 @@ const snapDate = new Date(insights.snapshotDate).toLocaleDateString('en-GB', { d
   <DataNote anchor="calc-variant-rule" snapshot={`${snapDate} (catalogue rebuilt ${insights.cacheGeneratedAt.slice(11, 16)} UTC)`}>
     <ul>
       <li>
-        <strong>The counts</strong> are read from the frozen snapshot file for this date. Removing duplicates uses a naming rule (an id ending in a date stamp or in "-fast"). It is a rule about identifiers, not a review of model families, so some versions that are really the same model remain.
+        <strong>The counts</strong> are read from the frozen snapshot file for this date. The variant filter is a naming rule: it drops an entry whose id ends in a date stamp or in "-fast". It does not check that another entry for the same model exists (a "-fast" entry with no standard sibling is dropped too), and it is not a review of model families, so some versions that are really the same model remain.
       </li>
       <li>
         <strong>What is not known.</strong> How many models exist, how many we miss and how many of the {missing} records without a full date or context window are missing which field. We have not counted those.

@@ -22,7 +22,7 @@ const e = practitionerB8.find(p => p.slug === 'ai-judge-disagreement-log')!;
 <h2>Reading the disagreements before changing anything</h2>
 <p>Each disagreement ends in one of three decisions: the reference label, the rubric or the judge needs correcting. The reason should be saved. A changed reference label should leave the earlier version in place, so a previous model comparison can still be interpreted.</p>
 <p>Where they fit the task, the reference set should also hold difficult but legitimate answers, concise correct answers and polished wrong answers. That coverage plan is our proposal. We have not measured whether any judge favours a particular style or length.</p>
-<p>Some reviewed cases should be held back while the rubric is improved. A judge tuned repeatedly against the same examples will agree well on them without showing that the repair generalises, so tuning and held-back results belong in separate columns.</p>
+<p>Some reviewed cases should be held back while the rubric is improved. A judge tuned repeatedly against the same examples may agree well on them without showing that the repair generalises, so tuning and held-back results belong in separate columns.</p>
 <h2>Why the smaller group needs its own numbers</h2>
 <p>The invented example has many reference passes and few reference failures, so overall agreement is dominated by the larger group. When either kind of error affects the decision, false accepts and false rejects each need their own denominators.</p>
 <p>Suppose the release policy treats an unsupported critical answer as a blocker. That category then gets inspected explicitly, and a high aggregate agreement rate does not waive the condition. The judge helps apply the release rule and should not quietly rewrite it.</p>
