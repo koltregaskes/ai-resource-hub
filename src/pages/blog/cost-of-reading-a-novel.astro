@@ -1,0 +1,111 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import StudioNote from '../../components/insights/StudioNote.astro';
+import LogBarChart from '../../components/insights/LogBarChart.astro';
+import { article } from '../../data/studio/cost-of-reading-a-novel';
+import data from '../../data/insights/2026-11-14-cost-of-reading-a-novel.json';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const a = data.assumptions;
+const rows = data.spread;
+const cheapest = data.cheapest;
+const dearest = data.dearest;
+const nf = (v: number) => v.toLocaleString('en-GB');
+const money = (v: number) => (v < 0.01 ? `$${v.toFixed(4)}` : v < 0.1 ? `$${v.toFixed(3)}` : `$${v.toFixed(2)}`);
+const price = (v: number) => `$${v}`;
+const novels = (v: number) => v.toFixed(2).replace(/\.?0+$/, '');
+const ratioOf = (r: { input: number; output: number }) => r.output / r.input;
+const lowRatio = rows.reduce((m, r) => (ratioOf(r) < ratioOf(m) ? r : m), rows[0]);
+const highRatio = rows.reduce((m, r) => (ratioOf(r) > ratioOf(m) ? r : m), rows[0]);
+const snapDate = '14 November 2026';
+const notFit = data.notFit;
+const dear = data.dearOnes;
+const dearSmall = dear.list.filter((m) => m.novelsThatFit < 2);
+const dearRead = dear.list.map((m) => m.readCost);
+const joinList = (xs: string[]) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`);
+const bigWindow = dear.list.filter((m) => m.contextWindow >= 1000000).length;
+const biggestNotFit = Math.max(...notFit.map((m) => m.contextWindow));
+const rowsFromOpenRouter = rows.filter((r) => r.priceFrom === 'openrouter').length;
+const priceFromLabel = (p: string) => (p === 'openrouter' ? 'Cheapest host on OpenRouter' : "Lab's own list");
+---
+
+<InsightArticle
+  title={article.title}
+  description={article.description}
+  date={article.date}
+  type={article.type}
+  readTime={article.readTime}
+  snapshot="2026-11-14"
+  standfirst="For an assumed 90,000-word novel, the cost of one read runs from a quarter of a cent to $3.60 across 65 models, and 60 of the 65 can hold the whole book."
+>
+  <p>Reading a whole novel once costs {money(cheapest.readCost)} on {cheapest.name} and {money(dearest.readCost)} on {dearest.name}, a spread of {nf(Math.round(data.readCostRatio))} to one. Of the {data.n} language models we track, {data.fitCount} have a recorded context window big enough to hold the book in one go, and {data.notFitCount} do not.</p>
+  <p>The novel is an assumption. We took a book of {nf(a.words)} words, which is a plausible length but not a measured one, and real books run shorter and much longer. To turn words into tokens we used OpenAI's <a href="https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them" rel="noopener">help page on tokens</a>, which says "100 tokens are approximately 75 words" for English text (read on 14 November 2026). That puts the book at {nf(a.tokens)} tokens. The page says these are estimates, not exact counts.</p>
+
+  <div class="stat-row">
+    <div class="stat"><b>{nf(a.tokens)}</b><span>tokens in the assumed {nf(a.words)}-word novel</span></div>
+    <div class="stat"><b>{money(cheapest.readCost)}</b><span>to read it once, cheapest ({cheapest.name})</span></div>
+    <div class="stat"><b>{money(dearest.readCost)}</b><span>to read it once, dearest ({dearest.name})</span></div>
+    <div class="stat"><b>{data.fitCount} of {data.n}</b><span>models whose recorded window holds the whole book</span></div>
+  </div>
+
+  <h2>Reading costs from {money(cheapest.readCost)} to {money(dearest.readCost)}</h2>
+  <p>The sum is the token count divided by a million, times the model's price per million input tokens. Because every model reads the same {nf(a.tokens)} tokens in this exercise, the spread in cost is the spread in input price. The cheapest model charges ${cheapest.input} per million input tokens and the dearest ${dearest.input}, so the cost differs by {nf(Math.round(data.readCostRatio))} times. Across all {data.n} models the median cost of one read is {money(data.medianReadCost)}.</p>
+  <p>For scale, the median model would read the book 100 times for {money(data.medianReadCost * 100)}, and the dearest would read it 100 times for {money(dearest.readCost * 100)}. Those are straight multiples of the single-read figures and say nothing about what a real project would need.</p>
+  <p>The table picks {rows.length} models at evenly spaced places in the list, sorted by input price. It is a spread to look at, not a shortlist. The "novels that fit" column divides each recorded context window by the book's {nf(a.tokens)} tokens, so 8.75 means room for a little under nine copies at once.</p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>Source: AI Resource Hub catalogue, snapshot of {snapDate}. US dollars. Assumed novel of {nf(a.words)} words, {nf(a.tokens)} tokens. List prices only. The last column says whether the price is a lab's own list or the cheapest OpenRouter host.</caption>
+      <thead>
+        <tr><th>Model</th><th class="num">Input per million</th><th class="num">Context window</th><th class="num">Novels that fit</th><th class="num">Read once</th><th class="num">Write one</th><th>Price from</th></tr>
+      </thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr>
+            <td>{r.name} <span style="color:var(--color-text-muted)">({r.provider})</span></td>
+            <td class="num">{price(r.input)}</td>
+            <td class="num">{nf(r.contextWindow)}</td>
+            <td class="num">{r.fits ? novels(r.novelsThatFit) : `${novels(r.novelsThatFit)}, does not fit`}</td>
+            <td class="num">{money(r.readCost)}</td>
+            <td class="num">{money(r.writeCost)}</td>
+            <td>{priceFromLabel(r.priceFrom)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <LogBarChart
+    title="Cost to read the assumed novel once, ten models from cheapest to dearest input price"
+    summary={`Cost of one read runs from ${money(cheapest.readCost)} for ${cheapest.name} to ${money(dearest.readCost)} for ${dearest.name}. Highlighted bars are models whose recorded context window is too small for the book.`}
+    ticks={[0.001, 0.01, 0.1, 1, 10]}
+    data={rows.map((r) => ({ label: r.name, value: r.readCost, valueLabel: money(r.readCost), highlight: !r.fits }))}
+    caption={`Source: AI Resource Hub catalogue, snapshot of ${snapDate}. US dollars, logarithmic scale. Assumed novel of ${nf(a.words)} words (${nf(a.tokens)} tokens). Highlighted bars: the recorded context window is smaller than the book.`}
+  />
+
+  <h2>Five of the 65 models cannot hold the book</h2>
+  <p>A context window is the amount of text a model can take in at once, and the novel has to fit inside it. The five that fall short are {notFit.map((m) => `${m.name} (${nf(m.contextWindow)})`).join(', ')}. The biggest of those windows holds about {novels(biggestNotFit / a.tokens)} of the book. Reka Flash 3 is in the table above, and it would need the novel cut into pieces and read in several goes.</p>
+  <p>All five are priced from the cheapest OpenRouter host, and none costs more than ${data.dearestNotFitInput} per million input tokens. The other {data.pricedAboveDearestNotFit} models priced above ${data.dearestNotFitInput} all fit. In this catalogue, then, a window too small for a novel goes with a price at the low end of the list.</p>
+  <p>Our <a href={`${base}blog/context-windows-explained/`}>context windows explainer</a> covers what the window is and how it has grown.</p>
+
+  <h2>The dear models all have room, and some cheap ones barely do</h2>
+  <p>There are {dear.count} models with an input price of $5 or more per million tokens, and every one of them fits the novel. Reading it costs between {money(Math.min(...dearRead))} and {money(Math.max(...dearRead))} on those. {bigWindow} of the {dear.count} have a window of 1,000,000 tokens or more, which is room for more than eight copies of the book. The exceptions are {joinList(dearSmall.map((m) => `${m.name} (${nf(m.contextWindow)} tokens, ${novels(m.novelsThatFit)} novels)`))}.</p>
+  <p>At the other end, fitting is not the same as having room. {data.tightFit.count} of the {data.fitCount} models that fit leave less than {nf(data.tightFit.limitTokens)} tokens spare, about a tenth of the novel. The tightest is {data.smallestFitting.name}, with a {nf(data.smallestFitting.contextWindow)}-token window and {nf(data.smallestFitting.headroom)} tokens to spare. A question about the book has to go into the same window, and a lab may count the reply against it as well; we have not checked each model's rule. A second novel would not fit on any of these {data.tightFit.count}.</p>
+
+  <h2>Writing the same length costs up to {money(dearest.writeCost)}</h2>
+  <p>For the reverse job, a model writing a novel of the same {nf(a.tokens)} tokens, we assumed the output matches the length of the book read. The sum uses the output price per million tokens. That comes to {money(cheapest.writeCost)} on {cheapest.name} and {money(dearest.writeCost)} on {dearest.name}. Among the {rows.length} rows shown, writing costs the same as reading on {lowRatio.name} and up to {ratioOf(highRatio)} times as much on {highRatio.name}. Our piece on <a href={`${base}blog/output-tokens-cost-five-times-input/`}>output prices</a> looks at that multiple across the whole catalogue.</p>
+  <p>A model that writes {nf(a.tokens)} tokens in total may need several replies to do it, since a single reply may have its own length limit. We have not tabulated those limits here.</p>
+
+  <h2>What the sums leave out</h2>
+  <p>The word-to-token rule is OpenAI's estimate for English text. We did not check how it holds for other languages, and different labs' tokenizers may count the same text differently, so {nf(a.tokens)} tokens is a rough guide for any one model.</p>
+  <p>The costs are list prices as recorded on {snapDate}. They leave out discounts for cached input and for batch jobs, and any higher rate that a lab applies to very long prompts. We did not check each lab's page for such a surcharge, so a model with one would cost more than the table shows once a prompt passes its threshold.</p>
+  <p>The sums cover one pass over the text and nothing else: no question about the book, no answer, no second read.</p>
+
+  <h2>Where the prices come from</h2>
+  <p>Of the {data.n} models, {data.fromOpenRouter} take their price from OpenRouter, which reports the cheapest host for each model, and {data.fromLab} take it from a lab's own pricing page, typed in by hand. All five models that cannot hold the book, and {rowsFromOpenRouter} of the {rows.length} rows in the table, are in the first group, so those prices reflect whichever host was cheapest on the snapshot date. Context windows are the figures recorded in the catalogue, and we did not re-check them against each lab's page for this piece. The <a href={`${base}transparency/`}>transparency page</a> lists what is known to be wrong with the data.</p>
+  <p>For the same kind of sum on your own workload, the <a href={`${base}calculator/`}>cost calculator</a> takes your token counts, and the <a href={`${base}blog/million-token-context-window/`}>million-token context window</a> piece covers what a very large window does and does not change.</p>
+
+  <StudioNote article={article} snapshot={snapDate} />
+</InsightArticle>

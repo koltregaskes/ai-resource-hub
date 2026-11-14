@@ -1,0 +1,90 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import StudioNote from '../../components/insights/StudioNote.astro';
+import LogBarChart from '../../components/insights/LogBarChart.astro';
+import { article } from '../../data/studio/cost-of-filling-a-million-token-window';
+import data from '../../data/insights/2026-11-14-cost-of-filling-a-million-token-window.json';
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const usd = (v: number) => {
+  const s = v.toFixed(4).replace(/0+$/, '');
+  const [whole, frac = ''] = s.split('.');
+  return `$${whole}.${frac.padEnd(2, '0')}`;
+};
+const num = (v: number) => v.toLocaleString('en-GB');
+const sourceLabel = (s: string) => (/openrouter/i.test(s) ? 'OpenRouter listing (cheapest host)' : s.replace(/ \(official.*\)/i, ' list price').replace('Vendor list price', 'Vendor list price'));
+const rows = data.rows;
+const g = data.gpt55;
+const gem = data.gemini25Pro;
+const anthropicRows = rows.filter((r) => r.provider === 'Anthropic');
+const gptRows = rows.filter((r) => r.provider === 'OpenAI');
+const googleRows = rows.filter((r) => r.provider === 'Google');
+const tiedCheap = data.cheapest.tied.join(', ');
+const tiedDear = data.dearest.tied.join(' and ');
+---
+<InsightArticle title={article.title} description={article.description} date={article.date} type={article.type} readTime={article.readTime} snapshot="2026-11-14" standfirst="Sending one full million-token prompt costs $0.10 on the cheapest of 28 models and $30 on the dearest, and at least one lab documents a higher rate for prompts that long.">
+  <p>Sending exactly 1,000,000 tokens to a model once costs between {usd(data.cheapest.fill)} and {usd(data.dearest.fill)} at list price, across the {data.count} active language models in our catalogue with a recorded window of a million tokens or more. That is a {data.spreadFill}-fold gap, and the median is {usd(data.medianFill)}.</p>
+
+  <div class="stat-row">
+    <div class="stat"><b>{data.count}</b><span>models with a recorded window of 1,000,000 tokens or more</span></div>
+    <div class="stat"><b>{usd(data.cheapest.fill)}</b><span>cheapest full prompt ({tiedCheap} tie)</span></div>
+    <div class="stat"><b>{usd(data.medianFill)}</b><span>median full prompt</span></div>
+    <div class="stat"><b>{usd(data.dearest.fill)}</b><span>dearest full prompt ({tiedDear} tie)</span></div>
+  </div>
+
+  <p>The price here is the input price per million tokens multiplied by one, so it is simply the listed input price. A 1,000-token answer adds the output price multiplied by 0.001, which moves the totals by pennies at most. The cheapest total, with that answer included, is {usd(data.cheapestTotal)} and the dearest is {usd(data.dearestTotal)}.</p>
+
+  <h2>All {data.count} models, cheapest first</h2>
+  <p>{data.underOneDollar} of the {data.count} cost under $1 to fill once, and {data.fiveDollarsOrMore} cost $5 or more. Anthropic has {anthropicRows.length} rows, OpenAI {gptRows.length} and Google {googleRows.length}; the rest come from Meta and Mistral. The chart uses a logarithmic scale, where each gridline is ten times the one before.</p>
+
+  <LogBarChart
+    title="Cost of one 1,000,000-token prompt at list input price"
+    summary={`Filling a million-token window once costs from ${usd(data.cheapest.fill)} to ${usd(data.dearest.fill)} across ${data.count} models; the median is ${usd(data.medianFill)}.`}
+    ticks={[0.1, 1, 10, 100]}
+    data={rows.map((r, i) => ({ label: r.name, value: r.fill, valueLabel: usd(r.fill), highlight: i === 0 || i === rows.length - 1 }))}
+    caption="Source: AI Resource Hub catalogue, snapshot of 14 November 2026. US dollars for 1,000,000 input tokens at list price; caching and batch discounts excluded. Logarithmic scale."
+  />
+
+  <div class="table-wrap">
+    <table>
+      <caption>Source: AI Resource Hub catalogue (data/pg-cache/models.json), 14 November 2026. US dollars. Suffix-based variant filtering applied. Answer is 1,000 output tokens.</caption>
+      <thead><tr><th>Model</th><th>Provider</th><th class="num">Recorded window (tokens)</th><th class="num">Input per million</th><th class="num">Output per million</th><th class="num">Full prompt</th><th class="num">Plus 1,000-token answer</th><th class="num">Total</th><th>Price source</th></tr></thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr><td>{r.name}</td><td>{r.provider}</td><td class="num">{num(r.contextWindow)}</td><td class="num">{usd(r.input)}</td><td class="num">{usd(r.output)}</td><td class="num">{usd(r.fill)}</td><td class="num">{usd(r.answer)}</td><td class="num">{usd(r.total)}</td><td>{sourceLabel(r.source)}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Which rows rest on a lab price and which on a reseller</h2>
+  <p>{data.officialCount} of the {data.count} rows carry a price typed in from the lab's own pricing page. The other {data.openrouterCount} come from the OpenRouter listing, which shows the cheapest host's price rather than the lab's. The three cheapest rows are all OpenRouter prices, while the two dearest are OpenAI list prices, so the bottom end of the range is the less certain one. We explain the price sources in more detail in <a href={`${base}blog/how-to-read-an-ai-price-list/`}>how to read an AI price list</a>, and the wider spread of output prices in <a href={`${base}blog/ai-price-spread-6000x/`}>the 6,000 times piece</a>.</p>
+
+  <h2>OpenAI documents a higher rate for GPT-5.5 prompts over 272K tokens</h2>
+  <p>The table assumes one flat rate for the whole window. OpenAI's <a href="https://developers.openai.com/api/docs/models/gpt-5.5" rel="noopener">GPT-5.5 model page</a>, which we read on 14 November 2026, lists $5 input and $30 output per million tokens and a 1,050,000-token window. It also says "prompts with >272K input tokens are priced at 2x input and 1.5x output", and that this applies "for the full session for standard, batch, and flex". The catalogue holds the base rates, and they match the page.</p>
+  <p>Here is the worked example for that one model. A full 1,000,000-token prompt is well over the 272K line, so if the rule applies to a single request as the page words it, the input costs {usd(g.surchargeFill)} instead of {usd(g.baseFill)}. The 1,000-token answer costs {usd(g.surchargeAnswer)} instead of {usd(g.baseAnswer)}. The total is {usd(g.surchargeTotal)} against {usd(g.baseTotal)} at the base rate, so the documented rule roughly doubles the bill ({usd(g.extra)} more). The table above shows the base figure, which is why GPT-5.5 appears there at {usd(g.baseFill)} for the prompt.</p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>Worked example for GPT-5.5 only. Source: OpenAI GPT-5.5 model page, read 14 November 2026. US dollars, one request, no caching or batch.</caption>
+      <thead><tr><th>Prompt</th><th class="num">Input cost</th><th class="num">1,000-token answer</th><th class="num">Total</th></tr></thead>
+      <tbody>
+        <tr><td>1,000,000 tokens at the base rate</td><td class="num">{usd(g.baseFill)}</td><td class="num">{usd(g.baseAnswer)}</td><td class="num">{usd(g.baseTotal)}</td></tr>
+        <tr><td>1,000,000 tokens with the over-272K rate (2x input, 1.5x output)</td><td class="num">{usd(g.surchargeFill)}</td><td class="num">{usd(g.surchargeAnswer)}</td><td class="num">{usd(g.surchargeTotal)}</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>We have not checked the pages for GPT-5.5 Pro, GPT-5.4, GPT-5.4 Pro or the GPT-5.6 models, so we make no claim about them. Other models in the table may have similar rules that we have not checked.</p>
+
+  <h2>What two other labs' pages say</h2>
+  <p>Anthropic's <a href="https://platform.claude.com/docs/en/about-claude/pricing" rel="noopener">pricing page</a>, read the same day, says Claude 4.6 and later models other than Claude Haiku 5.5 "include the full 1M token context window at standard pricing". It adds that a 900k-token request is billed at the same per-token rate as a 9k-token request. By that wording, {anthropicRows.length - 1} of our {anthropicRows.length} Anthropic rows (Opus 4.6 and later, Sonnet 4.6, Sonnet 5 and Fable 5) pay no extra for a full prompt, so the table's figure holds for them. Claude Sonnet 4.5 is an earlier model, and we did not read its own page. The same page does document a surcharge for Claude Haiku 5.5, which prices prompts over 100,000 tokens higher; that model is not in our table. Its base prices for Opus 5 ($5 and $25) and Sonnet 4.6 ($3 and $15) match the catalogue.</p>
+  <p>Google's <a href="https://aistudio.google.com/docs/pricing" rel="noopener">Gemini API pricing page</a>, read the same day, lists Gemini 2.5 Pro on its Standard tier at $1.25 input and $10 output "prompts &lt;= 200k tokens", and $2.50 and $15 for "prompts &gt; 200k tokens". Our catalogue entry for it, taken from OpenRouter, holds the lower pair. A full 1,000,000-token prompt is above 200k, so on Google's own figures the input costs {usd(gem.highFill)} instead of {usd(gem.lowFill)}, and with a 1,000-token answer the total is {usd(gem.highTotal)} instead of {usd(gem.lowTotal)}. The same page lists a similar split for Gemini 3.1 Pro Preview, which is not in our table. It also says Gemini 2.5 Pro is deprecated, with requests routed to another model from 1 December 2026. For the other Google rows and for Mistral, Meta and the remaining OpenAI models we have no reading, and we do not say they lack such rules.</p>
+
+  <h2>What the 28 rows leave out</h2>
+  <p>The catalogue lags the labs. Anthropic's page already lists Claude Opus 5.5 at $4 input and $20 output, Claude Sonnet 5.5 at $2 and $10, and Claude Fable 5.2 at $8 and $40 per million tokens, none of which are in the 28. By the page's wording the first two carry the full 1M window at standard pricing, so a refreshed table would shift several Anthropic rows.</p>
+  <p>The window figure is the size the catalogue records, taken from the lab or from OpenRouter. It caps what can be sent in one request and says nothing about how well a model uses a prompt that long. Tokens are also counted differently from lab to lab, so a million tokens of the same book is a different amount of text on different models. Anthropic's page notes that its newer tokeniser produces about 30% more tokens for the same text than the older one, so the same window may hold less text on those models than on Claude Sonnet 4.6.</p>
+
+  <StudioNote article={article} snapshot="14 November 2026" />
+</InsightArticle>
