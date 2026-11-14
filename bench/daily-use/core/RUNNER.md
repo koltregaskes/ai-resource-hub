@@ -11,14 +11,34 @@ The method is `docs/DAY-TO-DAY-BENCH-METHOD.md`. This page says how the code car
 | `keys.py` | Reads the owner's key file line by line and keeps only the first listed name per provider. Values live in `Secret` objects that never print. Holds the check that refuses every start while `OPENAI_API_KEY` or `ANTHROPIC_API_KEY` is set. |
 | `config.py` | Loads and checks `run-config.json`: every setting as an actual value, a dated price receipt per model, two judges from two providers, the judge candidates per provider, caps, key names. Every judge and every judge candidate must have an output limit of at most `JUDGE_MAX_OUTPUT_TOKENS` (400), in dry and live validation alike. Rejects anything that looks like a secret. `TO PIN BEFORE RUN` values pass a dry run and block a live one. Settings a provider would reject (temperature where it is not accepted, an unknown Anthropic API version, an effort value the API does not have) are refused outright. |
 | `providers.py` | `OpenAIResponses` and `AnthropicMessages` on an injectable transport. Builds the request, reads the answer, the finish reason and the raw usage, and sorts failures into transport error (retried, waiting for a `Retry-After` of up to 60 seconds), provider error and timeout (not retried). A 429 that says the account is out of credit or over a spend limit is a provider error. Holds the real `UrllibTransport`, which only the live gate can build. |
-| `ledger.py` | One durable ledger per provider, shared by model and judge calls. Reserve the worst case before each request, settle to the actual charge after it, refuse at the cap. The worst case uses `input_token_bound`, an upper bound on input tokens, and the full output limit. Money is `Decimal`. |
-| `preflight.py` | Prints expected, planning bound and absolute bound for the whole plan, whether or not the run is refused, and refuses when the planning bound is above a remaining cap. Both bounds count input with the ledger's `input_token_bound`. Counts qualification for every judge candidate and says how the judging was costed. |
+| `ledger.py` | One durable ledger per provider, shared by model and judge calls. Reserve the worst case before each request, settle to the actual charge after it, refuse at the cap. The worst case uses `input_token_bound`, an upper bound on input tokens, and the full output limit. Lists any settled charge that is above its reservation (`overruns`). Money is `Decimal`. |
+| `preflight.py` | Prints expected, planning bound and absolute bound for the whole plan, the planning bound of each stage and each pass, and the gates, whether or not the run is refused. Holds the whole-plan gate (`EXPECTED_MARGIN`), the planning-bound gate for what starts next, and `pass_gate`, which the runner calls before each pass. Both bounds count input with the ledger's `input_token_bound`. Counts qualification for every judge candidate and says how the judging was costed. |
 | `judges.py` | Judge prompts, JSON verdicts with one retry, the combine rules, qualification scoring and the choice of panel. |
-| `records.py` | Run, slot and request ids; the staging folder; finalising with a SHA-256 manifest; the public record through an allowlist; amendments. |
-| `runner.py` | Slots, requests and retries; judging; the stages; the qualification record; the live gate; the seam with the loader, the graders and the scorer. |
+| `records.py` | Run, slot and request ids; the staging folder; reopening a stopped run; the `incomplete` status and the rule that a run with fewer than all its passes is never finalised; finalising with a SHA-256 manifest; the public record through an allowlist; amendments. |
+| `runner.py` | Slots, requests and retries; judging; the stages; the passes of the full run and the gate before each; resuming; the qualification record; the live gate; the seam with the loader, the graders and the scorer. |
 | `cli.py` | The command line. |
 
 One request goes like this: work out the worst case, reserve it in the provider ledger (fsynced), append the "sent" line to the run record (fsynced), send, append the "done" line, settle the ledger. One request is in flight at a time.
+
+## How the cap is enforced
+
+The cap of each provider is held by three layers. Each one is tested on its own, and none of them relies on the one above it.
+
+**1. Every request is reserved before it is sent, and the run stops on an overrun.** The ledger reserves the worst case of a request (see the next section) before the request leaves, and refuses a reservation that would take spent plus reserved above the cap. If a settled charge is ever above its reservation, nothing more is sent and the run ends `interrupted`. That charge stays on file: while a ledger holds one, every later start of any stage or any pass is refused until the run config names the request id in `acknowledged_overruns: ["<request id>"]`. The refusal prints the request id. Naming it says the owner has seen it; it changes no cap and the charge still counts as spent.
+
+**2. A pass starts only if its own planning bound fits what is left of the cap.** The full run goes one pass at a time (see "the pass order" below). Before each pass, and when a run is resumed, the runner works out the planning bound of that pass: every request of the pass once at its output limit, input counted by the proven byte bound, plus 15% for retries. For each provider it must be at or below the remaining cap, which is the cap less the real settled spend and less any open reservation in the ledger. If it is not, the pass does not start and nothing of it is sent. The qualification and the canary are tested in the same way when they start.
+
+**3. The whole plan must fit at twice its expected cost.** Before the qualification, before the canary and before pass 1, and for each provider, `EXPECTED_MARGIN` (2) times the expected cost of everything still to run must be at or below the remaining cap. This is the only use of the expected figure in a gate. It replaces the old rule that the planning bound of the whole plan had to be at or below the cap: that bound is still printed, and when it is above a cap the pre-flight says so and says that the passes are gated one at a time. That alone is no longer a refusal.
+
+**The pass order.** The full run is as many passes as there are repeats, which is 3. Pass 1 is repeat 1 of every task for every model: models in config order, tasks in the seeded order of each model, the same in every pass. Each slot is judged (outcome classification and checklist judging) straight after its answer, so the whole of pass 1, judging included, is done before pass 2 starts; then pass 2; then pass 3. Slot records keep their `repeat` field: the pass number is the repeat. The canary is one pass.
+
+**`incomplete`.** A run whose next pass was refused by the gate ends with status `incomplete`, which is not `interrupted`. A line is printed that names the provider, the pass, its planning bound and the remaining cap, and the command exits with 5. The passes already finished are kept as they are, in staging.
+
+**Fewer than three passes is never scored.** A run with fewer complete passes than the configured number cannot be finalised, so it has no scores and no public record. A pass is complete when every one of its slots has a final result. Finalising such a run is refused with a message that gives the count, and there is no option that overrides it.
+
+**Resuming.** `--resume <run id>` on `dry-run`, `canary` or `full` carries a stopped run on under the same run id and the same ledger, in the planned order. A slot that has a row is left alone. No request id that is in the run's log is ever issued again: a slot that was stopped part-way goes on with its next request number, and the requests it had already used count towards its limit of 3. A paid answer that came back before the run stopped and was not yet graded is kept on its slot and is not asked for again; that slot stays pending. The run is resumed only as the same run: the same stage, the same task set and the same config, except that `caps_usd` and `acknowledged_overruns` may have changed. A qualification is not resumed; run it again.
+
+What the pre-flight refuses (exit 2): the whole-plan gate fails; or the qualification, the canary and pass 1, at their planning bounds, do not fit the remaining cap together; or an overrun is on file that the config does not acknowledge. A stage that is starting is refused on the same whole-plan gate, on its own planning bound (the qualification, the canary or pass 1) and on an overrun on file.
 
 ## What a reservation covers
 
@@ -32,9 +52,9 @@ This one function is behind every input figure in a reservation, in the pre-flig
 
 **The pre-flight's one planning assumption.** A judge request holds the model's answer, and at pre-flight time the answer does not exist. The two bounds plan it at 4 bytes per token of the task's output limit (`ANSWER_BYTES_PER_TOKEN` in `preflight.py`), each byte counted as one token. This is an assumption about the size of an answer, not a bound: a token can be longer than 4 bytes. It cannot break the cap, because at run time the judge request is reserved from the bytes of the real answer; an answer longer than planned can only stop the run early at the cap.
 
-**The expected figure** in the pre-flight keeps a softer size for input (3 characters per token). It is labelled as expected, it is for reading only, and it never feeds a reservation, a bound or a cap check.
+**The expected figure** in the pre-flight keeps a softer size for input (3 characters per token). It is labelled as expected, and it never feeds a reservation or a planning bound. Its one use in a gate is the whole-plan gate, where it is doubled.
 
-**The backstop.** If a settled charge is ever above its reservation, the ledger writes the settle line with the charge, the reservation and the flag `charge_above_reservation`. The runner then sends nothing more: the next request, a retry or a judge call, is refused before dispatch, the paid answer is kept on its slot, and the run ends `interrupted` in staging. The command exits with 3. An overrun on the very last request of a stage also ends the stage interrupted, so it is never finalised.
+**The backstop.** If a settled charge is ever above its reservation, the ledger writes the settle line with the charge, the reservation and the flag `charge_above_reservation`. The runner then sends nothing more: the next request, a retry or a judge call, is refused before dispatch, the paid answer is kept on its slot, and the run ends `interrupted` in staging. The command exits with 3. An overrun on the very last request of a stage also ends the stage interrupted, so it is never finalised. After that, no stage or pass starts, and the run is not resumed, until the run config names the request in `acknowledged_overruns`.
 
 **A possible later tightening.** Both providers have a token-count endpoint that would give the exact input count before a request. It needs a key and a network call, which nothing before the first paid step may make, so it is not used. It could replace the byte bound for the paid stages later; the byte bound would stay as the pre-flight figure.
 
@@ -63,7 +83,7 @@ Where things are written, all inside the private store (a folder outside the rep
 
 **The qualification record.** A finished live qualification writes `qualification/<run id>.json`. It holds, for every candidate, the judge model id, a fingerprint of its settings, its price sum and each agreement figure with pass or fail; the SHA-256 of both sample files; the thresholds; the task set version; the panel; the date; who signed off the run config (`approved_by`); and the manifest hash of the qualification run. `record_sha256` covers the rest of the record, so an edited record is not accepted. A dry qualification writes no record and opens nothing.
 
-**2. `canary`** needs a record that still stands, and its answers are judged by the qualified panel. **3. `full`** needs the same record and a finished canary that ran under it. The latest live qualification is the one that counts. It stops standing, and both stages are refused, when:
+**2. `canary`** needs a record that still stands, and its answers are judged by the qualified panel. **3. `full`** needs the same record and a finished canary that ran under it. It runs as three passes, each gated before it starts (see "How the cap is enforced"). The latest live qualification is the one that counts. It stops standing, and both stages are refused, when:
 
 - it did not pass;
 - the record file is missing or has been edited;
@@ -114,7 +134,7 @@ A live stage runs only if all of these hold, checked in this order:
 5. `--key-file` was given;
 6. neither provider key variable is set in the environment (this is checked first of all, as above);
 7. the earlier steps are on record: `qualify` needs nothing before it; `canary` needs a passed judge qualification record that still stands, with a panel equal to the config's `judges`; `full` needs that and a finished canary that ran under the same record;
-8. the pre-flight passes;
+8. the pre-flight passes: no unacknowledged overrun is on file, the whole-plan gate holds, and the planning bound of what is starting (the qualification, the canary or pass 1) fits the remaining cap;
 9. the keys load from the key file. This is the last step, so the file is read only when everything else has passed.
 
 With `LIVE_ENABLED = False`, `--live` is refused before the config, the key file or any transport is touched. Without `--live`, a `--key-file` path is ignored and never opened.
@@ -186,19 +206,24 @@ python -I $core qualify @common --key-file "<path to key file>" --live
 python -I $core canary @common --key-file "<path to key file>" --live
 #    Stop here. Review the adapters, usage fields, finish reasons and charges.
 
-# 5. The full run.
+# 5. The full run: three passes, each gated before it starts.
 python -I $core full @common --key-file "<path to key file>" --live
+#    If it ends incomplete (exit 5) or interrupted (exit 3), carry it on with:
+python -I $core full @common --key-file "<path to key file>" --live --resume "<run id>"
 ```
 
 The pre-flight says how the judging of the canary and the full run was costed. Before a qualification is on record it uses the worst case: on each provider side, the candidate whose judging would cost the most, since any candidate could still be the one that passes. Once a qualification stands it uses the recorded panel. With `--private-store` the `preflight` command reads the ledgers and the record; give `--stage canary` or `--stage full` to see the plan still to run after the earlier stages.
 
+The pre-flight prints, per provider: the three figures for the whole plan (expected, planning bound, absolute bound); the planning bound and the expected cost of the qualification, the canary, each pass and the full run; the whole-plan gate figure (2 x expected) against the remaining cap; the planning-bound gate for what starts next; the qualification, the canary and pass 1 together against the remaining cap; any overrun on file; and one result line.
+
 `--max-usd <amount>` sets a lower cap for one run. It can only lower: the provider caps always apply as well. `--seed <n>` fixes the task order; the seed is recorded either way. `--held-out-manifest <path>` names the manifest when it is not beside the public folder.
 
-Exit codes: 0 finished; 2 refused (the reason is printed after `REFUSED:`); 3 interrupted or pending, which includes a run stopped because a charge was above its reservation (the reason is printed after `stopped:`); 4 the qualification finished but named no panel. A mistake in the command itself exits with 1 or 2 from the argument parser. No refusal exits with 0.
+Exit codes: 0 finished; 2 refused (the reason is printed after `REFUSED:`); 3 interrupted or pending, which includes a run stopped because a charge was above its reservation (the reason is printed after `stopped:`); 4 the qualification finished but named no panel; 5 incomplete, a pass was not started because its planning bound was above the remaining cap (the reason is printed after `INCOMPLETE:`). A mistake in the command itself exits with 1 or 2 from the argument parser. No refusal exits with 0.
 
 ## Not built yet
 
-- Completing the judging of a run left pending in staging. Such a run stays unpublished, as the method requires, but there is no command to finish it.
-- Grading a slot that was left pending because the grader could not run. The answer is kept; there is no command to grade it later.
+- Completing the judging of a run left pending in staging. Such a run stays unpublished, as the method requires, but there is no command to finish it. `--resume` does not do it: it sends only slots that have no row.
+- Grading a slot that was left pending because the grader could not run, or a paid answer that `--resume` found on record without a row. The answer is kept; there is no command to grade it later, so that pass stays incomplete and the run is not scored.
+- A lock on a run in staging. Never resume a run that is still running in another window: both would write to the same record.
 - Streaming, and so time to first token.
 - A command for console reconciliation; only the ledger function exists.

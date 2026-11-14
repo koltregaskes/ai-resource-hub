@@ -6,10 +6,11 @@ classification (assumed for every slot in every family):
 
 - expected: from the planning figure for output size in the run config,
   with input sized by a softer estimate (see `expected_input_tokens`). It
-  is for reading only: it never feeds a reservation or a cap check;
+  never feeds a reservation or a planning bound. Its one use in a gate is
+  the whole-plan gate below;
 - planning bound: every request once at its output limit, plus a 15%
-  allowance for retries. The harness refuses to start when this is above
-  the remaining cap of any provider;
+  allowance for retries. It is worked out for the whole plan, for each
+  stage and for each pass of the full run;
 - absolute bound: every permitted request at the output limit (3 per model
   slot; 2 per judge call, the first plus its one retry). For information.
 
@@ -28,6 +29,23 @@ task's output limit when it becomes judge input. At run time the judge
 request is reserved from the bytes of the real answer, so the cap holds
 whatever the answer turns out to be; a longer answer than planned can only
 stop the run early at the cap.
+
+How the cap is enforced (three layers; see RUNNER.md):
+
+1. every request is reserved at its worst case before it is sent, and the
+   run stops if a charge is ever above its reservation (`ledger.py`);
+2. the full run goes one pass at a time (pass n is repeat n of every task
+   for every model, with its judging). A pass starts only if its own
+   planning bound is at or below the remaining cap of every provider
+   (`pass_gate`). The qualification and the canary are gated the same way;
+3. before the qualification, before the canary and before pass 1,
+   `EXPECTED_MARGIN` times the expected cost of everything still to run
+   must be at or below the remaining cap of every provider.
+
+A whole-plan planning bound above a cap is printed and is not, by itself,
+a refusal: the passes are gated one at a time. A ledger that holds a
+settled charge above its reservation refuses every start until the run
+config names that request in `acknowledged_overruns`.
 
 Judges. Qualification is counted for every judge candidate in the config:
 one call per sample per candidate. The judging of the canary and the full
@@ -51,6 +69,10 @@ except ImportError:
     import ledger
 
 RETRY_ALLOWANCE = Decimal("0.15")
+# The whole-plan gate: this many times the expected cost of everything still
+# to run must fit the remaining cap of each provider.
+EXPECTED_MARGIN = 2
+# The full run has one pass per repeat.
 REPEATS = 3
 MODEL_REQUESTS_PER_SLOT = 3
 JUDGE_REQUESTS_PER_CALL = 2
@@ -63,8 +85,9 @@ OUTPUT_LIMITS = (4096, 8192)
 # byte as one token. The real judge request is reserved from the real answer.
 ANSWER_BYTES_PER_TOKEN = 4
 # EXPECTED FIGURE ONLY. A softer size for input, never used for a
-# reservation, a bound or a cap check: 3 characters per input token, and an
-# answer of N output tokens read as 4 N characters.
+# reservation or a bound: 3 characters per input token, and an answer of N
+# output tokens read as 4 N characters. The expected figure feeds one gate,
+# the whole-plan gate, and there it is multiplied by EXPECTED_MARGIN.
 EXPECTED_CHARACTERS_PER_INPUT_TOKEN = 3
 EXPECTED_ANSWER_CHARACTERS_PER_TOKEN = 4
 # Used only when a task gives a count of judged checks without their texts.
@@ -80,7 +103,24 @@ ZERO = Decimal(0)
 
 
 class PreflightRefused(Exception):
-    """The planning bound is above a remaining cap."""
+    """A gate said no: the whole-plan gate, the planning bound of the stage
+    or pass about to start, `--max-usd`, or an overrun on file."""
+
+
+def pass_unit(number):
+    """The name of pass `number` of the full run inside the tally."""
+    return "full/%d" % number
+
+
+def unit_label(unit):
+    """How a gated unit is named in the output: qualify, canary, pass 1."""
+    return "pass " + unit.split("/", 1)[1] if unit.startswith("full/") else unit
+
+
+def first_unit(stage):
+    """The unit that starts when `stage` starts: the stage itself, or pass 1
+    of the full run."""
+    return pass_unit(1) if stage == "full" else stage
 
 
 class TaskError(ValueError):
@@ -155,6 +195,7 @@ class _Tally:
         cell["absolute_bound"] += once * permitted
         key = (stage, kind)
         self.requests[key] = self.requests.get(key, 0) + 1
+        return once * (1 + RETRY_ALLOWANCE)
 
     def merge(self, other):
         for key, cell in other.cells.items():
@@ -170,7 +211,7 @@ class _Tally:
 
 def expected_input_tokens(text):
     """EXPECTED FIGURE ONLY: a softer size for input text. Never used for a
-    reservation, the planning bound, the absolute bound or a cap check."""
+    reservation, the planning bound or the absolute bound."""
     return -(-len(text) // EXPECTED_CHARACTERS_PER_INPUT_TOKEN)
 
 
@@ -234,25 +275,37 @@ def build_plan(config, tasks, checklist_samples=None, outcome_samples=None, pane
                 _judge_input_expected(prefix[1], expected_answer_tokens))
 
     def judge_slot(into, stage, judge, task):
+        """Cost one judge's work on one slot; returns its planning bound."""
         limit = task["max_output_tokens"]
         outcome_prefix, checklist_prefix = prefix_tokens(task)
         bound, expected = judge_input(outcome_prefix, limit, min(expected_out, limit))
-        into.add(stage, "outcome_classification", judge, bound, expected,
-                 judge.max_output_tokens, config.judge_expected_output_tokens,
-                 JUDGE_REQUESTS_PER_CALL)
+        planned = into.add(stage, "outcome_classification", judge, bound, expected,
+                           judge.max_output_tokens, config.judge_expected_output_tokens,
+                           JUDGE_REQUESTS_PER_CALL)
         if checklist_prefix is not None:
             bound, expected = judge_input(checklist_prefix, limit, min(expected_out, limit))
-            into.add(stage, "checklist_judging", judge, bound, expected,
-                     judge.max_output_tokens, config.judge_expected_output_tokens,
-                     JUDGE_REQUESTS_PER_CALL)
+            planned += into.add(stage, "checklist_judging", judge, bound, expected,
+                                judge.max_output_tokens, config.judge_expected_output_tokens,
+                                JUDGE_REQUESTS_PER_CALL)
+        return planned
 
+    passes = tuple(range(1, REPEATS + 1))
     slots = []
+    # The planning bound of one slot (its model request and its judging), by
+    # provider. Every pass holds the same slots, so pass 1 gives the figure.
+    slot_bounds = {}
 
-    def model_slot(stage, model, task):
+    def slot_cell(model, task):
+        return slot_bounds.setdefault(model.model_id, {}).setdefault(task["id"], {})
+
+    def model_slot(unit, model, task):
         bound, expected = sizes(task["prompt"])
-        tally.add(stage, "model", model, bound, expected, task["max_output_tokens"],
-                  expected_out, MODEL_REQUESTS_PER_SLOT)
-        slots.append((stage, task))
+        planned = tally.add(unit, "model", model, bound, expected, task["max_output_tokens"],
+                            expected_out, MODEL_REQUESTS_PER_SLOT)
+        if unit == pass_unit(1):
+            cell = slot_cell(model, task)
+            cell[model.provider] = cell.get(model.provider, ZERO) + planned
+        slots.append((unit, model, task))
 
     canary = canary_tasks(config, tasks)
     for model in config.models:
@@ -260,34 +313,38 @@ def build_plan(config, tasks, checklist_samples=None, outcome_samples=None, pane
             for _ in range(CANARY_REPEATS):
                 model_slot("canary", model, task)
         for task in tasks:
-            for _ in range(REPEATS):
-                model_slot("full", model, task)
+            for number in passes:
+                model_slot(pass_unit(number), model, task)
 
     def judging(judge):
         """What one judge would cost over every slot of the canary and the
-        full run."""
+        full run: (the tally, the planning bound slot by slot)."""
         own = _Tally()
-        for stage, task in slots:
-            judge_slot(own, stage, judge, task)
-        return own
+        return own, [judge_slot(own, unit, judge, task) for unit, _, task in slots]
+
+    def take(judge, own, per_slot):
+        costed[judge.provider] = judge.model_id
+        tally.merge(own)
+        for (unit, model, task), planned in zip(slots, per_slot):
+            if unit == pass_unit(1):
+                cell = slot_cell(model, task)
+                cell[judge.provider] = cell.get(judge.provider, ZERO) + planned
 
     costed = {}
     if panel is not None:
         case = RECORDED_PANEL
         for judge in panel:
-            costed[judge.provider] = judge.model_id
-            tally.merge(judging(judge))
+            take(judge, *judging(judge))
     else:
         case = WORST_CASE
         for provider, specs in candidates.items():
             dearest = None
             for judge in specs:
-                own = judging(judge)
+                own, per_slot = judging(judge)
                 bound = own.planning_bound()
                 if dearest is None or bound > dearest[0]:
-                    dearest = (bound, judge, own)
-            costed[provider] = dearest[1].model_id
-            tally.merge(dearest[2])
+                    dearest = (bound, judge, own, per_slot)
+            take(*dearest[1:])
 
     assumed = checklist_samples is None or outcome_samples is None
     for judge in every_candidate:
@@ -334,14 +391,27 @@ def build_plan(config, tasks, checklist_samples=None, outcome_samples=None, pane
     outcome_calls = ASSUMED_OUTCOME_SAMPLES if outcome_samples is None else len(outcome_samples)
 
     providers = sorted(config.caps_usd)
-    by_stage = {stage: {provider: dict(tally.cells.get((stage, provider),
-                                                       dict.fromkeys(FIGURES, ZERO)))
-                        for provider in providers} for stage in STAGES}
+
+    def cells(unit):
+        return {provider: dict(tally.cells.get((unit, provider), dict.fromkeys(FIGURES, ZERO)))
+                for provider in providers}
+
+    by_pass = {number: cells(pass_unit(number)) for number in passes}
+    by_stage = {stage: cells(stage) for stage in STAGES}
+    # The full run is the sum of its passes.
+    for number in passes:
+        for provider in providers:
+            for figure in FIGURES:
+                by_stage["full"][provider][figure] += by_pass[number][provider][figure]
     requests = {stage: {} for stage in STAGES}
-    for (stage, kind), number in sorted(tally.requests.items()):
-        requests[stage][kind] = number
+    for (unit, kind), number in sorted(tally.requests.items()):
+        stage = "full" if unit.startswith("full/") else unit
+        requests[stage][kind] = requests[stage].get(kind, 0) + number
     return {
         "by_stage": by_stage,
+        "by_pass": by_pass,
+        "passes": len(passes),
+        "slot_planning_bound": slot_bounds,
         "requests": requests,
         "counts": {
             "models": len(config.models),
@@ -376,21 +446,74 @@ def _sum(by_stage, stages, providers):
     return totals
 
 
+def _unit_cells(plan, unit):
+    """The figures of one gated unit: a stage, or one pass of the full run."""
+    if unit.startswith("full/"):
+        return plan["by_pass"][int(unit.split("/", 1)[1])]
+    return plan["by_stage"][unit]
+
+
+def units_up_to_pass_one(stage):
+    """The gated units from `stage` up to and including pass 1 of the full
+    run: what the `preflight` command tests together."""
+    return [first_unit(name) for name in STAGES[STAGES.index(stage):]]
+
+
+def unacknowledged_overruns(config, overruns):
+    """`overruns` is {provider: [request id]} from `ProviderLedger.overruns`.
+    Returns the same shape, holding only the request ids that the run config
+    does not name in `acknowledged_overruns`."""
+    acknowledged = set(config.acknowledged_overruns)
+    left = {}
+    for provider, ids in sorted((overruns or {}).items()):
+        open_ids = [request for request in sorted(ids) if request not in acknowledged]
+        if open_ids:
+            left[provider] = open_ids
+    return left
+
+
+def overrun_refusals(config, overruns):
+    """One refusal line per overrun on file that the config does not name."""
+    return ["%s: request %s was charged above its reservation. No stage or pass starts "
+            "until the run config names that request id in acknowledged_overruns."
+            % (provider, request)
+            for provider, ids in unacknowledged_overruns(config, overruns).items()
+            for request in ids]
+
+
 def preflight(config, tasks, remaining_caps, stage="qualify", max_usd=None,
               checklist_samples=None, outcome_samples=None, out=print,
-              qualification=None, qualification_note=None, environ=None):
-    """Print and return the three figures, and say whether the run may start.
+              qualification=None, qualification_note=None, environ=None,
+              overruns=None, together=False, resuming=False):
+    """Print and return the figures, and say whether the stage may start.
 
-    `remaining_caps` is the remaining cap per provider from the ledgers.
-    `stage` is the stage about to run. The whole plan is always printed; the
-    refusal test uses this stage and the stages still to come after it
-    (qualify, then canary, then full), because earlier stages are already in
-    the ledger and so already out of the remaining cap.
-    `max_usd` is the lower cap for this one run; the run is refused when this
-    stage's planning bound is above it.
+    `remaining_caps` is the remaining cap per provider from the ledgers:
+    the cap less the real settled spend and less the open reservations.
+    `stage` is the stage about to run. The whole plan is always printed.
+
+    The start is refused when, for any provider:
+    - the ledger holds a settled charge above its reservation that the run
+      config does not name in `acknowledged_overruns` (`overruns` is
+      {provider: [request id]} from the ledgers);
+    - the whole-plan gate fails: `EXPECTED_MARGIN` times the expected cost of
+      this stage and everything after it is above the remaining cap;
+    - the planning bound of what is about to start (the qualification, the
+      canary, or pass 1 of the full run) is above the remaining cap.
+    It is also refused when that planning bound, over both providers, is
+    above `max_usd`, the lower cap for this one run.
+
+    With `together` (the `preflight` command) it is also refused when the
+    qualification, the canary and pass 1, at their planning bounds, do not
+    fit the remaining cap together. A whole-plan planning bound above a cap
+    is printed and is not a refusal: passes 2 onwards are gated by
+    `pass_gate` when they are reached.
+
+    With `resuming` only the overrun test applies here: the runner gates
+    the pass it resumes with `pass_gate`.
+
     `qualification` is `{"run_id", "panel"}` from a passed qualification
     record, or None. `qualification_note` says why a record on file was not
-    used. The three figures are printed whether or not the run is refused.
+    used. The figures are printed whether or not the run is refused.
 
     Raises `keys.EnvironmentNotClean`, before anything else, while a
     provider key variable is set in the environment.
@@ -407,22 +530,66 @@ def preflight(config, tasks, remaining_caps, stage="qualify", max_usd=None,
     whole = _sum(plan["by_stage"], STAGES, providers)
     ahead = _sum(plan["by_stage"], STAGES[STAGES.index(stage):], providers)
     this_stage = _sum(plan["by_stage"], [stage], providers)
-    refusals = []
+    remaining = {provider: Decimal(str(remaining_caps[provider])) for provider in providers}
+    unit = first_unit(stage)
+    label = unit_label(unit)
+    first_units = units_up_to_pass_one(stage)
+    first_label = " + ".join(unit_label(name) for name in first_units)
+
+    refusals = overrun_refusals(config, overruns)
+    whole_gate = {}
     for provider in providers:
-        remaining = Decimal(str(remaining_caps[provider]))
-        if ahead[provider]["planning_bound"] > remaining:
+        expected = ahead[provider]["expected"]
+        figure = EXPECTED_MARGIN * expected
+        whole_gate[provider] = {"expected_still_to_run": expected, "gate_figure": figure,
+                                "remaining_cap": remaining[provider],
+                                "ok": figure <= remaining[provider]}
+        if not resuming and figure > remaining[provider]:
             refusals.append(
-                "%s: planning bound %s USD for the plan still to run is above the remaining "
-                "cap %s USD. Shorten the model list in the run config; do not lower a limit."
-                % (provider, _usd(ahead[provider]["planning_bound"]), _usd(remaining)))
-    if max_usd is not None and this_stage["total"]["planning_bound"] > Decimal(str(max_usd)):
+                "%s: whole-plan gate: %d x the expected cost of everything still to run "
+                "(%s USD) is %s USD, above the remaining cap %s USD. Shorten the model list "
+                "in the run config; do not lower a limit."
+                % (provider, EXPECTED_MARGIN, _usd(expected), _usd(figure),
+                   _usd(remaining[provider])))
+    start_gate = {"unit": unit, "label": label}
+    for provider in providers:
+        bound = _unit_cells(plan, unit)[provider]["planning_bound"]
+        start_gate[provider] = {"planning_bound": bound, "remaining_cap": remaining[provider],
+                                "ok": bound <= remaining[provider]}
+        if not resuming and bound > remaining[provider]:
+            refusals.append(
+                "%s: the planning bound of %s, %s USD, is above the remaining cap %s USD, "
+                "so %s does not start."
+                % (provider, label, _usd(bound), _usd(remaining[provider]), label))
+    together_gate = {"units": first_units, "label": first_label}
+    for provider in providers:
+        bound = sum((_unit_cells(plan, name)[provider]["planning_bound"]
+                     for name in first_units), ZERO)
+        together_gate[provider] = {"planning_bound": bound,
+                                   "remaining_cap": remaining[provider],
+                                   "ok": bound <= remaining[provider]}
+        if together and not resuming and len(first_units) > 1 and bound > remaining[provider]:
+            refusals.append(
+                "%s: %s at their planning bounds come to %s USD together, above the "
+                "remaining cap %s USD."
+                % (provider, first_label, _usd(bound), _usd(remaining[provider])))
+    unit_total = sum((start_gate[provider]["planning_bound"] for provider in providers), ZERO)
+    if not resuming and max_usd is not None and unit_total > Decimal(str(max_usd)):
         refusals.append(
-            "--max-usd %s is below this stage's planning bound %s USD"
-            % (_usd(Decimal(str(max_usd))), _usd(this_stage["total"]["planning_bound"])))
+            "--max-usd %s is below the planning bound of %s, %s USD"
+            % (_usd(Decimal(str(max_usd))), label, _usd(unit_total)))
     result = dict(plan, stage=stage, whole_plan=whole, plan_still_to_run=ahead,
-                  this_stage=this_stage,
-                  remaining_caps={p: Decimal(str(remaining_caps[p])) for p in providers},
+                  this_stage=this_stage, remaining_caps=remaining,
                   max_usd=None if max_usd is None else Decimal(str(max_usd)),
+                  whole_plan_gate=whole_gate, start_gate=start_gate,
+                  together_gate=together_gate, together=bool(together),
+                  resuming=bool(resuming),
+                  overruns={"on_file": {provider: sorted(ids) for provider, ids
+                                        in sorted((overruns or {}).items()) if ids},
+                            "unacknowledged": unacknowledged_overruns(config, overruns)},
+                  planning_bound_above_cap=[
+                      provider for provider in providers
+                      if ahead[provider]["planning_bound"] > remaining[provider]],
                   ok=not refusals, refusals=refusals)
     if out:
         for line in render(result):
@@ -437,8 +604,59 @@ def enforce(result):
     return result
 
 
+def pass_gate(plan, slots, remaining_caps, number, passes, max_usd_left=None):
+    """The gate before one pass starts, and before a pass is resumed.
+
+    `plan` is from `build_plan` or `preflight`; `slots` are the slots of the
+    pass still to run, each with `model_id` and `task_id`. The planning
+    bound of the pass is every request of those slots once at its limit,
+    input by the proven byte bound, plus the retry allowance. The pass
+    starts only if that bound is at or below `remaining_caps[provider]` (the
+    cap less the real settled spend and the open reservations) for every
+    provider. `max_usd_left` is what is left of `--max-usd` for this run.
+
+    Returns {"pass", "passes", "planning_bound", "remaining_caps", "ok",
+    "provider", "reason", "lines"}; `provider` and `reason` name the first
+    provider that is short. Nothing is sent or reserved here.
+    """
+    providers = sorted(remaining_caps)
+    bound = dict.fromkeys(providers, ZERO)
+    for slot in slots:
+        cell = plan["slot_planning_bound"][slot["model_id"]][slot["task_id"]]
+        for provider, amount in cell.items():
+            bound[provider] = bound.get(provider, ZERO) + amount
+    remaining = {provider: Decimal(str(remaining_caps[provider])) for provider in providers}
+    name = "pass %d of %d" % (number, passes)
+    lines = ["  %s, %d slots to run: planning bound %s" % (name, len(slots), "; ".join(
+        "%s %s USD against a remaining cap of %s USD"
+        % (provider, _usd(bound[provider]), _usd(remaining[provider]))
+        for provider in providers))]
+    short = [provider for provider in providers if bound[provider] > remaining[provider]]
+    reason, provider = None, None
+    if short:
+        provider = short[0]
+        reason = "; ".join(
+            "%s not started: the %s planning bound of this pass, %s USD, is above the "
+            "remaining cap %s USD" % (name, item, _usd(bound[item]), _usd(remaining[item]))
+            for item in short)
+    elif max_usd_left is not None and sum(bound.values(), ZERO) > Decimal(str(max_usd_left)):
+        reason = ("%s not started: the planning bound of this pass, %s USD, is above what is "
+                  "left of --max-usd, %s USD"
+                  % (name, _usd(sum(bound.values(), ZERO)), _usd(Decimal(str(max_usd_left)))))
+    if reason:
+        lines.append("  INCOMPLETE: %s. Finished passes are kept; the run is not scored."
+                     % reason)
+    return {"pass": number, "passes": passes, "slots": len(slots), "planning_bound": bound,
+            "remaining_caps": remaining, "ok": reason is None, "provider": provider,
+            "reason": reason, "lines": lines}
+
+
 def _usd(amount):
     return str(amount.quantize(Decimal("0.0001")))
+
+
+def _verdict(passed):
+    return "ok" if passed else "ABOVE THE CAP"
 
 
 def render(result):
@@ -484,12 +702,6 @@ def render(result):
     row = result["whole_plan"]["total"]
     lines.append("  %-10s %14s %16s %16s" % (
         "total", _usd(row["expected"]), _usd(row["planning_bound"]), _usd(row["absolute_bound"])))
-    lines.append("  planning bound by stage:")
-    lines.append("  %-10s" % "stage" + "".join(" %16s" % provider for provider in providers))
-    for stage in STAGES:
-        lines.append("  %-10s" % stage + "".join(
-            " %16s" % _usd(result["by_stage"][stage][provider]["planning_bound"])
-            for provider in providers))
     lines.append("  The planning bound is every request once at its output limit plus 15% "
                  "for retries. The absolute bound is for information only.")
     lines.append("  Input in both bounds is the byte length of the text sent plus %d tokens "
@@ -497,10 +709,71 @@ def render(result):
                  "written is planned at %d bytes per token of its limit as judge input."
                  % (ledger.FRAMING_ALLOWANCE_TOKENS, ANSWER_BYTES_PER_TOKEN))
     lines.append("  The expected figure sizes input by a softer estimate and is never used "
-                 "for a reservation or a cap check.")
-    if result["ok"]:
-        lines.append("  Result: within the remaining caps for stage %s and what follows it."
-                     % result["stage"])
-    else:
+                 "for a reservation or a planning-bound gate. It feeds the whole-plan gate "
+                 "only.")
+
+    passes = sorted(result["by_pass"])
+    lines.append("  planning bound by stage and by pass (the full run is %d passes; pass n is "
+                 "repeat n of every task for every model, with its judging):" % len(passes))
+    lines.append("  %-16s" % "stage or pass" + "".join(" %16s" % p for p in providers))
+    rows = [(stage, result["by_stage"][stage]) for stage in ("qualify", "canary")]
+    rows += [("pass %d" % number, result["by_pass"][number]) for number in passes]
+    rows.append(("full, all passes", result["by_stage"]["full"]))
+    for name, cells in rows:
+        lines.append("  %-16s" % name + "".join(
+            " %16s" % _usd(cells[provider]["planning_bound"]) for provider in providers))
+    lines.append("  expected cost by stage and by pass:")
+    for name, cells in rows:
+        lines.append("  %-16s" % name + "".join(
+            " %16s" % _usd(cells[provider]["expected"]) for provider in providers))
+
+    lines.append("  whole-plan gate: %d x the expected cost of stage %s and everything after "
+                 "it, against the remaining cap:" % (EXPECTED_MARGIN, result["stage"]))
+    for provider in providers:
+        gate = result["whole_plan_gate"][provider]
+        lines.append("  %-10s %d x %s = %s against %s: %s" % (
+            provider, EXPECTED_MARGIN, _usd(gate["expected_still_to_run"]),
+            _usd(gate["gate_figure"]), _usd(gate["remaining_cap"]), _verdict(gate["ok"])))
+    start = result["start_gate"]
+    lines.append("  planning-bound gate for %s, the next to start:" % start["label"])
+    for provider in providers:
+        gate = start[provider]
+        lines.append("  %-10s %s against %s: %s" % (
+            provider, _usd(gate["planning_bound"]), _usd(gate["remaining_cap"]),
+            _verdict(gate["ok"])))
+    both = result["together_gate"]
+    if len(both["units"]) > 1:
+        lines.append("  %s at their planning bounds together:" % both["label"])
+        for provider in providers:
+            gate = both[provider]
+            lines.append("  %-10s %s against %s: %s" % (
+                provider, _usd(gate["planning_bound"]), _usd(gate["remaining_cap"]),
+                _verdict(gate["ok"])))
+    for provider in result["planning_bound_above_cap"]:
+        lines.append(
+            "  %s: the planning bound of the plan still to run, %s USD, is above the "
+            "remaining cap %s USD. That alone is not a refusal: the full run is gated one "
+            "pass at a time, and a pass starts only if its own planning bound fits what is "
+            "left of the cap." % (
+                provider, _usd(result["plan_still_to_run"][provider]["planning_bound"]),
+                _usd(result["remaining_caps"][provider])))
+    open_ids = result["overruns"]["unacknowledged"]
+    for provider, ids in sorted(result["overruns"]["on_file"].items()):
+        for request in ids:
+            lines.append("  overrun on file, %s: %s (%s)" % (
+                provider, request,
+                "not acknowledged" if request in open_ids.get(provider, ())
+                else "acknowledged in the run config"))
+    if not result["ok"]:
         lines.extend("  REFUSED: " + reason for reason in result["refusals"])
+    elif result["resuming"]:
+        lines.append("  Result: no overrun stands in the way of resuming. The pass gate "
+                     "decides whether the pass starts.")
+    elif result["together"]:
+        lines.append(
+            "  Result: the plan may start. The whole-plan gate holds and %s fit the "
+            "remaining caps. Every later pass is gated when it is reached." % both["label"])
+    else:
+        lines.append("  Result: %s may start. Every later pass is gated when it is reached."
+                     % start["label"])
     return lines

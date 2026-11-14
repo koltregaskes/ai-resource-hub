@@ -216,6 +216,25 @@ class LedgerTests(unittest.TestCase):
         self.assertEqual(book.spent, D("0.003"))
         self.assertIn("charge_above_reservation", self.book().entries["r/1"]["flags"])
 
+    def test_overruns_lists_every_charge_above_its_reservation(self):
+        book = self.book()
+        self.assertEqual(book.overruns(), [])
+        book.reserve("r/1", D("0.001"))
+        book.settle("r/1", usage(1000, 0, 0), receipt())             # 0.003 against 0.001
+        book.reserve("r/2", D("0.5"))
+        book.settle("r/2", usage(1000, 0, 0), receipt())             # 0.003 against 0.5
+        book.reserve("r/3", D("0.5"))                                # still in flight
+        self.assertEqual(book.overruns(), ["r/1"])
+        # It is still on file after a restart.
+        self.assertEqual(self.book().overruns(), ["r/1"])
+        # A console figure above the reservation is still an overrun; one at
+        # the reservation or below is not.
+        book.reconcile("r/1", "0.002", "console figure")
+        self.assertEqual(self.book().overruns(), ["r/1"])
+        book.reconcile("r/1", "0.001", "console figure")
+        self.assertEqual(book.overruns(), [])
+        self.assertEqual(self.book().overruns(), [])
+
     def test_misuse_is_refused(self):
         book = self.book()
         book.reserve("r/1", D("0.1"))

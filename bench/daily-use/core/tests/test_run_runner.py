@@ -274,30 +274,22 @@ class SlotAndRequestTests(RunnerCase):
         self.assertEqual(summary["remaining_caps"]["openai"], Decimal("50") - Decimal("0.108"))
 
     def test_run_is_interrupted_by_the_cap_and_lists_unstarted_slots(self):
-        plan = preflight.preflight(self.cfg, self.tasks, {"openai": 50, "anthropic": 50},
-                                   stage="full", checklist_samples=[], outcome_samples=[],
-                                   out=None)
-        bound = plan["plan_still_to_run"]["openai"]["planning_bound"]
+        # The cap is exactly the planning bound of one pass, so pass 1 starts. Every
+        # request fails to connect and keeps its full reservation of 0.123759: far
+        # above the 15% retry allowance. Slot 1 holds three (0.371277). Slot 2 holds
+        # a fourth (0.495036); its second request would be the fifth held (0.618795),
+        # which is above the cap, and it is refused.
+        bound = pass_bound_openai(self.tasks)
+        held = ledger.worst_case_usd(
+            ledger.input_token_bound(self.tasks[0]["prompt"]), 4096, self.cfg.models[0].price)
+        self.assertEqual(held, Decimal("0.123759"))
+        self.assertEqual(len(self.tasks[0]["prompt"]), len(self.tasks[1]["prompt"]))
+        self.assertLess(4 * held, bound)
+        self.assertGreater(5 * held, bound)
         raw = support.config_dict(models=[support.spec_dict("openai", "m-oa", "3", "30")],
                                   caps_usd={"openai": str(bound), "anthropic": "50"})
         cfg = support.config.validate(raw)
-        # The cap is exactly the planning bound, which has room for 13 model requests
-        # held at their reserved maximum and not for 14 (the bound also plans for the
-        # judging of every slot, and this grader asks for none). Request 3 succeeds;
-        # every other request fails to connect and keeps its full reservation: far
-        # above the 15% retry allowance. Slot 1: two failures, then success. Slots 2,
-        # 3 and 4: three failures each. Slot 5: two failures, then its third request,
-        # which would be the 14th held, is refused by the cap.
-        price = self.cfg.models[0].price
-        held = ledger.worst_case_usd(
-            ledger.input_token_bound(self.tasks[0]["prompt"]), 4096, price)
-        self.assertEqual(len(self.tasks[0]["prompt"]), len(self.tasks[1]["prompt"]))
-        self.assertLess(13 * held + Decimal("0.01"), bound)
-        self.assertGreater(14 * held, bound)
-
-        def step(request, n):
-            return reply_body(request, "fine") if n == 3 else providers.TransportFailure("down")
-        transport = model_only(step)
+        transport = model_only(lambda request, n: providers.TransportFailure("down"))
         summary = self.run_stage(transport=transport, cfg=cfg)
         self.assertEqual(summary["status"], "interrupted")
         self.assertFalse(summary["publishable"])
@@ -306,21 +298,22 @@ class SlotAndRequestTests(RunnerCase):
         self.assertEqual(report["stopped_providers"], ["openai"])
         self.assertIn("interrupted by cap", report["interrupt_reason"])
         counts = report["models"]["m-oa"]
-        self.assertEqual((counts["planned"], counts["attempted"], counts["unstarted"]), (6, 5, 1))
-        self.assertEqual(len(counts["unstarted_slots"]), 1)
-        self.assertEqual(len(transport.requests), 14)
+        self.assertEqual((counts["planned"], counts["attempted"], counts["unstarted"]), (6, 2, 4))
+        self.assertEqual(len(counts["unstarted_slots"]), 4)
+        self.assertEqual(len(transport.requests), 4)
         self.assertIn(os.path.join("runs", "_staging"), summary["dir"])
         self.assertFalse(os.path.exists(os.path.join(self.store, "runs", summary["run_id"])))
         self.assertFalse(os.path.exists(os.path.join(self.store, "public")))
+        self.assertEqual(summary["run_committed_usd"], Decimal("0.495036"))
         self.assertLessEqual(summary["run_committed_usd"], bound)
         rows = self.rows(summary)
-        self.assertEqual([r["outcome"] for r in rows],
-                         ["answered"] + ["execution_error"] * 4)
-        self.assertEqual([len(r["requests"]) for r in rows], [3, 3, 3, 3, 2])
+        self.assertEqual([r["outcome"] for r in rows], ["execution_error"] * 2)
+        self.assertEqual([len(r["requests"]) for r in rows], [3, 1])
         self.assertIn("retry_refused_by_cap", rows[-1]["flags"])
         self.assertIs(rows[-1]["pass"], False)
         self.assertEqual(rows[-1]["slot_id"] in counts["unstarted_slots"], False)
-
+        # A stop inside a pass is an interruption, not an incomplete run.
+        self.assertEqual([(g["pass"], g["ok"]) for g in summary["pass_gates"]], [(1, True)])
     def test_preflight_refusal_stops_a_dry_run_before_any_request(self):
         raw = support.config_dict(models=[support.spec_dict("openai", "m-oa", "3", "30")],
                                   caps_usd={"openai": "0.01", "anthropic": "50"})
@@ -935,6 +928,35 @@ class LiveGateTests(RunnerCase):
                          [("qualify", True, qualified["run_id"]),
                           ("canary", True, qualified["run_id"])])
 
+    def test_an_overrun_in_the_live_ledger_refuses_every_later_stage_until_named(self):
+        # The first model request of the canary reports 50,000 input tokens:
+        # (50000 x 3 + 5 x 30) / 1e6 = 0.15015 USD, above its reservation.
+        def step(request, n):
+            if n == 1:
+                return support.ok(support.openai_body("costly", input_tokens=50000))
+            return reply_body(request, "fine")
+        common = dict(grade=runner.stub_grade)
+        with mock.patch.object(runner, "LIVE_ENABLED", True):
+            self.live(stage="qualify", **common)
+            self.transport = model_only(step, judge_text=self.judge_text)
+            canary = self.live(stage="canary", **common)
+            self.assertEqual(canary["status"], "interrupted")
+            request = self.rows(canary)[0]["requests"][0]["request_id"]
+            self.assertEqual(self.rows(canary)[0]["requests"][0]["ledger_flags"],
+                             ["charge_above_reservation"])
+            # The shared live ledger holds the overrun: a new canary, a new
+            # qualification and a resume of the stopped canary are all refused,
+            # before the key file is read or a transport exists.
+            self.transport = self.new_transport("fine")
+            for kwargs in (dict(stage="canary"), dict(stage="qualify"),
+                           dict(stage="canary", resume=canary["run_id"])):
+                problem = self.refused("was charged above its reservation", **kwargs, **common)
+                self.assertIn(request, str(problem))
+            named = support.make_config(acknowledged_overruns=[request])
+            again = self.live(stage="canary", cfg=named, **common)
+        self.assertEqual(again["status"], "finalised")
+        self.assertEqual(len(self.model_requests()), 4)
+
     def test_stages_unlock_in_order_qualify_then_canary_then_full(self):
         common = dict(grade=runner.stub_grade)
         with mock.patch.object(runner, "LIVE_ENABLED", True):
@@ -1452,6 +1474,469 @@ class OverrunBackstopTests(RunnerCase):
             self.assertNotIn("charge_above_reservation", line.get("flags", []))
 
 
+def pass_bound_openai(tasks):
+    """The openai planning bound of one pass for one openai model (3 in / 30
+    out) and the fixture's openai judge (6 in / 12 out, limit 400), worked
+    the long way: per task, the model request once at its 4096 limit plus one
+    outcome classification, input counted as bytes + 256, the answer planned
+    as 4096 x 4 = 16384 bytes; then 15% on top."""
+    total = Decimal(0)
+    for item in tasks:
+        prompt_bytes = len(item["prompt"].encode("utf-8"))
+        model = (Decimal(prompt_bytes + 256) * 3 + Decimal(4096) * 30) / Decimal(1000000)
+        prefix = len(judges.build_outcome_prompt(item["prompt"], "").encode("utf-8")) + 256
+        judge = (Decimal(prefix + 16384) * 6 + Decimal(400) * 12) / Decimal(1000000)
+        total += model + judge
+    return total * Decimal("1.15")
+
+
+class PassCase(RunnerCase):
+    """One openai model and two tasks with 37-byte prompts and no judged
+    checks, graded without judges.
+
+    One model request at its limit: (37 + 256) x 3 + 4096 x 30 = 123759 per
+    million = 0.123759 USD reserved. The fake provider reports 10 input and 5
+    output tokens, so each request is charged (10 x 3 + 5 x 30) / 1e6 =
+    0.00018 USD. A pass is 2 slots; with every reply fine it costs 0.00036.
+    """
+
+    HELD = Decimal("0.123759")
+    CHARGE = Decimal("0.00018")
+
+    def setUp(self):
+        super().setUp()
+        self.bound = pass_bound_openai(self.tasks)
+        for item in self.tasks:
+            self.assertEqual(len(item["prompt"].encode("utf-8")), 37)
+
+    def capped(self, openai, **over):
+        raw = support.config_dict(models=[support.spec_dict("openai", "m-oa", "3", "30")],
+                                  caps_usd={"openai": str(openai), "anthropic": "50"}, **over)
+        return support.config.validate(raw)
+
+    def fine(self):
+        return model_only(lambda request, n: reply_body(request, "answer %d" % n))
+
+    def sent(self, summary):
+        return [line["request_id"] for line in self.log(summary) if line["event"] == "sent"]
+
+    def staged(self):
+        return os.listdir(os.path.join(self.store, "runs", "_staging"))
+
+
+class PassOrderTests(RunnerCase):
+    def test_the_full_run_is_dispatched_one_pass_at_a_time_judging_included(self):
+        cfg = support.make_config()                         # m-oa then m-an
+        tasks = [support.task("t1", family=4, checks=2),
+                 support.task("t2", family=2, answerable=False), support.task("t3")]
+        transport = model_only(lambda r, n: reply_body(r, "an answer"),
+                               judge_text=JudgingTests.judge_text(None))
+        summary = self.run_stage(transport=transport, cfg=cfg, tasks=tasks,
+                                 grade=JudgingTests.grade)
+        self.assertEqual(summary["status"], "finalised")
+        run_id = summary["run_id"]
+        order = []
+        for line in self.log(summary):
+            if line["event"] != "sent":
+                continue
+            model, task_id, repeat, rest = line["request_id"][len(run_id) + 1:].split("/", 3)
+            order.append((int(repeat), model, task_id, "judge" if rest.startswith("judge/")
+                          else "model"))
+        # 2 models x 3 tasks = 6 slots a pass, each one model request and 2 judge calls.
+        self.assertEqual(len(order), 3 * 6 * 3)
+        # Pass 1 is sent in full, judging included, before pass 2; then pass 3.
+        self.assertEqual([item[0] for item in order], [1] * 18 + [2] * 18 + [3] * 18)
+        passes = [order[start:start + 18] for start in (0, 18, 36)]
+        for number, sent in enumerate(passes, 1):
+            # Models in config order; every task once per model.
+            self.assertEqual([item[1] for item in sent], ["m-oa"] * 9 + ["m-an"] * 9)
+            for model in ("m-oa", "m-an"):
+                self.assertEqual(sorted({item[2] for item in sent if item[1] == model}),
+                                 ["t1", "t2", "t3"])
+            # Each slot: its model request, then both judge calls, then the next slot.
+            self.assertEqual([item[3] for item in sent], ["model", "judge", "judge"] * 6)
+            for start in range(0, 18, 3):
+                self.assertEqual(len({item[:3] for item in sent[start:start + 3]}), 1)
+            # The same slot order in every pass.
+            self.assertEqual([item[1:] for item in sent], [item[1:] for item in passes[0]])
+        with open(os.path.join(summary["dir"], "plan.json"), encoding="utf-8") as stream:
+            plan = json.load(stream)
+        self.assertEqual([slot["repeat"] for slot in plan], [1] * 6 + [2] * 6 + [3] * 6)
+        # Slot records keep their `repeat` field.
+        rows = self.rows(summary)
+        self.assertEqual([row["repeat"] for row in rows], [1] * 6 + [2] * 6 + [3] * 6)
+        self.assertEqual(summary["passes"], {"required": 3, "complete": 3})
+        self.assertEqual([gate["pass"] for gate in summary["pass_gates"]], [1, 2, 3])
+        self.assertTrue(all(gate["ok"] and gate["slots"] == 6 for gate in summary["pass_gates"]))
+
+    def test_plan_slots_follows_the_configured_repeats(self):
+        cfg = support.make_config()
+        tasks = preflight.normalise_tasks([support.task("t1"), support.task("t2")])
+        slots = runner.plan_slots(cfg, tasks, "full", 5, "RUN")
+        self.assertEqual([slot["repeat"] for slot in slots], [1] * 4 + [2] * 4 + [3] * 4)
+        self.assertEqual([slot["model_id"] for slot in slots], ["m-oa", "m-oa", "m-an", "m-an"] * 3)
+        with mock.patch.object(preflight, "REPEATS", 2):
+            self.assertEqual([slot["repeat"] for slot in
+                              runner.plan_slots(cfg, tasks, "full", 5, "RUN")], [1] * 4 + [2] * 4)
+        # The canary is one pass.
+        self.assertEqual([slot["repeat"] for slot in
+                          runner.plan_slots(cfg, tasks, "canary", 5, "RUN")], [1] * 4)
+
+
+class PassGateRunTests(PassCase):
+    def test_pass_two_is_not_started_when_the_remaining_cap_is_short(self):
+        # The cap is exactly one pass's planning bound. Pass 1 starts (the bound
+        # is not above the cap). It costs 2 x 0.00018 = 0.00036, so what is left
+        # is 0.00036 short of the bound and pass 2 does not start.
+        scored, printed = [], []
+        transport = self.fine()
+        summary = self.run_stage(transport=transport, cfg=self.capped(self.bound),
+                                 out=printed.append,
+                                 scores=lambda rows, tasks: scored.append(rows))
+        self.assertEqual(summary["status"], "incomplete")
+        self.assertNotEqual(summary["status"], "interrupted")
+        self.assertIsNone(summary["finalised"])
+        self.assertFalse(summary["publishable"])
+        self.assertEqual(scored, [])                              # never scored
+        self.assertEqual(len(transport.requests), 2)              # pass 1 only
+        self.assertEqual(summary["passes"], {"required": 3, "complete": 1})
+        # Pass 1 is intact: both slots final, with their answers.
+        rows = self.rows(summary)
+        self.assertEqual([(r["repeat"], r["outcome"], r["pass"], r["pending"]) for r in rows],
+                         [(1, "answered", True, False)] * 2)
+        self.assertEqual(sorted(r["reply"] for r in rows), ["answer 1", "answer 2"])
+        counts = summary["report"]["models"]["m-oa"]
+        self.assertEqual((counts["planned"], counts["attempted"], counts["unstarted"]), (6, 2, 4))
+        self.assertEqual(summary["run_committed_usd"], Decimal("0.00036"))
+        # The gates: pass 1 passed, pass 2 refused, pass 3 never reached.
+        first, second = summary["pass_gates"]
+        self.assertEqual((first["pass"], first["ok"]), (1, True))
+        self.assertEqual((second["pass"], second["ok"], second["provider"]), (2, False, "openai"))
+        self.assertEqual(second["planning_bound"]["openai"], self.bound)
+        self.assertEqual(second["remaining_caps"]["openai"], self.bound - Decimal("0.00036"))
+        # A printed line names the provider, the pass, its bound and the remaining cap.
+        line = ("  INCOMPLETE: pass 2 of 3 not started: the openai planning bound of this "
+                "pass, %s USD, is above the remaining cap %s USD. Finished passes are kept; "
+                "the run is not scored." % (
+                    (self.bound).quantize(Decimal("0.0001")),
+                    (self.bound - Decimal("0.00036")).quantize(Decimal("0.0001"))))
+        self.assertIn(line, printed)
+        report = summary["report"]
+        self.assertEqual(report["status"], "incomplete")
+        self.assertEqual(report["stopped_providers"], ["openai"])
+        self.assertIn("pass 2 of 3 not started", report["interrupt_reason"])
+        # It stays in staging, unscored and unpublished.
+        self.assertIn(os.path.join("runs", "_staging"), summary["dir"])
+        self.assertFalse(os.path.exists(os.path.join(summary["dir"], "slots.json")))
+        self.assertFalse(os.path.exists(os.path.join(summary["dir"], "scores.json")))
+        self.assertFalse(os.path.exists(os.path.join(self.store, "public")))
+        with open(os.path.join(summary["dir"], "run.json"), encoding="utf-8") as stream:
+            self.assertEqual(json.load(stream)["status"], "incomplete")
+
+    def test_pass_three_is_gated_on_what_the_first_two_really_cost(self):
+        # 0.00036 more cap: pass 2 fits exactly (bound + 0.00036 - 0.00036), and
+        # after it 0.00072 is spent, so pass 3 is 0.00036 short.
+        transport = self.fine()
+        summary = self.run_stage(transport=transport,
+                                 cfg=self.capped(self.bound + Decimal("0.00036")))
+        self.assertEqual(summary["status"], "incomplete")
+        self.assertEqual(len(transport.requests), 4)
+        self.assertEqual(summary["passes"], {"required": 3, "complete": 2})
+        self.assertEqual([(g["pass"], g["ok"]) for g in summary["pass_gates"]],
+                         [(1, True), (2, True), (3, False)])
+        self.assertEqual(summary["pass_gates"][1]["remaining_caps"]["openai"], self.bound)
+        self.assertEqual(summary["pass_gates"][2]["remaining_caps"]["openai"],
+                         self.bound - Decimal("0.00036"))
+        self.assertIn("pass 3 of 3 not started", summary["report"]["interrupt_reason"])
+        # 0.00072 more than one bound: all three passes start, and the run is finalised.
+        transport = self.fine()
+        summary = self.run_stage(transport=transport,
+                                 cfg=self.capped(self.bound + Decimal("0.00072")))
+        self.assertEqual(summary["status"], "finalised")
+        self.assertEqual(len(transport.requests), 6)
+        self.assertEqual(summary["passes"], {"required": 3, "complete": 3})
+
+    def test_the_gate_counts_a_request_held_at_its_reserved_maximum(self):
+        # Every request of pass 1 times out and is held at its full reservation
+        # (0.123759 each, 0.247518 for the two). With 0.2 of cap above one
+        # bound, pass 2 would fit after two ordinary replies (0.00036) and does
+        # not fit after 0.247518.
+        def step(request, n):
+            return providers.TransportTimeout()
+        cap = self.bound + Decimal("0.2")
+        transport = model_only(step)
+        summary = self.run_stage(transport=transport, cfg=self.capped(cap))
+        self.assertEqual(summary["status"], "incomplete")
+        self.assertEqual(len(transport.requests), 2)
+        self.assertEqual(summary["pass_gates"][1]["remaining_caps"]["openai"],
+                         cap - Decimal("0.247518"))
+
+    def test_the_whole_plan_gate_refuses_a_stage_before_any_request(self):
+        # The expected cost of the full run is far above 0.01 on openai.
+        transport = self.fine()
+        with self.assertRaises(preflight.PreflightRefused) as caught:
+            self.run_stage(transport=transport, cfg=self.capped("0.01"))
+        self.assertIn("openai: whole-plan gate: 2 x the expected cost", str(caught.exception))
+        self.assertEqual(transport.requests, [])
+        self.assertFalse(os.path.exists(os.path.join(self.store, "runs")))
+
+    def test_the_canary_is_one_gated_pass(self):
+        printed = []
+        summary = self.run_stage(stage="canary", transport=self.fine(), out=printed.append)
+        self.assertEqual(summary["status"], "finalised")
+        self.assertEqual([(g["pass"], g["passes"], g["ok"]) for g in summary["pass_gates"]],
+                         [(1, 1, True)])
+        self.assertIsNone(summary["passes"]["required"])
+        self.assertTrue(any(line.startswith("  pass 1 of 1, 2 slots to run") for line in printed))
+
+    def test_an_incomplete_run_cannot_be_finalised_or_scored_by_hand(self):
+        summary = self.run_stage(transport=self.fine(), cfg=self.capped(self.bound))
+        record = records.RunRecord.reopen(self.store, summary["run_id"])
+        self.addCleanup(record._log.close)
+        with self.assertRaises(records.RecordError) as caught:
+            record.finalise({"day_to_day": 100})
+        self.assertIn("has 1 of 3 passes complete: a run with fewer than 3 complete passes is "
+                      "never finalised or scored", str(caught.exception))
+        self.assertFalse(os.path.exists(os.path.join(self.store, "runs", summary["run_id"])))
+
+
+class ResumeTests(PassCase):
+    def test_an_incomplete_run_resumes_at_the_refused_pass_and_sends_nothing_twice(self):
+        first = self.fine()
+        stopped = self.run_stage(transport=first, cfg=self.capped(self.bound))
+        self.assertEqual(stopped["status"], "incomplete")
+        run_id = stopped["run_id"]
+        before_rows = self.rows(stopped)
+        before_sent = self.sent(stopped)
+        with open(os.path.join(stopped["dir"], "plan.json"), "rb") as stream:
+            plan_bytes = stream.read()
+        # Resumed under the same cap: still short, so nothing is sent.
+        again = self.fine()
+        same = self.run_stage(transport=again, cfg=self.capped(self.bound), resume=run_id)
+        self.assertEqual((same["status"], same["run_id"], same["resumed"]),
+                         ("incomplete", run_id, True))
+        self.assertEqual(again.requests, [])
+        # The owner raises the cap by 0.00072. Pass 2 then has bound + 0.00036
+        # left, which fits; after it has cost another 0.00036, pass 3 has
+        # exactly its bound left, which fits too.
+        scored = []
+        second = self.fine()
+        done = self.run_stage(transport=second, resume=run_id,
+                              cfg=self.capped(self.bound + Decimal("0.00072")),
+                              scores=lambda rows, tasks: scored.append(rows) or {"s": 1})
+        self.assertEqual((done["status"], done["run_id"]), ("finalised", run_id))
+        self.assertEqual(len(second.requests), 4)                 # passes 2 and 3 only
+        self.assertEqual([g["pass"] for g in done["pass_gates"]], [2, 3])
+        self.assertEqual(done["passes"], {"required": 3, "complete": 3})
+        # Nothing was sent twice: 6 request ids, all different, pass 1's unchanged.
+        sent = self.sent(done)
+        self.assertEqual(len(sent), 6)
+        self.assertEqual(len(set(sent)), 6)
+        self.assertEqual(sent[:2], before_sent)
+        rows = self.rows(done)
+        self.assertEqual(rows[:2], before_rows)
+        self.assertEqual([r["repeat"] for r in rows], [1, 1, 2, 2, 3, 3])
+        self.assertEqual(len(scored), 1)
+        self.assertEqual(len(scored[0]), 6)
+        # The plan was not rewritten, and the finalised folder verifies.
+        with open(os.path.join(done["dir"], "plan.json"), "rb") as stream:
+            self.assertEqual(stream.read(), plan_bytes)
+        records.verify_manifest(done["dir"])
+        # One ledger for the whole run: 6 reservations, each settled once.
+        path = os.path.join(self.store, "ledgers-dry", run_id, "openai.jsonl")
+        with open(path, encoding="utf-8") as stream:
+            events = [json.loads(line) for line in stream]
+        self.assertEqual(sorted(e["request_id"] for e in events if e["event"] == "reserve"),
+                         sorted(sent))
+        self.assertEqual(len([e for e in events if e["event"] == "settle"]), 6)
+        # A finalised run is not resumed.
+        with self.assertRaises(records.RecordError):
+            self.run_stage(transport=self.fine(), resume=run_id, cfg=self.capped(self.bound))
+
+    def test_a_run_stopped_mid_pass_resumes_in_order_without_reusing_a_request_id(self):
+        # The third model request (the first slot of pass 2) is in flight when
+        # the run is stopped from outside.
+        def step(request, n):
+            return KeyboardInterrupt() if n == 3 else reply_body(request, "answer %d" % n)
+        first = model_only(step)
+        with self.assertRaises(KeyboardInterrupt):
+            self.run_stage(transport=first)
+        self.assertEqual(len(first.requests), 3)
+        (run_id,) = self.staged()
+        # The gate at resume counts the reservation that was left open. With 0.1
+        # of cap above one bound, pass 2 would fit after the 0.00036 really
+        # spent; with the open 0.123759 as well it does not, and nothing is sent.
+        short = self.fine()
+        held = self.run_stage(transport=short, resume=run_id,
+                              cfg=self.capped(self.bound + Decimal("0.1")))
+        self.assertEqual(held["status"], "incomplete")
+        self.assertEqual(short.requests, [])
+        self.assertEqual(held["pass_gates"][0]["remaining_caps"]["openai"],
+                         self.bound + Decimal("0.1") - Decimal("0.00036") - self.HELD)
+        second = self.fine()
+        printed = []
+        done = self.run_stage(transport=second, resume=run_id, out=printed.append)
+        self.assertEqual(done["status"], "finalised")
+        # Pass 1 is not sent again. Pass 2 resumes with both of its slots: the
+        # stopped slot has no row yet. Then pass 3. 4 requests.
+        self.assertEqual(len(second.requests), 4)
+        self.assertTrue(any(line.startswith("  pass 2 of 3, 2 slots to run")
+                            for line in printed))
+        self.assertEqual([g["pass"] for g in done["pass_gates"]], [2, 3])
+        sent = self.sent(done)
+        self.assertEqual(len(sent), 7)
+        self.assertEqual(len(set(sent)), 7)
+        rows = self.rows(done)
+        self.assertEqual([r["repeat"] for r in rows], [1, 1, 2, 2, 3, 3])
+        stopped = rows[2]
+        # The request that was in flight is kept on the slot and counted as one
+        # of its three; the slot went on with request 2, never request 1 again.
+        self.assertEqual([q["request_id"] for q in stopped["requests"]],
+                         [stopped["slot_id"] + "/1", stopped["slot_id"] + "/2"])
+        self.assertEqual([q["status"] for q in stopped["requests"]],
+                         ["in_flight_when_stopped", "ok"])
+        self.assertEqual(stopped["requests"][0]["ledger_flags"], ["reservation_left_open"])
+        self.assertEqual((stopped["outcome"], stopped["pass"]), ("answered", True))
+        # Its cost holds the open reservation in full: 0.123759 + 0.00018.
+        self.assertEqual(Decimal(stopped["cost_usd_exact"]), Decimal("0.123939"))
+        # The ledger still holds that reservation open: 6 fine requests settled
+        # at 0.00018 each, plus 0.123759 never settled.
+        self.assertEqual(done["remaining_caps"]["openai"],
+                         Decimal("50") - 6 * self.CHARGE - self.HELD)
+
+    def test_a_slot_that_had_used_its_requests_is_not_sent_again(self):
+        # Requests 3 and 4 fail to connect; request 5, the slot's third, is in
+        # flight when the run stops.
+        def step(request, n):
+            if n in (3, 4):
+                return providers.TransportFailure("down")
+            return KeyboardInterrupt() if n == 5 else reply_body(request, "x")
+        with self.assertRaises(KeyboardInterrupt):
+            self.run_stage(transport=model_only(step))
+        (run_id,) = self.staged()
+        second = self.fine()
+        done = self.run_stage(transport=second, resume=run_id)
+        self.assertEqual(len(second.requests), 3)                 # not the used-up slot
+        rows = self.rows(done)
+        used = rows[2]
+        self.assertEqual(len(used["requests"]), 3)
+        self.assertEqual((used["outcome"], used["pass"], used["pending"]),
+                         ("execution_error", False, False))
+        self.assertEqual(used["failure_reason"],
+                         "the slot had used its requests before the run was resumed")
+        self.assertEqual(done["status"], "finalised")
+
+    def test_a_paid_answer_without_a_row_is_kept_and_never_asked_for_again(self):
+        calls = {"n": 0}
+
+        def grade(task, reply, judged=None):
+            calls["n"] += 1
+            if calls["n"] == 3:
+                raise KeyboardInterrupt()           # stopped after the answer was paid for
+            return answered(task, reply)
+        first = self.fine()
+        with self.assertRaises(KeyboardInterrupt):
+            self.run_stage(transport=first, grade=grade)
+        self.assertEqual(len(first.requests), 3)
+        (run_id,) = self.staged()
+        second = self.fine()
+        done = self.run_stage(transport=second, resume=run_id)
+        # The third answer is settled and on record: only the 3 slots after it are sent.
+        self.assertEqual(len(second.requests), 3)
+        self.assertEqual(len(set(self.sent(done))), 6)
+        kept = self.rows(done)[2]
+        self.assertEqual(kept["reply"], "answer 3")
+        self.assertEqual((kept["outcome"], kept["pass"], kept["pending"]),
+                         ("judge_unresolved", None, True))
+        self.assertEqual(kept["flags"], ["answer_kept_ungraded_on_resume"])
+        self.assertEqual(len(kept["requests"]), 1)
+        self.assertEqual(kept["requests"][0]["status"], "ok")
+        # A pending slot: its pass is not complete, so the run is not finalised.
+        self.assertEqual(done["status"], "pending_judging")
+        self.assertIsNone(done["finalised"])
+        self.assertEqual(done["passes"], {"required": 3, "complete": 2})
+
+    def test_a_run_is_only_resumed_as_the_same_run(self):
+        stopped = self.run_stage(transport=self.fine(), cfg=self.capped(self.bound))
+        run_id = stopped["run_id"]
+        cases = [
+            # another model price: anything but the money fields makes it a different run
+            (dict(cfg=support.config.validate(support.config_dict(
+                models=[support.spec_dict("openai", "m-oa", "4", "30")]))),
+             "the run config has changed"),
+            (dict(cfg=self.capped(self.bound), tasks=[support.task("t1"), support.task(
+                "t2", prompt="Another prompt")]), "the task set has changed"),
+            (dict(cfg=self.capped(self.bound), stage="canary"), "it is a full run"),
+        ]
+        for kwargs, fragment in cases:
+            transport = self.fine()
+            with self.assertRaises(records.RecordError) as caught:
+                self.run_stage(transport=transport, resume=run_id, **kwargs)
+            self.assertIn(fragment, str(caught.exception))
+            self.assertEqual(transport.requests, [])
+        with self.assertRaises(records.RecordError) as caught:
+            self.run_stage(transport=self.fine(), resume="2026-01-01T000000Z-00000000")
+        self.assertIn("no run in staging to resume", str(caught.exception))
+        with self.assertRaises(records.RecordError) as caught:
+            self.run_stage(stage="qualify", resume=run_id, checklist_samples=[],
+                           outcome_samples=[])
+        self.assertIn("a judge qualification is not resumed", str(caught.exception))
+
+
+class OverrunOnFileRunTests(PassCase):
+    """A settled charge above its reservation refuses every later start until
+    the run config names the request. The second model request reports 50,000
+    input tokens: (50000 x 3 + 5 x 30) / 1e6 = 0.15015 USD against a
+    reservation of 0.123759."""
+
+    def overrun(self):
+        def step(request, n):
+            if n == 2:
+                return support.ok(support.openai_body("costly", input_tokens=50000))
+            return reply_body(request, "fine")
+        summary = self.run_stage(transport=model_only(step))
+        self.assertEqual(summary["status"], "interrupted")
+        request = self.rows(summary)[1]["requests"][0]
+        self.assertEqual(Decimal(request["charge_usd"]), Decimal("0.15015"))
+        return summary, request["request_id"]
+
+    def test_the_run_is_not_resumed_until_the_overrun_is_acknowledged(self):
+        summary, request = self.overrun()
+        transport = self.fine()
+        with self.assertRaises(preflight.PreflightRefused) as caught:
+            self.run_stage(transport=transport, resume=summary["run_id"])
+        self.assertIn("openai: request %s was charged above its reservation" % request,
+                      str(caught.exception))
+        self.assertIn("acknowledged_overruns", str(caught.exception))
+        self.assertEqual(transport.requests, [])
+        # Naming another request does not help.
+        other = support.make_config(models=[support.spec_dict("openai", "m-oa", "3", "30")],
+                                    acknowledged_overruns=[request + "9"])
+        with self.assertRaises(preflight.PreflightRefused):
+            self.run_stage(transport=transport, resume=summary["run_id"], cfg=other)
+        self.assertEqual(transport.requests, [])
+        # Named in the config, the run carries on: the 4 slots not yet started.
+        named = support.make_config(models=[support.spec_dict("openai", "m-oa", "3", "30")],
+                                    acknowledged_overruns=[request])
+        printed = []
+        done = self.run_stage(transport=transport, resume=summary["run_id"], cfg=named,
+                              out=printed.append)
+        self.assertEqual(done["status"], "finalised")
+        self.assertEqual(len(transport.requests), 4)
+        self.assertIn("  overrun on file, openai: %s (acknowledged in the run config)" % request,
+                      printed)
+        # The overrun stays in the ledger and in what is left of the cap:
+        # 0.15015 + 5 x 0.00018 = 0.15105 spent.
+        self.assertEqual(done["remaining_caps"]["openai"], Decimal("50") - Decimal("0.15105"))
+
+    def test_runner_lists_the_overruns_in_the_ledgers(self):
+        summary, request = self.overrun()
+        books = runner._ledgers(self.cfg, self.store, False, summary["run_id"])
+        self.assertEqual(runner.overruns_on_file(books), {"openai": [request]})
+        clean = runner._ledgers(self.cfg, self.store, False, "another-run")
+        self.assertEqual(runner.overruns_on_file(clean), {})
+
+
 class CommandLineTests(unittest.TestCase):
     def setUp(self):
         folder = tempfile.TemporaryDirectory()
@@ -1531,7 +2016,8 @@ class CommandLineTests(unittest.TestCase):
     def test_preflight_covers_the_whole_plan_from_the_qualify_stage(self):
         code, text = self.main("preflight", *self.common(), *self.sample_files())
         self.assertEqual(code, 0)
-        self.assertIn("Result: within the remaining caps for stage qualify", text)
+        self.assertIn("Result: the plan may start. The whole-plan gate holds and qualify + "
+                      "canary + pass 1 fit the remaining caps.", text)
         self.assertIn("qualification: 24 calls per candidate (4 checklist samples + 20 outcome "
                       "samples), 48 calls in all", text)
         self.assertIn("judging costed at the WORST CASE", text)
@@ -1544,8 +2030,8 @@ class CommandLineTests(unittest.TestCase):
             caps_usd={"openai": "0.01", "anthropic": "50"}))
         tight_args = ["--config", tight, "--public-tasks", self.tasks_path]
         cases = [
-            # pre-flight above a cap: the figures are printed, then the refusal
-            (("preflight", *tight_args), "REFUSED: openai: planning bound"),
+            # the whole-plan gate fails: the figures are printed, then the refusal
+            (("preflight", *tight_args), "REFUSED: openai: whole-plan gate"),
             (("dry-run", *tight_args, "--private-store", store, "--stub-grade"),
              "REFUSED: pre-flight refused"),
             (("canary", *tight_args, "--private-store", store, "--stub-grade"),
@@ -1582,6 +2068,106 @@ class CommandLineTests(unittest.TestCase):
             self.main("dry-run", *self.common(), "--stub-grade")        # no --private-store
         self.assertNotIn(caught.exception.code, (0, None))
 
+    def plan(self, *sample_args):
+        """The pre-flight figures for this fixture, from the module."""
+        cfg = cli.config_module.load_config(self.cfg_path)
+        tasks, _ = cli.load_task_set(self.tasks_path, self.held_path)
+        return preflight.preflight(cfg, tasks, dict(cfg.caps_usd), out=None, together=True)
+
+    def test_preflight_prints_every_gate_and_refuses_only_on_them(self):
+        code, text = self.main("preflight", *self.common())
+        self.assertEqual(code, 0)
+        for words in ("planning bound by stage and by pass", "pass 1", "pass 2", "pass 3",
+                      "full, all passes", "whole-plan gate: 2 x the expected cost of stage qualify",
+                      "planning-bound gate for qualify, the next to start",
+                      "qualify + canary + pass 1 at their planning bounds together",
+                      "Result: the plan may start"):
+            self.assertIn(words, text)
+        plan = self.plan()
+        together = plan["together_gate"]["openai"]["planning_bound"]
+        self.assertLess(together, plan["whole_plan"]["openai"]["planning_bound"])
+        # A cap that holds qualify + canary + pass 1 exactly, and so is below the
+        # whole plan's planning bound: printed, and not a refusal.
+        exact = self.write("exact.json", support.config_dict(
+            caps_usd={"openai": str(together), "anthropic": "50"}))
+        code, text = self.main("preflight", "--config", exact, "--public-tasks",
+                               self.tasks_path, "--held-out-tasks", self.held_path)
+        self.assertEqual(code, 0, text)
+        self.assertIn("openai: the planning bound of the plan still to run", text)
+        self.assertIn("That alone is not a refusal: the full run is gated one pass at a time",
+                      text)
+        self.assertNotIn("REFUSED", text)
+        # One step lower and the three no longer fit together: refused, exit 2.
+        short = self.write("short.json", support.config_dict(
+            caps_usd={"openai": str(together - Decimal("0.000001")), "anthropic": "50"}))
+        code, text = self.main("preflight", "--config", short, "--public-tasks",
+                               self.tasks_path, "--held-out-tasks", self.held_path)
+        self.assertEqual(code, 2)
+        self.assertIn("REFUSED: openai: qualify + canary + pass 1 at their planning bounds "
+                      "come to", text)
+
+    def test_an_overrun_on_file_refuses_the_preflight_command(self):
+        store = os.path.join(self.folder, "store")
+        request = "2026-11-14T183000Z-1a2b3c4d/m-oa/t1/1/1"
+        os.makedirs(os.path.join(store, "ledgers"))
+        with open(os.path.join(store, "ledgers", "openai.jsonl"), "w", encoding="utf-8") as stream:
+            stream.write(json.dumps({"event": "reserve", "request_id": request,
+                                     "usd": "0.1"}) + "\n")
+            stream.write(json.dumps({"event": "settle", "request_id": request, "usd": "0.2",
+                                     "reserved_usd": "0.1", "reconciled": True,
+                                     "flags": ["charge_above_reservation"]}) + "\n")
+        for stage in ("qualify", "canary", "full"):
+            code, text = self.main("preflight", *self.common(), "--private-store", store,
+                                   "--stage", stage)
+            self.assertEqual(code, 2, stage)
+            self.assertIn("REFUSED: openai: request %s was charged above its reservation"
+                          % request, text)
+        named = self.write("named.json", support.config_dict(acknowledged_overruns=[request]))
+        code, text = self.main("preflight", "--config", named, "--public-tasks",
+                               self.tasks_path, "--private-store", store)
+        self.assertEqual(code, 0, text)
+        self.assertIn("overrun on file, openai: %s (acknowledged in the run config)" % request,
+                      text)
+        # The charge is out of the remaining cap all the same: 50 - 0.2.
+        self.assertIn("49.8000", text)
+
+    def test_an_incomplete_run_exits_with_5_and_can_be_resumed(self):
+        self.assertEqual(cli.EXIT_INCOMPLETE, 5)
+        self.assertNotIn(cli.EXIT_INCOMPLETE, (cli.EXIT_OK, cli.EXIT_REFUSED,
+                                               cli.EXIT_NOT_FINISHED, cli.EXIT_NOT_QUALIFIED, 1))
+        store = os.path.join(self.folder, "store")
+        # A cap of exactly one pass's planning bound on openai: pass 1 starts, and
+        # whatever it costs, pass 2 no longer fits.
+        one_pass = self.plan()["by_pass"][1]["openai"]["planning_bound"]
+        tight = self.write("tight.json", support.config_dict(
+            caps_usd={"openai": str(one_pass), "anthropic": "50"}))
+        run = ["--public-tasks", self.tasks_path, "--held-out-tasks", self.held_path,
+               "--private-store", store, "--stub-grade"]
+        code, text = self.main("dry-run", "--config", tight, *run, "--seed", "4")
+        self.assertEqual(code, 5, text)
+        self.assertIn("status incomplete, publishable False", text)
+        self.assertIn("INCOMPLETE: pass 2 of 3 not started: the openai planning bound of this "
+                      "pass", text)
+        self.assertIn("passes complete: 1 of 3", text)
+        self.assertIn("m-oa: planned 9, attempted 3, unstarted 6, pending 0", text)
+        run_id = text.split("Dry run ", 1)[1].split(":", 1)[0]
+        self.assertIn("--resume " + run_id, text)
+        # Resumed under the same cap it is still incomplete.
+        code, text = self.main("dry-run", "--config", tight, *run, "--resume", run_id)
+        self.assertEqual(code, 5, text)
+        self.assertIn("m-oa: planned 9, attempted 3, unstarted 6, pending 0", text)
+        # With room, it carries on under the same run id and finishes.
+        code, text = self.main("dry-run", "--config", self.cfg_path, *run, "--resume", run_id)
+        self.assertEqual(code, 0, text)
+        self.assertIn("Dry run %s: stage full, status finalised" % run_id, text)
+        self.assertIn("passes complete: 3 of 3", text)
+        self.assertIn("m-oa: planned 9, attempted 9, unstarted 0, pending 0", text)
+        # An unknown run id is a refusal.
+        code, text = self.main("dry-run", "--config", self.cfg_path, *run, "--resume",
+                               "2026-01-01T000000Z-00000000")
+        self.assertEqual(code, 2)
+        self.assertIn("REFUSED: no run in staging to resume", text)
+
     def test_max_usd_can_only_lower_a_cap(self):
         store = os.path.join(self.folder, "store")
         tight = self.write("tight.json", support.config_dict(
@@ -1592,11 +2178,11 @@ class CommandLineTests(unittest.TestCase):
         self.assertEqual(code, 2)
         self.assertIn("above the remaining cap 0.0100 USD", text)
         self.assertNotIn("--max-usd", text.split("REFUSED:", 1)[1])
-        # Below the stage's planning bound it lowers the cap, and the run is refused.
+        # Below the planning bound of pass 1 it lowers the cap, and the run is refused.
         code, text = self.main("dry-run", *self.common(), "--private-store", store,
                                "--stub-grade", "--max-usd", "0.5")
         self.assertEqual(code, 2)
-        self.assertIn("--max-usd 0.5000 is below this stage's planning bound", text)
+        self.assertIn("--max-usd 0.5000 is below the planning bound of pass 1", text)
         # Above the bound and inside the caps, it changes nothing.
         code, text = self.main("dry-run", *self.common(), "--private-store", store,
                                "--stub-grade", "--max-usd", "100000")

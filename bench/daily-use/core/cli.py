@@ -14,8 +14,15 @@ Every command, `preflight` and dry runs included, is refused before
 anything else is read while OPENAI_API_KEY or ANTHROPIC_API_KEY is set in
 the environment. The line names the variable and never shows its value.
 
+The full run goes one pass at a time (pass n is repeat n of every task for
+every model). A pass whose planning bound is above what is left of a cap is
+not started: the run ends `incomplete` and the command exits with 5.
+`--resume <run id>` carries a stopped canary or full run on.
+
 Exit codes: 0 finished; 2 refused; 3 interrupted or pending; 4 the judge
-qualification finished but named no panel. See RUNNER.md.
+qualification finished but named no panel; 5 incomplete, a pass was not
+started because its planning bound did not fit the remaining cap. See
+RUNNER.md.
 """
 
 import argparse
@@ -38,6 +45,9 @@ import runner  # noqa: E402
 
 STAGE_COMMANDS = ("qualify", "canary", "full")
 EXIT_OK, EXIT_REFUSED, EXIT_NOT_FINISHED, EXIT_NOT_QUALIFIED = 0, 2, 3, 4
+# A pass of the full run was not started: its planning bound was above the
+# remaining cap. Finished passes are kept; the run is not scored.
+EXIT_INCOMPLETE = 5
 
 
 def load_tasks(path, split):
@@ -131,6 +141,9 @@ def build_parser():
         if name == "dry-run" or name in STAGE_COMMANDS:
             sub.add_argument("--stub-grade", action="store_true",
                              help="dry runs only: plumbing check without the graders")
+            sub.add_argument("--resume", metavar="RUN_ID",
+                             help="carry on a stopped canary or full run in staging; no "
+                                  "request already in its log is sent again")
     return parser
 
 
@@ -220,9 +233,11 @@ def main(argv=None, out=print):
         file_hashes = {"checklist": checklist_sha, "outcome": outcome_sha}
         if args.command == "preflight":
             qualified, note = None, None
+            overruns = None
             if args.private_store:
                 books = runner._ledgers(config, args.private_store, True, "preflight")
                 remaining = {provider: book.remaining for provider, book in books.items()}
+                overruns = runner.overruns_on_file(books)
                 if stage != "qualify":
                     qualified, note = runner.check_qualification(
                         config, args.private_store, file_hashes, need_samples=False)
@@ -232,6 +247,7 @@ def main(argv=None, out=print):
             result = preflight.preflight(
                 config, tasks, remaining, stage=stage, max_usd=args.max_usd,
                 checklist_samples=checklist_samples, outcome_samples=outcome_samples, out=out,
+                overruns=overruns, together=True,
                 qualification=None if qualified is None else {
                     "run_id": qualified["run_id"], "panel": config.judges},
                 qualification_note=note)
@@ -255,7 +271,7 @@ def main(argv=None, out=print):
             grade=runner.stub_grade if args.stub_grade else None, live=live,
             key_file=args.key_file if live else None, max_usd=args.max_usd, seed=args.seed,
             checklist_samples=checklist_samples, outcome_samples=outcome_samples, out=out,
-            sample_file_hashes=file_hashes)
+            sample_file_hashes=file_hashes, resume=args.resume)
     except (runner.LiveRefused, runner.GraderUnavailable, runner.ScorerUnavailable,
             preflight.PreflightRefused, ledger.LedgerError, records.RecordError,
             keys.EnvironmentNotClean) as problem:
@@ -287,10 +303,17 @@ def main(argv=None, out=print):
         elif not summary["live"]:
             out("  This was a dry run: no qualification record was written, and a dry "
                 "run never opens the canary or the full run.")
+    passes = summary.get("passes") or {}
+    if passes.get("required"):
+        out("  passes complete: %d of %d" % (passes["complete"], passes["required"]))
     if summary["report"].get("interrupt_reason"):
         out("  stopped: " + str(summary["report"]["interrupt_reason"]))
     out("  committed by this run: %s USD" % summary["run_committed_usd"])
     out("  record: " + summary["dir"])
+    if summary["status"] == "incomplete":
+        out("  The run is incomplete and is not scored. Resume it with --resume %s once the "
+            "pass fits the remaining cap." % summary["run_id"])
+        return EXIT_INCOMPLETE
     if summary["status"] not in ("finalised", "complete"):
         return EXIT_NOT_FINISHED
     if qualification is not None and not qualification["qualified"]:

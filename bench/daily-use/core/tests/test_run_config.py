@@ -114,6 +114,33 @@ class ValidationTests(unittest.TestCase):
         self.assertIn(fragment, str(caught.exception))
         return str(caught.exception)
 
+    def test_acknowledged_overruns_is_an_optional_list_of_request_ids(self):
+        self.assertEqual(self.check().acknowledged_overruns, ())
+        model = "2026-11-14T183000Z-1a2b3c4d/m-oa/t1/1/1"
+        judge = "2026-11-14T183000Z-1a2b3c4d/m-oa/t1/1/judge/j-an/checklist_judging/1"
+        sample = "2026-11-14T183000Z-1a2b3c4d/qualify/j-oa/checklist/s3/1"
+        loaded = self.check(mode="live", acknowledged_overruns=[model, judge, sample])
+        self.assertEqual(loaded.acknowledged_overruns, (model, judge, sample))
+        self.assertEqual(loaded.live_blockers, ())
+        for bad in ("a request id", [1], [""], {"id": model}, None):
+            self.rejects("config.acknowledged_overruns must be a list of request ids",
+                         acknowledged_overruns=bad)
+
+    def test_run_sha256_leaves_out_the_two_money_fields_and_nothing_else(self):
+        plain = self.check()
+        self.assertRegex(plain.run_sha256, r"^[0-9a-f]{64}$")
+        self.assertEqual(config.RUN_SHA256_LEAVES_OUT, ("caps_usd", "acknowledged_overruns"))
+        self.assertEqual(self.check(acknowledged_overruns=["r/1"]).run_sha256, plain.run_sha256)
+        self.assertEqual(self.check(caps_usd={"openai": "1", "anthropic": "2"}).run_sha256,
+                         plain.run_sha256)
+        self.assertNotEqual(self.check(task_set_version="other").run_sha256, plain.run_sha256)
+        self.assertNotEqual(self.check(planning={
+            "expected_output_tokens": 301, "judge_expected_output_tokens": 100}).run_sha256,
+            plain.run_sha256)
+        dearer = [support.spec_dict("openai", "m-oa", "4", "30"),
+                  support.spec_dict("anthropic", "m-an", "3", "15")]
+        self.assertNotEqual(self.check(models=dearer).run_sha256, plain.run_sha256)
+
     def test_a_pinned_config_passes_for_live(self):
         loaded = self.check(mode="live")
         self.assertEqual(loaded.live_blockers, ())

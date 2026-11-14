@@ -16,6 +16,11 @@ its entries must be among the candidates. Without `judge_candidates` the two
 A config never holds a key. Any value that looks like a secret is rejected,
 and the error names only where it was found, never the value.
 
+`acknowledged_overruns` (optional) is a list of request ids. A ledger that
+holds a settled charge above its reservation refuses every later start until
+that request id is listed here. Listing it says the owner has seen the
+overrun; it changes no cap and no charge.
+
 Values marked `TO PIN BEFORE RUN` are accepted for a dry run and rejected
 for a live run.
 """
@@ -52,8 +57,9 @@ EFFORT_VALUES = {
 _TOP_LEVEL = {
     "task_set_version", "live_approved", "approved_by", "key_names",
     "caps_usd", "planning", "canary", "models", "judges", "judge_candidates",
+    "acknowledged_overruns",
 }
-_OPTIONAL_TOP_LEVEL = {"judge_candidates"}
+_OPTIONAL_TOP_LEVEL = {"judge_candidates", "acknowledged_overruns"}
 _MODEL_FIELDS = {
     "provider", "model_id", "api_version", "reasoning_effort",
     "send_reasoning_effort", "temperature", "send_temperature",
@@ -234,6 +240,13 @@ class RunConfig:
     live_blockers: tuple
     sha256: str = ""
     judge_candidates: dict = None
+    acknowledged_overruns: tuple = ()
+    # The config without its two money fields (`caps_usd` and
+    # `acknowledged_overruns`), hashed. A stopped run is resumed only under
+    # the same `run_sha256`: acknowledging an overrun or changing a cap does
+    # not make it a different run, and anything that shapes a request or a
+    # judgement does.
+    run_sha256: str = ""
 
     def spec(self, model_id):
         for item in self.models + self.judges + self.all_judge_candidates():
@@ -541,6 +554,11 @@ def validate(raw, mode="dry", today=None, sha256=""):
     if len(set(ids)) != len(ids):
         problems.append("config.models lists a model id twice")
     candidates = _candidates(raw, judges, problems, blockers, today)
+    acknowledged = raw.get("acknowledged_overruns", [])
+    if not isinstance(acknowledged, list) or not all(
+            isinstance(item, str) and item.strip() for item in acknowledged):
+        problems.append("config.acknowledged_overruns must be a list of request ids")
+        acknowledged = []
 
     placeholders = find_placeholders(raw)
     for place in placeholders:
@@ -564,7 +582,20 @@ def validate(raw, mode="dry", today=None, sha256=""):
         live_blockers=tuple(blockers),
         sha256=sha256,
         judge_candidates=candidates,
+        acknowledged_overruns=tuple(acknowledged),
+        run_sha256=_run_sha256(raw),
     )
+
+
+RUN_SHA256_LEAVES_OUT = ("caps_usd", "acknowledged_overruns")
+
+
+def _run_sha256(raw):
+    """SHA-256 of the config with `caps_usd` and `acknowledged_overruns`
+    left out."""
+    body = {name: value for name, value in raw.items() if name not in RUN_SHA256_LEAVES_OUT}
+    text = json.dumps(body, sort_keys=True, separators=(",", ":"), default=str)
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
 def _candidates(raw, judges, problems, blockers, today):

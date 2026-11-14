@@ -15,7 +15,8 @@ One ledger per provider, shared by model calls and judge calls.
   charge and flags the request.
 - A settled charge above its reservation is recorded and flagged
   `charge_above_reservation`; the runner then stops before the next request
-  (`ReservationExceeded`).
+  (`ReservationExceeded`). `overruns()` lists such requests, and every later
+  start is refused until the run config acknowledges each one by request id.
 - Every reserve and settle is appended to a JSONL file, flushed and fsynced
   before the call returns, so the reservation is on disk before the request
   is sent. A restart reloads the file; a reservation that was never settled
@@ -208,6 +209,17 @@ class ProviderLedger:
         """Request ids charged at their reserved maximum, awaiting the console figure."""
         return sorted(r for r, e in self.entries.items()
                       if e["charge"] is None or not e["reconciled"])
+
+    def overruns(self):
+        """Request ids whose settled charge is above their reservation.
+
+        An overrun on file refuses every later start until the run config
+        names the request id in `acknowledged_overruns`. A charge corrected
+        by hand to its reservation or below is no longer an overrun.
+        """
+        return sorted(r for r, e in self.entries.items()
+                      if e["charge"] is not None
+                      and (e["charge"] > e["reserved"] or OVERRUN_FLAG in e["flags"]))
 
     def check(self, worst_case):
         if self.spent + self.reserved + worst_case > self.cap:

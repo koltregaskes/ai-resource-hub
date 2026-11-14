@@ -11,6 +11,17 @@ Slots and requests follow the method exactly:
 - A truncated answer is kept, flagged and graded as it stands.
 - One request is in flight at a time.
 - Task order is shuffled per model with a recorded seed.
+- The full run goes one pass at a time. Pass n is repeat n of every task
+  for every model, and each slot is judged before the next slot starts, so
+  the whole of pass n, judging included, is done before pass n + 1 starts.
+  Before each pass, and when a run is resumed, `preflight.pass_gate` tests
+  the planning bound of the pass against what is left of each cap. A pass
+  that does not fit is not started: the run ends `incomplete`, the finished
+  passes are kept, and a run with fewer than all its passes is never
+  finalised or scored.
+- A stopped run is resumed with `resume=<run id>`. It carries on in the
+  planned order; a slot that has a row is left alone and a request id that
+  is in the log is never issued again.
 
 Grading is injected: `grade(task, reply)` returns
 `{"outcome", "pass", "pending", "needs_judge": [...]}`, and may add
@@ -52,6 +63,8 @@ above:
   while OPENAI_API_KEY or ANTHROPIC_API_KEY is set in the environment.
 - If a settled charge is ever above its reservation, the ledger records it,
   nothing more is sent, and the run ends interrupted (a non-zero exit).
+  While such a charge is on file, every later start of any stage or pass is
+  refused until the run config names the request in `acknowledged_overruns`.
 """
 
 import hashlib
@@ -323,7 +336,7 @@ def _earlier_steps_missing(stage, config, private_store, hashes):
 
 def open_live_gate(*, live, config, key_file, tasks, stage, private_store, remaining_caps,
                    max_usd=None, checklist_samples=None, outcome_samples=None,
-                   environ=None, out=print, hashes=None):
+                   environ=None, out=print, hashes=None, overruns=None, resuming=False):
     """Check every live condition in order and return
     (`LiveGatePass`, pre-flight result, qualification record or None).
 
@@ -353,7 +366,7 @@ def open_live_gate(*, live, config, key_file, tasks, stage, private_store, remai
     result = preflight.preflight(
         config, tasks, remaining_caps, stage=stage, max_usd=max_usd,
         checklist_samples=checklist_samples, outcome_samples=outcome_samples,
-        out=out, environ=environ,
+        out=out, environ=environ, overruns=overruns, resuming=resuming,
         qualification=None if qualified is None else {
             "run_id": qualified["run_id"], "panel": config.judges},
         qualification_note="this is the qualification stage" if stage == "qualify" else None)
@@ -713,18 +726,23 @@ def stub_grade(task, reply, judged=None):
 # ---- the engine --------------------------------------------------------
 
 def plan_slots(config, tasks, stage, seed, run_id):
-    """Every slot of the stage, in run order: models in config order, tasks
-    shuffled per model from the recorded seed, repeats in order."""
+    """Every slot of the stage, in run order: pass by pass. Pass n is
+    repeat n of every task for every model: models in config order, tasks
+    shuffled per model from the recorded seed (the same order in every
+    pass). The number of passes is the configured number of repeats."""
     if stage == "canary":
         chosen, repeats = preflight.canary_tasks(config, tasks), preflight.CANARY_REPEATS
     else:
         chosen, repeats = list(tasks), preflight.REPEATS
-    slots = []
+    orders = {}
     for model in config.models:
         order = sorted(chosen, key=lambda task: task["id"])
         random.Random("%s/%s" % (seed, model.model_id)).shuffle(order)
-        for task in order:
-            for repeat in range(1, repeats + 1):
+        orders[model.model_id] = order
+    slots = []
+    for repeat in range(1, repeats + 1):
+        for model in config.models:
+            for task in orders[model.model_id]:
                 slots.append({"slot_id": records.slot_id(run_id, model.model_id, task["id"], repeat),
                               "model_id": model.model_id, "task_id": task["id"],
                               "repeat": repeat})
@@ -872,11 +890,47 @@ class _Engine:
             return self.grade(task, reply, judged=judged)
         return fallback_resolve(task, first, judged)
 
-    def model_slot(self, model, task, repeat):
+    def _earlier_requests(self, model, slot):
+        """The model requests a resumed slot already has in the log, as
+        trail entries, with the answer text of any that came back."""
+        earlier = []
+        book = self.budget.ledgers[model.provider].entries
+        for item in self.record.logged_model_requests(slot):
+            done, entry = item["done"], book.get(item["request_id"]) or {}
+            if done is not None:
+                result = done.get("result") or {}
+                earlier.append(({
+                    "request_id": item["request_id"], "status": result.get("status"),
+                    "http_status": result.get("http_status"), "error": result.get("error"),
+                    "finish_reason": result.get("finish_reason"),
+                    "charge_usd": str(done.get("charge_usd")),
+                    "request_time_seconds": result.get("request_time_seconds"),
+                    "usage": result.get("usage"),
+                    "ledger_flags": list(done.get("ledger_flags") or [])}, result))
+                continue
+            # In flight when the run stopped: there is no result on record.
+            # It still counts as one of the slot's requests, and it is not
+            # sent again. Its reservation stays open in the ledger unless
+            # the ledger shows it settled.
+            settled = entry.get("charge") is not None
+            charge = entry["charge"] if settled else item["sent"].get("reserved_usd")
+            earlier.append(({
+                "request_id": item["request_id"], "status": "in_flight_when_stopped",
+                "http_status": None,
+                "error": "no result on record: the run stopped while this request was in flight",
+                "finish_reason": None, "charge_usd": str(charge),
+                "request_time_seconds": None, "usage": None,
+                "ledger_flags": list(entry.get("flags") or []) if settled
+                else ["reservation_left_open"]}, None))
+        return earlier
+
+    def model_slot(self, model, task, repeat, resumed=False):
         slot = records.slot_id(self.record.run_id, model.model_id, task["id"], repeat)
         prompt = task["prompt"]
         limit = task["max_output_tokens"]
-        trail = []
+        earlier = self._earlier_requests(model, slot) if resumed else []
+        trail = [entry for entry, _ in earlier]
+        used = len(trail)
         judge_trail = []
         # `model`, `task_id`, `family`, `split`, `repeat`, `outcome`, `pass`,
         # `truncated`, `time_s`, `cost_usd`, `checks` and
@@ -891,17 +945,40 @@ class _Engine:
             "time_s": None, "checks": [],
             "judged": None, "needed_judge_classification": False,
         }
+        kept = next((result for _, result in reversed(earlier)
+                     if result is not None and result.get("status") == providers.OK), None)
+        if kept is not None:
+            # A paid answer is on record without a slot row: the run stopped
+            # after the answer came back and before it was graded. It is kept
+            # and never asked for again. Grading a kept answer later is not
+            # built, so the slot stays pending and the run cannot be scored.
+            row.update(reply=kept.get("text"), truncated=bool(kept.get("truncated")),
+                       finish_reason=kept.get("finish_reason"), tokens=kept.get("usage"),
+                       outcome=judges.UNRESOLVED, pending=True,
+                       time_s=kept.get("request_time_seconds"))
+            row["flags"].append("answer_kept_ungraded_on_resume")
+            return self._close_slot(row, trail, judge_trail, None)
+        if used >= providers.MAX_REQUESTS_PER_SLOT:
+            row.update(outcome="execution_error", pending=False)
+            row["pass"] = False
+            row["failure_reason"] = "the slot had used its requests before the run was resumed"
+            row["failure_class"] = trail[-1]["status"]
+            return self._close_slot(row, trail, judge_trail, None)
+        # A resumed slot numbers its requests on from those already issued,
+        # and they count towards the slot's limit.
         adapter, before_send, after_result = self._hooks(
-            model, prompt, limit, "model", lambda number: records.request_id(slot, number), trail)
+            model, prompt, limit, "model",
+            lambda number: records.request_id(slot, number + used), trail)
         stop = None
         results = []
         try:
             results = providers.call_with_retries(
                 adapter, self.transport, prompt, limit, self._secret(model.provider),
+                max_requests=providers.MAX_REQUESTS_PER_SLOT - used,
                 before_send=before_send, after_result=after_result, sleep=self.sleep,
                 clock=self.clock)
         except ledger.CapExceeded as cap:
-            if not trail:
+            if len(trail) == used:
                 raise _Stop("interrupted by cap: " + str(cap), cap.provider) from None
             stop = _Stop("interrupted by cap: " + str(cap), cap.provider)
             row["flags"].append("retry_refused_by_cap")
@@ -969,6 +1046,10 @@ class _Engine:
             row["pass"] = False
             row["failure_reason"] = trail[-1]["error"] if trail else None
             row["failure_class"] = trail[-1]["status"] if trail else None
+        return self._close_slot(row, trail, judge_trail, stop)
+
+    def _close_slot(self, row, trail, judge_trail, stop):
+        """Total the slot's charges, store its row, then stop if need be."""
         row["requests"] = trail
         row["judge_requests"] = judge_trail
         # The model's own requests only; judge cost is reported separately.
@@ -1075,11 +1156,65 @@ def _scorer(live):
     return default_scores
 
 
+def overruns_on_file(books):
+    """{provider: [request id]} for every settled charge above its
+    reservation in these ledgers."""
+    found = {provider: book.overruns() for provider, book in books.items()}
+    return {provider: ids for provider, ids in found.items() if ids}
+
+
+def tasks_sha256(tasks):
+    """A fingerprint of what is sent for each task, so that a run is only
+    resumed against the task set it was started with."""
+    return content_sha256(sorted([task["id"], task["prompt"], task["max_output_tokens"]]
+                                 for task in tasks))
+
+
+def _resumable(private_store, run_id, stage, config, tasks, live, qualification_run_id=None,
+               check_qualification_id=False):
+    """The run.json of the staged run `run_id`, after checking that it is
+    the same run: same stage, same kind (dry or live), same config apart
+    from `caps_usd` and `acknowledged_overruns`, same task set, same judge
+    qualification."""
+    if stage == "qualify":
+        raise records.RecordError("a judge qualification is not resumed: run qualify again")
+    document = records.read_staged(private_store, run_id)
+    if document.get("status") not in records.RESUMABLE:
+        raise records.RecordError("run %s has status %s and cannot be resumed"
+                                  % (run_id, document.get("status")))
+    different = []
+    if document.get("stage") != stage:
+        different.append("it is a %s run" % document.get("stage"))
+    if bool(document.get("live")) != bool(live):
+        different.append("it is a %s run" % ("live" if document.get("live") else "dry"))
+    if document.get("config_run_sha256") != config.run_sha256:
+        different.append("the run config has changed (only caps_usd and acknowledged_overruns may change)")
+    if document.get("task_set_version") != config.task_set_version \
+            or document.get("tasks_sha256") != tasks_sha256(tasks):
+        different.append("the task set has changed")
+    if check_qualification_id and document.get("qualification_run_id") != qualification_run_id:
+        different.append("the judge qualification on record has changed")
+    if different:
+        raise records.RecordError("run %s cannot be resumed: %s" % (run_id, "; ".join(different)))
+    return document
+
+
 def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, key_file=None,
               max_usd=None, seed=None, checklist_samples=None, outcome_samples=None,
               transport=None, scores=None, clock=time.monotonic, sleep=None, out=print,
-              environ=None, live_transport_factory=None, sample_file_hashes=None):
+              environ=None, live_transport_factory=None, sample_file_hashes=None,
+              resume=None):
     """Run one stage and return a summary.
+
+    The canary is one pass; the full run is one pass per repeat. Before
+    each pass `preflight.pass_gate` tests the planning bound of the pass
+    against what is left of each cap. A pass that does not fit is not
+    started and the run ends with status `incomplete`.
+
+    `resume` is the run id of a stopped canary or full run in staging. The
+    run carries on in its planned order under the same run id and the same
+    ledger; a slot that has a row is left alone, and no request id that is
+    in the log is issued again.
 
     Without `live=True` this is a dry run: the transport is a fake (the
     deterministic stub unless one is passed in), the key file is never
@@ -1115,10 +1250,18 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
     if scores is None and stage == "full":
         scores = _scorer(live)
     hashes = sample_hashes(checklist_samples, outcome_samples, sample_file_hashes)
-    run_id = records.new_run_id()
-    seed = seed if seed is not None else random.SystemRandom().randrange(2 ** 32)
+    resuming = resume is not None
+    if resuming:
+        staged = _resumable(private_store, resume, stage, config, tasks, live)
+        run_id, seed = resume, staged.get("seed")
+    else:
+        run_id = records.new_run_id()
+        seed = seed if seed is not None else random.SystemRandom().randrange(2 ** 32)
     books = _ledgers(config, private_store, live, run_id)
     remaining = {provider: book.remaining for provider, book in books.items()}
+    # A settled charge above its reservation, from this run or an earlier
+    # one, refuses the start unless the config acknowledges it.
+    overruns = overruns_on_file(books)
     loaded = None
     qualified = None
     if live:
@@ -1126,7 +1269,11 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
             live=live, config=config, key_file=key_file, tasks=tasks, stage=stage,
             private_store=private_store, remaining_caps=remaining, max_usd=max_usd,
             checklist_samples=checklist_samples, outcome_samples=outcome_samples,
-            environ=environ, out=out, hashes=hashes)
+            environ=environ, out=out, hashes=hashes, overruns=overruns, resuming=resuming)
+        if resuming:
+            _resumable(private_store, resume, stage, config, tasks, live,
+                       qualification_run_id=None if qualified is None else qualified["run_id"],
+                       check_qualification_id=True)
         loaded = gate_pass.keys
         transport = (live_transport_factory or providers.UrllibTransport)(gate_pass)
         sleep = sleep or time.sleep
@@ -1139,15 +1286,18 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
         plan = preflight.enforce(preflight.preflight(
             config, tasks, remaining, stage=stage, max_usd=max_usd,
             checklist_samples=checklist_samples, outcome_samples=outcome_samples,
-            out=out, environ=environ,
+            out=out, environ=environ, overruns=overruns, resuming=resuming,
             qualification=None if qualified is None else {
                 "run_id": qualified["run_id"], "panel": config.judges},
             qualification_note=note))
         transport = transport or StubTransport()
     qualification_run_id = None if qualified is None else qualified["run_id"]
-    record = records.RunRecord(private_store, run_id, stage, {
+    guard = loaded.leaks_into if loaded is not None else None
+    record = records.RunRecord.reopen(private_store, run_id, guard=guard) if resuming \
+        else records.RunRecord(private_store, run_id, stage, {
         "live": bool(live), "task_set_version": config.task_set_version, "seed": seed,
-        "config_sha256": config.sha256,
+        "config_sha256": config.sha256, "config_run_sha256": config.run_sha256,
+        "tasks_sha256": tasks_sha256(tasks),
         "settings": [model.public() for model in config.models],
         "judge_settings": [judge.public() for judge in config.judges],
         "judge_candidate_settings": [judge.public() for judge in config.all_judge_candidates()]
@@ -1157,8 +1307,10 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
         "grader": grader_facts,
         "max_usd": None if max_usd is None else str(max_usd),
         "preflight": {"whole_plan": plan["whole_plan"], "requests": plan["requests"],
-                      "counts": plan["counts"], "judging": plan["judging"]},
-    }, guard=loaded.leaks_into if loaded is not None else None)
+                      "counts": plan["counts"], "judging": plan["judging"],
+                      "by_stage": plan["by_stage"], "by_pass": plan["by_pass"],
+                      "whole_plan_gate": plan["whole_plan_gate"]},
+    }, guard=guard, required_passes=preflight.REPEATS if stage == "full" else None)
     budget = ledger.Budget(books, run_id, max_usd=max_usd)
     engine = _Engine(config=config, tasks=tasks, stage=stage, record=record, budget=budget,
                      transport=transport, loaded_keys=loaded, grade=grade, clock=clock,
@@ -1166,7 +1318,8 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
     summary = {"run_id": run_id, "stage": stage, "live": bool(live), "seed": seed,
                "preflight": plan, "qualification": None, "qualification_record": None,
                "qualification_record_path": None,
-               "qualification_run_id": qualification_run_id, "finalised": None}
+               "qualification_run_id": qualification_run_id, "finalised": None,
+               "resumed": resuming, "pass_gates": []}
     try:
         if stage == "qualify":
             record.plan([])
@@ -1177,13 +1330,37 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
             # the stage is stopped here: it is never finalised.
             engine.stop_if_overrun()
         else:
-            slots = plan_slots(config, tasks, stage, seed, run_id)
-            record.plan(slots)
+            if resuming:
+                slots = record.planned
+            else:
+                slots = plan_slots(config, tasks, stage, seed, run_id)
+                record.plan(slots)
             by_model = {model.model_id: model for model in config.models}
             by_task = {task["id"]: task for task in tasks}
-            for slot in slots:
-                engine.model_slot(by_model[slot["model_id"]], by_task[slot["task_id"]],
-                                  slot["repeat"])
+            numbers = sorted({slot["repeat"] for slot in slots})
+            for number in numbers:
+                # Pass `number`: repeat `number` of every task for every
+                # model, each slot judged before the next one starts. A slot
+                # that already has a row (a resumed run) is left alone.
+                todo = [slot for slot in slots if slot["repeat"] == number
+                        and slot["slot_id"] not in record.rows]
+                if not todo:
+                    continue
+                gate = preflight.pass_gate(
+                    plan, todo, budget.remaining(), number, len(numbers),
+                    max_usd_left=None if max_usd is None
+                    else Decimal(str(max_usd)) - budget.run_committed())
+                summary["pass_gates"].append(gate)
+                for line in gate["lines"]:
+                    out(line)
+                if not gate["ok"]:
+                    # The pass does not start. Nothing of it is sent; the
+                    # finished passes stay as they are.
+                    record.mark_incomplete(gate["reason"], gate["provider"])
+                    break
+                for slot in todo:
+                    engine.model_slot(by_model[slot["model_id"]], by_task[slot["task_id"]],
+                                      slot["repeat"], resumed=resuming)
     except _Stop as stop:
         record.mark_interrupted(stop.reason, stop.provider)
     except ledger.CapExceeded as cap:
@@ -1194,9 +1371,12 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
         record.mark_interrupted("stopped by an error in the harness")
         record.close()
         raise
-    if record.status != "interrupted" and not record.pending_slots():
+    if record.status == "running" and not record.pending_slots() \
+            and not record.unstarted_slots():
         rows = [record.rows[slot["slot_id"]] for slot in record.planned]
         try:
+            # Never scored with fewer than the configured number of passes.
+            record.require_complete_passes()
             computed = scores(rows, tasks) if scores is not None else None
         except BaseException:
             record.close()                  # the run stays in staging, unscored
@@ -1227,6 +1407,8 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
             _record_stage(private_store, entry)
     else:
         record.close()
+    summary["passes"] = {"required": record.required_passes,
+                         "complete": record.complete_passes()}
     summary.update(status=record.status, publishable=record.publishable,
                    report=record.report(), dir=record.dir,
                    remaining_caps=budget.remaining(),

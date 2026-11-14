@@ -336,6 +336,202 @@ class RecordTests(unittest.TestCase):
         record.close()
 
 
+class PassRuleTests(unittest.TestCase):
+    """A full run needs 3 complete passes. Pass n is every planned slot with
+    repeat n; it is complete when each of those slots has a final result."""
+
+    setUp, record, planned = RecordTests.setUp, RecordTests.record, RecordTests.planned
+
+    def passes(self, done, pending=()):
+        record = records.RunRecord(self.store, self.run_id, "full",
+                                   {"live": False, "task_set_version": "test"},
+                                   required_passes=3)
+        self.addCleanup(record._log.close)
+        self.planned(record, [("m1", "pub-1", 1), ("m2", "pub-1", 1), ("m1", "pub-1", 2),
+                              ("m2", "pub-1", 2), ("m1", "pub-1", 3), ("m2", "pub-1", 3)])
+        for model, repeat in done:
+            record.slot_done(row(self.run_id, model, "pub-1", repeat))
+        for model, repeat in pending:
+            record.slot_done(row(self.run_id, model, "pub-1", repeat, outcome="answered",
+                                 passed=None, pending=True))
+        return record
+
+    def test_two_of_three_passes_cannot_be_finalised(self):
+        record = self.passes([("m1", 1), ("m2", 1), ("m1", 2), ("m2", 2)])
+        self.assertEqual(record.complete_passes(), 2)
+        with self.assertRaises(records.RecordError) as caught:
+            record.finalise({"day_to_day": 100})
+        self.assertEqual(str(caught.exception),
+                         "run %s has 2 of 3 passes complete: a run with fewer than 3 complete "
+                         "passes is never finalised or scored" % self.run_id)
+        with self.assertRaises(records.RecordError):
+            record.require_complete_passes()
+        self.assertFalse(os.path.exists(record.final_dir))
+        self.assertFalse(os.path.exists(os.path.join(record.dir, "scores.json")))
+        self.assertFalse(os.path.exists(os.path.join(self.store, "public")))
+
+    def test_an_incomplete_run_keeps_its_status_and_is_never_finalised(self):
+        record = self.passes([("m1", 1), ("m2", 1)])
+        record.mark_incomplete("pass 2 of 3 not started: openai is short", "openai")
+        self.assertEqual(record.status, "incomplete")
+        with self.assertRaises(records.RecordError) as caught:
+            record.finalise({})
+        self.assertIn("has 1 of 3 passes complete", str(caught.exception))
+        record.close()
+        with open(os.path.join(record.dir, "run.json"), encoding="utf-8") as stream:
+            status = json.load(stream)
+        self.assertEqual((status["status"], status["publishable"], status["required_passes"]),
+                         ("incomplete", False, 3))
+        self.assertEqual(status["interrupt_reason"], "pass 2 of 3 not started: openai is short")
+        self.assertEqual(status["stopped_providers"], ["openai"])
+        self.assertFalse(os.path.exists(record.final_dir))
+
+    def test_a_pending_or_missing_slot_leaves_its_pass_incomplete(self):
+        record = self.passes([("m1", 1), ("m2", 1), ("m1", 2), ("m1", 3), ("m2", 3)],
+                             pending=[("m2", 2)])
+        self.assertEqual(record.complete_passes(), 2)
+        with self.assertRaises(records.RecordError) as caught:
+            record.finalise({})
+        self.assertIn("has 2 of 3 passes complete", str(caught.exception))
+        self.assertEqual(record.status, "pending_judging")
+
+    def test_three_complete_passes_are_finalised(self):
+        record = self.passes([(model, repeat) for repeat in (1, 2, 3) for model in ("m1", "m2")])
+        self.assertEqual(record.complete_passes(), 3)
+        record.require_complete_passes()
+        result = record.finalise({"day_to_day": 100})
+        self.assertTrue(result["dir"].endswith(self.run_id))
+
+    def test_a_record_without_the_rule_is_not_held_to_it(self):
+        record = self.record(stage="canary")
+        self.planned(record, [("m1", "pub-1", 1)])
+        record.slot_done(row(self.run_id, "m1", "pub-1", 1))
+        self.assertIsNone(record.required_passes)
+        record.require_complete_passes()
+        record.finalise({})
+
+
+class ReopenTests(unittest.TestCase):
+    setUp, record, planned = RecordTests.setUp, RecordTests.record, RecordTests.planned
+    log_lines = RecordTests.log_lines
+
+    def stopped(self):
+        """Two slots planned for each of 2 passes. Pass 1 is done; the first
+        slot of pass 2 has one request with a result and one in flight."""
+        record = records.RunRecord(self.store, self.run_id, "full",
+                                   {"live": False, "task_set_version": "test", "seed": 7},
+                                   required_passes=2)
+        slots = self.planned(record, [("m1", "pub-1", 1), ("m2", "pub-1", 1),
+                                      ("m1", "pub-1", 2), ("m2", "pub-1", 2)])
+        for model in ("m1", "m2"):
+            data = row(self.run_id, model, "pub-1", 1)
+            request = data["requests"][0]["request_id"]
+            record.request_sent(request, {"kind": "model", "reserved_usd": "0.1"})
+            record.request_done(request, {"charge_usd": "0.0011", "result": {"status": "ok"}})
+            record.slot_done(data)
+        third = slots[2]["slot_id"]
+        record.request_sent(third + "/1", {"kind": "model", "reserved_usd": "0.1"})
+        record.request_done(third + "/1", {"charge_usd": "0", "result": {
+            "status": "transport_error"}})
+        record.request_sent(third + "/2", {"kind": "model", "reserved_usd": "0.1"})
+        record.request_sent(third + "/judge/j/outcome_classification/1", {"kind": "judge"})
+        record.write_json("extra.json", {"kept": True})
+        record.mark_interrupted("stopped by an error in the harness")
+        record.close()
+        return slots
+
+    def reopen(self, **kwargs):
+        record = records.RunRecord.reopen(self.store, self.run_id, **kwargs)
+        self.addCleanup(record._log.close)
+        return record
+
+    def test_a_stopped_run_is_read_back_as_it_was(self):
+        slots = self.stopped()
+        with open(os.path.join(self.store, "runs", "_staging", self.run_id,
+                               records.REQUEST_LOG), encoding="utf-8") as stream:
+            before = [json.loads(line) for line in stream]
+        record = self.reopen()
+        self.assertEqual((record.stage, record.status, record.required_passes),
+                         ("full", "running", 2))
+        self.assertEqual(record.planned, slots)
+        self.assertEqual(sorted(record.rows), sorted(s["slot_id"] for s in slots[:2]))
+        self.assertEqual(record.unstarted_slots(), [s["slot_id"] for s in slots[2:]])
+        self.assertEqual(record.complete_passes(), 1)
+        self.assertEqual(record.meta["seed"], 7)
+        # The model requests already issued for the stopped slot, in order; the
+        # judge request is not one of them.
+        logged = record.logged_model_requests(slots[2]["slot_id"])
+        self.assertEqual([item["request_id"][-2:] for item in logged], ["/1", "/2"])
+        self.assertEqual(logged[0]["done"]["result"]["status"], "transport_error")
+        self.assertIsNone(logged[1]["done"])
+        self.assertEqual(record.logged_model_requests(slots[3]["slot_id"]), [])
+        # Nothing already written is changed: the log only grows, by one line.
+        after = self.log_lines(record)
+        self.assertEqual(after[:len(before)], before)
+        self.assertEqual([line["event"] for line in after[len(before):]], ["resumed"])
+        self.assertEqual(after[-1]["before"]["status"], "interrupted")
+
+    def test_a_request_id_in_the_log_is_never_issued_again(self):
+        slots = self.stopped()
+        record = self.reopen()
+        for request in (slots[0]["slot_id"] + "/1", slots[2]["slot_id"] + "/1",
+                        slots[2]["slot_id"] + "/2"):
+            with self.assertRaises(records.RecordError) as caught:
+                record.request_sent(request, {"kind": "model"})
+            self.assertIn("request id used twice", str(caught.exception))
+        # A finished slot cannot be given another result either.
+        with self.assertRaises(records.RecordError):
+            record.slot_done(row(self.run_id, "m1", "pub-1", 1))
+        record.request_sent(slots[2]["slot_id"] + "/3", {"kind": "model"})
+
+    def test_a_reopened_run_finalises_with_a_manifest_that_verifies(self):
+        self.stopped()
+        record = self.reopen()
+        for model in ("m1", "m2"):
+            record.slot_done(row(self.run_id, model, "pub-1", 2))
+        result = record.finalise({"day_to_day": 50})
+        records.verify_manifest(result["dir"])
+        names = sorted(os.listdir(result["dir"]))
+        self.assertIn("extra.json", names)
+        with open(os.path.join(result["dir"], "run.json"), encoding="utf-8") as stream:
+            document = json.load(stream)
+        self.assertEqual(document["status"], "finalised")
+        self.assertEqual(len(document["resumed"]), 1)
+        self.assertEqual(document["resumed"][0]["status"], "interrupted")
+
+    def test_only_a_stopped_run_in_staging_is_reopened(self):
+        with self.assertRaises(records.RecordError) as caught:
+            self.reopen()
+        self.assertIn("no run in staging to resume", str(caught.exception))
+        self.stopped()
+        record = self.reopen()
+        for model in ("m1", "m2"):
+            record.slot_done(row(self.run_id, model, "pub-1", 2))
+        record.finalise({})
+        with self.assertRaises(records.RecordError) as caught:
+            records.RunRecord.reopen(self.store, self.run_id)
+        self.assertIn("is finalised", str(caught.exception))
+        # A run that is only waiting on judging has nothing left to send.
+        other = records.new_run_id(token="0badcafe")
+        waiting = self.record(run_id=other)
+        self.planned(waiting, [("m1", "pub-1", 1)])
+        waiting.slot_done(row(other, "m1", "pub-1", 1, passed=None, pending=True))
+        waiting.close()
+        self.assertEqual(waiting.status, "pending_judging")
+        with self.assertRaises(records.RecordError) as caught:
+            records.RunRecord.reopen(self.store, other)
+        self.assertIn("has status pending_judging and cannot be resumed", str(caught.exception))
+
+    def test_a_part_written_log_is_not_resumed(self):
+        self.stopped()
+        path = os.path.join(self.store, "runs", "_staging", self.run_id, records.REQUEST_LOG)
+        with open(path, "ab") as stream:
+            stream.write(b'{"event": "sent", "request_id": "x')
+        with self.assertRaises(records.RecordError) as caught:
+            records.RunRecord.reopen(self.store, self.run_id)
+        self.assertIn("does not read back", str(caught.exception))
+
+
 class AmendmentTests(unittest.TestCase):
     def setUp(self):
         folder = tempfile.TemporaryDirectory()

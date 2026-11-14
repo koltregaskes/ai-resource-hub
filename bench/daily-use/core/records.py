@@ -13,8 +13,14 @@ Layout inside the private store (a path given at run time, outside the repo):
 - Before a request is sent, a line with its id and reservation is appended
   to `requests.jsonl`, flushed and fsynced. The response is appended when it
   arrives. A crash leaves a record of what was in flight.
+- A run that was stopped can be reopened (`RunRecord.reopen`) and carried
+  on in the planned order. Slots that already have a row are left alone, and
+  a request id that is in the log is never issued again.
+- A run whose next pass was refused by the pass gate has status
+  `incomplete`: the finished passes are kept and nothing more was sent.
 - Finalising happens only when every planned slot has a final outcome and
-  pass and nothing is pending. Scores are injected; this module computes
+  pass and nothing is pending. A run with fewer complete passes than it
+  needs (`required_passes`) is never finalised, so it is never scored. Scores are injected; this module computes
   none. The manifest holds a SHA-256 of every file, taken from the bytes as
   they were written.
 - The public record is built by an allowlist. For held-out tasks it carries
@@ -30,6 +36,12 @@ import secrets as _random
 FINAL_OUTCOMES = ("answered", "abstained", "refused", "malformed", "execution_error")
 REQUEST_LOG = "requests.jsonl"
 MANIFEST = "manifest.json"
+# Statuses a staged run can be reopened from. `running` is what a run that
+# died without warning leaves behind.
+RESUMABLE = ("interrupted", "incomplete", "running")
+# Fields of run.json that are worked out from the record, not kept as meta.
+_COMPUTED = ("run_id", "stage", "status", "publishable", "started_utc", "interrupt_reason",
+             "stopped_providers", "report")
 
 HELD_OUT_FIELDS = ("task_id", "family", "outcome", "pass", "tokens", "cost_usd", "timing")
 PUBLIC_FIELDS = HELD_OUT_FIELDS + (
@@ -92,11 +104,16 @@ class RunRecord:
     return True when the text holds a key; the write is then refused.
     """
 
-    def __init__(self, private_store, run_id, stage, meta, guard=None):
+    def __init__(self, private_store, run_id, stage, meta, guard=None, required_passes=None):
         self.private_store = os.fspath(private_store)
         self.run_id = run_id
         self.stage = stage
         self.meta = dict(meta)
+        # The number of complete passes the run needs before it can be
+        # finalised and scored (3 for a full run). None: no pass rule.
+        self.required_passes = required_passes
+        if required_passes is not None:
+            self.meta["required_passes"] = required_passes
         self.guard = guard
         self.dir = os.path.join(self.private_store, "runs", "_staging", run_id)
         self.final_dir = os.path.join(self.private_store, "runs", run_id)
@@ -111,11 +128,101 @@ class RunRecord:
         self.rows = {}
         self.extra_files = {}
         self._issued = set()
+        self._requests = {}
         self._hashes = {}
         self._log_hash = hashlib.sha256()
         self._log = open(os.path.join(self.dir, REQUEST_LOG), "ab")
         self.started_utc = stamp()
         self._write_status()
+
+    @classmethod
+    def reopen(cls, private_store, run_id, guard=None):
+        """Open a staged run again so that it can be carried on.
+
+        The plan, the slot rows and every request id are read back from the
+        folder. Nothing already written is changed: new lines are appended
+        to the same log. Refused for a run that is finalised, complete or
+        only waiting on judging, and for a log that does not read back.
+        """
+        self = cls.__new__(cls)
+        self.private_store = os.fspath(private_store)
+        self.run_id = run_id
+        self.guard = guard
+        self.dir = os.path.join(self.private_store, "runs", "_staging", run_id)
+        self.final_dir = os.path.join(self.private_store, "runs", run_id)
+        if os.path.exists(self.final_dir):
+            raise RecordError("run %s is finalised; it is never written to again" % run_id)
+        document = read_staged(private_store, run_id)
+        if document.get("status") not in RESUMABLE:
+            raise RecordError("run %s has status %s and cannot be resumed"
+                              % (run_id, document.get("status")))
+        self.stage = document["stage"]
+        self.meta = {name: value for name, value in document.items() if name not in _COMPUTED}
+        self.required_passes = self.meta.get("required_passes")
+        self.started_utc = document.get("started_utc")
+        try:
+            with open(os.path.join(self.dir, "plan.json"), "rb") as stream:
+                self.planned = json.loads(stream.read())
+        except (OSError, ValueError):
+            raise RecordError("run %s has no readable plan; it cannot be resumed"
+                              % run_id) from None
+        self.finalised = False
+        self.rows = {}
+        self.extra_files = {}
+        self._issued = set()
+        self._requests = {}
+        with open(os.path.join(self.dir, REQUEST_LOG), "rb") as stream:
+            data = stream.read()
+        for number, line in enumerate(data.splitlines(), 1):
+            if not line.strip():
+                continue
+            try:
+                event = json.loads(line)
+                kind = event["event"]
+            except (ValueError, KeyError, TypeError):
+                raise RecordError("the request log of run %s does not read back at line %d; "
+                                  "repair it by hand before resuming" % (run_id, number)) from None
+            if kind == "sent":
+                self._issued.add(event["request_id"])
+                self._requests[event["request_id"]] = {"sent": event, "done": None}
+            elif kind == "done" and event.get("request_id") in self._requests:
+                self._requests[event["request_id"]]["done"] = event
+            elif kind == "slot":
+                self.rows[event["slot"]["slot_id"]] = dict(event["slot"])
+        if data and not data.endswith(b"\n"):
+            raise RecordError("the request log of run %s ends in a part-written line; repair "
+                              "it by hand before resuming" % run_id)
+        self._hashes = {}
+        for name in sorted(os.listdir(self.dir)):
+            if name in (REQUEST_LOG, MANIFEST) or not os.path.isfile(os.path.join(self.dir, name)):
+                continue
+            with open(os.path.join(self.dir, name), "rb") as stream:
+                self._hashes[name] = _sha(stream.read())
+            if name not in ("run.json", "plan.json"):
+                self.extra_files[name] = True
+        self._log_hash = hashlib.sha256(data)
+        self._log = open(os.path.join(self.dir, REQUEST_LOG), "ab")
+        before = {"status": document.get("status"),
+                  "reason": document.get("interrupt_reason"),
+                  "stopped_providers": document.get("stopped_providers") or []}
+        self.status = "running"
+        self.stopped_providers = []
+        self.interrupt_reason = None
+        self.meta.setdefault("resumed", []).append(dict(before, at_utc=stamp()))
+        self._append({"event": "resumed", "at_utc": stamp(), "before": before})
+        self._write_status()
+        return self
+
+    def logged_model_requests(self, slot):
+        """The model requests already issued for a slot, in order, each as
+        {"request_id", "sent", "done"}; `done` is None for a request that
+        was in flight when the run stopped."""
+        found = []
+        for request, lines in self._requests.items():
+            head, _, number = request.rpartition("/")
+            if head == slot and number.isdigit():
+                found.append((int(number), dict(lines, request_id=request)))
+        return [item for _, item in sorted(found, key=lambda pair: pair[0])]
 
     # ---- writing -------------------------------------------------------
 
@@ -178,12 +285,16 @@ class RunRecord:
         if request in self._issued:
             raise RecordError("request id used twice: " + request)
         self._issued.add(request)
-        self._append(dict(payload, event="sent", request_id=request, at_utc=stamp()))
+        line = dict(payload, event="sent", request_id=request, at_utc=stamp())
+        self._append(line)
+        self._requests[request] = {"sent": line, "done": None}
 
     def request_done(self, request, payload):
         if request not in self._issued:
             raise RecordError("no sent line for request " + request)
-        self._append(dict(payload, event="done", request_id=request, at_utc=stamp()))
+        line = dict(payload, event="done", request_id=request, at_utc=stamp())
+        self._append(line)
+        self._requests[request]["done"] = line
 
     def slot_done(self, row):
         """Store the row for one slot. A pending slot may be stored again
@@ -209,6 +320,39 @@ class RunRecord:
         if stopped_provider and stopped_provider not in self.stopped_providers:
             self.stopped_providers.append(stopped_provider)
         self._write_status()
+
+    def mark_incomplete(self, reason, stopped_provider=None):
+        """The next pass was refused by the pass gate. Finished passes are
+        kept; the run stays in staging, is never scored as it stands, and
+        can be resumed."""
+        if self.finalised:
+            raise RecordError("run %s is finalised; it is never written to again" % self.run_id)
+        self.status = "incomplete"
+        self.interrupt_reason = reason
+        if stopped_provider and stopped_provider not in self.stopped_providers:
+            self.stopped_providers.append(stopped_provider)
+        self._write_status()
+
+    def complete_passes(self):
+        """How many passes are complete. Pass n is every planned slot with
+        repeat n; it is complete when each of them has a final result."""
+        by_pass = {}
+        for slot in self.planned:
+            by_pass.setdefault(slot.get("repeat"), []).append(slot["slot_id"])
+        return sum(1 for slots in by_pass.values()
+                   if all(slot in self.rows and _is_final(self.rows[slot]) for slot in slots))
+
+    def require_complete_passes(self):
+        """Refuse to finalise or score a run with fewer complete passes than
+        it needs. There is no way round this."""
+        if self.required_passes is None:
+            return
+        complete = self.complete_passes()
+        if complete < self.required_passes:
+            raise RecordError(
+                "run %s has %d of %d passes complete: a run with fewer than %d complete "
+                "passes is never finalised or scored"
+                % (self.run_id, complete, self.required_passes, self.required_passes))
 
     def pending_slots(self):
         return sorted(s for s, row in self.rows.items() if not _is_final(row))
@@ -262,13 +406,16 @@ class RunRecord:
         """
         if self.finalised:
             raise RecordError("run %s is already finalised" % self.run_id)
-        if self.status == "interrupted":
+        if self.status in ("interrupted", "incomplete"):
             self._write_status()
-            raise RecordError("an interrupted run is never finalised")
+            self.require_complete_passes()
+            raise RecordError("an %s run is never finalised" % self.status)
         if self.unstarted_slots() or self.pending_slots():
             self.status = "pending_judging" if not self.unstarted_slots() else "interrupted"
             self._write_status()
+            self.require_complete_passes()
             raise RecordError("run has slots that are unstarted or pending; it stays in staging")
+        self.require_complete_passes()
         if os.path.exists(self.final_dir):
             raise RecordError("a finalised folder already exists for " + self.run_id)
         rows = [self.rows[slot["slot_id"]] for slot in self.planned]
@@ -315,6 +462,19 @@ class RunRecord:
                 stream.write(data)
             result.update(public_record=public, public_path=path)
         return result
+
+
+def read_staged(private_store, run_id):
+    """The run.json of a run in staging, for resuming it."""
+    path = os.path.join(os.fspath(private_store), "runs", "_staging", str(run_id), "run.json")
+    try:
+        with open(path, "rb") as stream:
+            document = json.loads(stream.read())
+    except (OSError, ValueError):
+        raise RecordError("no run in staging to resume: " + str(run_id)) from None
+    if not isinstance(document, dict) or document.get("run_id") != run_id:
+        raise RecordError("no run in staging to resume: " + str(run_id))
+    return document
 
 
 def _is_final(row):
