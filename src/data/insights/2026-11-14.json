@@ -1,0 +1,1137 @@
+{
+  "snapshotDate": "2026-11-14",
+  "cacheGeneratedAt": "2026-11-14T06:55:53.573Z",
+  "method": {
+    "set": "Language models (category \"llm\") in data/pg-cache/models.json, variants removed.",
+    "variantRule": "Catalogue id ends in a date stamp (-MMDD, -YYMM, -YYYYMMDD, -YYYY-MM-DD) or in -fast.",
+    "releasedField": "For models added through OpenRouter discovery, \"released\" is the date OpenRouter first listed the model, not the lab's announcement date.",
+    "minGroupSize": 10
+  },
+  "coverage": {
+    "llmEntries": 291,
+    "afterVariantRemoval": 268,
+    "withReleaseDateAndContext": 252,
+    "pricingSourceCounts": {
+      "OpenRouter models API": 201,
+      "Lab's own pricing page": 58,
+      "none recorded": 9
+    }
+  },
+  "contextWindows": {
+    "series": [
+      {
+        "period": "2024 H1",
+        "n": 11,
+        "median": 128000,
+        "max": 2097152,
+        "atLeast1M": 2,
+        "under200k": 8
+      },
+      {
+        "period": "2024 H2",
+        "n": 31,
+        "median": 131072,
+        "max": 1048576,
+        "atLeast1M": 1,
+        "under200k": 23
+      },
+      {
+        "period": "2025 H1",
+        "n": 48,
+        "median": 200000,
+        "max": 4096000,
+        "atLeast1M": 11,
+        "under200k": 23
+      },
+      {
+        "period": "2025 H2",
+        "n": 49,
+        "median": 262144,
+        "max": 1048576,
+        "atLeast1M": 5,
+        "under200k": 14
+      },
+      {
+        "period": "2026 H1",
+        "n": 60,
+        "median": 336000,
+        "max": 2000000,
+        "atLeast1M": 25,
+        "under200k": 9
+      },
+      {
+        "period": "2026 H2",
+        "n": 51,
+        "median": 1048576,
+        "max": 1050000,
+        "atLeast1M": 44,
+        "under200k": 3
+      }
+    ],
+    "yearly": [
+      {
+        "period": "2024",
+        "n": 42,
+        "median": 131072,
+        "max": 2097152,
+        "atLeast1M": 3,
+        "under200k": 31
+      },
+      {
+        "period": "2025",
+        "n": 97,
+        "median": 200000,
+        "max": 4096000,
+        "atLeast1M": 16,
+        "under200k": 37
+      },
+      {
+        "period": "2026",
+        "n": 111,
+        "median": 1000000,
+        "max": 2000000,
+        "atLeast1M": 69,
+        "under200k": 12
+      }
+    ],
+    "yearlyGrowthMultiple": 7.62939453125,
+    "seriesIncludingSmallGroups": [
+      {
+        "period": "2023 H1",
+        "n": 1,
+        "median": 8191,
+        "max": 8191,
+        "atLeast1M": 0,
+        "under200k": 1
+      },
+      {
+        "period": "2023 H2",
+        "n": 1,
+        "median": 16385,
+        "max": 16385,
+        "atLeast1M": 0,
+        "under200k": 1
+      },
+      {
+        "period": "2024 H1",
+        "n": 11,
+        "median": 128000,
+        "max": 2097152,
+        "atLeast1M": 2,
+        "under200k": 8
+      },
+      {
+        "period": "2024 H2",
+        "n": 31,
+        "median": 131072,
+        "max": 1048576,
+        "atLeast1M": 1,
+        "under200k": 23
+      },
+      {
+        "period": "2025 H1",
+        "n": 48,
+        "median": 200000,
+        "max": 4096000,
+        "atLeast1M": 11,
+        "under200k": 23
+      },
+      {
+        "period": "2025 H2",
+        "n": 49,
+        "median": 262144,
+        "max": 1048576,
+        "atLeast1M": 5,
+        "under200k": 14
+      },
+      {
+        "period": "2026 H1",
+        "n": 60,
+        "median": 336000,
+        "max": 2000000,
+        "atLeast1M": 25,
+        "under200k": 9
+      },
+      {
+        "period": "2026 H2",
+        "n": 51,
+        "median": 1048576,
+        "max": 1050000,
+        "atLeast1M": 44,
+        "under200k": 3
+      }
+    ],
+    "seriesWithVariants": [
+      {
+        "period": "2024 H1",
+        "n": 12,
+        "median": 128000,
+        "max": 2097152,
+        "atLeast1M": 2,
+        "under200k": 9
+      },
+      {
+        "period": "2024 H2",
+        "n": 31,
+        "median": 131072,
+        "max": 1048576,
+        "atLeast1M": 1,
+        "under200k": 23
+      },
+      {
+        "period": "2025 H1",
+        "n": 50,
+        "median": 181920,
+        "max": 4096000,
+        "atLeast1M": 11,
+        "under200k": 25
+      },
+      {
+        "period": "2025 H2",
+        "n": 61,
+        "median": 262144,
+        "max": 2097152,
+        "atLeast1M": 7,
+        "under200k": 17
+      },
+      {
+        "period": "2026 H1",
+        "n": 62,
+        "median": 336000,
+        "max": 2000000,
+        "atLeast1M": 26,
+        "under200k": 9
+      },
+      {
+        "period": "2026 H2",
+        "n": 54,
+        "median": 1048576,
+        "max": 1050000,
+        "atLeast1M": 47,
+        "under200k": 3
+      }
+    ],
+    "growthMultiple": 8.192,
+    "from": {
+      "period": "2024 H1",
+      "n": 11,
+      "median": 128000,
+      "max": 2097152,
+      "atLeast1M": 2,
+      "under200k": 8
+    },
+    "to": {
+      "period": "2026 H2",
+      "n": 51,
+      "median": 1048576,
+      "max": 1050000,
+      "atLeast1M": 44,
+      "under200k": 3
+    },
+    "largest": [
+      {
+        "id": "minimax-01",
+        "name": "MiniMax-01",
+        "provider": "MiniMax",
+        "context": 4096000,
+        "released": "2025-01-15",
+        "source": "minimaxi.com/pricing"
+      },
+      {
+        "id": "gemini-1.5-pro",
+        "name": "Gemini 1.5 Pro",
+        "provider": "Google",
+        "context": 2097152,
+        "released": "2024-02-15",
+        "source": "ai.google.dev/pricing"
+      },
+      {
+        "id": "grok-4.20",
+        "name": "Grok 4.20",
+        "provider": "xAI",
+        "context": 2000000,
+        "released": "2026-03-31",
+        "source": "openrouter.ai/api/v1/models"
+      },
+      {
+        "id": "grok-4.20-multi-agent",
+        "name": "Grok 4.20 Multi-Agent",
+        "provider": "xAI",
+        "context": 2000000,
+        "released": "2026-03-31",
+        "source": "openrouter.ai/api/v1/models"
+      },
+      {
+        "id": "llama-4-scout",
+        "name": "Llama 4 Scout",
+        "provider": "Meta",
+        "context": 1310720,
+        "released": "2025-04-05",
+        "source": "openrouter.ai/api/v1/models"
+      },
+      {
+        "id": "gpt-5.4",
+        "name": "GPT-5.4",
+        "provider": "OpenAI",
+        "context": 1050000,
+        "released": "2026-03-05",
+        "source": "OpenAI (official)"
+      },
+      {
+        "id": "gpt-5.4-pro",
+        "name": "GPT-5.4 Pro",
+        "provider": "OpenAI",
+        "context": 1050000,
+        "released": "2026-03-05",
+        "source": "OpenAI (official)"
+      },
+      {
+        "id": "gpt-5.5",
+        "name": "GPT-5.5",
+        "provider": "OpenAI",
+        "context": 1050000,
+        "released": "2026-04-23",
+        "source": "OpenAI (official)"
+      },
+      {
+        "id": "gpt-5.5-pro",
+        "name": "GPT-5.5 Pro",
+        "provider": "OpenAI",
+        "context": 1050000,
+        "released": "2026-04-23",
+        "source": "OpenAI (official)"
+      },
+      {
+        "id": "gpt-5.6-luna",
+        "name": "GPT-5.6 Luna",
+        "provider": "OpenAI",
+        "context": 1050000,
+        "released": "2026-07-09",
+        "source": "OpenAI (official)"
+      },
+      {
+        "id": "gpt-5.6-luna-pro",
+        "name": "GPT-5.6 Luna Pro",
+        "provider": "OpenAI",
+        "context": 1050000,
+        "released": "2026-07-09",
+        "source": "openrouter.ai/api/v1/models"
+      },
+      {
+        "id": "gpt-5.6-sol",
+        "name": "GPT-5.6 Sol",
+        "provider": "OpenAI",
+        "context": 1050000,
+        "released": "2026-07-09",
+        "source": "OpenAI (official)"
+      }
+    ]
+  },
+  "priceSpread": {
+    "n": 65,
+    "cheapest": [
+      {
+        "id": "mistral-nemo",
+        "name": "Mistral Nemo",
+        "provider": "Mistral",
+        "input": 0.029,
+        "output": 0.03,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "llama-3.1-8b",
+        "name": "Llama 3.1 8B Instruct",
+        "provider": "Meta",
+        "input": 0.02,
+        "output": 0.04,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "phi-4",
+        "name": "Phi 4",
+        "provider": "Microsoft",
+        "input": 0.07,
+        "output": 0.14,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "nova-micro",
+        "name": "Nova Micro 1.0",
+        "provider": "Amazon",
+        "input": 0.035,
+        "output": 0.14,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "command-r7b",
+        "name": "Command R7B (12-2024)",
+        "provider": "Cohere",
+        "input": 0.038,
+        "output": 0.15,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "reka-flash-3",
+        "name": "Reka Flash 3",
+        "provider": "Reka",
+        "input": 0.1,
+        "output": 0.2,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "nova-lite",
+        "name": "Nova Lite 1.0",
+        "provider": "Amazon",
+        "input": 0.06,
+        "output": 0.24,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "llama-4-scout",
+        "name": "Llama 4 Scout",
+        "provider": "Meta",
+        "input": 0.1,
+        "output": 0.3,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      }
+    ],
+    "dearest": [
+      {
+        "id": "gpt-5.5-pro",
+        "name": "GPT-5.5 Pro",
+        "provider": "OpenAI",
+        "input": 30,
+        "output": 180,
+        "source": "OpenAI (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "gpt-5.4-pro",
+        "name": "GPT-5.4 Pro",
+        "provider": "OpenAI",
+        "input": 30,
+        "output": 180,
+        "source": "OpenAI (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "gpt-5.2-pro",
+        "name": "GPT-5.2 Pro",
+        "provider": "OpenAI",
+        "input": 21,
+        "output": 168,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gpt-5-pro",
+        "name": "GPT-5 Pro",
+        "provider": "OpenAI",
+        "input": 15,
+        "output": 120,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "o3-pro",
+        "name": "o3 Pro",
+        "provider": "OpenAI",
+        "input": 20,
+        "output": 80,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "claude-fable-5",
+        "name": "Claude Fable 5",
+        "provider": "Anthropic",
+        "input": 10,
+        "output": 50,
+        "source": "Anthropic (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "gpt-5.6-sol",
+        "name": "GPT-5.6 Sol",
+        "provider": "OpenAI",
+        "input": 5,
+        "output": 30,
+        "source": "OpenAI (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "gpt-5.5",
+        "name": "GPT-5.5",
+        "provider": "OpenAI",
+        "input": 5,
+        "output": 30,
+        "source": "OpenAI (official)",
+        "checked": "2026-11-14 06:55:29"
+      }
+    ],
+    "ratio": 6000,
+    "medianOutput": 7.5,
+    "medianInput": 1.25,
+    "bands": [
+      {
+        "label": "Under $1",
+        "count": 17
+      },
+      {
+        "label": "$1 to under $5",
+        "count": 12
+      },
+      {
+        "label": "$5 to under $15",
+        "count": 17
+      },
+      {
+        "label": "$15 to under $50",
+        "count": 13
+      },
+      {
+        "label": "$50 and over",
+        "count": 6
+      }
+    ],
+    "all": [
+      {
+        "id": "mistral-nemo",
+        "name": "Mistral Nemo",
+        "provider": "Mistral",
+        "input": 0.029,
+        "output": 0.03,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "llama-3.1-8b",
+        "name": "Llama 3.1 8B Instruct",
+        "provider": "Meta",
+        "input": 0.02,
+        "output": 0.04,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "phi-4",
+        "name": "Phi 4",
+        "provider": "Microsoft",
+        "input": 0.07,
+        "output": 0.14,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "nova-micro",
+        "name": "Nova Micro 1.0",
+        "provider": "Amazon",
+        "input": 0.035,
+        "output": 0.14,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "command-r7b",
+        "name": "Command R7B (12-2024)",
+        "provider": "Cohere",
+        "input": 0.038,
+        "output": 0.15,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "reka-flash-3",
+        "name": "Reka Flash 3",
+        "provider": "Reka",
+        "input": 0.1,
+        "output": 0.2,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "nova-lite",
+        "name": "Nova Lite 1.0",
+        "provider": "Amazon",
+        "input": 0.06,
+        "output": 0.24,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "llama-4-scout",
+        "name": "Llama 4 Scout",
+        "provider": "Meta",
+        "input": 0.1,
+        "output": 0.3,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gpt-5-nano",
+        "name": "GPT-5 Nano",
+        "provider": "OpenAI",
+        "input": 0.05,
+        "output": 0.4,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gpt-4.1-nano",
+        "name": "GPT-4.1 Nano",
+        "provider": "OpenAI",
+        "input": 0.1,
+        "output": 0.4,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gemini-2.5-flash-lite",
+        "name": "Gemini 2.5 Flash Lite",
+        "provider": "Google",
+        "input": 0.1,
+        "output": 0.4,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "qwen-2.5-72b",
+        "name": "Qwen2.5 72B Instruct",
+        "provider": "Alibaba",
+        "input": 0.36,
+        "output": 0.4,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "mistral-small-3.1",
+        "name": "Mistral Small 3.1 24B",
+        "provider": "Mistral",
+        "input": 0.351,
+        "output": 0.555,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gpt-4o-mini",
+        "name": "GPT-4o-mini (2024-07-18)",
+        "provider": "OpenAI",
+        "input": 0.15,
+        "output": 0.6,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "command-r",
+        "name": "Command R (08-2024)",
+        "provider": "Cohere",
+        "input": 0.15,
+        "output": 0.6,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "llama-3.3-70b",
+        "name": "Llama 3.3 70B Instruct",
+        "provider": "Meta",
+        "input": 0.71,
+        "output": 0.71,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "llama-3.1-70b",
+        "name": "Llama 3.1 70B Instruct",
+        "provider": "Meta",
+        "input": 0.72,
+        "output": 0.72,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "qwen-2.5-coder-32b",
+        "name": "Qwen2.5 Coder 32B Instruct",
+        "provider": "Alibaba",
+        "input": 0.66,
+        "output": 1,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "llama-4-maverick",
+        "name": "Llama 4 Maverick",
+        "provider": "Meta",
+        "input": 0.35,
+        "output": 1,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "sonar",
+        "name": "Sonar",
+        "provider": "Perplexity",
+        "input": 1,
+        "output": 1,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "deepseek-v3",
+        "name": "DeepSeek V3",
+        "provider": "DeepSeek",
+        "input": 0.257,
+        "output": 1.029,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "deepseek-v3.2",
+        "name": "DeepSeek V3 0324",
+        "provider": "DeepSeek",
+        "input": 0.29,
+        "output": 1.14,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gpt-5.4-nano",
+        "name": "GPT-5.4 Nano",
+        "provider": "OpenAI",
+        "input": 0.2,
+        "output": 1.25,
+        "source": "OpenAI (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "gpt-4.1-mini",
+        "name": "GPT-4.1 Mini",
+        "provider": "OpenAI",
+        "input": 0.4,
+        "output": 1.6,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "mistral-large-4-0",
+        "name": "Mistral Large 4",
+        "provider": "Mistral",
+        "input": 0.7,
+        "output": 2.1,
+        "source": "Vendor (official, checked 2026-11-13)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "gemini-2.5-flash",
+        "name": "Gemini 2.5 Flash",
+        "provider": "Google",
+        "input": 0.3,
+        "output": 2.5,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gemini-3.5-flash-lite",
+        "name": "Gemini 3.5 Flash-Lite",
+        "provider": "Google",
+        "input": 0.3,
+        "output": 2.5,
+        "source": "Google AI (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "nova-pro",
+        "name": "Nova Pro 1.0",
+        "provider": "Amazon",
+        "input": 0.8,
+        "output": 3.2,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gpt-5.4-mini",
+        "name": "GPT-5.4 Mini",
+        "provider": "OpenAI",
+        "input": 0.75,
+        "output": 4.5,
+        "source": "OpenAI (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "claude-haiku-4.5",
+        "name": "Claude Haiku 4.5",
+        "provider": "Anthropic",
+        "input": 1,
+        "output": 5,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "mistral-large-3",
+        "name": "Mistral Large",
+        "provider": "Mistral",
+        "input": 2,
+        "output": 6,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gpt-5.6-luna",
+        "name": "GPT-5.6 Luna",
+        "provider": "OpenAI",
+        "input": 1,
+        "output": 6,
+        "source": "OpenAI (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "gemini-3.6-flash",
+        "name": "Gemini 3.6 Flash",
+        "provider": "Google",
+        "input": 1.5,
+        "output": 7.5,
+        "source": "Google AI (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "gemini-nano-banana-2.1",
+        "name": "Nano Banana 2.1",
+        "provider": "Google",
+        "input": 1.5,
+        "output": 7.5,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "o3",
+        "name": "o3",
+        "provider": "OpenAI",
+        "input": 2,
+        "output": 8,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gpt-4.1",
+        "name": "GPT-4.1",
+        "provider": "OpenAI",
+        "input": 2,
+        "output": 8,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gemini-3.5-flash",
+        "name": "Gemini 3.5 Flash",
+        "provider": "Google",
+        "input": 1.5,
+        "output": 9,
+        "source": "Google AI (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "gemini-omni-1.1-flash",
+        "name": "Gemini Omni 1.1 Flash",
+        "provider": "Google",
+        "input": 1.5,
+        "output": 9,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gemini-omni-1.2-flash",
+        "name": "Gemini Omni 1.2 Flash",
+        "provider": "Google",
+        "input": 1.5,
+        "output": 9,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gpt-5",
+        "name": "GPT-5",
+        "provider": "OpenAI",
+        "input": 1.25,
+        "output": 10,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gemini-2.5-pro",
+        "name": "Gemini 2.5 Pro Preview 06-05",
+        "provider": "Google",
+        "input": 1.25,
+        "output": 10,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "command-a",
+        "name": "Command A",
+        "provider": "Cohere",
+        "input": 2.5,
+        "output": 10,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "command-r-plus",
+        "name": "Command R+ (08-2024)",
+        "provider": "Cohere",
+        "input": 2.5,
+        "output": 10,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "claude-sonnet-5",
+        "name": "Claude Sonnet 5",
+        "provider": "Anthropic",
+        "input": 2,
+        "output": 10,
+        "source": "Anthropic (official, introductory through 2026-08-31)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "gemini-4-argon",
+        "name": "Gemini 4 Argon",
+        "provider": "Google",
+        "input": 2,
+        "output": 10,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gpt-5.2",
+        "name": "GPT-5.2",
+        "provider": "OpenAI",
+        "input": 1.75,
+        "output": 14,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "claude-sonnet-4.6",
+        "name": "Claude Sonnet 4.6",
+        "provider": "Anthropic",
+        "input": 3,
+        "output": 15,
+        "source": "Anthropic (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "claude-sonnet-4.5",
+        "name": "Claude Sonnet 4.5",
+        "provider": "Anthropic",
+        "input": 3,
+        "output": 15,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gpt-4o",
+        "name": "GPT-4o (2024-05-13)",
+        "provider": "OpenAI",
+        "input": 5,
+        "output": 15,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gpt-5.4",
+        "name": "GPT-5.4",
+        "provider": "OpenAI",
+        "input": 2.5,
+        "output": 15,
+        "source": "OpenAI (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "gpt-5.6-terra",
+        "name": "GPT-5.6 Terra",
+        "provider": "OpenAI",
+        "input": 2.5,
+        "output": 15,
+        "source": "OpenAI (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "muse-wonder",
+        "name": "Muse Wonder",
+        "provider": "Meta",
+        "input": 4,
+        "output": 20,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "claude-opus-4.6",
+        "name": "Claude Opus 4.6",
+        "provider": "Anthropic",
+        "input": 5,
+        "output": 25,
+        "source": "Anthropic (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "claude-opus-4.5",
+        "name": "Claude Opus 4.5",
+        "provider": "Anthropic",
+        "input": 5,
+        "output": 25,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "claude-opus-4.7",
+        "name": "Claude Opus 4.7",
+        "provider": "Anthropic",
+        "input": 5,
+        "output": 25,
+        "source": "Anthropic (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "claude-opus-4.8",
+        "name": "Claude Opus 4.8",
+        "provider": "Anthropic",
+        "input": 5,
+        "output": 25,
+        "source": "Anthropic (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "claude-opus-5",
+        "name": "Claude Opus 5",
+        "provider": "Anthropic",
+        "input": 5,
+        "output": 25,
+        "source": "Anthropic (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "gpt-5.5",
+        "name": "GPT-5.5",
+        "provider": "OpenAI",
+        "input": 5,
+        "output": 30,
+        "source": "OpenAI (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "gpt-5.6-sol",
+        "name": "GPT-5.6 Sol",
+        "provider": "OpenAI",
+        "input": 5,
+        "output": 30,
+        "source": "OpenAI (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "claude-fable-5",
+        "name": "Claude Fable 5",
+        "provider": "Anthropic",
+        "input": 10,
+        "output": 50,
+        "source": "Anthropic (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "o3-pro",
+        "name": "o3 Pro",
+        "provider": "OpenAI",
+        "input": 20,
+        "output": 80,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gpt-5-pro",
+        "name": "GPT-5 Pro",
+        "provider": "OpenAI",
+        "input": 15,
+        "output": 120,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gpt-5.2-pro",
+        "name": "GPT-5.2 Pro",
+        "provider": "OpenAI",
+        "input": 21,
+        "output": 168,
+        "source": "openrouter.ai/api/v1/models",
+        "checked": "2026-11-14 06:55:28"
+      },
+      {
+        "id": "gpt-5.4-pro",
+        "name": "GPT-5.4 Pro",
+        "provider": "OpenAI",
+        "input": 30,
+        "output": 180,
+        "source": "OpenAI (official)",
+        "checked": "2026-11-14 06:55:29"
+      },
+      {
+        "id": "gpt-5.5-pro",
+        "name": "GPT-5.5 Pro",
+        "provider": "OpenAI",
+        "input": 30,
+        "output": 180,
+        "source": "OpenAI (official)",
+        "checked": "2026-11-14 06:55:29"
+      }
+    ]
+  },
+  "outputInputRatio": {
+    "series": [
+      {
+        "period": "2024 H2",
+        "n": 31,
+        "median": 3,
+        "atLeast5x": 5,
+        "min": 1,
+        "max": 7.444444444444445
+      },
+      {
+        "period": "2025 H1",
+        "n": 47,
+        "median": 4,
+        "atLeast5x": 10,
+        "min": 1,
+        "max": 8.333333333333334
+      },
+      {
+        "period": "2025 H2",
+        "n": 49,
+        "median": 5,
+        "atLeast5x": 28,
+        "min": 0.8,
+        "max": 12.222222222222223
+      },
+      {
+        "period": "2026 H1",
+        "n": 60,
+        "median": 5,
+        "atLeast5x": 35,
+        "min": 1,
+        "max": 971.4285714285713
+      },
+      {
+        "period": "2026 H2",
+        "n": 51,
+        "median": 5,
+        "atLeast5x": 36,
+        "min": 1.95,
+        "max": 83.33333333333333
+      }
+    ]
+  }
+}

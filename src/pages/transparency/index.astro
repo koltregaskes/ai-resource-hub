@@ -1,0 +1,307 @@
+---
+import { readFileSync, existsSync } from 'node:fs';
+import path from 'node:path';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { serializeJsonLd } from '../../lib/json-ld';
+import { sources, calculations, stateLabels, termsLabels, REVIEWED, type SourceState } from '../../data/transparency';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+function readCache<T>(name: string, fallback: T): T {
+  const file = path.join(process.cwd(), 'data', 'pg-cache', name);
+  if (!existsSync(file)) return fallback;
+  try {
+    return JSON.parse(readFileSync(file, 'utf8')) as T;
+  } catch {
+    return fallback;
+  }
+}
+
+interface ScrapeRow {
+  scraper: string;
+  status: string;
+  models_updated: number;
+  finished_at: string;
+}
+
+const meta = readCache<{ generated_at?: string }>('_meta.json', {});
+const scrapeLog = readCache<ScrapeRow[]>('scrape_log.json', []);
+const lastRun = new Map<string, ScrapeRow>();
+for (const row of scrapeLog) {
+  const seen = lastRun.get(row.scraper);
+  if (!seen || row.finished_at > seen.finished_at) lastRun.set(row.scraper, row);
+}
+
+const fmtDate = (iso: string) =>
+  new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const fmtDateTime = (value: string) => {
+  const d = new Date(value.includes('T') ? value : `${value.replace(' ', 'T')}Z`);
+  return `${d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' })}, ${d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'UTC' })} UTC`;
+};
+
+/** Last logged run for a source's collector(s). A run is not proof the data changed. */
+function lastRunFor(collector?: string): string | null {
+  if (!collector) return null;
+  const rows = collector
+    .split(',')
+    .map((c) => lastRun.get(c.trim()))
+    .filter((r): r is ScrapeRow => Boolean(r));
+  if (rows.length === 0) return null;
+  const newest = rows.sort((a, b) => (a.finished_at < b.finished_at ? 1 : -1))[0];
+  return fmtDateTime(newest.finished_at);
+}
+
+const toneClass: Record<string, string> = {
+  good: 'bg-(--color-success)/15 text-(--color-success) border-(--color-success)/30',
+  warn: 'bg-(--color-warning)/15 text-(--color-warning) border-(--color-warning)/30',
+  bad: 'bg-(--color-danger)/15 text-(--color-danger) border-(--color-danger)/30',
+  muted: 'bg-(--color-bg-tertiary) text-(--color-text-muted) border-(--color-border)',
+};
+
+const order: SourceState[] = ['live', 'hand-entered', 'stale', 'on-hold', 'not-collected'];
+const counts = order.map((state) => ({ state, n: sources.filter((s) => s.state === state).length }));
+const articleCalcs = calculations.filter((c) => c.group === 'articles');
+const siteCalcs = calculations.filter((c) => c.group === 'site');
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Transparency: sources, terms and formulas',
+  dateModified: REVIEWED,
+  publisher: { '@type': 'Organization', name: 'The AI Resource Hub' },
+};
+---
+
+<BaseLayout
+  title="Transparency: every source and every formula - The AI Resource Hub"
+  description="Every data source The AI Resource Hub uses, how each is collected, where its terms stand, when it last refreshed, and the formula behind every number we calculate."
+>
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb"> <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Transparency</span>
+    </nav>
+
+    <header class="mb-10">
+      <p class="text-[11px] uppercase tracking-[0.28em] text-(--color-accent) mb-3">Transparency</p>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-(--color-text-primary) mb-4 leading-tight">
+        Every source and every formula
+      </h1>
+      <p class="text-lg text-(--color-text-secondary) max-w-3xl leading-relaxed">
+        This page lists where each number on the site comes from, how it gets here, whether the source's terms allow it, and the
+        sum behind anything we work out ourselves. It also lists what is wrong today. Some of our data is typed in by hand, some
+        is out of date, and two sources are being removed.
+      </p>
+      <p class="mt-4 text-sm text-(--color-text-muted)">
+        Last reviewed against the code and the sources: <strong class="text-(--color-text-secondary)">{fmtDate(REVIEWED)}</strong>. {meta.generated_at && (
+          <>
+            {' '}Data on the site was last rebuilt: <strong class="text-(--color-text-secondary)">{fmtDateTime(meta.generated_at)}</strong>.
+          </>
+        )}
+      </p>
+    </header>
+
+    <!-- At a glance -->
+    <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-12">
+      {
+        counts.map(({ state, n }) => (
+          <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-4">
+            <p class="text-3xl font-black text-(--color-text-primary)">{n}</p>
+            <p class="mt-1 text-xs text-(--color-text-secondary) leading-snug">{stateLabels[state].label}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <nav class="mb-12 rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-5 text-sm" aria-label="On this page">
+      <p class="text-[11px] uppercase tracking-[0.22em] text-(--color-text-muted) mb-3">On this page</p>
+      <ol class="grid sm:grid-cols-2 gap-x-8 gap-y-2 list-decimal pl-5 text-(--color-text-secondary)">
+        <li><a class="text-(--color-accent) hover:text-(--color-accent-hover)" href="#known-problems">What is wrong today</a></li>
+        <li><a class="text-(--color-accent) hover:text-(--color-accent-hover)" href="#sources">Sources, terms and refresh times</a></li>
+        <li><a class="text-(--color-accent) hover:text-(--color-accent-hover)" href="#article-figures">Figures in our articles</a></li>
+        <li><a class="text-(--color-accent) hover:text-(--color-accent-hover)" href="#site-figures">Figures on the site</a></li>
+        <li><a class="text-(--color-accent) hover:text-(--color-accent-hover)" href="#rules">The rules we write to</a></li>
+        <li><a class="text-(--color-accent) hover:text-(--color-accent-hover)" href="#corrections">Corrections</a></li>
+      </ol>
+    </nav>
+
+    <!-- Known problems -->
+    <section id="known-problems" class="mb-14 scroll-mt-24">
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">What is wrong today</h2>
+      <p class="text-(--color-text-secondary) mb-5 max-w-3xl leading-relaxed">
+        We found these while writing this page. They are listed first because a reader deserves to see them before the tidy
+        tables.
+      </p>
+      <ul class="space-y-3 text-sm text-(--color-text-secondary) leading-relaxed">
+        <li class="rounded-xl border border-(--color-danger)/30 bg-(--color-danger)/10 p-4">
+          <strong class="text-(--color-text-primary)">Speed figures are about nine months old.</strong> They come from a fixed list
+          recorded between 15 January and 20 February 2026 and are re-saved on every run, so they look current when they are not.
+          The source's terms also restrict our use. They are being removed.
+        </li>
+        <li class="rounded-xl border border-(--color-danger)/30 bg-(--color-danger)/10 p-4">
+          <strong class="text-(--color-text-primary)">Most benchmark scores have no source link.</strong> 300 of 365 were entered
+          without one. Those are held back from rankings until each has a link to where the lab published it.
+        </li>
+        <li class="rounded-xl border border-(--color-warning)/30 bg-(--color-warning)/10 p-4">
+          <strong class="text-(--color-text-primary)">Hand-entered prices can look fresher than they are.</strong> The date beside
+          a lab's list price is the time of our last run, not the last time someone checked the lab's page.
+        </li>
+        <li class="rounded-xl border border-(--color-warning)/30 bg-(--color-warning)/10 p-4">
+          <strong class="text-(--color-text-primary)">Release dates are often listing dates.</strong> For models added through
+          OpenRouter, the date is the day OpenRouter listed the model. That is usually within days of the launch, but not always.
+        </li>
+        <li class="rounded-xl border border-(--color-warning)/30 bg-(--color-warning)/10 p-4">
+          <strong class="text-(--color-text-primary)">Four company job feeds return nothing.</strong> Google DeepMind, Mistral,
+          Runway and Wayve are missing from the jobs data.
+        </li>
+        <li class="rounded-xl border border-(--color-warning)/30 bg-(--color-warning)/10 p-4">
+          <strong class="text-(--color-text-primary)">Price history mixes sources.</strong> A model's history can jump between a
+          lab's list price and a reseller's cheapest price. We do not publish statistics on how often prices change until that is
+          fixed.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Sources -->
+    <section id="sources" class="mb-14 scroll-mt-24">
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Sources, terms and refresh times</h2>
+      <p class="text-(--color-text-secondary) mb-6 max-w-3xl leading-relaxed">
+        "Last run" is the last time our collector ran, read from its log when this page was built. A run does not prove the
+        figure changed, and for hand-entered data it does not prove anyone re-checked the source.
+      </p>
+
+      <div class="space-y-5">
+        {
+          sources.map((s) => {
+            const st = stateLabels[s.state];
+            const run = lastRunFor(s.collector);
+            return (
+              <article id={`source-${s.id}`} class="rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-5 sm:p-6 scroll-mt-24">
+                <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+                  <h3 class="text-lg font-bold text-(--color-text-primary)"> <a href={s.url} rel="noopener" class="hover:text-(--color-accent) transition-colors">{s.name}</a>
+                  </h3>
+                  <div class="flex flex-wrap gap-2">
+                    <span class={`text-xs px-2.5 py-1 rounded-full border font-medium ${toneClass[st.tone]}`}>{st.label}</span>
+                    <span class="text-xs px-2.5 py-1 rounded-full border border-(--color-border) text-(--color-text-secondary)">
+                      {termsLabels[s.terms]}
+                    </span>
+                  </div>
+                </div>
+                <dl class="grid sm:grid-cols-[9rem_1fr] gap-x-4 gap-y-2 text-sm leading-relaxed">
+                  <dt class="text-(--color-text-muted)">What we take</dt>
+                  <dd class="text-(--color-text-secondary)">{s.takes}</dd>
+                  <dt class="text-(--color-text-muted)">How</dt>
+                  <dd class="text-(--color-text-secondary)">{s.how}</dd>
+                  <dt class="text-(--color-text-muted)">Terms</dt>
+                  <dd class="text-(--color-text-secondary)">{s.termsNote}</dd>
+                  <dt class="text-(--color-text-muted)">Refresh</dt>
+                  <dd class="text-(--color-text-secondary)">
+                    {s.cadence}
+                    {run && <span class="text-(--color-text-muted)"> · last run {run}</span>}
+                  </dd>
+                  {s.shownOn.length > 0 && (
+                    <>
+                      <dt class="text-(--color-text-muted)">Shown on</dt>
+                      <dd class="text-(--color-text-secondary)">{s.shownOn.join(', ')}</dd>
+                    </>
+                  )}
+                  {s.caveat && (
+                    <>
+                      <dt class="text-(--color-text-muted)">Caveat</dt>
+                      <dd class="text-(--color-text-primary)">{s.caveat}</dd>
+                    </>
+                  )}
+                </dl>
+              </article>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    <!-- Article figures -->
+    <section id="article-figures" class="mb-14 scroll-mt-24">
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Figures in our articles</h2>
+      <p class="text-(--color-text-secondary) mb-6 max-w-3xl leading-relaxed">
+        Every number we calculate for an article comes from one script, run against a dated copy of our catalogue. The output is
+        saved with the article, so the figures in a piece do not drift after it is published. Anyone can run the script and get
+        the same answers: <code class="px-1.5 py-0.5 rounded bg-(--color-bg-tertiary) text-(--color-text-primary) text-[0.85em]">node scripts/insights/compute-insights.mjs</code>.
+      </p>
+      <div class="space-y-4">
+        {
+          articleCalcs.map((c) => (
+            <article id={c.id} class="rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-5 sm:p-6 scroll-mt-24">
+              <h3 class="text-lg font-bold text-(--color-text-primary) mb-1">{c.name}</h3>
+              <p class="text-sm text-(--color-text-secondary) mb-3">{c.meaning}</p>
+              <p class="rounded-xl bg-(--color-bg-tertiary) p-4 text-sm text-(--color-text-primary) leading-relaxed">{c.formula}</p>
+              <dl class="mt-3 grid sm:grid-cols-[9rem_1fr] gap-x-4 gap-y-1.5 text-sm leading-relaxed">
+                <dt class="text-(--color-text-muted)">Inputs</dt>
+                <dd class="text-(--color-text-secondary)">{c.inputs}</dd>
+                <dt class="text-(--color-text-muted)">Limits</dt>
+                <dd class="text-(--color-text-secondary)">{c.limits}</dd>
+                <dt class="text-(--color-text-muted)">Code</dt>
+                <dd class="text-(--color-text-secondary)"><code class="text-[0.85em]">{c.code}</code></dd>
+              </dl>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Site figures -->
+    <section id="site-figures" class="mb-14 scroll-mt-24">
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Figures on the site</h2>
+      <p class="text-(--color-text-secondary) mb-6 max-w-3xl leading-relaxed">
+        These are the sums behind the scores and percentages on the reference pages. The <a href={`${base}methodology/`} class="text-(--color-accent) hover:text-(--color-accent-hover) underline underline-offset-2">methodology page</a> explains the reasoning; this section gives the arithmetic.
+      </p>
+      <div class="space-y-4">
+        {
+          siteCalcs.map((c) => (
+            <article id={c.id} class="rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-5 sm:p-6 scroll-mt-24">
+              <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+                <h3 class="text-lg font-bold text-(--color-text-primary)">{c.name}</h3>
+                <span class="text-xs text-(--color-text-muted)">Used on: {c.usedOn}</span>
+              </div>
+              <p class="text-sm text-(--color-text-secondary) mb-3">{c.meaning}</p>
+              <p class="rounded-xl bg-(--color-bg-tertiary) p-4 text-sm text-(--color-text-primary) leading-relaxed">{c.formula}</p>
+              <dl class="mt-3 grid sm:grid-cols-[9rem_1fr] gap-x-4 gap-y-1.5 text-sm leading-relaxed">
+                <dt class="text-(--color-text-muted)">Limits</dt>
+                <dd class="text-(--color-text-secondary)">{c.limits}</dd>
+                <dt class="text-(--color-text-muted)">Code</dt>
+                <dd class="text-(--color-text-secondary)"><code class="text-[0.85em]">{c.code}</code></dd>
+              </dl>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Rules -->
+    <section id="rules" class="mb-14 scroll-mt-24">
+      <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">The rules we write to</h2>
+      <ul class="space-y-3 text-(--color-text-secondary) leading-relaxed list-disc pl-6 max-w-3xl">
+        <li>Each claim in an article links to its source and carries a date.</li>
+        <li>A number we calculated links to its formula on this page.</li>
+        <li>Where the data is partial, the article says so next to the number, not in a footnote.</li>
+        <li>A lab's own benchmark score is described as the lab's claim.</li>
+        <li>We do not publish anything built on a source whose terms we have not cleared.</li>
+        <li>We do not invent quotes or figures. If we cannot source it, it does not go in.</li>
+        <li>
+          Articles are drafted with AI help, then checked against the data by a second, separate AI system before they are
+          published. The figures come from the script above, not from a language model's memory.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Corrections -->
+    <section id="corrections" class="rounded-2xl border border-(--color-border-accent) bg-(--color-accent-glow) p-6 scroll-mt-24">
+      <h2 class="text-sm font-semibold text-(--color-accent) mb-2">Found something wrong?</h2>
+      <p class="text-sm text-(--color-text-secondary) leading-relaxed">
+        Open an issue on <a href="https://github.com/koltregaskes/ai-resource-hub/issues" rel="noopener" class="text-(--color-accent) underline underline-offset-2 hover:text-(--color-accent-hover)">GitHub</a> with the page and the figure. We correct the data, note the change here, and fix any article that quoted it. See also the <a href={`${base}collection-policy/`} class="text-(--color-accent) underline underline-offset-2 hover:text-(--color-accent-hover)">collection policy</a>.
+      </p>
+    </section>
+  </section>
+
+  <script type="application/ld+json" set:html={serializeJsonLd(structuredData)} />
+</BaseLayout>
