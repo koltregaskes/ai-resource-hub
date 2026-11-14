@@ -17,7 +17,7 @@ export default defineConfig({
     sitemap({
       // Story pages (/news/YYYY-MM-DD/<slug>/) are reached through editions and
       // the news page; most are noindex because they carry a source's summary.
-      filter: (page) => !page.includes('/go') && !page.includes('/og/') && !/\/news\/\d{4}-\d{2}-\d{2}\//.test(page),
+      filter: (page) => !/^\/go\/?$/.test(new URL(page).pathname) && !page.includes('/og/') && !/\/news\/\d{4}-\d{2}-\d{2}\//.test(page),
       // Hand-built sitemaps listed in sitemap-index.xml alongside the generated one.
       customSitemaps: [
         'https://theairesourcehub.com/news-sitemap.xml',
