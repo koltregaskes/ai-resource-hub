@@ -1,0 +1,29 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import WorkedTable from '../../components/insights/WorkedTable.astro';
+import PractitionerNote from '../../components/insights/PractitionerNote.astro';
+import { practitionerB3 } from '../../data/practitioner-b3';
+import examples from '../../data/insights/2026-11-14-tracking.json';
+const e = practitionerB3[1];
+---
+<InsightArticle title={e.title} description={e.description} date="2026-11-14" type="Analysis" readTime="5 min" standfirst="If yesterday's price came from one host and today's from another, a lower number does not prove either host cut its price. Keep the seller attached to the record.">
+  <p>A tracker shows a model at $2 per million output tokens, then $1. The percentage change is easy: minus 50%. The explanation needs another field. If the first record came from Host A and the second from Host B, the tracker has observed a change in the quoted offer. It has not established a price cut by the model's maker or either seller.</p>
+  <p>These are fictional prices and hosts. We are not reporting a market trend. This is the reason to preserve source continuity before writing a trend article, especially when a catalogue combines direct lab prices with reseller listings.</p>
+  <WorkedTable headers={['Fictional record', 'Seller', 'Output price per million tokens']} rows={examples.prices} caption="Assumed US-dollar rates. Apparent change is −50%, but the seller changes between records. This is not a same-seller price history." />
+  <h2>Define what the price buys</h2>
+  <p>A useful price record names the model version, seller, endpoint, billing unit and service conditions. Keep input and output apart. If a record is for cached input, a batch route or another tier, preserve that distinction rather than replacing the ordinary rate with it.</p>
+  <p>OpenRouter's <a href={e.sources[0].url}>provider-routing documentation</a>, read on 14 November 2026, describes provider and endpoint selection and configurable fallbacks. That means a model identifier alone does not identify a single seller. Save the route used for your comparison, and record the resolved provider when your usage report supplies it.</p>
+  <p>For your own tracker, treat a change in seller or material conditions as a new series unless you have a documented reason to compare it with the old one. You can still show both offers. Label what changed so a reader does not mistake the comparison for one company's pricing history.</p>
+  <h2>Keep three dates apart</h2>
+  <p>Record when you fetched the source, when the source says the rate took effect, and when somebody last verified the interpretation. Those dates can coincide, but they need not. Running the same import again proves that it ran. It does not prove that a hand-entered price was checked against the seller's page.</p>
+  <p>When the source gives no effective date, leave it unknown. A first observation can establish when your tracker saw an offer. It cannot establish the day that offer began. The same caution applies to a missing row: it needs investigation before you call it a retirement or withdrawal.</p>
+  <p>Keep the source URL and the quoted unit with the observation. A bare number becomes hard to audit once it has been converted and rounded. Preserve enough public evidence to reproduce the conversion, without storing credentials, account details or private invoices in a public repository.</p>
+  <h2>Separate a bill estimate from a price history</h2>
+  <p>A bill estimate asks what a specified workload would cost at specified rates. A history asks how a comparable rate changed over time. You can calculate the first with one dated offer. The second needs observations with consistent meaning. Do not make the stronger claim because the charting tool can draw a line between two points.</p>
+  <p>If an application can switch sellers, compare the full candidate routes on the same workload. Record the result quality, elapsed time and actual spend alongside the quoted rate. That is a test of two service configurations. Keep it separate from a statement that a lab made its API cheaper.</p>
+  <p>For a public chart, mark breaks in the series when the source changes. Show missing intervals as missing. A smooth line through an unverified gap implies evidence you do not hold.</p>
+  <h2>What we would require for a price-cut claim</h2>
+  <p>We would want the same model version, seller, unit and relevant conditions on both sides, with dated source evidence. If those fields differ, describe the narrower observation: a different host is cheaper, a new tier exists, or the catalogue now uses a different source.</p>
+  <p>That discipline makes the tracker more useful. A practitioner can see the offer they might use, while a reader following the history can see exactly what the numbers support.</p>
+  <PractitionerNote evidence={e} />
+</InsightArticle>

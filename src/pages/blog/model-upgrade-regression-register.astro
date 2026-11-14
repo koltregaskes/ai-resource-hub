@@ -1,0 +1,29 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import WorkedTable from '../../components/insights/WorkedTable.astro';
+import PractitionerNote from '../../components/insights/PractitionerNote.astro';
+import { practitionerB3 } from '../../data/practitioner-b3';
+import examples from '../../data/insights/2026-11-14-tracking.json';
+const e = practitionerB3[0];
+---
+<InsightArticle title={e.title} description={e.description} date="2026-11-14" type="Explainer" readTime="5 min" standfirst="An upgrade can fix some cases and break others. Keep a paired record of both changes before replacing the model in a working application.">
+  <p>A new model arrives, the provider recommends it and the old endpoint has a retirement date. The migration now has two separate questions: when must you move, and what changes when you do? Put them in separate tracker fields. A deadline makes the test urgent; it does not supply the result.</p>
+  <p>Anthropic's <a href={e.sources[0].url}>deprecation guide</a>, read on 14 November 2026, distinguishes deprecated models that still work from retired models whose requests fail. It also notes that partner-operated platforms can have different schedules. Check the route your application uses rather than borrowing a date from another platform.</p>
+  <h2>Compare the same cases side by side</h2>
+  <p>Start with a fixed set of representative inputs and one acceptance rule. Run the existing configuration and the proposed replacement. Keep the model identifier, route, prompt, settings and date with each result. If the provider requires a prompt or parameter change, record that too: you are then testing a replacement configuration, not only a model swap.</p>
+  <p>The table is an invented paired test of 100 cases. It is deliberately small enough to inspect. Each case has an old result and a new result, then falls into one of four groups.</p>
+  <WorkedTable headers={['Outcome in the fictional paired test', 'Cases']} rows={examples.upgrades} caption="Invented outcomes for 100 fixed cases, one run per candidate. No named model was evaluated." />
+  <p>The old candidate passes {examples.oldPass} cases and the new one {examples.newPass}. That is a change of {examples.netPoints} percentage points. More useful for the migration plan: seven formerly passing cases now fail, while four formerly failing cases improve. Those are different sets of work.</p>
+  <h2>Give a regression a name and an owner</h2>
+  <p>For each lost case, save the input, expected result and what changed. Label the failure in terms of the job: wrong field, missing evidence, invalid tool argument, unfinished answer or unacceptable delay. Avoid vague labels such as “less intelligent”. They give the person fixing the workflow little to act on.</p>
+  <p>Decide which losses block the release. A minor wording change and a wrong amount should not disappear into the same average. Keep the blocking examples visible even if a later run produces a better overall pass rate.</p>
+  <p>Review the gains with the same care. A new answer that merely looks better may still miss the acceptance rule. If you change the rule after seeing it, rerun the earlier candidate under that rule before claiming an improvement.</p>
+  <h2>Separate a prompt repair from a model comparison</h2>
+  <p>If you tune the prompt for the new candidate, preserve the original test result. Call the next run a new configuration and give it a version. Hold back some cases from tuning, then use them to check whether the repair extends beyond the examples you worked on.</p>
+  <p>Repeat important cases when you need to understand variation. One pass or failure on one attempt is an observation, not a guarantee about the next request. Report the repetitions and the outcomes rather than presenting a single favourable answer as a stable capability.</p>
+  <p>Cost belongs in the same record. Compare spend for the complete test, including failed attempts and any recovery. A replacement with a lower token rate may still write more or need more attempts on your task. Measure that behaviour rather than assuming the old token counts will carry across.</p>
+  <h2>Prepare for the retirement date</h2>
+  <p>Keep a migration checklist with the last verified deadline, affected application, replacement configuration and unresolved regressions. Recheck the provider page as the date approaches. An old screenshot can explain your plan, but it cannot establish today's availability.</p>
+  <p>A rollback route is useful only while it remains available. After the old model retires, recovery may need a different provider or a reduced feature set. Decide that route in advance and test the part you intend to rely on. The register should end with a dated decision and evidence, not a model name copied from a release announcement.</p>
+  <PractitionerNote evidence={e} />
+</InsightArticle>
