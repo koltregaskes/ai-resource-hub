@@ -1,0 +1,1 @@
+export function contrastColour(hex: string): string { const rgb=hex.replace('#','').match(/.{2}/g)?.slice(0,3).map(v=>parseInt(v,16)/255);if(!rgb||rgb.length!==3)return '#fff';const values=rgb.map(v=>v<=0.04045?v/12.92:((v+0.055)/1.055)**2.4);return values[0]*0.2126+values[1]*0.7152+values[2]*0.0722>0.179?'#000':'#fff'; }
