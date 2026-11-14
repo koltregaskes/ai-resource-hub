@@ -1,0 +1,163 @@
+{
+  "task_set_version": 1,
+  "note": "Held-out tasks are not in this repository. Only ids, families and file hashes are listed.",
+  "files": [
+    {
+      "name": "families-1-2.json",
+      "sha256": "83df62c601abee67d7aa3fdff2e0d006b182d1299708aaa12656766cf74f543d",
+      "bytes": 56253
+    },
+    {
+      "name": "families-3-4-5.json",
+      "sha256": "05c8e9e6d83fc4419b3ad32a3c06d88c83e7d21271baf2f95293fa41b8f45a0e",
+      "bytes": 80648
+    },
+    {
+      "name": "families-6-7.json",
+      "sha256": "ebcf80857c73f26cbca29602014fae3647e4f0a82ec30d4dcb2fd7f93890f5ca",
+      "bytes": 34770
+    }
+  ],
+  "tasks": [
+    {
+      "id": "f1-ho-01",
+      "family": 1,
+      "answerable": true,
+      "grader": "checklist",
+      "version": 3
+    },
+    {
+      "id": "f1-ho-02",
+      "family": 1,
+      "answerable": true,
+      "grader": "regex",
+      "version": 2
+    },
+    {
+      "id": "f1-ho-03",
+      "family": 1,
+      "answerable": true,
+      "grader": "checklist",
+      "version": 3
+    },
+    {
+      "id": "f2-ho-01",
+      "family": 2,
+      "answerable": true,
+      "grader": "exact",
+      "version": 2
+    },
+    {
+      "id": "f2-ho-02",
+      "family": 2,
+      "answerable": true,
+      "grader": "exact",
+      "version": 2
+    },
+    {
+      "id": "f2-ho-03",
+      "family": 2,
+      "answerable": false,
+      "grader": "abstain",
+      "version": 3
+    },
+    {
+      "id": "f3-ho-01",
+      "family": 3,
+      "answerable": true,
+      "grader": "numeric",
+      "version": 2
+    },
+    {
+      "id": "f3-ho-02",
+      "family": 3,
+      "answerable": true,
+      "grader": "regex",
+      "version": 1
+    },
+    {
+      "id": "f3-ho-03",
+      "family": 3,
+      "answerable": false,
+      "grader": "abstain",
+      "version": 1
+    },
+    {
+      "id": "f4-ho-01",
+      "family": 4,
+      "answerable": true,
+      "grader": "json",
+      "version": 1
+    },
+    {
+      "id": "f4-ho-02",
+      "family": 4,
+      "answerable": true,
+      "grader": "json",
+      "version": 1
+    },
+    {
+      "id": "f4-ho-03",
+      "family": 4,
+      "answerable": true,
+      "grader": "checklist",
+      "version": 2
+    },
+    {
+      "id": "f5-ho-01",
+      "family": 5,
+      "answerable": true,
+      "grader": "checklist",
+      "version": 2
+    },
+    {
+      "id": "f5-ho-02",
+      "family": 5,
+      "answerable": true,
+      "grader": "checklist",
+      "version": 3
+    },
+    {
+      "id": "f5-ho-03",
+      "family": 5,
+      "answerable": true,
+      "grader": "checklist",
+      "version": 2
+    },
+    {
+      "id": "f6-ho-01",
+      "family": 6,
+      "answerable": true,
+      "grader": "json",
+      "version": 1
+    },
+    {
+      "id": "f6-ho-02",
+      "family": 6,
+      "answerable": true,
+      "grader": "json",
+      "version": 2
+    },
+    {
+      "id": "f7-ho-01",
+      "family": 7,
+      "answerable": true,
+      "grader": "formula",
+      "version": 2
+    },
+    {
+      "id": "f7-ho-02",
+      "family": 7,
+      "answerable": true,
+      "grader": "python_tests",
+      "version": 1
+    },
+    {
+      "id": "f7-ho-03",
+      "family": 7,
+      "answerable": true,
+      "grader": "python_tests",
+      "version": 1
+    }
+  ]
+}
