@@ -29,7 +29,7 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
 
 | # | Family | What it tests | Active | Public | Held-out | Graded by |
 |---|---|---|---|---|---|---|
-| 1 | Follow the exact brief | Length limits, a required format, "don't mention X", several instructions at once | 10 | 7 | 3 | Script |
+| 1 | Follow the exact brief | Length limits, a required format, "don't mention X", several instructions at once | 10 | 7 | 3 | Script, plus a judged check where a rule is about meaning |
 | 2 | Know, check or abstain | Short factual questions with one stable answer, UK-leaning, plus questions with no knowable answer | 10 | 7 | 3 | Script |
 | 3 | Grounded answer only | Answering from a supplied document only; some questions can't be answered from it | 8 | 5 | 3 | Script |
 | 4 | Summarise and extract | Fields from a receipt or letter; meeting notes into actions; summarising 2 to 3 pages | 8 | 5 | 3 | Script for extraction; checklist for summaries |
@@ -163,9 +163,12 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
 - Each grader is unit-tested with accepted, rejected, abstaining and malformed samples before any model run.
 - A script check's verdict is final. It never goes to a judge.
 
-### Checklist graders (summaries and rewrites: 10 tasks in task set v1)
+### Checklist graders (any task with a rule about meaning)
 
-- Each task has 4 to 8 pass/fail checks. Script-checkable ones are done by script; the rest are "model-judged checks".
+- **Which tasks:** the summaries and rewrites in families 4 and 5, and any family 1 task with a rule a script can't decide, such as "give no reason for the absence" or "say that proof of address is required". The exact count is whatever the admitted task set contains; it's printed in the pre-flight.
+- **Why family 1 is included:** two rounds of independent checking showed that a script-only grader for free text always leaves a wording that slips through. A banned idea can be phrased endlessly many ways. So a script checks everything it can decide (lengths, fixed lines, required strings), and a judged check covers the meaning.
+- Each task has pass/fail checks, usually 4 to 8, more where many separate facts are required. Script-checkable ones are done by script; the rest are "model-judged checks".
+- A judged check is one yes/no statement about the answer, worded so that "yes" means the answer is good, and closed enough that a careful reader with the prompt can decide it.
 - **Judge panel:** two judge models from two different labs, named in the run config with their settings. No answer is judged only by a model from its own lab.
 - **One call per judge per answer,** returning a JSON verdict with one true or false and a one-line reason per check.
 - **A model-judged check passes** only if both judges pass it. Disagreement marks the check `disputed`, which counts as failed in the main score.
@@ -173,7 +176,7 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
 - **Dispute rate** = disputed model-judged checks ÷ all model-judged checks, published per model, with the score recomputed excluding disputed checks shown beside it as a sensitivity figure.
 - **Judge failures aren't the model's failures.** A malformed verdict or a judge timeout is retried once. If it still fails, the check is `judge_unresolved`, and the slot's pass is left **pending**. A run with pending slots isn't published until the judging is completed.
 - **Judge qualification, before the first run:**
-  - 40 sample answers to checklist tasks, each with a reference verdict (true or false) for every model-judged check, written and frozen before any judge sees them;
+  - at least 4 sample answers for every checklist task that has a judged check, each with a reference verdict (true or false) for every model-judged check, written and frozen before any judge sees them;
   - **balanced at the item level:** across the set, at least 40% of the reference item verdicts are false and at least 40% are true;
   - agreement is measured per checklist item;
   - a judge needs at least 90% agreement overall, at least 85% on the items whose reference is true, and at least 85% on the items whose reference is false. A judge that always says true therefore fails.
@@ -250,7 +253,7 @@ Used only when the script's pattern list can't tell whether a reply is `answered
 - **The 15% is a planning allowance, not a guarantee.** If retries run above it, the per-request reservation still stops spending at the cap, and the run ends as "interrupted by cap", with its unstarted slots listed. We accept that risk in exchange for not reserving three requests for every slot. An interrupted run isn't published as a result.
   - Why the default limit is 4,096: the first review put four OpenAI models at about $101 worst case at 8,192 output tokens, above the $90 cap before judges or retries.
 - **Canary first:** the first paid step is 2 public tasks per model with 1 repeat, inside the same ledger and counted in the pre-flight figures above, with its permitted retries. It isn't a result and isn't published. The adapters, usage fields, finish reasons and charges are reviewed before the full run starts.
-- **Judging:** 10 tasks × 3 slots × 2 judges per model, plus 80 qualification calls, all reserved the same way. Judge cost is reported separately from model cost.
+- **Judging:** every checklist task with a judged check × 3 slots × 2 judges per model, plus the qualification calls, all reserved the same way. The pre-flight counts them from the admitted task set. Judge cost is reported separately from model cost.
 - **Order:** every call that spends OpenAI credit finishes before 20 Nov 2026, including OpenAI judging of Anthropic answers. So the Anthropic model runs that need an OpenAI judge are scheduled before that date too.
 
 ## Keys and safety
@@ -310,4 +313,5 @@ Used only when the script's pattern list can't tell whether a reply is `answered
     - the bootstrap names its generator, sampling order and interpolation, and the degenerate rule is corrected;
     - the 15% retry figure is a planning allowance, with the absolute bound printed, and the canary is in the pre-flight;
     - a new "Run records" section covers ids, staging, finalising and amendments, with token accounting and timing conventions.
+13. **After two rounds of task checking (koltregaskes/ai-resource-hub#126):** family 1 tasks may carry judged checks for rules about meaning, because script-only grading of free text kept leaving loopholes. The judging count and the qualification set now follow the admitted task set, not a fixed number.
 11. **Added after checking the first candidate tasks:** a default output limit of 4,096 (so the worst case fits the caps), retries reserved only when dispatched, a canary stage before the full run, the floor quota, and no abstention hints in unanswerable tasks.
