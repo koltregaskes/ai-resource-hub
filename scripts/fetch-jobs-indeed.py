@@ -1,16 +1,15 @@
 """Public source only; writes a candidate for review, never pushes or publishes."""
 import datetime, hashlib, json, subprocess, sys, tempfile, urllib.request
 from pathlib import Path
+from lib.indeed_source import source_revision
 def fetch(url):
     request=urllib.request.Request(url,headers={'User-Agent':'AIRH-source-review/1.0'})
     with urllib.request.urlopen(request,timeout=60) as response: return response.read()
-api='https://api.github.com/repos/hiring-lab/ai-tracker/'
-head=json.loads(fetch(api+'commits/main'))
-commit=head['sha']; vintage=head['commit']['committer']['date'][:10]
+head,commit,vintage=source_revision(fetch)
 checked='bca9fe5176050c03643b86989669778ef671454a'
 for file in ['README.md','LICENSE']:
     original=fetch(f'https://raw.githubusercontent.com/hiring-lab/ai-tracker/{checked}/{file}')
-    current=fetch(f'https://raw.githubusercontent.com/hiring-lab/ai-tracker/{commit}/{file}')
+    current=fetch(f'https://raw.githubusercontent.com/hiring-lab/ai-tracker/{head}/{file}')
     if original!=current: raise RuntimeError(f'{file} changed: rights/method review required')
 today=datetime.datetime.now(datetime.timezone.utc).date().isoformat()
 output=Path(f'data/ai-and-jobs/{today}.json')

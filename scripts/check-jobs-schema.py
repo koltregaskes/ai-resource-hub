@@ -27,3 +27,14 @@ subprocess.run(base+['2026-11-08','2026-11-16',str(third),str(second)],check=Tru
 assert len(json.loads(third.read_text())['jobs_observations'])==4
 subprocess.run(['node','scripts/validate-ai-and-jobs.mjs',str(third),str(second)],check=True)
 print('Repeated fetch preserves observations; new vintage appends without overwriting')
+from lib.indeed_source import source_revision
+calls=[]
+def fake_fetch(url):
+    calls.append(url)
+    if url.endswith('commits/main'):
+        return json.dumps({'sha':'a'*40,'commit':{'committer':{'date':'2026-11-14T12:00:00Z'}}}).encode()
+    assert 'path=AI_posting.csv&sha='+('a'*40)+'&per_page=1' in url
+    return json.dumps([{'sha':'b'*40,'commit':{'committer':{'date':'2026-10-08T13:08:41Z'}}}]).encode()
+assert source_revision(fake_fetch)==('a'*40,'b'*40,'2026-10-08')
+assert len(calls)==2
+print('Unrelated upstream HEAD changes cannot refresh the CSV source vintage')
