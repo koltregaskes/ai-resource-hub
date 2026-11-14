@@ -1,16 +1,433 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-14T15:55:53.223Z",
+  "generatedAt": "2026-11-14T17:04:52.709Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
-    "totalReleases": 61,
-    "highPriority": 5,
-    "readyForEditor": 17,
-    "officiallyVerified": 29,
-    "watchOnly": 32,
+    "totalReleases": 63,
+    "highPriority": 10,
+    "readyForEditor": 21,
+    "officiallyVerified": 34,
+    "watchOnly": 29,
     "openSource": 5
   },
   "releases": [
+    {
+      "id": "gemini-4-hydrogen",
+      "fileSlug": "2026-11-12-gemini-4-hydrogen-release-brief",
+      "modelName": "Gemini 4 Hydrogen",
+      "providerId": "google",
+      "providerName": "Google",
+      "providerColour": "#4285f4",
+      "releaseDate": "2026-11-12",
+      "releaseDateLabel": "12 Nov 2026",
+      "ageDays": 2,
+      "status": "active",
+      "fieldStates": {
+        "context_window": "verified",
+        "max_output": "verified",
+        "input_price": "verified",
+        "output_price": "verified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "official",
+      "priority": "high",
+      "draftStatus": "ready_for_editor",
+      "officialUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      "providerStatusUrl": "https://status.cloud.google.com",
+      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
+      "openSource": false,
+      "openSourceState": "unreviewed",
+      "apiAvailable": true,
+      "apiAvailableState": "unreviewed",
+      "modality": "text,vision,audio,video",
+      "contextWindow": 1000000,
+      "contextWindowState": "verified",
+      "maxOutput": 1000000,
+      "maxOutputState": "verified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": 1.5,
+      "inputPriceState": "verified",
+      "outputPrice": 7.5,
+      "outputPriceState": "verified",
+      "pricingSource": "Google (official, checked 2026-11-14)",
+      "pricingUpdated": "2026-11-14",
+      "summary": "Gemini 4 Hydrogen is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Officially checked 2026-11-14. USD 1.50 input / 7.50 output per million tokens, flat across the 1M context window. Up to 1M output tokens. Provider benchmark claims are not independent rankings; no benchmark score imported. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Google's Gemini 4 Hydrogen is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Google actually launched with Gemini 4 Hydrogen, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 12 Nov 2026 and should be framed against the models it is replacing or competing with."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Google’s new Gemini model is better at understanding complicated questions",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
+          "source": "The Verge",
+          "date": "2026-11-12",
+          "summary": "Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including \"questions with multiple parts, hard-to-understand typos, or highly specific requests.\" The new model can break down your questions and address each part in its responses. It's available starting today in search,…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Google&#8217;s latest Search upgrade promises better answers to your most complicated questions",
+          "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
+          "source": "TechCrunch",
+          "date": "2026-11-12",
+          "summary": "Powered by Gemini 4 Hydrogen, Google's AI Mode is getting better at understanding complex queries, surfacing relevant links, and delivering richer visual responses.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+          "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+          "source": "Google",
+          "date": "2026-11-12",
+          "summary": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive responses.",
+          "routingTags": [
+            "model_release"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-12-gemini-4-hydrogen-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 3,
+      "sourceCount": 4
+    },
+    {
+      "id": "qwen4-max-preview",
+      "fileSlug": "2026-11-11-qwen4-max-preview-release-brief",
+      "modelName": "Qwen4-Max-Preview",
+      "providerId": "alibaba",
+      "providerName": "Alibaba",
+      "providerColour": "#ff6a00",
+      "releaseDate": "2026-11-11",
+      "releaseDateLabel": "11 Nov 2026",
+      "ageDays": 3,
+      "status": "preview",
+      "fieldStates": {
+        "context_window": "verified",
+        "max_output": "verified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "official",
+      "priority": "high",
+      "draftStatus": "needs_research",
+      "officialUrl": "https://docs.qwencloud.com/changelog/models",
+      "providerStatusUrl": null,
+      "providerDocsUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "openSource": false,
+      "openSourceState": "unreviewed",
+      "apiAvailable": true,
+      "apiAvailableState": "unreviewed",
+      "modality": "text,vision,video",
+      "contextWindow": 1000000,
+      "contextWindowState": "verified",
+      "maxOutput": 393216,
+      "maxOutputState": "verified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Qwen4-Max-Preview is a preview-stage release from Alibaba. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Officially checked 2026-11-14. Preview via Token Plan only. 1M context and 393,216 maximum thinking plus output tokens; not a standalone visible-output allowance. No global token price asserted. Specifications: https://www.alibabacloud.com/help/en/model-studio/text-generation-model A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Alibaba's Qwen4-Max-Preview is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Preview status means the launch narrative matters before long-run benchmark coverage is complete.",
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+      ],
+      "checklist": [
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Alibaba actually launched with Qwen4-Max-Preview, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Keep the chronology explicit: this release landed on 11 Nov 2026 and should be framed against the models it is replacing or competing with."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [],
+      "draftPath": "editorial/release-drafts/2026-11-11-qwen4-max-preview-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 0,
+      "sourceCount": 1
+    },
+    {
+      "id": "gemini-4-carbon",
+      "fileSlug": "2026-11-10-gemini-4-carbon-release-brief",
+      "modelName": "Gemini 4 Carbon",
+      "providerId": "google",
+      "providerName": "Google",
+      "providerColour": "#4285f4",
+      "releaseDate": "2026-11-10",
+      "releaseDateLabel": "10 Nov 2026",
+      "ageDays": 4,
+      "status": "active",
+      "fieldStates": {
+        "context_window": "verified",
+        "max_output": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "official",
+      "priority": "high",
+      "draftStatus": "ready_for_editor",
+      "officialUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+      "providerStatusUrl": "https://status.cloud.google.com",
+      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
+      "openSource": false,
+      "openSourceState": "unreviewed",
+      "apiAvailable": true,
+      "apiAvailableState": "unreviewed",
+      "modality": "text,vision,audio,video",
+      "contextWindow": 1000000,
+      "contextWindowState": "verified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Gemini 4 Carbon is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Officially checked 2026-11-14. General paid API rollout on 10 November follows restricted Fairwind access on 28 October. Introductory USD 2 input / 10 output per million tokens is conditional and excluded from unqualified price comparisons. Combined input/output context up to 1M; no standalone maximum output asserted. https://deepmind.google/models/model-cards/gemini-4-carbon/ A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Google's Gemini 4 Carbon is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Google actually launched with Gemini 4 Carbon, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 10 Nov 2026 and should be framed against the models it is replacing or competing with."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Google Cloud launches Gemini for healthcare.",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+          "source": "Google",
+          "date": "2026-11-10",
+          "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
+          "routingTags": [
+            "model_release"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-10-gemini-4-carbon-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 1,
+      "sourceCount": 2
+    },
+    {
+      "id": "claude-fable-5.2",
+      "fileSlug": "2026-11-09-claude-fable-5-2-release-brief",
+      "modelName": "Claude Fable 5.2",
+      "providerId": "anthropic",
+      "providerName": "Anthropic",
+      "providerColour": "#d97706",
+      "releaseDate": "2026-11-09",
+      "releaseDateLabel": "9 Nov 2026",
+      "ageDays": 5,
+      "status": "active",
+      "fieldStates": {
+        "context_window": "verified",
+        "max_output": "verified",
+        "input_price": "verified",
+        "output_price": "verified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "official",
+      "priority": "high",
+      "draftStatus": "ready_for_editor",
+      "officialUrl": "https://platform.claude.com/docs/en/models/fable-5-2/overview",
+      "providerStatusUrl": "https://status.claude.com",
+      "providerDocsUrl": "https://docs.anthropic.com",
+      "openSource": false,
+      "openSourceState": "unreviewed",
+      "apiAvailable": true,
+      "apiAvailableState": "unreviewed",
+      "modality": "text,vision",
+      "contextWindow": 1000000,
+      "contextWindowState": "verified",
+      "maxOutput": 128000,
+      "maxOutputState": "verified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": 8,
+      "inputPriceState": "verified",
+      "outputPrice": 40,
+      "outputPriceState": "verified",
+      "pricingSource": "Anthropic (official, checked 2026-11-14; standard mode)",
+      "pricingUpdated": "2026-11-14",
+      "summary": "Claude Fable 5.2 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $8.00 in / $40.00 out per million tokens. Officially checked 2026-11-14. Standard mode USD 8 input / 40 output per million tokens; optional fast mode is USD 16 / 80. Specifications: https://platform.claude.com/docs/en/models/fable-5-2/overview. Announcement: https://www.anthropic.com/claude-fable-and-mythos-5-2. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Anthropic's Claude Fable 5.2 is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Anthropic actually launched with Claude Fable 5.2, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 9 Nov 2026 and should be framed against the models it is replacing or competing with."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+          "source": "The Verge",
+          "date": "2026-11-13",
+          "summary": "Normally, the products I test don't offer to help me write up my experience with them. Duet is different. Claude Duet is Anthropic's AI agent for consumers, the latest attempt by an AI company to try to convince us that agents can be useful for people who don't write code. It's been an interesting couple [&#8230;]",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-09-claude-fable-5-2-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 1,
+      "sourceCount": 2
+    },
+    {
+      "id": "claude-mythos-5.2",
+      "fileSlug": "2026-11-09-claude-mythos-5-2-release-brief",
+      "modelName": "Claude Mythos 5.2",
+      "providerId": "anthropic",
+      "providerName": "Anthropic",
+      "providerColour": "#d97706",
+      "releaseDate": "2026-11-09",
+      "releaseDateLabel": "9 Nov 2026",
+      "ageDays": 5,
+      "status": "tracking",
+      "fieldStates": {
+        "context_window": "verified",
+        "max_output": "verified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "official",
+      "priority": "high",
+      "draftStatus": "ready_for_editor",
+      "officialUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "providerStatusUrl": "https://status.claude.com",
+      "providerDocsUrl": "https://docs.anthropic.com",
+      "openSource": false,
+      "openSourceState": "unreviewed",
+      "apiAvailable": true,
+      "apiAvailableState": "unreviewed",
+      "modality": "text,vision",
+      "contextWindow": 1000000,
+      "contextWindowState": "verified",
+      "maxOutput": 128000,
+      "maxOutputState": "verified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Claude Mythos 5.2 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Officially checked 2026-11-14. Restricted to verified organizations; not general API availability. Shares Fable 5.2 specifications and USD 8 / 40 standard-mode pricing; fast mode USD 16 / 80. https://platform.claude.com/docs/en/models/fable-5-2/overview A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Anthropic's Claude Mythos 5.2 is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Anthropic actually launched with Claude Mythos 5.2, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 9 Nov 2026 and should be framed against the models it is replacing or competing with."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+          "source": "The Verge",
+          "date": "2026-11-13",
+          "summary": "Normally, the products I test don't offer to help me write up my experience with them. Duet is different. Claude Duet is Anthropic's AI agent for consumers, the latest attempt by an AI company to try to convince us that agents can be useful for people who don't write code. It's been an interesting couple [&#8230;]",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-09-claude-mythos-5-2-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 1,
+      "sourceCount": 2
+    },
     {
       "id": "muse-ember",
       "fileSlug": "2026-11-09-muse-ember-release-brief",
@@ -2560,107 +2977,6 @@ export const modelReleaseDesk = {
       "sourceCount": 2
     },
     {
-      "id": "claude-fable-5.2",
-      "fileSlug": "2026-11-14-claude-fable-5-2-release-brief",
-      "modelName": "Claude Fable 5.2",
-      "providerId": "anthropic",
-      "providerName": "Anthropic",
-      "providerColour": "#d97706",
-      "releaseDate": null,
-      "releaseDateLabel": "Unknown",
-      "ageDays": null,
-      "status": null,
-      "fieldStates": {
-        "released": "unverified",
-        "context_window": "unverified",
-        "max_output": "unverified",
-        "open_source": "unverified",
-        "modality": "unverified",
-        "api_available": "unverified",
-        "status": "unverified",
-        "category": "unverified",
-        "input_price": "unverified",
-        "output_price": "unverified",
-        "cached_input_price": "unverified"
-      },
-      "verificationState": "discovery_only",
-      "priority": "backfill",
-      "draftStatus": "watch_only",
-      "officialUrl": null,
-      "providerStatusUrl": "https://status.claude.com",
-      "providerDocsUrl": "https://docs.anthropic.com",
-      "openSource": null,
-      "openSourceState": "unverified",
-      "apiAvailable": null,
-      "apiAvailableState": "unverified",
-      "modality": null,
-      "contextWindow": null,
-      "contextWindowState": "unverified",
-      "maxOutput": null,
-      "maxOutputState": "unverified",
-      "qualityScore": null,
-      "qualityScoreState": "suppressed_untraceable",
-      "inputPrice": null,
-      "inputPriceState": "unverified",
-      "outputPrice": null,
-      "outputPriceState": "unverified",
-      "pricingSource": null,
-      "pricingUpdated": null,
-      "summary": "Claude Fable 5.2 is a currently tracked release from Anthropic. Auto-tracked from OpenRouter discovery (anthropic/claude-fable-5.2); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Anthropic's Claude Fable 5.2 is on the release desk with 2 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
-      ],
-      "checklist": [
-        "Confirm the model exists using a model-level provider source before drafting any release claim.",
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what Anthropic actually launched with Claude Fable 5.2, and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
-          "source": "The Verge",
-          "date": "2026-11-13",
-          "summary": "Normally, the products I test don't offer to help me write up my experience with them. Duet is different. Claude Duet is Anthropic's AI agent for consumers, the latest attempt by an AI company to try to convince us that agents can be useful for people who don't write code. It's been an interesting couple [&#8230;]",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
-          "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
-          "source": "Ars Technica",
-          "date": "2026-10-30",
-          "summary": "It's still unknown how attackers got access to Anthropic's verified Cursor account.",
-          "routingTags": [
-            "research_paper",
-            "open_source",
-            "hardware",
-            "policy"
-          ]
-        }
-      ],
-      "draftPath": "editorial/release-drafts/2026-11-14-claude-fable-5-2-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
-    },
-    {
       "id": "claude-haiku-5.5",
       "fileSlug": "2026-11-14-claude-haiku-5-5-release-brief",
       "modelName": "Claude Haiku 5.5",
@@ -3156,7 +3472,7 @@ export const modelReleaseDesk = {
       "outputPriceState": "unverified",
       "pricingSource": null,
       "pricingUpdated": null,
-      "summary": "DeepSeek V4.1 Flash 1017 is a currently tracked release from DeepSeek. Auto-tracked from OpenRouter discovery (deepseek/deepseek-v4.1-flash-1017); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "summary": "DeepSeek V4.1 Flash 1017 is a currently tracked release from DeepSeek. Auto-tracked from OpenRouter discovery (deepseek/deepseek-v4.1-flash-1017); awaiting official verification. Official API announcement checked 2026-11-14: 13 November adds service-side search, file input and URL reading to the existing deepseek-flash endpoint, not a new model release. No price/context/score change inferred. https://api-docs.deepseek.com/updates/ This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
       "dek": "DeepSeek's DeepSeek V4.1 Flash 1017 is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -3349,213 +3665,6 @@ export const modelReleaseDesk = {
       "benchmarkCount": 0,
       "storyCount": 1,
       "sourceCount": 1
-    },
-    {
-      "id": "gemini-4-carbon",
-      "fileSlug": "2026-11-14-gemini-4-carbon-release-brief",
-      "modelName": "Gemini 4 Carbon",
-      "providerId": "google",
-      "providerName": "Google",
-      "providerColour": "#4285f4",
-      "releaseDate": null,
-      "releaseDateLabel": "Unknown",
-      "ageDays": null,
-      "status": null,
-      "fieldStates": {
-        "released": "unverified",
-        "context_window": "unverified",
-        "max_output": "unverified",
-        "open_source": "unverified",
-        "modality": "unverified",
-        "api_available": "unverified",
-        "status": "unverified",
-        "category": "unverified",
-        "input_price": "unverified",
-        "output_price": "unverified",
-        "cached_input_price": "unverified"
-      },
-      "verificationState": "discovery_only",
-      "priority": "backfill",
-      "draftStatus": "watch_only",
-      "officialUrl": null,
-      "providerStatusUrl": "https://status.cloud.google.com",
-      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
-      "openSource": null,
-      "openSourceState": "unverified",
-      "apiAvailable": null,
-      "apiAvailableState": "unverified",
-      "modality": null,
-      "contextWindow": null,
-      "contextWindowState": "unverified",
-      "maxOutput": null,
-      "maxOutputState": "unverified",
-      "qualityScore": null,
-      "qualityScoreState": "suppressed_untraceable",
-      "inputPrice": null,
-      "inputPriceState": "unverified",
-      "outputPrice": null,
-      "outputPriceState": "unverified",
-      "pricingSource": null,
-      "pricingUpdated": null,
-      "summary": "Gemini 4 Carbon is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-4-carbon); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 4 Carbon is on the release desk with 1 related story and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
-      ],
-      "checklist": [
-        "Confirm the model exists using a model-level provider source before drafting any release claim.",
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what Google actually launched with Gemini 4 Carbon, and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Google Cloud launches Gemini for healthcare.",
-          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
-          "source": "Google",
-          "date": "2026-11-10",
-          "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
-          "routingTags": [
-            "model_release"
-          ]
-        }
-      ],
-      "draftPath": "editorial/release-drafts/2026-11-14-gemini-4-carbon-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 1
-    },
-    {
-      "id": "gemini-4-hydrogen",
-      "fileSlug": "2026-11-14-gemini-4-hydrogen-release-brief",
-      "modelName": "Gemini 4 Hydrogen",
-      "providerId": "google",
-      "providerName": "Google",
-      "providerColour": "#4285f4",
-      "releaseDate": null,
-      "releaseDateLabel": "Unknown",
-      "ageDays": null,
-      "status": null,
-      "fieldStates": {
-        "released": "unverified",
-        "context_window": "unverified",
-        "max_output": "unverified",
-        "open_source": "unverified",
-        "modality": "unverified",
-        "api_available": "unverified",
-        "status": "unverified",
-        "category": "unverified",
-        "input_price": "unverified",
-        "output_price": "unverified",
-        "cached_input_price": "unverified"
-      },
-      "verificationState": "discovery_only",
-      "priority": "backfill",
-      "draftStatus": "watch_only",
-      "officialUrl": null,
-      "providerStatusUrl": "https://status.cloud.google.com",
-      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
-      "openSource": null,
-      "openSourceState": "unverified",
-      "apiAvailable": null,
-      "apiAvailableState": "unverified",
-      "modality": null,
-      "contextWindow": null,
-      "contextWindowState": "unverified",
-      "maxOutput": null,
-      "maxOutputState": "unverified",
-      "qualityScore": null,
-      "qualityScoreState": "suppressed_untraceable",
-      "inputPrice": null,
-      "inputPriceState": "unverified",
-      "outputPrice": null,
-      "outputPriceState": "unverified",
-      "pricingSource": null,
-      "pricingUpdated": null,
-      "summary": "Gemini 4 Hydrogen is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-4-hydrogen); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 4 Hydrogen is on the release desk with 4 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
-      ],
-      "checklist": [
-        "Confirm the model exists using a model-level provider source before drafting any release claim.",
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what Google actually launched with Gemini 4 Hydrogen, and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Google’s new Gemini model is better at understanding complicated questions",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
-          "source": "The Verge",
-          "date": "2026-11-12",
-          "summary": "Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including \"questions with multiple parts, hard-to-understand typos, or highly specific requests.\" The new model can break down your questions and address each part in its responses. It's available starting today in search,…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google&#8217;s latest Search upgrade promises better answers to your most complicated questions",
-          "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
-          "source": "TechCrunch",
-          "date": "2026-11-12",
-          "summary": "Powered by Gemini 4 Hydrogen, Google's AI Mode is getting better at understanding complex queries, surfacing relevant links, and delivering richer visual responses.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
-          "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
-          "source": "Google",
-          "date": "2026-11-12",
-          "summary": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive responses.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google Cloud launches Gemini for healthcare.",
-          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
-          "source": "Google",
-          "date": "2026-11-10",
-          "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
-          "routingTags": [
-            "model_release"
-          ]
-        }
-      ],
-      "draftPath": "editorial/release-drafts/2026-11-14-gemini-4-hydrogen-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
     },
     {
       "id": "glm-5.3",

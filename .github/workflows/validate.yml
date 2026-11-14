@@ -43,6 +43,9 @@ jobs:
       - name: Test model registry guards (catalogue names, tier variants, demotions)
         run: npm run test:registry
 
+      - name: Test weekly official release evidence
+        run: npx tsx --test scripts/official-week.test.ts
+
       - name: Test source policy (no numbers from sources whose terms bar our use)
         run: npm run test:source-policy
 

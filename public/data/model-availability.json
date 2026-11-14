@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-14T15:55:54.038Z",
+  "generatedAt": "2026-11-14T17:04:54.453Z",
   "overview": {
-    "generatedAt": "2026-11-14T15:55:54.057Z",
+    "generatedAt": "2026-11-14T17:04:54.464Z",
     "totalRules": 4,
     "providerBaselines": 3,
     "modelSpecificRules": 1,
-    "surfacedModels": 76,
+    "surfacedModels": 80,
     "latestVerification": "2026-04-09T20:49:00Z"
   },
   "entries": [
@@ -81,7 +81,7 @@
           "llm"
         ]
       },
-      "matchingModelCount": 20,
+      "matchingModelCount": 22,
       "matchingModelIds": [
         "claude-opus-4.6",
         "claude-sonnet-4.6",
@@ -96,13 +96,15 @@
         "claude-haiku-4.5",
         "claude-3-opus",
         "claude-fable-5",
+        "claude-fable-5.2",
         "claude-mythos-preview",
         "claude-opus-4.7",
         "claude-opus-4.8",
         "claude-opus-4.8-fast",
         "claude-opus-5",
         "claude-opus-5-fast",
-        "claude-sonnet-5"
+        "claude-sonnet-5",
+        "claude-mythos-5.2"
       ],
       "matchingModelNames": [
         "Claude Opus 4.6",
@@ -118,13 +120,15 @@
         "Claude Haiku 4.5",
         "Claude 3 Opus",
         "Claude Fable 5",
+        "Claude Fable 5.2",
         "Claude Mythos Preview",
         "Claude Opus 4.7",
         "Claude Opus 4.8",
         "Claude Opus 4.8 Fast",
         "Claude Opus 5",
         "Claude Opus 5 Fast",
-        "Claude Sonnet 5"
+        "Claude Sonnet 5",
+        "Claude Mythos 5.2"
       ],
       "surfaceLabel": "Web + App"
     },
@@ -159,7 +163,7 @@
           "gemma-"
         ]
       },
-      "matchingModelCount": 20,
+      "matchingModelCount": 22,
       "matchingModelIds": [
         "gemini-3.1-pro",
         "veo-3",
@@ -178,6 +182,8 @@
         "gemini-3.5-flash-lite",
         "gemini-3.6-flash",
         "gemini-4-argon",
+        "gemini-4-carbon",
+        "gemini-4-hydrogen",
         "gemini-omni-1.1-flash",
         "gemini-omni-1.2-flash",
         "gemini-nano-banana-2.1"
@@ -200,6 +206,8 @@
         "Gemini 3.5 Flash-Lite",
         "Gemini 3.6 Flash",
         "Gemini 4 Argon",
+        "Gemini 4 Carbon",
+        "Gemini 4 Hydrogen",
         "Gemini Omni 1.1 Flash",
         "Gemini Omni 1.2 Flash",
         "Nano Banana 2.1"
