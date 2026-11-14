@@ -34,7 +34,8 @@ THE LIVE GATE. A live stage runs only if ALL of these hold:
   3. the config has `live_approved` true and `approved_by` filled in;
   4. the config has no `TO PIN BEFORE RUN` value and no other live blocker;
   5. `--key-file` was given;
-  6. the environment holds no OPENAI_API_KEY or ANTHROPIC_API_KEY;
+  6. the environment holds no OPENAI_API_KEY or ANTHROPIC_API_KEY (checked
+     first of all, and for dry runs too: see below);
   7. the stage's earlier steps are on record in the private store: the
      canary and the full run need a passed judge qualification record that
      still stands (same sample files, same task set version, and a panel
@@ -44,13 +45,19 @@ THE LIVE GATE. A live stage runs only if ALL of these hold:
   9. the keys load from the key file.
 With `LIVE_ENABLED = False`, a live request is refused before the key file
 is read and before any transport exists.
+
+Two rules hold for every start, dry or live, and come before all of the
+above:
+- `run_stage` and `open_live_gate` refuse, before anything else is read,
+  while OPENAI_API_KEY or ANTHROPIC_API_KEY is set in the environment.
+- If a settled charge is ever above its reservation, the ledger records it,
+  nothing more is sent, and the run ends interrupted (a non-zero exit).
 """
 
 import hashlib
 import importlib
 import inspect
 import json
-import math
 import os
 import random
 import re
@@ -316,12 +323,17 @@ def _earlier_steps_missing(stage, config, private_store, hashes):
 
 def open_live_gate(*, live, config, key_file, tasks, stage, private_store, remaining_caps,
                    max_usd=None, checklist_samples=None, outcome_samples=None,
-                   environ=None, tokeniser=None, out=print, hashes=None):
+                   environ=None, out=print, hashes=None):
     """Check every live condition in order and return
     (`LiveGatePass`, pre-flight result, qualification record or None).
 
+    The environment is checked first, before anything else is looked at.
     The key file is read last, and only after everything else has passed.
     """
+    try:
+        keys_module.assert_clean_environment(environ)
+    except keys_module.EnvironmentNotClean as problem:
+        raise LiveRefused(str(problem)) from None
     _refuse_if_disabled()
     if live is not True:
         raise LiveRefused("--live was not given")
@@ -333,10 +345,6 @@ def open_live_gate(*, live, config, key_file, tasks, stage, private_store, remai
                           + "; ".join(config.live_blockers))
     if not key_file:
         raise LiveRefused("--key-file was not given")
-    try:
-        keys_module.assert_clean_environment(environ)
-    except keys_module.EnvironmentNotClean as problem:
-        raise LiveRefused(str(problem)) from None
     if hashes is None:
         hashes = sample_hashes(checklist_samples, outcome_samples)
     missing, qualified = _earlier_steps_missing(stage, config, private_store, hashes)
@@ -345,7 +353,7 @@ def open_live_gate(*, live, config, key_file, tasks, stage, private_store, remai
     result = preflight.preflight(
         config, tasks, remaining_caps, stage=stage, max_usd=max_usd,
         checklist_samples=checklist_samples, outcome_samples=outcome_samples,
-        tokeniser=tokeniser, out=out,
+        out=out, environ=environ,
         qualification=None if qualified is None else {
             "run_id": qualified["run_id"], "panel": config.judges},
         qualification_note="this is the qualification stage" if stage == "qualify" else None)
@@ -391,6 +399,16 @@ def _shaped(provider, text, input_tokens, output_tokens):
                       "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}
 
 
+STUB_BYTES_PER_USAGE_TOKEN = 4
+
+
+def _stub_usage(text):
+    """The usage figure the fake provider reports for a text: made up, one
+    token per 4 bytes. It is what a dry run is "charged"; no reservation or
+    bound is ever worked out from it."""
+    return max(1, len(text.encode("utf-8", "surrogatepass")) // STUB_BYTES_PER_USAGE_TOKEN)
+
+
 class StubTransport:
     """A fake transport for dry runs. It never touches the network and never
     reads the key."""
@@ -403,8 +421,7 @@ class StubTransport:
         self.calls += 1
         prompt = _prompt_of(request)
         text = self.responder(request.provider, request.body["model"], prompt)
-        payload = _shaped(request.provider, text, math.ceil(len(prompt) / 3),
-                          max(1, math.ceil(len(text) / 3)))
+        payload = _shaped(request.provider, text, _stub_usage(prompt), _stub_usage(text))
         return providers.Response(status=200, body=json.dumps(payload), elapsed_seconds=0.0)
 
 
@@ -716,7 +733,7 @@ def plan_slots(config, tasks, stage, seed, run_id):
 
 class _Engine:
     def __init__(self, *, config, tasks, stage, record, budget, transport, loaded_keys,
-                 grade, clock, sleep, tokeniser):
+                 grade, clock, sleep):
         self.config = config
         self.tasks = {task["id"]: task for task in tasks}
         self.stage = stage
@@ -727,8 +744,10 @@ class _Engine:
         self.grade = grade
         self.clock = clock
         self.sleep = sleep
-        self.tokeniser = tokeniser
         self.adapters = {}
+        # Set when a settled charge was above its reservation. Once set,
+        # `before_send` refuses every further request.
+        self.overrun = None
         # The panel that judges answers. In a live canary or full run the
         # gate has already checked it against the qualification record.
         self.panel = tuple(config.judges)
@@ -750,9 +769,13 @@ class _Engine:
         adapter = self._adapter(spec)
 
         def before_send(number):
+            if self.overrun is not None:
+                raise self.overrun
             request = id_for(number)
-            worst = ledger.worst_case_usd(
-                ledger.count_input_tokens(prompt, self.tokeniser), limit, spec.price)
+            # The prompt is the only text field sent: the adapters send no
+            # system text (see providers.py). The output side is the full
+            # limit that is sent with the request.
+            worst = ledger.worst_case_usd(ledger.input_token_bound(prompt), limit, spec.price)
             self.budget.reserve(spec.provider, request, worst)
             self.record.request_sent(request, {
                 "kind": kind, "model_id": spec.model_id, "provider": spec.provider,
@@ -777,8 +800,20 @@ class _Engine:
                 "finish_reason": result.finish_reason, "charge_usd": str(settled["charge"]),
                 "request_time_seconds": result.request_time_seconds, "usage": result.usage,
                 "ledger_flags": settled["flags"]})
+            if ledger.OVERRUN_FLAG in settled["flags"] and self.overrun is None:
+                # The backstop. The ledger has recorded the overrun; nothing
+                # more is sent, and the run ends interrupted.
+                self.overrun = ledger.ReservationExceeded(
+                    "a charge was above its reservation on %s: request %s was charged %s "
+                    "USD against a reservation of %s USD"
+                    % (spec.provider, request, settled["charge"], settled["reserved"]),
+                    provider=spec.provider, request_id=request)
 
         return adapter, before_send, after_result
+
+    def stop_if_overrun(self):
+        if self.overrun is not None:
+            raise _Stop("interrupted: " + str(self.overrun), self.overrun.provider)
 
     def _judge_call(self, spec, base_id, kind, trail):
         """`call(prompt, attempt)` for one judge: a single request per
@@ -870,6 +905,10 @@ class _Engine:
                 raise _Stop("interrupted by cap: " + str(cap), cap.provider) from None
             stop = _Stop("interrupted by cap: " + str(cap), cap.provider)
             row["flags"].append("retry_refused_by_cap")
+        except ledger.ReservationExceeded as overrun:
+            # A retry was about to be sent after an overrun: it was not.
+            stop = _Stop("interrupted: " + str(overrun), overrun.provider)
+            row["flags"].append("retry_refused_after_overrun")
         last = results[-1] if results else None
         if last is not None and last.status == providers.OK:
             row.update(reply=last.text, truncated=last.truncated,
@@ -904,6 +943,15 @@ class _Engine:
                         (item["id"] if isinstance(item, dict) else item): judges.UNRESOLVED
                         for item in needs if item != "outcome"}}
                     row["flags"].append("judging_refused_by_cap")
+                except ledger.ReservationExceeded as overrun:
+                    # The answer is paid for and kept; no judge request was
+                    # sent after the overrun, so the slot stays pending.
+                    stop = _Stop("interrupted: " + str(overrun), overrun.provider)
+                    final = {"outcome": first.get("outcome"), "pass": None, "pending": True}
+                    judged = {"outcome": None, "checks": {
+                        (item["id"] if isinstance(item, dict) else item): judges.UNRESOLVED
+                        for item in needs if item != "outcome"}}
+                    row["flags"].append("judging_refused_after_overrun")
             outcome, passed = final.get("outcome"), final.get("pass")
             pending = bool(final.get("pending"))
             if outcome not in records.FINAL_OUTCOMES:
@@ -933,6 +981,7 @@ class _Engine:
         self.record.slot_done(row)
         if stop:
             raise stop
+        self.stop_if_overrun()
         return row
 
     def _qualify_one(self, judge, checklist_samples, outcome_samples):
@@ -1029,8 +1078,7 @@ def _scorer(live):
 def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, key_file=None,
               max_usd=None, seed=None, checklist_samples=None, outcome_samples=None,
               transport=None, scores=None, clock=time.monotonic, sleep=None, out=print,
-              environ=None, tokeniser=None, live_transport_factory=None,
-              sample_file_hashes=None):
+              environ=None, live_transport_factory=None, sample_file_hashes=None):
     """Run one stage and return a summary.
 
     Without `live=True` this is a dry run: the transport is a fake (the
@@ -1041,7 +1089,11 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
     finalised; a full run defaults to `default_scores`. `grade` defaults to
     `default_grade`. `sample_file_hashes` is `{"checklist", "outcome"}`,
     the SHA-256 of each sample file as read from disk.
+
+    Raises `keys.EnvironmentNotClean`, before anything else, while a
+    provider key variable is set in the environment: dry runs included.
     """
+    keys_module.assert_clean_environment(environ)
     if stage not in STAGES:
         raise ValueError("unknown stage: " + str(stage))
     if live:
@@ -1074,7 +1126,7 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
             live=live, config=config, key_file=key_file, tasks=tasks, stage=stage,
             private_store=private_store, remaining_caps=remaining, max_usd=max_usd,
             checklist_samples=checklist_samples, outcome_samples=outcome_samples,
-            environ=environ, tokeniser=tokeniser, out=out, hashes=hashes)
+            environ=environ, out=out, hashes=hashes)
         loaded = gate_pass.keys
         transport = (live_transport_factory or providers.UrllibTransport)(gate_pass)
         sleep = sleep or time.sleep
@@ -1087,7 +1139,7 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
         plan = preflight.enforce(preflight.preflight(
             config, tasks, remaining, stage=stage, max_usd=max_usd,
             checklist_samples=checklist_samples, outcome_samples=outcome_samples,
-            tokeniser=tokeniser, out=out,
+            out=out, environ=environ,
             qualification=None if qualified is None else {
                 "run_id": qualified["run_id"], "panel": config.judges},
             qualification_note=note))
@@ -1110,7 +1162,7 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
     budget = ledger.Budget(books, run_id, max_usd=max_usd)
     engine = _Engine(config=config, tasks=tasks, stage=stage, record=record, budget=budget,
                      transport=transport, loaded_keys=loaded, grade=grade, clock=clock,
-                     sleep=sleep, tokeniser=tokeniser)
+                     sleep=sleep)
     summary = {"run_id": run_id, "stage": stage, "live": bool(live), "seed": seed,
                "preflight": plan, "qualification": None, "qualification_record": None,
                "qualification_record_path": None,
@@ -1121,6 +1173,9 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
             qualification = engine.qualify(checklist_samples, outcome_samples)
             record.write_json("qualification.json", qualification)
             summary["qualification"] = qualification
+            # An overrun on the very last call leaves nothing to refuse, so
+            # the stage is stopped here: it is never finalised.
+            engine.stop_if_overrun()
         else:
             slots = plan_slots(config, tasks, stage, seed, run_id)
             record.plan(slots)
@@ -1133,6 +1188,8 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
         record.mark_interrupted(stop.reason, stop.provider)
     except ledger.CapExceeded as cap:
         record.mark_interrupted("interrupted by cap: " + str(cap), cap.provider)
+    except ledger.ReservationExceeded as overrun:
+        record.mark_interrupted("interrupted: " + str(overrun), overrun.provider)
     except BaseException:
         record.mark_interrupted("stopped by an error in the harness")
         record.close()

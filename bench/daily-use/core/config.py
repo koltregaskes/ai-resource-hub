@@ -33,6 +33,10 @@ PROVIDERS = ("openai", "anthropic")
 OUTPUT_LIMIT_PARAMETER = {"openai": "max_output_tokens", "anthropic": "max_tokens"}
 REASONING_BILLING = ("in_output", "separate")
 OUTPUT_LIMITS = (4096, 8192)
+# The method caps a judge reply at 400 tokens. Every entry in `judges` and in
+# `judge_candidates` must be at or below it, in every stage and in both dry
+# and live validation.
+JUDGE_MAX_OUTPUT_TOKENS = 400
 # Read from the provider references on 14 November 2026 (see RUNNER.md).
 # Anthropic: the `anthropic-version` header values. 2026-10-21 rejects
 # `temperature` on every model; 2023-06-01 still takes it.
@@ -400,8 +404,12 @@ def _spec(raw, role, where, problems, blockers, today):
     limit = None
     if role == "judge":
         limit = raw.get("max_output_tokens")
-        if isinstance(limit, bool) or not isinstance(limit, int) or not 0 < limit <= 8192:
-            problems.append(where + ".max_output_tokens must be a whole number up to 8192")
+        if isinstance(limit, bool) or not isinstance(limit, int) \
+                or not 0 < limit <= JUDGE_MAX_OUTPUT_TOKENS:
+            problems.append(
+                "%s.max_output_tokens must be a whole number from 1 to %d: the method "
+                "caps a judge reply at %d tokens"
+                % (where, JUDGE_MAX_OUTPUT_TOKENS, JUDGE_MAX_OUTPUT_TOKENS))
             limit = None
     return ModelSpec(
         role=role, provider=provider, model_id=model_id, api_version=api_version,
@@ -412,6 +420,20 @@ def _spec(raw, role, where, problems, blockers, today):
         price=_price(raw.get("price"), where + ".price", problems, blockers, today),
         max_output_tokens=limit,
     )
+
+
+def assert_judge_limits(specs):
+    """Refuse any judge whose output limit is missing or above the method's
+    limit. `validate` already rejects such a config; this guards the
+    pre-flight and the runner against a spec built any other way."""
+    for spec in specs:
+        limit = spec.max_output_tokens
+        if isinstance(limit, bool) or not isinstance(limit, int) \
+                or not 0 < limit <= JUDGE_MAX_OUTPUT_TOKENS:
+            raise ConfigError(
+                "judge %s has an output limit outside 1 to %d tokens: the method caps a "
+                "judge reply at %d tokens"
+                % (spec.model_id, JUDGE_MAX_OUTPUT_TOKENS, JUDGE_MAX_OUTPUT_TOKENS))
 
 
 def validate(raw, mode="dry", today=None, sha256=""):

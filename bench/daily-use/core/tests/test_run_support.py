@@ -57,7 +57,7 @@ def spec_dict(provider, model_id, price_in, price_out, cached="0", judge=False, 
         },
     }
     if judge:
-        item["max_output_tokens"] = 1000
+        item["max_output_tokens"] = config.JUDGE_MAX_OUTPUT_TOKENS
     item.update(over)
     return item
 

@@ -10,6 +10,10 @@ The stages run in that order: qualify, then canary, then full. Without
 `--live`, the stage commands are dry runs on a fake transport and the key
 file is never read. A key is never accepted on the command line.
 
+Every command, `preflight` and dry runs included, is refused before
+anything else is read while OPENAI_API_KEY or ANTHROPIC_API_KEY is set in
+the environment. The line names the variable and never shows its value.
+
 Exit codes: 0 finished; 2 refused; 3 interrupted or pending; 4 the judge
 qualification finished but named no panel. See RUNNER.md.
 """
@@ -26,6 +30,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import config as config_module  # noqa: E402
 import judges  # noqa: E402
+import keys  # noqa: E402
 import ledger  # noqa: E402
 import preflight  # noqa: E402
 import records  # noqa: E402
@@ -193,6 +198,12 @@ def qualification_lines(qualification, config):
 
 def main(argv=None, out=print):
     argv = list(sys.argv[1:] if argv is None else argv)
+    try:
+        # First of all, for every command: nothing has been read or parsed yet.
+        keys.assert_clean_environment()
+    except keys.EnvironmentNotClean as problem:
+        out("REFUSED: " + str(problem))
+        return EXIT_REFUSED
     _refuse_secrets_on_command_line(argv)
     args = build_parser().parse_args(argv)
     live = bool(getattr(args, "live", False))
@@ -246,7 +257,8 @@ def main(argv=None, out=print):
             checklist_samples=checklist_samples, outcome_samples=outcome_samples, out=out,
             sample_file_hashes=file_hashes)
     except (runner.LiveRefused, runner.GraderUnavailable, runner.ScorerUnavailable,
-            preflight.PreflightRefused, ledger.LedgerError, records.RecordError) as problem:
+            preflight.PreflightRefused, ledger.LedgerError, records.RecordError,
+            keys.EnvironmentNotClean) as problem:
         out("REFUSED: " + str(problem))
         return EXIT_REFUSED
     except ValueError as problem:
@@ -275,6 +287,8 @@ def main(argv=None, out=print):
         elif not summary["live"]:
             out("  This was a dry run: no qualification record was written, and a dry "
                 "run never opens the canary or the full run.")
+    if summary["report"].get("interrupt_reason"):
+        out("  stopped: " + str(summary["report"]["interrupt_reason"]))
     out("  committed by this run: %s USD" % summary["run_committed_usd"])
     out("  record: " + summary["dir"])
     if summary["status"] not in ("finalised", "complete"):

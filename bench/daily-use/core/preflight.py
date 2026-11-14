@@ -4,7 +4,9 @@ Three figures, per provider and in total, for the judge qualification, the
 canary and the full run with its checklist judging and outcome
 classification (assumed for every slot in every family):
 
-- expected: from the planning figure for output size in the run config;
+- expected: from the planning figure for output size in the run config,
+  with input sized by a softer estimate (see `expected_input_tokens`). It
+  is for reading only: it never feeds a reservation or a cap check;
 - planning bound: every request once at its output limit, plus a 15%
   allowance for retries. The harness refuses to start when this is above
   the remaining cap of any provider;
@@ -15,9 +17,17 @@ Tasks come in as plain dicts: id, family, split, prompt, max_output_tokens,
 the grader type, and the judged checks (a count, a list, or a `grader`
 object whose judged checks are marked `"by": "judge"`).
 
-Costs are counted the way the ledger reserves them, so the bound and the
-reservations agree: input tokens are ceil(len(text) / 3) unless a tokeniser
-is supplied.
+The two bounds count input the way the ledger reserves it, with the one
+function `ledger.input_token_bound`: the UTF-8 byte length of the text sent
+plus the framing allowance. That is an upper bound on the input tokens, not
+an estimate.
+
+One planning assumption remains, and it is named: an answer that does not
+exist yet is planned at `ANSWER_BYTES_PER_TOKEN` bytes per token of the
+task's output limit when it becomes judge input. At run time the judge
+request is reserved from the bytes of the real answer, so the cap holds
+whatever the answer turns out to be; a longer answer than planned can only
+stop the run early at the cap.
 
 Judges. Qualification is counted for every judge candidate in the config:
 one call per sample per candidate. The judging of the canary and the full
@@ -33,9 +43,11 @@ run is costed in one of two ways, and the output says which:
 from decimal import Decimal
 
 try:
-    from . import judges, ledger
+    from . import config as config_module, judges, keys as keys_module, ledger
 except ImportError:
+    import config as config_module
     import judges
+    import keys as keys_module
     import ledger
 
 RETRY_ALLOWANCE = Decimal("0.15")
@@ -46,9 +58,15 @@ CANARY_TASKS_PER_MODEL = 2
 CANARY_REPEATS = 1
 DEFAULT_OUTPUT_LIMIT = 4096
 OUTPUT_LIMITS = (4096, 8192)
-# An answer of N output tokens is planned as at most 4 N characters when it
-# becomes judge input. The ledger then counts those characters at 3 per token.
-ANSWER_CHARACTERS_PER_TOKEN = 4
+# PLANNING ASSUMPTION, bounds only. An answer of N output tokens is planned
+# as 4 N bytes when it becomes judge input, and the byte bound counts every
+# byte as one token. The real judge request is reserved from the real answer.
+ANSWER_BYTES_PER_TOKEN = 4
+# EXPECTED FIGURE ONLY. A softer size for input, never used for a
+# reservation, a bound or a cap check: 3 characters per input token, and an
+# answer of N output tokens read as 4 N characters.
+EXPECTED_CHARACTERS_PER_INPUT_TOKEN = 3
+EXPECTED_ANSWER_CHARACTERS_PER_TOKEN = 4
 # Used only when a task gives a count of judged checks without their texts.
 CHECK_TEXT_CHARACTERS = 300
 # Used only when the qualification sample files are not supplied.
@@ -150,15 +168,26 @@ class _Tally:
         return sum((cell["planning_bound"] for cell in self.cells.values()), ZERO)
 
 
-def _judge_input(prefix_tokens, answer_tokens, tokeniser):
-    """Judge input tokens: the prompt without the answer, plus the answer."""
-    if tokeniser is not None:
-        return prefix_tokens + answer_tokens
-    return prefix_tokens + -(-answer_tokens * ANSWER_CHARACTERS_PER_TOKEN // 3)
+def expected_input_tokens(text):
+    """EXPECTED FIGURE ONLY: a softer size for input text. Never used for a
+    reservation, the planning bound, the absolute bound or a cap check."""
+    return -(-len(text) // EXPECTED_CHARACTERS_PER_INPUT_TOKEN)
 
 
-def build_plan(config, tasks, checklist_samples=None, outcome_samples=None, tokeniser=None,
-               panel=None):
+def _judge_input_bound(prefix_bound, answer_tokens):
+    """Bound on judge input: the judge prompt without the answer (bytes plus
+    the framing allowance), plus the planned bytes of the answer."""
+    return prefix_bound + answer_tokens * ANSWER_BYTES_PER_TOKEN
+
+
+def _judge_input_expected(prefix_expected, answer_tokens):
+    """EXPECTED FIGURE ONLY: judge input for an answer of this many tokens."""
+    return prefix_expected + -(
+        -answer_tokens * EXPECTED_ANSWER_CHARACTERS_PER_TOKEN
+        // EXPECTED_CHARACTERS_PER_INPUT_TOKEN)
+
+
+def build_plan(config, tasks, checklist_samples=None, outcome_samples=None, panel=None):
     """Cost every request in the whole plan. Returns the figures by stage
     and provider, the request counts and the task counts.
 
@@ -169,10 +198,16 @@ def build_plan(config, tasks, checklist_samples=None, outcome_samples=None, toke
     tasks = normalise_tasks(tasks)
     by_id = {task["id"]: task for task in tasks}
     judges.assert_panel(config.judges)
+    config_module.assert_judge_limits(
+        tuple(config.judges) + tuple(config.all_judge_candidates()))
     if panel is not None:
         judges.assert_panel(panel)
+        config_module.assert_judge_limits(panel)
     tally = _Tally()
-    count = lambda text: ledger.count_input_tokens(text, tokeniser)  # noqa: E731
+
+    def sizes(text):
+        """(bound, expected) input tokens for one text sent as a request."""
+        return ledger.input_token_bound(text), expected_input_tokens(text)
     expected_out = config.expected_output_tokens
     judged_tasks = [task for task in tasks if judges.judged_check_count(task)]
     candidates = {provider: tuple(specs)
@@ -182,36 +217,40 @@ def build_plan(config, tasks, checklist_samples=None, outcome_samples=None, toke
 
     def prefix_tokens(task):
         """Judge prompt sizes for a task, without the answer: (outcome
-        classification, checklist judging or None)."""
+        classification, checklist judging or None), each a (bound,
+        expected) pair."""
         if task["id"] not in prefixes:
             checklist = None
             if judges.judged_check_count(task):
-                checklist = count(judges.build_checklist_prompt(
+                checklist = sizes(judges.build_checklist_prompt(
                     task["prompt"], "", _checks_for_planning(task)))
             prefixes[task["id"]] = (
-                count(judges.build_outcome_prompt(task["prompt"], "")), checklist)
+                sizes(judges.build_outcome_prompt(task["prompt"], "")), checklist)
         return prefixes[task["id"]]
+
+    def judge_input(prefix, answer_tokens, expected_answer_tokens):
+        """(bound, expected) judge input for a judge prompt and an answer."""
+        return (_judge_input_bound(prefix[0], answer_tokens),
+                _judge_input_expected(prefix[1], expected_answer_tokens))
 
     def judge_slot(into, stage, judge, task):
         limit = task["max_output_tokens"]
         outcome_prefix, checklist_prefix = prefix_tokens(task)
-        into.add(stage, "outcome_classification", judge,
-                 _judge_input(outcome_prefix, limit, tokeniser),
-                 _judge_input(outcome_prefix, min(expected_out, limit), tokeniser),
+        bound, expected = judge_input(outcome_prefix, limit, min(expected_out, limit))
+        into.add(stage, "outcome_classification", judge, bound, expected,
                  judge.max_output_tokens, config.judge_expected_output_tokens,
                  JUDGE_REQUESTS_PER_CALL)
         if checklist_prefix is not None:
-            into.add(stage, "checklist_judging", judge,
-                     _judge_input(checklist_prefix, limit, tokeniser),
-                     _judge_input(checklist_prefix, min(expected_out, limit), tokeniser),
+            bound, expected = judge_input(checklist_prefix, limit, min(expected_out, limit))
+            into.add(stage, "checklist_judging", judge, bound, expected,
                      judge.max_output_tokens, config.judge_expected_output_tokens,
                      JUDGE_REQUESTS_PER_CALL)
 
     slots = []
 
     def model_slot(stage, model, task):
-        tokens = count(task["prompt"])
-        tally.add(stage, "model", model, tokens, tokens, task["max_output_tokens"],
+        bound, expected = sizes(task["prompt"])
+        tally.add(stage, "model", model, bound, expected, task["max_output_tokens"],
                   expected_out, MODEL_REQUESTS_PER_SLOT)
         slots.append((stage, task))
 
@@ -254,10 +293,11 @@ def build_plan(config, tasks, checklist_samples=None, outcome_samples=None, toke
     for judge in every_candidate:
         if checklist_samples is None:
             for task in judged_tasks:
-                prefix = prefix_tokens(task)[1]
-                tokens = _judge_input(prefix, task["max_output_tokens"], tokeniser)
+                bound, expected = judge_input(prefix_tokens(task)[1],
+                                              task["max_output_tokens"],
+                                              task["max_output_tokens"])
                 for _ in range(ASSUMED_CHECKLIST_SAMPLES_PER_TASK):
-                    tally.add("qualify", "judge_qualification", judge, tokens, tokens,
+                    tally.add("qualify", "judge_qualification", judge, bound, expected,
                               judge.max_output_tokens, config.judge_expected_output_tokens,
                               JUDGE_REQUESTS_PER_CALL)
         else:
@@ -265,17 +305,18 @@ def build_plan(config, tasks, checklist_samples=None, outcome_samples=None, toke
                 task = by_id.get(sample.get("task_id"))
                 if task is None:
                     raise TaskError("checklist sample names an unknown task")
-                tokens = count(judges.build_checklist_prompt(
+                bound, expected = sizes(judges.build_checklist_prompt(
                     task["prompt"], sample["answer"], judges.judged_checks(task)))
-                tally.add("qualify", "judge_qualification", judge, tokens, tokens,
+                tally.add("qualify", "judge_qualification", judge, bound, expected,
                           judge.max_output_tokens, config.judge_expected_output_tokens,
                           JUDGE_REQUESTS_PER_CALL)
         if outcome_samples is None:
             largest = max(tasks, key=lambda t: (len(t["prompt"]), t["id"]))
-            prefix = prefix_tokens(largest)[0]
-            tokens = _judge_input(prefix, largest["max_output_tokens"], tokeniser)
+            bound, expected = judge_input(prefix_tokens(largest)[0],
+                                          largest["max_output_tokens"],
+                                          largest["max_output_tokens"])
             for _ in range(ASSUMED_OUTCOME_SAMPLES):
-                tally.add("qualify", "judge_qualification", judge, tokens, tokens,
+                tally.add("qualify", "judge_qualification", judge, bound, expected,
                           judge.max_output_tokens, config.judge_expected_output_tokens,
                           JUDGE_REQUESTS_PER_CALL)
         else:
@@ -283,8 +324,9 @@ def build_plan(config, tasks, checklist_samples=None, outcome_samples=None, toke
                 task = by_id.get(sample.get("task_id"))
                 if task is None:
                     raise TaskError("outcome sample names an unknown task")
-                tokens = count(judges.build_outcome_prompt(task["prompt"], sample["reply"]))
-                tally.add("qualify", "judge_qualification", judge, tokens, tokens,
+                bound, expected = sizes(
+                    judges.build_outcome_prompt(task["prompt"], sample["reply"]))
+                tally.add("qualify", "judge_qualification", judge, bound, expected,
                           judge.max_output_tokens, config.judge_expected_output_tokens,
                           JUDGE_REQUESTS_PER_CALL)
     checklist_calls = (len(judged_tasks) * ASSUMED_CHECKLIST_SAMPLES_PER_TASK
@@ -335,8 +377,8 @@ def _sum(by_stage, stages, providers):
 
 
 def preflight(config, tasks, remaining_caps, stage="qualify", max_usd=None,
-              checklist_samples=None, outcome_samples=None, tokeniser=None, out=print,
-              qualification=None, qualification_note=None):
+              checklist_samples=None, outcome_samples=None, out=print,
+              qualification=None, qualification_note=None, environ=None):
     """Print and return the three figures, and say whether the run may start.
 
     `remaining_caps` is the remaining cap per provider from the ledgers.
@@ -349,11 +391,15 @@ def preflight(config, tasks, remaining_caps, stage="qualify", max_usd=None,
     `qualification` is `{"run_id", "panel"}` from a passed qualification
     record, or None. `qualification_note` says why a record on file was not
     used. The three figures are printed whether or not the run is refused.
+
+    Raises `keys.EnvironmentNotClean`, before anything else, while a
+    provider key variable is set in the environment.
     """
+    keys_module.assert_clean_environment(environ)
     if stage not in STAGES:
         raise ValueError("unknown stage: " + str(stage))
     panel = None if qualification is None else tuple(qualification["panel"])
-    plan = build_plan(config, tasks, checklist_samples, outcome_samples, tokeniser, panel)
+    plan = build_plan(config, tasks, checklist_samples, outcome_samples, panel)
     if qualification is not None:
         plan["judging"]["qualification_run_id"] = qualification.get("run_id")
     plan["judging"]["note"] = qualification_note
@@ -446,6 +492,12 @@ def render(result):
             for provider in providers))
     lines.append("  The planning bound is every request once at its output limit plus 15% "
                  "for retries. The absolute bound is for information only.")
+    lines.append("  Input in both bounds is the byte length of the text sent plus %d tokens "
+                 "of framing per request: an upper bound on the tokens. An answer not yet "
+                 "written is planned at %d bytes per token of its limit as judge input."
+                 % (ledger.FRAMING_ALLOWANCE_TOKENS, ANSWER_BYTES_PER_TOKEN))
+    lines.append("  The expected figure sizes input by a softer estimate and is never used "
+                 "for a reservation or a cap check.")
     if result["ok"]:
         lines.append("  Result: within the remaining caps for stage %s and what follows it."
                      % result["stage"])

@@ -21,6 +21,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import cli  # noqa: E402
 import judges  # noqa: E402
 import keys  # noqa: E402
+import ledger  # noqa: E402
 import preflight  # noqa: E402
 import providers  # noqa: E402
 import records  # noqa: E402
@@ -280,13 +281,22 @@ class SlotAndRequestTests(RunnerCase):
         raw = support.config_dict(models=[support.spec_dict("openai", "m-oa", "3", "30")],
                                   caps_usd={"openai": str(bound), "anthropic": "50"})
         cfg = support.config.validate(raw)
-        # The cap is exactly the planning bound, which has room for 9 requests held
-        # at their reserved maximum. Request 2 succeeds; every other request fails to
-        # connect and keeps its full reservation: far above the 15% retry allowance.
-        # Slot 1: fail, success. Slots 2 and 3: three failures each. Slot 4: two
-        # failures, then its third request is refused by the cap.
+        # The cap is exactly the planning bound, which has room for 13 model requests
+        # held at their reserved maximum and not for 14 (the bound also plans for the
+        # judging of every slot, and this grader asks for none). Request 3 succeeds;
+        # every other request fails to connect and keeps its full reservation: far
+        # above the 15% retry allowance. Slot 1: two failures, then success. Slots 2,
+        # 3 and 4: three failures each. Slot 5: two failures, then its third request,
+        # which would be the 14th held, is refused by the cap.
+        price = self.cfg.models[0].price
+        held = ledger.worst_case_usd(
+            ledger.input_token_bound(self.tasks[0]["prompt"]), 4096, price)
+        self.assertEqual(len(self.tasks[0]["prompt"]), len(self.tasks[1]["prompt"]))
+        self.assertLess(13 * held + Decimal("0.01"), bound)
+        self.assertGreater(14 * held, bound)
+
         def step(request, n):
-            return reply_body(request, "fine") if n == 2 else providers.TransportFailure("down")
+            return reply_body(request, "fine") if n == 3 else providers.TransportFailure("down")
         transport = model_only(step)
         summary = self.run_stage(transport=transport, cfg=cfg)
         self.assertEqual(summary["status"], "interrupted")
@@ -296,17 +306,17 @@ class SlotAndRequestTests(RunnerCase):
         self.assertEqual(report["stopped_providers"], ["openai"])
         self.assertIn("interrupted by cap", report["interrupt_reason"])
         counts = report["models"]["m-oa"]
-        self.assertEqual((counts["planned"], counts["attempted"], counts["unstarted"]), (6, 4, 2))
-        self.assertEqual(len(counts["unstarted_slots"]), 2)
-        self.assertEqual(len(transport.requests), 10)
+        self.assertEqual((counts["planned"], counts["attempted"], counts["unstarted"]), (6, 5, 1))
+        self.assertEqual(len(counts["unstarted_slots"]), 1)
+        self.assertEqual(len(transport.requests), 14)
         self.assertIn(os.path.join("runs", "_staging"), summary["dir"])
         self.assertFalse(os.path.exists(os.path.join(self.store, "runs", summary["run_id"])))
         self.assertFalse(os.path.exists(os.path.join(self.store, "public")))
         self.assertLessEqual(summary["run_committed_usd"], bound)
         rows = self.rows(summary)
         self.assertEqual([r["outcome"] for r in rows],
-                         ["answered", "execution_error", "execution_error", "execution_error"])
-        self.assertEqual([len(r["requests"]) for r in rows], [2, 3, 3, 2])
+                         ["answered"] + ["execution_error"] * 4)
+        self.assertEqual([len(r["requests"]) for r in rows], [3, 3, 3, 3, 2])
         self.assertIn("retry_refused_by_cap", rows[-1]["flags"])
         self.assertIs(rows[-1]["pass"], False)
         self.assertEqual(rows[-1]["slot_id"] in counts["unstarted_slots"], False)
@@ -854,9 +864,17 @@ class LiveGateTests(RunnerCase):
                          cfg=support.make_config(models=[null_cached]))
             # 5. --key-file
             self.refused("--key-file was not given", stage="qualify", key_file=None)
-            # 6. clean environment
+            # 6. clean environment: the gate itself refuses, and `run_stage`
+            # refuses even earlier (see EnvironmentGuardTests).
             for name in ("OPENAI_API_KEY", "ANTHROPIC_API_KEY"):
-                self.refused(name + " is set", stage="qualify", environ={name: "FAKE-ENV-VALUE"})
+                with self.assertRaises(runner.LiveRefused) as caught:
+                    runner.open_live_gate(
+                        live=True, config=self.cfg, key_file=self.key_file,
+                        tasks=preflight.normalise_tasks(self.tasks), stage="qualify",
+                        private_store=self.store, remaining_caps=dict(self.cfg.caps_usd),
+                        environ={name: "FAKE-ENV-VALUE"}, out=QUIET)
+                self.assertIn(name + " is set", str(caught.exception))
+                self.assertNotIn("FAKE-ENV-VALUE", str(caught.exception))
             # 7. earlier steps on record: the canary and the full run need a
             # passed judge qualification, and there is none yet.
             self.refused("no judge qualification is on record", stage="canary")
@@ -1167,6 +1185,271 @@ class LiveGateTests(RunnerCase):
                 self.live(stage="full", scores=None)
             self.assertIn("no scorer available", str(caught.exception))
         self.assertEqual(len(self.transport.requests), sent)
+
+
+class EnvironmentGuardTests(RunnerCase):
+    """OPENAI_API_KEY and ANTHROPIC_API_KEY refuse every start, dry runs and
+    the pre-flight included, before anything else is read. The values used
+    here are dummies, patched into `os.environ` for the test only."""
+
+    NAMES = ("OPENAI_API_KEY", "ANTHROPIC_API_KEY")
+    DUMMY = "FAKE-ENV-VALUE-not-a-key"
+
+    def test_run_stage_refuses_a_dry_run_of_every_stage(self):
+        checklist, outcome = support.qualification_samples()
+        for name in self.NAMES:
+            for stage in runner.STAGES:
+                transport = model_only(lambda r, n: reply_body(r, "x"))
+                for how in ("argument", "os.environ"):
+                    kwargs = {"environ": {name: self.DUMMY}} if how == "argument" else {}
+                    patch = mock.patch.dict(os.environ, {} if how == "argument"
+                                            else {name: self.DUMMY})
+                    with patch, self.assertRaises(keys.EnvironmentNotClean) as caught:
+                        self.run_stage(stage=stage, transport=transport,
+                                       checklist_samples=checklist, outcome_samples=outcome,
+                                       **kwargs)
+                    self.assertIn(name + " is set", str(caught.exception))
+                    self.assertNotIn(self.DUMMY, str(caught.exception))
+                self.assertEqual(transport.requests, [])
+        # Nothing was written: no record, no ledger, not even a dry one.
+        self.assertEqual(os.listdir(self.store), [])
+
+    def test_run_stage_checks_the_environment_before_anything_else(self):
+        # Every other argument is unusable; the environment is still what is reported.
+        for name in self.NAMES:
+            with self.assertRaises(keys.EnvironmentNotClean):
+                runner.run_stage("no-such-stage", None, None, private_store=None,
+                                 environ={name: self.DUMMY})
+            with mock.patch.object(runner, "LIVE_ENABLED", True), \
+                    self.assertRaises(keys.EnvironmentNotClean):
+                runner.run_stage("full", None, None, private_store=None, live=True,
+                                 environ={name: self.DUMMY})
+
+    def test_the_live_gate_checks_the_environment_first(self):
+        for name in self.NAMES:
+            # With live runs switched off, and with nothing else valid.
+            with self.assertRaises(runner.LiveRefused) as caught:
+                runner.open_live_gate(live=False, config=None, key_file=None, tasks=None,
+                                      stage="qualify", private_store=None, remaining_caps=None,
+                                      environ={name: self.DUMMY})
+            self.assertIn(name + " is set", str(caught.exception))
+            with mock.patch.dict(os.environ, {name: self.DUMMY}), \
+                    self.assertRaises(runner.LiveRefused) as caught:
+                runner.open_live_gate(live=False, config=None, key_file=None, tasks=None,
+                                      stage="qualify", private_store=None, remaining_caps=None)
+            self.assertIn(name + " is set", str(caught.exception))
+
+    def test_every_cli_command_is_refused_and_nothing_is_read(self):
+        store = os.path.join(self.store, "store")
+        absent = os.path.join(self.store, "absent")
+        for name in self.NAMES:
+            for command in ("preflight", "dry-run", "qualify", "canary", "full"):
+                for live in ((False, True) if command in cli.STAGE_COMMANDS else (False,)):
+                    argv = [command, "--config", absent + "-config.json",
+                            "--public-tasks", absent + "-tasks",
+                            "--checklist-samples", absent + "-checklist.json",
+                            "--outcome-samples", absent + "-outcome.json",
+                            "--key-file", absent + "-keys.txt", "--private-store", store]
+                    if live:
+                        argv.append("--live")
+                    lines = []
+                    with mock.patch.dict(os.environ, {name: self.DUMMY}), \
+                            mock.patch("builtins.open",
+                                       side_effect=AssertionError("nothing may be opened")), \
+                            mock.patch.object(cli.config_module, "load_config") as load_config:
+                        code = cli.main(argv, out=lines.append)
+                        load_config.assert_not_called()
+                    self.assertEqual(code, 2, argv)
+                    self.assertEqual(lines, ["REFUSED: refusing to start: %s is set in the "
+                                             "environment" % name], argv)
+                    self.assertNotIn(self.DUMMY, "\n".join(lines))
+        self.assertFalse(os.path.exists(store))
+        # The check comes before the arguments are parsed at all.
+        with mock.patch.dict(os.environ, {self.NAMES[0]: self.DUMMY}):
+            lines = []
+            self.assertEqual(cli.main(["no-such-command"], out=lines.append), 2)
+            self.assertTrue(lines[0].startswith("REFUSED: "))
+
+    def test_a_clean_environment_still_starts(self):
+        clean = {key: value for key, value in os.environ.items() if key not in self.NAMES}
+        with mock.patch.dict(os.environ, clean, clear=True):
+            summary = self.run_stage(transport=model_only(lambda r, n: reply_body(r, "x")))
+        self.assertEqual(summary["status"], "finalised")
+
+
+class OverrunBackstopTests(RunnerCase):
+    """If a settled charge is ever above its reservation, the ledger records
+    it, nothing more is sent, and the run ends interrupted (exit code 3)."""
+
+    HUGE = 50000000          # input tokens reported by the fake provider: 150 USD at 3 per million
+
+    def overrun_on(self, wanted):
+        def step(request, n):
+            if n == wanted:
+                return support.ok(support.openai_body("costly", input_tokens=self.HUGE))
+            return reply_body(request, "fine")
+        return step
+
+    def ledger_lines(self, summary, provider="openai"):
+        path = os.path.join(self.store, "ledgers-dry", summary["run_id"], provider + ".jsonl")
+        with open(path, encoding="utf-8") as stream:
+            return [json.loads(line) for line in stream]
+
+    def test_a_model_overrun_stops_the_run_before_the_next_request(self):
+        transport = model_only(self.overrun_on(2))
+        summary = self.run_stage(transport=transport)
+        # Request 1 was fine, request 2 overran, request 3 was never sent.
+        self.assertEqual(len(transport.requests), 2)
+        self.assertEqual(summary["status"], "interrupted")
+        self.assertIsNone(summary["finalised"])
+        self.assertFalse(summary["publishable"])
+        report = summary["report"]
+        self.assertIn("a charge was above its reservation on openai", report["interrupt_reason"])
+        self.assertEqual(report["stopped_providers"], ["openai"])
+        counts = report["models"]["m-oa"]
+        self.assertEqual((counts["planned"], counts["attempted"], counts["unstarted"]), (6, 2, 4))
+        # The ledger holds the overrun: the charge, the reservation, the flag.
+        settles = [line for line in self.ledger_lines(summary) if line["event"] == "settle"]
+        self.assertEqual(len(settles), 2)
+        self.assertEqual(settles[0]["flags"], [])
+        self.assertEqual(settles[1]["flags"], ["charge_above_reservation"])
+        self.assertGreater(Decimal(settles[1]["usd"]), Decimal(settles[1]["reserved_usd"]))
+        self.assertGreater(Decimal(settles[1]["usd"]), Decimal("150"))
+        # The paid answer is kept on its slot, with the flag on its request.
+        rows = self.rows(summary)
+        self.assertEqual([r["reply"] for r in rows], ["fine", "costly"])
+        self.assertEqual(rows[1]["requests"][0]["ledger_flags"], ["charge_above_reservation"])
+        self.assertEqual(rows[1]["outcome"], "answered")
+        self.assertIn(os.path.join("runs", "_staging"), summary["dir"])
+
+    def test_no_judge_request_is_sent_after_a_model_overrun(self):
+        tasks = [support.task("t1", family=4, checks=2), support.task("t2", family=4, checks=2)]
+        transport = model_only(self.overrun_on(1))
+        summary = self.run_stage(transport=transport, tasks=tasks, grade=JudgingTests.grade)
+        self.assertEqual(len(transport.requests), 1)             # the model request only
+        self.assertEqual(summary["status"], "interrupted")
+        row = self.rows(summary)[0]
+        self.assertEqual(row["reply"], "costly")
+        self.assertTrue(row["pending"])
+        self.assertIsNone(row["pass"])
+        self.assertIn("judging_refused_after_overrun", row["flags"])
+        self.assertEqual(row["judge_requests"], [])
+
+    def test_a_judge_overrun_stops_the_run_before_the_next_request(self):
+        tasks = [support.task("t1", family=4, checks=2), support.task("t2", family=4, checks=2)]
+        calls = []
+
+        def judge_text(request, prompt):
+            calls.append(request.body["model"])
+            return json.dumps({"checks": {"c1": {"pass": True, "reason": "r"},
+                                          "c2": {"pass": True, "reason": "r"}}})
+
+        def transport(request):
+            if is_judge_prompt(prompt_of(request)):
+                judge_text(request, prompt_of(request))
+                if len(calls) == 1:
+                    body = support.openai_body if request.provider == "openai" \
+                        else support.anthropic_body
+                    return support.ok(body("{}", input_tokens=self.HUGE))
+            return reply_body(request, "an answer")
+        fake = ScriptedTransport(default=transport)
+        summary = self.run_stage(transport=fake, tasks=tasks, grade=JudgingTests.grade)
+        # One model request, then the first judge request overran: nothing after it,
+        # not the retry of the malformed verdict and not the second judge.
+        self.assertEqual(len(fake.requests), 2)
+        self.assertEqual(len(calls), 1)
+        self.assertEqual(summary["status"], "interrupted")
+        self.assertIn("above its reservation", summary["report"]["interrupt_reason"])
+        row = self.rows(summary)[0]
+        self.assertTrue(row["pending"])
+        self.assertEqual(row["judge_requests"][0]["ledger_flags"], ["charge_above_reservation"])
+
+    def test_an_overrun_on_the_last_request_of_a_stage_is_never_finalised(self):
+        # The model stage: the very last slot overruns, so there is no next request
+        # to refuse. The run still ends interrupted.
+        transport = model_only(self.overrun_on(6))
+        summary = self.run_stage(transport=transport)
+        self.assertEqual(len(transport.requests), 6)
+        self.assertEqual(summary["status"], "interrupted")
+        self.assertIsNone(summary["finalised"])
+        self.assertFalse(os.path.exists(os.path.join(self.store, "runs", summary["run_id"])))
+        # The qualification stage: the last sample of the last candidate overruns.
+        tasks = [support.task("t1", family=4, checks=2), support.task("t2")]
+        checklist, outcome = support.qualification_samples()
+        seen = []
+
+        def judge(request):
+            seen.append(request)
+            text = support.reference_verdict(prompt_of(request), outcome)
+            body = support.openai_body if request.provider == "openai" else support.anthropic_body
+            return support.ok(body(text, input_tokens=self.HUGE if len(seen) == 48 else 10))
+        summary = self.run_stage(stage="qualify", transport=ScriptedTransport(default=judge),
+                                 cfg=support.make_config(), tasks=tasks,
+                                 checklist_samples=checklist, outcome_samples=outcome)
+        self.assertEqual(len(seen), 48)                           # 24 samples x 2 judges
+        self.assertEqual(summary["status"], "interrupted")
+        self.assertIsNone(summary["finalised"])
+        self.assertIsNone(summary["qualification_record"])
+        self.assertIn("above its reservation", summary["report"]["interrupt_reason"])
+
+    def test_a_qualification_overrun_stops_before_the_next_sample(self):
+        tasks = [support.task("t1", family=4, checks=2), support.task("t2")]
+        checklist, outcome = support.qualification_samples()
+        seen = []
+
+        def judge(request):
+            seen.append(request)
+            text = support.reference_verdict(prompt_of(request), outcome)
+            body = support.openai_body if request.provider == "openai" else support.anthropic_body
+            return support.ok(body(text, input_tokens=self.HUGE if len(seen) == 3 else 10))
+        summary = self.run_stage(stage="qualify", transport=ScriptedTransport(default=judge),
+                                 cfg=support.make_config(), tasks=tasks,
+                                 checklist_samples=checklist, outcome_samples=outcome)
+        self.assertEqual(len(seen), 3)
+        self.assertEqual(summary["status"], "interrupted")
+        self.assertIsNone(summary["qualification"])
+
+    def test_the_command_line_exits_non_zero_after_an_overrun(self):
+        huge = self.HUGE
+
+        class Overrunning(runner.StubTransport):
+            def __call__(self, request):
+                response = super().__call__(request)
+                if self.calls == 2:
+                    payload = json.loads(response.body)
+                    payload["usage"]["input_tokens"] = huge
+                    return providers.Response(status=200, body=json.dumps(payload),
+                                              elapsed_seconds=0.0)
+                return response
+
+        cfg_path = os.path.join(self.store, "cfg.json")
+        tasks_path = os.path.join(self.store, "tasks.json")
+        with open(cfg_path, "w", encoding="utf-8") as stream:
+            json.dump(support.config_dict(), stream)
+        with open(tasks_path, "w", encoding="utf-8") as stream:
+            json.dump(self.tasks, stream)
+        lines = []
+        with mock.patch.object(runner, "StubTransport", Overrunning), \
+                mock.patch.dict(sys.modules, ABSENT):
+            code = cli.main(["dry-run", "--config", cfg_path, "--public-tasks", tasks_path,
+                             "--private-store", os.path.join(self.store, "store"),
+                             "--stub-grade"], out=lines.append)
+        text = "\n".join(lines)
+        self.assertEqual(code, 3, text)
+        self.assertNotEqual(code, 0)
+        self.assertIn("status interrupted", text)
+        self.assertIn("stopped: interrupted: a charge was above its reservation", text)
+
+    def test_reservations_cover_ordinary_replies_so_the_backstop_stays_quiet(self):
+        # The fake provider reports exactly as many input tokens as the prompt has
+        # bytes, and a full-length answer: within the bound, so no overrun.
+        def step(request, n):
+            used = len(prompt_of(request).encode("utf-8"))
+            return support.ok(support.openai_body("x", input_tokens=used, output_tokens=4096))
+        summary = self.run_stage(transport=model_only(step))
+        self.assertEqual(summary["status"], "finalised")
+        for line in self.ledger_lines(summary):
+            self.assertNotIn("charge_above_reservation", line.get("flags", []))
 
 
 class CommandLineTests(unittest.TestCase):

@@ -248,6 +248,57 @@ class ValidationTests(unittest.TestCase):
         self.assertTrue(self.check(judge_candidates=unpinned).live_blockers)
         self.rejects("TO PIN BEFORE RUN", mode="live", judge_candidates=unpinned)
 
+    def test_a_judge_above_the_400_token_limit_is_refused(self):
+        self.assertEqual(config.JUDGE_MAX_OUTPUT_TOKENS, 400)
+        for mode in ("dry", "live"):
+            for limit in (401, 1000, 8192):
+                judges = [support.spec_dict("openai", "j-oa", "6", "12", judge=True,
+                                            max_output_tokens=limit),
+                          support.spec_dict("anthropic", "j-an", "9", "18", judge=True)]
+                message = self.rejects("config.judges[0].max_output_tokens must be a whole "
+                                       "number from 1 to 400", mode=mode, judges=judges)
+                self.assertIn("caps a judge reply at 400 tokens", message)
+        for limit in (0, -1, True, "400", 400.0, None):
+            judges = [support.spec_dict("openai", "j-oa", "6", "12", judge=True),
+                      support.spec_dict("anthropic", "j-an", "9", "18", judge=True,
+                                        max_output_tokens=limit)]
+            self.rejects("config.judges[1].max_output_tokens must be a whole number from 1 "
+                         "to 400", judges=judges)
+        # At the limit and below it, the config passes in both modes.
+        for limit in (400, 399, 1):
+            judges = [support.spec_dict("openai", "j-oa", "6", "12", judge=True,
+                                        max_output_tokens=limit),
+                      support.spec_dict("anthropic", "j-an", "9", "18", judge=True)]
+            for mode in ("dry", "live"):
+                self.assertEqual(self.check(mode=mode, judges=judges).judges[0]
+                                 .max_output_tokens, limit)
+
+    def test_a_judge_candidate_above_the_400_token_limit_is_refused(self):
+        for mode in ("dry", "live"):
+            for side, index in (("openai", 2), ("anthropic", 0)):
+                sides = support.candidates_dict()
+                sides[side][index]["max_output_tokens"] = 401
+                self.rejects("config.judge_candidates.%s[%d].max_output_tokens must be a "
+                             "whole number from 1 to 400" % (side, index), mode=mode,
+                             judge_candidates=sides)
+        # A candidate that is not on the panel is held to the limit as well.
+        sides = support.candidates_dict()
+        sides["openai"][0]["max_output_tokens"] = 1000
+        self.rejects("config.judge_candidates.openai[0].max_output_tokens",
+                     judge_candidates=sides)
+
+    def test_a_judge_spec_built_another_way_is_held_to_the_limit(self):
+        import dataclasses
+        loaded = self.check(judge_candidates=support.candidates_dict())
+        config.assert_judge_limits(loaded.judges)
+        config.assert_judge_limits(loaded.all_judge_candidates())
+        for limit in (401, 1000, 8192, None, 0):
+            lifted = dataclasses.replace(loaded.judges[0], max_output_tokens=limit)
+            with self.assertRaises(config.ConfigError) as caught:
+                config.assert_judge_limits([loaded.judges[1], lifted])
+            self.assertIn("judge j-oa has an output limit outside 1 to 400 tokens",
+                          str(caught.exception))
+
     def test_settings_fingerprint_follows_the_settings_not_the_price(self):
         base = self.check().judges[0]
         repriced = support.spec_dict("openai", "j-oa", "7", "14", judge=True)
@@ -257,7 +308,7 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(base.settings_sha256(), same.settings_sha256())
         self.assertEqual(len(base.settings_sha256()), 64)
         for field, value in (("reasoning_effort", "high"), ("temperature", 0),
-                             ("max_output_tokens", 400), ("api_version", "2026-06-01"),
+                             ("max_output_tokens", 300), ("api_version", "2026-06-01"),
                              ("send_reasoning_effort", False)):
             other = support.spec_dict("openai", "j-oa", "6", "12", judge=True, **{field: value})
             moved = self.check(judges=[other, support.spec_dict("anthropic", "j-an", "9", "18",

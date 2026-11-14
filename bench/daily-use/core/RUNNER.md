@@ -8,17 +8,35 @@ The method is `docs/DAY-TO-DAY-BENCH-METHOD.md`. This page says how the code car
 
 | File | Job |
 |---|---|
-| `keys.py` | Reads the owner's key file line by line and keeps only the first listed name per provider. Values live in `Secret` objects that never print. Refuses to start while `OPENAI_API_KEY` or `ANTHROPIC_API_KEY` is set. |
-| `config.py` | Loads and checks `run-config.json`: every setting as an actual value, a dated price receipt per model, two judges from two providers, the judge candidates per provider, caps, key names. Rejects anything that looks like a secret. `TO PIN BEFORE RUN` values pass a dry run and block a live one. Settings a provider would reject (temperature where it is not accepted, an unknown Anthropic API version, an effort value the API does not have) are refused outright. |
+| `keys.py` | Reads the owner's key file line by line and keeps only the first listed name per provider. Values live in `Secret` objects that never print. Holds the check that refuses every start while `OPENAI_API_KEY` or `ANTHROPIC_API_KEY` is set. |
+| `config.py` | Loads and checks `run-config.json`: every setting as an actual value, a dated price receipt per model, two judges from two providers, the judge candidates per provider, caps, key names. Every judge and every judge candidate must have an output limit of at most `JUDGE_MAX_OUTPUT_TOKENS` (400), in dry and live validation alike. Rejects anything that looks like a secret. `TO PIN BEFORE RUN` values pass a dry run and block a live one. Settings a provider would reject (temperature where it is not accepted, an unknown Anthropic API version, an effort value the API does not have) are refused outright. |
 | `providers.py` | `OpenAIResponses` and `AnthropicMessages` on an injectable transport. Builds the request, reads the answer, the finish reason and the raw usage, and sorts failures into transport error (retried, waiting for a `Retry-After` of up to 60 seconds), provider error and timeout (not retried). A 429 that says the account is out of credit or over a spend limit is a provider error. Holds the real `UrllibTransport`, which only the live gate can build. |
-| `ledger.py` | One durable ledger per provider, shared by model and judge calls. Reserve the worst case before each request, settle to the actual charge after it, refuse at the cap. Money is `Decimal`. |
-| `preflight.py` | Prints expected, planning bound and absolute bound for the whole plan, whether or not the run is refused, and refuses when the planning bound is above a remaining cap. Counts qualification for every judge candidate and says how the judging was costed. |
+| `ledger.py` | One durable ledger per provider, shared by model and judge calls. Reserve the worst case before each request, settle to the actual charge after it, refuse at the cap. The worst case uses `input_token_bound`, an upper bound on input tokens, and the full output limit. Money is `Decimal`. |
+| `preflight.py` | Prints expected, planning bound and absolute bound for the whole plan, whether or not the run is refused, and refuses when the planning bound is above a remaining cap. Both bounds count input with the ledger's `input_token_bound`. Counts qualification for every judge candidate and says how the judging was costed. |
 | `judges.py` | Judge prompts, JSON verdicts with one retry, the combine rules, qualification scoring and the choice of panel. |
 | `records.py` | Run, slot and request ids; the staging folder; finalising with a SHA-256 manifest; the public record through an allowlist; amendments. |
 | `runner.py` | Slots, requests and retries; judging; the stages; the qualification record; the live gate; the seam with the loader, the graders and the scorer. |
 | `cli.py` | The command line. |
 
-One request goes like this: count the worst case, reserve it in the provider ledger (fsynced), append the "sent" line to the run record (fsynced), send, append the "done" line, settle the ledger. One request is in flight at a time.
+One request goes like this: work out the worst case, reserve it in the provider ledger (fsynced), append the "sent" line to the run record (fsynced), send, append the "done" line, settle the ledger. One request is in flight at a time.
+
+## What a reservation covers
+
+A reservation has to be at least what the request can cost, or the cap is not a cap. It is worked out by `ledger.worst_case_usd` from two figures.
+
+**Input: an upper bound, not an estimate.** `ledger.input_token_bound` is the UTF-8 byte length of every text field sent (the system text, if there were any, and the prompt or messages) plus a fixed framing allowance of 256 tokens per request (`FRAMING_ALLOWANCE_TOKENS`). The reason: a byte-level BPE tokeniser starts from the bytes of the text and only merges them, so it never emits more tokens than the text has bytes. The framing allowance covers the role and message wrappers the provider adds. Code, punctuation and non-English text, which a characters-per-token estimate undercounts, are covered because the count is in bytes. The adapters send one text field, the prompt, and no system text.
+
+This one function is behind every input figure in a reservation, in the pre-flight planning bound and in the absolute bound. There is no second estimate. The input side is priced at the dearer of the input rate and the cached-input rate.
+
+**Output: the full limit.** The output side is the output limit sent with the request (4,096 or 8,192 for a task, at most 400 for a judge) at the output price. Reasoning and thinking tokens are inside the output limit on both APIs and are billed as output, so the limit covers them. If a price receipt says reasoning is billed separately, the limit is priced at the output rate plus the reasoning rate.
+
+**The pre-flight's one planning assumption.** A judge request holds the model's answer, and at pre-flight time the answer does not exist. The two bounds plan it at 4 bytes per token of the task's output limit (`ANSWER_BYTES_PER_TOKEN` in `preflight.py`), each byte counted as one token. This is an assumption about the size of an answer, not a bound: a token can be longer than 4 bytes. It cannot break the cap, because at run time the judge request is reserved from the bytes of the real answer; an answer longer than planned can only stop the run early at the cap.
+
+**The expected figure** in the pre-flight keeps a softer size for input (3 characters per token). It is labelled as expected, it is for reading only, and it never feeds a reservation, a bound or a cap check.
+
+**The backstop.** If a settled charge is ever above its reservation, the ledger writes the settle line with the charge, the reservation and the flag `charge_above_reservation`. The runner then sends nothing more: the next request, a retry or a judge call, is refused before dispatch, the paid answer is kept on its slot, and the run ends `interrupted` in staging. The command exits with 3. An overrun on the very last request of a stage also ends the stage interrupted, so it is never finalised.
+
+**A possible later tightening.** Both providers have a token-count endpoint that would give the exact input count before a request. It needs a key and a network call, which nothing before the first paid step may make, so it is not used. It could replace the byte bound for the paid stages later; the byte bound would stay as the pre-flight figure.
 
 A judge verdict is one JSON object. It may come bare or inside a single Markdown code fence; the fence is stripped before parsing, so that habit does not cost a retry. Anything else (text before or after, two fences, JSON in the wrong shape) is malformed and is retried once.
 
@@ -85,6 +103,8 @@ Before the first request of a canary or a full run, the default grader is checke
 
 ## The live gate
 
+**Every start, dry or live.** Before anything else is read, every command (`preflight` and `dry-run` included) and both programmatic entry points (`runner.run_stage`, `runner.open_live_gate`), as well as `preflight.preflight`, refuse while `OPENAI_API_KEY` or `ANTHROPIC_API_KEY` is set in the environment. The command prints `REFUSED:` with the name of the variable, never its value, and exits with 2. No config, task file, sample file, key file or store is opened first.
+
 A live stage runs only if all of these hold, checked in this order:
 
 1. `LIVE_ENABLED = True` in `runner.py`, changed in a reviewed commit;
@@ -92,7 +112,7 @@ A live stage runs only if all of these hold, checked in this order:
 3. the config has `live_approved: true` and `approved_by` filled in;
 4. the config has no `TO PIN BEFORE RUN` value, no null cached rate and no ended promotion;
 5. `--key-file` was given;
-6. neither provider key variable is set in the environment;
+6. neither provider key variable is set in the environment (this is checked first of all, as above);
 7. the earlier steps are on record: `qualify` needs nothing before it; `canary` needs a passed judge qualification record that still stands, with a panel equal to the config's `judges`; `full` needs that and a finished canary that ran under the same record;
 8. the pre-flight passes;
 9. the keys load from the key file. This is the last step, so the file is read only when everything else has passed.
@@ -129,7 +149,7 @@ The request and reply shapes at the top of `providers.py` were read against the 
 
 ## Still to verify before the first paid step
 
-- **The judge output limit of 400 tokens.** On both APIs the limit also covers reasoning or thinking tokens, and thinking is on by default on all three Claude models. OpenAI's own advice is to leave at least 25,000 tokens for reasoning and output when starting out. Confirm, at the effort pinned for each candidate, that a verdict for the task with the most judged checks fits. A cut-off verdict is malformed, is retried once and then leaves the check unresolved, and in qualification it counts as disagreement.
+- **The judge output limit of 400 tokens.** The limit itself is enforced: a judge or a judge candidate above 400 is refused by the config check, and again by the pre-flight. What is still to verify is that 400 is enough. On both APIs the limit also covers reasoning or thinking tokens, and thinking is on by default on all three Claude models. OpenAI's own advice is to leave at least 25,000 tokens for reasoning and output when starting out. Confirm, at the effort pinned for each candidate, that a verdict for the task with the most judged checks fits. A cut-off verdict is malformed, is retried once and then leaves the check unresolved, and in qualification it counts as disagreement.
 - **The task limits of 4,096 and 8,192 tokens** cover reasoning as well, for the same reason. An answer can be cut off, or come back empty, with the whole limit spent on reasoning. The canary should show the truncation rate at the pinned effort.
 - **Effort and data retention** are still `TO PIN BEFORE RUN` in the example. They are the owner's choices.
 - **Prices:** re-read on the day of the run. OpenAI lists a 10% uplift for regional processing; the receipts assume the global endpoint.
@@ -174,7 +194,7 @@ The pre-flight says how the judging of the canary and the full run was costed. B
 
 `--max-usd <amount>` sets a lower cap for one run. It can only lower: the provider caps always apply as well. `--seed <n>` fixes the task order; the seed is recorded either way. `--held-out-manifest <path>` names the manifest when it is not beside the public folder.
 
-Exit codes: 0 finished; 2 refused (the reason is printed after `REFUSED:`); 3 interrupted or pending; 4 the qualification finished but named no panel. A mistake in the command itself exits with 1 or 2 from the argument parser. No refusal exits with 0.
+Exit codes: 0 finished; 2 refused (the reason is printed after `REFUSED:`); 3 interrupted or pending, which includes a run stopped because a charge was above its reservation (the reason is printed after `stopped:`); 4 the qualification finished but named no panel. A mistake in the command itself exits with 1 or 2 from the argument parser. No refusal exits with 0.
 
 ## Not built yet
 

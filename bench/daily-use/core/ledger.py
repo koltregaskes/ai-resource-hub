@@ -3,12 +3,19 @@
 One ledger per provider, shared by model calls and judge calls.
 
 - `reserve(request_id, worst_case_usd)` runs before each request. The worst
-  case is counted input tokens x input price + the output limit x output
+  case is the input-token bound x input price + the output limit x output
   price. It raises `CapExceeded` when spent + reserved + the new reservation
   would pass the provider cap.
+- The input-token bound is `input_token_bound`: the UTF-8 byte length of
+  every text field sent, plus `FRAMING_ALLOWANCE_TOKENS`. It is an upper
+  bound, not an estimate, and it is the only input-token figure that ever
+  feeds a reservation or a pre-flight bound.
 - `settle(request_id, billable, receipt)` reconciles to the actual charge at
   the frozen price receipt. Missing usage keeps the full reservation as the
   charge and flags the request.
+- A settled charge above its reservation is recorded and flagged
+  `charge_above_reservation`; the runner then stops before the next request
+  (`ReservationExceeded`).
 - Every reserve and settle is appended to a JSONL file, flushed and fsynced
   before the call returns, so the reservation is on disk before the request
   is sent. A restart reloads the file; a reservation that was never settled
@@ -19,12 +26,15 @@ Money is `decimal.Decimal` throughout and is written to disk as text.
 
 import datetime
 import json
-import math
 import os
 from decimal import Decimal
 
 MTOK = Decimal(1000000)
 ZERO = Decimal(0)
+# Tokens allowed per request, on top of the bytes of the text, for what the
+# provider wraps round it: role markers and message wrappers.
+FRAMING_ALLOWANCE_TOKENS = 256
+OVERRUN_FLAG = "charge_above_reservation"
 
 
 class CapExceeded(Exception):
@@ -40,20 +50,51 @@ class LedgerError(Exception):
     """The ledger was used wrongly or its file is damaged."""
 
 
-def count_input_tokens(text, tokeniser=None):
-    """Count input tokens for a reservation.
+class ReservationExceeded(Exception):
+    """A settled charge was above its reservation. Nothing more is sent."""
 
-    Without a tokeniser the count is the conservative ceil(len(text) / 3).
+    def __init__(self, message, provider=None, request_id=None):
+        super().__init__(message)
+        self.provider = provider
+        self.request_id = request_id
+
+
+def input_token_bound(*texts):
+    """An upper bound on the input tokens of one request.
+
+    `texts` is every text field sent in the request (the system text, if
+    any, and the prompt or every message). The bound is their UTF-8 byte
+    length plus `FRAMING_ALLOWANCE_TOKENS`.
+
+    Why it is a bound and not an estimate: a byte-level BPE tokeniser starts
+    from the bytes of the text and only ever merges them, so it never emits
+    more tokens than the text has bytes. The framing allowance covers the
+    role and message wrappers the provider adds round the text.
+
+    This is the one function behind every input-token figure in a
+    reservation, the pre-flight planning bound and the absolute bound.
     """
-    if tokeniser is not None:
-        return int(tokeniser(text))
-    return math.ceil(len(text) / 3)
+    return sum(len(text.encode("utf-8", "surrogatepass")) for text in texts)         + FRAMING_ALLOWANCE_TOKENS
 
 
 def worst_case_usd(input_tokens, output_limit, receipt):
-    """Input tokens x input price + the output limit x output price."""
-    return (Decimal(input_tokens) * receipt.input_per_mtok
-            + Decimal(output_limit) * receipt.output_per_mtok) / MTOK
+    """The input-token bound x input price + the output limit x output price.
+
+    The output side is the full output limit at the output price. Reasoning
+    and thinking tokens are inside the output limit on both APIs and are
+    billed as output, so the limit covers them. If a receipt says reasoning
+    is billed separately, the limit is priced at the output rate plus the
+    reasoning rate. The input side uses the dearer of the input rate and
+    the cached-input rate, so a cached token can never cost more than was
+    reserved for it.
+    """
+    input_rate = receipt.input_per_mtok
+    if receipt.cached_input_per_mtok is not None:
+        input_rate = max(input_rate, receipt.cached_input_per_mtok)
+    output_rate = receipt.output_per_mtok
+    if receipt.reasoning_billing == "separate" and receipt.reasoning_per_mtok is not None:
+        output_rate += receipt.reasoning_per_mtok
+    return (Decimal(input_tokens) * input_rate + Decimal(output_limit) * output_rate) / MTOK
 
 
 def charge_usd(billable, receipt):
@@ -209,7 +250,8 @@ class ProviderLedger:
             charge = entry["reserved"]
             flags = flags + ["charged_at_reserved_maximum"]
         elif charge > entry["reserved"]:
-            flags = flags + ["charge_above_reservation"]
+            # Recorded here; the runner stops before the next request.
+            flags = flags + [OVERRUN_FLAG]
         self._append({"event": "settle", "request_id": request_id, "usd": str(charge),
                       "reserved_usd": str(entry["reserved"]), "flags": flags,
                       "reconciled": reconciled})

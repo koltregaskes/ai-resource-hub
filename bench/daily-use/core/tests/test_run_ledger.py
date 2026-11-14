@@ -31,13 +31,69 @@ def usage(uncached=0, cached=0, output=0, reasoning=None, unpriced=()):
 
 
 class ArithmeticTests(unittest.TestCase):
-    def test_input_tokens_are_counted_conservatively(self):
-        self.assertEqual(ledger.count_input_tokens(""), 0)
-        self.assertEqual(ledger.count_input_tokens("abc"), 1)
-        self.assertEqual(ledger.count_input_tokens("abcd"), 2)
-        self.assertEqual(ledger.count_input_tokens("x" * 300), 100)
-        self.assertEqual(ledger.count_input_tokens("x" * 301), 101)
-        self.assertEqual(ledger.count_input_tokens("x" * 301, tokeniser=lambda text: 77), 77)
+    def test_the_input_bound_is_utf8_bytes_plus_the_framing_allowance(self):
+        self.assertEqual(ledger.FRAMING_ALLOWANCE_TOKENS, 256)
+        bound = ledger.input_token_bound
+        self.assertEqual(bound(""), 256)
+        self.assertEqual(bound("abc"), 3 + 256)
+        self.assertEqual(bound("x" * 300), 300 + 256)
+        # Bytes, not characters: text that the old characters / 3 undercounted.
+        self.assertEqual(bound("\u00e9"), 2 + 256)                    # e acute
+        self.assertEqual(bound("\u20ac"), 3 + 256)                    # euro sign
+        self.assertEqual(bound("\u65e5\u672c\u8a9e"), 9 + 256)        # three CJK characters
+        self.assertEqual(bound("\U0001f600"), 4 + 256)                # one emoji
+        self.assertEqual(bound("{}[]();:,.<>!?"), 14 + 256)           # punctuation
+        # Every text field sent is counted; the allowance is per request, once.
+        self.assertEqual(bound("system text", "prompt"), 11 + 6 + 256)
+        self.assertEqual(bound(), 256)
+        # A lone surrogate from a JSON escape is counted, not an error.
+        self.assertEqual(bound("\ud800"), 3 + 256)
+
+    def test_the_input_bound_is_never_below_one_token_per_byte(self):
+        for text in ("plain words", "def f(x):\n    return {x: [x]}", "\u00e9\u00e8\u00ea",
+                     "\u4e2d\u6587\u6587\u672c", "\U0001f600" * 5, "a" * 10000):
+            self.assertGreaterEqual(ledger.input_token_bound(text),
+                                    len(text.encode("utf-8")))
+            self.assertGreaterEqual(ledger.input_token_bound(text), len(text))
+
+    def test_there_is_one_input_figure_and_no_second_estimate(self):
+        self.assertFalse(hasattr(ledger, "count_input_tokens"))
+        folder = support.CORE
+        for name in ("ledger.py", "preflight.py", "runner.py"):
+            with open(os.path.join(folder, name), encoding="utf-8") as stream:
+                text = stream.read()
+            self.assertNotIn("tokeniser=", text, name)
+            self.assertNotIn("chars_per_token", text.lower(), name)
+        with open(os.path.join(folder, "ledger.py"), encoding="utf-8") as stream:
+            text = stream.read()
+        self.assertNotIn("/ 3", text)
+        self.assertNotIn("// 3", text)
+
+    def test_worst_case_covers_reasoning_billed_separately_and_a_dearer_cached_rate(self):
+        # Separate reasoning: the limit is priced at output + reasoning.
+        # 100 x 3 + 4096 x (30 + 40) = 300 + 286720 = 287020 per million
+        price = receipt(billing="separate", reasoning="40")
+        self.assertEqual(ledger.worst_case_usd(100, 4096, price), D("0.28702"))
+        # ...so the dearest charge the limit allows is never above it.
+        charge, _ = ledger.charge_usd(usage(100, 0, 4096, reasoning=4096), price)
+        self.assertEqual(charge, D("0.28702"))
+        # A cached rate above the input rate: the dearer one is reserved.
+        # 100 x 5 + 4096 x 30 = 500 + 122880 = 123380 per million
+        price = receipt(cached="5")
+        self.assertEqual(ledger.worst_case_usd(100, 4096, price), D("0.12338"))
+        charge, _ = ledger.charge_usd(usage(0, 100, 4096), price)
+        self.assertEqual(charge, D("0.12338"))
+
+    def test_a_request_within_the_bound_and_the_limit_never_costs_more_than_reserved(self):
+        price = receipt()
+        prompt = "Summarise: \u00e9t\u00e9 {code}; " * 40
+        tokens = ledger.input_token_bound(prompt)
+        reserved = ledger.worst_case_usd(tokens, 4096, price)
+        for uncached, cached, output in ((tokens, 0, 4096), (0, tokens, 4096),
+                                         (tokens // 2, tokens // 2, 4096), (10, 0, 1)):
+            charge, _ = ledger.charge_usd(usage(uncached, cached, output, reasoning=output),
+                                          price)
+            self.assertLessEqual(charge, reserved)
 
     def test_worst_case_is_input_plus_the_output_limit(self):
         # 100 x 3 + 4096 x 30 = 300 + 122880 = 123180 per million = 0.12318
@@ -151,6 +207,14 @@ class LedgerTests(unittest.TestCase):
         settled = book.settle("r/1", usage(1000, 0, 0), receipt())   # 0.003
         self.assertEqual(settled["charge"], D("0.003"))
         self.assertIn("charge_above_reservation", settled["flags"])
+        self.assertEqual(ledger.OVERRUN_FLAG, "charge_above_reservation")
+        # The overrun is on disk with both figures, and it counts as spent in full.
+        line = self.lines()[-1]
+        self.assertEqual((line["event"], line["usd"], line["reserved_usd"]),
+                         ("settle", "0.003", "0.001"))
+        self.assertIn("charge_above_reservation", line["flags"])
+        self.assertEqual(book.spent, D("0.003"))
+        self.assertIn("charge_above_reservation", self.book().entries["r/1"]["flags"])
 
     def test_misuse_is_refused(self):
         book = self.book()
