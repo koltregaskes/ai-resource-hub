@@ -20,6 +20,15 @@ export const blogPosts: BlogPost[] = [
   ...practitionerB2.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: (p.slug === 'structured-output-is-not-a-correct-answer' ? 'Explainer' : 'Analysis') as BlogType, readTime: '5 min' })),
   ...practitionerB1.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: (p.slug === 'choose-an-ai-model-by-job' ? 'Explainer' : 'Analysis') as BlogType, readTime: '5 min' })),
   {
+    slug: 'how-to-read-an-ai-price-list',
+    title: 'How to read an AI price list',
+    description:
+      'A worked guide to AI model pricing: input and output tokens, reasoning, caching and batch discounts, with one example job priced on four models and four ways.',
+    date: '2026-11-14',
+    type: 'Explainer',
+    readTime: '8 min',
+  },
+  {
     slug: 'output-tokens-cost-five-times-input',
     title: 'AI models now charge five times more to write than to read',
     description:
