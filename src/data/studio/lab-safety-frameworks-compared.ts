@@ -2,7 +2,7 @@ import type { StudioArticle } from "./types";
 
 export const article: StudioArticle = {
   slug: "lab-safety-frameworks-compared",
-  title: "Two of three AI lab safety frameworks name the CEO as the final decision-maker",
+  title: "Two AI lab safety frameworks give the final call to the CEO, one with a designate clause",
   description: "We read the current safety frameworks of Anthropic, OpenAI and Google DeepMind and compared what each says happens when a model reaches a dangerous capability, and who decides.",
   type: "Analysis",
   readTime: "9 min",
