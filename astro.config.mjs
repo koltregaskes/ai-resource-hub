@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import pagesCsp from './scripts/contracts/pages-csp.mjs';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
@@ -14,6 +15,7 @@ export default defineConfig({
     defaultStrategy: 'hover',
   },
   integrations: [
+    pagesCsp(),
     react(),
     publicLinks(),
     sitemap({
