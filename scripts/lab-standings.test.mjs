@@ -46,7 +46,7 @@ test('openness excludes unknowns, groups variants by most open credit',()=>{
 });
 test('published snapshot reproduces exactly and maps every listed lab frontier',()=>{
  const s=JSON.parse(readFileSync('data/lab-standings/snapshots/2026-11-14.json','utf8'));
- assert.deepEqual(scoreSnapshot(s.input).rows,s.rows);
+ assert.deepEqual(JSON.parse(JSON.stringify(scoreSnapshot(s.input).rows)),s.rows);
  const raw=readFileSync('data/lab-standings/raw/eci-2026-11-14.csv','utf8');
  assert.ok(raw.includes('Claude Fable 5.2'));
  assert.equal(s.rows.find(r=>r.id==='anthropic').best,173.44);
