@@ -1,6 +1,6 @@
 # AI Milestones Snapshot
 
-Generated: 14 Nov 2026, 03:09 UTC
+Generated: 14 Nov 2026, 04:57 UTC
 
 Repo-readable mirror of the public AI Milestones page. This is the curated chronology layer for major model launches, lab founding dates, research breakthroughs, and milestone tracking gaps.
 
@@ -8,7 +8,7 @@ Repo-readable mirror of the public AI Milestones page. This is the curated chron
 
 | Metric | Value |
 | --- | --- |
-| Generated | 14 Nov 2026, 03:09 UTC |
+| Generated | 14 Nov 2026, 04:57 UTC |
 | Reference date | Saturday, 14 November 2026 |
 | Curated milestones | 37 |
 | Verified milestones | 35 |
@@ -75,7 +75,7 @@ No exact anniversary lands on the current Europe/London date snapshot.
 | 30 Nov 2020 | AlphaFold breakthrough at CASP14 | Research breakthrough | [Google DeepMind](https://deepmind.google/research/highlighted-research/alphafold/timeline-of-a-breakthrough/) |
 | 14 Feb 2019 | GPT-2 announced | Research breakthrough | [OpenAI](https://openai.com/blog/better-language-models/) |
 | 12 Jun 2017 | Attention Is All You Need released | Research breakthrough | [arXiv](https://arxiv.org/abs/1706.03762) |
-| 15 Mar 2016 | AlphaGo beats Lee Sedol | Research breakthrough | [Google DeepMind](https://deepmind.google/discover/blog/alphago-seoul-final-score-4-1/) |
+| 15 Mar 2016 | AlphaGo beats Lee Sedol | Research breakthrough | [Google DeepMind](https://blog.google/innovation-and-ai/products/what-we-learned-in-seoul-with-alphago/) |
 | 13 Oct 2012 | AlexNet wins ILSVRC 2012 | Research breakthrough | [ImageNet ILSVRC 2012](https://image-net.org/challenges/LSVRC/2012/index) |
 
 ## Tracking Queue
