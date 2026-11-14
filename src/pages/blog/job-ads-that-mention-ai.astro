@@ -1,0 +1,105 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import StudioNote from '../../components/insights/StudioNote.astro';
+import ColumnChart from '../../components/insights/ColumnChart.astro';
+import { article } from '../../data/studio/job-ads-that-mention-ai';
+import data from '../../data/insights/2026-11-14-job-ads-that-mention-ai.json';
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// Every number below is read from the frozen output of scripts/insights/job-ads-that-mention-ai.mjs.
+const fmt = (iso: string) => new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const pct = (v: number) => `${v.toFixed(2)}%`;
+const pts = (v: number) => `${v >= 0 ? '+' : ''}${v.toFixed(2)}`;
+const times = (v: number) => v.toFixed(2);
+const oneIn = (v: number) => Math.round(100 / v);
+const by = (g: string) => data.rows.find((r) => r.geography === g)!;
+const gb = by('GB');
+const ca = by('CA');
+const us = by('US');
+const ie = by('IE');
+const rows = data.rows; // sorted by latest share, highest first
+const byEarlier = [...rows].sort((a, b) => b.earlier.value - a.earlier.value);
+const earlierTop = byEarlier[0];
+const earlierBottom = byEarlier[byEarlier.length - 1];
+const latestBottom = rows[rows.length - 1];
+const byRatio = [...rows].sort((a, b) => b.ratio - a.ratio);
+const lowestFour = rows.slice(-4).map((r) => r.country).reverse();
+const listNames = (xs: string[]) => `${xs.slice(0, -1).join(', ')} and ${xs[xs.length - 1]}`;
+const latestDate = fmt(data.latestPeriod);
+const earlierDate = fmt(data.earlierPeriod);
+const vintage = fmt(rows[0].latest.vintage);
+const retrieved = fmt(data.input.retrievedAt);
+const allRose = data.rose === data.countries ? `all ${data.countries}` : `${data.rose} of the ${data.countries}`;
+const ieRank = rows.findIndex((r) => r.geography === earlierTop.geography) + 1;
+const rankWord = ['', 'first', 'second', 'third', 'fourth', 'fifth'][ieRank] ?? `number ${ieRank}`;
+const gbPointsRank = [...rows].sort((a, b) => b.changePoints - a.changePoints).findIndex((r) => r.geography === 'GB') + 1;
+const uncertaintyNote = rows[0].latest.uncertainty;
+---
+<InsightArticle title={article.title} description={article.description} date={article.date} type={article.type} readTime={article.readTime} snapshot="2026-11-14" standfirst={`The share of Indeed job postings that mention AI keywords rose in ${allRose} countries in our data over the year to ${latestDate}, but it counts adverts on one job site, not jobs.`}>
+  <p>In the seven days to {latestDate}, {pct(gb.latest.value)} of job postings on Indeed in the United Kingdom included AI-related keywords. A year earlier the figure was {pct(gb.earlier.value)}. That is about one posting in {oneIn(gb.latest.value)} now against one in {oneIn(gb.earlier.value)} then, and the share rose in {allRose} countries in our copy of Indeed Hiring Lab's published data.</p>
+  <p>Each figure in this piece is <strong>{gb.kindLabel.toLowerCase()}</strong>: it is worked out from Indeed's own postings, not estimated from a survey sample. Hiring Lab publishes no margin of error for these numbers, so each carries the note "{uncertaintyNote}". That does not make the counts exact. A list of keywords can miss a relevant posting or catch one that mentions AI only in passing.</p>
+
+  <div class="stat-row">
+    <div class="stat"><b>{pct(gb.latest.value)}</b><span>{gb.kindLabel}: UK share, week to {latestDate}</span></div>
+    <div class="stat"><b>{pct(gb.earlier.value)}</b><span>{gb.kindLabel}: UK share, week to {earlierDate}</span></div>
+    <div class="stat"><b>{pct(ca.latest.value)}</b><span>{ca.kindLabel}: {ca.country}, the highest of {data.countries} countries</span></div>
+    <div class="stat"><b>{data.rose} of {data.countries}</b><span>countries where the share rose over the year</span></div>
+  </div>
+
+  <h2>What Indeed Hiring Lab counts</h2>
+  <p>Hiring Lab is Indeed's economic research team. Its <a href={data.source.methodUrl} rel="noopener">method note on GitHub</a> (read on 14 November 2026) says the data is the share of AI job postings as a percentage of all job postings, using a seven-day trailing average. A posting counts when it includes keywords associated with AI, and the note's examples are "Machine Learning", "Data Science" and "Artificial Intelligence". The data is daily and is refreshed each month.</p>
+  <p>The bottom of that fraction is all Indeed postings in the country concerned, so each figure is a share of one job site's listings, not of the country's vacancies. And because each daily value is a seven-day trailing average, "{latestDate}" describes the week ending that day rather than a single day.</p>
+  <p>The same source publishes a separate share for generative AI keywords. Our data file holds only the broader AI series, so this piece says nothing about generative AI on its own.</p>
+  <p>Our file is also a selection, not the full daily series. For each country it holds the latest date published ({latestDate}) and the same date a year earlier. The longest change it supports is therefore one year, measured point to point. It cannot show whether the rise was steady, sudden or uneven in between.</p>
+
+  <h2>Canada's share more than tripled</h2>
+
+  <ColumnChart
+    title="Share of Indeed job postings with AI-related keywords, week to 30 September 2026"
+    summary={`Measured shares by country: ${rows.map((r) => `${r.country} ${pct(r.latest.value)}`).join('; ')}.`} data={rows.map((r) => ({ label: r.geography, value: r.latest.value, valueLabel: pct(r.latest.value), sub: r.country, highlight: r.geography === 'GB' }))} caption={`Measured. Source: Indeed Hiring Lab, AI_posting.csv (CC BY 4.0), retrieved ${retrieved}. Per cent of Indeed postings in each country, seven-day trailing average to ${latestDate}. ${uncertaintyNote}. ${data.rights.attributionText}`}
+  />
+
+  <div class="table-wrap">
+    <table>
+      <caption>Measured. Source: Indeed Hiring Lab, AI_posting.csv (CC BY 4.0), retrieved {retrieved}. Per cent of Indeed postings with AI-related keywords, seven-day trailing average to each date. {uncertaintyNote}. {data.rights.attributionText}</caption>
+      <thead>
+        <tr><th>Country</th><th class="num">{earlierDate}</th><th class="num">{latestDate}</th><th class="num">Change (points)</th><th class="num">Later / earlier</th><th>Evidence kind</th></tr>
+      </thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr>
+            <td>{r.country}</td>
+            <td class="num">{pct(r.earlier.value)}</td>
+            <td class="num">{pct(r.latest.value)}</td>
+            <td class="num">{pts(r.changePoints)}</td>
+            <td class="num">{times(r.ratio)}x</td>
+            <td>{r.kindLabel}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <p>Canada stands apart. Its share went from {pct(ca.earlier.value)} to {pct(ca.latest.value)}, a rise of {pts(ca.changePoints).replace('+','')} percentage points, or {times(ca.ratio)} times the earlier figure. It is the only country in the file where the share doubled. The {byRatio[1].country} ({times(byRatio[1].ratio)} times) and the {byRatio[2].country} ({times(byRatio[2].ratio)} times) came closest.</p>
+  <p>For the United Kingdom the rise was {pts(gb.changePoints)} percentage points, the {['', 'largest', 'second-largest', 'third-largest', 'fourth-largest'][gbPointsRank]} in points of the {data.countries} countries. In ratio terms the UK share ended the year at {times(gb.ratio)} times its starting level, just short of double. So about one UK posting on Indeed in {oneIn(gb.latest.value)} carried an AI keyword in the week to {latestDate} (measured; {uncertaintyNote.toLowerCase()}).</p>
+  <p>The file cannot say why Canada moved so far. It holds the share and nothing else, so a jump in AI-keyword postings looks the same in it as a fall in other postings while AI-keyword postings held steady. Both would push the share up.</p>
+  <p>A year ago {earlierTop.country} had the highest share, at {pct(earlierTop.earlier.value)}. It is {rankWord} now, at {pct(earlierTop.latest.value)}, so Canada overtook it during the year. {earlierBottom.country} was lowest at both dates: {pct(earlierBottom.earlier.value)} then and {pct(latestBottom.latest.value)} now.</p>
+
+  <h2>Why a higher share in one country is not more AI hiring</h2>
+  <p>Each country's figure is a statement about Indeed's postings in that country. Our file does not hold how much of each country's hiring is advertised on Indeed, how many postings sit behind each share, or which employers use the site. Two countries with the same share could have very different numbers of AI-related adverts.</p>
+  <p>Language is a second gap. The method note gives its keyword examples in English and does not say how matching works for postings written in other languages. So we would not read the four lowest shares, in {listNames(lowestFour)}, as evidence of less AI hiring there. They may be, or the keyword lists may behave differently; the published method does not let us tell.</p>
+
+  <h2>What a rising share leaves out</h2>
+  <p>It is a count of adverts on one website. A posting is not a hire, and the file holds no hiring or employment figures, so nothing here says how many people work in AI-related roles.</p>
+  <p>It is not jobs lost or created. More postings with AI keywords says nothing about postings that never appeared, or about whether any job was replaced.</p>
+  <p>It does not show how AI is used in the job. The method note says a posting counts if it includes the keywords; it does not say the keyword has to describe the main work. Going by the note's examples, an advert for a data scientist counts alongside one for a machine learning engineer. The share cannot tell whether the person hired will build AI systems, use AI tools now and then, or neither.</p>
+  <p>And it is not a forecast. Two points a year apart describe what happened between them, and we draw no line beyond {latestDate}.</p>
+
+  <h2>Release, licence and the copy we hold</h2>
+  <p>The figures come from Indeed Hiring Lab's <a href={data.source.csvUrl} rel="noopener">AI_posting.csv on GitHub</a>, at commit {data.input.upstreamCommit.slice(0, 7)}, retrieved for this site on {retrieved}. Hiring Lab publishes the data under the <a href={data.rights.licenceUrl} rel="noopener">Creative Commons Attribution 4.0 licence</a>, which allows reuse as long as Hiring Lab is credited as the source. The credit line our data record requires is: {data.rights.attributionText}</p>
+  <p>Each value in our file has a source release date of {vintage} and is marked provisional. The source is refreshed monthly, so a later release could revise these numbers. When that happens our file adds the new values next to the old ones rather than overwriting them. The SHA-256 of the CSV we imported is <code>{data.input.sourceCsvSha256}</code>.</p>
+  <p>Our <a href={`${base}ai-and-jobs/`}>AI and jobs page</a> shows the same {data.countries} countries with a source receipt for each figure, and the <a href={`${base}transparency/`}>transparency page</a> sets out the rules every number in that section has to pass before it is published.</p>
+
+  <StudioNote article={article} snapshot="14 November 2026" />
+</InsightArticle>

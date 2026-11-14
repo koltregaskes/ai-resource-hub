@@ -1,0 +1,87 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import StudioNote from '../../components/insights/StudioNote.astro';
+import { article } from '../../data/studio/lab-safety-frameworks-compared';
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const docs = {
+  rsp: 'https://www-cdn.anthropic.com/files/4zrzovbb/website/0bacdc8440ea96e62a8766d99ebe1d4eea6d5f3a.pdf',
+  rspIndex: 'https://www.anthropic.com/responsible-scaling-policy',
+  pf: 'https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf',
+  pfIndex: 'https://openai.com/index/updating-our-preparedness-framework/',
+  fgf: 'https://cdn.openai.com/pdf/e37d949b-8c9f-4d76-b99e-4272f4631a7e/openai-frontier-governance-framework.pdf',
+  fsf: 'https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf',
+  fsfIndex: 'https://deepmind.google/frontier-safety/',
+};
+---
+<InsightArticle title={article.title} description={article.description} date={article.date} type={article.type} readTime={article.readTime} snapshot="2026-11-14" standfirst="When a model reaches a dangerous capability, Anthropic's and OpenAI's safety frameworks give the final call to the chief executive (with a second named officer at Anthropic), while Google DeepMind's names no role at all.">
+  <p>Two of the three frontier-safety frameworks we read on 14 November 2026 name the chief executive as the person who makes the final decision once a model reaches a dangerous capability, and the third names nobody. Anthropic's Responsible Scaling Policy gives that decision to its CEO and its Responsible Scaling Officer together, OpenAI's Preparedness Framework gives it to OpenAI Leadership, defined as "the CEO or a person designated by them", and Google DeepMind's Frontier Safety Framework refers only to "the appropriate governance function".</p>
+  <p>We downloaded the current version of each document from the lab's own site (or the file the lab's own page links to) and read it in full. This piece compares five things: which risks each names, what it calls the trigger, what it commits to when the trigger is reached, who decides, and how the document itself can change. It reports what the documents say. It does not describe how any lab has acted under its framework, and it does not rank them.</p>
+
+  <h2>The three documents and their versions</h2>
+  <div class="table-wrap"><table>
+    <caption>Versions and dates as printed on each document or its index page, read 14 November 2026.</caption>
+    <thead><tr><th>Lab</th><th>Document</th><th>Version and date as stated</th><th>Where we found it</th></tr></thead>
+    <tbody>
+      <tr><td>Anthropic</td><td><a href={docs.rsp} rel="noopener">Responsible Scaling Policy</a></td><td>Version 3.4, effective July 8, 2026</td><td><a href={docs.rspIndex} rel="noopener">anthropic.com index page</a></td></tr>
+      <tr><td>OpenAI</td><td><a href={docs.pf} rel="noopener">Preparedness Framework</a></td><td>Version 2, last updated 15 April 2025</td><td><a href={docs.pfIndex} rel="noopener">openai.com framework page</a></td></tr>
+      <tr><td>Google DeepMind</td><td><a href={docs.fsf} rel="noopener">Frontier Safety Framework</a></td><td>Version 3.1, published April 17, 2026</td><td><a href={docs.fsfIndex} rel="noopener">deepmind.google frontier safety page</a></td></tr>
+    </tbody>
+  </table></div>
+  <p>OpenAI's is the oldest of the three. We found no later version on OpenAI's site, and OpenAI's own page for the framework still links Version 2. OpenAI also publishes a separate <a href={docs.fgf} rel="noopener">Frontier Governance Framework</a> written to meet California and EU legal requirements; that document says OpenAI will continue to use and evolve the Preparedness Framework for its own approach, so we compare the Preparedness Framework here.</p>
+
+  <h2>Five questions, three answers</h2>
+  <div class="table-wrap"><table>
+    <caption>Paraphrases are ours; quotes are exact, from the versions listed above, read 14 November 2026. Sources: Anthropic RSP v3.4, OpenAI Preparedness Framework v2, Google DeepMind Frontier Safety Framework v3.1.</caption>
+    <thead><tr><th></th><th>Anthropic</th><th>OpenAI</th><th>Google DeepMind</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Risk areas named</th><td>Chemical and biological weapons (a non-novel and a novel threshold), misaligned AI systems in high-stakes settings, and automated R&amp;D in key domains. "For now, our evaluations will focus specifically on AI R&amp;D."</td><td>Three Tracked Categories: biological and chemical, cybersecurity, and AI self-improvement. Five Research Categories, including nuclear and radiological. "Persuasion category risks do not fit the criteria for inclusion."</td><td>Misuse: CBRN, cyber and harmful manipulation. Also machine learning R&amp;D and misalignment. The manipulation level is "exploratory and subject to further research".</td></tr>
+      <tr><th scope="row">What it calls the trigger</th><td>A "Capability or usage threshold", one per row of a three-column table. Earlier versions' AI Safety Levels now describe present safeguards, not future triggers.</td><td>Capability thresholds at two levels, High and Critical. Automated tests have "indicative thresholds"; the final call rests on "holistic judgment based on the totality of available evidence".</td><td>Critical Capability Levels, plus lower Tracked Capability Levels new in 3.1, with alert thresholds set "marginally earlier than our CCLs".</td></tr>
+      <tr><th scope="row">Commitment when reached</th><td>Keep or improve its ASL-3 protections for the first chemical and biological threshold, and apply protections at least as strong to more use cases for the second; report in Risk Reports every 3 to 6 months. Delay is promised in named competitor scenarios: "We will delay AI development and deployment as needed to achieve this."</td><td>High: safeguards that sufficiently minimise the risk before deployment, plus security controls. Critical: safeguards during development as well; each Critical row says "halt further development" until Critical-standard safeguards are specified.</td><td>An alert threshold leads to a response plan. At a Critical level: a recommended security level, deployment mitigations and a safety case. For misuse levels these are "required only for external deployment, not internal deployment or further development".</td></tr>
+      <tr><th scope="row">Who decides</th><td>The CEO and the Responsible Scaling Officer approve each Risk Report and the plans that follow; the Board and Long-Term Benefit Trust are told, and must approve when a marginal-risk argument plays a major role. "The CEO and RSO will make the ultimate determination."</td><td>The Safety Advisory Group recommends; OpenAI Leadership decides, meaning "the CEO or a person designated by them". The board may reverse a decision; its Safety and Security Committee has oversight.</td><td>No role or committee is named. External deployment waits until "the appropriate governance function determines the residual risk to be acceptable".</td></tr>
+      <tr><th scope="row">Can it change, and how</th><td>Yes. Changes are proposed by the CEO and RSO and "approved by the Board in consultation with the LTBT", then published by the effective date with a changelog.</td><td>Yes. Called a "living document"; the Safety Advisory Group reviews proposed changes, and the framework is reviewed at least once a year.</td><td>Yes. Reviewed at least once a year, or sooner on reasonable grounds; updates go to "the appropriate corporate governance bodies".</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Chemical and biological weapons appear in all three; cyber does not</h2>
+  <p>Each document names chemical and biological weapons, and each treats AI that speeds up AI research as its own risk: Anthropic calls it automated R&amp;D, OpenAI AI self-improvement, and Google DeepMind machine learning R&amp;D. After that the lists part. Cyber is a trigger in OpenAI's and Google DeepMind's documents, but the word does not appear in the version of Anthropic's policy we read. Anthropic's has its own row for misaligned AI systems in high-stakes settings, such as systems used heavily inside AI companies, while Google DeepMind folds misalignment into its machine learning R&amp;D domain and OpenAI keeps related abilities, such as sandbagging and undermining safeguards, as Research Categories rather than triggers.</p>
+  <p>Manipulation splits them most plainly. Google DeepMind has a harmful manipulation level, marked exploratory. OpenAI's framework says persuasion is handled outside it, through its Model Spec and usage policies. Anthropic's policy has no manipulation threshold; the word appears only where it describes what a misaligned system might do. Anthropic's Risk Reports must cover, at a minimum, the threat models in its table, so a report can go wider than the policy.</p>
+
+  <h2>Thresholds by name, and how many</h2>
+  <div class="stat-row"><div class="stat"><b>4</b><span>threshold rows in Anthropic's table</span></div><div class="stat"><b>6</b><span>OpenAI thresholds (3 categories, High and Critical each)</span></div><div class="stat"><b>7</b><span>Google DeepMind levels (5 critical, 2 tracked)</span></div></div>
+  <p>These counts are ours, made by hand from the three documents, and they say nothing about strictness: a single row in one document can cover ground that takes two levels in another. OpenAI also lists five Research Categories that are not triggers but have a "potential response" each; converting autonomous replication and adaptation into a Tracked Category is one of them.</p>
+  <p>The three also mean different things by "trigger". OpenAI's describes a fixed sequence: automated tests with preset indicative thresholds feed a Capabilities Report, and the Safety Advisory Group decides whether a line has been crossed. Google DeepMind adds an early warning step, alert thresholds that sit below each critical level, and in version 3.1 a second, lower tier of Tracked Capability Levels for harm it describes as significant but not severe. Anthropic's version 3 moved the other way. Its policy says it now asks for analysis and arguments that make a strong case for safety rather than fixed lists of required controls, and its Risk Reports are to discuss whether it believes a threshold has been crossed.</p>
+
+  <h2>Halting, delaying and adding safeguards are written differently</h2>
+  <p>Only OpenAI's document ties a pause to the top level of every tracked risk. For each of its three Critical thresholds, the safeguard guideline in Table 1 is to halt further development until safeguards and security controls meeting a Critical standard have been specified. At High, the commitment is to have safeguards that sufficiently minimise the risk of severe harm before deployment; for the High level of AI self-improvement, the only listed guideline is security controls.</p>
+  <p>Anthropic's policy separates what it plans to do as a company from what it recommends for the whole industry, and says it cannot unilaterally and unconditionally commit to the industry-wide column. Its delay commitments sit in Appendix A and depend on what competitors are doing: if Anthropic is in the lead with a highly capable model, it will delay development and deployment as needed to get a strong argument that catastrophic risk is contained. The same appendix adds that it would strongly consider pausing in cases the appendix does not cover.</p>
+  <p>Google DeepMind's process centres on deployment. A model at a critical level gets a safety case, and an external deployment takes place only after the governance function accepts the residual risk. For the misuse levels, the deployment mitigations are required for external deployment only; for the machine learning R&amp;D levels they also apply to high-risk internal use. The document does not describe pausing development. Each critical level carries a recommended security level, from 2+ for misuse up to 4 for full automation of AI research, which the document presents as a recommendation for the whole field.</p>
+
+  <h2>Who can overrule whom</h2>
+  <p>OpenAI's appendix on decision-making goes furthest in naming roles. The Safety Advisory Group makes recommendations; OpenAI Leadership appoints its members and chair, and members serve one-year terms. Leadership can decide without the group, which the document says cannot "filibuster". The Safety and Security Committee of the board can review decisions, and the board may reverse a decision where necessary.</p>
+  <p>Anthropic gives the final call to two named roles jointly. The CEO and the Responsible Scaling Officer approve each Risk Report and decide on the development or deployment plans that follow, then share the decision with the Board and the Long-Term Benefit Trust. If an argument about marginal risk (that other companies' models already pose similar risk) plays a major role in a decision to move forward, the Board and the Trust must approve the report explicitly.</p>
+  <p>Google DeepMind's document describes the governance structure in one paragraph: responsibilities are allocated across the organisation, with legal, compliance and safety reviews and escalation procedures. It does not say who sits in the governance function that accepts residual risk.</p>
+
+  <h2>Details the documents leave for later</h2>
+  <p>Each document says plainly that parts of it are unsettled. These are the points where the text itself defers a detail or says it is not yet defined.</p>
+  <div class="table-wrap"><table>
+    <caption>Exact quotes from the versions listed above, read 14 November 2026.</caption>
+    <thead><tr><th>Lab</th><th>What is left open</th><th>The document's words</th></tr></thead>
+    <tbody>
+      <tr><td>Anthropic</td><td>Which evaluations will show a threshold has been passed</td><td>"cannot presently give highly specific advance detail on what evaluations"</td></tr>
+      <tr><td>Anthropic</td><td>The automated R&amp;D threshold, revised in 3.1 and again in 3.4</td><td>"has proven difficult to operationalize"</td></tr>
+      <tr><td>Anthropic</td><td>Goals in its Frontier Safety Roadmap</td><td>"These are not hard commitments"</td></tr>
+      <tr><td>OpenAI</td><td>Its approach at the Critical level</td><td>"we expect to further update this Preparedness Framework before reaching such a level"</td></tr>
+      <tr><td>OpenAI</td><td>The safeguards in Appendix C</td><td>"should not be construed as a definitive checklist"</td></tr>
+      <tr><td>Google DeepMind</td><td>Mitigations for models beyond the current frontier</td><td>"the specific mitigations we implement may be determined when a T/CCL is reached"</td></tr>
+      <tr><td>Google DeepMind</td><td>The harmful manipulation level</td><td>"exploratory and subject to further research"</td></tr>
+    </tbody>
+  </table></div>
+  <p>Two of these gaps concern the triggers that carry the strongest commitments. OpenAI's framework says it expects to be updated before any model reaches Critical capability, the level its halt guideline applies to. Anthropic's automated R&amp;D threshold, which its policy uses to define a highly capable model, is the one its own changelog says has been hard to pin down.</p>
+
+  <h2>What a side-by-side reading leaves out</h2>
+  <p>These are three documents at one date. Each lab publishes others that add detail: Anthropic's Frontier Safety Roadmap and Risk Reports, and OpenAI's system cards and its Frontier Governance Framework. Anthropic's policy says regulatory requirements beyond its scope are handled in separate documents. Anthropic's and Google DeepMind's documents both say other considerations can lead to stricter action than the framework sets out, and a framework can be rewritten; all three say they will be reviewed or updated. Our <a href={`${base}blog/how-ai-benchmarks-work/`}>guide to how AI benchmarks work</a> covers the kind of tests that sit behind many of these thresholds.</p>
+
+  <StudioNote article={article} snapshot="14 November 2026" />
+</InsightArticle>
