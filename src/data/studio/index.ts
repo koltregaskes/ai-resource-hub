@@ -5,6 +5,9 @@ import { article as costOfFillingAMillionTokenWindow } from './cost-of-filling-a
 import { article as jobAdsThatMentionAi } from './job-ads-that-mention-ai';
 import { article as whatToReadInAModelCard } from './what-to-read-in-a-model-card';
 import { article as labSafetyFrameworksCompared } from './lab-safety-frameworks-compared';
+import { article as countTokensBeforeYouPay } from './count-tokens-before-you-pay';
+import { article as readingAnAiStatusPage } from './reading-an-ai-status-page';
+import { article as howAiImageAndVideoArePriced } from './how-ai-image-and-video-are-priced';
 // Each article adds one import line and one entry here, in the same pull request as its page.
 export const studioArticles: StudioArticle[] = [
   costOfReadingANovel,
@@ -13,4 +16,7 @@ export const studioArticles: StudioArticle[] = [
   jobAdsThatMentionAi,
   whatToReadInAModelCard,
   labSafetyFrameworksCompared,
+  countTokensBeforeYouPay,
+  readingAnAiStatusPage,
+  howAiImageAndVideoArePriced,
 ];

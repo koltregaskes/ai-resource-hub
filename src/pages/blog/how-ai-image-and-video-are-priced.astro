@@ -1,0 +1,83 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import StudioNote from '../../components/insights/StudioNote.astro';
+import { article } from '../../data/studio/how-ai-image-and-video-are-priced';
+import data from '../../data/insights/2026-11-14-how-ai-image-and-video-are-priced.json';
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const p = (k: string) => data.prices.find((r) => r.key === k)!;
+const usd = (v: number, dp = 2) => `$${v.toFixed(dp)}`;
+const n = (v: number) => v.toLocaleString('en-GB');
+const c = data.conversions;
+const a = data.assumptions;
+
+const oai = p('openai-image');
+const gImg = p('gemini-image');
+const flux3 = p('flux3-image');
+const flux2 = p('flux2-pro');
+const gVid = p('gemini-video');
+const veo = p('runway-veo');
+const el = p('eleven-tts');
+const dg = p('deepgram-tts');
+const lyria = p('lyria');
+const suno = p('suno-pro');
+const noRows = data.prices.filter((r) => r.perItem === 'no');
+const words = ['none', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+const tokenRows = data.prices.filter((r) => r.unitFamily === 'per million tokens');
+const otherRows = data.prices.filter((r) => r.unitFamily !== 'per million tokens');
+const otherUnits = new Set(otherRows.map((r) => r.unitFamily)).size;
+const cap = (w: string) => w[0].toUpperCase() + w.slice(1);
+---
+<InsightArticle title={article.title} description={article.description} date={article.date} type={article.type} readTime={article.readTime} snapshot="2026-11-14" standfirst="Language models are priced per million tokens; the image, video, voice and music products we checked use seven different units, and some of them cannot be turned into a price per picture, second or song from the page alone.">
+  <p>We read the official pricing pages for {data.products} AI image, video, voice and music products from {data.providers} providers on 14 November 2026, and their prices came in {data.unitCount} different units: {data.units.join(', ')}. For {data.perItemNo} of the {data.products}, the page does not give enough to work out what one image, one second or one song costs.</p>
+  <p>That is the difference from language models. A chat model's price list starts with two numbers per million tokens, so two models can sit side by side in a table, as they do in our <a href={`${base}blog/how-to-read-an-ai-price-list/`}>guide to reading an AI price list</a>. Our own catalogue holds {data.catalogue.mediaEntries} image, video, voice, speech and sound entries, and every one has a price number, but none records the unit that number is in. So for this piece we ignored those numbers and went back to the providers' pages.</p>
+
+  <div class="stat-row">
+    <div class="stat"><b>{data.products}</b><span>products, read on 14 November 2026</span></div>
+    <div class="stat"><b>{data.unitCount}</b><span>different units of price</span></div>
+    <div class="stat"><b>{data.perItemNo}</b><span>cannot be turned into a price per item from the page alone</span></div>
+  </div>
+
+  <h2>{cap(words[data.products])} prices, {words[data.unitCount]} units</h2>
+  <p>The table gives each product as its page names it, the unit, the price as printed, and the conditions the page attaches. We picked products that show the range of units rather than a fair sample of the market, and none of the pages we used needed a login.</p>
+  <div class="table-wrap"><table><caption>Source: each provider's own pricing page, read 14 November 2026. US dollars as shown on the page.</caption><thead><tr><th>Product (as the page words it)</th><th>Provider</th><th>Kind</th><th>Unit</th><th class="num">Price as shown</th><th>Conditions on the page</th></tr></thead><tbody>
+    {data.prices.map((r) => (
+      <tr><td><a href={r.url} rel="noopener">{r.product}</a></td><td>{r.provider}</td><td>{r.kind}</td><td>{r.unit}</td><td class="num">{r.shown}</td><td>{r.condition}</td></tr>
+    ))}
+  </tbody></table></div>
+  <p>{cap(words[tokenRows.length])} of the {words[data.products]} are priced per million tokens, the same unit as a language model. The other {words[otherRows.length]} are spread across {words[otherUnits]} units, and only one of those, per 1,000 characters, is used by more than one product (the two text-to-speech rates).</p>
+
+  <h2>Why a token price for pictures does not tell you the price of a picture</h2>
+  <p>A token is the chunk a model reads and writes. For text there are rules of thumb for counting them. For pictures and video, Google's page shows the count changing with resolution, so the token price alone does not fix the cost of one output.</p>
+  <p>OpenAI's page lists {oai.product} at {oai.shown} per million image output tokens on the standard tier, and says prices are per million tokens unless noted. It does not say how many tokens one image uses. For an estimate it sends readers to a calculator in its image generation guide. So from the pricing page alone we cannot turn {oai.shown} into a cost per picture.</p>
+  <p>Google's Gemini API page prices {gImg.product} the same way, at {gImg.shown} per million image output tokens, but then does the conversion for you: a 1K image (1024 by 1024 pixels) uses {n(gImg.tokensPer1kImage)} tokens, which the page calls equivalent to {usd(gImg.pageEquivalentPer1kImage, 3)} per image. Our own sum, {c.geminiImagePer1k.sum}, gives {usd(c.geminiImagePer1k.perImage, 4)}, which matches the page once rounded. The unit is the same as OpenAI's, but one page gives you the tokens per image and the other does not, so the two prices cannot be set side by side.</p>
+  <p>Black Forest Labs skips tokens. {flux3.product} is priced per image, and the price climbs with resolution, from {usd(flux3.at768, 3)} at 768 by 768 to {usd(flux3.value, 3)} at 1K and {usd(flux3.at4k, 3)} at 4K. On the same page, {flux2.product} is priced per megapixel: {flux2.shown}. You know how many pixels your own image has, but the page does not say how a part-megapixel is rounded, so any per-image figure for it would rest on our guess about that rounding.</p>
+  <p>Google and Black Forest Labs both use the label 1K, and the two numbers look easy to compare. They are not, on what the pages say: Google defines 1K as 1024 by 1024 pixels, and the Black Forest Labs table does not give pixel sizes for its 1K column.</p>
+
+  <h2>Video is sold by the second, once the page does the sums</h2>
+  <p>Video was the easiest kind to convert, because both video rows we picked state a per-second rate somewhere on the page. The arithmetic below uses an assumed clip length of {a.clipSeconds} seconds. That number is an assumption chosen to show the sum, not a typical clip.</p>
+  <div class="table-wrap"><table><caption>Our arithmetic on prices read 14 November 2026. Clip length of {a.clipSeconds} seconds and script length of {n(a.scriptCharacters)} characters are assumptions.</caption><thead><tr><th>Product</th><th>Sum</th><th class="num">Per second</th><th class="num">Assumed {a.clipSeconds}-second clip</th><th class="num">The page's own figure</th></tr></thead><tbody>
+    <tr><td>{gVid.product}, 720p</td><td>{c.geminiVideo.sum}</td><td class="num">{usd(c.geminiVideo.perSecond, 4)}</td><td class="num">{usd(c.geminiVideo.forAssumedClip, 3)}</td><td class="num">about {usd(c.geminiVideo.pageSaysPerSecond)} a second, about {usd(c.geminiVideo.pageSaysFor10s)} for 10 seconds</td></tr>
+    <tr><td>{veo.product} on Runway, with audio</td><td>{veo.value} credits x {usd(veo.dollarsPerCredit)} x seconds</td><td class="num">{usd(c.runwayVeo.perSecondAudio)}</td><td class="num">{usd(c.runwayVeo.clipAudio)} ({n(c.runwayVeo.creditsAudio)} credits)</td><td class="num">not given</td></tr>
+    <tr><td>{veo.product} on Runway, no audio</td><td>{veo.noAudio} credits x {usd(veo.dollarsPerCredit)} x seconds</td><td class="num">{usd(c.runwayVeo.perSecondNoAudio)}</td><td class="num">{usd(c.runwayVeo.clipNoAudio)} ({n(c.runwayVeo.creditsNoAudio)} credits)</td><td class="num">not given</td></tr>
+  </tbody></table></div>
+  <p>Google bills {gVid.product} in tokens and turns them into seconds in a footnote: 720p video uses {n(gVid.tokensPerSecond720p)} tokens a second, which at {gVid.shown} per million comes to about {usd(c.geminiVideo.pageSaysPerSecond)} a second. Our sum agrees. The footnote gives different token rates for 360p, 1080p and 4K, so the per-second figure only holds for 720p.</p>
+  <p>Runway's developer API uses credits, but its page fixes the exchange rate: credits can be bought for {usd(veo.dollarsPerCredit)} each. That makes a credit price as good as a dollar price. The page also shows audio as a condition on the price: {veo.product} costs {veo.value} credits a second with audio and {veo.noAudio} without, so the same model's clip costs twice as much with sound on Runway's list.</p>
+  <p>These two rows are different models from different companies, so the per-second numbers are not a ranking. They share a unit after conversion, but the pages set different conditions (resolution on one, audio on the other), and a price says nothing about what the video looks like.</p>
+
+  <h2>Speech by the character, music by the song or the credit</h2>
+  <p>The two text-to-speech rates are the only pair in the table quoted in the same unit. ElevenLabs lists {el.product} at {el.shown} per 1,000 characters on its API pricing page, which says API usage is billed in US dollars. Deepgram lists {dg.product} at {dg.shown.replace(' /1k characters', '')} per 1,000 characters of input text, pay as you go. For an assumed script of {n(a.scriptCharacters)} characters, that is {usd(c.speechScript.elevenLabs)} and {usd(c.speechScript.deepgram, 3)} respectively. On those two list prices, Deepgram's rate is the lower one per character. We did not check whether the two count characters the same way, and neither number says anything about how the voices sound.</p>
+  <p>Turning characters into minutes of audio needs a speaking rate. ElevenLabs gives one in its plan table, pairing each 1,000 characters with about a minute of audio (it prints {el.shown} per 1,000 characters as roughly {el.shown} a minute). Deepgram's page, as we read it, gives no such figure, so its rate stays per character.</p>
+  <p>Music was the hardest. Google lists {lyria.product} at {lyria.shown} on the Gemini API, a clean price per song, but the page gives no song length, so there is no per-second figure to be had. Suno sells a {suno.product} at {suno.shown} on monthly billing, or {usd(suno.yearlyMonthly, 0)} a month billed at {usd(suno.yearlyBilled, 0)} a year, with {n(suno.creditsPerMonth)} credits a month. Dividing gives {usd(c.sunoCredit.perCreditMonthly, 3)} per credit on monthly billing and {usd(c.sunoCredit.perCreditYearly, 4)} on yearly billing. That is as far as the page goes: it does not say how many credits a song uses, and it says unused plan credits do not carry over, so the cost per credit you actually use rises if some go unspent.</p>
+
+  <h2>Where the page runs out</h2>
+  <p>These are the {data.perItemNo} rows where the page alone does not let you work out a price per image, per second or per song, and the reason in each case.</p>
+  <div class="table-wrap"><table><caption>Source: the same pricing pages, read 14 November 2026.</caption><thead><tr><th>Product</th><th>Unit on the page</th><th>What is missing</th></tr></thead><tbody>
+    {noRows.map((r) => (<tr><td>{r.product} ({r.provider})</td><td>{r.unit}</td><td>{r.perItemWhy}</td></tr>))}
+  </tbody></table></div>
+  <p>A missing conversion is not the same as a hidden price. In each case the information may exist elsewhere, in a calculator, a usage dashboard or the help pages, but it was not on the pricing page we read, and we have not used anything we did not read ourselves.</p>
+  <p>Prices on these pages change, and some already carry dates. Google says its Gemini 3.8 Flash TTS output rate doubles on 1 January 2027, and Runway marks some models as discounted until 30 November 2026; neither of those is in our table. Every price above is as read on 14 November 2026. The full list, with the URL, the words we checked and a fingerprint of each page as we fetched it, is in the data file linked below.</p>
+
+  <StudioNote article={article} snapshot="14 November 2026" />
+</InsightArticle>

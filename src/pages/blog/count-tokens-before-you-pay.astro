@@ -1,0 +1,86 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import StudioNote from '../../components/insights/StudioNote.astro';
+import { article } from '../../data/studio/count-tokens-before-you-pay';
+import data from '../../data/insights/2026-11-14-count-tokens-before-you-pay.json';
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const n = (v: number) => v.toLocaleString('en-GB');
+const usd = (v: number) => `$${v.toFixed(2)}`;
+const a = data.assumed;
+const p = data.promptTokens;
+const rows = data.rows;
+const opus = rows.find((r) => r.name === 'Claude Opus 5')!;
+const mini = rows.find((r) => r.name === 'GPT-5.4 Mini')!;
+const flash = rows.find((r) => r.name === 'Gemini 3.5 Flash')!;
+const spreadPct = Math.round(((opus.per1000.plus30 - opus.per1000.siteRule) / opus.per1000.siteRule) * 100);
+---
+<InsightArticle title={article.title} description={article.description} date={article.date} type={article.type} readTime={article.readTime} snapshot="2026-11-14" standfirst="A token count belongs to one model's tokenizer, so count with the tool for the model you will pay for.">
+  <p>Anthropic's documentation says the same text produces approximately 30 percent more tokens on Claude Opus 4.7 and later models than on earlier ones. A token count is therefore a number about one model, not about the text. We read the documentation of OpenAI, Anthropic and Google on 14 November 2026 to see what each offers for counting before you send, and what our own counter does.</p>
+
+  <div class="stat-row">
+    <div class="stat"><b>about 4 characters</b><span>one token, per Google's Gemini docs</span></div>
+    <div class="stat"><b>60 to 80 words</b><span>per 100 tokens, per Google's Gemini docs</span></div>
+    <div class="stat"><b>approx. 30%</b><span>more tokens on newer Claude models, per Anthropic</span></div>
+  </div>
+
+  <h2>The rule of thumb is about four characters per token</h2>
+  <p>Google's <a href="https://ai.google.dev/gemini-api/docs/tokens" rel="noopener">Gemini token page</a> says a token is equivalent to about 4 characters, and that 100 tokens is about 60 to 80 English words. OpenAI's <a href="https://github.com/openai/tiktoken" rel="noopener">tiktoken README</a> describes a similar figure in bytes: on average, in practice, each token corresponds to about 4 bytes. The two pages use different units, characters and bytes, so we list them as two figures and not as one rule.</p>
+  <p>These are averages for English prose. Neither page promises them for code, other languages or tables, and we have not tested those here.</p>
+  <p>OpenAI also has a help article on tokens. Our fetch of it returned an access error on 14 November 2026, so we do not cite it. The two OpenAI sources used here are the README and the <a href="https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb" rel="noopener">OpenAI Cookbook page on counting tokens</a>.</p>
+
+  <h2>Why two models can count the same text differently</h2>
+  <p>The Cookbook page states it directly: "Different models use different encodings." An encoding is the rule that splits text into tokens, so a different rule gives a different count. tiktoken lets you load the encoding by name, or look it up from a model name with <code>encoding_for_model</code>, which the Cookbook says loads the correct encoding for a given model name.</p>
+  <p>Anthropic gives a measured example from its own range. Its page says Claude Opus 4.7 and later models, and Claude Mythos Preview, use a newer tokenizer, and that the same input text produces approximately 30 percent more tokens than on earlier models. The exact increase depends on the content. The page tells readers to recount prompts against the model they plan to use instead of reusing counts from earlier models, and says billing on the newer models reflects the newer tokenizer's counts.</p>
+
+  <h2>What each official counter covers</h2>
+  <p>Anthropic's page says counting is free to use, with requests-per-minute limits that depend on your usage tier. Its endpoint accepts the same inputs as a message request, including system prompts, tools, images and PDFs. It returns an error for a few inputs the Messages API accepts, among them server tools such as web search, the MCP connector, and image or document blocks that use a URL or file source.</p>
+  <p>Google's page says to call <code>count_tokens</code> with the input of the request, that it returns the total for the input only, and that you should make the call before sending to check the size of your requests. It does not state a price for counting, so the table leaves that cell open.</p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>Source: the documentation pages linked in the text and in the record below, read 14 November 2026. "Not stated" means the page we read does not say.</caption>
+      <thead><tr><th>Method</th><th>Provided by</th><th>Exact or approximate</th><th>Cost to use</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>tiktoken (Python library)</td><td>OpenAI</td><td>Splits text with a named encoding. For chat messages, the Cookbook calls its example function's counts "an estimate, not a timeless guarantee"</td><td>Open source, installed from PyPI; no fee stated</td><td>README and Cookbook</td></tr>
+        <tr><td>Token counting endpoint</td><td>Anthropic</td><td>An estimate that might differ by a small amount from actual input tokens</td><td>Free to use, with rate limits</td><td>Anthropic token counting docs</td></tr>
+        <tr><td><code>count_tokens</code></td><td>Google</td><td>Input tokens only; the page does not call the figure exact or an estimate</td><td>Not stated</td><td>Gemini token docs</td></tr>
+        <tr><td>Our counter at /token-counter/</td><td>This site</td><td>Estimate: characters divided by four, rounded up</td><td>Free to use on this site</td><td>The page and its code</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>What our own counter does</h2>
+  <p>The <a href={`${base}token-counter/`}>counter on this site</a> takes the number of characters in the box, divides by four and rounds up. That is the whole method. It also shows characters, words and lines, but the words figure is not used for the token estimate, even though the page text mentions a 0.75 words per token rule alongside the four-character one.</p>
+  <p>The page's own wording is that the estimate is "a fast budgeting tool, not a billing guarantee", and that providers often add system formatting, tool wrappers or other hidden tokens at request time. Below the box, it prices that estimate as input tokens only for the twenty language models with the lowest blended price, and checks the estimate against context windows of 128,000, 200,000 and 1,048,576 tokens. Output tokens, which are billed separately, are not in that table.</p>
+  <p>Because it applies one rule to every model, our counter cannot show the Claude difference described above. When the number decides whether a job is affordable, run the lab's own counter for the model you will use.</p>
+
+  <h2>What a count before sending does not show</h2>
+  <p>Anthropic's page says token counts might include tokens added automatically by Anthropic for system optimisations, and that you are not billed for system-added tokens. It also says counting gives an estimate without using caching logic: you may include <code>cache_control</code> blocks in a counting request, but prompt caching only occurs when a message is actually created. A pre-send count therefore does not show what a cache would save.</p>
+  <p>Google's page lists the usage fields it returns after a call: input, output, thinking, cached content and tool use. Its pre-send call returns the input only, so according to that page, a thinking figure arrives with the response, not with the count. We found no equivalent statement on the Anthropic page, so we do not extend this to Claude.</p>
+
+  <h2>A budget with assumed numbers</h2>
+  <p>The numbers below are assumptions, not measurements. Take a prompt of {n(a.promptWords)} words, a reply of {n(a.replyWords)} words and {n(a.requests)} requests. The site's rule of {a.wordsPerTokenSite} words per token turns the prompt into {n(p.siteRule)} tokens and the reply into {n(data.replyTokens)}. Google's range of 60 to 80 words per 100 tokens gives a prompt of {n(p.low)} to {n(p.high)} tokens. Prices are catalogue list prices in US dollars per million tokens, checked 14 November 2026.</p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>Source: src/data/insights/2026-11-14.json prices and scripts/insights/count-tokens-before-you-pay.mjs. All token counts come from the assumed word counts above. Cost for {n(a.requests)} requests, reply fixed at {n(data.replyTokens)} tokens.</caption>
+      <thead><tr><th>Model</th><th class="num">Input / output per million</th><th class="num">{n(p.low)} prompt tokens</th><th class="num">{n(p.siteRule)} prompt tokens</th><th class="num">{n(p.high)} prompt tokens</th><th class="num">{n(data.sensitivityPromptTokens)} prompt tokens</th></tr></thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr><td>{r.name} ({r.provider})</td><td class="num">{usd(r.input)} / {usd(r.output)}</td><td class="num">{usd(r.per1000.low)}</td><td class="num">{usd(r.per1000.siteRule)}</td><td class="num">{usd(r.per1000.high)}</td><td class="num">{usd(r.per1000.plus30)}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <p>The last column multiplies the {n(p.siteRule)}-token prompt by Anthropic's approximately 30 percent figure, giving {n(data.sensitivityPromptTokens)}. That is an illustration of the size of a tokenizer change, not a claim that these three models count this way. On {opus.name}, it moves the cost of {n(a.requests)} requests from {usd(opus.per1000.siteRule)} to {usd(opus.per1000.plus30)}, a rise of {spreadPct} percent, because the reply stays fixed and only the prompt grows.</p>
+  <p>The price gap between models is far larger than the counting gap. At {n(p.siteRule)} prompt tokens, {n(a.requests)} requests cost {usd(mini.per1000.siteRule)} on {mini.name}, {usd(flash.per1000.siteRule)} on {flash.name} and {usd(opus.per1000.siteRule)} on {opus.name}. In this example the choice of model moves the cost far more than the counting range within one model does. The <a href={`${base}blog/how-to-read-an-ai-price-list/`}>price list guide</a> explains how to read those prices.</p>
+  <p>The sums leave out reasoning tokens, cached tokens, tool use, images, batch discounts and any minimum charge. Any of those can change a real bill, and none can be read from a word-count estimate.</p>
+
+  <h2>Where to count, by provider</h2>
+  <p>For OpenAI models, tiktoken with the model's own encoding gives the count for plain text. For Claude, the counting endpoint is free and takes the model name, so the count follows that model's tokenizer. For Gemini, <code>count_tokens</code> runs on the request input before you send it. The <a href={`${base}token-counter/`}>site counter</a> covers the rough first pass, and the <a href={`${base}context-window/`}>context window page</a> shows the limits to check a count against.</p>
+
+  <StudioNote article={article} snapshot="14 November 2026" />
+</InsightArticle>
