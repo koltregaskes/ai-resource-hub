@@ -1,7 +1,13 @@
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
-import {scoreSnapshot,METHOD} from '../src/lib/lab-standings.mjs';
+import {scoreSnapshot,selectListedLabs,METHOD} from '../src/lib/lab-standings.mjs';
 const date=process.argv[2];
 if(!/^\d{4}-\d{2}-\d{2}$/.test(date??'')) throw Error('Expected snapshot date');
 const original=JSON.parse(readFileSync(`data/lab-standings/snapshots/${date}.json`,'utf8'));
+const names=JSON.parse(readFileSync('data/lab-standings/lab-names.json','utf8'));
+const providers=Object.entries(names).map(([id,name])=>original.input.labs.find(l=>l.id===id)??{id,name,catalogueCheckedThrough:null,releases:[]});
+const input={...original.input,labs:selectListedLabs(date,providers,original.input.models)};
+const correction={"originalMethod":"0.3","originalPath":"/labs/standings/2026-11-14/","note":"Corrected catalogue-date admission defect: released, mapped Epoch models now list their labs even without a catalogue release date. Value is normalised across every listed lab with a value, ranked or unranked. The published snapshot is unchanged."};
+correction.originalMethod=original.method;
+correction.originalPath=`/labs/standings/${date}/`;
 mkdirSync(`data/lab-standings/rescored/${METHOD}`,{recursive:true});
-writeFileSync(`data/lab-standings/rescored/${METHOD}/${date}.json`,JSON.stringify({...scoreSnapshot(original.input),input:original.input},null,2)+'\n',{flag:'wx'});
+writeFileSync(`data/lab-standings/rescored/${METHOD}/${date}.json`,JSON.stringify({...scoreSnapshot(input),input,correction},null,2)+'\n',{flag:'wx'});

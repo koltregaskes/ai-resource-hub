@@ -1,6 +1,6 @@
 export const PARTS = ['capability', 'value', 'shipping', 'openness', 'usage'];
 export const DEFAULT_WEIGHTS = [35, 20, 15, 10, 20];
-export const METHOD = '0.3';
+export const METHOD = '0.3.1';
 const finite = x => typeof x === 'number' && Number.isFinite(x);
 const nonnegative = x => finite(x) && x >= 0;
 const max = xs => xs.length ? Math.max(...xs) : null;
@@ -89,4 +89,25 @@ export function scoreSnapshot(input) {
     return { ...r, parts, coverage, observedWeight, eligible: coverage >= 3 && observedWeight >= 60 && parts.capability != null };
   });
   return { method: METHOD, date: input.date, floor, leader, rows: rank(rows), sensitivity: sensitivity(rows) };
+}
+
+/** Calendar-month window, inclusive; Epoch models passed here are explicitly mapped. */
+export function selectListedLabs(date, providers, models, catalogue = []) {
+  const cutoff = new Date(date+'T00:00:00Z');
+  const day = cutoff.getUTCDate();
+  cutoff.setUTCDate(1); cutoff.setUTCMonth(cutoff.getUTCMonth()-18);
+  const end = new Date(Date.UTC(cutoff.getUTCFullYear(),cutoff.getUTCMonth()+1,0)).getUTCDate();
+  cutoff.setUTCDate(Math.min(day,end));
+  const start = cutoff.toISOString().slice(0,10);
+  const inWindow = released => typeof released === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(released)
+    && Number.isFinite(Date.parse(released)) && released >= start && released <= date;
+  return providers.filter(p => models.some(m => m.lab===p.id && m.id && finite(m.eci)
+      && m.accessibility!=='Unreleased' && inWindow(m.released))
+    || catalogue.some(m => m.providerId===p.id && m.officialUrl && inWindow(m.released)
+      && (m.status??'active')==='active' && (m.category??'llm')==='llm'));
+}
+export function selectCurrentSnapshot(published, rescored = []) {
+  const latest = [...published].sort((a,b)=>b.date.localeCompare(a.date))[0];
+  return rescored.filter(s=>s.date===latest?.date && s.correction)
+    .sort((a,b)=>b.method.localeCompare(a.method,undefined,{numeric:true}))[0] ?? latest;
 }

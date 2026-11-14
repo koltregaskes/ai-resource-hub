@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { getCatalogModelsById, PROVIDER_CATALOG } from './model-catalog';
 import { MODEL_FIELD_REVIEWS } from './lib/model-field-reviews';
-import { scoreSnapshot } from '../src/lib/lab-standings.mjs';
+import { scoreSnapshot, selectListedLabs } from '../src/lib/lab-standings.mjs';
 
 // Offline transform only. Fetching data is separate from scoring; no credentials are read.
 const date = process.argv[2];
@@ -34,8 +34,7 @@ for (const row of eci) {
     receipt: { source: 'Epoch AI, Epoch Capabilities Index', url: 'https://epoch.ai/data/eci_scores.csv', asOf: date,
       retrievedAt: date, version: createHash('sha256').update(csv).digest('hex'), licence: 'CC BY 4.0', asOfNote:'Download vintage; upstream measurement date not supplied separately in CSV.' } });
 }
-const labs = PROVIDER_CATALOG.filter(p => [...catalogue.values()].some(m=>m.providerId===p.id && m.released && m.released <= date && m.released >= new Date(Date.parse(date)-548*86400000).toISOString().slice(0,10)
-  && (m.status ?? 'active') === 'active' && (m.category ?? 'llm') === 'llm')).map(p => ({ id:p.id,name:p.name,catalogueCheckedThrough:null,
+const labs = selectListedLabs(date, PROVIDER_CATALOG, models, [...catalogue.values()]).map(p => ({ id:p.id,name:p.name,catalogueCheckedThrough:null,
     releases: [...licenceReviews.filter(r=>catalogue.get(r.id)?.providerId===p.id && catalogue.get(r.id)?.released).map(r=>({
       family:r.family,released:catalogue.get(r.id)!.released,openness:r.credit,licenceSource:r.licence_url,
       licence_id:r.licence_id,checkedOn:r.checked_on,releaseSource:catalogue.get(r.id)!.officialUrl })), ...MODEL_FIELD_REVIEWS.filter(r => r.fields.providerId.value === p.id && r.fields.released.verification==='verified'
