@@ -36,7 +36,7 @@ jobs:
         run: |
           result=0
           mkdir -p "$RUNNER_TEMP/source-scan"
-          git ls-files -z -- . ':(exclude)**/.env' ':(exclude)**/.env.*' ':(exclude).env' ':(exclude).env.*' | while IFS= read -r -d '' file; do
+          git ls-files -z -- . ':(exclude,icase)**/.env*' ':(exclude,icase).env*' | while IFS= read -r -d '' file; do
             if [ -L "$file" ]; then echo "Refusing a tracked symbolic link"; exit 1; fi
             mkdir -p "$RUNNER_TEMP/source-scan/$(dirname "$file")"
             cp -- "$file" "$RUNNER_TEMP/source-scan/$file"
@@ -45,7 +45,12 @@ jobs:
           source_result=0
           public_result=0
           docker run --rm -v "$RUNNER_TEMP/source-scan:/source:ro" -v "$RUNNER_TEMP/scan-reports:/reports" zricethezav/gitleaks:v8.30.0 dir /source --redact=100 --report-format json --report-path /reports/source.json --exit-code 2 --no-banner > "$RUNNER_TEMP/source-scan.log" 2>&1 || source_result=$?
-          docker run --rm -v "$PWD:/repo:ro" -v "$RUNNER_TEMP/scan-reports:/reports" zricethezav/gitleaks:v8.30.0 dir /repo/dist --redact=100 --report-format json --report-path /reports/public.json --exit-code 2 --no-banner > "$RUNNER_TEMP/public-scan.log" 2>&1 || public_result=$?
+          if find dist -type f -iname '.env*' -print -quit | grep -q .; then
+            echo "Public build contains a forbidden dotenv path; contents not read"
+            public_result=2
+          else
+            docker run --rm -v "$PWD:/repo:ro" -v "$RUNNER_TEMP/scan-reports:/reports" zricethezav/gitleaks:v8.30.0 dir /repo/dist --redact=100 --report-format json --report-path /reports/public.json --exit-code 2 --no-banner > "$RUNNER_TEMP/public-scan.log" 2>&1 || public_result=$?
+          fi
           node scripts/contracts/redacted-scan-summary.mjs "$RUNNER_TEMP/scan-reports"
           echo "Tracked source scan exit $source_result; public build scan exit $public_result; values and matching lines withheld"
           if [ "$source_result" -ne 0 ] || [ "$public_result" -ne 0 ]; then exit 2; fi
