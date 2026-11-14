@@ -1,0 +1,280 @@
+{
+  "snapshotDate": "2026-11-14",
+  "input": {
+    "file": "data/ai-and-jobs/2026-11-14.json",
+    "fileSha256": "ceb3ebad6fff5b384239f0cb0e232397bece9529fb1a6d06aa2d02a33ff91ae1",
+    "sourceCsvSha256": "f68d852e3f4573ebcc8fa5e9fccea7f9b5c17958708d621093b446bc6db745cd",
+    "upstreamCommit": "bca9fe5176050c03643b86989669778ef671454a",
+    "retrievedAt": "2026-11-14",
+    "selection": "Latest daily observation per country plus the observation on the same date one year earlier, if available. These are selected daily snapshots, not monthly means."
+  },
+  "source": {
+    "publisher": "Indeed Hiring Lab",
+    "name": "Indeed AI Tracker",
+    "csvUrl": "https://github.com/hiring-lab/ai-tracker/blob/bca9fe5176050c03643b86989669778ef671454a/AI_posting.csv",
+    "methodUrl": "https://github.com/hiring-lab/ai-tracker/blob/bca9fe5176050c03643b86989669778ef671454a/README.md",
+    "refreshCadenceDays": 30
+  },
+  "rights": {
+    "licence": "CC BY 4.0",
+    "licenceUrl": "https://github.com/hiring-lab/ai-tracker/blob/bca9fe5176050c03643b86989669778ef671454a/LICENSE",
+    "attributionText": "Source: Indeed Hiring Lab. Licensed under CC BY 4.0. Selected observations; formatting adapted by AIRH.",
+    "status": "confirmed",
+    "verifiedOn": "2026-11-14"
+  },
+  "method": {
+    "rows": "publicationRows() from src/lib/ai-and-jobs.mjs, Indeed series only.",
+    "span": "Latest date in the file and the same calendar date one year earlier, same series version.",
+    "changePoints": "latest value minus earlier value, in percentage points",
+    "ratio": "latest value divided by earlier value"
+  },
+  "latestPeriod": "2026-09-30",
+  "earlierPeriod": "2025-09-30",
+  "countries": 9,
+  "skipped": [],
+  "rose": 9,
+  "fell": 0,
+  "doubledOrMore": 1,
+  "highest": "Canada",
+  "lowest": "Netherlands",
+  "biggestRisePoints": "Canada",
+  "smallestRisePoints": "Netherlands",
+  "biggestRatio": "Canada",
+  "smallestRatio": "Italy",
+  "rows": [
+    {
+      "seriesId": "indeed-ai-ca",
+      "geography": "CA",
+      "country": "Canada",
+      "kind": "measured",
+      "kindLabel": "Measured",
+      "unit": "percent of Indeed job postings",
+      "averagingWindowDays": 7,
+      "seriesVersion": "indeed-ai-ca-keywords-v1",
+      "latest": {
+        "period": "2026-09-30",
+        "value": 18.9696563904776,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "earlier": {
+        "period": "2025-09-30",
+        "value": 5.74057477886402,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "changePoints": 13.22908161161358,
+      "ratio": 3.3044872893775685
+    },
+    {
+      "seriesId": "indeed-ai-ie",
+      "geography": "IE",
+      "country": "Ireland",
+      "kind": "measured",
+      "kindLabel": "Measured",
+      "unit": "percent of Indeed job postings",
+      "averagingWindowDays": 7,
+      "seriesVersion": "indeed-ai-ie-keywords-v1",
+      "latest": {
+        "period": "2026-09-30",
+        "value": 15.0197438100594,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "earlier": {
+        "period": "2025-09-30",
+        "value": 9.85378158454038,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "changePoints": 5.165962225519019,
+      "ratio": 1.5242618969375077
+    },
+    {
+      "seriesId": "indeed-ai-gb",
+      "geography": "GB",
+      "country": "United Kingdom",
+      "kind": "measured",
+      "kindLabel": "Measured",
+      "unit": "percent of Indeed job postings",
+      "averagingWindowDays": 7,
+      "seriesVersion": "indeed-ai-gb-keywords-v1",
+      "latest": {
+        "period": "2026-09-30",
+        "value": 9.92103324690105,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "earlier": {
+        "period": "2025-09-30",
+        "value": 5.1227875501628,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "changePoints": 4.79824569673825,
+      "ratio": 1.9366474111513297
+    },
+    {
+      "seriesId": "indeed-ai-us",
+      "geography": "US",
+      "country": "United States",
+      "kind": "measured",
+      "kindLabel": "Measured",
+      "unit": "percent of Indeed job postings",
+      "averagingWindowDays": 7,
+      "seriesVersion": "indeed-ai-us-keywords-v1",
+      "latest": {
+        "period": "2026-09-30",
+        "value": 7.33818434887748,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "earlier": {
+        "period": "2025-09-30",
+        "value": 3.70551075376619,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "changePoints": 3.6326735951112896,
+      "ratio": 1.980343557610548
+    },
+    {
+      "seriesId": "indeed-ai-au",
+      "geography": "AU",
+      "country": "Australia",
+      "kind": "measured",
+      "kindLabel": "Measured",
+      "unit": "percent of Indeed job postings",
+      "averagingWindowDays": 7,
+      "seriesVersion": "indeed-ai-au-keywords-v1",
+      "latest": {
+        "period": "2026-09-30",
+        "value": 7.12029880911784,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "earlier": {
+        "period": "2025-09-30",
+        "value": 4.86634876733584,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "changePoints": 2.2539500417820006,
+      "ratio": 1.4631706746773026
+    },
+    {
+      "seriesId": "indeed-ai-de",
+      "geography": "DE",
+      "country": "Germany",
+      "kind": "measured",
+      "kindLabel": "Measured",
+      "unit": "percent of Indeed job postings",
+      "averagingWindowDays": 7,
+      "seriesVersion": "indeed-ai-de-keywords-v1",
+      "latest": {
+        "period": "2026-09-30",
+        "value": 5.74163012331981,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "earlier": {
+        "period": "2025-09-30",
+        "value": 3.59807946826636,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "changePoints": 2.14355065505345,
+      "ratio": 1.5957485580734723
+    },
+    {
+      "seriesId": "indeed-ai-it",
+      "geography": "IT",
+      "country": "Italy",
+      "kind": "measured",
+      "kindLabel": "Measured",
+      "unit": "percent of Indeed job postings",
+      "averagingWindowDays": 7,
+      "seriesVersion": "indeed-ai-it-keywords-v1",
+      "latest": {
+        "period": "2026-09-30",
+        "value": 4.76487285784418,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "earlier": {
+        "period": "2025-09-30",
+        "value": 3.25824189284218,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "changePoints": 1.506630965002,
+      "ratio": 1.462406111808893
+    },
+    {
+      "seriesId": "indeed-ai-fr",
+      "geography": "FR",
+      "country": "France",
+      "kind": "measured",
+      "kindLabel": "Measured",
+      "unit": "percent of Indeed job postings",
+      "averagingWindowDays": 7,
+      "seriesVersion": "indeed-ai-fr-keywords-v1",
+      "latest": {
+        "period": "2026-09-30",
+        "value": 4.52739491947547,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "earlier": {
+        "period": "2025-09-30",
+        "value": 2.75868279459262,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "changePoints": 1.7687121248828501,
+      "ratio": 1.64114371117613
+    },
+    {
+      "seriesId": "indeed-ai-nl",
+      "geography": "NL",
+      "country": "Netherlands",
+      "kind": "measured",
+      "kindLabel": "Measured",
+      "unit": "percent of Indeed job postings",
+      "averagingWindowDays": 7,
+      "seriesVersion": "indeed-ai-nl-keywords-v1",
+      "latest": {
+        "period": "2026-09-30",
+        "value": 3.62811746725153,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "earlier": {
+        "period": "2025-09-30",
+        "value": 2.3265266903427,
+        "vintage": "2026-10-08",
+        "status": "provisional",
+        "uncertainty": "No uncertainty published by the source"
+      },
+      "changePoints": 1.3015907769088297,
+      "ratio": 1.5594566279044508
+    }
+  ]
+}

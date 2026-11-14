@@ -1,0 +1,95 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import StudioNote from '../../components/insights/StudioNote.astro';
+import { article } from '../../data/studio/what-to-read-in-a-model-card';
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+// The three cards we read on 14 November 2026, and the six items we looked for.
+// Each mark carries the heading or phrase we saw on the page, or says we did not find it.
+const notFound = 'not found on the page we read';
+const cards = [
+  { key: 'gemma', name: 'Gemma 4', publisher: 'Google DeepMind', url: 'https://gemma.ai/models/gemma-4/model-card/' },
+  { key: 'haiku', name: 'Claude Haiku 5.5', publisher: 'Anthropic', url: 'https://www.anthropic.com/claude-haiku-5-5-system-card' },
+  { key: 'mistral', name: 'Mistral-7B-Instruct-v0.3', publisher: 'Mistral AI', url: 'https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3' },
+];
+const items = [
+  { label: 'Intended use', gemma: ['Yes', '"Intended Usage"'], haiku: ['Partly', '"Usage Policy details prohibited uses of our models"'], mistral: ['No', notFound] },
+  { label: 'Out-of-scope uses or limitations', gemma: ['Yes', '"Limitations" (no separate out-of-scope list)'], haiku: ['Partly', '"Output quality varies by language."'], mistral: ['Yes', '"Limitations": "It does not have any moderation mechanisms."'] },
+  { label: 'Training data description', gemma: ['Yes', '"Training Dataset", "with a cutoff date of January 2025"'], haiku: ['Yes', '"1.1 Training data and process"'], mistral: ['No', notFound] },
+  { label: 'Evaluation results', gemma: ['Yes', '"Benchmark Results" and "Evaluation Results"'], haiku: ['Yes', '"pre-deployment evaluations in seven areas"'], mistral: ['No', notFound] },
+  { label: 'Licence', gemma: ['Yes', '"License : Apache 2.0"'], haiku: ['No', notFound], mistral: ['Yes', '"license: apache-2.0" in the metadata'] },
+  { label: 'Safety or bias testing', gemma: ['Yes', '"Ethics and Safety", "Evaluation Approach"'], haiku: ['Yes', '"4.4 Bias and integrity evaluations"'], mistral: ['No', notFound] },
+];
+const tally = (key: string, mark: string) => items.filter((i) => i[key][0] === mark).length;
+const score = Object.fromEntries(cards.map((c) => [c.key, { yes: tally(c.key, 'Yes'), partly: tally(c.key, 'Partly'), no: tally(c.key, 'No') }]));
+const total = items.length;
+
+// The nine headings proposed by Mitchell et al. (2019), with what each asks, paraphrased from the paper.
+const mitchell = [
+  ['Model Details', 'Who built it, when, which version and type, the licence, and where to send questions'],
+  ['Intended Use', 'Primary intended uses and users, and out-of-scope use cases'],
+  ['Factors', 'Groups, conditions or settings where performance may vary'],
+  ['Metrics', 'Which performance measures were used, and decision thresholds'],
+  ['Evaluation Data', 'Which datasets were used to test it, why, and how they were prepared'],
+  ['Training Data', 'Ideally the same detail as the evaluation data, if that is possible'],
+  ['Quantitative Analyses', 'Results broken down by each factor and by combinations of factors'],
+  ['Ethical Considerations', 'Whether sensitive data is used, and what risks and harms may be present'],
+  ['Caveats and Recommendations', 'Remaining concerns and further recommendations for use'],
+];
+const haikuPages = 144; // counted from the PDF served on 14 November 2026
+---
+<InsightArticle title={article.title} description={article.description} date={article.date} type={article.type} readTime={article.readTime} snapshot="2026-11-14" standfirst="A model card is meant to say what a model is for, what it was trained and tested on, and where it falls short; of three cards we read on 14 November 2026, one covered all six of those basics and one covered two.">
+  <p>We read three real model cards on 14 November 2026 and looked for six basics: intended use, limitations, training data, evaluation results, licence and safety or bias testing. Google DeepMind's card for Gemma 4 had all {total}. Anthropic's system card for Claude Haiku 5.5 had {score.haiku.yes} outright and {score.haiku.partly} in part, and Mistral AI's card for Mistral-7B-Instruct-v0.3 on Hugging Face had {score.mistral.yes}.</p>
+  <p>That is three documents on one day, picked by us, so it says nothing about model cards in general. It does show how far apart two documents with the same name can be, and which headings are worth finding before you build on a model.</p>
+
+  <div class="stat-row">
+    <div class="stat"><b>{score.gemma.yes} of {total}</b><span>Gemma 4 (Google DeepMind)</span></div>
+    <div class="stat"><b>{score.haiku.yes} of {total}</b><span>Claude Haiku 5.5 (Anthropic), plus {score.haiku.partly} in part</span></div>
+    <div class="stat"><b>{score.mistral.yes} of {total}</b><span>Mistral-7B-Instruct-v0.3 (Mistral AI)</span></div>
+  </div>
+
+  <h2>Where the idea came from: nine headings proposed in 2019</h2>
+  <p>The term comes from a paper by Margaret Mitchell and eight co-authors, <a href="https://arxiv.org/abs/1810.03993" rel="noopener">"Model Cards for Model Reporting"</a>, first posted to arXiv in October 2018 and presented at the FAT* conference in January 2019. The paper describes model cards as short documents that travel with a trained model and report how it performs in different conditions, including across demographic groups that matter for its intended use. Its worked examples were a smiling-face detector and a toxic-comment detector.</p>
+  <p>The paper proposes nine sections. The names below are the authors' own; the right-hand column is our short paraphrase of the prompts the paper lists under each.</p>
+  <div class="table-wrap"><table>
+    <caption>Source: Mitchell et al., "Model Cards for Model Reporting", arXiv 1810.03993, read 14 November 2026.</caption>
+    <thead><tr><th>Section heading in the paper</th><th>What it asks for (our paraphrase)</th></tr></thead>
+    <tbody>
+      {mitchell.map(([h, d]) => <tr><td>{h}</td><td>{d}</td></tr>)}
+    </tbody>
+  </table></div>
+  <p>Two details from the paper are worth carrying forward. Licence sits inside Model Details, so the authors treated it as a basic fact rather than an extra. And the authors admit that Training Data "May not be possible to provide in practice", suggesting at least some summary of how the training data is spread across the factors when full detail cannot be given. A thin training data section was expected from the start; a missing one is a different matter.</p>
+
+  <h2>What Hugging Face's format asks for</h2>
+  <p>On the Hugging Face Hub, a model card is the README.md file in the model's repository. The <a href="https://huggingface.co/docs/hub/model-cards" rel="noopener">Hub's model card documentation</a> (read 14 November 2026) says the card should describe the model, "its intended uses & potential limitations, including biases and ethical considerations", the training parameters, the datasets used for training, and the evaluation results. It cites the Mitchell paper for the limitations part.</p>
+  <p>The card has two parts: a block of metadata at the top, written in YAML, and the text below it. According to the same page, the metadata lets people filter models on the Hub, displays the model's licence on the model page, and adds a "Datasets used to train" line linking to those datasets when they are on the Hub. The licence field takes a standard identifier such as apache-2.0, or "other" with a name and a link for a custom licence. Evaluation results can also go in the metadata in a structured form.</p>
+  <p>Hugging Face also publishes a <a href="https://github.com/huggingface/huggingface_hub/blob/main/src/huggingface_hub/templates/modelcard_template.md" rel="noopener">template for the text</a> (read 14 November 2026). Its headings include Uses, with Direct Use and Out-of-Scope Use beneath it, then "Bias, Risks, and Limitations", Training Details, Evaluation and Environmental Impact. The documentation links this template and an annotated guide to filling it in; the Mistral card below shows that a card on the Hub need not follow it.</p>
+
+  <h2>Three cards, read on 14 November 2026</h2>
+  <p>We chose three cards from three publishers: one open-weights card on Hugging Face, one open-weights card on the publisher's own site, and one system card for a model that Anthropic serves through its own products and API. A Yes means we found a heading or phrase that covers the item; the quoted words are what we saw. A No means we did not find it on the page we read, which is not proof that the publisher says nothing anywhere.</p>
+  <div class="table-wrap"><table>
+    <caption>Source: the three cards linked in the header row, each read on 14 November 2026. Quoted words are from the card. No test scores are reproduced.</caption>
+    <thead><tr><th>What we looked for</th>{cards.map((c) => <th><a href={c.url} rel="noopener">{c.name}</a> ({c.publisher})</th>)}</tr></thead>
+    <tbody>
+      {items.map((i) => <tr><td>{i.label}</td>{cards.map((c) => <td><strong>{i[c.key][0]}</strong>: {i[c.key][1]}</td>)}</tr>)}
+      <tr><td><strong>Yes count</strong></td>{cards.map((c) => <td><strong>{score[c.key].yes} of {total}</strong>{score[c.key].partly ? `, ${score[c.key].partly} partly` : ''}</td>)}</tr>
+    </tbody>
+  </table></div>
+
+  <h2>How the three differ in practice</h2>
+  <p>The <a href="https://gemma.ai/models/gemma-4/model-card/" rel="noopener">Gemma 4 card</a> follows the paper's shape most closely. It states the licence at the top, lists intended uses under "Intended Usage" with the caveat that the list "is not comprehensive", and gives a "Limitations" section covering training data, task complexity, ambiguity, factual accuracy and common sense. Its training data section names the kinds of data (web documents, code, mathematics, images) and gives a cutoff date of January 2025. On safety, it lists the content categories it tested against and says all testing "was conducted without safety filters". What it does not have is a separate list of uses the model should not be put to; a "Prohibited use" page is linked from the site's menu instead, and we did not audit that page.</p>
+  <p>The <a href="https://www.anthropic.com/claude-haiku-5-5-system-card" rel="noopener">Claude Haiku 5.5 system card</a> is a different kind of document. It is a {haikuPages}-page PDF dated 7 October 2026, and most of it reports pre-deployment evaluations in seven areas, including Anthropic's Responsible Scaling Policy tests, alignment and model welfare. It has a training data section, which says the model was trained on "a proprietary mix of publicly available information from the internet", public and private datasets, user data that users included in feedback or explicitly permitted for training, and other sources such as synthetic data, and it has a section headed "Bias and integrity evaluations". Intended use is handled by reference: the card says the Usage Policy "details prohibited uses of our models" rather than listing them. We found no licence statement: neither spelling of the word appears in the text we extracted from the PDF. The card also says it is "somewhat shorter than some previous ones", by design.</p>
+  <p>The <a href="https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3" rel="noopener">Mistral-7B-Instruct-v0.3 card</a> is mostly installation steps and code. Its licence, apache-2.0, is in the metadata, so the Hub shows it on the model page. Its "Limitations" section is three sentences long and says plainly that the model "does not have any moderation mechanisms". We found no section on intended use, training data, evaluation results or safety testing. The card does name its base model, Mistral-7B-v0.3, and lists what changed from the previous version.</p>
+  <p>None of this measures how good or safe any of the three models is. A card with every heading can still be vague under each one, and a short card can describe a perfectly usable model. What the table shows is how much a reader can learn from the card alone.</p>
+
+  <h2>What two minutes with a card can tell you</h2>
+  <p>A card can be skimmed in a couple of minutes with the browser's find-in-page box and a handful of searches, one per row of the table: "intended", "limitation" and "out-of-scope", "training data", "evaluation", "licen" (to match both spellings), and "bias" or "safety". On the Gemma 4 card those searches land on the matching headings. On the Haiku card two of them would not: the passages we marked Partly sit under "Usage Policy and support" and inside the training data section, so a search for "intended" or "limitation" would have missed them. A heading search is a start, and the short sections around it still need reading.</p>
+  <p>Each answer tells you something different. An intended use section, or a pointer to a usage policy, says what the publisher had in mind and what it forbids. A limitations section is where a publisher says in its own words where the model is weak; the Mistral card's single line about moderation is short, and it matters to anyone putting the model in front of the public. A training data section with a cutoff date tells you how recent the model's knowledge can be. A licence line tells you the terms for using and sharing downloaded weights; the Haiku card names no licence and points to the Usage Policy instead. A safety or bias section tells you whether the publisher tested for the harms that matter to your use, and under what conditions; Gemma's note that testing ran without safety filters is the kind of condition worth knowing.</p>
+  <p>For a model on Hugging Face, the metadata is the fastest part to read. The licence shows on the model page, and a "Datasets used to train" line appears only if the publisher filled in the datasets field. The Mistral card had a licence and a base model in its metadata, and no datasets field.</p>
+
+  <h2>What this audit leaves out</h2>
+  <p>We read each card once, on 14 November 2026, and publishers can edit them at any time; the Mistral card is a file in a repository and can be updated. We marked presence, not quality, and we did not check any card's claims against the model. Publishers often put material in technical reports, licence pages and policy pages rather than in the card itself, and both the Gemma and Haiku cards refer readers to pages like these. Our marks cover only the card as we read it. For more on the difference between downloadable models and those served through an API, see our <a href={`${base}blog/open-source-vs-closed-ai/`}>explainer on open and closed AI</a>, and for what the numbers in an evaluation section can and cannot tell you, our piece on <a href={`${base}blog/how-ai-benchmarks-work/`}>how AI benchmarks work</a>.</p>
+
+  <StudioNote article={article} snapshot="14 November 2026" />
+</InsightArticle>
