@@ -46,6 +46,9 @@ jobs:
       - name: Test source policy (no numbers from sources whose terms bar our use)
         run: npm run test:source-policy
 
+      - name: Test Lab Standings method
+        run: node --test scripts/lab-standings.test.mjs
+
       - name: Test news routing provenance
         run: node --test scripts/news-pipeline-provenance.test.mjs scripts/lib/news-routing-config.test.mjs scripts/verify-news-pipeline.test.mjs
 
