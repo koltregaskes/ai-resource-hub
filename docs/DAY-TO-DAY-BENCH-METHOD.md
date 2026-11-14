@@ -47,6 +47,8 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
   - the expected answer or checklist;
   - the date written, the author and the checker.
 - **Two agents per task:** one writes the task and its answer key; a different one checks both. A task is "admitted" only after that check is recorded.
+- **Floor quota:** at most 2 tasks per family in the public set are "floor" tasks (very short basics, a sanity check). The rest are realistic: the size and messiness of a real request, with a supplied document of 250 to 700 words where one is involved. A set of floor tasks alone would put every strong model near 100% and separate nobody.
+- **Unanswerable tasks never hint at the way out.** The prompt reads like a normal question; nothing tells the model it may say "unknown".
 - **Facts must be stable and sourced.** Each factual task's answer key links to an official source and avoids anything likely to change within a year.
 - **No personal data** in any task.
 - **The 60 synthetic fixtures in PR 111 are for testing the harness only.** They're public, so none can become a held-out task, and none counts as an admitted task until it passes the two-agent check and fits a family above.
@@ -116,7 +118,7 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
   - the provider's data-retention setting;
   - the price receipt (below).
 - **One configuration per model in v1:** the provider's default reasoning setting and default temperature, written out as actual values, so a provider changing its defaults later can't change the config silently.
-- **Output limit:** 8,192 tokens, mapped to whichever parameter caps total output on that API, reasoning tokens included where the API counts them there.
+- **Output limit:** 4,096 tokens by default, mapped to whichever parameter caps total output on that API, reasoning tokens included where the API counts them there. A task may declare 8,192 in its file, and only if it needs a long answer. The truncation rate (answers cut off at the limit) is reported per model.
 - **Prompt:** an empty system prompt, no worked examples, and **no tools** (no web search, no code execution).
 - **Access route:** each lab's own API. Results describe the API model, not the chat app.
 - **Recorded per request:**
@@ -194,12 +196,13 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
 - **Price receipt:** before a run, the run config records each model's input, output and cached-token prices from the provider's official pricing page, with the URL, the date read and any promotional end date. That frozen price is used for every charge in the run. Our catalogue isn't the source, because it can lag (the first review found a model page showing a promotional price our catalogue didn't have).
 - **Caps (from hub #270):** about $90 of OpenAI credit and $60 of Anthropic credit. These are planned allocations, not checked balances; the remaining credit is confirmed in the provider console before the first paid run.
 - **Reservation, not estimation:**
-  - Before each request, the harness reserves the most it could cost: input tokens × input price + the output limit × output price.
+  - Before each request, the harness reserves the most it could cost: input tokens × input price + the task's output limit × output price. A retry is reserved when it's dispatched, not in advance.
   - It keeps one ledger per provider, shared by model calls and judge calls, covering requests in flight.
   - It refuses to send a request that would take reserved plus spent above the cap, and reconciles to the actual charge afterwards.
 - **`--max-usd`** sets a lower cap for one run and can't raise a provider cap.
-- **Pre-flight:** before any call, the harness prints the worst-case cost of the whole run (every slot at the output limit, retries, judge qualification and judging included), next to an expected cost from a planning figure for output size. It refuses to start if the worst case is above the remaining cap, unless the run config narrows the model list or the output limit.
-  - At 8,192 output tokens, the worst case is well above the typical cost: the first review put four OpenAI models at about $101 worst case, against about $40 at 3,000 output tokens. So the model list and output limit are fixed against the cap at pre-flight, not assumed.
+- **Pre-flight:** before any call, the harness prints the worst-case cost of the whole run, next to an expected cost from a planning figure for output size. The worst case is every slot once at its task's output limit, plus a 15% allowance for retries, plus judge qualification and judging. The harness refuses to start if the worst case is above the remaining cap. The fix is then a shorter model list in the run config, never a silently lower limit.
+  - Why the default limit is 4,096: the first review put four OpenAI models at about $101 worst case at 8,192 output tokens, above the $90 cap before judges or retries.
+- **Canary first:** the first paid step is 2 public tasks per model with 1 repeat, inside the same ledger. It isn't a result and isn't published. The adapters, usage fields, finish reasons and charges are reviewed before the full run starts.
 - **Judging:** about 16 tasks × 3 slots × 2 judges per model, plus 80 qualification calls, all reserved the same way. Judge cost is reported separately from model cost.
 - **Order:** every call that spends OpenAI credit finishes before 20 Nov 2026, including OpenAI judging of Anthropic answers. So the Anthropic model runs that need an OpenAI judge are scheduled before that date too.
 
@@ -248,3 +251,4 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
 8. **Rotation arithmetic fixed** (10 public tasks retire each quarter, so the set stays 40 and 20). Private and public run records are separated by an allowlist, and the leak claim is narrowed.
 9. **Harness contract:** timeout scope, output-limit mapping, truncation, tools policy, missing usage, and cost and time definitions.
 10. **Review answers adopted:** 60 tasks × 3 repeats; one frozen default configuration; disputed checks count as failed; the stratified bootstrap stays.
+11. **Added after checking the first candidate tasks:** a default output limit of 4,096 (so the worst case fits the caps), retries reserved only when dispatched, a canary stage before the full run, the floor quota, and no abstention hints in unanswerable tasks.
