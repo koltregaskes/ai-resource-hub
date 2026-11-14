@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "date": "2026-11-13",
+  "snapshotAt": "2026-11-14T06:55:59.278Z",
+  "stories": [
+    {
+      "id": "news-04367a7d0b10c58a54bc",
+      "title": "Amazon has a plan to index the world’s online shopping data",
+      "url": "https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search",
+      "source": "The Verge",
+      "summary": "Amazon has plans to build a vault of data on every product sold anywhere on the internet, even products Amazon doesn't sell, and make the information available through its own site, according to Reuters. The project, called the \"World Product Graph,\" is meant to make it less likely that shoppers leave Amazon to do the…",
+      "publishedAt": "2026-11-13T23:49:11.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-ec577d4c46a6d8cee627",
+      "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+      "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+      "source": "TechCrunch",
+      "summary": "Nvidia poured tens of billions into AI startups under Huang. Without him at the helm, founders and VCs are bracing for smaller checks and lower valuations.",
+      "publishedAt": "2026-11-13T22:43:00.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-951c84561943a913ab40",
+      "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
+      "source": "The Verge",
+      "summary": "After launching its Dots AI agents platform earlier this year, OpenAI is launching a wallet for the agents. ChatGPT Wallet is rolling out starting today for ChatGPT Pro subscribers in the US aged 18 and older using a US billing address and \"eligible US-issued American Express, Chase, Mastercard and Visa cards.\" After…",
+      "publishedAt": "2026-11-13T20:45:10.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-645e798427f902eb10a4",
+      "title": "AI agent startup LangChain hits $3B valuation",
+      "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+      "source": "TechCrunch",
+      "summary": "LangChain now claims 7,000 customers of its model and platform agnostic agent management tool LangSmith.",
+      "publishedAt": "2026-11-13T19:37:57.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-3dc626ea28ff3a7d36fa",
+      "title": "Export-banned Nvidia chips are behind China&#8217;s most powerful AI models — uh-oh, Jensen!",
+      "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
+      "source": "TechCrunch",
+      "summary": "New research shows the most advanced AI models from China were trained on banned Nvidia chips.",
+      "publishedAt": "2026-11-13T18:40:30.000Z",
+      "category": "policy",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-c231d25e54b9ad3f2848",
+      "title": "ChatGPT&#8217;s new Wallet lets AI agents shop and check out for you",
+      "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+      "source": "TechCrunch",
+      "summary": "ChatGPT Wallet lets AI agents shop and check out on users' behalf, starting with a limited rollout to U.S. Pro subscribers.",
+      "publishedAt": "2026-11-13T16:00:12.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-59c58e3f39cc6e58a783",
+      "title": "The unfolding Jensen Huang scandal: a timeline",
+      "url": "https://techcrunch.com/2026/11/13/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+      "source": "TechCrunch",
+      "summary": "Jensen Huang has resigned from Nvidia following an affair, which could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
+      "publishedAt": "2026-11-13T15:58:00.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-5bf4951adbe9698dd9e4",
+      "title": "Introducing ChatGPT Wallet",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet",
+      "source": "OpenAI",
+      "summary": "Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.",
+      "publishedAt": "2026-11-13T15:00:00.000Z",
+      "category": "models",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-627c324df106de1bc688",
+      "title": "What&#8217;s really at stake in the Jensen Huang saga",
+      "url": "https://www.theverge.com/podcast/1032866/jensen-huang-nvidia-china-trump-vergecast",
+      "source": "The Verge",
+      "summary": "One part of the saga surrounding Nvidia CEO Jensen Huang ended on Thursday, when Huang resigned from his position at the top of AI's most important company. But in the coming weeks and months, a much bigger story may be about to unfold. A story about Nvidia's dealings in China, about the US government's willingness [&…",
+      "publishedAt": "2026-11-13T14:47:16.000Z",
+      "category": "policy",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-744da6a2871c93b3ee8c",
+      "title": "ElevenLabs&#8217; new app combines meeting note-taking and dictation for teams",
+      "url": "https://techcrunch.com/2026/11/13/elevenlabs-new-app-combines-meeting-note-taking-and-dictation-for-teams/",
+      "source": "TechCrunch",
+      "summary": "ElevenAI is a new meeting notetaker and dictation app aimed at teams and enterprises.",
+      "publishedAt": "2026-11-13T14:44:48.000Z",
+      "category": "tools",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-cd9d1a105b69dd290c13",
+      "title": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+      "source": "The Verge",
+      "summary": "Normally, the products I test don't offer to help me write up my experience with them. Duet is different. Claude Duet is Anthropic's AI agent for consumers, the latest attempt by an AI company to try to convince us that agents can be useful for people who don't write code. It's been an interesting couple [&#8230;]",
+      "publishedAt": "2026-11-13T14:00:00.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-f240bb31094b1ee35ea9",
+      "title": "Israel&#8217;s VCs see opportunity for challengers in Nvidia&#8217;s turmoil",
+      "url": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/",
+      "source": "TechCrunch",
+      "summary": "Given Nvidia’s stronghold on AI and its importance in Israel, many in the country's startup ecosystem are worried about the impact of his departure.",
+      "publishedAt": "2026-11-13T12:52:19.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-025949940b1ff6f30fad",
+      "title": "Jensen Huang didn&#8217;t show confidence in his successor, report says",
+      "url": "https://techcrunch.com/2026/11/13/jensen-huang-didnt-show-confidence-in-his-successor-report-says/",
+      "source": "TechCrunch",
+      "summary": "Huang described Kress as a \"deer in the headlights\" during a meeting in summer.",
+      "publishedAt": "2026-11-13T12:28:23.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-71dad9da95c2fbfe808e",
+      "title": "Let’s talk about Jensen Huang’s many affairs!",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032339/lets-talk-about-the-nvidia-shitshow",
+      "source": "The Verge",
+      "summary": "Usually, we'd be offering to answer your questions about a news event, but honestly we don't really have any answers about what the hell is going on over at Nvidia. I can't speak for Nilay but at the rate Jensen Huang's new mistresses are dropping, I am concerned we are approaching an affair Singularity. If [&#8230;]",
+      "publishedAt": "2026-11-13T12:00:00.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-d1318183fe1728936389",
+      "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+      "url": "https://openai.com/business/customer-stories/shield",
+      "source": "OpenAI",
+      "summary": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their judgment.",
+      "publishedAt": "2026-11-13T08:00:00.000Z",
+      "category": "models",
+      "tags": [],
+      "importance": 0.4
+    }
+  ]
+}
