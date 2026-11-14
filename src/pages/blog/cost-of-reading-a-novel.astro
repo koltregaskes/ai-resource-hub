@@ -57,7 +57,7 @@ const priceFromLabel = (p: string) => (p === 'openrouter' ? 'Cheapest host on Op
 
   <div class="table-wrap">
     <table>
-      <caption>Source: AI Resource Hub catalogue, snapshot of {snapDate}. US dollars. Assumed novel of {nf(a.words)} words, {nf(a.tokens)} tokens. List prices only. The last column says whether the price is a lab's own list or the cheapest OpenRouter host.</caption>
+      <caption>Source: AI Resource Hub catalogue, snapshot of {snapDate}. US dollars. Assumed novel of {nf(a.words)} words, {nf(a.tokens)} tokens. List prices only. The last column says whether the price is a lab's own list or the top-provider price OpenRouter lists.</caption>
       <thead>
         <tr><th>Model</th><th class="num">Input per million</th><th class="num">Context window</th><th class="num">Novels that fit</th><th class="num">Read once</th><th class="num">Write one</th><th>Price from</th></tr>
       </thead>
@@ -87,7 +87,7 @@ const priceFromLabel = (p: string) => (p === 'openrouter' ? 'Cheapest host on Op
 
   <h2>Five of the 65 models cannot hold the book</h2>
   <p>A context window is the amount of text a model can take in at once, and the novel has to fit inside it. The five that fall short are {notFit.map((m) => `${m.name} (${nf(m.contextWindow)})`).join(', ')}. The biggest of those windows holds about {novels(biggestNotFit / a.tokens)} of the book. Reka Flash 3 is in the table above, and it would need the novel cut into pieces and read in several goes.</p>
-  <p>All five are priced from the cheapest OpenRouter host, and none costs more than ${data.dearestNotFitInput} per million input tokens. The other {data.pricedAboveDearestNotFit} models priced above ${data.dearestNotFitInput} all fit. In this catalogue, then, a window too small for a novel goes with a price at the low end of the list.</p>
+  <p>All five are priced from OpenRouter's top-provider listing, and none costs more than ${data.dearestNotFitInput} per million input tokens. The other {data.pricedAboveDearestNotFit} models priced above ${data.dearestNotFitInput} all fit. In this catalogue, then, a window too small for a novel goes with a price at the low end of the list.</p>
   <p>Our <a href={`${base}blog/context-windows-explained/`}>context windows explainer</a> covers what the window is and how it has grown.</p>
 
   <h2>The dear models all have room, and some cheap ones barely do</h2>
@@ -104,7 +104,7 @@ const priceFromLabel = (p: string) => (p === 'openrouter' ? 'Cheapest host on Op
   <p>The sums cover one pass over the text and nothing else: no question about the book, no answer, no second read.</p>
 
   <h2>Where the prices come from</h2>
-  <p>Of the {data.n} models, {data.fromOpenRouter} take their price from OpenRouter, which reports the cheapest host for each model, and {data.fromLab} take it from a lab's own pricing page, typed in by hand. All five models that cannot hold the book, and {rowsFromOpenRouter} of the {rows.length} rows in the table, are in the first group, so those prices reflect whichever host was cheapest on the snapshot date. Context windows are the figures recorded in the catalogue, and we did not re-check them against each lab's page for this piece. The <a href={`${base}transparency/`}>transparency page</a> lists what is known to be wrong with the data.</p>
+  <p>Of the {data.n} models, {data.fromOpenRouter} take their price from OpenRouter, which lists the price from the top provider for each model, and {data.fromLab} take it from a lab's own pricing page, typed in by hand. All five models that cannot hold the book, and {rowsFromOpenRouter} of the {rows.length} rows in the table, are in the first group, so those prices reflect whichever host was cheapest on the snapshot date. Context windows are the figures recorded in the catalogue, and we did not re-check them against each lab's page for this piece. The <a href={`${base}transparency/`}>transparency page</a> lists what is known to be wrong with the data.</p>
   <p>For the same kind of sum on your own workload, the <a href={`${base}calculator/`}>cost calculator</a> takes your token counts, and the <a href={`${base}blog/million-token-context-window/`}>million-token context window</a> piece covers what a very large window does and does not change.</p>
 
   <StudioNote article={article} snapshot={snapDate} />

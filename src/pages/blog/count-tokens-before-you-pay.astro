@@ -65,7 +65,7 @@ const spreadPct = Math.round(((opus.per1000.plus30 - opus.per1000.siteRule) / op
 
   <div class="table-wrap">
     <table>
-      <caption>Source: src/data/insights/2026-11-14.json prices and scripts/insights/count-tokens-before-you-pay.mjs. All token counts come from the assumed word counts above. Cost for {n(a.requests)} requests, reply fixed at {n(data.replyTokens)} tokens.</caption>
+      <caption>Source: src/data/insights/2026-11-14.json prices and scripts/insights/count-tokens-before-you-pay.mjs. All token counts come from the assumed word counts above. Cost for {n(a.requests)} requests, reply fixed at {n(data.replyTokens)} tokens. The Gemini 3.5 Flash row is a catalogue price we did not confirm: Google's model page says requests to that name are now routed to Gemini 3.6 Flash, which has a different listed price.</caption>
       <thead><tr><th>Model</th><th class="num">Input / output per million</th><th class="num">{n(p.low)} prompt tokens</th><th class="num">{n(p.siteRule)} prompt tokens</th><th class="num">{n(p.high)} prompt tokens</th><th class="num">{n(data.sensitivityPromptTokens)} prompt tokens</th></tr></thead>
       <tbody>
         {rows.map((r) => (

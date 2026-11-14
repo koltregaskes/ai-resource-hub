@@ -1,6 +1,6 @@
 {
   "snapshotDate": "2026-11-14",
-  "cacheGeneratedAt": "2026-11-14T15:55:50.637Z",
+  "cacheGeneratedAt": "2026-11-14T17:58:56.560Z",
   "inputs": {
     "modelsSha256": "a13a9dec6ed6f736079fef57ccf544db6e68cba575ea94a71a29e4caf8e0b788"
   },
@@ -148,21 +148,38 @@
       "outputMultiple": 10,
       "catalogueMatches": true,
       "catalogueSource": "openrouter"
+    },
+    {
+      "pair": "GPT-5.2",
+      "base": {
+        "input": 1.75,
+        "output": 14
+      },
+      "pro": {
+        "input": 21,
+        "output": 168
+      },
+      "page": "https://developers.openai.com/api/docs/pricing",
+      "proPage": "https://developers.openai.com/api/docs/pricing",
+      "inputMultiple": 12,
+      "outputMultiple": 12,
+      "catalogueMatches": true,
+      "catalogueSource": "openrouter"
     }
   ],
   "livePairs": {
-    "n": 4,
+    "n": 5,
     "input": {
-      "n": 4,
+      "n": 5,
       "min": 6,
       "max": 12,
-      "median": 11
+      "median": 12
     },
     "output": {
-      "n": 4,
+      "n": 5,
       "min": 6,
       "max": 12,
-      "median": 11
+      "median": 12
     }
   },
   "liveDifferences": [
@@ -231,6 +248,12 @@
       "base": 0.04,
       "pro": 0.36,
       "multiple": 10
+    },
+    {
+      "pair": "GPT-5.2",
+      "base": 0.05,
+      "pro": 0.55,
+      "multiple": 12
     }
   ],
   "pairs": [

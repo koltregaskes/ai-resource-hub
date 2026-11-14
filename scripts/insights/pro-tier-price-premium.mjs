@@ -86,6 +86,7 @@ const live = [
   { pair: "GPT-5.4", base: { input: 2.5, output: 15 }, pro: { input: 30, output: 180 }, page: "https://developers.openai.com/api/docs/pricing", proPage: "https://developers.openai.com/api/docs/models/gpt-5.4-pro" },
   { pair: "GPT-5", base: { input: 1.25, output: 10 }, pro: { input: 15, output: 120 }, page: "https://developers.openai.com/api/docs/models/gpt-5", proPage: "https://developers.openai.com/api/docs/pricing" },
   { pair: "o3", base: { input: 2, output: 8 }, pro: { input: 20, output: 80 }, page: "https://developers.openai.com/api/docs/models/o3", proPage: "https://developers.openai.com/api/docs/models/o3-pro" },
+  { pair: "GPT-5.2", base: { input: 1.75, output: 14 }, pro: { input: 21, output: 168 }, page: "https://developers.openai.com/api/docs/pricing", proPage: "https://developers.openai.com/api/docs/pricing" },
 ];
 for (const l of live) {
   const c = pairs.find((p) => p.pro.name === l.pair + " Pro");

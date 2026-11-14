@@ -70,7 +70,7 @@ const over50 = spread.bands[spread.bands.length - 1].count;
       value: m.output,
       valueLabel: usd(m.output),
       highlight: i === 0 || i === ladder.length - 1,
-    }))} caption={`Source: AI Resource Hub catalogue, snapshot of ${snapDate}. US dollars per million output tokens. Logarithmic scale. Prices under $1 for third-party hosted models are the cheapest host listed by OpenRouter.`}
+    }))} caption={`Source: AI Resource Hub catalogue, snapshot of ${snapDate}. US dollars per million output tokens. Logarithmic scale. Prices under $1 for third-party hosted models are the price OpenRouter lists from its top provider for that model.`}
   />
 
   <p>
@@ -202,7 +202,7 @@ const over50 = spread.bands[spread.bands.length - 1].count;
       </li>
       <li>
         <strong>Two kinds of price.</strong> {spread.fromReseller} of the {spread.n} prices come
-        from OpenRouter, which reports the cheapest host for each model. {spread.fromLabList} come from a lab's own pricing page
+        from OpenRouter, which lists the price from the top provider for each model. {spread.fromLabList} come from a lab's own pricing page
         and were typed in by hand. The table shows which is which.
       </li>
       <li>

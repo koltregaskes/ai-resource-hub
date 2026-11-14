@@ -13,7 +13,7 @@ const usd = (v: number) => {
   return `$${whole}.${frac.padEnd(2, '0')}`;
 };
 const num = (v: number) => v.toLocaleString('en-GB');
-const sourceLabel = (s: string) => (/openrouter/i.test(s) ? 'OpenRouter listing (cheapest host)' : /introductory/i.test(s) ? 'Anthropic list price (introductory through 2026-08-31, which the Anthropic page now says is the standard price)' : s.replace(/ \(official.*\)/i, ' list price'));
+const sourceLabel = (s: string) => (/openrouter/i.test(s) ? 'OpenRouter listing (top provider)' : /introductory/i.test(s) ? 'Anthropic list price (introductory through 2026-08-31, which the Anthropic page now says is the standard price)' : s.replace(/ \(official.*\)/i, ' list price'));
 const rows = data.rows;
 const g = data.gpt55;
 const gem = data.gemini25Pro;
@@ -60,7 +60,7 @@ const tiedDear = data.dearest.tied.join(' and ');
   </div>
 
   <h2>Which rows rest on a lab price and which on a reseller</h2>
-  <p>{data.officialCount} of the {data.count} rows carry a price typed in from the lab's own pricing page. The other {data.openrouterCount} come from the OpenRouter listing, which shows the cheapest host's price rather than the lab's. The three cheapest rows are all OpenRouter prices, while the two dearest are OpenAI list prices, so the bottom end of the range is the less certain one. We explain the price sources in more detail in <a href={`${base}blog/how-to-read-an-ai-price-list/`}>how to read an AI price list</a>, and the wider spread of output prices in <a href={`${base}blog/ai-price-spread-6000x/`}>the 6,000 times piece</a>.</p>
+  <p>{data.officialCount} of the {data.count} rows carry a price typed in from the lab's own pricing page. The other {data.openrouterCount} come from the OpenRouter listing, which shows the price from the top provider for that model, not the lab's own price. The three cheapest rows are all OpenRouter prices, while the two dearest are OpenAI list prices, so the bottom end of the range is the less certain one. We explain the price sources in more detail in <a href={`${base}blog/how-to-read-an-ai-price-list/`}>how to read an AI price list</a>, and the wider spread of output prices in <a href={`${base}blog/ai-price-spread-6000x/`}>the 6,000 times piece</a>.</p>
 
   <h2>OpenAI documents a higher rate for GPT-5.5 prompts over 272K tokens</h2>
   <p>The table assumes one flat rate for the whole window. OpenAI's <a href="https://developers.openai.com/api/docs/models/gpt-5.5" rel="noopener">GPT-5.5 model page</a>, which we read on 14 November 2026, lists $5 input and $30 output per million tokens and a 1,050,000-token window. It also says "prompts with >272K input tokens are priced at 2x input and 1.5x output", and that this applies "for the full session for standard, batch, and flex". The catalogue holds the base rates, and they match the page.</p>
