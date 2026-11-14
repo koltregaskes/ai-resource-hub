@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T06:55:48.818Z",
+  "generatedAt": "2026-11-14T07:56:03.761Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-14T06:55:48.811Z",
+      "lastCheckedAt": "2026-11-14T07:56:03.754Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,6 +90,108 @@
       ]
     },
     {
+      "id": "anthropic",
+      "providerId": "anthropic",
+      "name": "Anthropic",
+      "colour": "#d97706",
+      "websiteUrl": "https://anthropic.com",
+      "statusPageUrl": "https://status.claude.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-11-14T07:56:02.253Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partially Degraded Service",
+      "summary": "1 active incident across 10 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "claude.ai",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Claude Platform on AWS",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Console (platform.claude.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude in Microsoft Foundry",
+          "status": "operational"
+        },
+        {
+          "name": "Claude API (api.anthropic.com)",
+          "status": "operational"
+        },
+        {
+          "name": "Claude Models on Google Cloud (Anthropic managed)",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "ct4c2pwf2xpj",
+          "title": "Some users unable to sign up with Apple on the Claude iOS app",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-11-14T07:11:36.117Z",
+          "updatedAt": "2026-11-14T07:11:36.220Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/4858wf40dx89",
+          "summary": "We are investigating an issue with Sign in with Apple on the Claude iOS app, which is mainly affecting new accounts. New users can sign up with Google or email instead. We will pr..."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "ct4c2pwf2xpj",
+          "title": "Some users unable to sign up with Apple on the Claude iOS app",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-11-14T07:11:36.117Z",
+          "updatedAt": "2026-11-14T07:11:36.220Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/4858wf40dx89",
+          "summary": "We are investigating an issue with Sign in with Apple on the Claude iOS app, which is mainly affecting new accounts. New users can sign up with Google or email instead. We will pr..."
+        },
+        {
+          "id": "qrpz8k79qm7x",
+          "title": "Elevated purchasing errors on claude.ai",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-11-14T02:54:33.309Z",
+          "updatedAt": "2026-11-14T04:23:05.216Z",
+          "resolvedAt": "2026-11-14T04:23:05.193Z",
+          "url": "https://stspg.io/qqf00d9r7pm4",
+          "summary": "The issue affecting purchases and plan changes on claude.ai has been resolved, and delayed plan changes and payments have now been applied. Impact occurred from 18:34 PT on Novemb..."
+        },
+        {
+          "id": "sqn3fg1l96dl",
+          "title": "Elevated errors affecting the Microsoft 365 connector",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-11-12T17:52:44.934Z",
+          "updatedAt": "2026-11-13T21:49:44.052Z",
+          "resolvedAt": "2026-11-13T21:49:44.029Z",
+          "url": "https://stspg.io/m0rbx38nmy1c",
+          "summary": "This incident has been resolved. From 08:03 PT / 16:03 UTC on November 12 to 08:40 PT / 16:40 UTC on November 13, mail, calendar and search tools in the Microsoft 365 connector an..."
+        },
+        {
+          "id": "34wq7gxnxvvm",
+          "title": "Elevated errors on claude.ai, the Claude API, and Claude Code",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-11-13T13:09:50.199Z",
+          "updatedAt": "2026-11-13T15:38:49.380Z",
+          "resolvedAt": "2026-11-13T15:38:49.356Z",
+          "url": "https://stspg.io/264r547qtkky",
+          "summary": "The issue affecting multiple surfaces has been resolved."
+        }
+      ]
+    },
+    {
       "id": "openai",
       "providerId": "openai",
       "name": "OpenAI",
@@ -100,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-14T06:55:46.831Z",
+      "lastCheckedAt": "2026-11-14T07:56:02.286Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -187,96 +289,6 @@
       ]
     },
     {
-      "id": "anthropic",
-      "providerId": "anthropic",
-      "name": "Anthropic",
-      "colour": "#d97706",
-      "websiteUrl": "https://anthropic.com",
-      "statusPageUrl": "https://status.claude.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-11-14T06:55:46.788Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 10 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "claude.ai",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Platform on AWS",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Console (platform.claude.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude in Microsoft Foundry",
-          "status": "operational"
-        },
-        {
-          "name": "Claude API (api.anthropic.com)",
-          "status": "operational"
-        },
-        {
-          "name": "Claude Models on Google Cloud (Anthropic managed)",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "qrpz8k79qm7x",
-          "title": "Elevated purchasing errors on claude.ai",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-11-14T02:54:33.309Z",
-          "updatedAt": "2026-11-14T04:23:05.216Z",
-          "resolvedAt": "2026-11-14T04:23:05.193Z",
-          "url": "https://stspg.io/qqf00d9r7pm4",
-          "summary": "The issue affecting purchases and plan changes on claude.ai has been resolved, and delayed plan changes and payments have now been applied. Impact occurred from 18:34 PT on Novemb..."
-        },
-        {
-          "id": "sqn3fg1l96dl",
-          "title": "Elevated errors affecting the Microsoft 365 connector",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-11-12T17:52:44.934Z",
-          "updatedAt": "2026-11-13T21:49:44.052Z",
-          "resolvedAt": "2026-11-13T21:49:44.029Z",
-          "url": "https://stspg.io/m0rbx38nmy1c",
-          "summary": "This incident has been resolved. From 08:03 PT / 16:03 UTC on November 12 to 08:40 PT / 16:40 UTC on November 13, mail, calendar and search tools in the Microsoft 365 connector an..."
-        },
-        {
-          "id": "34wq7gxnxvvm",
-          "title": "Elevated errors on claude.ai, the Claude API, and Claude Code",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-11-13T13:09:50.199Z",
-          "updatedAt": "2026-11-13T15:38:49.380Z",
-          "resolvedAt": "2026-11-13T15:38:49.356Z",
-          "url": "https://stspg.io/264r547qtkky",
-          "summary": "The issue affecting multiple surfaces has been resolved."
-        },
-        {
-          "id": "nn11wk485zfn",
-          "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-11-13T09:58:58.057Z",
-          "updatedAt": "2026-11-13T11:58:45.676Z",
-          "resolvedAt": "2026-11-13T11:58:45.647Z",
-          "url": "https://stspg.io/6kqyd0c5b1gr",
-          "summary": "The issue affecting claude.ai and Claude Cowork has been resolved."
-        }
-      ]
-    },
-    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -287,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-14T06:55:47.589Z",
+      "lastCheckedAt": "2026-11-14T07:56:03.082Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -307,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-14T06:55:47.011Z",
+      "lastCheckedAt": "2026-11-14T07:56:02.456Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -350,7 +362,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-14T06:55:47.773Z",
+      "lastCheckedAt": "2026-11-14T07:56:03.293Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -374,7 +386,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
