@@ -9,8 +9,8 @@
     },
     {
       "name": "families-3-4-5.json",
-      "sha256": "05c8e9e6d83fc4419b3ad32a3c06d88c83e7d21271baf2f95293fa41b8f45a0e",
-      "bytes": 80648
+      "sha256": "d731d5ac51e9575f973a25d2b4d200de3e3abb2353c09f6aabe76567b6424437",
+      "bytes": 88692
     },
     {
       "name": "families-6-7.json",
@@ -115,7 +115,7 @@
       "family": 5,
       "answerable": true,
       "grader": "checklist",
-      "version": 3
+      "version": 4
     },
     {
       "id": "f5-ho-03",
