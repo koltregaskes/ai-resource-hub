@@ -1,0 +1,44 @@
+{
+  "task_set_version": "daily-use-v1",
+  "repeats": 3,
+  "caps_usd": {
+    "openai": "10",
+    "anthropic": "10"
+  },
+  "judge_panel": [
+    {
+      "provider": "openai",
+      "model": "fixture-judge-o"
+    },
+    {
+      "provider": "anthropic",
+      "model": "fixture-judge-a"
+    }
+  ],
+  "models": [
+    {
+      "provider": "openai",
+      "model": "fixture-openai",
+      "effort": "none",
+      "temperature": 0,
+      "max_output_tokens": 512,
+      "context_tokens": 4096,
+      "input_usd_per_million": "1",
+      "output_usd_per_million": "4",
+      "system_prompt": "",
+      "shot": "zero-shot"
+    },
+    {
+      "provider": "anthropic",
+      "model": "fixture-anthropic",
+      "effort": "none",
+      "temperature": 0,
+      "max_output_tokens": 512,
+      "context_tokens": 4096,
+      "input_usd_per_million": "1",
+      "output_usd_per_million": "4",
+      "system_prompt": "",
+      "shot": "zero-shot"
+    }
+  ]
+}
