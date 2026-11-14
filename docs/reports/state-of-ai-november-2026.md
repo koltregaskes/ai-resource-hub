@@ -23,3 +23,5 @@ Implementation: dedicated data and source ledger; reusable accessible chart comp
 - Locked dependencies installed with scripts disabled. This host uses Node 26; npm warned that better-sqlite3's supported engine list ends at Node 25. No database migration or native-addon rebuild was performed.
 
 Launch requires separate approval and a fresh source check after this report's 14 November cut-off. PR-only instruction remains in force.
+
+Final build evidence: normal build completed with 658 pages and no draft output; isolated opt-in build completed with 659 pages, including the report. Neither sitemap contains `/drafts/`. Final opt-in HTML was rendered again at both viewport sizes after the chart-link correction, with two tables, expected robots metadata and no overflow. Both builds completed; the initial overlapping-output build was discarded and is not counted as a pass.
