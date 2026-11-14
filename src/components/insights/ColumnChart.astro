@@ -1,0 +1,99 @@
+---
+/**
+ * Static column chart for data articles. Server-rendered SVG, no JavaScript,
+ * colours from the site theme tokens so it works in both light and dark themes.
+ * Every chart carries a caption with the source and the snapshot date.
+ */
+interface Datum {
+  label: string;
+  value: number;
+  /** Text printed above the column. Defaults to the formatted value. */
+  valueLabel?: string;
+  /** Small text under the label, e.g. "n=48". */
+  sub?: string;
+  highlight?: boolean;
+}
+
+interface Props {
+  title: string;
+  data: Datum[];
+  caption: string;
+  /** Accessible summary of what the chart shows, in one sentence. */
+  summary: string;
+  maxValue?: number;
+  height?: number;
+}
+
+const { title, data, caption, summary, height = 300 } = Astro.props;
+const width = 720;
+const pad = { top: 34, right: 12, bottom: 52, left: 12 };
+const plotH = height - pad.top - pad.bottom;
+const plotW = width - pad.left - pad.right;
+const max = Astro.props.maxValue ?? Math.max(...data.map((d) => d.value));
+const slot = plotW / data.length;
+const barW = Math.min(slot * 0.62, 84);
+const id = `chart-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+---
+
+<figure class="my-8 rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-4 sm:p-6">
+  <h3 id={id} class="text-base font-semibold text-(--color-text-primary) mb-1">{title}</h3>
+  <svg
+    viewBox={`0 0 ${width} ${height}`}
+    role="img"
+    aria-labelledby={id}
+    aria-describedby={`${id}-desc`}
+    class="w-full h-auto"
+  >
+    <desc id={`${id}-desc`}>{summary}</desc>
+    <line
+      x1={pad.left}
+      x2={width - pad.right}
+      y1={pad.top + plotH}
+      y2={pad.top + plotH}
+      stroke="var(--color-border-strong, var(--color-border))"
+      stroke-width="1"
+    />
+    {
+      data.map((d, i) => {
+        const h = Math.max(2, (d.value / max) * plotH);
+        const x = pad.left + i * slot + (slot - barW) / 2;
+        const y = pad.top + plotH - h;
+        const cx = pad.left + i * slot + slot / 2;
+        return (
+          <g>
+            <rect
+              x={x}
+              y={y}
+              width={barW}
+              height={h}
+              rx="4"
+              fill={d.highlight ? 'var(--color-accent)' : 'var(--color-accent-muted)'}
+              opacity={d.highlight ? 1 : 0.55}
+            />
+            <text
+              x={cx}
+              y={y - 8}
+              text-anchor="middle"
+              font-size="15"
+              font-weight="700"
+              fill="var(--color-text-primary)"
+            >
+              {d.valueLabel ?? d.value.toLocaleString('en-GB')}
+            </text>
+            <text x={cx} y={pad.top + plotH + 20} text-anchor="middle" font-size="13" fill="var(--color-text-secondary)">
+              {d.label}
+            </text>
+            {d.sub && (
+              <text x={cx} y={pad.top + plotH + 38} text-anchor="middle" font-size="11" fill="var(--color-text-muted)">
+                {d.sub}
+              </text>
+            )}
+          </g>
+        );
+      })
+    }
+  </svg>
+  <figcaption class="mt-3 text-xs leading-relaxed text-(--color-text-muted)">
+    {caption}
+  </figcaption>
+</figure>

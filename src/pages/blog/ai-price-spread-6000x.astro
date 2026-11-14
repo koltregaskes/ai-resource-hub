@@ -1,0 +1,213 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import ColumnChart from '../../components/insights/ColumnChart.astro';
+import LogBarChart from '../../components/insights/LogBarChart.astro';
+import DataNote from '../../components/insights/DataNote.astro';
+import insights from '../../data/insights/2026-11-14.json';
+import check from '../../data/insights/2026-11-14.openrouter-check.json';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const spread = insights.priceSpread;
+const all = spread.all; // sorted cheapest to dearest by output price
+const cheapest = all[0];
+const dearest = all[all.length - 1];
+const usd = (v: number) => (v < 1 ? `$${v.toFixed(2)}` : `$${Number.isInteger(v) ? v : v.toFixed(2)}`);
+const isReseller = (source: string) => /openrouter/i.test(source);
+const snapDate = new Date(insights.snapshotDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+
+// All of these are computed by scripts/insights/compute-insights.mjs.
+const ladder = spread.ladder;
+const labCheapest = spread.labListCheapest;
+const labDearest = spread.labListDearest;
+const labRatio = Math.round(spread.labListRatio);
+const labRows = spread.rangeByLab;
+const live = check.outputPrices;
+const checkDate = new Date(check.checkedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const liveDearest = live.dearest.filter((m) => m.outputPerMillion === live.dearest[0].outputPerMillion);
+const liveName = (id: string) => all.find((m) => id.endsWith(`/${m.id}`))?.name ?? id;
+
+const under1 = spread.bands[0].count;
+const over50 = spread.bands[spread.bands.length - 1].count;
+---
+
+<InsightArticle
+  title="The dearest AI model costs 6,000 times more than the cheapest"
+  description="Across 65 active language models we track, the price of a million output tokens runs from $0.03 to $180. Where the models sit in between, why the two ends are not like for like, and what the gap does not prove."
+  date="2026-11-14"
+  type="Analysis"
+  readTime="5 min"
+  snapshot={insights.snapshotDate} standfirst="A million tokens of output costs three cents from the cheapest model we track and $180 from the dearest. Both are for sale today. The gap is real, but the two ends are not selling the same thing."
+>
+  <p>
+    {cheapest.name} will write you a million tokens for {usd(cheapest.output)}. {dearest.name} charges {usd(dearest.output)} for the same amount. On OpenAI's <a href="https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them" rel="noopener">rule of thumb</a> that 100 tokens is about 75 words, a million tokens is roughly 750,000 words. So the same pile of text costs three cents
+    or $180 depending on which model writes it.
+  </p>
+  <p>
+    That is a ratio of {Math.round(spread.ratio).toLocaleString('en-GB')} to one, across the {spread.n} language models we
+    list as active and priced on {snapDate}.
+  </p>
+
+  <div class="stat-row">
+    <div class="stat"><b>{usd(cheapest.output)}</b><span>cheapest, per million output tokens ({cheapest.name})</span></div>
+    <div class="stat"><b>{usd(dearest.output)}</b><span>dearest, per million output tokens ({dearest.name})</span></div>
+    <div class="stat"><b>{Math.round(spread.ratio).toLocaleString('en-GB')}x</b><span>dearest divided by cheapest</span></div>
+    <div class="stat"><b>{usd(spread.medianOutput)}</b><span>median output price across {spread.n} models</span></div>
+  </div>
+
+  <h2>The ladder</h2>
+  <p>
+    Sort the {spread.n} models by output price and take every fifth one, and you get the ladder below. The scale is
+    logarithmic, which means each gridline is ten times the one before. On an ordinary scale everything under $10 would be
+    squashed flat against the left edge.
+  </p>
+
+  <LogBarChart
+    title="Output price per million tokens, every fifth model from cheapest to dearest"
+    summary={`Output prices run from ${usd(cheapest.output)} for ${cheapest.name} to ${usd(dearest.output)} for ${dearest.name}.`} ticks={[0.01, 0.1, 1, 10, 100, 1000]} data={ladder.map((m, i) => ({
+      label: m.name,
+      value: m.output,
+      valueLabel: usd(m.output),
+      highlight: i === 0 || i === ladder.length - 1,
+    }))} caption={`Source: AI Resource Hub catalogue, snapshot of ${snapDate}. US dollars per million output tokens. Logarithmic scale. Prices under $1 for third-party hosted models are the cheapest host listed by OpenRouter.`}
+  />
+
+  <p>
+    The median output price is {usd(spread.medianOutput)} per million
+    tokens and the median input price is {usd(spread.medianInput)}.
+  </p>
+
+  <h2>Where the models sit</h2>
+
+  <ColumnChart
+    title="Active language models by output price band"
+    summary={`Models per price band: ${spread.bands.map((b) => `${b.label}: ${b.count}`).join('; ')}.`} data={spread.bands.map((b) => ({ label: b.label, value: b.count, valueLabel: String(b.count), highlight: b.label.startsWith('$50') }))} caption={`Source: AI Resource Hub catalogue, snapshot of ${snapDate}. Count of models out of ${spread.n}. Bands are US dollars per million output tokens.`}
+  />
+
+  <p>
+    The spread is fairly even until the top. {under1} of the {spread.n} models charge under a dollar per million output
+    tokens. Only {over50} charge $50 or more: five "Pro" tiers from OpenAI and Anthropic's Claude Fable 5.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>Source: AI Resource Hub catalogue, snapshot of {snapDate}. US dollars per million tokens.</caption>
+      <thead>
+        <tr><th>Five cheapest</th><th class="num">Input</th><th class="num">Output</th><th>Price from</th></tr>
+      </thead>
+      <tbody>
+        {spread.cheapest.slice(0, 5).map((m) => (
+          <tr>
+            <td>{m.name} <span style="color:var(--color-text-muted)">({m.provider})</span></td>
+            <td class="num">{usd(m.input)}</td>
+            <td class="num">{usd(m.output)}</td>
+            <td>{isReseller(m.source) ? 'Cheapest host on OpenRouter' : "Lab's own list"}</td>
+          </tr>
+        ))}
+      </tbody>
+      <thead>
+        <tr><th>Five dearest</th><th class="num">Input</th><th class="num">Output</th><th>Price from</th></tr>
+      </thead>
+      <tbody>
+        {spread.dearest.slice(0, 5).map((m) => (
+          <tr>
+            <td>{m.name} <span style="color:var(--color-text-muted)">({m.provider})</span></td>
+            <td class="num">{usd(m.input)}</td>
+            <td class="num">{usd(m.output)}</td>
+            <td>{isReseller(m.source) ? 'OpenRouter listing' : "Lab's own list"}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>The two ends are not like for like</h2>
+  <p>
+    Look at the "price from" column. The cheap end is made up of small models such as Mistral Nemo, Llama 3.1 8B and Phi 4
+    that anyone may host, priced at whichever host on OpenRouter is cheapest that day. The dear end is a lab's own list price
+    for its top tier. Comparing them is a bit like comparing the cheapest supermarket's own-brand with a restaurant's tasting
+    menu. Both are food and the price gap is true, but nobody thinks they are the same product.
+  </p>
+  <p>
+    A fairer test is to use only prices taken from the labs' own pricing pages. We hold {spread.fromLabList} of those among the
+    active models. They run from {labCheapest.name} at {usd(labCheapest.output)} to {labDearest.name} at {usd(labDearest.output)}, which is {labRatio} to one. Both of those are OpenAI models, so one lab's own price list spans
+    more than a hundredfold.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>
+        Source: AI Resource Hub catalogue, snapshot of {snapDate}. Labs with at least three active, priced language models.
+        US dollars per million output tokens. Cheapest figures may be a third-party host's price.
+      </caption>
+      <thead>
+        <tr><th>Lab</th><th class="num">Models</th><th class="num">Cheapest</th><th class="num">Dearest</th><th class="num">Range</th></tr>
+      </thead>
+      <tbody>
+        {labRows.map((r) => (
+          <tr>
+            <td>{r.lab}</td>
+            <td class="num">{r.n}</td>
+            <td class="num">{usd(r.min)}</td>
+            <td class="num">{usd(r.max)}</td>
+            <td class="num">{Math.round(r.max / r.min).toLocaleString('en-GB')}x</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    Anthropic stands out in that table for a different reason. Its cheapest model in this set, Claude Haiku 4.5, costs $5 per million output tokens,
+    which is more than the cheapest from every other lab listed.
+  </p>
+
+  <h2>What the gap does not prove</h2>
+  <p>
+    It would be neat to finish by saying whether the $180 model is 6,000 times better. We cannot say, and we would be wary of
+    anyone who claims to. Price per token is easy to measure. Quality is not, and we do not yet hold independent test results
+    we are allowed to publish alongside these prices. Our <a href={`${base}transparency/`}>transparency page</a> explains what
+    is missing and why.
+  </p>
+  <p>
+    There is a second gap in this comparison. Price per token is not cost per job. A model that reasons at length before it
+    answers uses more output tokens to do the same task. OpenAI's <a href="https://developers.openai.com/api/docs/guides/reasoning" rel="noopener">documentation</a> (read on 14 November 2026) says reasoning tokens "are billed as output tokens" and can run to tens of thousands per
+    response. So a higher price can be multiplied by a higher token count. Two
+    models with the same list price can produce very different bills.
+  </p>
+
+  <h2>Start at the cheap end</h2>
+  <p>
+    If the job is simple and the volume is high,
+    such as sorting messages into categories, pulling fields out of documents or writing short summaries, try a model from the
+    bottom third of the ladder first and move up only if the results are not good enough. Trying the cheap model on a small sample
+    first costs very little, and you will know from the output whether you need to pay more.
+  </p>
+  <p>
+    For the sums on your own workload, use the <a href={`${base}calculator/`}>cost calculator</a>. The <a href={`${base}guides/understanding-ai-pricing/`}>guide to AI pricing</a> covers input, output and cached tokens, and
+    the <a href={`${base}cheapest/`}>cheapest models page</a> keeps a current list.
+  </p>
+
+  <DataNote anchor="calc-price-spread" snapshot={`${snapDate} (catalogue rebuilt ${insights.cacheGeneratedAt.slice(11, 16)} UTC)`}>
+    <ul>
+      <li>
+        <strong>What we counted.</strong> {spread.n} language models that we mark as active and that have an input and an
+        output price above zero. Free models and duplicate entries are left out. Newer models whose prices we are still
+        confirming are marked "tracking" and are not in this count.
+      </li>
+      <li>
+        <strong>Checked against the source.</strong> On {checkDate} we read OpenRouter's live public list of {check.listings} entries. Its cheapest paid model was {liveName(live.cheapest[0].id)} at {usd(live.cheapest[0].outputPerMillion)} and its dearest {liveDearest.length > 1 ? 'were' : 'was'} {liveDearest.map((m) => liveName(m.id)).sort().reverse().join(' and ')} at {usd(live.dearest[0].outputPerMillion)}, the same two ends as our catalogue. The result is saved with this article's
+        data.
+      </li>
+      <li>
+        <strong>Two kinds of price.</strong> {spread.fromReseller} of the {spread.n} prices come
+        from OpenRouter, which reports the cheapest host for each model. {spread.fromLabList} come from a lab's own pricing page
+        and were typed in by hand. The table shows which is which.
+      </li>
+      <li>
+        <strong>List prices only.</strong> No batch discounts, cached-token discounts or volume deals are included.
+      </li>
+    </ul>
+  </DataNote>
+</InsightArticle>

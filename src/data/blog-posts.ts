@@ -12,6 +12,33 @@ export interface BlogPost {
 /** Editorial posts, newest first. The blog index, search, RSS, and tickers share this list. */
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'output-tokens-cost-five-times-input',
+    title: 'AI models now charge five times more to write than to read',
+    description:
+      'The median new language model in our catalogue charges five times as much for output tokens as for input tokens, up from three times in late 2024. What the data shows and which kinds of work it makes dearer.',
+    date: '2026-11-14',
+    type: 'Analysis',
+    readTime: '5 min',
+  },
+  {
+    slug: 'ai-price-spread-6000x',
+    title: 'The dearest AI model costs 6,000 times more than the cheapest',
+    description:
+      'Across 65 active language models we track, the price of a million output tokens runs from $0.03 to $180. Where the models sit in between, why the two ends are not like for like, and what the gap does not prove.',
+    date: '2026-11-14',
+    type: 'Analysis',
+    readTime: '5 min',
+  },
+  {
+    slug: 'million-token-context-window',
+    title: 'The typical new AI model now reads a million tokens',
+    description:
+      'In 2024 the median new language model in our catalogue took in about 131,000 tokens. In 2026 it takes a million. The data, what a million tokens holds, and what the number does not tell you.',
+    date: '2026-11-14',
+    type: 'Analysis',
+    readTime: '5 min',
+  },
+  {
     slug: 'four-million-entrepreneurs',
     title: "What the OpenAI entrepreneurship report didn't say",
     description:

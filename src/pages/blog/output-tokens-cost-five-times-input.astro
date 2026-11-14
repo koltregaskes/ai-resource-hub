@@ -1,0 +1,242 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import ColumnChart from '../../components/insights/ColumnChart.astro';
+import DataNote from '../../components/insights/DataNote.astro';
+import insights from '../../data/insights/2026-11-14.json';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const series = insights.outputInputRatio.series;
+const first = series[0];
+const last = series[series.length - 1];
+const pct = (a: number, b: number) => `${Math.round((a / b) * 100)}%`;
+const snapDate = new Date(insights.snapshotDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const usd = (v: number) => `$${v.toFixed(2)}`;
+
+// All of these are computed by scripts/insights/compute-insights.mjs.
+const activeStats = insights.outputInputRatio.active;
+const active = activeStats.rows;
+const buckets = activeStats.buckets;
+const fiveOrMore = activeStats.atLeast5x;
+const lowest = activeStats.lowest;
+const highest = activeStats.highest;
+const anthropic = activeStats.anthropic.rows;
+const anthropicAllFive = activeStats.anthropic.allExactly5x;
+const outliers = insights.outputInputRatio.outliers;
+const round2 = (v: number) => Number(v.toFixed(2));
+
+const pick = (name: string) => active.find((m) => m.name === name)!;
+const examples = ['Mistral Nemo', 'Llama 3.3 70B Instruct', 'Claude Haiku 4.5', 'Claude Fable 5', 'GPT-5.5', 'GPT-5.5 Pro', 'GPT-5.4 Nano', highest.name]
+  .filter((n, i, a) => a.indexOf(n) === i)
+  .map(pick)
+  .filter(Boolean);
+
+// Worked examples at GPT-5.5's list price.
+const ref = pick('GPT-5.5');
+const job = (label: string, tokensIn: number, tokensOut: number, note: string) => {
+  const costIn = (tokensIn / 1_000_000) * ref.input;
+  const costOut = (tokensOut / 1_000_000) * ref.output;
+  return { label, tokensIn, tokensOut, costIn, costOut, total: costIn + costOut, share: costOut / (costIn + costOut), note };
+};
+const jobs = [
+  job('Summarise a long report', 50_000, 1_000, 'Reads a lot, writes a little'),
+  job('Draft a long article', 2_000, 8_000, 'Reads a little, writes a lot'),
+  job('Short answer after long reasoning', 2_000, 21_000, '1,000 tokens of answer plus 20,000 of reasoning'),
+];
+const n = (v: number) => v.toLocaleString('en-GB');
+---
+
+<InsightArticle
+  title="AI models now charge five times more to write than to read"
+  description="The median new language model in our catalogue charges five times as much for output tokens as for input tokens, up from three times in late 2024. What the data shows and which kinds of work it makes dearer."
+  date="2026-11-14"
+  type="Analysis"
+  readTime="5 min"
+  snapshot={insights.snapshotDate} standfirst="Every model has two prices: one for the text it reads and one for the text it writes. Among models from late 2024 the writing price was typically three times the reading price. Among this year's models it is five."
+>
+  <p>
+    Price lists for AI models quote two numbers per million tokens. The input price covers everything you send: your question,
+    your documents, the conversation so far. The output price covers what the model writes back. For most models output costs more.
+    The gap between the two has widened.
+  </p>
+  <p>
+    We divided each model's output price by its input price and took the median for models released in each half-year. For
+    models from the second half of 2024 the median is {first.median}. For models from the second half of 2025 onwards it is {last.median}.
+  </p>
+
+  <div class="stat-row">
+    <div class="stat"><b>{first.median}x</b><span>median output-to-input ratio, models from {first.period}</span></div>
+    <div class="stat"><b>{last.median}x</b><span>median ratio, models from {last.period}</span></div>
+    <div class="stat"><b>{pct(first.atLeast5x, first.n)}</b><span>of {first.period} models charged 5x or more</span></div>
+    <div class="stat"><b>{pct(last.atLeast5x, last.n)}</b><span>of {last.period} models charge 5x or more</span></div>
+  </div>
+
+  <ColumnChart
+    title="Median output price as a multiple of input price, by release period"
+    summary={`Median ratio by half-year: ${series.map((p) => `${p.period} ${p.median}x`).join(', ')}.`} maxValue={6} height={280} data={series.map((p, i) => ({
+      label: p.period,
+      value: p.median,
+      valueLabel: `${p.median}x`,
+      sub: `${p.n} models`,
+      highlight: i === series.length - 1,
+    }))} caption={`Source: AI Resource Hub catalogue, snapshot of ${snapDate}. Uses each model's current price, grouped by the half-year it was released. 2026 H2 runs to 14 November.`}
+  />
+
+  <div class="table-wrap">
+    <table>
+      <caption>Source: AI Resource Hub catalogue, snapshot of {snapDate}. Models with both prices above zero.</caption>
+      <thead>
+        <tr><th>Released</th><th class="num">Models</th><th class="num">Median ratio</th><th class="num">Charging 5x or more</th></tr>
+      </thead>
+      <tbody>
+        {series.map((p) => (
+          <tr>
+            <td>{p.period}</td>
+            <td class="num">{p.n}</td>
+            <td class="num">{p.median}x</td>
+            <td class="num">{p.atLeast5x} ({pct(p.atLeast5x, p.n)})</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    The median has sat at five since the second half of 2025, but the last column kept moving. In late 2024 about one model
+    in six charged five times or more for output. Since July this year it is seven in ten.
+  </p>
+
+  <h2>Five has become the house number</h2>
+  <p>
+    Among the {active.length} models we list as active and priced, {fiveOrMore} charge five times or more for output, and {buckets[3].count} charge exactly five.
+  </p>
+
+  <ColumnChart
+    title="Active language models by output-to-input price ratio"
+    summary={`Models per ratio band: ${buckets.map((b) => `${b.label}: ${b.count}`).join('; ')}.`} height={280} data={buckets.map((b) => ({ label: b.label, value: b.count, valueLabel: String(b.count), highlight: b.label === 'Exactly 5x' }))} caption={`Source: AI Resource Hub catalogue, snapshot of ${snapDate}. Count of models out of ${active.length}.`}
+  />
+
+  <p>
+    {anthropicAllFive && (
+      <>
+        Anthropic is the plainest case. All {anthropic.length} of its models in this set are priced at exactly five to one,
+        from Claude Haiku 4.5 at $1 in and $5 out to Claude Fable 5 at $10 and $50.{' '}
+      </>
+    )}
+    OpenAI's current models sit a little higher, at about six. The lowest ratio in the set is {lowest.name}, which charges
+    the same for both, and the highest is {highest.name} at {highest.ratio.toFixed(1)} to one.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>Source: AI Resource Hub catalogue, snapshot of {snapDate}. US dollars per million tokens.</caption>
+      <thead>
+        <tr><th>Model</th><th class="num">Input</th><th class="num">Output</th><th class="num">Ratio</th></tr>
+      </thead>
+      <tbody>
+        {examples.map((m) => (
+          <tr>
+            <td>{m.name} <span style="color:var(--color-text-muted)">({m.provider})</span></td>
+            <td class="num">${m.input}</td>
+            <td class="num">${m.output}</td>
+            <td class="num">{m.ratio.toFixed(1)}x</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    The models near one to one are small open-weight models sold by third-party hosts. The models at five and six are the
+    labs' own flagships. We can see that pattern in the prices. We cannot see the labs' costs, so we are not going to guess at
+    why they price this way.
+  </p>
+
+  <h2>Which work this makes dearer</h2>
+  <p>
+    A higher output price only bites when a job writes a lot. Here are three jobs priced at {ref.name}'s list price of
+    ${ref.input} per million input tokens and ${ref.output} per million output tokens. The token counts are made-up round
+    numbers to show the arithmetic, not measurements.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>
+        Illustration only. Token counts are assumed. Prices are {ref.name} list prices from the snapshot of {snapDate}.
+      </caption>
+      <thead>
+        <tr>
+          <th>Job</th><th class="num">Tokens in</th><th class="num">Tokens out</th><th class="num">Input cost</th><th class="num">Output cost</th><th class="num">Output share</th>
+        </tr>
+      </thead>
+      <tbody>
+        {jobs.map((j) => (
+          <tr>
+            <td>{j.label}<br /><span style="color:var(--color-text-muted);font-weight:400;font-size:0.8rem">{j.note}</span></td>
+            <td class="num">{n(j.tokensIn)}</td>
+            <td class="num">{n(j.tokensOut)}</td>
+            <td class="num">{usd(j.costIn)}</td>
+            <td class="num">{usd(j.costOut)}</td>
+            <td class="num">{pct(j.costOut, j.total)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    The summary costs {usd(jobs[0].total)} and nine tenths of that is input. The output ratio barely matters. The article
+    costs about the same, {usd(jobs[1].total)}, and almost all of it is output.
+  </p>
+  <p>
+    OpenAI's <a href="https://developers.openai.com/api/docs/guides/reasoning" rel="noopener">documentation on reasoning models</a> (read on 14 November 2026) says the tokens a model spends thinking are not shown to you but "are billed as output tokens",
+    and that a response can use "anywhere from a few hundred to tens of thousands" of them. So a short answer from a model
+    that reasons first can cost more than a long article from one that does not. In our made-up example it comes to {usd(jobs[2].total)}, and you only ever see 1,000 of the 21,000 tokens you paid for.
+  </p>
+  <p>
+    So if you use a reasoning mode, the output price is the one to check. The thinking is charged at the output rate, and
+    the output rate has moved from three times the input rate to five.
+  </p>
+
+  <h2>Before you pick on price</h2>
+  <ul>
+    <li>
+      <strong>Look at the output price first</strong> if your work is writing, coding or anything that uses a reasoning mode.
+      Look at the input price first if you mostly feed in long documents and ask short questions.
+    </li>
+    <li>
+      <strong>Check what a "blended" price assumes.</strong> Sites that quote a single price per million tokens, ours
+      included, have to assume a mix of input and output. Ours assumes one part input to three parts output and the <a href={`${base}transparency/#calc-blended-price`}>formula is published</a>. If your mix is different, the blended
+      figure will mislead you.
+    </li>
+    <li>
+      <strong>Measure a real job.</strong> Run your own task once, read your provider's usage report for that request, and
+      only then scale it up. The <a href={`${base}calculator/`}>cost calculator</a> will
+      do the multiplication.
+    </li>
+  </ul>
+
+  <DataNote anchor="calc-output-input-ratio" snapshot={`${snapDate} (catalogue rebuilt ${insights.cacheGeneratedAt.slice(11, 16)} UTC)`}>
+    <ul>
+      <li>
+        <strong>What we counted.</strong> For the trend, every language model with a release date and both prices above zero,
+        duplicates removed, grouped by half-year of release. Groups with fewer than 10 models are left out, which removes
+        everything before July 2024. For the second chart, the {active.length} models we mark as active.
+      </li>
+      <li>
+        <strong>Current prices, not launch prices.</strong> The trend uses what each model costs today. If an older model's
+        prices have changed since launch, its ratio here reflects the new prices.
+      </li>
+      <li>
+        <strong>Odd rows.</strong> {outliers.length} models in the trend data show ratios between {Math.round(outliers[0].ratio)} and {Math.round(outliers[outliers.length - 1].ratio)} to one:{' '}
+        {outliers.map((m) => `${m.name} (${m.ratio})`).join(', ')}. They are priced from third-party hosts and the largest
+        look like data errors, so we have flagged them to be checked. A median is not moved by a few extreme values, and
+        none of them is in the active set.
+      </li>
+      <li>
+        <strong>Release dates.</strong> For most models the date is the day OpenRouter first listed it.
+      </li>
+    </ul>
+  </DataNote>
+</InsightArticle>

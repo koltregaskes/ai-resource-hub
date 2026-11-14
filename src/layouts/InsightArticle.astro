@@ -1,0 +1,203 @@
+---
+/**
+ * Shared shell for long-form data articles (blog posts built on AIRH's own
+ * numbers). Gives every piece the same header, typography, source footer and
+ * structured data, so the article file holds only the writing and the charts.
+ */
+import BaseLayout from './BaseLayout.astro';
+import { serializeJsonLd } from '../lib/json-ld';
+
+interface Props {
+  title: string;
+  description: string;
+  /** ISO date, e.g. 2026-11-14 */
+  date: string;
+  type: 'Analysis' | 'Explainer' | 'Comparison' | 'Beginner' | 'Essay' | 'News';
+  readTime: string;
+  standfirst: string;
+  /** Date of the data snapshot the figures come from. */
+  snapshot?: string;
+}
+
+const { title, description, date, type, readTime, standfirst, snapshot } = Astro.props;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const fmt = (iso: string) =>
+  new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+
+const badge: Record<string, string> = {
+  Explainer: 'bg-blue-500/20 text-blue-400',
+  Analysis: 'bg-purple-500/20 text-purple-400',
+  Comparison: 'bg-green-500/20 text-green-400',
+  Beginner: 'bg-yellow-500/20 text-yellow-400',
+  Essay: 'bg-orange-500/20 text-orange-300',
+  News: 'bg-pink-500/20 text-pink-400',
+};
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description,
+  datePublished: date,
+  dateModified: date,
+  author: { '@type': 'Organization', name: 'The AI Resource Hub' },
+};
+---
+
+<BaseLayout title={`${title} - Blog - The AI Resource Hub`} description={description}>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb"> <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span> <a href={`${base}blog/`} class="hover:text-(--color-text-secondary) transition-colors">Blog</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">{title}</span>
+    </nav>
+
+    <header class="mb-8">
+      <div class="flex flex-wrap items-center gap-3 mb-4">
+        <span class={`text-xs px-2 py-0.5 rounded-full font-medium ${badge[type]}`}>{type}</span>
+        <span class="text-xs text-(--color-text-muted)">{fmt(date)}</span>
+        <span class="text-xs text-(--color-text-muted)">{readTime} read</span>
+        {snapshot && <span class="text-xs text-(--color-text-muted)">Data as of {fmt(snapshot)}</span>}
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-(--color-text-primary) mb-5 leading-[1.1]">{title}</h1>
+      <p class="text-lg sm:text-xl text-(--color-text-secondary) leading-relaxed">{standfirst}</p>
+    </header>
+
+    <div class="insight-prose">
+      <slot />
+    </div>
+
+    <footer class="mt-12 pt-6 border-t border-(--color-border) text-sm text-(--color-text-muted) leading-relaxed">
+      <p>
+        Figures we calculated are explained on the <a href={`${base}transparency/`} class="text-(--color-accent) hover:text-(--color-accent-hover) underline underline-offset-2">transparency page</a>.
+        Spotted an error? <a href="https://github.com/koltregaskes/ai-resource-hub/issues" rel="noopener" class="text-(--color-accent) hover:text-(--color-accent-hover) underline underline-offset-2">Tell us</a> and we will correct it.
+      </p> <a
+        href={`${base}blog/`} class="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Back to Blog
+      </a>
+    </footer>
+  </article>
+
+  <script type="application/ld+json" set:html={serializeJsonLd(structuredData)} />
+</BaseLayout>
+
+<style is:global>
+  .insight-prose {
+    color: var(--color-text-secondary);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+  .insight-prose > p,
+  .insight-prose > ul,
+  .insight-prose > ol {
+    margin-bottom: 1.25rem;
+  }
+  .insight-prose h2 {
+    color: var(--color-text-primary);
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 2.75rem 0 1rem;
+  }
+  .insight-prose h3 {
+    color: var(--color-text-primary);
+    font-weight: 700;
+  }
+  .insight-prose p strong,
+  .insight-prose li strong {
+    color: var(--color-text-primary);
+  }
+  .insight-prose p a,
+  .insight-prose li a,
+  .insight-prose td a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .insight-prose p a:hover,
+  .insight-prose li a:hover {
+    color: var(--color-accent-hover);
+  }
+  .insight-prose ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+  }
+  .insight-prose ol {
+    list-style: decimal;
+    padding-left: 1.5rem;
+  }
+  .insight-prose li {
+    margin-bottom: 0.5rem;
+  }
+  .insight-prose .table-wrap {
+    overflow-x: auto;
+    margin: 1.75rem 0;
+    border: 1px solid var(--color-border);
+    border-radius: 0.9rem;
+  }
+  .insight-prose table {
+    width: 100%;
+    font-size: 0.9rem;
+    border-collapse: collapse;
+  }
+  .insight-prose caption {
+    caption-side: bottom;
+    text-align: left;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    border-top: 1px solid var(--color-border);
+  }
+  .insight-prose th {
+    text-align: left;
+    padding: 0.6rem 0.9rem;
+    background: var(--color-bg-tertiary);
+    color: var(--color-text-muted);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .insight-prose td {
+    padding: 0.6rem 0.9rem;
+    border-top: 1px solid var(--color-border);
+  }
+  .insight-prose th.num,
+  .insight-prose td.num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .insight-prose td:first-child {
+    color: var(--color-text-primary);
+    font-weight: 500;
+  }
+  .insight-prose .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+    gap: 0.75rem;
+    margin: 2rem 0;
+  }
+  .insight-prose .stat {
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-card);
+    border-radius: 1rem;
+    padding: 1rem 1.1rem;
+  }
+  .insight-prose .stat b {
+    display: block;
+    font-size: 1.9rem;
+    line-height: 1.1;
+    font-weight: 900;
+    color: var(--color-text-primary);
+  }
+  .insight-prose .stat span {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.8rem;
+    line-height: 1.35;
+    color: var(--color-text-muted);
+  }
+</style>

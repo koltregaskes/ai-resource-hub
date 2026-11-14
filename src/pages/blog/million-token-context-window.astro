@@ -1,0 +1,242 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import ColumnChart from '../../components/insights/ColumnChart.astro';
+import DataNote from '../../components/insights/DataNote.astro';
+import insights from '../../data/insights/2026-11-14.json';
+import check from '../../data/insights/2026-11-14.openrouter-check.json';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const ctx = insights.contextWindows;
+const yearly = ctx.yearly;
+const half = ctx.series;
+const y2024 = yearly.find((p) => p.period === '2024')!;
+const y2026 = yearly.find((p) => p.period === '2026')!;
+const latest = half[half.length - 1];
+const num = (n: number) => n.toLocaleString('en-GB');
+const pct = (a: number, b: number) => `${Math.round((a / b) * 100)}%`;
+const short = (n: number) => (n >= 1_000_000 ? `${(n / 1_000_000).toFixed(n % 1_000_000 === 0 ? 0 : 2)}M` : `${Math.round(n / 1000)}k`);
+// OpenAI's rule of thumb: 100 tokens is about 75 English words.
+const words = (tokens: number) => num(Math.round((tokens * 0.75) / 1000) * 1000);
+const snapDate = new Date(insights.snapshotDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const latestBy = ctx.latestBreakdown;
+const opus = ctx.exampleClaude3Opus!;
+const without = latestBy.withoutBiggestLab;
+const ctxCheck = check.contextWindows;
+const checkDate = new Date(check.checkedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const medianInput = insights.priceSpread.medianInput;
+---
+
+<InsightArticle
+  title="The typical new AI model now reads a million tokens"
+  description="In 2024 the median new language model in our catalogue took in about 131,000 tokens. In 2026 it takes a million. The data, what a million tokens holds, and what the number does not tell you."
+  date="2026-11-14"
+  type="Analysis"
+  readTime="5 min"
+  snapshot={insights.snapshotDate} standfirst="In 2024 the middle-of-the-pack new model could take in about 131,000 tokens at once. In 2026 it takes a million. Most of that jump happened in the last six months."
+>
+  <p>
+    {opus.name} arrived in March 2024 with a {num(opus.context)}-token context window, and that was large for the time. Of the {y2024.n} language models in our catalogue from 2024, {y2024.under200k} had a smaller one.
+  </p>
+  <p>
+    We have added {y2026.n} language models so far in 2026 and {y2026.atLeast1M} of them
+    accept a million tokens or more. The context window is the amount of text a model can hold in view at once: your
+    question, any documents you attach, the conversation so far and its own answer.
+  </p>
+
+  <div class="stat-row">
+    <div class="stat"><b>{num(y2024.median)}</b><span>median context window, models from 2024</span></div>
+    <div class="stat"><b>{num(y2026.median)}</b><span>median context window, models from 2026</span></div>
+    <div class="stat"><b>{ctx.yearlyGrowthMultiple.toFixed(1)}x</b><span>growth in two years</span></div>
+    <div class="stat"><b>{pct(latest.atLeast1M, latest.n)}</b><span>of models since July with a million tokens or more</span></div>
+  </div>
+
+  <h2>The numbers, year by year</h2>
+  <p>
+    We took every language model in the catalogue that has a release date and a context window, removed duplicate entries for
+    the same model, and found the median for each year. The median is the middle value: half the models are above it and half
+    below. It suits this job better than an average, because one model with a four-million-token window would drag an average
+    upwards on its own.
+  </p>
+
+  <ColumnChart
+    title="Median context window of new language models, by year"
+    summary={`The median rose from ${num(yearly[0].median)} tokens in 2024 to ${num(yearly[1].median)} in 2025 and ${num(yearly[2].median)} in 2026.`} data={yearly.map((p, i) => ({
+      label: p.period === '2026' ? '2026 so far' : p.period,
+      value: p.median,
+      valueLabel: num(p.median),
+      sub: `${p.n} models`,
+      highlight: i === yearly.length - 1,
+    }))} caption={`Source: AI Resource Hub catalogue, snapshot of ${snapDate}. Tokens. 2026 covers 1 January to 14 November.`}
+  />
+
+  <p>
+    From 2024 to 2025 the median went from {num(yearly[0].median)} to {num(yearly[1].median)}, a rise of about half. From 2025
+    to 2026 it went up five times over.
+  </p>
+
+  <h2>Slow, then sudden</h2>
+  <p>
+    Split the same models into half-years and you can see when it happened. For two years the median rose steadily. Then, between
+    the first and second halves of 2026, it tripled.
+  </p>
+
+  <ColumnChart
+    title="Median context window of new language models, by half-year"
+    summary={`Half-year medians: ${half.map((p) => `${p.period} ${num(p.median)}`).join(', ')}.`} data={half.map((p, i) => ({
+      label: p.period,
+      value: p.median,
+      valueLabel: short(p.median),
+      sub: `${p.n} models`,
+      highlight: i === half.length - 1,
+    }))} caption={`Source: AI Resource Hub catalogue, snapshot of ${snapDate}. H1 is January to June, H2 is July to December. 2026 H2 runs to 14 November. The first group holds only ${half[0].n} models, so treat it with care.`}
+  />
+
+  <div class="table-wrap">
+    <table>
+      <caption>
+        Source: AI Resource Hub catalogue, snapshot of {snapDate}. "Under 200,000" and "a million or more" count
+        models, not tokens.
+      </caption>
+      <thead>
+        <tr>
+          <th>Period</th>
+          <th class="num">New models</th>
+          <th class="num">Median window</th>
+          <th class="num">Under 200,000</th>
+          <th class="num">A million or more</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          half.map((p) => (
+            <tr>
+              <td>{p.period}</td>
+              <td class="num">{p.n}</td>
+              <td class="num">{num(p.median)}</td>
+              <td class="num">{p.under200k} ({pct(p.under200k, p.n)})</td>
+              <td class="num">{p.atLeast1M} ({pct(p.atLeast1M, p.n)})</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    The last two columns show the change better than the median does. In the second half of 2024, 23 of 31 new models had
+    a window under 200,000 tokens and one reached a million. Since July this year it is the other way round: 3 of 51 are under
+    200,000 and 44 are at a million or more.
+  </p>
+
+  <h2>Who moved</h2>
+  <p>
+    Nearly everyone. Of the {latestBy.n} models listed since July, {latestBy.atLeast1M} accept a million tokens or more.
+    Here they are by lab.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>
+        Source: AI Resource Hub catalogue, snapshot of {snapDate}. Language models first listed from 1 July to 14 November
+        2026.
+      </caption>
+      <thead>
+        <tr><th>Lab</th><th class="num">New models</th><th class="num">A million tokens or more</th></tr>
+      </thead>
+      <tbody>
+        {latestBy.byLab.map((r) => (
+          <tr>
+            <td>{r.lab}</td>
+            <td class="num">{r.n}</td>
+            <td class="num">{r.atLeast1M}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    {latestBy.below1M.length} models fall short of a million:{' '}
+    {latestBy.below1M.map((m, i) => (
+      <>
+        {i > 0 && (i === latestBy.below1M.length - 1 ? ' and ' : ', ')}
+        {m.name} ({num(m.context)})
+      </>
+    ))}. Going by their names, the four with the shortest windows are small or fast models, which is where you would expect
+    one.
+  </p>
+  <p>
+    One caution about that {latestBy.atLeast1M}. {without.lab} accounts for {without.labEntries} of the {latestBy.n} entries,
+    because each of its models also has a Pro tier that we list separately. Leave {without.lab} out altogether and the count
+    is {without.atLeast1M} of {without.n}, which is still {pct(without.atLeast1M, without.n)}.
+  </p>
+
+  <h2>What a million tokens holds</h2>
+  <p>
+    A token is a chunk of text, usually part of a word. OpenAI's <a href="https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them" rel="noopener">guide to tokens</a> (read on 14 November 2026) gives the rule of thumb that 100 tokens is about 75 words of English. On that rule the 2024
+    median of {num(y2024.median)} tokens is roughly {words(y2024.median)} words, and a million tokens is roughly {words(1_000_000)}.
+  </p>
+  <p>
+    That is the difference between attaching one long report and attaching a shelf of them. It is a rule of thumb for English
+    prose, though. Code, tables and other languages split into tokens differently, so your own files may fit more or less than
+    the rule suggests. Our <a href={`${base}token-counter/`}>token counter</a> will give you a real figure for a piece of text.
+  </p>
+
+  <h2>What the number does not tell you</h2>
+  <p>
+    The context window is a limit on how much a model will accept. It says nothing about how well the model uses what you
+    give it.
+  </p>
+  <p>
+    The public test we know of is a <a href="https://www.trychroma.com/research/context-rot" rel="noopener">July 2025 report from Chroma</a>, which tested 18
+    models and found that "model performance degrades as input length increases", even on simple tasks. That report is older
+    than all of this year's models, so it cannot tell us whether they have fixed the problem.
+    We have not tested it ourselves and we do not have an independent source that has. Until one exists, treat a million-token
+    window as room you can use, not a promise about quality when you fill it.
+  </p>
+  <p>
+    Filling it also costs money, because you pay for every token you send, every time you send it. The median input price
+    among the active models we track is ${medianInput.toFixed(2)} per million tokens, so one full million-token request costs
+    about that much at the median before the model has written a word. At the top of the range, GPT-5.5 Pro lists at $30 per
+    million input tokens. A long conversation resends its history on each turn, so those costs repeat.
+  </p>
+
+  <h2>If you are choosing a model</h2>
+  <p>
+    If you are choosing between the large models released this autumn, the context window will not separate them. Forty-four
+    of the last 51 share almost the same figure. Price, speed and how well the model does your actual work are better things
+    to compare, and our <a href={`${base}guides/choosing-an-ai-model/`}>guide to choosing a model</a> walks through them.
+  </p>
+  <p>
+    The window still matters when you look at smaller, cheaper or older models, where 131,072 and 262,144 are common. Check
+    the figure on the <a href={`${base}context-window/`}>context window page</a> before you plan a job around long documents.
+    For how context windows work underneath, see <a href={`${base}blog/context-windows-explained/`}>our explainer</a>.
+  </p>
+
+  <DataNote anchor="calc-context-median" snapshot={`${snapDate} (catalogue rebuilt ${insights.cacheGeneratedAt.slice(11, 16)} UTC)`}>
+    <ul>
+      <li>
+        <strong>What we counted.</strong> {insights.coverage.withReleaseDateAndContext} language models with a release date and
+        a context window, after removing {insights.coverage.llmEntries - insights.coverage.afterVariantRemoval} duplicate
+        entries (dated snapshots and fast tiers of a model already listed).
+      </li>
+      <li>
+        <strong>Checked against the source.</strong> On {checkDate} we compared our figures with OpenRouter's live public
+        list. Of {ctxCheck.matched} models we could match by catalogue id, {ctxCheck.identical} had the identical context
+        window. {ctxCheck.differences.length === 1 ? `The one that differed was ${ctxCheck.differences[0].name}.` : ''} The
+        result is saved with this article's data.
+      </li>
+      <li>
+        <strong>Release dates.</strong> For most models the date is the day OpenRouter first listed it, which is usually close
+        to the launch but not always. A few dates in the 2024 groups look wrong by some months, which is why the yearly chart
+        is the safer comparison.
+      </li>
+      <li>
+        <strong>Coverage.</strong> This is the set of models we track, not every model released. It is strongest for the large
+        labs and for models sold through an API.
+      </li>
+    </ul>
+  </DataNote>
+</InsightArticle>

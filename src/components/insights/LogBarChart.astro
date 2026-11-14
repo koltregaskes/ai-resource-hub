@@ -1,0 +1,88 @@
+---
+/**
+ * Horizontal bar chart on a log scale, for values that span several orders of
+ * magnitude (prices from $0.03 to $180). Server-rendered SVG, no JavaScript.
+ * The caption must say the scale is logarithmic.
+ */
+interface Datum {
+  label: string;
+  value: number;
+  valueLabel: string;
+  sub?: string;
+  highlight?: boolean;
+}
+
+interface Props {
+  title: string;
+  data: Datum[];
+  caption: string;
+  summary: string;
+  /** Axis ticks, e.g. [0.01, 0.1, 1, 10, 100]. First and last set the range. */
+  ticks: number[];
+  tickFormat?: (v: number) => string;
+}
+
+const { title, data, caption, summary, ticks } = Astro.props;
+const tickFormat = Astro.props.tickFormat ?? ((v: number) => `$${v}`);
+const width = 720;
+const rowH = 30;
+const pad = { top: 10, right: 78, bottom: 30, left: 190 };
+const plotW = width - pad.left - pad.right;
+const height = pad.top + data.length * rowH + pad.bottom;
+const lo = Math.log10(ticks[0]);
+const hi = Math.log10(ticks[ticks.length - 1]);
+const xOf = (v: number) => pad.left + ((Math.log10(v) - lo) / (hi - lo)) * plotW;
+const id = `chart-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+---
+
+<figure class="my-8 rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-4 sm:p-6">
+  <h3 id={id} class="text-base font-semibold text-(--color-text-primary) mb-2">{title}</h3>
+  <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-labelledby={id} aria-describedby={`${id}-desc`} class="w-full h-auto">
+    <desc id={`${id}-desc`}>{summary}</desc>
+    {
+      ticks.map((t) => (
+        <g>
+          <line
+            x1={xOf(t)}
+            x2={xOf(t)}
+            y1={pad.top}
+            y2={height - pad.bottom}
+            stroke="var(--color-border)"
+            stroke-width="1"
+          />
+          <text x={xOf(t)} y={height - 10} text-anchor="middle" font-size="11" fill="var(--color-text-muted)">
+            {tickFormat(t)}
+          </text>
+        </g>
+      ))
+    }
+    {
+      data.map((d, i) => {
+        const y = pad.top + i * rowH;
+        const x1 = xOf(d.value);
+        return (
+          <g>
+            <text x={pad.left - 10} y={y + rowH / 2 + 4} text-anchor="end" font-size="12.5" fill="var(--color-text-secondary)">
+              {d.label}
+            </text>
+            <rect
+              x={pad.left}
+              y={y + 6}
+              width={Math.max(2, x1 - pad.left)}
+              height={rowH - 12}
+              rx="3"
+              fill={d.highlight ? 'var(--color-accent)' : 'var(--color-accent-muted)'}
+              opacity={d.highlight ? 1 : 0.55}
+            />
+            <text x={x1 + 8} y={y + rowH / 2 + 4} font-size="12.5" font-weight="700" fill="var(--color-text-primary)">
+              {d.valueLabel}
+            </text>
+          </g>
+        );
+      })
+    }
+  </svg>
+  <figcaption class="mt-3 text-xs leading-relaxed text-(--color-text-muted)">
+    {caption}
+  </figcaption>
+</figure>
