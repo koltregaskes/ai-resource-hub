@@ -30,6 +30,7 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
+      - run: node --test scripts/contracts/public-scan-exceptions.test.mjs
       - run: npm run build
       - name: Scan tracked source and public build (aggregate only)
         shell: bash
@@ -42,6 +43,11 @@ jobs:
             cp -- "$file" "$RUNNER_TEMP/source-scan/$file"
           done
           mkdir -p "$RUNNER_TEMP/scan-reports"
+          node scripts/contracts/scan-controls.mjs create "$RUNNER_TEMP/scan-controls"
+          control_result=0
+          docker run --rm -v "$RUNNER_TEMP/scan-controls:/controls:ro" -v "$RUNNER_TEMP/scan-reports:/reports" zricethezav/gitleaks:v8.30.0 dir /controls --redact=100 --report-format json --report-path /reports/controls.json --exit-code 2 --no-banner > "$RUNNER_TEMP/control-scan.log" 2>&1 || control_result=$?
+          if [ "$control_result" -ne 2 ]; then echo "Scanner credential control failed (exit $control_result); values withheld"; exit 1; fi
+          node scripts/contracts/scan-controls.mjs verify "$RUNNER_TEMP/scan-reports"
           source_result=0
           public_result=0
           docker run --rm -v "$RUNNER_TEMP/source-scan:/source:ro" -v "$RUNNER_TEMP/scan-reports:/reports" zricethezav/gitleaks:v8.30.0 dir /source --redact=100 --report-format json --report-path /reports/source.json --exit-code 2 --no-banner > "$RUNNER_TEMP/source-scan.log" 2>&1 || source_result=$?
