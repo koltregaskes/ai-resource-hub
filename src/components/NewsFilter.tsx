@@ -140,6 +140,7 @@ export default function NewsFilter({ news }: Props) {
   const [favourites, setFavourites] = useState<Set<string>>(new Set());
   const [highlightsOnly, setHighlightsOnly] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const closeSidebar = () => { setSidebarOpen(false); requestAnimationFrame(() => document.getElementById('news-filters-toggle')?.focus()); };
   const [archiveMonth, setArchiveMonth] = useState('');
   const [activeTag, setActiveTag] = useState('');
   const [groupBy, setGroupBy] = useState<GroupBy>('date');
@@ -297,11 +298,14 @@ export default function NewsFilter({ news }: Props) {
   }, [activeTag, archiveMonth, customFrom, customTo, dateRange, highlightsOnly, searchQuery]);
 
   return (
-    <div className="relative flex gap-6">
+    <div className="relative flex gap-6" onKeyDown={event => { if (event.key === 'Escape' && sidebarOpen) closeSidebar(); }}>
       <button
+        id="news-filters-toggle" aria-controls="news-filters-panel"
+        aria-label="Toggle news filters"
+        aria-expanded={sidebarOpen}
         onClick={() => setSidebarOpen(!sidebarOpen)}
         className="fixed bottom-4 right-4 z-50 rounded-full p-3 shadow-lg lg:hidden"
-        style={{ backgroundColor: 'var(--color-accent)', color: '#fff' }}
+        style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-bg-primary)' }}
       >
         <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
@@ -313,13 +317,14 @@ export default function NewsFilter({ news }: Props) {
         </svg>
       </button>
 
-      <aside
-        className={`${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} fixed inset-y-0 left-0 z-40 w-72 shrink-0 overflow-y-auto transition-transform lg:static lg:w-64 lg:translate-x-0`}
+      <aside id="news-filters-panel" aria-label="News filters"
+        className={`${sidebarOpen ? 'translate-x-0' : 'hidden lg:block'} fixed inset-y-0 left-0 z-40 w-72 shrink-0 overflow-y-auto transition-transform lg:static lg:w-64 lg:translate-x-0`}
         style={{ backgroundColor: 'var(--color-bg-secondary)', borderRight: '1px solid var(--color-border)' }}
       >
         <div className="space-y-5 p-4">
           <button
-            onClick={() => setSidebarOpen(false)}
+            aria-label="Close news filters"
+            onClick={closeSidebar}
             className="absolute right-3 top-3 rounded p-1 lg:hidden"
             style={{ color: 'var(--color-text-muted)' }}
           >
@@ -332,6 +337,7 @@ export default function NewsFilter({ news }: Props) {
             <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Search</h3>
             <input
               type="text"
+              aria-label="Search articles"
               placeholder="Search articles..."
               value={searchQuery}
               onChange={(event) => setSearchQuery(event.target.value)}
@@ -352,7 +358,7 @@ export default function NewsFilter({ news }: Props) {
                 className="rounded-full px-2.5 py-1 text-[11px] font-medium"
                 style={{
                   backgroundColor: activeTag === '' ? 'var(--color-accent)' : 'var(--color-bg-tertiary)',
-                  color: activeTag === '' ? '#fff' : 'var(--color-text-secondary)',
+                  color: activeTag === '' ? 'var(--color-bg-primary)' : 'var(--color-text-secondary)',
                 }}
               >
                 All topics
@@ -364,7 +370,7 @@ export default function NewsFilter({ news }: Props) {
                   className="rounded-full px-2.5 py-1 text-[11px] font-medium"
                   style={{
                     backgroundColor: activeTag === tag ? 'var(--color-accent)' : 'var(--color-bg-tertiary)',
-                    color: activeTag === tag ? '#fff' : 'var(--color-text-secondary)',
+                    color: activeTag === tag ? 'var(--color-bg-primary)' : 'var(--color-text-secondary)',
                   }}
                 >
                   {TOPIC_LABELS[tag] ?? tag}
@@ -386,7 +392,7 @@ export default function NewsFilter({ news }: Props) {
                       ? 'var(--color-accent)'
                       : 'var(--color-bg-tertiary)',
                     color: dateRange === key && !archiveMonth && !customFrom && !customTo
-                      ? '#fff'
+                      ? 'var(--color-bg-primary)'
                       : 'var(--color-text-secondary)',
                   }}
                 >
@@ -396,24 +402,24 @@ export default function NewsFilter({ news }: Props) {
             </div>
             <div className="flex items-center gap-1 text-xs">
               <input
-                type="date"
+                type="date" aria-label="News from date"
                 value={customFrom}
                 onChange={(event) => {
                   setCustomFrom(event.target.value);
                   setArchiveMonth('');
                 }}
-                className="flex-1 rounded border px-2 py-1 text-xs outline-none"
+                className="min-w-0 w-full flex-1 rounded border px-2 py-1 text-xs outline-none"
                 style={{ backgroundColor: 'var(--color-bg-tertiary)', borderColor: 'var(--color-border)', color: 'var(--color-text-primary)' }}
               />
               <span style={{ color: 'var(--color-text-muted)' }}>to</span>
               <input
-                type="date"
+                type="date" aria-label="News to date"
                 value={customTo}
                 onChange={(event) => {
                   setCustomTo(event.target.value);
                   setArchiveMonth('');
                 }}
-                className="flex-1 rounded border px-2 py-1 text-xs outline-none"
+                className="min-w-0 w-full flex-1 rounded border px-2 py-1 text-xs outline-none"
                 style={{ backgroundColor: 'var(--color-bg-tertiary)', borderColor: 'var(--color-border)', color: 'var(--color-text-primary)' }}
               />
             </div>
@@ -421,7 +427,7 @@ export default function NewsFilter({ news }: Props) {
 
           <div>
             <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--color-text-muted)' }}>Archive</h3>
-            <select
+            <select aria-label="News archive month"
               value={archiveMonth}
               onChange={(event) => {
                 setArchiveMonth(event.target.value);
@@ -450,7 +456,7 @@ export default function NewsFilter({ news }: Props) {
                   className="flex-1 rounded-md py-1.5 text-xs font-medium transition-colors"
                   style={{
                     backgroundColor: groupBy === value ? 'var(--color-accent)' : 'var(--color-bg-tertiary)',
-                    color: groupBy === value ? '#fff' : 'var(--color-text-secondary)',
+                    color: groupBy === value ? 'var(--color-bg-primary)' : 'var(--color-text-secondary)',
                   }}
                 >
                   {value === 'date' ? 'Date' : 'Topic'}

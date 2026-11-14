@@ -165,7 +165,7 @@ const baseJSON = safeJson(base);
                   class="h-full rounded-full bg-(--color-accent) flex items-center justify-end pr-2"
                   style={`width: ${maxCount > 0 ? (d.count / maxCount * 100) : 0}%`}
                 >
-                  {d.count > 0 && <span class="text-[10px] font-bold text-white">{d.count}</span>}
+                  {d.count > 0 && <span class="text-[10px] font-bold text-black">{d.count}</span>}
                 </div>
               </div>
             </div>
@@ -226,11 +226,11 @@ const baseJSON = safeJson(base);
             const maxAvg = Math.max(...providerAvgs.map(x => x.avgInput));
             const pct = maxAvg > 0 ? (p.avgInput / maxAvg * 100) : 0;
             return (
-              <div class="flex items-center gap-3">
+              <div class="flex flex-wrap items-center gap-3">
                 <span class="text-sm text-(--color-text-secondary) w-28 truncate">{p.provider}</span>
-                <div class="flex-1 h-5 bg-(--color-bg-tertiary) rounded-full overflow-hidden relative">
+                <div class="flex-1 min-w-[6rem] h-6 bg-(--color-bg-tertiary) rounded-full relative">
                   <div class="h-full rounded-full" style={`width: ${pct}%; background-color: ${p.colour}; opacity: 0.7`}></div>
-                  <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-mono text-(--color-text-primary)">${p.avgInput.toFixed(2)}/M</span>
+                  <span class="absolute right-2 top-1/2 -translate-y-1/2 whitespace-nowrap text-[10px] font-mono text-(--color-text-primary)">${p.avgInput.toFixed(2)}/M</span>
                 </div>
                 <span class="text-xs text-(--color-text-muted) w-10 text-right">{p.count}</span>
               </div>
