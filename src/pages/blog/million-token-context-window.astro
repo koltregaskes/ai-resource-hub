@@ -3,6 +3,7 @@ import InsightArticle from '../../layouts/InsightArticle.astro';
 import ColumnChart from '../../components/insights/ColumnChart.astro';
 import DataNote from '../../components/insights/DataNote.astro';
 import insights from '../../data/insights/2026-11-14.json';
+import check from '../../data/insights/2026-11-14.openrouter-check.json';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -19,6 +20,11 @@ const short = (n: number) => (n >= 1_000_000 ? `${(n / 1_000_000).toFixed(n % 1_
 // OpenAI's rule of thumb: 100 tokens is about 75 English words.
 const words = (tokens: number) => num(Math.round((tokens * 0.75) / 1000) * 1000);
 const snapDate = new Date(insights.snapshotDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const latestBy = ctx.latestBreakdown;
+const opus = ctx.exampleClaude3Opus!;
+const without = latestBy.withoutBiggestLab;
+const ctxCheck = check.contextWindows;
+const checkDate = new Date(check.checkedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 const medianInput = insights.priceSpread.medianInput;
 ---
 
@@ -31,10 +37,10 @@ const medianInput = insights.priceSpread.medianInput;
   snapshot={insights.snapshotDate} standfirst="In 2024 the middle-of-the-pack new model could take in about 131,000 tokens at once. In 2026 it takes a million. Most of that jump happened in the last six months."
 >
   <p>
-    Claude 3 Opus arrived in March 2024 with a 200,000-token context window, and that was large for the time. Of the {y2024.n} language models in our catalogue from 2024, {y2024.under200k} had a smaller one.
+    {opus.name} arrived in March 2024 with a {num(opus.context)}-token context window, and that was large for the time. Of the {y2024.n} language models in our catalogue from 2024, {y2024.under200k} had a smaller one.
   </p>
   <p>
-    This year looks nothing like that. We have added {y2026.n} language models so far in 2026 and {y2026.atLeast1M} of them
+    We have added {y2026.n} language models so far in 2026 and {y2026.atLeast1M} of them
     accept a million tokens or more. The context window is the amount of text a model can hold in view at once: your
     question, any documents you attach, the conversation so far and its own answer.
   </p>
@@ -126,18 +132,45 @@ const medianInput = insights.priceSpread.medianInput;
 
   <h2>Who moved</h2>
   <p>
-    Nearly everyone. Among the 51 models listed since July, every OpenAI and Anthropic entry sits at a million tokens or a
-    shade over, as do six of Google's eight, six of Meta's seven and the new models from DeepSeek, Moonshot, MiniMax, Zhipu and
-    Alibaba.
+    Nearly everyone. Of the {latestBy.n} models listed since July, {latestBy.atLeast1M} accept a million tokens or more.
+    Here they are by lab.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>
+        Source: AI Resource Hub catalogue, snapshot of {snapDate}. Language models first listed from 1 July to 14 November
+        2026.
+      </caption>
+      <thead>
+        <tr><th>Lab</th><th class="num">New models</th><th class="num">A million tokens or more</th></tr>
+      </thead>
+      <tbody>
+        {latestBy.byLab.map((r) => (
+          <tr>
+            <td>{r.lab}</td>
+            <td class="num">{r.n}</td>
+            <td class="num">{r.atLeast1M}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    {latestBy.below1M.length} models fall short of a million:{' '}
+    {latestBy.below1M.map((m, i) => (
+      <>
+        {i > 0 && (i === latestBy.below1M.length - 1 ? ' and ' : ', ')}
+        {m.name} ({num(m.context)})
+      </>
+    ))}. Going by their names, the four with the shortest windows are small or fast models, which is where you would expect
+    one.
   </p>
   <p>
-    There are seven exceptions. xAI's three Grok releases stop at 500,000. Two Gemini Omni Flash models and Meta's Muse Glimmer
-    30B stay at 131,072, and NVIDIA's Nemotron 3.5 Lightning is at 262,144. Going by their names, those four are small
-    or fast models, which is where you would expect a shorter window.
-  </p>
-  <p>
-    One caution about that 44. OpenAI accounts for 16 of the 51 entries, because each of its models also has a Pro tier that
-    we list separately. Leave OpenAI out altogether and the count is 28 of 35, which is still four in five.
+    One caution about that {latestBy.atLeast1M}. {without.lab} accounts for {without.labEntries} of the {latestBy.n} entries,
+    because each of its models also has a Pro tier that we list separately. Leave {without.lab} out altogether and the count
+    is {without.atLeast1M} of {without.n}, which is still {pct(without.atLeast1M, without.n)}.
   </p>
 
   <h2>What a million tokens holds</h2>
@@ -157,7 +190,7 @@ const medianInput = insights.priceSpread.medianInput;
     give it.
   </p>
   <p>
-    The best public evidence on that is a <a href="https://www.trychroma.com/research/context-rot" rel="noopener">July 2025 report from Chroma</a>, which tested 18
+    The public test we know of is a <a href="https://www.trychroma.com/research/context-rot" rel="noopener">July 2025 report from Chroma</a>, which tested 18
     models and found that "model performance degrades as input length increases", even on simple tasks. That report is older
     than all of this year's models, so it cannot tell us whether they have fixed the problem.
     We have not tested it ourselves and we do not have an independent source that has. Until one exists, treat a million-token
@@ -190,8 +223,10 @@ const medianInput = insights.priceSpread.medianInput;
         entries (dated snapshots and fast tiers of a model already listed).
       </li>
       <li>
-        <strong>Checked against the source.</strong> On 14 November 2026 we compared our figures with OpenRouter's live public
-        list. Of 184 models we could match by name, 183 had the identical context window. The one that differed was Kimi K2.5.
+        <strong>Checked against the source.</strong> On {checkDate} we compared our figures with OpenRouter's live public
+        list. Of {ctxCheck.matched} models we could match by catalogue id, {ctxCheck.identical} had the identical context
+        window. {ctxCheck.differences.length === 1 ? `The one that differed was ${ctxCheck.differences[0].name}.` : ''} The
+        result is saved with this article's data.
       </li>
       <li>
         <strong>Release dates.</strong> For most models the date is the day OpenRouter first listed it, which is usually close

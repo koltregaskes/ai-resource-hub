@@ -18,6 +18,7 @@ export type SourceState =
   | 'hand-entered' // typed in from the source's own page; only as fresh as the last manual check
   | 'stale' // shown on the site but known to be out of date
   | 'on-hold' // being switched off while we settle the source's terms
+  | 'removed' // blocked in src/data/source-policy.ts: no longer collected or shown
   | 'not-collected'; // credited or linked on the site, but no data is taken
 
 export type TermsStatus = 'open-licence' | 'public-api' | 'not-reviewed' | 'restricted' | 'own-data';
@@ -39,6 +40,12 @@ export interface TransparencySource {
   /** Pages that show this data. */
   shownOn: string[];
   caveat?: string;
+  /**
+   * Wording to use once the source is listed in src/data/source-policy.ts
+   * (BLOCKED_DATA_SOURCES). The page switches to it automatically, and takes
+   * the terms reason, link and checked date from that file.
+   */
+  whenBlocked?: { how: string; caveat: string };
   reviewed: string;
 }
 
@@ -57,7 +64,7 @@ export const sources: TransparencySource[] = [
     state: 'live',
     terms: 'public-api',
     termsNote:
-      'A public API that needs no key. We have not yet completed a written terms review for republishing these prices, so treat this as "in use, review pending".',
+      "Terms review pending. It is a public API that needs no key, and we found no data licence covering it when we read OpenRouter's Terms of Service (last updated 31 August 2026) on 14 November 2026. Those terms bar scraping the website by automated means; we use only the API.",
     shownOn: ['Model pages', 'Compare', 'Cheapest', 'Context window', 'Pricing trends'],
     caveat:
       'The price is the cheapest host OpenRouter lists for that model, which can be lower than the lab\'s own list price. For these models the "released" date is the day OpenRouter listed the model, not the lab\'s announcement date. About three quarters of the language models in the catalogue get their price this way.',
@@ -67,7 +74,7 @@ export const sources: TransparencySource[] = [
     id: 'official-pricing',
     name: "Labs' own pricing pages",
     url: 'https://openai.com/api/pricing/',
-    takes: 'List prices for input, output and cached tokens for the models each lab sells directly.',
+    takes: 'List prices for input and output tokens for the models each lab sells directly.',
     how: 'Typed in by hand from each lab\'s pricing page into our model catalogue, then copied into the database on every run. Nothing is scraped from these pages.',
     collector: 'official-pricing',
     cadence: 'When someone re-checks the page',
@@ -97,9 +104,9 @@ export const sources: TransparencySource[] = [
   },
   {
     id: 'benchmark-seed',
-    name: 'Benchmark scores reported by labs',
+    name: 'Benchmark scores entered by hand',
     url: 'https://github.com/koltregaskes/ai-resource-hub/blob/main/scripts/seed-db.ts',
-    takes: 'Scores on public benchmarks, as reported in lab announcements, model cards and papers.',
+    takes: 'Scores on public benchmarks, mostly as reported in lab announcements, model cards and papers. The set also holds older arena ratings, which are covered under Arena below.',
     how: 'Typed in by hand. The set is rebuilt from the same file on every run.',
     cadence: 'When someone adds or corrects a score',
     state: 'hand-entered',
@@ -107,7 +114,7 @@ export const sources: TransparencySource[] = [
     termsNote: 'Figures quoted from the publishing lab. Each should link to where it was published.',
     shownOn: ['Benchmarks', 'Leaderboard', 'Model pages'],
     caveat:
-      'Of 365 scores, 300 have no source link recorded yet. Scores without a traceable source are being held back from rankings until the link is added. A lab\'s own score is a claim by that lab, not an independent test.',
+      "Of {benchmarkTotal} scores, {benchmarkNoLink} have no source link recorded yet. Scores without a traceable source are held back from rankings until the link is added. A lab's own score is a claim by that lab, not an independent test.",
     reviewed: REVIEWED,
   },
   {
@@ -115,9 +122,9 @@ export const sources: TransparencySource[] = [
     name: 'Artificial Analysis',
     url: 'https://artificialanalysis.ai/',
     takes: 'Output speed (tokens per second), time to first token, and arena ratings for image, video and voice models.',
-    how: 'The speed figures on the site come from a fixed list recorded between 15 January and 20 February 2026. No live collection is running.',
+    how: 'On each run the collector tries the Artificial Analysis API. Without an API key it falls back to a fixed list recorded between 15 January and 20 February 2026, saves those figures again and logs the run as a success. Every speed figure on the site today comes from that fixed list.',
     collector: 'speed, creative-benchmarks',
-    cadence: 'Not refreshing',
+    cadence: 'Runs hourly, but the figures do not change',
     state: 'on-hold',
     terms: 'restricted',
     termsNote:
@@ -125,6 +132,10 @@ export const sources: TransparencySource[] = [
     shownOn: ['Speed', 'Fastest', 'Creative model ratings'],
     caveat:
       'These numbers are about nine months old and should not be read as current. No article on this site is built on them.',
+    whenBlocked: {
+      how: 'No longer collected. Its figures are dropped before any page, export or score is built.',
+      caveat: 'Speed and creative arena figures from this source have been removed from the site. No article on this site is built on them.',
+    },
     reviewed: REVIEWED,
   },
   {
@@ -132,15 +143,19 @@ export const sources: TransparencySource[] = [
     name: 'Arena (formerly LMArena and LMSYS Chatbot Arena)',
     url: 'https://arena.ai/',
     takes: 'Arena Elo ratings for language models.',
-    how: 'A set of ratings entered by hand in the past. The automatic collector has not written any new ratings.',
+    how: 'A set of ratings entered by hand in the past. The collector still tries to fetch new ratings on each run; on the last recorded run it fell back and wrote none.',
     collector: 'benchmarks:chatbot-arena',
-    cadence: 'Not refreshing',
+    cadence: 'Runs hourly; the last run wrote nothing',
     state: 'on-hold',
     terms: 'restricted',
     termsNote:
       "On 14 November 2026 we read the Arena Terms of Use (updated 23 February 2026). They bar programmatic access, manual or automated extraction of data, and reproduction of the service's output. We are removing these ratings from the site and from our composite scores.",
     shownOn: ['Benchmarks', 'Leaderboard'],
     caveat: 'No article on this site is built on Arena ratings.',
+    whenBlocked: {
+      how: 'No longer collected. Its ratings are dropped before any page, export or score is built.',
+      caveat: 'Arena ratings have been removed from the site and from our composite scores. No article on this site is built on them.',
+    },
     reviewed: REVIEWED,
   },
   {
@@ -176,15 +191,15 @@ export const sources: TransparencySource[] = [
     id: 'news',
     name: 'News feeds',
     url: 'https://github.com/koltregaskes/ai-resource-hub/blob/main/docs/repo-reference/source-registry.md',
-    takes: 'Headlines, links and short summaries from 14 sources: lab blogs, research feeds and technology news sites.',
-    how: 'Public RSS and Atom feeds, plus public pages for lab blogs. We link to the original and never republish full articles. Lab sources are treated as primary; media sources are cross-checked before a story is promoted.',
+    takes: 'Headlines, links and short summaries from lab blogs, research feeds and technology news sites.',
+    how: 'Two routes. The collector in this repository fetches seven feeds (OpenAI, Anthropic, Google, TechCrunch, VentureBeat, The Verge and Ars Technica). A shared news pipeline, used by several of our sites, is configured with 14 sources and supplies the rest. We link to the original and never republish full articles. Lab sources are treated as primary; media sources are cross-checked before a story is promoted.',
     collector: 'news:rss',
     cadence: 'Hourly',
     state: 'live',
     terms: 'public-api',
     termsNote: 'Feeds published for syndication. Headline, link and a short summary only.',
     shownOn: ['News', 'Daily digest', 'Newsletter'],
-    caveat: 'Some feeds rate-limit us from time to time, so a source can be missing from a given run.',
+    caveat: 'The last-run time shown here is for the seven-feed collector only. It says nothing about the health of the shared pipeline. Some feeds rate-limit us from time to time, so a source can be missing from a given run.',
     reviewed: REVIEWED,
   },
   {
@@ -241,6 +256,8 @@ export interface Calculation {
   code: string;
   usedOn: string;
   limits: string;
+  /** An extra sentence for `limits` that depends on whether a source is blocked in src/data/source-policy.ts. */
+  blockNote?: { source: string; pending: string; done: string };
   group: 'articles' | 'site';
 }
 
@@ -340,7 +357,12 @@ export const calculations: Calculation[] = [
     code: 'src/data/hub-dashboard.ts',
     usedOn: 'Leaderboard.',
     limits:
-      'Only as good as the scores underneath, most of which are labs\' own claims and many of which lack a source link today. Arena ratings are being removed from this score.',
+      "Only as good as the scores underneath, most of which are labs' own claims and many of which lack a source link today.",
+    blockNote: {
+      source: 'arena',
+      pending: 'Arena ratings still count towards this score today and are being removed.',
+      done: 'Arena ratings no longer count towards this score.',
+    },
   },
   {
     id: 'calc-value-score',
@@ -387,7 +409,12 @@ export const calculations: Calculation[] = [
     code: 'scripts/check-staleness.ts, scripts/normalize-model-registry.ts',
     usedOn: 'Across the site.',
     limits:
-      'These rules read the time a figure was last written. For hand-entered prices and the fixed speed list that time is refreshed on every run, so the rules do not catch them. This is a known fault.',
+      'These rules read the time a figure was last written. For hand-entered prices that time is refreshed on every run, so the rules do not catch them. This is a known fault.',
+    blockNote: {
+      source: 'artificial-analysis',
+      pending: 'The fixed speed list has the same fault, so the 30-day speed rule never fires.',
+      done: 'Speed figures are no longer shown, so the speed rule has nothing to act on.',
+    },
   },
 ];
 
@@ -396,6 +423,7 @@ export const stateLabels: Record<SourceState, { label: string; tone: 'good' | 'w
   'hand-entered': { label: 'Entered by hand', tone: 'warn' },
   stale: { label: 'Out of date', tone: 'bad' },
   'on-hold': { label: 'Being removed', tone: 'bad' },
+  removed: { label: 'Removed from the site', tone: 'muted' },
   'not-collected': { label: 'Not collected yet', tone: 'muted' },
 };
 

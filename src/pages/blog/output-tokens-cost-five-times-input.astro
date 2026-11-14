@@ -14,21 +14,17 @@ const pct = (a: number, b: number) => `${Math.round((a / b) * 100)}%`;
 const snapDate = new Date(insights.snapshotDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 const usd = (v: number) => `$${v.toFixed(2)}`;
 
-// Ratio for each active, priced model in the snapshot.
-const active = insights.priceSpread.all.map((m) => ({ ...m, ratio: m.output / m.input }));
+// All of these are computed by scripts/insights/compute-insights.mjs.
+const activeStats = insights.outputInputRatio.active;
+const active = activeStats.rows;
+const buckets = activeStats.buckets;
+const fiveOrMore = activeStats.atLeast5x;
+const lowest = activeStats.lowest;
+const highest = activeStats.highest;
+const anthropic = activeStats.anthropic.rows;
+const anthropicAllFive = activeStats.anthropic.allExactly5x;
+const outliers = insights.outputInputRatio.outliers;
 const round2 = (v: number) => Number(v.toFixed(2));
-const buckets = [
-  { label: 'Under 2x', test: (r: number) => r < 2 },
-  { label: '2x to under 4x', test: (r: number) => r >= 2 && r < 4 },
-  { label: '4x to under 5x', test: (r: number) => r >= 4 && r < 5 },
-  { label: 'Exactly 5x', test: (r: number) => r === 5 },
-  { label: 'Over 5x', test: (r: number) => r > 5 },
-].map((b) => ({ label: b.label, count: active.filter((m) => b.test(round2(m.ratio))).length }));
-const fiveOrMore = active.filter((m) => round2(m.ratio) >= 5).length;
-const lowest = [...active].sort((a, b) => a.ratio - b.ratio)[0];
-const highest = [...active].sort((a, b) => b.ratio - a.ratio)[0];
-const anthropic = active.filter((m) => m.provider === 'Anthropic');
-const anthropicAllFive = anthropic.every((m) => round2(m.ratio) === 5);
 
 const pick = (name: string) => active.find((m) => m.name === name)!;
 const examples = ['Mistral Nemo', 'Llama 3.3 70B Instruct', 'Claude Haiku 4.5', 'Claude Fable 5', 'GPT-5.5', 'GPT-5.5 Pro', 'GPT-5.4 Nano', highest.name]
@@ -61,7 +57,7 @@ const n = (v: number) => v.toLocaleString('en-GB');
 >
   <p>
     Price lists for AI models quote two numbers per million tokens. The input price covers everything you send: your question,
-    your documents, the conversation so far. The output price covers what the model writes back. Output has always cost more.
+    your documents, the conversation so far. The output price covers what the model writes back. For most models output costs more.
     The gap between the two has widened.
   </p>
   <p>
@@ -194,7 +190,7 @@ const n = (v: number) => v.toLocaleString('en-GB');
     costs about the same, {usd(jobs[1].total)}, and almost all of it is output.
   </p>
   <p>
-    The third row is the one to watch. OpenAI's <a href="https://developers.openai.com/api/docs/guides/reasoning" rel="noopener">documentation on reasoning models</a> (read on 14 November 2026) says the tokens a model spends thinking are not shown to you but "are billed as output tokens",
+    OpenAI's <a href="https://developers.openai.com/api/docs/guides/reasoning" rel="noopener">documentation on reasoning models</a> (read on 14 November 2026) says the tokens a model spends thinking are not shown to you but "are billed as output tokens",
     and that a response can use "anywhere from a few hundred to tens of thousands" of them. So a short answer from a model
     that reasons first can cost more than a long article from one that does not. In our made-up example it comes to {usd(jobs[2].total)}, and you only ever see 1,000 of the 21,000 tokens you paid for.
   </p>
@@ -233,9 +229,10 @@ const n = (v: number) => v.toLocaleString('en-GB');
         prices have changed since launch, its ratio here reflects the new prices.
       </li>
       <li>
-        <strong>Odd rows.</strong> Five models in the trend data show ratios between 12 and 971 to one. They are priced from
-        third-party hosts and the largest look like data errors, so we have flagged them to be checked. A median is not moved by a few
-        extreme values, and none of them is in the active set.
+        <strong>Odd rows.</strong> {outliers.length} models in the trend data show ratios between {Math.round(outliers[0].ratio)} and {Math.round(outliers[outliers.length - 1].ratio)} to one:{' '}
+        {outliers.map((m) => `${m.name} (${m.ratio})`).join(', ')}. They are priced from third-party hosts and the largest
+        look like data errors, so we have flagged them to be checked. A median is not moved by a few extreme values, and
+        none of them is in the active set.
       </li>
       <li>
         <strong>Release dates.</strong> For most models the date is the day OpenRouter first listed it.

@@ -9,14 +9,20 @@
  * so that a reader can re-run it and get the same number. The formulas are
  * described in plain English on /transparency/.
  *
- * Usage: node scripts/insights/compute-insights.mjs [--date YYYY-MM-DD]
+ * The catalogue is rebuilt every hour, so a snapshot file is written once and
+ * then left alone: the script refuses to overwrite an existing snapshot unless
+ * --force is passed. The output records the SHA-256 of the input it read.
+ *
+ * Usage: node scripts/insights/compute-insights.mjs [--date YYYY-MM-DD] [--force]
  */
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const models = JSON.parse(readFileSync(join(root, 'data/pg-cache/models.json'), 'utf8'));
+const modelsRaw = readFileSync(join(root, 'data/pg-cache/models.json'));
+const models = JSON.parse(modelsRaw.toString('utf8'));
 const meta = JSON.parse(readFileSync(join(root, 'data/pg-cache/_meta.json'), 'utf8'));
 
 const dateArg = process.argv.indexOf('--date');
@@ -136,8 +142,76 @@ for (const m of base) {
   sourceCounts[key] = (sourceCounts[key] || 0) + 1;
 }
 
+// ---- supporting rows for claims made in the articles ----------------------
+
+const round2 = (v) => Number(v.toFixed(2));
+const ctxRow = (m) => ({ id: m.id, name: m.name, provider: m.provider_name, context: m.context_window, released: m.released });
+
+// The latest half-year, broken down by lab.
+const latestPeriod = ctxLast.period;
+const latestModels = base.filter((m) => m.released && m.context_window > 0 && halfYear(m.released) === latestPeriod);
+const byLabLatest = {};
+for (const m of latestModels) {
+  const row = (byLabLatest[m.provider_name] ||= { lab: m.provider_name, n: 0, atLeast1M: 0 });
+  row.n += 1;
+  if (m.context_window >= 1_000_000) row.atLeast1M += 1;
+}
+const latestByLab = Object.values(byLabLatest).sort((a, b) => b.n - a.n || a.lab.localeCompare(b.lab));
+const biggestLab = latestByLab[0];
+const latestBreakdown = {
+  period: latestPeriod,
+  n: latestModels.length,
+  atLeast1M: latestModels.filter((m) => m.context_window >= 1_000_000).length,
+  byLab: latestByLab,
+  below1M: latestModels.filter((m) => m.context_window < 1_000_000).sort((a, b) => b.context_window - a.context_window).map(ctxRow),
+  withoutBiggestLab: {
+    lab: biggestLab.lab,
+    labEntries: biggestLab.n,
+    n: latestModels.length - biggestLab.n,
+    atLeast1M: latestModels.filter((m) => m.context_window >= 1_000_000).length - biggestLab.atLeast1M,
+  },
+};
+const claude3Opus = base.find((m) => m.id === 'claude-3-opus');
+
+// Price spread: lab-list-only range, range by lab, and the chart ladder.
+const isReseller = (m) => /openrouter/i.test(m.pricing_source || '');
+const labOnly = byOut.filter((m) => !isReseller(m));
+const rangeByLab = {};
+for (const m of byOut) (rangeByLab[m.provider_name] ||= []).push(m.output_price);
+const labRanges = Object.entries(rangeByLab)
+  .filter(([, v]) => v.length >= 3)
+  .map(([lab, v]) => ({ lab, n: v.length, min: Math.min(...v), max: Math.max(...v) }))
+  .sort((a, b) => b.max - a.max);
+Object.assign(spread, {
+  fromReseller: byOut.filter(isReseller).length,
+  fromLabList: labOnly.length,
+  labListCheapest: slim(labOnly[0]),
+  labListDearest: slim(labOnly[labOnly.length - 1]),
+  labListRatio: labOnly[labOnly.length - 1].output_price / labOnly[0].output_price,
+  rangeByLab: labRanges,
+  // Every fifth model from cheapest to dearest, plus the dearest.
+  ladder: byOut.filter((_, i) => i % 5 === 0 || i === byOut.length - 1).map(slim),
+});
+
+// Output-to-input ratio among the active, priced models.
+const activeRatios = byOut.map((m) => ({ ...slim(m), ratio: round2(m.output_price / m.input_price) })).sort((a, b) => a.ratio - b.ratio);
+const ratioBuckets = [
+  ['Under 2x', (r) => r < 2],
+  ['2x to under 4x', (r) => r >= 2 && r < 4],
+  ['4x to under 5x', (r) => r >= 4 && r < 5],
+  ['Exactly 5x', (r) => r === 5],
+  ['Over 5x', (r) => r > 5],
+].map(([label, test]) => ({ label, count: activeRatios.filter((m) => test(m.ratio)).length }));
+const anthropicRatios = activeRatios.filter((m) => m.provider === 'Anthropic');
+// Rows in the trend data with a ratio of 12 or more: flagged as likely data errors.
+const ratioOutliers = base
+  .filter((m) => m.released && m.input_price > 0 && m.output_price > 0 && m.output_price / m.input_price >= 12)
+  .map((m) => ({ id: m.id, name: m.name, status: m.status, input: m.input_price, output: m.output_price, ratio: round2(m.output_price / m.input_price), source: m.pricing_source }))
+  .sort((a, b) => a.ratio - b.ratio);
+
 const out = {
   snapshotDate,
+  inputSha256: createHash('sha256').update(modelsRaw).digest('hex'),
   cacheGeneratedAt: meta.generated_at,
   method: {
     set: 'Language models (category "llm") in data/pg-cache/models.json, variants removed.',
@@ -161,12 +235,30 @@ const out = {
     from: ctxFirst,
     to: ctxLast,
     largest,
+    latestBreakdown,
+    exampleClaude3Opus: claude3Opus ? ctxRow(claude3Opus) : null,
   },
   priceSpread: spread,
-  outputInputRatio: { series: ratio },
+  outputInputRatio: {
+    series: ratio,
+    active: {
+      n: activeRatios.length,
+      atLeast5x: activeRatios.filter((m) => m.ratio >= 5).length,
+      buckets: ratioBuckets,
+      lowest: activeRatios[0],
+      highest: activeRatios[activeRatios.length - 1],
+      anthropic: { n: anthropicRatios.length, allExactly5x: anthropicRatios.every((m) => m.ratio === 5), rows: anthropicRatios },
+      rows: activeRatios,
+    },
+    outliers: ratioOutliers,
+  },
 };
 
 const outPath = join(root, 'src/data/insights', `${snapshotDate}.json`);
+if (existsSync(outPath) && !process.argv.includes('--force')) {
+  console.error(`${outPath} already exists. Snapshots are frozen; pass --force to rebuild it from the current catalogue.`);
+  process.exit(1);
+}
 mkdirSync(dirname(outPath), { recursive: true });
 writeFileSync(outPath, JSON.stringify(out, null, 2) + '\n');
 console.log(`wrote ${outPath}`);

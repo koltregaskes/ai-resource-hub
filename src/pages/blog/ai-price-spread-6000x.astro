@@ -4,6 +4,7 @@ import ColumnChart from '../../components/insights/ColumnChart.astro';
 import LogBarChart from '../../components/insights/LogBarChart.astro';
 import DataNote from '../../components/insights/DataNote.astro';
 import insights from '../../data/insights/2026-11-14.json';
+import check from '../../data/insights/2026-11-14.openrouter-check.json';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -16,22 +17,16 @@ const usd = (v: number) => (v < 1 ? `$${v.toFixed(2)}` : `$${Number.isInteger(v)
 const isReseller = (source: string) => /openrouter/i.test(source);
 const snapDate = new Date(insights.snapshotDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 
-// Every fifth model from cheapest to dearest, plus the dearest, for the ladder chart.
-const ladder = all.filter((_, i) => i % 5 === 0 || i === all.length - 1);
-
-// Prices taken from a lab's own pricing page only (no reseller prices).
-const labOnly = all.filter((m) => !isReseller(m.source));
-const labCheapest = labOnly[0];
-const labDearest = labOnly[labOnly.length - 1];
-const labRatio = Math.round(labDearest.output / labCheapest.output);
-
-// Range by lab, for labs with at least three priced models.
-const byLab = new Map<string, number[]>();
-for (const m of all) byLab.set(m.provider, [...(byLab.get(m.provider) ?? []), m.output]);
-const labRows = [...byLab.entries()]
-  .filter(([, v]) => v.length >= 3)
-  .map(([lab, v]) => ({ lab, n: v.length, min: Math.min(...v), max: Math.max(...v) }))
-  .sort((a, b) => b.max - a.max);
+// All of these are computed by scripts/insights/compute-insights.mjs.
+const ladder = spread.ladder;
+const labCheapest = spread.labListCheapest;
+const labDearest = spread.labListDearest;
+const labRatio = Math.round(spread.labListRatio);
+const labRows = spread.rangeByLab;
+const live = check.outputPrices;
+const checkDate = new Date(check.checkedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const liveDearest = live.dearest.filter((m) => m.outputPerMillion === live.dearest[0].outputPerMillion);
+const liveName = (id: string) => all.find((m) => id.endsWith(`/${m.id}`))?.name ?? id;
 
 const under1 = spread.bands[0].count;
 const over50 = spread.bands[spread.bands.length - 1].count;
@@ -79,7 +74,7 @@ const over50 = spread.bands[spread.bands.length - 1].count;
   />
 
   <p>
-    The middle of the ladder is where most people buy. The median output price is {usd(spread.medianOutput)} per million
+    The median output price is {usd(spread.medianOutput)} per million
     tokens and the median input price is {usd(spread.medianInput)}.
   </p>
 
@@ -135,7 +130,7 @@ const over50 = spread.bands[spread.bands.length - 1].count;
     menu. Both are food and the price gap is true, but nobody thinks they are the same product.
   </p>
   <p>
-    A fairer test is to use only prices taken from the labs' own pricing pages. We hold {labOnly.length} of those among the
+    A fairer test is to use only prices taken from the labs' own pricing pages. We hold {spread.fromLabList} of those among the
     active models. They run from {labCheapest.name} at {usd(labCheapest.output)} to {labDearest.name} at {usd(labDearest.output)}, which is {labRatio} to one. Both of those are OpenAI models, so one lab's own price list spans
     more than a hundredfold.
   </p>
@@ -184,10 +179,10 @@ const over50 = spread.bands[spread.bands.length - 1].count;
 
   <h2>Start at the cheap end</h2>
   <p>
-    The useful part of a 6,000-fold spread is that the cheap end exists at all. If the job is simple and the volume is high,
+    If the job is simple and the volume is high,
     such as sorting messages into categories, pulling fields out of documents or writing short summaries, try a model from the
-    bottom third of the ladder first and move up only if the results are not good enough. The cost of being wrong is a few
-    cents.
+    bottom third of the ladder first and move up only if the results are not good enough. Trying the cheap model on a small sample
+    first costs very little, and you will know from the output whether you need to pay more.
   </p>
   <p>
     For the sums on your own workload, use the <a href={`${base}calculator/`}>cost calculator</a>. The <a href={`${base}guides/understanding-ai-pricing/`}>guide to AI pricing</a> covers input, output and cached tokens, and
@@ -202,13 +197,12 @@ const over50 = spread.bands[spread.bands.length - 1].count;
         confirming are marked "tracking" and are not in this count.
       </li>
       <li>
-        <strong>Checked against the source.</strong> On 14 November 2026 we read OpenRouter's live public list of 471 models.
-        Its cheapest paid model was Mistral Nemo at $0.03 and its dearest were GPT-5.5 Pro and GPT-5.4 Pro at $180, the same
-        two ends as our catalogue.
+        <strong>Checked against the source.</strong> On {checkDate} we read OpenRouter's live public list of {check.listings} entries. Its cheapest paid model was {liveName(live.cheapest[0].id)} at {usd(live.cheapest[0].outputPerMillion)} and its dearest {liveDearest.length > 1 ? 'were' : 'was'} {liveDearest.map((m) => liveName(m.id)).sort().reverse().join(' and ')} at {usd(live.dearest[0].outputPerMillion)}, the same two ends as our catalogue. The result is saved with this article's
+        data.
       </li>
       <li>
-        <strong>Two kinds of price.</strong> {all.filter((m) => isReseller(m.source)).length} of the {spread.n} prices come
-        from OpenRouter, which reports the cheapest host for each model. {labOnly.length} come from a lab's own pricing page
+        <strong>Two kinds of price.</strong> {spread.fromReseller} of the {spread.n} prices come
+        from OpenRouter, which reports the cheapest host for each model. {spread.fromLabList} come from a lab's own pricing page
         and were typed in by hand. The table shows which is which.
       </li>
       <li>

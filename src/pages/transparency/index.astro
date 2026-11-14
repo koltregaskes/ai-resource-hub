@@ -26,6 +26,26 @@ interface ScrapeRow {
 }
 
 const meta = readCache<{ generated_at?: string }>('_meta.json', {});
+
+// Benchmark scores with and without a source link, counted from the cache at build time.
+const benchmarkScores = readCache<Array<{ source_url?: string | null }>>('benchmark_scores.json', []);
+const benchmarkTotal = benchmarkScores.length;
+const benchmarkNoLink = benchmarkScores.filter((row) => !row.source_url).length;
+const fill = (text: string) =>
+  text.replace('{benchmarkTotal}', String(benchmarkTotal)).replace('{benchmarkNoLink}', String(benchmarkNoLink));
+
+// Sources blocked for terms reasons (src/data/source-policy.ts, hub #1569). The file may not exist on every
+// branch, so it is loaded with a glob: no match means nothing is blocked yet.
+interface BlockedSource {
+  id: string;
+  reason: string;
+  termsUrl: string;
+  termsCheckedOn: string;
+}
+const policyModules = import.meta.glob<{ BLOCKED_DATA_SOURCES?: readonly BlockedSource[] }>('../../data/source-policy.ts', {
+  eager: true,
+});
+const blocked = new Map((Object.values(policyModules)[0]?.BLOCKED_DATA_SOURCES ?? []).map((b) => [b.id, b]));
 const scrapeLog = readCache<ScrapeRow[]>('scrape_log.json', []);
 const lastRun = new Map<string, ScrapeRow>();
 for (const row of scrapeLog) {
@@ -59,8 +79,29 @@ const toneClass: Record<string, string> = {
   muted: 'bg-(--color-bg-tertiary) text-(--color-text-muted) border-(--color-border)',
 };
 
-const order: SourceState[] = ['live', 'hand-entered', 'stale', 'on-hold', 'not-collected'];
-const counts = order.map((state) => ({ state, n: sources.filter((s) => s.state === state).length }));
+// Apply the block list: a blocked source shows as removed, with the reason and date from the policy file.
+const shownSources = sources.map((s) => {
+  const b = blocked.get(s.id);
+  if (!b || !s.whenBlocked) return { ...s, caveat: s.caveat ? fill(s.caveat) : s.caveat, termsUrl: undefined as string | undefined };
+  return {
+    ...s,
+    state: 'removed' as SourceState,
+    how: s.whenBlocked.how,
+    cadence: 'Not collected',
+    collector: undefined,
+    termsNote: `${b.reason} Terms checked on ${fmtDate(b.termsCheckedOn)}.`,
+    termsUrl: b.termsUrl as string | undefined,
+    caveat: s.whenBlocked.caveat,
+  };
+});
+const speedRemoved = blocked.has('artificial-analysis');
+const limitsFor = (c: (typeof calculations)[number]) =>
+  c.blockNote ? `${c.limits} ${blocked.has(c.blockNote.source) ? c.blockNote.done : c.blockNote.pending}` : c.limits;
+
+const order: SourceState[] = ['live', 'hand-entered', 'stale', 'on-hold', 'removed', 'not-collected'];
+const counts = order
+  .map((state) => ({ state, n: shownSources.filter((s) => s.state === state).length }))
+  .filter((c) => c.n > 0);
 const articleCalcs = calculations.filter((c) => c.group === 'articles');
 const siteCalcs = calculations.filter((c) => c.group === 'site');
 
@@ -91,7 +132,7 @@ const structuredData = {
       <p class="text-lg text-(--color-text-secondary) max-w-3xl leading-relaxed">
         This page lists where each number on the site comes from, how it gets here, whether the source's terms allow it, and the
         sum behind anything we work out ourselves. It also lists what is wrong today. Some of our data is typed in by hand, some
-        is out of date, and two sources are being removed.
+        is out of date, and two sources {speedRemoved ? 'have been removed' : 'are being removed'} because their terms restrict our use.
       </p>
       <p class="mt-4 text-sm text-(--color-text-muted)">
         Last reviewed against the code and the sources: <strong class="text-(--color-text-secondary)">{fmtDate(REVIEWED)}</strong>. {meta.generated_at && (
@@ -134,14 +175,22 @@ const structuredData = {
         tables.
       </p>
       <ul class="space-y-3 text-sm text-(--color-text-secondary) leading-relaxed">
+        {speedRemoved ? (
+          <li class="rounded-xl border border-(--color-border) bg-(--color-bg-card) p-4">
+            <strong class="text-(--color-text-primary)">Speed figures have been removed.</strong> They came from a fixed list
+            recorded between 15 January and 20 February 2026 that was re-saved on every run, and the source's terms restrict
+            our use. We have no licensed replacement yet.
+          </li>
+        ) : (
+          <li class="rounded-xl border border-(--color-danger)/30 bg-(--color-danger)/10 p-4">
+            <strong class="text-(--color-text-primary)">Speed figures are about nine months old.</strong> They come from a fixed
+            list recorded between 15 January and 20 February 2026 and are re-saved on every run, so they look current when
+            they are not. The source's terms also restrict our use. They are being removed.
+          </li>
+        )}
         <li class="rounded-xl border border-(--color-danger)/30 bg-(--color-danger)/10 p-4">
-          <strong class="text-(--color-text-primary)">Speed figures are about nine months old.</strong> They come from a fixed list
-          recorded between 15 January and 20 February 2026 and are re-saved on every run, so they look current when they are not.
-          The source's terms also restrict our use. They are being removed.
-        </li>
-        <li class="rounded-xl border border-(--color-danger)/30 bg-(--color-danger)/10 p-4">
-          <strong class="text-(--color-text-primary)">Most benchmark scores have no source link.</strong> 300 of 365 were entered
-          without one. Those are held back from rankings until each has a link to where the lab published it.
+          <strong class="text-(--color-text-primary)">Most benchmark scores have no source link.</strong> {benchmarkNoLink} of {benchmarkTotal} were
+          entered without one. Those are held back from rankings until each has a link to where the score was published.
         </li>
         <li class="rounded-xl border border-(--color-warning)/30 bg-(--color-warning)/10 p-4">
           <strong class="text-(--color-text-primary)">Hand-entered prices can look fresher than they are.</strong> The date beside
@@ -173,7 +222,7 @@ const structuredData = {
 
       <div class="space-y-5">
         {
-          sources.map((s) => {
+          shownSources.map((s) => {
             const st = stateLabels[s.state];
             const run = lastRunFor(s.collector);
             return (
@@ -194,7 +243,14 @@ const structuredData = {
                   <dt class="text-(--color-text-muted)">How</dt>
                   <dd class="text-(--color-text-secondary)">{s.how}</dd>
                   <dt class="text-(--color-text-muted)">Terms</dt>
-                  <dd class="text-(--color-text-secondary)">{s.termsNote}</dd>
+                  <dd class="text-(--color-text-secondary)">
+                    {s.termsNote}
+                    {s.termsUrl && (
+                      <>
+                        {' '}<a href={s.termsUrl} rel="noopener" class="text-(--color-accent) underline underline-offset-2">Read the terms</a>.
+                      </>
+                    )}
+                  </dd>
                   <dt class="text-(--color-text-muted)">Refresh</dt>
                   <dd class="text-(--color-text-secondary)">
                     {s.cadence}
@@ -239,7 +295,7 @@ const structuredData = {
                 <dt class="text-(--color-text-muted)">Inputs</dt>
                 <dd class="text-(--color-text-secondary)">{c.inputs}</dd>
                 <dt class="text-(--color-text-muted)">Limits</dt>
-                <dd class="text-(--color-text-secondary)">{c.limits}</dd>
+                <dd class="text-(--color-text-secondary)">{limitsFor(c)}</dd>
                 <dt class="text-(--color-text-muted)">Code</dt>
                 <dd class="text-(--color-text-secondary)"><code class="text-[0.85em]">{c.code}</code></dd>
               </dl>
@@ -267,7 +323,7 @@ const structuredData = {
               <p class="rounded-xl bg-(--color-bg-tertiary) p-4 text-sm text-(--color-text-primary) leading-relaxed">{c.formula}</p>
               <dl class="mt-3 grid sm:grid-cols-[9rem_1fr] gap-x-4 gap-y-1.5 text-sm leading-relaxed">
                 <dt class="text-(--color-text-muted)">Limits</dt>
-                <dd class="text-(--color-text-secondary)">{c.limits}</dd>
+                <dd class="text-(--color-text-secondary)">{limitsFor(c)}</dd>
                 <dt class="text-(--color-text-muted)">Code</dt>
                 <dd class="text-(--color-text-secondary)"><code class="text-[0.85em]">{c.code}</code></dd>
               </dl>
