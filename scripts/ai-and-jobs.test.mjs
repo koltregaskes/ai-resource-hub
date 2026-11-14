@@ -160,3 +160,121 @@ test('rights register: terms recorded for ONS, BLS and Anthropic, with no series
   assert.throws(()=>validateRightsRegister({jobs_rights:[{...register.jobs_rights[0],...patch}]}));
  }
 });
+// Publication hold across the whole rights chain (PR 133 review, 14 November 2026). A hold or an
+// unconfirmed record at ANY level blocks, whichever record is the narrowest. Everything named
+// "test-..." or "TEST FIXTURE" below is INVENTED for these tests and is never written to a snapshot.
+import {createHash} from 'node:crypto';
+const testPublicationRights={id:'test-publication-rights',scope:'publication',covers:'TEST FIXTURE: invented single publication',licence:'Invented Publication Licence (test)',licence_url:'https://example.org/test-publication-licence',attribution_text:'TEST FIXTURE: Invented single publication. Not a real source.',commercial_use:'allowed',verified_on:'2026-11-14',verified_by:'test fixture',evidence_url:'https://example.org/test-publication-terms',status:'confirmed'};
+const HELD_IDS=['ons-ogl-v3','bls-public-domain','anthropic-economic-index'];
+const NARROWER={dataset:'test-dataset-rights',publication:'test-publication-rights'};
+// Every render and export path, as the routes call them: page and transparency blocks, data.json, archive, validator.
+const publishPaths={
+ page_happening:d=>assertPlacement(publicationRows(d,'happening'),'happening'),
+ page_exposure:d=>assertPlacement(publicationRows(d,'exposure'),'exposure'),
+ page_projections:d=>assertPlacement(publicationRows(d,'projections'),'projections'),
+ data_json:d=>JSON.parse(JSON.stringify({section:'happening',rows:assertPlacement(publicationRows(d,'happening'),'happening')})).rows,
+ archive:d=>validateJobs(d).jobs_observations,
+ validator:d=>{validateJobs(d);return publicationRows(d);},
+};
+function assertNothingPublished(d,label) {
+ for(const [name,run] of Object.entries(publishPaths)) {
+  let rows=[];
+  assert.throws(()=>{rows=run(d);},/rights/i,`${label}: ${name} must fail`);
+  assert.equal(rows.length,0,`${label}: ${name} must publish zero rows`);
+ }
+}
+// The reviewer's shape: the real Indeed series (18 rows) sit under a source whose record is held,
+// while each series points at a confirmed narrower record.
+function indeedUnderHeld(heldId,narrowerScope) {
+ const d=copy();
+ d.jobs_rights.push(structuredClone(register.jobs_rights.find(r=>r.id===heldId)),structuredClone(testPublicationRights));
+ d.jobs_sources[0].rights_id=heldId;
+ if(narrowerScope==='publication') for(const series of d.jobs_series) series.rights_id=NARROWER.publication;
+ return d;
+}
+// The same on the invented source: its source points at the held record, its series at a confirmed narrower one.
+function testSourceUnderHeld(heldId,narrowerScope) {
+ const d=withTestSource();
+ d.jobs_rights.push(structuredClone(register.jobs_rights.find(r=>r.id===heldId)),structuredClone(testPublicationRights));
+ d.jobs_sources.at(-1).rights_id=heldId;d.jobs_series.at(-1).rights_id=NARROWER[narrowerScope];
+ return d;
+}
+test('a confirmed narrower record cannot bypass a held ONS, BLS or Anthropic record: zero rows rendered or exported, validation fails',()=>{
+ let cases=0;
+ for(const heldId of HELD_IDS) for(const narrowerScope of ['dataset','publication']) {
+  const held=register.jobs_rights.find(r=>r.id===heldId);assert.equal(held.admitted_for_publication,false);
+  const d=indeedUnderHeld(heldId,narrowerScope);
+  // The narrower record really is confirmed, and really is the one the old rule selected.
+  const narrowest=d.jobs_rights.find(r=>r.id===d.jobs_series[0].rights_id);
+  assert.equal(narrowest.status,'confirmed');assert.notEqual(narrowest.admitted_for_publication,false);assert.equal(narrowest.scope,narrowerScope);
+  assertNothingPublished(d,`Indeed series under held ${heldId}, confirmed ${narrowerScope} record`);
+  assert.throws(()=>rightsForSeries(d,d.jobs_series[0],d.jobs_sources[0]),/not admitted for publication/);
+  const t=testSourceUnderHeld(heldId,narrowerScope);
+  assertNothingPublished(t,`invented series under held ${heldId}, confirmed ${narrowerScope} record`);
+  assert.throws(()=>rightsForSeries(t,t.jobs_series.at(-1),t.jobs_sources.at(-1)),/not admitted for publication/);
+  cases+=2;
+ }
+ assert.equal(cases,12);
+});
+test('a hold or an unconfirmed record at any level of the chain blocks, and the source-level record must exist',()=>{
+ // Hold on the narrowest record (the case the earlier tests already covered) still blocks.
+ const narrow=withTestSource();narrow.jobs_rights.find(r=>r.id==='test-dataset-rights').admitted_for_publication=false;assertNothingPublished(narrow,'hold on the narrowest record');
+ // Hold on the broader record, with nothing else wrong.
+ const broad=withTestSource();broad.jobs_rights.find(r=>r.id==='test-source-rights').admitted_for_publication=false;assertNothingPublished(broad,'hold on the source-level record');
+ // Unconfirmed broader record under a confirmed narrower one, with no hold flag at all.
+ for(const status of ['partial','unconfirmed',undefined]) {const d=withTestSource();d.jobs_rights.find(r=>r.id==='test-source-rights').status=status;assertNothingPublished(d,`source-level status ${status}`);}
+ // Commercial use not confirmed on the broader record.
+ const commercial=withTestSource();commercial.jobs_rights.find(r=>r.id==='test-source-rights').commercial_use='unknown';assertNothingPublished(commercial,'source-level commercial use unknown');
+ // No source-level record: a confirmed series record alone is not enough.
+ for(const missing of [null,undefined,'no-such-record']) {const d=withTestSource();d.jobs_sources.at(-1).rights_id=missing;assertNothingPublished(d,`source rights_id ${missing}`);}
+ // The same hold placed on the real Indeed record blocks the real rows.
+ const indeed=copy();indeed.jobs_rights[0].admitted_for_publication=false;assertNothingPublished(indeed,'hold on the Indeed record');
+});
+test('a held or unconfirmed chain fails the build instead of dropping rows silently',()=>{
+ // A series with no observations would render nothing, so only validation can catch it: it must.
+ const d=testSourceUnderHeld('ons-ogl-v3','dataset');d.jobs_observations.pop();
+ assert.ok(!d.jobs_observations.some(o=>o.series_version_id==='test-series-v1'));
+ assertNothingPublished(d,'held chain on a series with no observations');
+ // A source with no series at all, pointing at a held record.
+ const s=withTestSource();s.jobs_rights.push(structuredClone(register.jobs_rights[1]));s.jobs_observations.pop();s.jobs_series_versions.pop();s.jobs_series.pop();s.jobs_sources.at(-1).rights_id='bls-public-domain';
+ assertNothingPublished(s,'held record on a source with no series');
+ // One held chain stops the whole snapshot: the 18 real rows are not published around it.
+ const mixed=testSourceUnderHeld('bls-public-domain','publication');
+ assert.equal(mixed.jobs_observations.length,data.jobs_observations.length+1);assertNothingPublished(mixed,'one held chain beside the Indeed rows');
+ // A study cannot point at a held record either.
+ const study=copy();study.jobs_rights.push(structuredClone(register.jobs_rights[0]));
+ study.jobs_studies.push({id:'test-study',rights_id:'ons-ogl-v3',revision_id:'test-1',published_at:'2026-01-01',retrieved_at:'2026-11-14',url:'https://example.org/test-study',data_period:'2025',design:'TEST FIXTURE',sample:'TEST FIXTURE',limitations:'TEST FIXTURE'});
+ study.jobs_study_results.push({id:'test-result',study_id:'test-study',kind:'measured',effect:1,uncertainty_status:'not_published'});
+ assertNothingPublished(study,'study under a held record');
+ study.jobs_studies[0].rights_id='indeed-ai-tracker';assert.equal(validateJobs(study),study);
+});
+test('a fully confirmed and admitted chain still renders, credited to its narrowest record',()=>{
+ const d=withTestSource();
+ for(const run of Object.values(publishPaths)) assert.doesNotThrow(()=>run(d));
+ const rows=publicationRows(d),row=testRow(rows);assert.equal(rows.length,19);
+ assert.equal(row.rights.id,'test-dataset-rights');assert.equal(displayRow(row).credit,'TEST FIXTURE: Invented Workforce Survey dataset. Not a real source.');assert.equal(displayRow(row).licence,'Invented Dataset Licence (test)');
+ // Admission stated outright at both levels.
+ const stated=withTestSource();for(const r of stated.jobs_rights) r.admitted_for_publication=true;assert.equal(publicationRows(stated).length,19);
+ // A confirmed publication-level record over a confirmed source-level record: publishes, credited to the publication record.
+ const p=withTestSource();p.jobs_rights.push(structuredClone(testPublicationRights));p.jobs_series.at(-1).rights_id='test-publication-rights';
+ const published=testRow(publicationRows(p));assert.equal(published.rights.id,'test-publication-rights');
+ assert.equal(displayRow(published).credit,'TEST FIXTURE: Invented single publication. Not a real source.');
+ assert.deepEqual(rightsInUse(allSections(p)).map(r=>r.id),['indeed-ai-tracker','test-publication-rights']);
+ // Held register records that nothing points at change nothing.
+ const unused=withTestSource();unused.jobs_rights.push(...structuredClone(register.jobs_rights));assert.equal(publicationRows(unused).length,19);
+});
+test("Indeed's real data is unchanged by the chain rule",()=>{
+ const rows=publishPaths.page_happening(data);
+ assert.equal(rows.length,18);assert.equal(publishPaths.page_exposure(data).length,0);assert.equal(publishPaths.page_projections(data).length,0);
+ assert.ok(rows.every(r=>r.source.id==='indeed'&&r.kind==='measured'&&r.rights.id==='indeed-ai-tracker'&&r.rights===data.jobs_rights[0]));
+ for(const row of rows) {
+  const raw=data.jobs_observations.filter(o=>o.series_version_id===row.series_version_id&&o.period===row.period);
+  assert.ok(raw.some(o=>o.value===row.value&&o.vintage===row.vintage));
+  assert.equal(displayRow(row).credit,'Source: Indeed Hiring Lab. Licensed under CC BY 4.0. Selected observations; formatting adapted by AIRH.');assert.equal(displayRow(row).licence,'CC BY 4.0');
+ }
+ // The exact payload data.json serves, pinned to the bytes recorded before the chain rule was added.
+ const exported=JSON.stringify({section:'happening',rows});
+ assert.equal(Buffer.byteLength(exported),42168);
+ assert.equal(createHash('sha256').update(exported).digest('hex'),'7e84a6cec7775e40f79931d952ea4add5be2e3c7b1f733c5f3e9565abbc57a12');
+ assert.equal(validateJobs(data),data);
+});

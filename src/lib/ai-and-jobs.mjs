@@ -13,9 +13,15 @@ function uncertainty(row) {
    if(interval && (row.interval_lower>row.interval_upper || !['confidence','prediction','credible','scenario_range'].includes(row.interval_type) || !(row.confidence_level>0 && row.confidence_level<1))) throw Error('Invalid interval');
  }
 }
-function rightsFor(data, id) {
- const rights=data.jobs_rights.find(r=>r.id===id);
- if(!rights || rights.status!=='confirmed' || rights.commercial_use!=='allowed') throw Error('Unconfirmed rights');
+// One rights record, checked for publication: it must exist, must not be held
+// (admitted_for_publication:false), and must be confirmed with commercial use allowed.
+// `used_by` names what points at the record, so a failed build says where to look.
+function rightsFor(data, id, used_by='') {
+ const where=used_by?` (${used_by})`:'';
+ const rights=id==null?null:data.jobs_rights.find(r=>r.id===id);
+ if(!rights) throw Error(`Unconfirmed rights: no rights record "${id}"${where}`);
+ if(rights.admitted_for_publication===false) throw Error(`Rights record "${id}" is not admitted for publication${where}`);
+ if(rights.status!=='confirmed' || rights.commercial_use!=='allowed') throw Error(`Unconfirmed rights: record "${id}"${where}`);
  requireFields(rights,['licence','licence_url','attribution_text','verified_on','verified_by','evidence_url']);
  return rights;
 }
@@ -42,6 +48,13 @@ export function currentObservations(data) {
 }
 export function validateJobs(data, previous=null) {
  const seen=new Set();
+ // Rights gate for the whole snapshot, not only for rows that would render: every source and
+ // every series must have a fully confirmed and admitted rights chain, or the build stops here.
+ for(const source of data.jobs_sources) rightsFor(data,source.rights_id,`source "${source.id}"`);
+ for(const series of data.jobs_series) {
+  const source=data.jobs_sources.find(s=>s.id===series.source_id);if(!source) throw Error('Missing source');
+  rightsForSeries(data,series,source);
+ }
  for(const row of data.jobs_observations) {
   requireFields(row,['series_version_id','period','vintage','retrieved_at','source_url','status','uncertainty_status']);
   const key=[row.series_version_id,row.period,row.vintage].join('|');if(seen.has(key)) throw Error('Duplicate observation');seen.add(key);
@@ -56,7 +69,7 @@ export function validateJobs(data, previous=null) {
    const study=data.jobs_studies.find(s=>s.id===result.study_id);if(!study)throw Error('Missing study');
    if(!KINDS.includes(result.kind)) throw Error('Missing study kind');
    requireFields(study,['revision_id','published_at','retrieved_at','url','data_period','design','sample','limitations']);
-   rightsFor(data,study.rights_id);uncertainty(result);
+   rightsFor(data,study.rights_id,`study "${study.id}"`);uncertainty(result);
  }
  for(const claim of data.jobs_company_claims) {
    requireFields(claim,['company','statement_url','statement_channel','statement_date','context_url','added_by','checked_by']);
@@ -102,19 +115,25 @@ export function kindWord(kind) { return kindLabel(kind).toLowerCase(); }
 // The label to print beside a figure. Exposure figures always carry the note.
 export function kindCaption(kind) { const label=kindLabel(kind); return kind==='modelled_exposure'?`${label} \u00b7 ${EXPOSURE_NOTE}`:label; }
 
-// The rights record that applies to one series: the narrowest scope it references
-// (publication, then dataset, then source). It must be confirmed, allow commercial use
-// and be admitted for publication, or nothing from the series is published.
+// The single publication gate for a series, used by every render and export path
+// (validateJobs and publicationRows both call it). Two separate questions:
+//  1. May this series be published at all? Only if EVERY rights record in its chain passes
+//     rightsFor: the series' own record (publication or dataset level) and its source's record.
+//     The source's record must exist. A hold or an unconfirmed record at any level blocks,
+//     so a confirmed narrower record can never publish around a held broader one.
+//  2. Which record supplies the credit and licence? The narrowest scope in the chain
+//     (publication, then dataset, then source).
+// It throws instead of returning nothing, so a held chain fails the build and no row is dropped silently.
 export function rightsForSeries(data, series, source) {
+ const used_by=`series "${series.id}", source "${source.id}"`;
+ if(source.rights_id==null) throw Error(`Unconfirmed rights: source has no rights record (${used_by})`);
  const ids=[...new Set([series.rights_id,source.rights_id].filter(id=>id!=null))];
- if(!ids.length) throw Error('Unconfirmed rights');
- const records=ids.map(id=>{
-  const record=data.jobs_rights.find(r=>r.id===id);
-  if(!record || !(record.scope in SCOPE_RANK)) throw Error('Unconfirmed rights');
+ const chain=ids.map(id=>{
+  const record=rightsFor(data,id,used_by);
+  if(!(record.scope in SCOPE_RANK)) throw Error(`Unconfirmed rights: record "${id}" has no valid scope (${used_by})`);
   return record;
- }).sort((a,b)=>SCOPE_RANK[a.scope]-SCOPE_RANK[b.scope]);
- if(records[0].admitted_for_publication===false) throw Error('Rights record not admitted for publication');
- return rightsFor(data,records[0].id);
+ });
+ return chain.sort((a,b)=>SCOPE_RANK[a.scope]-SCOPE_RANK[b.scope])[0];
 }
 // Distinct rights records behind a set of published rows, in first-use order.
 // A rights record that no published series uses is never returned, so it renders nothing.
@@ -181,7 +200,7 @@ export function sourceFormat(url) { return /\.csv($|[?#])/i.test(url)?'CSV':'fil
 
 // Rights register: records for sources whose terms have been read but which have no admitted
 // series yet. A record here is not a licence to publish: every entry is flagged
-// admitted_for_publication:false, and rightsForSeries refuses any series that points at one.
+// admitted_for_publication:false, and rightsForSeries refuses any series with one anywhere in its chain.
 export function validateRightsRegister(register) {
  const seen=new Set();
  for(const record of register.jobs_rights) {
