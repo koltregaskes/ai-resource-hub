@@ -1,0 +1,781 @@
+{
+  "generated": "2026-11-14",
+  "script": "scripts/insights/official-statistics-on-business-ai-use.mjs",
+  "inputs": [
+    {
+      "file": "btos-National.xlsx",
+      "url": "https://www.census.gov/hfp/btos/downloads/National.xlsx",
+      "retrieved": "2026-11-14",
+      "sha256": "019cc3fff1ac2a985f27741084777780c4f9c7899a26b29dcf49392cad643f59"
+    },
+    {
+      "file": "bicswave1652final.xlsx",
+      "url": "https://www.ons.gov.uk/file?uri=/economy/economicoutputandproductivity/output/datasets/businessinsightsandimpactontheukeconomy/bicswave165/bicswave1652final.xlsx",
+      "retrieved": "2026-11-14",
+      "sha256": "285f6fadc5ec9b2b738d28fb5356f994b3311eda1c8cf2a0f2907cdc22736e90"
+    },
+    {
+      "file": "wave165confidenceintervals.xlsx",
+      "url": "https://www.ons.gov.uk/file?uri=/economy/economicoutputandproductivity/output/datasets/businessinsightsandimpactontheukeconomyconfidenceintervals/bicswave165/wave165confidenceintervals.xlsx",
+      "retrieved": "2026-11-14",
+      "sha256": "4a3518839ae73c284929f53b4036470372e7029ce061d3b565fb5bd766893587"
+    },
+    {
+      "file": "eurostat-isoc_eb_ai-E_AI_TANY.json",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_eb_ai?format=JSON&lang=EN&geo=EU27_2020&unit=PC_ENT&indic_is=E_AI_TANY",
+      "retrieved": "2026-11-14",
+      "sha256": "558f55a568c6dff57907131aee91f8d3b78ca2aef22682fa00c6164b118e12cb"
+    }
+  ],
+  "us": {
+    "kind": "Survey estimate",
+    "question": "In the last two weeks, did this business use Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI) in any of its business functions? (Examples of SI use include: SI-powered data analysis; generative SI for marketing, product design, or coding; virtual SI agents for customer service; SI-powered forecasting or pricing; SI-driven computer vision for quality control, etc.)",
+    "sourceLine": "Source: U.S. Census Bureau, Business Trends and Outlook Survey (BTOS) 2023-2026. The Census Bureau has reviewed this data product to ensure appropriate access, use, and disclosure avoidance protection of the confidential source data (Project No. P-7529868, Disclosure Review Board (DRB) approval number:  CBDRB-FY26-0278).",
+    "periods": 25,
+    "first": {
+      "period": "202524",
+      "yes": 17.3,
+      "no": 71.6,
+      "doNotKnow": 11.1,
+      "standardError": 0.18,
+      "ci90": {
+        "lower": 17,
+        "upper": 17.6
+      },
+      "collection": {
+        "start": "2025-11-17",
+        "end": "2025-11-30"
+      },
+      "reference": {
+        "start": "2025-11-03",
+        "end": "2025-11-16"
+      },
+      "published": "2025-12-04"
+    },
+    "latest": {
+      "period": "202622",
+      "yes": 24.2,
+      "no": 61.9,
+      "doNotKnow": 13.9,
+      "standardError": 0.61,
+      "ci90": {
+        "lower": 23.2,
+        "upper": 25.2
+      },
+      "collection": {
+        "start": "2026-10-19",
+        "end": "2026-11-01"
+      },
+      "reference": {
+        "start": "2026-10-05",
+        "end": "2026-10-18"
+      },
+      "published": "2026-11-05"
+    },
+    "series": [
+      {
+        "period": "202524",
+        "yes": 17.3,
+        "no": 71.6,
+        "doNotKnow": 11.1,
+        "standardError": 0.18,
+        "ci90": {
+          "lower": 17,
+          "upper": 17.6
+        },
+        "collection": {
+          "start": "2025-11-17",
+          "end": "2025-11-30"
+        },
+        "reference": {
+          "start": "2025-11-03",
+          "end": "2025-11-16"
+        },
+        "published": "2025-12-04"
+      },
+      {
+        "period": "202525",
+        "yes": 17.2,
+        "no": 72,
+        "doNotKnow": 10.8,
+        "standardError": 0.23,
+        "ci90": {
+          "lower": 16.8,
+          "upper": 17.6
+        },
+        "collection": {
+          "start": "2025-12-01",
+          "end": "2025-12-14"
+        },
+        "reference": {
+          "start": "2025-11-17",
+          "end": "2025-11-30"
+        },
+        "published": "2025-12-18"
+      },
+      {
+        "period": "202526",
+        "yes": 17.8,
+        "no": 71.8,
+        "doNotKnow": 10.4,
+        "standardError": 0.47,
+        "ci90": {
+          "lower": 17,
+          "upper": 18.6
+        },
+        "collection": {
+          "start": "2025-12-15",
+          "end": "2025-12-28"
+        },
+        "reference": {
+          "start": "2025-12-01",
+          "end": "2025-12-14"
+        },
+        "published": "2025-12-31"
+      },
+      {
+        "period": "202601",
+        "yes": 17.7,
+        "no": 71.1,
+        "doNotKnow": 11.2,
+        "standardError": 0.3,
+        "ci90": {
+          "lower": 17.2,
+          "upper": 18.2
+        },
+        "collection": {
+          "start": "2025-12-29",
+          "end": "2026-01-11"
+        },
+        "reference": {
+          "start": "2025-12-15",
+          "end": "2025-12-28"
+        },
+        "published": "2026-01-15"
+      },
+      {
+        "period": "202602",
+        "yes": 18.2,
+        "no": 71.4,
+        "doNotKnow": 10.4,
+        "standardError": 0.24,
+        "ci90": {
+          "lower": 17.8,
+          "upper": 18.6
+        },
+        "collection": {
+          "start": "2026-01-12",
+          "end": "2026-01-25"
+        },
+        "reference": {
+          "start": "2025-12-29",
+          "end": "2026-01-11"
+        },
+        "published": "2026-01-29"
+      },
+      {
+        "period": "202603",
+        "yes": 18.9,
+        "no": 70.1,
+        "doNotKnow": 11,
+        "standardError": 0.39,
+        "ci90": {
+          "lower": 18.3,
+          "upper": 19.5
+        },
+        "collection": {
+          "start": "2026-01-26",
+          "end": "2026-02-08"
+        },
+        "reference": {
+          "start": "2026-01-12",
+          "end": "2026-01-25"
+        },
+        "published": "2026-02-12"
+      },
+      {
+        "period": "202604",
+        "yes": 17.5,
+        "no": 73.1,
+        "doNotKnow": 9.4,
+        "standardError": 0.4,
+        "ci90": {
+          "lower": 16.8,
+          "upper": 18.2
+        },
+        "collection": {
+          "start": "2026-02-09",
+          "end": "2026-02-22"
+        },
+        "reference": {
+          "start": "2026-01-26",
+          "end": "2026-02-08"
+        },
+        "published": "2026-02-26"
+      },
+      {
+        "period": "202605",
+        "yes": 18.2,
+        "no": 72.4,
+        "doNotKnow": 9.4,
+        "standardError": 0.32,
+        "ci90": {
+          "lower": 17.7,
+          "upper": 18.7
+        },
+        "collection": {
+          "start": "2026-02-23",
+          "end": "2026-03-08"
+        },
+        "reference": {
+          "start": "2026-02-09",
+          "end": "2026-02-22"
+        },
+        "published": "2026-03-12"
+      },
+      {
+        "period": "202606",
+        "yes": 18.9,
+        "no": 72,
+        "doNotKnow": 9.1,
+        "standardError": 0.32,
+        "ci90": {
+          "lower": 18.4,
+          "upper": 19.4
+        },
+        "collection": {
+          "start": "2026-03-09",
+          "end": "2026-03-22"
+        },
+        "reference": {
+          "start": "2026-02-23",
+          "end": "2026-03-08"
+        },
+        "published": "2026-03-26"
+      },
+      {
+        "period": "202607",
+        "yes": 19.1,
+        "no": 71.8,
+        "doNotKnow": 9.1,
+        "standardError": 0.42,
+        "ci90": {
+          "lower": 18.4,
+          "upper": 19.8
+        },
+        "collection": {
+          "start": "2026-03-23",
+          "end": "2026-04-05"
+        },
+        "reference": {
+          "start": "2026-03-09",
+          "end": "2026-03-22"
+        },
+        "published": "2026-04-09"
+      },
+      {
+        "period": "202608",
+        "yes": 19.8,
+        "no": 70.9,
+        "doNotKnow": 9.3,
+        "standardError": 0.29,
+        "ci90": {
+          "lower": 19.3,
+          "upper": 20.3
+        },
+        "collection": {
+          "start": "2026-04-06",
+          "end": "2026-04-19"
+        },
+        "reference": {
+          "start": "2026-03-23",
+          "end": "2026-04-05"
+        },
+        "published": "2026-04-23"
+      },
+      {
+        "period": "202609",
+        "yes": 19.8,
+        "no": 71.1,
+        "doNotKnow": 9.1,
+        "standardError": 0.24,
+        "ci90": {
+          "lower": 19.4,
+          "upper": 20.2
+        },
+        "collection": {
+          "start": "2026-04-20",
+          "end": "2026-05-03"
+        },
+        "reference": {
+          "start": "2026-04-06",
+          "end": "2026-04-19"
+        },
+        "published": "2026-05-07"
+      },
+      {
+        "period": "202610",
+        "yes": 19.5,
+        "no": 70.3,
+        "doNotKnow": 10.2,
+        "standardError": 0.24,
+        "ci90": {
+          "lower": 19.1,
+          "upper": 19.9
+        },
+        "collection": {
+          "start": "2026-05-04",
+          "end": "2026-05-17"
+        },
+        "reference": {
+          "start": "2026-04-20",
+          "end": "2026-05-03"
+        },
+        "published": "2026-05-21"
+      },
+      {
+        "period": "202611",
+        "yes": 20.6,
+        "no": 69.6,
+        "doNotKnow": 9.9,
+        "standardError": 0.29,
+        "ci90": {
+          "lower": 20.1,
+          "upper": 21.1
+        },
+        "collection": {
+          "start": "2026-05-18",
+          "end": "2026-05-31"
+        },
+        "reference": {
+          "start": "2026-05-04",
+          "end": "2026-05-17"
+        },
+        "published": "2026-06-04"
+      },
+      {
+        "period": "202612",
+        "yes": 20.6,
+        "no": 69.4,
+        "doNotKnow": 10,
+        "standardError": 0.27,
+        "ci90": {
+          "lower": 20.2,
+          "upper": 21
+        },
+        "collection": {
+          "start": "2026-06-01",
+          "end": "2026-06-14"
+        },
+        "reference": {
+          "start": "2026-05-18",
+          "end": "2026-05-31"
+        },
+        "published": "2026-06-18"
+      },
+      {
+        "period": "202613",
+        "yes": 20.6,
+        "no": 68.7,
+        "doNotKnow": 10.7,
+        "standardError": 0.39,
+        "ci90": {
+          "lower": 20,
+          "upper": 21.2
+        },
+        "collection": {
+          "start": "2026-06-15",
+          "end": "2026-06-28"
+        },
+        "reference": {
+          "start": "2026-06-01",
+          "end": "2026-06-14"
+        },
+        "published": "2026-07-02"
+      },
+      {
+        "period": "202614",
+        "yes": 21.7,
+        "no": 67.5,
+        "doNotKnow": 10.9,
+        "standardError": 0.31,
+        "ci90": {
+          "lower": 21.2,
+          "upper": 22.2
+        },
+        "collection": {
+          "start": "2026-06-29",
+          "end": "2026-07-12"
+        },
+        "reference": {
+          "start": "2026-06-15",
+          "end": "2026-06-28"
+        },
+        "published": "2026-07-16"
+      },
+      {
+        "period": "202615",
+        "yes": 21.5,
+        "no": 68.1,
+        "doNotKnow": 10.3,
+        "standardError": 0.42,
+        "ci90": {
+          "lower": 20.8,
+          "upper": 22.2
+        },
+        "collection": {
+          "start": "2026-07-13",
+          "end": "2026-07-26"
+        },
+        "reference": {
+          "start": "2026-06-29",
+          "end": "2026-07-12"
+        },
+        "published": "2026-07-30"
+      },
+      {
+        "period": "202616",
+        "yes": 21.8,
+        "no": 68.6,
+        "doNotKnow": 9.6,
+        "standardError": 0.33,
+        "ci90": {
+          "lower": 21.3,
+          "upper": 22.3
+        },
+        "collection": {
+          "start": "2026-07-27",
+          "end": "2026-08-09"
+        },
+        "reference": {
+          "start": "2026-07-13",
+          "end": "2026-07-26"
+        },
+        "published": "2026-08-13"
+      },
+      {
+        "period": "202617",
+        "yes": 22.4,
+        "no": 68.2,
+        "doNotKnow": 9.4,
+        "standardError": 0.36,
+        "ci90": {
+          "lower": 21.8,
+          "upper": 23
+        },
+        "collection": {
+          "start": "2026-08-10",
+          "end": "2026-08-23"
+        },
+        "reference": {
+          "start": "2026-07-27",
+          "end": "2026-08-09"
+        },
+        "published": "2026-08-27"
+      },
+      {
+        "period": "202618",
+        "yes": 23.2,
+        "no": 67.2,
+        "doNotKnow": 9.6,
+        "standardError": 0.28,
+        "ci90": {
+          "lower": 22.7,
+          "upper": 23.7
+        },
+        "collection": {
+          "start": "2026-08-24",
+          "end": "2026-09-06"
+        },
+        "reference": {
+          "start": "2026-08-10",
+          "end": "2026-08-23"
+        },
+        "published": "2026-09-10"
+      },
+      {
+        "period": "202619",
+        "yes": 23.8,
+        "no": 66.5,
+        "doNotKnow": 9.7,
+        "standardError": 0.26,
+        "ci90": {
+          "lower": 23.4,
+          "upper": 24.2
+        },
+        "collection": {
+          "start": "2026-09-07",
+          "end": "2026-09-20"
+        },
+        "reference": {
+          "start": "2026-08-24",
+          "end": "2026-09-06"
+        },
+        "published": "2026-09-24"
+      },
+      {
+        "period": "202620",
+        "yes": 23.8,
+        "no": 66.4,
+        "doNotKnow": 9.8,
+        "standardError": 0.41,
+        "ci90": {
+          "lower": 23.1,
+          "upper": 24.5
+        },
+        "collection": {
+          "start": "2026-09-21",
+          "end": "2026-10-04"
+        },
+        "reference": {
+          "start": "2026-09-07",
+          "end": "2026-09-20"
+        },
+        "published": "2026-10-08"
+      },
+      {
+        "period": "202621",
+        "yes": 24.6,
+        "no": 65.8,
+        "doNotKnow": 9.6,
+        "standardError": 0.27,
+        "ci90": {
+          "lower": 24.2,
+          "upper": 25
+        },
+        "collection": {
+          "start": "2026-10-05",
+          "end": "2026-10-18"
+        },
+        "reference": {
+          "start": "2026-09-21",
+          "end": "2026-10-04"
+        },
+        "published": "2026-10-22"
+      },
+      {
+        "period": "202622",
+        "yes": 24.2,
+        "no": 61.9,
+        "doNotKnow": 13.9,
+        "standardError": 0.61,
+        "ci90": {
+          "lower": 23.2,
+          "upper": 25.2
+        },
+        "collection": {
+          "start": "2026-10-19",
+          "end": "2026-11-01"
+        },
+        "reference": {
+          "start": "2026-10-05",
+          "end": "2026-10-18"
+        },
+        "published": "2026-11-05"
+      }
+    ],
+    "uncertainty": "published: standard error (delete-a-group jackknife); 90% interval computed by us as estimate +/- 1.645 x SE, per the BTOS methodology"
+  },
+  "uk": {
+    "kind": "Survey estimate",
+    "wave": "Wave 165",
+    "question": "Which of the following artificial intelligence technologies, if any, does your business currently use?",
+    "basis": "As a percentage of businesses not permanently stopped trading, broken down by industry and size band, weighted by count, UK, 18 September 2023 to 4 October 2026",
+    "released": "Released 8 October 2026",
+    "livePeriod": "Survey live period: 21 September 2026 to 4 October 2026",
+    "responses": "The survey was sent to around 39,000 UK businesses, and results presented in this release are based on a limited number of responses, around 25.7% (9,933) of all businesses surveyed that responded.",
+    "options": [
+      "Autonomous vehicles",
+      "Data processing using machine learning",
+      "Image processing using machine learning",
+      "Robotics",
+      "Text generation using Large Language Models",
+      "Visual content creation",
+      "Other",
+      "Not sure",
+      "Business does not currently use artificial intelligence technologies"
+    ],
+    "allBusinesses": {
+      "band": "All businesses",
+      "dates": "21 September 2026 to 4 October 2026",
+      "values": {
+        "Autonomous vehicles": {
+          "estimate": null,
+          "ci95": {
+            "lower": 0,
+            "upper": null
+          },
+          "ciPointCheck": null
+        },
+        "Data processing using machine learning": {
+          "estimate": 8.5,
+          "ci95": {
+            "lower": 6.7,
+            "upper": 10.2
+          },
+          "ciPointCheck": 8.5
+        },
+        "Image processing using machine learning": {
+          "estimate": 5,
+          "ci95": {
+            "lower": 3.5,
+            "upper": 6.5
+          },
+          "ciPointCheck": 5
+        },
+        "Robotics": {
+          "estimate": null,
+          "ci95": {
+            "lower": null,
+            "upper": null
+          },
+          "ciPointCheck": null
+        },
+        "Text generation using Large Language Models": {
+          "estimate": 19,
+          "ci95": {
+            "lower": 16.9,
+            "upper": 21.1
+          },
+          "ciPointCheck": 19
+        },
+        "Visual content creation": {
+          "estimate": 14.4,
+          "ci95": {
+            "lower": 12.5,
+            "upper": 16.4
+          },
+          "ciPointCheck": 14.4
+        },
+        "Other": {
+          "estimate": 2.2,
+          "ci95": {
+            "lower": 1.5,
+            "upper": 2.8
+          },
+          "ciPointCheck": 2.2
+        },
+        "Not sure": {
+          "estimate": 6.2,
+          "ci95": {
+            "lower": 4.8,
+            "upper": 7.5
+          },
+          "ciPointCheck": 6.2
+        },
+        "Business does not currently use artificial intelligence technologies": {
+          "estimate": 64.1,
+          "ci95": {
+            "lower": 61.4,
+            "upper": 66.9
+          },
+          "ciPointCheck": 64.1
+        }
+      }
+    },
+    "tenPlus": {
+      "band": "All size bands excluding 0 - 9",
+      "dates": "21 September 2026 to 4 October 2026",
+      "values": {
+        "Autonomous vehicles": {
+          "estimate": null,
+          "ci95": {
+            "lower": null,
+            "upper": null
+          },
+          "ciPointCheck": null
+        },
+        "Data processing using machine learning": {
+          "estimate": 13.4,
+          "ci95": {
+            "lower": 12.2,
+            "upper": 14.7
+          },
+          "ciPointCheck": 13.4
+        },
+        "Image processing using machine learning": {
+          "estimate": 5.8,
+          "ci95": {
+            "lower": 4.9,
+            "upper": 6.7
+          },
+          "ciPointCheck": 5.8
+        },
+        "Robotics": {
+          "estimate": 1.4,
+          "ci95": {
+            "lower": 1,
+            "upper": 1.8
+          },
+          "ciPointCheck": 1.4
+        },
+        "Text generation using Large Language Models": {
+          "estimate": 20.9,
+          "ci95": {
+            "lower": 19.3,
+            "upper": 22.5
+          },
+          "ciPointCheck": 20.9
+        },
+        "Visual content creation": {
+          "estimate": 18.6,
+          "ci95": {
+            "lower": 17,
+            "upper": 20.1
+          },
+          "ciPointCheck": 18.6
+        },
+        "Other": {
+          "estimate": 2.5,
+          "ci95": {
+            "lower": 1.9,
+            "upper": 3.1
+          },
+          "ciPointCheck": 2.5
+        },
+        "Not sure": {
+          "estimate": 11.1,
+          "ci95": {
+            "lower": 9.9,
+            "upper": 12.4
+          },
+          "ciPointCheck": 11.1
+        },
+        "Business does not currently use artificial intelligence technologies": {
+          "estimate": 50.8,
+          "ci95": {
+            "lower": 48.8,
+            "upper": 52.8
+          },
+          "ciPointCheck": 50.8
+        }
+      }
+    },
+    "uncertainty": "published: 95% confidence intervals in the ONS confidence-interval dataset for the same wave"
+  },
+  "eu": {
+    "kind": "Survey estimate",
+    "dataset": "isoc_eb_ai",
+    "updated": "2026-06-15T11:00:00+0200",
+    "indicator": "Enterprises using at least one of the AI technologies: AI_TTM, AI_TSR, AI_TNLG, AI_TIR, AI_TML, AI_TPA, AI_TAR, E_AI_TPVSG",
+    "sector": "All activities (except agriculture, forestry and fishing, and mining and quarrying), without financial sector",
+    "sizeClasses": [
+      "From 0 to 1 person employed",
+      "From 0 to 9 persons employed",
+      "From 2 to 9 persons employed",
+      "From 10 to 49 persons employed",
+      "From 10 to 249 persons employed",
+      "10 persons employed or more",
+      "From 50 to 249 persons employed",
+      "250 persons employed or more"
+    ],
+    "years": [
+      "2021",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "figure": null,
+    "uncertainty": "not yet checked: the dataset carries no standard error; Eurostat metadata says EU standard errors are published for a selection of indicators, in a library we could not open"
+  }
+}

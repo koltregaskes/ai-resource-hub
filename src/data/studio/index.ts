@@ -12,6 +12,9 @@ import { article as twelveWordsOnAnAiPricePage } from './twelve-words-on-an-ai-p
 import { article as aiPricingRaceToZero } from './ai-pricing-race-to-zero';
 import { article as whatIsTheModelContextProtocol } from './what-is-the-model-context-protocol';
 import { article as aiCodingCliToolsAndTheirLicences } from './ai-coding-cli-tools-and-their-licences';
+import { article as officialStatisticsOnBusinessAiUse } from './official-statistics-on-business-ai-use';
+import { article as euAiActLabellingAiGeneratedContent } from './eu-ai-act-labelling-ai-generated-content';
+import { article as whatAContentCredentialRecords } from './what-a-content-credential-records';
 // Each article adds one import line and one entry here, in the same pull request as its page.
 export const studioArticles: StudioArticle[] = [
   costOfReadingANovel,
@@ -27,4 +30,7 @@ export const studioArticles: StudioArticle[] = [
   aiPricingRaceToZero,
   whatIsTheModelContextProtocol,
   aiCodingCliToolsAndTheirLicences,
+  officialStatisticsOnBusinessAiUse,
+  euAiActLabellingAiGeneratedContent,
+  whatAContentCredentialRecords,
 ];
