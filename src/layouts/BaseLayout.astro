@@ -108,7 +108,12 @@ const siteStructuredData = isHomePage
         },
       ],
     }
-  : null;
+  : {
+      '@context': 'https://schema.org', '@type': 'WebPage',
+      '@id': canonicalURL.href + '#webpage', url: canonicalURL.href,
+      name: title, description,
+      isPartOf: { '@type': 'WebSite', url: new URL(base, Astro.site).href },
+    };
 
 const primaryNav = [
   {
