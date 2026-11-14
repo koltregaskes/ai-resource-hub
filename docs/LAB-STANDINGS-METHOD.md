@@ -1,176 +1,225 @@
-# Lab Standings: method (draft v0.1)
+# Lab Standings: method (draft v0.2)
 
-Status: draft for review. Nothing here is built yet.
+Status: draft for review. Nothing here is built yet. v0.2 answers the Codex review of v0.1 (PR 105, 14 Nov 2026).
 Owner: Claude (AI Resource Hub session). Hub issue: koltregaskes/rooms-os-hub#1568.
 Terms checked: 14 Nov 2026, first-hand, by reading each source's current terms page.
 
 ## What it is
 
-One score from 0 to 100 for each AI lab, telling a reader who is ahead right now and why. It's built from six parts we can source and show, and every number on the page links to where it came from and when.
+One score from 0 to 100 for each AI lab, telling a reader where the lab stands **relative to the other labs right now**, and why. It's built from parts we can source and show, and every number on the page links to where it came from and when.
 
 The idea came from AI Race Scoreboard. We've kept the useful ideas (one composite per lab, a coverage label, receipts, momentum, your own weights, a weekly archive) and built our own method, wording and design. It doesn't use their data, feeds or text.
+
+**Every score is relative standing.** A lab's score can fall because another lab moved, even if nothing about the first lab changed. The page says this next to the scores and next to momentum.
 
 ## Rules we hold to
 
 1. **No guessing.** A missing input stays missing. We don't fill it with a neutral value or an estimate.
-2. **Receipts on everything.** Every input stores its value, source name, source URL, the date the source says it applies to, the date we fetched it, and the licence.
-3. **Only sources whose terms allow it.** If the terms say no, the source stays out of the score, however good the data is (see "Sources we can't use").
+2. **Receipts on everything.** Every input stores its value, unit, source name, source URL, the date the source says it applies to, the date we fetched it, the source's version or vintage, and the licence.
+3. **Only sources whose terms allow it** (see "Sources we can't use").
 4. **Published history never changes.** Each weekly snapshot is frozen. If the method changes, we re-score old weeks under the new method and show those next to the originals, never in place of them.
 5. **Information, not advice.** Nothing on the page tells anyone to buy, sell or bet.
+6. **Every formula has defined edge cases.** Zero, missing, ties and invalid input each have a stated outcome, listed under each part. Non-finite or negative inputs where only non-negative values make sense are rejected and logged, never scored.
 
 ## Which labs are in
 
-A lab is listed if AIRH's verified catalogue has at least one active general-purpose language model from it released in the last 18 months. Image, video, audio and speech-only companies are out of v1, because the capability and adoption sources below only cover language models.
+- **Listed:** a lab with at least one active general-purpose language model in AIRH's verified catalogue, released in the last 18 months. Image, video, audio and speech-only companies are out of v1.
+- **Ranked:** a lab with data for at least **3 of the 5 scored parts**, one of which is capability, and whose observed default weights add up to at least 60.
+- Anything with less is still listed, under "Not enough data to rank", with its coverage shown.
 
-A lab is **ranked** only if it has data for at least 4 of the 6 parts and one of those is capability. Anything with less is still listed, under "Not enough data to rank", with its coverage shown.
+## The parts
 
-## The six parts
-
-Each part produces a score from 0 to 100. The default weights add up to 100.
+Each scored part produces a score from 0 to 100. The default weights add up to 100.
 
 | Part | Default weight | Source | Licence / terms |
 |---|---|---|---|
-| Capability | 30 | Epoch AI, Epoch Capabilities Index (ECI), Epoch's own runs only | CC BY 4.0 |
-| Value | 15 | Capability (above) divided by AIRH's verified prices | CC BY 4.0 plus our own data |
+| Capability | 35 | Epoch AI, Epoch Capabilities Index (ECI), as published (`eci_scores.csv`) | CC BY 4.0 |
+| Value | 20 | Capability (above), with AIRH's verified prices | CC BY 4.0 plus our own data |
 | Shipping pace | 15 | AIRH's verified model catalogue | Our own data |
 | Openness | 10 | AIRH's verified catalogue, plus each model's licence | Our own data |
-| Developer usage | 15 | OpenRouter public rankings dataset (API) | CC BY 4.0 |
-| Business scale | 15 | Epoch AI, Data on AI companies (annualised revenue) | CC BY 4.0 |
+| Developer usage (observed) | 20 | OpenRouter Data API, public rankings dataset | CC BY 4.0 |
+| Business scale | **0 (shown, not scored, in v1)** | Epoch AI, Data on AI companies | CC BY 4.0 |
 
-### 1. Capability (30)
+Business scale has weight 0 in v1, following the review: Epoch covers only some labs, so scoring it would change the basis of comparison from lab to lab. It's shown on each lab card with its receipt. We'll revisit once coverage and company scope are documented.
 
-- **Input:** the ECI of the lab's best model, using Epoch AI's internal runs only. Epoch's hub also includes external runs that keep their own licences, so those are excluded.
+### 1. Capability (35)
+
+- **Input:** Epoch's published ECI for each model, from the ECI download, CC BY 4.0. We use the published index as it is; we don't refit it.
+  - Epoch fits the ECI from benchmark results run by Epoch, by benchmark creators and by model developers. It's Epoch's derived index under Epoch's licence.
+  - **Open check before build:** confirm from Epoch's ECI documentation which external benchmark sources feed the fit. If any feed is one whose terms bar our use, raise it before we rely on the index.
+- **Lab best:** the highest ECI among the lab's models. A model counts once it's in the snapshot's ECI download.
+- **Floor:** the highest ECI among **all eligible models released on or before the same calendar date 12 months earlier** (for example, for a 14 Nov 2026 snapshot, released by 14 Nov 2025).
+  - Both ends come from **the same ECI download**, so a re-fit by Epoch moves both together.
+  - This is the frontier a year ago, not a particular lab's past score.
+- **Leader:** the highest lab best in the snapshot.
 - **Formula:** score = 100 × (lab best − floor) ÷ (leader − floor), clamped to 0 to 100.
-  - The **floor** is the leader's ECI exactly 12 months before the snapshot date.
-  - In plain words, a lab level with today's leader scores 100, and a lab that is only as good as the leader was a year ago scores 0.
-  - That gives the scale a meaning a reader can hold on to: the score tracks how far behind the frontier a lab is, measured in time.
-- **Why not our own benchmark table?** On 14 Nov 2026 only 12 of the 365 benchmark scores in our export count as rankable (the other 353 are quarantined until their evidence is fixed), and collection has stalled since February (hub #1533). That isn't enough to rank labs. If #1533 is fixed and our own scores reach 3 or more rankable benchmarks per frontier model, we'll reconsider.
+  - **What it means:** the share of the last year's frontier gain that the lab has matched. It's a fraction of progress, not a measured time lag.
+- **Edge cases:**
+  - Leader ≤ floor (no gain in a year), or no eligible model by the floor date: capability is **missing for every lab** that week, and the page says why.
+  - Tied leaders all score 100.
+  - Negative or zero raw ECI values are valid, because only differences are used.
 - **Matching:** Epoch model names are mapped to AIRH model ids in a checked-in table. An unmapped model is logged and left out; we never fuzzy-match it at build time.
 
-### 2. Value (15)
+### 2. Value (20)
 
-- **Input:**
-  - for each of the lab's models that has both an ECI score and a verified AIRH price (`pricing_source` set);
-  - a blended price = (3 × input price + output price) ÷ 4, per million tokens, which assumes a typical 3:1 read-to-write mix.
-- **Lab value:** the best capability per dollar among those models, where capability per dollar = (ECI − floor) ÷ blended price, using the same floor as above.
+- **Eligible models:** those with an ECI score and a verified AIRH price (`pricing_source` set).
+  - Input and output prices must be finite and ≥ 0.
+  - The blended price below must be > 0.
+  - A free input or output direction is allowed, as long as the blend is still positive.
+- **Blended price** = (3 × input price + output price) ÷ 4, per million tokens.
+  - This is an **explicit default workload assumption** (three tokens read for each one written). We don't claim it's typical.
+  - The page shows both prices next to the value score, so readers can judge for their own mix.
+- **Model value** = max(ECI − floor, 0) ÷ blended price. The floor is the same one as capability.
+- **Lab value:** the best model value among the lab's eligible models.
 - **Formula:** score = 100 × log(1 + lab value) ÷ log(1 + best lab value).
-  - The log stops one very cheap small model from flattening everyone else.
-- **No data:** missing when no model has both an ECI score and a verified price. Free-only and unpriced models don't count.
+  - All terms are ≥ 0, so the score is between 0 and 100 and keeps the ordering.
+- **Edge cases:**
+  - A lab with no eligible models: value is **missing**.
+  - Every eligible lab has value 0 (no model above the floor): every eligible lab scores **0**.
+  - The log softens extremes but doesn't stop one very cheap model from compressing everyone else's scores. The page shows the raw value next to the score.
 
 ### 3. Shipping pace (15)
 
-- **Input:** the number of distinct models the lab released in the last 90 days, taken from AIRH's verified catalogue (`released` date plus an official source URL).
-  - Variants of one model (fast, batch, mini/flash of the same release, dated snapshots) count once, as a single release.
-  - This needs a `family` field in the catalogue; see "Build notes".
+- **Input:** distinct model releases by the lab in the last 90 days, from AIRH's verified catalogue (a `released` date checked against an official source).
+  - Variants of one release (dated snapshots, fast, batch, regional editions) count once, using a `family` field.
 - **Formula:** score = 100 × √(lab count ÷ highest lab count).
-  - The square root rewards shipping without letting a lab that pushes out many small releases run away with it.
-- **No data:** a lab with no releases in 90 days scores 0, not "missing". That's a real result, not a gap.
+  - **Square root:** one release against a leader's four scores 50, not 25. That's deliberate damping. Volume isn't the same as useful progress, which is why this part's weight is modest.
+- **Edge cases:**
+  - Every lab has 0 releases: every lab scores **0**.
+  - A lab scores 0, rather than "missing", **only if** its catalogue coverage has been checked for the window: a recorded check that we've reviewed its official release channel up to the snapshot date. Without that check, shipping is missing for the lab.
 
 ### 4. Openness (10)
 
-- **Input:** the lab's distinct model releases in the last 12 months, each graded by licence:
+- **Input:** the lab's distinct releases in the last 12 months, each graded once:
 
-  | Licence | Credit |
+  | Release | Credit |
   |---|---|
-  | Open weights under an OSI-approved licence (for example Apache 2.0, MIT) | 1.0 |
-  | Open weights with use restrictions (for example a custom community licence with a user cap or acceptable-use terms) | 0.6 |
-  | Weights not released | 0 |
+  | Weights published under an OSI-approved licence (for example Apache 2.0, MIT) | 1.0 |
+  | Weights published with use restrictions (for example a custom community licence) | 0.6 |
+  | Weights not published | 0 |
+  | Licence not yet checked | Excluded from both sums and flagged. Never counted as 0 |
 
-- **Formula:** score = 100 × (sum of credits ÷ number of releases).
-- **No data:** missing when the lab had no releases in 12 months. Each licence grade is a receipt that links to the licence text.
+  - A grouped release whose variants carry different licences takes the credit of its **most open published weights**, with each variant's licence shown in the receipt.
+- **Formula:** score = 100 × (sum of credits ÷ number of graded releases).
+- **Edge cases:** missing when the lab has no graded releases in 12 months.
 
-### 5. Developer usage (15)
+### 5. Developer usage, observed (20)
 
-- **Input:** the lab's share of all tokens in OpenRouter's public rankings dataset over the last 28 days.
-  - Each model's tokens are added to its lab.
-  - The dataset's `other` row is included in the total, so the shares are of all traffic, not just of the top 50 models.
-- **Formula:** score = 100 × √(lab share ÷ highest lab share).
-- **Label on the page:** "Developer usage (OpenRouter)", never "adoption".
-  - OpenRouter is one marketplace that leans towards developers and open models.
-  - Traffic straight to a lab's own API or apps isn't in it.
-  - OpenRouter also says token counts come from each provider's own tokeniser, so they aren't strictly comparable.
-- **Attribution:** "Source: OpenRouter (openrouter.ai/rankings), as of {date}", as the dataset terms require.
-- **No data:** missing when none of the lab's models appear in the top 50.
+- **Input:** OpenRouter's public rankings dataset (Data API), daily rows over the last 28 days. Each day lists the top 50 models by tokens, plus one `other` row for everything else.
+- **What we can and can't measure:** a lab's tokens in the `other` row can't be attributed to it. So this part measures **observed top-50 contributions to public OpenRouter traffic**, not a lab's full usage.
+  - Private and zero-data-retention traffic isn't in the dataset.
+  - The label on the page says exactly that: "Developer usage: observed top-50 share of public OpenRouter traffic".
+- **Lab observed volume:** the sum of tokens over the 28 days for the lab's models that appear in the daily top-50 rows.
+- **Formula:** score = 100 × √(lab observed volume ÷ highest lab observed volume).
+  - The denominator cancels in that ratio, so the `other` row doesn't fix incomplete lab coverage. We don't claim it does.
+- **Edge cases:**
+  - Fewer than 20 of the 28 days available: missing for all labs.
+  - A lab never appears in the top 50 across the window: **0**, labelled "not in top 50", which is an observation rather than missing.
+  - Every lab at 0: every lab scores 0.
+  - Negative counts: rejected.
+- **Republishing:** keep the dataset's response metadata (as-of date) with the snapshot, and cite: "Source: OpenRouter (openrouter.ai/rankings), as of {as_of}. Licensed under CC BY 4.0."
 
-### 6. Business scale (15)
+### 6. Business scale (0 in v1: shown, not scored)
 
-- **Input:** the latest annualised revenue for the lab's company in Epoch AI's "Data on AI companies" dataset, with the date Epoch gives for that figure.
-- **Formula:** score = 100 × (log10(revenue) − log10($10M)) ÷ (log10(top revenue) − log10($10M)), clamped to 0 to 100.
-- **Stale data:** if the figure is more than 9 months old, it's shown but treated as missing.
-- **Valuation:** shown on the lab card with its receipt but **not scored**. A valuation is the market's opinion of the same things the other parts measure, so scoring it would count them twice.
-- **No data:** missing for labs Epoch doesn't cover. We don't type in figures from press reports for v1. That can come later with a reviewed source list.
+- **Shown on the lab card:** the latest annualised revenue in Epoch's companies data, in USD, with Epoch's date and confidence note. It's attributed to the lab's company only where the company is the lab: a parent company's revenue isn't shown as a lab's.
+- **If it's scored later**, the formula will be:
+  - revenue ≤ $10M scores 0, decided before taking any log;
+  - above that, 100 × (log10(revenue) − 7) ÷ (log10(top revenue) − 7);
+  - if top revenue ≤ $10M, every lab scores 0;
+  - zero or negative revenue is rejected;
+  - a figure older than 9 months counts as missing.
+- **Valuation** is shown with its receipt and never scored.
 
 ## Putting it together
 
 - **Composite** = Σ(weight × part score) ÷ Σ(weights of the parts the lab has).
-  - In other words, missing parts are dropped and the other weights are scaled up to fill the gap.
-  - This is why the coverage label matters: "5/6 data" tells the reader the score rests on less.
-- **Rounding:** to one decimal place. Ties share a rank.
-- **How solid is the rank?** For each lab, we re-run the composite six times, leaving out one part each time, and show the best and worst rank it gets. A lab whose rank swings by 5 places with one part removed is shown as "rank depends heavily on {part}".
+  - The page always shows the coverage ("3/5 parts") **and the observed weight** ("weights covered: 70 of 100").
+- **Known limitation, shown on the page:** re-scaling means a missing part can help or hurt a lab compared with an observed score.
+  - For example, a lab scoring 60 everywhere scores 60 with one part missing. With that part observed, it scores lower if the part is weak, or higher if it's strong.
+  - The observed-weight figure and the drop-one range (below) are there so readers can see this.
+- **No composite:** when no part is observed, or the observed weight is 0.
+- **Ties and rounding:** ranking uses unrounded composites, displayed to one decimal. Exact ties share a rank and the next rank is skipped (1, 1, 3).
+
+### Your weights (sliders)
+
+- Each weight is a finite number from 0 to 100. If every slider is 0, the table shows "Set at least one weight" instead of re-ranking.
+- Moving sliders re-ranks in the browser only. The URL keeps the weights, so a view can be shared, and a "Your weights" badge shows when they differ from the default.
+- The published ranking, archive and feeds always use the default weights.
+
+### How solid is the rank? (drop-one range)
+
+- **Cohort:** fixed at the labs ranked under the default weights that week.
+- **Scenarios:** for each of the five scored parts, remove that part **from every lab in the cohort**, re-compute every composite, and re-rank the whole cohort.
+  - Labs keep their cohort membership even if they'd fall below the ranking threshold in a scenario.
+  - Removing capability is a scenario like the others.
+- **Lab range:** the best and worst rank across the baseline plus the five scenarios.
+- **Warning:** "rank depends heavily on {part}" when the range width (worst − best) is 5 or more places. It names the part whose removal moves the lab furthest.
+- **Labelled as:** sensitivity to leaving out one part, not statistical confidence.
 
 ## On the page
 
-- **Table:** rank, lab, composite, coverage ("n/6"), the six part scores, and the 7-day and 28-day change.
-- **Receipts:** every number opens a small panel with its value, source, link, "as of" date, fetched date and licence.
-- **Your weights:** sliders for the six weights.
-  - Moving them re-ranks the table in the browser only.
-  - The URL keeps the weights, so a view can be shared.
-  - A clear "Your weights" badge shows when they differ from the default.
-  - The published ranking, archive and feeds always use the default weights.
-- **Momentum:** composite change over 7 and 28 days, from the frozen snapshots. It's blank until enough weeks exist; we never back-fill.
+- **Table:**
+  - rank, lab and composite;
+  - coverage and observed weight;
+  - the five part scores;
+  - the 7-day and 28-day change in composite, labelled "change in relative standing".
+- **Receipts:** every number opens a small panel with its value, unit, source, link, "as of" date, fetched date, version and licence.
+- **Momentum:** from the frozen snapshots only. It's blank until enough weeks exist; we never back-fill.
 - **What changed this week:** rank moves, any part that moved 5 or more points, new or lost data, and method changes.
-- **Weekly archive:** one frozen snapshot every Monday at 06:00 UTC, at `/labs/standings/YYYY-MM-DD/`. Each snapshot stores the inputs, the receipts, the method version, and the scores.
-- **Attribution footer:** Epoch AI (CC BY 4.0), with its citation; OpenRouter (CC BY 4.0), with its required wording; plus "Lab Standings is our own analysis and isn't endorsed by these sources."
+- **Weekly archive:** one frozen snapshot every Monday at 06:00 UTC, at `/labs/standings/YYYY-MM-DD/`. It stores the inputs, receipts, method version and scores.
+- **Attribution footer:**
+  - Epoch AI (CC BY 4.0), with its citation;
+  - OpenRouter (CC BY 4.0), with its required wording and as-of date;
+  - "Lab Standings is our own analysis and isn't endorsed by these sources."
 
 ## Sources we can't use (terms read 14 Nov 2026)
 
 | Source | What the terms say | Decision |
 |---|---|---|
-| Arena (arena.ai, formerly LMArena) | Terms of Use, last updated 23 Feb 2026, User Conduct section: users may not "access the Services through programmatic or automated means" (vi), may not use "any manual or automated software, devices or other processes" to scrape, extract or download data from its pages (vii), and may not reproduce or commercially exploit the Service or its output (i). | **Out, including manual snapshots.** Clause (vii) covers manual extraction too, so the "manual snapshot" idea in the hub issue doesn't clear the terms. We can link to Arena, but we don't copy its numbers. |
-| Artificial Analysis | Data Platform Terms, last revised 19 Aug 2026, which also cover the free API. Section 2.5 bars using its data in any product "whose primary purpose is benchmarking, ranking, comparison" without written consent. The Terms of Use, section 2.2(c), bar using the site "to build a similar or competitive website". Section 2.3 allows brief citations of single data points with attribution, not structured or tabular reuse. | **Out of the score.** A lab ranking is exactly what 2.5 rules out. Single facts may be quoted in editorial text with "Source: Artificial Analysis (artificialanalysis.ai)". |
-| OpenRouter website pages | Terms of Service, last updated 31 Aug 2026: no scraping or copying of information on the Site by automated means. | **Pages out; the CC BY dataset API is in** (part 5). |
-| Polymarket | Terms of Use, effective 11 Aug 2026: no scraping of the Site. The UK is a restricted jurisdiction for trading. Data access is barred for capital-markets firms (we aren't one). | **Not in v1.** Odds are never scored. Showing them at all is Kol's call later, display-only, through Polymarket's API, with a clear "not betting advice" line. |
+| Arena (arena.ai, formerly LMArena) | Terms of Use, updated 23 Feb 2026, User Conduct section: users may not access the services by programmatic or automated means (vi), may not use manual or automated processes to scrape, extract or download data (vii), and may not reproduce or commercially exploit the service or its output (i). | **Out, including manual snapshots.** We can link to Arena, but we don't copy its numbers. |
+| Artificial Analysis | **Data Platform Terms**, revised 19 Aug 2026, which also cover the free API. Section 2.5 bars using its data in any product whose primary purpose is benchmarking, ranking or comparison, without written consent. Section 2.4 bars redistribution. **Website Terms of Use**, revised 15 Sep 2026: 2.2(c) bars using the site to build a similar or competitive site, and 3.3(b)(vi) bars automated requests and scraping. | **Out of the score.** The one narrow allowance is Data Platform Terms 2.3: a brief citation of a single data point in editorial text, credited "Source: Artificial Analysis (artificialanalysis.ai)", and never in tables. It doesn't override the restrictions above. |
+| OpenRouter website pages | Terms of Service, 31 Aug 2026: no scraping or automated copying of the Site. | **Pages out; the CC BY 4.0 Data API is in** (part 5), with its response metadata and licence wording kept. |
+| Polymarket | Terms of Use, effective 11 Aug 2026: the UK is a restricted jurisdiction for trading. The data clauses restrict collecting information for unauthorised purposes, and restrict redistributing data to capital-markets clients **and market-data distributors**. | **Not in v1.** Odds are never scored. Showing them at all is Kol's call later, and only after a fresh check of those data clauses (being outside capital markets doesn't by itself permit redistribution), with a clear "not betting advice" line. |
 
-## Knock-on finding (outside this feature)
-
-AIRH already pulls Artificial Analysis data:
-
-- `scripts/scrapers/benchmarks.ts`;
-- the speed scraper;
-- `scripts/scrapers/creative-benchmarks.ts` (image, video and TTS arenas).
-
-It also pulls Arena-derived Elo through Hugging Face. Under the August 2026 Artificial Analysis terms and the February 2026 Arena terms, a public comparison site using that data is likely not allowed. This needs its own hub issue and a decision. It isn't fixed by this doc.
+AIRH's existing use of Artificial Analysis and Arena data is being removed in koltregaskes/ai-resource-hub#107 (hub #1569). None of the five scored parts above depends on either source.
 
 ## What needs Kol
 
-- **An OpenRouter API key for part 5.**
-  - The dataset endpoints need a valid OpenRouter key: 30 requests a minute, 500 a day.
-  - Kol adds it himself as a GitHub Actions secret named `OPENROUTER_DATASETS_KEY`.
-  - No agent reads, types or stores it.
-  - Until then, part 5 is missing for every lab and the page says so.
+- **An OpenRouter API key for part 5.** Kol adds it himself as a GitHub Actions secret named `OPENROUTER_DATASETS_KEY`. No agent reads, types or stores it. Until then, part 5 is missing for every lab and the page says so.
 - **Market odds:** whether to show them at all (default: no).
-
-Nothing else here needs a yes: Epoch's data is CC BY and offered as a direct download, and the rest is our own data.
 
 ## Build notes (for the build PRs, not this one)
 
 1. **Catalogue fields:**
    - `family`, so variants count once;
-   - `licence_id` and `licence_url` for openness.
-   Fill both for every catalogue model released since 1 Jan 2025, each with a receipt.
-2. **Epoch mapping table:** `scripts/lab-standings/epoch-model-map.ts`, plus a test that fails on an unmapped frontier model.
-3. **Collectors** (all write receipts):
-   - Epoch benchmark ZIP (internal runs only);
-   - Epoch companies ZIP;
-   - OpenRouter rankings (skipped cleanly with no key).
-4. **Scorer:** a pure function from inputs to scores, with unit tests for every formula, the coverage rule, the drop-one rank range and re-weighting.
-5. **Snapshot:** a frozen weekly JSON, written once with the `wx` flag like the newsletter archive. Add a re-score script that writes `rescored/<method-version>/` next to it and never over it.
-6. **Page:** `/labs/standings/`, with the table, receipts panel, sliders (client-side only), momentum, what changed, archive index and attribution footer.
-7. **Feeds (later):** JSON at `/data/lab-standings-latest.json` and RSS of the weekly "what changed".
+   - `licence_id` and `licence_url` for openness;
+   - a per-lab `catalogue_checked_through` date for the shipping zero rule.
+2. **Epoch:** the ECI download (`eci_scores.csv`) and the companies download, each stored with its download date and file hash. Plus the model-mapping table, and a test that fails on an unmapped frontier model.
+3. **OpenRouter:** the Data API rankings collector, which keeps the response metadata and skips cleanly with no key.
+4. **Scorer:** a pure function from inputs to scores, with unit tests for:
+   - every formula, and every edge case above (all-zero, leader ≤ floor, no eligible models, invalid input);
+   - the coverage and observed-weight rule;
+   - re-weighting with zero and all-zero sliders;
+   - competition ranking;
+   - the drop-one cohort range, using the review's two-lab example as a fixture.
+5. **Snapshot:** a frozen weekly JSON, written once (`wx`). A re-score script writes `rescored/<method-version>/` next to it, never over it.
+6. **Page:** `/labs/standings/`, with the table, receipts panel, sliders, momentum, what changed, archive index and attribution footer.
 
-## Open questions for the reviewer
+## Changes from v0.1 (Codex review, 14 Nov 2026)
 
-1. Is "a year behind the leader = 0" a fair floor, or should the floor be a fixed ECI value that we revisit yearly?
-2. Is a 3:1 input-to-output blend right for value, or should we show both prices and score on one?
-3. Is √ the right damping for shipping pace and usage, or does it still over-reward volume?
-4. Should business scale stay at 15 when Epoch covers only some labs, given that coverage then varies a lot between labs?
+1. **Capability:**
+   - uses Epoch's published ECI, not "internal runs only" (that would have needed a refit);
+   - the floor is redefined as the frontier a year earlier, from the same ECI download;
+   - degenerate cases are defined;
+   - scores are labelled as relative standing.
+2. **Value:** the numerator is floored at 0, prices are validated and the blend must be positive, the all-zero and no-eligible cases are separated, and 3:1 is stated as an assumption with both prices shown.
+3. **Shipping and usage:** all-zero branches added; a shipping zero needs a coverage check; usage is relabelled "observed top-50 share of public traffic".
+4. **Business scale:** weight 0 in v1 (shown, not scored), with log-safe rules for later. The other default weights are rebalanced: capability 35, value 20, shipping 15, openness 10, usage 20.
+5. **Composite:**
+   - shows observed weight;
+   - states the re-scaling limitation;
+   - adds the no-composite case, slider rules, competition ranks and unrounded ranking;
+   - the ranking threshold changes to 3 of 5 parts with observed weight ≥ 60.
+6. **Drop-one:** global removal, fixed cohort, baseline included, and the warning is based on range width.
+7. **Terms:** the Artificial Analysis website terms date is corrected to 15 Sep 2026, the citation allowance is attributed to Data Platform Terms 2.3, and the Polymarket summary is corrected.
+8. **Openness:** unknown licences are excluded rather than scored 0, and the grouped-release rule is defined.
