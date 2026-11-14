@@ -20,6 +20,24 @@ export const blogPosts: BlogPost[] = [
   ...practitionerB2.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: (p.slug === 'structured-output-is-not-a-correct-answer' ? 'Explainer' : 'Analysis') as BlogType, readTime: '5 min' })),
   ...practitionerB1.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: (p.slug === 'choose-an-ai-model-by-job' ? 'Explainer' : 'Analysis') as BlogType, readTime: '5 min' })),
   {
+    slug: 'price-history-repeats',
+    title: 'Our price history has 9,155 later records. 9,146 repeat the price before.',
+    description:
+      'Almost every row in our price history for lab-priced language models is the previous price written down again. What that means for any claim about how often AI prices change.',
+    date: '2026-11-14',
+    type: 'Analysis',
+    readTime: '5 min',
+  },
+  {
+    slug: 'model-count-is-not-the-market',
+    title: 'We list 268 language models. That number describes our list, not the market.',
+    description:
+      'Our catalogue holds 291 language-model entries, 268 after suffix-based variant filtering, 252 with a release date and context window, and 65 that are active and priced. Why none of those is a count of all AI models.',
+    date: '2026-11-14',
+    type: 'Analysis',
+    readTime: '5 min',
+  },
+  {
     slug: 'how-to-read-an-ai-price-list',
     title: 'How to read an AI price list',
     description:

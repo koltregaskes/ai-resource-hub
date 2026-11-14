@@ -279,14 +279,14 @@ export const calculations: Calculation[] = [
     id: 'calc-variant-rule',
     group: 'articles',
     name: 'Removing variants',
-    meaning: 'Stops one model being counted twice when the catalogue holds a dated snapshot or a faster tier of it.',
+    meaning: 'Leaves out catalogue entries whose names mark them as a dated snapshot or a fast tier, so that the same model is less likely to be counted more than once.',
     formula:
       'A catalogue entry is a variant if its id ends in a date stamp (-MMDD, -YYMM, -YYYYMMDD or -YYYY-MM-DD) or in -fast. Variants are dropped before any count or median.',
     inputs: 'Catalogue ids.',
     code: 'scripts/insights/compute-insights.mjs',
     usedOn: 'Every figure in the data articles.',
     limits:
-      'A simple naming rule. It removes 23 of 291 language-model entries in the 14 November 2026 snapshot. Point releases with their own name (for example 5.4 and 5.5) still count separately.',
+      'A simple naming rule, not a check that another entry for the same model exists: it can drop a "-fast" entry that has no standard sibling in the catalogue. It removes 23 of 291 language-model entries in the 14 November 2026 snapshot. Point releases with their own name (for example 5.4 and 5.5) still count separately.',
   },
   {
     id: 'calc-price-spread',
@@ -311,6 +311,19 @@ export const calculations: Calculation[] = [
     usedOn: 'Data articles on pricing and agents.',
     limits:
       'Uses today\'s prices grouped by release period, not the price on launch day. A few rows have extreme ratios that look like data errors; the median is not moved by them.',
+  },
+  {
+    id: 'calc-price-history-repeats',
+    group: 'articles',
+    name: 'Price-history repeats',
+    meaning: 'How many price-history rows for lab-priced language models are the previous price written down again.',
+    formula:
+      'Take language models only, and rows whose source is not OpenRouter. For each model, order the rows by time and leave out the first. A later row repeats when its input and output prices both equal the previous row of the same model. Rows labelled with a lab name and "(official)" and rows labelled with a website address are also counted separately. Repeat share = repeats ÷ rows counted.',
+    inputs: 'Rows of price_history.json and models.json in the committed cache; the script records the SHA-256 of both.',
+    code: 'scripts/insights/price-history-repeats.mjs',
+    usedOn: 'The data article on price-history repeats.',
+    limits:
+      'Describes our records, not how often labs change prices. A change between two rows can be a real move, a correction or a change of source label; the history cannot tell them apart.',
   },
   {
     id: 'calc-blended-price',
