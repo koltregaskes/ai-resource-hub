@@ -8,6 +8,12 @@ field to its definition.
 Input is a list of slot records (plain dicts). A slot is one model, one task
 and one repeat (1 to 3). Nothing here reads files, keys or the network.
 
+A checklist slot carries its check-level results in "checks": a list of
+{"id", "by": "script" or "judge", "state": "pass", "fail", "disputed" or
+"unresolved"}. The slot's pass must equal the AND of those checks (method,
+"Checklist graders"); a record that contradicts its own checks is refused.
+The check list is what makes the dispute sensitivity score possible.
+
 Conventions:
 - Scores and rates are percentages (0 to 100), unrounded.
 - Money is in US dollars, time in seconds.
@@ -29,6 +35,11 @@ OUTCOMES = ("answered", "abstained", "refused", "malformed", "execution_error")
 PENDING_OUTCOME = "judge_unresolved"
 ABSTAIN_FAMILIES = (2, 3)
 NO_SUCCESSFUL_TASKS = "no successful tasks"
+CHECK_BY = ("script", "judge")
+CHECK_STATES = ("pass", "fail", "disputed", "unresolved")
+# Only a model-judged check can be disputed or unresolved: a script check's
+# verdict is final and never goes to a judge.
+JUDGE_ONLY_STATES = ("disputed", "unresolved")
 
 REQUIRED_FIELDS = (
     "model",
@@ -71,6 +82,84 @@ def _where(index, slot):
         slot.get("task_id"),
         slot.get("repeat"),
     )
+
+
+def _check_checks(where, slot):
+    """Validate slot["checks"] against the slot's pass.
+
+    Returns (judged, disputed): the number of model-judged checks and how
+    many of them are disputed. Both are 0 for a slot without checks.
+    """
+    if "checks" not in slot:
+        return 0, 0
+    checks = slot["checks"]
+    if not isinstance(checks, (list, tuple)):
+        raise SlotValidationError("%s: checks must be a list of dicts" % where)
+    if not checks:
+        return 0, 0
+    if slot["outcome"] != "answered":
+        raise SlotValidationError(
+            "%s: checks are only valid on an 'answered' slot (the grader only "
+            "runs on a substantive answer), got outcome %r" % (where, slot["outcome"])
+        )
+    seen = set()
+    states = {}
+    judged = 0
+    for position, check in enumerate(checks):
+        if not isinstance(check, dict):
+            raise SlotValidationError("%s: check %d is not a dict" % (where, position))
+        check_id = check.get("id")
+        if not isinstance(check_id, str) or not check_id:
+            raise SlotValidationError(
+                "%s: check %d needs a non-empty string id" % (where, position)
+            )
+        if check_id in seen:
+            raise SlotValidationError("%s: duplicate check id %r" % (where, check_id))
+        seen.add(check_id)
+        by = check.get("by")
+        state = check.get("state")
+        if by not in CHECK_BY:
+            raise SlotValidationError(
+                "%s: check %r: by must be 'script' or 'judge', got %r" % (where, check_id, by)
+            )
+        if state not in CHECK_STATES:
+            raise SlotValidationError(
+                "%s: check %r: state must be 'pass', 'fail', 'disputed' or "
+                "'unresolved', got %r" % (where, check_id, state)
+            )
+        if by == "script" and state in JUDGE_ONLY_STATES:
+            raise SlotValidationError(
+                "%s: check %r: a script check cannot be %r (a script verdict is "
+                "final and never goes to a judge)" % (where, check_id, state)
+            )
+        if by == "judge":
+            judged += 1
+        states.setdefault(state, check_id)
+
+    # The slot's pass is the AND of every check. A disputed check counts as
+    # failed; an unresolved check leaves the pass pending.
+    passed = slot["pass"]
+    if "unresolved" in states:
+        if passed is not None:
+            raise SlotValidationError(
+                "%s: pass is %r but check %r is unresolved; while any check is "
+                "unresolved the pass must be None (pending)"
+                % (where, passed, states["unresolved"])
+            )
+    elif "fail" in states or "disputed" in states:
+        state = "fail" if "fail" in states else "disputed"
+        if passed is not False:
+            raise SlotValidationError(
+                "%s: pass is %r but check %r is %s; a failed or disputed check "
+                "fails the slot, so pass must be false"
+                % (where, passed, states[state], "failed" if state == "fail" else "disputed")
+            )
+    elif passed is not True:
+        raise SlotValidationError(
+            "%s: pass is %r but every check passed, so pass must be true" % (where, passed)
+        )
+    disputed = sum(1 for check in checks if check["state"] == "disputed")
+    return judged, disputed
 
 
 def _check_slot(index, slot):
@@ -123,15 +212,21 @@ def _check_slot(index, slot):
         )
     if not _is_number(slot["cost_usd"]) or slot["cost_usd"] < 0:
         raise SlotValidationError("%s: cost_usd must be a number, zero or more" % where)
-    judged = slot.get("judged_checks", 0)
-    disputed = slot.get("disputed_checks", 0)
-    for name, value in (("judged_checks", judged), ("disputed_checks", disputed)):
+    judged, disputed = _check_checks(where, slot)
+    # The old aggregate counts are optional. They are never used for a
+    # figure; when given they must agree with the check list.
+    for name, derived in (("judged_checks", judged), ("disputed_checks", disputed)):
+        if name not in slot:
+            continue
+        value = slot[name]
         if not _is_int(value) or value < 0:
             raise SlotValidationError("%s: %s must be an integer, zero or more" % (where, name))
-    if disputed > judged:
-        raise SlotValidationError(
-            "%s: disputed_checks (%d) is more than judged_checks (%d)" % (where, disputed, judged)
-        )
+        if value != derived:
+            raise SlotValidationError(
+                "%s: %s is %d but the checks list gives %d; give the check-level "
+                "results in checks (the counts are derived from them)"
+                % (where, name, value, derived)
+            )
     if not isinstance(slot.get("needed_judge_classification", False), bool):
         raise SlotValidationError("%s: needed_judge_classification must be true or false" % where)
 
@@ -221,19 +316,63 @@ def _percent(numerator, denominator):
     return numerator / denominator * 100.0
 
 
-def task_score(task):
+def slot_checks(slot):
+    """The slot's check list, empty when it has none."""
+    return slot.get("checks") or ()
+
+
+def check_counts(slot):
+    """(model-judged checks, disputed checks) for one slot, from its checks."""
+    checks = slot_checks(slot)
+    return (
+        sum(1 for check in checks if check["by"] == "judge"),
+        sum(1 for check in checks if check["state"] == "disputed"),
+    )
+
+
+def slot_passed(slot, exclude_disputed=False):
+    """True when the slot counts as passed. A pending pass is not passed.
+
+    With exclude_disputed=True the pass is recomputed as the AND of the
+    slot's checks with the disputed ones left out, for the sensitivity
+    figure: a slot that failed only on disputed checks passes, one with a
+    failed (or unresolved) check as well stays not passed. A slot without a
+    disputed check is unchanged.
+    """
+    if not exclude_disputed:
+        return slot["pass"] is True
+    checks = slot_checks(slot)
+    if not any(check["state"] == "disputed" for check in checks):
+        return slot["pass"] is True
+    return all(check["state"] == "pass" for check in checks if check["state"] != "disputed")
+
+
+def task_score(task, exclude_disputed=False):
     """Passes divided by 3 slots. A pending pass counts as not passed."""
-    passes = sum(1 for slot in task["slots"] if slot["pass"] is True)
+    passes = sum(1 for slot in task["slots"] if slot_passed(slot, exclude_disputed))
     return passes / SLOTS_PER_TASK
 
 
-def _headline_block(tasks):
-    """Family scores, the equal-family headline and the pooled pass rate."""
+def pending_slot_ids(tasks_by_id):
+    """Ids of one model's pending slots, as "<task id>/<repeat>", sorted by
+    task id then repeat."""
+    return [
+        "%s/%d" % (task_id, slot["repeat"])
+        for task_id in sorted(tasks_by_id)
+        for slot in tasks_by_id[task_id]["slots"]
+        if slot["pass"] is None
+    ]
+
+
+def _equal_family(tasks, exclude_disputed=False):
+    """(family scores, task counts, headline, reason, passed slots)."""
     family_scores = {}
     family_task_counts = {}
     empty = []
     for family in FAMILIES:
-        scores = [task_score(task) for task in tasks if task["family"] == family]
+        scores = [
+            task_score(task, exclude_disputed) for task in tasks if task["family"] == family
+        ]
         family_task_counts[str(family)] = len(scores)
         if scores:
             family_scores[str(family)] = _mean(scores) * 100.0
@@ -246,16 +385,41 @@ def _headline_block(tasks):
     else:
         headline = _mean([family_scores[str(family)] for family in FAMILIES])
         reason = None
+    passed = sum(
+        1 for task in tasks for slot in task["slots"] if slot_passed(slot, exclude_disputed)
+    )
+    return family_scores, family_task_counts, headline, reason, passed
+
+
+def _headline_block(tasks):
+    """Family scores, the equal-family headline and the pooled pass rate,
+    each with its dispute sensitivity twin (disputed checks excluded)."""
+    family_scores, family_task_counts, headline, reason, passed = _equal_family(tasks)
+    families_excl, _, headline_excl, _, passed_excl = _equal_family(tasks, exclude_disputed=True)
     slots = [slot for task in tasks for slot in task["slots"]]
-    passed = sum(1 for slot in slots if slot["pass"] is True)
+    with_disputed = [slot for slot in slots if check_counts(slot)[1] > 0]
+    flipped = sum(1 for slot in with_disputed if slot_passed(slot, exclude_disputed=True))
     return {
         "tasks": len(tasks),
         "slots": len(slots),
         "day_to_day_score": headline,
+        "day_to_day_score_excluding_disputed": headline_excl,
         "day_to_day_score_reason": reason,
         "family_scores": family_scores,
+        "family_scores_excluding_disputed": families_excl,
         "family_task_counts": family_task_counts,
         "pooled_pass_rate": _percent(passed, len(slots)),
+        "pooled_pass_rate_excluding_disputed": _percent(passed_excl, len(slots)),
+        "dispute_sensitivity": {
+            "slots_with_disputed_checks": len(with_disputed),
+            "slots_passing_when_disputed_excluded": flipped,
+            "slots_still_failed_when_disputed_excluded": len(with_disputed) - flipped,
+            "tasks_changed": sum(
+                1
+                for task in tasks
+                if task_score(task, exclude_disputed=True) != task_score(task)
+            ),
+        },
     }
 
 
@@ -294,8 +458,8 @@ def _side_figures(tasks):
         if slot["outcome"] != "execution_error" and slot["time_s"] is not None
     ]
 
-    judged = sum(slot.get("judged_checks", 0) for slot in slots)
-    disputed = sum(slot.get("disputed_checks", 0) for slot in slots)
+    judged = sum(check_counts(slot)[0] for slot in slots)
+    disputed = sum(check_counts(slot)[1] for slot in slots)
 
     return {
         "wrong_answer_rate": _percent(wrong, len(abstain_slots)),
@@ -321,12 +485,16 @@ def _side_figures(tasks):
 
 def _score_tasks(model, tasks_by_id):
     tasks = [tasks_by_id[task_id] for task_id in sorted(tasks_by_id)]
-    pending = sum(1 for task in tasks for slot in task["slots"] if slot["pass"] is None)
+    pending = pending_slot_ids(tasks_by_id)
     result = {"model": model}
+    result["provisional"] = len(pending) > 0
+    result["pending_slots"] = len(pending)
+    result["pending_slot_ids"] = pending
     result.update(_headline_block(tasks))
-    result["pending_slots"] = pending
-    result["provisional"] = pending > 0
     result["task_scores"] = {task["task_id"]: task_score(task) for task in tasks}
+    result["task_scores_excluding_disputed"] = {
+        task["task_id"]: task_score(task, exclude_disputed=True) for task in tasks
+    }
     result["subsets"] = {
         split: _headline_block([task for task in tasks if task["split"] == split])
         for split in SPLITS
@@ -340,7 +508,9 @@ def score_run(slots, allow_pending=False):
 
     The result is plain data (dicts, strings, numbers, None), with unrounded
     floats. With allow_pending=True a pending slot counts as not passed in
-    every figure and the result is marked "provisional": true.
+    every figure and the result is marked "provisional": true, with the
+    count and the ids of the pending slots. A final result always carries
+    "provisional": false, 0 and an empty list.
     """
     grouped = validate_slots(slots, allow_pending=allow_pending)
     return {model: _score_tasks(model, grouped[model]) for model in sorted(grouped)}
@@ -395,6 +565,8 @@ def _round_half_up(value, places):
 def format_for_display(value, _key=None):
     """Return a rounded copy for showing to people. The input is not changed.
 
+    Flags, counts and ids, "provisional" and the pending slots among them,
+    are carried over unchanged, so a provisional result stays marked.
     Every float is rounded to one decimal place, half up, except money
     (keys ending in "_usd"), which keeps four decimal places because a cost
     per task is often well under ten cents. Integers, strings, booleans and

@@ -414,6 +414,76 @@ class Validation(unittest.TestCase):
         with self.assertRaises(scores.PendingSlotsError):
             bootstrap.bootstrap_report(slots, resamples=10)
 
+    def test_a_final_report_says_it_is_not_provisional(self):
+        summary = bootstrap.bootstrap_report(pinned_slots(), pairs=[("a", "b")], resamples=50)
+        self.assertIs(summary["provisional"], False)
+        self.assertEqual(summary["pending_slots"], {"a": 0, "b": 0})
+        self.assertEqual(summary["pending_slot_ids"], {"a": [], "b": []})
+        self.assertIs(summary["models"]["a"]["provisional"], False)
+        self.assertEqual(summary["models"]["a"]["pending_slots"], 0)
+        self.assertIs(summary["paired_differences"][0]["provisional"], False)
+
+    def test_a_pending_report_is_marked_provisional_with_counts_and_ids(self):
+        slots = pinned_slots()
+        for slot in slots:
+            if slot["model"] == "a" and (slot["task_id"], slot["repeat"]) in (("t-101", 2), ("t-702", 1)):
+                slot["pass"] = None
+        report = bootstrap.BootstrapReport(slots, resamples=50, allow_pending=True)
+        summary = report.to_dict(pairs=[("a", "b")])
+        self.assertTrue(report.provisional)
+        self.assertIs(summary["provisional"], True)
+        self.assertEqual(summary["pending_slots"], {"a": 2, "b": 0})
+        self.assertEqual(summary["pending_slot_ids"], {"a": ["t-101/2", "t-702/1"], "b": []})
+        self.assertIs(summary["models"]["a"]["provisional"], True)
+        self.assertEqual(summary["models"]["a"]["pending_slots"], 2)
+        self.assertIs(summary["models"]["b"]["provisional"], False)
+        self.assertIs(summary["paired_differences"][0]["provisional"], True)
+        self.assertEqual(json.loads(json.dumps(summary)), summary)
+
+    def test_a_pending_slot_does_not_serialise_like_a_final_failed_one(self):
+        # The Codex review's case (PR 132, finding 3): a perfect run with one
+        # slot pending, against the same slot finalised as failed. The
+        # intervals are the same; the report must not be.
+        def with_first_slot(value):
+            slots = slots_for("m", method_tasks(), lambda task_id, family: 3)
+            slots[0]["pass"] = value  # f1-t01, repeat 1
+            return slots
+
+        pending = bootstrap.bootstrap_report(with_first_slot(None), allow_pending=True)
+        final = bootstrap.bootstrap_report(with_first_slot(False))
+        interval = pending["models"]["m"]["main"]["day_to_day_interval"]
+        self.assertAlmostEqual(interval["lower"], 98.5714285714, places=10)
+        self.assertEqual(interval["upper"], 100.0)
+        self.assertEqual(
+            pending["models"]["m"]["main"]["day_to_day_interval"],
+            final["models"]["m"]["main"]["day_to_day_interval"],
+        )
+        self.assertNotEqual(json.dumps(pending, sort_keys=True), json.dumps(final, sort_keys=True))
+        self.assertIs(pending["provisional"], True)
+        self.assertIs(final["provisional"], False)
+        self.assertEqual(pending["pending_slots"], {"m": 1})
+        self.assertEqual(pending["pending_slot_ids"], {"m": ["f1-t01/1"]})
+        self.assertEqual(final["pending_slots"], {"m": 0})
+        # The rounded copy for display keeps the marking.
+        shown = scores.format_for_display(pending)
+        self.assertIs(shown["provisional"], True)
+        self.assertEqual(shown["pending_slot_ids"], {"m": ["f1-t01/1"]})
+        self.assertNotEqual(
+            json.dumps(shown, sort_keys=True),
+            json.dumps(scores.format_for_display(final), sort_keys=True),
+        )
+
+    def test_a_disputed_check_lowers_the_task_score_that_is_resampled(self):
+        slots = pinned_slots()
+        target = next(s for s in slots if s["model"] == "a" and s["task_id"] == "t-101" and s["repeat"] == 1)
+        target["checks"] = [{"id": "c1", "by": "judge", "state": "disputed"}]
+        with self.assertRaises(scores.SlotValidationError):
+            bootstrap.bootstrap_report(slots, resamples=10)  # pass is still true
+        target["pass"] = False
+        report = bootstrap.BootstrapReport(slots, resamples=10)
+        # Model a's family 1 task scores, in id order: now 2, 2, 0, 1 passes.
+        np.testing.assert_allclose(report.task_scores["main"]["a"][1], [2 / 3, 2 / 3, 0.0, 1 / 3])
+
     def test_a_wrong_slot_count_is_refused(self):
         slots = slots_for("m", method_tasks(), half_pass)[1:]
         with self.assertRaises(scores.SlotValidationError):

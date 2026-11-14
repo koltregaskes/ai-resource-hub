@@ -47,6 +47,14 @@ def make_slot(model, task_id, family, split, repeat, outcome="answered", passed=
     return slot
 
 
+def checks(judge=(), script=()):
+    """A check list: judge checks j1, j2, ... then script checks s1, s2, ...
+    with the given states."""
+    made = [{"id": "j%d" % n, "by": "judge", "state": state} for n, state in enumerate(judge, start=1)]
+    made += [{"id": "s%d" % n, "by": "script", "state": state} for n, state in enumerate(script, start=1)]
+    return made
+
+
 def run_from(model, tasks, decide):
     """Three slots per task. decide(task_id, family, split, repeat) returns
     (outcome, passed) or (outcome, passed, extra dict)."""
@@ -171,6 +179,7 @@ class SideFigures(unittest.TestCase):
         def s(task, family, repeat, outcome, passed, **extra):
             return make_slot("m", task, family, "public", repeat, outcome, passed, **extra)
 
+        all_pass = checks(["pass"] * 4, ["pass"])
         cls.slots = [
             # family 1: pass, pass, fail (inconsistent)
             s("a1", 1, 1, "answered", True, time_s=2.0, cost_usd=0.10),
@@ -185,12 +194,18 @@ class SideFigures(unittest.TestCase):
             s("c1", 3, 2, "abstained", True, time_s=16.0, cost_usd=0.05),
             s("c1", 3, 3, "answered", False, time_s=18.0, cost_usd=0.05, needed_judge_classification=True),
             # family 4: checklist task, all pass (consistent)
-            s("d1", 4, 1, "answered", True, time_s=20.0, cost_usd=0.30, judged_checks=4, disputed_checks=0),
-            s("d1", 4, 2, "answered", True, time_s=22.0, cost_usd=0.30, judged_checks=4, disputed_checks=0),
-            s("d1", 4, 3, "answered", True, time_s=24.0, cost_usd=0.30, judged_checks=4, disputed_checks=0),
-            # family 5: checklist task, all fail, 3 disputed checks (consistent)
-            s("e1", 5, 1, "answered", False, time_s=26.0, cost_usd=0.30, judged_checks=4, disputed_checks=1),
-            s("e1", 5, 2, "answered", False, time_s=28.0, cost_usd=0.30, judged_checks=4, disputed_checks=2),
+            # (4 judged checks and 1 script check per answered slot; the old
+            # aggregate counts are given too and agree with the check lists)
+            s("d1", 4, 1, "answered", True, time_s=20.0, cost_usd=0.30, checks=all_pass, judged_checks=4, disputed_checks=0),
+            s("d1", 4, 2, "answered", True, time_s=22.0, cost_usd=0.30, checks=all_pass, judged_checks=4, disputed_checks=0),
+            s("d1", 4, 3, "answered", True, time_s=24.0, cost_usd=0.30, checks=all_pass),
+            # family 5: checklist task, all fail, 3 disputed checks (consistent).
+            # Slot 1 fails only on its disputed check; slot 2 has 2 disputed
+            # checks and a failed script check as well.
+            s("e1", 5, 1, "answered", False, time_s=26.0, cost_usd=0.30,
+              checks=checks(["pass", "disputed", "pass", "pass"], ["pass"]), judged_checks=4, disputed_checks=1),
+            s("e1", 5, 2, "answered", False, time_s=28.0, cost_usd=0.30,
+              checks=checks(["disputed", "pass", "disputed", "pass"], ["fail"]), judged_checks=4, disputed_checks=2),
             s("e1", 5, 3, "refused", False, time_s=30.0, cost_usd=0.30, judged_checks=0, disputed_checks=0),
             # family 6: all execution errors (consistent); a retry cost is kept
             s("f1", 6, 1, "execution_error", False, time_s=None, cost_usd=0.00),
@@ -254,6 +269,30 @@ class SideFigures(unittest.TestCase):
         self.assertEqual(self.side["disputed_checks"], 3)
         self.assertAlmostEqual(self.side["dispute_rate"], 15.0, places=12)
 
+    def test_dispute_sensitivity_score(self):
+        # Excluding disputed checks, e1 slot 1 passes and slot 2 still fails
+        # (its script check failed): task e1 is 1/3, family 5 is 33.3.
+        self.assertAlmostEqual(self.result["task_scores_excluding_disputed"]["e1"], 1 / 3, places=15)
+        self.assertEqual(self.result["task_scores"]["e1"], 0.0)
+        self.assertAlmostEqual(self.result["family_scores_excluding_disputed"]["5"], 100 / 3, places=12)
+        self.assertEqual(self.result["family_scores_excluding_disputed"]["4"], 100.0)
+        # (1100/3 + 100/3) / 7 = 400/7, against the main (1100/3) / 7.
+        self.assertAlmostEqual(self.result["day_to_day_score_excluding_disputed"], 400 / 7, places=12)
+        self.assertAlmostEqual(self.result["day_to_day_score"], (1100 / 3) / 7, places=12)
+        self.assertAlmostEqual(self.result["pooled_pass_rate_excluding_disputed"], 12 / 21 * 100, places=12)
+        self.assertEqual(
+            self.result["dispute_sensitivity"],
+            {
+                "slots_with_disputed_checks": 2,
+                "slots_passing_when_disputed_excluded": 1,
+                "slots_still_failed_when_disputed_excluded": 1,
+                "tasks_changed": 1,
+            },
+        )
+        public = self.result["subsets"]["public"]
+        self.assertAlmostEqual(public["day_to_day_score_excluding_disputed"], 400 / 7, places=12)
+        self.assertIsNone(self.result["subsets"]["held-out"]["day_to_day_score_excluding_disputed"])
+
     def test_judge_classification_rate(self):
         self.assertAlmostEqual(self.side["judge_classification_rate"], 2 / 21 * 100, places=12)
 
@@ -290,6 +329,159 @@ class SideFigures(unittest.TestCase):
         before = copy.deepcopy(self.slots)
         scores.score_model(self.slots)
         self.assertEqual(self.slots, before)
+
+
+class DisputedChecks(unittest.TestCase):
+    """The Codex review's case (PR 132, finding 1): an otherwise perfect
+    180-slot run with one disputed check on one slot."""
+
+    TARGET = ("f1-t01", 1)  # a ten-task family
+
+    def run_with(self, passed, target_checks):
+        def decide(task_id, family, split, repeat):
+            if (task_id, repeat) == self.TARGET:
+                return ("answered", passed, {"checks": target_checks})
+            return ("answered", True)
+
+        return run_from("m", method_tasks(), decide)
+
+    def test_pass_true_with_a_disputed_check_is_refused(self):
+        slots = self.run_with(True, checks(["pass", "disputed", "pass"]))
+        self.assertEqual(len(slots), 180)
+        with self.assertRaises(scores.SlotValidationError) as caught:
+            scores.score_run(slots)
+        message = str(caught.exception)
+        self.assertIn("pass is True but check 'j2' is disputed", message)
+        self.assertIn("f1-t01", message)
+
+    def test_the_disputed_slot_fails_and_the_run_scores_99_5238(self):
+        result = scores.score_model(self.run_with(False, checks(["pass", "disputed", "pass"])))
+        # Task 2/3, family 1 (9 + 2/3) / 10, headline (600 + 96.67) / 7.
+        self.assertAlmostEqual(result["task_scores"]["f1-t01"], 2 / 3, places=15)
+        self.assertAlmostEqual(result["family_scores"]["1"], 290 / 3, places=12)
+        self.assertAlmostEqual(result["day_to_day_score"], (600 + 290 / 3) / 7, places=12)
+        self.assertAlmostEqual(result["day_to_day_score"], 99.5238095238, places=10)
+        self.assertNotEqual(result["day_to_day_score"], 100.0)
+        self.assertAlmostEqual(result["pooled_pass_rate"], 179 / 180 * 100, places=12)
+
+    def test_failed_only_on_a_disputed_check_gives_100_excluding_disputed(self):
+        result = scores.score_model(self.run_with(False, checks(["pass", "disputed", "pass"])))
+        self.assertEqual(result["day_to_day_score_excluding_disputed"], 100.0)
+        self.assertEqual(result["family_scores_excluding_disputed"]["1"], 100.0)
+        self.assertEqual(result["task_scores_excluding_disputed"]["f1-t01"], 1.0)
+        self.assertEqual(result["pooled_pass_rate_excluding_disputed"], 100.0)
+        self.assertEqual(
+            result["dispute_sensitivity"],
+            {
+                "slots_with_disputed_checks": 1,
+                "slots_passing_when_disputed_excluded": 1,
+                "slots_still_failed_when_disputed_excluded": 0,
+                "tasks_changed": 1,
+            },
+        )
+        side = result["side_figures"]
+        self.assertEqual((side["judged_checks"], side["disputed_checks"]), (3, 1))
+        self.assertAlmostEqual(side["dispute_rate"], 100 / 3, places=12)
+
+    def test_an_undisputed_failure_as_well_keeps_the_slot_failed(self):
+        # The same main score, a different sensitivity score: the aggregate
+        # counts alone could not tell these two runs apart.
+        for other in (checks(["fail", "disputed", "pass"]), checks(["pass", "disputed"], ["fail"])):
+            result = scores.score_model(self.run_with(False, other))
+            self.assertAlmostEqual(result["day_to_day_score"], 99.5238095238, places=10)
+            self.assertAlmostEqual(result["day_to_day_score_excluding_disputed"], 99.5238095238, places=10)
+            self.assertEqual(result["day_to_day_score_excluding_disputed"], result["day_to_day_score"])
+            self.assertEqual(result["dispute_sensitivity"]["slots_passing_when_disputed_excluded"], 0)
+            self.assertEqual(result["dispute_sensitivity"]["slots_still_failed_when_disputed_excluded"], 1)
+            self.assertEqual(result["dispute_sensitivity"]["tasks_changed"], 0)
+
+    def test_without_disputed_checks_the_two_scores_are_equal(self):
+        result = scores.score_model(uniform_model("m", 2))
+        self.assertEqual(result["day_to_day_score_excluding_disputed"], result["day_to_day_score"])
+        self.assertEqual(result["task_scores_excluding_disputed"], result["task_scores"])
+        self.assertEqual(result["dispute_sensitivity"]["slots_with_disputed_checks"], 0)
+
+    def test_pass_must_be_the_and_of_the_checks(self):
+        refused = [
+            (True, checks(["pass"], ["fail"]), "check 's1' is failed"),
+            (True, checks(["fail", "pass"]), "check 'j1' is failed"),
+            (None, checks(["pass", "disputed"]), "check 'j2' is disputed"),
+            (False, checks(["pass", "pass"], ["pass"]), "every check passed"),
+            (None, checks(["pass"]), "every check passed"),
+            (True, checks(["pass", "unresolved"]), "check 'j2' is unresolved"),
+            (False, checks(["disputed", "unresolved"]), "check 'j2' is unresolved"),
+        ]
+        for passed, target_checks, expected in refused:
+            with self.assertRaises(scores.SlotValidationError, msg=expected) as caught:
+                scores.score_run(self.run_with(passed, target_checks), allow_pending=True)
+            self.assertIn(expected, str(caught.exception))
+        accepted = [
+            (True, checks(["pass", "pass"], ["pass"])),
+            (False, checks(["pass"], ["fail"])),
+            (False, checks(["disputed"])),
+        ]
+        for passed, target_checks in accepted:
+            scores.score_run(self.run_with(passed, target_checks))
+
+    def test_an_unresolved_check_makes_the_slot_pending(self):
+        slots = self.run_with(None, checks(["pass", "unresolved", "disputed"]))
+        with self.assertRaises(scores.PendingSlotsError):
+            scores.score_run(slots)
+        result = scores.score_model(slots, allow_pending=True)
+        self.assertTrue(result["provisional"])
+        self.assertEqual(result["pending_slot_ids"], ["f1-t01/1"])
+        # Not passed in the main score, and still not passed with the
+        # disputed check left out, because another check is unresolved.
+        self.assertAlmostEqual(result["day_to_day_score"], 99.5238095238, places=10)
+        self.assertAlmostEqual(result["day_to_day_score_excluding_disputed"], 99.5238095238, places=10)
+
+    def test_bad_check_records(self):
+        bad = [
+            "c1",
+            [["id", "c1"]],
+            [{"by": "judge", "state": "pass"}],
+            [{"id": "", "by": "judge", "state": "pass"}],
+            [{"id": "c1", "by": "human", "state": "pass"}],
+            [{"id": "c1", "by": "judge", "state": "maybe"}],
+            [{"id": "c1", "by": "judge", "state": "pass"}, {"id": "c1", "by": "script", "state": "pass"}],
+            [{"id": "c1", "by": "script", "state": "disputed"}],
+            [{"id": "c1", "by": "script", "state": "unresolved"}],
+        ]
+        for target_checks in bad:
+            for passed in (True, False, None):
+                with self.assertRaises(scores.SlotValidationError, msg=repr(target_checks)):
+                    scores.score_run(self.run_with(passed, target_checks), allow_pending=True)
+
+    def test_checks_are_only_valid_on_an_answered_slot(self):
+        slots = self.run_with(False, checks(["fail"]))
+        slots[0]["outcome"] = "refused"
+        with self.assertRaises(scores.SlotValidationError) as caught:
+            scores.score_run(slots)
+        self.assertIn("only valid on an 'answered' slot", str(caught.exception))
+
+    def test_aggregate_counts_must_agree_with_the_check_list(self):
+        target = checks(["pass", "disputed", "pass"], ["pass"])
+        for field, value in (("judged_checks", 4), ("judged_checks", 2), ("disputed_checks", 0), ("disputed_checks", 2)):
+            slots = self.run_with(False, target)
+            slots[0][field] = value
+            with self.assertRaises(scores.SlotValidationError, msg="%s=%r" % (field, value)) as caught:
+                scores.score_run(slots)
+            self.assertIn("the checks list gives", str(caught.exception))
+        slots = self.run_with(False, target)
+        slots[0].update(judged_checks=3, disputed_checks=1)
+        self.assertEqual(scores.score_model(slots)["side_figures"]["disputed_checks"], 1)
+
+    def test_aggregate_counts_without_a_check_list_are_refused(self):
+        # The reviewer's exact record: pass true with disputed_checks 1.
+        slots = uniform_model("m", 3)
+        slots[0].update(judged_checks=4, disputed_checks=1)
+        with self.assertRaises(scores.SlotValidationError):
+            scores.score_run(slots)
+        slots = uniform_model("m", 3)
+        slots[0]["pass"] = False
+        slots[0].update(judged_checks=4, disputed_checks=1)
+        with self.assertRaises(scores.SlotValidationError):
+            scores.score_run(slots)
 
 
 class Display(unittest.TestCase):
@@ -363,9 +555,44 @@ class Validation(unittest.TestCase):
         self.assertEqual(result["pending_slots"], 1)
         self.assertAlmostEqual(result["task_scores"]["f1-t01"], 2 / 3, places=15)
         self.assertAlmostEqual(result["pooled_pass_rate"], 179 / 180 * 100, places=12)
+        self.assertEqual(result["pending_slot_ids"], ["f1-t01/1"])
         clean = scores.score_model(uniform_model("m", 3))
         self.assertFalse(clean["provisional"])
         self.assertEqual(clean["pending_slots"], 0)
+        self.assertEqual(clean["pending_slot_ids"], [])
+
+    def test_pending_slot_ids_are_listed_per_model(self):
+        other = uniform_model("n", 3)
+        self.slots[0]["pass"] = None  # f1-t01, repeat 1
+        self.slots[179]["pass"] = None  # f7-t08, repeat 3
+        self.slots[4]["outcome"] = "judge_unresolved"  # f1-t02, repeat 2
+        self.slots[4]["pass"] = None
+        results = scores.score_run(self.slots + other, allow_pending=True)
+        self.assertEqual(results["m"]["pending_slots"], 3)
+        self.assertEqual(results["m"]["pending_slot_ids"], ["f1-t01/1", "f1-t02/2", "f7-t08/3"])
+        self.assertTrue(results["m"]["provisional"])
+        self.assertFalse(results["n"]["provisional"])
+        self.assertEqual(results["n"]["pending_slot_ids"], [])
+
+    def test_a_provisional_result_serialises_differently_from_a_final_one(self):
+        # The same slot, once pending and once finalised as failed: every
+        # score is identical, so only the provisional fields tell them apart.
+        self.slots[0]["pass"] = None
+        pending = scores.score_model(self.slots, allow_pending=True)
+        self.slots[0]["pass"] = False
+        final = scores.score_model(self.slots)
+        self.assertEqual(pending["day_to_day_score"], final["day_to_day_score"])
+        self.assertNotEqual(json.dumps(pending, sort_keys=True), json.dumps(final, sort_keys=True))
+        differing = sorted(key for key in final if final[key] != pending[key])
+        self.assertEqual(differing, ["pending_slot_ids", "pending_slots", "provisional"])
+        # The rounded copy for display keeps the marking too.
+        shown_pending = scores.format_for_display(pending)
+        shown_final = scores.format_for_display(final)
+        self.assertIs(shown_pending["provisional"], True)
+        self.assertEqual(shown_pending["pending_slots"], 1)
+        self.assertEqual(shown_pending["pending_slot_ids"], ["f1-t01/1"])
+        self.assertIs(shown_final["provisional"], False)
+        self.assertNotEqual(json.dumps(shown_pending, sort_keys=True), json.dumps(shown_final, sort_keys=True))
 
     def test_a_task_with_two_slots_is_refused(self):
         del self.slots[0]
@@ -419,7 +646,9 @@ class Validation(unittest.TestCase):
             ("model", ""),
             ("task_id", 7),
             ("judged_checks", -1),
-            ("disputed_checks", 1),  # more disputed than judged (0)
+            ("judged_checks", 4),  # no check list to back it
+            ("disputed_checks", 1),  # no check list to back it
+            ("checks", None),
             ("needed_judge_classification", "no"),
         ]
         for field, value in cases:

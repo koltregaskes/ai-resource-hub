@@ -20,6 +20,12 @@ tasks, then all 20,000 for the held-out tasks. A family with no tasks in a
 subset draws nothing.
 
 Task ids are sorted as plain strings (Python's default, by code point).
+
+A report is final or provisional, and says which. A run with a pending slot
+is refused unless allow_pending=True; then the pending slot counts as not
+passed and the report, and every paired difference in it, carries
+"provisional": true with the count and ids of the pending slots per model.
+A provisional interval is not a result and is never published.
 """
 
 try:
@@ -102,6 +108,10 @@ class BootstrapReport:
     - family_resamples[set][model][family]: resampled family scores;
     - headline_resamples[set][model]: resampled Day-to-Day scores, or None
       when a family has no tasks in that set.
+
+    provisional is True when any slot is pending (only possible with
+    allow_pending=True); pending_slot_ids[model] lists them as
+    "<task id>/<repeat>".
     """
 
     def __init__(self, slots, resamples=RESAMPLES, seed=SEED, allow_pending=False):
@@ -109,6 +119,10 @@ class BootstrapReport:
         self.resamples = resamples
         self.seed = seed
         self.models = sorted(grouped)
+        self.pending_slot_ids = {
+            model: _scores.pending_slot_ids(grouped[model]) for model in self.models
+        }
+        self.provisional = any(self.pending_slot_ids[model] for model in self.models)
         rng = np.random.default_rng(seed)  # created once per report
 
         self.task_ids = {}
@@ -239,6 +253,7 @@ class BootstrapReport:
                 "model_a": model_a,
                 "model_b": model_b,
                 "set": set_name,
+                "provisional": self._pair_provisional(model_a, model_b),
                 "difference": None,
                 "lower": None,
                 "upper": None,
@@ -251,11 +266,15 @@ class BootstrapReport:
             "model_a": model_a,
             "model_b": model_b,
             "set": set_name,
+            "provisional": self._pair_provisional(model_a, model_b),
             "difference": point,
             "lower": lower,
             "upper": upper,
             "flag": None,
         }
+
+    def _pair_provisional(self, model_a, model_b):
+        return bool(self.pending_slot_ids[model_a] or self.pending_slot_ids[model_b])
 
     def _point(self, model, set_name):
         """The observed equal-family score on this set, without resampling."""
@@ -272,10 +291,17 @@ class BootstrapReport:
 
         pairs is an optional list of (model_a, model_b) to add paired
         differences on the full task set.
+
+        "provisional" is always present: false for a final report, true when
+        any slot is pending. "pending_slots" and "pending_slot_ids" are keyed
+        by model, and each model's own block repeats its flag and count.
         """
         models = {}
         for model in self.models:
-            models[model] = {}
+            models[model] = {
+                "provisional": bool(self.pending_slot_ids[model]),
+                "pending_slots": len(self.pending_slot_ids[model]),
+            }
             for set_name in SETS:
                 models[model][set_name] = {
                     "day_to_day_interval": self.headline_interval(model, set_name),
@@ -286,6 +312,13 @@ class BootstrapReport:
                 }
         return {
             "method": "percentile bootstrap, stratified by family, unit = task score",
+            "provisional": self.provisional,
+            "pending_slots": {
+                model: len(self.pending_slot_ids[model]) for model in self.models
+            },
+            "pending_slot_ids": {
+                model: list(self.pending_slot_ids[model]) for model in self.models
+            },
             "generator": GENERATOR if self.seed == SEED else "numpy.random.default_rng(%d)" % self.seed,
             "seed": self.seed,
             "resamples": self.resamples,
