@@ -151,7 +151,7 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
   4. builds the public record from it through the allowlist.
   A finalised folder is never written to again.
 - **Not finalised:** an interrupted run, or one with pending judging, stays in staging with its status, and is never published as a result.
-- **Amendments:** if a grading mistake is found later, the original record stays as it is. A correction is a new record, `runs/<run id>/amendments/<n>/`, holding the changed verdicts, the reason, who made the change, and the recomputed scores. The page shows the amended scores, with a visible "corrected on" note linking both versions.
+- **Amendments:** if a grading mistake is found later, the finalised folder stays exactly as it is. A correction is a new record in a separate tree, `amendments/<run id>/<n>/`, outside `runs/`. It holds the changed verdicts, the reason, who made the change, the recomputed scores, and the hash of the original run's manifest, so it can't be attached to a different run. Each amendment is itself written once and never edited; a further correction is amendment `<n+1>`. The page shows the amended scores, with a visible "corrected on" note linking both versions.
 
 ## Grading
 
@@ -189,7 +189,8 @@ Used only when the script's pattern list can't tell whether a reply is `answered
 - **Agreement:** if both judges give the same outcome, that's the outcome. If they disagree, the outcome is `answered`. That's the stricter reading: on an unanswerable task it fails the slot, and on an answerable task the reply then goes to the task's normal grader.
 - **Judge failure:** a malformed verdict or timeout is retried once, then the slot's outcome is `judge_unresolved` and its pass is pending, exactly as for checklist checks.
 - **Qualification:** the judges also classify 20 frozen sample replies (at least 6 of each outcome, including hedged answers and quoted abstention phrases). A judge needs at least 90% agreement with the reference outcomes.
-- **Budget:** these calls, and their retries, are reserved and counted in the same provider ledgers as all other judge calls. The pre-flight worst case assumes every slot in families 2 and 3 needs one classification call per judge.
+- **Which slots:** any slot in any family can need it, because outcomes are assigned in every family. In practice it's mostly families 2 and 3.
+- **Budget:** these calls, and their retries, are reserved and counted in the same provider ledgers as all other judge calls. The pre-flight worst case assumes **every slot in every family** needs one classification call per judge.
 - The share of slots that needed judge classification is published per model.
 
 ## Scores
