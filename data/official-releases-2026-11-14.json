@@ -1,0 +1,110 @@
+{
+  "window": {
+    "from": "2026-11-09",
+    "through": "2026-11-14"
+  },
+  "checkedAt": "2026-11-14",
+  "releases": [
+    {
+      "id": "claude-fable-5.2",
+      "name": "Claude Fable 5.2",
+      "providerId": "anthropic",
+      "released": "2026-11-09",
+      "contextWindow": 1000000,
+      "maxOutput": 128000,
+      "modality": "text,vision",
+      "apiAvailable": true,
+      "status": "active",
+      "officialUrl": "https://platform.claude.com/docs/en/models/fable-5-2/overview",
+      "openRouterIds": [
+        "anthropic/claude-fable-5.2"
+      ],
+      "notes": "Officially checked 2026-11-14. Standard mode USD 8 input / 40 output per million tokens; optional fast mode is USD 16 / 80. Specifications: https://platform.claude.com/docs/en/models/fable-5-2/overview. Announcement: https://www.anthropic.com/claude-fable-and-mythos-5-2.",
+      "officialPricing": {
+        "inputPrice": 8,
+        "outputPrice": 40,
+        "cachedInputPrice": 0.2,
+        "source": "Anthropic (official, checked 2026-11-14; standard mode)",
+        "sourceUrl": "https://platform.claude.com/docs/en/models/fable-5-2/overview"
+      }
+    },
+    {
+      "id": "claude-mythos-5.2",
+      "name": "Claude Mythos 5.2",
+      "providerId": "anthropic",
+      "released": "2026-11-09",
+      "contextWindow": 1000000,
+      "maxOutput": 128000,
+      "modality": "text,vision",
+      "apiAvailable": true,
+      "status": "tracking",
+      "officialUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "notes": "Officially checked 2026-11-14. Restricted to verified organizations; not general API availability. Shares Fable 5.2 specifications and USD 8 / 40 standard-mode pricing; fast mode USD 16 / 80. https://platform.claude.com/docs/en/models/fable-5-2/overview",
+      "pricingConditions": "Access restricted to verified organizations; excluded from general price comparisons."
+    },
+    {
+      "id": "gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "providerId": "google",
+      "released": "2026-11-10",
+      "contextWindow": 1000000,
+      "modality": "text,vision,audio,video",
+      "apiAvailable": true,
+      "status": "active",
+      "officialUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+      "openRouterIds": [
+        "google/gemini-4-carbon"
+      ],
+      "notes": "Officially checked 2026-11-14. General paid API rollout on 10 November follows restricted Fairwind access on 28 October. Introductory USD 2 input / 10 output per million tokens is conditional and excluded from unqualified price comparisons. Combined input/output context up to 1M; no standalone maximum output asserted. https://deepmind.google/models/model-cards/gemini-4-carbon/",
+      "pricingConditions": "Introductory pricing; paid API tiers. See official announcement for current terms."
+    },
+    {
+      "id": "gemini-4-hydrogen",
+      "name": "Gemini 4 Hydrogen",
+      "providerId": "google",
+      "released": "2026-11-12",
+      "contextWindow": 1000000,
+      "maxOutput": 1000000,
+      "modality": "text,vision,audio,video",
+      "apiAvailable": true,
+      "status": "active",
+      "officialUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      "openRouterIds": [
+        "google/gemini-4-hydrogen"
+      ],
+      "notes": "Officially checked 2026-11-14. USD 1.50 input / 7.50 output per million tokens, flat across the 1M context window. Up to 1M output tokens. Provider benchmark claims are not independent rankings; no benchmark score imported.",
+      "officialPricing": {
+        "inputPrice": 1.5,
+        "outputPrice": 7.5,
+        "source": "Google (official, checked 2026-11-14)",
+        "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+      }
+    },
+    {
+      "id": "qwen4-max-preview",
+      "name": "Qwen4-Max-Preview",
+      "providerId": "alibaba",
+      "released": "2026-11-11",
+      "contextWindow": 1000000,
+      "maxOutput": 393216,
+      "modality": "text,vision,video",
+      "apiAvailable": true,
+      "status": "preview",
+      "officialUrl": "https://docs.qwencloud.com/changelog/models",
+      "pricingConditions": "Token Plan only; no global USD token rate verified.",
+      "notes": "Officially checked 2026-11-14. Preview via Token Plan only. 1M context and 393,216 maximum thinking plus output tokens; not a standalone visible-output allowance. No global token price asserted. Specifications: https://www.alibabacloud.com/help/en/model-studio/text-generation-model"
+    }
+  ],
+  "standings": {
+    "change": "Canonical official Fable 5.2 and Hydrogen prices become eligible for future snapshot inputs. Existing frozen snapshots and all capability scores remain unchanged. Carbon and Mythos conditional prices remain excluded.",
+    "benchmarkInputsAdded": 0
+  },
+  "announcements": [
+    {
+      "date": "2026-11-13",
+      "provider": "DeepSeek",
+      "sourceUrl": "https://api-docs.deepseek.com/updates/",
+      "whatChanged": "Built-in application tools on existing deepseek-flash endpoint. No new model or numeric change inferred."
+    }
+  ]
+}
