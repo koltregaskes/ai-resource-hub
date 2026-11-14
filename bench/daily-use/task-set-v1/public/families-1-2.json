@@ -373,7 +373,7 @@
   },
   {
     "id": "f1-pub-05",
-    "version": 3,
+    "version": 4,
     "changed_in_v2": "Prompt now puts each section on one line, fixes the wording that ties each time to its event ('doors open at 6.45pm', 'meeting starts at 7.15pm'), asks for the agenda items in order in What:, the room, floor and block in Where:, and the fob and the voting condition in separate sentences in Bring:; the grader now checks each of these per section, allows exactly two times and bans cost, guest and speaker wording.",
     "changed_in_v3": "Grader changed from constraints to checklist: the 12 script checks are kept unchanged as c1 to c12, and two judge checks are added (c13: proof of address is required to vote; c14: a fob is needed), because the script could see the words but not whether the condition was reversed.",
     "family": 1,
@@ -522,6 +522,11 @@
           "id": "c14",
           "text": "Says residents need to bring their fob (does not say a fob is optional or not needed).",
           "by": "judge"
+        },
+        {
+          "id": "c15",
+          "text": "Presents all four agenda items (the chair's report, the accounts for the year, the election of the committee, the lift replacement programme) as things that will happen at the meeting. Saying that any of them will not happen, is cancelled or is postponed fails.",
+          "by": "judge"
         }
       ]
     },
@@ -539,17 +544,20 @@
       "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only, and proof of address. Everyone in the building is encouraged to come along.\nAll residents welcome.",
       "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you must also bring proof of address. Councillor Reyes is no longer able to attend.\nAll residents welcome.",
       "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you need not bring proof of address.\nAll residents welcome.",
-      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob if you have one to hand, though the Community Room door will be propped open. If you want to vote, you must also bring proof of address.\nAll residents welcome."
+      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob if you have one to hand, though the Community Room door will be propped open. If you want to vote, you must also bring proof of address.\nAll residents welcome.",
+      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will not hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you must also bring proof of address.\nAll residents welcome."
     ],
     "reject_notes": {
       "R8": "The second reviewer's counterexample. Passes every script check ('proof of address' and 'vote' share a sentence) but fails judge check c13: 'you need not bring proof of address' reverses the voting condition.",
-      "R9": "Passes every script check (the Bring: line mentions a fob) but fails judge check c14: it makes the fob optional and invents a propped-open door."
+      "R9": "Passes every script check (the Bring: line mentions a fob) but fails judge check c14: it makes the fob optional and invents a propped-open door.",
+      "R10": "The third reviewer's counterexample. Passes every script check (all four items are named in order) but fails judge check c15: it says the chair's report will not be heard."
     },
     "sources": [],
     "why_hard": "The facts supplied are thin for an 80-word minimum, which tempts a model to pad with the background it was told to leave out (the overspend and the absent councillor) or to drift over 110 words; section order and British spelling must also hold.",
     "verification": "v2: checked with Python that 21 January 2027 is a Thursday; ran both accept and all seven reject examples through _verify/fixes/check_fixes.py (accepts pass every check; each reject fails at least one, including the reviewer's swapped-times notice). v3: ran both accepts and all nine rejects through _verify/fixes2/check_fixes2.py: accepts pass all 12 script checks; R1 to R7 each fail a script check; R8 (the second reviewer's 'you need not bring proof of address' notice) and R9 pass the script checks and are rejected by judge checks c13 and c14, as reject_notes says.",
     "author": "Claude (AIRH task agent)",
-    "written_on": "2026-11-14"
+    "written_on": "2026-11-14",
+    "changed_in_v4": "Added judged check c15: all four agenda items must be presented as happening."
   },
   {
     "id": "f1-pub-06",
@@ -582,7 +590,7 @@
   },
   {
     "id": "f1-pub-07",
-    "version": 3,
+    "version": 4,
     "changed_in_v2": "Prompt now asks for the arrival time straight after 'arrive at' or 'arrive by', forbids any other time or a number of minutes, and spells out the privacy rule (no treatment or purpose, no dentist, doctor, Dr or other staff); the grader now counts time-of-day tokens (exactly one), requires 'arrive at/by 2:30pm' and bans treatment words, staff roles and titles, and names after 'with'.",
     "changed_in_v3": "Grader changed from constraints to checklist: the 13 script checks are kept unchanged as c1 to c13, and two judge checks are added (c14: no member of staff and no treatment or purpose of any kind; c15: no other time, in figures or words), because word lists cannot cover every staff name or treatment such as 'Patel will see you' or 'for bleaching'.",
     "family": 1,
@@ -745,7 +753,7 @@
         },
         {
           "id": "c15",
-          "text": "Gives no time other than the 2:30pm arrival time, in figures or in words, and does not say how early she should be.",
+          "text": "States that the appointment is on Tue 1 Dec and tells Geraldine to arrive at or by 2:30pm. Contradicting either (for example saying the appointment is not on that date) fails. Gives no other time of day, in figures or in words, and does not say how early she should be.",
           "by": "judge"
         }
       ]
@@ -766,18 +774,21 @@
       "Elm Row Dental: Hi Geraldine, your follow-up appointment is on Tue 1 Dec. Please arrive at 2:30pm. Reply STOP to opt out.",
       "Elm Row Dental: Hi Geraldine, a reminder of your appointment on Tue 1 Dec. Patel will see you. Please arrive at 2:30pm. Reply STOP to opt out.",
       "Elm Row Dental: Hi Geraldine, a reminder of your appointment for bleaching on Tue 1 Dec. Please arrive at 2:30pm. Reply STOP to opt out.",
-      "Elm Row Dental: Hi Geraldine, your appointment is on Tue 1 Dec. Please arrive at 2:30pm, a little before your slot at twenty to three. Reply STOP to opt out."
+      "Elm Row Dental: Hi Geraldine, your appointment is on Tue 1 Dec. Please arrive at 2:30pm, a little before your slot at twenty to three. Reply STOP to opt out.",
+      "Elm Row Dental: Hi Geraldine, your appointment is not on Tue 1 Dec. Please arrive at 2:30pm to update your medical form. Reply STOP to opt out."
     ],
     "reject_notes": {
       "R9": "The second reviewer's counterexample. Passes every script check ('Patel' is not on a list and does not follow 'with') but fails judge check c14: it names a member of staff.",
       "R10": "The second reviewer's counterexample. Passes every script check ('bleaching' is not on the word list) but fails judge check c14: it names a treatment.",
-      "R11": "Passes every script check (the second time is spelt out as 'twenty to three') but fails judge check c15: it gives the slot time as well as the arrival time."
+      "R11": "Passes every script check (the second time is spelt out as 'twenty to three') but fails judge check c15: it gives the slot time as well as the arrival time.",
+      "R12": "The third reviewer's counterexample. Passes every script check (the date string and one arrival time are present) but fails judge check c15: it says the appointment is not on Tue 1 Dec."
     },
     "sources": [],
     "why_hard": "The diary shows 14:40 but the one time allowed is the arrival time, which must be worked out (10 minutes earlier) and converted to 12-hour format as 2:30pm, all inside 160 characters with the fixed opening and closing eating into the budget.",
     "verification": "v2: checked with Python that 1 December 2026 is a Tuesday and that 14:40 less 10 minutes is 14:30 (2:30pm); measured the character length of each example; ran both accept and all eight reject examples through _verify/fixes/check_fixes.py (accepts pass every check; each reject fails at least one, including the reviewer's two-times and other-dentist messages). v3: measured each new example (all 160 characters or fewer) and ran both accepts and all eleven rejects through _verify/fixes2/check_fixes2.py: accepts pass all 13 script checks; R1 to R8 each fail a script check; R9 and R10 (the second reviewer's 'Patel will see you' and 'for bleaching' messages) and R11 pass the script checks and are rejected by judge checks c14 and c15, as reject_notes says.",
     "author": "Claude (AIRH task agent)",
-    "written_on": "2026-11-14"
+    "written_on": "2026-11-14",
+    "changed_in_v4": "Judged check c15 reworded: the date and the arrival time must be stated and not contradicted."
   },
   {
     "id": "f2-pub-01",
