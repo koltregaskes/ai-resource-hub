@@ -2,10 +2,12 @@
   "git_commit": "fa31ff51cfb29b09d80f14a464d17608bcf7caad",
   "task_set_version": "daily-use-v1",
   "sha256": {
-    "public-tasks.json": "9e8766fb4ff73f525c3a98239264b516012c7c3cb5c6e18ce29a9da4dfae2c0b",
-    "report.md": "6191e0ca2b744769d7394340bea10690ae87cad1a8e4be15c03260a76498e75d",
-    "results.json": "87604666228f79f16349085cd1319c24b7589c6f5f4e4f7e6011c5bee82b57be",
-    "harness.py": "0503b764df75290e284587de3ae0a7e157ec24795d0ecac9da86f888d2cb98e1",
-    "fixtures.json": "d36c4c470638195d1ab81592ae68bbfe2f0a116bb9d6114e72f4df42e6520b15"
-  }
+    "public-tasks.json": "bc34730a4df19c042555b97c5c27b8b9acaf6eaaaa761c7657e0d2029b78237e",
+    "report.md": "efd59164bac86568510f5a52169fc5cbabeb518b411bb66aa45b4bdce05377cb",
+    "results.json": "37df391342bec938713519b4fa1bef3d08990f5e8e7ae966cd04078cf315b4d7",
+    "source/harness.py": "d598d44d7559fae3464a2ddedb1729fe072a2248599b3a59a20e6cfe2bde855f",
+    "source/fixtures.json": "c82de89a1467daf26f2d87b602ac8760f70b47d492a5874ba8c6447c75dc98f5",
+    "manifest.original.json": "c25915b92fd24a27d0463f7d69b648a15f3100021b5ebf58f8235e65e2d007be"
+  },
+  "normalization": "LF repair only; historical source snapshots under source/; original manifest preserved"
 }

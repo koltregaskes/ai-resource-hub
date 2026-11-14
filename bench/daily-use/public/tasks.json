@@ -17,7 +17,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "rewrite_edit",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "email-02",
@@ -37,7 +41,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "rewrite_edit",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "email-03",
@@ -57,7 +65,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "rewrite_edit",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "email-04",
@@ -77,7 +89,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "rewrite_edit",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "email-05",
@@ -97,7 +113,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "rewrite_edit",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "email-06",
@@ -117,7 +137,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "rewrite_edit",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "summary-01",
@@ -137,7 +161,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "summarise_extract",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "summary-02",
@@ -157,7 +185,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "summarise_extract",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "summary-03",
@@ -177,7 +209,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "summarise_extract",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "summary-04",
@@ -197,7 +233,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "summarise_extract",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "summary-05",
@@ -217,7 +257,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "summarise_extract",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "summary-06",
@@ -237,7 +281,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "summarise_extract",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "formula-01",
@@ -248,7 +296,11 @@
       "expected": "=SUM(B2:B20)"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "spreadsheet_code",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "formula-02",
@@ -259,7 +311,11 @@
       "expected": "=AVERAGE(C2:C10)"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "spreadsheet_code",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "formula-03",
@@ -270,7 +326,11 @@
       "expected": "=COUNT(A1:A9)"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "spreadsheet_code",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "formula-04",
@@ -281,7 +341,11 @@
       "expected": "=MAX(D2:D12)"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "spreadsheet_code",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "formula-05",
@@ -292,7 +356,11 @@
       "expected": "=MIN(E1:E8)"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "spreadsheet_code",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "formula-06",
@@ -303,7 +371,11 @@
       "expected": "=ROUND(B2,2)"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "spreadsheet_code",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "travel-01",
@@ -314,7 +386,11 @@
       "expected": "10:30"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "numbers_planning",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "travel-02",
@@ -325,7 +401,11 @@
       "expected": "12:00"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "numbers_planning",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "travel-03",
@@ -336,7 +416,11 @@
       "expected": "15:10"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "numbers_planning",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "travel-04",
@@ -347,7 +431,11 @@
       "expected": "09:55"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "numbers_planning",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "travel-05",
@@ -358,7 +446,11 @@
       "expected": "17:35"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "numbers_planning",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "travel-06",
@@ -369,7 +461,11 @@
       "expected": "19:15"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "numbers_planning",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "receipt-01",
@@ -383,7 +479,11 @@
       }
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "summarise_extract",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "receipt-02",
@@ -397,7 +497,11 @@
       }
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "summarise_extract",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "receipt-03",
@@ -411,7 +515,11 @@
       }
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "summarise_extract",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "receipt-04",
@@ -425,7 +533,11 @@
       }
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "summarise_extract",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "receipt-05",
@@ -439,7 +551,11 @@
       }
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "summarise_extract",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "receipt-06",
@@ -453,7 +569,11 @@
       }
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "summarise_extract",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "rewrite-01",
@@ -472,7 +592,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "rewrite_edit",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "rewrite-02",
@@ -491,7 +615,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "rewrite_edit",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "rewrite-03",
@@ -510,7 +638,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "rewrite_edit",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "rewrite-04",
@@ -529,7 +661,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "rewrite_edit",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "rewrite-05",
@@ -548,7 +684,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "rewrite_edit",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "rewrite-06",
@@ -568,7 +708,11 @@
       ]
     },
     "grader": "rubric",
-    "honesty": false
+    "honesty": false,
+    "family": "rewrite_edit",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "code-01",
@@ -579,7 +723,11 @@
       "expected": "def calculate():\n    return 2 + 3"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "spreadsheet_code",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "code-02",
@@ -590,7 +738,11 @@
       "expected": "def calculate():\n    return 7 - 2"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "spreadsheet_code",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "code-03",
@@ -601,7 +753,11 @@
       "expected": "def calculate():\n    return 4 * 3"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "spreadsheet_code",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "code-04",
@@ -612,7 +768,11 @@
       "expected": "def calculate():\n    return 12 // 3"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "spreadsheet_code",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "code-05",
@@ -623,7 +783,11 @@
       "expected": "def calculate():\n    return 9 % 4"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "spreadsheet_code",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "code-06",
@@ -634,7 +798,11 @@
       "expected": "def calculate():\n    return 2 ** 3"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "spreadsheet_code",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "uk-facts-01",
@@ -645,7 +813,11 @@
       "expected": "Edinburgh"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "know_check_abstain",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "uk-facts-02",
@@ -656,7 +828,11 @@
       "expected": "Cardiff"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "know_check_abstain",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "uk-facts-03",
@@ -667,7 +843,11 @@
       "expected": "Belfast"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "know_check_abstain",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "uk-facts-04",
@@ -678,7 +858,11 @@
       "expected": "GBP"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "know_check_abstain",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "uk-facts-05",
@@ -689,7 +873,11 @@
       "expected": "100"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "know_check_abstain",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "uk-facts-06",
@@ -700,7 +888,11 @@
       "expected": "England"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "know_check_abstain",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "calendar-01",
@@ -711,7 +903,11 @@
       "expected": "2026-02-02"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "numbers_planning",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "calendar-02",
@@ -722,7 +918,11 @@
       "expected": "2024-03-01"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "numbers_planning",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "calendar-03",
@@ -733,7 +933,11 @@
       "expected": "2027-01-01"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "numbers_planning",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "calendar-04",
@@ -744,7 +948,11 @@
       "expected": "2026-05-01"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "numbers_planning",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "calendar-05",
@@ -755,7 +963,11 @@
       "expected": "2026-06-08"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "numbers_planning",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "calendar-06",
@@ -766,7 +978,11 @@
       "expected": "2026-10-30"
     },
     "grader": "script",
-    "honesty": false
+    "honesty": false,
+    "family": "numbers_planning",
+    "split": "public",
+    "answerable": true,
+    "admitted": false
   },
   {
     "id": "arithmetic-01",
@@ -777,7 +993,11 @@
       "expected": "I don't know"
     },
     "grader": "script",
-    "honesty": true
+    "honesty": true,
+    "family": "know_check_abstain",
+    "split": "public",
+    "answerable": false,
+    "admitted": false
   },
   {
     "id": "arithmetic-02",
@@ -788,7 +1008,11 @@
       "expected": "I don't know"
     },
     "grader": "script",
-    "honesty": true
+    "honesty": true,
+    "family": "know_check_abstain",
+    "split": "public",
+    "answerable": false,
+    "admitted": false
   },
   {
     "id": "arithmetic-03",
@@ -799,7 +1023,11 @@
       "expected": "I don't know"
     },
     "grader": "script",
-    "honesty": true
+    "honesty": true,
+    "family": "know_check_abstain",
+    "split": "public",
+    "answerable": false,
+    "admitted": false
   },
   {
     "id": "arithmetic-04",
@@ -810,7 +1038,11 @@
       "expected": "I don't know"
     },
     "grader": "script",
-    "honesty": true
+    "honesty": true,
+    "family": "know_check_abstain",
+    "split": "public",
+    "answerable": false,
+    "admitted": false
   },
   {
     "id": "arithmetic-05",
@@ -821,7 +1053,11 @@
       "expected": "I don't know"
     },
     "grader": "script",
-    "honesty": true
+    "honesty": true,
+    "family": "know_check_abstain",
+    "split": "public",
+    "answerable": false,
+    "admitted": false
   },
   {
     "id": "arithmetic-06",
@@ -832,6 +1068,10 @@
       "expected": "I don't know"
     },
     "grader": "script",
-    "honesty": true
+    "honesty": true,
+    "family": "know_check_abstain",
+    "split": "public",
+    "answerable": false,
+    "admitted": false
   }
 ]
