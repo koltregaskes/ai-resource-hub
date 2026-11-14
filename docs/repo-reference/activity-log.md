@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 14 Nov 2026, 10:21 UTC
+Generated: 14 Nov 2026, 11:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 14 Nov 2026, 12:00 UTC | blog | A cheaper tracker row may be a different seller | Analysis · 5 min read. | `/blog/ai-price-tracker-source-changes/` |
-| 14 Nov 2026, 12:00 UTC | blog | A model upgrade needs a regression register | Explainer · 5 min read. | `/blog/model-upgrade-regression-register/` |
+| 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
+| 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,035 open roles across 10 tracked companies. | `/jobs/` |
-| 14 Nov 2026, 12:00 UTC | blog | The batch discount needs a deadline you can afford | Analysis · 5 min read. | `/blog/batch-ai-jobs-deadline/` |
-| 14 Nov 2026, 10:21 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 14 Nov 2026, 10:21 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 14 Nov 2026, 10:21 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 14 Nov 2026, 10:21 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
+| 14 Nov 2026, 11:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 14 Nov 2026, 11:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 14 Nov 2026, 11:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 14 Nov 2026, 11:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 13 Nov 2026, 12:00 UTC | digest | Amazon has a plan to index the world’s online shopping data | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search) |
 | 13 Nov 2026, 12:00 UTC | digest | ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet) |
 | 13 Nov 2026, 12:00 UTC | digest | Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/) |
