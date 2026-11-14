@@ -5,7 +5,7 @@ interface Props { review: ModelFieldReview; discoveryName: string; }
 const { review, discoveryName } = Astro.props;
 const confirmed = review.fields.name.verification === 'verified';
 const name = confirmed ? String(review.fields.name.value) : discoveryName;
-const labels: Record<string,string> = { name:'Model name',providerId:'Provider',released:'Release date',contextWindow:'Context window (tokens)',maxOutput:'Maximum output (tokens)',modality:'Modalities',openSource:'Open weights',apiAvailable:'API available',status:'Vendor lifecycle status',category:'Category',inputPrice:'Input price',outputPrice:'Output price',cachedInputPrice:'Cached input price',currency:'Published currency',pricingUnit:'Price unit',pricingConditions:'Pricing and deployment scope' };
+const labels: Record<string,string> = { snapshot:'Default snapshot (not launch date)',licence:'Model weight licence',vendorLifecycle:'Exact vendor lifecycle label',name:'Model name',providerId:'Provider',released:'Release date',contextWindow:'Context window (tokens)',maxOutput:'Maximum output (tokens)',modality:'Modalities',openSource:'Open weights',apiAvailable:'API available',status:'Vendor lifecycle status',category:'Category',inputPrice:'Input price',outputPrice:'Output price',cachedInputPrice:'Cached input price',currency:'Published currency',pricingUnit:'Price unit',pricingConditions:'Pricing and deployment scope' };
 const priceKeys = new Set(['inputPrice','outputPrice','cachedInputPrice']);
 function display(key: string, value: string | number | boolean | null) {
   if (value === null) return 'Unverified';

@@ -1,0 +1,11 @@
+---
+import { MODEL_FIELD_REVIEWS } from '../../../scripts/lib/model-field-reviews';
+const rows=MODEL_FIELD_REVIEWS.filter(r=>r.fields.name.checkedAt==='2026-11-14' && r.fields.providerId.value==='openai');
+---
+<section id="openai-model-review-2026-11-14" class="my-12">
+<h2 class="text-2xl font-bold">OpenAI model field review, 14 November 2026</h2>
+<p>Ten model pages checked manually against OpenAI documentation. Context and output limits and listed text-token prices are transcribed directly, with no calculation. Snapshot identifiers are preserved separately from initial launch dates. Deprecated is mapped to superseded; Shut down is mapped to retired and API unavailable. Documented endpoint compatibility alone does not establish live access.</p>
+<p>Prices are USD per million text tokens from the first pricing table, excluding batch discounts, tools and other modalities. Listed prices for shut-down models are historical reference, not available offers. No benchmark, Artificial Analysis or Arena data is used. Release dates use dated official launch posts, distinct from snapshots. Weight licences and access not established by the checked pages remain explicitly unverified. This is a manual check dated 14 November, not an automated refresh promise.</p>
+<p>Terms status: provider documentation used for factual reference and linking; no permission to redistribute model weights or documentation is claimed. No full documentation text is republished. A separate reuse-terms review has not been completed.</p>
+<ul>{rows.map(row=><li><a href={`${import.meta.env.BASE_URL}models/${row.id}/`}>{row.fields.name.value}</a>: {[...new Set(Object.values(row.fields).map(f=>f.sourceUrl))].map(url=><a href={url}>Official model documentation</a>)}. Checked 14 November 2026; field values, omissions and reasons are on the model page.</li>)}</ul>
+</section>
