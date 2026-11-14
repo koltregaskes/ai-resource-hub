@@ -213,7 +213,8 @@ Every task is written by us. We reuse nobody else's questions, prompts or result
   - The file's path is given with `--key-file`. It's never hard-coded or committed.
   - The two entry names are set in the run config: one for the OpenAI key and one for the Anthropic key.
   - The loader reads the file line by line and keeps only those two names. Every other line is discarded unread, and nothing from the file is logged.
-  - If a name isn't there, the harness stops with `key not found: <name>`. It doesn't guess another name.
+  - Name matching ignores case. The run config may also list named alternatives for each key, tried in order. Nothing outside that list is tried.
+  - If none of the listed names is there, the harness stops with `key not found: <name>`.
   - The keys are held in variables and passed straight to the HTTP client. **They're never put in an environment variable,** not even for the harness's own process, so no other tool can pick them up.
 - **What the harness refuses:**
   - starting while `OPENAI_API_KEY` or `ANTHROPIC_API_KEY` is set in its environment (those names switch other tools to paid billing, and a set value means something exported a key);
