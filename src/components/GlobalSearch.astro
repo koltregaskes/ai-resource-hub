@@ -71,20 +71,35 @@ const typeColorsJSON = safeJson(typeColors);
       aria-label="Global search"
       data-search-dialog
     >
-      <div class="flex items-center gap-3 border-b border-[var(--color-border)] px-4 py-3">
+      {/*
+        WebMCP (Chrome origin trial): toolname/tooldescription register this form as a
+        read-only "search_site" tool for in-browser agents; toolautosubmit lets the agent
+        run the search without a click because searching changes nothing. Browsers
+        without WebMCP ignore these attributes.
+        Docs: https://developer.chrome.com/docs/ai/webmcp/declarative-api
+      */}
+      <form
+        class="flex items-center gap-3 border-b border-[var(--color-border)] px-4 py-3"
+        data-search-form
+        toolname="search_site"
+        tooldescription="Searches AI Resource Hub for AI models, providers, people, glossary terms and guides by keyword. Returns up to 12 matching pages with their titles, types and links. Read-only."
+        toolautosubmit
+      >
         <svg class="h-5 w-5 shrink-0 text-[var(--color-text-muted)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
         </svg>
         <input
           type="search"
+          name="query"
           placeholder="Search models, providers, glossary, guides..."
           class="flex-1 bg-transparent text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:outline-none"
           data-search-input
+          toolparamdescription="Keyword or name to look for, for example a model name, provider or glossary term."
         />
         <kbd class="rounded border border-[var(--color-border)] bg-[var(--color-bg-tertiary)] px-1.5 py-0.5 font-mono text-[10px] text-[var(--color-text-muted)]">
           ESC
         </kbd>
-      </div>
+      </form>
 
       <div class="max-h-[50vh] overflow-y-auto" data-search-results></div>
     </div>
@@ -115,6 +130,7 @@ const typeColorsJSON = safeJson(typeColors);
     const dialog = root.querySelector('[data-search-dialog]');
     const input = root.querySelector('[data-search-input]');
     const results = root.querySelector('[data-search-results]');
+    const form = root.querySelector('[data-search-form]');
     let open = false;
 
     if (!(overlay instanceof HTMLElement) || !(dialog instanceof HTMLElement) || !(results instanceof HTMLElement) || !(input instanceof HTMLInputElement)) {
@@ -223,6 +239,35 @@ const typeColorsJSON = safeJson(typeColors);
     });
     dialog.addEventListener('click', (event) => event.stopPropagation());
     input.addEventListener('input', () => renderResults(searchItems(input.value)));
+
+    // The input sits in a <form> so WebMCP can expose it as a declarative tool.
+    // Always cancel native submission, so pressing Enter still does nothing for people.
+    // When an agent invokes the tool (SubmitEvent.agentInvoked), show the results in the
+    // dialog and hand a short plain-text summary back with respondWith().
+    const formatForAgent = (query, matches) => {
+      const q = query.trim();
+      if (!q) return 'Provide a keyword to search for.';
+      if (matches.length === 0) return `No AI Resource Hub pages matched "${q}".`;
+      const lines = [`AI Resource Hub results for "${q}":`];
+      for (const item of matches) {
+        const label = typeLabels[item.type] ?? item.type;
+        const line = `- ${item.title} (${label}): ${new URL(item.url, window.location.href).href}`;
+        if (lines.join('\n').length + line.length > 1400) break;
+        lines.push(line);
+      }
+      return lines.join('\n');
+    };
+
+    form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!event.agentInvoked) return;
+      const matches = searchItems(input.value);
+      if (!open) openSearch();
+      renderResults(matches);
+      if (typeof event.respondWith === 'function') {
+        event.respondWith(Promise.resolve(formatForAgent(input.value, matches)));
+      }
+    });
 
     document.addEventListener('keydown', (event) => {
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
