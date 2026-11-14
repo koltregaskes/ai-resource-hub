@@ -181,7 +181,129 @@
       }
     }
   ],
-  "_judges_comment": "EXAMPLE judge choice only: one judge per provider. The real panel is named after judge qualification.",
+  "_judge_candidates_comment": "The qualify stage tries every candidate against the frozen samples, cheapest first, and names the panel: on each side the cheapest candidate that passed. Then set judges to that panel. A judge verdict is a small JSON object, so every judge and candidate has an output limit of 400 tokens.",
+  "judge_candidates": {
+    "openai": [
+      {
+        "provider": "openai",
+        "model_id": "gpt-6-luna",
+        "api_version": "TO PIN BEFORE RUN",
+        "reasoning_effort": "TO PIN BEFORE RUN",
+        "send_reasoning_effort": true,
+        "temperature": "TO PIN BEFORE RUN",
+        "send_temperature": true,
+        "output_limit_parameter": "max_output_tokens",
+        "data_retention": "TO PIN BEFORE RUN",
+        "max_output_tokens": 400,
+        "price": {
+          "input_per_mtok": 0.10,
+          "output_per_mtok": 0.50,
+          "cached_input_per_mtok": 0.01,
+          "reasoning_billing": "in_output",
+          "reasoning_per_mtok": null,
+          "source_url": "https://developers.openai.com/api/docs/pricing",
+          "read_on": "2026-11-14",
+          "promo_ends": null,
+          "note": "standard tier, USD per million tokens"
+        }
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-6.1-terra",
+        "api_version": "TO PIN BEFORE RUN",
+        "reasoning_effort": "TO PIN BEFORE RUN",
+        "send_reasoning_effort": true,
+        "temperature": "TO PIN BEFORE RUN",
+        "send_temperature": true,
+        "output_limit_parameter": "max_output_tokens",
+        "data_retention": "TO PIN BEFORE RUN",
+        "max_output_tokens": 400,
+        "price": {
+          "input_per_mtok": 1,
+          "output_per_mtok": 5,
+          "cached_input_per_mtok": 0.05,
+          "reasoning_billing": "in_output",
+          "reasoning_per_mtok": null,
+          "source_url": "https://developers.openai.com/api/docs/pricing",
+          "read_on": "2026-11-14",
+          "promo_ends": null,
+          "note": "standard tier, USD per million tokens"
+        }
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-6.1-sol",
+        "api_version": "TO PIN BEFORE RUN",
+        "reasoning_effort": "TO PIN BEFORE RUN",
+        "send_reasoning_effort": true,
+        "temperature": "TO PIN BEFORE RUN",
+        "send_temperature": true,
+        "output_limit_parameter": "max_output_tokens",
+        "data_retention": "TO PIN BEFORE RUN",
+        "max_output_tokens": 400,
+        "price": {
+          "input_per_mtok": 2,
+          "output_per_mtok": 10,
+          "cached_input_per_mtok": 0.10,
+          "reasoning_billing": "in_output",
+          "reasoning_per_mtok": null,
+          "source_url": "https://developers.openai.com/api/docs/pricing",
+          "read_on": "2026-11-14",
+          "promo_ends": null,
+          "note": "standard tier, USD per million tokens"
+        }
+      }
+    ],
+    "anthropic": [
+      {
+        "provider": "anthropic",
+        "model_id": "claude-haiku-5-5",
+        "api_version": "TO PIN BEFORE RUN",
+        "reasoning_effort": "TO PIN BEFORE RUN",
+        "send_reasoning_effort": true,
+        "temperature": "TO PIN BEFORE RUN",
+        "send_temperature": true,
+        "output_limit_parameter": "max_tokens",
+        "data_retention": "TO PIN BEFORE RUN",
+        "max_output_tokens": 400,
+        "price": {
+          "input_per_mtok": 0.10,
+          "output_per_mtok": 0.50,
+          "cached_input_per_mtok": null,
+          "reasoning_billing": "in_output",
+          "reasoning_per_mtok": null,
+          "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "read_on": "2026-11-14",
+          "promo_ends": null,
+          "note": "USD per million tokens; cached rate not recorded: re-read before the run"
+        }
+      },
+      {
+        "provider": "anthropic",
+        "model_id": "claude-sonnet-5-5",
+        "api_version": "TO PIN BEFORE RUN",
+        "reasoning_effort": "TO PIN BEFORE RUN",
+        "send_reasoning_effort": true,
+        "temperature": "TO PIN BEFORE RUN",
+        "send_temperature": true,
+        "output_limit_parameter": "max_tokens",
+        "data_retention": "TO PIN BEFORE RUN",
+        "max_output_tokens": 400,
+        "price": {
+          "input_per_mtok": 2,
+          "output_per_mtok": 10,
+          "cached_input_per_mtok": null,
+          "reasoning_billing": "in_output",
+          "reasoning_per_mtok": null,
+          "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "read_on": "2026-11-14",
+          "promo_ends": null,
+          "note": "USD per million tokens; cached rate not recorded: re-read before the run"
+        }
+      }
+    ]
+  },
+  "_judges_comment": "EXAMPLE judge choice only: one judge per provider, each taken from judge_candidates. The real panel is the one named by the qualify stage; the canary and the full run refuse a panel that differs from the qualification record.",
   "judges": [
     {
       "provider": "openai",
@@ -193,7 +315,7 @@
       "send_temperature": true,
       "output_limit_parameter": "max_output_tokens",
       "data_retention": "TO PIN BEFORE RUN",
-      "max_output_tokens": 1024,
+      "max_output_tokens": 400,
       "price": {
         "input_per_mtok": 2,
         "output_per_mtok": 10,
@@ -216,7 +338,7 @@
       "send_temperature": true,
       "output_limit_parameter": "max_tokens",
       "data_retention": "TO PIN BEFORE RUN",
-      "max_output_tokens": 1024,
+      "max_output_tokens": 400,
       "price": {
         "input_per_mtok": 2,
         "output_per_mtok": 10,

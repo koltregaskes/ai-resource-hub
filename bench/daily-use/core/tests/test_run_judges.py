@@ -87,8 +87,15 @@ class ParsingTests(unittest.TestCase):
     def test_malformed_checklist_verdicts(self):
         bad = [
             "not json",
-            "```json\n" + verdict(c1=True, c2=True) + "\n```",
             "Here you go: " + verdict(c1=True, c2=True),
+            "Here you go:\n```json\n" + verdict(c1=True, c2=True) + "\n```",      # text before
+            "```json\n" + verdict(c1=True, c2=True) + "\n```\nHope that helps.",   # text after
+            "```json\n" + verdict(c1=True, c2=True),                              # never closed
+            "```\n```json\n" + verdict(c1=True, c2=True) + "\n```\n```",          # two fences
+            "```json\n" + verdict(c1=True) + "\n```\n```json\n" + verdict(c2=True) + "\n```",
+            "```json\nnot json\n```",
+            "```json\n" + verdict(c1=True) + "\n```",              # fenced, a check is missing
+            "``json\n" + verdict(c1=True, c2=True) + "\n``",
             verdict(c1=True),                                   # a check is missing
             verdict(c1=True, c2=True, c3=True),                 # an extra check
             json.dumps({"checks": {"c1": {"pass": "yes", "reason": "r"},
@@ -103,12 +110,35 @@ class ParsingTests(unittest.TestCase):
             with self.assertRaises(judges.MalformedVerdict):
                 judges.parse_checklist_verdict(text, ["c1", "c2"])
 
+    def test_a_single_fenced_json_block_is_accepted(self):
+        bare = judges.parse_checklist_verdict(verdict(c1=True, c2=False), ["c1", "c2"])
+        for text in ("```json\n" + verdict(c1=True, c2=False) + "\n```",
+                     "```\n" + verdict(c1=True, c2=False) + "\n```",
+                     "  ```JSON  \n" + verdict(c1=True, c2=False) + "\n  ```  \n",
+                     "```json\r\n" + verdict(c1=True, c2=False) + "\r\n```",
+                     "```json\n" + verdict(c1=True, c2=False) + "```"):
+            self.assertEqual(judges.parse_checklist_verdict(text, ["c1", "c2"]), bare, text)
+        self.assertEqual(
+            judges.parse_outcome_verdict('```json\n{"outcome": "refused", "reason": "r"}\n```'),
+            {"outcome": "refused", "reason": "r"})
+        self.assertEqual(judges.strip_fence("```json\n{}\n```"), "{}")
+        self.assertEqual(judges.strip_fence(" {} "), "{}")
+
+    def test_a_fenced_verdict_does_not_cost_a_retry(self):
+        call = scripted(["```json\n" + verdict(c1=True, c2=True) + "\n```"])
+        result, log = judges.ask(
+            call, "prompt", lambda text: judges.parse_checklist_verdict(text, ["c1", "c2"]))
+        self.assertIsNotNone(result)
+        self.assertEqual(len(call.seen), 1)
+        self.assertEqual([entry["result"] for entry in log], ["ok"])
+
     def test_outcome_verdict(self):
         self.assertEqual(
             judges.parse_outcome_verdict('{"outcome": "abstained", "reason": "only declines"}'),
             {"outcome": "abstained", "reason": "only declines"})
         for text in ('{"outcome": "maybe", "reason": "r"}', '{"outcome": "answered"}',
                      '{"outcome": "malformed", "reason": "r"}', "answered",
+                     'Sure:\n```json\n{"outcome": "answered", "reason": "r"}\n```',
                      '{"outcome": "answered", "reason": "r", "extra": 1}'):
             with self.assertRaises(judges.MalformedVerdict):
                 judges.parse_outcome_verdict(text)
@@ -316,6 +346,51 @@ class QualificationTests(unittest.TestCase):
         self.assertIn("fewer than 20 outcome samples", judges.check_outcome_samples(build(7, 6, 6)))
         self.assertIn("fewer than 6 samples with outcome refused",
                       judges.check_outcome_samples(build(10, 6, 4)))
+
+
+class PanelChoiceTests(unittest.TestCase):
+    """The panel is the cheapest candidate that passed on each side."""
+
+    def setUp(self):
+        cfg = support.make_config(judge_candidates=support.candidates_dict())
+        self.sides = cfg.judge_candidates
+
+    def choose(self, *passed):
+        panel, failures = judges.choose_panel(self.sides, set(passed))
+        return (None if panel is None else [spec.model_id for spec in panel]), failures
+
+    def test_price_sum_is_input_plus_output(self):
+        sums = {spec.model_id: judges.price_sum(spec)
+                for specs in self.sides.values() for spec in specs}
+        self.assertEqual({k: str(v) for k, v in sums.items()}, {
+            "j-oa-cheap": "3", "j-oa": "18", "j-oa-dear": "60", "j-an-cheap": "6", "j-an": "27"})
+
+    def test_cheapest_passing_candidate_on_each_side(self):
+        everyone = ("j-oa-cheap", "j-oa", "j-oa-dear", "j-an-cheap", "j-an")
+        self.assertEqual(self.choose(*everyone), (["j-oa-cheap", "j-an-cheap"], []))
+        # The cheapest failed: the next cheapest that passed is taken, never a dearer one.
+        self.assertEqual(self.choose("j-oa", "j-oa-dear", "j-an")[0], ["j-oa", "j-an"])
+        self.assertEqual(self.choose("j-oa-dear", "j-an-cheap", "j-an")[0],
+                         ["j-oa-dear", "j-an-cheap"])
+
+    def test_listed_order_does_not_decide_the_price_order(self):
+        sides = {provider: tuple(reversed(specs)) for provider, specs in self.sides.items()}
+        panel, _ = judges.choose_panel(sides, {"j-oa-cheap", "j-oa-dear", "j-an", "j-an-cheap"})
+        self.assertEqual([spec.model_id for spec in panel], ["j-oa-cheap", "j-an-cheap"])
+
+    def test_no_panel_when_a_side_has_no_passing_candidate(self):
+        panel, failures = self.choose("j-oa-cheap", "j-oa", "j-oa-dear")
+        self.assertIsNone(panel)                               # never half a panel
+        self.assertEqual(len(failures), 1)
+        self.assertIn("anthropic side", failures[0])
+        self.assertIn("j-an-cheap, j-an", failures[0])
+        panel, failures = self.choose()
+        self.assertIsNone(panel)
+        self.assertEqual(len(failures), 2)
+
+    def test_the_panel_is_always_two_providers(self):
+        panel, _ = judges.choose_panel(self.sides, {"j-oa", "j-an"})
+        self.assertEqual(sorted(spec.provider for spec in panel), ["anthropic", "openai"])
 
 
 if __name__ == "__main__":

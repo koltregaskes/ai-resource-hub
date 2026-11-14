@@ -7,6 +7,12 @@ data-retention note and a dated price receipt. It also holds the caps per
 provider, the key names per provider, the canary settings and the approval
 fields for a live run.
 
+`judge_candidates` (optional) lists, per provider, the judges that the
+qualify stage tries: `{"openai": [...], "anthropic": [...]}`, each a full
+judge entry. `judges` is the panel the canary and the full run use; both of
+its entries must be among the candidates. Without `judge_candidates` the two
+`judges` are the only candidates.
+
 A config never holds a key. Any value that looks like a secret is rejected,
 and the error names only where it was found, never the value.
 
@@ -30,8 +36,9 @@ OUTPUT_LIMITS = (4096, 8192)
 
 _TOP_LEVEL = {
     "task_set_version", "live_approved", "approved_by", "key_names",
-    "caps_usd", "planning", "canary", "models", "judges",
+    "caps_usd", "planning", "canary", "models", "judges", "judge_candidates",
 }
+_OPTIONAL_TOP_LEVEL = {"judge_candidates"}
 _MODEL_FIELDS = {
     "provider", "model_id", "api_version", "reasoning_effort",
     "send_reasoning_effort", "temperature", "send_temperature",
@@ -175,6 +182,26 @@ class ModelSpec:
             "max_output_tokens": self.max_output_tokens,
         }
 
+    def settings(self):
+        """What a judge was qualified as: every setting that shapes its
+        replies. The price receipt is left out, so re-reading a price does
+        not undo a qualification."""
+        return {
+            "provider": self.provider,
+            "model_id": self.model_id,
+            "api_version": self.api_version,
+            "reasoning_effort": self.reasoning_effort,
+            "send_reasoning_effort": self.send_reasoning_effort,
+            "temperature": None if self.temperature is None else str(self.temperature),
+            "send_temperature": self.send_temperature,
+            "output_limit_parameter": self.output_limit_parameter,
+            "max_output_tokens": self.max_output_tokens,
+        }
+
+    def settings_sha256(self):
+        text = json.dumps(self.settings(), sort_keys=True, separators=(",", ":"))
+        return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
 
 @dataclass(frozen=True)
 class RunConfig:
@@ -191,12 +218,18 @@ class RunConfig:
     placeholders: tuple
     live_blockers: tuple
     sha256: str = ""
+    judge_candidates: dict = None
 
     def spec(self, model_id):
-        for item in self.models + self.judges:
+        for item in self.models + self.judges + self.all_judge_candidates():
             if item.model_id == model_id:
                 return item
         raise KeyError(model_id)
+
+    def all_judge_candidates(self):
+        """Every judge candidate, provider by provider, in listed order."""
+        return tuple(spec for provider in PROVIDERS
+                     for spec in (self.judge_candidates or {}).get(provider, ()))
 
     def require_live_ready(self):
         if self.live_blockers:
@@ -362,7 +395,7 @@ def validate(raw, mode="dry", today=None, sha256=""):
     for name in sorted(set(raw) - _TOP_LEVEL):
         if not str(name).startswith("_"):
             problems.append("config has an unknown top-level field")
-    for name in sorted(_TOP_LEVEL - set(raw)):
+    for name in sorted(_TOP_LEVEL - _OPTIONAL_TOP_LEVEL - set(raw)):
         problems.append("config.%s is missing" % name)
 
     version = _text(raw.get("task_set_version"), "config.task_set_version", problems)
@@ -445,6 +478,7 @@ def validate(raw, mode="dry", today=None, sha256=""):
     ids = [m.model_id for m in models]
     if len(set(ids)) != len(ids):
         problems.append("config.models lists a model id twice")
+    candidates = _candidates(raw, judges, problems, blockers, today)
 
     placeholders = find_placeholders(raw)
     for place in placeholders:
@@ -467,7 +501,46 @@ def validate(raw, mode="dry", today=None, sha256=""):
         placeholders=tuple(placeholders),
         live_blockers=tuple(blockers),
         sha256=sha256,
+        judge_candidates=candidates,
     )
+
+
+def _candidates(raw, judges, problems, blockers, today):
+    """The judge candidates per provider. Without `judge_candidates` the
+    two judges are the candidates, one on each side."""
+    if "judge_candidates" not in raw:
+        return {provider: tuple(j for j in judges if j.provider == provider)
+                for provider in PROVIDERS}
+    listed = raw["judge_candidates"]
+    candidates = {provider: () for provider in PROVIDERS}
+    if not isinstance(listed, dict) or set(listed) != set(PROVIDERS):
+        problems.append("config.judge_candidates must list candidates for openai and anthropic")
+        return candidates
+    seen = set()
+    for provider in PROVIDERS:
+        items = listed[provider]
+        if not isinstance(items, list) or not items:
+            problems.append("config.judge_candidates.%s must list at least one judge" % provider)
+            continue
+        specs = []
+        for index, item in enumerate(items):
+            where = "config.judge_candidates.%s[%d]" % (provider, index)
+            spec = _spec(item, "judge", where, problems, blockers, today)
+            if spec is None:
+                continue
+            if spec.provider != provider:
+                problems.append(where + ".provider must be " + provider)
+            if spec.model_id in seen:
+                problems.append("config.judge_candidates lists a model id twice")
+            seen.add(spec.model_id)
+            specs.append(spec)
+        candidates[provider] = tuple(specs)
+    for index, judge in enumerate(judges):
+        if judge not in candidates.get(judge.provider, ()):
+            problems.append(
+                "config.judges[%d] must be one of the judge candidates for its provider, "
+                "with the same settings and price receipt" % index)
+    return candidates
 
 
 def load_config(path, mode="dry", today=None):

@@ -179,3 +179,45 @@ def read_everything(folder):
             with open(os.path.join(root, name), "rb") as stream:
                 chunks.append(stream.read().decode("utf-8", "replace"))
     return "\n".join(chunks)
+
+
+def candidates_dict():
+    """Judge candidates: three on the OpenAI side and two on the Anthropic
+    side. The config's own judges (j-oa, j-an) are among them; neither is
+    the cheapest on its side."""
+    return {
+        "openai": [spec_dict("openai", "j-oa-cheap", "1", "2", judge=True),
+                   spec_dict("openai", "j-oa", "6", "12", judge=True),
+                   spec_dict("openai", "j-oa-dear", "20", "40", judge=True)],
+        "anthropic": [spec_dict("anthropic", "j-an-cheap", "2", "4", judge=True),
+                      spec_dict("anthropic", "j-an", "9", "18", judge=True)],
+    }
+
+
+def cheap_panel():
+    """The cheapest candidate on each side, as a `judges` list."""
+    return [spec_dict("openai", "j-oa-cheap", "1", "2", judge=True),
+            spec_dict("anthropic", "j-an-cheap", "2", "4", judge=True)]
+
+
+def qualification_samples(checklist_task="t1", outcome_task="t2"):
+    """A valid frozen sample set: 4 checklist samples for the one judged
+    task (reference c1 true, c2 false) and 20 outcome samples."""
+    checklist = [{"sample_id": "s%d" % n, "task_id": checklist_task, "answer": "Answer %d" % n,
+                  "reference": {"c1": True, "c2": False}} for n in range(4)]
+    outcome = [{"sample_id": "o%d" % n, "task_id": outcome_task, "reply": "Reply %d" % n,
+                "reference_outcome": ("answered", "abstained", "refused")[n % 3]}
+               for n in range(20)]
+    return checklist, outcome
+
+
+def reference_verdict(prompt, outcome_samples):
+    """What a judge that agrees with every reference verdict replies."""
+    import judges
+    if prompt.startswith(judges.CHECKLIST_PROMPT[:60]):
+        return json.dumps({"checks": {"c1": {"pass": True, "reason": "r"},
+                                      "c2": {"pass": False, "reason": "r"}}})
+    for sample in outcome_samples:
+        if "\n%s\n>>>" % sample["reply"] in prompt:
+            return json.dumps({"outcome": sample["reference_outcome"], "reason": "r"})
+    return json.dumps({"outcome": "answered", "reason": "r"})

@@ -66,6 +66,28 @@ class ExampleConfigTests(unittest.TestCase):
         loaded = config.load_config(EXAMPLE, mode="dry", today=TODAY)
         self.assertEqual(sorted(j.provider for j in loaded.judges), ["anthropic", "openai"])
 
+    def test_example_lists_the_judge_candidates_with_a_400_token_limit(self):
+        loaded = config.load_config(EXAMPLE, mode="dry", today=TODAY)
+        self.assertEqual(
+            {provider: [spec.model_id for spec in specs]
+             for provider, specs in loaded.judge_candidates.items()},
+            {"openai": ["gpt-6-luna", "gpt-6.1-terra", "gpt-6.1-sol"],
+             "anthropic": ["claude-haiku-5-5", "claude-sonnet-5-5"]})
+        by_model = {model.model_id: model for model in loaded.models}
+        for judge in loaded.judges + loaded.all_judge_candidates():
+            self.assertEqual(judge.max_output_tokens, 400)
+            self.assertEqual(judge.role, "judge")
+            # The same price receipt as the model entry of the same id.
+            self.assertEqual(judge.price, by_model[judge.model_id].price)
+        for judge in loaded.judges:
+            self.assertIn(judge, loaded.judge_candidates[judge.provider])
+        # The benchmarked models carry no limit of their own: the task's value applies.
+        with open(EXAMPLE, encoding="utf-8") as stream:
+            raw = json.load(stream)
+        for model in raw["models"]:
+            self.assertNotIn("max_output_tokens", model)
+        self.assertTrue(all(m.max_output_tokens is None for m in loaded.models))
+
 
 class ValidationTests(unittest.TestCase):
     def check(self, mode="dry", **over):
@@ -137,6 +159,63 @@ class ValidationTests(unittest.TestCase):
                 support.spec_dict("openai", "j2", "1", "2", judge=True)]
         self.rejects("two different providers", judges=same)
         self.rejects("exactly two judges", judges=same[:1])
+
+    def test_judge_candidates_default_to_the_two_judges(self):
+        loaded = self.check()
+        self.assertEqual({p: [s.model_id for s in specs]
+                          for p, specs in loaded.judge_candidates.items()},
+                         {"openai": ["j-oa"], "anthropic": ["j-an"]})
+        self.assertEqual([s.model_id for s in loaded.all_judge_candidates()], ["j-oa", "j-an"])
+
+    def test_judge_candidates_are_checked(self):
+        loaded = self.check(judge_candidates=support.candidates_dict())
+        self.assertEqual([s.model_id for s in loaded.all_judge_candidates()],
+                         ["j-oa-cheap", "j-oa", "j-oa-dear", "j-an-cheap", "j-an"])
+        self.assertEqual(loaded.spec("j-oa-dear").provider, "openai")
+        self.assertEqual(self.check(mode="live",
+                                    judge_candidates=support.candidates_dict()).live_blockers, ())
+        one_side = support.candidates_dict()
+        del one_side["anthropic"]
+        self.rejects("candidates for openai and anthropic", judge_candidates=one_side)
+        empty = support.candidates_dict()
+        empty["openai"] = []
+        self.rejects("must list at least one judge", judge_candidates=empty)
+        wrong_side = support.candidates_dict()
+        wrong_side["openai"].append(support.spec_dict("anthropic", "j-x", "1", "2", judge=True))
+        self.rejects("provider must be openai", judge_candidates=wrong_side)
+        twice = support.candidates_dict()
+        twice["openai"].append(support.spec_dict("openai", "j-oa", "6", "12", judge=True))
+        self.rejects("model id twice", judge_candidates=twice)
+        no_limit = support.candidates_dict()
+        del no_limit["openai"][0]["max_output_tokens"]
+        self.rejects("max_output_tokens is missing", judge_candidates=no_limit)
+        # The panel must be drawn from the candidates, entry for entry.
+        missing = support.candidates_dict()
+        missing["openai"] = missing["openai"][:1]
+        self.rejects("must be one of the judge candidates", judge_candidates=missing)
+        changed = support.candidates_dict()
+        changed["anthropic"][1]["reasoning_effort"] = "high"
+        self.rejects("must be one of the judge candidates", judge_candidates=changed)
+        unpinned = support.candidates_dict()
+        unpinned["openai"][2]["api_version"] = config.PLACEHOLDER
+        self.assertTrue(self.check(judge_candidates=unpinned).live_blockers)
+        self.rejects("TO PIN BEFORE RUN", mode="live", judge_candidates=unpinned)
+
+    def test_settings_fingerprint_follows_the_settings_not_the_price(self):
+        base = self.check().judges[0]
+        repriced = support.spec_dict("openai", "j-oa", "7", "14", judge=True)
+        repriced["price"]["read_on"] = "2026-11-20"
+        same = self.check(judges=[repriced, support.spec_dict("anthropic", "j-an", "9", "18",
+                                                              judge=True)]).judges[0]
+        self.assertEqual(base.settings_sha256(), same.settings_sha256())
+        self.assertEqual(len(base.settings_sha256()), 64)
+        for field, value in (("reasoning_effort", "high"), ("temperature", 0),
+                             ("max_output_tokens", 400), ("api_version", "2026-06-01"),
+                             ("send_temperature", False)):
+            other = support.spec_dict("openai", "j-oa", "6", "12", judge=True, **{field: value})
+            moved = self.check(judges=[other, support.spec_dict("anthropic", "j-an", "9", "18",
+                                                                judge=True)]).judges[0]
+            self.assertNotEqual(base.settings_sha256(), moved.settings_sha256(), field)
 
     def test_price_receipt_is_checked(self):
         bad_url = support.spec_dict("openai", "m-oa", "3", "30")

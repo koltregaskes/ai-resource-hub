@@ -1,7 +1,8 @@
 """The judge panel: checklist judging and outcome classification.
 
 Two judges from two different providers. One call per judge per answer,
-returning strict JSON. This module builds the prompts, parses the verdicts,
+returning one JSON object (bare, or inside a single Markdown code fence,
+which is stripped before parsing). This module builds the prompts, parses the verdicts,
 combines the two judges and scores judge qualification. It makes no calls
 itself: the runner passes in a `call(prompt, attempt)` function, so every
 judge request goes through the same ledger and run record as a model call.
@@ -19,9 +20,13 @@ Rules taken from the method:
 - Qualification: at least 90% item agreement overall, at least 85% on the
   items whose reference is true and at least 85% on those whose reference is
   false; at least 90% on the outcome samples.
+- Qualification is per candidate. The panel is the cheapest candidate that
+  passed on each provider side, by the simple sum of the input and output
+  price per million tokens in its price receipt.
 """
 
 import json
+import re
 
 PASS = "pass"
 FAIL = "fail"
@@ -30,6 +35,19 @@ UNRESOLVED = "judge_unresolved"
 NOT_NEEDED = "not_needed"
 JUDGE_OUTCOMES = ("answered", "abstained", "refused")
 ATTEMPTS_PER_JUDGE_CALL = 2
+
+# The method's qualification thresholds, as whole percentages.
+CHECKLIST_OVERALL_PERCENT = 90
+CHECKLIST_TRUE_PERCENT = 85
+CHECKLIST_FALSE_PERCENT = 85
+OUTCOME_PERCENT = 90
+THRESHOLDS = {
+    "checklist_overall": "0.90", "checklist_on_true": "0.85",
+    "checklist_on_false": "0.85", "outcome": "0.90",
+}
+
+# One Markdown fence around the whole reply, with an optional language tag.
+_FENCE = re.compile(r"\A```[A-Za-z0-9_-]*[ \t]*\r?\n(.*?)\r?\n?[ \t]*```\Z", re.DOTALL)
 
 CHECKLIST_PROMPT = """You are one of two independent judges checking an answer against a short list of yes/no checks.
 
@@ -140,9 +158,21 @@ def build_outcome_prompt(task_prompt, reply):
     return OUTCOME_PROMPT.replace("[[TASK_PROMPT]]", task_prompt).replace("[[REPLY]]", reply)
 
 
+def strip_fence(text):
+    """Remove one Markdown code fence that surrounds the whole text.
+
+    Judges often wrap a JSON verdict in a fence. That habit is harmless, so
+    it does not cost a retry. Text before or after the fence, or a second
+    fence, is left as it is and then fails to parse.
+    """
+    stripped = text.strip()
+    match = _FENCE.match(stripped)
+    return match.group(1).strip() if match else stripped
+
+
 def _strict_object(text):
     try:
-        value = json.loads(text.strip())
+        value = json.loads(strip_fence(text))
     except (ValueError, AttributeError):
         raise MalformedVerdict("not JSON") from None
     if not isinstance(value, dict):
@@ -344,8 +374,9 @@ def score_checklist_qualification(samples, verdicts):
             else:
                 false_total += 1
                 false_agree += hit
-    passed = (_at_least(agree, total, 90) and _at_least(true_agree, true_total, 85)
-              and _at_least(false_agree, false_total, 85))
+    passed = (_at_least(agree, total, CHECKLIST_OVERALL_PERCENT)
+              and _at_least(true_agree, true_total, CHECKLIST_TRUE_PERCENT)
+              and _at_least(false_agree, false_total, CHECKLIST_FALSE_PERCENT))
     return {
         "items": total, "agreement": _rate(agree, total),
         "reference_true_items": true_total, "agreement_on_true": _rate(true_agree, true_total),
@@ -361,4 +392,40 @@ def score_outcome_qualification(samples, verdicts):
     agree = sum(1 for sample in samples
                 if verdicts.get(sample["sample_id"]) == sample["reference_outcome"])
     return {"samples": len(samples), "agreement": _rate(agree, len(samples)),
-            "passed": _at_least(agree, len(samples), 90)}
+            "passed": _at_least(agree, len(samples), OUTCOME_PERCENT)}
+
+
+def price_sum(spec):
+    """The figure candidates are ranked by: input plus output price per
+    million tokens, a simple sum, from the candidate's price receipt."""
+    return spec.price.input_per_mtok + spec.price.output_per_mtok
+
+
+def cheapest_first(specs):
+    """Candidates in price order; the listed order breaks a tie."""
+    return sorted(specs, key=price_sum)
+
+
+def choose_panel(candidates_by_provider, passed_ids):
+    """Pick the panel from the qualification results.
+
+    `candidates_by_provider` maps each provider to its candidate specs and
+    `passed_ids` holds the model ids that passed. On each provider side the
+    cheapest candidate that passed is chosen. Returns (panel, failures):
+    the two chosen specs, or None with one sentence per side on which no
+    candidate passed. There is never a partial panel.
+    """
+    panel = []
+    failures = []
+    for provider, specs in candidates_by_provider.items():
+        passed = [spec for spec in cheapest_first(specs) if spec.model_id in passed_ids]
+        if passed:
+            panel.append(passed[0])
+        else:
+            failures.append(
+                "no judge candidate passed qualification on the %s side (%d tried: %s)"
+                % (provider, len(specs), ", ".join(spec.model_id for spec in specs)))
+    if failures:
+        return None, failures
+    assert_panel(panel)
+    return panel, []

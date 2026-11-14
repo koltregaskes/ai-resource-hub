@@ -13,15 +13,19 @@ Slots and requests follow the method exactly:
 - Task order is shuffled per model with a recorded seed.
 
 Grading is injected: `grade(task, reply)` returns
-`{"outcome", "pass", "pending", "needs_judge": [...]}`. `needs_judge` lists
-`"outcome"` and/or judged check ids. When it is not empty the runner asks
-the judge panel, then calls `grade(task, reply, judged=...)` for the final
-result if the grader accepts `judged`; otherwise a conservative fallback is
-used. This module never imports the graders, except lazily in
-`default_grade`.
+`{"outcome", "pass", "pending", "needs_judge": [...]}`, and may add
+`"checks"`, a list of `{"id", "by", "state"}`. `needs_judge` lists
+`"outcome"` and/or judged checks (ids, or `{"id", "text"}`). When it is not
+empty the runner asks the judge panel, then calls
+`grade(task, reply, judged=...)` for the final result if the grader accepts
+`judged`; otherwise a conservative fallback is used. This module never
+imports the other bench modules at the top: `default_grade` and
+`default_scores` import `core/outcome.py`, `core/graders.py` and
+`core/scores.py` lazily, and say so plainly when they are absent.
 
-Stages: `canary` (2 public tasks per model, 1 repeat; never published),
-`qualify` (the judges against the frozen sample files) and `full`.
+Stages, in order: `qualify` (every judge candidate against the frozen
+sample files; names the panel), `canary` (2 public tasks per model, 1
+repeat, judged by the qualified panel; never published) and `full`.
 
 THE LIVE GATE. A live stage runs only if ALL of these hold:
   1. `LIVE_ENABLED` below is True (it ships False and changes only in a
@@ -31,7 +35,11 @@ THE LIVE GATE. A live stage runs only if ALL of these hold:
   4. the config has no `TO PIN BEFORE RUN` value and no other live blocker;
   5. `--key-file` was given;
   6. the environment holds no OPENAI_API_KEY or ANTHROPIC_API_KEY;
-  7. the stage's earlier steps are on record in the private store;
+  7. the stage's earlier steps are on record in the private store: the
+     canary and the full run need a passed judge qualification record that
+     still stands (same sample files, same task set version, and a panel
+     equal to the config's judges); the full run also needs a finished
+     canary judged by that panel;
   8. the pre-flight passes;
   9. the keys load from the key file.
 With `LIVE_ENABLED = False`, a live request is refused before the key file
@@ -39,12 +47,14 @@ is read and before any transport exists.
 """
 
 import hashlib
+import importlib
 import inspect
 import json
 import math
 import os
 import random
 import re
+import sys
 import time
 from decimal import Decimal
 
@@ -60,8 +70,11 @@ except ImportError:
 
 LIVE_ENABLED = False
 
-STAGES = ("canary", "qualify", "full")
+STAGES = ("qualify", "canary", "full")
 STAGE_INDEX = "stages.jsonl"
+QUALIFICATION_DIR = "qualification"
+QUALIFICATION_RECORD = "judge-qualification"
+CORE_DIR = os.path.dirname(os.path.abspath(__file__))
 _PASSES = []
 
 
@@ -71,6 +84,10 @@ class LiveRefused(Exception):
 
 class GraderUnavailable(Exception):
     """No grading function was supplied and the graders are not present."""
+
+
+class ScorerUnavailable(Exception):
+    """No scoring function was supplied and `core/scores.py` is not present."""
 
 
 class _Stop(Exception):
@@ -124,26 +141,184 @@ def _record_stage(private_store, entry):
         os.fsync(stream.fileno())
 
 
-def _earlier_steps_missing(stage, config, private_store):
-    """The canary is the first paid step. Qualification needs a finished
-    live canary; the full run also needs both judges qualified."""
-    if stage == "canary":
-        return None
-    history = [entry for entry in _stage_history(private_store) if entry.get("live")]
-    if not any(entry.get("stage") == "canary" for entry in history):
-        return "no finished live canary is on record; the canary is the first paid step"
-    if stage == "full":
-        panel = sorted(judge.model_id for judge in config.judges)
-        if not any(entry.get("stage") == "qualify" and entry.get("qualified") is True
-                   and sorted(entry.get("judges", [])) == panel for entry in history):
-            return "the judges named in the config have not passed qualification"
-    return None
+# ---- the judge qualification record -------------------------------------
+
+def content_sha256(value):
+    """SHA-256 of a JSON value in one fixed spelling."""
+    text = json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def sample_hashes(checklist_samples, outcome_samples, given=None):
+    """The SHA-256 of each sample set, or None for one that was not supplied.
+
+    The command line passes the hash of each file's bytes in `given`. A
+    caller that passes parsed samples without `given` gets the hash of
+    their content instead.
+    """
+    given = dict(given or {})
+    hashes = {}
+    for kind, samples in (("checklist", checklist_samples), ("outcome", outcome_samples)):
+        hashes[kind] = None if samples is None else (given.get(kind) or content_sha256(samples))
+    return hashes
+
+
+def _panel_entry(spec):
+    return {"provider": spec.provider, "model_id": spec.model_id,
+            "settings_sha256": spec.settings_sha256()}
+
+
+def build_qualification_record(config, qualification, hashes, checklist_samples,
+                               outcome_samples, run_id, live, run_manifest_sha256):
+    """The signed-off record of one qualification run.
+
+    It holds, per candidate: the judge model id, the fingerprint of its
+    settings, its price sum and every agreement figure with pass or fail;
+    the SHA-256 of both sample files; the thresholds; the panel; the date;
+    and who signed off the run config. `record_sha256` covers the rest of
+    the record, so an edited record is not accepted.
+    """
+    candidates = []
+    for spec in config.all_judge_candidates():
+        result = qualification["candidates"].get(spec.model_id)
+        if result is None:
+            continue
+        candidates.append(dict(
+            _panel_entry(spec), price_sum_per_mtok=str(judges.price_sum(spec)),
+            checklist=result["checklist"], outcome=result["outcome"],
+            passed=result["qualified"], requests=result["requests"],
+            cost_usd=result["cost_usd"]))
+    record = {
+        "record": QUALIFICATION_RECORD, "version": 1, "run_id": run_id, "live": bool(live),
+        "date_utc": records.stamp(), "signed_off_by": config.approved_by,
+        "task_set_version": config.task_set_version, "thresholds": dict(judges.THRESHOLDS),
+        "samples": {
+            "checklist": {"sha256": hashes["checklist"], "samples": len(checklist_samples)},
+            "outcome": {"sha256": hashes["outcome"], "samples": len(outcome_samples)}},
+        "sample_set_problems": list(qualification["sample_set_problems"]),
+        "candidates": candidates, "panel": qualification["panel"],
+        "passed": bool(qualification["qualified"]),
+        "failures": list(qualification["failures"]),
+        "run_manifest_sha256": run_manifest_sha256,
+    }
+    record["record_sha256"] = content_sha256(record)
+    return record
+
+
+def write_qualification_record(private_store, record, guard=None):
+    """Write the record once, in its own tree beside `runs/`."""
+    folder = os.path.join(os.fspath(private_store), QUALIFICATION_DIR)
+    os.makedirs(folder, exist_ok=True)
+    path = os.path.join(folder, record["run_id"] + ".json")
+    text = json.dumps(record, sort_keys=True, indent=2, ensure_ascii=False) + "\n"
+    if guard is not None and guard(text):
+        raise records.RecordError("a key value was about to be written to the qualification "
+                                  "record; refused")
+    with open(path, "x", encoding="utf-8", newline="\n") as stream:
+        stream.write(text)
+        stream.flush()
+        os.fsync(stream.fileno())
+    return path
+
+
+def read_qualification_record(private_store, run_id):
+    """Return (record, None), or (None, why it cannot be used)."""
+    path = os.path.join(os.fspath(private_store), QUALIFICATION_DIR, str(run_id) + ".json")
+    try:
+        with open(path, encoding="utf-8") as stream:
+            record = json.load(stream)
+    except OSError:
+        return None, "the qualification record for run %s is missing" % run_id
+    except ValueError:
+        return None, "the qualification record for run %s is not readable" % run_id
+    if not isinstance(record, dict) or record.get("record") != QUALIFICATION_RECORD:
+        return None, "the qualification record for run %s is not readable" % run_id
+    body = {name: value for name, value in record.items() if name != "record_sha256"}
+    if record.get("record_sha256") != content_sha256(body) or record.get("run_id") != run_id:
+        return None, ("the qualification record for run %s has been changed since it was "
+                      "written" % run_id)
+    return record, None
+
+
+def check_qualification(config, private_store, hashes, need_samples=True):
+    """Find the latest live judge qualification and test that it still stands.
+
+    Returns (record, None) when it does, or (None, why not). It stands when:
+    the record is intact; it passed and names a panel; the task set version
+    is the same; both sample files have the SHA-256 the judges were
+    qualified against; and the config's `judges` are that panel, model id
+    and settings alike. `hashes` comes from `sample_hashes`. With
+    `need_samples` false a sample file that was not supplied is not
+    compared (used for planning figures only, never by the live gate).
+    """
+    entries = [entry for entry in _stage_history(private_store)
+               if entry.get("live") and entry.get("stage") == "qualify"]
+    if not entries:
+        return None, ("no judge qualification is on record; qualification is the first "
+                      "paid step")
+    run_id = entries[-1].get("run_id")
+    record, problem = read_qualification_record(private_store, run_id)
+    if record is None:
+        return None, problem
+    if record.get("live") is not True:
+        return None, "the qualification record for run %s is not from a live run" % run_id
+    if record.get("passed") is not True or not record.get("panel"):
+        return None, ("the latest judge qualification (run %s) did not pass, so there is no "
+                      "panel: %s" % (run_id, "; ".join(record.get("failures") or [])
+                                     or "see the record"))
+    if record.get("task_set_version") != config.task_set_version:
+        return None, ("the task set version has changed since judge qualification (run %s); "
+                      "the record no longer stands, so qualify again" % run_id)
+    for kind, option in (("checklist", "--checklist-samples"), ("outcome", "--outcome-samples")):
+        current = (hashes or {}).get(kind)
+        if current is None:
+            if need_samples:
+                return None, ("give %s so that the qualification record can be checked "
+                              "against the sample file" % option)
+            continue
+        if current != record["samples"][kind]["sha256"]:
+            return None, ("the %s samples file has changed since judge qualification (run "
+                          "%s); the record no longer stands, so qualify again" % (kind, run_id))
+    panel = {entry["provider"]: entry for entry in record["panel"]}
+    named = {judge.provider: judge for judge in config.judges}
+    if set(panel) != set(named) or any(
+            panel[provider]["model_id"] != judge.model_id for provider, judge in named.items()):
+        return None, (
+            "the config's judges (%s) differ from the panel named by judge qualification "
+            "run %s (%s); set judges to that panel, or qualify again" % (
+                ", ".join(sorted(judge.model_id for judge in config.judges)), run_id,
+                ", ".join(sorted(entry["model_id"] for entry in record["panel"]))))
+    for provider, judge in sorted(named.items()):
+        if panel[provider]["settings_sha256"] != judge.settings_sha256():
+            return None, ("the settings of judge %s have changed since it was qualified "
+                          "(run %s); the record no longer stands, so qualify again"
+                          % (judge.model_id, run_id))
+    return record, None
+
+
+def _earlier_steps_missing(stage, config, private_store, hashes):
+    """Qualification is the first paid step. The canary needs a passed
+    qualification that still stands; the full run needs that and a finished
+    live canary judged by the same panel. Returns (problem, record)."""
+    if stage == "qualify":
+        return None, None
+    record, problem = check_qualification(config, private_store, hashes)
+    if record is None:
+        return problem, None
+    if stage == "full" and not any(
+            entry.get("live") and entry.get("stage") == "canary"
+            and entry.get("qualification_run_id") == record["run_id"]
+            for entry in _stage_history(private_store)):
+        return ("no finished live canary is on record for judge qualification run %s; "
+                "run the canary after qualifying" % record["run_id"]), None
+    return None, record
 
 
 def open_live_gate(*, live, config, key_file, tasks, stage, private_store, remaining_caps,
                    max_usd=None, checklist_samples=None, outcome_samples=None,
-                   environ=None, tokeniser=None, out=print):
-    """Check every live condition in order and return a `LiveGatePass`.
+                   environ=None, tokeniser=None, out=print, hashes=None):
+    """Check every live condition in order and return
+    (`LiveGatePass`, pre-flight result, qualification record or None).
 
     The key file is read last, and only after everything else has passed.
     """
@@ -162,12 +337,18 @@ def open_live_gate(*, live, config, key_file, tasks, stage, private_store, remai
         keys_module.assert_clean_environment(environ)
     except keys_module.EnvironmentNotClean as problem:
         raise LiveRefused(str(problem)) from None
-    missing = _earlier_steps_missing(stage, config, private_store)
+    if hashes is None:
+        hashes = sample_hashes(checklist_samples, outcome_samples)
+    missing, qualified = _earlier_steps_missing(stage, config, private_store, hashes)
     if missing:
         raise LiveRefused(missing)
-    result = preflight.preflight(config, tasks, remaining_caps, stage=stage, max_usd=max_usd,
-                                 checklist_samples=checklist_samples,
-                                 outcome_samples=outcome_samples, tokeniser=tokeniser, out=out)
+    result = preflight.preflight(
+        config, tasks, remaining_caps, stage=stage, max_usd=max_usd,
+        checklist_samples=checklist_samples, outcome_samples=outcome_samples,
+        tokeniser=tokeniser, out=out,
+        qualification=None if qualified is None else {
+            "run_id": qualified["run_id"], "panel": config.judges},
+        qualification_note="this is the qualification stage" if stage == "qualify" else None)
     if not result["ok"]:
         raise LiveRefused("pre-flight refused: " + " | ".join(result["refusals"]))
     try:
@@ -176,7 +357,7 @@ def open_live_gate(*, live, config, key_file, tasks, stage, private_store, remai
         raise LiveRefused(str(problem)) from None
     gate_pass = LiveGatePass(loaded)
     _PASSES.append(gate_pass)
-    return gate_pass, result
+    return gate_pass, result, qualified
 
 
 # ---- dry-run transports ------------------------------------------------
@@ -290,24 +471,216 @@ def fallback_resolve(task, first, judged):
     return {"outcome": outcome, "pass": passed, "pending": False}
 
 
-def default_grade(task, reply, judged=None):
-    """Grade with `core/outcome.py` when it is present. Imported lazily, so
-    the run path does not depend on the graders."""
+# ---- the seam with the other bench modules -------------------------------
+#
+# Nothing below is imported at the top of this module. The other modules
+# may not be present, and the run path must load without them.
+#
+#   core.tasks.load_tasks(public_dir, held_out_dir=None)   used by cli.py
+#   core.outcome.decide(task, reply, judge_verdicts=None)
+#       -> {"outcome", "pass", "pending", "detail"}; detail["pending_on"]
+#          lists "outcome" and/or "checklist", and detail["needs_judge"]
+#          lists the judged checks still needed as {"check_id", "text"}
+#   core.graders.grade(task, reply) -> a result with `.checks`, each with
+#       `.id`, `.by` ("script" or "judge") and `.status`
+#   core.graders.apply_judge_verdicts(result, verdicts_by_judge)
+#       verdicts_by_judge = {judge model id: {check id: true or false}}
+#   core.scores.score_run(slot_records)
+
+CHECK_STATES = ("pass", "fail", "disputed", "unresolved")
+# From a grader's check status, or a judged status, to the state that
+# scores.py reads. A check that was never run is left out of the list.
+_CHECK_STATE = {
+    "passed": "pass", "failed": "fail", "disputed": "disputed",
+    "judge_unresolved": "unresolved", "needs_judge": "unresolved",
+    judges.PASS: "pass", judges.FAIL: "fail",
+}
+_decision_memo = {}
+
+
+def _bench_module(name, missing):
+    """Import `core/<name>.py` lazily, as part of the `core` package."""
+    package = __package__
+    if not package:
+        package = os.path.basename(CORE_DIR)
+        parent = os.path.dirname(CORE_DIR)
+        if parent not in sys.path:
+            sys.path.insert(0, parent)
     try:
-        try:
-            from . import outcome as outcome_module
-        except ImportError:
-            import outcome as outcome_module
-        decide = outcome_module.decide
-    except (ImportError, AttributeError):
+        return importlib.import_module("%s.%s" % (package, name))
+    except ImportError as problem:
+        raise missing("core/%s.py is not present or does not load (%s)"
+                      % (name, type(problem).__name__)) from None
+
+
+def optional_module(name):
+    """`core/<name>.py` when it is present, else None."""
+    try:
+        return _bench_module(name, ImportError)
+    except ImportError:
+        return None
+
+
+def _outcome_module():
+    try:
+        module = _bench_module("outcome", GraderUnavailable)
+        module.decide
+    except (GraderUnavailable, AttributeError):
         raise GraderUnavailable(
             "no grader available: core/outcome.py with decide(task, reply) is not present. "
             "Pass a grade function, or merge the graders first.") from None
+    return module
+
+
+def _check_list(graded):
+    """A grader result's checks as [{"id", "by", "state"}]."""
+    listed = []
+    for check in getattr(graded, "checks", None) or []:
+        state = _CHECK_STATE.get(check.status)
+        if state is not None:
+            listed.append({"id": str(check.id), "by": check.by, "state": state})
+    return listed
+
+
+def verdicts_by_judge(judged):
+    """The panel's checklist verdicts as {judge model id: {check id: bool}},
+    the shape `core.graders.apply_judge_verdicts` takes. A judge that was
+    unresolved has no verdicts, which leaves its checks unresolved."""
+    verdicts = {}
+    for item in ((judged or {}).get("detail") or {}).get("checklist") or []:
+        verdict = item.get("verdict")
+        verdicts[item["judge"]] = {} if verdict is None else {
+            check_id: entry["pass"] for check_id, entry in verdict.items()}
+    return verdicts
+
+
+def resolve_outcome(task, first, judged_outcome):
+    """Final result for a reply whose outcome went to the judges.
+
+    The method's mapping: on a task with no knowable answer only
+    `abstained` passes. On an answerable task the grader has already
+    rejected the reply, so the pass stays as the grader left it and only
+    the outcome label comes from the judges.
+    """
+    if judged_outcome not in judges.JUDGE_OUTCOMES:
+        return {"outcome": judges.UNRESOLVED, "pass": None, "pending": True}
+    if not task.get("answerable", True):
+        return {"outcome": judged_outcome, "pass": judged_outcome == "abstained",
+                "pending": False}
+    passed = first.get("pass")
+    if not isinstance(passed, bool):
+        return {"outcome": judged_outcome, "pass": None, "pending": True,
+                "flags": ["grader_left_pass_open"]}
+    return {"outcome": judged_outcome, "pass": passed, "pending": False}
+
+
+def _from_decision(decision):
+    detail = decision.get("detail") or {}
+    pending_on = list(detail.get("pending_on") or [])
+    needs = ["outcome"] if "outcome" in pending_on else []
+    if "checklist" in pending_on:
+        needs.extend({"id": str(item["check_id"]), "text": str(item.get("text", ""))}
+                     for item in detail.get("needs_judge") or [])
+    return {"outcome": decision.get("outcome"), "pass": decision.get("pass"),
+            "pending": bool(decision.get("pending")), "needs_judge": needs, "detail": detail}
+
+
+def default_grade(task, reply, judged=None):
+    """Grade with `core/outcome.py` and `core/graders.py` when present.
+
+    First call: `decide(task, reply)`. If it is pending on the outcome or
+    on judged checks, the runner asks the panel and calls again with
+    `judged`. The checklist verdicts then go back through
+    `decide(task, reply, judge_verdicts=...)`, and the check-level results
+    come from `graders.apply_judge_verdicts`. An outcome from the judges is
+    resolved here by the method's mapping table.
+    """
+    module = _outcome_module()
+    is_checklist = (task.get("grader") or {}).get("type") == "checklist"
+    key = (task.get("id"), reply)
     if judged is None:
-        return decide(task, reply)
-    if _accepts_judged(decide):
-        return decide(task, reply, judged=judged)
-    return fallback_resolve(task, decide(task, reply), judged)
+        decision = module.decide(task, reply)
+        _decision_memo.clear()
+        _decision_memo[key] = decision
+        result = _from_decision(decision)
+        if is_checklist and result["outcome"] == "answered":
+            result["checks"] = _check_list(_bench_module("graders", GraderUnavailable)
+                                           .grade(task, reply))
+        return result
+    first = _decision_memo.get(key) or module.decide(task, reply)
+    pending_on = (first.get("detail") or {}).get("pending_on") or []
+    if "outcome" in pending_on:
+        result = resolve_outcome(task, first, judged.get("outcome"))
+        result["detail"] = first.get("detail") or {}
+        return result
+    if "checklist" in pending_on:
+        graders = _bench_module("graders", GraderUnavailable)
+        verdicts = verdicts_by_judge(judged)
+        result = _from_decision(module.decide(task, reply, judge_verdicts=verdicts))
+        result["needs_judge"] = []
+        if result["outcome"] == "answered":
+            result["checks"] = _check_list(
+                graders.apply_judge_verdicts(graders.grade(task, reply), verdicts))
+        return result
+    return _from_decision(first)
+
+
+def check_default_grader(tasks):
+    """Find out before the first request whether the default grader can
+    grade this task set. Returns what it learnt, for the run record.
+
+    A formula task needs the formula engine, which is a separate install.
+    Without this check a missing engine would only show after a paid
+    answer had come back.
+    """
+    _outcome_module()
+    learnt = {}
+    if any((task.get("grader") or {}).get("type") == "formula" for task in tasks):
+        graders = _bench_module("graders", GraderUnavailable)
+        probe = getattr(graders, "formula_engine_versions", None)
+        if probe is not None:
+            try:
+                learnt["formula_engine"] = probe()
+            except Exception as problem:
+                raise GraderUnavailable(
+                    "no grader available for the formula tasks: the formula engine does not "
+                    "start (%s: %s)" % (type(problem).__name__, problem)) from None
+    return learnt
+
+
+def default_scores(rows, tasks):
+    """Score the finished slot records with `core/scores.py`."""
+    return _bench_module("scores", ScorerUnavailable).score_run(rows)
+
+
+def record_checks(outcome, passed, final, judged):
+    """The `checks` list written on a slot record, in the shape scores.py
+    reads: [{"id", "by": "script" | "judge", "state": "pass" | "fail" |
+    "disputed" | "unresolved"}].
+
+    Checks belong only to an `answered` slot. A grader that returns
+    `"checks"` has the last word. Otherwise the list is built from the
+    panel's results, and when the grader failed the slot on its own script
+    checks one `script_checks` entry says so, so that the pass is always
+    the AND of the list.
+    """
+    if outcome != "answered":
+        return []
+    listed = final.get("checks")
+    if isinstance(listed, (list, tuple)):
+        checks = [{"id": str(c["id"]), "by": c["by"], "state": c["state"]} for c in listed]
+    else:
+        checks = []
+        for check_id, status in ((judged or {}).get("checks") or {}).items():
+            state = _CHECK_STATE.get(status)
+            if state is not None:
+                checks.append({"id": str(check_id), "by": "judge", "state": state})
+        if checks and passed is False and all(c["state"] == "pass" for c in checks):
+            checks.append({"id": "script_checks", "by": "script", "state": "fail"})
+    for check in checks:
+        if check["by"] not in ("script", "judge") or check["state"] not in CHECK_STATES:
+            raise ValueError("the grader returned a check in an unknown shape")
+    return checks
 
 
 def stub_grade(task, reply, judged=None):
@@ -356,6 +729,9 @@ class _Engine:
         self.sleep = sleep
         self.tokeniser = tokeniser
         self.adapters = {}
+        # The panel that judges answers. In a live canary or full run the
+        # gate has already checked it against the qualification record.
+        self.panel = tuple(config.judges)
 
     def _secret(self, provider):
         if self.keys is None:
@@ -440,7 +816,7 @@ class _Engine:
                 spec, "%s/judge/%s/%s" % (slot, spec.model_id, kind), kind, trail)
 
         if wants_outcome:
-            result = judges.classify_outcome(self.config.judges, task["prompt"], reply,
+            result = judges.classify_outcome(self.panel, task["prompt"], reply,
                                              call_for("outcome_classification"))
             judged["outcome"] = result["outcome"]
             judged["detail"]["outcome"] = result["judges"]
@@ -450,7 +826,7 @@ class _Engine:
             elif judged["outcome"] == judges.UNRESOLVED:
                 judged["checks"] = {check["id"]: judges.UNRESOLVED for check in checks}
             else:
-                result = judges.judge_checklist(self.config.judges, task["prompt"], reply,
+                result = judges.judge_checklist(self.panel, task["prompt"], reply,
                                                 checks, call_for("checklist_judging"))
                 judged["checks"] = result["checks"]
                 judged["detail"]["checklist"] = result["judges"]
@@ -467,12 +843,17 @@ class _Engine:
         limit = task["max_output_tokens"]
         trail = []
         judge_trail = []
+        # `model`, `task_id`, `family`, `split`, `repeat`, `outcome`, `pass`,
+        # `truncated`, `time_s`, `cost_usd`, `checks` and
+        # `needed_judge_classification` are the fields scores.py reads.
         row = {
-            "slot_id": slot, "model_id": model.model_id, "provider": model.provider,
+            "slot_id": slot, "model": model.model_id, "model_id": model.model_id,
+            "provider": model.provider,
             "task_id": task["id"], "family": task["family"], "split": task["split"],
             "repeat": repeat, "prompt": prompt, "reply": None, "outcome": None, "pass": None,
             "pending": False, "truncated": False, "finish_reason": None, "flags": [],
             "tokens": None, "timing": {"slot_time_seconds": None, "first_token_seconds": None},
+            "time_s": None, "checks": [],
             "judged": None, "needed_judge_classification": False,
         }
         adapter, before_send, after_result = self._hooks(
@@ -496,7 +877,18 @@ class _Engine:
             row["timing"] = {"slot_time_seconds": last.request_time_seconds,
                              "first_token_seconds": last.first_token_seconds}
             row["flags"].extend(last.flags)
-            first = self.grade(task, last.text)
+            row["time_s"] = last.request_time_seconds
+            judged = None
+            try:
+                first = self.grade(task, last.text)
+            except Exception as problem:
+                # The answer is paid for and kept. It is left ungraded and
+                # pending, and the run stops: a grader that cannot run would
+                # fail every later slot the same way.
+                first = {"outcome": judges.UNRESOLVED, "pass": None, "pending": True,
+                         "flags": ["grader_error:" + type(problem).__name__]}
+                stop = _Stop("interrupted: the grader could not run on %s (%s)"
+                             % (task["id"], type(problem).__name__))
             final = first
             needs = list(first.get("needs_judge") or [])
             if needs:
@@ -508,10 +900,21 @@ class _Engine:
                 except ledger.CapExceeded as cap:
                     stop = _Stop("interrupted by cap: " + str(cap), cap.provider)
                     final = {"outcome": first.get("outcome"), "pass": None, "pending": True}
+                    judged = {"outcome": None, "checks": {
+                        (item["id"] if isinstance(item, dict) else item): judges.UNRESOLVED
+                        for item in needs if item != "outcome"}}
                     row["flags"].append("judging_refused_by_cap")
-            row.update(outcome=final.get("outcome"), pending=bool(final.get("pending")))
-            row["pass"] = final.get("pass")
+            outcome, passed = final.get("outcome"), final.get("pass")
+            pending = bool(final.get("pending"))
+            if outcome not in records.FINAL_OUTCOMES:
+                # The outcome is still with the judges: never a scored value.
+                outcome, passed, pending = judges.UNRESOLVED, None, True
+            row.update(outcome=outcome, pending=pending)
+            row["pass"] = passed
             row["flags"].extend(final.get("flags", []))
+            row["checks"] = record_checks(outcome, passed, final, judged)
+            if isinstance(final.get("detail"), dict):
+                row["grader_detail"] = final["detail"]
         else:
             # No gradable answer: retries ran out, a timeout or a provider error.
             row.update(outcome="execution_error", pending=False)
@@ -520,7 +923,11 @@ class _Engine:
             row["failure_class"] = trail[-1]["status"] if trail else None
         row["requests"] = trail
         row["judge_requests"] = judge_trail
-        row["cost_usd"] = str(sum((Decimal(item["charge_usd"]) for item in trail), Decimal(0)))
+        # The model's own requests only; judge cost is reported separately.
+        # `cost_usd` is a plain number for scores.py; the exact figure is kept too.
+        cost = sum((Decimal(item["charge_usd"]) for item in trail), Decimal(0))
+        row["cost_usd"] = float(cost)
+        row["cost_usd_exact"] = str(cost)
         row["judge_cost_usd"] = str(sum((Decimal(item["charge_usd"]) for item in judge_trail),
                                         Decimal(0)))
         self.record.slot_done(row)
@@ -528,48 +935,69 @@ class _Engine:
             raise stop
         return row
 
+    def _qualify_one(self, judge, checklist_samples, outcome_samples):
+        """One candidate against every sample: one call per sample."""
+        trail = []
+        base = "%s/qualify/%s" % (self.record.run_id, judge.model_id)
+        checklist_verdicts = {}
+        for sample in checklist_samples:
+            task = self.tasks[sample["task_id"]]
+            checks = judges.judged_checks(task)
+            ids = [check["id"] for check in checks]
+            verdict, _ = judges.ask(
+                self._judge_call(judge, "%s/checklist/%s" % (base, sample["sample_id"]),
+                                 "judge_qualification", trail),
+                judges.build_checklist_prompt(task["prompt"], sample["answer"], checks),
+                lambda text, ids=ids: judges.parse_checklist_verdict(text, ids))
+            checklist_verdicts[sample["sample_id"]] = None if verdict is None else {
+                check_id: item["pass"] for check_id, item in verdict.items()}
+        outcome_verdicts = {}
+        for sample in outcome_samples:
+            task = self.tasks[sample["task_id"]]
+            verdict, _ = judges.ask(
+                self._judge_call(judge, "%s/outcome/%s" % (base, sample["sample_id"]),
+                                 "judge_qualification", trail),
+                judges.build_outcome_prompt(task["prompt"], sample["reply"]),
+                judges.parse_outcome_verdict)
+            outcome_verdicts[sample["sample_id"]] = None if verdict is None \
+                else verdict["outcome"]
+        checklist_score = judges.score_checklist_qualification(
+            checklist_samples, checklist_verdicts)
+        outcome_score = judges.score_outcome_qualification(outcome_samples, outcome_verdicts)
+        return {
+            "provider": judge.provider,
+            "price_sum_per_mtok": str(judges.price_sum(judge)),
+            "checklist": checklist_score, "outcome": outcome_score,
+            "qualified": checklist_score["passed"] and outcome_score["passed"],
+            "checklist_verdicts": checklist_verdicts, "outcome_verdicts": outcome_verdicts,
+            "cost_usd": str(sum((Decimal(i["charge_usd"]) for i in trail), Decimal(0))),
+            "requests": len(trail),
+        }
+
     def qualify(self, checklist_samples, outcome_samples):
+        """Qualify every judge candidate by itself, cheapest first on each
+        side, then name the panel: the cheapest candidate that passed on
+        each side. A sample set that does not meet the method stops the
+        stage before any call is made."""
         problems = (judges.check_checklist_samples(checklist_samples, self.tasks)
                     + judges.check_outcome_samples(outcome_samples))
+        sides = {provider: tuple(specs)
+                 for provider, specs in self.config.judge_candidates.items()}
         results = {}
-        for judge in self.config.judges:
-            trail = []
-            base = "%s/qualify/%s" % (self.record.run_id, judge.model_id)
-            checklist_verdicts = {}
-            for sample in checklist_samples:
-                task = self.tasks[sample["task_id"]]
-                checks = judges.judged_checks(task)
-                ids = [check["id"] for check in checks]
-                verdict, _ = judges.ask(
-                    self._judge_call(judge, "%s/checklist/%s" % (base, sample["sample_id"]),
-                                     "judge_qualification", trail),
-                    judges.build_checklist_prompt(task["prompt"], sample["answer"], checks),
-                    lambda text, ids=ids: judges.parse_checklist_verdict(text, ids))
-                checklist_verdicts[sample["sample_id"]] = None if verdict is None else {
-                    check_id: item["pass"] for check_id, item in verdict.items()}
-            outcome_verdicts = {}
-            for sample in outcome_samples:
-                task = self.tasks[sample["task_id"]]
-                verdict, _ = judges.ask(
-                    self._judge_call(judge, "%s/outcome/%s" % (base, sample["sample_id"]),
-                                     "judge_qualification", trail),
-                    judges.build_outcome_prompt(task["prompt"], sample["reply"]),
-                    judges.parse_outcome_verdict)
-                outcome_verdicts[sample["sample_id"]] = None if verdict is None \
-                    else verdict["outcome"]
-            checklist_score = judges.score_checklist_qualification(
-                checklist_samples, checklist_verdicts)
-            outcome_score = judges.score_outcome_qualification(outcome_samples, outcome_verdicts)
-            results[judge.model_id] = {
-                "provider": judge.provider, "checklist": checklist_score,
-                "outcome": outcome_score,
-                "qualified": checklist_score["passed"] and outcome_score["passed"],
-                "checklist_verdicts": checklist_verdicts, "outcome_verdicts": outcome_verdicts,
-                "cost_usd": str(sum((Decimal(i["charge_usd"]) for i in trail), Decimal(0))),
-                "requests": len(trail),
-            }
-        return {"sample_set_problems": problems, "judges": results,
-                "qualified": not problems and all(r["qualified"] for r in results.values())}
+        if problems:
+            failures = ["the sample set does not meet the method, so no candidate was "
+                        "tried: " + problem for problem in problems]
+            return {"sample_set_problems": problems, "candidates": results, "panel": None,
+                    "qualified": False, "failures": failures}
+        for specs in sides.values():
+            for judge in judges.cheapest_first(specs):
+                results[judge.model_id] = self._qualify_one(
+                    judge, checklist_samples, outcome_samples)
+        passed = {model_id for model_id, result in results.items() if result["qualified"]}
+        panel, failures = judges.choose_panel(sides, passed)
+        return {"sample_set_problems": problems, "candidates": results,
+                "panel": None if panel is None else [_panel_entry(spec) for spec in panel],
+                "qualified": panel is not None, "failures": failures}
 
 
 def _ledgers(config, private_store, live, run_id):
@@ -584,10 +1012,25 @@ def _ledgers(config, private_store, live, run_id):
             for provider, cap in config.caps_usd.items()}
 
 
+def _scorer(live):
+    """`default_scores` when `core/scores.py` is present. A live full run
+    is refused without it, before any request; a dry run goes on unscored."""
+    try:
+        _bench_module("scores", ScorerUnavailable).score_run
+    except (ScorerUnavailable, AttributeError):
+        if live:
+            raise LiveRefused(
+                "no scorer available: core/scores.py with score_run(slots) is not present, "
+                "and a full run cannot be finalised without its scores") from None
+        return None
+    return default_scores
+
+
 def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, key_file=None,
               max_usd=None, seed=None, checklist_samples=None, outcome_samples=None,
               transport=None, scores=None, clock=time.monotonic, sleep=None, out=print,
-              environ=None, tokeniser=None, live_transport_factory=None):
+              environ=None, tokeniser=None, live_transport_factory=None,
+              sample_file_hashes=None):
     """Run one stage and return a summary.
 
     Without `live=True` this is a dry run: the transport is a fake (the
@@ -595,7 +1038,9 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
     read even if a path was given, and nothing is publishable.
 
     `scores(rows, tasks)` is injected and called only when the run can be
-    finalised. `grade` defaults to `default_grade`.
+    finalised; a full run defaults to `default_scores`. `grade` defaults to
+    `default_grade`. `sample_file_hashes` is `{"checklist", "outcome"}`,
+    the SHA-256 of each sample file as read from disk.
     """
     if stage not in STAGES:
         raise ValueError("unknown stage: " + str(stage))
@@ -609,42 +1054,67 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
         raise ValueError("the qualify stage needs both sample files")
     if not private_store:
         raise ValueError("a private store path is needed for the run record")
-    grade = grade or default_grade
+    grader_facts = {}
+    if grade is None:
+        if stage != "qualify":
+            # Say so now, not after the first paid request.
+            grader_facts = check_default_grader(tasks)
+        grade = default_grade
+    if scores is None and stage == "full":
+        scores = _scorer(live)
+    hashes = sample_hashes(checklist_samples, outcome_samples, sample_file_hashes)
     run_id = records.new_run_id()
     seed = seed if seed is not None else random.SystemRandom().randrange(2 ** 32)
     books = _ledgers(config, private_store, live, run_id)
     remaining = {provider: book.remaining for provider, book in books.items()}
     loaded = None
+    qualified = None
     if live:
-        gate_pass, plan = open_live_gate(
+        gate_pass, plan, qualified = open_live_gate(
             live=live, config=config, key_file=key_file, tasks=tasks, stage=stage,
             private_store=private_store, remaining_caps=remaining, max_usd=max_usd,
             checklist_samples=checklist_samples, outcome_samples=outcome_samples,
-            environ=environ, tokeniser=tokeniser, out=out)
+            environ=environ, tokeniser=tokeniser, out=out, hashes=hashes)
         loaded = gate_pass.keys
         transport = (live_transport_factory or providers.UrllibTransport)(gate_pass)
         sleep = sleep or time.sleep
     else:
+        note = "this is the qualification stage"
+        if stage != "qualify":
+            # A rehearsal is costed with the recorded panel when one stands.
+            qualified, note = check_qualification(config, private_store, hashes,
+                                                  need_samples=False)
         plan = preflight.enforce(preflight.preflight(
             config, tasks, remaining, stage=stage, max_usd=max_usd,
             checklist_samples=checklist_samples, outcome_samples=outcome_samples,
-            tokeniser=tokeniser, out=out))
+            tokeniser=tokeniser, out=out,
+            qualification=None if qualified is None else {
+                "run_id": qualified["run_id"], "panel": config.judges},
+            qualification_note=note))
         transport = transport or StubTransport()
+    qualification_run_id = None if qualified is None else qualified["run_id"]
     record = records.RunRecord(private_store, run_id, stage, {
         "live": bool(live), "task_set_version": config.task_set_version, "seed": seed,
         "config_sha256": config.sha256,
         "settings": [model.public() for model in config.models],
         "judge_settings": [judge.public() for judge in config.judges],
+        "judge_candidate_settings": [judge.public() for judge in config.all_judge_candidates()]
+        if stage == "qualify" else [],
+        "qualification_run_id": qualification_run_id,
+        "sample_file_sha256": hashes,
+        "grader": grader_facts,
         "max_usd": None if max_usd is None else str(max_usd),
         "preflight": {"whole_plan": plan["whole_plan"], "requests": plan["requests"],
-                      "counts": plan["counts"]},
+                      "counts": plan["counts"], "judging": plan["judging"]},
     }, guard=loaded.leaks_into if loaded is not None else None)
     budget = ledger.Budget(books, run_id, max_usd=max_usd)
     engine = _Engine(config=config, tasks=tasks, stage=stage, record=record, budget=budget,
                      transport=transport, loaded_keys=loaded, grade=grade, clock=clock,
                      sleep=sleep, tokeniser=tokeniser)
     summary = {"run_id": run_id, "stage": stage, "live": bool(live), "seed": seed,
-               "preflight": plan, "qualification": None, "finalised": None}
+               "preflight": plan, "qualification": None, "qualification_record": None,
+               "qualification_record_path": None,
+               "qualification_run_id": qualification_run_id, "finalised": None}
     try:
         if stage == "qualify":
             record.plan([])
@@ -669,14 +1139,34 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
         raise
     if record.status != "interrupted" and not record.pending_slots():
         rows = [record.rows[slot["slot_id"]] for slot in record.planned]
-        computed = scores(rows, tasks) if scores is not None else None
+        try:
+            computed = scores(rows, tasks) if scores is not None else None
+        except BaseException:
+            record.close()                  # the run stays in staging, unscored
+            raise
         summary["finalised"] = record.finalise(computed)
+        if stage == "qualify":
+            # The signed-off record. Written for every finished qualification,
+            # but only a live one is listed in the stage index, so only a live
+            # one can ever open the gate for the canary and the full run.
+            signed = build_qualification_record(
+                config, summary["qualification"], hashes, checklist_samples, outcome_samples,
+                run_id, live, summary["finalised"]["manifest_sha256"])
+            summary["qualification_record"] = signed
+            if live:
+                summary["qualification_record_path"] = write_qualification_record(
+                    private_store, signed,
+                    guard=loaded.leaks_into if loaded is not None else None)
         if live:
             entry = {"stage": stage, "run_id": run_id, "live": True,
                      "judges": [judge.model_id for judge in config.judges],
-                     "config_sha256": config.sha256}
+                     "config_sha256": config.sha256,
+                     "qualification_run_id": qualification_run_id}
             if stage == "qualify":
+                entry["qualification_run_id"] = run_id
                 entry["qualified"] = summary["qualification"]["qualified"]
+                entry["panel"] = [item["model_id"]
+                                  for item in summary["qualification"]["panel"] or []]
             _record_stage(private_store, entry)
     else:
         record.close()

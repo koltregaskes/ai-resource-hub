@@ -10,6 +10,7 @@ import json
 import os
 import sys
 import tempfile
+import types
 import unittest
 from decimal import Decimal
 from unittest import mock
@@ -28,6 +29,10 @@ import test_run_support as support  # noqa: E402
 from test_run_support import ScriptedTransport, http, prompt_of, reply_body  # noqa: E402
 
 QUIET = lambda line: None  # noqa: E731
+NO_SCORES = lambda rows, tasks: None  # noqa: E731
+# The other bench modules, as absent as they are on this branch: the tests
+# below behave the same before and after those modules are merged.
+ABSENT = {"core.outcome": None, "core.graders": None, "core.scores": None, "core.tasks": None}
 
 
 def answered(task, reply, judged=None):
@@ -73,6 +78,7 @@ class RunnerCase(unittest.TestCase):
                   **kwargs):
         kwargs.setdefault("out", QUIET)
         kwargs.setdefault("seed", 11)
+        kwargs.setdefault("scores", NO_SCORES)
         return runner.run_stage(stage, cfg or self.cfg, tasks or self.tasks,
                                 private_store=self.store, grade=grade, transport=transport,
                                 **kwargs)
@@ -192,7 +198,8 @@ class SlotAndRequestTests(RunnerCase):
         self.assertEqual(len(failed), 1)
         self.assertEqual(len(failed[0]["requests"]), 1)
         self.assertEqual(failed[0]["failure_reason"], "HTTP 400 invalid_request_error")
-        self.assertEqual(failed[0]["cost_usd"], "0")
+        self.assertEqual(failed[0]["cost_usd_exact"], "0")
+        self.assertEqual(failed[0]["cost_usd"], 0.0)
 
     def test_truncated_answer_is_kept_flagged_and_graded(self):
         graded = []
@@ -259,7 +266,8 @@ class SlotAndRequestTests(RunnerCase):
         summary = self.run_stage(transport=model_only(step))
         for row in self.rows(summary):
             # 1000 x 3 + 500 x 30 = 18000 per million
-            self.assertEqual(Decimal(row["cost_usd"]), Decimal("0.018"))
+            self.assertEqual(Decimal(row["cost_usd_exact"]), Decimal("0.018"))
+            self.assertEqual(row["cost_usd"], 0.018)
             self.assertEqual(row["tokens"]["output_tokens"], 500)
         self.assertEqual(summary["run_committed_usd"], Decimal("0.108"))
         self.assertEqual(summary["remaining_caps"]["openai"], Decimal("50") - Decimal("0.108"))
@@ -497,19 +505,6 @@ class JudgingTests(RunnerCase):
         undecided = resolve(task, {"outcome": None}, {"outcome": "answered", "checks": {}})
         self.assertTrue(undecided["pending"])
 
-    def test_default_grade_says_clearly_when_the_graders_are_absent(self):
-        with mock.patch.dict(sys.modules, {"outcome": None}):
-            with self.assertRaises(runner.GraderUnavailable) as caught:
-                runner.default_grade({"id": "t1"}, "reply")
-        self.assertIn("core/outcome.py", str(caught.exception))
-
-    def test_default_grade_uses_outcome_decide_when_present(self):
-        fake = mock.Mock()
-        fake.decide = lambda task, reply: {"outcome": "answered", "pass": True,
-                                           "pending": False, "needs_judge": []}
-        with mock.patch.dict(sys.modules, {"outcome": fake}):
-            self.assertEqual(runner.default_grade({"id": "t1"}, "reply")["pass"], True)
-
 
 class DryRunTests(RunnerCase):
     def setUp(self):
@@ -591,12 +586,23 @@ class DryRunTests(RunnerCase):
                            transport=runner.ReplayTransport(fixtures))
 
     def qualification_samples(self):
-        checklist = [{"sample_id": "s%d" % n, "task_id": "p2", "answer": "Answer %d" % n,
-                      "reference": {"c1": True, "c2": False}} for n in range(4)]
-        outcome = [{"sample_id": "o%d" % n, "task_id": "p1", "reply": "Reply %d" % n,
-                    "reference_outcome": ("answered", "abstained", "refused")[n % 3]}
-                   for n in range(20)]
-        return checklist, outcome
+        return support.qualification_samples("p2", "p1")
+
+    def qualify(self, cfg=None, wrong=(), **kwargs):
+        """A dry qualify stage. Candidates named in `wrong` say true to every
+        check and "answered" to every reply; the others agree with the reference."""
+        checklist, outcome = self.qualification_samples()
+        asked = []
+
+        def responder(provider, model_id, prompt):
+            asked.append(model_id)
+            if model_id in wrong:
+                return runner.stub_reply(provider, model_id, prompt)
+            return support.reference_verdict(prompt, outcome)
+        summary = self.run_stage(stage="qualify", cfg=cfg or self.cfg,
+                                 checklist_samples=checklist, outcome_samples=outcome,
+                                 transport=runner.StubTransport(responder), **kwargs)
+        return summary, asked
 
     def test_qualify_stage_fails_an_always_true_judge(self):
         checklist, outcome = self.qualification_samples()
@@ -605,45 +611,146 @@ class DryRunTests(RunnerCase):
                                  outcome_samples=outcome)
         result = summary["qualification"]
         self.assertFalse(result["qualified"])
+        self.assertIsNone(result["panel"])
         self.assertEqual(result["sample_set_problems"], [])
         for judge in ("j-oa", "j-an"):
-            self.assertEqual(result["judges"][judge]["checklist"]["agreement_on_false"], 0.0)
-            self.assertFalse(result["judges"][judge]["qualified"])
-            self.assertEqual(result["judges"][judge]["requests"], 24)
+            figures = result["candidates"][judge]["checklist"]
+            self.assertEqual(figures["agreement"], 0.5)          # right on every true item
+            self.assertEqual(figures["agreement_on_true"], 1.0)
+            self.assertEqual(figures["agreement_on_false"], 0.0)  # and wrong on every false one
+            self.assertFalse(figures["passed"])
+            self.assertFalse(result["candidates"][judge]["qualified"])
+            self.assertEqual(result["candidates"][judge]["requests"], 24)
+        self.assertEqual(len(result["failures"]), 2)
         self.assertEqual(summary["status"], "finalised")
         self.assertFalse(summary["publishable"])
         self.assertTrue(os.path.isfile(os.path.join(summary["dir"], "qualification.json")))
         records.verify_manifest(summary["dir"])
 
     def test_qualify_stage_passes_judges_that_match_the_reference(self):
-        checklist, outcome = self.qualification_samples()
-        by_reply = {s["reply"]: s["reference_outcome"] for s in outcome}
-
-        def responder(provider, model_id, prompt):
-            if prompt.startswith(judges.CHECKLIST_PROMPT[:60]):
-                return json.dumps({"checks": {"c1": {"pass": True, "reason": "r"},
-                                              "c2": {"pass": False, "reason": "r"}}})
-            reply = [r for r in by_reply if "\n%s\n>>>" % r in prompt][0]
-            return json.dumps({"outcome": by_reply[reply], "reason": "r"})
-        summary = self.run_stage(stage="qualify", cfg=self.cfg, checklist_samples=checklist,
-                                 outcome_samples=outcome,
-                                 transport=runner.StubTransport(responder))
-        self.assertTrue(summary["qualification"]["qualified"])
+        summary, _ = self.qualify()
+        result = summary["qualification"]
+        self.assertTrue(result["qualified"])
+        self.assertEqual([item["model_id"] for item in result["panel"]], ["j-oa", "j-an"])
+        self.assertEqual(result["failures"], [])
 
     def test_qualify_needs_both_sample_files(self):
         with self.assertRaises(ValueError):
             self.run_stage(stage="qualify", cfg=self.cfg)
+
+    def candidate_cfg(self, **over):
+        over.setdefault("judge_candidates", support.candidates_dict())
+        return support.make_config(**over)
+
+    def test_every_candidate_is_qualified_by_itself_and_reported(self):
+        summary, asked = self.qualify(cfg=self.candidate_cfg(), wrong={"j-oa-dear"})
+        result = summary["qualification"]
+        self.assertEqual(sorted(result["candidates"]),
+                         ["j-an", "j-an-cheap", "j-oa", "j-oa-cheap", "j-oa-dear"])
+        # 24 calls each (4 checklist samples + 20 outcome samples), cheapest first per side.
+        self.assertEqual(asked, ["j-oa-cheap"] * 24 + ["j-oa"] * 24 + ["j-oa-dear"] * 24
+                         + ["j-an-cheap"] * 24 + ["j-an"] * 24)
+        good = result["candidates"]["j-oa-cheap"]
+        self.assertEqual((good["checklist"]["agreement"], good["checklist"]["agreement_on_true"],
+                          good["checklist"]["agreement_on_false"], good["outcome"]["agreement"]),
+                         (1.0, 1.0, 1.0, 1.0))
+        self.assertEqual((good["checklist"]["items"], good["checklist"]["reference_true_items"],
+                          good["checklist"]["reference_false_items"],
+                          good["outcome"]["samples"]), (8, 4, 4, 20))
+        self.assertEqual(good["price_sum_per_mtok"], "3")
+        self.assertTrue(good["qualified"])
+        # One candidate failing does not touch the others.
+        bad = result["candidates"]["j-oa-dear"]
+        self.assertEqual(bad["checklist"]["agreement_on_false"], 0.0)
+        self.assertEqual(bad["outcome"]["agreement"], 0.35)       # 7 of 20 are "answered"
+        self.assertFalse(bad["qualified"])
+        self.assertEqual(bad["requests"], 24)
+
+    def test_the_panel_is_the_cheapest_passing_candidate_on_each_side(self):
+        summary, _ = self.qualify(cfg=self.candidate_cfg())
+        result = summary["qualification"]
+        self.assertTrue(result["qualified"])
+        self.assertEqual([(item["provider"], item["model_id"]) for item in result["panel"]],
+                         [("openai", "j-oa-cheap"), ("anthropic", "j-an-cheap")])
+        # The cheapest on one side fails: the next cheapest that passed is named.
+        summary, _ = self.qualify(cfg=self.candidate_cfg(), wrong={"j-oa-cheap"})
+        self.assertEqual([item["model_id"] for item in summary["qualification"]["panel"]],
+                         ["j-oa", "j-an-cheap"])
+        # The record carries the figures, the thresholds, the hashes and the panel.
+        record = summary["qualification_record"]
+        self.assertEqual(record["panel"], summary["qualification"]["panel"])
+        self.assertEqual(record["thresholds"], {
+            "checklist_overall": "0.90", "checklist_on_true": "0.85",
+            "checklist_on_false": "0.85", "outcome": "0.90"})
+        self.assertEqual([(c["model_id"], c["passed"]) for c in record["candidates"]], [
+            ("j-oa-cheap", False), ("j-oa", True), ("j-oa-dear", True),
+            ("j-an-cheap", True), ("j-an", True)])
+        self.assertEqual(len(record["samples"]["checklist"]["sha256"]), 64)
+        self.assertEqual((record["samples"]["checklist"]["samples"],
+                          record["samples"]["outcome"]["samples"]), (4, 20))
+        self.assertTrue(record["passed"])
+        self.assertFalse(record["live"])
+
+    def test_no_panel_when_no_candidate_passes_on_one_side(self):
+        summary, asked = self.qualify(cfg=self.candidate_cfg(),
+                                      wrong={"j-oa-cheap", "j-oa", "j-oa-dear"})
+        result = summary["qualification"]
+        self.assertFalse(result["qualified"])
+        self.assertIsNone(result["panel"])                         # never half a panel
+        self.assertEqual(len(result["failures"]), 1)
+        self.assertIn("no judge candidate passed qualification on the openai side",
+                      result["failures"][0])
+        self.assertTrue(result["candidates"]["j-an-cheap"]["qualified"])
+        self.assertEqual(len(asked), 120)                          # every candidate was still tried
+        self.assertFalse(summary["qualification_record"]["passed"])
+        self.assertIsNone(summary["qualification_record"]["panel"])
+
+    def test_a_bad_sample_set_stops_the_stage_before_any_call(self):
+        checklist, outcome = self.qualification_samples()
+        transport = runner.StubTransport()
+        summary = self.run_stage(stage="qualify", cfg=self.candidate_cfg(),
+                                 checklist_samples=checklist[:3], outcome_samples=outcome,
+                                 transport=transport)
+        result = summary["qualification"]
+        self.assertEqual(transport.calls, 0)
+        self.assertFalse(result["qualified"])
+        self.assertIsNone(result["panel"])
+        self.assertEqual(result["sample_set_problems"], ["task p2 has fewer than 4 samples"])
+        self.assertIn("no candidate was tried", result["failures"][0])
+
+    def test_a_dry_qualification_writes_no_record_and_opens_nothing(self):
+        summary, _ = self.qualify()
+        self.assertTrue(summary["qualification"]["qualified"])
+        self.assertIsNone(summary["qualification_record_path"])
+        self.assertFalse(os.path.exists(os.path.join(self.store, runner.QUALIFICATION_DIR)))
+        self.assertFalse(os.path.exists(os.path.join(self.store, runner.STAGE_INDEX)))
+        record, problem = runner.check_qualification(self.cfg, self.store, {})
+        self.assertIsNone(record)
+        self.assertIn("no judge qualification is on record", problem)
 
 
 class LiveGateTests(RunnerCase):
     def setUp(self):
         super().setUp()
         self.cfg = support.make_config()
+        self.tasks = [support.task("t1", family=4, checks=2), support.task("t2")]
+        self.checklist, self.outcome = support.qualification_samples()
         key_folder = tempfile.TemporaryDirectory()
         self.addCleanup(key_folder.cleanup)
         self.key_file = support.write_key_file(key_folder.name)
-        self.transport = model_only(lambda r, n: reply_body(r, "live-shaped answer"))
+        self.wrong_judges = set()
+        self.transport = self.new_transport("live-shaped answer")
         self.factory_calls = []
+
+    def judge_text(self, request, prompt):
+        """Judges agree with the reference, except those in `wrong_judges`,
+        which say true to every check and "answered" to every reply."""
+        if request.body["model"] in self.wrong_judges:
+            return runner.stub_reply(request.provider, request.body["model"], prompt)
+        return support.reference_verdict(prompt, self.outcome)
+
+    def new_transport(self, answer):
+        return model_only(lambda r, n: reply_body(r, answer), judge_text=self.judge_text)
 
     def factory(self, gate_pass):
         self.factory_calls.append(gate_pass)
@@ -654,6 +761,8 @@ class LiveGateTests(RunnerCase):
         kwargs.setdefault("environ", {})
         kwargs.setdefault("live", True)
         kwargs.setdefault("sleep", lambda seconds: None)
+        kwargs.setdefault("checklist_samples", self.checklist)
+        kwargs.setdefault("outcome_samples", self.outcome)
         return self.run_stage(stage=stage, cfg=cfg or self.cfg,
                               live_transport_factory=self.factory, **kwargs)
 
@@ -667,6 +776,13 @@ class LiveGateTests(RunnerCase):
             self.assertNotIn(value, str(caught.exception))
         return caught.exception
 
+    def model_requests(self):
+        return [r for r in self.transport.requests if not is_judge_prompt(prompt_of(r))]
+
+    def stage_index(self):
+        with open(os.path.join(self.store, runner.STAGE_INDEX), encoding="utf-8") as stream:
+            return [json.loads(line) for line in stream if line.strip()]
+
     def test_ships_with_live_disabled(self):
         self.assertIs(runner.LIVE_ENABLED, False)
         with open(os.path.join(support.CORE, "runner.py"), encoding="utf-8") as stream:
@@ -674,19 +790,20 @@ class LiveGateTests(RunnerCase):
 
     def test_live_is_refused_before_the_key_file_is_read_or_a_transport_exists(self):
         missing = os.path.join(self.store, "this-key-file-does-not-exist.txt")
-        with mock.patch.object(keys, "load_keys") as load_keys, \
-                mock.patch.object(providers, "UrllibTransport") as real_transport, \
-                mock.patch("builtins.open", side_effect=AssertionError("nothing may be opened")):
-            try:
-                self.live(key_file=missing)
-            except runner.LiveRefused as refusal:
-                self.assertIn("LIVE_ENABLED is False", str(refusal))
-            except FileNotFoundError:                        # pragma: no cover
-                self.fail("the key file was touched")
-            else:                                            # pragma: no cover
-                self.fail("a live run was not refused")
-            load_keys.assert_not_called()
-            real_transport.assert_not_called()
+        for stage in runner.STAGES:
+            with mock.patch.object(keys, "load_keys") as load_keys, \
+                    mock.patch.object(providers, "UrllibTransport") as real_transport, \
+                    mock.patch("builtins.open", side_effect=AssertionError("nothing may be opened")):
+                try:
+                    self.live(stage=stage, key_file=missing)
+                except runner.LiveRefused as refusal:
+                    self.assertIn("LIVE_ENABLED is False", str(refusal))
+                except FileNotFoundError:                        # pragma: no cover
+                    self.fail("the key file was touched")
+                else:                                            # pragma: no cover
+                    self.fail("a live run was not refused")
+                load_keys.assert_not_called()
+                real_transport.assert_not_called()
         self.assertEqual(self.factory_calls, [])
         self.assertEqual(os.listdir(self.store), [])
 
@@ -697,63 +814,70 @@ class LiveGateTests(RunnerCase):
             json.dump(support.config_dict(), stream)
         with open(tasks_path, "w", encoding="utf-8") as stream:
             json.dump(self.tasks, stream)
-        lines = []
-        with mock.patch.object(keys, "load_keys") as load_keys:
-            code = cli.main(["full", "--live", "--config", cfg_path, "--public-tasks", tasks_path,
-                             "--private-store", os.path.join(self.store, "store"),
-                             "--key-file", os.path.join(self.store, "absent-keys.txt")],
-                            out=lines.append)
-            load_keys.assert_not_called()
-        self.assertEqual(code, 2)
-        self.assertEqual(len(lines), 1)
-        self.assertTrue(lines[0].startswith("REFUSED: live runs are switched off"))
-        self.assertFalse(os.path.exists(os.path.join(self.store, "store")))
+        for command in ("qualify", "canary", "full"):
+            lines = []
+            with mock.patch.object(keys, "load_keys") as load_keys:
+                code = cli.main([command, "--live", "--config", cfg_path,
+                                 "--public-tasks", tasks_path,
+                                 "--private-store", os.path.join(self.store, "store"),
+                                 "--key-file", os.path.join(self.store, "absent-keys.txt")],
+                                out=lines.append)
+                load_keys.assert_not_called()
+            self.assertEqual(code, 2)
+            self.assertEqual(len(lines), 1)
+            self.assertTrue(lines[0].startswith("REFUSED: live runs are switched off"))
+            self.assertFalse(os.path.exists(os.path.join(self.store, "store")))
 
     def test_every_condition_is_needed(self):
+        # Qualification is the first paid step, so conditions 2 to 6, 8 and 9 are
+        # shown on it: nothing earlier has to be on record.
         with mock.patch.object(runner, "LIVE_ENABLED", True):
             # 2. --live
             with self.assertRaises(runner.LiveRefused) as caught:
                 runner.open_live_gate(live=False, config=self.cfg, key_file=self.key_file,
-                                      tasks=preflight.normalise_tasks(self.tasks), stage="canary",
+                                      tasks=preflight.normalise_tasks(self.tasks), stage="qualify",
                                       private_store=self.store,
                                       remaining_caps=dict(self.cfg.caps_usd), environ={},
                                       out=QUIET)
             self.assertIn("--live was not given", str(caught.exception))
             # 3. approval
-            self.refused("not approved", cfg=support.make_config(live_approved=False))
-            self.refused("not approved", cfg=support.make_config(approved_by="  "))
+            self.refused("not approved", stage="qualify",
+                         cfg=support.make_config(live_approved=False))
+            self.refused("not approved", stage="qualify", cfg=support.make_config(approved_by="  "))
             # 4. nothing left to pin
             unpinned = support.spec_dict("openai", "m-oa", "3", "30",
                                          api_version="TO PIN BEFORE RUN")
-            self.refused("TO PIN BEFORE RUN", cfg=support.make_config(models=[unpinned]))
+            self.refused("TO PIN BEFORE RUN", stage="qualify",
+                         cfg=support.make_config(models=[unpinned]))
             null_cached = support.spec_dict("openai", "m-oa", "3", "30", cached=None)
-            self.refused("cached_input_per_mtok is null",
+            self.refused("cached_input_per_mtok is null", stage="qualify",
                          cfg=support.make_config(models=[null_cached]))
             # 5. --key-file
-            self.refused("--key-file was not given", key_file=None)
+            self.refused("--key-file was not given", stage="qualify", key_file=None)
             # 6. clean environment
             for name in ("OPENAI_API_KEY", "ANTHROPIC_API_KEY"):
-                self.refused(name + " is set", environ={name: "FAKE-ENV-VALUE"})
-            # 7. earlier steps on record
-            self.refused("no finished live canary", stage="full")
-            checklist, outcome = [], []
-            self.refused("no finished live canary", stage="qualify",
-                         checklist_samples=checklist, outcome_samples=outcome)
+                self.refused(name + " is set", stage="qualify", environ={name: "FAKE-ENV-VALUE"})
+            # 7. earlier steps on record: the canary and the full run need a
+            # passed judge qualification, and there is none yet.
+            self.refused("no judge qualification is on record", stage="canary")
+            self.refused("no judge qualification is on record", stage="full")
             # 8. pre-flight
-            self.refused("pre-flight refused", cfg=support.make_config(
+            self.refused("pre-flight refused", stage="qualify", cfg=support.make_config(
                 caps_usd={"openai": "0.01", "anthropic": "50"}))
-            self.refused("--max-usd", max_usd="0.0001")
+            self.refused("--max-usd", stage="qualify", max_usd="0.0001")
             # 9. keys load
             folder = tempfile.TemporaryDirectory()
             self.addCleanup(folder.cleanup)
             only_one = support.write_key_file(
                 folder.name, ["OPENAI_API_KEY=" + support.FAKE_OPENAI_KEY])
-            refusal = self.refused("key not found: CLAUDE_API", key_file=only_one)
+            refusal = self.refused("key not found: CLAUDE_API", stage="qualify",
+                                   key_file=only_one)
             self.assertEqual(str(refusal), "key not found: CLAUDE_API")
-            self.refused("key file unavailable",
+            self.refused("key file unavailable", stage="qualify",
                          key_file=os.path.join(folder.name, "absent.txt"))
         # Nothing was sent and no live ledger entry was written by any refusal.
         self.assertFalse(os.path.exists(os.path.join(self.store, "ledgers")))
+        self.assertFalse(os.path.exists(os.path.join(self.store, runner.QUALIFICATION_DIR)))
 
     def test_gate_open_runs_on_the_fake_transport_and_never_leaks_a_key(self):
         printed = []
@@ -761,20 +885,23 @@ class LiveGateTests(RunnerCase):
         before = dict(os.environ)
         with mock.patch.object(runner, "LIVE_ENABLED", True), \
                 mock.patch("sys.stdout", stdout), mock.patch("sys.stderr", stderr):
+            qualified = self.live(stage="qualify", out=printed.append)
             summary = self.live(out=printed.append)
+        self.assertEqual((qualified["status"], qualified["live"]), ("finalised", True))
         self.assertEqual((summary["status"], summary["live"]), ("finalised", True))
         self.assertFalse(summary["publishable"])                    # a canary never is
-        self.assertEqual(len(self.factory_calls), 1)
+        self.assertEqual(len(self.factory_calls), 2)
         self.assertIsInstance(self.factory_calls[0], runner.LiveGatePass)
-        self.assertEqual(len(self.transport.requests), 4)           # 2 models x 2 tasks x 1
+        self.assertEqual(len(self.model_requests()), 4)             # 2 models x 2 tasks x 1
         # The adapter hands the transport the right key, and only inside the Secret.
         by_provider = {r.provider: r for r in self.transport.requests}
         self.assertEqual(by_provider["openai"].secret.reveal(), support.FAKE_OPENAI_KEY)
         self.assertEqual(by_provider["anthropic"].secret.reveal(), support.FAKE_ANTHROPIC_KEY)
-        # Scan every output for the fake values: files, printed lines, the summary,
+        # Scan every output for the fake values: files, printed lines, the summaries,
         # the requests as recorded, the environment.
         outputs = [support.read_everything(self.store), "\n".join(printed), stdout.getvalue(),
                    stderr.getvalue(), repr(summary), json.dumps(summary, default=repr),
+                   repr(qualified), json.dumps(qualified, default=repr),
                    repr(self.factory_calls), repr(self.transport.requests),
                    json.dumps([r.to_record() for r in self.transport.requests]),
                    "\n".join(os.environ.values())]
@@ -782,51 +909,225 @@ class LiveGateTests(RunnerCase):
             for value in support.FAKE_VALUES:
                 self.assertNotIn(value, text)
         self.assertEqual(dict(os.environ), before)
-        # A live run uses the shared ledgers and records the finished stage.
+        # A live run uses the shared ledgers and records each finished stage.
         self.assertTrue(os.path.isfile(os.path.join(self.store, "ledgers", "openai.jsonl")))
         self.assertFalse(os.path.exists(os.path.join(self.store, "ledgers-dry")))
-        with open(os.path.join(self.store, runner.STAGE_INDEX), encoding="utf-8") as stream:
-            entry = json.loads(stream.read())
-        self.assertEqual((entry["stage"], entry["live"]), ("canary", True))
+        self.assertEqual([(e["stage"], e["live"], e["qualification_run_id"])
+                          for e in self.stage_index()],
+                         [("qualify", True, qualified["run_id"]),
+                          ("canary", True, qualified["run_id"])])
 
-    def test_stages_unlock_in_order(self):
-        tasks = [support.task("t1", family=4, checks=2), support.task("t2")]
-        checklist = [{"sample_id": "s%d" % n, "task_id": "t1", "answer": "Answer %d" % n,
-                      "reference": {"c1": True, "c2": False}} for n in range(4)]
-        outcome = [{"sample_id": "o%d" % n, "task_id": "t2", "reply": "Reply %d" % n,
-                    "reference_outcome": ("answered", "abstained", "refused")[n % 3]}
-                   for n in range(20)]
-        by_reply = {s["reply"]: s["reference_outcome"] for s in outcome}
-
-        def judge_text(request, prompt):
-            if prompt.startswith(judges.OUTCOME_PROMPT[:60]):
-                reply = [r for r in by_reply if "\n%s\n>>>" % r in prompt]
-                return json.dumps({"outcome": by_reply[reply[0]] if reply else "answered",
-                                   "reason": "r"})
-            return json.dumps({"checks": {"c1": {"pass": True, "reason": "r"},
-                                          "c2": {"pass": False, "reason": "r"}}})
-        self.transport = model_only(lambda r, n: reply_body(r, "x"), judge_text=judge_text)
-        common = dict(tasks=tasks, grade=runner.stub_grade)
+    def test_stages_unlock_in_order_qualify_then_canary_then_full(self):
+        common = dict(grade=runner.stub_grade)
         with mock.patch.object(runner, "LIVE_ENABLED", True):
-            self.refused("no finished live canary", stage="qualify",
-                         checklist_samples=checklist, outcome_samples=outcome, **common)
-            self.assertEqual(self.live(stage="canary", **common)["status"], "finalised")
-            self.refused("have not passed qualification", stage="full", **common)
-            qualified = self.live(stage="qualify", checklist_samples=checklist,
-                                  outcome_samples=outcome, **common)
+            # Nothing runs before the judges are qualified.
+            self.refused("no judge qualification is on record", stage="canary", **common)
+            self.refused("no judge qualification is on record", stage="full", **common)
+            qualified = self.live(stage="qualify", **common)
             self.assertTrue(qualified["qualification"]["qualified"])
+            # The full run still needs the canary.
+            self.refused("no finished live canary is on record", stage="full", **common)
+            sent = len(self.transport.requests)
+            canary = self.live(stage="canary", **common)
+            self.assertEqual(canary["status"], "finalised")
+            # The canary's answers are judged by the qualified panel.
+            judge_models = {r.body["model"] for r in self.transport.requests[sent:]
+                            if is_judge_prompt(prompt_of(r))}
+            self.assertEqual(judge_models, {"j-oa", "j-an"})
+            self.assertEqual(canary["qualification_run_id"], qualified["run_id"])
             full = self.live(stage="full", **common)
         self.assertEqual(full["status"], "finalised")
         self.assertTrue(full["publishable"])
         self.assertTrue(os.path.isfile(full["finalised"]["public_path"]))
+        self.assertEqual([e["stage"] for e in self.stage_index()], ["qualify", "canary", "full"])
         for value in support.FAKE_VALUES:
             self.assertNotIn(value, support.read_everything(self.store))
+
+    def test_the_qualification_record_is_signed_off_and_written_once(self):
+        with mock.patch.object(runner, "LIVE_ENABLED", True):
+            qualified = self.live(stage="qualify",
+                                  sample_file_hashes={"checklist": "c" * 64, "outcome": "o" * 64})
+        path = qualified["qualification_record_path"]
+        self.assertEqual(path, os.path.join(self.store, "qualification",
+                                            qualified["run_id"] + ".json"))
+        with open(path, encoding="utf-8") as stream:
+            record = json.load(stream)
+        self.assertEqual(record, qualified["qualification_record"])
+        self.assertEqual((record["record"], record["run_id"], record["live"], record["passed"]),
+                         ("judge-qualification", qualified["run_id"], True, True))
+        self.assertEqual(record["signed_off_by"], "Test Owner")
+        self.assertRegex(record["date_utc"], r"^\d{4}-\d{2}-\d{2}T")
+        self.assertEqual(record["samples"], {"checklist": {"sha256": "c" * 64, "samples": 4},
+                                             "outcome": {"sha256": "o" * 64, "samples": 20}})
+        self.assertEqual(record["task_set_version"], "test")
+        self.assertEqual(record["run_manifest_sha256"],
+                         qualified["finalised"]["manifest_sha256"])
+        self.assertEqual([(c["provider"], c["model_id"], c["passed"], c["price_sum_per_mtok"])
+                          for c in record["candidates"]],
+                         [("openai", "j-oa", True, "18"), ("anthropic", "j-an", True, "27")])
+        first = record["candidates"][0]
+        self.assertEqual(first["settings_sha256"], self.cfg.judges[0].settings_sha256())
+        self.assertEqual(
+            (first["checklist"]["agreement"], first["checklist"]["agreement_on_true"],
+             first["checklist"]["agreement_on_false"], first["outcome"]["agreement"]),
+            (1.0, 1.0, 1.0, 1.0))
+        self.assertEqual([(e["provider"], e["model_id"]) for e in record["panel"]],
+                         [("openai", "j-oa"), ("anthropic", "j-an")])
+        self.assertEqual(record["thresholds"]["checklist_on_false"], "0.85")
+        body = {k: v for k, v in record.items() if k != "record_sha256"}
+        self.assertEqual(record["record_sha256"], runner.content_sha256(body))
+        # Written once: the same run id can never be written again.
+        with self.assertRaises(FileExistsError):
+            runner.write_qualification_record(self.store, record)
+        # The finalised run folder is untouched by the record.
+        records.verify_manifest(qualified["dir"])
+
+    def test_a_changed_samples_file_or_judge_invalidates_the_record(self):
+        other = dict(self.checklist[0], answer="An edited answer")
+        with mock.patch.object(runner, "LIVE_ENABLED", True):
+            self.live(stage="qualify")
+            for stage in ("canary", "full"):
+                # A changed samples file.
+                self.refused("the checklist samples file has changed since judge qualification",
+                             stage=stage, checklist_samples=[other] + self.checklist[1:])
+                self.refused("the outcome samples file has changed since judge qualification",
+                             stage=stage, outcome_samples=self.outcome[:-1])
+                # The sample files must be given, so that they can be compared.
+                self.refused("give --checklist-samples", stage=stage, checklist_samples=None)
+                self.refused("give --outcome-samples", stage=stage, outcome_samples=None)
+                # A changed judge id.
+                swapped = support.make_config(judges=[
+                    support.spec_dict("openai", "j-oa-2", "6", "12", judge=True),
+                    support.spec_dict("anthropic", "j-an", "9", "18", judge=True)])
+                refusal = self.refused("differ from the panel named by judge qualification",
+                                       stage=stage, cfg=swapped)
+                self.assertIn("j-oa-2", str(refusal))
+                self.assertIn("j-an, j-oa)", str(refusal))
+                # The same judge id with a changed setting.
+                retuned = support.make_config(judges=[
+                    support.spec_dict("openai", "j-oa", "6", "12", judge=True,
+                                      reasoning_effort="high"),
+                    support.spec_dict("anthropic", "j-an", "9", "18", judge=True)])
+                self.refused("the settings of judge j-oa have changed since it was qualified",
+                             stage=stage, cfg=retuned)
+                # A changed task set version.
+                self.refused("the task set version has changed", stage=stage,
+                             cfg=support.make_config(task_set_version="test-2"))
+            # A re-read price does not undo the qualification: the canary runs.
+            repriced = support.spec_dict("openai", "j-oa", "7", "14", judge=True)
+            repriced["price"]["read_on"] = "2026-11-20"
+            cfg = support.make_config(judges=[
+                repriced, support.spec_dict("anthropic", "j-an", "9", "18", judge=True)])
+            self.assertEqual(self.live(stage="canary", cfg=cfg)["status"], "finalised")
+
+    def test_an_edited_or_missing_record_is_not_accepted(self):
+        with mock.patch.object(runner, "LIVE_ENABLED", True):
+            qualified = self.live(stage="qualify", cfg=support.make_config(
+                judge_candidates=support.candidates_dict()))
+            path = qualified["qualification_record_path"]
+            # The cheapest candidates were named, not the config's judges.
+            self.refused("differ from the panel named by judge qualification", stage="canary")
+            with open(path, encoding="utf-8") as stream:
+                record = json.load(stream)
+            # Editing the record to name the config's judges is caught by its hash.
+            record["panel"] = [dict(entry, model_id=name) for entry, name in
+                               zip(record["panel"], ("j-oa", "j-an"))]
+            with open(path, "w", encoding="utf-8") as stream:
+                json.dump(record, stream)
+            self.refused("has been changed since it was written", stage="canary")
+            os.remove(path)
+            self.refused("is missing", stage="canary")
+
+    def test_a_failed_later_qualification_replaces_an_earlier_pass(self):
+        with mock.patch.object(runner, "LIVE_ENABLED", True):
+            self.live(stage="qualify")
+            self.assertEqual(self.live(stage="canary")["status"], "finalised")
+            self.wrong_judges = {"j-an"}
+            failed = self.live(stage="qualify")
+            self.assertFalse(failed["qualification"]["qualified"])
+            self.assertFalse(failed["qualification_record"]["passed"])
+            for stage in ("canary", "full"):
+                refusal = self.refused("did not pass, so there is no panel", stage=stage)
+                self.assertIn("anthropic side", str(refusal))
+
+    def test_the_canary_and_full_run_refuse_a_config_that_differs_from_the_panel(self):
+        candidates = support.candidates_dict()
+        listed = support.make_config(judge_candidates=candidates)
+        named = support.make_config(judge_candidates=candidates, judges=support.cheap_panel())
+        with mock.patch.object(runner, "LIVE_ENABLED", True):
+            qualified = self.live(stage="qualify", cfg=listed)
+            self.assertEqual([item["model_id"] for item in qualified["qualification"]["panel"]],
+                             ["j-oa-cheap", "j-an-cheap"])
+            # 5 candidates x 24 samples.
+            self.assertEqual(len(self.transport.requests), 120)
+            for stage in ("canary", "full"):
+                refusal = self.refused("differ from the panel named by judge qualification",
+                                       stage=stage, cfg=listed, grade=runner.stub_grade)
+                self.assertIn("(j-an, j-oa)", str(refusal))
+                self.assertIn("(j-an-cheap, j-oa-cheap)", str(refusal))
+            # With judges set to the panel the canary runs, judged by that panel.
+            sent = len(self.transport.requests)
+            canary = self.live(stage="canary", cfg=named, grade=runner.stub_grade)
+            self.assertEqual(canary["status"], "finalised")
+            self.assertEqual({r.body["model"] for r in self.transport.requests[sent:]
+                              if is_judge_prompt(prompt_of(r))}, {"j-oa-cheap", "j-an-cheap"})
+            self.assertEqual(self.live(stage="full", cfg=named,
+                                       grade=runner.stub_grade)["status"], "finalised")
+
+    def test_a_dry_qualification_never_opens_the_canary(self):
+        dry = self.run_stage(stage="qualify", cfg=self.cfg, checklist_samples=self.checklist,
+                             outcome_samples=self.outcome, transport=self.transport)
+        self.assertTrue(dry["qualification"]["qualified"])
+        with mock.patch.object(runner, "LIVE_ENABLED", True):
+            self.refused("no judge qualification is on record", stage="canary")
+
+    def test_preflight_uses_the_worst_case_until_a_panel_is_recorded(self):
+        candidates = support.candidates_dict()
+        listed = support.make_config(judge_candidates=candidates)
+        named = support.make_config(judge_candidates=candidates, judges=support.cheap_panel())
+        samples = dict(checklist_samples=self.checklist, outcome_samples=self.outcome)
+
+        def dry(cfg, stage="canary"):
+            lines = []
+            summary = self.run_stage(stage=stage, cfg=cfg, out=lines.append, **samples)
+            return summary["preflight"], "\n".join(lines)
+
+        before, text = dry(named)
+        self.assertEqual(before["judging"]["case"], "worst_case")
+        self.assertEqual(before["judging"]["judges"], {"openai": "j-oa-dear", "anthropic": "j-an"})
+        self.assertIn("WORST CASE", text)
+        self.assertIn("no judge qualification is on record", text)
+        with mock.patch.object(runner, "LIVE_ENABLED", True):
+            qualified = self.live(stage="qualify", cfg=listed)
+            in_gate = []
+            self.live(stage="canary", cfg=named, out=in_gate.append)
+        self.assertIn("RECORDED PANEL of qualification " + qualified["run_id"],
+                      "\n".join(in_gate))
+        after, text = dry(named)
+        self.assertEqual(after["judging"], {
+            "case": "recorded_panel",
+            "judges": {"openai": "j-oa-cheap", "anthropic": "j-an-cheap"},
+            "qualification_run_id": qualified["run_id"], "note": None})
+        self.assertIn("RECORDED PANEL of qualification " + qualified["run_id"], text)
+        for provider in ("openai", "anthropic"):
+            self.assertLess(after["by_stage"]["full"][provider]["planning_bound"],
+                            before["by_stage"]["full"][provider]["planning_bound"])
+        # A config whose judges are not the recorded panel falls back to the worst
+        # case, and the output says why.
+        fallback, text = dry(listed)
+        self.assertEqual(fallback["judging"]["case"], "worst_case")
+        self.assertIn("differ from the panel named by judge qualification", text)
+        # The qualification stage itself is always costed at the worst case.
+        again, text = dry(named, stage="qualify")
+        self.assertEqual(again["judging"]["case"], "worst_case")
+        self.assertIn("this is the qualification stage", text)
 
     def test_a_key_echoed_by_the_provider_is_refused_by_the_record(self):
         def echo(request, n):
             return reply_body(request, "you sent " + request.secret.reveal())
-        self.transport = model_only(echo)
         with mock.patch.object(runner, "LIVE_ENABLED", True):
+            self.live(stage="qualify")
+            self.transport = model_only(echo)
             with self.assertRaises(records.RecordError) as caught:
                 self.live()
         for value in support.FAKE_VALUES:
@@ -846,7 +1147,7 @@ class LiveGateTests(RunnerCase):
 
     def test_gate_pass_is_single_purpose(self):
         with mock.patch.object(runner, "LIVE_ENABLED", True):
-            self.live()
+            self.live(stage="qualify")
             gate_pass = self.factory_calls[0]
             runner.require_live_pass(gate_pass)                     # issued by the gate
             with self.assertRaises(runner.LiveRefused):
@@ -854,6 +1155,18 @@ class LiveGateTests(RunnerCase):
         with self.assertRaises(runner.LiveRefused):
             runner.require_live_pass(gate_pass)                     # live disabled again
         self.assertNotIn(support.FAKE_OPENAI_KEY, repr(gate_pass) + repr(gate_pass.keys))
+
+    def test_a_live_run_is_refused_without_graders_or_scorer_before_any_request(self):
+        with mock.patch.object(runner, "LIVE_ENABLED", True), mock.patch.dict(sys.modules, ABSENT):
+            self.live(stage="qualify")
+            self.live(stage="canary")
+            sent = len(self.transport.requests)
+            with self.assertRaises(runner.GraderUnavailable):
+                self.live(stage="full", grade=None)
+            with self.assertRaises(runner.LiveRefused) as caught:
+                self.live(stage="full", scores=None)
+            self.assertIn("no scorer available", str(caught.exception))
+        self.assertEqual(len(self.transport.requests), sent)
 
 
 class CommandLineTests(unittest.TestCase):
@@ -871,6 +1184,22 @@ class CommandLineTests(unittest.TestCase):
         self.held_path = os.path.join(self.folder, "held.json")
         with open(self.held_path, "w", encoding="utf-8") as stream:
             json.dump({"tasks": [support.task("h1", split="held-out")]}, stream)
+        absent = mock.patch.dict(sys.modules, ABSENT)
+        absent.start()
+        self.addCleanup(absent.stop)
+
+    def write(self, name, value):
+        path = os.path.join(self.folder, name)
+        with open(path, "w", encoding="utf-8") as stream:
+            json.dump(value, stream)
+        return path
+
+    def sample_files(self):
+        checklist, outcome = support.qualification_samples("t2", "t1")
+        checklist = [dict(item, reference={"c1": n % 2 == 0})
+                     for n, item in enumerate(checklist)]
+        return ["--checklist-samples", self.write("checklist.json", checklist),
+                "--outcome-samples", self.write("outcome.json", outcome)]
 
     def main(self, *argv):
         lines = []
@@ -909,12 +1238,132 @@ class CommandLineTests(unittest.TestCase):
 
     def test_dry_run_without_graders_says_so(self):
         store = os.path.join(self.folder, "store")
-        with mock.patch.dict(sys.modules, {"outcome": None}):
-            with self.assertRaises(runner.GraderUnavailable):
-                runner.default_grade({}, "")
-            code, text = self.main("dry-run", *self.common(), "--private-store", store)
+        with self.assertRaises(runner.GraderUnavailable):
+            runner.default_grade({}, "")
+        code, text = self.main("dry-run", *self.common(), "--private-store", store)
         self.assertEqual(code, 2)
         self.assertIn("no grader available", text)
+        self.assertFalse(os.path.exists(os.path.join(store, "runs")))
+
+    def test_preflight_covers_the_whole_plan_from_the_qualify_stage(self):
+        code, text = self.main("preflight", *self.common(), *self.sample_files())
+        self.assertEqual(code, 0)
+        self.assertIn("Result: within the remaining caps for stage qualify", text)
+        self.assertIn("qualification: 24 calls per candidate (4 checklist samples + 20 outcome "
+                      "samples), 48 calls in all", text)
+        self.assertIn("judging costed at the WORST CASE", text)
+        self.assertIn("sample set: meets the method's rules", text)
+        self.assertIn("built-in reader", text)
+
+    def test_every_refusal_has_a_non_zero_exit_code(self):
+        store = os.path.join(self.folder, "store")
+        tight = self.write("tight.json", support.config_dict(
+            caps_usd={"openai": "0.01", "anthropic": "50"}))
+        tight_args = ["--config", tight, "--public-tasks", self.tasks_path]
+        cases = [
+            # pre-flight above a cap: the figures are printed, then the refusal
+            (("preflight", *tight_args), "REFUSED: openai: planning bound"),
+            (("dry-run", *tight_args, "--private-store", store, "--stub-grade"),
+             "REFUSED: pre-flight refused"),
+            (("canary", *tight_args, "--private-store", store, "--stub-grade"),
+             "REFUSED: pre-flight refused"),
+            # --max-usd below the stage's planning bound
+            (("preflight", *self.common(), "--stage", "canary", "--max-usd", "0.0001"),
+             "REFUSED: --max-usd"),
+            # qualify without its sample files
+            (("qualify", *self.common(), "--private-store", store),
+             "REFUSED: the qualify stage needs both sample files"),
+            # a config that does not validate, and files that are missing or broken
+            (("preflight", "--config", self.write("bad.json", {"models": []}),
+              "--public-tasks", self.tasks_path), "REFUSED: config rejected"),
+            (("preflight", "--config", os.path.join(self.folder, "absent.json"),
+              "--public-tasks", self.tasks_path), "REFUSED: cannot read absent.json"),
+            (("preflight", "--config", self.cfg_path,
+              "--public-tasks", os.path.join(self.folder, "absent-tasks.json")),
+             "REFUSED: cannot read absent-tasks.json"),
+            (("preflight", *self.common(), "--checklist-samples",
+              self.write("not-a-list.json", {"a": 1})), "REFUSED: not a list of samples"),
+            (("dry-run", *self.common(), "--private-store", store),
+             "REFUSED: no grader available"),
+        ]
+        for argv, fragment in cases:
+            code, text = self.main(*argv)
+            self.assertEqual(code, 2, argv)
+            self.assertIn(fragment, text, argv)
+        # The three figures are printed with a pre-flight refusal, not instead of it.
+        code, text = self.main("dry-run", *tight_args, "--private-store", store, "--stub-grade")
+        for word in ("expected", "planning bound", "absolute bound"):
+            self.assertIn(word, text)
+        self.assertFalse(os.path.exists(os.path.join(store, "runs")))
+        with self.assertRaises(SystemExit) as caught:
+            self.main("dry-run", *self.common(), "--stub-grade")        # no --private-store
+        self.assertNotIn(caught.exception.code, (0, None))
+
+    def test_max_usd_can_only_lower_a_cap(self):
+        store = os.path.join(self.folder, "store")
+        tight = self.write("tight.json", support.config_dict(
+            caps_usd={"openai": "0.01", "anthropic": "50"}))
+        # A --max-usd far above the provider cap does not lift it.
+        code, text = self.main("dry-run", "--config", tight, "--public-tasks", self.tasks_path,
+                               "--private-store", store, "--stub-grade", "--max-usd", "100000")
+        self.assertEqual(code, 2)
+        self.assertIn("above the remaining cap 0.0100 USD", text)
+        self.assertNotIn("--max-usd", text.split("REFUSED:", 1)[1])
+        # Below the stage's planning bound it lowers the cap, and the run is refused.
+        code, text = self.main("dry-run", *self.common(), "--private-store", store,
+                               "--stub-grade", "--max-usd", "0.5")
+        self.assertEqual(code, 2)
+        self.assertIn("--max-usd 0.5000 is below this stage's planning bound", text)
+        # Above the bound and inside the caps, it changes nothing.
+        code, text = self.main("dry-run", *self.common(), "--private-store", store,
+                               "--stub-grade", "--max-usd", "100000")
+        self.assertEqual(code, 0, text)
+
+    def test_a_qualification_that_names_no_panel_fails_the_stage(self):
+        store = os.path.join(self.folder, "store")
+        cfg = self.write("candidates.json", support.config_dict(
+            judge_candidates=support.candidates_dict()))
+        # The dry-run stub judge says true to everything, so no candidate passes.
+        code, text = self.main("qualify", "--config", cfg, "--public-tasks", self.tasks_path,
+                               "--held-out-tasks", self.held_path, "--private-store", store,
+                               *self.sample_files())
+        self.assertEqual(code, 4, text)
+        self.assertIn("status finalised", text)
+        self.assertIn("QUALIFICATION FAILED, no panel: no judge candidate passed qualification "
+                      "on the openai side", text)
+        self.assertIn("on the anthropic side", text)
+        rows = [line.split() for line in text.split("\n")
+                if line.strip().startswith("j-") and line.split()[-1] in ("PASS", "FAIL")]
+        self.assertEqual([(row[0], row[1], row[2], row[-1]) for row in rows], [
+            ("j-oa-cheap", "openai", "3", "FAIL"), ("j-oa", "openai", "18", "FAIL"),
+            ("j-oa-dear", "openai", "60", "FAIL"), ("j-an-cheap", "anthropic", "6", "FAIL"),
+            ("j-an", "anthropic", "27", "FAIL")])
+        # overall, on true items, on false items, outcome samples
+        self.assertEqual(rows[0][3:7], ["0.5000", "1.0000", "0.0000", "0.3500"])
+        self.assertIn("no qualification record was written", text)
+        self.assertNotIn("recommended panel", text)
+
+    def test_a_qualification_that_passes_prints_the_recommended_panel(self):
+        _, outcome = support.qualification_samples("t2", "t1")
+        qualification = {
+            "sample_set_problems": [], "failures": [],
+            "panel": [{"provider": "openai", "model_id": "j-oa-cheap", "settings_sha256": "x"},
+                      {"provider": "anthropic", "model_id": "j-an", "settings_sha256": "y"}],
+            "qualified": True,
+            "candidates": {
+                "j-oa-cheap": {"price_sum_per_mtok": "3", "qualified": True, "checklist": {
+                    "agreement": 0.9531, "agreement_on_true": 0.9, "agreement_on_false": 1.0},
+                    "outcome": {"agreement": 0.95}},
+                "j-an": {"price_sum_per_mtok": "27", "qualified": True, "checklist": {
+                    "agreement": 1.0, "agreement_on_true": 1.0, "agreement_on_false": 1.0},
+                    "outcome": {"agreement": 1.0}}}}
+        cfg = support.make_config(judge_candidates=support.candidates_dict())
+        text = "\n".join(cli.qualification_lines(qualification, cfg))
+        self.assertIn("recommended panel, the cheapest candidate that passed on each side: "
+                      "openai j-oa-cheap, anthropic j-an", text)
+        self.assertIn("0.9531", text)
+        self.assertIn("not tried", text)                           # candidates with no result
+        self.assertNotIn("QUALIFICATION FAILED", text)
 
     def test_a_key_on_the_command_line_is_refused_without_echo(self):
         stderr = io.StringIO()
