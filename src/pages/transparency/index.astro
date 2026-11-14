@@ -7,6 +7,7 @@ import { practitionerB2 } from '../../data/practitioner-b2';
 import { practitionerB3 } from '../../data/practitioner-b3';
 import { serializeJsonLd } from '../../lib/json-ld';
 import { sources, calculations, stateLabels, termsLabels, REVIEWED, type SourceState } from '../../data/transparency';
+const featureReceipts = Object.values(import.meta.glob('../../components/transparency/*.astro', { eager: true, import: 'default' })) as any[];
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
@@ -146,6 +147,7 @@ const structuredData = {
       </p>
     </header>
 
+    {featureReceipts.map(Receipts => <Receipts />)}
     <!-- At a glance -->
     <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-12">
       {
