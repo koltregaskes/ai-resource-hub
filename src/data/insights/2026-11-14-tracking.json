@@ -1,0 +1,36 @@
+{
+  "upgrades": [
+    [
+      "Both pass",
+      88
+    ],
+    [
+      "Old only passes",
+      7
+    ],
+    [
+      "New only passes",
+      4
+    ],
+    [
+      "Neither passes",
+      1
+    ]
+  ],
+  "prices": [
+    [
+      "Earlier record",
+      "Host A",
+      "$2.00"
+    ],
+    [
+      "Later record",
+      "Host B",
+      "$1.00"
+    ]
+  ],
+  "oldPass": 95,
+  "newPass": 92,
+  "netPoints": -3,
+  "apparentPriceChange": -50
+}
