@@ -1,0 +1,73 @@
+{
+  "metrics": {
+    "callCost": 0.009,
+    "toolAllowance": 20000,
+    "screenRate": 90,
+    "passedScreen": 2,
+    "denialRate": 100,
+    "executed": 0
+  },
+  "agent-budget-enforced-stop": [
+    [
+      5,
+      4000,
+      1000,
+      "$0.045"
+    ],
+    [
+      10,
+      4000,
+      1000,
+      "$0.090"
+    ],
+    [
+      20,
+      4000,
+      1000,
+      "$0.180"
+    ]
+  ],
+  "tool-results-context-budget": [
+    [
+      500,
+      5000,
+      "25%"
+    ],
+    [
+      2000,
+      20000,
+      "100%"
+    ],
+    [
+      8000,
+      80000,
+      "400%"
+    ]
+  ],
+  "prompt-injection-permission-tests": [
+    [
+      "Malicious fixtures",
+      20
+    ],
+    [
+      "Screen flags",
+      18
+    ],
+    [
+      "Reach model",
+      2
+    ],
+    [
+      "Prohibited proposals",
+      2
+    ],
+    [
+      "Executor denials",
+      2
+    ],
+    [
+      "Prohibited executions",
+      0
+    ]
+  ]
+}
