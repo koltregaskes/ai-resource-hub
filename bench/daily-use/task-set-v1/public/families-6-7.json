@@ -99,7 +99,8 @@
   },
   {
     "id": "f6-pub-06",
-    "version": 1,
+    "version": 2,
+    "changed_in_v2": "Added integer_keys for lemon_nets and sugar_bags, so the pack counts must be exact whole numbers (10.004 nets or 2.004 bags no longer pass inside the numeric tolerance).",
     "family": 6,
     "split": "public",
     "answerable": true,
@@ -114,7 +115,11 @@
       },
       "numeric_tolerance": 0.005,
       "allow_extra_keys": false,
-      "string_compare": "casefold_trim"
+      "string_compare": "casefold_trim",
+      "integer_keys": [
+        "lemon_nets",
+        "sugar_bags"
+      ]
     },
     "expected": "Diluted drink 150 x 0.25 L x 1.1 = 41.25 L. Concentrate is one fifth = 8.25 L (3.3 batches); water is four fifths = 33.00 L. Lemons 39.6, so 40 lemons = 10 nets. Sugar 2,970 g less 1,000 g in the cupboard = 1,970 g, so 2 bags. {\"lemon_nets\": 10, \"sugar_bags\": 2, \"water_litres\": 33.00}",
     "accept_examples": [
@@ -124,17 +129,20 @@
     "reject_examples": [
       "{\"lemon_nets\": 13, \"sugar_bags\": 3, \"water_litres\": 30.94}",
       "{\"lemon_nets\": 9, \"sugar_bags\": 2, \"water_litres\": 30.00}",
-      "{\"lemon_nets\": 10, \"sugar_bags\": 3, \"water_litres\": 33.00}"
+      "{\"lemon_nets\": 10, \"sugar_bags\": 3, \"water_litres\": 33.00}",
+      "{\"lemon_nets\": 10.004, \"sugar_bags\": 2.004, \"water_litres\": 33.00}",
+      "{\"lemon_nets\": 10, \"sugar_bags\": 2.004, \"water_litres\": 33.00}"
     ],
     "sources": [],
     "why_hard": "A 1 to 4 dilution means concentrate is one fifth of the drink, not one quarter; the 10% extra applies to the diluted drink; lemons and sugar round up to whole packs, and the sugar already in the cupboard takes the purchase from 3 bags to 2.",
-    "verification": "Computed forwards in Python with exact fractions (cups to litres to concentrate to batches to packs) and checked by a second route working back from the answer: 10 nets and 3 kg of sugar make 3.33 batches = 8.33 L concentrate, which with 4 parts water covers the 41.25 L needed, while 9 nets or 1 bag would fall short.",
+    "verification": "Computed forwards in Python with exact fractions (cups to litres to concentrate to batches to packs) and checked by a second route working back from the answer: 10 nets and 3 kg of sugar make 3.33 batches = 8.33 L concentrate, which with 4 parts water covers the 41.25 L needed, while 9 nets or 1 bag would fall short. v2: all accept and reject examples re-run through _verify/fixes/check_fixes.py with integer_keys.",
     "author": "Claude (AIRH task agent)",
     "written_on": "2026-11-14"
   },
   {
     "id": "f7-pub-03",
-    "version": 1,
+    "version": 2,
+    "changed_in_v2": "No change to the prompt, cases or key; the task was validated in a real formula engine (formulas 1.3.4) and the result is recorded in verification and engine_validated.",
     "family": 7,
     "split": "public",
     "answerable": true,
@@ -353,17 +361,23 @@
     ],
     "sources": [],
     "why_hard": "The refund total must carry the same Paid condition as the sales total, otherwise refunds shown against Cancelled orders are subtracted (Wales gives -60 instead of 0).",
-    "verification": "Worked each case by hand (North: 120 + 45.25 + 200.10 = 365.35 less 45.25 + 20 = 65.25, giving 300.10; South: 80.50 + 19.99 - 10.50 = 89.99; Wales and Scotland 0; second sheet 50) and with a Python model of SUMIFS over the same cells; the two accept formulas reproduce every expected value and each reject formula fails at least one case. Blank cells are represented by leaving the cell out of the case.",
+    "verification": "Worked each case by hand (North: 120 + 45.25 + 200.10 = 365.35 less 45.25 + 20 = 65.25, giving 300.10; South: 80.50 + 19.99 - 10.50 = 89.99; Wales and Scotland 0; second sheet 50) and with a Python model of SUMIFS over the same cells; the two accept formulas reproduce every expected value and each reject formula fails at least one case. Blank cells are represented by leaving the cell out of the case. v2 engine validation (2026-11-14): every case was built as a workbook (openpyxl 3.1.5) and evaluated by the formula engine formulas 1.3.4 under Python 3.15.2; both accept formulas give the expected value in every case and each reject formula differs in at least one case: expected 300.1, 0, 89.99, 0, 50; A1 gives 300.1, 0, 89.99, 0, 50; A2 gives 300.1, 0, 89.99, 0, 50; R1 gives 200.11, -60, 89.99, 0, 50 (differs in case 1 and 2); R2 gives 600.1, 0, 89.99, 0, 125 (differs in case 1 and 5); R3 gives 365.35, 0, 100.49, 0, 50 (differs in case 1 and 3).",
+    "engine_validated": {
+      "engine": "formulas",
+      "version": "1.3.4",
+      "date": "2026-11-14"
+    },
     "author": "Claude (AIRH task agent)",
     "written_on": "2026-11-14"
   },
   {
     "id": "f7-pub-04",
-    "version": 1,
+    "version": 2,
+    "changed_in_v2": "The reference solution and accept example A1 now parse pounds and pence as integers (no floats); two regression tests were added (£70,368,744,177,664.01 must give 7036874417766401 pence, and its refund), the old round(float) key is now a reject example, and the prompt says 'however large the amounts are'.",
     "family": 7,
     "split": "public",
     "answerable": true,
-    "prompt": "I use this little Python function to total a column that I export from our household budget spreadsheet. The values come through as text like \"£1,234.50\", refunds come through with a minus sign in front like \"-£12.00\", and some cells are blank.\n\n```python\ndef total_pence(amounts):\n    \"\"\"Add up money strings such as \"£1,234.50\" and return the total in pence as an int.\n\n    Blank entries are skipped. A leading minus sign, as in \"-£12.00\", is a refund.\n    \"\"\"\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += int(float(a) * 100)\n    return total\n```\n\nMost of the time it is right, but every so often the total is a penny or two out compared with adding it up by hand. For example total_pence([\"£19.99\", \"£0.29\"]) gives 2026 when it should be 2028. It has to be exactly right for every list of amounts, including lists with refunds in them. Amounts never have more than two decimal places.\n\nPlease fix it. Keep the function name, the argument and the return type (an int number of pence) the same, and use only the standard library.\n\nReply with only the corrected Python code, no explanation.",
+    "prompt": "I use this little Python function to total a column that I export from our household budget spreadsheet. The values come through as text like \"£1,234.50\", refunds come through with a minus sign in front like \"-£12.00\", and some cells are blank.\n\n```python\ndef total_pence(amounts):\n    \"\"\"Add up money strings such as \"£1,234.50\" and return the total in pence as an int.\n\n    Blank entries are skipped. A leading minus sign, as in \"-£12.00\", is a refund.\n    \"\"\"\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += int(float(a) * 100)\n    return total\n```\n\nMost of the time it is right, but every so often the total is a penny or two out compared with adding it up by hand. For example total_pence([\"£19.99\", \"£0.29\"]) gives 2026 when it should be 2028. It has to be exactly right for every list of amounts, however large the amounts are, including lists with refunds in them. Amounts never have more than two decimal places.\n\nPlease fix it. Keep the function name, the argument and the return type (an int number of pence) the same, and use only the standard library.\n\nReply with only the corrected Python code, no explanation.",
     "max_output_tokens": 4096,
     "grader": {
       "type": "python_tests",
@@ -449,32 +463,51 @@
             ]
           ],
           "expect": 1305
+        },
+        {
+          "args": [
+            [
+              "£70,368,744,177,664.01"
+            ]
+          ],
+          "expect": 7036874417766401
+        },
+        {
+          "args": [
+            [
+              "-£70,368,744,177,664.01",
+              "£0.02"
+            ]
+          ],
+          "expect": -7036874417766399
         }
       ]
     },
-    "expected": "def total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += round(float(a) * 100)\n    return total",
+    "expected": "def total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        sign = -1 if a.startswith(\"-\") else 1\n        pounds, _, pence = a.lstrip(\"+-\").partition(\".\")\n        pence = (pence + \"00\")[:2]\n        total += sign * (int(pounds or \"0\") * 100 + int(pence))\n    return total",
     "accept_examples": [
-      "def total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += round(float(a) * 100)\n    return total",
+      "def total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        sign = -1 if a.startswith(\"-\") else 1\n        pounds, _, pence = a.lstrip(\"+-\").partition(\".\")\n        pence = (pence + \"00\")[:2]\n        total += sign * (int(pounds or \"0\") * 100 + int(pence))\n    return total",
       "from decimal import Decimal\n\ndef total_pence(amounts):\n    total = Decimal(0)\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\").replace(\" \", \"\")\n        if not a:\n            continue\n        total += Decimal(a) * 100\n    return int(total)"
     ],
     "reject_examples": [
       "def total_pence(amounts):\n    \"\"\"Add up money strings such as \"£1,234.50\" and return the total in pence as an int.\n\n    Blank entries are skipped. A leading minus sign, as in \"-£12.00\", is a refund.\n    \"\"\"\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += int(float(a) * 100)\n    return total",
       "def total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += int(float(a) * 100 + 0.5)\n    return total",
-      "import math\n\ndef total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += math.ceil(float(a) * 100)\n    return total"
+      "import math\n\ndef total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += math.ceil(float(a) * 100)\n    return total",
+      "def total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += round(float(a) * 100)\n    return total"
     ],
     "sources": [],
-    "why_hard": "int() truncates binary floating-point values such as 19.99 * 100 = 1998.9999999999998, and the obvious patch of adding 0.5 before int() still gets negative refunds wrong because int() truncates towards zero.",
-    "verification": "Ran the original function (fails 5 of 9 tests, including the 2026 example), two correct fixes using round() and Decimal (both pass 9 of 9) and two plausible wrong fixes (add 0.5 then int, and math.ceil; both fail the two refund tests) under Python 3.15.",
+    "why_hard": "int() truncates binary floating-point values such as 19.99 * 100 = 1998.9999999999998; the obvious patch of adding 0.5 before int() still gets negative refunds wrong, and round(float(a) * 100) is still not exact for very large amounts, so only integer or Decimal parsing is right for every amount.",
+    "verification": "v2: ran under Python 3.15.2 through _verify/fixes/check_fixes.py (each solution in its own subprocess): the integer-parsing key and the Decimal solution pass 11 of 11 tests; the original function, the add-0.5 patch, math.ceil and the old round(float(a) * 100) key each fail (the last only on the two new large-amount tests, where it returns 7036874417766402).",
     "author": "Claude (AIRH task agent)",
     "written_on": "2026-11-14"
   },
   {
     "id": "f7-pub-05",
-    "version": 1,
+    "version": 2,
+    "changed_in_v2": "Prompt now says the parts of the worded form are separated by exactly one ordinary space each; four tests were added that require None for a newline, a tab or a double space between the parts (plus one confirming outer whitespace is still ignored), and both accept examples were changed to obey this; the old A1 is now a reject example.",
     "family": 7,
     "split": "public",
     "answerable": true,
-    "prompt": "I'm tidying up a membership list where staff in our UK office typed the dates by hand in all sorts of ways. Please write a Python function parse_uk_date(text) that turns one typed date into an ISO date string.\n\nIt must return a string in the form \"YYYY-MM-DD\", or None if the text is not a valid date in one of the two accepted forms below. Leading and trailing spaces are ignored.\n\nAccepted form 1, numeric, always day first then month then year:\n- the day is one or two digits, the month is one or two digits;\n- the year is either four digits, or two digits meaning 20YY (so 26 means 2026);\n- the separator is \"/\", \"-\" or \".\", and it must be the same separator in both places.\nExamples: \"3/4/2026\", \"03-04-26\" and \"3.4.2026\" all mean 3 April 2026.\n\nAccepted form 2, with the month as a word: the day, then the month name, then a four-digit year, separated by spaces.\n- the day is one or two digits and may be followed by st, nd, rd or th;\n- the month is the full English month name or its first three letters, in any mix of upper and lower case.\nExamples: \"3 April 2026\", \"3rd apr 2026\", \"21st DECEMBER 2026\".\n\nAnything else must return None. That includes dates that do not exist, such as 31/04/2026 or 29/02/2027, and text in any other layout.\n\nUse only the Python standard library. Reply with only the Python code, no explanation.",
+    "prompt": "I'm tidying up a membership list where staff in our UK office typed the dates by hand in all sorts of ways. Please write a Python function parse_uk_date(text) that turns one typed date into an ISO date string.\n\nIt must return a string in the form \"YYYY-MM-DD\", or None if the text is not a valid date in one of the two accepted forms below. Leading and trailing spaces are ignored.\n\nAccepted form 1, numeric, always day first then month then year:\n- the day is one or two digits, the month is one or two digits;\n- the year is either four digits, or two digits meaning 20YY (so 26 means 2026);\n- the separator is \"/\", \"-\" or \".\", and it must be the same separator in both places.\nExamples: \"3/4/2026\", \"03-04-26\" and \"3.4.2026\" all mean 3 April 2026.\n\nAccepted form 2, with the month as a word: the day, then the month name, then a four-digit year, with exactly one ordinary space between the day and the month and exactly one between the month and the year. Two spaces, a tab or a line break between the parts is not accepted.\n- the day is one or two digits and may be followed by st, nd, rd or th;\n- the month is the full English month name or its first three letters, in any mix of upper and lower case.\nExamples: \"3 April 2026\", \"3rd apr 2026\", \"21st DECEMBER 2026\".\n\nAnything else must return None. That includes dates that do not exist, such as 31/04/2026 or 29/02/2027, and text in any other layout.\n\nUse only the Python standard library. Reply with only the Python code, no explanation.",
     "max_output_tokens": 4096,
     "grader": {
       "type": "python_tests",
@@ -563,22 +596,53 @@
             "5/11/26"
           ],
           "expect": "2026-11-05"
+        },
+        {
+          "args": [
+            "3 April\n2026"
+          ],
+          "expect": null
+        },
+        {
+          "args": [
+            "3\tApril 2026"
+          ],
+          "expect": null
+        },
+        {
+          "args": [
+            "3 April\t2026"
+          ],
+          "expect": null
+        },
+        {
+          "args": [
+            "3  April 2026"
+          ],
+          "expect": null
+        },
+        {
+          "args": [
+            "  3 April 2026\n"
+          ],
+          "expect": "2026-04-03"
         }
       ]
     },
-    "expected": "import re\nfrom datetime import date\n\n_MONTHS = [\"january\", \"february\", \"march\", \"april\", \"may\", \"june\", \"july\",\n           \"august\", \"september\", \"october\", \"november\", \"december\"]\n\ndef parse_uk_date(text):\n    if not isinstance(text, str):\n        return None\n    s = text.strip()\n    m = re.fullmatch(r\"(\\d{1,2})([/.\\-])(\\d{1,2})\\2(\\d{4}|\\d{2})\", s)\n    if m:\n        d, mo, y = int(m.group(1)), int(m.group(3)), m.group(4)\n        y = int(y) if len(y) == 4 else 2000 + int(y)\n    else:\n        m = re.fullmatch(r\"(\\d{1,2})(?:st|nd|rd|th)?\\s+([A-Za-z]+)\\s+(\\d{4})\", s, re.IGNORECASE)\n        if not m:\n            return None\n        name = m.group(2).lower()\n        mo = None\n        for i, full in enumerate(_MONTHS, start=1):\n            if name == full or name == full[:3]:\n                mo = i\n        if mo is None:\n            return None\n        d, y = int(m.group(1)), int(m.group(3))\n    try:\n        return date(y, mo, d).isoformat()\n    except ValueError:\n        return None",
+    "expected": "import re\nfrom datetime import date\n\n_MONTHS = [\"january\", \"february\", \"march\", \"april\", \"may\", \"june\", \"july\",\n           \"august\", \"september\", \"october\", \"november\", \"december\"]\n\ndef parse_uk_date(text):\n    if not isinstance(text, str):\n        return None\n    s = text.strip()\n    m = re.fullmatch(r\"(\\d{1,2})([/.\\-])(\\d{1,2})\\2(\\d{4}|\\d{2})\", s)\n    if m:\n        d, mo, y = int(m.group(1)), int(m.group(3)), m.group(4)\n        y = int(y) if len(y) == 4 else 2000 + int(y)\n    else:\n        m = re.fullmatch(r\"(\\d{1,2})(?:st|nd|rd|th)? ([A-Za-z]+) (\\d{4})\", s, re.IGNORECASE)\n        if not m:\n            return None\n        name = m.group(2).lower()\n        mo = None\n        for i, full in enumerate(_MONTHS, start=1):\n            if name == full or name == full[:3]:\n                mo = i\n        if mo is None:\n            return None\n        d, y = int(m.group(1)), int(m.group(3))\n    try:\n        return date(y, mo, d).isoformat()\n    except ValueError:\n        return None",
     "accept_examples": [
-      "import re\nfrom datetime import date\n\n_MONTHS = [\"january\", \"february\", \"march\", \"april\", \"may\", \"june\", \"july\",\n           \"august\", \"september\", \"october\", \"november\", \"december\"]\n\ndef parse_uk_date(text):\n    if not isinstance(text, str):\n        return None\n    s = text.strip()\n    m = re.fullmatch(r\"(\\d{1,2})([/.\\-])(\\d{1,2})\\2(\\d{4}|\\d{2})\", s)\n    if m:\n        d, mo, y = int(m.group(1)), int(m.group(3)), m.group(4)\n        y = int(y) if len(y) == 4 else 2000 + int(y)\n    else:\n        m = re.fullmatch(r\"(\\d{1,2})(?:st|nd|rd|th)?\\s+([A-Za-z]+)\\s+(\\d{4})\", s, re.IGNORECASE)\n        if not m:\n            return None\n        name = m.group(2).lower()\n        mo = None\n        for i, full in enumerate(_MONTHS, start=1):\n            if name == full or name == full[:3]:\n                mo = i\n        if mo is None:\n            return None\n        d, y = int(m.group(1)), int(m.group(3))\n    try:\n        return date(y, mo, d).isoformat()\n    except ValueError:\n        return None",
-      "import calendar\n\ndef parse_uk_date(text):\n    s = (text or \"\").strip()\n    names = {}\n    for i in range(1, 13):\n        names[calendar.month_name[i].lower()] = i\n        names[calendar.month_abbr[i].lower()] = i\n    day = month = year = None\n    for sep in \"/-.\":\n        if sep in s:\n            parts = s.split(sep)\n            if len(parts) != 3 or not all(p.isdigit() and p.isascii() for p in parts):\n                return None\n            if not (1 <= len(parts[0]) <= 2 and 1 <= len(parts[1]) <= 2 and len(parts[2]) in (2, 4)):\n                return None\n            day, month, year = int(parts[0]), int(parts[1]), int(parts[2])\n            if len(parts[2]) == 2:\n                year += 2000\n            break\n    else:\n        parts = s.split()\n        if len(parts) != 3:\n            return None\n        d = parts[0].lower()\n        for suf in (\"st\", \"nd\", \"rd\", \"th\"):\n            if d.endswith(suf):\n                d = d[:-2]\n                break\n        if not (d.isdigit() and 1 <= len(d) <= 2 and parts[2].isdigit() and len(parts[2]) == 4):\n            return None\n        month = names.get(parts[1].lower())\n        if month is None:\n            return None\n        day, year = int(d), int(parts[2])\n    if not (1 <= month <= 12) or year < 1:\n        return None\n    if not (1 <= day <= calendar.monthrange(year, month)[1]):\n        return None\n    return \"%04d-%02d-%02d\" % (year, month, day)"
+      "import re\nfrom datetime import date\n\n_MONTHS = [\"january\", \"february\", \"march\", \"april\", \"may\", \"june\", \"july\",\n           \"august\", \"september\", \"october\", \"november\", \"december\"]\n\ndef parse_uk_date(text):\n    if not isinstance(text, str):\n        return None\n    s = text.strip()\n    m = re.fullmatch(r\"(\\d{1,2})([/.\\-])(\\d{1,2})\\2(\\d{4}|\\d{2})\", s)\n    if m:\n        d, mo, y = int(m.group(1)), int(m.group(3)), m.group(4)\n        y = int(y) if len(y) == 4 else 2000 + int(y)\n    else:\n        m = re.fullmatch(r\"(\\d{1,2})(?:st|nd|rd|th)? ([A-Za-z]+) (\\d{4})\", s, re.IGNORECASE)\n        if not m:\n            return None\n        name = m.group(2).lower()\n        mo = None\n        for i, full in enumerate(_MONTHS, start=1):\n            if name == full or name == full[:3]:\n                mo = i\n        if mo is None:\n            return None\n        d, y = int(m.group(1)), int(m.group(3))\n    try:\n        return date(y, mo, d).isoformat()\n    except ValueError:\n        return None",
+      "import calendar\n\ndef parse_uk_date(text):\n    s = (text or \"\").strip()\n    names = {}\n    for i in range(1, 13):\n        names[calendar.month_name[i].lower()] = i\n        names[calendar.month_abbr[i].lower()] = i\n    day = month = year = None\n    for sep in \"/-.\":\n        if sep in s:\n            parts = s.split(sep)\n            if len(parts) != 3 or not all(p.isdigit() and p.isascii() for p in parts):\n                return None\n            if not (1 <= len(parts[0]) <= 2 and 1 <= len(parts[1]) <= 2 and len(parts[2]) in (2, 4)):\n                return None\n            day, month, year = int(parts[0]), int(parts[1]), int(parts[2])\n            if len(parts[2]) == 2:\n                year += 2000\n            break\n    else:\n        parts = s.split(\" \")\n        if len(parts) != 3:\n            return None\n        d = parts[0].lower()\n        for suf in (\"st\", \"nd\", \"rd\", \"th\"):\n            if d.endswith(suf):\n                d = d[:-2]\n                break\n        if not (d.isdigit() and 1 <= len(d) <= 2 and parts[2].isdigit() and len(parts[2]) == 4):\n            return None\n        month = names.get(parts[1].lower())\n        if month is None:\n            return None\n        day, year = int(d), int(parts[2])\n    if not (1 <= month <= 12) or year < 1:\n        return None\n    if not (1 <= day <= calendar.monthrange(year, month)[1]):\n        return None\n    return \"%04d-%02d-%02d\" % (year, month, day)"
     ],
     "reject_examples": [
       "from datetime import datetime\n\ndef parse_uk_date(text):\n    s = text.strip()\n    for fmt in (\"%d/%m/%Y\", \"%d-%m-%Y\", \"%d.%m.%Y\", \"%d/%m/%y\", \"%d-%m-%y\", \"%d.%m.%y\",\n                \"%d %B %Y\", \"%d %b %Y\", \"%Y-%m-%d\"):\n        try:\n            return datetime.strptime(s, fmt).strftime(\"%Y-%m-%d\")\n        except ValueError:\n            pass\n    return None",
       "import re\n\nMONTHS = [\"jan\", \"feb\", \"mar\", \"apr\", \"may\", \"jun\", \"jul\", \"aug\", \"sep\", \"oct\", \"nov\", \"dec\"]\n\ndef parse_uk_date(text):\n    s = text.strip()\n    m = re.match(r\"^(\\d{1,2})[/.\\-](\\d{1,2})[/.\\-](\\d{2}|\\d{4})$\", s)\n    if m:\n        d, mo, y = int(m.group(1)), int(m.group(2)), int(m.group(3))\n        if y < 100:\n            y += 2000\n    else:\n        m = re.match(r\"^(\\d{1,2})(?:st|nd|rd|th)?\\s+([a-z]+)\\s+(\\d{4})$\", s.lower())\n        if not m or m.group(2)[:3] not in MONTHS:\n            return None\n        d, mo, y = int(m.group(1)), MONTHS.index(m.group(2)[:3]) + 1, int(m.group(3))\n    if not (1 <= mo <= 12 and 1 <= d <= 31):\n        return None\n    return f\"{y:04d}-{mo:02d}-{d:02d}\"",
-      "import re\nfrom datetime import date\n\ndef parse_uk_date(text):\n    s = text.strip()\n    m = re.fullmatch(r\"(\\d{1,2})[/.\\-](\\d{1,2})[/.\\-](\\d{4}|\\d{2})\", s)\n    if not m:\n        return None\n    a, b, y = int(m.group(1)), int(m.group(2)), int(m.group(3))\n    if y < 100:\n        y += 2000\n    try:\n        return date(y, a, b).isoformat()\n    except ValueError:\n        try:\n            return date(y, b, a).isoformat()\n        except ValueError:\n            return None"
+      "import re\nfrom datetime import date\n\ndef parse_uk_date(text):\n    s = text.strip()\n    m = re.fullmatch(r\"(\\d{1,2})[/.\\-](\\d{1,2})[/.\\-](\\d{4}|\\d{2})\", s)\n    if not m:\n        return None\n    a, b, y = int(m.group(1)), int(m.group(2)), int(m.group(3))\n    if y < 100:\n        y += 2000\n    try:\n        return date(y, a, b).isoformat()\n    except ValueError:\n        try:\n            return date(y, b, a).isoformat()\n        except ValueError:\n            return None",
+      "import re\nfrom datetime import date\n\n_MONTHS = [\"january\", \"february\", \"march\", \"april\", \"may\", \"june\", \"july\",\n           \"august\", \"september\", \"october\", \"november\", \"december\"]\n\ndef parse_uk_date(text):\n    if not isinstance(text, str):\n        return None\n    s = text.strip()\n    m = re.fullmatch(r\"(\\d{1,2})([/.\\-])(\\d{1,2})\\2(\\d{4}|\\d{2})\", s)\n    if m:\n        d, mo, y = int(m.group(1)), int(m.group(3)), m.group(4)\n        y = int(y) if len(y) == 4 else 2000 + int(y)\n    else:\n        m = re.fullmatch(r\"(\\d{1,2})(?:st|nd|rd|th)?\\s+([A-Za-z]+)\\s+(\\d{4})\", s, re.IGNORECASE)\n        if not m:\n            return None\n        name = m.group(2).lower()\n        mo = None\n        for i, full in enumerate(_MONTHS, start=1):\n            if name == full or name == full[:3]:\n                mo = i\n        if mo is None:\n            return None\n        d, y = int(m.group(1)), int(m.group(3))\n    try:\n        return date(y, mo, d).isoformat()\n    except ValueError:\n        return None"
     ],
     "sources": [],
-    "why_hard": "Dates are day first (12/25/2026 is invalid, not Christmas), impossible dates must be rejected, mixed separators and ISO-style input must return None, and ordinal suffixes and short month names must be accepted.",
-    "verification": "Ran two independent correct implementations (regex plus datetime.date, and manual parsing plus calendar.monthrange): both pass 14 of 14; ran three plausible wrong ones (a strptime format list, a version with no calendar check, a version that falls back to month-first): each fails at least two tests. Expected dates checked against the calendar by hand (2028 is a leap year, 2027 is not; April and June have 30 days).",
+    "why_hard": "Dates are day first (12/25/2026 is invalid, not Christmas), impossible dates must be rejected, mixed separators and ISO-style input must return None, and ordinal suffixes and short month names must be accepted; in the worded form only single spaces may separate the parts, so the usual \\s+ pattern or a bare split() wrongly accepts tabs and line breaks.",
+    "verification": "v2: ran under Python 3.15.2 through _verify/fixes/check_fixes.py (each solution in its own subprocess): the two corrected implementations (regex with single literal spaces, and split(\" \") plus calendar.monthrange) pass 19 of 19 tests; the three original wrong ones and the old A1 (which used \\s+ and so accepts '3 April\\n2026') each fail.",
     "author": "Claude (AIRH task agent)",
     "written_on": "2026-11-14"
   }

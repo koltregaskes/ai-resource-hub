@@ -134,7 +134,7 @@
     "author": "Codex benchmark research worker", "checked_by": "Claude (AIRH session)", "written_on": "2026-11-14"
   },
   {
-    "id": "f7-pub-01", "version": 1, "family": 7, "split": "public", "answerable": true, "floor": true,
+    "id": "f7-pub-01", "version": 2, "changed_in_v2": "No change to the prompt, cases or key; the task was validated in a real formula engine (formulas 1.3.4) and the result is recorded in verification and engine_validated.", "family": 7, "split": "public", "answerable": true, "floor": true,
     "prompt": "In Excel, column A (A2:A5) holds a status and column B (B2:B5) holds an amount. Write one formula that adds up the amounts in B2:B5 only for rows where the status in A2:A5 is Ready. Return only the formula.",
     "max_output_tokens": 4096,
     "grader": { "type": "formula", "dialect": "excel", "cases": [
@@ -146,7 +146,8 @@
     "accept_examples": ["=SUMIF(A2:A5,\"Ready\",B2:B5)", "=SUMIFS(B2:B5,A2:A5,\"Ready\")"],
     "reject_examples": ["=SUM(B2:B5)", "=SUMIF(B2:B5,\"Ready\",A2:A5)", "=COUNTIF(A2:A5,\"Ready\")"],
     "sources": [], "why_hard": "Floor task: the criteria range and the sum range must be the right way round.",
-    "verification": "Candidate C01 from the Codex design packet, with three cases worked by hand: 10 + 25 = 35; none = 0; 1.5 + 2.5 + 0 + 6 = 10. Checked by Claude.",
+    "verification": "Candidate C01 from the Codex design packet, with three cases worked by hand: 10 + 25 = 35; none = 0; 1.5 + 2.5 + 0 + 6 = 10. Checked by Claude. v2 engine validation (2026-11-14): every case was built as a workbook (openpyxl 3.1.5) and evaluated by the formula engine formulas 1.3.4 under Python 3.15.2; both accept formulas give the expected value in every case and each reject formula differs in at least one case: expected 35, 0, 10; A1 gives 35, 0, 10; A2 gives 35, 0, 10; R1 gives 95, 95, 10 (differs in case 1 and 2); R2 gives 0, 0, 0 (differs in case 1 and 3); R3 gives 2, 0, 4 (differs in case 1 and 3).",
+    "engine_validated": {"engine": "formulas", "version": "1.3.4", "date": "2026-11-14"},
     "author": "Codex benchmark research worker", "checked_by": "Claude (AIRH session)", "written_on": "2026-11-14"
   },
   {

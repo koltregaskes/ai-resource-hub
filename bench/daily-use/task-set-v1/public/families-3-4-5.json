@@ -30,17 +30,21 @@
   },
   {
     "id": "f3-pub-04",
-    "version": 1,
+    "version": 2,
+    "changed_in_v2": "Grader switched from last-number to whole-answer amount (only_number with the pound sign as the one allowed affix), so '125.50, not 80.50' fails; the prompt now says the pound sign is optional and nothing else may be written.",
     "family": 3,
     "split": "public",
     "answerable": true,
-    "prompt": "Below is the contract summary for my broadband. I'm not moving house and I have no complaint about the speed or the price; I've simply found a cheaper deal elsewhere. If I give notice so that my service end date is 14 January 2027, and the router gets back to them within a week of that date, how much will Brightline charge me for leaving early?\n\n--- DOCUMENT START ---\nBRIGHTLINE BROADBAND – CONTRACT SUMMARY\nCustomer: Mr T. Varga, 8 Orchard Close, Kettering NN15 7LP\nAccount: BL-7730418\n\nService. Fibre 150 (average download speed 150 Mbps, minimum guaranteed speed 75 Mbps), with a Brightline Hub 2 router on loan.\n\nStart date and length. Your service started on 14 August 2025. The minimum term is 24 months, so it ends on 14 August 2027. After that the contract continues from month to month until either of us ends it.\n\nPrice. £31.00 a month for the minimum term, taken by Direct Debit on or around the 14th. Each April the monthly price goes up by £3.00; this increase is part of your contract and was explained when you ordered. Outside the minimum term our standard price, currently £44.00 a month, applies.\n\nEnding the contract. You must give us 30 days' notice. Your service end date is the date on which your notice runs out.\n\nEarly termination charge. If your service end date is before the end of the minimum term, we charge £11.50 for each full month left between your service end date and the end of the minimum term. Part months are not charged. The charge does not depend on the monthly price you are paying at the time.\n\nWhen the early termination charge does not apply. You will not pay it if:\n(a) we raise your price by more than the £3.00 April increase described above and you tell us you want to leave within 30 days of our notice; or\n(b) your download speed stays below the minimum guaranteed speed for 30 days after you report it and we have not fixed it.\nIf you move to an address that we cannot serve, the charge is halved.\n\nEquipment. The router remains ours. When the service ends we send you a prepaid returns bag. If we have not received the router within 21 days of your service end date, we charge a £45.00 non-return fee. There is no charge if it reaches us within that time.\n\nFinal bill. Your final bill includes any early termination charge and any equipment fee, less any credit on the account. We take it by Direct Debit about 10 days after the service end date.\n\nComplaints. Call 0330 555 0199 or write to Brightline Customer Relations, PO Box 412, Leicester LE1 9ZZ. If we cannot resolve a complaint within eight weeks you can take it to our dispute resolution scheme free of charge.\n--- DOCUMENT END ---\n\nReply with the amount only, in pounds and pence (for example £12.34).",
+    "prompt": "Below is the contract summary for my broadband. I'm not moving house and I have no complaint about the speed or the price; I've simply found a cheaper deal elsewhere. If I give notice so that my service end date is 14 January 2027, and the router gets back to them within a week of that date, how much will Brightline charge me for leaving early?\n\n--- DOCUMENT START ---\nBRIGHTLINE BROADBAND – CONTRACT SUMMARY\nCustomer: Mr T. Varga, 8 Orchard Close, Kettering NN15 7LP\nAccount: BL-7730418\n\nService. Fibre 150 (average download speed 150 Mbps, minimum guaranteed speed 75 Mbps), with a Brightline Hub 2 router on loan.\n\nStart date and length. Your service started on 14 August 2025. The minimum term is 24 months, so it ends on 14 August 2027. After that the contract continues from month to month until either of us ends it.\n\nPrice. £31.00 a month for the minimum term, taken by Direct Debit on or around the 14th. Each April the monthly price goes up by £3.00; this increase is part of your contract and was explained when you ordered. Outside the minimum term our standard price, currently £44.00 a month, applies.\n\nEnding the contract. You must give us 30 days' notice. Your service end date is the date on which your notice runs out.\n\nEarly termination charge. If your service end date is before the end of the minimum term, we charge £11.50 for each full month left between your service end date and the end of the minimum term. Part months are not charged. The charge does not depend on the monthly price you are paying at the time.\n\nWhen the early termination charge does not apply. You will not pay it if:\n(a) we raise your price by more than the £3.00 April increase described above and you tell us you want to leave within 30 days of our notice; or\n(b) your download speed stays below the minimum guaranteed speed for 30 days after you report it and we have not fixed it.\nIf you move to an address that we cannot serve, the charge is halved.\n\nEquipment. The router remains ours. When the service ends we send you a prepaid returns bag. If we have not received the router within 21 days of your service end date, we charge a £45.00 non-return fee. There is no charge if it reaches us within that time.\n\nFinal bill. Your final bill includes any early termination charge and any equipment fee, less any credit on the account. We take it by Direct Debit about 10 days after the service end date.\n\nComplaints. Call 0330 555 0199 or write to Brightline Customer Relations, PO Box 412, Leicester LE1 9ZZ. If we cannot resolve a complaint within eight weeks you can take it to our dispute resolution scheme free of charge.\n--- DOCUMENT END ---\n\nReply with the amount only, in pounds and pence (for example £12.34). The pound sign is optional; write nothing else, not even a full stop.",
     "max_output_tokens": 4096,
     "grader": {
       "type": "numeric",
       "value": 80.5,
       "tolerance": 0.005,
-      "extract": "last_number"
+      "extract": "only_number",
+      "allow_affixes": [
+        "£"
+      ]
     },
     "expected": "£80.50 (7 full months left at £11.50; no router fee because it is returned within 21 days)",
     "accept_examples": [
@@ -50,11 +54,13 @@
     "reject_examples": [
       "£125.50",
       "£92.00",
-      "£40.25"
+      "£40.25",
+      "125.50, not 80.50",
+      "£80.50 (7 full months at £11.50)"
     ],
     "sources": [],
     "why_hard": "Needs the month count worked out from two dates, the £45 router fee excluded because of its exception, and the halving and no-charge exceptions recognised as not applying.",
-    "verification": "Two routes: 14 Jan 2027 to 14 Aug 2027 is 7 full months, 7 x 11.50 = 80.50; and 24-month term minus 17 months used (14 Aug 2025 to 14 Jan 2027) = 7, x 11.50 = 80.50. Asserted in Python.",
+    "verification": "Two routes: 14 Jan 2027 to 14 Aug 2027 is 7 full months, 7 x 11.50 = 80.50; and 24-month term minus 17 months used (14 Aug 2025 to 14 Jan 2027) = 7, x 11.50 = 80.50. Asserted in Python. v2: all accept and reject examples re-run through _verify/fixes/check_fixes.py under the whole-answer number rule.",
     "author": "Claude (AIRH task agent)",
     "written_on": "2026-11-14"
   },
@@ -166,11 +172,12 @@
   },
   {
     "id": "f4-pub-05",
-    "version": 1,
+    "version": 2,
+    "changed_in_v2": "The required clothing and kit is now enumerated and script-checked item by item (uniform, coat, footwear, packed lunch, water bottle) in place of the old judge check c7, the prompt asks for each item by kind, and accept example A1 now includes the footwear; this makes 9 checks, one over the usual 8, so that every required item is covered.",
     "family": 4,
     "split": "public",
     "answerable": true,
-    "prompt": "My daughter's school has sent the letter below. Summarise it for our family group chat in no more than 70 words. The summary must cover: the date of the visit, the time she has to be at school, the time they expect to be back, the cost, how and by when to give consent and pay, and what she needs to bring or wear.\n\n--- DOCUMENT START ---\nElmfield Primary School\nCrossgate Road, Durham\n\n2 February 2027\n\nDear parents and carers,\n\nYear 4 visit to Beamhurst Open-Air Museum – Friday 12 March 2027\n\nAs part of this term's topic on Victorian Britain, Year 4 will be spending a day at Beamhurst Open-Air Museum. The children will take part in a lesson in the Victorian schoolroom, visit the colliery village and ride on the tram. Every child in Year 4 is expected to come, as the follow-up work in class depends on it.\n\nTimings. We will travel by coach. The coach leaves school at 08:40 sharp, so children need to be in the playground by 08:25, which is earlier than a normal school day. Breakfast club will run as usual from 07:45. We expect to be back at school at about 15:45, a little after the usual finish; please wait in the playground, and we will text if the coach is delayed. After-school club will run as normal.\n\nCost. We are asking for a voluntary contribution of £14.50 per child, which covers the coach and the schoolroom session. No child will be left out if a family cannot contribute, but if we do not receive enough contributions the visit may have to be cancelled. Families whose children receive free school meals are not asked to pay.\n\nConsent and payment. Please give consent and pay through the ParentHub app by Friday 26 February. We cannot take cash or paper slips at the office. If you have trouble with the app, speak to Mrs Lowther in the office.\n\nWhat to bring. Children should wear school uniform with a warm, waterproof coat and sensible shoes or wellies, as most of the day is outdoors. They need a packed lunch in a disposable bag and a water bottle; no fizzy drinks, glass bottles or nuts, please. Children entitled to a free school meal can order a school packed lunch through the app by the same deadline. No spending money is needed, as we will not be visiting the gift shop.\n\nMedication. Inhalers and any other medication must be handed to the class teacher, in a named bag, on the morning of the visit.\n\nHelpers. We need four adult volunteers who have a current DBS check through the school. If you can help, please email Miss Farrow at year4@elmfieldprimary.example by 19 February.\n\nYours sincerely,\n\nMr D. Kessler\nDeputy Headteacher\n--- DOCUMENT END ---\n\nKeep dates, times and amounts written in the same format as in the letter. Reply with the summary only.",
+    "prompt": "My daughter's school has sent the letter below. Summarise it for our family group chat in no more than 70 words. The summary must cover: the date of the visit, the time she has to be at school, the time they expect to be back, the cost, how and by when to give consent and pay, and everything the letter says she must wear and bring: name each item of clothing, footwear, food and drink.\n\n--- DOCUMENT START ---\nElmfield Primary School\nCrossgate Road, Durham\n\n2 February 2027\n\nDear parents and carers,\n\nYear 4 visit to Beamhurst Open-Air Museum – Friday 12 March 2027\n\nAs part of this term's topic on Victorian Britain, Year 4 will be spending a day at Beamhurst Open-Air Museum. The children will take part in a lesson in the Victorian schoolroom, visit the colliery village and ride on the tram. Every child in Year 4 is expected to come, as the follow-up work in class depends on it.\n\nTimings. We will travel by coach. The coach leaves school at 08:40 sharp, so children need to be in the playground by 08:25, which is earlier than a normal school day. Breakfast club will run as usual from 07:45. We expect to be back at school at about 15:45, a little after the usual finish; please wait in the playground, and we will text if the coach is delayed. After-school club will run as normal.\n\nCost. We are asking for a voluntary contribution of £14.50 per child, which covers the coach and the schoolroom session. No child will be left out if a family cannot contribute, but if we do not receive enough contributions the visit may have to be cancelled. Families whose children receive free school meals are not asked to pay.\n\nConsent and payment. Please give consent and pay through the ParentHub app by Friday 26 February. We cannot take cash or paper slips at the office. If you have trouble with the app, speak to Mrs Lowther in the office.\n\nWhat to bring. Children should wear school uniform with a warm, waterproof coat and sensible shoes or wellies, as most of the day is outdoors. They need a packed lunch in a disposable bag and a water bottle; no fizzy drinks, glass bottles or nuts, please. Children entitled to a free school meal can order a school packed lunch through the app by the same deadline. No spending money is needed, as we will not be visiting the gift shop.\n\nMedication. Inhalers and any other medication must be handed to the class teacher, in a named bag, on the morning of the visit.\n\nHelpers. We need four adult volunteers who have a current DBS check through the school. If you can help, please email Miss Farrow at year4@elmfieldprimary.example by 19 February.\n\nYours sincerely,\n\nMr D. Kessler\nDeputy Headteacher\n--- DOCUMENT END ---\n\nKeep dates, times and amounts written in the same format as in the letter. Reply with the summary only.",
     "max_output_tokens": 4096,
     "grader": {
       "type": "checklist",
@@ -240,35 +247,56 @@
         },
         {
           "id": "c7",
-          "text": "Says the child needs a packed lunch and a warm or waterproof coat",
-          "by": "judge"
+          "text": "Names the uniform, the coat, the packed lunch and the water bottle",
+          "by": "script",
+          "script": {
+            "check": "must_include",
+            "values": [
+              "uniform",
+              "coat",
+              "packed lunch",
+              "water bottle"
+            ]
+          }
         },
         {
           "id": "c8",
           "text": "States nothing that contradicts the letter or is not in it (for example it does not give 08:40 as the arrival time or say cash is accepted)",
           "by": "judge"
+        },
+        {
+          "id": "c9",
+          "text": "Names the footwear (sensible shoes or wellies)",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "pattern": "\\b(?:shoes|wellies|wellingtons|boots)\\b",
+            "flags": "i"
+          }
         }
       ]
     },
-    "expected": "Year 4 trip to Beamhurst Open-Air Museum is on Friday 12 March. Be in the playground by 08:25 (coach leaves 08:40); back about 15:45. Voluntary contribution £14.50. Give consent and pay on the ParentHub app by Friday 26 February – no cash. She needs school uniform, a warm waterproof coat, a packed lunch in a disposable bag and a water bottle.",
+    "expected": "Year 4 trip to Beamhurst Open-Air Museum is on Friday 12 March. Be in the playground by 08:25 (coach leaves 08:40); back about 15:45. Voluntary contribution £14.50. Give consent and pay on the ParentHub app by Friday 26 February – no cash. She needs school uniform, a warm waterproof coat, sensible shoes or wellies, a packed lunch in a disposable bag and a water bottle.",
     "accept_examples": [
-      "Year 4 trip to Beamhurst Open-Air Museum is on Friday 12 March. Be in the playground by 08:25 (coach leaves 08:40); back about 15:45. Voluntary contribution £14.50. Give consent and pay on the ParentHub app by Friday 26 February – no cash. She needs school uniform, a warm waterproof coat, a packed lunch in a disposable bag and a water bottle.",
+      "Year 4 trip to Beamhurst Open-Air Museum is on Friday 12 March. Be in the playground by 08:25 (coach leaves 08:40); back about 15:45. Voluntary contribution £14.50. Give consent and pay on the ParentHub app by Friday 26 February – no cash. She needs school uniform, a warm waterproof coat, sensible shoes or wellies, a packed lunch in a disposable bag and a water bottle.",
       "Beamhurst Open-Air Museum trip (Year 4): Friday 12 March. In the playground by 08:25, back around 15:45. £14.50 voluntary contribution; consent and payment via the ParentHub app by 26 February. Bring a packed lunch in a disposable bag, a water bottle and a warm waterproof coat; uniform and sensible shoes or wellies."
     ],
     "reject_examples": [
-      "Year 4 trip to Beamhurst Open-Air Museum is on Friday 12 March. Be at school for 08:40; back about 15:45. Voluntary contribution £14.50. Give consent and pay on the ParentHub app by Friday 26 February – no cash. She needs school uniform, a warm waterproof coat, a packed lunch in a disposable bag and a water bottle.",
+      "Year 4 trip to Beamhurst Open-Air Museum is on Friday 12 March. Be at school for 08:40; back about 15:45. Voluntary contribution £14.50. Give consent and pay on the ParentHub app by Friday 26 February – no cash. She needs school uniform, a warm waterproof coat, sensible shoes or wellies, a packed lunch in a disposable bag and a water bottle.",
       "School trip on 12 March: be in the playground by 08:25, back 15:45. Please send £14.50 in cash to the office by 26 February, with a packed lunch and a coat.",
-      "There's a Year 4 museum trip next month. It costs about £15 and you need to sign up on the app soon. She'll need a packed lunch and a coat."
+      "There's a Year 4 museum trip next month. It costs about £15 and you need to sign up on the app soon. She'll need a packed lunch and a coat.",
+      "Year 4 trip to Beamhurst Open-Air Museum is on Friday 12 March. Be in the playground by 08:25 (coach leaves 08:40); back about 15:45. Voluntary contribution £14.50. Give consent and pay on the ParentHub app by Friday 26 February – no cash. She needs school uniform, a warm waterproof coat, a packed lunch in a disposable bag and a water bottle."
     ],
     "sources": [],
     "why_hard": "The arrival time (08:25) is easily confused with the coach departure (08:40), and seven separate facts have to fit in 70 words.",
-    "verification": "Model answers word-counted by script (both under 70) and run through a local implementation of every script check; each reject example fails at least one script check.",
+    "verification": "v2: model answers word-counted by script (65 and 52 words, both under 70) and run through _verify/fixes/check_fixes.py: both accepts pass all eight script checks; every reject fails at least one script check, including the old A1, which omits the footwear.",
     "author": "Claude (AIRH task agent)",
     "written_on": "2026-11-14"
   },
   {
     "id": "f5-pub-03",
-    "version": 1,
+    "version": 2,
+    "changed_in_v2": "Added script check c9 (the words 'in writing' or 'written') and judge check c10 (a firm delivery date confirmed in writing within 7 days), because the old c6 checked only the duration; this makes 10 checks, two over the usual 8, so that the full remedy is covered.",
     "family": 5,
     "split": "public",
     "answerable": true,
@@ -350,6 +378,21 @@
           "id": "c8",
           "text": "Is polite but firm, and every date and event it gives matches the notes (delivery promised 11 September, delivered 16 September, damage found 17 September) with nothing invented",
           "by": "judge"
+        },
+        {
+          "id": "c9",
+          "text": "Says the delivery date must be confirmed in writing",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "pattern": "\\b(?:in writing|written)\\b",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c10",
+          "text": "Asks the shop to confirm a firm delivery date, in writing, within 7 days of the email (the 7 days is the deadline for that written confirmation, not for anything else)",
+          "by": "judge"
         }
       ]
     },
@@ -361,11 +404,16 @@
     "reject_examples": [
       "Dear Kelder Appliances,\n\nI am writing to complain about order KD-48817, a Norvik D60 dishwasher with your connection and old-appliance removal service, for which I paid £404.00 in total.\n\nDelivery was promised for 11 September but nobody came and nobody contacted me. When I rang the next day it was rebooked for 16 September. On that day the crew left the dishwasher boxed in my hall, did not connect it and did not take the old one away. When I unpacked it on 17 September I found a large dent in the door, which does not close flush. I have not used it; photos are attached. I reported this by web chat (reference CH-730552) and was promised a call within 48 hours, which I have not received.\n\nPlease replace it with an undamaged Norvik D60, connected, with the old machine and the damaged one removed on the same visit. If I do not have a firm delivery date in writing within 7 days of this email I will ask my card provider for a chargeback.\n\nYou can reach me on 07700 900412 after 5pm.\n\nYours faithfully,\nJoanne Mbeki",
       "Dear Kelder Appliances, I ordered a Norvik D60 dishwasher (order KD-48817) for £379.00. It was due on 11 September and turned up on 16 September with a dented door. The delivery man was rude and would not install it. Please send a replacement as soon as you can. Joanne Mbeki",
-      "Dear Kelder Appliances,\n\nI am writing to complain about order KD-48817, a Norvik D60 dishwasher with your connection and old-appliance removal service, for which I paid £379.00.\n\nDelivery was promised for 11 September but nobody came and nobody contacted me. When I rang the next day it was rebooked for 16 September. On that day the crew left the dishwasher boxed in my hall, did not connect it and did not take the old one away. When I unpacked it on 17 September I found a large dent in the door, which does not close flush. I have not used it; photos are attached. I reported this by web chat and was promised a call within 48 hours, which I have not received.\n\nPlease replace it with an undamaged Norvik D60, connected, with the old machine and the damaged one removed on the same visit. Please confirm a firm delivery date in writing within 7 days of this email.\n\nYou can reach me on 07700 900412 after 5pm.\n\nYours faithfully,\nJoanne Mbeki"
+      "Dear Kelder Appliances,\n\nI am writing to complain about order KD-48817, a Norvik D60 dishwasher with your connection and old-appliance removal service, for which I paid £379.00.\n\nDelivery was promised for 11 September but nobody came and nobody contacted me. When I rang the next day it was rebooked for 16 September. On that day the crew left the dishwasher boxed in my hall, did not connect it and did not take the old one away. When I unpacked it on 17 September I found a large dent in the door, which does not close flush. I have not used it; photos are attached. I reported this by web chat and was promised a call within 48 hours, which I have not received.\n\nPlease replace it with an undamaged Norvik D60, connected, with the old machine and the damaged one removed on the same visit. Please confirm a firm delivery date in writing within 7 days of this email.\n\nYou can reach me on 07700 900412 after 5pm.\n\nYours faithfully,\nJoanne Mbeki",
+      "Dear Kelder Appliances,\n\nI am writing to complain about order KD-48817, a Norvik D60 dishwasher with your connection and old-appliance removal service, for which I paid £404.00 in total.\n\nDelivery was promised for 11 September but nobody came and nobody contacted me. When I rang the next day it was rebooked for 16 September. On that day the crew left the dishwasher boxed in my hall, did not connect it and did not take the old one away. When I unpacked it on 17 September I found a large dent in the door, which does not close flush. I have not used it; photos are attached. I reported this by web chat (reference CH-730552) and was promised a call within 48 hours, which I have not received.\n\nPlease replace it with an undamaged Norvik D60, connected, with the old machine and the damaged one removed on the same visit. Please give me a firm delivery date within 7 days of this email.\n\nYou can reach me on 07700 900412 after 5pm.\n\nYours faithfully,\nJoanne Mbeki",
+      "Dear Kelder Appliances,\n\nI am writing to complain about order KD-48817, a Norvik D60 dishwasher with your connection and old-appliance removal service, for which I paid £404.00 in total.\n\nDelivery was promised for 11 September but nobody came and nobody contacted me. When I rang the next day it was rebooked for 16 September. On that day the crew left the dishwasher boxed in my hall, did not connect it and did not take the old one away. When I unpacked it on 17 September I found a large dent in the door, which does not close flush. I have not used it; photos are attached. I reported this by web chat (reference CH-730552) and was promised a call within 48 hours, which I have not received.\n\nPlease replace it with an undamaged Norvik D60, connected, with the old machine and the damaged one removed on the same visit. Please confirm in writing that you have received this complaint, and telephone me within 7 days of this email.\n\nYou can reach me on 07700 900412 after 5pm.\n\nYours faithfully,\nJoanne Mbeki"
     ],
+    "reject_notes": {
+      "R5": "Passes every script check (it contains 'in writing' and '7 days') but fails judge check c10: it asks for a written acknowledgement and a phone call, not for a firm delivery date confirmed in writing within 7 days."
+    },
     "sources": [],
     "why_hard": "The notes contain things to keep out (the chargeback threat, the rudeness), a remedy that is a replacement rather than the more usual refund, and a total (£404) that differs from the item price (£379).",
-    "verification": "Model answers word-counted by script (both within 130 to 200) and run through a local implementation of every script check; 379 + 25 = 404 confirmed; each reject example fails at least one script check.",
+    "verification": "Model answers word-counted by script (both within 130 to 200) and run through a local implementation of every script check; 379 + 25 = 404 confirmed; each reject example fails at least one script check. v2: all examples re-run through _verify/fixes/check_fixes.py: both accepts pass all seven script checks; R1 to R4 each fail a script check (R4, which drops 'in writing', fails c9); R5 passes the script checks and is rejected by judge check c10, as its reject_notes entry says.",
     "author": "Claude (AIRH task agent)",
     "written_on": "2026-11-14"
   },
@@ -476,11 +524,12 @@
   },
   {
     "id": "f5-pub-05",
-    "version": 1,
+    "version": 2,
+    "changed_in_v2": "Added script checks for the closing and reopening times (c9), the permit collection place and hours (c10) and the display requirement (c11), and judge check c12 for who the phone number is for and which time belongs to which event; the prompt now lists these details; this makes 12 checks, four over the usual 8, so that every actionable detail is covered.",
     "family": 5,
     "split": "public",
     "answerable": true,
-    "prompt": "I'm the secretary of our residents' management company. The notice below is too long for the lobby noticeboard. Cut it to no more than 90 words without losing anything a resident needs to act on: when the car park closes and reopens, what happens to vehicles left in it and what that costs, where to park instead and how and by when to get a permit, who to ring if you can't manage the walk, and the fact that the dates depend on the weather.\n\n--- DOCUMENT START ---\nNOTICE TO ALL RESIDENTS OF WEAVERS COURT\n\nResurfacing of the residents' car park\n\nDear residents,\n\nAs many of you will know, the surface of the residents' car park at the rear of Weavers Court has been deteriorating for a number of years, and at the annual general meeting in May it was agreed by a large majority that the management company should arrange for it to be completely resurfaced. After obtaining several quotations, the directors have appointed Calderbank Surfacing Ltd to carry out the work, and we are now able to confirm the arrangements.\n\nThe car park will be closed from 7.00am on Monday 19 April 2027 until 6.00pm on Thursday 22 April 2027. All vehicles, including motorcycles and trailers, must be removed before 7.00am on the Monday. We regret that any vehicle still in the car park at that time will have to be lifted out by the contractor, and the cost of doing so, which we understand to be £180, will be passed on to the owner.\n\nWhile the car park is closed, residents may park free of charge at the Mill Street long-stay car park, which is about five minutes' walk away. To park there without paying you must display a temporary permit. Permits can be collected from the caretaker, Mr Osei, at Flat 1 between 5.00pm and 7.00pm on any weekday evening up to and including Friday 16 April. There is one permit per flat.\n\nBlue Badge holders and anyone who would find the walk from Mill Street difficult should contact the managing agent, Mrs Pruett, on 0161 555 0138 as soon as possible, as three spaces at the front of the building will be reserved for those who need them.\n\nThe bin store can still be reached on foot throughout the works, and refuse collections will not be affected. The work is weather-dependent; if heavy rain is forecast it may have to be put back, in which case a further notice will be displayed in the entrance hall.\n\nWe apologise for the inconvenience and thank you for your co-operation.\n\nThe Directors, Weavers Court Management Company Ltd\n--- DOCUMENT END ---\n\nKeep dates, times, amounts and the phone number written in the same format as in the notice. Reply with the shortened notice only.",
+    "prompt": "I'm the secretary of our residents' management company. The notice below is too long for the lobby noticeboard. Cut it to no more than 90 words without losing anything a resident needs to act on: the day and time the car park closes and the day and time it reopens, what happens to vehicles left in it and what that costs, where to park instead, the permit that must be displayed there and where, between what times and by what date to collect it, who should ring the managing agent's number (people who can't manage the walk), and the fact that the dates depend on the weather.\n\n--- DOCUMENT START ---\nNOTICE TO ALL RESIDENTS OF WEAVERS COURT\n\nResurfacing of the residents' car park\n\nDear residents,\n\nAs many of you will know, the surface of the residents' car park at the rear of Weavers Court has been deteriorating for a number of years, and at the annual general meeting in May it was agreed by a large majority that the management company should arrange for it to be completely resurfaced. After obtaining several quotations, the directors have appointed Calderbank Surfacing Ltd to carry out the work, and we are now able to confirm the arrangements.\n\nThe car park will be closed from 7.00am on Monday 19 April 2027 until 6.00pm on Thursday 22 April 2027. All vehicles, including motorcycles and trailers, must be removed before 7.00am on the Monday. We regret that any vehicle still in the car park at that time will have to be lifted out by the contractor, and the cost of doing so, which we understand to be £180, will be passed on to the owner.\n\nWhile the car park is closed, residents may park free of charge at the Mill Street long-stay car park, which is about five minutes' walk away. To park there without paying you must display a temporary permit. Permits can be collected from the caretaker, Mr Osei, at Flat 1 between 5.00pm and 7.00pm on any weekday evening up to and including Friday 16 April. There is one permit per flat.\n\nBlue Badge holders and anyone who would find the walk from Mill Street difficult should contact the managing agent, Mrs Pruett, on 0161 555 0138 as soon as possible, as three spaces at the front of the building will be reserved for those who need them.\n\nThe bin store can still be reached on foot throughout the works, and refuse collections will not be affected. The work is weather-dependent; if heavy rain is forecast it may have to be put back, in which case a further notice will be displayed in the entrance hall.\n\nWe apologise for the inconvenience and thank you for your co-operation.\n\nThe Directors, Weavers Court Management Company Ltd\n--- DOCUMENT END ---\n\nKeep dates, times, amounts and the phone number written in the same format as in the notice. Reply with the shortened notice only.",
     "max_output_tokens": 4096,
     "grader": {
       "type": "checklist",
@@ -562,22 +611,63 @@
           "id": "c8",
           "text": "Says vehicles must be out before 7.00am on the Monday or be removed at the owner's cost, mentions that the dates depend on the weather, and adds nothing that is not in the notice",
           "by": "judge"
+        },
+        {
+          "id": "c9",
+          "text": "Gives the closing time 7.00am and the reopening time 6.00pm",
+          "by": "script",
+          "script": {
+            "check": "must_include",
+            "values": [
+              "7.00am",
+              "6.00pm"
+            ]
+          }
+        },
+        {
+          "id": "c10",
+          "text": "Says permits are collected at Flat 1 between 5.00pm and 7.00pm",
+          "by": "script",
+          "script": {
+            "check": "must_include",
+            "values": [
+              "Flat 1",
+              "5.00pm",
+              "7.00pm"
+            ]
+          }
+        },
+        {
+          "id": "c11",
+          "text": "Says the permit must be displayed",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "pattern": "\\bdisplay",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c12",
+          "text": "Makes clear who should ring the phone number (Blue Badge holders or anyone who would find the walk difficult), and attaches each time to the right event (closes 7.00am Monday 19 April, reopens 6.00pm Thursday 22 April, permits collected 5.00pm to 7.00pm on weekdays)",
+          "by": "judge"
         }
       ]
     },
-    "expected": "Car park closed for resurfacing from 7.00am Monday 19 April to 6.00pm Thursday 22 April 2027. Remove all vehicles before 7.00am Monday; any left will be lifted out at the owner's cost (£180).\n\nPark free at Mill Street long-stay with a temporary permit: one per flat, from Mr Osei, Flat 1, weekdays 5.00pm to 7.00pm until Friday 16 April.\n\nBlue Badge holders or anyone who cannot manage the walk: call Mrs Pruett on 0161 555 0138.\n\nDates may change if heavy rain is forecast.",
+    "expected": "Car park closed for resurfacing from 7.00am Monday 19 April to 6.00pm Thursday 22 April 2027. Remove all vehicles before 7.00am Monday; any left will be lifted out at the owner's cost (£180).\n\nPark free at Mill Street long-stay by displaying a temporary permit: one per flat, from Mr Osei, Flat 1, weekdays 5.00pm to 7.00pm until Friday 16 April.\n\nBlue Badge holders or anyone who cannot manage the walk: call Mrs Pruett on 0161 555 0138.\n\nDates may change if heavy rain is forecast.",
     "accept_examples": [
-      "Car park closed for resurfacing from 7.00am Monday 19 April to 6.00pm Thursday 22 April 2027. Remove all vehicles before 7.00am Monday; any left will be lifted out at the owner's cost (£180).\n\nPark free at Mill Street long-stay with a temporary permit: one per flat, from Mr Osei, Flat 1, weekdays 5.00pm to 7.00pm until Friday 16 April.\n\nBlue Badge holders or anyone who cannot manage the walk: call Mrs Pruett on 0161 555 0138.\n\nDates may change if heavy rain is forecast.",
-      "Car park closed for resurfacing: 7.00am Monday 19 April to 6.00pm Thursday 22 April 2027. All vehicles must be out before 7.00am Monday, or the contractor will lift them out and charge the owner £180. Free parking at Mill Street long-stay with a temporary permit (one per flat) from Mr Osei, Flat 1, weekdays 5.00pm to 7.00pm, up to Friday 16 April. Blue Badge holders, or anyone who would struggle with the walk, ring Mrs Pruett on 0161 555 0138. Heavy rain may delay the work."
+      "Car park closed for resurfacing from 7.00am Monday 19 April to 6.00pm Thursday 22 April 2027. Remove all vehicles before 7.00am Monday; any left will be lifted out at the owner's cost (£180).\n\nPark free at Mill Street long-stay by displaying a temporary permit: one per flat, from Mr Osei, Flat 1, weekdays 5.00pm to 7.00pm until Friday 16 April.\n\nBlue Badge holders or anyone who cannot manage the walk: call Mrs Pruett on 0161 555 0138.\n\nDates may change if heavy rain is forecast.",
+      "Car park closed for resurfacing: 7.00am Monday 19 April to 6.00pm Thursday 22 April 2027. All vehicles must be out before 7.00am Monday, or the contractor will lift them out and charge the owner £180. Free parking at Mill Street long-stay if you display a temporary permit (one per flat) from Mr Osei, Flat 1, weekdays 5.00pm to 7.00pm, up to Friday 16 April. Blue Badge holders, or anyone who would struggle with the walk, ring Mrs Pruett on 0161 555 0138. Heavy rain may delay the work."
     ],
     "reject_examples": [
-      "Car park closed for resurfacing from 7.00am Monday 19 April to 6.00pm Thursday 22 April 2027. Remove all vehicles before 7.00am Monday; any left will be lifted out at the owner's cost (£180).\n\nPark free at Mill Street long-stay with a temporary permit: one per flat, from Mr Osei, Flat 1, weekdays 5.00pm to 7.00pm.\n\nBlue Badge holders or anyone who cannot manage the walk: call Mrs Pruett on 0161 555 0138.\n\nDates may change if heavy rain is forecast.",
+      "Car park closed for resurfacing from 7.00am Monday 19 April to 6.00pm Thursday 22 April 2027. Remove all vehicles before 7.00am Monday; any left will be lifted out at the owner's cost (£180).\n\nPark free at Mill Street long-stay by displaying a temporary permit: one per flat, from Mr Osei, Flat 1, weekdays 5.00pm to 7.00pm.\n\nBlue Badge holders or anyone who cannot manage the walk: call Mrs Pruett on 0161 555 0138.\n\nDates may change if heavy rain is forecast.",
       "The car park will be resurfaced from Monday 19 April to Thursday 22 April 2027. Please move your car before 7.00am or it may be towed. You can park at Mill Street instead. Thank you for your co-operation.",
-      "Car park closed for resurfacing from 7.00am Monday 19 April to 6.00pm Thursday 22 April 2027. Remove all vehicles before 7.00am Monday; any left will be lifted out at the owner's cost (£180).\n\nPark free at Mill Street long-stay with a temporary permit: one per flat, from Mr Osei, Flat 1, weekdays 5.00pm to 7.00pm until Friday 16 April.\n\nBlue Badge holders or anyone who cannot manage the walk: call Mrs Pruett on 0161 555 0138.\n\nDates may change if heavy rain is forecast.\n\nWe apologise for the inconvenience and thank you for your co-operation. The bin store can still be reached on foot throughout the works and refuse collections will not be affected."
+      "Car park closed for resurfacing from 7.00am Monday 19 April to 6.00pm Thursday 22 April 2027. Remove all vehicles before 7.00am Monday; any left will be lifted out at the owner's cost (£180).\n\nPark free at Mill Street long-stay by displaying a temporary permit: one per flat, from Mr Osei, Flat 1, weekdays 5.00pm to 7.00pm until Friday 16 April.\n\nBlue Badge holders or anyone who cannot manage the walk: call Mrs Pruett on 0161 555 0138.\n\nDates may change if heavy rain is forecast.\n\nWe apologise for the inconvenience and thank you for your co-operation. The bin store can still be reached on foot throughout the works and refuse collections will not be affected.",
+      "Car park closed for resurfacing from Monday 19 April to Thursday 22 April 2027. Remove all vehicles before 7.00am Monday; any left will be lifted out at the owner's cost (£180).\n\nPark free at Mill Street long-stay; permits from Mr Osei until Friday 16 April.\n\nQueries: 0161 555 0138.\n\nDates may change if heavy rain is forecast."
     ],
     "sources": [],
     "why_hard": "Roughly 330 words must be cut to 90 while keeping three dates, four times, an amount, two names and a phone number; the permit deadline (16 April) and the £180 charge are the facts most often dropped.",
-    "verification": "Model answers word-counted by script (both under 90) and run through a local implementation of every script check; weekdays for 16, 19 and 22 April 2027 confirmed in Python; each reject example fails at least one script check.",
+    "verification": "Model answers word-counted by script (both under 90) and run through a local implementation of every script check; weekdays for 16, 19 and 22 April 2027 confirmed in Python; each reject example fails at least one script check. v2: model answers re-counted (both still within 90 words) and all examples re-run through _verify/fixes/check_fixes.py: both accepts pass all ten script checks; every reject fails at least one script check, including R4, which drops the reopening time, the collection place and hours, the display requirement and the purpose of the phone number.",
     "author": "Claude (AIRH task agent)",
     "written_on": "2026-11-14"
   }
