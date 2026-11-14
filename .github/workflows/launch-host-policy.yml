@@ -1,0 +1,44 @@
+name: Pages host policy
+on: [pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  policy:
+    runs-on: windows-latest
+    env:
+      PLAYWRIGHT_CHANNEL: msedge
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm ci --prefix scripts/contracts/browser
+      - run: node --test scripts/contracts/pages-csp.test.mjs
+      - run: npm run build
+      - run: node scripts/contracts/check-pages-policy.mjs
+      - run: node scripts/contracts/browser/csp.mjs
+  redacted-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Scan source history and public build (aggregate only)
+        shell: bash
+        run: |
+          result=0
+          docker run --rm -v "$PWD:/repo:ro" zricethezav/gitleaks:v8.30.0 git /repo --redact=100 --exit-code 2 --no-banner --log-opts="--all -- . :(exclude)**/.env :(exclude)**/.env.* :(exclude).env :(exclude).env.*" > "$RUNNER_TEMP/history-scan.log" 2>&1 || result=$?
+          if [ "$result" -ne 0 ]; then echo "Source scan failed (exit $result); values and matching lines withheld"; exit "$result"; fi
+          docker run --rm -v "$PWD:/repo:ro" zricethezav/gitleaks:v8.30.0 dir /repo/dist --redact=100 --exit-code 2 --no-banner > "$RUNNER_TEMP/public-scan.log" 2>&1 || result=$?
+          if [ "$result" -ne 0 ]; then echo "Public build scan failed (exit $result); values and matching lines withheld"; exit "$result"; fi
+          echo "Source history and public build secret scans passed (aggregate only)"
