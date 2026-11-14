@@ -2,6 +2,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import AdditionalTransparency from '../../components/insights/AdditionalTransparency.astro';
 import { practitionerB1 } from '../../data/practitioner-b1';
 import { practitionerB2 } from '../../data/practitioner-b2';
 import { practitionerB3 } from '../../data/practitioner-b3';
@@ -296,6 +297,7 @@ const structuredData = {
         </article>
       ))}</div>
     </section>
+    <AdditionalTransparency />
     <!-- Article figures -->
     <section id="article-figures" class="mb-14 scroll-mt-24">
       <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Figures in our articles</h2>

@@ -1,0 +1,30 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import WorkedTable from '../../components/insights/WorkedTable.astro';
+import PractitionerNote from '../../components/insights/PractitionerNote.astro';
+import { practitionerB4 } from '../../data/practitioner-b4';
+import examples from '../../data/insights/2026-11-14-b4.json';
+const e = practitionerB4.find(p => p.slug === 'rag-chunk-overlap-budget')!;
+---
+<InsightArticle title={e.title} description={e.description} date="2026-11-14" type={e.type as 'Analysis' | 'Explainer'} readTime="5 min" standfirst="For a 10,000-token document split into 1,000-token chunks, 200-token overlap stores 12,400 tokens in this example. That is 24% more text to embed. Whether it helps is a separate test.">
+
+<p>Overlap is a small-looking setting with a repeatable cost. It copies text from the end of one chunk into the next. That can preserve material around a boundary, but it also changes how much text you process and what a search can return. Record the setting alongside the embedding model.</p>
+<p>Anthropic's <a href={e.sources[0].url}>retrieval article</a>, read on 14 November 2026, describes splitting documents before embedding and retrieving them. It does not establish the right overlap for your files. We use a simple finite document to show what the setting does to the token count.</p>
+<h2>Start with a document whose length is known</h2>
+<p>Assume 10,000 tokens and a maximum chunk size of 1,000. With no overlap, ten chunks cover the document. With 200 tokens of overlap, each new full chunk advances by 800 tokens. The last chunk closes the remaining gap and can be shorter than the maximum.</p>
+<WorkedTable headers={["Overlap tokens","Chunks","Stored text tokens","Extra text"]} rows={examples['rag-chunk-overlap-budget']} caption="Calculated greedy chunks for one assumed 10,000-token document. Final chunks may be shorter. No embedding price or retrieval result is claimed." />
+<p>The 200-token setting produces thirteen chunks and 12,400 stored text tokens. At 500 tokens of overlap, it produces nineteen chunks and 19,000 tokens. Those are exact results for the stated slicing rule. They do not include titles, contextual summaries, vectors or index overhead.</p>
+<h2>Count the final chunk instead of rounding away the edge</h2>
+<p>For this rule, the chunk count is one plus the ceiling of the remaining document length divided by the step size. The step is chunk size minus overlap. Add the overlap once for each boundary to obtain the total stored text. An overlap equal to the chunk size would make the step zero, so the rule requires a smaller overlap.</p>
+<p>A long-document approximation can be useful for an early estimate, but a short document needs the finite count. If a file already fits in one chunk, this rule adds no overlap at all. Applying a fixed percentage uplift to every file would overstate that part of a collection.</p>
+<p>For a real collection, sum the counts file by file. Preserve the chunker's version and tokenisation method. Character-based splitting and token-based splitting are different assumptions; do not label a character estimate as a measured token bill.</p>
+<h2>Look for repeated evidence in the prompt</h2>
+<p>When neighbouring chunks are retrieved together, their shared passage may appear more than once. Inspect a few assembled prompts and count the material after any deduplication. Indexed text and text sent for generation are separate totals, and either can change when you adjust overlap.</p>
+<p>Keep examples where the answer crosses a chunk boundary. Compare whether the required material survives each setting. Also keep examples whose evidence lies comfortably within one chunk, so the test does not consist entirely of cases chosen to favour overlap.</p>
+<p>If you add surrounding text after retrieval, record that too. A small indexed chunk with a larger retrieved neighbourhood is a different design from embedding a large overlapping chunk. You can compare them, but the configuration needs to make the distinction visible.</p>
+<h2>Put the extra tokens beside the result</h2>
+<p>Use the same question set and source collection for each candidate setting. Record evidence coverage, accepted answers, indexed tokens and final prompt tokens. An increase in indexed text is certain under this slicing rule. An increase in useful answers has to be observed.</p>
+<p>Price re-embedding separately from ongoing requests. A one-off rebuild and repeated prompt duplication affect different budgets. If the collection changes frequently, also estimate the part that must be regenerated under your update process rather than assuming every rebuild is complete.</p>
+<p>Choose overlap from the cases it preserves, with the extra processing visible. The setting is easier to defend when the tracker can name both the boundary failures it fixes and the duplicate text it introduces.</p>
+<PractitionerNote evidence={e} />
+</InsightArticle>
