@@ -180,7 +180,7 @@ The request and reply shapes at the top of `providers.py` were read against the 
 
 ## Command sequence
 
-Run from the repo root in PowerShell. `python -I` keeps the interpreter isolated. Every stage is given both sample files, because the canary and the full run check them against the qualification record.
+Run from the repo root in PowerShell. `python -I` keeps the interpreter isolated. One exception: the canary and the full run grade formula tasks, so `formulas` and `openpyxl` (see `requirements.txt`) must be importable. Where they live in a folder of their own, not in the interpreter's site-packages, run those stages without `-I` and with `PYTHONPATH` set to that folder for that one process, and set `DTD_SANDBOX=docker` so the code tasks use the proven sandbox. Every stage is given both sample files, because the canary and the full run check them against the qualification record.
 
 ```powershell
 $core   = "bench/daily-use/core/cli.py"
