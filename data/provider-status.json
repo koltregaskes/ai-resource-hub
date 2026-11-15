@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T02:55:44.004Z",
+  "generatedAt": "2026-11-15T03:55:41.479Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-15T02:55:43.997Z",
+      "lastCheckedAt": "2026-11-15T03:55:41.472Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,15 +20,15 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-15T02:30:26.000Z",
+          "id": "fireworks-feed-0-2026-11-15T03:13:39.000Z",
           "title": "Service Degradation for GLM 5.3",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-11-15T02:30:26.000Z",
-          "updatedAt": "2026-11-15T02:30:26.000Z",
+          "startedAt": "2026-11-15T03:13:39.000Z",
+          "updatedAt": "2026-11-15T03:13:39.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M7EGNB5FJ3AQNVB9A2W4N2DQ",
-          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.3. We are actively investigating. Affected components GLM 5.3 (Degraded performance)"
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-11-15T00:27:07.000Z",
@@ -44,15 +44,15 @@
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-15T02:30:26.000Z",
+          "id": "fireworks-feed-0-2026-11-15T03:13:39.000Z",
           "title": "Service Degradation for GLM 5.3",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-11-15T02:30:26.000Z",
-          "updatedAt": "2026-11-15T02:30:26.000Z",
+          "startedAt": "2026-11-15T03:13:39.000Z",
+          "updatedAt": "2026-11-15T03:13:39.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M7EGNB5FJ3AQNVB9A2W4N2DQ",
-          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.3. We are actively investigating. Affected components GLM 5.3 (Degraded performance)"
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-11-15T00:27:07.000Z",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-15T02:55:41.879Z",
+      "lastCheckedAt": "2026-11-15T03:55:40.215Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-15T02:55:41.865Z",
+      "lastCheckedAt": "2026-11-15T03:55:40.225Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -299,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-15T02:55:42.651Z",
+      "lastCheckedAt": "2026-11-15T03:55:40.861Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-15T02:55:42.128Z",
+      "lastCheckedAt": "2026-11-15T03:55:40.497Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -362,7 +362,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-15T02:55:42.716Z",
+      "lastCheckedAt": "2026-11-15T03:55:41.080Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -386,7 +386,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
