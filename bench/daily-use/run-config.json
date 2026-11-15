@@ -303,13 +303,13 @@
       }
     ]
   },
-  "_judges_comment": "Placeholder panel until the qualify stage names one: then judges is set to that panel in a reviewed change. The canary and the full run refuse a panel that differs from the qualification record.",
+  "_judges_comment": "The panel named by the live judge qualification of 15 November 2026 (run 2026-11-15T023300Z-391854ad): on each side the cheapest candidate that passed. The canary and the full run refuse a panel that differs from the qualification record.",
   "judges": [
     {
       "provider": "openai",
-      "model_id": "gpt-6.1-sol",
+      "model_id": "gpt-6.1-terra",
       "api_version": "v1",
-      "reasoning_effort": "low",
+      "reasoning_effort": "none",
       "send_reasoning_effort": true,
       "temperature": 1,
       "send_temperature": false,
@@ -317,9 +317,9 @@
       "data_retention": "store false is sent; no zero-data-retention agreement; provider abuse-monitoring logs, which can include prompts and replies, are kept up to 30 days (developers.openai.com/api/docs/guides/your-data, read 2026-11-15)",
       "max_output_tokens": 400,
       "price": {
-        "input_per_mtok": 2,
-        "output_per_mtok": 10,
-        "cached_input_per_mtok": 0.1,
+        "input_per_mtok": 1,
+        "output_per_mtok": 5,
+        "cached_input_per_mtok": 0.05,
         "reasoning_billing": "in_output",
         "reasoning_per_mtok": null,
         "source_url": "https://developers.openai.com/api/docs/pricing",
