@@ -34,3 +34,17 @@ generator pins the publisher README licence-section URL, checked 15 November
 2026, instead of the unavailable LICENSE recorded in the original input.
 Original observations and vintage metadata are preserved; the latter does not
 establish a verified publisher release date.
+
+## Token, status and media figures (studio-3)
+
+| Generator (`node scripts/insights/<slug>.mjs --force`) | Pinned input | Output prefix `2026-11-14-` |
+|---|---|---|
+| count-tokens-before-you-pay | Committed `src/data/insights/2026-11-14.json`, whose bytes are identified by `inputSha256`; generator holds the labelled assumptions | `count-tokens-before-you-pay.json` |
+| reading-an-ai-status-page | `data/provider-status.json` at `24922b06afe88388d30570643d00873a8086e8b8`, read by the shared helper | `reading-an-ai-status-page.json` |
+| how-ai-image-and-video-are-priced | `data/pg-cache/models.json` at that same commit, plus the committed generator price constants and assumptions | `how-ai-image-and-video-are-priced.json` |
+
+Each command must reproduce the complete frozen file byte for byte. The status
+collector is not run: its original timestamp, DeepSeek endpoint and errors are
+preserved together with its input hash. They are historical collector records,
+not independent evidence of the upstream HTTP responses. Media HTML fingerprints
+are original author metadata, not retained copies of the pricing pages.

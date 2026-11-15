@@ -11,7 +11,7 @@
  *    with Google's rule of thumb (100 tokens ~= 60 to 80 English words, Gemini API docs, read 14 Nov 2026).
  *  - Anthropic says its newer tokenizer gives approximately 30 percent more tokens for the same text
  *    (docs, read 14 Nov 2026); that factor is used only as a labelled sensitivity.
- * Prices are US dollars per million tokens from the snapshot's priceSpread.all (labelled lab list prices here).
+ * Prices are US dollars per million tokens from the snapshot's priceSpread.all (catalogue labels, not independent confirmation; Gemini 3.5 Flash is unverified historical pricing).
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -22,7 +22,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const inPath = join(root, 'src/data/insights/2026-11-14.json');
 const outPath = join(root, 'src/data/insights/2026-11-14-count-tokens-before-you-pay.json');
 if (existsSync(outPath) && !process.argv.includes('--force')) {
-  console.error('Output exists; pass --force to overwrite.');
+  console.error('Snapshots are frozen; pass --force to rebuild.');
   process.exit(1);
 }
 const raw = readFileSync(inPath);
@@ -45,6 +45,7 @@ const rows = names.map((n) => {
   if (!m) throw new Error('missing ' + n);
   const per = (t) => cost(m, t, replyTokens);
   return {
+    verification: m.name === 'Gemini 3.5 Flash' ? 'unverified historical catalogue price' : null,
     name: m.name, provider: m.provider, input: m.input, output: m.output, source: m.source,
     perRequest: { siteRule: per(promptTokens.siteRule), low: per(promptTokens.low), high: per(promptTokens.high), plus30: per(sensitivity) },
     per1000: { siteRule: per(promptTokens.siteRule) * assumed.requests, low: per(promptTokens.low) * assumed.requests, high: per(promptTokens.high) * assumed.requests, plus30: per(sensitivity) * assumed.requests },

@@ -2,6 +2,7 @@
   "snapshotDate": "2026-11-14",
   "read": "14 November 2026",
   "inputs": {
+    "inputCommit": "24922b06afe88388d30570643d00873a8086e8b8",
     "modelsSha256": "a13a9dec6ed6f736079fef57ccf544db6e68cba575ea94a71a29e4caf8e0b788"
   },
   "method": "Prices typed from each provider's pricing page as read on 14 November 2026; conversions use only numbers on the same page plus labelled assumptions.",

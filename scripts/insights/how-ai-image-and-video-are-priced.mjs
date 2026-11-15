@@ -4,7 +4,7 @@
  *
  * Input:  the PRICES list below. Each row was read on the provider's own pricing page on 14 November 2026
  *         (URL, the words checked, and the SHA-256 of the HTML we fetched are stored per row).
- *         data/pg-cache/models.json is read only to count the media entries in our catalogue; its prices
+ *         data/pg-cache/models.json at the pinned inputCommit is read only to count the media entries in our catalogue; its prices
  *         carry no unit for these categories and are NOT used.
  * Output: src/data/insights/2026-11-14-how-ai-image-and-video-are-priced.json
  *         (frozen; refuses to overwrite without --force).
@@ -16,6 +16,7 @@
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { readPinnedInput, inputCommit } from './pinned-studio-input.mjs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -23,7 +24,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const date = '2026-11-14';
 const read = '14 November 2026';
 
-const modelsRaw = readFileSync(join(root, 'data/pg-cache/models.json'));
+const modelsRaw = readPinnedInput(root, 'data/pg-cache/models.json');
 const models = JSON.parse(modelsRaw.toString('utf8'));
 const mediaCats = ['image', 'video', 'voice', 'speech', 'sound'];
 const media = models.filter((m) => mediaCats.includes(m.category));
@@ -175,7 +176,7 @@ const conversions = {
 const out = {
   snapshotDate: date,
   read,
-  inputs: { modelsSha256: createHash('sha256').update(modelsRaw).digest('hex') },
+  inputs: { inputCommit, modelsSha256: createHash('sha256').update(modelsRaw).digest('hex') },
   method:
     'Prices typed from each provider\'s pricing page as read on 14 November 2026; conversions use only numbers on the same page plus labelled assumptions.',
   catalogue,

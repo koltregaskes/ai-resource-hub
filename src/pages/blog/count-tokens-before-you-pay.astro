@@ -61,22 +61,22 @@ const spreadPct = Math.round(((opus.per1000.plus30 - opus.per1000.siteRule) / op
   <p>Google's page lists the usage fields it returns after a call: input, output, thinking, cached content and tool use. Its pre-send call returns the input only, so according to that page, a thinking figure arrives with the response, not with the count. We found no equivalent statement on the Anthropic page, so we do not extend this to Claude.</p>
 
   <h2>A budget with assumed numbers</h2>
-  <p>The numbers below are assumptions, not measurements. Take a prompt of {n(a.promptWords)} words, a reply of {n(a.replyWords)} words and {n(a.requests)} requests. The site's rule of {a.wordsPerTokenSite} words per token turns the prompt into {n(p.siteRule)} tokens and the reply into {n(data.replyTokens)}. Google's range of 60 to 80 words per 100 tokens gives a prompt of {n(p.low)} to {n(p.high)} tokens. Prices are catalogue list prices in US dollars per million tokens, checked 14 November 2026.</p>
+  <p>The numbers below are assumptions, not measurements. Take a prompt of {n(a.promptWords)} words, a reply of {n(a.replyWords)} words and {n(a.requests)} requests. The site's rule of {a.wordsPerTokenSite} words per token turns the prompt into {n(p.siteRule)} tokens and the reply into {n(data.replyTokens)}. Google's range of 60 to 80 words per 100 tokens gives a prompt of {n(p.low)} to {n(p.high)} tokens. Prices are frozen catalogue figures in US dollars per million tokens. The Gemini row is an unverified historical example, not a checked current price.</p>
 
   <div class="table-wrap">
     <table>
-      <caption>Source: src/data/insights/2026-11-14.json prices and scripts/insights/count-tokens-before-you-pay.mjs. All token counts come from the assumed word counts above. Cost for {n(a.requests)} requests, reply fixed at {n(data.replyTokens)} tokens.</caption>
+      <caption>Source: src/data/insights/2026-11-14.json prices and scripts/insights/count-tokens-before-you-pay.mjs. All token counts come from the assumed word counts above. Cost for {n(a.requests)} requests, reply fixed at {n(data.replyTokens)} tokens. The Gemini 3.5 Flash row is a catalogue price we did not confirm: Google's model page says requests to that name are now routed to Gemini 3.6 Flash, which has a different listed price.</caption>
       <thead><tr><th>Model</th><th class="num">Input / output per million</th><th class="num">{n(p.low)} prompt tokens</th><th class="num">{n(p.siteRule)} prompt tokens</th><th class="num">{n(p.high)} prompt tokens</th><th class="num">{n(data.sensitivityPromptTokens)} prompt tokens</th></tr></thead>
       <tbody>
         {rows.map((r) => (
-          <tr><td>{r.name} ({r.provider})</td><td class="num">{usd(r.input)} / {usd(r.output)}</td><td class="num">{usd(r.per1000.low)}</td><td class="num">{usd(r.per1000.siteRule)}</td><td class="num">{usd(r.per1000.high)}</td><td class="num">{usd(r.per1000.plus30)}</td></tr>
+          <tr><td>{r.name} ({r.provider}){r.verification ? `: ${r.verification}` : ''}</td><td class="num">{usd(r.input)} / {usd(r.output)}</td><td class="num">{usd(r.per1000.low)}</td><td class="num">{usd(r.per1000.siteRule)}</td><td class="num">{usd(r.per1000.high)}</td><td class="num">{usd(r.per1000.plus30)}</td></tr>
         ))}
       </tbody>
     </table>
   </div>
 
   <p>The last column multiplies the {n(p.siteRule)}-token prompt by Anthropic's approximately 30 percent figure, giving {n(data.sensitivityPromptTokens)}. That is an illustration of the size of a tokenizer change, not a claim that these three models count this way. On {opus.name}, it moves the cost of {n(a.requests)} requests from {usd(opus.per1000.siteRule)} to {usd(opus.per1000.plus30)}, a rise of {spreadPct} percent, because the reply stays fixed and only the prompt grows.</p>
-  <p>The price gap between models is far larger than the counting gap. At {n(p.siteRule)} prompt tokens, {n(a.requests)} requests cost {usd(mini.per1000.siteRule)} on {mini.name}, {usd(flash.per1000.siteRule)} on {flash.name} and {usd(opus.per1000.siteRule)} on {opus.name}. In this example the choice of model moves the cost far more than the counting range within one model does. The <a href={`${base}blog/how-to-read-an-ai-price-list/`}>price list guide</a> explains how to read those prices.</p>
+  <p>The price gap between models is far larger than the counting gap. At {n(p.siteRule)} prompt tokens, {n(a.requests)} requests cost {usd(mini.per1000.siteRule)} on {mini.name}, {usd(flash.per1000.siteRule)} on {flash.name} (unverified historical catalogue price) and {usd(opus.per1000.siteRule)} on {opus.name}. In this example the choice of model moves the cost far more than the counting range within one model does. The <a href={`${base}blog/how-to-read-an-ai-price-list/`}>price list guide</a> explains how to read those prices.</p>
   <p>The sums leave out reasoning tokens, cached tokens, tool use, images, batch discounts and any minimum charge. Any of those can change a real bill, and none can be read from a word-count estimate.</p>
 
   <h2>Where to count, by provider</h2>

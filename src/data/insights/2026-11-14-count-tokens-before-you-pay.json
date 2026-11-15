@@ -23,6 +23,7 @@
   },
   "rows": [
     {
+      "verification": null,
       "name": "GPT-5.4 Mini",
       "provider": "OpenAI",
       "input": 0.75,
@@ -43,6 +44,7 @@
       "inputShareSiteRule": 0.45454545454545453
     },
     {
+      "verification": "unverified historical catalogue price",
       "name": "Gemini 3.5 Flash",
       "provider": "Google",
       "input": 1.5,
@@ -63,6 +65,7 @@
       "inputShareSiteRule": 0.45454545454545453
     },
     {
+      "verification": null,
       "name": "Claude Opus 5",
       "provider": "Anthropic",
       "input": 5,
