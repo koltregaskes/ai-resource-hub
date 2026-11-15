@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { digest } from '../news-pipeline-provenance.mjs';
+import { validNewsSiteFilter } from './news-routing-policy.mjs';
 
 // Preserve the exporter's historical relative root unless explicitly overridden.
 export function loadNewsRoutingConfig(repoRoot, env = process.env) {
@@ -27,9 +28,7 @@ export function loadNewsRoutingConfig(repoRoot, env = process.env) {
     if (!siteFilter || typeof siteFilter !== 'object' || Array.isArray(siteFilter)) {
       return unknown('missing_site_filter');
     }
-    for (const field of ['include_tags', 'exclude_tags']) {
-      if (siteFilter[field] != null && !Array.isArray(siteFilter[field])) return unknown('invalid_config');
-    }
+    if (!validNewsSiteFilter(siteFilter)) return unknown('invalid_config');
     return {
       siteFilter,
       provenance: {
