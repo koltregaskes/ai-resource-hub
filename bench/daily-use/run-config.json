@@ -23,7 +23,11 @@
   "canary": {
     "public_tasks_per_model": 2,
     "repeats": 1,
-    "task_ids": []
+    "task_ids": [
+      "f5-pub-03",
+      "f7-pub-05"
+    ],
+    "_comment": "Second canary, 15 November 2026. The first (run 2026-11-15T031058Z-aa0ee142) took the default two tasks, both short and script-graded, so it proved the transport and the charges and nothing else. These two exercise what it missed: f5-pub-03 has five judged checks and a long prompt, f7-pub-05 is graded by tests in the sandbox."
   },
   "models": [
     {
