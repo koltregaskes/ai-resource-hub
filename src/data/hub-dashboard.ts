@@ -840,10 +840,14 @@ export function getAgiOverview(): AgiOverview {
   };
 }
 
-export function getDataPulse(basePath = '/'): DataPulseEntry[] {
+export function getDataPulse(basePath = '/', scrapeLogs = readCacheArray<CacheScrapeLog>('scrape_log')): DataPulseEntry[] {
   const digest = getLatestDigest();
   const jobsOverview = getAIJobsOverview();
-  const benchmarkRefresh = benchmarkFreshness(getBenchmarkScores(), readCacheArray<CacheScrapeLog>('scrape_log'));
+  const benchmarkRefresh = benchmarkFreshness(getBenchmarkScores(), scrapeLogs);
+  const speedAttempt = [...scrapeLogs].filter((entry) => entry.scraper === 'speed')
+    .sort((a, b) => Date.parse(normaliseDateTime(b.finished_at ?? b.started_at) ?? '')
+      - Date.parse(normaliseDateTime(a.finished_at ?? a.started_at) ?? '') || b.id - a.id)[0];
+  const speedUnavailable = speedAttempt && ['blocked', 'error', 'fallback'].includes(speedAttempt.status);
 
   return [
     {
@@ -866,8 +870,11 @@ export function getDataPulse(basePath = '/'): DataPulseEntry[] {
     {
       id: 'speed',
       label: 'Speed measurements',
-      note: 'Latency and tokens-per-second snapshots for tracked models.',
-      updatedAt: getLastScrapeTime('speed'),
+      note: speedUnavailable ? scrapeRunExplanation(speedAttempt.status, speedAttempt.error_message)
+        : 'Latency and tokens-per-second snapshots for tracked models.',
+      updatedAt: speedUnavailable ? null : getLastScrapeTime('speed'),
+      attemptedAt: normaliseDateTime(speedAttempt?.finished_at ?? speedAttempt?.started_at),
+      sourceVerifiedAt: null,
       href: `${basePath}speed/`,
     },
     {

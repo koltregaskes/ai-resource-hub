@@ -6,7 +6,7 @@ import { readFileSync } from 'node:fs';
 import { skipBlockedSource, permittedFallback, recordCreativeCollection } from './scrapers/source-policy-collection';
 import { blockedSourceById } from '../src/data/source-policy';
 import { benchmarkFreshness, scrapeRunExplanation } from '../src/data/benchmark-freshness';
-import { latestScrapeActivities } from '../src/data/hub-dashboard';
+import { getDataPulse, latestScrapeActivities } from '../src/data/hub-dashboard';
 
 function database(t: TestContext) {
   const sqlite = new DatabaseSync(':memory:');
@@ -131,6 +131,19 @@ test('dashboard retains an actual error instead of showing the preceding success
   assert.match(entries[0].title, /failed/);
   assert.equal(entries[0].detail, 'Connection failed');
   assert.match(scrapeRunExplanation('blocked', null), /no source retrieval/);
+});
+
+test('speed pulse exposes a newer block without presenting the old success as current measurement', () => {
+  const log = { id: 2, scraper: 'speed', status: 'blocked', models_updated: 0,
+    error_message: JSON.stringify({ reason: 'Source blocked. Terms: https://example.com/terms' }),
+    started_at: null, finished_at: '2026-10-02T00:00:00Z' };
+  const pulse = getDataPulse('/', [
+    { ...log, id: 1, status: 'success', finished_at: '2026-10-01T00:00:00Z' }, log,
+  ]).find((entry) => entry.id === 'speed')!;
+  assert.match(pulse.note, /Source blocked.*Terms:/);
+  assert.equal(pulse.updatedAt, null);
+  assert.equal(pulse.attemptedAt, log.finished_at);
+  assert.equal(pulse.sourceVerifiedAt, null);
 });
 
 test('all policy-gated scraper entry points use receipts and the creative zero-row path returns before writes', () => {
