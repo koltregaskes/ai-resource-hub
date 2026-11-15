@@ -1001,13 +1001,19 @@ class _Engine:
             # In flight when the run stopped: there is no result on record.
             # It still counts as one of the slot's requests, and it is not
             # sent again. Its reservation stays open in the ledger unless
-            # the ledger shows it settled.
+            # the ledger shows it settled. The same goes for a request that
+            # is only in the ledger: reserved, and the run died before its
+            # sent line was written.
             settled = entry.get("charge") is not None
             charge = entry["charge"] if settled else item["sent"].get("reserved_usd")
+            only_ledger = bool(item["sent"].get("ledger_only"))
             earlier.append(({
-                "request_id": item["request_id"], "status": "in_flight_when_stopped",
+                "request_id": item["request_id"],
+                "status": "reserved_never_logged" if only_ledger else "in_flight_when_stopped",
                 "http_status": None,
-                "error": "no result on record: the run stopped while this request was in flight",
+                "error": "reserved in the ledger and never written to the run log: the run "
+                         "stopped between the two" if only_ledger else
+                         "no result on record: the run stopped while this request was in flight",
                 "finish_reason": None, "charge_usd": str(charge),
                 "request_time_seconds": None, "usage": None,
                 "ledger_flags": list(entry.get("flags") or []) if settled
@@ -1277,6 +1283,34 @@ def _logged_prompt(item):
         return body["messages"][0]["content"]
     except (KeyError, IndexError, TypeError):
         return None
+
+
+def adopt_ledger_only_requests(record, books, out=print):
+    """Bring the run log level with the ledgers when a run is reopened.
+
+    A request is reserved in its provider ledger (fsynced) before its sent
+    line is written to the run log. A run that dies between the two leaves
+    an id that only the ledger knows. Every such id of this run, model or
+    judge, is taken into the record here, before anything is sent: an audit
+    line (`ledger_only_request_found`, with the id, the provider and the
+    reserved amount) is appended and printed, the id is never issued again,
+    and it counts as one of its slot's or judge call's requests. The
+    reservation is left exactly as it is in the ledger, so it keeps counting
+    against the cap until it is reconciled. Returns the audit lines.
+    """
+    found = []
+    prefix = record.run_id + "/"
+    for provider, book in sorted(books.items()):
+        for request, entry in list(book.entries.items()):
+            if not request.startswith(prefix) or record.is_issued(request):
+                continue
+            line = record.ledger_only(request, provider, entry["reserved"], entry["charge"])
+            found.append(line)
+            out("  resume: request %s is in the %s ledger (reserved %s USD) and not in the run "
+                "log: the run stopped before it was written. The id is not used again, it "
+                "counts as a request already made, and its reservation stays in the ledger."
+                % (request, provider, entry["reserved"]))
+    return found
 
 
 def _ledgers(config, private_store, live, run_id):
@@ -1563,6 +1597,7 @@ def _run_stage_locked(lock, stage, config, tasks, *, private_store, grade, live,
                       "whole_plan_gate": plan["whole_plan_gate"]},
     }, guard=guard, required_passes=preflight.REPEATS if stage == "full" else None)
     budget = ledger.Budget(books, run_id, max_usd=max_usd)
+    ledger_only = adopt_ledger_only_requests(record, books, out) if resuming else []
     engine = _Engine(config=config, tasks=tasks, stage=stage, record=record, budget=budget,
                      transport=transport, loaded_keys=loaded, grade=grade, clock=clock,
                      sleep=sleep, out=out)
@@ -1570,7 +1605,8 @@ def _run_stage_locked(lock, stage, config, tasks, *, private_store, grade, live,
                "preflight": plan, "qualification": None, "qualification_record": None,
                "qualification_record_path": None,
                "qualification_run_id": qualification_run_id, "finalised": None,
-               "resumed": resuming, "pass_gates": []}
+               "resumed": resuming, "pass_gates": [],
+               "ledger_only_requests": [line["request_id"] for line in ledger_only]}
     try:
         if stage == "qualify":
             record.plan([])

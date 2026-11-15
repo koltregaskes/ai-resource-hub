@@ -2330,6 +2330,174 @@ class FinishJudgingOnResumeTests(JudgingTests):
         self.assertEqual((models, set(asked)), ([], {"j-an"}))
 
 
+# Run in a process of its own by CrashBetweenReserveAndLogTests. It starts a
+# dry full run on fake transports and hard-exits, with os._exit, inside
+# `request_sent` for the chosen request: after `ledger.reserve` has written
+# and fsynced the reservation and before the sent line reaches the run log.
+CRASH_CHILD = r"""
+import os, sys
+core, tests, store, which = sys.argv[1:5]
+sys.path.insert(0, core)
+sys.path.insert(0, tests)
+import records, runner
+import test_run_support as support
+import test_run_runner as cases
+
+seen = {"model": 0, "judge": 0}
+real = records.RunRecord.request_sent
+
+def request_sent(self, request, payload):
+    kind = "model" if payload["kind"] == "model" else "judge"
+    seen[kind] += 1
+    if kind == which and seen[kind] == {"judge": 1, "model": 3}[which]:
+        os._exit(74)
+    return real(self, request, payload)
+
+records.RunRecord.request_sent = request_sent
+tasks = [support.task("t1", family=4, checks=2), support.task("t2", family=2, answerable=False)]
+cfg = support.make_config(models=[support.spec_dict("openai", "m-oa", "3", "30")])
+transport = cases.model_only(lambda r, n: support.reply_body(r, "an answer"))
+runner.run_stage("full", cfg, tasks, private_store=store, grade=cases.JudgingTests.grade,
+                 transport=transport, out=cases.QUIET, seed=11, scores=cases.NO_SCORES)
+os._exit(0)
+"""
+
+
+class CrashBetweenReserveAndLogTests(JudgingTests):
+    """A real process dies between a successful `ledger.reserve` and the
+    `request_sent` write. The reservation is in the ledger; the run log has
+    never seen the id. The same run is then resumed here."""
+
+    def crash(self, which):
+        import subprocess
+        here = os.path.dirname(os.path.abspath(__file__))
+        env = {name: value for name, value in os.environ.items()
+               if name not in ("OPENAI_API_KEY", "ANTHROPIC_API_KEY")}
+        done = subprocess.run(
+            [sys.executable, "-I", "-c", CRASH_CHILD, os.path.dirname(here), here, self.store,
+             which], env=env, capture_output=True, text=True, timeout=120)
+        self.assertEqual(done.returncode, 74, done.stderr)
+        (run_id,) = os.listdir(os.path.join(self.store, "runs", "_staging"))
+        return run_id
+
+    def book(self, run_id, provider="openai"):
+        return ledger.ProviderLedger(provider, "50", os.path.join(
+            self.store, "ledgers-dry", run_id, provider + ".jsonl"))
+
+    def resume(self, run_id):
+        transport = model_only(lambda r, n: reply_body(r, "an answer"))
+        printed = []
+        summary = self.run_stage(transport=transport, grade=self.grade, resume=run_id,
+                                 out=printed.append)
+        return summary, transport, printed
+
+    def check(self, run_id, orphan, done, printed):
+        self.assertEqual(done["status"], "finalised")
+        self.assertEqual(done["passes"], {"required": 3, "complete": 3})
+        self.assertEqual(done["ledger_only_requests"], [orphan])
+        log = self.log(done)
+        sent = [line["request_id"] for line in log if line["event"] == "sent"]
+        self.assertEqual(len(sent), len(set(sent)))
+        self.assertNotIn(orphan, sent)                           # never issued again
+        # The audit line, before anything was sent by the resume.
+        events = [line["event"] for line in log]
+        audit = events.index("ledger_only_request_found")
+        self.assertEqual(events[audit - 1], "resumed")
+        self.assertEqual(events.count("ledger_only_request_found"), 1)
+        line = log[audit]
+        entry = self.book(run_id).entries[orphan]
+        self.assertEqual((line["request_id"], line["provider"], line["reserved_usd"]),
+                         (orphan, "openai", str(entry["reserved"])))
+        self.assertTrue(any(orphan in text and "not in the run log" in text
+                            for text in printed))
+        # The orphan reservation is still on the ledger, open, and still
+        # counts against the cap. Every other request of the run is settled.
+        self.assertIsNone(entry["charge"])
+        self.assertGreater(entry["reserved"], 0)
+        book = self.book(run_id)
+        self.assertEqual(book.reserved, entry["reserved"])
+        self.assertEqual(done["remaining_caps"]["openai"],
+                         Decimal("50") - book.spent - entry["reserved"])
+        self.assertEqual(set(book.entries) - {orphan},
+                         {i for i in sent if "/judge/j-an/" not in i})
+        records.verify_manifest(done["dir"])
+
+    def test_a_judge_request_reserved_and_never_logged_is_recovered_on_resume(self):
+        run_id = self.crash("judge")
+        # Before the resume: the answer is logged, the judge id is in the
+        # ledger only.
+        (orphan,) = [i for i in self.book(run_id).entries if "/judge/" in i]
+        self.assertTrue(orphan.endswith("/judge/j-oa/%s/1" % orphan.split("/")[-2]))
+        with open(os.path.join(self.store, "runs", "_staging", run_id, "requests.jsonl"),
+                  encoding="utf-8") as stream:
+            before = [json.loads(text) for text in stream]
+        self.assertEqual([line["event"] for line in before], ["sent", "done"])
+        done, transport, printed = self.resume(run_id)
+        self.check(run_id, orphan, done, printed)
+        # No second answer for the stopped slot: 5 slots were unsent.
+        models = [r for r in transport.requests if not is_judge_prompt(prompt_of(r))]
+        self.assertEqual(len(models), 5)
+        row = self.rows(done)[0]
+        self.assertEqual(len(row["requests"]), 1)
+        base = orphan.rpartition("/")[0]
+        # The orphan counts as one of j-oa's two; the resume went on with 2.
+        self.assertEqual([(q["request_id"], q["status"]) for q in row["judge_requests"]],
+                         [(orphan, "reserved_never_logged"), (base + "/2", "ok"),
+                          (base.replace("/j-oa/", "/j-an/") + "/1", "ok")])
+        self.assertEqual(row["judge_requests"][0]["ledger_flags"], ["reservation_left_open"])
+        self.assertEqual((row["pass"], row["pending"]), (True, False))
+        # A second resume is refused (the run is finalised); nothing is found twice.
+
+    def test_a_model_request_reserved_and_never_logged_is_recovered_on_resume(self):
+        run_id = self.crash("model")
+        logged = self.sent_in_staging(run_id)
+        (orphan,) = [i for i in self.book(run_id).entries if i not in logged]
+        self.assertNotIn("/judge/", orphan)
+        self.assertTrue(orphan.endswith("/1"))
+        done, transport, printed = self.resume(run_id)
+        self.check(run_id, orphan, done, printed)
+        models = [r for r in transport.requests if not is_judge_prompt(prompt_of(r))]
+        self.assertEqual(len(models), 4)                          # slots 3 to 6, once each
+        row = self.rows(done)[2]
+        slot = orphan.rpartition("/")[0]
+        self.assertEqual(row["slot_id"], slot)
+        # It counts as one of the slot's three; the slot went on with 2.
+        self.assertEqual([(q["request_id"], q["status"]) for q in row["requests"]],
+                         [(orphan, "reserved_never_logged"), (slot + "/2", "ok")])
+        self.assertEqual((row["pass"], row["pending"]), (True, False))
+        # Its cost holds the open reservation in full.
+        self.assertEqual(Decimal(row["cost_usd_exact"]),
+                         self.book(run_id).entries[orphan]["reserved"]
+                         + Decimal(row["requests"][1]["charge_usd"]))
+
+    def sent_in_staging(self, run_id):
+        with open(os.path.join(self.store, "runs", "_staging", run_id, "requests.jsonl"),
+                  encoding="utf-8") as stream:
+            return [line["request_id"] for line in map(json.loads, stream)
+                    if line["event"] == "sent"]
+
+    def test_an_orphan_found_once_stays_used_on_later_resumes_and_after_reconciling(self):
+        run_id = self.crash("judge")
+        (orphan,) = [i for i in self.book(run_id).entries if "/judge/" in i]
+        # First resume: the judge gives no verdict, so the slot stays pending.
+        bad = model_only(lambda r, n: reply_body(r, "an answer"),
+                         judge_text=lambda request, prompt: "never valid")
+        first = self.run_stage(transport=bad, grade=self.grade, resume=run_id)
+        self.assertEqual(first["ledger_only_requests"], [orphan])
+        self.assertEqual(first["status"], "pending_judging")
+        # The known-unsent reservation is reconciled to zero by hand. The id
+        # stays used: the next resume neither reports it again nor reuses it.
+        self.book(run_id).reconcile(orphan, 0, "known not to have been sent")
+        done, _, _ = self.resume(run_id)
+        self.assertEqual(done["ledger_only_requests"], [])
+        self.assertEqual(done["status"], "finalised")
+        log = self.log(done)
+        self.assertEqual([line["event"] for line in log].count("ledger_only_request_found"), 1)
+        sent = [line["request_id"] for line in log if line["event"] == "sent"]
+        self.assertEqual(len(sent), len(set(sent)))
+        self.assertNotIn(orphan, sent)
+
+
 class StoreLockRunTests(PassCase):
     def held(self, run_id="run-held"):
         lock = ledger.StoreLock(self.store).acquire(run_id)

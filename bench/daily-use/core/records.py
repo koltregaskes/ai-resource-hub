@@ -49,6 +49,10 @@ RESUMABLE = ("interrupted", "incomplete", "running", "pending_judging")
 _COMPUTED = ("run_id", "stage", "status", "publishable", "started_utc", "interrupt_reason",
              "stopped_providers", "report")
 
+# The audit line for a request id found in a provider ledger and not in the
+# run log when a run is reopened.
+LEDGER_ONLY_EVENT = "ledger_only_request_found"
+
 HELD_OUT_FIELDS = ("task_id", "family", "outcome", "pass", "tokens", "cost_usd", "timing")
 PUBLIC_FIELDS = HELD_OUT_FIELDS + (
     "split", "repeat", "slot_id", "prompt", "reply", "finish_reason", "truncated",
@@ -203,6 +207,12 @@ class RunRecord:
                 self._requests[event["request_id"]]["done"] = event
             elif kind == "slot":
                 self.rows[event["slot"]["slot_id"]] = dict(event["slot"])
+            elif kind == LEDGER_ONLY_EVENT and event.get("request_id") not in self._requests:
+                # Found by an earlier resume: an id that was reserved in a
+                # ledger and never reached this log. It stays used.
+                self._issued.add(event["request_id"])
+                self._requests[event["request_id"]] = {"sent": _ledger_only_sent(event),
+                                                       "done": None}
         if data and not data.endswith(b"\n"):
             raise RecordError("the request log of run %s ends in a part-written line; repair "
                               "it by hand before resuming" % run_id)
@@ -245,11 +255,32 @@ class RunRecord:
         return [dict(lines, request_id=request) for request, lines in self._requests.items()
                 if request.startswith(prefix)]
 
+    def is_issued(self, request):
+        return request in self._issued
+
+    def ledger_only(self, request, provider, reserved_usd, charge_usd=None):
+        """Take in a request id that a provider ledger holds and this log
+        does not: the run died after the reservation was written and before
+        the sent line. The id is used from now on: it is never issued
+        again, and it counts as one of its slot's or judge call's requests,
+        like a request that was in flight. An audit line is appended; the
+        ledger is not touched. Returns the line."""
+        if request in self._issued:
+            raise RecordError("request id is already in the log: " + request)
+        line = {"event": LEDGER_ONLY_EVENT, "request_id": request, "provider": provider,
+                "reserved_usd": str(reserved_usd),
+                "charge_usd": None if charge_usd is None else str(charge_usd),
+                "at_utc": stamp()}
+        self._append(line)
+        self._issued.add(request)
+        self._requests[request] = {"sent": _ledger_only_sent(line), "done": None}
+        return line
+
     def note(self, event, payload):
         """Append a line that is neither a request nor a slot row, for
         example the notice that a resume gave a judge call one more
         attempt. `event` may not be a name the log already uses."""
-        if event in ("sent", "done", "slot", "resumed"):
+        if event in ("sent", "done", "slot", "resumed", LEDGER_ONLY_EVENT):
             raise RecordError("reserved event name: " + str(event))
         self._append(dict(payload, event=event, at_utc=stamp()))
 
@@ -493,6 +524,13 @@ class RunRecord:
                 stream.write(data)
             result.update(public_record=public, public_path=path)
         return result
+
+
+def _ledger_only_sent(event):
+    """What stands in for the sent line of a ledger-only request."""
+    return {"event": LEDGER_ONLY_EVENT, "request_id": event["request_id"],
+            "provider": event.get("provider"), "reserved_usd": event.get("reserved_usd"),
+            "ledger_only": True, "at_utc": event.get("at_utc")}
 
 
 def read_staged(private_store, run_id):
