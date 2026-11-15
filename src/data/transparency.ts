@@ -67,7 +67,7 @@ export const sources: TransparencySource[] = [
       "Terms review pending. It is a public API that needs no key, and we found no data licence covering it when we read OpenRouter's Terms of Service (last updated 31 August 2026) on 14 November 2026. Those terms bar scraping the website by automated means; we use only the API.",
     shownOn: ['Model pages', 'Compare', 'Cheapest', 'Context window', 'Pricing trends'],
     caveat:
-      'The price is the cheapest host OpenRouter lists for that model, which can be lower than the lab\'s own list price. For these models the "released" date is the day OpenRouter listed the model, not the lab\'s announcement date. About three quarters of the language models in the catalogue get their price this way.',
+      'The price is the one OpenRouter lists from its top provider for that model, which can be lower than the lab\'s own list price. For these models the "released" date is the day OpenRouter listed the model, not the lab\'s announcement date. About three quarters of the language models in the catalogue get their price this way.',
     reviewed: REVIEWED,
   },
   {
@@ -298,7 +298,7 @@ export const calculations: Calculation[] = [
     code: 'scripts/insights/compute-insights.mjs',
     usedOn: 'Data articles on pricing.',
     limits:
-      'The cheap end is the cheapest host on OpenRouter, not a lab\'s list price. The dear end is a lab\'s list price. Free models are excluded. Both ends were re-checked against OpenRouter\'s live API on the snapshot date.',
+      'The cheap end is OpenRouter\'s top-provider price, not a lab\'s list price. The dear end is a lab\'s list price. Free models are excluded. Both ends were re-checked against OpenRouter\'s live API on the snapshot date.',
   },
   {
     id: 'calc-output-input-ratio',
@@ -346,7 +346,7 @@ export const calculations: Calculation[] = [
     code: 'src/pages/models/[id].astro',
     usedOn: 'Model pages, Pricing trends.',
     limits:
-      'The history mixes sources. A switch from a lab\'s list price to OpenRouter\'s cheapest host shows up as a price move when nothing changed. We do not publish "how often prices change" figures until the history is rebuilt on one source per model.',
+      'The history mixes sources. A switch from a lab\'s list price to OpenRouter\'s top-provider price shows up as a price move when nothing changed. We do not publish "how often prices change" figures until the history is rebuilt on one source per model.',
   },
   {
     id: 'calc-benchmark-normalisation',

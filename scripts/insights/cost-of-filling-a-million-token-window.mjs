@@ -2,7 +2,7 @@
 /**
  * What does it cost to fill a one-million-token context window once?
  *
- * Input:  data/pg-cache/models.json (the committed catalogue) and _meta.json.
+ * Input: models.json and _meta.json at the commit in pinned-studio-input.mjs; see README.md.
  * Output: src/data/insights/2026-11-14-cost-of-filling-a-million-token-window.json
  *         (frozen; refuses to overwrite without --force).
  *
@@ -22,12 +22,14 @@
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { readPinnedInput, inputCommit } from './pinned-studio-input.mjs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const modelsRaw = readFileSync(join(root, 'data/pg-cache/models.json'));
-const meta = JSON.parse(readFileSync(join(root, 'data/pg-cache/_meta.json'), 'utf8'));
+const modelsRaw = readPinnedInput(root, 'data/pg-cache/models.json');
+const metaRaw = readPinnedInput(root, 'data/pg-cache/_meta.json');
+const meta = JSON.parse(metaRaw.toString('utf8'));
 const models = JSON.parse(modelsRaw.toString('utf8'));
 const date = '2026-11-14';
 
@@ -106,7 +108,7 @@ const anthropicCheck = {
 const out = {
   snapshotDate: date,
   cacheGeneratedAt: meta.generated_at,
-  inputs: { modelsSha256: createHash('sha256').update(modelsRaw).digest('hex') },
+  inputs: { inputCommit, metaSha256: createHash('sha256').update(metaRaw).digest('hex'), modelsSha256: createHash('sha256').update(modelsRaw).digest('hex') },
   method: {
     set: 'Language models (category "llm"), status active, input and output price above zero, variants removed by the suffix rule, recorded context_window of 1,000,000 or more.',
     variantRule: 'Catalogue id ends in a date stamp (-MMDD, -YYYYMMDD, -YYYY-MM-DD) or in -fast.',
