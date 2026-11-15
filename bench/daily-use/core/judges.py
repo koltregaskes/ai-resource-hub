@@ -215,7 +215,10 @@ def ask(call, prompt, parse, attempts=None):
 
     `attempts` is the attempt numbers to use. It is given only when a
     stopped run is resumed: the numbers then go on from those the judge
-    call had already used, so that no request id is issued twice.
+    call had already used, so that no request id is issued twice. It may
+    be empty, when the judge call has used all its requests or one of them
+    awaits reconciliation: nothing is sent then and the result is
+    (None, []).
     """
     log = []
     if attempts is None:
@@ -272,7 +275,8 @@ def _ask_judge(spec, prompt, parse, call_for, earlier_for):
     `earlier_for(spec, prompt, parse)` is given only on a resumed run. It
     returns (the verdict already in the run log or None, the attempt
     numbers still allowed, the log of what was found). A judge whose
-    verdict is on record is not asked again.
+    verdict is on record is not asked again. With no attempt numbers left
+    the judge is not asked either and stays unresolved.
     """
     if earlier_for is None:
         return ask(call_for(spec), prompt, parse)

@@ -100,6 +100,31 @@ class RunnerCase(unittest.TestCase):
         with open(os.path.join(summary["dir"], "requests.jsonl"), encoding="utf-8") as stream:
             return [json.loads(line) for line in stream]
 
+    def in_flight(self, run_id):
+        """[(request id, provider)] for every request of a staged run that
+        has a sent line and neither a received nor a done line."""
+        path = os.path.join(self.store, "runs", "_staging", run_id, "requests.jsonl")
+        with open(path, encoding="utf-8") as stream:
+            lines = [json.loads(line) for line in stream]
+        settled = {line["request_id"] for line in lines
+                   if line["event"] in ("received", "done")}
+        return [(line["request_id"], line["provider"]) for line in lines
+                if line["event"] == "sent" and line["request_id"] not in settled]
+
+    def reconcile(self, run_id, usd=None, live=False):
+        """Reconcile every in-flight request of a staged run with the
+        `reconcile` command, as the operator would: at `usd`, or at its
+        reserved maximum. Returns the request ids."""
+        done = []
+        for request, provider in self.in_flight(run_id):
+            amount = ["--at-reserved-maximum"] if usd is None else ["--usd", str(usd)]
+            code = cli.main(["reconcile", "--private-store", self.store, "--provider", provider,
+                             "--request-id", request, "--note", "console figure"] + amount
+                            + ([] if live else ["--dry-ledger", run_id]), out=QUIET)
+            self.assertEqual(code, cli.EXIT_OK)
+            done.append(request)
+        return done
+
 
 class SlotAndRequestTests(RunnerCase):
     def test_three_slots_per_model_per_task_each_a_fresh_conversation(self):
@@ -991,6 +1016,9 @@ class LiveGateTests(RunnerCase):
                 lock.release()
             self.assertFalse(load_keys.called)
             self.assertEqual((len(self.factory_calls), self.transport.requests), (calls, []))
+            # The model request that was in flight may have been billed, so
+            # it is reconciled in the live ledger first.
+            self.assertEqual(len(self.reconcile(run_id, live=True)), 1)
             # Under the caps it started with, and with the store free, it carries on.
             done = self.live(stage="canary", resume=run_id, **common)
         self.assertEqual((done["status"], done["run_id"]), ("finalised", run_id))
@@ -1017,6 +1045,64 @@ class LiveGateTests(RunnerCase):
         self.assertEqual(full["status"], "finalised")
         self.assertTrue(full["publishable"])
         self.assertTrue(os.path.isfile(full["finalised"]["public_path"]))
+        self.assertEqual([e["stage"] for e in self.stage_index()], ["qualify", "canary", "full"])
+
+    def test_a_live_run_killed_before_its_stage_index_entry_is_finished_on_resume(self):
+        class Killed(BaseException):
+            pass
+        common = dict(grade=runner.stub_grade)
+        real = runner._record_stage
+
+        def dies_on_the_canary(private_store, entry):
+            if entry["stage"] == "canary":
+                raise Killed()
+            return real(private_store, entry)
+        with mock.patch.object(runner, "LIVE_ENABLED", True):
+            qualified = self.live(stage="qualify", **common)
+            # The canary is finalised, folder and all, and the process dies
+            # before the stage index entry is written. Nothing catches the
+            # kill between finalising and the entry, so the disk is as a real
+            # kill would leave it.
+            with mock.patch.object(runner, "_record_stage", dies_on_the_canary):
+                with self.assertRaises(Killed):
+                    self.live(stage="canary", **common)
+            (run_id,) = [name for name in os.listdir(os.path.join(self.store, "runs"))
+                         if name not in ("_staging", qualified["run_id"])]
+            self.assertEqual(os.listdir(os.path.join(self.store, "runs", "_staging")), [])
+            records.verify_manifest(os.path.join(self.store, "runs", run_id))
+            self.assertEqual([e["stage"] for e in self.stage_index()], ["qualify"])
+            # A paid canary with no entry does not open the full run.
+            self.refused("no finished live canary is on record", stage="full", **common)
+            # The resume writes the entry. It sends nothing, builds no
+            # transport, loads no key and touches no ledger.
+            before = support.read_everything(os.path.join(self.store, "ledgers"))
+            sent, built = len(self.transport.requests), len(self.factory_calls)
+            with mock.patch.object(keys, "load_keys") as load_keys, \
+                    mock.patch.object(ledger, "ProviderLedger") as books:
+                done = self.live(stage="canary", resume=run_id, **common)
+            self.assertFalse(load_keys.called or books.called)
+            self.assertEqual((len(self.transport.requests), len(self.factory_calls)),
+                             (sent, built))
+            self.assertEqual(support.read_everything(os.path.join(self.store, "ledgers")),
+                             before)
+            self.assertEqual((done["status"], done["run_id"], done["already_finalised"]),
+                             ("finalised", run_id, False))
+            entries = self.stage_index()
+            self.assertEqual([e["stage"] for e in entries], ["qualify", "canary"])
+            self.assertEqual((entries[1]["run_id"], entries[1]["live"],
+                              entries[1]["qualification_run_id"], entries[1]["judges"]),
+                             (run_id, True, qualified["run_id"], ["j-oa", "j-an"]))
+            # Resumed once more: already finalised, and no second entry.
+            again = self.live(stage="canary", resume=run_id, **common)
+            self.assertEqual((again["status"], again["already_finalised"]), ("finalised", True))
+            self.assertEqual(len(self.stage_index()), 2)
+            # It is only finished as the same run.
+            with self.assertRaises(records.RecordError) as caught:
+                self.live(stage="full", resume=run_id, **common)
+            self.assertIn("it is a canary run", str(caught.exception))
+            # The full run is now open.
+            full = self.live(stage="full", **common)
+        self.assertEqual(full["status"], "finalised")
         self.assertEqual([e["stage"] for e in self.stage_index()], ["qualify", "canary", "full"])
         for value in support.FAKE_VALUES:
             self.assertNotIn(value, support.read_everything(self.store))
@@ -1832,9 +1918,14 @@ class ResumeTests(PassCase):
         final = self.run_json(done)
         self.assertEqual(final["caps_usd"], started["caps_usd"])
         self.assertEqual(len(final["resumed"]), 2)
-        # A finalised run is not resumed.
-        with self.assertRaises(records.RecordError):
-            self.run_stage(transport=self.fine(), resume=run_id, cfg=self.capped(cap))
+        # A finalised run is not carried on. Resuming it sends nothing, changes
+        # nothing and reports it as already finalised.
+        everything = support.read_everything(self.store)
+        late = self.fine()
+        over = self.run_stage(transport=late, resume=run_id, cfg=self.capped(cap))
+        self.assertEqual((over["status"], over["already_finalised"], late.requests),
+                         ("finalised", True, []))
+        self.assertEqual(support.read_everything(self.store), everything)
 
     def test_a_resume_never_raises_a_cap_and_a_refused_pass_stays_incomplete(self):
         # The cap is exactly one pass's bound and the run starts with
@@ -1935,46 +2026,81 @@ class ResumeTests(PassCase):
             self.run_stage(transport=first)
         self.assertEqual(len(first.requests), 3)
         (run_id,) = self.staged()
-        # The gate at resume counts the reservation that was left open. With 0.1
-        # of cap above one bound, pass 2 would fit after the 0.00036 really
-        # spent; with the open 0.123759 as well it does not, and nothing is sent.
+        ((flying, _),) = self.in_flight(run_id)
+        slot = flying.rpartition("/")[0]
+        asked = [prompt_of(r) for r in first.requests]
+        # The gate at resume counts the reservation that was left open. The
+        # stopped slot is left out, so pass 2 has one slot to run, and with
+        # 0.1 left under the cap that slot does not fit: nothing is sent.
+        tight = self.HELD + Decimal("0.00036") + Decimal("0.1")
         short = self.fine()
-        held = self.run_stage(transport=short, resume=run_id,
-                              cfg=self.capped(self.bound + Decimal("0.1")))
+        held = self.run_stage(transport=short, resume=run_id, cfg=self.capped(tight))
         self.assertEqual(held["status"], "incomplete")
         self.assertEqual(short.requests, [])
-        self.assertEqual(held["pass_gates"][0]["remaining_caps"]["openai"],
-                         self.bound + Decimal("0.1") - Decimal("0.00036") - self.HELD)
+        self.assertEqual(held["pass_gates"][0]["remaining_caps"]["openai"], Decimal("0.1"))
+        self.assertEqual(held["pass_gates"][0]["slots"], 1)
+        self.assertEqual(held["awaiting_reconciliation"], [flying])
+        # Resumed without reconciling. The request that was in flight may have
+        # been billed, so nothing is sent for its slot and it gets no row. The
+        # other slots carry on: one in pass 2, two in pass 3.
         second = self.fine()
         printed = []
-        done = self.run_stage(transport=second, resume=run_id, out=printed.append)
-        self.assertEqual(done["status"], "finalised")
-        # Pass 1 is not sent again. Pass 2 resumes with both of its slots: the
-        # stopped slot has no row yet. Then pass 3. 4 requests.
-        self.assertEqual(len(second.requests), 4)
-        self.assertTrue(any(line.startswith("  pass 2 of 3, 2 slots to run")
+        waiting = self.run_stage(transport=second, resume=run_id, out=printed.append)
+        self.assertEqual(len(second.requests), 3)
+        self.assertEqual(waiting["status"], "interrupted")
+        self.assertEqual(waiting["awaiting_reconciliation"], [flying])
+        reason = waiting["report"]["interrupt_reason"]
+        self.assertIn("1 model request(s) were sent and have no result on record", reason)
+        self.assertIn(flying, reason)
+        self.assertTrue(any(line.startswith("  pass 2 of 3, 1 slots to run")
                             for line in printed))
-        self.assertEqual([g["pass"] for g in done["pass_gates"]], [2, 3])
+        self.assertTrue(any(flying in line and "may have been billed" in line
+                            for line in printed))
+        command = next(line for line in printed if "cli.py reconcile" in line)
+        self.assertIn('--private-store "%s" --provider openai --request-id "%s"'
+                      % (self.store, flying), command)
+        self.assertIn("--dry-ledger " + run_id, command)
+        self.assertEqual([g["pass"] for g in waiting["pass_gates"]], [2, 3])
+        self.assertNotIn(slot, [r["slot_id"] for r in self.rows(waiting)])
+        self.assertEqual(waiting["report"]["models"]["m-oa"]["unstarted_slots"], [slot])
+        # Again without reconciling: nothing at all is sent.
+        idle = self.fine()
+        still = self.run_stage(transport=idle, resume=run_id)
+        self.assertEqual((still["status"], idle.requests, still["awaiting_reconciliation"]),
+                         ("interrupted", [], [flying]))
+        # The stopped slot's prompt has gone out once in each pass and never
+        # a second time in pass 2, where it was in flight.
+        between = [prompt_of(r) for r in short.requests + second.requests + idle.requests]
+        self.assertEqual(asked.count(asked[2]) + between.count(asked[2]), 2 + 1)
+        # The operator enters the console figure, 0.00018. The request now
+        # counts as one used request with no result, and the slot goes on
+        # with request 2.
+        self.assertEqual(self.reconcile(run_id, usd=self.CHARGE), [flying])
+        last = self.fine()
+        done = self.run_stage(transport=last, resume=run_id)
+        self.assertEqual(done["status"], "finalised")
+        self.assertEqual(done["awaiting_reconciliation"], [])
+        self.assertEqual(len(last.requests), 1)
+        self.assertEqual([g["pass"] for g in done["pass_gates"]], [2])
         sent = self.sent(done)
         self.assertEqual(len(sent), 7)
         self.assertEqual(len(set(sent)), 7)
         rows = self.rows(done)
         self.assertEqual([r["repeat"] for r in rows], [1, 1, 2, 2, 3, 3])
         stopped = rows[2]
+        self.assertEqual(stopped["slot_id"], slot)
         # The request that was in flight is kept on the slot and counted as one
         # of its three; the slot went on with request 2, never request 1 again.
         self.assertEqual([q["request_id"] for q in stopped["requests"]],
                          [stopped["slot_id"] + "/1", stopped["slot_id"] + "/2"])
         self.assertEqual([q["status"] for q in stopped["requests"]],
                          ["in_flight_when_stopped", "ok"])
-        self.assertEqual(stopped["requests"][0]["ledger_flags"], ["reservation_left_open"])
+        self.assertEqual(stopped["requests"][0]["ledger_flags"], ["reconciled_by_hand"])
         self.assertEqual((stopped["outcome"], stopped["pass"]), ("answered", True))
-        # Its cost holds the open reservation in full: 0.123759 + 0.00018.
-        self.assertEqual(Decimal(stopped["cost_usd_exact"]), Decimal("0.123939"))
-        # The ledger still holds that reservation open: 6 fine requests settled
-        # at 0.00018 each, plus 0.123759 never settled.
-        self.assertEqual(done["remaining_caps"]["openai"],
-                         Decimal("50") - 6 * self.CHARGE - self.HELD)
+        # Its cost holds the reconciled charge: 0.00018 + 0.00018.
+        self.assertEqual(Decimal(stopped["cost_usd_exact"]), 2 * self.CHARGE)
+        # Nothing is left open in the ledger: 7 requests at 0.00018 each.
+        self.assertEqual(done["remaining_caps"]["openai"], Decimal("50") - 7 * self.CHARGE)
 
     def test_a_slot_that_had_used_its_requests_is_not_sent_again(self):
         # Requests 3 and 4 fail to connect; request 5, the slot's third, is in
@@ -1986,9 +2112,19 @@ class ResumeTests(PassCase):
         with self.assertRaises(KeyboardInterrupt):
             self.run_stage(transport=model_only(step))
         (run_id,) = self.staged()
+        # The third request may have been billed: until it is reconciled the
+        # slot is left alone and the other three slots carry on.
         second = self.fine()
-        done = self.run_stage(transport=second, resume=run_id)
-        self.assertEqual(len(second.requests), 3)                 # not the used-up slot
+        waiting = self.run_stage(transport=second, resume=run_id)
+        self.assertEqual(len(second.requests), 3)                 # not the stopped slot
+        self.assertEqual(waiting["status"], "interrupted")
+        self.assertEqual(len(waiting["awaiting_reconciliation"]), 1)
+        # Reconciled at its reserved maximum. The slot has now used its three
+        # requests, so nothing is sent for it.
+        self.assertEqual(self.reconcile(run_id), waiting["awaiting_reconciliation"])
+        third = self.fine()
+        done = self.run_stage(transport=third, resume=run_id)
+        self.assertEqual(third.requests, [])
         rows = self.rows(done)
         used = rows[2]
         self.assertEqual(len(used["requests"]), 3)
@@ -2150,21 +2286,41 @@ class FinishJudgingOnResumeTests(JudgingTests):
             self.run_stage(transport=first, grade=self.grade)
         self.assertEqual(self.split(first), (["m-oa"] * 3, ["j-oa", "j-an"] * 3))
         (run_id,) = self.staged()
+        ((flying, provider),) = self.in_flight(run_id)
+        self.assertEqual(provider, "anthropic")
+        # Resumed without reconciling. j-an's request may have been billed, so
+        # nothing is sent for that judge call and the slot stays pending. The
+        # answer and j-oa's verdict are reused; the 3 unsent slots carry on.
         second = self.transport()
         printed = []
-        done = self.run_stage(transport=second, grade=self.grade, resume=run_id,
+        waiting = self.run_stage(transport=second, grade=self.grade, resume=run_id,
+                                 out=printed.append)
+        self.assertEqual(waiting["status"], "pending_judging")
+        self.assertEqual(waiting["awaiting_reconciliation"], [flying])
+        self.assertEqual(self.split(second), (["m-oa"] * 3, ["j-oa", "j-an"] * 3))
+        held = self.rows(waiting)[2]
+        self.assertEqual((held["pass"], held["pending"]), (None, True))
+        self.assertEqual(held["flags"],
+                         ["finished_on_resume", "judge_request_awaiting_reconciliation"])
+        self.assertTrue(any(flying in line and "may have been billed" in line
+                            for line in printed))
+        self.assertEqual([(g["pass"], g["slots"], g["finishing"])
+                          for g in waiting["pass_gates"]], [(2, 2, 1), (3, 2, 0)])
+        # Reconciled: the request counts as one of j-an's two, with no result,
+        # and the judge call goes on with number 2.
+        self.assertEqual(self.reconcile(run_id), [flying])
+        third = self.transport()
+        printed = []
+        done = self.run_stage(transport=third, grade=self.grade, resume=run_id,
                               out=printed.append)
         self.assertEqual(done["status"], "finalised")
         self.assertEqual(done["passes"], {"required": 3, "complete": 3})
-        models, asked = self.split(second)
-        # No second model request for the stopped slot: 3 slots were unsent.
-        self.assertEqual(models, ["m-oa"] * 3)
-        # Only the judging that was missing: j-an for the stopped slot, then
-        # both judges for each of the 3 unsent slots. j-oa is not asked again.
-        self.assertEqual(asked, ["j-an"] + ["j-oa", "j-an"] * 3)
+        # Only the judging that was missing: j-an for the stopped slot. No
+        # model request, and j-oa is not asked again.
+        self.assertEqual(self.split(third), ([], ["j-an"]))
         rows = self.rows(done)
         stopped = rows[2]
-        answers = [r for r in first.requests + second.requests
+        answers = [r for r in first.requests + second.requests + third.requests
                    if prompt_of(r) == stopped["prompt"]]
         self.assertEqual(len(answers), 3)                        # once per pass, never twice
         self.assertEqual([q["request_id"] for q in stopped["requests"]],
@@ -2191,66 +2347,64 @@ class FinishJudgingOnResumeTests(JudgingTests):
         sent = self.sent(done)
         self.assertEqual((len(sent), len(set(sent))), (19, 19))
         self.assertEqual([(g["pass"], g["slots"], g["finishing"]) for g in done["pass_gates"]],
-                         [(2, 2, 1), (3, 2, 0)])
-        self.assertFalse(any("one further request" in line for line in printed))
+                         [(2, 1, 1)])
+        self.assertFalse(any("used all" in line for line in printed))
         records.verify_manifest(done["dir"])
 
-    def test_an_unresolved_judge_gets_one_further_request_per_resume_and_then_resolves(self):
+    def test_the_judge_call_limit_holds_for_the_life_of_the_run_however_often_it_is_resumed(
+            self):
+        # The canary: each task once, so each judge call has a prompt of its
+        # own and the calls can be counted per prompt in the fake transports.
+        # j-oa never gives a valid checklist verdict for t1.
         bad = {"checklist": {"j-oa": "never valid"}}
-        first = self.transport(**bad)
-        waiting = self.run_stage(transport=first, grade=self.grade)
+        transports = [self.transport(**bad)]
+        waiting = self.run_stage(transport=transports[0], grade=self.grade, stage="canary")
         self.assertEqual(waiting["status"], "pending_judging")
-        self.assertEqual(waiting["passes"], {"required": 3, "complete": 0})
         run_id = waiting["run_id"]
-        pending = [r["slot_id"] for r in self.rows(waiting) if r["pending"]]
-        self.assertEqual(len(pending), 3)                        # t1 in each pass
-        # Resume 1, the judge still unresolved. Each pending slot gets one
-        # further j-oa request, number 3, and no more. j-an's verdict is on
-        # record and it is not asked. No model request at all.
-        still = self.transport(**bad)
-        printed = []
-        again = self.run_stage(transport=still, grade=self.grade, resume=run_id,
-                               out=printed.append)
-        self.assertEqual(self.split(still), ([], ["j-oa"] * 3))
-        self.assertEqual((again["status"], again["finalised"]), ("pending_judging", None))
-        self.assertFalse(again["publishable"])
-        self.assertEqual(again["passes"], {"required": 3, "complete": 0})
-        notes = [line for line in self.log(again)
-                 if line["event"] == "judge_attempt_added_on_resume"]
-        self.assertEqual([n["slot_id"] for n in notes], pending)
-        for note in notes:
-            self.assertEqual(note["request_id"],
-                             note["slot_id"] + "/judge/j-oa/checklist_judging/3")
-            self.assertEqual((note["judge"], note["earlier_requests"], note["allowed"]),
-                             ("j-oa", 2, 2))
-        self.assertEqual(len([line for line in printed if "one further request" in line]), 3)
-        for row in (r for r in self.rows(again) if r["task_id"] == "t1"):
-            self.assertEqual((row["pass"], row["pending"]), (None, True))
-            self.assertEqual(row["flags"],
-                             ["finished_on_resume", "judge_attempt_added_on_resume"])
-        # Resume 2, the judge answers. One further request each, number 4.
-        fine = self.transport()
-        done = self.run_stage(transport=fine, grade=self.grade, resume=run_id)
-        self.assertEqual(self.split(fine), ([], ["j-oa"] * 3))
-        self.assertEqual(done["status"], "finalised")
-        self.assertEqual(done["passes"], {"required": 3, "complete": 3})
-        for row in (r for r in self.rows(done) if r["task_id"] == "t1"):
-            self.assertEqual(row["judged"]["checks"], {"c1": "pass", "c2": "pass"})
-            self.assertEqual((row["outcome"], row["pass"], row["pending"]),
-                             ("answered", True, False))
-            self.assertEqual(len(row["requests"]), 1)
-            self.assertEqual([q["request_id"].rpartition("/judge/")[2]
-                              for q in row["judge_requests"]],
-                             ["j-oa/checklist_judging/1", "j-oa/checklist_judging/2",
-                              "j-an/checklist_judging/1", "j-oa/checklist_judging/3",
-                              "j-oa/checklist_judging/4"])
-            self.assertEqual(Decimal(row["judge_cost_usd"]),
-                             sum(Decimal(q["charge_usd"]) for q in row["judge_requests"]))
-        # 6 answers, 15 judge requests in the first run, 3 in each resume.
-        sent = self.sent(done)
-        self.assertEqual((len(sent), len(set(sent))), (27, 27))
-        self.assertEqual(len(self.run_json(done)["resumed"]), 2)
-        records.verify_manifest(done["dir"])
+        (pending,) = [r for r in self.rows(waiting) if r["pending"]]
+        self.assertEqual(pending["task_id"], "t1")
+        base = pending["slot_id"] + "/judge/j-oa/checklist_judging/"
+
+        def calls_for_the_judge_call():
+            """How often the fake transports were asked for j-oa's checklist
+            verdict on the pending slot, over the whole life of the run."""
+            return [r for transport in transports for r in transport.requests
+                    if r.body["model"] == "j-oa"
+                    and prompt_of(r).startswith(judges.CHECKLIST_PROMPT[:60])]
+        self.assertEqual(len(calls_for_the_judge_call()), judges.ATTEMPTS_PER_JUDGE_CALL)
+        self.assertEqual(len({prompt_of(r) for r in calls_for_the_judge_call()}), 1)
+        # Resumed three times: twice with the judge still broken, then with a
+        # judge that would answer. Nothing is sent, for this judge call or
+        # for anything else, and the slot stays pending.
+        for number, verdicts in enumerate((bad, bad, {}), 1):
+            transports.append(self.transport(**verdicts))
+            printed = []
+            again = self.run_stage(transport=transports[-1], grade=self.grade, stage="canary",
+                                   resume=run_id, out=printed.append)
+            self.assertEqual(transports[-1].requests, [])
+            self.assertEqual((again["status"], again["finalised"]), ("pending_judging", None))
+            self.assertFalse(again["publishable"])
+            self.assertEqual(len(calls_for_the_judge_call()), judges.ATTEMPTS_PER_JUDGE_CALL)
+            (row,) = [r for r in self.rows(again) if r["pending"]]
+            self.assertEqual((row["slot_id"], row["pass"]), (pending["slot_id"], None))
+            self.assertEqual(row["flags"], ["finished_on_resume", "judge_attempts_exhausted"])
+            self.assertEqual(len([line for line in printed if "has used all 2 of its "
+                                  "requests for checklist_judging" in line]), 1)
+            attempts = row["judged"]["detail"]["checklist"][0]["attempts"]
+            self.assertEqual([item["result"] for item in attempts],
+                             ["earlier_attempts_unresolved", "attempts_exhausted"])
+            # j-an's verdict is on record and is reused, not asked for again.
+            self.assertEqual(row["judged"]["detail"]["checklist"][1]["attempts"][0]["detail"],
+                             "verdict taken from the run log; the judge was not asked again")
+            self.assertEqual(len(self.run_json(again)["resumed"]), number)
+        # The log holds exactly the two request ids of the judge call, and no
+        # line of the retired kind.
+        log = self.log(again)
+        self.assertEqual([line["request_id"] for line in log
+                          if line["event"] == "sent" and line["request_id"].startswith(base)],
+                         [base + "1", base + "2"])
+        self.assertNotIn("judge_attempt_added_on_resume", [line["event"] for line in log])
+        self.assertEqual(again["awaiting_reconciliation"], [])
 
     def run_json(self, summary):
         with open(os.path.join(summary["dir"], "run.json"), encoding="utf-8") as stream:
@@ -2260,9 +2414,15 @@ class FinishJudgingOnResumeTests(JudgingTests):
         return support.make_config(models=[support.spec_dict("openai", "m-oa", "3", "30")],
                                    caps_usd={"openai": str(openai), "anthropic": "50"})
 
+    def one_request_per_judge_call(self):
+        """Hold a first run to one request per judge call, so that a judge
+        that gave no verdict has one request of its two left for a resume."""
+        return mock.patch.object(judges, "ATTEMPTS_PER_JUDGE_CALL", 1)
+
     def test_the_caps_and_the_pass_gate_still_refuse_a_resume_that_only_has_judging_left(self):
         bad = {"checklist": {"j-oa": "never valid"}}
-        waiting = self.run_stage(transport=self.transport(**bad), grade=self.grade)
+        with self.one_request_per_judge_call():
+            waiting = self.run_stage(transport=self.transport(**bad), grade=self.grade)
         self.assertEqual(waiting["status"], "pending_judging")
         run_id = waiting["run_id"]
         spent = Decimal("50") - waiting["remaining_caps"]["openai"]
@@ -2287,8 +2447,8 @@ class FinishJudgingOnResumeTests(JudgingTests):
         self.assertEqual(held["passes"], {"required": 3, "complete": 0})
         self.assertEqual(len([r for r in self.rows(held) if r["pending"]]), 3)
         # The reservation does not lean on the gate. With a gate that admits
-        # everything, the ledger still refuses the one further request under
-        # the same cap: nothing is sent and the run stops.
+        # everything, the ledger still refuses the judge's remaining request
+        # under the same cap: nothing is sent and the run stops.
         real_gate = preflight.pass_gate
 
         def admits(*args, **kwargs):
@@ -2317,17 +2477,17 @@ class FinishJudgingOnResumeTests(JudgingTests):
         self.assertEqual(len(sent), len(set(sent)))
 
     def test_a_canary_left_pending_is_finished_on_resume(self):
-        # j-an gives no verdict on the checklist: its first request and its
-        # retry are both malformed.
-        waiting = self.run_stage(transport=self.transport(checklist={"j-an": "no"}),
-                                 grade=self.grade, stage="canary")
+        # j-an gives no verdict on the checklist: its one request of the first
+        # run is malformed. It has one of its two requests left.
+        with self.one_request_per_judge_call():
+            waiting = self.run_stage(transport=self.transport(checklist={"j-an": "no"}),
+                                     grade=self.grade, stage="canary")
         self.assertEqual(waiting["status"], "pending_judging")
         fine = self.transport()
         done = self.run_stage(transport=fine, grade=self.grade, stage="canary",
                               resume=waiting["run_id"])
         self.assertEqual(done["status"], "finalised")
-        models, asked = self.split(fine)
-        self.assertEqual((models, set(asked)), ([], {"j-an"}))
+        self.assertEqual(self.split(fine), ([], ["j-an"]))
 
 
 # Run in a process of its own by CrashBetweenReserveAndLogTests. It starts a
@@ -2431,7 +2591,7 @@ class CrashBetweenReserveAndLogTests(JudgingTests):
         with open(os.path.join(self.store, "runs", "_staging", run_id, "requests.jsonl"),
                   encoding="utf-8") as stream:
             before = [json.loads(text) for text in stream]
-        self.assertEqual([line["event"] for line in before], ["sent", "done"])
+        self.assertEqual([line["event"] for line in before], ["sent", "received", "done"])
         done, transport, printed = self.resume(run_id)
         self.check(run_id, orphan, done, printed)
         # No second answer for the stopped slot: 5 slots were unsent.
@@ -2479,12 +2639,17 @@ class CrashBetweenReserveAndLogTests(JudgingTests):
     def test_an_orphan_found_once_stays_used_on_later_resumes_and_after_reconciling(self):
         run_id = self.crash("judge")
         (orphan,) = [i for i in self.book(run_id).entries if "/judge/" in i]
-        # First resume: the judge gives no verdict, so the slot stays pending.
-        bad = model_only(lambda r, n: reply_body(r, "an answer"),
-                         judge_text=lambda request, prompt: "never valid")
-        first = self.run_stage(transport=bad, grade=self.grade, resume=run_id)
+        # First resume, under a cap with no room left: the orphan is found,
+        # the pass is not started and nothing is sent.
+        idle = model_only(lambda r, n: reply_body(r, "an answer"))
+        tight = support.make_config(models=[support.spec_dict("openai", "m-oa", "3", "30")],
+                                    caps_usd={"openai": "0.001", "anthropic": "50"})
+        first = self.run_stage(transport=idle, grade=self.grade, resume=run_id, cfg=tight)
         self.assertEqual(first["ledger_only_requests"], [orphan])
-        self.assertEqual(first["status"], "pending_judging")
+        self.assertEqual((first["status"], idle.requests), ("incomplete", []))
+        # A request that only the ledger knew was never sent, so it does not
+        # wait for reconciliation and blocks nothing.
+        self.assertEqual(first["awaiting_reconciliation"], [])
         # The known-unsent reservation is reconciled to zero by hand. The id
         # stays used: the next resume neither reports it again nor reuses it.
         self.book(run_id).reconcile(orphan, 0, "known not to have been sent")

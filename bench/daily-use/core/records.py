@@ -11,8 +11,17 @@ Layout inside the private store (a path given at run time, outside the repo):
   `<run id>/<model id>/<task id>/<repeat>`; a request id is the slot id plus
   the request number. Ids are never reused.
 - Before a request is sent, a line with its id and reservation is appended
-  to `requests.jsonl`, flushed and fsynced. The response is appended when it
-  arrives. A crash leaves a record of what was in flight.
+  to `requests.jsonl`, flushed and fsynced. When the response arrives it is
+  appended as a `received` line, fsynced, before the ledger is settled; the
+  `done` line follows the settlement. A crash leaves a record of what was
+  in flight, and a response that came back is never lost.
+- Whole files (run.json, plan.json, slots.json, scores.json, the manifest,
+  the public record, an amendment) are written through `atomic_write`: to
+  a temporary file beside the destination, fsynced, then moved over it. A
+  crash leaves the old complete file or the new complete file.
+- A part-written last line of `requests.jsonl` is moved to the sidecar
+  `requests.jsonl.torn` when the run is reopened (`ledger.move_torn_tail`).
+  Damage anywhere else in the log still refuses the resume.
 - A run that was stopped can be reopened (`RunRecord.reopen`) and carried
   on in the planned order. A slot with a final row is left alone, and a
   request id that is in the log is never issued again. A slot whose row is
@@ -26,8 +35,12 @@ Layout inside the private store (a path given at run time, outside the repo):
 - Finalising happens only when every planned slot has a final outcome and
   pass and nothing is pending. A run with fewer complete passes than it
   needs (`required_passes`) is never finalised, so it is never scored. Scores are injected; this module computes
-  none. The manifest holds a SHA-256 of every file, taken from the bytes as
-  they were written.
+  none. The manifest holds a SHA-256 of every file, taken from the bytes on
+  disk once the folder is sealed.
+- Finalising can be restarted. Writing run.json with status `finalised`
+  seals the staged folder; the manifest, the move to `runs/<run id>/` and
+  the public record are then one idempotent function,
+  `complete_finalisation`, which a resume calls again after a crash.
 - The public record is built by an allowlist. For held-out tasks it carries
   only the task id, family, outcome, pass, tokens, cost and timing.
 """
@@ -37,14 +50,23 @@ import hashlib
 import json
 import os
 import secrets as _random
+import time
+
+try:
+    from . import ledger
+except ImportError:
+    import ledger
 
 FINAL_OUTCOMES = ("answered", "abstained", "refused", "malformed", "execution_error")
 REQUEST_LOG = "requests.jsonl"
 MANIFEST = "manifest.json"
+TEMP_SUFFIX = ".tmp"
 # Statuses a staged run can be reopened from. `running` is what a run that
 # died without warning leaves behind. `pending_judging` is a run whose slots
 # all have a row, some of them still pending: a resume finishes those.
-RESUMABLE = ("interrupted", "incomplete", "running", "pending_judging")
+# `complete` is a run whose slots are all final and whose scoring or
+# finalising failed: a resume sends nothing, scores it and finalises it.
+RESUMABLE = ("interrupted", "incomplete", "running", "pending_judging", "complete")
 # Fields of run.json that are worked out from the record, not kept as meta.
 _COMPUTED = ("run_id", "stage", "status", "publishable", "started_utc", "interrupt_reason",
              "stopped_providers", "report")
@@ -52,6 +74,13 @@ _COMPUTED = ("run_id", "stage", "status", "publishable", "started_utc", "interru
 # The audit line for a request id found in a provider ledger and not in the
 # run log when a run is reopened.
 LEDGER_ONLY_EVENT = "ledger_only_request_found"
+# The audit line for a part-written last line that a reopen moved to the
+# sidecar.
+TORN_TAIL_EVENT = "torn_tail_moved_to_sidecar"
+# How often, and how far apart, a move onto a file or folder is tried again
+# when Windows refuses it because a scanner has the file open.
+MOVE_TRIES = 6
+MOVE_WAIT_SECONDS = 0.05
 
 HELD_OUT_FIELDS = ("task_id", "family", "outcome", "pass", "tokens", "cost_usd", "timing")
 PUBLIC_FIELDS = HELD_OUT_FIELDS + (
@@ -107,6 +136,55 @@ def _sha(data):
     return hashlib.sha256(data).hexdigest()
 
 
+def _move(function, source, destination):
+    """`os.replace` or `os.rename`, tried again a few times after a short
+    sleep when Windows refuses it with PermissionError."""
+    for attempt in range(1, MOVE_TRIES + 1):
+        try:
+            return function(source, destination)
+        except PermissionError:
+            if attempt == MOVE_TRIES:
+                raise
+            time.sleep(MOVE_WAIT_SECONDS)
+
+
+def _sync_folder(folder):
+    """Fsync a folder so that a rename inside it is on disk. POSIX only:
+    Windows cannot open a folder this way, and nothing is done there."""
+    if os.name == "nt":
+        return
+    try:
+        descriptor = os.open(folder or ".", os.O_RDONLY)
+    except OSError:
+        return
+    try:
+        os.fsync(descriptor)
+    except OSError:
+        pass
+    finally:
+        os.close(descriptor)
+
+
+def atomic_write(path, data):
+    """Write a whole file so that a crash leaves either the old complete
+    file or the new complete file, never a cut-off one.
+
+    The bytes go to `<name>.tmp` in the same folder, are flushed and
+    fsynced, and the temporary file is then moved onto the destination with
+    `os.replace`. On POSIX the folder is fsynced as well. A `<name>.tmp`
+    left behind by a crash is not a record: readers ignore it and the next
+    write of that name overwrites it.
+    """
+    path = os.fspath(path)
+    temporary = path + TEMP_SUFFIX
+    with open(temporary, "wb") as stream:
+        stream.write(data)
+        stream.flush()
+        os.fsync(stream.fileno())
+    _move(os.replace, temporary, path)
+    _sync_folder(os.path.dirname(path))
+
+
 class RunRecord:
     """One run's record while it is in staging.
 
@@ -140,6 +218,7 @@ class RunRecord:
         self._issued = set()
         self._requests = {}
         self._hashes = {}
+        self.torn_recovered = []
         self._log_hash = hashlib.sha256()
         self._log = open(os.path.join(self.dir, REQUEST_LOG), "ab")
         self.started_utc = stamp()
@@ -153,9 +232,16 @@ class RunRecord:
         folder. Nothing already written is changed: new lines are appended
         to the same log, and the metadata the run started with (the caps
         among it) is kept as it was. Refused for a run that is finalised
-        or complete, and for a log that does not read back. A run that is
-        only waiting on judging can be reopened, so that the judging can
-        be finished.
+        and for a log that does not read back. A run that is only waiting
+        on judging can be reopened, so that the judging can be finished,
+        and so can a run whose slots are all final (status `complete`), so
+        that it can be scored and finalised.
+
+        A part-written last line of the log, left by a crash, is moved to
+        the sidecar `requests.jsonl.torn` before the log is read, and an
+        audit line says so (see `ledger.move_torn_tail` for why that is
+        safe). `torn_recovered` lists what was moved. Temporary files left
+        by `atomic_write` are ignored.
 
         `note` is a dict written with this resume, both in the `resumed`
         list of run.json and on the `resumed` line of the log. The runner
@@ -189,6 +275,8 @@ class RunRecord:
         self.extra_files = {}
         self._issued = set()
         self._requests = {}
+        torn = ledger.recover_torn_tail(os.path.join(self.dir, REQUEST_LOG))
+        self.torn_recovered = [] if torn is None else [torn]
         with open(os.path.join(self.dir, REQUEST_LOG), "rb") as stream:
             data = stream.read()
         for number, line in enumerate(data.splitlines(), 1):
@@ -202,7 +290,10 @@ class RunRecord:
                                   "repair it by hand before resuming" % (run_id, number)) from None
             if kind == "sent":
                 self._issued.add(event["request_id"])
-                self._requests[event["request_id"]] = {"sent": event, "done": None}
+                self._requests[event["request_id"]] = {"sent": event, "received": None,
+                                                       "done": None}
+            elif kind == "received" and event.get("request_id") in self._requests:
+                self._requests[event["request_id"]]["received"] = event
             elif kind == "done" and event.get("request_id") in self._requests:
                 self._requests[event["request_id"]]["done"] = event
             elif kind == "slot":
@@ -212,13 +303,11 @@ class RunRecord:
                 # ledger and never reached this log. It stays used.
                 self._issued.add(event["request_id"])
                 self._requests[event["request_id"]] = {"sent": _ledger_only_sent(event),
-                                                       "done": None}
-        if data and not data.endswith(b"\n"):
-            raise RecordError("the request log of run %s ends in a part-written line; repair "
-                              "it by hand before resuming" % run_id)
+                                                       "received": None, "done": None}
         self._hashes = {}
         for name in sorted(os.listdir(self.dir)):
-            if name in (REQUEST_LOG, MANIFEST) or not os.path.isfile(os.path.join(self.dir, name)):
+            if name in (REQUEST_LOG, MANIFEST) or name.endswith(TEMP_SUFFIX) \
+                    or not os.path.isfile(os.path.join(self.dir, name)):
                 continue
             with open(os.path.join(self.dir, name), "rb") as stream:
                 self._hashes[name] = _sha(stream.read())
@@ -235,13 +324,19 @@ class RunRecord:
         note = dict(note or {})
         self.meta.setdefault("resumed", []).append(dict(note, **before, at_utc=stamp()))
         self._append(dict(note, event="resumed", at_utc=stamp(), before=before))
+        for moved in self.torn_recovered:
+            self._append({"event": TORN_TAIL_EVENT, "at_utc": stamp(),
+                          "journal": moved["journal"], "offset": moved["offset"],
+                          "length": moved["length"], "sha256": moved["sha256"],
+                          "sidecar": moved["journal"] + ledger.TORN_SUFFIX})
         self._write_status()
         return self
 
     def logged_model_requests(self, slot):
         """The model requests already issued for a slot, in order, each as
-        {"request_id", "sent", "done"}; `done` is None for a request that
-        was in flight when the run stopped."""
+        {"request_id", "sent", "received", "done"}; `done` is None for a
+        request that was in flight when the run stopped, and `received` is
+        None when no response reached the log."""
         found = []
         for request, lines in self._requests.items():
             head, _, number = request.rpartition("/")
@@ -251,7 +346,8 @@ class RunRecord:
 
     def logged_requests(self, prefix):
         """Every request in the log whose id starts with `prefix`, in the
-        order it was sent, each as {"request_id", "sent", "done"}."""
+        order it was sent, each as {"request_id", "sent", "received",
+        "done"}."""
         return [dict(lines, request_id=request) for request, lines in self._requests.items()
                 if request.startswith(prefix)]
 
@@ -262,9 +358,9 @@ class RunRecord:
         """Take in a request id that a provider ledger holds and this log
         does not: the run died after the reservation was written and before
         the sent line. The id is used from now on: it is never issued
-        again, and it counts as one of its slot's or judge call's requests,
-        like a request that was in flight. An audit line is appended; the
-        ledger is not touched. Returns the line."""
+        again, and it counts as one of its slot's or judge call's requests.
+        It was never sent, so it does not wait for reconciliation. An audit
+        line is appended; the ledger is not touched. Returns the line."""
         if request in self._issued:
             raise RecordError("request id is already in the log: " + request)
         line = {"event": LEDGER_ONLY_EVENT, "request_id": request, "provider": provider,
@@ -273,14 +369,16 @@ class RunRecord:
                 "at_utc": stamp()}
         self._append(line)
         self._issued.add(request)
-        self._requests[request] = {"sent": _ledger_only_sent(line), "done": None}
+        self._requests[request] = {"sent": _ledger_only_sent(line), "received": None,
+                                   "done": None}
         return line
 
     def note(self, event, payload):
         """Append a line that is neither a request nor a slot row, for
-        example the notice that a resume gave a judge call one more
-        attempt. `event` may not be a name the log already uses."""
-        if event in ("sent", "done", "slot", "resumed", LEDGER_ONLY_EVENT):
+        example the notice that a resume finished a request from its
+        `received` line. `event` may not be a name the log already uses."""
+        if event in ("sent", "received", "done", "slot", "resumed", LEDGER_ONLY_EVENT,
+                     TORN_TAIL_EVENT):
             raise RecordError("reserved event name: " + str(event))
         self._append(dict(payload, event=event, at_utc=stamp()))
 
@@ -294,10 +392,7 @@ class RunRecord:
 
     def _write(self, name, data):
         self._check(data)
-        with open(os.path.join(self.dir, name), "wb") as stream:
-            stream.write(data)
-            stream.flush()
-            os.fsync(stream.fileno())
+        atomic_write(os.path.join(self.dir, name), data)
         self._hashes[name] = _sha(data)
 
     def _append(self, value):
@@ -347,7 +442,20 @@ class RunRecord:
         self._issued.add(request)
         line = dict(payload, event="sent", request_id=request, at_utc=stamp())
         self._append(line)
-        self._requests[request] = {"sent": line, "done": None}
+        self._requests[request] = {"sent": line, "received": None, "done": None}
+
+    def request_received(self, request, payload):
+        """Append the response of a request, as it came back and before the
+        ledger is settled. The line is on disk when this returns, so a run
+        that dies after this point never has to send the request again: a
+        resume settles it from this line and writes its `done` line."""
+        if request not in self._issued:
+            raise RecordError("no sent line for request " + request)
+        if self._requests[request].get("received") is not None:
+            raise RecordError("request already has a received line: " + request)
+        line = dict(payload, event="received", request_id=request, at_utc=stamp())
+        self._append(line)
+        self._requests[request]["received"] = line
 
     def request_done(self, request, payload):
         if request not in self._issued:
@@ -465,6 +573,12 @@ class RunRecord:
 
         Refused while a slot is unstarted or pending, or after an interrupt.
         Returns {"dir", "manifest_sha256", "public_record", "public_path"}.
+
+        The slot rows and the scores are written, every file is checked
+        against the bytes this object wrote, and then run.json is written
+        with status `finalised`. That write seals the folder. Everything
+        after it is `complete_finalisation`, which can be run again after a
+        crash, so a run that was paid for in full is never left stranded.
         """
         if self.finalised:
             raise RecordError("run %s is already finalised" % self.run_id)
@@ -481,48 +595,27 @@ class RunRecord:
         if os.path.exists(self.final_dir):
             raise RecordError("a finalised folder already exists for " + self.run_id)
         rows = [self.rows[slot["slot_id"]] for slot in self.planned]
-        self.status = "finalised"
-        finalised_utc = stamp()
-        document = self._run_document()
-        document["finalised_utc"] = finalised_utc
-        will_publish = bool(self.meta.get("live") and self.stage == "full")
-        if build_public is None:
-            # A dry full run builds the record too, as a rehearsal of the
-            # allowlist. It is marked not publishable and not live.
-            build_public = self.stage == "full"
-        document["publishable"] = will_publish
         self._write("slots.json", _dump(rows))
         self._write("scores.json", _dump(scores if scores is not None else {}))
-        self._write("run.json", _dump(document))
         self._log.close()
         self._hashes[REQUEST_LOG] = self._log_hash.hexdigest()
+        # Before the folder is sealed: no file may differ from what this
+        # object wrote.
         for name, digest in sorted(self._hashes.items()):
             with open(os.path.join(self.dir, name), "rb") as stream:
                 if _sha(stream.read()) != digest:
                     raise RecordError("file changed on disk after it was written: " + name)
-        manifest = _dump({"run_id": self.run_id, "created_utc": finalised_utc,
-                          "files": dict(sorted(self._hashes.items()))})
-        self._check(manifest)
-        with open(os.path.join(self.dir, MANIFEST), "wb") as stream:
-            stream.write(manifest)
-            stream.flush()
-            os.fsync(stream.fileno())
-        os.rename(self.dir, self.final_dir)
+        self.status = "finalised"
+        document = self._run_document()
+        document["finalised_utc"] = stamp()
+        document["publishable"] = bool(self.meta.get("live") and self.stage == "full")
+        # The seal. From here on the folder is finished by
+        # `complete_finalisation`, now or on a later resume.
+        self._write("run.json", _dump(document))
         self.finalised = True
+        result = complete_finalisation(self.private_store, self.run_id, guard=self.guard,
+                                       build_public=build_public)
         self.dir = self.final_dir
-        result = {"dir": self.final_dir, "manifest_sha256": _sha(manifest),
-                  "public_record": None, "public_path": None}
-        if build_public:
-            public = build_public_record(document, rows, scores, result["manifest_sha256"])
-            data = _dump(public)
-            if self.guard is not None and self.guard(data.decode("utf-8")):
-                raise RecordError("a key value was about to be published; refused")
-            folder = os.path.join(self.private_store, "public", self.run_id)
-            os.makedirs(folder)
-            path = os.path.join(folder, "public-record.json")
-            with open(path, "xb") as stream:
-                stream.write(data)
-            result.update(public_record=public, public_path=path)
         return result
 
 
@@ -533,8 +626,135 @@ def _ledger_only_sent(event):
             "ledger_only": True, "at_utc": event.get("at_utc")}
 
 
+def _read_json(path):
+    with open(path, "rb") as stream:
+        return json.loads(stream.read())
+
+
+def is_sealed(private_store, run_id):
+    """True when the run's staged folder is sealed (its run.json has status
+    `finalised`) or its final folder is already there: the run needs
+    `complete_finalisation` and nothing else."""
+    store = os.fspath(private_store)
+    if os.path.isdir(os.path.join(store, "runs", str(run_id))):
+        return True
+    try:
+        document = _read_json(os.path.join(store, "runs", "_staging", str(run_id), "run.json"))
+    except (OSError, ValueError):
+        return False
+    return isinstance(document, dict) and document.get("run_id") == run_id \
+        and document.get("status") == "finalised"
+
+
+def sealed_document(private_store, run_id):
+    """The run.json of a sealed or finalised run, from wherever the folder
+    is now."""
+    store = os.fspath(private_store)
+    for folder in (os.path.join(store, "runs", str(run_id)),
+                   os.path.join(store, "runs", "_staging", str(run_id))):
+        if os.path.isdir(folder):
+            try:
+                document = _read_json(os.path.join(folder, "run.json"))
+            except (OSError, ValueError):
+                break
+            if isinstance(document, dict) and document.get("run_id") == run_id \
+                    and document.get("status") == "finalised":
+                return document
+            break
+    raise RecordError("run %s is not sealed: its run.json does not say finalised" % run_id)
+
+
+def complete_finalisation(private_store, run_id, guard=None, build_public=None):
+    """Finish finalising a run whose staged folder is sealed, or whose
+    final folder is already there. Returns what `RunRecord.finalise`
+    returns: {"dir", "manifest_sha256", "public_record", "public_path"}.
+
+    Every step is safe to do again, so this is called by `finalise` for its
+    own tail and again by a resume after a crash:
+
+    1. If the staged folder is there and sealed: this program's own
+       leftover `*.tmp` files are removed, every other file but the
+       manifest is hashed from disk, and the manifest is written
+       (atomically) unless an identical one is already there. Its
+       `created_utc` is the `finalised_utc` of run.json, so the manifest is
+       the same however often it is built. Then the folder is renamed to
+       `runs/<run id>/`.
+    2. If the final folder is there and the run is a full-stage run, the
+       public record is built from run.json, slots.json, scores.json and
+       the manifest hash, and written (atomically) unless an identical one
+       is already there.
+
+    `build_public` overrides the full-stage rule of step 2. `guard(text)`
+    returns True when the text holds a key; the write is then refused.
+    """
+    store = os.fspath(private_store)
+    staged = os.path.join(store, "runs", "_staging", str(run_id))
+    final = os.path.join(store, "runs", str(run_id))
+    if os.path.isdir(staged):
+        if os.path.exists(final):
+            raise RecordError("run %s has both a staged and a finalised folder; nothing "
+                              "was changed" % run_id)
+        document = sealed_document(store, run_id)
+        for name in os.listdir(staged):
+            if name.endswith(TEMP_SUFFIX) and os.path.isfile(os.path.join(staged, name)):
+                os.remove(os.path.join(staged, name))
+        hashes = {}
+        for name in sorted(os.listdir(staged)):
+            if name == MANIFEST or not os.path.isfile(os.path.join(staged, name)):
+                continue
+            with open(os.path.join(staged, name), "rb") as stream:
+                hashes[name] = _sha(stream.read())
+        manifest = _dump({"run_id": run_id, "created_utc": document.get("finalised_utc"),
+                          "files": hashes})
+        if guard is not None and guard(manifest.decode("utf-8")):
+            raise RecordError("a key value was about to be written to the run record; refused")
+        try:
+            with open(os.path.join(staged, MANIFEST), "rb") as stream:
+                written = stream.read() == manifest
+        except OSError:
+            written = False
+        if not written:
+            atomic_write(os.path.join(staged, MANIFEST), manifest)
+        _move(os.rename, staged, final)
+        _sync_folder(os.path.dirname(final))
+    elif not os.path.isdir(final):
+        raise RecordError("no sealed or finalised run to complete: " + str(run_id))
+    document = sealed_document(store, run_id)
+    with open(os.path.join(final, MANIFEST), "rb") as stream:
+        manifest_sha256 = _sha(stream.read())
+    result = {"dir": final, "manifest_sha256": manifest_sha256,
+              "public_record": None, "public_path": None}
+    if build_public is None:
+        # A dry full run builds the record too, as a rehearsal of the
+        # allowlist. It is marked not publishable and not live.
+        build_public = document.get("stage") == "full"
+    if build_public:
+        public = build_public_record(document, _read_json(os.path.join(final, "slots.json")),
+                                     _read_json(os.path.join(final, "scores.json")),
+                                     manifest_sha256)
+        data = _dump(public)
+        if guard is not None and guard(data.decode("utf-8")):
+            raise RecordError("a key value was about to be published; refused")
+        folder = os.path.join(store, "public", str(run_id))
+        os.makedirs(folder, exist_ok=True)
+        path = os.path.join(folder, "public-record.json")
+        try:
+            with open(path, "rb") as stream:
+                existing = stream.read()
+        except OSError:
+            existing = None
+        if existing is None:
+            atomic_write(path, data)
+        elif existing != data:
+            raise RecordError("a different public record is already there for run %s; "
+                              "nothing was changed" % run_id)
+        result.update(public_record=public, public_path=path)
+    return result
+
+
 def read_staged(private_store, run_id):
-    """The run.json of a run in staging, for resuming it."""
+    """The run.json of a run in staging, for resuming it. Only the real
+    file is read: a `run.json.tmp` left by a crash is never a record."""
     path = os.path.join(os.fspath(private_store), "runs", "_staging", str(run_id), "run.json")
     try:
         with open(path, "rb") as stream:
@@ -643,8 +863,7 @@ def write_amendment(private_store, run_id, changed_verdicts, reason, author, sco
         "recomputed_scores": scores, "written_utc": stamp(),
     }
     path = os.path.join(folder, "amendment.json")
-    with open(path, "xb") as stream:
-        stream.write(_dump(document))
-        stream.flush()
-        os.fsync(stream.fileno())
+    # The folder was made just above and is this amendment's alone, so the
+    # file is written once.
+    atomic_write(path, _dump(document))
     return {"path": path, "amendment": number, "original_manifest_sha256": manifest_sha}
