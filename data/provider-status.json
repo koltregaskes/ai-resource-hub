@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T01:51:13.680Z",
+  "generatedAt": "2026-11-15T02:55:44.004Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-15T01:51:13.675Z",
+      "lastCheckedAt": "2026-11-15T02:55:43.997Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-15T00:27:07.000Z",
+          "id": "fireworks-feed-0-2026-11-15T02:30:26.000Z",
+          "title": "Service Degradation for GLM 5.3",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-15T02:30:26.000Z",
+          "updatedAt": "2026-11-15T02:30:26.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M7EGNB5FJ3AQNVB9A2W4N2DQ",
+          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.3. We are actively investigating. Affected components GLM 5.3 (Degraded performance)"
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-15T00:27:07.000Z",
           "title": "Maintenance: Scheduled maintenance: Serverless inference",
           "status": "reported",
           "impact": "unknown",
@@ -29,22 +40,22 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M7BZTD2XA8CS0CZ7BNARWJEW",
           "summary": "Status: Complete (Sun, 15 Nov 2026 00:00:00 GMT - Sun, 15 Nov 2026 00:27:07 GMT) The scheduled maintenance is complete and serverless traffic is back to normal. If you are still s..."
-        },
-        {
-          "id": "fireworks-feed-1-2026-11-14T15:02:48.000Z",
-          "title": "Service Degradation for GLM 5.3 Flash",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-14T15:02:48.000Z",
-          "updatedAt": "2026-11-14T15:02:48.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M7D4DXFWX3K1H75X12AZNT1M",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-15T00:27:07.000Z",
+          "id": "fireworks-feed-0-2026-11-15T02:30:26.000Z",
+          "title": "Service Degradation for GLM 5.3",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-15T02:30:26.000Z",
+          "updatedAt": "2026-11-15T02:30:26.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M7EGNB5FJ3AQNVB9A2W4N2DQ",
+          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.3. We are actively investigating. Affected components GLM 5.3 (Degraded performance)"
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-15T00:27:07.000Z",
           "title": "Maintenance: Scheduled maintenance: Serverless inference",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Complete (Sun, 15 Nov 2026 00:00:00 GMT - Sun, 15 Nov 2026 00:27:07 GMT) The scheduled maintenance is complete and serverless traffic is back to normal. If you are still s..."
         },
         {
-          "id": "fireworks-feed-1-2026-11-14T15:02:48.000Z",
+          "id": "fireworks-feed-2-2026-11-14T15:02:48.000Z",
           "title": "Service Degradation for GLM 5.3 Flash",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-11-14T12:56:52.000Z",
+          "id": "fireworks-feed-3-2026-11-14T12:56:52.000Z",
           "title": "Service Degradation for GLM 5.3",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-11-14T12:56:52.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M7D197EJ3DD07TJK7W0XJ9T4",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-11-13T18:51:37.000Z",
-          "title": "Service Degradation for GLM 5.3 Flash",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-13T18:51:37.000Z",
-          "updatedAt": "2026-11-13T18:51:37.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M7B3C1X649TVBXJC301BEER2",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-15T01:51:12.219Z",
+      "lastCheckedAt": "2026-11-15T02:55:41.879Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
@@ -138,7 +138,7 @@
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-11-14T07:11:36.117Z",
-          "updatedAt": "2026-11-14T20:12:05.568Z",
+          "updatedAt": "2026-11-15T02:10:54.568Z",
           "resolvedAt": null,
           "url": "https://stspg.io/4858wf40dx89",
           "summary": "We are continuing to investigate an issue with Sign in with Apple on the Claude iOS app, which is mainly affecting new accounts. New users can sign up with Google or email instead..."
@@ -151,7 +151,7 @@
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-11-14T07:11:36.117Z",
-          "updatedAt": "2026-11-14T20:12:05.568Z",
+          "updatedAt": "2026-11-15T02:10:54.568Z",
           "resolvedAt": null,
           "url": "https://stspg.io/4858wf40dx89",
           "summary": "We are continuing to investigate an issue with Sign in with Apple on the Claude iOS app, which is mainly affecting new accounts. New users can sign up with Google or email instead..."
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-15T01:51:12.436Z",
+      "lastCheckedAt": "2026-11-15T02:55:41.865Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -299,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-15T01:51:13.013Z",
+      "lastCheckedAt": "2026-11-15T02:55:42.651Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-15T01:51:12.393Z",
+      "lastCheckedAt": "2026-11-15T02:55:42.128Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -362,7 +362,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-15T01:51:13.173Z",
+      "lastCheckedAt": "2026-11-15T02:55:42.716Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -386,7 +386,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
