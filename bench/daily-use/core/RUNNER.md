@@ -1,6 +1,6 @@
 # Day-to-Day Bench: the run path
 
-Status: built and tested offline only. Nothing here has called a model provider. The request and reply shapes were read against the providers' API references on 14 November 2026 (see below). `LIVE_ENABLED` in `runner.py` ships as `False`, so every run is a dry run on a fake transport until that line is changed in a reviewed commit.
+Status: built and tested offline only. Nothing here has called a model provider. The request and reply shapes were read against the providers' API references on 14 November 2026 (see below). `LIVE_ENABLED` in `runner.py` was set to `True` in the run-config change of 15 November 2026, after the owner typed his go for the paid runs. A run is still a dry run on a fake transport unless `--live` is given and every condition under "The live gate" holds. The pinned config is `bench/daily-use/run-config.json`.
 
 The method is `docs/DAY-TO-DAY-BENCH-METHOD.md`. This page says how the code carries it out.
 
@@ -180,8 +180,8 @@ The request and reply shapes at the top of `providers.py` were read against the 
 
 - **The judge output limit of 400 tokens.** The limit itself is enforced: a judge or a judge candidate above 400 is refused by the config check, and again by the pre-flight. What is still to verify is that 400 is enough. On both APIs the limit also covers reasoning or thinking tokens, and thinking is on by default on all three Claude models. OpenAI's own advice is to leave at least 25,000 tokens for reasoning and output when starting out. Confirm, at the effort pinned for each candidate, that a verdict for the task with the most judged checks fits. A cut-off verdict is malformed, is retried once and then leaves the check unresolved, and in qualification it counts as disagreement.
 - **The task limits of 4,096 and 8,192 tokens** cover reasoning as well, for the same reason. An answer can be cut off, or come back empty, with the whole limit spent on reasoning. The canary should show the truncation rate at the pinned effort.
-- **Effort and data retention** are still `TO PIN BEFORE RUN` in the example. They are the owner's choices.
-- **Prices:** re-read on the day of the run. OpenAI lists a 10% uplift for regional processing; the receipts assume the global endpoint.
+- **Effort and data retention** are `TO PIN BEFORE RUN` in the example and pinned in `run-config.json`: effort `low` for all seven benchmarked models, and for each judge candidate the lowest value it accepts (`none` on `gpt-6.1-terra` and `gpt-6-luna`, `low` on the rest). Scores therefore describe the models at low effort, not at their defaults, and the published record says so. Canary stop rule: if more than 1 of the 14 canary answers is cut off at its limit, or any judge verdict is, stop before the full run and decide again.
+- **Prices:** re-read on 15 November 2026; all seven matched. Re-read again if the run moves to a later day. OpenAI lists a 10% uplift for regional processing; the receipts assume the global endpoint.
 - **Billing assumptions in the ledger:** a request answered with an HTTP error status is settled at zero. A timeout or a connection failure keeps its full reservation until the console figure is entered with `ProviderLedger.reconcile`. Cache-creation tokens (Anthropic) and cache-write tokens (OpenAI) are not priced, so any such request keeps its full reservation. An Anthropic refusal before any output is not billed in most categories, though usage is reported; the ledger charges it, which errs on the safe side.
 - **Timeout:** calls are not streamed, so time to first token is left empty. Confirm that a full-length answer returns inside 120 seconds without streaming. Anthropic advises streaming for long requests.
 - **The real transport:** `UrllibTransport` has never been exercised, including its reading of `Retry-After`. It allows only the two provider hosts over https, follows no redirects and uses no proxy.
@@ -189,7 +189,7 @@ The request and reply shapes at the top of `providers.py` were read against the 
 
 ## Command sequence
 
-Run from the repo root in PowerShell. `python -I` keeps the interpreter isolated. Every stage is given both sample files, because the canary and the full run check them against the qualification record.
+Run from the repo root in PowerShell. `python -I` keeps the interpreter isolated. One exception: the canary and the full run grade formula tasks, so `formulas` and `openpyxl` (see `requirements.txt`) must be importable. Where they live in a folder of their own, not in the interpreter's site-packages, run those stages without `-I` and with `PYTHONPATH` set to that folder for that one process, and set `DTD_SANDBOX=docker` so the code tasks use the proven sandbox. Every stage is given both sample files, because the canary and the full run check them against the qualification record.
 
 ```powershell
 $core   = "bench/daily-use/core/cli.py"
