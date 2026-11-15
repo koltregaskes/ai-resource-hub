@@ -173,7 +173,7 @@ const typeColorsJSON = safeJson(typeColors);
       }
 
       if (matches.length === 0) {
-        results.innerHTML = `<div class="px-4 py-8 text-center text-sm text-[var(--color-text-muted)]">No results found for "${input.value.trim()}"</div>`;
+        results.innerHTML = `<div class="px-4 py-8 text-center text-sm text-[var(--color-text-muted)]">No results found for "${escapeHtml(input.value.trim())}"</div>`;
         return;
       }
 
