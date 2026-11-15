@@ -10,6 +10,19 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
+  routed-feed-regressions:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - run: mkdir -p .review
+      - name: Test fake feeds and local Git races without network or dependencies
+        run: node --test tests/refresh-routed-feed.test.mjs tests/routed-feed-freshness.test.mjs tests/routed-news.test.mjs scripts/push-generated-data.test.mjs
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -28,11 +41,66 @@ jobs:
       - name: Test benchmark provenance
         run: npm run test:benchmark-provenance
 
+      - name: Test news categories
+        run: npm run test:news-categories
+
+      - name: Test SEO sitemaps and ping safeguards
+        run: npm run test:seo
+
+      - name: Test and validate daily edition notes
+        run: npm run test:editorial
+
+      - name: Test frozen daily editions
+        run: npm run test:editions
+
+      - name: Test model registry guards (catalogue names, tier variants, demotions)
+        run: npm run test:registry
+
+      - name: Test source policy (no numbers from sources whose terms bar our use)
+        run: npm run test:source-policy
+
+      - name: Test Lab Standings method
+        run: node --test scripts/lab-standings.test.mjs
+
+      - name: Validate AI and jobs evidence, rights and immutable history
+        run: |
+          node --test scripts/ai-and-jobs.test.mjs
+          node scripts/validate-ai-and-jobs.mjs
+          python scripts/check-jobs-schema.py
+
       - name: Test news routing provenance
-        run: node --test scripts/news-pipeline-provenance.test.mjs scripts/lib/news-routing-config.test.mjs
+        run: node --test scripts/news-pipeline-provenance.test.mjs scripts/lib/news-routing-config.test.mjs scripts/verify-news-pipeline.test.mjs
 
       - name: Verify publish readiness
         run: npm run verify:publish
 
       - name: Build Astro site
         run: npm run build
+
+      - name: Verify AI and jobs rendered evidence labels and exports
+        run: node --test scripts/ai-and-jobs-built.test.mjs
+
+      - name: Verify catalogue fields and rendered pages
+        run: npm run test:model-fields
+
+  newsletter-worker:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: workers/newsletter
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: workers/newsletter/package-lock.json
+
+      - name: Install Worker dependencies
+        run: npm ci
+
+      - name: Test Worker in Miniflare (no network, no deploy)
+        run: npm test

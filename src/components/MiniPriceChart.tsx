@@ -79,9 +79,9 @@ export default function MiniPriceChart({ data, colour: _colour }: Props) {
   };
 
   return (
-    <div className="flex items-center gap-3">
-      <div style={{ width: '200px', height: '60px', position: 'relative' }}>
-        <Line data={chartData} options={options} />
+    <div className="flex flex-wrap items-center gap-3">
+      <div style={{ width: 'min(200px, 100%)', height: '60px', position: 'relative' }}>
+        <Line role="img" aria-label="Model price history chart" data={chartData} options={options} />
       </div>
       <div className="text-xs space-y-0.5">
         <div style={{ color: '#64748b' }}>

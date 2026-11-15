@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import fs from 'node:fs'
-import os from 'node:os'
+fs.mkdirSync(path.resolve('.review'), { recursive: true })
 import path from 'node:path'
 import test from 'node:test'
 
@@ -27,6 +27,22 @@ function pipeline(dir, sources) {
   }))
   fs.writeFileSync(path.join(dir, 'config', 'sources.json'), JSON.stringify({ sources }))
 }
+
+test('empty and unusable source configurations preserve the existing feed without fetching', async () => {
+  for (const sources of [[], [null], [{}], [{ id: 'bad', name: 'Bad', adapter: 'rss', url: 'file:///private' }],
+    [{ id: 'bad', name: 'Bad', adapter: 'unknown', url: 'https://example.com' }]]) {
+    const dir = fs.mkdtempSync(path.join(process.cwd(), '.review', 'sources-'))
+    pipeline(dir, sources)
+    const outputPath = path.join(dir, 'feed.json')
+    fs.writeFileSync(outputPath, 'previous feed')
+    let calls = 0
+    await assert.rejects(refreshRoutedFeed({ pipelineDir: dir, outputPath,
+      fetchImpl: async () => { calls++; throw new Error('must not fetch') },
+    }), /usable|unusable/)
+    assert.equal(calls, 0)
+    assert.equal(fs.readFileSync(outputPath, 'utf8'), 'previous feed')
+  }
+})
 
 test('rss entries keep the source tags and the site filter', () => {
   const rss = `<?xml version="1.0"?><rss version="2.0"><channel><title>Example</title>
@@ -80,7 +96,7 @@ test('html listings use dates that are on the page', () => {
 })
 
 test('a source that cannot be fetched fails by name and does not write', async () => {
-  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'routed-feed-'))
+  const dir = fs.mkdtempSync(path.join(path.resolve('.review'), 'routed-feed-'))
   const outputPath = path.join(dir, 'news-feed-latest.json')
   pipeline(dir, [{
     id: 'venturebeat-ai',
@@ -104,7 +120,7 @@ test('a source that cannot be fetched fails by name and does not write', async (
 })
 
 test('an empty match writes a fresh empty feed and a matched item is written', async () => {
-  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'routed-feed-'))
+  const dir = fs.mkdtempSync(path.join(path.resolve('.review'), 'routed-feed-'))
   const outputPath = path.join(dir, 'news-feed-latest.json')
   fs.writeFileSync(outputPath, '{"untouched":true}\n')
   pipeline(dir, [
@@ -171,7 +187,7 @@ test('an empty match writes a fresh empty feed and a matched item is written', a
 
 
 test('a source tag list does not qualify an unrelated story', async () => {
-  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'routed-feed-'))
+  const dir = fs.mkdtempSync(path.join(path.resolve('.review'), 'routed-feed-'))
   const outputPath = path.join(dir, 'news-feed-latest.json')
   pipeline(dir, [{
     id: 'digg-ai',
@@ -237,7 +253,7 @@ test('html dates come from the enclosing card when the time is before the link',
 })
 
 test('a thrown timeout uses the remaining retries', async () => {
-  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'routed-feed-'))
+  const dir = fs.mkdtempSync(path.join(path.resolve('.review'), 'routed-feed-'))
   const outputPath = path.join(dir, 'news-feed-latest.json')
   pipeline(dir, [{
     id: 'venturebeat-ai',
@@ -267,7 +283,7 @@ test('a thrown timeout uses the remaining retries', async () => {
 })
 
 test('a non-retryable HTTP response fails immediately and names the source', async () => {
-  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'routed-feed-'))
+  const dir = fs.mkdtempSync(path.join(path.resolve('.review'), 'routed-feed-'))
   const outputPath = path.join(dir, 'news-feed-latest.json')
   pipeline(dir, [{
     id: 'venturebeat-ai',

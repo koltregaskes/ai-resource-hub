@@ -1,0 +1,127 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import ColumnChart from '../../components/insights/ColumnChart.astro';
+import DataNote from '../../components/insights/DataNote.astro';
+import insights from '../../data/insights/2026-11-14.json';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const cov = insights.coverage;
+const all = cov.llmEntries;
+const afterVariants = cov.afterVariantRemoval;
+const dated = cov.withReleaseDateAndContext;
+const priced = insights.priceSpread.n;
+const removed = all - afterVariants;
+const missing = afterVariants - dated;
+const snapDate = new Date(insights.snapshotDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+---
+
+<InsightArticle
+  title="We list 268 language models. That number describes our list, not the market."
+  description="Our catalogue holds 291 language-model entries, 268 after suffix-based variant filtering, 252 with a release date and context window, and 65 that are active and priced. Why none of those is a count of all AI models."
+  date="2026-11-14"
+  type="Analysis"
+  readTime="5 min"
+  snapshot={insights.snapshotDate}
+  standfirst="Four different counts come out of the same catalogue, from 291 down to 65, and none of them is the number of AI models in the world. Where each count comes from, and what it can and cannot tell you."
+>
+  <p>
+    On {snapDate}, our catalogue held {all} language-model entries. Apply our variant filter and {afterVariants} remain. Those are fair numbers to quote about
+    the AI Resource Hub. They are poor numbers to quote about AI.
+  </p>
+  <p>
+    A catalogue records what its collectors found and what its editors added. A model that never reached either route is absent,
+    and absence tells you nothing about whether the model exists, works well or is worth using.
+  </p>
+
+  <h2>Four counts from one list</h2>
+  <p>
+    The figures in our recent articles all come from the same frozen copy of the catalogue, but they do not all count the same
+    thing. Here are the four.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <caption>Source: AI Resource Hub catalogue, snapshot of {snapDate}. Counts are of our records, not of models in the world.</caption>
+      <thead>
+        <tr><th>Count</th><th class="num">Entries</th><th>What it counts</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Language-model entries</td><td class="num">{all}</td><td>Every record in the language-model category</td></tr>
+        <tr><td>After variant filtering</td><td class="num">{afterVariants}</td><td>Drops {removed} entries whose id ends in a date stamp or in "-fast"</td></tr>
+        <tr><td>With a date and a context window</td><td class="num">{dated}</td><td>The records our context-window charts can use. {missing} of the {afterVariants} are missing a release date, a context window, or both.</td></tr>
+        <tr><td>Active and priced</td><td class="num">{priced}</td><td>The records our price comparisons use: marked active, with input and output prices above zero</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ColumnChart
+    title="Four counts from one catalogue"
+    summary={`Language-model records: ${all}; after variant filtering ${afterVariants}; with a date and context window ${dated}; active and priced ${priced}.`}
+    height={280}
+    data={[
+      { label: 'All entries', value: all, valueLabel: String(all) },
+      { label: 'After variant filter', value: afterVariants, valueLabel: String(afterVariants) },
+      { label: 'Date and context', value: dated, valueLabel: String(dated), highlight: true },
+      { label: 'Active and priced', value: priced, valueLabel: String(priced), highlight: true },
+    ]}
+    caption={`Source: AI Resource Hub catalogue, snapshot of ${snapDate}. The last two bars are separate selections from the ${afterVariants}, not steps in one sequence. A record can be in one and not the other.`}
+  />
+
+  <p>
+    The last two bars are why a context-window chart and a price chart from us can describe different sets of models, even
+    though both say "our catalogue". The article on <a href={`${base}blog/million-token-context-window/`}>context windows</a> uses the {dated}. The one on
+    <a href={`${base}blog/ai-price-spread-6000x/`}>the price spread</a> uses the {priced}.
+  </p>
+
+  <h2>How a model gets into the list</h2>
+  <p>
+    There are two routes. Some models are entered by hand from lab announcements and documentation. Others are added automatically
+    when OpenRouter lists a paid model from a provider we watch. Those start with the status "tracking" and a note that they are awaiting verification against
+    the lab's own page.
+  </p>
+  <p>
+    The automatic route has limits that come with it. OpenRouter's <a href="https://openrouter.ai/docs/guides/overview/models" rel="noopener">documentation</a> (read on 14 November 2026) says its models list returns text-output models only unless you ask for
+    other types. Our <a href="https://github.com/koltregaskes/ai-resource-hub/blob/main/scripts/scrapers/openrouter.ts" rel="noopener">collector</a> also skips free variants, skips routing variants, and only auto-tracks a model if its provider is one we recognise. A
+    model that is free only, from an unfamiliar lab, or not a text model, would not arrive that way.
+  </p>
+  <p>
+    The hand-entered route has gaps too, since it depends on what we noticed and added. We cannot say how many
+    models both routes miss, because that would need an independent list to compare against, and we do not have one.
+  </p>
+
+  <h2>What follows for anyone using the list</h2>
+  <ul>
+    <li>
+      <strong>A missing model is not a verdict.</strong> It may be unavailable, unsuitable or simply unlisted. For a model you care about, the lab's own documentation is the source.
+    </li>
+    <li>
+      <strong>A count is only useful with its denominator.</strong> "{priced} active, priced models" is a statement about a defined selection. "{all} models" is a statement about our records.
+    </li>
+    <li>
+      <strong>Some charts cannot be drawn yet.</strong> The open-source flag on automatically added models is unreliable, as our
+      <a href={`${base}transparency/#source-model-catalogue`}>transparency page</a> says, so we do not publish an open-versus-closed breakdown.
+    </li>
+  </ul>
+
+  <p>
+    None of this makes the catalogue useless. It is a dated list with stated rules, and it is good for finding and comparing
+    the models it holds. It is a poor way to count how many models exist, and the numbers in this article are a reason to read
+    any "number of AI models" headline, ours included, with its denominator beside it.
+  </p>
+
+  <DataNote anchor="calc-variant-rule" snapshot={`${snapDate} (catalogue rebuilt ${insights.cacheGeneratedAt.slice(11, 16)} UTC)`}>
+    <ul>
+      <li>
+        <strong>The counts</strong> are read from the frozen snapshot file for this date. The variant filter is a naming rule: it drops an entry whose id ends in a date stamp or in "-fast". It does not check that another entry for the same model exists (a "-fast" entry with no standard sibling is dropped too), and it is not a review of model families, so some versions that are really the same model remain.
+      </li>
+      <li>
+        <strong>What is not known.</strong> How many models exist, how many we miss and how many of the {missing} records without a full date or context window are missing which field. We have not counted those.
+      </li>
+      <li>
+        <strong>OpenRouter.</strong> Its terms review is still pending, as the transparency page states. This article describes how we use it. It adds no new data from it.
+      </li>
+    </ul>
+  </DataNote>
+</InsightArticle>

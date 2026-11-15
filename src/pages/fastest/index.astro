@@ -45,7 +45,9 @@ function formatTokens(n: number): string {
         Fastest AI Models
       </h1>
       <p class="text-(--color-text-secondary) max-w-2xl">
-        {fastModels.length} LLMs ranked by speed (tokens per second). For latency-sensitive applications like chatbots, real-time coding, and interactive agents.
+        {fastModels.length > 0
+          ? `${fastModels.length} LLMs ranked by speed (tokens per second). For latency-sensitive applications like chatbots, real-time coding, and interactive agents.`
+          : "No licensed speed source yet. We've removed our speed rankings because our previous source's terms no longer allow us to republish its figures. They'll come back when we have a source we're allowed to use."}
       </p>
       <p class="text-xs text-(--color-text-muted) mt-2">
         Note: Speed ratings are relative estimates. For production latency data, we recommend <a href="https://artificialanalysis.ai" target="_blank" rel="noopener noreferrer" class="text-(--color-accent) hover:text-(--color-accent-hover)">Artificial Analysis</a>.

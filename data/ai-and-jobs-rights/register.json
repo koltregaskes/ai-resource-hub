@@ -1,0 +1,54 @@
+{
+  "about": "Rights register for the AI and jobs section. These are licence records for sources whose terms have been read but which have NO admitted series. Nothing here is rendered or exported. Every record is flagged admitted_for_publication false, and the publication code refuses any series that points at one. Admitting a source means a reviewed pull request that copies its record into a dated snapshot together with the exact series, definitions and uncertainty.",
+  "jobs_rights": [
+    {
+      "id": "ons-ogl-v3",
+      "scope": "source",
+      "covers": "ons: material published by the UK Office for National Statistics, excluding third-party rights, logos and products that carry their own terms",
+      "licence": "Open Government Licence v3.0",
+      "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "attribution_text": "Source: Office for National Statistics licensed under the Open Government Licence v.3.0",
+      "commercial_use": "allowed",
+      "verified_on": "2026-11-14",
+      "verified_by": "Claude (AI Resource Hub build agent), read first-hand",
+      "evidence_url": "https://www.ons.gov.uk/methodology/geography/licences",
+      "evidence_quote": "if you wish to use or re-use ONS material, whether commercially or privately, you may do so freely",
+      "status": "confirmed",
+      "admitted_for_publication": false,
+      "also_read": ["https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"],
+      "notes": "Both pages were read on 14 November 2026. The ONS page says reproduced content must include a source accreditation to ONS, and gives the attribution wording above for its data products. The licence text allows commercial and non-commercial use and asks for the provider's attribution statement and, where possible, a link to the licence. ONS warns that some products include other organisations' rights, and the licence does not cover third-party rights or logos, so each dataset still needs its own check before a series is admitted."
+    },
+    {
+      "id": "bls-public-domain",
+      "scope": "source",
+      "covers": "bls: material published by the US Bureau of Labor Statistics, excluding previously copyrighted photographs and illustrations and the BLS emblem",
+      "licence": "Public domain (US federal government publication)",
+      "licence_url": "https://www.bls.gov/opub/copyright-information.htm",
+      "attribution_text": "Source: Bureau of Labor Statistics",
+      "commercial_use": "allowed",
+      "verified_on": "2026-11-14",
+      "verified_by": "Claude (AI Resource Hub build agent), read first-hand",
+      "evidence_url": "https://www.bls.gov/opub/copyright-information.htm",
+      "evidence_quote": "everything that we publish, both in hard copy and electronically, is in the public domain",
+      "status": "confirmed",
+      "admitted_for_publication": false,
+      "notes": "Read on 14 November 2026. BLS says its public domain material may be used without specific permission and asks to be cited as the source; it gives no fixed attribution wording, so the line above simply names it as the source. Not covered: previously copyrighted photographs and illustrations. The BLS emblem is a registered trademark and must not be used."
+    },
+    {
+      "id": "anthropic-economic-index",
+      "scope": "dataset",
+      "covers": "huggingface: Anthropic/EconomicIndex",
+      "licence": "CC-BY for the data according to the dataset card (no version stated); the licence metadata field says MIT",
+      "licence_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+      "attribution_text": "Source: Anthropic Economic Index, Anthropic. Data released under CC-BY according to the dataset card.",
+      "commercial_use": "unknown",
+      "verified_on": "2026-11-14",
+      "verified_by": "Claude (AI Resource Hub build agent), read first-hand",
+      "evidence_url": "https://huggingface.co/datasets/Anthropic/EconomicIndex",
+      "evidence_quote": "Data released under CC-BY, code released under MIT License.",
+      "status": "partial",
+      "admitted_for_publication": false,
+      "notes": "Read on 14 November 2026. The card text and the licence metadata field conflict: the card says the data is CC-BY and the code MIT, while the metadata field reads 'license: mit'. The card states no CC-BY version and links no licence text, and it gives per-release citations instead of a fixed attribution line. Both licences named would permit commercial use, but which one governs the data is not settled, so commercial use is recorded as unknown and the record stays partial until Anthropic's terms are clear."
+    }
+  ]
+}

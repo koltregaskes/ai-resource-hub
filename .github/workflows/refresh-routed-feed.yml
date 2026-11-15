@@ -19,7 +19,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: refresh-routed-feed
+  group: ai-resource-hub-data-writers-main
+  queue: max
   cancel-in-progress: false
 
 jobs:
@@ -32,6 +33,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Checkout news routing config
@@ -59,12 +61,11 @@ jobs:
             exit 0
           fi
           git commit -m "chore: refresh routed news feed"
-          git pull --rebase origin "${GITHUB_REF_NAME}"
           echo "committed=true" >> "$GITHUB_OUTPUT"
 
       - name: Push the refreshed feed
         if: steps.commit.outputs.committed == 'true'
-        run: git push origin "HEAD:${GITHUB_REF_NAME}"
+        run: bash scripts/push-generated-data.sh
 
       - name: Remove the pipeline checkout
         if: steps.commit.outputs.committed == 'true'

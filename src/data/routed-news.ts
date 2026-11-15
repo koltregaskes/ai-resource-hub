@@ -5,6 +5,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { assessRoutedFeedFreshness } from '../../scripts/check-routed-feed-freshness.mjs';
 
 export const ROUTED_FEED_SITE = 'AI Resource Hub';
 export const ROUTED_FEED_PATH = path.resolve(process.cwd(), 'src', 'data', 'news-feed-latest.json');
@@ -40,6 +41,7 @@ export interface RoutedHeadline {
 }
 
 interface RoutedFeedFile {
+  generated?: string;
   site?: string;
   articles?: RoutedArticle[];
 }
@@ -70,8 +72,24 @@ function dateLabel(isoDate: string): string {
   });
 }
 
-export function routedArticles(feedPath = ROUTED_FEED_PATH): RoutedArticle[] {
-  return readFeed(feedPath)?.articles ?? [];
+export function routedFeedStatus(feedPath = ROUTED_FEED_PATH, now = new Date()): 'fresh' | 'stale' | 'unavailable' {
+  const feed = readFeed(feedPath);
+  if (!feed) return 'unavailable';
+  try {
+    return assessRoutedFeedFreshness(feed, now).warn ? 'stale' : 'fresh';
+  } catch {
+    return 'unavailable';
+  }
+}
+
+export function routedArticles(feedPath = ROUTED_FEED_PATH, now = new Date()): RoutedArticle[] {
+  const feed = readFeed(feedPath);
+  if (!feed) return [];
+  try {
+    return assessRoutedFeedFreshness(feed, now).warn ? [] : feed.articles ?? [];
+  } catch {
+    return [];
+  }
 }
 
 export function mapRoutedArticles(articles: RoutedArticle[]): RoutedNewsCard[] {
@@ -101,12 +119,12 @@ export function mapRoutedArticles(articles: RoutedArticle[]): RoutedNewsCard[] {
   return cards;
 }
 
-export function loadRoutedNewsCards(feedPath = ROUTED_FEED_PATH): RoutedNewsCard[] {
-  return mapRoutedArticles(routedArticles(feedPath));
+export function loadRoutedNewsCards(feedPath = ROUTED_FEED_PATH, now = new Date()): RoutedNewsCard[] {
+  return mapRoutedArticles(routedArticles(feedPath, now));
 }
 
-export function loadRoutedHeadlines(feedPath = ROUTED_FEED_PATH): RoutedHeadline[] | null {
-  const articles = routedArticles(feedPath).flatMap((article) => {
+export function loadRoutedHeadlines(feedPath = ROUTED_FEED_PATH, now = new Date()): RoutedHeadline[] | null {
+  const articles = routedArticles(feedPath, now).flatMap((article) => {
     const title = String(article?.title ?? '').trim();
     const url = String(article?.url ?? '').trim();
     const headlineDate = String(article?.date ?? '').trim();

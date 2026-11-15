@@ -1,6 +1,7 @@
 #!/usr/bin/env npx tsx
 import { getDB, logScrapeRun } from './scrapers/base';
 import { VERIFIED_MODEL_CATALOG } from './model-catalog';
+import { buildDemotions } from './lib/registry-guards';
 
 type Candidate = {
   id: string;
@@ -86,39 +87,13 @@ async function main() {
     WHERE id = ?
   `);
 
-  const candidates = new Map<string, { name: string; notes: string | null; reasons: Set<string> }>();
-
-  for (const model of zeroQualityCandidates) {
-    candidates.set(model.id, {
-      name: model.name,
-      notes: model.notes,
-      reasons: new Set(['Tracking only until benchmark and quality coverage is available.']),
-    });
-  }
-
-  for (const model of noBenchmarkCandidates) {
-    if (verifiedIds.has(model.id)) continue;
-    const existing = candidates.get(model.id);
-    const reasons = existing?.reasons ?? new Set<string>();
-    reasons.add('Tracking only until benchmark coverage is available.');
-    candidates.set(model.id, {
-      name: model.name,
-      notes: existing?.notes ?? model.notes,
-      reasons,
-    });
-  }
-
-  for (const model of unsourcedPricingCandidates) {
-    if (verifiedIds.has(model.id)) continue;
-    const existing = candidates.get(model.id);
-    const reasons = existing?.reasons ?? new Set<string>();
-    reasons.add('Tracking only until pricing is refreshed from a live or official source.');
-    candidates.set(model.id, {
-      name: model.name,
-      notes: existing?.notes ?? model.notes,
-      reasons,
-    });
-  }
+  // Hub #1534: catalogue models are never demoted, in any of the three lists.
+  // (The zero-quality list used to skip that check, which demoted Claude Opus 5,
+  // GPT-5.6 Sol and others to "tracking" once benchmark collection stalled.)
+  const candidates = buildDemotions(
+    { zeroQuality: zeroQualityCandidates, noBenchmark: noBenchmarkCandidates, unsourcedPricing: unsourcedPricingCandidates },
+    verifiedIds,
+  );
 
   let updated = 0;
   let speedRetired = 0;

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-06T15:07:35.789Z",
+  "generatedAt": "2026-11-15T20:55:59.781Z",
   "provenance": {
-    "sourceVerifiedAt": "2026-10-06T15:07:35.789Z",
+    "sourceVerifiedAt": "2026-11-15T20:55:59.781Z",
     "sourceEdition": {
       "siteFiltersSha256": "bad10f90faa07d54f4ce690f38214e0e06b7b46dbc1710c466d53bc45e7f5768",
       "sourcesSha256": "4299709f06121cfefd781c092a5bc01a1168cb636477b159e5774bd69d38bc8d",
@@ -153,6 +153,9 @@
         "game_preview",
         "gaming_platform"
       ],
+      "requiredAnyTags": [],
+      "excludeSourcePatterns": [],
+      "excludeTextPatterns": [],
       "includeLabels": [
         {
           "id": "product_launch",
@@ -363,6 +366,9 @@
         "game_preview",
         "gaming_platform"
       ],
+      "requiredAnyTags": [],
+      "excludeSourcePatterns": [],
+      "excludeTextPatterns": [],
       "includeLabels": [
         {
           "id": "image_gen",
@@ -629,6 +635,9 @@
         "game_preview",
         "gaming_platform"
       ],
+      "requiredAnyTags": [],
+      "excludeSourcePatterns": [],
+      "excludeTextPatterns": [],
       "includeLabels": [
         {
           "id": "model_release",
@@ -833,6 +842,9 @@
         "game_preview",
         "gaming_platform"
       ],
+      "requiredAnyTags": [],
+      "excludeSourcePatterns": [],
+      "excludeTextPatterns": [],
       "includeLabels": [
         {
           "id": "ai_agents",
@@ -976,6 +988,9 @@
         "game_preview",
         "gaming_platform"
       ],
+      "requiredAnyTags": [],
+      "excludeSourcePatterns": [],
+      "excludeTextPatterns": [],
       "includeLabels": [
         {
           "id": "photography",
@@ -1077,6 +1092,9 @@
       "newsEnabled": false,
       "includeTags": [],
       "excludeTags": [],
+      "requiredAnyTags": [],
+      "excludeSourcePatterns": [],
+      "excludeTextPatterns": [],
       "includeLabels": [],
       "excludeLabels": [],
       "minImportanceScore": null,
@@ -1096,6 +1114,9 @@
       "newsEnabled": false,
       "includeTags": [],
       "excludeTags": [],
+      "requiredAnyTags": [],
+      "excludeSourcePatterns": [],
+      "excludeTextPatterns": [],
       "includeLabels": [],
       "excludeLabels": [],
       "minImportanceScore": null,
@@ -1133,6 +1154,9 @@
         "camera",
         "lens"
       ],
+      "requiredAnyTags": [],
+      "excludeSourcePatterns": [],
+      "excludeTextPatterns": [],
       "includeLabels": [
         {
           "id": "game_release",
@@ -1240,6 +1264,9 @@
         "game_event",
         "gaming_platform"
       ],
+      "requiredAnyTags": [],
+      "excludeSourcePatterns": [],
+      "excludeTextPatterns": [],
       "includeLabels": [
         {
           "id": "repo_update",
@@ -1364,6 +1391,9 @@
         "game_event",
         "gaming_platform"
       ],
+      "requiredAnyTags": [],
+      "excludeSourcePatterns": [],
+      "excludeTextPatterns": [],
       "includeLabels": [
         {
           "id": "tool_update",

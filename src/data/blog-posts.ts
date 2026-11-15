@@ -1,3 +1,7 @@
+import { practitionerB1 } from './practitioner-b1';
+import { additionalPractitioner } from './practitioner-additional';
+import { practitionerB2 } from './practitioner-b2';
+import { practitionerB3 } from './practitioner-b3';
 export type BlogType = 'Explainer' | 'Analysis' | 'Comparison' | 'Beginner' | 'Essay' | 'News';
 
 export interface BlogPost {
@@ -11,6 +15,64 @@ export interface BlogPost {
 
 /** Editorial posts, newest first. The blog index, search, RSS, and tickers share this list. */
 export const blogPosts: BlogPost[] = [
+  ...additionalPractitioner.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: p.type as BlogType, readTime: '5 min' })),
+  ...practitionerB3.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: (p.slug === 'model-upgrade-regression-register' ? 'Explainer' : 'Analysis') as BlogType, readTime: '5 min' })),
+  ...practitionerB2.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: (p.slug === 'structured-output-is-not-a-correct-answer' ? 'Explainer' : 'Analysis') as BlogType, readTime: '5 min' })),
+  ...practitionerB1.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: (p.slug === 'choose-an-ai-model-by-job' ? 'Explainer' : 'Analysis') as BlogType, readTime: '5 min' })),
+  {
+    slug: 'price-history-repeats',
+    title: 'Our price history has 9,155 later records. 9,146 repeat the price before.',
+    description:
+      'Almost every row in our price history for lab-priced language models is the previous price written down again. What that means for any claim about how often AI prices change.',
+    date: '2026-11-14',
+    type: 'Analysis',
+    readTime: '5 min',
+  },
+  {
+    slug: 'model-count-is-not-the-market',
+    title: 'We list 268 language models. That number describes our list, not the market.',
+    description:
+      'Our catalogue holds 291 language-model entries, 268 after suffix-based variant filtering, 252 with a release date and context window, and 65 that are active and priced. Why none of those is a count of all AI models.',
+    date: '2026-11-14',
+    type: 'Analysis',
+    readTime: '5 min',
+  },
+  {
+    slug: 'how-to-read-an-ai-price-list',
+    title: 'How to read an AI price list',
+    description:
+      'A worked guide to AI model pricing: input and output tokens, reasoning, caching and batch discounts, with one example job priced on four models and four ways.',
+    date: '2026-11-14',
+    type: 'Explainer',
+    readTime: '8 min',
+  },
+  {
+    slug: 'output-tokens-cost-five-times-input',
+    title: 'AI models now charge five times more to write than to read',
+    description:
+      'The median new language model in our catalogue charges five times as much for output tokens as for input tokens, up from three times in late 2024. What the data shows and which kinds of work it makes dearer.',
+    date: '2026-11-14',
+    type: 'Analysis',
+    readTime: '5 min',
+  },
+  {
+    slug: 'ai-price-spread-6000x',
+    title: 'The dearest AI model costs 6,000 times more than the cheapest',
+    description:
+      'Across 65 active language models we track, the price of a million output tokens runs from $0.03 to $180. Where the models sit in between, why the two ends are not like for like, and what the gap does not prove.',
+    date: '2026-11-14',
+    type: 'Analysis',
+    readTime: '5 min',
+  },
+  {
+    slug: 'million-token-context-window',
+    title: 'The typical new AI model now reads a million tokens',
+    description:
+      'In 2024 the median new language model in our catalogue took in about 131,000 tokens. In 2026 it takes a million. The data, what a million tokens holds, and what the number does not tell you.',
+    date: '2026-11-14',
+    type: 'Analysis',
+    readTime: '5 min',
+  },
   {
     slug: 'four-million-entrepreneurs',
     title: "What the OpenAI entrepreneurship report didn't say",

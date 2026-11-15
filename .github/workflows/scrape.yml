@@ -29,6 +29,8 @@ concurrency:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    env:
+      WEBSITES_ESTATE_ROOT: ${{ github.workspace }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -80,6 +82,9 @@ jobs:
       - name: Sync news pipeline snapshot
         run: npm run sync:news-pipeline
 
+      - name: Verify canonical news configuration freshness
+        run: node scripts/verify-news-pipeline.mjs
+
       - name: Generate regional availability export
         run: npm run generate:availability
 
@@ -97,13 +102,16 @@ jobs:
         run: npm run verify:publish
         timeout-minutes: 1
 
+      - name: Freeze closed daily editions
+        run: npm run snapshot:editions
+
       - name: Check for changes
         id: changes
         run: |
           shopt -s nullglob
           digest_files=(src/data/digest-*.md)
           news_feed_files=(src/data/news-feed-latest.json)
-          git add data/pg-cache data/provider-status.json data/events-source-status.json public/data src/data/model-release-desk.generated.ts src/data/news-pipeline.generated.ts docs/repo-reference "${digest_files[@]}" "${news_feed_files[@]}"
+          git add data/pg-cache data/provider-status.json data/events-source-status.json public/data src/data/model-release-desk.generated.ts src/data/news-pipeline.generated.ts src/data/newsletter-archive src/data/news-archive docs/repo-reference "${digest_files[@]}" "${news_feed_files[@]}"
           git diff --cached --quiet || echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit updated data
@@ -114,7 +122,7 @@ jobs:
           shopt -s nullglob
           digest_files=(src/data/digest-*.md)
           news_feed_files=(src/data/news-feed-latest.json)
-          git add data/pg-cache data/provider-status.json data/events-source-status.json public/data src/data/model-release-desk.generated.ts src/data/news-pipeline.generated.ts docs/repo-reference "${digest_files[@]}" "${news_feed_files[@]}"
+          git add data/pg-cache data/provider-status.json data/events-source-status.json public/data src/data/model-release-desk.generated.ts src/data/news-pipeline.generated.ts src/data/newsletter-archive src/data/news-archive docs/repo-reference "${digest_files[@]}" "${news_feed_files[@]}"
           git diff --staged --quiet || git commit -m "chore: update pricing & benchmark data $(date +%Y-%m-%d) [automated]"
           git push
 

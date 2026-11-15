@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "date": "2026-11-14",
+  "snapshotAt": "2026-11-15T08:55:57.421Z",
+  "totalAvailable": 5,
+  "stories": [
+    {
+      "id": "news-a4a92fbcda03532a9916",
+      "title": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
+      "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
+      "source": "TechCrunch",
+      "summary": "The petition had attracted more than 115,000 signatures as of Saturday afternoon.",
+      "publishedAt": "2026-11-14T21:41:22.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-7134e7e1ad670b601a76",
+      "title": "The AI graveyard: a running list of projects and startups that didn&#8217;t make it",
+      "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+      "source": "TechCrunch",
+      "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+      "publishedAt": "2026-11-14T17:30:00.000Z",
+      "category": "tools",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-075bbfb634c2a8a5f6c8",
+      "title": "Asian governments react to Nvidia CEO Jensen Huang’s exit",
+      "url": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/",
+      "source": "TechCrunch",
+      "summary": "Some governments moved to confirm chip supply commitments, while others are monitoring the impact on local projects or addressing ongoing investigations.",
+      "publishedAt": "2026-11-14T16:34:15.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-d46b516a4c8344dc087c",
+      "title": "The OpenAI board member who fired Sam Altman says we still can&#8217;t trust AI CEOs",
+      "url": "https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview",
+      "source": "The Verge",
+      "summary": "Today, I’m talking with Helen Toner, the executive director of the Center for Security and Emerging Technology at Georgetown University. This episode is part two of our series on AI in real life. Helen is a well-known figure in the AI safety and policy community, though she is perhaps best known for having served on […",
+      "publishedAt": "2026-11-14T15:00:00.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-567fa298898a17ca87ec",
+      "title": "Jensen Huang and the decline of the visionary showman founder CEO",
+      "url": "https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
+      "source": "The Verge",
+      "summary": "On January 6th, 2025, Nvidia CEO Jensen Huang got his rockstar moment at last. He strode triumphantly onstage, hand raised in the air, to the claps and cheers of a 14,000-person arena absolutely packed with influencers and fans, their faces awash in blue glow, as he made his entrance in a black leather jacket that [&#…",
+      "publishedAt": "2026-11-14T12:00:00.000Z",
+      "category": "industry",
+      "tags": [
+        "benchmark"
+      ],
+      "importance": 0.4
+    }
+  ]
+}

@@ -361,6 +361,17 @@ function loadPipeline(pipelineDir) {
   if (!filters?.sites || !Array.isArray(sourcesDoc?.sources)) {
     throw new Error(`News pipeline config at ${pipelineDir} is missing sites or sources.`)
   }
+  if (sourcesDoc.sources.length === 0) {
+    throw new Error('News pipeline must contain at least one usable source.')
+  }
+  for (const source of sourcesDoc.sources) {
+    let url
+    try { url = new URL(source?.url) } catch { /* rejected below */ }
+    if (!source?.id || !source?.name || !['rss', 'html', 'huggingnews'].includes(source?.adapter)
+      || !url || !['http:', 'https:'].includes(url.protocol)) {
+      throw new Error(`News pipeline source ${source?.id || '(unnamed)'} is unusable: require id, name, HTTP(S) URL and supported adapter.`)
+    }
+  }
   return { filters, sources: sourcesDoc.sources }
 }
 

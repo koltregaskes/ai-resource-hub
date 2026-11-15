@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { ModelFieldReview } from '../../scripts/lib/model-field-reviews';
+interface Props { review: ModelFieldReview; discoveryName: string; }
+const { review, discoveryName } = Astro.props;
+const confirmed = review.fields.name.verification === 'verified';
+const name = confirmed ? String(review.fields.name.value) : discoveryName;
+const labels: Record<string,string> = { name:'Model name',providerId:'Provider',released:'Release date',contextWindow:'Context window (tokens)',maxOutput:'Maximum output (tokens)',modality:'Modalities',openSource:'Open weights',apiAvailable:'API available',status:'Vendor lifecycle status',category:'Category',inputPrice:'Input price',outputPrice:'Output price',cachedInputPrice:'Cached input price',currency:'Published currency',pricingUnit:'Price unit',pricingConditions:'Pricing and deployment scope' };
+const priceKeys = new Set(['inputPrice','outputPrice','cachedInputPrice']);
+function display(key: string, value: string | number | boolean | null) {
+  if (value === null) return 'Unverified';
+  if (typeof value === 'boolean') return value ? 'Yes' : 'No';
+  if (priceKeys.has(key)) return String(review.fields.currency.value ?? '') + ' ' + value;
+  return String(value);
+}
+---
+<BaseLayout title={name + ' - The AI Resource Hub'} description={name + ': vendor sources, specifications and explicitly unverified fields.'}>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <a href={import.meta.env.BASE_URL + 'models/'}>All models</a>
+    <h1 class="text-3xl font-bold mt-4 mb-4">{name}</h1>
+    <p class="mb-4">{confirmed ? 'Vendor-confirmed model. Each field below has its own source and check date.' : 'Discovery only. This exact model has not been verified from a readable vendor page.'}</p>
+    {review.fields.status.value === 'retired' && <p class="mb-4">Retired model. Its replacement's specifications and prices are not attributed to this release.</p>}
+    <p class="mb-6">No score yet. No benchmark result was verified in this catalogue review.</p>
+    <dl class="grid gap-4">
+      {Object.entries(review.fields).map(([key, field]) => <div class="rounded-lg border border-(--color-border) p-4 min-w-0" data-model-field={key} data-verification={field.verification}>
+        <dt class="font-semibold">{labels[key] ?? key}</dt>
+        <dd class="mt-1 break-words">{display(key,field.value)}</dd>
+        {field.reason && <dd class="text-sm mt-1">{field.reason}</dd>}
+        <dd class="text-sm mt-2"><a href={field.sourceUrl} target="_blank" rel="noopener noreferrer">{field.verification === 'verified' ? 'Vendor source' : 'Vendor page checked'}</a> - Checked {field.checkedAt}</dd>
+      </div>)}
+    </dl>
+  </section>
+</BaseLayout>

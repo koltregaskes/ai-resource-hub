@@ -303,7 +303,7 @@ export default function LLMComparisonTable({ models, baseUrl = '/' }: Props) {
               className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:border-[var(--color-accent)] focus:outline-none text-sm"
             />
           </div>
-          <select
+          <select aria-label="Provider filter"
             value={providerFilter}
             onChange={(e) => setProviderFilter(e.target.value)}
             className="px-4 py-2.5 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] text-[var(--color-text-primary)] text-sm focus:border-[var(--color-accent)] focus:outline-none min-w-[160px]"
@@ -315,7 +315,7 @@ export default function LLMComparisonTable({ models, baseUrl = '/' }: Props) {
               </option>
             ))}
           </select>
-          <select
+          <select aria-label="Model modality"
             value={modalityFilter}
             onChange={(e) => setModalityFilter(e.target.value)}
             className="px-4 py-2.5 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] text-[var(--color-text-primary)] text-sm focus:border-[var(--color-accent)] focus:outline-none min-w-[140px]"
@@ -368,7 +368,7 @@ export default function LLMComparisonTable({ models, baseUrl = '/' }: Props) {
       </div>
 
       {/* Table */}
-      <div className="table-scroll-container rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)]">
+      <div tabIndex={0} role="region" aria-label="Scrollable comparison table" data-airh-scroll-region="true" className="table-scroll-container rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)]">
         <table className="w-full text-sm" role="grid">
           <thead>
             <tr className="border-b border-[var(--color-border)]">

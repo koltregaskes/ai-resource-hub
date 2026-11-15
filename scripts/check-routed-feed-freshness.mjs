@@ -25,7 +25,8 @@ export function assessRoutedFeedFreshness(feed, now = new Date()) {
     throw new Error('Routed feed freshness clock is invalid.')
   }
 
-  const generatedMs = new Date(feed.generated).getTime()
+  const generatedMs = typeof feed.generated === 'string' && feed.generated.trim()
+    ? new Date(feed.generated).getTime() : NaN
   if (!Number.isFinite(generatedMs)) {
     throw new Error('Routed feed generated timestamp is missing or invalid.')
   }
@@ -38,6 +39,9 @@ export function assessRoutedFeedFreshness(feed, now = new Date()) {
     return time
   })
   const newestMs = itemTimes.length ? Math.max(...itemTimes) : generatedMs
+  if (generatedMs > nowMs + 5 * 60 * 1000 || itemTimes.some(time => time > nowMs + 5 * 60 * 1000)) {
+    throw new Error('Routed feed contains a future timestamp.')
+  }
   const ageDays = Math.max(nowMs - generatedMs, nowMs - newestMs) / 86_400_000
 
   return {

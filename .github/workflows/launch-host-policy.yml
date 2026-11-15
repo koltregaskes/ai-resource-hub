@@ -1,0 +1,67 @@
+name: Pages host policy
+on: [pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  policy:
+    runs-on: windows-latest
+    env:
+      PLAYWRIGHT_CHANNEL: msedge
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm ci --prefix scripts/contracts/browser
+      - run: node --test scripts/contracts/pages-csp.test.mjs
+      - run: npm run build
+      - run: node scripts/contracts/check-pages-policy.mjs
+      - run: node scripts/contracts/browser/csp.mjs
+  redacted-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: node --test scripts/contracts/public-scan-exceptions.test.mjs
+      - run: npm run build
+      - name: Scan tracked source and public build (aggregate only)
+        shell: bash
+        run: |
+          result=0
+          mkdir -p "$RUNNER_TEMP/source-scan"
+          git ls-files -z -- . ':(exclude,icase)**/.env*' ':(exclude,icase).env*' | while IFS= read -r -d '' file; do
+            if [ -L "$file" ]; then echo "Refusing a tracked symbolic link"; exit 1; fi
+            mkdir -p "$RUNNER_TEMP/source-scan/$(dirname "$file")"
+            cp -- "$file" "$RUNNER_TEMP/source-scan/$file"
+          done
+          mkdir -p "$RUNNER_TEMP/scan-reports"
+          node scripts/contracts/scan-controls.mjs create "$RUNNER_TEMP/scan-controls"
+          control_result=0
+          docker run --rm -v "$RUNNER_TEMP/scan-controls:/controls:ro" -v "$RUNNER_TEMP/scan-reports:/reports" zricethezav/gitleaks:v8.30.0 dir /controls --redact=100 --report-format json --report-path /reports/controls.json --exit-code 2 --no-banner > "$RUNNER_TEMP/control-scan.log" 2>&1 || control_result=$?
+          if [ "$control_result" -ne 2 ]; then echo "Scanner credential control failed (exit $control_result); values withheld"; exit 1; fi
+          node scripts/contracts/scan-controls.mjs verify "$RUNNER_TEMP/scan-reports"
+          source_result=0
+          public_result=0
+          docker run --rm -v "$RUNNER_TEMP/source-scan:/source:ro" -v "$RUNNER_TEMP/scan-reports:/reports" zricethezav/gitleaks:v8.30.0 dir /source --redact=100 --report-format json --report-path /reports/source.json --exit-code 2 --no-banner > "$RUNNER_TEMP/source-scan.log" 2>&1 || source_result=$?
+          if find dist -type f -iname '.env*' -print -quit | grep -q .; then
+            echo "Public build contains a forbidden dotenv path; contents not read"
+            public_result=2
+          else
+            docker run --rm -v "$PWD:/repo:ro" -v "$RUNNER_TEMP/scan-reports:/reports" zricethezav/gitleaks:v8.30.0 dir /repo/dist --redact=100 --report-format json --report-path /reports/public.json --exit-code 2 --no-banner > "$RUNNER_TEMP/public-scan.log" 2>&1 || public_result=$?
+          fi
+          node scripts/contracts/redacted-scan-summary.mjs "$RUNNER_TEMP/scan-reports"
+          echo "Tracked source scan exit $source_result; public build scan exit $public_result; values and matching lines withheld"
+          if [ "$source_result" -ne 0 ] || [ "$public_result" -ne 0 ]; then exit 2; fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: redacted-scan-summary
+          path: scan-summary.json

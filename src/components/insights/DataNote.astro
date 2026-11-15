@@ -1,0 +1,26 @@
+---
+/**
+ * "Where these numbers come from" box for data articles. Every article that
+ * quotes a figure we calculated must include one, linking to the matching
+ * section of the transparency page.
+ */
+interface Props {
+  /** Anchor on /transparency/ that holds the formula, e.g. "calc-context-median". */
+  anchor: string;
+  snapshot: string;
+  title?: string;
+}
+
+const { anchor, snapshot, title = 'Where these numbers come from' } = Astro.props;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<aside class="my-8 rounded-2xl border border-(--color-border-accent) bg-(--color-accent-glow) p-5 text-sm leading-relaxed text-(--color-text-secondary)">
+  <p class="text-[11px] uppercase tracking-[0.22em] text-(--color-accent) font-semibold mb-2">{title}</p>
+  <slot />
+  <p class="mt-3">
+    Data snapshot: <strong class="text-(--color-text-primary)">{snapshot}</strong>. The exact formula, the script that produces it
+    and the known gaps are on the <a href={`${base}transparency/#${anchor}`} class="text-(--color-accent) underline underline-offset-2 hover:text-(--color-accent-hover)">transparency page</a>.
+  </p>
+</aside>

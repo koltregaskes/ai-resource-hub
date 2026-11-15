@@ -121,7 +121,7 @@ export default function BenchmarkTable({ benchmarks, models }: Props) {
             className="w-full pl-10 pr-4 py-2.5 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] focus:border-[var(--color-accent)] focus:outline-none text-sm"
           />
         </div>
-        <select
+        <select aria-label="Provider filter"
           value={categoryFilter}
           onChange={(e) => setCategoryFilter(e.target.value)}
           className="px-4 py-2.5 rounded-lg bg-[var(--color-bg-tertiary)] border border-[var(--color-border)] text-[var(--color-text-primary)] text-sm focus:border-[var(--color-accent)] focus:outline-none min-w-[160px]"
@@ -141,7 +141,7 @@ export default function BenchmarkTable({ benchmarks, models }: Props) {
       </div>
 
       {/* Table */}
-      <div className="table-scroll-container rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)]">
+      <div tabIndex={0} role="region" aria-label="Scrollable comparison table" data-airh-scroll-region="true" className="table-scroll-container rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)]">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-[var(--color-border)]">
@@ -229,7 +229,7 @@ export default function BenchmarkTable({ benchmarks, models }: Props) {
       <div className="mt-4 flex flex-wrap gap-4 text-xs text-[var(--color-text-muted)]">
         <span>&#9733; = best score in column</span>
         <span>— = not yet measured</span>
-        <span>Scores from official reports and LMSYS Chatbot Arena</span>
+        <span>Scores from official reports, each linked to its source</span>
       </div>
     </div>
   );

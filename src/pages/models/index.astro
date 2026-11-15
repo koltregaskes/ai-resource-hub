@@ -1,4 +1,5 @@
 ---
+import { MODEL_FIELD_REVIEWS } from '../../../scripts/lib/model-field-reviews';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getBenchmarkScores, getLastScrapeTime, getPublicModelsByCategory } from '../../db/queries';
 
@@ -7,6 +8,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const categories = ['llm', 'image', 'video', 'voice', 'speech', 'sound'];
 const models = categories
   .flatMap((category) => getPublicModelsByCategory(category))
+  .filter(model => !MODEL_FIELD_REVIEWS.some(review => review.id === model.id))
   .sort((a, b) => {
     const releasedDelta = Date.parse(b.released ?? '') - Date.parse(a.released ?? '');
     return releasedDelta || a.provider_name.localeCompare(b.provider_name) || a.name.localeCompare(b.name);
@@ -93,6 +95,14 @@ function formatPrice(value: number): string {
       or <a href={`${base}compare/head-to-head/`}>head-to-head comparison</a>.
     </div>
 
+    <section class="desk-section" aria-labelledby="reviewed-models-title">
+      <h2 id="reviewed-models-title">Vendor field reviews</h2>
+      <p>Specifications and prices have individual source links and check dates. Missing values are marked unverified.</p>
+      <ul>
+        {MODEL_FIELD_REVIEWS.map(review => <li><a href={base + 'models/' + review.id + '/'}>{String(review.fields.name.value ?? review.id)}</a> - {review.fields.name.verification === 'verified' ? (review.fields.status.value === 'retired' ? 'Retired' : 'Vendor-confirmed identity') : 'Discovery only, unverified'}</li>)}
+      </ul>
+    </section>
+
     <section class="desk-section">
       <div class="desk-section-head">
         <div>
@@ -111,15 +121,15 @@ function formatPrice(value: number): string {
           placeholder="Search model, lab, modality..."
           class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) placeholder:text-(--color-text-muted) focus:outline-none focus:border-(--color-accent)"
         />
-        <select id="model-provider" class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+        <select aria-label="Model provider" id="model-provider" class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
           <option value="">All providers</option>
           {providerOptions.map((provider) => <option value={provider}>{provider}</option>)}
         </select>
-        <select id="model-category" class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+        <select aria-label="Model category" id="model-category" class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
           <option value="">All categories</option>
           {categoryOptions.map((category) => <option value={category}>{category.toUpperCase()}</option>)}
         </select>
-        <select id="model-sort" class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
+        <select aria-label="Sort models" id="model-sort" class="w-full rounded-md border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-sm text-(--color-text-primary) focus:outline-none focus:border-(--color-accent)">
           <option value="released">Newest release</option>
           <option value="name">Model A-Z</option>
           <option value="provider">Provider A-Z</option>

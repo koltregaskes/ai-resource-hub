@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-11-14T08:03:37.361Z",
+  "endpoint": "https://openrouter.ai/api/v1/models",
+  "responseSha256": "70e33eb9c1fa406f37d89b02f83646997ec60957d7a1d40828f1c33ccb129b05",
+  "catalogueSha256": "4e5d30af7cea9b626ed87a9ff21b47fc69dac339c41a13fcd124f94d4b651998",
+  "matchRule": "Catalogue id equals the part of the OpenRouter id after the slash. Routing variants (ids containing a colon) are ignored.",
+  "listings": 471,
+  "listingsWithoutRoutingVariants": 370,
+  "contextWindows": {
+    "catalogueModels": 252,
+    "matched": 184,
+    "identical": 183,
+    "differences": [
+      {
+        "id": "kimi-k2.5",
+        "name": "Kimi K2.5",
+        "catalogue": 131072,
+        "openRouter": 262144
+      }
+    ]
+  },
+  "outputPrices": {
+    "paidModels": 357,
+    "cheapest": [
+      {
+        "id": "mistralai/mistral-nemo",
+        "outputPerMillion": 0.03,
+        "inputPerMillion": 0.029
+      },
+      {
+        "id": "meta-llama/llama-3.1-8b-instruct",
+        "outputPerMillion": 0.04,
+        "inputPerMillion": 0.02
+      },
+      {
+        "id": "inclusionai/ling-3.0-tiny",
+        "outputPerMillion": 0.045,
+        "inputPerMillion": 0.015
+      }
+    ],
+    "dearest": [
+      {
+        "id": "openai/gpt-5.4-pro",
+        "outputPerMillion": 180,
+        "inputPerMillion": 30
+      },
+      {
+        "id": "openai/gpt-5.5-pro",
+        "outputPerMillion": 180,
+        "inputPerMillion": 30
+      },
+      {
+        "id": "openai/gpt-5.2-pro",
+        "outputPerMillion": 168,
+        "inputPerMillion": 21
+      }
+    ]
+  }
+}

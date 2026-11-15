@@ -1,6 +1,6 @@
 # AI Milestones Snapshot
 
-Generated: 31 Oct 2026, 21:29 UTC
+Generated: 15 Nov 2026, 20:56 UTC
 
 Repo-readable mirror of the public AI Milestones page. This is the curated chronology layer for major model launches, lab founding dates, research breakthroughs, and milestone tracking gaps.
 
@@ -8,14 +8,14 @@ Repo-readable mirror of the public AI Milestones page. This is the curated chron
 
 | Metric | Value |
 | --- | --- |
-| Generated | 31 Oct 2026, 21:29 UTC |
-| Reference date | Saturday, 31 October 2026 |
+| Generated | 15 Nov 2026, 20:56 UTC |
+| Reference date | Sunday, 15 November 2026 |
 | Curated milestones | 37 |
 | Verified milestones | 35 |
 | Tracking milestones | 2 |
 | Exact-date anniversaries | 27 |
 | Anniversaries today | 0 |
-| Next exact milestone | Grok announced (3 Nov 2026) |
+| Next exact milestone | AlphaFold breakthrough at CASP14 (30 Nov 2026) |
 
 ## Today in AI
 
@@ -25,14 +25,14 @@ No exact anniversary lands on the current Europe/London date snapshot.
 
 | In | Date | Title | Source |
 | --- | --- | --- | --- |
-| 3d | 3 Nov 2026 | Grok announced | [xAI](https://x.ai/news/grok) |
-| 30d | 30 Nov 2026 | AlphaFold breakthrough at CASP14 | [Google DeepMind](https://deepmind.google/research/highlighted-research/alphafold/timeline-of-a-breakthrough/) |
-| 30d | 30 Nov 2026 | ChatGPT launched | [OpenAI](https://openai.com/blog/chatgpt/) |
-| 36d | 6 Dec 2026 | Gemini 1 introduced | [Google](https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/) |
-| 41d | 11 Dec 2026 | Mixtral 8x7B released | [Mistral AI](https://mistral.ai/news/mixtral-of-experts/) |
-| 41d | 11 Dec 2026 | OpenAI founded | [OpenAI](https://openai.com/index/introducing-openai/) |
-| 56d | 26 Dec 2026 | DeepSeek-V3 released | [DeepSeek API docs](https://api-docs.deepseek.com/news/news1226) |
-| 81d | 20 Jan 2027 | DeepSeek-R1 released | [DeepSeek API docs](https://api-docs.deepseek.com/news/news250120) |
+| 15d | 30 Nov 2026 | AlphaFold breakthrough at CASP14 | [Google DeepMind](https://deepmind.google/research/highlighted-research/alphafold/timeline-of-a-breakthrough/) |
+| 15d | 30 Nov 2026 | ChatGPT launched | [OpenAI](https://openai.com/blog/chatgpt/) |
+| 21d | 6 Dec 2026 | Gemini 1 introduced | [Google](https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/) |
+| 26d | 11 Dec 2026 | Mixtral 8x7B released | [Mistral AI](https://mistral.ai/news/mixtral-of-experts/) |
+| 26d | 11 Dec 2026 | OpenAI founded | [OpenAI](https://openai.com/index/introducing-openai/) |
+| 41d | 26 Dec 2026 | DeepSeek-V3 released | [DeepSeek API docs](https://api-docs.deepseek.com/news/news1226) |
+| 66d | 20 Jan 2027 | DeepSeek-R1 released | [DeepSeek API docs](https://api-docs.deepseek.com/news/news250120) |
+| 91d | 14 Feb 2027 | GPT-2 announced | [OpenAI](https://openai.com/blog/better-language-models/) |
 
 ## Recent Flagship Launches
 
@@ -75,7 +75,7 @@ No exact anniversary lands on the current Europe/London date snapshot.
 | 30 Nov 2020 | AlphaFold breakthrough at CASP14 | Research breakthrough | [Google DeepMind](https://deepmind.google/research/highlighted-research/alphafold/timeline-of-a-breakthrough/) |
 | 14 Feb 2019 | GPT-2 announced | Research breakthrough | [OpenAI](https://openai.com/blog/better-language-models/) |
 | 12 Jun 2017 | Attention Is All You Need released | Research breakthrough | [arXiv](https://arxiv.org/abs/1706.03762) |
-| 15 Mar 2016 | AlphaGo beats Lee Sedol | Research breakthrough | [Google DeepMind](https://deepmind.google/discover/blog/alphago-seoul-final-score-4-1/) |
+| 15 Mar 2016 | AlphaGo beats Lee Sedol | Research breakthrough | [Google DeepMind](https://blog.google/innovation-and-ai/products/what-we-learned-in-seoul-with-alphago/) |
 | 13 Oct 2012 | AlexNet wins ILSVRC 2012 | Research breakthrough | [ImageNet ILSVRC 2012](https://image-net.org/challenges/LSVRC/2012/index) |
 
 ## Tracking Queue
