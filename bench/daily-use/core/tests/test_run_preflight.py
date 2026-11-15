@@ -643,10 +643,34 @@ class PassGateTests(unittest.TestCase):
         self.assertEqual(gate["planning_bound"],
                          {"openai": D("0.5199702"), "anthropic": D("0.3559158")})
         self.assertEqual((gate["pass"], gate["passes"], gate["slots"]), (2, 3, 2))
-        self.assertEqual(gate["lines"], [
-            "  pass 2 of 3, 2 slots to run: planning bound anthropic 0.3559 USD against a "
-            "remaining cap of 0.3559 USD; openai 0.5200 USD against a remaining cap of "
-            "0.5200 USD"])
+        self.assertEqual(gate["lines"][0],
+                         "  pass 2 of 3, 2 slots to run: planning bound anthropic 0.3559 USD "
+                         "against a remaining cap of 0.3559 USD; openai 0.5200 USD against a "
+                         "remaining cap of 0.5200 USD")
+        # An admitted pass is told plainly what the gate does not promise.
+        self.assertEqual(len(gate["lines"]), 2)
+        note = gate["lines"][1]
+        self.assertTrue(note.startswith("  pass 2 of 3 is admitted: it fits at one request "
+                                        "per slot at its output limit plus 15% for retries."))
+        self.assertIn("likely to finish, not certain to", note)
+        self.assertIn("keeps its full reservation until reconciled", note)
+        self.assertIn("interrupted or incomplete, unscored, inside the cap", note)
+        self.assertIn("The cap is never exceeded", note)
+
+    def test_nothing_printed_or_documented_promises_that_an_admitted_pass_finishes(self):
+        texts = {}
+        for name in ("RUNNER.md", "preflight.py", "runner.py", "cli.py", "records.py",
+                     "ledger.py"):
+            with open(os.path.join(support.CORE, name), encoding="utf-8") as stream:
+                texts[name] = stream.read()
+        for name, text in texts.items():
+            lowered = text.lower()
+            for phrase in ("guarantee", "will finish", "can finish", "sure to finish",
+                           "always finishes", "is certain to finish"):
+                self.assertNotIn(phrase, lowered, "%s says %r" % (name, phrase))
+        for name in ("RUNNER.md", "preflight.py"):
+            self.assertIn("likely, not certain", texts[name])
+        self.assertIn("keeps its full reservation until it is reconciled", texts["RUNNER.md"])
 
     def test_a_pass_is_refused_when_one_provider_is_short(self):
         gate = self.gate({"openai": D("0.5199701"), "anthropic": D("50")})

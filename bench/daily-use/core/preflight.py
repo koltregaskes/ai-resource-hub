@@ -28,7 +28,8 @@ exist yet is planned at `ANSWER_BYTES_PER_TOKEN` bytes per token of the
 task's output limit when it becomes judge input. At run time the judge
 request is reserved from the bytes of the real answer, so the cap holds
 whatever the answer turns out to be; a longer answer than planned can only
-stop the run early at the cap.
+stop the run early at the cap. It is one more reason why a pass that was
+admitted is likely to finish and is not sure to.
 
 How the cap is enforced (three layers; see RUNNER.md):
 
@@ -37,7 +38,14 @@ How the cap is enforced (three layers; see RUNNER.md):
 2. the full run goes one pass at a time (pass n is repeat n of every task
    for every model, with its judging). A pass starts only if its own
    planning bound is at or below the remaining cap of every provider
-   (`pass_gate`). The qualification and the canary are gated the same way;
+   (`pass_gate`). The qualification and the canary are gated the same way.
+   The gate admits a pass that fits at one request per slot at its output
+   limit plus 15% for retries. That makes finishing likely, not certain:
+   a slot may use up to 3 model requests and each judge call 2, and a
+   timeout or a connection failure keeps its full reservation until it is
+   reconciled, so a bad run of them can use up the room. The run then ends
+   `interrupted` or `incomplete` inside the cap and is not scored. Layer 1
+   is what holds the cap; this layer only decides whether to start;
 3. before the qualification, before the canary and before pass 1,
    `EXPECTED_MARGIN` times the expected cost of everything still to run
    must be at or below the remaining cap of every provider.
@@ -511,6 +519,10 @@ def preflight(config, tasks, remaining_caps, stage="qualify", max_usd=None,
     With `resuming` only the overrun test applies here: the runner gates
     the pass it resumes with `pass_gate`.
 
+    A start that is allowed is not a promise that the stage finishes:
+    see `pass_gate`. The gates decide whether to start; the reservation
+    before every request is what holds the cap.
+
     `qualification` is `{"run_id", "panel"}` from a passed qualification
     record, or None. `qualification_note` says why a record on file was not
     used. The figures are printed whether or not the run is refused.
@@ -615,6 +627,16 @@ def pass_gate(plan, slots, remaining_caps, number, passes, max_usd_left=None):
     cap less the real settled spend and the open reservations) for every
     provider. `max_usd_left` is what is left of `--max-usd` for this run.
 
+    What the gate says and does not say. It admits a pass that fits at one
+    request per slot at its output limit plus 15% for retries. That makes
+    finishing likely, not certain. A slot may use up to 3 model requests
+    and each judge call 2; a timeout or a connection failure keeps its full
+    reservation until it is reconciled; and judge input is planned on an
+    assumed answer size. A pass that was admitted can therefore still run
+    out of room. The run then ends `interrupted` or `incomplete` inside the
+    cap and is not scored. The cap itself is never exceeded, because every
+    request is reserved at its worst case before it is sent (`ledger.py`).
+
     Returns {"pass", "passes", "planning_bound", "remaining_caps", "ok",
     "provider", "reason", "lines"}; `provider` and `reason` name the first
     provider that is short. Nothing is sent or reserved here.
@@ -646,9 +668,21 @@ def pass_gate(plan, slots, remaining_caps, number, passes, max_usd_left=None):
     if reason:
         lines.append("  INCOMPLETE: %s. Finished passes are kept; the run is not scored."
                      % reason)
+    else:
+        lines.append("  " + PASS_GATE_NOTE % name)
     return {"pass": number, "passes": passes, "slots": len(slots), "planning_bound": bound,
             "remaining_caps": remaining, "ok": reason is None, "provider": provider,
             "reason": reason, "lines": lines}
+
+
+# Printed with every pass that is admitted, so that the gate is never read
+# as a promise.
+PASS_GATE_NOTE = (
+    "%s is admitted: it fits at one request per slot at its output limit plus 15%% for "
+    "retries. It is likely to finish, not certain to: a timeout or a connection failure "
+    "keeps its full reservation until reconciled and can use up the room. The run would "
+    "then end interrupted or incomplete, unscored, inside the cap. The cap is never "
+    "exceeded: every request is reserved in full before it is sent.")
 
 
 def _usd(amount):
@@ -704,6 +738,10 @@ def render(result):
         "total", _usd(row["expected"]), _usd(row["planning_bound"]), _usd(row["absolute_bound"])))
     lines.append("  The planning bound is every request once at its output limit plus 15% "
                  "for retries. The absolute bound is for information only.")
+    lines.append("  A stage or pass that fits its planning bound is likely to finish, not "
+                 "certain to: timeouts and connection failures keep their full reservation "
+                 "until reconciled and can use up the room. The run then ends interrupted "
+                 "or incomplete, unscored, inside the cap. The cap is never exceeded.")
     lines.append("  Input in both bounds is the byte length of the text sent plus %d tokens "
                  "of framing per request: an upper bound on the tokens. An answer not yet "
                  "written is planned at %d bytes per token of its limit as judge input."

@@ -18,10 +18,17 @@ Slots and requests follow the method exactly:
   the planning bound of the pass against what is left of each cap. A pass
   that does not fit is not started: the run ends `incomplete`, the finished
   passes are kept, and a run with fewer than all its passes is never
-  finalised or scored.
+  finalised or scored. A pass that is admitted is likely to finish, not
+  certain to: timeouts and connection failures keep their full reservation
+  and can use up the room, and the run then ends `interrupted` or
+  `incomplete` inside the cap, unscored.
 - A stopped run is resumed with `resume=<run id>`. It carries on in the
   planned order; a slot that has a row is left alone and a request id that
-  is in the log is never issued again.
+  is in the log is never issued again. The caps a run starts with are
+  written in its record; a resume may lower a cap and is refused if it
+  would raise one.
+- One run at a time owns a private store (`ledger.StoreLock`). A second
+  start or resume, dry or live, is refused while the first is running.
 
 Grading is injected: `grade(task, reply)` returns
 `{"outcome", "pass", "pending", "needs_judge": [...]}`, and may add
@@ -99,7 +106,9 @@ _PASSES = []
 
 
 class LiveRefused(Exception):
-    """A live run was asked for and the gate is not fully open."""
+    """A live run was asked for and the gate is not fully open. Also raised
+    for any run, dry or live, while another run holds the private store's
+    execution lock."""
 
 
 class GraderUnavailable(Exception):
@@ -1132,7 +1141,8 @@ class _Engine:
 
 def _ledgers(config, private_store, live, run_id):
     """Live ledgers are shared across runs. A dry run gets its own, so a
-    rehearsal can never eat into the real caps."""
+    rehearsal can never eat into the real caps. A run builds these with the
+    store's execution lock held."""
     if live:
         folder = os.path.join(os.fspath(private_store), "ledgers")
     else:
@@ -1170,12 +1180,59 @@ def tasks_sha256(tasks):
                                  for task in tasks))
 
 
+def caps_in_force(config, max_usd):
+    """The caps a run starts under, as text, for its frozen metadata."""
+    return {"caps_usd": {provider: str(cap) for provider, cap in sorted(config.caps_usd.items())},
+            "max_usd": None if max_usd is None else str(max_usd)}
+
+
+def _caps_raised(document, config, max_usd):
+    """Why these caps are above the ones the run started with, as a list of
+    reasons; empty when every cap is the same or lower.
+
+    A run never spends above the caps it started with: a resume may lower a
+    provider cap or `--max-usd`, and may add a `--max-usd` where there was
+    none, and nothing else. The caps on record are the ones written when
+    the run started; a lowered cap on an earlier resume does not replace
+    them.
+    """
+    recorded = document.get("caps_usd")
+    if not isinstance(recorded, dict) or set(recorded) != set(config.caps_usd):
+        return ["its record does not hold the caps it started with"]
+    raised = []
+    try:
+        for provider in sorted(recorded):
+            if config.caps_usd[provider] > Decimal(recorded[provider]):
+                raised.append(
+                    "the %s cap is %s USD, above the %s USD the run started with"
+                    % (provider, config.caps_usd[provider], recorded[provider]))
+        first = document.get("max_usd")
+        if first is not None:
+            if max_usd is None:
+                raised.append("the run started with --max-usd %s and none was given" % first)
+            elif Decimal(str(max_usd)) > Decimal(first):
+                raised.append("--max-usd is %s, above the %s the run started with"
+                              % (max_usd, first))
+    except (ArithmeticError, TypeError, ValueError):
+        return ["its record does not hold the caps it started with"]
+    return raised
+
+
+def _resume_note(document, config, max_usd):
+    """What a resume writes to the run's record and log: the caps the run
+    started with, the caps in force for this resume, and the config hash."""
+    return {"caps_at_start": {"caps_usd": document.get("caps_usd"),
+                              "max_usd": document.get("max_usd")},
+            "caps_in_force": caps_in_force(config, max_usd),
+            "config_sha256": config.sha256}
+
+
 def _resumable(private_store, run_id, stage, config, tasks, live, qualification_run_id=None,
-               check_qualification_id=False):
+               check_qualification_id=False, max_usd=None):
     """The run.json of the staged run `run_id`, after checking that it is
     the same run: same stage, same kind (dry or live), same config apart
     from `caps_usd` and `acknowledged_overruns`, same task set, same judge
-    qualification."""
+    qualification; and that no cap is above the one the run started with."""
     if stage == "qualify":
         raise records.RecordError("a judge qualification is not resumed: run qualify again")
     document = records.read_staged(private_store, run_id)
@@ -1188,7 +1245,8 @@ def _resumable(private_store, run_id, stage, config, tasks, live, qualification_
     if bool(document.get("live")) != bool(live):
         different.append("it is a %s run" % ("live" if document.get("live") else "dry"))
     if document.get("config_run_sha256") != config.run_sha256:
-        different.append("the run config has changed (only caps_usd and acknowledged_overruns may change)")
+        different.append("the run config has changed (only acknowledged_overruns may change, "
+                         "and a cap may be lowered)")
     if document.get("task_set_version") != config.task_set_version \
             or document.get("tasks_sha256") != tasks_sha256(tasks):
         different.append("the task set has changed")
@@ -1196,6 +1254,12 @@ def _resumable(private_store, run_id, stage, config, tasks, live, qualification_
         different.append("the judge qualification on record has changed")
     if different:
         raise records.RecordError("run %s cannot be resumed: %s" % (run_id, "; ".join(different)))
+    raised = _caps_raised(document, config, max_usd)
+    if raised:
+        raise records.RecordError(
+            "run %s cannot be resumed with a higher cap: %s. A run never spends above the "
+            "caps it started with; a cap may only be lowered on resume."
+            % (run_id, "; ".join(raised)))
     return document
 
 
@@ -1209,12 +1273,22 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
     The canary is one pass; the full run is one pass per repeat. Before
     each pass `preflight.pass_gate` tests the planning bound of the pass
     against what is left of each cap. A pass that does not fit is not
-    started and the run ends with status `incomplete`.
+    started and the run ends with status `incomplete`. A pass that is
+    started is likely to finish, not certain to: if failed requests hold
+    their reservations and the room runs out, the run ends `interrupted`
+    inside the cap.
 
     `resume` is the run id of a stopped canary or full run in staging. The
     run carries on in its planned order under the same run id and the same
     ledger; a slot that has a row is left alone, and no request id that is
-    in the log is issued again.
+    in the log is issued again. A resume is refused when a provider cap or
+    `max_usd` is above the one the run started with.
+
+    One owner at a time: the execution lock of the private store
+    (`ledger.StoreLock`) is taken before any ledger is read or any run
+    record is opened, and kept until this call returns. While another run
+    holds it, every stage start and every resume, dry or live, is refused
+    with `LiveRefused`.
 
     Without `live=True` this is a dry run: the transport is a fake (the
     deterministic stub unless one is passed in), the key file is never
@@ -1250,13 +1324,43 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
     if scores is None and stage == "full":
         scores = _scorer(live)
     hashes = sample_hashes(checklist_samples, outcome_samples, sample_file_hashes)
+    # One owner of the private store at a time. Taken here: nothing in the
+    # store has been read yet, no key has been loaded, nothing has been sent.
+    lock = ledger.StoreLock(private_store)
+    try:
+        lock.acquire(resume)
+    except ledger.StoreLocked as busy:
+        raise LiveRefused(str(busy)) from None
+    try:
+        return _run_stage_locked(
+            lock, stage, config, tasks, private_store=private_store, grade=grade, live=live,
+            key_file=key_file, max_usd=max_usd, seed=seed,
+            checklist_samples=checklist_samples, outcome_samples=outcome_samples,
+            transport=transport, scores=scores, clock=clock, sleep=sleep, out=out,
+            environ=environ, live_transport_factory=live_transport_factory, resume=resume,
+            hashes=hashes, grader_facts=grader_facts)
+    finally:
+        lock.release()
+
+
+def _run_stage_locked(lock, stage, config, tasks, *, private_store, grade, live, key_file,
+                      max_usd, seed, checklist_samples, outcome_samples, transport, scores,
+                      clock, sleep, out, environ, live_transport_factory, resume, hashes,
+                      grader_facts):
+    """The rest of `run_stage`, with the store's execution lock held."""
     resuming = resume is not None
+    resume_note = None
     if resuming:
-        staged = _resumable(private_store, resume, stage, config, tasks, live)
+        # Before any ledger is built and long before the key file is read:
+        # a resume with a cap above the one the run started with stops here.
+        staged = _resumable(private_store, resume, stage, config, tasks, live,
+                            max_usd=max_usd)
+        resume_note = _resume_note(staged, config, max_usd)
         run_id, seed = resume, staged.get("seed")
     else:
         run_id = records.new_run_id()
         seed = seed if seed is not None else random.SystemRandom().randrange(2 ** 32)
+        lock.describe(run_id)
     books = _ledgers(config, private_store, live, run_id)
     remaining = {provider: book.remaining for provider, book in books.items()}
     # A settled charge above its reservation, from this run or an earlier
@@ -1273,7 +1377,7 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
         if resuming:
             _resumable(private_store, resume, stage, config, tasks, live,
                        qualification_run_id=None if qualified is None else qualified["run_id"],
-                       check_qualification_id=True)
+                       check_qualification_id=True, max_usd=max_usd)
         loaded = gate_pass.keys
         transport = (live_transport_factory or providers.UrllibTransport)(gate_pass)
         sleep = sleep or time.sleep
@@ -1293,7 +1397,8 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
         transport = transport or StubTransport()
     qualification_run_id = None if qualified is None else qualified["run_id"]
     guard = loaded.leaks_into if loaded is not None else None
-    record = records.RunRecord.reopen(private_store, run_id, guard=guard) if resuming \
+    record = records.RunRecord.reopen(private_store, run_id, guard=guard,
+                                      note=resume_note) if resuming \
         else records.RunRecord(private_store, run_id, stage, {
         "live": bool(live), "task_set_version": config.task_set_version, "seed": seed,
         "config_sha256": config.sha256, "config_run_sha256": config.run_sha256,
@@ -1305,7 +1410,9 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
         "qualification_run_id": qualification_run_id,
         "sample_file_sha256": hashes,
         "grader": grader_facts,
-        "max_usd": None if max_usd is None else str(max_usd),
+        # The caps the run starts under. They are frozen here: a resume
+        # may lower them and may never raise them.
+        **caps_in_force(config, max_usd),
         "preflight": {"whole_plan": plan["whole_plan"], "requests": plan["requests"],
                       "counts": plan["counts"], "judging": plan["judging"],
                       "by_stage": plan["by_stage"], "by_pass": plan["by_pass"],
