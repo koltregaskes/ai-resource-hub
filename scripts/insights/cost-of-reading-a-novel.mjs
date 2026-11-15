@@ -2,13 +2,13 @@
 /**
  * What does it cost a language model to read a whole novel once, and does the novel fit in its context window?
  *
- * Input:  data/pg-cache/models.json (the committed catalogue).
+ * Input: data/pg-cache/models.json at the commit in pinned-studio-input.mjs; see README.md.
  * Output: src/data/insights/<date>-cost-of-reading-a-novel.json (frozen; refuses to overwrite without --force).
  *
  * ASSUMPTIONS (labelled as such in the article):
  *  - The novel is 90,000 English words. Real books vary.
  *  - Tokens come from OpenAI's published rule of thumb for English: 100 tokens is about 75 words,
- *    so tokens = words / 0.75. Tokenizers differ by model; the same text may count differently.
+ *    so tokens = words / 0.75. Tokenisers differ by model; the same text may count differently.
  *  - "Writing a novel" means the model outputs the same number of tokens as it read.
  *
  * Set: category "llm", status "active", input_price and output_price above zero, and no variants by the
@@ -20,12 +20,14 @@
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { readPinnedInput, inputCommit } from './pinned-studio-input.mjs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const modelsRaw = readFileSync(join(root, 'data/pg-cache/models.json'));
-const meta = JSON.parse(readFileSync(join(root, 'data/pg-cache/_meta.json'), 'utf8'));
+const modelsRaw = readPinnedInput(root, 'data/pg-cache/models.json');
+const metaRaw = readPinnedInput(root, 'data/pg-cache/_meta.json');
+const meta = JSON.parse(metaRaw.toString('utf8'));
 const models = JSON.parse(modelsRaw.toString('utf8'));
 
 const dateArg = process.argv.indexOf('--date');
@@ -84,7 +86,7 @@ const median = (a) => (a.length % 2 ? a[(a.length - 1) / 2] : (a[a.length / 2 - 
 const out = {
   snapshotDate: date,
   cacheGeneratedAt: meta.generated_at,
-  inputs: { modelsSha256: createHash('sha256').update(modelsRaw).digest('hex') },
+  inputs: { inputCommit, metaSha256: createHash('sha256').update(metaRaw).digest('hex'), modelsSha256: createHash('sha256').update(modelsRaw).digest('hex') },
   assumptions: {
     words: WORDS,
     wordsNote: 'ASSUMPTION: a 90,000-word English novel. Real books vary.',

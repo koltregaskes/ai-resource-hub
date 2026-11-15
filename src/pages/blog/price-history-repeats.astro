@@ -95,7 +95,7 @@ const relabelDay = relabelDays.length === 1 ? day(relabelDays[0] + ' 00:00:00') 
         <strong>What was counted.</strong> Language models only. Rows whose source is not OpenRouter. Rows run from {day(h.rowsFrom)} to {day(h.rowsTo)}. The first row for each model is the starting point and is not counted. A later row "repeats" when both prices equal the previous row of the same model.
       </li>
       <li>
-        <strong>Not counted.</strong> Rows from OpenRouter, which are cheapest-host prices that can legitimately move.
+        <strong>Not counted.</strong> Rows from OpenRouter, which are top-provider prices that can legitimately move.
       </li>
       <li>
         <strong>Not claimed.</strong> We have not counted price cuts or price rises, and these figures are not evidence of how often labs change prices. They describe our records.
