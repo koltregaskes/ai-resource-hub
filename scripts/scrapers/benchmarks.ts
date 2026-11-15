@@ -7,8 +7,9 @@
  * Data sources:
  * 1. Artificial Analysis API (MMLU-Pro, GPQA, MATH-500 etc.) — saved by speed scraper
  * 2. LMSYS Chatbot Arena (ELO rankings) via HuggingFace datasets API
- * 3. Open LLM Leaderboard v2 via HuggingFace datasets API
- * 4. Fallback to historical cached data when APIs are inaccessible
+ * 3. Historical cached data when APIs are inaccessible (not fresh collection)
+ * Open LLM Leaderboard v2 has no collector here.
+ * Source policy is checked before collection or fallback reuse.
  *
  * Strategy:
  * - Try live data first from HuggingFace
@@ -21,7 +22,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { benchmarkCollectionReceipt } from '../../src/data/benchmark-freshness';
-import { blockedSourceById } from '../../src/data/source-policy';
+import { skipBlockedSource } from './source-policy-collection';
 
 export interface ScrapedScore {
   modelId: string;
@@ -371,13 +372,8 @@ async function main() {
   let totalUpdated = 0;
 
   // Hub #1569: sources whose current terms bar our use are skipped entirely.
-  const aaBlocked = blockedSourceById('artificial-analysis');
-  const arenaBlocked = blockedSourceById('arena');
-
   // 1. Artificial Analysis benchmark scores (from speed scraper data)
-  if (aaBlocked) {
-    console.log(`  ⊘ Artificial Analysis benchmarks skipped: blocked source (${aaBlocked.termsUrl}).`);
-  } else try {
+  if (!skipBlockedSource(db, 'benchmarks:artificial-analysis', 'artificial-analysis')) try {
     const aaScores = loadAABenchmarks();
     if (aaScores.length > 0) {
       const updated = recordBenchmarkCollection(db, 'benchmarks:artificial-analysis', aaScores, false);
@@ -391,9 +387,7 @@ async function main() {
   }
 
   // 2. Chatbot Arena ELO
-  if (arenaBlocked) {
-    console.log(`  ⊘ Chatbot Arena skipped: blocked source (${arenaBlocked.termsUrl}).`);
-  } else try {
+  if (!skipBlockedSource(db, 'benchmarks:chatbot-arena', 'arena')) try {
     const { scores, isLive } = await scrapeChatbotArena(existingModels);
     if (scores.length > 0) {
       const updated = recordBenchmarkCollection(db, 'benchmarks:chatbot-arena', scores, isLive);
@@ -411,5 +405,8 @@ async function main() {
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
-  main().catch(console.error);
+  main().catch((error) => {
+    console.error('Benchmark scraper failed:', error);
+    process.exitCode = 1;
+  });
 }

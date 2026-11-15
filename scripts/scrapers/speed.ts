@@ -16,7 +16,7 @@
  */
 import { getDB, logScrapeRun } from './base';
 import type Database from 'better-sqlite3';
-import { blockedSourceById } from '../../src/data/source-policy';
+import { skipBlockedSource } from './source-policy-collection';
 
 interface SpeedEntry {
   modelId: string;
@@ -338,11 +338,8 @@ async function main() {
   // Hub #1569: Artificial Analysis is our only speed source, and its current terms bar
   // our use. Fetch nothing and write nothing, including the old hard-coded fallback,
   // which used to be re-stamped with today's date on every run.
-  const blocked = blockedSourceById('artificial-analysis');
-  if (blocked) {
-    console.log(`  ⊘ Speed scraper skipped: ${blocked.name} is on the blocked-source list (${blocked.termsUrl}).`);
+  if (skipBlockedSource(db, 'speed', 'artificial-analysis')) {
     console.log('    No licensed speed source yet; speed pages show "no licensed source".');
-    logScrapeRun(db, 'speed', 'success', 0);
     db.close();
     return;
   }
@@ -391,4 +388,7 @@ async function main() {
   db.close();
 }
 
-main().catch(console.error);
+main().catch((error) => {
+  console.error('Speed scraper failed:', error);
+  process.exitCode = 1;
+});
