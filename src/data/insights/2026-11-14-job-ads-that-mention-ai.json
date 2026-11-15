@@ -17,10 +17,10 @@
   },
   "rights": {
     "licence": "CC BY 4.0",
-    "licenceUrl": "https://github.com/hiring-lab/ai-tracker/blob/bca9fe5176050c03643b86989669778ef671454a/LICENSE",
+    "licenceUrl": "https://github.com/hiring-lab/ai-tracker/blob/bca9fe5176050c03643b86989669778ef671454a/README.md#license",
     "attributionText": "Source: Indeed Hiring Lab. Licensed under CC BY 4.0. Selected observations; formatting adapted by AIRH.",
     "status": "confirmed",
-    "verifiedOn": "2026-11-14"
+    "verifiedOn": "2026-11-15"
   },
   "method": {
     "rows": "publicationRows() from src/lib/ai-and-jobs.mjs, Indeed series only.",

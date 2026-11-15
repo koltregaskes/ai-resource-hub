@@ -2,7 +2,7 @@
 /**
  * Freezes the provider status table for "reading-an-ai-status-page".
  *
- * Input:  data/provider-status.json (committed output of scripts/scrapers/status-pages.mjs).
+ * Input: data/provider-status.json at the commit in pinned-studio-input.mjs; see README.md.
  * Output: src/data/insights/2026-11-14-reading-an-ai-status-page.json (refuses to overwrite without --force).
  *
  * Nothing is re-fetched. The table is a snapshot of the moment in the file's generatedAt field.
@@ -17,11 +17,12 @@
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { readPinnedInput, inputCommit } from './pinned-studio-input.mjs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const raw = readFileSync(join(root, 'data/provider-status.json'));
+const raw = readPinnedInput(root, 'data/provider-status.json');
 const src = JSON.parse(raw.toString('utf8'));
 
 const sourceKindMeaning = {
@@ -51,9 +52,9 @@ const rows = src.providers.map((p) => ({
 
 const live = rows.filter((r) => r.fetchState === 'live');
 const out = {
-  inputs: { providerStatusSha256: createHash('sha256').update(raw).digest('hex') },
+  inputs: { inputCommit, providerStatusSha256: createHash('sha256').update(raw).digest('hex') },
   generatedAt: src.generatedAt,
-  method: 'Read data/provider-status.json as committed. Count providers by fetchState; for live providers count entries in activeIncidents. No re-fetching.',
+  method: 'Read data/provider-status.json at the pinned inputCommit. Count providers by fetchState; for live providers count entries in activeIncidents. No re-fetching.',
   providers: rows.length,
   live: live.length,
   notLive: rows.length - live.length,

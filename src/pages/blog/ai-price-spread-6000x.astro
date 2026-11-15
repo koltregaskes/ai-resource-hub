@@ -102,7 +102,7 @@ const over50 = spread.bands[spread.bands.length - 1].count;
             <td>{m.name} <span style="color:var(--color-text-muted)">({m.provider})</span></td>
             <td class="num">{usd(m.input)}</td>
             <td class="num">{usd(m.output)}</td>
-            <td>{isReseller(m.source) ? 'Cheapest host on OpenRouter' : "Lab's own list"}</td>
+            <td>{isReseller(m.source) ? 'OpenRouter top-provider listing' : "Lab's own list"}</td>
           </tr>
         ))}
       </tbody>
@@ -125,7 +125,7 @@ const over50 = spread.bands[spread.bands.length - 1].count;
   <h2>The two ends are not like for like</h2>
   <p>
     Look at the "price from" column. The cheap end is made up of small models such as Mistral Nemo, Llama 3.1 8B and Phi 4
-    that anyone may host, priced at whichever host on OpenRouter is cheapest that day. The dear end is a lab's own list price
+    that anyone may host, priced from the top provider OpenRouter listed that day. The dear end is a lab's own list price
     for its top tier. Comparing them is a bit like comparing the cheapest supermarket's own-brand with a restaurant's tasting
     menu. Both are food and the price gap is true, but nobody thinks they are the same product.
   </p>

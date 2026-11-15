@@ -67,7 +67,7 @@ const readFail = (r) => (r.fetchState === 'error' ? 'could not be read' : 'not r
     <li><strong>Mistral</strong> returned an error as well: "{mistralErr}". Our collector's note says Mistral publishes no public RSS or JSON incident feed that we could verify, so only the page headline is read, and that read was refused.</li>
     <li><strong>xAI</strong> is a link only. Our collector's note says xAI blocks automated requests to its status page, so we read nothing from it.</li>
   </ul>
-  <p>A missing reading is not a clean bill of health. For these three, the collector has no information either way.</p>
+  <p>These error messages and the xAI explanation are records of that collector run, not independently recovered HTTP receipts or current access tests. A missing reading is not a clean bill of health. For these three, the collector has no information either way.</p>
 
   <h2>How our collector builds the labels</h2>
   <p>The labels come from different places, and the file's field names hide that. For OpenAI, Anthropic and DeepSeek the collector reads a JSON summary in the Statuspage format. For Cohere, Together AI, Fireworks AI and Mistral it searches the page's HTML for a status marker and, for the first three, reads an RSS feed. For Google it reads Google Cloud's public incident feed and keeps incidents that mention Gemini, Vertex AI and a few related product names, so Google's "No active Gemini or Vertex AI incidents" is our own sentence about a keyword filter, not a headline Google wrote.</p>

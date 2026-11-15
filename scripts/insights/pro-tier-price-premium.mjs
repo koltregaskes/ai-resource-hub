@@ -2,7 +2,7 @@
 /**
  * How much more does the "Pro" version of a model cost than the standard one?
  *
- * Input:  data/pg-cache/models.json (the committed catalogue).
+ * Input: data/pg-cache/models.json at the commit in pinned-studio-input.mjs; see README.md.
  * Output: src/data/insights/<date>-pro-tier-price-premium.json (frozen; refuses to overwrite without --force).
  *
  * Definition:
@@ -13,18 +13,20 @@
  *  - Multiple = Pro price / base price, separately for input and output.
  *  - No status filter: catalogue status "tracking" rows are included and the status is shown.
  *  - Price source: "official" when the catalogue's pricing_source ends in "(official)" (typed in from the lab's
- *    list price); "openrouter" when it is openrouter.ai/api/v1/models (the cheapest host's price).
+ *    list price); "openrouter" when it is openrouter.ai/api/v1/models (the top-provider listing).
  *
  * Usage: node scripts/insights/pro-tier-price-premium.mjs [--date YYYY-MM-DD] [--force]
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { readPinnedInput, inputCommit } from './pinned-studio-input.mjs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const modelsRaw = readFileSync(join(root, 'data/pg-cache/models.json'));
-const meta = JSON.parse(readFileSync(join(root, 'data/pg-cache/_meta.json'), 'utf8'));
+const modelsRaw = readPinnedInput(root, 'data/pg-cache/models.json');
+const metaRaw = readPinnedInput(root, 'data/pg-cache/_meta.json');
+const meta = JSON.parse(metaRaw.toString('utf8'));
 const models = JSON.parse(modelsRaw.toString('utf8'));
 
 const dateArg = process.argv.indexOf('--date');
@@ -109,12 +111,12 @@ const worked = live.map((l) => ({ pair: l.pair, base: round(cost(l.base)), pro: 
 const out = {
   snapshotDate: date,
   cacheGeneratedAt: meta.generated_at,
-  inputs: { modelsSha256: createHash('sha256').update(modelsRaw).digest('hex') },
+  inputs: { inputCommit, metaSha256: createHash('sha256').update(metaRaw).digest('hex'), modelsSha256: createHash('sha256').update(modelsRaw).digest('hex') },
   method: {
     set: 'Language models (category "llm") with input and output price above zero.',
     pairRule: 'A pair is two such models where one name is exactly the other name plus " Pro". No status filter.',
     multiple: 'Pro price divided by base price, input and output separately, rounded to two places.',
-    sourceRule: 'official = pricing_source ends in "(official)" (lab list price typed in); openrouter = openrouter.ai/api/v1/models (cheapest host).',
+    sourceRule: 'official = pricing_source ends in "(official)" (lab list price typed in); openrouter = openrouter.ai/api/v1/models (top-provider listing).',
   },
   pricedLlms: priced.length,
   proNames: priced.filter((m) => / Pro$/.test(m.name)).length,

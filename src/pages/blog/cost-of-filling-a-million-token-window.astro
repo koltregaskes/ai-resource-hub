@@ -34,7 +34,9 @@ const tiedDear = data.dearest.tied.join(' and ');
     <div class="stat"><b>{usd(data.dearest.fill)}</b><span>dearest full prompt ({tiedDear} tie)</span></div>
   </div>
 
-  <p>The price here is the input price per million tokens multiplied by one, so it is simply the listed input price. A 1,000-token answer adds the output price multiplied by 0.001, which moves the totals by pennies at most. One limit applies to those totals. For the {anthropicFullWindow.length} Anthropic rows whose recorded window is exactly 1,000,000 tokens, a prompt of 1,000,000 tokens leaves no room for a reply, because Anthropic's <a href="https://platform.claude.com/docs/en/build-with-claude/context-windows" rel="noopener">context windows page</a> (read on 14 November 2026) counts the model's own output within the window ("including the response itself"). Their totals are arithmetic for a full window, not a request that could be sent as written. The cheapest total, with that answer included, is {usd(data.cheapestTotal)} and the dearest is {usd(data.dearestTotal)}.</p>
+  <p>The price here is the input price per million tokens multiplied by one, so it is simply the listed input price. A 1,000-token answer adds the output price multiplied by 0.001, which moves the totals by pennies at most. These are price calculations; they do not establish request feasibility. For the {anthropicFullWindow.length} Anthropic rows whose recorded window is exactly 1,000,000 tokens, a prompt of 1,000,000 tokens leaves no room for a reply, because Anthropic's <a href="https://platform.claude.com/docs/en/build-with-claude/context-windows" rel="noopener">context windows page</a> (read on 14 November 2026) counts the model's own output within the window ("including the response itself"). Their totals are arithmetic for a full window, not a request that could be sent as written. The cheapest total, with that answer included, is {usd(data.cheapestTotal)} and the dearest is {usd(data.dearestTotal)}.</p>
+
+  <p>OpenAI's <a href="https://developers.openai.com/api/docs/models/gpt-5.6-sol" rel="noopener">Sol</a>, <a href="https://developers.openai.com/api/docs/models/gpt-5.6-terra" rel="noopener">Terra</a> and <a href="https://developers.openai.com/api/docs/models/gpt-5.6-luna" rel="noopener">Luna</a> model pages, checked on 15 November 2026, each specify a maximum input of 922,000 tokens despite a 1,050,000-token context window. Their million-input prices and totals below are hypothetical arithmetic too: the input alone exceeds that maximum. A recorded context window does not prove that a million-token prompt is accepted.</p>
 
   <h2>All {data.count} models, cheapest first</h2>
   <p>{data.underOneDollar} of the {data.count} cost under $1 to fill once, and {data.fiveDollarsOrMore} cost $5 or more. Anthropic has {anthropicRows.length} rows, OpenAI {gptRows.length} and Google {googleRows.length}; the rest come from Meta and Mistral. The chart uses a logarithmic scale, where each gridline is ten times the one before.</p>
@@ -49,7 +51,7 @@ const tiedDear = data.dearest.tied.join(' and ');
 
   <div class="table-wrap">
     <table>
-      <caption>Source: AI Resource Hub catalogue (data/pg-cache/models.json), 14 November 2026. US dollars. Suffix-based variant filtering applied. Answer is 1,000 output tokens.</caption>
+      <caption>Source: AI Resource Hub catalogue (data/pg-cache/models.json), 14 November 2026. US dollars. Suffix-based variant filtering applied. Answer is 1,000 output tokens. All eight exactly-million-token Anthropic totals and the three GPT-5.6 Sol, Terra and Luna million-input rows are hypothetical; see the input and response limits above.</caption>
       <thead><tr><th>Model</th><th>Provider</th><th class="num">Recorded window (tokens)</th><th class="num">Input per million</th><th class="num">Output per million</th><th class="num">Full prompt</th><th class="num">Plus 1,000-token answer</th><th class="num">Total</th><th>Price source</th></tr></thead>
       <tbody>
         {rows.map((r) => (
@@ -77,7 +79,7 @@ const tiedDear = data.dearest.tied.join(' and ');
     </table>
   </div>
 
-  <p>We have not checked the pages for GPT-5.5 Pro, GPT-5.4, GPT-5.4 Pro or the GPT-5.6 models, so we make no claim about them. Other models in the table may have similar rules that we have not checked.</p>
+  <p>We have not checked the pages for GPT-5.5 Pro, GPT-5.4, GPT-5.4 Pro so we make no claim about their long-prompt rates. For GPT-5.6 Sol, Terra and Luna we checked the input limit only. Other models in the table may have similar rules that we have not checked.</p>
 
   <h2>What two other labs' pages say</h2>
   <p>Anthropic's <a href="https://platform.claude.com/docs/en/about-claude/pricing" rel="noopener">pricing page</a>, read the same day, says Claude 4.6 and later models other than Claude Haiku 5.5 "include the full 1M token context window at standard pricing". It adds that a 900k-token request is billed at the same per-token rate as a 9k-token request. By that wording, {anthropicRows.length - 1} of our {anthropicRows.length} Anthropic rows (Opus 4.6 and later, Sonnet 4.6, Sonnet 5 and Fable 5) pay no extra for a full prompt, so the table's figure holds for them. Claude Sonnet 4.5 is an earlier model, and we did not read its own page. The same page does document a surcharge for Claude Haiku 5.5, which prices prompts over 100,000 tokens higher; that model is not in our table. Its base prices for Opus 5 ($5 and $25) and Sonnet 4.6 ($3 and $15) match the catalogue.</p>

@@ -28,7 +28,7 @@ const joinList = (xs: string[]) => (xs.length < 2 ? xs.join('') : `${xs.slice(0,
 const bigWindow = dear.list.filter((m) => m.contextWindow >= 1000000).length;
 const biggestNotFit = Math.max(...notFit.map((m) => m.contextWindow));
 const rowsFromOpenRouter = rows.filter((r) => r.priceFrom === 'openrouter').length;
-const priceFromLabel = (p: string) => (p === 'openrouter' ? 'Cheapest host on OpenRouter' : "Lab's own list");
+const priceFromLabel = (p: string) => (p === 'openrouter' ? 'OpenRouter top-provider listing' : "Lab's own list");
 ---
 
 <InsightArticle
@@ -99,12 +99,12 @@ const priceFromLabel = (p: string) => (p === 'openrouter' ? 'Cheapest host on Op
   <p>A model that writes {nf(a.tokens)} tokens in total may need several replies to do it, since a single reply may have its own length limit. We have not tabulated those limits here.</p>
 
   <h2>What the sums leave out</h2>
-  <p>The word-to-token rule is OpenAI's estimate for English text. We did not check how it holds for other languages, and different labs' tokenizers may count the same text differently, so {nf(a.tokens)} tokens is a rough guide for any one model.</p>
+  <p>The word-to-token rule is OpenAI's estimate for English text. We did not check how it holds for other languages, and different labs' tokenisers may count the same text differently, so {nf(a.tokens)} tokens is a rough guide for any one model.</p>
   <p>The costs are list prices as recorded on {snapDate}. They leave out discounts for cached input and for batch jobs, and any higher rate that a lab applies to very long prompts. We did not check each lab's page for such a surcharge, so a model with one would cost more than the table shows once a prompt passes its threshold.</p>
   <p>The sums cover one pass over the text and nothing else: no question about the book, no answer, no second read.</p>
 
   <h2>Where the prices come from</h2>
-  <p>Of the {data.n} models, {data.fromOpenRouter} take their price from OpenRouter, which lists the price from the top provider for each model, and {data.fromLab} take it from a lab's own pricing page, typed in by hand. All five models that cannot hold the book, and {rowsFromOpenRouter} of the {rows.length} rows in the table, are in the first group, so those prices reflect whichever host was cheapest on the snapshot date. Context windows are the figures recorded in the catalogue, and we did not re-check them against each lab's page for this piece. The <a href={`${base}transparency/`}>transparency page</a> lists what is known to be wrong with the data.</p>
+  <p>Of the {data.n} models, {data.fromOpenRouter} take their price from OpenRouter, which lists the price from the top provider for each model, and {data.fromLab} take it from a lab's own pricing page, typed in by hand. All five models that cannot hold the book, and {rowsFromOpenRouter} of the {rows.length} rows in the table, are in the first group, so those prices reflect the top provider OpenRouter listed on the snapshot date. Context windows are the figures recorded in the catalogue, and we did not re-check them against each lab's page for this piece. The <a href={`${base}transparency/`}>transparency page</a> lists what is known to be wrong with the data.</p>
   <p>For the same kind of sum on your own workload, the <a href={`${base}calculator/`}>cost calculator</a> takes your token counts, and the <a href={`${base}blog/million-token-context-window/`}>million-token context window</a> piece covers what a very large window does and does not change.</p>
 
   <StudioNote article={article} snapshot={snapDate} />

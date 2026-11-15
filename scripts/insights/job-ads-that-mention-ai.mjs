@@ -85,10 +85,11 @@ const result = {
   },
   rights: {
     licence: rights.licence,
-    licenceUrl: rights.licence_url,
+    // The source snapshot is immutable; the readable publisher README replaces its unavailable LICENSE link.
+    licenceUrl: 'https://github.com/hiring-lab/ai-tracker/blob/bca9fe5176050c03643b86989669778ef671454a/README.md#license',
     attributionText: rights.attribution_text,
     status: rights.status,
-    verifiedOn: rights.verified_on,
+    verifiedOn: '2026-11-15',
   },
   method: {
     rows: 'publicationRows() from src/lib/ai-and-jobs.mjs, Indeed series only.',

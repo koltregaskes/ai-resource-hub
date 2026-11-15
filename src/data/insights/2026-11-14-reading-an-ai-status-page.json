@@ -1,9 +1,10 @@
 {
   "inputs": {
+    "inputCommit": "24922b06afe88388d30570643d00873a8086e8b8",
     "providerStatusSha256": "00a8b5ad8f397676871c2aa7c159caa3f62edb006e817795947a80ff16a07879"
   },
   "generatedAt": "2026-11-14T15:55:45.418Z",
-  "method": "Read data/provider-status.json as committed. Count providers by fetchState; for live providers count entries in activeIncidents. No re-fetching.",
+  "method": "Read data/provider-status.json at the pinned inputCommit. Count providers by fetchState; for live providers count entries in activeIncidents. No re-fetching.",
   "providers": 9,
   "live": 6,
   "notLive": 3,

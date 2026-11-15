@@ -302,7 +302,7 @@ const structuredData = {
     {studioArticles.length > 0 && (
       <section id="studio-articles" class="mb-14 scroll-mt-24">
         <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">Studio articles: sources and sums</h2>
-        <p class="text-(--color-text-secondary) mb-6">Each article below lists every outside source it relies on, the date we read it and what we took from it, plus the sum behind any figure we worked out. Where an article has figures of its own, the script that produces them and the frozen data file are named, so the numbers can be reproduced. Sources are linked and paraphrased, not collected as a dataset; no data licence is claimed beyond what each source states.</p>
+        <p class="text-(--color-text-secondary) mb-6">Each article below lists every outside source it relies on, the date we read it and what we took from it, plus the sum behind any figure we worked out. Where an article has figures of its own, the script that produces them and the frozen data file are named. The input commit and reproduction commands are documented in scripts/insights/README.md; catalogue inputs and their metadata are pinned together. Sources are linked and paraphrased, not collected as a dataset; no data licence is claimed beyond what each source states.</p>
         <div class="space-y-4">{studioArticles.map((e) => (
           <article id={e.id} class="rounded-2xl border border-(--color-border) bg-(--color-bg-card) p-5 scroll-mt-24">
             <h3 class="text-lg font-bold text-(--color-text-primary)"><a href={`${base}blog/${e.slug}/`}>{e.title}</a></h3>
