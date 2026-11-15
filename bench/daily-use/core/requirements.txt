@@ -1,0 +1,4 @@
+# The formula engine used to grade formula tasks. Everything else in core is
+# standard library only. Version 1.3.4 is the one the task set was validated with.
+formulas==1.3.4
+openpyxl==3.1.5
