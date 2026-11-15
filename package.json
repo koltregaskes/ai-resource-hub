@@ -47,7 +47,7 @@
     "test:editions": "node --test scripts/newsletter-preferences.test.mjs && tsx --test scripts/newsletter-editions.test.ts scripts/news-stories.test.ts scripts/json-ld.test.ts",
     "snapshot:editions": "tsx scripts/snapshot-editions.ts",
     "backfill:news-categories": "tsx scripts/backfill-news-categories.ts",
-    "test:seo": "node --test scripts/seo-ping.test.mjs && tsx --test scripts/seo-feeds.test.ts",
+    "test:seo": "node --test scripts/seo-ping.test.mjs && tsx --test scripts/seo-feeds.test.ts scripts/seo-successor.test.mjs",
     "test:editorial": "node --test scripts/editorial.test.mjs && node scripts/validate-editorial.mjs",
     "test:model-fields": "node --test scripts/model-field-publication.test.mjs scripts/pr89-regressions.test.mjs && tsx --test scripts/model-field-reviews.test.ts"
   },

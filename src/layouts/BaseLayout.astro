@@ -421,6 +421,15 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
       content={contentSecurityPolicy}
     />
     <link rel="canonical" href={canonicalURL} />
+    <script type="application/ld+json" set:html={serializeJsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: title,
+      description,
+      url: canonicalURL.href,
+      inLanguage: localeMeta.code,
+      isPartOf: { '@type': 'WebSite', name: 'The AI Resource Hub', url: new URL(base, Astro.site).href },
+    })} />
     {alternateLocaleLinks.map((link) => (
       <link rel="alternate" hreflang={link.hreflang} href={link.href} />
     ))}
@@ -570,7 +579,7 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
     )}
 
     {compactChrome && !isHomePage && globalTickerItems.length > 0 && (
-      <div class="airh-site-ticker" aria-label="Latest AI Resource Hub updates">
+      <div class="airh-site-ticker" role="region" aria-label="Latest AI Resource Hub updates">
         <div class="airh-site-ticker-inner">
           <a
             href={`${base}updates/`}

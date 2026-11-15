@@ -45,7 +45,8 @@
   if (siblings.length === 0) return;
 
   const shell = document.createElement('div');
-  shell.setAttribute('role', 'contentinfo');
+  shell.setAttribute('role', 'navigation');
+  shell.setAttribute('aria-label', 'Other sites in the estate');
   shell.style.cssText = `
     display: flex;
     flex-direction: column;
