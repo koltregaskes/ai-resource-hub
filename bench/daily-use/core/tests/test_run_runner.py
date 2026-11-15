@@ -786,15 +786,21 @@ class LiveGateTests(RunnerCase):
         with open(os.path.join(self.store, runner.STAGE_INDEX), encoding="utf-8") as stream:
             return [json.loads(line) for line in stream if line.strip()]
 
-    def test_ships_with_live_disabled(self):
-        self.assertIs(runner.LIVE_ENABLED, False)
+    def test_the_live_switch_is_one_literal_line_in_the_source(self):
+        # The switch was turned on in the reviewed run-config commit of
+        # 15 November 2026. It is one plain assignment, so a change to it
+        # always shows in a diff.
+        self.assertIs(runner.LIVE_ENABLED, True)
         with open(os.path.join(support.CORE, "runner.py"), encoding="utf-8") as stream:
-            self.assertIn("\nLIVE_ENABLED = False\n", stream.read())
+            source = stream.read()
+        self.assertEqual(source.count("\nLIVE_ENABLED = True\n"), 1)
+        self.assertEqual(source.count("\nLIVE_ENABLED ="), 1)
 
     def test_live_is_refused_before_the_key_file_is_read_or_a_transport_exists(self):
         missing = os.path.join(self.store, "this-key-file-does-not-exist.txt")
         for stage in runner.STAGES:
-            with mock.patch.object(keys, "load_keys") as load_keys, \
+            with mock.patch.object(runner, "LIVE_ENABLED", False), \
+                    mock.patch.object(keys, "load_keys") as load_keys, \
                     mock.patch.object(providers, "UrllibTransport") as real_transport, \
                     mock.patch("builtins.open", side_effect=AssertionError("nothing may be opened")):
                 try:
@@ -819,7 +825,8 @@ class LiveGateTests(RunnerCase):
             json.dump(self.tasks, stream)
         for command in ("qualify", "canary", "full"):
             lines = []
-            with mock.patch.object(keys, "load_keys") as load_keys:
+            with mock.patch.object(runner, "LIVE_ENABLED", False), \
+                    mock.patch.object(keys, "load_keys") as load_keys:
                 code = cli.main([command, "--live", "--config", cfg_path,
                                  "--public-tasks", tasks_path,
                                  "--private-store", os.path.join(self.store, "store"),
@@ -1192,8 +1199,9 @@ class LiveGateTests(RunnerCase):
             runner.require_live_pass(gate_pass)                     # issued by the gate
             with self.assertRaises(runner.LiveRefused):
                 runner.require_live_pass(runner.LiveGatePass(gate_pass.keys))
-        with self.assertRaises(runner.LiveRefused):
-            runner.require_live_pass(gate_pass)                     # live disabled again
+        with mock.patch.object(runner, "LIVE_ENABLED", False):
+            with self.assertRaises(runner.LiveRefused):
+                runner.require_live_pass(gate_pass)                 # live disabled again
         self.assertNotIn(support.FAKE_OPENAI_KEY, repr(gate_pass) + repr(gate_pass.keys))
 
     def test_a_live_run_is_refused_without_graders_or_scorer_before_any_request(self):

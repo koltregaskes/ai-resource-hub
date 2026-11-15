@@ -255,11 +255,19 @@ class FailureClassTests(unittest.TestCase):
 
 class RealTransportGateTests(unittest.TestCase):
     def test_real_transport_cannot_be_built_while_live_is_disabled(self):
-        self.assertIs(runner.LIVE_ENABLED, False)
-        with self.assertRaises(runner.LiveRefused):
-            providers.UrllibTransport(object())
-        with self.assertRaises(runner.LiveRefused):
-            providers.UrllibTransport(runner.LiveGatePass(None))
+        with mock.patch.object(runner, "LIVE_ENABLED", False):
+            with self.assertRaises(runner.LiveRefused):
+                providers.UrllibTransport(object())
+            with self.assertRaises(runner.LiveRefused):
+                providers.UrllibTransport(runner.LiveGatePass(None))
+
+    def test_real_transport_needs_a_pass_issued_by_the_gate_when_live_is_enabled(self):
+        # With the switch on, a pass that the gate did not issue is still refused.
+        with mock.patch.object(runner, "LIVE_ENABLED", True):
+            with self.assertRaises(runner.LiveRefused):
+                providers.UrllibTransport(object())
+            with self.assertRaises(runner.LiveRefused):
+                providers.UrllibTransport(runner.LiveGatePass(None))
 
     def test_real_transport_needs_a_pass_issued_by_the_gate(self):
         with mock.patch.object(runner, "LIVE_ENABLED", True):
