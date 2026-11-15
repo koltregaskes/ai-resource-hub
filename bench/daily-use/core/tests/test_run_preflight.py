@@ -697,6 +697,28 @@ class PassGateTests(unittest.TestCase):
         self.assertFalse(self.gate({"openai": D("0.2599850"), "anthropic": D("50")},
                                    slots=left)["ok"])
 
+    def test_a_slot_to_finish_on_resume_is_counted_at_its_judging_alone(self):
+        # Of the 0.2599851 of one slot on openai, 0.1413465 is the model
+        # request and 0.1186386 is the openai judge. On anthropic there is
+        # only a judge, so the whole 0.1779579 is judging.
+        judging = run()["slot_judging_bound"]["m-oa"]["t1"]
+        self.assertEqual(judging, {"openai": D("0.1186386"), "anthropic": D("0.1779579")})
+        finish = [dict(self.SLOTS[0], judging_only=True), self.SLOTS[1]]
+        exact = {"openai": D("0.1186386") + D("0.2599851"), "anthropic": D("0.3559158")}
+        gate = self.gate(exact, slots=finish)
+        self.assertTrue(gate["ok"])
+        self.assertEqual(gate["planning_bound"], exact)
+        self.assertEqual((gate["slots"], gate["finishing"]), (2, 1))
+        self.assertTrue(gate["lines"][0].startswith(
+            "  pass 2 of 3, 2 slots to run (1 of them only to grade and judge: the paid "
+            "answer is on record and is not asked for again): planning bound "))
+        # The pending work is counted: a hair short on either side refuses.
+        for provider in exact:
+            short = dict(exact, **{provider: exact[provider] - D("0.0000001")})
+            refused = self.gate(short, slots=finish)
+            self.assertEqual((refused["ok"], refused["provider"]), (False, provider))
+        self.assertEqual(self.gate(exact)["finishing"], 0)
+
     def test_what_is_left_of_max_usd_is_tested_too(self):
         caps = {"openai": D("50"), "anthropic": D("50")}
         # Both providers together: 0.5199702 + 0.3559158 = 0.875886.

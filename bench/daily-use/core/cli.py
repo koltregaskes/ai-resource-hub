@@ -17,7 +17,8 @@ the environment. The line names the variable and never shows its value.
 The full run goes one pass at a time (pass n is repeat n of every task for
 every model). A pass whose planning bound is above what is left of a cap is
 not started: the run ends `incomplete` and the command exits with 5.
-`--resume <run id>` carries a stopped canary or full run on.
+`--resume <run id>` carries a stopped canary or full run on. It first grades
+and judges, from the run record, the slots that already hold a paid answer.
 
 Exit codes: 0 finished; 2 refused; 3 interrupted or pending; 4 the judge
 qualification finished but named no panel; 5 incomplete, a pass was not
@@ -324,6 +325,10 @@ def main(argv=None, out=print):
             "after held reservations are reconciled. A resume can lower a cap and can "
             "never raise one." % summary["run_id"])
         return EXIT_INCOMPLETE
+    if summary["status"] == "pending_judging":
+        out("  Slots are still pending on the grader or the judges, so the run is not "
+            "scored. --resume %s grades and judges them from the record; the model is "
+            "not asked again." % summary["run_id"])
     if summary["status"] not in ("finalised", "complete"):
         return EXIT_NOT_FINISHED
     if qualification is not None and not qualification["qualified"]:

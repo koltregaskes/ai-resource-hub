@@ -302,6 +302,9 @@ def build_plan(config, tasks, checklist_samples=None, outcome_samples=None, pane
     # The planning bound of one slot (its model request and its judging), by
     # provider. Every pass holds the same slots, so pass 1 gives the figure.
     slot_bounds = {}
+    # The judging part of that figure alone, for a slot that already has its
+    # paid answer and only has to be graded and judged on a resume.
+    judging_bounds = {}
 
     def slot_cell(model, task):
         return slot_bounds.setdefault(model.model_id, {}).setdefault(task["id"], {})
@@ -336,6 +339,8 @@ def build_plan(config, tasks, checklist_samples=None, outcome_samples=None, pane
         for (unit, model, task), planned in zip(slots, per_slot):
             if unit == pass_unit(1):
                 cell = slot_cell(model, task)
+                cell[judge.provider] = cell.get(judge.provider, ZERO) + planned
+                cell = judging_bounds.setdefault(model.model_id, {}).setdefault(task["id"], {})
                 cell[judge.provider] = cell.get(judge.provider, ZERO) + planned
 
     costed = {}
@@ -420,6 +425,7 @@ def build_plan(config, tasks, checklist_samples=None, outcome_samples=None, pane
         "by_pass": by_pass,
         "passes": len(passes),
         "slot_planning_bound": slot_bounds,
+        "slot_judging_bound": judging_bounds,
         "requests": requests,
         "counts": {
             "models": len(config.models),
@@ -622,7 +628,11 @@ def pass_gate(plan, slots, remaining_caps, number, passes, max_usd_left=None):
     `plan` is from `build_plan` or `preflight`; `slots` are the slots of the
     pass still to run, each with `model_id` and `task_id`. The planning
     bound of the pass is every request of those slots once at its limit,
-    input by the proven byte bound, plus the retry allowance. The pass
+    input by the proven byte bound, plus the retry allowance. A slot marked
+    `"judging_only": True` is one a resume only has to finish: its paid
+    answer is on record and is never asked for again, so it is counted at
+    the planning bound of its judging alone (every judge call of the slot,
+    whether or not some verdicts are already on record). The pass
     starts only if that bound is at or below `remaining_caps[provider]` (the
     cap less the real settled spend and the open reservations) for every
     provider. `max_usd_left` is what is left of `--max-usd` for this run.
@@ -643,13 +653,22 @@ def pass_gate(plan, slots, remaining_caps, number, passes, max_usd_left=None):
     """
     providers = sorted(remaining_caps)
     bound = dict.fromkeys(providers, ZERO)
+    finishing = 0
     for slot in slots:
-        cell = plan["slot_planning_bound"][slot["model_id"]][slot["task_id"]]
+        if slot.get("judging_only"):
+            finishing += 1
+            cell = plan["slot_judging_bound"].get(slot["model_id"], {}).get(slot["task_id"], {})
+        else:
+            cell = plan["slot_planning_bound"][slot["model_id"]][slot["task_id"]]
         for provider, amount in cell.items():
             bound[provider] = bound.get(provider, ZERO) + amount
     remaining = {provider: Decimal(str(remaining_caps[provider])) for provider in providers}
     name = "pass %d of %d" % (number, passes)
-    lines = ["  %s, %d slots to run: planning bound %s" % (name, len(slots), "; ".join(
+    count = "%d slots to run" % len(slots)
+    if finishing:
+        count += (" (%d of them only to grade and judge: the paid answer is on record and "
+                  "is not asked for again)" % finishing)
+    lines = ["  %s, %s: planning bound %s" % (name, count, "; ".join(
         "%s %s USD against a remaining cap of %s USD"
         % (provider, _usd(bound[provider]), _usd(remaining[provider]))
         for provider in providers))]
@@ -670,7 +689,8 @@ def pass_gate(plan, slots, remaining_caps, number, passes, max_usd_left=None):
                      % reason)
     else:
         lines.append("  " + PASS_GATE_NOTE % name)
-    return {"pass": number, "passes": passes, "slots": len(slots), "planning_bound": bound,
+    return {"pass": number, "passes": passes, "slots": len(slots), "finishing": finishing,
+            "planning_bound": bound,
             "remaining_caps": remaining, "ok": reason is None, "provider": provider,
             "reason": reason, "lines": lines}
 

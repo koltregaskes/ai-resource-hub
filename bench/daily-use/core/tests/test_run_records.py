@@ -511,16 +511,46 @@ class ReopenTests(unittest.TestCase):
         with self.assertRaises(records.RecordError) as caught:
             records.RunRecord.reopen(self.store, self.run_id)
         self.assertIn("is finalised", str(caught.exception))
-        # A run that is only waiting on judging has nothing left to send.
+
+    def test_a_run_waiting_on_judging_is_reopened_and_its_pending_row_replaced(self):
         other = records.new_run_id(token="0badcafe")
         waiting = self.record(run_id=other)
-        self.planned(waiting, [("m1", "pub-1", 1)])
+        self.planned(waiting, [("m1", "pub-1", 1), ("m1", "pub-1", 2)])
         waiting.slot_done(row(other, "m1", "pub-1", 1, passed=None, pending=True))
+        waiting.slot_done(row(other, "m1", "pub-1", 2))
         waiting.close()
         self.assertEqual(waiting.status, "pending_judging")
+        log = os.path.join(waiting.dir, "requests.jsonl")
+        with open(log, "rb") as stream:
+            before = stream.read()
+        again = records.RunRecord.reopen(self.store, other)
+        self.addCleanup(again._log.close)
+        self.assertEqual(again.status, "running")
+        self.assertEqual(again.pending_slots(), [records.slot_id(other, "m1", "pub-1", 1)])
+        self.assertEqual(again.complete_passes(), 1)
+        # A final row is never changed.
+        with self.assertRaises(records.RecordError) as caught:
+            again.slot_done(row(other, "m1", "pub-1", 2))
+        self.assertIn("slot already has a final result", str(caught.exception))
+        # The pending row is replaced by appending: the old line stays.
+        again.note("judge_attempt_added_on_resume", {"slot_id": "s"})
+        again.slot_done(row(other, "m1", "pub-1", 1))
+        self.assertEqual(again.pending_slots(), [])
+        self.assertEqual(again.complete_passes(), 2)
+        with open(log, "rb") as stream:
+            after = stream.read()
+        self.assertTrue(after.startswith(before))
+        events = [json.loads(line)["event"] for line in after[len(before):].splitlines()]
+        self.assertEqual(events, ["resumed", "judge_attempt_added_on_resume", "slot"])
+        for name in ("sent", "done", "slot", "resumed"):
+            with self.assertRaises(records.RecordError):
+                again.note(name, {})
+        again.close()
+        # Nothing is left to do, so the run is complete and is not reopened.
+        self.assertEqual(again.status, "complete")
         with self.assertRaises(records.RecordError) as caught:
             records.RunRecord.reopen(self.store, other)
-        self.assertIn("has status pending_judging and cannot be resumed", str(caught.exception))
+        self.assertIn("has status complete and cannot be resumed", str(caught.exception))
 
     def test_a_part_written_log_is_not_resumed(self):
         self.stopped()

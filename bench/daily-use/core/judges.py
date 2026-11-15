@@ -206,15 +206,21 @@ def parse_outcome_verdict(text):
     return {"outcome": value["outcome"], "reason": value["reason"]}
 
 
-def ask(call, prompt, parse):
+def ask(call, prompt, parse, attempts=None):
     """One judge, one answer: a first call and at most one retry.
 
     `call(prompt, attempt)` returns the judge's reply text or raises
     `JudgeCallFailed`. Returns (verdict or None, attempts log). None means
     the judge is unresolved for this answer.
+
+    `attempts` is the attempt numbers to use. It is given only when a
+    stopped run is resumed: the numbers then go on from those the judge
+    call had already used, so that no request id is issued twice.
     """
     log = []
-    for attempt in range(1, ATTEMPTS_PER_JUDGE_CALL + 1):
+    if attempts is None:
+        attempts = range(1, ATTEMPTS_PER_JUDGE_CALL + 1)
+    for attempt in attempts:
         try:
             text = call(prompt, attempt)
         except JudgeCallFailed as failure:
@@ -260,11 +266,29 @@ def combine_outcome(first, second):
     return "answered"
 
 
-def judge_checklist(panel, task_prompt, answer, checks, call_for):
+def _ask_judge(spec, prompt, parse, call_for, earlier_for):
+    """One judge's verdict on one prompt: (verdict or None, attempts log).
+
+    `earlier_for(spec, prompt, parse)` is given only on a resumed run. It
+    returns (the verdict already in the run log or None, the attempt
+    numbers still allowed, the log of what was found). A judge whose
+    verdict is on record is not asked again.
+    """
+    if earlier_for is None:
+        return ask(call_for(spec), prompt, parse)
+    verdict, attempts, found = earlier_for(spec, prompt, parse)
+    if verdict is not None:
+        return verdict, list(found)
+    verdict, log = ask(call_for(spec), prompt, parse, attempts=attempts)
+    return verdict, list(found) + log
+
+
+def judge_checklist(panel, task_prompt, answer, checks, call_for, earlier_for=None):
     """Ask both judges about one answer.
 
     `panel` is the two judge specs; `call_for(spec)` returns that judge's
     `call(prompt, attempt)`. Returns {"checks": {id: status}, "judges": [...]}.
+    `earlier_for` is for a resumed run: see `_ask_judge`.
     """
     assert_panel(panel)
     ids = [check["id"] for check in checks]
@@ -272,21 +296,24 @@ def judge_checklist(panel, task_prompt, answer, checks, call_for):
     verdicts = []
     detail = []
     for spec in panel:
-        verdict, log = ask(call_for(spec), prompt, lambda text: parse_checklist_verdict(text, ids))
+        verdict, log = _ask_judge(spec, prompt,
+                                  lambda text: parse_checklist_verdict(text, ids),
+                                  call_for, earlier_for)
         verdicts.append(verdict)
         detail.append({"judge": spec.model_id, "provider": spec.provider,
                        "verdict": verdict, "attempts": log})
     return {"checks": combine_checklist(verdicts[0], verdicts[1], ids), "judges": detail}
 
 
-def classify_outcome(panel, task_prompt, reply, call_for):
-    """Ask both judges to classify one reply. Returns {"outcome", "judges"}."""
+def classify_outcome(panel, task_prompt, reply, call_for, earlier_for=None):
+    """Ask both judges to classify one reply. Returns {"outcome", "judges"}.
+    `earlier_for` is for a resumed run: see `_ask_judge`."""
     assert_panel(panel)
     prompt = build_outcome_prompt(task_prompt, reply)
     outcomes = []
     detail = []
     for spec in panel:
-        verdict, log = ask(call_for(spec), prompt, parse_outcome_verdict)
+        verdict, log = _ask_judge(spec, prompt, parse_outcome_verdict, call_for, earlier_for)
         outcomes.append(None if verdict is None else verdict["outcome"])
         detail.append({"judge": spec.model_id, "provider": spec.provider,
                        "verdict": verdict, "attempts": log})

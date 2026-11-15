@@ -38,7 +38,19 @@ The cap of each provider is held by three layers. Each one is tested on its own,
 
 **Fewer than three passes is never scored.** A run with fewer complete passes than the configured number cannot be finalised, so it has no scores and no public record. A pass is complete when every one of its slots has a final result. Finalising such a run is refused with a message that gives the count, and there is no option that overrides it.
 
-**Resuming.** `--resume <run id>` on `dry-run`, `canary` or `full` carries a stopped run on under the same run id and the same ledger, in the planned order. A slot that has a row is left alone. No request id that is in the run's log is ever issued again: a slot that was stopped part-way goes on with its next request number, and the requests it had already used count towards its limit of 3. A paid answer that came back before the run stopped and was not yet graded is kept on its slot and is not asked for again; that slot stays pending. The run is resumed only as the same run: the same stage, the same task set and the same config, except that `acknowledged_overruns` may have changed and a cap may have been lowered. A qualification is not resumed; run it again.
+**Resuming.** `--resume <run id>` on `dry-run`, `canary` or `full` carries a stopped run on under the same run id and the same ledger, in the planned order. A slot that has a final row is left alone. No request id that is in the run's log is ever issued again: a slot that was stopped part-way goes on with its next request number, and the requests it had already used count towards its limit of 3. The run is resumed only as the same run: the same stage, the same task set and the same config, except that `acknowledged_overruns` may have changed and a cap may have been lowered. A run whose slots all have a row, some still pending (status `pending_judging`), is resumed in the same way. A qualification is not resumed; run it again.
+
+**What a resume finishes.** In each pass, before any unsent slot of that pass is sent, the resume finishes the slots that already hold a paid answer, in the planned order. The model is never asked again for such a slot: the answer is read from the run record.
+
+- *A paid answer with no row* (the run stopped between the answer and its grading or judging). The answer is graded, and judged if the grader says so.
+- *A row left pending because the grader could not run.* The answer is graded again. If the grader still cannot run, the slot stays pending and the run stops, as before.
+- *A row pending on the judges* (a judge unresolved after its retry, or judging refused by a cap or after an overrun). Only the judging that is missing is sent. A verdict that is in the run log for the same judge prompt is used as it stands and that judge is not asked again.
+
+Judge requests on a resume follow the limit already in the code, 2 requests per judge call (one judge, one kind of judging, one slot). The requests in the log count towards it, one that was in flight when the run stopped included, and the numbering goes on from them, so a judge request id is never used twice. A judge call that had already used both requests gets one further request in that resume, and only one. That is written to the run log as a `judge_attempt_added_on_resume` line, printed, and flagged on the slot row. If the judge still gives no verdict, the slot stays pending and the run stays unpublishable; the next resume may try once more. Nothing loops.
+
+The slot row is replaced by appending: the new row is a further `slot` line in `requests.jsonl`, the earlier pending row stays in the log, and the last row of a slot is the one that counts for the passes, for finalising and for the manifest. A row that is final is never replaced. A finished slot carries the flag `finished_on_resume`, every model and judge request of the slot (those from before the stop included) and their whole cost.
+
+Every request of a resume goes through the same steps as any other: the store lock, the frozen-caps check, the pre-flight, the pass gate and the ledger reservation. The gate before a pass counts the work to finish in that pass: a slot that only has to be graded and judged is counted at the planning bound of its judging (every judge call of the slot, plus the 15%), and an unsent slot at its whole planning bound. If that does not fit, nothing of the pass is sent, the slots stay pending and the run is `incomplete`.
 
 **A resume never raises a cap.** The caps in force when a run starts (`caps_usd` for each provider, and `--max-usd` or none) are written into its record and are not changed afterwards. `--resume` is refused, with exit 2 and before the key file is read, if a provider cap is higher than the one on record, if `--max-usd` is higher than the one on record, or if the run started with a `--max-usd` and none is given. The same or a lower figure is accepted, and a `--max-usd` may be added where there was none. Every resume writes a line to the run's record and log with the caps the run started with, the caps in force for that resume and the config hash, so a lowered cap is on file. The comparison is always with the caps the run started with. Nothing lets one run id spend above them.
 
@@ -118,11 +130,11 @@ How a slot is graded with the default grader:
 1. `decide(task, reply)`. If nothing is pending, that is the result.
 2. If it is pending on the checklist, both judges are asked about the judged checks only, and their verdicts go back through `decide(task, reply, judge_verdicts=...)`. The check-level results come from `apply_judge_verdicts`.
 3. If it is pending on the outcome, both judges classify the reply. Agreement gives that outcome and disagreement gives `answered`. The pass then follows the method's table: on a task with no knowable answer only `abstained` passes; on an answerable task the grader has already rejected the reply, so the pass stays false.
-4. A judge left unresolved after its one retry leaves the slot pending, with outcome `judge_unresolved` when it was the outcome that could not be settled.
+4. A judge left unresolved after its one retry leaves the slot pending, with outcome `judge_unresolved` when it was the outcome that could not be settled. `--resume` asks that judge again: see "What a resume finishes".
 
 A different grader can be injected: `grade(task, reply)` returns `{"outcome", "pass", "pending", "needs_judge"}`, where `needs_judge` lists `"outcome"` and/or judged checks, and the runner calls `grade(task, reply, judged=...)` with the panel's results. A grader that does not take `judged` gets a conservative fallback that leaves anything it cannot decide pending.
 
-Before the first request of a canary or a full run, the default grader is checked: `core/outcome.py` must load, and if the task set has a formula task the formula engine must start. A live full run is also refused without `core/scores.py`. If a grader still fails in the middle of a run, the paid answer is kept on its slot as pending and the run stops.
+Before the first request of a canary or a full run, the default grader is checked: `core/outcome.py` must load, and if the task set has a formula task the formula engine must start. A live full run is also refused without `core/scores.py`. If a grader still fails in the middle of a run, the paid answer is kept on its slot as pending and the run stops. Once the grader works, `--resume` grades that answer from the record.
 
 **The slot record.** Every slot row the runner writes can be handed straight to `score_run`. It carries `model`, `task_id`, `family`, `split`, `repeat`, `outcome`, `pass`, `truncated`, `time_s`, `cost_usd`, `needed_judge_classification` and `checks`:
 
@@ -217,8 +229,8 @@ python -I $core canary @common --key-file "<path to key file>" --live
 
 # 5. The full run: three passes, each gated before it starts.
 python -I $core full @common --key-file "<path to key file>" --live
-#    If it ends incomplete (exit 5) or interrupted (exit 3), carry it on, under the
-#    same caps or lower ones, with:
+#    If it ends incomplete (exit 5), or interrupted or pending (exit 3), carry it on,
+#    under the same caps or lower ones, with:
 python -I $core full @common --key-file "<path to key file>" --live --resume "<run id>"
 ```
 
@@ -232,7 +244,7 @@ Exit codes: 0 finished; 2 refused (the reason is printed after `REFUSED:`); 3 in
 
 ## Not built yet
 
-- Completing the judging of a run left pending in staging. Such a run stays unpublished, as the method requires, but there is no command to finish it. `--resume` does not do it: it sends only slots that have no row.
-- Grading a slot that was left pending because the grader could not run, or a paid answer that `--resume` found on record without a row. The answer is kept; there is no command to grade it later, so that pass stays incomplete and the run is not scored.
+- Resuming a qualification. Run it again.
+- Finishing a pending slot by hand, or with a judge other than the panel. A slot whose judge never gives a verdict stays pending however often the run is resumed, and the run is then left unscored.
 - Streaming, and so time to first token.
 - A command for console reconciliation; only the ledger function exists.

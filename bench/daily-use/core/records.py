@@ -14,8 +14,10 @@ Layout inside the private store (a path given at run time, outside the repo):
   to `requests.jsonl`, flushed and fsynced. The response is appended when it
   arrives. A crash leaves a record of what was in flight.
 - A run that was stopped can be reopened (`RunRecord.reopen`) and carried
-  on in the planned order. Slots that already have a row are left alone, and
-  a request id that is in the log is never issued again.
+  on in the planned order. A slot with a final row is left alone, and a
+  request id that is in the log is never issued again. A slot whose row is
+  pending is finished by appending a new row for it: the log is only ever
+  appended to, and the last row of a slot is the one that counts.
 - A run whose next pass was refused by the pass gate has status
   `incomplete`: the finished passes are kept and nothing more was sent.
 - The metadata a run starts with is kept as written, the caps among it
@@ -40,8 +42,9 @@ FINAL_OUTCOMES = ("answered", "abstained", "refused", "malformed", "execution_er
 REQUEST_LOG = "requests.jsonl"
 MANIFEST = "manifest.json"
 # Statuses a staged run can be reopened from. `running` is what a run that
-# died without warning leaves behind.
-RESUMABLE = ("interrupted", "incomplete", "running")
+# died without warning leaves behind. `pending_judging` is a run whose slots
+# all have a row, some of them still pending: a resume finishes those.
+RESUMABLE = ("interrupted", "incomplete", "running", "pending_judging")
 # Fields of run.json that are worked out from the record, not kept as meta.
 _COMPUTED = ("run_id", "stage", "status", "publishable", "started_utc", "interrupt_reason",
              "stopped_providers", "report")
@@ -145,9 +148,10 @@ class RunRecord:
         The plan, the slot rows and every request id are read back from the
         folder. Nothing already written is changed: new lines are appended
         to the same log, and the metadata the run started with (the caps
-        among it) is kept as it was. Refused for a run that is finalised,
-        complete or only waiting on judging, and for a log that does not
-        read back.
+        among it) is kept as it was. Refused for a run that is finalised
+        or complete, and for a log that does not read back. A run that is
+        only waiting on judging can be reopened, so that the judging can
+        be finished.
 
         `note` is a dict written with this resume, both in the `resumed`
         list of run.json and on the `resumed` line of the log. The runner
@@ -235,6 +239,20 @@ class RunRecord:
                 found.append((int(number), dict(lines, request_id=request)))
         return [item for _, item in sorted(found, key=lambda pair: pair[0])]
 
+    def logged_requests(self, prefix):
+        """Every request in the log whose id starts with `prefix`, in the
+        order it was sent, each as {"request_id", "sent", "done"}."""
+        return [dict(lines, request_id=request) for request, lines in self._requests.items()
+                if request.startswith(prefix)]
+
+    def note(self, event, payload):
+        """Append a line that is neither a request nor a slot row, for
+        example the notice that a resume gave a judge call one more
+        attempt. `event` may not be a name the log already uses."""
+        if event in ("sent", "done", "slot", "resumed"):
+            raise RecordError("reserved event name: " + str(event))
+        self._append(dict(payload, event=event, at_utc=stamp()))
+
     # ---- writing -------------------------------------------------------
 
     def _check(self, data):
@@ -309,7 +327,9 @@ class RunRecord:
 
     def slot_done(self, row):
         """Store the row for one slot. A pending slot may be stored again
-        once its judging completes; a final slot may not be changed."""
+        once its grading or judging completes: the new row is appended and
+        takes the place of the earlier one, which stays in the log. A final
+        slot may not be changed."""
         slot = row["slot_id"]
         earlier = self.rows.get(slot)
         if earlier is not None and not earlier.get("pending"):
@@ -351,7 +371,7 @@ class RunRecord:
         for slot in self.planned:
             by_pass.setdefault(slot.get("repeat"), []).append(slot["slot_id"])
         return sum(1 for slots in by_pass.values()
-                   if all(slot in self.rows and _is_final(self.rows[slot]) for slot in slots))
+                   if all(slot in self.rows and is_final(self.rows[slot]) for slot in slots))
 
     def require_complete_passes(self):
         """Refuse to finalise or score a run with fewer complete passes than
@@ -366,7 +386,7 @@ class RunRecord:
                 % (self.run_id, complete, self.required_passes, self.required_passes))
 
     def pending_slots(self):
-        return sorted(s for s, row in self.rows.items() if not _is_final(row))
+        return sorted(s for s, row in self.rows.items() if not is_final(row))
 
     def unstarted_slots(self):
         return [slot["slot_id"] for slot in self.planned if slot["slot_id"] not in self.rows]
@@ -386,7 +406,7 @@ class RunRecord:
                 entry["unstarted_slots"].append(slot["slot_id"])
             else:
                 entry["attempted"] += 1
-                if not _is_final(row):
+                if not is_final(row):
                     entry["pending"] += 1
         return {"models": models, "stopped_providers": list(self.stopped_providers),
                 "interrupt_reason": self.interrupt_reason, "status": self.status}
@@ -488,7 +508,7 @@ def read_staged(private_store, run_id):
     return document
 
 
-def _is_final(row):
+def is_final(row):
     return (row.get("outcome") in FINAL_OUTCOMES and isinstance(row.get("pass"), bool)
             and not row.get("pending"))
 
