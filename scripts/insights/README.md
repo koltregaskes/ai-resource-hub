@@ -23,3 +23,14 @@ publisher prices and assumptions are pinned by the generator's own committed
 source, with URLs and reading dates in the matching Studio record. Reproduction
 proves the calculation and provenance, not that historical publisher responses
 or page fingerprints were independently captured.
+
+## Job-ad figures (studio-2)
+
+Run `node scripts/insights/job-ads-that-mention-ai.mjs --force` and compare
+`2026-11-14-job-ads-that-mention-ai.json` byte for byte. The input is the committed
+`data/ai-and-jobs/2026-11-14.json`; its SHA-256 is in `input.fileSha256`. Keep
+that file and `src/lib/ai-and-jobs.mjs` from the same fixed branch revision. The
+generator pins the publisher README licence-section URL, checked 15 November
+2026, instead of the unavailable LICENSE recorded in the original input.
+Original observations and vintage metadata are preserved; the latter does not
+establish a verified publisher release date.
