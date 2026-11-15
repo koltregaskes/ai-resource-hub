@@ -42,6 +42,10 @@ export function applyModelFieldEvidence<T extends { id: string; notes?: string |
     values.pricing_source = entry.officialPricing.source;
     values.input_price = entry.officialPricing.inputPrice;
     values.output_price = entry.officialPricing.outputPrice;
+    // Cache-hit pricing needs its own evidence too. Never retain a discovery
+    // value when the catalogue has no verified scalar for this field.
+    values.cached_input_price = entry.officialPricing.cachedInputPrice ?? null;
+    result.field_states.cached_input_price = values.cached_input_price === null ? 'unverified' : 'verified';
     result.field_states.input_price = 'verified';
     result.field_states.output_price = 'verified';
   }
