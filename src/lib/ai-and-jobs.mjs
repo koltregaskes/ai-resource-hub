@@ -5,12 +5,28 @@ export function isStale(observation, source, now = new Date()) {
 }
 function requireFields(row, fields) { for(const field of fields) if(row[field] == null || row[field]==='') throw Error(`Missing ${field}`); }
 function uncertainty(row) {
+ const has = field => row[field] !== null && row[field] !== undefined;
+ const fields = ['standard_error','relative_standard_error','interval_lower','interval_upper','interval_type','confidence_level'];
  if(!['published','not_published'].includes(row.uncertainty_status)) throw Error('Unchecked uncertainty');
  if(!Number.isFinite(row.value ?? row.effect)) throw Error('Non-finite figure');
- if(row.uncertainty_status==='published') {
-   const interval=Number.isFinite(row.interval_lower)&&Number.isFinite(row.interval_upper);
-   if(!interval && !Number.isFinite(row.standard_error) && !Number.isFinite(row.relative_standard_error)) throw Error('Missing published uncertainty');
-   if(interval && (row.interval_lower>row.interval_upper || !['confidence','prediction','credible','scenario_range'].includes(row.interval_type) || !(row.confidence_level>0 && row.confidence_level<1))) throw Error('Invalid interval');
+ for(const field of ['standard_error','relative_standard_error']) {
+   if(has(field) && (!Number.isFinite(row[field]) || row[field] < 0)) throw Error('Invalid non-negative uncertainty');
+ }
+ const lower = has('interval_lower'), upper = has('interval_upper');
+ if(lower !== upper) throw Error('Incomplete interval');
+ if(lower) {
+   if(!Number.isFinite(row.interval_lower) || !Number.isFinite(row.interval_upper) ||
+      row.interval_lower > row.interval_upper ||
+      !['confidence','prediction','credible','scenario_range'].includes(row.interval_type) ||
+      !Number.isFinite(row.confidence_level) || row.confidence_level <= 0 || row.confidence_level >= 1)
+     throw Error('Invalid interval');
+ } else if(has('interval_type') || has('confidence_level')) {
+   throw Error('Orphan interval metadata');
+ }
+ if(row.uncertainty_status === 'not_published') {
+   if(fields.some(has)) throw Error('Unexpected unpublished uncertainty');
+ } else if(!lower && !has('standard_error') && !has('relative_standard_error')) {
+   throw Error('Missing published uncertainty');
  }
 }
 function rightsFor(data, id) {

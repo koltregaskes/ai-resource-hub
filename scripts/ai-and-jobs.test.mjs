@@ -42,3 +42,47 @@ test('survey intervals must retain published uncertainty metadata',()=>{
  const d=copy();d.jobs_series[0].kind='survey_estimate';Object.assign(d.jobs_observations[0],{uncertainty_status:'published',interval_lower:1,interval_upper:3,interval_type:'confidence',confidence_level:0.95});validateJobs(d);
  d.jobs_observations[0].confidence_level=null;assert.throws(()=>validateJobs(d));
 });
+
+test('uncertainty errors must be finite and non-negative even beside a valid interval',()=>{
+ for(const field of ['standard_error','relative_standard_error']) {
+  for(const bad of [-1,Infinity,-Infinity,NaN,'0','',true]) {
+   const d=copy();Object.assign(d.jobs_observations[0],{
+    uncertainty_status:'published',interval_lower:1,interval_upper:3,
+    interval_type:'confidence',confidence_level:0.95,[field]:bad,
+   });
+   assert.throws(()=>validateJobs(d),/Invalid non-negative uncertainty/,field+'='+String(bad));
+  }
+ }
+});
+test('a valid error value cannot hide partial, orphan or invalid interval metadata',()=>{
+ const invalid=[
+  {interval_lower:1},{interval_upper:3},{interval_lower:1,interval_upper:3},
+  {interval_type:'confidence'},{confidence_level:0.95},
+  {interval_lower:3,interval_upper:1,interval_type:'confidence',confidence_level:0.95},
+  {interval_lower:1,interval_upper:3,interval_type:'confidence',confidence_level:'0.95'},
+  {interval_lower:1,interval_upper:3,interval_type:'confidence',confidence_level:Infinity},
+ ];
+ for(const patch of invalid) {
+  const d=copy();Object.assign(d.jobs_observations[0],{uncertainty_status:'published',standard_error:0,...patch});
+  assert.throws(()=>validateJobs(d),/interval/i);
+ }
+});
+test('not-published uncertainty cannot carry numeric or interval evidence',()=>{
+ for(const patch of [
+  {standard_error:0},{relative_standard_error:0},
+  {interval_lower:1,interval_upper:3,interval_type:'confidence',confidence_level:0.95},
+ ]) {
+  const d=copy();Object.assign(d.jobs_observations[0],patch);
+  assert.equal(d.jobs_observations[0].uncertainty_status,'not_published');
+  assert.throws(()=>publicationRows(d),/Unexpected unpublished uncertainty/);
+ }
+});
+test('legitimate zero uncertainty and complete published intervals remain valid',()=>{
+ for(const patch of [
+  {standard_error:0},{relative_standard_error:0},
+  {interval_lower:0,interval_upper:0,interval_type:'confidence',confidence_level:0.95},
+ ]) {
+  const d=copy();Object.assign(d.jobs_observations[0],{uncertainty_status:'published',...patch});
+  assert.equal(validateJobs(d),d);
+ }
+});
