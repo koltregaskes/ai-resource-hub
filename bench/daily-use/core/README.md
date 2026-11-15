@@ -69,7 +69,7 @@ Backends, chosen with the `DTD_SANDBOX` environment variable. There is no defaul
 
 | `DTD_SANDBOX` | What it is |
 |---|---|
-| `docker` | `docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges --pids-limit 64 --memory 256m --cpus 1 --user 65534:65534 --tmpfs /tmp:rw,size=16m,noexec`, with no volume mounts and `--pull never`. The image is pinned in `sandbox.DOCKER_IMAGE` (`python:3.12.7-slim-bookworm`) and must already be on the machine. On expiry the named container is killed with `docker kill`. |
+| `docker` | `docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges --pids-limit 64 --memory 256m --cpus 1 --user 65534:65534 --tmpfs /tmp:rw,size=16m,noexec`, with no volume mounts and `--pull never`. The image is pinned by content digest in `sandbox.DOCKER_IMAGE` (`python@sha256:60d9996b6a8a3689d36db740b49f4327be3be09a21122bd02fb8895abb38b50d`, read from the tag `python:3.12.7-slim-bookworm`) and must already be on the machine. On expiry the named container is killed with `docker kill`. |
 | `wsl-bwrap` | Through `wsl.exe`: `bwrap --unshare-all --die-with-parent --new-session`, with only `/usr` bound (read-only), a fresh `/proc`, `/dev` and `/tmp`, a cleared environment, no Windows drive and no network, plus `timeout` and `prlimit` limits on CPU time, address space, file size and process count. `DTD_WSL_DISTRO` names the distribution if it isn't the default one. |
 
 Nothing here installs, downloads or pulls anything. If no backend is chosen, the tool or the image is missing, or the self-test fails, a `python_tests` reply comes back `sandbox_unavailable`: it is not graded, `decide` reports the slot as pending on `sandbox`, and it is never run on the host or graded by its text.

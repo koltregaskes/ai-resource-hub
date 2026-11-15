@@ -195,8 +195,10 @@ class CommandLineTest(unittest.TestCase):
         self.assertEqual(command[-5:], [sandbox.DOCKER_IMAGE, "python", "-I", "-S", "-"])
 
     def test_the_docker_image_is_pinned(self):
-        self.assertRegex(sandbox.DOCKER_IMAGE, r"^python:\d+\.\d+\.\d+-[a-z-]+$")
-        self.assertNotIn("latest", sandbox.DOCKER_IMAGE)
+        # An immutable content digest, never a tag: a tag can be moved.
+        self.assertRegex(sandbox.DOCKER_IMAGE, r"^python@sha256:[0-9a-f]{64}$")
+        self.assertRegex(sandbox.DOCKER_IMAGE_TAG, r"^python:\d+\.\d+\.\d+-[a-z-]+$")
+        self.assertNotIn("latest", sandbox.DOCKER_IMAGE_TAG)
 
     def test_wsl_bwrap_command(self):
         with mock.patch.dict(os.environ, {}, clear=False):

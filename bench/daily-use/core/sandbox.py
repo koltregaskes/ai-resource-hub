@@ -55,9 +55,14 @@ from typing import Any, Optional, Sequence
 ENV_BACKEND = "DTD_SANDBOX"
 ENV_WSL_DISTRO = "DTD_WSL_DISTRO"
 
-# The pinned official Python image. It must already be present locally:
-# containers are started with ``--pull never``.
-DOCKER_IMAGE = "python:3.12.7-slim-bookworm"
+# The pinned official Python image, named by its content digest so that the
+# availability check, the self-test and every grading run use identical image
+# contents (a tag can be moved; a digest cannot). ``DOCKER_IMAGE_TAG`` is the
+# tag the digest was read from and is for people, never passed to Docker.
+# The image must already be present locally: containers are started with
+# ``--pull never``.
+DOCKER_IMAGE_TAG = "python:3.12.7-slim-bookworm"
+DOCKER_IMAGE = "python@sha256:60d9996b6a8a3689d36db740b49f4327be3be09a21122bd02fb8895abb38b50d"
 DOCKER_USER = "65534:65534"
 DOCKER_UID = 65534
 
