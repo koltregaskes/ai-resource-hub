@@ -1,0 +1,473 @@
+{
+  "snapshotDate": "2026-11-14",
+  "read": "14 November 2026",
+  "method": {
+    "prices": "US dollars per million tokens, standard rate, uncached, short prompts. Batch, Flex, Fast mode, caching, data-residency uplifts and long-prompt surcharges are excluded.",
+    "order": "Versions ordered by version number. dateOnPage is a date the lab page gives for the version (inside a snapshot or model ID), not a launch date.",
+    "step": "(new - old) / old, input and output separately, rounded to one decimal place.",
+    "lines": "opus and fable follow the \"line\" field in Anthropic Models API documentation. openai-main follows the GPT-5.6 Sol page saying Sol roughly corresponds to the earlier unsuffixed tier."
+  },
+  "lines": [
+    {
+      "key": "opus",
+      "lab": "Anthropic",
+      "name": "Claude Opus",
+      "rows": [
+        {
+          "version": "Claude Opus 4",
+          "input": 15,
+          "output": 75,
+          "status": "Retired",
+          "dateOnPage": "2025-05-14",
+          "dateNote": "model ID claude-opus-4-20250514",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "dateUrl": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "Claude Opus 4.1",
+          "input": 15,
+          "output": 75,
+          "status": "Retired",
+          "dateOnPage": "2025-08-05",
+          "dateNote": "model ID claude-opus-4-1-20250805",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "dateUrl": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "Claude Opus 4.5",
+          "input": 5,
+          "output": 25,
+          "status": "Active",
+          "dateOnPage": "2025-11-01",
+          "dateNote": "model ID claude-opus-4-5-20251101",
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "dateUrl": "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "Claude Opus 4.6",
+          "input": 5,
+          "output": 25,
+          "status": "Active",
+          "dateOnPage": null,
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "Claude Opus 4.7",
+          "input": 5,
+          "output": 25,
+          "status": "Active",
+          "dateOnPage": null,
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "Claude Opus 4.8",
+          "input": 5,
+          "output": 25,
+          "status": "Active",
+          "dateOnPage": null,
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "Claude Opus 5",
+          "input": 5,
+          "output": 25,
+          "status": "Active",
+          "dateOnPage": null,
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "Claude Opus 5.5",
+          "input": 4,
+          "output": 20,
+          "status": "Active",
+          "dateOnPage": null,
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "read": "14 November 2026"
+        }
+      ],
+      "steps": [
+        {
+          "from": "Claude Opus 4",
+          "to": "Claude Opus 4.1",
+          "inputPct": 0,
+          "outputPct": 0,
+          "direction": "flat"
+        },
+        {
+          "from": "Claude Opus 4.1",
+          "to": "Claude Opus 4.5",
+          "inputPct": -66.7,
+          "outputPct": -66.7,
+          "direction": "down"
+        },
+        {
+          "from": "Claude Opus 4.5",
+          "to": "Claude Opus 4.6",
+          "inputPct": 0,
+          "outputPct": 0,
+          "direction": "flat"
+        },
+        {
+          "from": "Claude Opus 4.6",
+          "to": "Claude Opus 4.7",
+          "inputPct": 0,
+          "outputPct": 0,
+          "direction": "flat"
+        },
+        {
+          "from": "Claude Opus 4.7",
+          "to": "Claude Opus 4.8",
+          "inputPct": 0,
+          "outputPct": 0,
+          "direction": "flat"
+        },
+        {
+          "from": "Claude Opus 4.8",
+          "to": "Claude Opus 5",
+          "inputPct": 0,
+          "outputPct": 0,
+          "direction": "flat"
+        },
+        {
+          "from": "Claude Opus 5",
+          "to": "Claude Opus 5.5",
+          "inputPct": -20,
+          "outputPct": -20,
+          "direction": "down"
+        }
+      ],
+      "firstToLast": {
+        "from": "Claude Opus 4",
+        "to": "Claude Opus 5.5",
+        "inputPct": -73.3,
+        "outputPct": -73.3
+      },
+      "counts": {
+        "up": 0,
+        "down": 2,
+        "flat": 5,
+        "mixed": 0
+      },
+      "peakInput": {
+        "version": "Claude Opus 4",
+        "input": 15,
+        "output": 75
+      }
+    },
+    {
+      "key": "fable",
+      "lab": "Anthropic",
+      "name": "Claude Fable",
+      "rows": [
+        {
+          "version": "Claude Fable 5",
+          "input": 10,
+          "output": 50,
+          "status": "Active",
+          "dateOnPage": null,
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "Claude Fable 5.1",
+          "input": 10,
+          "output": 50,
+          "status": "Active",
+          "dateOnPage": null,
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "Claude Fable 5.2",
+          "input": 8,
+          "output": 40,
+          "status": "Active",
+          "dateOnPage": null,
+          "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "read": "14 November 2026"
+        }
+      ],
+      "steps": [
+        {
+          "from": "Claude Fable 5",
+          "to": "Claude Fable 5.1",
+          "inputPct": 0,
+          "outputPct": 0,
+          "direction": "flat"
+        },
+        {
+          "from": "Claude Fable 5.1",
+          "to": "Claude Fable 5.2",
+          "inputPct": -20,
+          "outputPct": -20,
+          "direction": "down"
+        }
+      ],
+      "firstToLast": {
+        "from": "Claude Fable 5",
+        "to": "Claude Fable 5.2",
+        "inputPct": -20,
+        "outputPct": -20
+      },
+      "counts": {
+        "up": 0,
+        "down": 1,
+        "flat": 1,
+        "mixed": 0
+      },
+      "peakInput": {
+        "version": "Claude Fable 5",
+        "input": 10,
+        "output": 50
+      }
+    },
+    {
+      "key": "openai-main",
+      "lab": "OpenAI",
+      "name": "GPT-5 to GPT-5.5, then Sol",
+      "rows": [
+        {
+          "version": "GPT-5",
+          "input": 1.25,
+          "output": 10,
+          "status": "Deprecated",
+          "dateOnPage": "2025-08-07",
+          "dateNote": "snapshot gpt-5-2025-08-07",
+          "url": "https://developers.openai.com/api/docs/models/gpt-5",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "GPT-5.1",
+          "input": 1.25,
+          "output": 10,
+          "status": "Deprecated",
+          "dateOnPage": "2025-11-13",
+          "dateNote": "snapshot gpt-5.1-2025-11-13",
+          "url": "https://developers.openai.com/api/docs/models/gpt-5.1",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "GPT-5.2",
+          "input": 1.75,
+          "output": 14,
+          "status": null,
+          "dateOnPage": "2025-12-11",
+          "dateNote": "snapshot gpt-5.2-2025-12-11",
+          "url": "https://developers.openai.com/api/docs/models/gpt-5.2",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "GPT-5.4",
+          "input": 2.5,
+          "output": 15,
+          "status": null,
+          "dateOnPage": "2026-03-05",
+          "dateNote": "snapshot gpt-5.4-2026-03-05",
+          "url": "https://developers.openai.com/api/docs/models/gpt-5.4",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "GPT-5.5",
+          "input": 5,
+          "output": 30,
+          "status": null,
+          "dateOnPage": "2026-04-23",
+          "dateNote": "snapshot gpt-5.5-2026-04-23",
+          "url": "https://developers.openai.com/api/docs/models/gpt-5.5",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "GPT-5.6 Sol",
+          "input": 4,
+          "output": 20,
+          "status": null,
+          "promo": "promotional pricing until 30 November 2026; the page does not give the price after that",
+          "dateOnPage": null,
+          "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "GPT-6 Sol",
+          "input": 2,
+          "output": 10,
+          "status": null,
+          "dateOnPage": null,
+          "url": "https://developers.openai.com/api/docs/models/gpt-6-sol",
+          "read": "14 November 2026"
+        },
+        {
+          "version": "GPT-6.1 Sol",
+          "input": 2,
+          "output": 10,
+          "status": null,
+          "dateOnPage": null,
+          "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "alsoUrl": "https://developers.openai.com/api/docs/pricing",
+          "read": "14 November 2026"
+        }
+      ],
+      "steps": [
+        {
+          "from": "GPT-5",
+          "to": "GPT-5.1",
+          "inputPct": 0,
+          "outputPct": 0,
+          "direction": "flat"
+        },
+        {
+          "from": "GPT-5.1",
+          "to": "GPT-5.2",
+          "inputPct": 40,
+          "outputPct": 40,
+          "direction": "up"
+        },
+        {
+          "from": "GPT-5.2",
+          "to": "GPT-5.4",
+          "inputPct": 42.9,
+          "outputPct": 7.1,
+          "direction": "up"
+        },
+        {
+          "from": "GPT-5.4",
+          "to": "GPT-5.5",
+          "inputPct": 100,
+          "outputPct": 100,
+          "direction": "up"
+        },
+        {
+          "from": "GPT-5.5",
+          "to": "GPT-5.6 Sol",
+          "inputPct": -20,
+          "outputPct": -33.3,
+          "direction": "down"
+        },
+        {
+          "from": "GPT-5.6 Sol",
+          "to": "GPT-6 Sol",
+          "inputPct": -50,
+          "outputPct": -50,
+          "direction": "down"
+        },
+        {
+          "from": "GPT-6 Sol",
+          "to": "GPT-6.1 Sol",
+          "inputPct": 0,
+          "outputPct": 0,
+          "direction": "flat"
+        }
+      ],
+      "firstToLast": {
+        "from": "GPT-5",
+        "to": "GPT-6.1 Sol",
+        "inputPct": 60,
+        "outputPct": 0
+      },
+      "counts": {
+        "up": 3,
+        "down": 2,
+        "flat": 2,
+        "mixed": 0
+      },
+      "peakInput": {
+        "version": "GPT-5.5",
+        "input": 5,
+        "output": 30
+      }
+    },
+    {
+      "key": "astra",
+      "lab": "OpenAI",
+      "name": "GPT-6 Astra",
+      "rows": [
+        {
+          "version": "GPT-6 Astra",
+          "input": 10,
+          "output": 50,
+          "status": null,
+          "dateOnPage": null,
+          "url": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+          "alsoUrl": "https://developers.openai.com/api/docs/pricing",
+          "read": "14 November 2026"
+        }
+      ],
+      "steps": [],
+      "firstToLast": {
+        "from": "GPT-6 Astra",
+        "to": "GPT-6 Astra",
+        "inputPct": 0,
+        "outputPct": 0
+      },
+      "counts": {
+        "up": 0,
+        "down": 0,
+        "flat": 0,
+        "mixed": 0
+      },
+      "peakInput": {
+        "version": "GPT-6 Astra",
+        "input": 10,
+        "output": 50
+      }
+    }
+  ],
+  "headline": {
+    "opusFirstToLast": {
+      "from": "Claude Opus 4",
+      "to": "Claude Opus 5.5",
+      "inputPct": -73.3,
+      "outputPct": -73.3
+    },
+    "opusRises": 0,
+    "openaiPeakVsGpt5": {
+      "version": "GPT-5.5",
+      "inputMultiple": 4,
+      "outputMultiple": 3
+    },
+    "openaiPeakToLatest": {
+      "from": "GPT-5.5",
+      "to": "GPT-6.1 Sol",
+      "inputPct": -60,
+      "outputPct": -66.7
+    },
+    "openaiGpt5ToLatest": {
+      "from": "GPT-5",
+      "to": "GPT-6.1 Sol",
+      "inputPct": 60,
+      "outputPct": 0
+    },
+    "topTiers": [
+      {
+        "version": "Claude Fable 5.2",
+        "input": 8,
+        "output": 40,
+        "vsMainLine": {
+          "version": "Claude Opus 5.5",
+          "inputMultiple": 2,
+          "outputMultiple": 2
+        }
+      },
+      {
+        "version": "GPT-6 Astra",
+        "input": 10,
+        "output": 50,
+        "vsMainLine": {
+          "version": "GPT-6.1 Sol",
+          "inputMultiple": 5,
+          "outputMultiple": 5
+        }
+      }
+    ],
+    "astraVsGpt5": {
+      "inputMultiple": 8,
+      "outputMultiple": 5
+    }
+  }
+}

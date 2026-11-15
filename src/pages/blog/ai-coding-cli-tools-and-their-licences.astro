@@ -1,0 +1,75 @@
+---
+import InsightArticle from '../../layouts/InsightArticle.astro';
+import StudioNote from '../../components/insights/StudioNote.astro';
+import { article } from '../../data/studio/ai-coding-cli-tools-and-their-licences';
+import data from '../../data/insights/2026-11-14-ai-coding-cli-tools-and-their-licences.json';
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const c = data.counts;
+const rows = data.rows;
+const pr = data.pricingTypeOfOsiStyleTools;
+const catText = (r) => `${r.catalogue.openSource ? 'Open source' : 'Not open source'}, ${r.catalogue.license ? r.catalogue.license : 'no licence named'}`;
+const fileName = (u) => u.split('/').pop();
+const agree = (r) => {
+  if (!r.verified) return 'Cannot check';
+  if (r.flagAgrees === false) return 'No';
+  if (r.nameAgrees === false) return 'Open source flag yes, licence name no';
+  return 'Yes';
+};
+---
+<InsightArticle title={article.title} description={article.description} date={article.date} type={article.type} readTime={article.readTime} snapshot="2026-11-14" standfirst="We read the licence files of the AI command-line coding tools on our tools page, and our own records disagreed with the files for four of the 13.">
+  <p>On 14 November 2026 we read the licence file of {c.withLicenceFileRead} of the {c.tools} command-line coding tools on our tools page. {c.osiStyle} of them name MIT, Apache 2.0 or AGPL 3.0, the licences we count as open source here. Our own records disagreed with the files on the open source flag for {c.catalogueFlagDisagrees} tools, and gave a different licence name for {c.catalogueNameDisagrees} of the {c.catalogueNamedALicence} that carried one.</p>
+
+  <div class="stat-row">
+    <div class="stat"><b>{c.withLicenceFileRead} of {c.tools}</b><span>tools where we read a licence file</span></div>
+    <div class="stat"><b>{c.osiStyle}</b><span>name MIT, Apache 2.0 or AGPL 3.0</span></div>
+    <div class="stat"><b>{c.catalogueFlagDisagrees}</b><span>open source flags that did not match</span></div>
+    <div class="stat"><b>{c.catalogueAddressBlank}</b><span>records with no repository address</span></div>
+  </div>
+
+  <p>The tools page is built from a catalogue file of our own records. Its fields for open source, licence name and repository address are our own records, and some were blank. This piece checks them against the files. For the {c.catalogueAddressBlank} tools with no address we looked for a repository ourselves and found one for four of them, so a licence file there shows that a public repository exists, not that it holds the whole product. A licence applies to the code in its repository and says nothing about the models a tool calls or what the tool costs, as the section further down explains.</p>
+
+  <h2>What the 13 licence files say</h2>
+  <p>The files below were fetched as raw text on 14 November 2026. The "Agree?" column compares our open source flag with the file, and our licence name with the file where we had named one.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Source: licence files in each tool's repository, fetched as raw text on 14 November 2026 (addresses in the table); catalogue fields from data/pg-cache/cli_tools.json. Computed by scripts/insights/ai-coding-cli-tools-and-their-licences.mjs.</caption>
+      <thead><tr><th>Tool</th><th>Maker</th><th>Our catalogue says</th><th>The repository's licence file says (first line as read)</th><th>Agree?</th></tr></thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr>
+            <td>{r.name}</td>
+            <td>{r.maker}</td>
+            <td>{catText(r)}</td>
+            <td>{r.verified ? r.read.files.map((f) => (<div><a href={f.url} rel="noopener">{fileName(f.url)}</a>: {f.firstLine}</div>)) : 'No public licence found at the address we checked'}</td>
+            <td>{agree(r)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p>Where a first line spans two lines in the file, the table joins them with a slash. The repository addresses are in the frozen data file, and for four tools they are ones we found rather than ones the catalogue held. Goose's address now redirects to a different GitHub organisation, aaif-goose, and the file there has the same SHA-256 as the one we read.</p>
+
+  <h2>Six records that did not match the files</h2>
+  <p>Four of the six are open source flag errors. Our records for Amazon Q Developer CLI, Codebuff and Warp said not open source, with no licence and no repository, and each has a public repository with licence files in it. Crush is the fourth: we had it as open source under MIT, and its file says something else.</p>
+  <p>Amazon Q Developer CLI is the most awkward. Its repository holds <a href={rows.find((r) => r.id === 'amazon-q-cli').read.files[1].url} rel="noopener">LICENSE.MIT</a> and a LICENSE.APACHE beside it, and the README says the repository is dual licensed under both. The same README says the project is no longer being actively maintained, and that the tool is now Kiro CLI, which Amazon describes there as a closed-source product. So the old code can be open while the product that replaced it is not. Our record, which still lists the tool as active, says neither.</p>
+  <p>Warp's repository holds an AGPL v3 file and an MIT file. Its README says the two user-interface crates, warpui_core and warpui, are MIT and the rest of the code in that repository is AGPL v3. The Codebuff address redirects to a repository now named freebuff, and its README is titled Freebuff. The file there is Apache License 2.0. We have not established how much of the Codebuff product that repository contains.</p>
+  <p>Crush's file is the Functional Source License, Version 1.1, MIT Future License, not MIT. In the file's wording, it allows any purpose other than a "Competing Use", meaning a commercial product or service that substitutes for the software or offers the same or similar functionality. It also grants MIT terms from the second anniversary of the date a version is made available. The licence's own site calls it a Fair Source licence that converts to Apache 2.0 or MIT after two years. We do not count it as open source here. The Open Source Definition's sixth point says a licence must not restrict anyone from using a program in a specific field of endeavour, and a competing-use limit sits awkwardly with that. This is our reading, and we did not look for the licence on opensource.org's approved list.</p>
+  <p>The last two are about licence names, not the flag. Our record for the Firecrawl CLI named Apache 2.0 at the address firecrawl/firecrawl, whose LICENSE file is the GNU Affero General Public License, version 3. The command-line tool also has its own repository, firecrawl/cli, with no licence file at its top level and a package.json that declares "ISC". We do not know which of the two licences covers the tool as installed. For Plandex we had AGPL 3.0, and the file is the MIT License, copyright 2025 PlandexAI Inc. Both are open source licences, so only the name was wrong.</p>
+
+  <h2>Claude Code and CodeRabbit CLI</h2>
+  <p>Claude Code's repository has a LICENSE.md that begins "© Anthropic PBC. All rights reserved." and adds that use is subject to Anthropic's Commercial Terms of Service. Our record said not open source, which matches, but it had no repository address. We read only that file and did not check which parts of the tool's code the repository holds.</p>
+  <p>For CodeRabbit CLI we found no public licence. The catalogue holds no repository address, the tool's page names no GitHub repository in its text, and the list of public repositories under the coderabbitai organisation on GitHub holds 40 entries, none whose name or description says it is the command-line tool. That is "no public licence found at the address we checked". It does not tell us how the tool is licensed.</p>
+
+  <h2>What an open source licence covers</h2>
+  <p>The Open Source Initiative's definition begins by saying <a href="https://opensource.org/osd" rel="noopener">"Open source doesn't just mean access to the source code."</a> It then lists distribution criteria, such as free redistribution and permission to make modified versions. A licence file in a repository sets those terms for the code in that repository, and nothing more.</p>
+  <p>Two things it does not set are the cost and the model. Of the {c.osiStyle} tools whose files name MIT, Apache 2.0 or AGPL 3.0, our catalogue lists {pr.free} as free, {pr.freemium} as freemium and {pr.subscription} as subscription, including Codex CLI, whose Apache 2.0 file we read. Those pricing labels are our own records and we did not check them today. Our catalogue note for Aider reads "Free and open source; pay for model API usage", and it shows the point: the licence file covers the program, while the AI model the program calls may be a separate service with its own charges. We did not test what each tool calls or what it costs.</p>
+  <p>A licence also says nothing about whether a project is still maintained. The Amazon Q Developer CLI repository, open under two licences, is the example in this set of a project whose own README calls it no longer actively maintained.</p>
+
+  <h2>How we counted</h2>
+  <p>For each of the {c.tools} records we fetched the licence file from the repository's default branch with curl and noted the licence it names, the file's first line and its SHA-256. A tool counts as open source by an OSI-style licence when the file names MIT, Apache 2.0 or AGPL 3.0, because opensource.org has a licence page for each of the three. That is our rule. It is not a legal test, and it is not advice about whether you may use a tool for a particular purpose.</p>
+  <p>The tally is {c.withLicenceFileRead} files read, {c.osiStyle} that meet our rule, {c.notOsiStyle} that do not (Crush and Claude Code) and {c.noPublicLicenceFound} with no public licence found (CodeRabbit CLI). Our open source flag matched the files for {c.catalogueFlagAgrees} tools, did not match for {c.catalogueFlagDisagrees}, and could not be checked for one. Our licence name matched for {c.catalogueNameAgrees} of the {c.catalogueNamedALicence} where we had named one. The script that does the sums is <code>{article.code}</code>, and the rows exactly as read are frozen in <code>{article.frozen}</code>. Repositories change, so a file may differ after 14 November 2026. Our <a href={`${base}transparency/`}>transparency page</a> explains how the rest of our data is gathered and where it is known to be wrong.</p>
+
+  <StudioNote article={article} snapshot="14 November 2026" />
+</InsightArticle>

@@ -139,15 +139,6 @@ export const blogPosts: BlogPost[] = [
     readTime: '8 min',
   },
   {
-    slug: 'ai-pricing-race-to-zero',
-    title: 'The AI Pricing Race to Zero',
-    description:
-      'AI model pricing has dropped over 90% in two years. We tracked every price change and here is what the data shows about where pricing is heading.',
-    date: '2026-02-15',
-    type: 'Analysis',
-    readTime: '6 min',
-  },
-  {
     slug: 'open-source-vs-closed-ai',
     title: 'Open Source vs Closed AI Models in 2026',
     description:

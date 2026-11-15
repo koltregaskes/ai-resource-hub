@@ -1,0 +1,28 @@
+import type { StudioArticle } from "./types";
+
+export const article: StudioArticle = {
+  slug: "what-is-the-model-context-protocol",
+  title: "What MCP is: a standard way to connect AI apps to outside tools, and what it leaves open",
+  description: "A plain-English reading of the official Model Context Protocol pages: the three roles, what a server can offer, the two standard transports, who runs the project, and what MCP does not settle.",
+  type: "Explainer",
+  readTime: "8 min",
+  date: "2026-11-14",
+  id: "calc-studio-what-is-the-model-context-protocol",
+  formula: "No calculation. Every statement about MCP is taken from the pages listed below, read in full text on 14 November 2026. The word search for money terms ran over the text of those pages.",
+  assumptions: "No data file and no assumed numbers. All pages are the 2026-07-28 revision, which the documentation labels as the latest and the versioning page names as the current protocol version. Page text was fetched with curl as raw HTML and stripped of tags, not summarised.",
+  limits: "This reads what the official pages say; it does not test any MCP product, server or client, and says nothing about how widely MCP is used or how well any implementation follows the specification. The pages change: the specification says its current revision may continue to receive backwards compatible changes, so a later reading may differ. We did not summarise the authorization pages or the pages for other revisions.",
+  sources: [
+    { title: "What is the Model Context Protocol (MCP)?", url: "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro", checked: "14 November 2026", claim: "Describes MCP as an open-source standard for connecting AI applications to external systems, with the USB-C comparison and examples of data sources, tools and workflows.", rights: "public documentation" },
+    { title: "Architecture overview", url: "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture", checked: "14 November 2026", claim: "Defines host, client and server, the data and transport layers, the tools, resources and prompts primitives, statelessness and server/discover, and says MCP does not dictate how AI applications use LLMs or manage context.", rights: "public documentation" },
+    { title: "Specification (version 2026-07-28)", url: "https://modelcontextprotocol.io/specification/2026-07-28", checked: "14 November 2026", claim: "Lists what servers and clients may offer, the optional extensions, and the security and trust principles, including that MCP cannot enforce them at protocol level.", rights: "public documentation" },
+    { title: "Transports (overview)", url: "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports", checked: "14 November 2026", claim: "Says the standard transports are stdio and Streamable HTTP, that custom transports are possible, and that protocol semantics are identical on every transport.", rights: "public documentation" },
+    { title: "Transports: stdio", url: "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/stdio", checked: "14 November 2026", claim: "The client launches the server as a subprocess and they exchange newline-delimited JSON-RPC messages over standard streams.", rights: "public documentation" },
+    { title: "Transports: Streamable HTTP", url: "https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/streamable-http", checked: "14 November 2026", claim: "Revision 2026-07-28 removed the GET stream endpoint and protocol-level sessions from Streamable HTTP.", rights: "public documentation" },
+    { title: "Tools (specification)", url: "https://modelcontextprotocol.io/specification/2026-07-28/server/tools", checked: "14 November 2026", claim: "Tools are designed to be model-controlled; the protocol does not mandate an interaction model; there SHOULD always be a human in the loop able to deny tool invocations.", rights: "public documentation" },
+    { title: "Resources (specification)", url: "https://modelcontextprotocol.io/specification/2026-07-28/server/resources", checked: "14 November 2026", claim: "Resources are designed to be application-driven, with host applications deciding how to include context.", rights: "public documentation" },
+    { title: "Prompts (specification)", url: "https://modelcontextprotocol.io/specification/2026-07-28/server/prompts", checked: "14 November 2026", claim: "Prompts are designed to be user-controlled; this refers to who decides when a prompt is used, not who writes its content.", rights: "public documentation" },
+    { title: "Versioning (documentation)", url: "https://modelcontextprotocol.io/docs/2026-07-28/learn/versioning", checked: "14 November 2026", claim: "Version strings are YYYY-MM-DD dates of the last backwards incompatible change; the current protocol version is 2026-07-28; earlier revisions up to 2025-11-25 were handshake-based.", rights: "public documentation" },
+    { title: "Governance and Stewardship", url: "https://modelcontextprotocol.io/community/governance", checked: "14 November 2026", claim: "The project was established as a Series of LF Projects, LLC; roles run from Contributors to Lead Maintainers; membership is for individuals, not companies; licences are Apache 2.0 for code and specifications and CC BY 4.0 for documentation.", rights: "public documentation" },
+    { title: "SEP-932: Model Context Protocol Governance", url: "https://modelcontextprotocol.io/seps/932-model-context-protocol-governance", checked: "14 November 2026", claim: "The governance proposal has status Final and was created on 2025-07-08.", rights: "public documentation" }
+  ]
+};
