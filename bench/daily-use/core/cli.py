@@ -46,7 +46,8 @@ import runner  # noqa: E402
 STAGE_COMMANDS = ("qualify", "canary", "full")
 EXIT_OK, EXIT_REFUSED, EXIT_NOT_FINISHED, EXIT_NOT_QUALIFIED = 0, 2, 3, 4
 # A pass of the full run was not started: its planning bound was above the
-# remaining cap. Finished passes are kept; the run is not scored.
+# remaining cap. Finished passes are kept; the run is not scored. It can be
+# resumed only inside the caps it started with.
 EXIT_INCOMPLETE = 5
 
 
@@ -235,6 +236,13 @@ def main(argv=None, out=print):
             qualified, note = None, None
             overruns = None
             if args.private_store:
+                # The pre-flight only reads, so it does not take the store's
+                # execution lock. It says so when a run holds it.
+                owner = ledger.store_owner(args.private_store)
+                if owner:
+                    out("  NOTE: a run is using this private store now (%s). The remaining "
+                        "caps below are as read at this moment and may be out of date by "
+                        "the time you act on them." % owner)
                 books = runner._ledgers(config, args.private_store, True, "preflight")
                 remaining = {provider: book.remaining for provider, book in books.items()}
                 overruns = runner.overruns_on_file(books)
@@ -311,8 +319,10 @@ def main(argv=None, out=print):
     out("  committed by this run: %s USD" % summary["run_committed_usd"])
     out("  record: " + summary["dir"])
     if summary["status"] == "incomplete":
-        out("  The run is incomplete and is not scored. Resume it with --resume %s once the "
-            "pass fits the remaining cap." % summary["run_id"])
+        out("  The run is incomplete and is not scored. It can be resumed with --resume %s "
+            "once the pass fits what is left of the caps it started with, for example "
+            "after held reservations are reconciled. A resume can lower a cap and can "
+            "never raise one." % summary["run_id"])
         return EXIT_INCOMPLETE
     if summary["status"] not in ("finalised", "complete"):
         return EXIT_NOT_FINISHED

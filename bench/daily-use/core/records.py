@@ -18,6 +18,9 @@ Layout inside the private store (a path given at run time, outside the repo):
   a request id that is in the log is never issued again.
 - A run whose next pass was refused by the pass gate has status
   `incomplete`: the finished passes are kept and nothing more was sent.
+- The metadata a run starts with is kept as written, the caps among it
+  (`caps_usd`, `max_usd`). Each resume adds a line that states the caps in
+  force for that resume.
 - Finalising happens only when every planned slot has a final outcome and
   pass and nothing is pending. A run with fewer complete passes than it
   needs (`required_passes`) is never finalised, so it is never scored. Scores are injected; this module computes
@@ -136,13 +139,20 @@ class RunRecord:
         self._write_status()
 
     @classmethod
-    def reopen(cls, private_store, run_id, guard=None):
+    def reopen(cls, private_store, run_id, guard=None, note=None):
         """Open a staged run again so that it can be carried on.
 
         The plan, the slot rows and every request id are read back from the
         folder. Nothing already written is changed: new lines are appended
-        to the same log. Refused for a run that is finalised, complete or
-        only waiting on judging, and for a log that does not read back.
+        to the same log, and the metadata the run started with (the caps
+        among it) is kept as it was. Refused for a run that is finalised,
+        complete or only waiting on judging, and for a log that does not
+        read back.
+
+        `note` is a dict written with this resume, both in the `resumed`
+        list of run.json and on the `resumed` line of the log. The runner
+        passes the caps the run started with, the caps in force for this
+        resume and the config hash, so a lowered cap is on file.
         """
         self = cls.__new__(cls)
         self.private_store = os.fspath(private_store)
@@ -208,8 +218,9 @@ class RunRecord:
         self.status = "running"
         self.stopped_providers = []
         self.interrupt_reason = None
-        self.meta.setdefault("resumed", []).append(dict(before, at_utc=stamp()))
-        self._append({"event": "resumed", "at_utc": stamp(), "before": before})
+        note = dict(note or {})
+        self.meta.setdefault("resumed", []).append(dict(note, **before, at_utc=stamp()))
+        self._append(dict(note, event="resumed", at_utc=stamp(), before=before))
         self._write_status()
         return self
 

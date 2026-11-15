@@ -21,14 +21,30 @@ One ledger per provider, shared by model calls and judge calls.
   before the call returns, so the reservation is on disk before the request
   is sent. A restart reloads the file; a reservation that was never settled
   stays counted in full.
+- One writer at a time, across processes, in two layers. `StoreLock` is the
+  execution lock of a private store: one process owns the store for as long
+  as it runs, and a second one is refused. Under that, every reserve, settle
+  and reconcile holds an operating-system lock on the ledger, reads what
+  any other writer has appended since, checks, appends and fsyncs before it
+  lets go. Two writers can therefore never both fit the same room under a
+  cap. Both locks are held by the operating system and end with the
+  process, so a crashed run does not leave the store stuck.
 
 Money is `decimal.Decimal` throughout and is written to disk as text.
 """
 
+import contextlib
 import datetime
 import json
 import os
+import time
 from decimal import Decimal
+
+try:
+    import msvcrt
+except ImportError:                     # not Windows
+    msvcrt = None
+    import fcntl
 
 MTOK = Decimal(1000000)
 ZERO = Decimal(0)
@@ -49,6 +65,10 @@ class CapExceeded(Exception):
 
 class LedgerError(Exception):
     """The ledger was used wrongly or its file is damaged."""
+
+
+class StoreLocked(LedgerError):
+    """Another owner holds the execution lock of the private store."""
 
 
 class ReservationExceeded(Exception):
@@ -135,8 +155,167 @@ def _now():
     return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+# ---- operating-system locks ---------------------------------------------
+
+# The byte that is locked. It is far past the end of the file, so the text
+# at the start of a lock file stays readable by a process that is refused
+# (on Windows a locked byte cannot be read through another handle).
+_LOCK_OFFSET = 1 << 30
+LEDGER_LOCK_WAIT_SECONDS = 30.0
+STORE_LOCK_NAME = "execution.lock"
+
+
+def _try_lock(descriptor):
+    """Take an exclusive lock on an open file without waiting. True when
+    taken. The operating system drops the lock when the descriptor is
+    closed or the process ends, however it ends."""
+    try:
+        if msvcrt is not None:
+            os.lseek(descriptor, _LOCK_OFFSET, os.SEEK_SET)
+            msvcrt.locking(descriptor, msvcrt.LK_NBLCK, 1)
+        else:
+            fcntl.flock(descriptor, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        return False
+    return True
+
+
+def _unlock(descriptor):
+    try:
+        if msvcrt is not None:
+            os.lseek(descriptor, _LOCK_OFFSET, os.SEEK_SET)
+            msvcrt.locking(descriptor, msvcrt.LK_UNLCK, 1)
+        else:
+            fcntl.flock(descriptor, fcntl.LOCK_UN)
+    except OSError:
+        pass
+
+
+def _read_owner(descriptor):
+    try:
+        os.lseek(descriptor, 0, os.SEEK_SET)
+        return os.read(descriptor, 200).decode("utf-8", "replace").strip()
+    except OSError:
+        return ""
+
+
+class StoreLock:
+    """The execution lock of a private store: one owner at a time.
+
+    `acquire` takes an operating-system lock on `<store>/execution.lock`
+    without waiting and raises `StoreLocked` when another process (or
+    another owner in this process) holds it. It is taken before any ledger
+    is read and before any run record is opened, and it is kept until
+    `release` or until the process ends. The file holds the owner's pid,
+    run id and start time as plain text, for the refusal message. The lock
+    is the operating-system lock, never the text or the file being there:
+    a file left behind by a run that has ended locks nothing.
+    """
+
+    def __init__(self, private_store):
+        self.path = os.path.join(os.fspath(private_store), STORE_LOCK_NAME)
+        self._descriptor = None
+        self._started = None
+
+    @property
+    def held(self):
+        return self._descriptor is not None
+
+    def acquire(self, run_id=None):
+        if self.held:
+            raise LedgerError("the store lock is already held by this owner")
+        os.makedirs(os.path.dirname(self.path) or ".", exist_ok=True)
+        descriptor = os.open(self.path, os.O_RDWR | os.O_CREAT, 0o600)
+        if not _try_lock(descriptor):
+            owner = _read_owner(descriptor)
+            os.close(descriptor)
+            raise StoreLocked(
+                "the private store is in use by another run (%s). One run at a time may "
+                "use a private store; wait for it to end. The lock ends with the process "
+                "that holds it." % (owner or "owner not readable"))
+        self._descriptor = descriptor
+        self._started = _now()
+        self.describe(run_id)
+        return self
+
+    def describe(self, run_id):
+        """Write who holds the lock: pid, run id and start time."""
+        text = "pid %d, run %s, started %s\n" % (
+            os.getpid(), run_id or "not yet named", self._started)
+        os.lseek(self._descriptor, 0, os.SEEK_SET)
+        os.ftruncate(self._descriptor, 0)
+        os.write(self._descriptor, text.encode("utf-8"))
+        os.fsync(self._descriptor)
+
+    def release(self):
+        if self._descriptor is None:
+            return
+        descriptor, self._descriptor = self._descriptor, None
+        try:
+            os.lseek(descriptor, 0, os.SEEK_SET)
+            os.ftruncate(descriptor, 0)
+        except OSError:
+            pass
+        _unlock(descriptor)
+        os.close(descriptor)
+
+    def __enter__(self):
+        return self if self.held else self.acquire()
+
+    def __exit__(self, *exc):
+        self.release()
+        return False
+
+
+def store_owner(private_store):
+    """Who holds the execution lock of this store right now, as text, or
+    None when nobody does. Nothing is created."""
+    path = os.path.join(os.fspath(private_store), STORE_LOCK_NAME)
+    try:
+        descriptor = os.open(path, os.O_RDWR)
+    except OSError:
+        return None
+    try:
+        if _try_lock(descriptor):
+            _unlock(descriptor)
+            return None
+        return _read_owner(descriptor) or "owner not readable"
+    finally:
+        os.close(descriptor)
+
+
+@contextlib.contextmanager
+def _file_lock(path, wait_seconds=None):
+    """Hold an exclusive operating-system lock on `path` (made if absent),
+    waiting for another holder to let go."""
+    wait = LEDGER_LOCK_WAIT_SECONDS if wait_seconds is None else wait_seconds
+    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    descriptor = os.open(path, os.O_RDWR | os.O_CREAT, 0o600)
+    try:
+        deadline = time.monotonic() + wait
+        while not _try_lock(descriptor):
+            if time.monotonic() >= deadline:
+                raise LedgerError(
+                    "the ledger lock %s was not free after %d seconds; nothing was "
+                    "reserved or written" % (os.path.basename(path), wait))
+            time.sleep(0.005)
+        try:
+            yield
+        finally:
+            _unlock(descriptor)
+    finally:
+        os.close(descriptor)
+
+
 class ProviderLedger:
-    """The durable ledger for one provider."""
+    """The durable ledger for one provider.
+
+    The file on disk is the truth, and it may have more than one writer.
+    `reserve`, `settle` and `reconcile` each run as one step under the
+    ledger's lock file (`<ledger>.lock`): read what has been appended since
+    the last look, check, append, fsync, let go. `spent`, `reserved` and
+    `remaining` are as of the last look; `refresh` looks again.
+    """
 
     def __init__(self, provider, cap_usd, path):
         self.provider = provider
@@ -144,45 +323,80 @@ class ProviderLedger:
         if not self.cap.is_finite() or self.cap < 0:
             raise LedgerError("invalid cap")
         self.path = os.fspath(path)
+        self.lock_path = self.path + ".lock"
         self.entries = {}
-        self._load()
+        self._read_to = 0               # bytes of the file already read
+        self._lines = 0
+        # Nothing is made on disk for a ledger that does not exist yet.
+        if os.path.exists(self.path):
+            self.refresh()
+
+    def _locked(self):
+        return _file_lock(self.lock_path)
+
+    def refresh(self):
+        """Read what any writer has appended since the last look."""
+        with self._locked():
+            self._load()
 
     def _load(self):
-        if not os.path.exists(self.path):
+        """Bring `entries` up to date with the file. Call under the lock.
+
+        The file is only ever appended to, so only the part added since the
+        last look is read. A file that has become shorter (edited by hand)
+        is read again from the top. Under the lock no writer is part-way
+        through a line, so a line without its newline is damage.
+        """
+        try:
+            with open(self.path, "rb") as stream:
+                stream.seek(0, os.SEEK_END)
+                if stream.tell() < self._read_to:
+                    self.entries, self._read_to, self._lines = {}, 0, 0
+                stream.seek(self._read_to)
+                data = stream.read()
+        except FileNotFoundError:
+            if self._read_to:
+                raise LedgerError("ledger for %s has gone from disk" % self.provider) from None
             return
-        with open(self.path, encoding="utf-8") as stream:
-            for number, line in enumerate(stream, 1):
-                if not line.strip():
-                    continue
-                try:
-                    event = json.loads(line)
-                    kind = event["event"]
-                    request_id = event["request_id"]
-                    amount = Decimal(event["usd"])
-                except (ValueError, KeyError, TypeError, ArithmeticError):
-                    raise LedgerError(
-                        "ledger for %s is damaged at line %d; repair it by hand before "
-                        "any further spending" % (self.provider, number)) from None
-                if kind == "reserve":
-                    self.entries[request_id] = {"reserved": amount, "charge": None,
-                                                "flags": [], "reconciled": True}
-                elif kind in ("settle", "reconcile") and request_id in self.entries:
-                    entry = self.entries[request_id]
-                    entry["charge"] = amount
-                    entry["flags"] = list(event.get("flags", []))
-                    entry["reconciled"] = bool(event.get("reconciled", True))
-                else:
-                    raise LedgerError(
-                        "ledger for %s has an unexpected entry at line %d"
-                        % (self.provider, number))
+        for line in data.splitlines(keepends=True):
+            self._lines += 1
+            self._read_to += len(line)
+            if not line.strip():
+                continue
+            try:
+                if not line.endswith(b"\n"):
+                    raise ValueError("part-written line")
+                event = json.loads(line.decode("utf-8"))
+                kind = event["event"]
+                request_id = event["request_id"]
+                amount = Decimal(event["usd"])
+            except (ValueError, KeyError, TypeError, ArithmeticError):
+                raise LedgerError(
+                    "ledger for %s is damaged at line %d; repair it by hand before "
+                    "any further spending" % (self.provider, self._lines)) from None
+            if kind == "reserve":
+                self.entries[request_id] = {"reserved": amount, "charge": None,
+                                            "flags": [], "reconciled": True}
+            elif kind in ("settle", "reconcile") and request_id in self.entries:
+                entry = self.entries[request_id]
+                entry["charge"] = amount
+                entry["flags"] = list(event.get("flags", []))
+                entry["reconciled"] = bool(event.get("reconciled", True))
+            else:
+                raise LedgerError(
+                    "ledger for %s has an unexpected entry at line %d"
+                    % (self.provider, self._lines))
 
     def _append(self, event):
+        """Append one event and fsync. Call under the lock, after `_load`."""
         event = dict(event, provider=self.provider, at_utc=_now())
-        os.makedirs(os.path.dirname(self.path) or ".", exist_ok=True)
-        with open(self.path, "a", encoding="utf-8", newline="\n") as stream:
-            stream.write(json.dumps(event, sort_keys=True) + "\n")
+        data = (json.dumps(event, sort_keys=True) + "\n").encode("utf-8")
+        with open(self.path, "ab") as stream:
+            stream.write(data)
             stream.flush()
             os.fsync(stream.fileno())
+        self._read_to += len(data)
+        self._lines += 1
 
     @property
     def spent(self):
@@ -228,16 +442,30 @@ class ProviderLedger:
                 % (self.provider, self.spent, self.reserved, worst_case, self.cap),
                 provider=self.provider)
 
-    def reserve(self, request_id, worst_case_usd_amount):
+    def reserve(self, request_id, worst_case_usd_amount, also=None):
+        """Reserve the worst case of one request, as one step under the
+        ledger lock: read the file again, add up spent plus reserved, check
+        the cap, append, fsync. A second writer, in this process or another,
+        waits for the lock and then sees this reservation.
+
+        `also(worst_case)` is a further check run inside the same step,
+        after the cap check and before anything is written; it refuses by
+        raising.
+        """
         worst_case = Decimal(str(worst_case_usd_amount))
         if not worst_case.is_finite() or worst_case < 0:
             raise LedgerError("invalid reservation")
-        if request_id in self.entries:
-            raise LedgerError("request id used twice: " + request_id)
-        self.check(worst_case)
-        self._append({"event": "reserve", "request_id": request_id, "usd": str(worst_case)})
-        self.entries[request_id] = {"reserved": worst_case, "charge": None, "flags": [],
-                                    "reconciled": True}
+        with self._locked():
+            self._load()
+            if request_id in self.entries:
+                raise LedgerError("request id used twice: " + request_id)
+            self.check(worst_case)
+            if also is not None:
+                also(worst_case)
+            self._append({"event": "reserve", "request_id": request_id,
+                          "usd": str(worst_case)})
+            self.entries[request_id] = {"reserved": worst_case, "charge": None, "flags": [],
+                                        "reconciled": True}
         return worst_case
 
     def settle(self, request_id, billable, receipt, zero_reason=None):
@@ -248,41 +476,45 @@ class ProviderLedger:
         HTTP error status and so did not bill.
         Returns {"charge", "reserved", "flags", "reconciled"}.
         """
-        entry = self.entries.get(request_id)
-        if entry is None:
-            raise LedgerError("no reservation for " + request_id)
-        if entry["charge"] is not None:
-            raise LedgerError("already settled: " + request_id)
-        if zero_reason:
-            charge, flags = ZERO, [str(zero_reason)]
-        else:
-            charge, flags = charge_usd(billable, receipt)
-        reconciled = charge is not None
-        if charge is None:
-            charge = entry["reserved"]
-            flags = flags + ["charged_at_reserved_maximum"]
-        elif charge > entry["reserved"]:
-            # Recorded here; the runner stops before the next request.
-            flags = flags + [OVERRUN_FLAG]
-        self._append({"event": "settle", "request_id": request_id, "usd": str(charge),
-                      "reserved_usd": str(entry["reserved"]), "flags": flags,
-                      "reconciled": reconciled})
-        entry.update(charge=charge, flags=flags, reconciled=reconciled)
-        return {"charge": charge, "reserved": entry["reserved"], "flags": flags,
-                "reconciled": reconciled}
+        with self._locked():
+            self._load()
+            entry = self.entries.get(request_id)
+            if entry is None:
+                raise LedgerError("no reservation for " + request_id)
+            if entry["charge"] is not None:
+                raise LedgerError("already settled: " + request_id)
+            if zero_reason:
+                charge, flags = ZERO, [str(zero_reason)]
+            else:
+                charge, flags = charge_usd(billable, receipt)
+            reconciled = charge is not None
+            if charge is None:
+                charge = entry["reserved"]
+                flags = flags + ["charged_at_reserved_maximum"]
+            elif charge > entry["reserved"]:
+                # Recorded here; the runner stops before the next request.
+                flags = flags + [OVERRUN_FLAG]
+            self._append({"event": "settle", "request_id": request_id, "usd": str(charge),
+                          "reserved_usd": str(entry["reserved"]), "flags": flags,
+                          "reconciled": reconciled})
+            entry.update(charge=charge, flags=flags, reconciled=reconciled)
+            return {"charge": charge, "reserved": entry["reserved"], "flags": flags,
+                    "reconciled": reconciled}
 
     def reconcile(self, request_id, actual_usd, note):
         """Replace a charge with the provider console figure."""
-        entry = self.entries.get(request_id)
-        if entry is None:
-            raise LedgerError("no reservation for " + request_id)
         actual = Decimal(str(actual_usd))
         if not actual.is_finite() or actual < 0:
             raise LedgerError("invalid amount")
-        flags = ["reconciled_by_hand"]
-        self._append({"event": "reconcile", "request_id": request_id, "usd": str(actual),
-                      "flags": flags, "reconciled": True, "note": str(note)})
-        entry.update(charge=actual, flags=flags, reconciled=True)
+        with self._locked():
+            self._load()
+            entry = self.entries.get(request_id)
+            if entry is None:
+                raise LedgerError("no reservation for " + request_id)
+            flags = ["reconciled_by_hand"]
+            self._append({"event": "reconcile", "request_id": request_id, "usd": str(actual),
+                          "flags": flags, "reconciled": True, "note": str(note)})
+            entry.update(charge=actual, flags=flags, reconciled=True)
 
 
 class Budget:
@@ -307,13 +539,16 @@ class Budget:
         if not request_id.startswith(self.run_prefix):
             raise LedgerError("request id does not belong to this run")
         ledger = self.ledgers[provider]
-        ledger.check(worst_case)
-        if self.max_usd is not None and self.run_committed() + worst_case > self.max_usd:
-            raise CapExceeded(
-                "--max-usd reached: this run has committed %s and this request needs %s, "
-                "above %s USD" % (self.run_committed(), worst_case, self.max_usd),
-                provider=provider, scope="max-usd")
-        return ledger.reserve(request_id, worst_case)
+
+        def within_max_usd(amount):
+            # Runs inside the ledger's locked step, on figures just read
+            # from disk, after the provider cap check.
+            if self.max_usd is not None and self.run_committed() + amount > self.max_usd:
+                raise CapExceeded(
+                    "--max-usd reached: this run has committed %s and this request needs "
+                    "%s, above %s USD" % (self.run_committed(), amount, self.max_usd),
+                    provider=provider, scope="max-usd")
+        return ledger.reserve(request_id, worst_case, also=within_max_usd)
 
     def settle(self, provider, request_id, billable, receipt, zero_reason=None):
         return self.ledgers[provider].settle(request_id, billable, receipt,

@@ -964,6 +964,37 @@ class LiveGateTests(RunnerCase):
         self.assertEqual(again["status"], "finalised")
         self.assertEqual(len(self.model_requests()), 4)
 
+    def test_a_live_resume_with_a_higher_cap_or_a_held_store_stops_before_the_key_file(self):
+        common = dict(grade=runner.stub_grade)
+        with mock.patch.object(runner, "LIVE_ENABLED", True):
+            self.live(stage="qualify", **common)
+            self.transport = model_only(lambda r, n: KeyboardInterrupt(),
+                                        judge_text=self.judge_text)
+            with self.assertRaises(KeyboardInterrupt):
+                self.live(stage="canary", **common)
+            (run_id,) = os.listdir(os.path.join(self.store, "runs", "_staging"))
+            self.transport = self.new_transport("fine")
+            calls = len(self.factory_calls)
+            higher = support.make_config(caps_usd={"openai": "50.01", "anthropic": "50"})
+            with mock.patch.object(keys, "load_keys") as load_keys:
+                with self.assertRaises(records.RecordError) as caught:
+                    self.live(stage="canary", cfg=higher, resume=run_id, **common)
+                self.assertIn("cannot be resumed with a higher cap: the openai cap is 50.01 "
+                              "USD, above the 50 USD the run started with",
+                              str(caught.exception))
+                lock = ledger.StoreLock(self.store).acquire("another-run")
+                self.addCleanup(lock.release)
+                for kwargs in (dict(stage="canary", resume=run_id), dict(stage="canary"),
+                               dict(stage="qualify")):
+                    self.refused("the private store is in use by another run (pid",
+                                 **kwargs, **common)
+                lock.release()
+            self.assertFalse(load_keys.called)
+            self.assertEqual((len(self.factory_calls), self.transport.requests), (calls, []))
+            # Under the caps it started with, and with the store free, it carries on.
+            done = self.live(stage="canary", resume=run_id, **common)
+        self.assertEqual((done["status"], done["run_id"]), ("finalised", run_id))
+
     def test_stages_unlock_in_order_qualify_then_canary_then_full(self):
         common = dict(grade=runner.stub_grade)
         with mock.patch.object(runner, "LIVE_ENABLED", True):
@@ -1709,28 +1740,63 @@ class PassGateRunTests(PassCase):
 
 
 class ResumeTests(PassCase):
+    def timeouts_then_fine(self, timeouts=2):
+        def step(request, n):
+            if n <= timeouts:
+                return providers.TransportTimeout()
+            return reply_body(request, "answer %d" % n)
+        return model_only(step)
+
+    def run_json(self, summary):
+        with open(os.path.join(summary["dir"], "run.json"), encoding="utf-8") as stream:
+            return json.load(stream)
+
     def test_an_incomplete_run_resumes_at_the_refused_pass_and_sends_nothing_twice(self):
-        first = self.fine()
-        stopped = self.run_stage(transport=first, cfg=self.capped(self.bound))
+        # Both requests of pass 1 time out and keep their full reservation:
+        # 2 x 0.123759 = 0.247518. With 0.2 of cap above one bound, pass 2 has
+        # bound - 0.047518 left and does not start.
+        cap = self.bound + Decimal("0.2")
+        first = self.timeouts_then_fine()
+        stopped = self.run_stage(transport=first, cfg=self.capped(cap))
         self.assertEqual(stopped["status"], "incomplete")
         run_id = stopped["run_id"]
         before_rows = self.rows(stopped)
         before_sent = self.sent(stopped)
+        self.assertEqual(len(before_sent), 2)
         with open(os.path.join(stopped["dir"], "plan.json"), "rb") as stream:
             plan_bytes = stream.read()
+        # The caps the run started with are in its record.
+        started = self.run_json(stopped)
+        self.assertEqual(started["caps_usd"], {"anthropic": "50", "openai": str(cap)})
+        self.assertIsNone(started["max_usd"])
         # Resumed under the same cap: still short, so nothing is sent.
         again = self.fine()
-        same = self.run_stage(transport=again, cfg=self.capped(self.bound), resume=run_id)
+        same = self.run_stage(transport=again, cfg=self.capped(cap), resume=run_id)
         self.assertEqual((same["status"], same["run_id"], same["resumed"]),
                          ("incomplete", run_id, True))
         self.assertEqual(again.requests, [])
-        # The owner raises the cap by 0.00072. Pass 2 then has bound + 0.00036
-        # left, which fits; after it has cost another 0.00036, pass 3 has
-        # exactly its bound left, which fits too.
+        # Raising the cap is not a way out: the resume is refused, nothing is
+        # sent, and the run stays incomplete on disk with no new resume line.
+        raised = self.fine()
+        with self.assertRaises(records.RecordError) as caught:
+            self.run_stage(transport=raised, resume=run_id,
+                           cfg=self.capped(cap + Decimal("0.00072")))
+        self.assertIn("cannot be resumed with a higher cap: the openai cap is %s USD, above "
+                      "the %s USD the run started with" % (cap + Decimal("0.00072"), cap),
+                      str(caught.exception))
+        self.assertEqual(raised.requests, [])
+        self.assertEqual(self.run_json(same)["status"], "incomplete")
+        self.assertEqual(len(self.run_json(same)["resumed"]), 1)
+        # The legitimate way: the two held requests are reconciled against the
+        # provider console at what they really cost, 0.00018 each. That frees
+        # room inside the same cap, and the run carries on under it.
+        path = os.path.join(self.store, "ledgers-dry", run_id, "openai.jsonl")
+        book = ledger.ProviderLedger("openai", cap, path)
+        for request in before_sent:
+            book.reconcile(request, self.CHARGE, "console figure")
         scored = []
         second = self.fine()
-        done = self.run_stage(transport=second, resume=run_id,
-                              cfg=self.capped(self.bound + Decimal("0.00072")),
+        done = self.run_stage(transport=second, resume=run_id, cfg=self.capped(cap),
                               scores=lambda rows, tasks: scored.append(rows) or {"s": 1})
         self.assertEqual((done["status"], done["run_id"]), ("finalised", run_id))
         self.assertEqual(len(second.requests), 4)                 # passes 2 and 3 only
@@ -1750,16 +1816,114 @@ class ResumeTests(PassCase):
         with open(os.path.join(done["dir"], "plan.json"), "rb") as stream:
             self.assertEqual(stream.read(), plan_bytes)
         records.verify_manifest(done["dir"])
-        # One ledger for the whole run: 6 reservations, each settled once.
-        path = os.path.join(self.store, "ledgers-dry", run_id, "openai.jsonl")
+        # One ledger for the whole run: 6 reservations, each settled once, and
+        # the two reconciliations.
         with open(path, encoding="utf-8") as stream:
             events = [json.loads(line) for line in stream]
         self.assertEqual(sorted(e["request_id"] for e in events if e["event"] == "reserve"),
                          sorted(sent))
         self.assertEqual(len([e for e in events if e["event"] == "settle"]), 6)
+        self.assertEqual(len([e for e in events if e["event"] == "reconcile"]), 2)
+        # The whole run stayed inside the cap it started with.
+        self.assertEqual(done["run_committed_usd"], 6 * self.CHARGE)
+        self.assertLessEqual(done["run_committed_usd"], cap)
+        # The caps at the start are unchanged in the record, and each of the
+        # two resumes that went ahead wrote its own line.
+        final = self.run_json(done)
+        self.assertEqual(final["caps_usd"], started["caps_usd"])
+        self.assertEqual(len(final["resumed"]), 2)
         # A finalised run is not resumed.
         with self.assertRaises(records.RecordError):
-            self.run_stage(transport=self.fine(), resume=run_id, cfg=self.capped(self.bound))
+            self.run_stage(transport=self.fine(), resume=run_id, cfg=self.capped(cap))
+
+    def test_a_resume_never_raises_a_cap_and_a_refused_pass_stays_incomplete(self):
+        # The cap is exactly one pass's bound and the run starts with
+        # --max-usd 5. Pass 1 costs 0.00036, so pass 2 does not fit: incomplete.
+        start_cfg = self.capped(self.bound)
+        stopped = self.run_stage(transport=self.fine(), cfg=start_cfg, max_usd=Decimal("5"))
+        self.assertEqual(stopped["status"], "incomplete")
+        run_id = stopped["run_id"]
+        started = self.run_json(stopped)
+        self.assertEqual(started["caps_usd"], {"anthropic": "50", "openai": str(self.bound)})
+        self.assertEqual(started["max_usd"], "5")
+        more = self.bound + Decimal("0.000001")
+        refusals = [
+            (dict(cfg=self.capped(more), max_usd=Decimal("5")),
+             "the openai cap is %s USD, above the %s USD the run started with"
+             % (more, self.bound)),
+            (dict(cfg=support.config.validate(support.config_dict(
+                models=[support.spec_dict("openai", "m-oa", "3", "30")],
+                caps_usd={"openai": str(self.bound), "anthropic": "50.01"})),
+                max_usd=Decimal("5")),
+             "the anthropic cap is 50.01 USD, above the 50 USD the run started with"),
+            (dict(cfg=start_cfg, max_usd=Decimal("5.01")),
+             "--max-usd is 5.01, above the 5 the run started with"),
+            (dict(cfg=start_cfg), "the run started with --max-usd 5 and none was given"),
+            (dict(cfg=self.capped("50"), max_usd=Decimal("100")),
+             "the openai cap is 50 USD"),
+        ]
+        for kwargs, fragment in refusals:
+            transport = self.fine()
+            with self.assertRaises(records.RecordError) as caught:
+                self.run_stage(transport=transport, resume=run_id, **kwargs)
+            self.assertIn("cannot be resumed with a higher cap", str(caught.exception))
+            self.assertIn(fragment, str(caught.exception))
+            self.assertEqual(transport.requests, [])
+        self.assertNotIn("resumed", self.run_json(stopped))       # nothing was reopened
+        # The same caps, or lower ones, are accepted. There is still no room
+        # for pass 2, so the run stays incomplete and nothing is sent.
+        lower = self.bound - Decimal("0.1")
+        accepted = [dict(cfg=start_cfg, max_usd=Decimal("5")),
+                    dict(cfg=self.capped(lower), max_usd=Decimal("4")),
+                    # back up to the starting caps, never above them
+                    dict(cfg=start_cfg, max_usd=Decimal("5"))]
+        for kwargs in accepted:
+            transport = self.fine()
+            again = self.run_stage(transport=transport, resume=run_id, **kwargs)
+            self.assertEqual((again["status"], again["resumed"]), ("incomplete", True))
+            self.assertEqual(transport.requests, [])
+            self.assertEqual(again["run_committed_usd"], Decimal("0.00036"))
+        final = self.run_json(stopped)
+        self.assertEqual((final["status"], final["caps_usd"], final["max_usd"]),
+                         ("incomplete", started["caps_usd"], "5"))
+        # Each resume is on file with the caps it ran under and the config hash.
+        notes = final["resumed"]
+        self.assertEqual(len(notes), 3)
+        for note in notes:
+            self.assertEqual(note["caps_at_start"],
+                             {"caps_usd": started["caps_usd"], "max_usd": "5"})
+            self.assertRegex(note["config_sha256"], r"^[0-9a-f]{0,64}$")
+        self.assertEqual(notes[1]["caps_in_force"],
+                         {"caps_usd": {"anthropic": "50", "openai": str(lower)},
+                          "max_usd": "4"})
+        self.assertEqual(notes[2]["caps_in_force"],
+                         {"caps_usd": started["caps_usd"], "max_usd": "5"})
+        logged = [line for line in self.log(stopped) if line["event"] == "resumed"]
+        self.assertEqual([line["caps_in_force"] for line in logged],
+                         [note["caps_in_force"] for note in notes])
+        self.assertEqual(logged[1]["caps_at_start"]["caps_usd"], started["caps_usd"])
+        # A --max-usd may be added to a run that started without one.
+        bare = self.run_stage(transport=self.fine(), cfg=start_cfg)
+        added = self.run_stage(transport=self.fine(), cfg=start_cfg, resume=bare["run_id"],
+                               max_usd=Decimal("3"))
+        self.assertEqual(added["status"], "incomplete")
+        self.assertIsNone(self.run_json(added)["max_usd"])
+        self.assertEqual(self.run_json(added)["resumed"][0]["caps_in_force"]["max_usd"], "3")
+
+    def test_a_record_without_its_starting_caps_is_not_resumed(self):
+        stopped = self.run_stage(transport=self.fine(), cfg=self.capped(self.bound))
+        path = os.path.join(stopped["dir"], "run.json")
+        document = self.run_json(stopped)
+        del document["caps_usd"]
+        with open(path, "w", encoding="utf-8") as stream:
+            json.dump(document, stream)
+        transport = self.fine()
+        with self.assertRaises(records.RecordError) as caught:
+            self.run_stage(transport=transport, resume=stopped["run_id"],
+                           cfg=self.capped(self.bound))
+        self.assertIn("its record does not hold the caps it started with",
+                      str(caught.exception))
+        self.assertEqual(transport.requests, [])
 
     def test_a_run_stopped_mid_pass_resumes_in_order_without_reusing_a_request_id(self):
         # The third model request (the first slot of pass 2) is in flight when
@@ -1889,6 +2053,145 @@ class ResumeTests(PassCase):
             self.run_stage(stage="qualify", resume=run_id, checklist_samples=[],
                            outcome_samples=[])
         self.assertIn("a judge qualification is not resumed", str(caught.exception))
+
+
+class StoreLockRunTests(PassCase):
+    def held(self, run_id="run-held"):
+        lock = ledger.StoreLock(self.store).acquire(run_id)
+        self.addCleanup(lock.release)
+        return lock
+
+    def test_a_second_owner_is_refused_for_every_stage_and_for_resume(self):
+        stopped = self.run_stage(transport=self.fine(), cfg=self.capped(self.bound))
+        before = sorted(glob.glob(os.path.join(self.store, "**"), recursive=True))
+        self.held()
+        checklist, outcome = support.qualification_samples()
+        for kwargs in (dict(stage="full"), dict(stage="canary"),
+                       dict(stage="qualify", checklist_samples=checklist,
+                            outcome_samples=outcome),
+                       dict(stage="full", resume=stopped["run_id"],
+                            cfg=self.capped(self.bound))):
+            transport = self.fine()
+            with self.assertRaises(runner.LiveRefused) as caught:
+                self.run_stage(transport=transport, **kwargs)
+            self.assertIn("the private store is in use by another run (pid %d, run run-held"
+                          % os.getpid(), str(caught.exception))
+            self.assertEqual(transport.requests, [])
+        # Nothing in the store was read into a new record or written.
+        self.assertEqual(sorted(glob.glob(os.path.join(self.store, "**"), recursive=True)),
+                         before)
+        with open(os.path.join(stopped["dir"], "run.json"), encoding="utf-8") as stream:
+            self.assertNotIn("resumed", json.load(stream))
+
+    def test_the_lock_is_taken_before_a_ledger_is_read_or_a_record_is_opened(self):
+        self.held()
+        with mock.patch.object(runner, "_ledgers") as ledgers, \
+                mock.patch.object(records, "read_staged") as read_staged, \
+                mock.patch.object(records, "RunRecord") as record:
+            with self.assertRaises(runner.LiveRefused):
+                self.run_stage(transport=self.fine(), resume="2026-01-01T000000Z-00000000")
+            with self.assertRaises(runner.LiveRefused):
+                self.run_stage(transport=self.fine())
+        self.assertEqual((ledgers.called, read_staged.called, record.called),
+                         (False, False, False))
+
+    def test_the_lock_names_the_run_and_is_let_go_when_the_run_ends(self):
+        seen = []
+
+        def step(request, n):
+            seen.append(ledger.store_owner(self.store))
+            with self.assertRaises(runner.LiveRefused):
+                self.run_stage(transport=self.fine())      # a second run, mid-run
+            return reply_body(request, "answer %d" % n)
+        summary = self.run_stage(transport=model_only(step))
+        self.assertEqual(summary["status"], "finalised")
+        self.assertEqual(len(seen), 6)
+        for owner in seen:
+            self.assertIn("pid %d, run %s, started" % (os.getpid(), summary["run_id"]), owner)
+        self.assertEqual(self.staged(), [])                 # the refused runs made no record
+        self.assertIsNone(ledger.store_owner(self.store))
+        # Let go after a refusal and after an error in the harness as well.
+        with self.assertRaises(preflight.PreflightRefused):
+            self.run_stage(transport=self.fine(), cfg=self.capped("0.01"))
+        self.assertIsNone(ledger.store_owner(self.store))
+        with self.assertRaises(KeyboardInterrupt):
+            self.run_stage(transport=model_only(lambda request, n: KeyboardInterrupt()))
+        self.assertIsNone(ledger.store_owner(self.store))
+        self.assertEqual(self.run_stage(transport=self.fine())["status"], "finalised")
+
+
+class AdmittedPassTests(PassCase):
+    """The pass gate admits a pass; it does not promise that the pass
+    finishes. Codex's probe in miniature."""
+
+    def test_connection_failures_use_up_the_room_and_the_run_stops_inside_the_cap(self):
+        # One pass at its planning bound is 0.5408703 on openai. A request that
+        # fails to connect keeps its full reservation of 0.123759. The cap, 0.75,
+        # holds six of them (0.742554) and not a seventh.
+        cap = Decimal("0.75")
+        self.assertLessEqual(self.bound, cap)
+        self.assertLessEqual(6 * self.HELD, cap)
+        self.assertGreater(7 * self.HELD, cap)
+        path = []
+        committed = []
+
+        def step(request, n):
+            # What the ledger holds on disk while this request is in flight.
+            book = ledger.ProviderLedger("openai", cap, path[0])
+            committed.append(book.spent + book.reserved)
+            return providers.TransportFailure("down")
+        transport = model_only(step)
+        real = runner._ledgers
+
+        def ledgers(config, private_store, live, run_id):
+            books = real(config, private_store, live, run_id)
+            path.append(books["openai"].path)
+            return books
+        with mock.patch.object(runner, "_ledgers", ledgers):
+            summary = self.run_stage(transport=transport, cfg=self.capped(cap))
+        # Pass 1 was admitted: its bound fitted the cap.
+        first = summary["pass_gates"][0]
+        self.assertEqual((first["pass"], first["ok"]), (1, True))
+        self.assertEqual(first["planning_bound"]["openai"], self.bound)
+        self.assertIn("likely to finish, not certain to", first["lines"][1])
+        # Each of its two slots used all three requests, every one of which kept
+        # its reservation: six in all, far more than the 15% allowed for retries.
+        self.assertEqual(len(transport.requests), 6)
+        rows = self.rows(summary)
+        self.assertEqual([(r["outcome"], len(r["requests"])) for r in rows],
+                         [("execution_error", 3)] * 2)
+        self.assertEqual(summary["run_committed_usd"], 6 * self.HELD)
+        # No room is left for pass 2, so the run stops, unscored, in staging.
+        self.assertIn(summary["status"], ("incomplete", "interrupted"))
+        self.assertEqual(summary["status"], "incomplete")
+        self.assertEqual([(g["pass"], g["ok"]) for g in summary["pass_gates"]],
+                         [(1, True), (2, False)])
+        self.assertIsNone(summary["finalised"])
+        self.assertFalse(summary["publishable"])
+        self.assertEqual(summary["passes"], {"required": 3, "complete": 1})
+        self.assertFalse(os.path.exists(os.path.join(summary["dir"], "scores.json")))
+        # Inside the cap at every moment, and no charge above its reservation.
+        self.assertEqual(committed, [n * self.HELD for n in range(1, 7)])
+        self.assertLessEqual(max(committed), cap)
+        book = ledger.ProviderLedger("openai", cap, path[0])
+        self.assertEqual(book.overruns(), [])
+        self.assertEqual(book.spent + book.reserved, 6 * self.HELD)
+        self.assertLessEqual(book.spent + book.reserved, cap)
+        self.assertEqual(summary["remaining_caps"]["openai"], cap - 6 * self.HELD)
+
+    def test_a_tighter_cap_stops_the_admitted_pass_part_way_still_inside_the_cap(self):
+        # With the cap at exactly one bound, the fifth held request does not fit
+        # and the pass itself is cut short: interrupted, not incomplete.
+        transport = model_only(lambda request, n: providers.TransportFailure("down"))
+        summary = self.run_stage(transport=transport, cfg=self.capped(self.bound))
+        self.assertEqual(summary["pass_gates"][0]["ok"], True)
+        self.assertEqual(summary["status"], "interrupted")
+        self.assertIn("interrupted by cap", summary["report"]["interrupt_reason"])
+        self.assertIsNone(summary["finalised"])
+        self.assertEqual(summary["run_committed_usd"], 4 * self.HELD)
+        self.assertLessEqual(summary["run_committed_usd"], self.bound)
+        books = runner._ledgers(self.capped(self.bound), self.store, False, summary["run_id"])
+        self.assertEqual(runner.overruns_on_file(books), {})
 
 
 class OverrunOnFileRunTests(PassCase):
@@ -2164,12 +2467,56 @@ class CommandLineTests(unittest.TestCase):
         code, text = self.main("dry-run", "--config", tight, *run, "--resume", run_id)
         self.assertEqual(code, 5, text)
         self.assertIn("m-oa: planned 9, attempted 3, unstarted 6, pending 0", text)
-        # With room, it carries on under the same run id and finishes.
+        self.assertIn("A resume can lower a cap and can never raise one.", text)
+        # A config with a higher cap does not carry it on: refused, exit 2.
         code, text = self.main("dry-run", "--config", self.cfg_path, *run, "--resume", run_id)
+        self.assertEqual(code, 2, text)
+        self.assertIn("REFUSED: run %s cannot be resumed with a higher cap: the openai cap is "
+                      "50 USD, above the %s USD the run started with" % (run_id, one_pass), text)
+        # A lower cap is accepted; the run is still incomplete.
+        lower = self.write("lower.json", support.config_dict(
+            caps_usd={"openai": str(one_pass - Decimal("0.5")), "anthropic": "50"}))
+        code, text = self.main("dry-run", "--config", lower, *run, "--resume", run_id,
+                               "--max-usd", "40")
+        self.assertEqual(code, 5, text)
+        self.assertIn("m-oa: planned 9, attempted 3, unstarted 6, pending 0", text)
+        with open(os.path.join(store, "runs", "_staging", run_id, "run.json"),
+                  encoding="utf-8") as stream:
+            document = json.load(stream)
+        self.assertEqual(document["caps_usd"]["openai"], str(one_pass))
+        self.assertEqual(document["resumed"][-1]["caps_in_force"],
+                         {"caps_usd": {"anthropic": "50",
+                                       "openai": str(one_pass - Decimal("0.5"))},
+                          "max_usd": "40"})
+
+    def test_a_store_in_use_refuses_every_run_command_and_the_preflight_says_so(self):
+        store = os.path.join(self.folder, "store")
+        run = [*self.common(), "--private-store", store, "--stub-grade"]
+        code, text = self.main("dry-run", *run, "--seed", "4")
         self.assertEqual(code, 0, text)
-        self.assertIn("Dry run %s: stage full, status finalised" % run_id, text)
-        self.assertIn("passes complete: 3 of 3", text)
-        self.assertIn("m-oa: planned 9, attempted 9, unstarted 0, pending 0", text)
+        before = sorted(glob.glob(os.path.join(store, "runs", "**"), recursive=True))
+        lock = ledger.StoreLock(store).acquire("run-held")
+        self.addCleanup(lock.release)
+        for command in (("dry-run", *run), ("canary", *run), ("full", *run),
+                        ("qualify", *run, *self.sample_files()),
+                        ("dry-run", *run, "--resume", "2026-01-01T000000Z-00000000")):
+            code, text = self.main(*command)
+            self.assertEqual(code, 2, text)
+            self.assertIn("REFUSED: the private store is in use by another run (pid %d, run "
+                          "run-held, started 20" % os.getpid(), text)
+        self.assertEqual(sorted(glob.glob(os.path.join(store, "runs", "**"), recursive=True)),
+                         before)
+        # The pre-flight only reads: it runs, and says its figures can be stale.
+        code, text = self.main("preflight", *self.common(), "--private-store", store)
+        self.assertEqual(code, 0, text)
+        self.assertIn("NOTE: a run is using this private store now (pid %d, run run-held"
+                      % os.getpid(), text)
+        self.assertIn("may be out of date", text)
+        lock.release()
+        code, text = self.main("preflight", *self.common(), "--private-store", store)
+        self.assertNotIn("NOTE: a run is using this private store", text)
+        code, text = self.main("dry-run", *run)
+        self.assertEqual(code, 0, text)
         # An unknown run id is a refusal.
         code, text = self.main("dry-run", "--config", self.cfg_path, *run, "--resume",
                                "2026-01-01T000000Z-00000000")

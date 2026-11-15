@@ -2,6 +2,7 @@
 
 import json
 import os
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -362,6 +363,211 @@ class BudgetTests(unittest.TestCase):
         second.reserve("openai", "run2/a", D("0.30"))
         with self.assertRaises(ledger.LedgerError):
             second.reserve("openai", "run1/zzz", D("0.01"))
+
+
+HELPER = r'''
+import os
+import sys
+import time
+
+sys.path.insert(0, sys.argv[1])
+import ledger
+
+mode = sys.argv[2]
+if mode == "reserve":
+    path, request, ready, go = sys.argv[3:7]
+    # Built on the ledger as it is now, before the other process has written.
+    book = ledger.ProviderLedger("openai", "1.00", path)
+    open(ready, "w").close()
+    while not os.path.exists(go):
+        time.sleep(0.001)
+    try:
+        book.reserve(request, "0.75")
+    except ledger.CapExceeded:
+        print("REFUSED")
+        sys.exit(2)
+    print("RESERVED")
+elif mode == "hold":
+    lock = ledger.StoreLock(sys.argv[3]).acquire("run-a")
+    print("HELD", flush=True)
+    sys.stdin.readline()                # until the parent says so, or kills us
+    if sys.argv[4] == "release":
+        lock.release()
+elif mode == "take":
+    try:
+        ledger.StoreLock(sys.argv[3]).acquire("run-b")
+    except ledger.StoreLocked as busy:
+        print("REFUSED: " + str(busy))
+        sys.exit(2)
+    print("TAKEN")
+'''
+
+
+class TwoProcessTests(unittest.TestCase):
+    """Real second processes. Nothing here calls a provider: the helper
+    only uses `ledger.py`."""
+
+    def setUp(self):
+        folder = tempfile.TemporaryDirectory()
+        self.addCleanup(folder.cleanup)
+        self.folder = folder.name
+        self.helper = os.path.join(self.folder, "helper.py")
+        with open(self.helper, "w", encoding="utf-8") as stream:
+            stream.write(HELPER)
+
+    def spawn(self, *args, **kwargs):
+        return subprocess.Popen([sys.executable, "-I", self.helper, support.CORE, *args],
+                                stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+                                **kwargs)
+
+    def wait_for(self, path):
+        import time
+        deadline = time.monotonic() + 60
+        while not os.path.exists(path):
+            self.assertLess(time.monotonic(), deadline, "the helper did not start")
+            time.sleep(0.005)
+
+    def test_two_processes_cannot_both_reserve_the_same_room(self):
+        # Codex's probe: two instances on one empty 1 USD ledger, each
+        # reserving 0.75. Both are built before either writes.
+        path = os.path.join(self.folder, "ledgers", "openai.jsonl")
+        go = os.path.join(self.folder, "go")
+        ready = [os.path.join(self.folder, "ready-%d" % n) for n in (1, 2)]
+        workers = [self.spawn("reserve", path, "run%d/a" % n, ready[n - 1], go)
+                   for n in (1, 2)]
+        for marker in ready:
+            self.wait_for(marker)
+        self.assertFalse(os.path.exists(path))           # both saw an empty ledger
+        open(go, "w").close()
+        results = [worker.communicate(timeout=60) for worker in workers]
+        said = sorted(out.strip() for out, _ in results)
+        self.assertEqual(said, ["REFUSED", "RESERVED"], results)
+        self.assertEqual(sorted(worker.returncode for worker in workers), [0, 2])
+        with open(path, encoding="utf-8") as stream:
+            events = [json.loads(line) for line in stream]
+        self.assertEqual([(e["event"], e["usd"]) for e in events], [("reserve", "0.75")])
+        book = ledger.ProviderLedger("openai", "1.00", path)
+        self.assertEqual((book.reserved, book.remaining), (D("0.75"), D("0.25")))
+        self.assertLessEqual(book.spent + book.reserved, book.cap)
+
+    def test_a_second_process_cannot_take_the_store_lock_until_the_first_ends(self):
+        store = os.path.join(self.folder, "store")
+        for ending in ("release", "killed"):
+            holder = self.spawn("hold", store, ending, stdin=subprocess.PIPE)
+            self.addCleanup(holder.kill)
+            self.assertEqual(holder.stdout.readline().strip(), "HELD")
+            # Another process is refused, and is told who holds the store.
+            second = self.spawn("take", store)
+            out, err = second.communicate(timeout=60)
+            self.assertEqual(second.returncode, 2, err)
+            self.assertIn("REFUSED: the private store is in use by another run", out)
+            self.assertIn("pid %d, run run-a, started 20" % holder.pid, out)
+            # So is another owner in this process.
+            with self.assertRaises(ledger.StoreLocked):
+                ledger.StoreLock(store).acquire("run-c")
+            self.assertIn("pid %d, run run-a" % holder.pid, ledger.store_owner(store))
+            if ending == "release":
+                holder.communicate("\n", timeout=60)
+            else:
+                # A crash: the process dies holding the lock and never lets go
+                # of it itself. The operating system does.
+                holder.kill()
+                holder.communicate(timeout=60)
+            self.assertIsNone(ledger.store_owner(store))
+            third = self.spawn("take", store)
+            out, err = third.communicate(timeout=60)
+            self.assertEqual((third.returncode, out.strip()), (0, "TAKEN"), err)
+            # The lock file is still there. It locks nothing by itself.
+            self.assertTrue(os.path.exists(os.path.join(store, "execution.lock")))
+
+
+class SingleWriterTests(unittest.TestCase):
+    def setUp(self):
+        folder = tempfile.TemporaryDirectory()
+        self.addCleanup(folder.cleanup)
+        self.folder = folder.name
+        self.path = os.path.join(folder.name, "ledgers", "openai.jsonl")
+
+    def book(self, cap="1.00"):
+        return ledger.ProviderLedger("openai", cap, self.path)
+
+    def test_reserve_reads_the_file_again_before_it_checks_the_cap(self):
+        # Two instances built on the same empty ledger, as two processes would be.
+        first, second = self.book(), self.book()
+        first.reserve("run1/a", D("0.75"))
+        with self.assertRaises(ledger.CapExceeded) as caught:
+            second.reserve("run2/a", D("0.75"))
+        self.assertIn("reserved 0.75", str(caught.exception))
+        self.assertEqual(second.reserved, D("0.75"))      # it now sees the other's entry
+        second.reserve("run2/b", D("0.25"))               # what is really left still fits
+        with self.assertRaises(ledger.CapExceeded):
+            first.reserve("run1/b", D("0.01"))
+        with open(self.path, encoding="utf-8") as stream:
+            self.assertEqual(len(stream.readlines()), 2)
+        # A request id used by the other writer is refused too.
+        with self.assertRaises(ledger.LedgerError):
+            first.reserve("run2/b", D("0"))
+
+    def test_settle_and_reconcile_read_the_file_again(self):
+        first, second = self.book(), self.book()
+        first.reserve("run1/a", D("0.75"))
+        second.settle("run1/a", None, None, zero_reason="never_sent")
+        with self.assertRaises(ledger.LedgerError) as caught:
+            first.settle("run1/a", None, None, zero_reason="never_sent")
+        self.assertIn("already settled", str(caught.exception))
+        self.assertEqual(first.remaining, D("1.00"))
+        first.reserve("run1/b", D("0.40"))
+        second.reconcile("run1/b", "0.10", "console")
+        first.refresh()
+        self.assertEqual((first.spent, first.reserved), (D("0.10"), D(0)))
+        self.assertEqual(self.book().spent, D("0.10"))
+
+    def test_max_usd_is_checked_in_the_same_locked_step(self):
+        books = {"openai": self.book("10")}
+        budget = ledger.Budget(books, "run1", max_usd="1")
+        budget.reserve("openai", "run1/a", D("0.75"))
+        with self.assertRaises(ledger.CapExceeded) as caught:
+            budget.reserve("openai", "run1/b", D("0.75"))
+        self.assertEqual(caught.exception.scope, "max-usd")
+        with open(self.path, encoding="utf-8") as stream:
+            self.assertEqual(len(stream.readlines()), 1)  # the refused one wrote nothing
+
+    def test_a_part_written_last_line_is_damage(self):
+        book = self.book()
+        book.reserve("run1/a", D("0.10"))
+        with open(self.path, "ab") as stream:
+            stream.write(b'{"event": "reserve", "request_id": "run1/b", "usd": "0.1')
+        with self.assertRaises(ledger.LedgerError) as caught:
+            book.reserve("run1/c", D("0.10"))
+        self.assertIn("damaged at line 2", str(caught.exception))
+        with self.assertRaises(ledger.LedgerError):
+            self.book()
+
+    def test_a_ledger_that_does_not_exist_yet_makes_nothing_on_disk(self):
+        book = self.book()
+        self.assertEqual(book.remaining, D("1.00"))
+        self.assertEqual(os.listdir(self.folder), [])
+
+    def test_the_store_lock_has_one_owner_and_can_be_taken_again_after_release(self):
+        store = os.path.join(self.folder, "store")
+        self.assertIsNone(ledger.store_owner(store))
+        self.assertFalse(os.path.exists(store))           # asking makes nothing
+        lock = ledger.StoreLock(store).acquire("run-a")
+        self.addCleanup(lock.release)
+        with open(lock.path, encoding="utf-8") as stream:
+            self.assertRegex(stream.read(), r"^pid %d, run run-a, started 20\S+Z\n$"
+                             % os.getpid())
+        with self.assertRaises(ledger.StoreLocked) as caught:
+            ledger.StoreLock(store).acquire("run-b")
+        self.assertIn("pid %d, run run-a" % os.getpid(), str(caught.exception))
+        self.assertIsInstance(caught.exception, ledger.LedgerError)
+        lock.describe("run-named-later")
+        self.assertIn("run run-named-later", ledger.store_owner(store))
+        lock.release()
+        self.assertIsNone(ledger.store_owner(store))
+        with ledger.StoreLock(store) as again:
+            self.assertTrue(again.held)
+        self.assertFalse(again.held)
 
 
 if __name__ == "__main__":

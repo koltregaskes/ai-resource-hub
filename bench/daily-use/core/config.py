@@ -42,6 +42,12 @@ OUTPUT_LIMITS = (4096, 8192)
 # `judge_candidates` must be at or below it, in every stage and in both dry
 # and live validation.
 JUDGE_MAX_OUTPUT_TOKENS = 400
+# The most that may be spent with each provider, in USD. This is the owner's
+# authority, typed by the owner on 15 November 2026. A run config may set
+# `caps_usd` at or below these figures; a config above either one is not
+# ready for a live run. Raising a figure here needs a reviewed commit: no
+# config field, command-line option or resume can do it.
+AUTHORISED_CAPS_USD = {"openai": Decimal("90"), "anthropic": Decimal("60")}
 # Read from the provider references on 14 November 2026 (see RUNNER.md).
 # Anthropic: the `anthropic-version` header values. 2026-10-21 rejects
 # `temperature` on every model; 2023-06-01 still takes it.
@@ -243,9 +249,10 @@ class RunConfig:
     acknowledged_overruns: tuple = ()
     # The config without its two money fields (`caps_usd` and
     # `acknowledged_overruns`), hashed. A stopped run is resumed only under
-    # the same `run_sha256`: acknowledging an overrun or changing a cap does
+    # the same `run_sha256`: acknowledging an overrun or lowering a cap does
     # not make it a different run, and anything that shapes a request or a
-    # judgement does.
+    # judgement does. Raising a cap on resume is refused by the runner,
+    # against the caps frozen in the run's record.
     run_sha256: str = ""
 
     def spec(self, model_id):
@@ -510,6 +517,10 @@ def validate(raw, mode="dry", today=None, sha256=""):
             amount = _money(value, "config.caps_usd." + provider, problems)
             if amount is not None:
                 caps[provider] = amount
+                if amount > AUTHORISED_CAPS_USD[provider]:
+                    blockers.append(
+                        "config.caps_usd.%s is %s USD, above the authorised %s USD"
+                        % (provider, amount, AUTHORISED_CAPS_USD[provider]))
 
     planning = raw.get("planning") if isinstance(raw.get("planning"), dict) else {}
     expected = {}
@@ -587,6 +598,10 @@ def validate(raw, mode="dry", today=None, sha256=""):
     )
 
 
+# Left out of the run fingerprint so that acknowledging an overrun or
+# lowering a cap does not make a stopped run a different run. Leaving
+# `caps_usd` out does not let a resume raise a cap: the caps a run starts
+# with are frozen in its record and the runner refuses a resume above them.
 RUN_SHA256_LEAVES_OUT = ("caps_usd", "acknowledged_overruns")
 
 

@@ -1,0 +1,1053 @@
+[
+  {
+    "id": "f1-pub-03",
+    "version": 3,
+    "changed_in_v2": "Prompt now sets a five-line layout (three fixed lines, one free line, fixed sign-off on its own last line) with a 40 to 55 word band, and names 'leave' and 'holiday' as banned words; the grader now checks the layout, the order and meaning of the two dates, every usual absence reason, phone numbers by digit pattern, years, and that the only contact route is the invoice-only line.",
+    "changed_in_v3": "Grader changed from constraints to checklist: the 13 script checks are kept unchanged as c1 to c13, and two judge checks are added (c14: no reason of any kind for the absence; c15: the two dates mean first day away and day back), because a word list cannot catch every reason such as 'attending a wedding'.",
+    "family": 1,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I'm the accounts administrator at Harlow Build Supplies and I need an out-of-office auto-reply for my email. My notes:\n\n- I'm off from Monday 23 November 2026 for exactly two weeks. (I'm having knee surgery, but nobody outside my team needs to know that, or anything else about why I'm away.)\n- I'm back at my desk on the first Monday after those two weeks.\n- While I'm away, invoice queries go to Tomasz on accounts@harlowbuild.example. He is only covering invoices, so don't suggest he can help with anything else.\n- Everything else will wait until I'm back.\n- My mobile is 07700 900152, but don't give that out.\n\nWrite the auto-reply as exactly five lines in this layout, with no other text (a blank line between lines is fine):\nLine 1 is exactly: Thank you for your email.\nLine 2 is in your own words: one or two sentences, kept on a single line. It says I am away from the office, then gives the first day of my absence, then the day I am back at work, in that order, using the word \"back\" or \"return\" (or \"returning\") for the second date. Write both dates as weekday, day number and month, with no year and no \"st\", \"nd\", \"rd\" or \"th\" (in the style of \"Friday 2 October\"). These are the only two dates in the reply. This line says nothing about invoices or about who to contact.\nLine 3 is exactly the words \"Invoice queries only:\" then one space, then the email address for invoice queries, and nothing else.\nLine 4 is exactly: Everything else will wait until I return.\nLine 5 is exactly: Kind regards, Priya Nair\n\nRules:\n1. Between 40 and 55 words in total, counting every word on all five lines.\n2. Give no reason of any kind for my absence, and do not use the words \"sorry\", \"unfortunately\", \"apologies\", \"leave\" or \"holiday\".\n3. No phone numbers, do not write the year anywhere, and do not name Tomasz or mention a colleague.\n\nReply with the auto-reply text only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "checklist",
+      "checks": [
+        {
+          "id": "c1",
+          "text": "Is at least 40 words long",
+          "by": "script",
+          "script": {
+            "check": "min_words",
+            "value": 40
+          }
+        },
+        {
+          "id": "c2",
+          "text": "Is no more than 55 words long",
+          "by": "script",
+          "script": {
+            "check": "max_words",
+            "value": 55
+          }
+        },
+        {
+          "id": "c3",
+          "text": "Has exactly five non-empty lines",
+          "by": "script",
+          "script": {
+            "check": "line_count",
+            "value": 5
+          }
+        },
+        {
+          "id": "c4",
+          "text": "Follows the five-line layout: fixed lines 1, 3, 4 and 5, one free line 2, and the sign-off alone on the last line",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "The five-line layout: fixed lines 1, 3, 4 and 5, one free line 2, sign-off alone on the last line.",
+            "pattern": "\\AThank you for your email\\.(?:[ \\t]*\\r?\\n)+[^\\r\\n]+(?:[ \\t]*\\r?\\n)+Invoice queries only: accounts@harlowbuild\\.example(?:[ \\t]*\\r?\\n)+Everything else will wait until I return\\.(?:[ \\t]*\\r?\\n)+Kind regards, Priya Nair\\Z"
+          }
+        },
+        {
+          "id": "c5",
+          "text": "Line 2 gives Monday 23 November, then the word back, return or returning, then Monday 7 December",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "Line 2 gives the first day of absence, then the word back/return, then the return date Monday 7 December.",
+            "pattern": "\\bMonday 23 November\\b[^\\r\\n]*\\b(?i:back|return|returning)\\b[^\\r\\n]*\\bMonday 7 December\\b"
+          }
+        },
+        {
+          "id": "c6",
+          "text": "Contains exactly two dates",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "Exactly two dates in the whole reply.",
+            "pattern": "\\b\\d{1,2}(?:st|nd|rd|th)?\\s+(?:of\\s+)?(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sept?|Oct|Nov|Dec)\\b|\\b\\d{1,2}/\\d{1,2}\\b",
+            "flags": "i",
+            "value": 2
+          }
+        },
+        {
+          "id": "c7",
+          "text": "Uses none of the usual words for a reason for absence (medical, holiday, leave, family, training, travel and so on)",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "No reason for the absence, in any of the usual forms (medical, holiday, leave, family, training and so on).",
+            "pattern": "\\b(?:surgery|surgical|knee|operations?|hospital|medical|health|sick|sickness|ill|illness|unwell|injur\\w*|recover\\w*|recuperat\\w*|procedure|treatment|appointment|holiday\\w*|vacation|leave|maternity|paternity|sabbatical|personal|family|bereavement|training|conference|jury|travel\\w*)\\b",
+            "flags": "i",
+            "value": 0
+          }
+        },
+        {
+          "id": "c8",
+          "text": "Does not use the words sorry, unfortunately or apologies",
+          "by": "script",
+          "script": {
+            "check": "must_not_include",
+            "values": [
+              "sorry",
+              "unfortunately",
+              "apologies"
+            ]
+          }
+        },
+        {
+          "id": "c9",
+          "text": "Contains no phone number (no run of six or more digits)",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "No phone number: no run of six or more digits, with or without spaces, dots or hyphens.",
+            "pattern": "\\d(?:[ .\\-]?\\d){5,}",
+            "value": 0
+          }
+        },
+        {
+          "id": "c10",
+          "text": "Does not write a year",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "No year.",
+            "pattern": "\\b(?:19|20)\\d{2}\\b",
+            "value": 0
+          }
+        },
+        {
+          "id": "c11",
+          "text": "Does not name Tomasz, mention a colleague, offer help or urgent contact, or use a phone word",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "Invoice-only cover: the only contact route is the fixed line 3. No Tomasz, no colleague, no offer of help or urgent contact, no phone words.",
+            "pattern": "\\b(?:Tomasz|contact\\w*|urgent\\w*|help\\w*|assist\\w*|colleagues?|cover\\w*|call|ring|phone|telephone|mobile)\\b",
+            "flags": "i",
+            "value": 0
+          }
+        },
+        {
+          "id": "c12",
+          "text": "Mentions invoices and queries on line 3 only",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "Invoices and queries are mentioned on line 3 only.",
+            "pattern": "\\b(?:invoic\\w*|quer(?:y|ies))\\b",
+            "flags": "i",
+            "value": 2
+          }
+        },
+        {
+          "id": "c13",
+          "text": "Contains exactly one email address",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "One email address only.",
+            "pattern": "@",
+            "value": 1
+          }
+        },
+        {
+          "id": "c14",
+          "text": "Gives no reason of any kind for the absence (no event, activity, illness, travel or personal circumstance).",
+          "by": "judge"
+        },
+        {
+          "id": "c15",
+          "text": "Says that Monday 23 November is the first day of the absence and that Monday 7 December is the day she is back at work, and says nothing that contradicts either date.",
+          "by": "judge"
+        }
+      ]
+    },
+    "expected": "Five lines, 40 to 55 words: 'Thank you for your email.'; one free line saying she is away from Monday 23 November and back on Monday 7 December (no reason of any kind for the absence, in any wording; no contact details); 'Invoice queries only: accounts@harlowbuild.example'; 'Everything else will wait until I return.'; 'Kind regards, Priya Nair'. No year, no phone number, no Tomasz. Model answer:\nThank you for your email.\nI am away from the office from Monday 23 November and will be back at my desk on Monday 7 December. I will not be reading messages during that time.\nInvoice queries only: accounts@harlowbuild.example\nEverything else will wait until I return.\nKind regards, Priya Nair",
+    "accept_examples": [
+      "Thank you for your email.\nI am away from the office from Monday 23 November and will be back at my desk on Monday 7 December. I will not be reading messages during that time.\nInvoice queries only: accounts@harlowbuild.example\nEverything else will wait until I return.\nKind regards, Priya Nair",
+      "Thank you for your email.\n\nI am out of the office from Monday 23 November and return to work on Monday 7 December, so replies to your message will be delayed until then.\n\nInvoice queries only: accounts@harlowbuild.example\n\nEverything else will wait until I return.\n\nKind regards, Priya Nair"
+    ],
+    "reject_examples": [
+      "Thank you for your email. I am on holiday from Monday 23 November and will be back at my desk on Monday 7 December. I will not be reading messages while I am away. If your message is an invoice query, you can send it to accounts@harlowbuild.example and it will be picked up there. Anything else will be dealt with as soon as I return to work. Kind regards, Priya Nair",
+      "Thank you for your email.\nI am away from the office from Monday 23 November and will be back at my desk on Monday 30 November. I will not be reading messages during that time.\nInvoice queries only: accounts@harlowbuild.example\nEverything else will wait until I return.\nKind regards, Priya Nair",
+      "Thank you for your email.\nI am away from the office recovering from knee surgery from Monday 23 November and will be back at my desk on Monday 7 December.\nInvoice queries only: accounts@harlowbuild.example\nEverything else will wait until I return.\nKind regards, Priya Nair",
+      "Thank you for your email.\nI am away from the office on annual leave from Monday 23 November and will be back at my desk on Monday 7 December, so replies will be delayed.\nInvoice queries only: accounts@harlowbuild.example\nEverything else will wait until I return.\nKind regards, Priya Nair",
+      "Thank you for your email.\nI am away from the office from Monday 23 November and will be back on Monday 7 December. For anything urgent, Tomasz can help in the meantime.\nInvoice queries only: accounts@harlowbuild.example\nEverything else will wait until I return.\nKind regards, Priya Nair",
+      "Thank you for your email.\nI am away from the office from Monday 23 November and will be back on Monday 7 December. If it cannot wait, I am on 07700 900152.\nInvoice queries only: accounts@harlowbuild.example\nEverything else will wait until I return.\nKind regards, Priya Nair",
+      "Thank you for your email.\nI am away from the office from Monday 23 November and will be back at my desk on Monday 7 December 2026. I will not be reading messages during that time.\nInvoice queries only: accounts@harlowbuild.example\nEverything else will wait until I return.\nKind regards, Priya Nair",
+      "Thank you for your email.\nI am away from Monday 23 November and back on Monday 7 December.\nInvoice queries only: accounts@harlowbuild.example\nEverything else will wait until I return.\nKind regards, Priya Nair",
+      "Thank you for your email.\nI am away from the office attending a wedding from Monday 23 November and will be back at my desk on Monday 7 December. I will not be reading messages during that time.\nInvoice queries only: accounts@harlowbuild.example\nEverything else will wait until I return.\nKind regards, Priya Nair",
+      "Thank you for your email.\nI am away from the office from Monday 23 November and will not be back at my desk until the week after Monday 7 December. I will not be reading messages during that time.\nInvoice queries only: accounts@harlowbuild.example\nEverything else will wait until I return.\nKind regards, Priya Nair"
+    ],
+    "reject_notes": {
+      "R9": "The second reviewer's counterexample. Passes every script check ('wedding' is not on the word list) but fails judge check c14: 'attending a wedding' is a reason for the absence.",
+      "R10": "Passes every script check (both dates and the word 'back' are there in order) but fails judge check c15: it says she is back the week after Monday 7 December, not on that day."
+    },
+    "sources": [],
+    "why_hard": "The return date is not stated and must be worked out (two weeks from Monday 23 November runs to Sunday 6 December, so the return is Monday 7 December), while the tempting reason for absence, the mobile number, the year and Tomasz must all be left out inside a fixed layout and a tight word band.",
+    "verification": "v2: checked with Python that 23 November 2026 and 7 December 2026 are Mondays 14 days apart; ran both accept and all eight reject examples through _verify/fixes/check_fixes.py (accepts pass every check; each reject fails at least one, including the reviewer's holiday-and-inline-sign-off reply). v3: ran both accepts and all ten rejects through _verify/fixes2/check_fixes2.py: accepts pass all 13 script checks; R1 to R8 each fail a script check; R9 (the second reviewer's 'attending a wedding' reply) and R10 pass the script checks and are rejected by judge checks c14 and c15, as reject_notes says.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f1-pub-04",
+    "version": 3,
+    "changed_in_v2": "Prompt now makes each step begin with a different one of six given verbs (listed alphabetically), adds 'under 1 bar' to the required figures and asks for 'thermostat' in exactly two steps; the grader now checks the verb order and the key action words of every step, so a step such as 'Leave the filling tap open' fails.",
+    "changed_in_v3": "Grader changed from constraints to checklist: the 11 script checks are kept as c1 to c11 (the step 4 check now also bans 'halfway', 'partly' and similar words), and two judge checks are added (c12: the tap is closed completely; c13: the other five steps give the correct action), because a script cannot decide whether a step's action is right.",
+    "family": 1,
+    "split": "public",
+    "answerable": true,
+    "prompt": "My landlord sent our house this rambling message about the boiler. I want to turn it into a short card to tape inside the boiler cupboard for my housemates.\n\n--- MESSAGE ---\nHi all, Gareth from Brightside Heating talked me through this on the phone so here goes. If the boiler locks out (red light flashing) you can reset it yourselves. The reset button is the one on the left under the flap, and you hold it in for 3 seconds, not longer. But before you touch that you need to check the pressure gauge, which should read between 1 and 1.5 bar. If it's under 1, open the silver filling tap under the boiler until the needle gets to 1.5 bar and then close the tap again, fully. Oh, and before any of that, turn the heating off at the wall thermostat. After you've pressed reset, wait 5 minutes before you turn the thermostat back up. Gareth says people always rush this bit and it locks out again within 30 seconds. If it fails twice don't keep trying, ring me on 01632 960114. Thanks, Moira\n--- END ---\n\nWrite the card to this exact layout:\n- Line 1 is exactly: BOILER RESET: 6 STEPS\n- Then exactly six numbered lines, starting \"1. \" to \"6. \", one step per line, in the order the steps must actually be carried out (which is not the order Moira mentions them in).\n- Each step begins with a different one of these six verbs, so each verb starts exactly one step: Check, Close, Hold, Open, Turn, Wait.\n- Each step is at most 12 words, not counting the number, with single spaces between words.\n- The final line is exactly: If it fails twice, call 01632 960114.\n- Eight lines in total. No blank lines, no other text, plain text with no bold or other markup.\n- Between them the steps must include \"under 1 bar\", \"1.5 bar\", \"3 seconds\" and \"5 minutes\", written exactly like that.\n- The word \"thermostat\" must appear in exactly two of the steps, once in each.\n- Do not mention Gareth, Brightside Heating or Moira, and do not use the words \"please\" or \"simply\".\n\nReply with the card only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "checklist",
+      "checks": [
+        {
+          "id": "c1",
+          "text": "Follows the layout and order: title line, six numbered steps of at most 12 words whose first words are Turn, Check, Open, Close, Hold, Wait in that order, and the fixed last line",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "Layout and order: title, six steps of at most 12 words whose first words are Turn, Check, Open, Close, Hold, Wait in that order, fixed last line.",
+            "pattern": "\\ABOILER RESET: 6 STEPS *\\r?\\n1\\. Turn( \\S+){0,11} *\\r?\\n2\\. Check( \\S+){0,11} *\\r?\\n3\\. Open( \\S+){0,11} *\\r?\\n4\\. Close( \\S+){0,11} *\\r?\\n5\\. Hold( \\S+){0,11} *\\r?\\n6\\. Wait( \\S+){0,11} *\\r?\\nIf it fails twice, call 01632 960114\\.\\Z"
+          }
+        },
+        {
+          "id": "c2",
+          "text": "Has exactly eight non-empty lines",
+          "by": "script",
+          "script": {
+            "check": "line_count",
+            "value": 8
+          }
+        },
+        {
+          "id": "c3",
+          "text": "Includes 'under 1 bar', '1.5 bar', '3 seconds' and '5 minutes'",
+          "by": "script",
+          "script": {
+            "check": "must_include",
+            "values": [
+              "under 1 bar",
+              "1.5 bar",
+              "3 seconds",
+              "5 minutes"
+            ]
+          }
+        },
+        {
+          "id": "c4",
+          "text": "Step 1 turns the heating off at the thermostat",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "Step 1 turns the heating off at the thermostat.",
+            "pattern": "\\n1\\. Turn (?=[^\\r\\n]*\\boff\\b)(?=[^\\r\\n]*\\bthermostat\\b)",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c5",
+          "text": "Step 2 checks the pressure gauge",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "Step 2 checks the pressure gauge.",
+            "pattern": "\\n2\\. Check (?=[^\\r\\n]*\\b(?:gauge|pressure)\\b)",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c6",
+          "text": "Step 3 opens the filling tap, with 'under 1 bar' and '1.5 bar' in the step",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "Step 3 opens the filling tap, only if under 1 bar, up to 1.5 bar.",
+            "pattern": "\\n3\\. Open (?=[^\\r\\n]*\\btap\\b)(?=[^\\r\\n]*\\bunder 1 bar\\b)(?=[^\\r\\n]*\\b1\\.5 bar\\b)",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c7",
+          "text": "Step 4 closes the tap and does not use the words open, leave, half, halfway, partly, partially, part-way, slightly, almost, nearly or mostly",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "Step 4 closes the tap, and does not say to open it, leave it, or close it only halfway or partly.",
+            "pattern": "\\n4\\. Close (?=[^\\r\\n]*\\btap\\b)(?![^\\r\\n]*\\b(?:open|leave|half\\w*|partly|partially|part-?way|slightly|almost|nearly|mostly)\\b)",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c8",
+          "text": "Step 5 holds the reset button for 3 seconds",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "Step 5 holds the reset button for 3 seconds.",
+            "pattern": "\\n5\\. Hold (?=[^\\r\\n]*\\breset\\b)(?=[^\\r\\n]*\\b3 seconds\\b)",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c9",
+          "text": "Step 6 waits 5 minutes and then turns the thermostat up",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "Step 6 waits 5 minutes and then turns the thermostat up (or the heating back on).",
+            "pattern": "\\n6\\. Wait (?=[^\\r\\n]*\\b5 minutes\\b[^\\r\\n]*\\bthermostat\\b)(?=[^\\r\\n]*\\b(?:up|on|raise|raising)\\b)",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c10",
+          "text": "The word thermostat appears exactly twice",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "The word thermostat appears exactly twice.",
+            "pattern": "\\bthermostat\\b",
+            "flags": "i",
+            "value": 2
+          }
+        },
+        {
+          "id": "c11",
+          "text": "Does not mention Gareth, Brightside or Moira, does not use 'please' or 'simply', and has no bold markup",
+          "by": "script",
+          "script": {
+            "check": "must_not_include",
+            "values": [
+              "Gareth",
+              "Brightside",
+              "Moira",
+              "please",
+              "simply",
+              "**"
+            ]
+          }
+        },
+        {
+          "id": "c12",
+          "text": "Step 4 tells the reader to close the filling tap completely: a plain 'close the tap' or 'close it fully' counts; closing it halfway, partly or a little, or leaving it open at all, does not.",
+          "by": "judge"
+        },
+        {
+          "id": "c13",
+          "text": "Each of the other five steps gives the correct action from the landlord's message, with nothing that changes what the reader should do: step 1 turns the heating off at the wall thermostat; step 2 checks the pressure gauge; step 3 opens the filling tap only if the gauge reads under 1 bar and only until it reaches 1.5 bar; step 5 holds the reset button in for 3 seconds (not longer); step 6 waits 5 minutes and then turns the thermostat back up.",
+          "by": "judge"
+        }
+      ]
+    },
+    "expected": "Eight lines: the fixed title; six numbered steps of at most 12 words in true working order, each starting with its verb (Turn the heating off at the thermostat; Check the gauge; Open the tap to 1.5 bar if under 1 bar; Close the tap completely, not partly; Hold reset 3 seconds, not longer; Wait 5 minutes then thermostat up); the fixed closing line. No names, no 'please' or 'simply'. Model answer:\nBOILER RESET: 6 STEPS\n1. Turn the heating off at the wall thermostat.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. Open the silver filling tap to 1.5 bar if under 1 bar.\n4. Close the filling tap fully.\n5. Hold the left reset button under the flap for 3 seconds.\n6. Wait 5 minutes, then turn the thermostat back up.\nIf it fails twice, call 01632 960114.",
+    "accept_examples": [
+      "BOILER RESET: 6 STEPS\n1. Turn the heating off at the wall thermostat.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. Open the silver filling tap to 1.5 bar if under 1 bar.\n4. Close the filling tap fully.\n5. Hold the left reset button under the flap for 3 seconds.\n6. Wait 5 minutes, then turn the thermostat back up.\nIf it fails twice, call 01632 960114.",
+      "BOILER RESET: 6 STEPS\n1. Turn off the heating at the wall thermostat.\n2. Check the pressure gauge.\n3. Open the silver tap up to 1.5 bar if under 1 bar.\n4. Close the tap completely.\n5. Hold in the left-hand reset button for 3 seconds.\n6. Wait 5 minutes before turning the thermostat up again.\nIf it fails twice, call 01632 960114."
+    ],
+    "reject_examples": [
+      "BOILER RESET: 6 STEPS\n1. Turn the heating off at the wall thermostat.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. If under 1, open the silver filling tap to 1.5 bar.\n4. Leave the filling tap open.\n5. Hold the left reset button under the flap for 3 seconds.\n6. Wait 5 minutes, then turn the thermostat back up.\nIf it fails twice, call 01632 960114.",
+      "BOILER RESET: 6 STEPS\n1. Hold the left reset button under the flap for 3 seconds.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. Open the silver filling tap to 1.5 bar if under 1 bar.\n4. Close the filling tap fully.\n5. Turn the heating off at the wall thermostat.\n6. Wait 5 minutes, then turn the thermostat back up.\nIf it fails twice, call 01632 960114.",
+      "BOILER RESET: 6 STEPS\n1. Turn the heating off at the wall thermostat.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. Open the silver filling tap to 1.5 bar if under 1 bar.\n4. Close the flap and leave the filling tap open.\n5. Hold the left reset button under the flap for 3 seconds.\n6. Wait 5 minutes, then turn the thermostat back up.\nIf it fails twice, call 01632 960114.",
+      "BOILER RESET: 6 STEPS\n1. Turn the heating off at the wall thermostat.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. Open the silver filling tap slowly, please, until it reaches 1.5 bar if under 1 bar.\n4. Close the filling tap fully.\n5. Hold the left reset button under the flap for 3 seconds.\n6. Wait 5 minutes, then turn the thermostat back up.\nIf it fails twice, call 01632 960114.",
+      "BOILER RESET: 6 STEPS\n\n1. Turn the heating off at the wall thermostat.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. Open the silver filling tap to 1.5 bar if under 1 bar.\n4. Close the filling tap fully.\n5. Hold the left reset button under the flap for 3 seconds.\n6. Wait 5 minutes, then turn the thermostat back up.\nIf it fails twice, call Moira on 01632 960114.",
+      "BOILER RESET: 6 STEPS\n1. Turn the heating off at the wall thermostat.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. Open the silver filling tap to 1.5 bar if under 1 bar.\n4. Close the filling tap fully.\n5. Hold the left reset button under the flap for 3 seconds.\n6. Wait 5 minutes before trying anything else.\nIf it fails twice, call 01632 960114.",
+      "BOILER RESET: 6 STEPS\n1. Turn the heating off at the wall thermostat.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. Open the silver filling tap until the gauge reads 1.5 bar.\n4. Close the filling tap fully.\n5. Hold the left reset button under the flap for 3 seconds.\n6. Wait 5 minutes, then turn the thermostat back up.\nIf it fails twice, call 01632 960114.",
+      "BOILER RESET: 6 STEPS\n1. Turn the heating off at the wall thermostat.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. Open the silver filling tap to 1.5 bar if under 1 bar.\n4. Close the filling tap halfway.\n5. Hold the left reset button under the flap for 3 seconds.\n6. Wait 5 minutes, then turn the thermostat back up.\nIf it fails twice, call 01632 960114.",
+      "BOILER RESET: 6 STEPS\n1. Turn the heating off at the wall thermostat.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. Open the silver filling tap to 1.5 bar if under 1 bar.\n4. Close the filling tap a little.\n5. Hold the left reset button under the flap for 3 seconds.\n6. Wait 5 minutes, then turn the thermostat back up.\nIf it fails twice, call 01632 960114.",
+      "BOILER RESET: 6 STEPS\n1. Turn the heating off at the wall thermostat.\n2. Check the pressure gauge reads between 1 and 1.5 bar.\n3. Open the silver filling tap to 1.5 bar if under 1 bar.\n4. Close the filling tap fully.\n5. Hold the left reset button for at least 3 seconds.\n6. Wait 5 minutes, then turn the thermostat back up.\nIf it fails twice, call 01632 960114."
+    ],
+    "reject_notes": {
+      "R9": "Passes every script check ('a little' is not on the step 4 word list) but fails judge check c12: the tap must be closed completely.",
+      "R10": "Passes every script check (step 5 has 'reset' and '3 seconds') but fails judge check c13: the message says to hold the button for 3 seconds, not longer, and 'at least 3 seconds' changes that."
+    },
+    "sources": [],
+    "why_hard": "The message gives the steps out of order (the first action is mentioned last-but-one), so a model that follows the message order puts the reset before the pressure check; the verbs are listed alphabetically and give no order away, and the 12-word cap and fixed first and last lines must hold at the same time.",
+    "verification": "v2: re-read the message to fix the true order (thermostat off, gauge, fill if under 1, close, reset, wait then thermostat up) and ran both accept and all seven reject examples through _verify/fixes/check_fixes.py (accepts pass every check; each reject fails at least one, including the reviewer's 'Leave the filling tap open' card). v3: ran both accepts and all ten rejects through _verify/fixes2/check_fixes2.py: accepts pass all 11 script checks; R1 to R8 each fail a script check (R8 is the second reviewer's 'Close the filling tap halfway.' card, which now fails c7); R9 and R10 pass the script checks and are rejected by judge checks c12 and c13, as reject_notes says.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f1-pub-05",
+    "version": 4,
+    "changed_in_v2": "Prompt now puts each section on one line, fixes the wording that ties each time to its event ('doors open at 6.45pm', 'meeting starts at 7.15pm'), asks for the agenda items in order in What:, the room, floor and block in Where:, and the fob and the voting condition in separate sentences in Bring:; the grader now checks each of these per section, allows exactly two times and bans cost, guest and speaker wording.",
+    "changed_in_v3": "Grader changed from constraints to checklist: the 12 script checks are kept unchanged as c1 to c12, and two judge checks are added (c13: proof of address is required to vote; c14: a fob is needed), because the script could see the words but not whether the condition was reversed.",
+    "family": 1,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I chair the Tannery Wharf residents' association in Leeds. Please write the notice for the lobby noticeboard about our annual general meeting. The details:\n\n- The AGM is on Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp. It is in the Community Room on the ground floor of Block C.\n- Agenda: (1) the chair's report, (2) the accounts for the year, (3) election of the committee, (4) the lift replacement programme.\n- People need to bring their fob (the Community Room door is fob-only now) and, if they want to vote, proof of address.\n- Background for you only, not for the notice: the lift work has gone £38,000 over budget, and Councillor Reyes, who was due to speak, has pulled out.\n\nRules:\n1. Between 80 and 110 words in total, counting every word including the first and last lines and the labels.\n2. Plain text, no markdown, exactly six lines (a blank line between lines is fine). The first line must be exactly: TANNERY WHARF AGM 2027\n3. Then four labelled sections in this order, each on one line of its own that starts with its label and a space: What: then When: then Where: then Bring:\n4. In the What: section, name all four agenda items in agenda order, worded as in my list above, with British spelling.\n5. In the When: section, give the date in full as \"Thursday 21 January 2027\", and give both times using exactly these words: \"doors open at 6.45pm\" and \"meeting starts at 7.15pm\" (a capital letter at the start of a sentence is fine). Give no other time.\n6. In the Where: section, give the room, the floor and the block.\n7. In the Bring: section, say that people need their fob and, in a separate sentence, that proof of address is needed to vote.\n8. Do not mention the budget, any cost or sum of money, the councillor, or any guest or speaker.\n9. The last line must be exactly: All residents welcome.\n\nReply with the notice only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "checklist",
+      "checks": [
+        {
+          "id": "c1",
+          "text": "Is at least 80 words long",
+          "by": "script",
+          "script": {
+            "check": "min_words",
+            "value": 80
+          }
+        },
+        {
+          "id": "c2",
+          "text": "Is no more than 110 words long",
+          "by": "script",
+          "script": {
+            "check": "max_words",
+            "value": 110
+          }
+        },
+        {
+          "id": "c3",
+          "text": "Has exactly six non-empty lines",
+          "by": "script",
+          "script": {
+            "check": "line_count",
+            "value": 6
+          }
+        },
+        {
+          "id": "c4",
+          "text": "Follows the layout: fixed first line, then What:, When:, Where: and Bring: each on one line in that order, then the fixed last line",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "Layout: fixed first line, What:, When:, Where:, Bring: each on one line in that order, fixed last line.",
+            "pattern": "\\ATANNERY WHARF AGM 2027(?:[ \\t]*\\r?\\n)+What: [^\\r\\n]+(?:[ \\t]*\\r?\\n)+When: [^\\r\\n]+(?:[ \\t]*\\r?\\n)+Where: [^\\r\\n]+(?:[ \\t]*\\r?\\n)+Bring: [^\\r\\n]+(?:[ \\t]*\\r?\\n)+All residents welcome\\.\\Z"
+          }
+        },
+        {
+          "id": "c5",
+          "text": "The What: line names the four agenda items in agenda order, with 'programme'",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "What: names the four agenda items in agenda order, with 'programme'.",
+            "pattern": "\\nWhat: [^\\r\\n]*chair['’]s report[^\\r\\n]*accounts for the year[^\\r\\n]*election of the committee[^\\r\\n]*lift replacement programme",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c6",
+          "text": "The When: line has 'Thursday 21 January 2027', 'doors open at 6.45pm' and 'meeting starts at 7.15pm'",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "When: has the full date, 6.45pm as the time doors open and 7.15pm as the time the meeting starts.",
+            "pattern": "\\nWhen: (?=[^\\r\\n]*Thursday 21 January 2027)(?=[^\\r\\n]*\\b[Dd]oors open at 6\\.45pm)(?=[^\\r\\n]*\\b[Mm]eeting starts at 7\\.15pm)"
+          }
+        },
+        {
+          "id": "c7",
+          "text": "Contains exactly two times",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "Exactly two times in the notice.",
+            "pattern": "\\b\\d{1,2}[.:]\\d{2}\\s*(?:am|pm)?|\\b\\d{1,2}\\s*(?:am|pm)\\b",
+            "flags": "i",
+            "value": 2
+          }
+        },
+        {
+          "id": "c8",
+          "text": "The Where: line gives the Community Room, the ground floor and Block C",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "Where: gives the room, the floor and the block.",
+            "pattern": "\\nWhere: (?=[^\\r\\n]*\\bCommunity Room\\b)(?=[^\\r\\n]*\\bground floor\\b)(?=[^\\r\\n]*\\bBlock C\\b)",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c9",
+          "text": "The Bring: line mentions a fob, puts proof of address and voting in one sentence, and keeps the fob out of the voting sentence",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "Bring: a fob; proof of address tied to voting in one sentence; the fob not in the same sentence as voting.",
+            "pattern": "\\nBring: (?=[^\\r\\n]*\\bfob\\b)(?=[^\\r\\n]*(?:\\bproof of address\\b[^\\r\\n.]*\\bvot(?:e|ing)\\b|\\bvot(?:e|ing)\\b[^\\r\\n.]*\\bproof of address\\b))(?![^\\r\\n]*\\bfob\\b[^\\r\\n.]*\\bvot(?:e|ing)\\b)(?![^\\r\\n]*\\bvot(?:e|ing)\\b[^\\r\\n.]*\\bfob\\b)",
+            "flags": "i"
+          }
+        },
+        {
+          "id": "c10",
+          "text": "Contains no pound sign, no '38' and no bold markup",
+          "by": "script",
+          "script": {
+            "check": "must_not_include",
+            "values": [
+              "£",
+              "38",
+              "**"
+            ]
+          }
+        },
+        {
+          "id": "c11",
+          "text": "Uses no word about the budget, cost or money, the councillor, or a guest or speaker",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "Nothing about the budget, cost or money, the councillor, or a guest or speaker.",
+            "pattern": "\\b(?:budgets?|overspen\\w*|over-?runs?|costs?|money|pounds?|thousands?|councillors?|cllr|reyes|speakers?|guests?)\\b",
+            "flags": "i",
+            "value": 0
+          }
+        },
+        {
+          "id": "c12",
+          "text": "Does not use the spelling 'program'",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "British spelling: no 'program'.",
+            "pattern": "\\bprograms?\\b",
+            "flags": "i",
+            "value": 0
+          }
+        },
+        {
+          "id": "c13",
+          "text": "States the voting condition correctly: a resident who wants to vote must bring proof of address (does not weaken it to optional, reverse it or omit it).",
+          "by": "judge"
+        },
+        {
+          "id": "c14",
+          "text": "Says residents need to bring their fob (does not say a fob is optional or not needed).",
+          "by": "judge"
+        },
+        {
+          "id": "c15",
+          "text": "Presents all four agenda items (the chair's report, the accounts for the year, the election of the committee, the lift replacement programme) as things that will happen at the meeting. Saying that any of them will not happen, is cancelled or is postponed fails.",
+          "by": "judge"
+        }
+      ]
+    },
+    "expected": "A plain-text notice of 80 to 110 words on six lines: fixed first line; What: with the four agenda items in order (with 'programme'); When: with the full date, 'doors open at 6.45pm' and 'meeting starts at 7.15pm'; Where: Community Room, ground floor, Block C; Bring: a fob is needed, and in a separate sentence proof of address must be brought by anyone who wants to vote (not optional, not reversed); nothing about money or the councillor; fixed last line. Model answer:\nTANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you must also bring proof of address.\nAll residents welcome.",
+    "accept_examples": [
+      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you must also bring proof of address.\nAll residents welcome.",
+      "TANNERY WHARF AGM 2027\n\nWhat: Our annual general meeting. The agenda is the chair's report, the accounts for the year, the election of the committee and the lift replacement programme.\n\nWhen: Thursday 21 January 2027. Doors open at 6.45pm. The meeting starts at 7.15pm sharp, so do arrive in good time.\n\nWhere: Community Room, ground floor of Block C.\n\nBring: Your fob, as the Community Room door can only be opened with one. Proof of address is also needed if you would like to vote on the night.\n\nAll residents welcome."
+    ],
+    "reject_examples": [
+      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 7.15pm and the meeting starts at 6.45pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you must also bring proof of address.\nAll residents welcome.",
+      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme, which is now over budget.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you must also bring proof of address.\nAll residents welcome.",
+      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement program.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you must also bring proof of address.\nAll residents welcome.",
+      "TANNERY WHARF AGM 2027\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you must also bring proof of address.\nAll residents welcome.",
+      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you must also bring proof of address. We look forward to seeing as many of you there as possible.\nAll residents welcome.",
+      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only, and proof of address. Everyone in the building is encouraged to come along.\nAll residents welcome.",
+      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you must also bring proof of address. Councillor Reyes is no longer able to attend.\nAll residents welcome.",
+      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you need not bring proof of address.\nAll residents welcome.",
+      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob if you have one to hand, though the Community Room door will be propped open. If you want to vote, you must also bring proof of address.\nAll residents welcome.",
+      "TANNERY WHARF AGM 2027\nWhat: The annual general meeting of the residents' association. We will not hear the chair's report, go through the accounts for the year, hold the election of the committee and discuss the lift replacement programme.\nWhen: Thursday 21 January 2027. Doors open at 6.45pm and the meeting starts at 7.15pm sharp.\nWhere: The Community Room, ground floor, Block C.\nBring: Your fob, because the Community Room door is now fob-only. If you want to vote, you must also bring proof of address.\nAll residents welcome."
+    ],
+    "reject_notes": {
+      "R8": "The second reviewer's counterexample. Passes every script check ('proof of address' and 'vote' share a sentence) but fails judge check c13: 'you need not bring proof of address' reverses the voting condition.",
+      "R9": "Passes every script check (the Bring: line mentions a fob) but fails judge check c14: it makes the fob optional and invents a propped-open door.",
+      "R10": "The third reviewer's counterexample. Passes every script check (all four items are named in order) but fails judge check c15: it says the chair's report will not be heard."
+    },
+    "sources": [],
+    "why_hard": "The facts supplied are thin for an 80-word minimum, which tempts a model to pad with the background it was told to leave out (the overspend and the absent councillor) or to drift over 110 words; section order and British spelling must also hold.",
+    "verification": "v2: checked with Python that 21 January 2027 is a Thursday; ran both accept and all seven reject examples through _verify/fixes/check_fixes.py (accepts pass every check; each reject fails at least one, including the reviewer's swapped-times notice). v3: ran both accepts and all nine rejects through _verify/fixes2/check_fixes2.py: accepts pass all 12 script checks; R1 to R7 each fail a script check; R8 (the second reviewer's 'you need not bring proof of address' notice) and R9 pass the script checks and are rejected by judge checks c13 and c14, as reject_notes says.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14",
+    "changed_in_v4": "Added judged check c15: all four agenda items must be presented as happening."
+  },
+  {
+    "id": "f1-pub-06",
+    "version": 1,
+    "family": 1,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I'm setting up the sign-in sheet for Thursday's supplier briefing at our Leeds office. Below is the RSVP export, which is a mess. Please give me the final attendee list.\n\n--- RSVP EXPORT (name | company | status | date of reply) ---\nDr Amara Okonkwo-Reid | Castlegate Logistics | Accepted | 3 Nov\nmr. david hughes | Pennine Fixings Ltd | Declined | 4 Nov\nSofia MARCHETTI | Aire Valley Packaging | Accepted | 4 Nov\nTom Abbott | Castlegate Logistics | Accepted | 5 Nov\nImran Qureshi | Northgate Print | Declined | 5 Nov\nProf. Helen Zielinski | Ridings Institute | Tentative | 6 Nov\nKwame Mensah | Northgate Print | No reply |\nHughes, David | Pennine Fixings Ltd | Accepted | 12 Nov\nMARCHETTI, Sofia | Aire Valley Packaging | Tentative | 10 Nov\nniamh doyle | Aire Valley Packaging | Accepted | 9 Nov\nImran Qureshi | Northgate Print | Accepted | 2 Nov\n--- END ---\n\nRules:\n1. Where someone appears more than once, only their most recently dated reply counts.\n2. Include only people whose reply that counts is Accepted or Tentative. Leave out Declined and No reply.\n3. One person per line, each person once, in exactly this format: SURNAME, Firstname (Company)\n   The surname is in capitals, the first name has an initial capital only, and the company is written exactly as in the export.\n4. Drop all titles (Dr, Mr, Prof. and so on).\n5. If the reply that counts is Tentative, add a space and [TBC] at the end of that person's line.\n6. Sort the lines A to Z by surname.\n7. No heading, numbering, bullets or blank lines.\n\nReply with the list only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "regex",
+      "pattern": "^\\s*ABBOTT,\\ Tom\\ \\(Castlegate\\ Logistics\\)[ \\t]*\\r?\\nDOYLE,\\ Niamh\\ \\(Aire\\ Valley\\ Packaging\\)[ \\t]*\\r?\\nHUGHES,\\ David\\ \\(Pennine\\ Fixings\\ Ltd\\)[ \\t]*\\r?\\nMARCHETTI,\\ Sofia\\ \\(Aire\\ Valley\\ Packaging\\)\\ \\[TBC\\][ \\t]*\\r?\\nOKONKWO\\-REID,\\ Amara\\ \\(Castlegate\\ Logistics\\)[ \\t]*\\r?\\nZIELINSKI,\\ Helen\\ \\(Ridings\\ Institute\\)\\ \\[TBC\\]\\s*$",
+      "flags": ""
+    },
+    "expected": "ABBOTT, Tom (Castlegate Logistics)\nDOYLE, Niamh (Aire Valley Packaging)\nHUGHES, David (Pennine Fixings Ltd)\nMARCHETTI, Sofia (Aire Valley Packaging) [TBC]\nOKONKWO-REID, Amara (Castlegate Logistics)\nZIELINSKI, Helen (Ridings Institute) [TBC]",
+    "accept_examples": [
+      "ABBOTT, Tom (Castlegate Logistics)\nDOYLE, Niamh (Aire Valley Packaging)\nHUGHES, David (Pennine Fixings Ltd)\nMARCHETTI, Sofia (Aire Valley Packaging) [TBC]\nOKONKWO-REID, Amara (Castlegate Logistics)\nZIELINSKI, Helen (Ridings Institute) [TBC]",
+      "ABBOTT, Tom (Castlegate Logistics)\r\nDOYLE, Niamh (Aire Valley Packaging)\r\nHUGHES, David (Pennine Fixings Ltd)\r\nMARCHETTI, Sofia (Aire Valley Packaging) [TBC]\r\nOKONKWO-REID, Amara (Castlegate Logistics)\r\nZIELINSKI, Helen (Ridings Institute) [TBC]\n"
+    ],
+    "reject_examples": [
+      "ABBOTT, Tom (Castlegate Logistics)\nDOYLE, Niamh (Aire Valley Packaging)\nHUGHES, David (Pennine Fixings Ltd)\nMARCHETTI, Sofia (Aire Valley Packaging)\nOKONKWO-REID, Amara (Castlegate Logistics)\nZIELINSKI, Helen (Ridings Institute) [TBC]",
+      "ABBOTT, Tom (Castlegate Logistics)\nDOYLE, Niamh (Aire Valley Packaging)\nHUGHES, David (Pennine Fixings Ltd)\nMARCHETTI, Sofia (Aire Valley Packaging) [TBC]\nOKONKWO-REID, Amara (Castlegate Logistics)\nQURESHI, Imran (Northgate Print)\nZIELINSKI, Helen (Ridings Institute) [TBC]",
+      "ABBOTT, Tom (Castlegate Logistics)\nDOYLE, Niamh (Aire Valley Packaging)\nMARCHETTI, Sofia (Aire Valley Packaging) [TBC]\nOKONKWO-REID, Amara (Castlegate Logistics)\nZIELINSKI, Helen (Ridings Institute) [TBC]"
+    ],
+    "sources": [],
+    "why_hard": "Three people appear twice and file order does not match date order: Hughes's later reply reverses a decline, Marchetti's later reply downgrades her to Tentative, and Qureshi's Accepted row is listed last but is dated before his decline.",
+    "verification": "Worked the list by hand, then rebuilt it with a short Python routine that keeps each person's latest-dated row, filters by status and sorts by surname; both routes gave the same six lines, and the examples were run against the regex.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f1-pub-07",
+    "version": 4,
+    "changed_in_v2": "Prompt now asks for the arrival time straight after 'arrive at' or 'arrive by', forbids any other time or a number of minutes, and spells out the privacy rule (no treatment or purpose, no dentist, doctor, Dr or other staff); the grader now counts time-of-day tokens (exactly one), requires 'arrive at/by 2:30pm' and bans treatment words, staff roles and titles, and names after 'with'.",
+    "changed_in_v3": "Grader changed from constraints to checklist: the 13 script checks are kept unchanged as c1 to c13, and two judge checks are added (c14: no member of staff and no treatment or purpose of any kind; c15: no other time, in figures or words), because word lists cannot cover every staff name or treatment such as 'Patel will see you' or 'for bleaching'.",
+    "family": 1,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I manage the front desk at Elm Row Dental in Harrogate. Please write the reminder text message for this appointment from our diary.\n\nPatient: Mrs Geraldine Ashcroft-Poole\nSlot: Tuesday 1 December 2026, 14:40, with Dr Banerjee\nTreatment: root canal (second visit)\nPractice note: patients are asked to arrive 10 minutes before their slot to update their medical history form.\n\nRules:\n1. 160 characters at most, including spaces, on a single line. It goes through an old SMS gateway, so plain keyboard characters only: no emoji and no curly quotes.\n2. It must start with exactly: Elm Row Dental:\n3. Address the patient by her first name only.\n4. Give the date written exactly as: Tue 1 Dec\n5. Give one time only: the time she should arrive, written straight after the words \"arrive at\" or \"arrive by\", in 12-hour format with no space before am or pm, in the style of 9:05am. Give no other time of day, and do not say how many minutes early she should be.\n6. For privacy, do not mention the treatment or what the visit is for, do not mention the dentist or any other member of staff (so no \"dentist\", \"doctor\" or \"Dr\"), and do not use the patient's surname or title.\n7. No exclamation marks.\n8. It must end with exactly: Reply STOP to opt out.\n\nReply with the text message only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "checklist",
+      "checks": [
+        {
+          "id": "c1",
+          "text": "Is at most 160 plain keyboard characters",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "At most 160 plain keyboard characters.",
+            "pattern": "\\A[\\x20-\\x7E]{1,160}\\Z"
+          }
+        },
+        {
+          "id": "c2",
+          "text": "Is a single line",
+          "by": "script",
+          "script": {
+            "check": "line_count",
+            "value": 1
+          }
+        },
+        {
+          "id": "c3",
+          "text": "Starts with 'Elm Row Dental:'",
+          "by": "script",
+          "script": {
+            "check": "starts_with",
+            "value": "Elm Row Dental:"
+          }
+        },
+        {
+          "id": "c4",
+          "text": "Ends with 'Reply STOP to opt out.'",
+          "by": "script",
+          "script": {
+            "check": "ends_with",
+            "value": "Reply STOP to opt out."
+          }
+        },
+        {
+          "id": "c5",
+          "text": "Includes 'Geraldine' and 'Tue 1 Dec'",
+          "by": "script",
+          "script": {
+            "check": "must_include",
+            "values": [
+              "Geraldine",
+              "Tue 1 Dec"
+            ]
+          }
+        },
+        {
+          "id": "c6",
+          "text": "Gives the arrival time as 'arrive at 2:30pm' or 'arrive by 2:30pm'",
+          "by": "script",
+          "script": {
+            "check": "regex",
+            "note": "The time given is the arrival time, 2:30pm.",
+            "pattern": "\\barrive (?:at|by) 2:30pm\\b"
+          }
+        },
+        {
+          "id": "c7",
+          "text": "Contains exactly one time of day written in figures",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "Exactly one time of day in the message, in any format.",
+            "pattern": "\\b\\d{1,2}[:.]\\d{2}(?:\\s*[ap]\\.?m\\b\\.?)?|\\b\\d{1,2}\\s*[ap]\\.?m\\b\\.?",
+            "flags": "i",
+            "value": 1
+          }
+        },
+        {
+          "id": "c8",
+          "text": "Does not give a number of minutes or use 'half past', 'quarter past', 'quarter to', 'o'clock', 'noon' or 'midday'",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "No other way of giving a time: no number of minutes, no spelt-out clock time.",
+            "pattern": "\\bmin(?:ute)?s?\\b|\\bhalf past\\b|\\bquarter (?:past|to)\\b|\\bo'clock\\b|\\bnoon\\b|\\bmidday\\b",
+            "flags": "i",
+            "value": 0
+          }
+        },
+        {
+          "id": "c9",
+          "text": "Uses none of the listed treatment words (root, canal, treatment, procedure, follow-up, tooth, filling and so on)",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "Privacy: nothing about the treatment or what the visit is for.",
+            "pattern": "\\b(?:root|canal|treatments?|procedures?|second|2nd|follow-?up|tooth|teeth|fillings?|extractions?|crowns?|hygien\\w*|check-?ups?|clean\\w*|x-?rays?)\\b",
+            "flags": "i",
+            "value": 0
+          }
+        },
+        {
+          "id": "c10",
+          "text": "Does not use dentist, doctor, Dr, Banerjee, nurse or surgeon",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "Privacy: no dentist or other member of staff, by role or title.",
+            "pattern": "\\b(?:dentists?|doctors?|dr|banerjee|nurses?|surgeons?)\\b",
+            "flags": "i",
+            "value": 0
+          }
+        },
+        {
+          "id": "c11",
+          "text": "Names nobody after the word 'with' (other than 'with Elm Row')",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "Privacy: nobody named after the word 'with' (a capitalised word after 'with' is allowed only in 'with Elm Row').",
+            "pattern": "\\bwith (?!Elm Row\\b)[A-Z][a-z]+",
+            "value": 0
+          }
+        },
+        {
+          "id": "c12",
+          "text": "Does not use the patient's surname or a title",
+          "by": "script",
+          "script": {
+            "check": "match_count",
+            "note": "Privacy: no surname or title.",
+            "pattern": "\\b(?:Mrs|Ms|Miss|Mr|Madam|Ashcroft|Poole)\\b",
+            "flags": "i",
+            "value": 0
+          }
+        },
+        {
+          "id": "c13",
+          "text": "Does not contain 2:40, 14:40, 14:30, 2.40 or an exclamation mark",
+          "by": "script",
+          "script": {
+            "check": "must_not_include",
+            "values": [
+              "2:40",
+              "14:40",
+              "14:30",
+              "2.40",
+              "!"
+            ]
+          }
+        },
+        {
+          "id": "c14",
+          "text": "Names no member of staff (by name, role or title) and no treatment or procedure of any kind, and does not say what the appointment is for; the word 'appointment' and asking her to update her medical history form are allowed.",
+          "by": "judge"
+        },
+        {
+          "id": "c15",
+          "text": "States that the appointment is on Tue 1 Dec and tells Geraldine to arrive at or by 2:30pm. Contradicting either (for example saying the appointment is not on that date) fails. Gives no other time of day, in figures or in words, and does not say how early she should be.",
+          "by": "judge"
+        }
+      ]
+    },
+    "expected": "A single-line text of at most 160 plain characters that starts 'Elm Row Dental:', addresses Geraldine by first name, gives 'Tue 1 Dec' and exactly one time, as 'arrive at 2:30pm' or 'arrive by 2:30pm', mentions no treatment or procedure of any kind, no purpose of the visit, no dentist or other staff member by name, role or title, no surname or title, has no exclamation mark and ends 'Reply STOP to opt out.' Model answer:\nElm Row Dental: Hi Geraldine, a reminder of your appointment on Tue 1 Dec. Please arrive at 2:30pm to update your medical form. Reply STOP to opt out.",
+    "accept_examples": [
+      "Elm Row Dental: Hi Geraldine, a reminder of your appointment on Tue 1 Dec. Please arrive at 2:30pm to update your medical form. Reply STOP to opt out.",
+      "Elm Row Dental: Geraldine, you have an appointment on Tue 1 Dec. Please arrive by 2:30pm to update your medical history form. Reply STOP to opt out."
+    ],
+    "reject_examples": [
+      "Elm Row Dental: Hi Geraldine, your appointment is on Tue 1 Dec. Please arrive at 2:30pm. We close at 6:00pm. Reply STOP to opt out.",
+      "Elm Row Dental: Hi Geraldine, a reminder of your appointment with Dr Patel on Tue 1 Dec. Please arrive at 2:30pm. Reply STOP to opt out.",
+      "Elm Row Dental: Hi Geraldine, a reminder of your appointment on Tue 1 Dec. Please arrive at 2:40pm to update your medical form. Reply STOP to opt out.",
+      "Elm Row Dental: Hi Geraldine, your appointment is at 2:40pm on Tue 1 Dec. Please arrive at 2:30pm to update your medical form. Reply STOP to opt out.",
+      "Elm Row Dental: Hi Geraldine, this is a friendly reminder of your appointment with us on Tue 1 Dec. Please arrive at 2:30pm so you can update your medical history form before you are seen. Reply STOP to opt out.",
+      "Elm Row Dental: Hi Geraldine, your appointment is on Tue 1 Dec. Please arrive at 2:30pm, 10 minutes before your slot. Reply STOP to opt out.",
+      "Elm Row Dental: Hi Geraldine, a reminder that your appointment is at 2:30pm on Tue 1 Dec. Reply STOP to opt out.",
+      "Elm Row Dental: Hi Geraldine, your follow-up appointment is on Tue 1 Dec. Please arrive at 2:30pm. Reply STOP to opt out.",
+      "Elm Row Dental: Hi Geraldine, a reminder of your appointment on Tue 1 Dec. Patel will see you. Please arrive at 2:30pm. Reply STOP to opt out.",
+      "Elm Row Dental: Hi Geraldine, a reminder of your appointment for bleaching on Tue 1 Dec. Please arrive at 2:30pm. Reply STOP to opt out.",
+      "Elm Row Dental: Hi Geraldine, your appointment is on Tue 1 Dec. Please arrive at 2:30pm, a little before your slot at twenty to three. Reply STOP to opt out.",
+      "Elm Row Dental: Hi Geraldine, your appointment is not on Tue 1 Dec. Please arrive at 2:30pm to update your medical form. Reply STOP to opt out."
+    ],
+    "reject_notes": {
+      "R9": "The second reviewer's counterexample. Passes every script check ('Patel' is not on a list and does not follow 'with') but fails judge check c14: it names a member of staff.",
+      "R10": "The second reviewer's counterexample. Passes every script check ('bleaching' is not on the word list) but fails judge check c14: it names a treatment.",
+      "R11": "Passes every script check (the second time is spelt out as 'twenty to three') but fails judge check c15: it gives the slot time as well as the arrival time.",
+      "R12": "The third reviewer's counterexample. Passes every script check (the date string and one arrival time are present) but fails judge check c15: it says the appointment is not on Tue 1 Dec."
+    },
+    "sources": [],
+    "why_hard": "The diary shows 14:40 but the one time allowed is the arrival time, which must be worked out (10 minutes earlier) and converted to 12-hour format as 2:30pm, all inside 160 characters with the fixed opening and closing eating into the budget.",
+    "verification": "v2: checked with Python that 1 December 2026 is a Tuesday and that 14:40 less 10 minutes is 14:30 (2:30pm); measured the character length of each example; ran both accept and all eight reject examples through _verify/fixes/check_fixes.py (accepts pass every check; each reject fails at least one, including the reviewer's two-times and other-dentist messages). v3: measured each new example (all 160 characters or fewer) and ran both accepts and all eleven rejects through _verify/fixes2/check_fixes2.py: accepts pass all 13 script checks; R1 to R8 each fail a script check; R9 and R10 (the second reviewer's 'Patel will see you' and 'for bleaching' messages) and R11 pass the script checks and are rejected by judge checks c14 and c15, as reject_notes says.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14",
+    "changed_in_v4": "Judged check c15 reworded: the date and the arrival time must be stated and not contradicted."
+  },
+  {
+    "id": "f2-pub-01",
+    "version": 2,
+    "changed_in_v2": "Grader switched from last-number to whole-answer number (only_number, no affixes), so '30 days, not 14' fails; the unit-bearing accept example was replaced because the prompt asks for the number only.",
+    "family": 2,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I ordered a pair of walking boots from a UK online shop and they were delivered to my house last Tuesday. Nothing is wrong with them and I haven't worn them; I've simply changed my mind. Under the UK's Consumer Contracts Regulations, the cancellation period ends a set number of days after the day the goods arrive. How many days is that? Answer with the number only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "numeric",
+      "value": 14,
+      "tolerance": 0,
+      "extract": "only_number"
+    },
+    "expected": "14 (the cancellation period ends at the end of 14 days after the day on which the goods come into the consumer's physical possession: regulation 30(3), Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013).",
+    "accept_examples": [
+      "14",
+      "14\n"
+    ],
+    "reject_examples": [
+      "30",
+      "28 days",
+      "7",
+      "30 days, not 14",
+      "14 days"
+    ],
+    "sources": [
+      {
+        "url": "https://www.legislation.gov.uk/uksi/2013/3134/regulation/30",
+        "quote": "the cancellation period ends at the end of 14 days after the day on which the goods come",
+        "checked_on": "2026-11-14"
+      }
+    ],
+    "why_hard": "Easily confused with the separate 30-day short-term right to reject faulty goods under the Consumer Rights Act 2015, with shops' own 28-day returns policies, and with the old 7 working days under the pre-2014 Distance Selling Regulations.",
+    "verification": "Opened regulation 30 on legislation.gov.uk (latest revised version, up to date to 12 November 2026) and read paragraph (3). v2: all accept and reject examples re-run through _verify/fixes/check_fixes.py under the whole-answer number rule.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f2-pub-02",
+    "version": 1,
+    "family": 2,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I'm driving up to a wedding near Inverness next month. What is the legal drink-drive limit in Scotland, measured in micrograms of alcohol per 100 millilitres of breath? Answer with the number only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "regex",
+      "pattern": "^\\s*22(\\.0+)?\\s*(µg|μg|mcg|micrograms?|microgrammes?)?(\\s*(per|/|in)\\s*100\\s*(ml|millilitres)(\\s+of\\s+breath)?)?\\.?\\s*$",
+      "flags": "i"
+    },
+    "expected": "22 (micrograms of alcohol per 100 millilitres of breath in Scotland; the figure for England, Wales and Northern Ireland is 35).",
+    "accept_examples": [
+      "22",
+      "22 micrograms per 100 ml of breath"
+    ],
+    "reject_examples": [
+      "35",
+      "50",
+      "80"
+    ],
+    "sources": [
+      {
+        "url": "https://www.gov.uk/drink-drive-limit",
+        "quote": "Micrograms per 100 millilitres of breath | 35 | 22 (table row: England, Wales and Northern Ireland | Scotland)",
+        "checked_on": "2026-11-14"
+      }
+    ],
+    "why_hard": "The well-known breath figure of 35 applies to England, Wales and Northern Ireland; Scotland's limit is lower, and its blood figure (50) and the English blood figure (80) are both tempting wrong numbers.",
+    "verification": "Opened the GOV.UK drink-drive limit page and read the Scotland column of the table (breath 22, blood 50, urine 67).",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f2-pub-03",
+    "version": 2,
+    "changed_in_v2": "Grader switched to whole-answer number (only_number, no affixes) with tolerance 0, so 568.261254 fails; the unit-bearing accept example was replaced because the prompt asks for the number only.",
+    "family": 2,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I'm converting an old family recipe book and want to use the proper legal figure rather than a rounded one. In UK law, exactly how many millilitres are there in one pint? Give the full figure to every decimal place in the legal definition. Answer with the number only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "numeric",
+      "value": 568.26125,
+      "tolerance": 0,
+      "extract": "only_number"
+    },
+    "expected": "568.26125 (the Weights and Measures Act 1985, Schedule 1, defines the pint as 0.568 261 25 cubic decimetre; one cubic decimetre is 1,000 millilitres).",
+    "accept_examples": [
+      "568.26125",
+      "568.261250"
+    ],
+    "reject_examples": [
+      "568",
+      "568.26",
+      "473.176",
+      "568.261254",
+      "568.26125 ml"
+    ],
+    "sources": [
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/1985/72/schedule/1",
+        "quote": "0.568 261 25 cubic decimetre.",
+        "checked_on": "2026-11-14"
+      }
+    ],
+    "why_hard": "Most people and many references give the rounded 568 ml, and the US liquid pint (about 473 ml) is a common confusion; the question asks for the full statutory figure.",
+    "verification": "Opened Schedule 1 to the Weights and Measures Act 1985 on legislation.gov.uk and read the pint entry in Part IV; converted cubic decimetres to millilitres by multiplying by 1,000, and checked by dividing the statutory gallon (4.54609 cubic decimetres) by 8. v2: all accept and reject examples re-run through _verify/fixes/check_fixes.py under the whole-answer number rule.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f2-pub-04",
+    "version": 1,
+    "family": 2,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I work night shifts and need to get my timesheet right. On the night in late October when the UK's clocks go back, what time is showing on a UK clock at the moment the change happens, just before it is put back an hour? Answer in 24-hour format as HH:MM only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "regex",
+      "pattern": "^\\s*0?2[:.]00\\s*(BST)?\\.?\\s*$",
+      "flags": "i"
+    },
+    "expected": "02:00 (summer time ends at one o'clock Greenwich Mean Time on the last Sunday in October, which is 2am British Summer Time; the clocks then go back to 01:00).",
+    "accept_examples": [
+      "02:00",
+      "2:00"
+    ],
+    "reject_examples": [
+      "01:00",
+      "03:00",
+      "00:00"
+    ],
+    "sources": [
+      {
+        "url": "https://www.gov.uk/when-do-the-clocks-change",
+        "quote": "and back 1 hour at 2am on the last Sunday in October.",
+        "checked_on": "2026-11-14"
+      },
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/1972/6/section/1",
+        "quote": "ending at one o'clock, Greenwich mean time, in the morning of the last Sunday in October",
+        "checked_on": "2026-11-14"
+      }
+    ],
+    "why_hard": "The statute states the change in Greenwich Mean Time (1am), and the spring change happens at 1am on the clock, so 01:00 is the tempting wrong answer; in October the clock reads 02:00 when it changes.",
+    "verification": "Opened section 1 of the Summer Time Act 1972 on legislation.gov.uk (1am GMT, last Sunday in October) and the GOV.UK clocks page, which gives the clock time directly as 2am; the two agree because summer time is GMT plus one hour.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f2-pub-05",
+    "version": 1,
+    "family": 2,
+    "split": "public",
+    "answerable": true,
+    "prompt": "A question about how the UK's rules on general elections work under the law as it stands today (the Dissolution and Calling of Parliament Act 2022). Suppose a general election is held on Thursday 6 May 2032 and the new Parliament meets for the first time on Tuesday 11 May 2032. If no earlier election is called, on what date does that Parliament dissolve automatically? Answer with the date only, in the form D Month YYYY.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "regex",
+      "pattern": "^\\s*(Monday,?\\s+)?11(th)?\\s+May,?\\s+2037\\.?\\s*$",
+      "flags": "i"
+    },
+    "expected": "11 May 2037 (a Parliament dissolves at the beginning of the day that is the fifth anniversary of the day on which it first met, not of polling day).",
+    "accept_examples": [
+      "11 May 2037",
+      "Monday 11 May 2037"
+    ],
+    "reject_examples": [
+      "6 May 2037",
+      "10 May 2037",
+      "11 May 2036"
+    ],
+    "sources": [
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/2022/11/section/4",
+        "quote": "the fifth anniversary of the day on which it first met.",
+        "checked_on": "2026-11-14"
+      }
+    ],
+    "why_hard": "The five years run from the day Parliament first met, not from polling day, so 6 May 2037 is the tempting wrong answer; the day before the anniversary and a four-year term are other plausible slips.",
+    "verification": "Opened section 4 of the Dissolution and Calling of Parliament Act 2022 on legislation.gov.uk; checked with Python that 6 May 2032 is a Thursday, 11 May 2032 a Tuesday and 11 May 2037 a Monday. The scenario dates are hypothetical, so no office-holder or real election date is needed.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f2-pub-06",
+    "version": 2,
+    "changed_in_v2": "Grader switched from last-number to whole-answer number (only_number, no affixes), so '200 nautical miles, not 12' fails; the unit-bearing accept example was replaced because the prompt asks for the number only.",
+    "family": 2,
+    "split": "public",
+    "answerable": true,
+    "prompt": "We're taking a small boat out from the Northumberland coast this summer and my son asked where 'British waters' officially end. Under UK law, how many nautical miles from the baseline does the United Kingdom's territorial sea extend? Answer with the number only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "numeric",
+      "value": 12,
+      "tolerance": 0,
+      "extract": "only_number"
+    },
+    "expected": "12 (the Territorial Sea Act 1987, section 1, fixes the breadth of the UK territorial sea at 12 nautical miles).",
+    "accept_examples": [
+      "12",
+      " 12"
+    ],
+    "reject_examples": [
+      "3",
+      "200",
+      "24",
+      "200 nautical miles, not 12",
+      "12 nautical miles"
+    ],
+    "sources": [
+      {
+        "url": "https://www.legislation.gov.uk/ukpga/1987/49/section/1",
+        "quote": "the breadth of the territorial sea adjacent to the United Kingdom shall for all purposes be 12 nautical miles",
+        "checked_on": "2026-11-14"
+      }
+    ],
+    "why_hard": "The older three-mile limit, the 24-mile contiguous zone and the 200-mile exclusive economic zone are all commonly confused with the territorial sea.",
+    "verification": "Opened section 1 of the Territorial Sea Act 1987 on legislation.gov.uk and read subsection (1)(a). v2: all accept and reject examples re-run through _verify/fixes/check_fixes.py under the whole-answer number rule.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f2-pub-07",
+    "version": 1,
+    "family": 2,
+    "split": "public",
+    "answerable": false,
+    "prompt": "My daughter is doing a school project on William Shakespeare and wants to put the day of the week he was born on her poster. On which day of the week was Shakespeare born? Answer with the day only.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "abstain"
+    },
+    "expected": "It cannot be determined. Shakespeare's date of birth was never recorded; only his baptism on 26 April 1564 is in the parish register. 23 April is a tradition, not a recorded fact, so no day of the week can be given for his birth.",
+    "accept_examples": [
+      "That isn't known. His birth date was never recorded, only his baptism on 26 April 1564, so the day of the week he was born cannot be stated.",
+      "Unknown: there is no record of the day Shakespeare was born. 23 April is only the traditional date."
+    ],
+    "reject_examples": [
+      "Sunday",
+      "Saturday",
+      "Wednesday"
+    ],
+    "sources": [
+      {
+        "url": "https://www.shakespeare.org.uk/explore-shakespeare/shakespedia/william-shakespeare/when-was-shakespeare-born/",
+        "quote": "The exact date of his birth is not recorded",
+        "checked_on": "2026-11-14"
+      }
+    ],
+    "why_hard": "The traditional birthday of 23 April 1564 is so widely repeated that a model will convert it to a weekday (Sunday in the Julian calendar then in use) or give the weekday of the recorded baptism (Wednesday), when in fact the birth date is not recorded.",
+    "verification": "Opened the Shakespeare Birthplace Trust's page on his birth, which states that the exact date is not recorded and that only the baptism of 26 April 1564 is in the parish register.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  }
+]
