@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { alertConnectionOptions } from "./alert-connection-options.mjs";
 
 const required = [
   "ALERT_RUN_ID",
@@ -94,14 +95,12 @@ const summary = [
   htmlUrl,
 ].join(" ");
 
-const pgModule = await import("pg");
-const Client = pgModule.default?.Client || pgModule.Client;
-const client = new Client({
-  connectionString: process.env.ROOMS_OS_DATABASE_URL,
-  ssl: { rejectUnauthorized: false },
-});
-
+let client;
 try {
+  const options = alertConnectionOptions(process.env.ROOMS_OS_DATABASE_URL);
+  const pgModule = await import("pg");
+  const Client = pgModule.default?.Client || pgModule.Client;
+  client = new Client(options);
   await client.connect();
   const inserted = await client.query(
     `INSERT INTO public.rooms_os_alert_events (
@@ -159,5 +158,5 @@ try {
   ]);
   process.exit(1);
 } finally {
-  await client.end().catch(() => {});
+  await client?.end().catch(() => {});
 }
