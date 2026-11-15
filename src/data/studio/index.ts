@@ -8,6 +8,7 @@ import { article as labSafetyFrameworksCompared } from './lab-safety-frameworks-
 import { article as countTokensBeforeYouPay } from './count-tokens-before-you-pay';
 import { article as readingAnAiStatusPage } from './reading-an-ai-status-page';
 import { article as howAiImageAndVideoArePriced } from './how-ai-image-and-video-are-priced';
+import { article as twelveWordsOnAnAiPricePage } from './twelve-words-on-an-ai-price-page';
 // Each article adds one import line and one entry here, in the same pull request as its page.
 export const studioArticles: StudioArticle[] = [
   costOfReadingANovel,
@@ -19,4 +20,5 @@ export const studioArticles: StudioArticle[] = [
   countTokensBeforeYouPay,
   readingAnAiStatusPage,
   howAiImageAndVideoArePriced,
+  twelveWordsOnAnAiPricePage,
 ];

@@ -48,3 +48,11 @@ collector is not run: its original timestamp, DeepSeek endpoint and errors are
 preserved together with its input hash. They are historical collector records,
 not independent evidence of the upstream HTTP responses. Media HTML fingerprints
 are original author metadata, not retained copies of the pricing pages.
+
+## Price-page glossary (studio-4)
+
+Run `node scripts/insights/twelve-words-on-an-ai-price-page.mjs --force` and
+compare `2026-11-14-twelve-words-on-an-ai-price-page.json` byte for byte. This
+generator uses only its committed source constants, with publisher URLs and
+reading dates in `src/data/studio/twelve-words-on-an-ai-price-page.ts`. Keep both
+from the same fixed branch revision; there is no refreshing catalogue input.
