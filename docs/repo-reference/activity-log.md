@@ -1,18 +1,18 @@
 # Recent Activity Snapshot
 
-Generated: 16 Nov 2026, 15:55 UTC
+Generated: 16 Nov 2026, 16:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 16 Nov 2026, 15:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 16 Nov 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 16 Nov 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 16 Nov 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 16 Nov 2026, 16:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 16 Nov 2026, 16:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 16 Nov 2026, 16:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 16 Nov 2026, 16:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 16 Nov 2026, 12:00 UTC | digest | Audible turns to AI to help users discover audiobooks | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/audible-turns-to-ai-to-help-users-discover-audiobooks/) |
 | 16 Nov 2026, 12:00 UTC | digest | Google Maps can now build trip itineraries with real-time details about each stop | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/google-maps-can-now-build-trip-itineraries-with-real-time-details-about-each-stop/) |
-| 16 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,026 open roles across 10 tracked companies. | `/jobs/` |
+| 16 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,027 open roles across 10 tracked companies. | `/jobs/` |
 | 16 Nov 2026, 12:00 UTC | digest | Published the 2026-11-16 daily digest | 14 stories captured from 4 sources. | `/news/` |
 | 16 Nov 2026, 12:00 UTC | digest | US tightens AI chip export controls to deter Chinese companies from accessing compute remotely | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/) |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |

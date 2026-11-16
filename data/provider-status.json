@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T15:55:39.457Z",
+  "generatedAt": "2026-11-16T16:55:45.453Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T15:55:39.452Z",
+      "lastCheckedAt": "2026-11-16T16:55:45.446Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,15 +100,15 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T15:55:38.465Z",
+      "lastCheckedAt": "2026-11-16T16:55:44.206Z",
       "overallStatus": "degraded",
-      "overallLabel": "Minor Service Outage",
+      "overallLabel": "Partially Degraded Service",
       "summary": "2 active incidents across 10 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "partial_outage"
+          "status": "degraded_performance"
         },
         {
           "name": "Claude Platform on AWS",
@@ -138,10 +138,10 @@
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-11-16T15:10:15.167Z",
-          "updatedAt": "2026-11-16T15:12:56.270Z",
+          "updatedAt": "2026-11-16T16:27:03.838Z",
           "resolvedAt": null,
           "url": "https://stspg.io/01qq3kzyyqzl",
-          "summary": "We are investigating reports of degraded performance affecting claude.ai. We will provide an update as soon as possible."
+          "summary": "We have temporarily paused Auto-join while we work on this. Adding Claude to a call by hand is also affected. Calls already in progress are not affected. We will provide another u..."
         },
         {
           "id": "ct4c2pwf2xpj",
@@ -162,10 +162,10 @@
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-11-16T15:10:15.167Z",
-          "updatedAt": "2026-11-16T15:12:56.270Z",
+          "updatedAt": "2026-11-16T16:27:03.838Z",
           "resolvedAt": null,
           "url": "https://stspg.io/01qq3kzyyqzl",
-          "summary": "We are investigating reports of degraded performance affecting claude.ai. We will provide an update as soon as possible."
+          "summary": "We have temporarily paused Auto-join while we work on this. Adding Claude to a call by hand is also affected. Calls already in progress are not affected. We will provide another u..."
         },
         {
           "id": "r1b4f9bbnsx1",
@@ -213,7 +213,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T15:55:38.964Z",
+      "lastCheckedAt": "2026-11-16T16:55:44.723Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -233,7 +233,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T15:55:38.468Z",
+      "lastCheckedAt": "2026-11-16T16:55:44.185Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -276,7 +276,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T15:55:38.462Z",
+      "lastCheckedAt": "2026-11-16T16:55:44.305Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -362,7 +362,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T15:55:39.141Z",
+      "lastCheckedAt": "2026-11-16T16:55:44.931Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
