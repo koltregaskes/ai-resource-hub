@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { admitMethod, comparisonReasons, renderMethodPanel, METHOD_FIELDS } from '../src/data/benchmark-method.mjs';
 
 const envelope = method => ({ kind: 'synthetic', privacyReview: 'Original synthetic example; no private inputs', rightsReview: 'Original fixture', method });
-const internal = { dataset: 'Synthetic office tasks', split: 'demo', version: '1', model: 'Example A',
+const internal = { dataset: 'Synthetic office tasks', split: 'demo', version: '1', metric: 'exact-choice accuracy v1', promptVersion: 'prompt-v1', sampling: 'temperature 0', model: 'Example A',
   effort: 'standard', harness: 'synthetic-v1', tools: 'none', attempts: 1, aggregation: 'mean accuracy',
   contextLimit: 8000, tokenLimit: 1000, sampleSize: 100, accuracy: .6, brier: .18,
   coverage: .8, abstention: .2, totalCostUsd: 12, acceptedCorrect: 60,
@@ -35,7 +35,7 @@ test('synthetic aggregate separates accuracy, Brier, abstention, cost and dates'
 });
 test('comparison blocks changed and missing protocols without a numeric delta', () => {
   assert.deepEqual(comparisonReasons(internal, { ...internal, attempts: 5, aggregation: 'pass@5' }), ['attempts: incompatible', 'aggregation: incompatible']);
-  assert.equal(comparisonReasons(null, internal).length, 10);
+  assert.equal(comparisonReasons(null, internal).length, 13);
   assert.deepEqual(comparisonReasons(internal, internal), []);
 });
 test('all unknown and zero-denominator costs remain unknown; zero is displayed', () => {
@@ -72,4 +72,29 @@ test('semantic disclosure has a named native summary and paired definition field
   assert.doesNotMatch(html, /<script|<iframe|onclick=|tabindex=/);
   const page = readFileSync('src/pages/benchmarks/[id].astro', 'utf8');
   assert.match(page, /<BenchmarkMethodPanel model=\{s.model_name\}/);
+});
+
+
+test('comparison requires known metric, prompt revision and sampling controls', () => {
+  for (const key of ['metric', 'promptVersion', 'sampling']) {
+    const missing = { ...internal };
+    delete missing[key];
+    assert.deepEqual(comparisonReasons(missing, missing), [`${key}: unknown`]);
+    assert.deepEqual(comparisonReasons(internal, { ...internal, [key]: 'different' }), [`${key}: incompatible`]);
+  }
+  assert.deepEqual(comparisonReasons(internal, { ...internal, model: 'Example B' }), []);
+});
+
+test('equal unknown placeholders and malformed controls cannot unlock a comparison', () => {
+  for (const value of ['', '  ', 'Unknown', 'NOT REPORTED', 'not_reported', 'N/A', 'unspecified', {}, [], 0]) {
+    const candidate = { ...internal, harness: value };
+    assert.deepEqual(comparisonReasons(candidate, candidate), ['harness: unknown']);
+  }
+  for (const key of ['attempts', 'contextLimit', 'tokenLimit']) {
+    for (const value of [0, -1, 1.5, NaN, Infinity, '1', Number.MAX_SAFE_INTEGER + 1]) {
+      const candidate = { ...internal, [key]: value };
+      assert.deepEqual(comparisonReasons(candidate, candidate), [`${key}: unknown`]);
+    }
+  }
+  assert.deepEqual(comparisonReasons(internal, internal), []);
 });
