@@ -1,13 +1,13 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-16T01:58:56.390Z",
+  "generatedAt": "2026-11-16T06:21:05.449Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
-    "totalReleases": 61,
+    "totalReleases": 62,
     "highPriority": 5,
     "readyForEditor": 17,
     "officiallyVerified": 29,
-    "watchOnly": 32,
+    "watchOnly": 33,
     "openSource": 5
   },
   "releases": [
@@ -470,7 +470,7 @@ export const modelReleaseDesk = {
       "outputPrice": 0.6,
       "outputPriceState": "verified",
       "pricingSource": "Vendor (official, checked 2026-11-13)",
-      "pricingUpdated": "2026-11-16 01:58:33",
+      "pricingUpdated": "2026-11-16 06:20:40",
       "summary": "MiniMax M3.1 Flash is a currently tracked release from MiniMax. It belongs in the open-weight / local-model conversation. Tracked context window: 1M tokens. Current tracked pricing: $0.15 in / $0.60 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "MiniMax's MiniMax M3.1 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -978,7 +978,7 @@ export const modelReleaseDesk = {
       "outputPrice": 25,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-16 01:58:33",
+      "pricingUpdated": "2026-11-16 06:20:40",
       "summary": "Claude Opus 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Current generally available Opus model. Some safeguarded requests can fall back to Opus 4.8. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 5 is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1073,7 +1073,7 @@ export const modelReleaseDesk = {
       "outputPrice": 50,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-16 01:58:33",
+      "pricingUpdated": "2026-11-16 06:20:40",
       "summary": "Claude Opus 5 Fast is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Official faster Opus 5 mode, priced at twice the base token rate. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 5 Fast is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1168,7 +1168,7 @@ export const modelReleaseDesk = {
       "outputPrice": 2.5,
       "outputPriceState": "verified",
       "pricingSource": "Google AI (official)",
-      "pricingUpdated": "2026-11-16 01:58:33",
+      "pricingUpdated": "2026-11-16 06:20:40",
       "summary": "Gemini 3.5 Flash-Lite is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.30 in / $2.50 out per million tokens. Current generally available low-cost Gemini Flash-Lite model. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Google's Gemini 3.5 Flash-Lite is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1246,7 +1246,7 @@ export const modelReleaseDesk = {
       "outputPrice": 7.5,
       "outputPriceState": "verified",
       "pricingSource": "Google AI (official)",
-      "pricingUpdated": "2026-11-16 01:58:33",
+      "pricingUpdated": "2026-11-16 06:20:40",
       "summary": "Gemini 3.6 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Current generally available Gemini Flash model. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Google's Gemini 3.6 Flash is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1324,7 +1324,7 @@ export const modelReleaseDesk = {
       "outputPrice": 30,
       "outputPriceState": "verified",
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-11-16 01:58:33",
+      "pricingUpdated": "2026-11-16 06:20:40",
       "summary": "GPT-5.6 Sol is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Current frontier GPT-5.6 model; the gpt-5.6 alias routes to Sol. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1427,7 +1427,7 @@ export const modelReleaseDesk = {
       "outputPrice": 10,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official, introductory through 2026-08-31)",
-      "pricingUpdated": "2026-11-16 01:58:33",
+      "pricingUpdated": "2026-11-16 06:20:40",
       "summary": "Claude Sonnet 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Generally available Sonnet model. Introductory pricing applies through 31 August 2026. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Sonnet 5 is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1522,7 +1522,7 @@ export const modelReleaseDesk = {
       "outputPrice": 50,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-16 01:58:33",
+      "pricingUpdated": "2026-11-16 06:20:40",
       "summary": "Claude Fable 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Generally available Mythos-class model. Safeguarded topics can fall back to Opus 4.8 or Opus 5. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Fable 5 is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2033,7 +2033,7 @@ export const modelReleaseDesk = {
       "outputPrice": 15,
       "outputPriceState": "verified",
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-11-16 01:58:33",
+      "pricingUpdated": "2026-11-16 06:20:40",
       "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Official GPT-5.4 API model; superseded as the current flagship by GPT-5.6. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "OpenAI's GPT-5.4 is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2214,7 +2214,7 @@ export const modelReleaseDesk = {
       "outputPrice": 15,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-16 01:58:33",
+      "pricingUpdated": "2026-11-16 06:20:40",
       "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 200K tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. Speed data hidden until it is refreshed from a current live measurement source. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2376,7 +2376,7 @@ export const modelReleaseDesk = {
       "outputPrice": 25,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-16 01:58:33",
+      "pricingUpdated": "2026-11-16 06:20:40",
       "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Official Opus release retained for historical comparisons. Speed data hidden until it is refreshed from a current live measurement source. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 2 related stories and 1 benchmark signal to review.",
       "whyItMatters": [
@@ -5340,6 +5340,79 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-11-16-qwen3-8-max-prime-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 0,
+      "sourceCount": 0
+    },
+    {
+      "id": "qwen4-max",
+      "fileSlug": "2026-11-16-qwen4-max-release-brief",
+      "modelName": "Qwen4 Max",
+      "providerId": "alibaba",
+      "providerName": "Alibaba",
+      "providerColour": "#ff6a00",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": null,
+      "providerDocsUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Qwen4 Max is a currently tracked release from Alibaba. Auto-tracked from OpenRouter discovery (qwen/qwen4-max); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "Alibaba's Qwen4 Max is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Alibaba actually launched with Qwen4 Max, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [],
+      "draftPath": "editorial/release-drafts/2026-11-16-qwen4-max-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
