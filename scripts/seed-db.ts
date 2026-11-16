@@ -1694,7 +1694,7 @@ const youtubeCreators = [
   // AI Art & Creative
   ['olivio-sarikas', 'Olivio Sarikas', 'Olivio Sarikas', 'OlivioSarikas', 250000, 'creative', 'AI art tutorials covering Stable Diffusion, Midjourney, FLUX, and creative workflows.', null],
   ['aitrepreneur', 'AItrepreneur', 'Aitrepreneur', 'Aitrepreneur', 300000, 'creative', 'AI image and video generation tutorials. Local AI setup guides.', null],
-  ['theoretically-media', 'Tim', 'Theoretically Media', 'TheoreticallyMedia', 180000, 'creative', 'AI filmmaking, video generation, and creative AI tool reviews.', null],
+  ['theoretically-media', 'Tim Simmons', 'Theoretically Media', 'TheoreticallyMedia', 180000, 'creative', 'AI filmmaking, video generation, and creative AI tool reviews. Low-key, hands-on production breakdowns.', '@TheoMediaAI'],
 
   // Business & Strategy
   ['ai-advantage', 'Igor Pogany', 'The AI Advantage', 'AIAdvantage', 500000, 'business', 'Practical AI strategies for productivity, business, and personal use.', null],

@@ -106,3 +106,23 @@ The easiest useful pieces to create from this lane are:
 - a short educational page on verification harnesses
 - a short explainer on why models can feel worse without the weights changing
 - a compact guide on MCP, context bloat, and tool-call overhead
+
+---
+
+## Creative Tool & Filmmaking Creator: Theoretically Media (Tim Simmons)
+
+Added: 16 Nov 2026 (from rooms-os-hub#1632 review)
+
+- **YouTube:** @TheoreticallyMedia (https://www.youtube.com/@TheoreticallyMedia)
+- **X (Twitter):** @TheoMediaAI (https://x.com/TheoMediaAI)
+- **Website & Newsletter:** https://theoreticallymedia.com/
+
+Why Tim Simmons is tracked for creative tools:
+
+- low-key, non-hype practitioner with 17 years of production experience rather than AI slop demos
+- tests video/image/audio models against real multi-shot narrative films and explicitly logs what failed and got thrown out (e.g. dropping 3D previs when agent shot control wasted time)
+- surfaces practical studio orchestration patterns (Markdown second brains, OpenArt MCP, local AE/Resolve cleanup before rerolling)
+
+Seed source:
+
+- "The New Cinematic AI Film Workflow (What Actually Works)" (https://www.youtube.com/watch?v=OWr3IU82bJ8) - 6 Nov 2026
