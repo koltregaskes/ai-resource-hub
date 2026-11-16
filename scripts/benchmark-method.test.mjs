@@ -7,7 +7,7 @@ const envelope = method => ({ kind: 'synthetic', privacyReview: 'Original synthe
 const internal = { dataset: 'Synthetic office tasks', split: 'demo', version: '1', metric: 'exact-choice accuracy v1', promptVersion: 'prompt-v1', sampling: 'temperature 0', model: 'Example A',
   effort: 'standard', harness: 'synthetic-v1', tools: 'none', attempts: 1, aggregation: 'mean accuracy',
   contextLimit: 8000, tokenLimit: 1000, sampleSize: 100, accuracy: .6, brier: .18,
-  coverage: .8, abstention: .2, totalCostUsd: 12, acceptedCorrect: 60,
+  coverage: .8, abstention: .2, totalCostUsd: 12, acceptedCorrect: 60, costScope: 'complete-task',
   measuredAt: '2025-01-01', retrievedAt: '2026-11-16', releasedAt: null, revisedAt: null,
   uncertainty: null, origin: 'Synthetic internal aggregate; not a model evaluation' };
 const render = method => renderMethodPanel({ model: method.model, method: admitMethod(envelope(method)), now: new Date('2026-11-16') });
@@ -180,4 +180,19 @@ test('paired disclosure renders admitted synthetic pairs and blocks invalid or m
   assert.match(mixed, /measurement kind: incompatible/);
   assert.doesNotMatch(mixed, /percentage points/);
   assert.match(renderRobustnessPanel(), /Comparison unavailable/);
+});
+
+test('cost per accepted result requires explicit complete task accounting scope', () => {
+  for (const costScope of [null, undefined, 'partial']) {
+    const method = { ...internal, costScope };
+    if (costScope === undefined) delete method.costScope;
+    assert.match(render(method), /result \(USD\)<\/dt><dd>Unknown/);
+    assert.match(render({ ...method, totalCostUsd: 0 }), /result \(USD\)<\/dt><dd>Unknown/);
+  }
+  assert.match(render({ ...internal, totalCostUsd: 0 }), /result \(USD\)<\/dt><dd>0.0000/);
+  assert.match(render(internal), /result \(USD\)<\/dt><dd>0.2000/);
+  for (const costScope of ['Unknown', 'complete', {}, true]) {
+    assert.throws(() => admitMethod(envelope({ ...internal, costScope })));
+    assert.match(renderMethodPanel({ model: 'A', method: { ...internal, costScope } }), /result \(USD\)<\/dt><dd>Unknown/);
+  }
 });

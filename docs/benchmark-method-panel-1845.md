@@ -60,3 +60,7 @@ A separate non-placeholder `pairing` validation reference is also required; equa
 ## Reusable paired disclosure
 
 `renderRobustnessPanel` accepts two reviewed aggregate envelopes and applies admission before displaying any content. Invalid envelopes produce a generic unavailable message without echoing raw fields. Mixed synthetic/real kinds block comparison; synthetic pairs are explicitly labelled. Each result retains its own source/measurement/uncertainty disclosure; incompatible pairs list reasons without a numeric delta. An admitted invariant pair displays perturbed-minus-original accuracy in percentage points with a descriptive-only caveat. This renderer is not wired to public rows or private exports; real pairing/export review remains open. Semantic Node checks do not establish browser accessibility.
+
+## Task-cost completeness
+
+Optional `costScope` is null/absent, `partial`, or `complete-task`. A per-accepted-correct cost is calculated only for explicit `complete-task` scope, meaning all failures, retries, tools and judge costs are included in the reported total. Partial or unknown scope keeps the ratio unknown even when the reported total is zero. The reported total remains separate and visible. The declaration does not prove accounting completeness or human review. Existing bundles without scope still disclose their totals, but no longer imply complete per-result cost. No token-price fallback or live provider calls.

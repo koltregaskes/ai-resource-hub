@@ -3,7 +3,7 @@ export const METHOD_FIELDS = Object.freeze([
   'dataset', 'split', 'version', 'metric', 'promptVersion', 'sampling', 'model', 'effort', 'harness', 'tools',
   'attempts', 'aggregation', 'contextLimit', 'tokenLimit', 'sampleSize',
   'uncertainty', 'origin', 'measuredAt', 'retrievedAt', 'releasedAt', 'revisedAt',
-  'accuracy', 'brier', 'coverage', 'abstention', 'totalCostUsd', 'acceptedCorrect',
+  'accuracy', 'brier', 'coverage', 'abstention', 'totalCostUsd', 'acceptedCorrect', 'costScope',
   'latency', 'route', 'perturbation', 'equivalence', 'pairing',
 ]);
 const CONTROLS = ['dataset', 'split', 'version', 'metric', 'promptVersion', 'sampling', 'effort', 'harness', 'tools',
@@ -38,6 +38,7 @@ export function admitMethod(input) {
   if (Object.keys(method).some(k => !METHOD_FIELDS.includes(k))) throw Error('Unexpected method field');
   for (const [key, value] of Object.entries(method)) {
     if (value === null) continue;
+    if (key === 'costScope' && !['complete-task', 'partial'].includes(value)) throw Error('Invalid cost scope');
     if (DATE_FIELDS.includes(key) && !Number.isFinite(evidenceTime(value))) throw Error('Invalid evidence date');
     if (NUMBER_FIELDS.includes(key)) {
       if (typeof value !== 'number' || !Number.isFinite(value) || value < 0) throw Error('Invalid aggregate number');
@@ -75,7 +76,7 @@ const labels = {
   sampleSize: 'Sample size', uncertainty: 'Uncertainty / population / method', origin: 'Provider or independent measurement',
   measuredAt: 'Measured', retrievedAt: 'Retrieved', releasedAt: 'Model released', revisedAt: 'Result revised',
   accuracy: 'Accuracy', brier: 'Brier (not a pure calibration grade)', coverage: 'Coverage',
-  abstention: 'Abstention', totalCostUsd: 'Total task cost (USD; include failures, tools and judge)',
+  abstention: 'Abstention', totalCostUsd: 'Reported cost total (USD)', costScope: 'Task cost scope (complete-task / partial)',
   acceptedCorrect: 'Accepted correct results', latency: 'Latency', route: 'Route availability',
   perturbation: 'Perturbation: invariant or task change', equivalence: 'Equivalence validation', pairing: 'Aggregate pairing validation',
 };
@@ -101,7 +102,7 @@ export function renderMethodPanel({ model, measuredAt = null, sourceUrl = null, 
   const accepted = values.acceptedCorrect;
   const validSample = values.sampleSize == null || (Number.isSafeInteger(values.sampleSize)
     && values.sampleSize >= accepted);
-  const unitCost = typeof totalCost === 'number' && Number.isFinite(totalCost) && totalCost >= 0
+  const unitCost = values.costScope === 'complete-task' && typeof totalCost === 'number' && Number.isFinite(totalCost) && totalCost >= 0
     && Number.isSafeInteger(accepted) && accepted > 0 && validSample ? totalCost / accepted : NaN;
   // Guard direct renderer callers too. Never label an invalid ratio, or a tiny
   // positive measured cost rounded to zero, as a free accepted result.
@@ -112,7 +113,7 @@ export function renderMethodPanel({ model, measuredAt = null, sourceUrl = null, 
     <p>${escape(freshness)}. ${source}</p>
     <dl>${METHOD_FIELDS.map(key => `<dt>${escape(labels[key])}</dt><dd>${escape(values[key])}</dd>`).join('')}
     <dt>Cost per accepted correct result (USD)</dt><dd>${escape(cost)}</dd></dl>
-    <p>Token price is not task cost. Missing uncertainty is unknown. Protocol alignment does not establish significance.
+    <p>Token price is not task cost. Cost per accepted result requires complete-task scope including failures, retries, tools and judge; a scope label does not verify accounting. Missing uncertainty is unknown. Protocol alignment does not establish significance.
     A robustness drop is not proof of training contamination. Benchmark outcomes, evaluator judgements and forecasts are separate;
     restricted research results do not establish generally available product capability.</p></details>`;
 }
