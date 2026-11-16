@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { admitMethod, comparisonReasons, renderMethodPanel, METHOD_FIELDS } from '../src/data/benchmark-method.mjs';
+import { admitMethod, comparisonReasons, renderMethodPanel, robustnessComparison, METHOD_FIELDS } from '../src/data/benchmark-method.mjs';
 
 const envelope = method => ({ kind: 'synthetic', privacyReview: 'Original synthetic example; no private inputs', rightsReview: 'Original fixture', method });
 const internal = { dataset: 'Synthetic office tasks', split: 'demo', version: '1', metric: 'exact-choice accuracy v1', promptVersion: 'prompt-v1', sampling: 'temperature 0', model: 'Example A',
@@ -141,4 +141,19 @@ test('equal unknown placeholders and malformed controls cannot unlock a comparis
     }
   }
   assert.deepEqual(comparisonReasons(internal, internal), []);
+});
+
+test('robustness pairs require invariant evidence and matched model, route and sample', () => {
+  const original = { ...internal, route: 'public API snapshot' };
+  const perturbed = { ...original, accuracy: .5, perturbation: 'invariant', equivalence: 'Original synthetic reviewer checked all paired answers', pairing: 'Synthetic one-to-one complete sample; same exclusions' };
+  const result = robustnessComparison(original, perturbed);
+  assert.deepEqual(result.reasons, []);
+  assert.ok(Math.abs(result.delta + .1) < 1e-12);
+  assert.equal(robustnessComparison({ ...original, accuracy: 0 }, { ...perturbed, accuracy: 0 }).delta, 0);
+  for (const changes of [ { perturbation: 'task-change' }, { perturbation: null }, { equivalence: 'Unknown' }, { pairing: null }, { model: 'Example B' }, { route: null }, { sampleSize: 99 }, { sampleSize: 0 }, { accuracy: NaN }, { accuracy: '0.5' }, { attempts: 5 } ]) {
+    const blocked = robustnessComparison(original, { ...perturbed, ...changes });
+    assert.ok(blocked.reasons.length);
+    assert.equal(blocked.delta, null);
+  }
+  assert.equal(robustnessComparison(null, null).delta, null);
 });

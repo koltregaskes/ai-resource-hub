@@ -4,7 +4,7 @@ export const METHOD_FIELDS = Object.freeze([
   'attempts', 'aggregation', 'contextLimit', 'tokenLimit', 'sampleSize',
   'uncertainty', 'origin', 'measuredAt', 'retrievedAt', 'releasedAt', 'revisedAt',
   'accuracy', 'brier', 'coverage', 'abstention', 'totalCostUsd', 'acceptedCorrect',
-  'latency', 'route', 'perturbation', 'equivalence',
+  'latency', 'route', 'perturbation', 'equivalence', 'pairing',
 ]);
 const CONTROLS = ['dataset', 'split', 'version', 'metric', 'promptVersion', 'sampling', 'effort', 'harness', 'tools',
   'attempts', 'aggregation', 'contextLimit', 'tokenLimit'];
@@ -77,7 +77,7 @@ const labels = {
   accuracy: 'Accuracy', brier: 'Brier (not a pure calibration grade)', coverage: 'Coverage',
   abstention: 'Abstention', totalCostUsd: 'Total task cost (USD; include failures, tools and judge)',
   acceptedCorrect: 'Accepted correct results', latency: 'Latency', route: 'Route availability',
-  perturbation: 'Perturbation: invariant or task change', equivalence: 'Equivalence validation',
+  perturbation: 'Perturbation: invariant or task change', equivalence: 'Equivalence validation', pairing: 'Aggregate pairing validation',
 };
 
 /** Only caller-selected public fields enter this renderer. Escapes all displayed text.
@@ -115,4 +115,26 @@ export function renderMethodPanel({ model, measuredAt = null, sourceUrl = null, 
     <p>Token price is not task cost. Missing uncertainty is unknown. Protocol alignment does not establish significance.
     A robustness drop is not proof of training contamination. Benchmark outcomes, evaluator judgements and forecasts are separate;
     restricted research results do not establish generally available product capability.</p></details>`;
+}
+
+/** Descriptive invariant-pair check only: no significance or contamination claim.
+ * Inputs must already be admitted public aggregate projections.
+ */
+export function robustnessComparison(original, perturbed) {
+  const reasons = comparisonReasons(original, perturbed);
+  for (const key of ['model', 'route']) {
+    if (!knownControl(key, original?.[key]) || !knownControl(key, perturbed?.[key])) reasons.push(key + ': unknown');
+    else if (original[key] !== perturbed[key]) reasons.push(key + ': incompatible');
+  }
+  if (perturbed?.perturbation !== 'invariant') reasons.push('perturbation: invariant required; task changes are not robustness pairs');
+  if (!knownControl('equivalence', perturbed?.equivalence)) reasons.push('equivalence: validation unknown');
+  if (!knownControl('pairing', perturbed?.pairing)) reasons.push('pairing: validation unknown');
+  for (const [label, result] of [['original', original], ['perturbed', perturbed]]) {
+    if (!Number.isSafeInteger(result?.sampleSize) || result.sampleSize <= 0) reasons.push(label + ' sample size: unknown');
+    if (typeof result?.accuracy !== 'number' || !Number.isFinite(result.accuracy) || result.accuracy < 0 || result.accuracy > 1) reasons.push(label + ' accuracy: unknown');
+  }
+  if (Number.isSafeInteger(original?.sampleSize) && Number.isSafeInteger(perturbed?.sampleSize)
+      && original.sampleSize !== perturbed.sampleSize) reasons.push('sampleSize: incompatible');
+  return Object.freeze({ reasons: Object.freeze(reasons),
+    delta: reasons.length ? null : perturbed.accuracy - original.accuracy });
 }

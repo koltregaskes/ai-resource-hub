@@ -50,3 +50,9 @@ Sensitivity: baseline plus one-at-a-time relative ±25% changes to each active c
 Efficiency: the matrix contains no measured time-per-accepted-task or full cost-per-accepted-correct-result bundle, so these remain explicitly unknown. Never infer them from token price or token throughput. Caveats require matched tasks/configuration and reasoning, retries, tools, failures, judge costs and review time. Source licence and private-output gates remain unchanged.
 
 Implementation: `src/data/benchmark-weights.mjs`, `src/components/BenchmarkWeights.tsx` and its CSS; existing benchmark explorer route. Dependency-free numerical regressions are part of existing Validate CI. Page edits are ephemeral: no persistence, tracking, new endpoint or refresh job. Reset restores equal weights, all benchmarks and 25% perturbation.
+
+## Invariant robustness pairs
+
+`robustnessComparison` admits a descriptive accuracy delta only for known aligned protocols, the same served model and route, equal positive sample counts, valid accuracies, explicit `invariant` classification and a non-placeholder equivalence-validation reference. Task changes and unknown validation block the delta with reasons. Review text is a reference, not proof of a review; matched counts do not prove item pairing. Callers remain responsible for reviewed aggregate admission and documented pairing. Delta is perturbed minus original accuracy, not significance or contamination evidence. No real bundle or private items are imported.
+
+A separate non-placeholder `pairing` validation reference is also required; equal sample counts alone never unlock the delta. It must document one-to-one pairing and exclusions without exposing item IDs.
