@@ -59,6 +59,20 @@ test('invalid aggregate numbers and inconsistent counts are rejected', () => {
   assert.throws(() => admitMethod(envelope({ ...internal, coverage: .9 })));
   assert.throws(() => admitMethod(envelope({ ...internal, attempts: 1.5 })));
 });
+
+test('admission preserves exact counts and rejects impossible protocol limits', () => {
+  for (const key of ['attempts', 'sampleSize', 'acceptedCorrect', 'contextLimit', 'tokenLimit']) {
+    assert.throws(() => admitMethod(envelope({ ...internal, [key]: Number.MAX_SAFE_INTEGER + 1 })));
+  }
+  for (const key of ['attempts', 'contextLimit', 'tokenLimit']) {
+    assert.throws(() => admitMethod(envelope({ ...internal, [key]: 0 })));
+    assert.equal(admitMethod(envelope({ ...internal, [key]: null }))[key], null);
+  }
+  const empty = admitMethod(envelope({ sampleSize: 0, acceptedCorrect: 0, totalCostUsd: 0 }));
+  assert.equal(empty.sampleSize, 0);
+  assert.equal(empty.acceptedCorrect, 0);
+  assert.equal(admitMethod(envelope({ sampleSize: Number.MAX_SAFE_INTEGER })).sampleSize, Number.MAX_SAFE_INTEGER);
+});
 test('renderer escapes text and rejects executable or credential-bearing source links', () => {
   const html = renderMethodPanel({ model: '<script>alert(1)</script>', sourceUrl: 'javascript:alert(1)' });
   assert.doesNotMatch(html, /<script|href=/);

@@ -28,7 +28,8 @@ export function admitMethod(input) {
     if (NUMBER_FIELDS.includes(key)) {
       if (typeof value !== 'number' || !Number.isFinite(value) || value < 0) throw Error('Invalid aggregate number');
       if (['accuracy', 'coverage', 'abstention', 'brier'].includes(key) && value > 1) throw Error('Invalid probability');
-      if (['attempts', 'sampleSize', 'acceptedCorrect', 'contextLimit', 'tokenLimit'].includes(key) && !Number.isInteger(value)) throw Error('Invalid count');
+      if (['attempts', 'sampleSize', 'acceptedCorrect', 'contextLimit', 'tokenLimit'].includes(key) && !Number.isSafeInteger(value)) throw Error('Invalid count');
+      if (['attempts', 'contextLimit', 'tokenLimit'].includes(key) && value === 0) throw Error('Invalid protocol limit');
     } else if (typeof value !== 'string' || !value.trim() || value.length > 600) throw Error('Expected bounded aggregate text');
   }
   if (method.acceptedCorrect != null && method.sampleSize != null && method.acceptedCorrect > method.sampleSize) throw Error('Accepted count exceeds sample');
