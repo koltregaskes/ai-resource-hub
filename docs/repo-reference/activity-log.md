@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 16 Nov 2026, 12:55 UTC
+Generated: 16 Nov 2026, 13:56 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 16 Nov 2026, 12:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 16 Nov 2026, 12:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 16 Nov 2026, 12:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 16 Nov 2026, 12:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 16 Nov 2026, 12:00 UTC | digest | Apple launches new app to study how people use AI for health | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/) |
+| 16 Nov 2026, 13:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 16 Nov 2026, 13:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 16 Nov 2026, 13:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 16 Nov 2026, 13:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 16 Nov 2026, 12:00 UTC | digest | Freshworks alums raise $53M to take on Salesforce, HubSpot with AI-native CRM | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/freshworks-alums-raise-53m-to-take-on-salesforce-hubspot-with-ai-native-crm/) |
 | 16 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,026 open roles across 10 tracked companies. | `/jobs/` |
 | 16 Nov 2026, 12:00 UTC | digest | LVMH’s Media Division announces strategic partnership with OpenAI | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/lvmh-media-division-partnership) |
-| 16 Nov 2026, 12:00 UTC | digest | Published the 2026-11-16 daily digest | 5 stories captured from 3 sources. | `/news/` |
+| 16 Nov 2026, 12:00 UTC | digest | Published the 2026-11-16 daily digest | 6 stories captured from 3 sources. | `/news/` |
+| 16 Nov 2026, 12:00 UTC | digest | The Nvidia scandal isn’t slowing down | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1031740/jensen-huang-nvidia-scandal-isnt-slowing-down) |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
