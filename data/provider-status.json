@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T14:55:47.134Z",
+  "generatedAt": "2026-11-16T15:55:39.457Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T14:55:47.127Z",
+      "lastCheckedAt": "2026-11-16T15:55:39.452Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,10 +100,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T14:55:45.463Z",
+      "lastCheckedAt": "2026-11-16T15:55:38.465Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
-      "summary": "1 active incident across 10 tracked components.",
+      "summary": "2 active incidents across 10 tracked components.",
       "notes": null,
       "components": [
         {
@@ -133,6 +133,17 @@
       ],
       "activeIncidents": [
         {
+          "id": "b5cq662qf2wm",
+          "title": "Claude unable to join meetings",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-11-16T15:10:15.167Z",
+          "updatedAt": "2026-11-16T15:12:56.270Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/01qq3kzyyqzl",
+          "summary": "We are investigating reports of degraded performance affecting claude.ai. We will provide an update as soon as possible."
+        },
+        {
           "id": "ct4c2pwf2xpj",
           "title": "Some users unable to sign up with Apple on the Claude iOS app",
           "status": "investigating",
@@ -145,6 +156,17 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "b5cq662qf2wm",
+          "title": "Claude unable to join meetings",
+          "status": "investigating",
+          "impact": "major",
+          "startedAt": "2026-11-16T15:10:15.167Z",
+          "updatedAt": "2026-11-16T15:12:56.270Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/01qq3kzyyqzl",
+          "summary": "We are investigating reports of degraded performance affecting claude.ai. We will provide an update as soon as possible."
+        },
         {
           "id": "r1b4f9bbnsx1",
           "title": "Elevated errors for Claude Sonnet 5.5 and Claude Fable 5.2",
@@ -177,17 +199,6 @@
           "resolvedAt": "2026-11-14T04:23:05.193Z",
           "url": "https://stspg.io/qqf00d9r7pm4",
           "summary": "The issue affecting purchases and plan changes on claude.ai has been resolved, and delayed plan changes and payments have now been applied. Impact occurred from 18:34 PT on Novemb..."
-        },
-        {
-          "id": "sqn3fg1l96dl",
-          "title": "Elevated errors affecting the Microsoft 365 connector",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-11-12T17:52:44.934Z",
-          "updatedAt": "2026-11-13T21:49:44.052Z",
-          "resolvedAt": "2026-11-13T21:49:44.029Z",
-          "url": "https://stspg.io/m0rbx38nmy1c",
-          "summary": "This incident has been resolved. From 08:03 PT / 16:03 UTC on November 12 to 08:40 PT / 16:40 UTC on November 13, mail, calendar and search tools in the Microsoft 365 connector an..."
         }
       ]
     },
@@ -202,7 +213,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T14:55:46.263Z",
+      "lastCheckedAt": "2026-11-16T15:55:38.964Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +233,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T14:55:45.656Z",
+      "lastCheckedAt": "2026-11-16T15:55:38.468Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -265,7 +276,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T14:55:45.552Z",
+      "lastCheckedAt": "2026-11-16T15:55:38.462Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -351,7 +362,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T14:55:46.480Z",
+      "lastCheckedAt": "2026-11-16T15:55:39.141Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",

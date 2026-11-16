@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 16 Nov 2026, 14:55 UTC
+Generated: 16 Nov 2026, 15:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 16 Nov 2026, 14:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 16 Nov 2026, 14:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 16 Nov 2026, 14:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 16 Nov 2026, 14:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 16 Nov 2026, 12:00 UTC | digest | Audible is trying to make it easier to find audiobooks you’ll actually like | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1034083/audible-audio-discovery-ai-feature-availability) |
+| 16 Nov 2026, 15:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 16 Nov 2026, 15:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 16 Nov 2026, 15:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 16 Nov 2026, 15:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 16 Nov 2026, 12:00 UTC | digest | Audible turns to AI to help users discover audiobooks | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/audible-turns-to-ai-to-help-users-discover-audiobooks/) |
 | 16 Nov 2026, 12:00 UTC | digest | Google Maps can now build trip itineraries with real-time details about each stop | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/google-maps-can-now-build-trip-itineraries-with-real-time-details-about-each-stop/) |
-| 16 Nov 2026, 12:00 UTC | digest | Google Maps can now create trip itineraries for you | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1034110/google-ask-maps-ai-trip-planning) |
 | 16 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,026 open roles across 10 tracked companies. | `/jobs/` |
-| 16 Nov 2026, 12:00 UTC | digest | Published the 2026-11-16 daily digest | 12 stories captured from 4 sources. | `/news/` |
+| 16 Nov 2026, 12:00 UTC | digest | Published the 2026-11-16 daily digest | 14 stories captured from 4 sources. | `/news/` |
+| 16 Nov 2026, 12:00 UTC | digest | US tightens AI chip export controls to deter Chinese companies from accessing compute remotely | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/) |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
