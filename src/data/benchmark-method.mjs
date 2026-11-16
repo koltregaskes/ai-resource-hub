@@ -1,12 +1,12 @@
 /** Public method contract. Deliberately does not accept evaluation items or outputs. */
 export const METHOD_FIELDS = Object.freeze([
-  'dataset', 'split', 'version', 'model', 'effort', 'harness', 'tools',
+  'dataset', 'split', 'version', 'metric', 'promptVersion', 'sampling', 'model', 'effort', 'harness', 'tools',
   'attempts', 'aggregation', 'contextLimit', 'tokenLimit', 'sampleSize',
   'uncertainty', 'origin', 'measuredAt', 'retrievedAt', 'releasedAt', 'revisedAt',
   'accuracy', 'brier', 'coverage', 'abstention', 'totalCostUsd', 'acceptedCorrect',
   'latency', 'route', 'perturbation', 'equivalence',
 ]);
-const CONTROLS = ['dataset', 'split', 'version', 'effort', 'harness', 'tools',
+const CONTROLS = ['dataset', 'split', 'version', 'metric', 'promptVersion', 'sampling', 'effort', 'harness', 'tools',
   'attempts', 'aggregation', 'contextLimit', 'tokenLimit'];
 const NUMBER_FIELDS = ['attempts', 'contextLimit', 'tokenLimit', 'sampleSize',
   'accuracy', 'brier', 'coverage', 'abstention', 'totalCostUsd', 'acceptedCorrect'];
@@ -36,8 +36,16 @@ export function admitMethod(input) {
   return Object.freeze({ ...method });
 }
 
+// This helper also guards callers that have not yet admitted an aggregate envelope.
+// Equal placeholders are not evidence that two measurement protocols align.
+function knownControl(key, value) {
+  if (NUMBER_FIELDS.includes(key)) return Number.isSafeInteger(value) && value > 0;
+  return typeof value === 'string' && value.trim().length > 0
+    && !/^(unknown|not reported|not_reported|n\/a|unspecified)$/i.test(value.trim());
+}
+
 export function comparisonReasons(left, right) {
-  return CONTROLS.flatMap(key => left?.[key] == null || right?.[key] == null
+  return CONTROLS.flatMap(key => !knownControl(key, left?.[key]) || !knownControl(key, right?.[key])
     ? [`${key}: unknown`] : left[key] !== right[key] ? [`${key}: incompatible`] : []);
 }
 
@@ -45,7 +53,8 @@ const escape = value => String(value ?? 'Unknown').replace(/[&<>"']/g, c => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
 }[c]));
 const labels = {
-  dataset: 'Dataset', split: 'Split', version: 'Dataset version', model: 'Served model',
+  dataset: 'Dataset', split: 'Split', version: 'Dataset version',
+  metric: 'Metric / scoring definition', promptVersion: 'Prompt revision', sampling: 'Sampling protocol', model: 'Served model',
   effort: 'Effort', harness: 'Harness / scorer', tools: 'Tools', attempts: 'Attempts',
   aggregation: 'Aggregation (AVG@k / pass@k)', contextLimit: 'Context limit', tokenLimit: 'Token limit',
   sampleSize: 'Sample size', uncertainty: 'Uncertainty / population / method', origin: 'Provider or independent measurement',
