@@ -1,0 +1,17 @@
+---
+import { renderMethodPanel } from '../data/benchmark-method.mjs';
+interface Props { model: string; measuredAt?: string | null; sourceUrl?: string | null; }
+const { model, measuredAt, sourceUrl } = Astro.props;
+// Existing public projection only. No raw evaluation object is forwarded.
+const markup = renderMethodPanel({ model, measuredAt, sourceUrl });
+---
+<div class="method-panel" set:html={markup} />
+<style>
+  .method-panel { min-width: 12rem; max-width: 36rem; font-size: .875rem; white-space: normal; }
+  .method-panel :global(summary) { cursor: pointer; color: var(--color-accent); padding: .5rem; }
+  .method-panel :global(summary:focus-visible) { outline: 2px solid currentColor; outline-offset: 2px; }
+  .method-panel :global(p) { margin: .75rem .5rem; }
+  .method-panel :global(dl) { margin: .5rem; overflow-wrap: anywhere; }
+  .method-panel :global(dt) { font-weight: 600; margin-top: .6rem; }
+  .method-panel :global(dd) { margin: .15rem 0 0; color: var(--color-text-secondary); }
+</style>
