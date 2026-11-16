@@ -97,8 +97,16 @@ export function renderMethodPanel({ model, measuredAt = null, sourceUrl = null, 
       source = `<a href="${escape(url.href)}" rel="noreferrer">Result source</a>`;
     }
   } catch { /* unknown */ }
-  const cost = values.totalCostUsd != null && values.acceptedCorrect > 0
-    ? (values.totalCostUsd / values.acceptedCorrect).toFixed(4) : 'Unknown';
+  const totalCost = values.totalCostUsd;
+  const accepted = values.acceptedCorrect;
+  const validSample = values.sampleSize == null || (Number.isSafeInteger(values.sampleSize)
+    && values.sampleSize >= accepted);
+  const unitCost = typeof totalCost === 'number' && Number.isFinite(totalCost) && totalCost >= 0
+    && Number.isSafeInteger(accepted) && accepted > 0 && validSample ? totalCost / accepted : NaN;
+  // Guard direct renderer callers too. Never label an invalid ratio, or a tiny
+  // positive measured cost rounded to zero, as a free accepted result.
+  const cost = !Number.isFinite(unitCost) || (totalCost > 0 && unitCost === 0) ? 'Unknown'
+    : unitCost > 0 && unitCost < .00005 ? unitCost.toExponential(3) : unitCost.toFixed(4);
   return `<details class="benchmark-method"><summary>Method and limits for ${escape(model)}</summary>
     <p>${method ? 'Method metadata supplied; comparison requires aligned controls.' : 'Method unknown — comparison unavailable.'}</p>
     <p>${escape(freshness)}. ${source}</p>

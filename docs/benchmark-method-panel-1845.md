@@ -21,6 +21,16 @@ Comparison helper returns explicit missing/unequal controls; it computes no delt
 
 Dates remain separate: measured, retrieved, model release, result revision. Fresh retrieval cannot clear stale measurement. No invented measurement or freshness values.
 
+## Aggregate validation continuation, 16 November 2026
+
+Counts must be safe integers; attempts and context/token limits must be positive when known. Zero sample size and zero accepted results remain valid observations, with cost per accepted result unknown when the denominator is zero. Missing metadata can remain null.
+
+Evidence dates require a real ISO calendar day (`YYYY-MM-DD`) or an ISO timestamp with seconds and an explicit timezone. Invalid calendar days, locale dates, timezone-free timestamps and rolling `24:00` timestamps are rejected at admission. Invalid legacy measurement dates render unknown age. The existing 365-day age and one-day future tolerance remain unchanged; collection and rankability policy are outside this change.
+
+Cost rendering independently checks finite nonnegative numeric totals, exact positive accepted counts and any supplied sample denominator. Invalid ratios and arithmetic underflow render unknown. Tiny positive costs use scientific notation rather than rounding to `0.0000`; a measured zero remains zero. This arithmetic check does not verify cost completeness, human review, rights or real aggregate admission.
+
+Continuation validation: 21 method/weight Node tests pass, including malformed and boundary fixtures. Build, rendered accessibility, CI and independent review have not been verified for these continuation changes. Existing real-export and full-contract acceptance gates remain open.
+
 Validation: `node --test scripts/benchmark-method.test.mjs` tests an existing public result projection, original synthetic internal aggregate, incomparable/unknown protocol pairs, stale versus retrieval dates, unknown versus zero, rejected raw/private keys, malformed numbers, HTML escaping, safe links and semantic disclosure structure. These are semantic accessibility checks, **not** browser, screen-reader or axe evidence.
 
 Remaining acceptance gates: independent contract/PR review; Astro build/type check; rendered responsive/keyboard/axe review; actual reviewed aggregate export and operational no-retention evidence; paired comparison UI. No new dataset or external score is copied. Latest #1845 licence notice remains link-only; no rights inferred from public readability. Publication remains with AIRH owner; this branch must not be merged or deployed as acceptance-complete.
