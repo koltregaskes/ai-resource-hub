@@ -43,6 +43,21 @@ test('all unknown and zero-denominator costs remain unknown; zero is displayed',
   assert.match(render({ ...internal, acceptedCorrect: 0 }), /result \(USD\)<\/dt><dd>Unknown/);
   assert.match(render({ ...internal, totalCostUsd: 0 }), /result \(USD\)<\/dt><dd>0.0000/);
 });
+
+test('direct renderer rejects invalid cost ratios and preserves tiny positive costs', () => {
+  const direct = changes => renderMethodPanel({ model: 'A', method: { ...internal, ...changes } });
+  for (const totalCostUsd of ['12', NaN, Infinity, -1]) {
+    assert.match(direct({ totalCostUsd }), /result \(USD\)<\/dt><dd>Unknown/);
+  }
+  for (const acceptedCorrect of ['60', .5, Infinity, 101, Number.MAX_SAFE_INTEGER + 1]) {
+    assert.match(direct({ acceptedCorrect }), /result \(USD\)<\/dt><dd>Unknown/);
+  }
+  assert.match(direct({ sampleSize: -1 }), /result \(USD\)<\/dt><dd>Unknown/);
+  assert.match(direct({ totalCostUsd: .000001, acceptedCorrect: 1 }), /result \(USD\)<\/dt><dd>1.000e-6/);
+  assert.match(direct({ totalCostUsd: Number.MIN_VALUE, acceptedCorrect: 60 }), /result \(USD\)<\/dt><dd>Unknown/);
+  assert.match(direct({ totalCostUsd: 0 }), /result \(USD\)<\/dt><dd>0.0000/);
+  assert.match(direct({ sampleSize: null }), /result \(USD\)<\/dt><dd>0.2000/);
+});
 test('private inputs and raw outputs cannot enter the aggregate contract', () => {
   for (const field of ['holdouts', 'raw_outputs', 'items', 'prompt', 'credentials', 'private_ids']) {
     assert.throws(() => admitMethod({ ...envelope(internal), [field]: ['private'] }));
