@@ -65,7 +65,9 @@ const labels = {
   perturbation: 'Perturbation: invariant or task change', equivalence: 'Equivalence validation',
 };
 
-/** Only caller-selected public fields enter this renderer. Escapes all displayed text. */
+/** Only caller-selected public fields enter this renderer. Escapes all displayed text.
+ * @param {{ model: string, measuredAt?: string | null, sourceUrl?: string | null, method?: Record<string, any> | null, now?: Date }} options
+ */
 export function renderMethodPanel({ model, measuredAt = null, sourceUrl = null, method = null, now = new Date() }) {
   const values = method ?? { model, measuredAt };
   const measured = values.measuredAt;

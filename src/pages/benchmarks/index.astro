@@ -3,6 +3,7 @@ import { serializeJsonLd } from '../../lib/json-ld';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Tooltip from '../../components/Tooltip.astro';
 import BenchmarkTable from '../../components/BenchmarkTable';
+import BenchmarkWeights from '../../components/BenchmarkWeights';
 import { getBenchmarkMatrix } from '../../db/queries';
 import { BENCHMARK_RESOURCES } from '../../data/benchmark-resources';
 import { ROOMS_OS_BENCHMARK_SNAPSHOT } from '../../data/rooms-os-benchmark-snapshot';
@@ -132,6 +133,8 @@ const benchmarkResources = BENCHMARK_RESOURCES;
         </div>
       </div>
     </div>
+
+    <BenchmarkWeights benchmarks={matrix.benchmarks} models={matrix.models} client:load />
 
     <BenchmarkTable
       client:load
