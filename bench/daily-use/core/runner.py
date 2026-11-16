@@ -189,6 +189,13 @@ def _stage_history(private_store):
     path = os.path.join(os.fspath(private_store), STAGE_INDEX)
     if not os.path.exists(path):
         return []
+    with ledger._file_lock(path + ".lock"):
+        return _read_stage_history(path)
+
+
+def _read_stage_history(path):
+    # The stage lock also covers prerequisite reads outside a running store.
+    ledger.recover_torn_tail(path)
     with open(path, encoding="utf-8") as stream:
         return [json.loads(line) for line in stream if line.strip()]
 
@@ -196,13 +203,15 @@ def _stage_history(private_store):
 def _record_stage(private_store, entry):
     """Add a finished live stage to the index. A run id that is already
     listed is not listed again, so this can be repeated after a crash."""
-    if any(listed.get("run_id") == entry["run_id"] for listed in _stage_history(private_store)):
-        return
     path = os.path.join(os.fspath(private_store), STAGE_INDEX)
-    with open(path, "a", encoding="utf-8", newline="\n") as stream:
-        stream.write(json.dumps(entry, sort_keys=True) + "\n")
-        stream.flush()
-        os.fsync(stream.fileno())
+    with ledger._file_lock(path + ".lock"):
+        history = _read_stage_history(path) if os.path.exists(path) else []
+        if any(listed.get("run_id") == entry["run_id"] for listed in history):
+            return
+        with open(path, "a", encoding="utf-8", newline="\n") as stream:
+            stream.write(json.dumps(entry, sort_keys=True) + "\n")
+            stream.flush()
+            os.fsync(stream.fileno())
 
 
 # ---- the judge qualification record -------------------------------------
@@ -843,6 +852,13 @@ class _Engine:
             # limit that is sent with the request.
             worst = ledger.worst_case_usd(ledger.input_token_bound(prompt), limit, spec.price)
             self.budget.reserve(spec.provider, request, worst)
+            for item in self.record.logged_requests(request.rpartition("/")[0] + "/"):
+                entry = self.budget.ledgers[spec.provider].entries.get(item["request_id"], {})
+                if (item.get("done") is None and item.get("received") is None
+                        and not item["sent"].get("ledger_only")
+                        and entry.get("retry_lost_paid")):
+                    self.out("SECOND PAID CALL for request %s: sending replacement %s."
+                             % (item["request_id"], request))
             self.record.request_sent(request, {
                 "kind": kind, "model_id": spec.model_id, "provider": spec.provider,
                 "reserved_usd": str(worst),
@@ -942,7 +958,7 @@ class _Engine:
                     flags.append(AWAITING_FLAG)
                 self.out("  resume: judge %s is not asked for %s on slot %s: request %s may "
                          "have been billed and has no result on record. Nothing is sent for "
-                         "this judge call until it is reconciled."
+                         "this judge call until it is reconciled with explicit --retry-lost-paid consent."
                          % (spec.model_id, kind, slot, ", ".join(waiting)))
                 return None, range(0), [{
                     "attempt": None, "result": "awaiting_reconciliation",
@@ -973,16 +989,9 @@ class _Engine:
         return earlier_for
 
     def awaits_reconciliation(self, item):
-        """True for a logged request that may have been billed and whose
-        outcome is not known: it has a sent line, no received line and no
-        done line, and its ledger entry has no charge yet. Such a request
-        blocks its slot or its judge call until a person reconciles it.
-
-        Once the ledger entry has a charge (reconciled by hand, or settled)
-        the request is an ordinary used request with no result. A request
-        that only the ledger knew was never sent, so it never waits. A sent
-        request with no ledger entry at all should not exist; it waits too,
-        since nothing says what it cost.
+        """Block a dispatched request with no durable response, even when its
+        cost has been reconciled. Only explicit, journalled retry consent
+        releases it. Ledger-only reservations precede dispatch and are safe.
         """
         if item.get("done") is not None or item.get("received") is not None:
             return False
@@ -990,7 +999,7 @@ class _Engine:
             return False
         book = self.budget.ledgers.get(item["sent"].get("provider"))
         entry = None if book is None else book.entries.get(item["request_id"])
-        return entry is None or entry["charge"] is None
+        return entry is None or not entry.get("retry_lost_paid", False)
 
     def unknown_requests(self):
         """Every request of this run that awaits reconciliation, sorted."""
@@ -1537,10 +1546,8 @@ def overruns_on_file(books):
 
 
 def tasks_sha256(tasks):
-    """A fingerprint of what is sent for each task, so that a run is only
-    resumed against the task set it was started with."""
-    return content_sha256(sorted([task["id"], task["prompt"], task["max_output_tokens"]]
-                                 for task in tasks))
+    """Freeze the full normalised definitions, including all marking criteria."""
+    return content_sha256(sorted(tasks, key=lambda task: task["id"]))
 
 
 def caps_in_force(config, max_usd):
@@ -1895,8 +1902,9 @@ def _run_stage_locked(lock, stage, config, tasks, *, private_store, grade, live,
         for request in awaiting:
             provider = sent_by[request]
             out("  resume: request %s was sent and has no result on record. It may have "
-                "been billed, so nothing is sent for its %s until it is reconciled against "
-                "the %s console (or use --at-reserved-maximum in place of --usd):"
+                "been billed. Its %s stays pending. Reconcile the cost from the %s console "
+                "(or use --at-reserved-maximum). Accounting alone does not permit retry. "
+                "Only add --retry-lost-paid to authorise a SECOND PAID CALL:"
                 % (request, "slot" if request.rpartition("/")[0] in blocked else "judge call",
                    provider))
             out("    " + reconcile_command(private_store, provider, request, live, run_id))

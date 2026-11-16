@@ -300,10 +300,17 @@ class NoSecondCallTests(KillCase):
         still, idle, _ = self.resume(run_id)
         self.assertEqual((still["status"], idle.requests), ("interrupted", []))
         self.assertEqual(self.calls(), counts)
-        # Reconciled by the operator. The earlier request counts as used and
-        # the slot goes on with its second request.
+        # Accounting alone leaves the lost response blocked. Only an explicit
+        # retry permits a replacement, and the warning precedes dispatch.
         self.assertEqual(self.reconcile(run_id), [flying])
-        done, _, _ = self.resume(run_id)
+        for _ in range(3):
+            blocked, idle, _ = self.resume(run_id)
+            self.assertIn(flying, blocked["awaiting_reconciliation"])
+            self.assertEqual(idle.requests, [])
+            self.assertEqual(self.calls(), counts)
+        self.reconcile(run_id, retry_lost_paid=True)
+        done, _, printed = self.resume(run_id)
+        self.assertTrue(any("SECOND PAID CALL for request " + flying in line for line in printed))
         self.finished(done)
         row = next(r for r in self.rows(done) if r["slot_id"] == slot)
         self.assertEqual([(q["request_id"], q["status"]) for q in row["requests"]],
@@ -339,9 +346,16 @@ class NoSecondCallTests(KillCase):
         # Again, not reconciled: nothing is sent, the row stays pending.
         still, idle, _ = self.resume(run_id)
         self.assertEqual((still["status"], idle.requests), ("pending_judging", []))
-        # Reconciled: the judge call goes on with its second request.
+        # Reconciliation alone blocks; explicit consent permits request two.
         self.assertEqual(self.reconcile(run_id), [flying])
-        done, transport, _ = self.resume(run_id)
+        for _ in range(3):
+            blocked, idle, _ = self.resume(run_id)
+            self.assertIn(flying, blocked["awaiting_reconciliation"])
+            self.assertEqual(idle.requests, [])
+            self.assertEqual(self.calls(), counts)
+        self.reconcile(run_id, retry_lost_paid=True)
+        done, transport, printed = self.resume(run_id)
+        self.assertTrue(any("SECOND PAID CALL for request " + flying in line for line in printed))
         self.finished(done)
         self.assertEqual([r.body["model"] for r in transport.requests], ["j-oa"])
         row = next(r for r in self.rows(done) if r["slot_id"] == slot)

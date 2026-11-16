@@ -165,6 +165,9 @@ def build_parser():
                         help="charge the request at its own reservation, the most it can "
                              "have cost")
     sub.add_argument("--note", required=True, help="why, for the ledger")
+    sub.add_argument("--retry-lost-paid", action="store_true",
+                     help="explicitly allow a SECOND PAID CALL for this lost response on resume; "
+                          "the original attempt and all caps still count")
     sub.add_argument("--dry-ledger", metavar="RUN_ID",
                      help="reconcile in the ledger of this dry run, not the live ledger")
     return parser
@@ -273,7 +276,8 @@ def reconcile(args, out=print):
         before = "an open reservation" if entry["charge"] is None \
             else "a charge of %s USD" % entry["charge"]
         amount = entry["reserved"] if args.at_reserved_maximum else args.usd
-        book.reconcile(args.request_id, amount, args.note)
+        book.reconcile(args.request_id, amount, args.note,
+                       retry_lost_paid=args.retry_lost_paid)
     except ledger.LedgerError as problem:
         out("REFUSED: " + str(problem))
         return EXIT_REFUSED
@@ -285,8 +289,12 @@ def reconcile(args, out=print):
         amount, " (its reserved maximum)" if args.at_reserved_maximum else ""))
     out("  reserved: %s USD; before this it was %s" % (entry["reserved"], before))
     out("  note: " + args.note)
-    out("  The request now counts as used, with no result. A resume goes on with what its "
-        "slot or judge call has left.")
+    if args.retry_lost_paid:
+        out("  SECOND PAID CALL for request %s authorised on resume, subject to the "
+            "remaining attempts and caps." % args.request_id)
+    else:
+        out("  A lost response stays pending and blocked. Accounting does not authorise "
+            "another paid call. Use --retry-lost-paid explicitly to allow it.")
     return EXIT_OK
 
 

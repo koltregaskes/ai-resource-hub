@@ -485,6 +485,8 @@ class ProviderLedger:
                 entry["charge"] = amount
                 entry["flags"] = list(event.get("flags", []))
                 entry["reconciled"] = bool(event.get("reconciled", True))
+                if kind == "reconcile":
+                    entry["retry_lost_paid"] = bool(event.get("retry_lost_paid", False))
             else:
                 raise LedgerError(
                     "ledger for %s has an unexpected entry at line %d"
@@ -607,7 +609,7 @@ class ProviderLedger:
             return {"charge": charge, "reserved": entry["reserved"], "flags": flags,
                     "reconciled": reconciled}
 
-    def reconcile(self, request_id, actual_usd, note):
+    def reconcile(self, request_id, actual_usd, note, retry_lost_paid=False):
         """Replace a charge with the provider console figure."""
         actual = Decimal(str(actual_usd))
         if not actual.is_finite() or actual < 0:
@@ -619,8 +621,10 @@ class ProviderLedger:
                 raise LedgerError("no reservation for " + request_id)
             flags = ["reconciled_by_hand"]
             self._append({"event": "reconcile", "request_id": request_id, "usd": str(actual),
-                          "flags": flags, "reconciled": True, "note": str(note)})
-            entry.update(charge=actual, flags=flags, reconciled=True)
+                          "flags": flags, "reconciled": True, "note": str(note),
+                          "retry_lost_paid": bool(retry_lost_paid)})
+            entry.update(charge=actual, flags=flags, reconciled=True,
+                         retry_lost_paid=bool(retry_lost_paid))
 
 
 class Budget:

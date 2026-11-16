@@ -111,7 +111,7 @@ class RunnerCase(unittest.TestCase):
         return [(line["request_id"], line["provider"]) for line in lines
                 if line["event"] == "sent" and line["request_id"] not in settled]
 
-    def reconcile(self, run_id, usd=None, live=False):
+    def reconcile(self, run_id, usd=None, live=False, retry_lost_paid=False):
         """Reconcile every in-flight request of a staged run with the
         `reconcile` command, as the operator would: at `usd`, or at its
         reserved maximum. Returns the request ids."""
@@ -120,7 +120,8 @@ class RunnerCase(unittest.TestCase):
             amount = ["--at-reserved-maximum"] if usd is None else ["--usd", str(usd)]
             code = cli.main(["reconcile", "--private-store", self.store, "--provider", provider,
                              "--request-id", request, "--note", "console figure"] + amount
-                            + ([] if live else ["--dry-ledger", run_id]), out=QUIET)
+                            + ([] if live else ["--dry-ledger", run_id])
+                            + (["--retry-lost-paid"] if retry_lost_paid else []), out=QUIET)
             self.assertEqual(code, cli.EXIT_OK)
             done.append(request)
         return done
@@ -1018,7 +1019,7 @@ class LiveGateTests(RunnerCase):
             self.assertEqual((len(self.factory_calls), self.transport.requests), (calls, []))
             # The model request that was in flight may have been billed, so
             # it is reconciled in the live ledger first.
-            self.assertEqual(len(self.reconcile(run_id, live=True)), 1)
+            self.assertEqual(len(self.reconcile(run_id, live=True, retry_lost_paid=True)), 1)
             # Under the caps it started with, and with the store free, it carries on.
             done = self.live(stage="canary", resume=run_id, **common)
         self.assertEqual((done["status"], done["run_id"]), ("finalised", run_id))
@@ -2075,7 +2076,7 @@ class ResumeTests(PassCase):
         # The operator enters the console figure, 0.00018. The request now
         # counts as one used request with no result, and the slot goes on
         # with request 2.
-        self.assertEqual(self.reconcile(run_id, usd=self.CHARGE), [flying])
+        self.assertEqual(self.reconcile(run_id, usd=self.CHARGE, retry_lost_paid=True), [flying])
         last = self.fine()
         done = self.run_stage(transport=last, resume=run_id)
         self.assertEqual(done["status"], "finalised")
@@ -2121,7 +2122,7 @@ class ResumeTests(PassCase):
         self.assertEqual(len(waiting["awaiting_reconciliation"]), 1)
         # Reconciled at its reserved maximum. The slot has now used its three
         # requests, so nothing is sent for it.
-        self.assertEqual(self.reconcile(run_id), waiting["awaiting_reconciliation"])
+        self.assertEqual(self.reconcile(run_id, retry_lost_paid=True), waiting["awaiting_reconciliation"])
         third = self.fine()
         done = self.run_stage(transport=third, resume=run_id)
         self.assertEqual(third.requests, [])
@@ -2308,7 +2309,7 @@ class FinishJudgingOnResumeTests(JudgingTests):
                           for g in waiting["pass_gates"]], [(2, 2, 1), (3, 2, 0)])
         # Reconciled: the request counts as one of j-an's two, with no result,
         # and the judge call goes on with number 2.
-        self.assertEqual(self.reconcile(run_id), [flying])
+        self.assertEqual(self.reconcile(run_id, retry_lost_paid=True), [flying])
         third = self.transport()
         printed = []
         done = self.run_stage(transport=third, grade=self.grade, resume=run_id,
