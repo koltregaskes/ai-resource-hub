@@ -176,6 +176,43 @@ class AskTests(unittest.TestCase):
         call = scripted([judges.JudgeCallFailed("timeout"), judges.JudgeCallFailed("HTTP 500")])
         self.assertIsNone(judges.ask(call, "prompt", self.parse)[0])
 
+    def test_an_empty_attempt_range_sends_nothing_and_leaves_the_judge_unresolved(self):
+        # What a resumed judge call gets when its requests are used up, or
+        # when one of them awaits reconciliation.
+        for attempts in (range(0), range(3, 3), [], ()):
+            call = scripted([verdict(c1=True, c2=True)])
+            self.assertEqual(judges.ask(call, "prompt", self.parse, attempts=attempts),
+                             (None, []))
+            self.assertEqual(call.seen, [])
+        # A given range is used as it is, and never more than it holds.
+        call = scripted(["rubbish", verdict(c1=True, c2=True)])
+        result, log = judges.ask(call, "prompt", self.parse, attempts=range(2, 3))
+        self.assertIsNone(result)
+        self.assertEqual([attempt for _, attempt in call.seen], [2])
+
+    def test_a_panel_judge_with_no_attempts_left_is_unresolved_without_a_call(self):
+        panel = support.make_config().judges
+        calls = []
+
+        def call_for(spec):
+            def call(prompt, attempt):
+                calls.append((spec.model_id, attempt))
+                return verdict(c1=True, c2=True)
+            return call
+
+        def earlier_for(spec, prompt, parse):
+            if spec.model_id == "j-oa":
+                return None, range(0), [{"attempt": None, "result": "attempts_exhausted"}]
+            return None, range(2, 3), []
+        result = judges.judge_checklist(
+            panel, "task", "answer", [{"id": "c1", "text": "one"}, {"id": "c2", "text": "two"}],
+            call_for, earlier_for)
+        self.assertEqual(calls, [("j-an", 2)])
+        self.assertEqual(result["checks"], {"c1": judges.UNRESOLVED, "c2": judges.UNRESOLVED})
+        self.assertIsNone(result["judges"][0]["verdict"])
+        self.assertEqual(result["judges"][0]["attempts"],
+                         [{"attempt": None, "result": "attempts_exhausted"}])
+
 
 class CombineTests(unittest.TestCase):
     def test_a_check_passes_only_if_both_judges_pass_it(self):

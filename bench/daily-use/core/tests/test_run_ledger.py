@@ -303,13 +303,132 @@ class LedgerTests(unittest.TestCase):
         self.assertEqual(seen, [["r/1"], ["r/1", "r/2"]])
 
     def test_damaged_file_stops_all_spending(self):
+        # Damage in the middle of the file: a line that does not read back
+        # and is followed by a good one. Nothing is repaired or cut.
         book = self.book()
         book.reserve("r/1", D("0.10"))
-        with open(self.path, "a", encoding="utf-8") as stream:
-            stream.write('{"event": "reserve", "request_id": "r/2", "us')
+        with open(self.path, "a", encoding="utf-8", newline="\n") as stream:
+            stream.write('{"event": "reserve", "request_id": "r/2", "us\n')
+            stream.write('{"event": "reserve", "request_id": "r/3", "usd": "0.1"}\n')
+        with open(self.path, "rb") as stream:
+            before = stream.read()
         with self.assertRaises(ledger.LedgerError) as caught:
             self.book()
         self.assertIn("damaged at line 2", str(caught.exception))
+        with self.assertRaises(ledger.LedgerError):
+            book.reserve("r/4", D("0.10"))
+        with open(self.path, "rb") as stream:
+            self.assertEqual(stream.read(), before)
+        self.assertFalse(os.path.exists(self.path + ".torn"))
+
+    def torn_sidecar(self):
+        with open(self.path + ".torn", encoding="utf-8") as stream:
+            return [json.loads(line) for line in stream]
+
+    def test_a_torn_reserve_at_the_end_is_moved_to_the_sidecar_and_spending_goes_on(self):
+        import base64
+        import hashlib
+        for name, tail in (
+                ("cut mid-line", b'{"event": "reserve", "request_id": "r/2", "us'),
+                ("whole object, no newline",
+                 b'{"event": "reserve", "provider": "openai", "request_id": "r/2", '
+                 b'"usd": "0.2"}')):
+            with self.subTest(name):
+                for leftover in (self.path, self.path + ".torn"):
+                    if os.path.exists(leftover):
+                        os.replace(leftover, leftover + ".old")
+                book = self.book()
+                book.reserve("r/1", D("0.10"))
+                with open(self.path, "rb") as stream:
+                    whole = stream.read()
+                with open(self.path, "ab") as stream:
+                    stream.write(tail)
+                # A fresh ledger, as after a restart: the tail is moved to
+                # the sidecar, the earlier reservation is kept exactly, and
+                # the request of the torn line was never reserved.
+                again = self.book()
+                self.assertEqual(list(again.entries), ["r/1"])
+                self.assertEqual((again.reserved, again.spent), (D("0.10"), D("0")))
+                with open(self.path, "rb") as stream:
+                    self.assertEqual(stream.read(), whole)
+                (moved,) = again.torn_recovered
+                self.assertEqual(self.torn_sidecar(), [moved])
+                self.assertEqual((moved["journal"], moved["offset"], moved["length"]),
+                                 ("openai.jsonl", len(whole), len(tail)))
+                self.assertEqual(base64.b64decode(moved["bytes_base64"]), tail)
+                self.assertEqual(moved["sha256"], hashlib.sha256(tail).hexdigest())
+                # Spending goes on with no repair by hand, the torn id included.
+                again.reserve("r/2", D("0.20"))
+                again.settle("r/1", usage(1, 0, 1), receipt())
+                self.assertEqual(sorted(self.book().entries), ["r/1", "r/2"])
+                self.assertEqual(len(self.torn_sidecar()), 1)       # nothing moved twice
+
+    def test_a_torn_settle_leaves_the_reservation_open(self):
+        book = self.book()
+        book.reserve("r/1", D("0.10"))
+        book.settle("r/1", usage(1, 0, 1), receipt())
+        with open(self.path, "rb") as stream:
+            lines = stream.read().splitlines(keepends=True)
+        with open(self.path, "wb") as stream:
+            stream.write(lines[0] + lines[1][:25])
+        again = self.book()
+        self.assertEqual(again.entries["r/1"]["charge"], None)
+        self.assertEqual((again.reserved, again.spent), (D("0.10"), D("0")))
+        self.assertEqual(again.unreconciled(), ["r/1"])
+        again.settle("r/1", usage(1, 0, 1), receipt())             # settled again
+        self.assertEqual(self.book().entries["r/1"]["charge"], D("0.000033"))
+
+    def test_torn_tail_recovery_can_be_stopped_half_way_and_repeated(self):
+        book = self.book()
+        book.reserve("r/1", D("0.10"))
+        tail = b'{"event": "reserve", "request_id": "r/2"'
+        with open(self.path, "ab") as stream:
+            stream.write(tail)
+
+        class Killed(BaseException):
+            pass
+        real_open = open
+
+        def dies_before_the_cut(path, mode="r", *args, **kwargs):
+            if mode == "r+b":
+                raise Killed()
+            return real_open(path, mode, *args, **kwargs)
+        # Stopped after the sidecar entry and before the ledger is cut.
+        with mock.patch("builtins.open", dies_before_the_cut):
+            with self.assertRaises(Killed):
+                self.book()
+        with open(self.path, "rb") as stream:
+            self.assertTrue(stream.read().endswith(tail))
+        self.assertEqual(len(self.torn_sidecar()), 1)
+        # The step is done again: one more sidecar entry, the same bytes.
+        again = self.book()
+        self.assertEqual(list(again.entries), ["r/1"])
+        entries = self.torn_sidecar()
+        self.assertEqual(len(entries), 2)
+        self.assertEqual(entries[0]["bytes_base64"], entries[1]["bytes_base64"])
+        self.assertEqual(entries[0]["offset"], entries[1]["offset"])
+
+    def test_a_ledger_for_reconciliation_only_reserves_nothing(self):
+        with self.assertRaises(ledger.LedgerError) as caught:
+            ledger.ProviderLedger.for_reconciliation("openai", self.path)
+        self.assertIn("there is no ledger", str(caught.exception))
+        self.assertFalse(os.path.exists(os.path.dirname(self.path)))
+        book = self.book()
+        book.reserve("r/1", D("0.10"))
+        only = ledger.ProviderLedger.for_reconciliation("openai", self.path)
+        # It cannot pass a reservation, whatever the amount: no cap is known
+        # to it, so no cap check can be weakened by it.
+        for amount in ("0", "0.01"):
+            with self.assertRaises(ledger.LedgerError) as caught:
+                only.reserve("r/2", D(amount))
+            self.assertIn("reconciliation only", str(caught.exception))
+        with self.assertRaises(ledger.LedgerError):
+            only.check(D("0"))
+        self.assertEqual(len(self.lines()), 1)
+        only.reconcile("r/1", D("0.04"), "console figure")
+        self.assertEqual(self.lines()[-1]["event"], "reconcile")
+        # The real ledger, with its cap, sees the figure.
+        self.assertEqual((self.book().spent, self.book().reserved), (D("0.04"), D("0")))
 
     def test_money_is_stored_as_text_not_float(self):
         book = self.book()
@@ -532,16 +651,29 @@ class SingleWriterTests(unittest.TestCase):
         with open(self.path, encoding="utf-8") as stream:
             self.assertEqual(len(stream.readlines()), 1)  # the refused one wrote nothing
 
-    def test_a_part_written_last_line_is_damage(self):
+    def test_a_part_written_last_line_is_recovered_under_the_lock(self):
+        # A writer died part-way through a line. The next locked step of a
+        # ledger that was already open moves the tail to the sidecar and goes
+        # on; the earlier reservation is kept and still counts.
         book = self.book()
         book.reserve("run1/a", D("0.10"))
+        tail = b'{"event": "reserve", "request_id": "run1/b", "usd": "0.1'
         with open(self.path, "ab") as stream:
-            stream.write(b'{"event": "reserve", "request_id": "run1/b", "usd": "0.1')
-        with self.assertRaises(ledger.LedgerError) as caught:
-            book.reserve("run1/c", D("0.10"))
-        self.assertIn("damaged at line 2", str(caught.exception))
-        with self.assertRaises(ledger.LedgerError):
-            self.book()
+            stream.write(tail)
+        book.reserve("run1/c", D("0.10"))
+        self.assertEqual(sorted(book.entries), ["run1/a", "run1/c"])
+        self.assertEqual(book.reserved, D("0.20"))
+        self.assertEqual([moved["length"] for moved in book.torn_recovered], [len(tail)])
+        with open(self.path, "rb") as stream:
+            data = stream.read()
+        self.assertNotIn(tail, data)
+        self.assertEqual(len(data.splitlines()), 2)
+        fresh = self.book()
+        self.assertEqual((sorted(fresh.entries), fresh.torn_recovered),
+                         (["run1/a", "run1/c"], []))
+        # The cap still counts the kept reservation: 0.20 held of 1.00.
+        with self.assertRaises(ledger.CapExceeded):
+            fresh.reserve("run1/d", D("0.81"))
 
     def test_a_ledger_that_does_not_exist_yet_makes_nothing_on_disk(self):
         book = self.book()

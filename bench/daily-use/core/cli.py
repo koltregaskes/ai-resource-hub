@@ -5,6 +5,8 @@
     python -I bench/daily-use/core/cli.py qualify   ... --key-file ... --live
     python -I bench/daily-use/core/cli.py canary    ... --key-file ... --live
     python -I bench/daily-use/core/cli.py full      ... --key-file ... --live
+    python -I bench/daily-use/core/cli.py reconcile --private-store ... --provider openai
+        --request-id ... (--usd AMOUNT | --at-reserved-maximum) --note ...
 
 The stages run in that order: qualify, then canary, then full. Without
 `--live`, the stage commands are dry runs on a fake transport and the key
@@ -17,7 +19,12 @@ the environment. The line names the variable and never shows its value.
 The full run goes one pass at a time (pass n is repeat n of every task for
 every model). A pass whose planning bound is above what is left of a cap is
 not started: the run ends `incomplete` and the command exits with 5.
-`--resume <run id>` carries a stopped canary or full run on.
+`--resume <run id>` carries a stopped canary or full run on. It first grades
+and judges, from the run record, the slots that already hold a paid answer.
+A request that was sent and has no result on record may have been billed:
+the resume sends nothing for its slot or judge call and prints the
+`reconcile` command for it. `reconcile` enters the provider console figure
+for one request in a ledger. It needs no run config and no key file.
 
 Exit codes: 0 finished; 2 refused; 3 interrupted or pending; 4 the judge
 qualification finished but named no panel; 5 incomplete, a pass was not
@@ -145,11 +152,30 @@ def build_parser():
             sub.add_argument("--resume", metavar="RUN_ID",
                              help="carry on a stopped canary or full run in staging; no "
                                   "request already in its log is sent again")
+    sub = commands.add_parser(
+        "reconcile", help="enter the provider console figure for one request in a ledger")
+    sub.add_argument("--private-store", required=True,
+                     help="folder outside the repo that holds the ledgers")
+    sub.add_argument("--provider", required=True, choices=RECONCILE_PROVIDERS)
+    sub.add_argument("--request-id", required=True, help="the request id, as printed")
+    amount = sub.add_mutually_exclusive_group(required=True)
+    amount.add_argument("--usd", type=_usd,
+                        help="what the provider console shows for the request, in USD")
+    amount.add_argument("--at-reserved-maximum", action="store_true",
+                        help="charge the request at its own reservation, the most it can "
+                             "have cost")
+    sub.add_argument("--note", required=True, help="why, for the ledger")
+    sub.add_argument("--retry-lost-paid", action="store_true",
+                     help="explicitly allow a SECOND PAID CALL for this lost response on resume; "
+                          "the original attempt and all caps still count")
+    sub.add_argument("--dry-ledger", metavar="RUN_ID",
+                     help="reconcile in the ledger of this dry run, not the live ledger")
     return parser
 
 
 PATH_OPTIONS = ("--config", "--public-tasks", "--held-out-tasks", "--held-out-manifest",
                 "--key-file", "--private-store", "--checklist-samples", "--outcome-samples")
+RECONCILE_PROVIDERS = ("openai", "anthropic")
 
 
 def _usd(text):
@@ -210,6 +236,68 @@ def qualification_lines(qualification, config):
     return lines
 
 
+def reconcile(args, out=print):
+    """The `reconcile` command: write the charge of one request into a
+    provider ledger by hand.
+
+    It is for a request that was sent and has no result on record (a
+    resume lists these and sends nothing for them until they are
+    reconciled), and for a request held at its reserved maximum. It takes
+    the store's execution lock, so it never runs beside a run; opens the
+    one ledger file by its path; refuses a request id the ledger does not
+    hold; and appends one `reconcile` line. It reads no run config and no
+    key file, and it checks no cap: the ledger is opened for reconciliation
+    only and can reserve nothing.
+    """
+    store = args.private_store
+    if not os.path.isdir(store):
+        out("REFUSED: there is no private store at this place")
+        return EXIT_REFUSED
+    run_id = args.dry_ledger
+    if run_id is not None and (os.path.basename(run_id) != run_id or run_id in ("", ".", "..")):
+        out("REFUSED: --dry-ledger takes a run id, not a path")
+        return EXIT_REFUSED
+    folder = os.path.join(store, "ledgers") if run_id is None \
+        else os.path.join(store, "ledgers-dry", run_id)
+    path = os.path.join(folder, args.provider + ".jsonl")
+    lock = ledger.StoreLock(store)
+    try:
+        lock.acquire("reconcile")
+    except ledger.StoreLocked as busy:
+        out("REFUSED: " + str(busy))
+        return EXIT_REFUSED
+    try:
+        book = ledger.ProviderLedger.for_reconciliation(args.provider, path)
+        entry = book.entries.get(args.request_id)
+        if entry is None:
+            out("REFUSED: the %s ledger holds no reservation for request %s; nothing was "
+                "written" % (args.provider, args.request_id))
+            return EXIT_REFUSED
+        before = "an open reservation" if entry["charge"] is None \
+            else "a charge of %s USD" % entry["charge"]
+        amount = entry["reserved"] if args.at_reserved_maximum else args.usd
+        book.reconcile(args.request_id, amount, args.note,
+                       retry_lost_paid=args.retry_lost_paid)
+    except ledger.LedgerError as problem:
+        out("REFUSED: " + str(problem))
+        return EXIT_REFUSED
+    finally:
+        lock.release()
+    out("Reconciled request %s in the %s ledger%s." % (
+        args.request_id, args.provider, "" if run_id is None else " of dry run " + run_id))
+    out("  charge written: %s USD%s" % (
+        amount, " (its reserved maximum)" if args.at_reserved_maximum else ""))
+    out("  reserved: %s USD; before this it was %s" % (entry["reserved"], before))
+    out("  note: " + args.note)
+    if args.retry_lost_paid:
+        out("  SECOND PAID CALL for request %s authorised on resume, subject to the "
+            "remaining attempts and caps." % args.request_id)
+    else:
+        out("  A lost response stays pending and blocked. Accounting does not authorise "
+            "another paid call. Use --retry-lost-paid explicitly to allow it.")
+    return EXIT_OK
+
+
 def main(argv=None, out=print):
     argv = list(sys.argv[1:] if argv is None else argv)
     try:
@@ -220,6 +308,8 @@ def main(argv=None, out=print):
         return EXIT_REFUSED
     _refuse_secrets_on_command_line(argv)
     args = build_parser().parse_args(argv)
+    if args.command == "reconcile":
+        return reconcile(args, out)
     live = bool(getattr(args, "live", False))
     stage = args.command if args.command in STAGE_COMMANDS else args.stage
     try:
@@ -316,14 +406,24 @@ def main(argv=None, out=print):
         out("  passes complete: %d of %d" % (passes["complete"], passes["required"]))
     if summary["report"].get("interrupt_reason"):
         out("  stopped: " + str(summary["report"]["interrupt_reason"]))
-    out("  committed by this run: %s USD" % summary["run_committed_usd"])
+    if summary["run_committed_usd"] is not None:
+        out("  committed by this run: %s USD" % summary["run_committed_usd"])
     out("  record: " + summary["dir"])
+    if summary.get("awaiting_reconciliation"):
+        out("  %d request(s) were sent and have no result on record. Nothing is sent for "
+            "their slots or judge calls until each is reconciled with the reconcile command "
+            "printed above: %s" % (len(summary["awaiting_reconciliation"]),
+                                   ", ".join(summary["awaiting_reconciliation"])))
     if summary["status"] == "incomplete":
         out("  The run is incomplete and is not scored. It can be resumed with --resume %s "
             "once the pass fits what is left of the caps it started with, for example "
             "after held reservations are reconciled. A resume can lower a cap and can "
             "never raise one." % summary["run_id"])
         return EXIT_INCOMPLETE
+    if summary["status"] == "pending_judging":
+        out("  Slots are still pending on the grader or the judges, so the run is not "
+            "scored. --resume %s grades and judges them from the record; the model is "
+            "not asked again." % summary["run_id"])
     if summary["status"] not in ("finalised", "complete"):
         return EXIT_NOT_FINISHED
     if qualification is not None and not qualification["qualified"]:

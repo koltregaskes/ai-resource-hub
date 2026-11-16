@@ -7,6 +7,7 @@ import os
 import sys
 import tempfile
 import unittest
+from unittest import mock
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -511,25 +512,404 @@ class ReopenTests(unittest.TestCase):
         with self.assertRaises(records.RecordError) as caught:
             records.RunRecord.reopen(self.store, self.run_id)
         self.assertIn("is finalised", str(caught.exception))
-        # A run that is only waiting on judging has nothing left to send.
+
+    def test_a_run_waiting_on_judging_is_reopened_and_its_pending_row_replaced(self):
         other = records.new_run_id(token="0badcafe")
         waiting = self.record(run_id=other)
-        self.planned(waiting, [("m1", "pub-1", 1)])
+        self.planned(waiting, [("m1", "pub-1", 1), ("m1", "pub-1", 2)])
         waiting.slot_done(row(other, "m1", "pub-1", 1, passed=None, pending=True))
+        waiting.slot_done(row(other, "m1", "pub-1", 2))
         waiting.close()
         self.assertEqual(waiting.status, "pending_judging")
+        log = os.path.join(waiting.dir, "requests.jsonl")
+        with open(log, "rb") as stream:
+            before = stream.read()
+        again = records.RunRecord.reopen(self.store, other)
+        self.addCleanup(again._log.close)
+        self.assertEqual(again.status, "running")
+        self.assertEqual(again.pending_slots(), [records.slot_id(other, "m1", "pub-1", 1)])
+        self.assertEqual(again.complete_passes(), 1)
+        # A final row is never changed.
         with self.assertRaises(records.RecordError) as caught:
-            records.RunRecord.reopen(self.store, other)
-        self.assertIn("has status pending_judging and cannot be resumed", str(caught.exception))
+            again.slot_done(row(other, "m1", "pub-1", 2))
+        self.assertIn("slot already has a final result", str(caught.exception))
+        # The pending row is replaced by appending: the old line stays.
+        again.note("an_audit_note", {"slot_id": "s"})
+        again.slot_done(row(other, "m1", "pub-1", 1))
+        self.assertEqual(again.pending_slots(), [])
+        self.assertEqual(again.complete_passes(), 2)
+        with open(log, "rb") as stream:
+            after = stream.read()
+        self.assertTrue(after.startswith(before))
+        events = [json.loads(line)["event"] for line in after[len(before):].splitlines()]
+        self.assertEqual(events, ["resumed", "an_audit_note", "slot"])
+        for name in ("sent", "received", "done", "slot", "resumed",
+                     records.LEDGER_ONLY_EVENT, records.TORN_TAIL_EVENT):
+            with self.assertRaises(records.RecordError):
+                again.note(name, {})
+        again.close()
+        # Nothing is left to send. The run is complete, and it can still be
+        # reopened: that is how a run whose scoring or finalising failed is
+        # scored and finalised.
+        self.assertEqual(again.status, "complete")
+        self.assertIn("complete", records.RESUMABLE)
+        once_more = records.RunRecord.reopen(self.store, other)
+        self.assertEqual((once_more.pending_slots(), once_more.unstarted_slots()), ([], []))
+        result = once_more.finalise({})
+        records.verify_manifest(result["dir"])
 
-    def test_a_part_written_log_is_not_resumed(self):
+    def test_a_part_written_last_line_is_moved_to_the_sidecar_and_the_run_is_resumed(self):
+        import base64
+        slots = self.stopped()
+        folder = os.path.join(self.store, "runs", "_staging", self.run_id)
+        path = os.path.join(folder, records.REQUEST_LOG)
+        with open(path, "rb") as stream:
+            whole = stream.read()
+        tail = b'{"event": "sent", "request_id": "x'
+        with open(path, "ab") as stream:
+            stream.write(tail)
+        record = self.reopen()
+        (moved,) = record.torn_recovered
+        self.assertEqual((moved["journal"], moved["offset"], moved["length"]),
+                         (records.REQUEST_LOG, len(whole), len(tail)))
+        self.assertEqual(base64.b64decode(moved["bytes_base64"]), tail)
+        with open(path + ".torn", encoding="utf-8") as stream:
+            self.assertEqual([json.loads(line) for line in stream], [moved])
+        # Everything before the tail reads back as it was, and the log goes
+        # on with the resume line and an audit line.
+        self.assertEqual(sorted(record.rows), sorted(s["slot_id"] for s in slots[:2]))
+        self.assertFalse(record.is_issued("x"))
+        with open(path, "rb") as stream:
+            after = stream.read()
+        self.assertTrue(after.startswith(whole))
+        added = [json.loads(line) for line in after[len(whole):].splitlines()]
+        self.assertEqual([line["event"] for line in added],
+                         ["resumed", records.TORN_TAIL_EVENT])
+        self.assertEqual((added[1]["offset"], added[1]["length"], added[1]["sha256"],
+                          added[1]["sidecar"]),
+                         (len(whole), len(tail), moved["sha256"], "requests.jsonl.torn"))
+        # The sidecar stays in the folder and is in the manifest.
+        for model in ("m1", "m2"):
+            record.slot_done(row(self.run_id, model, "pub-1", 2))
+        result = record.finalise({})
+        records.verify_manifest(result["dir"])
+        with open(os.path.join(result["dir"], "manifest.json"), encoding="utf-8") as stream:
+            self.assertIn("requests.jsonl.torn", json.load(stream)["files"])
+
+    def test_a_whole_last_line_without_its_newline_is_torn_too(self):
         self.stopped()
         path = os.path.join(self.store, "runs", "_staging", self.run_id, records.REQUEST_LOG)
         with open(path, "ab") as stream:
-            stream.write(b'{"event": "sent", "request_id": "x')
+            stream.write(b'{"event": "sent", "request_id": "x/1", "kind": "model"}')
+        record = self.reopen()
+        self.assertEqual(len(record.torn_recovered), 1)
+        self.assertFalse(record.is_issued("x/1"))
+        # A second reopen finds a clean log and moves nothing.
+        record.close()
+        again = self.reopen()
+        self.assertEqual(again.torn_recovered, [])
+        with open(path + ".torn", encoding="utf-8") as stream:
+            self.assertEqual(len(stream.readlines()), 1)
+
+    def test_damage_in_the_middle_of_the_log_is_not_resumed(self):
+        self.stopped()
+        path = os.path.join(self.store, "runs", "_staging", self.run_id, records.REQUEST_LOG)
+        with open(path, "rb") as stream:
+            lines = stream.read().splitlines(keepends=True)
+        damaged = b"".join(lines[:3]) + b'{"event": "sent", "request_id": "x\n' \
+            + b"".join(lines[3:])
+        with open(path, "wb") as stream:
+            stream.write(damaged)
         with self.assertRaises(records.RecordError) as caught:
             records.RunRecord.reopen(self.store, self.run_id)
-        self.assertIn("does not read back", str(caught.exception))
+        self.assertIn("does not read back at line 4", str(caught.exception))
+        with open(path, "rb") as stream:
+            self.assertEqual(stream.read(), damaged)               # nothing was cut
+        self.assertFalse(os.path.exists(path + ".torn"))
+
+    def test_a_received_line_is_read_back(self):
+        slots = self.stopped()
+        record = self.reopen()
+        request = slots[2]["slot_id"] + "/2"
+        with self.assertRaises(records.RecordError):
+            record.request_received("never/sent/1", {})
+        record.request_received(request, {"result": {"status": "ok", "text": "kept"},
+                                          "billable": {"input_uncached": 3, "output": 4}})
+        with self.assertRaises(records.RecordError):
+            record.request_received(request, {})                   # once per request
+        self.assertEqual(self.log_lines(record)[-1]["event"], "received")
+        record.close()
+        again = self.reopen()
+        (first, second) = again.logged_model_requests(slots[2]["slot_id"])
+        self.assertIsNone(first["received"])
+        self.assertEqual(second["received"]["result"]["text"], "kept")
+        self.assertEqual(second["received"]["billable"], {"input_uncached": 3, "output": 4})
+        self.assertIsNone(second["done"])
+
+
+class Killed(BaseException):
+    """Stands in for a process that is killed: not an Exception, so nothing
+    in the code under test catches it."""
+
+
+class AtomicWriteTests(unittest.TestCase):
+    """Whole files are written to a temporary file and moved into place."""
+
+    setUp, record, planned = RecordTests.setUp, RecordTests.record, RecordTests.planned
+
+    def staged(self, name="run.json"):
+        return os.path.join(self.store, "runs", "_staging", self.run_id, name)
+
+    def test_the_file_is_complete_or_absent_never_cut_off(self):
+        path = os.path.join(self.store, "document.json")
+        records.atomic_write(path, b"first\n")
+        with open(path, "rb") as stream:
+            self.assertEqual(stream.read(), b"first\n")
+        self.assertFalse(os.path.exists(path + ".tmp"))
+        # Killed before the move: the temporary file holds the new bytes and
+        # the destination still holds the old ones, whole.
+        with mock.patch.object(records.os, "replace", side_effect=Killed()):
+            with self.assertRaises(Killed):
+                records.atomic_write(path, b"second, and longer\n")
+        with open(path, "rb") as stream:
+            self.assertEqual(stream.read(), b"first\n")
+        with open(path + ".tmp", "rb") as stream:
+            self.assertEqual(stream.read(), b"second, and longer\n")
+        # The next write of that name overwrites the leftover.
+        records.atomic_write(path, b"third\n")
+        with open(path, "rb") as stream:
+            self.assertEqual(stream.read(), b"third\n")
+        self.assertFalse(os.path.exists(path + ".tmp"))
+
+    def test_a_refused_move_is_tried_again(self):
+        path = os.path.join(self.store, "document.json")
+        real, calls = os.replace, []
+
+        def busy_twice(source, destination):
+            calls.append(source)
+            if len(calls) <= 2:
+                raise PermissionError("in use by a scanner")
+            return real(source, destination)
+        with mock.patch.object(records.os, "replace", busy_twice), \
+                mock.patch.object(records.time, "sleep") as sleep:
+            records.atomic_write(path, b"data\n")
+        self.assertEqual((len(calls), sleep.call_count), (3, 2))
+        with open(path, "rb") as stream:
+            self.assertEqual(stream.read(), b"data\n")
+        # It gives up in the end and says so; the old file is untouched.
+        with mock.patch.object(records.os, "replace", side_effect=PermissionError()), \
+                mock.patch.object(records.time, "sleep"):
+            with self.assertRaises(PermissionError):
+                records.atomic_write(path, b"never\n")
+        with open(path, "rb") as stream:
+            self.assertEqual(stream.read(), b"data\n")
+
+    def stopped_run(self):
+        record = self.record(live=False)
+        self.planned(record, [("m1", "pub-1", 1), ("m1", "pub-1", 2)])
+        record.slot_done(row(self.run_id, "m1", "pub-1", 1))
+        return record
+
+    def test_a_status_write_killed_at_any_point_leaves_run_json_whole(self):
+        real = os.replace
+
+        def after(source, destination):
+            real(source, destination)
+            raise Killed()
+        for name, patched, expected in (
+                ("before the move", mock.Mock(side_effect=Killed()), "running"),
+                ("during the move", mock.Mock(side_effect=[Killed()]), "running"),
+                ("after the move", after, "interrupted")):
+            with self.subTest(name):
+                self.run_id = records.new_run_id()
+                record = self.stopped_run()
+                with open(self.staged(), "rb") as stream:
+                    old = stream.read()
+                with mock.patch.object(records.os, "replace", patched):
+                    with self.assertRaises(Killed):
+                        record.mark_interrupted("stopped from outside")
+                record._log.close()
+                # Only the disk from here on. run.json is a whole document:
+                # the old one, or the new one.
+                staged = records.read_staged(self.store, self.run_id)
+                self.assertEqual(staged["status"], expected)
+                with open(self.staged(), "rb") as stream:
+                    self.assertEqual(stream.read() == old, expected == "running")
+                self.assertEqual(os.path.exists(self.staged("run.json.tmp")),
+                                 expected == "running")
+                # The run is resumed and finalised. The leftover temporary
+                # file is in neither the manifest nor the final folder.
+                again = records.RunRecord.reopen(self.store, self.run_id)
+                self.assertNotIn("run.json.tmp", again.extra_files)
+                again.slot_done(row(self.run_id, "m1", "pub-1", 2))
+                result = again.finalise({})
+                records.verify_manifest(result["dir"])
+                self.assertEqual([n for n in os.listdir(result["dir"]) if n.endswith(".tmp")],
+                                 [])
+
+    def test_a_leftover_temporary_file_is_never_read_as_the_record(self):
+        record = self.stopped_run()
+        record.mark_interrupted("stopped")
+        record.close()
+        with open(self.staged("run.json.tmp"), "wb") as stream:
+            stream.write(b'{"run_id": "%s", "status": "final' % self.run_id.encode("ascii"))
+        with open(self.staged("plan.json.tmp"), "wb") as stream:
+            stream.write(b"[")
+        self.assertEqual(records.read_staged(self.store, self.run_id)["status"], "interrupted")
+        again = records.RunRecord.reopen(self.store, self.run_id)
+        self.assertEqual(len(again.planned), 2)
+        self.assertEqual(again.extra_files, {})
+        again.close()
+        # Without the real file there is no run to resume, whatever the
+        # temporary file holds.
+        os.replace(self.staged(), self.staged("run.json.moved-away"))
+        with self.assertRaises(records.RecordError):
+            records.read_staged(self.store, self.run_id)
+
+
+class RestartableFinaliseTests(unittest.TestCase):
+    """Finalising can be stopped at any point and finished from the disk."""
+
+    setUp, record, planned = RecordTests.setUp, RecordTests.record, RecordTests.planned
+    complete = RecordTests.complete
+
+    def paths(self):
+        return (os.path.join(self.store, "runs", "_staging", self.run_id),
+                os.path.join(self.store, "runs", self.run_id),
+                os.path.join(self.store, "public", self.run_id, "public-record.json"))
+
+    def reference(self):
+        """An uninterrupted finalise of the same data, under the same run
+        id and at the same moment, in a store of its own: the bytes of its
+        manifest and of its public record."""
+        folder = tempfile.TemporaryDirectory()
+        self.addCleanup(folder.cleanup)
+        store, self.store = self.store, folder.name
+        try:
+            result = self.complete().finalise({"day_to_day": 66.7})
+            with open(os.path.join(result["dir"], "manifest.json"), "rb") as stream:
+                manifest = stream.read()
+            with open(result["public_path"], "rb") as stream:
+                return manifest, stream.read()
+        finally:
+            self.store = store
+
+    def test_finalising_is_finished_from_disk_after_a_stop_at_every_step(self):
+        real_write, real_rename, real_build = (records.atomic_write, os.rename,
+                                               records.build_public_record)
+
+        def no_manifest(path, data):
+            if os.path.basename(path) == "manifest.json":
+                raise Killed()
+            return real_write(path, data)
+
+        def no_rename(source, destination):
+            raise Killed()
+
+        def no_public(*args):
+            raise Killed()
+
+        def no_public_write(path, data):
+            if os.path.basename(path) == "public-record.json":
+                raise Killed()
+            return real_write(path, data)
+        cases = (
+            ("after the seal, before the manifest",
+             lambda: mock.patch.object(records, "atomic_write", no_manifest),
+             (True, False, False, False)),
+            ("after the manifest, before the rename",
+             lambda: mock.patch.object(records.os, "rename", no_rename),
+             (True, True, False, False)),
+            ("after the rename, before the public record",
+             lambda: mock.patch.object(records, "build_public_record", no_public),
+             (False, True, True, False)),
+            ("after the rename, while the public record is written",
+             lambda: mock.patch.object(records, "atomic_write", no_public_write),
+             (False, True, True, False)),
+        )
+        fixed = datetime.datetime(2026, 11, 15, 12, 0, 0, tzinfo=datetime.timezone.utc)
+        with mock.patch.object(records, "utc_now", return_value=fixed):
+            for name, patch, expected in cases:
+                with self.subTest(name):
+                    self.run_id = records.new_run_id()
+                    want_manifest, want_public = self.reference()
+                    record = self.complete()
+                    with patch():
+                        with self.assertRaises(Killed):
+                            record.finalise({"day_to_day": 66.7})
+                    staged, final, public = self.paths()
+                    manifest = os.path.join(staged if expected[0] else final, "manifest.json")
+                    self.assertEqual((os.path.isdir(staged), os.path.isfile(manifest),
+                                      os.path.isdir(final), os.path.isfile(public)), expected)
+                    self.assertTrue(records.is_sealed(self.store, self.run_id))
+                    # A sealed run is not reopened for more work.
+                    with self.assertRaises(records.RecordError):
+                        records.RunRecord.reopen(self.store, self.run_id)
+                    # From the disk alone, and twice: the second call finds
+                    # everything done and changes nothing.
+                    first = records.complete_finalisation(self.store, self.run_id)
+                    everything = support.read_everything(self.store)
+                    second = records.complete_finalisation(self.store, self.run_id)
+                    self.assertEqual(support.read_everything(self.store), everything)
+                    self.assertEqual(first, second)
+                    self.assertEqual(first["dir"], final)
+                    self.assertFalse(os.path.exists(staged))
+                    self.assertEqual(records.verify_manifest(final), first["manifest_sha256"])
+                    # Byte for byte what an uninterrupted finalise gives.
+                    with open(os.path.join(final, "manifest.json"), "rb") as stream:
+                        self.assertEqual(stream.read(), want_manifest)
+                    with open(public, "rb") as stream:
+                        self.assertEqual(stream.read(), want_public)
+                    self.assertEqual(first["public_path"], public)
+                    self.assertNotIn(HELD_OUT_PROMPT, support.read_everything(
+                        os.path.join(self.store, "public")))
+
+    def test_a_run_that_is_not_sealed_is_not_completed(self):
+        record = self.complete()
+        record.close()
+        self.assertFalse(records.is_sealed(self.store, self.run_id))
+        with self.assertRaises(records.RecordError) as caught:
+            records.complete_finalisation(self.store, self.run_id)
+        self.assertIn("is not sealed", str(caught.exception))
+        staged, final, public = self.paths()
+        self.assertEqual((os.path.isdir(staged), os.path.exists(final), os.path.exists(public)),
+                         (True, False, False))
+        self.assertFalse(os.path.exists(os.path.join(staged, "manifest.json")))
+        with self.assertRaises(records.RecordError):
+            records.complete_finalisation(self.store, "2026-01-01T000000Z-00000000")
+
+    def test_a_file_changed_before_the_seal_stops_finalising_unsealed(self):
+        record = self.complete()
+        with open(os.path.join(record.dir, "plan.json"), "ab") as stream:
+            stream.write(b" ")
+        with self.assertRaises(records.RecordError) as caught:
+            record.finalise({})
+        self.assertIn("file changed on disk after it was written: plan.json",
+                      str(caught.exception))
+        self.assertFalse(records.is_sealed(self.store, self.run_id))
+        self.assertFalse(os.path.exists(self.paths()[1]))
+
+    def test_a_different_public_record_already_there_is_not_overwritten(self):
+        record = self.complete()
+        staged, final, public = self.paths()
+        os.makedirs(os.path.dirname(public))
+        with open(public, "wb") as stream:
+            stream.write(b"{}\n")
+        with self.assertRaises(records.RecordError) as caught:
+            record.finalise({})
+        self.assertIn("a different public record is already there", str(caught.exception))
+        with open(public, "rb") as stream:
+            self.assertEqual(stream.read(), b"{}\n")
+        self.assertTrue(os.path.isdir(final))                     # the run itself is finalised
+
+    def test_the_key_guard_still_covers_the_public_record(self):
+        record = self.complete()
+        # A guard that lets the run folder through and refuses the public record.
+        record.guard = lambda text: '"manifest_sha256"' in text
+        with self.assertRaises(records.RecordError) as caught:
+            record.finalise({})
+        self.assertIn("a key value was about to be published", str(caught.exception))
+        self.assertFalse(os.path.exists(self.paths()[2]))
 
 
 class AmendmentTests(unittest.TestCase):

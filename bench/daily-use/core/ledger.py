@@ -21,6 +21,10 @@ One ledger per provider, shared by model calls and judge calls.
   before the call returns, so the reservation is on disk before the request
   is sent. A restart reloads the file; a reservation that was never settled
   stays counted in full.
+- A write that was cut off by a crash leaves a part-written last record.
+  It is moved to a sidecar file and cut from the ledger the next time the
+  ledger is read (`recover_torn_tail`); damage anywhere else in the file
+  still stops all spending.
 - One writer at a time, across processes, in two layers. `StoreLock` is the
   execution lock of a private store: one process owns the store for as long
   as it runs, and a second one is refused. Under that, every reserve, settle
@@ -33,8 +37,10 @@ One ledger per provider, shared by model calls and judge calls.
 Money is `decimal.Decimal` throughout and is written to disk as text.
 """
 
+import base64
 import contextlib
 import datetime
+import hashlib
 import json
 import os
 import time
@@ -307,6 +313,74 @@ def _file_lock(path, wait_seconds=None):
         os.close(descriptor)
 
 
+# ---- a part-written last record ------------------------------------------
+
+TORN_SUFFIX = ".torn"
+
+
+def torn_tail(data):
+    """The incomplete trailing record of a journal's bytes: everything after
+    the last newline, when the bytes do not end in a newline. It is torn
+    whether or not it happens to parse as JSON, because every writer here
+    writes a record and its newline in one step. Returns (offset, bytes),
+    or None when the journal ends cleanly."""
+    if not data or data.endswith(b"\n"):
+        return None
+    offset = data.rfind(b"\n") + 1
+    return offset, data[offset:]
+
+
+def move_torn_tail(path, offset, tail):
+    """Move a journal's part-written last record to the sidecar
+    `<journal>.torn` and cut it from the journal. Returns what was moved.
+
+    The order makes it safe to be stopped anywhere: first one JSON line is
+    appended to the sidecar (the time, the journal's file name, the byte
+    offset, the length, the SHA-256 and the bytes themselves as base64) and
+    fsynced; only then is the journal cut at the offset and fsynced. A
+    crash between the two repeats the step and leaves the same entry in the
+    sidecar twice, which is harmless. Nothing before the offset is touched.
+
+    Why cutting the tail is safe. Every append to a ledger or a run log is
+    fsynced before the step that depends on it, so a record that did not
+    reach the disk whole belongs to a step that had not gone on:
+    - a torn `reserve` means the request was never sent;
+    - a torn `settle` leaves the reservation open, which is the conservative
+      side, and the `received` line of the run log lets a resume settle it
+      again;
+    - a torn `sent` line leaves a request that only the ledger knows, which
+      was never sent;
+    - a torn `received` line leaves a request with no result on record,
+      which stays blocked until a person reconciles it;
+    - a torn `done` line or slot row is built again from the `received`
+      line and the requests in the log.
+    """
+    found = {"at_utc": _now(), "journal": os.path.basename(path), "offset": offset,
+             "length": len(tail), "sha256": hashlib.sha256(tail).hexdigest(),
+             "bytes_base64": base64.b64encode(tail).decode("ascii")}
+    with open(path + TORN_SUFFIX, "ab") as stream:
+        stream.write((json.dumps(found, sort_keys=True) + "\n").encode("utf-8"))
+        stream.flush()
+        os.fsync(stream.fileno())
+    with open(path, "r+b") as stream:
+        stream.truncate(offset)
+        stream.flush()
+        os.fsync(stream.fileno())
+    return found
+
+
+def recover_torn_tail(path):
+    """Find and move the part-written last record of the journal at `path`.
+    Returns what was moved, or None when the journal ends cleanly. The
+    caller must be the only writer: the ledger calls this under its lock,
+    the run record under the store's execution lock."""
+    with open(path, "rb") as stream:
+        torn = torn_tail(stream.read())
+    if torn is None:
+        return None
+    return move_torn_tail(path, *torn)
+
+
 class ProviderLedger:
     """The durable ledger for one provider.
 
@@ -325,11 +399,31 @@ class ProviderLedger:
         self.path = os.fspath(path)
         self.lock_path = self.path + ".lock"
         self.entries = {}
+        # Part-written last records that this object moved to the sidecar,
+        # for the runner to print.
+        self.torn_recovered = []
+        # True for a ledger opened by `for_reconciliation`: it has no cap,
+        # so it reserves nothing.
+        self.reconcile_only = False
         self._read_to = 0               # bytes of the file already read
         self._lines = 0
         # Nothing is made on disk for a ledger that does not exist yet.
         if os.path.exists(self.path):
             self.refresh()
+
+    @classmethod
+    def for_reconciliation(cls, provider, path):
+        """Open an existing ledger to reconcile a request by hand, and for
+        nothing else. The caller has no run config and so no cap; rather
+        than invent one, this ledger refuses `check` and `reserve` outright,
+        so it can never pass a reservation that a real cap would refuse.
+        `reconcile` checks no cap, here or anywhere."""
+        path = os.fspath(path)
+        if not os.path.isfile(path):
+            raise LedgerError("there is no ledger for %s at this place" % provider)
+        book = cls(provider, 0, path)
+        book.reconcile_only = True
+        return book
 
     def _locked(self):
         return _file_lock(self.lock_path)
@@ -344,8 +438,14 @@ class ProviderLedger:
 
         The file is only ever appended to, so only the part added since the
         last look is read. A file that has become shorter (edited by hand)
-        is read again from the top. Under the lock no writer is part-way
-        through a line, so a line without its newline is damage.
+        is read again from the top.
+
+        Under the lock no living writer is part-way through a line, so bytes
+        after the last newline were left by a writer that died. They are
+        moved to the sidecar and cut from the file (see `move_torn_tail`
+        for why that is safe); every entry before them is kept as it is. A
+        line that does not read back anywhere else is damage and stops all
+        spending.
         """
         try:
             with open(self.path, "rb") as stream:
@@ -358,14 +458,17 @@ class ProviderLedger:
             if self._read_to:
                 raise LedgerError("ledger for %s has gone from disk" % self.provider) from None
             return
+        torn = torn_tail(data)
+        if torn is not None:
+            cut, tail = torn
+            self.torn_recovered.append(move_torn_tail(self.path, self._read_to + cut, tail))
+            data = data[:cut]
         for line in data.splitlines(keepends=True):
             self._lines += 1
             self._read_to += len(line)
             if not line.strip():
                 continue
             try:
-                if not line.endswith(b"\n"):
-                    raise ValueError("part-written line")
                 event = json.loads(line.decode("utf-8"))
                 kind = event["event"]
                 request_id = event["request_id"]
@@ -382,6 +485,8 @@ class ProviderLedger:
                 entry["charge"] = amount
                 entry["flags"] = list(event.get("flags", []))
                 entry["reconciled"] = bool(event.get("reconciled", True))
+                if kind == "reconcile":
+                    entry["retry_lost_paid"] = bool(event.get("retry_lost_paid", False))
             else:
                 raise LedgerError(
                     "ledger for %s has an unexpected entry at line %d"
@@ -436,6 +541,9 @@ class ProviderLedger:
                       and (e["charge"] > e["reserved"] or OVERRUN_FLAG in e["flags"]))
 
     def check(self, worst_case):
+        if self.reconcile_only:
+            raise LedgerError("this ledger was opened for reconciliation only: it has no "
+                              "cap and reserves nothing")
         if self.spent + self.reserved + worst_case > self.cap:
             raise CapExceeded(
                 "%s cap reached: spent %s + reserved %s + this request %s is above %s USD"
@@ -501,7 +609,7 @@ class ProviderLedger:
             return {"charge": charge, "reserved": entry["reserved"], "flags": flags,
                     "reconciled": reconciled}
 
-    def reconcile(self, request_id, actual_usd, note):
+    def reconcile(self, request_id, actual_usd, note, retry_lost_paid=False):
         """Replace a charge with the provider console figure."""
         actual = Decimal(str(actual_usd))
         if not actual.is_finite() or actual < 0:
@@ -513,8 +621,10 @@ class ProviderLedger:
                 raise LedgerError("no reservation for " + request_id)
             flags = ["reconciled_by_hand"]
             self._append({"event": "reconcile", "request_id": request_id, "usd": str(actual),
-                          "flags": flags, "reconciled": True, "note": str(note)})
-            entry.update(charge=actual, flags=flags, reconciled=True)
+                          "flags": flags, "reconciled": True, "note": str(note),
+                          "retry_lost_paid": bool(retry_lost_paid)})
+            entry.update(charge=actual, flags=flags, reconciled=True,
+                         retry_lost_paid=bool(retry_lost_paid))
 
 
 class Budget:

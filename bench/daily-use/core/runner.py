@@ -23,10 +23,22 @@ Slots and requests follow the method exactly:
   and can use up the room, and the run then ends `interrupted` or
   `incomplete` inside the cap, unscored.
 - A stopped run is resumed with `resume=<run id>`. It carries on in the
-  planned order; a slot that has a row is left alone and a request id that
-  is in the log is never issued again. The caps a run starts with are
-  written in its record; a resume may lower a cap and is refused if it
-  would raise one.
+  planned order; a slot that has a final row is left alone and a request id
+  that is in the log is never issued again. In each pass the resume first
+  finishes the slots that already hold a paid answer (an answer with no
+  row, or a row left pending on the grader or the judges): the answer is
+  graded and judged from the record and the model is never asked again.
+  Only then are the unsent slots of the pass sent. The caps a run starts
+  with are written in its record; a resume may lower a cap and is refused
+  if it would raise one.
+- No billed call is made twice by the harness. A response is written to
+  the run log (`received`) before the ledger is settled, and a resume
+  finishes such a request from the log. A request that was sent and has no
+  response on record may have been billed: it blocks its slot or its judge
+  call until a person reconciles it (`cli.py reconcile`).
+- A judge call (one slot, one judge, one kind of judging) has
+  `judges.ATTEMPTS_PER_JUDGE_CALL` requests for the whole life of the run,
+  resumes included.
 - One run at a time owns a private store (`ledger.StoreLock`). A second
   start or resume, dry or live, is refused while the first is running.
 
@@ -106,6 +118,11 @@ LIVE_ENABLED = True
 STAGES = ("qualify", "canary", "full")
 STAGE_INDEX = "stages.jsonl"
 QUALIFICATION_DIR = "qualification"
+# The audit line for a request that a resume finished from its received line.
+RECOVERED_EVENT = "received_request_finished_on_resume"
+# Row flags: a judge call that sends nothing on a resume.
+AWAITING_FLAG = "judge_request_awaiting_reconciliation"
+EXHAUSTED_FLAG = "judge_attempts_exhausted"
 QUALIFICATION_RECORD = "judge-qualification"
 CORE_DIR = os.path.dirname(os.path.abspath(__file__))
 _PASSES = []
@@ -160,20 +177,41 @@ def require_live_pass(gate_pass):
         raise LiveRefused("the real transport needs a pass from the live gate")
 
 
+def _stage_entry(stage, run_id, config, qualification_run_id):
+    """The stage index entry of a finished live canary or full run."""
+    return {"stage": stage, "run_id": run_id, "live": True,
+            "judges": [judge.model_id for judge in config.judges],
+            "config_sha256": config.sha256,
+            "qualification_run_id": qualification_run_id}
+
+
 def _stage_history(private_store):
     path = os.path.join(os.fspath(private_store), STAGE_INDEX)
     if not os.path.exists(path):
         return []
+    with ledger._file_lock(path + ".lock"):
+        return _read_stage_history(path)
+
+
+def _read_stage_history(path):
+    # The stage lock also covers prerequisite reads outside a running store.
+    ledger.recover_torn_tail(path)
     with open(path, encoding="utf-8") as stream:
         return [json.loads(line) for line in stream if line.strip()]
 
 
 def _record_stage(private_store, entry):
+    """Add a finished live stage to the index. A run id that is already
+    listed is not listed again, so this can be repeated after a crash."""
     path = os.path.join(os.fspath(private_store), STAGE_INDEX)
-    with open(path, "a", encoding="utf-8", newline="\n") as stream:
-        stream.write(json.dumps(entry, sort_keys=True) + "\n")
-        stream.flush()
-        os.fsync(stream.fileno())
+    with ledger._file_lock(path + ".lock"):
+        history = _read_stage_history(path) if os.path.exists(path) else []
+        if any(listed.get("run_id") == entry["run_id"] for listed in history):
+            return
+        with open(path, "a", encoding="utf-8", newline="\n") as stream:
+            stream.write(json.dumps(entry, sort_keys=True) + "\n")
+            stream.flush()
+            os.fsync(stream.fileno())
 
 
 # ---- the judge qualification record -------------------------------------
@@ -249,10 +287,10 @@ def write_qualification_record(private_store, record, guard=None):
     if guard is not None and guard(text):
         raise records.RecordError("a key value was about to be written to the qualification "
                                   "record; refused")
-    with open(path, "x", encoding="utf-8", newline="\n") as stream:
-        stream.write(text)
-        stream.flush()
-        os.fsync(stream.fileno())
+    if os.path.exists(path):
+        raise FileExistsError("the qualification record is written once: "
+                              + os.path.basename(path))
+    records.atomic_write(path, text.encode("utf-8"))
     return path
 
 
@@ -766,7 +804,7 @@ def plan_slots(config, tasks, stage, seed, run_id):
 
 class _Engine:
     def __init__(self, *, config, tasks, stage, record, budget, transport, loaded_keys,
-                 grade, clock, sleep):
+                 grade, clock, sleep, out=None):
         self.config = config
         self.tasks = {task["id"]: task for task in tasks}
         self.stage = stage
@@ -777,6 +815,7 @@ class _Engine:
         self.grade = grade
         self.clock = clock
         self.sleep = sleep
+        self.out = out or (lambda line: None)
         self.adapters = {}
         # Set when a settled charge was above its reservation. Once set,
         # `before_send` refuses every further request.
@@ -798,7 +837,10 @@ class _Engine:
 
     def _hooks(self, spec, prompt, limit, kind, id_for, trail):
         """The before-send and after-result steps shared by every request:
-        reserve, write the record, then (after the reply) settle and record."""
+        reserve, write the sent line, then (after the reply) write the
+        received line, settle and write the done line. The response is on
+        disk before the ledger is settled, so a run that dies after the
+        reply came back never has to ask for it again."""
         adapter = self._adapter(spec)
 
         def before_send(number):
@@ -810,6 +852,13 @@ class _Engine:
             # limit that is sent with the request.
             worst = ledger.worst_case_usd(ledger.input_token_bound(prompt), limit, spec.price)
             self.budget.reserve(spec.provider, request, worst)
+            for item in self.record.logged_requests(request.rpartition("/")[0] + "/"):
+                entry = self.budget.ledgers[spec.provider].entries.get(item["request_id"], {})
+                if (item.get("done") is None and item.get("received") is None
+                        and not item["sent"].get("ledger_only")
+                        and entry.get("retry_lost_paid")):
+                    self.out("SECOND PAID CALL for request %s: sending replacement %s."
+                             % (item["request_id"], request))
             self.record.request_sent(request, {
                 "kind": kind, "model_id": spec.model_id, "provider": spec.provider,
                 "reserved_usd": str(worst),
@@ -818,12 +867,14 @@ class _Engine:
 
         def after_result(number, result):
             request = id_for(number)
-            zero_reason = None
-            if result.status in (providers.TRANSPORT_ERROR, providers.PROVIDER_ERROR) \
-                    and result.http_status not in (None, 200):
-                zero_reason = "http_error_not_billed"
-            settled = self.budget.settle(spec.provider, request, result.billable, spec.price,
-                                         zero_reason=zero_reason)
+            # First of all, and fsynced: the response as it came back, with
+            # what the settlement needs, so that it can be done again from
+            # the log.
+            self.record.request_received(request, {
+                "result": result.to_record(), "billable": result.billable})
+            settled = self.budget.settle(
+                spec.provider, request, result.billable, spec.price,
+                zero_reason=not_billed_reason(result.status, result.http_status))
             self.record.request_done(request, {
                 "result": result.to_record(), "charge_usd": str(settled["charge"]),
                 "ledger_flags": settled["flags"], "reconciled": settled["reconciled"]})
@@ -864,7 +915,114 @@ class _Engine:
             return result.text
         return call
 
-    def _judge(self, slot, task, reply, needs, trail):
+    def _earlier_verdict(self, slot, kind, flags):
+        """`earlier_for(spec, prompt, parse)` for one kind of judging on a
+        resumed slot (see `judges._ask_judge`).
+
+        A verdict that is already in the run log, for this very prompt, is
+        used as it stands and that judge is not asked again. Otherwise the
+        judge call goes on with the attempts it has left of its
+        `judges.ATTEMPTS_PER_JUDGE_CALL`, numbered on from those in the log,
+        so no request id is issued twice.
+
+        The limit is for the whole life of the run. Every request id under
+        `<slot>/judge/<judge>/<kind>/` counts: one with a result, one that
+        was in flight, one that only the ledger knew, one reconciled by
+        hand. When they are used up and no verdict is on record, nothing is
+        sent: the attempt range is empty, the slot stays pending and its row
+        gets the flag `judge_attempts_exhausted`.
+
+        A request of this judge call that was sent, has no response on
+        record and is still open in the ledger may have been billed. Until
+        it is reconciled nothing is sent for this judge call either, and the
+        row gets the flag `judge_request_awaiting_reconciliation`.
+        """
+        def earlier_for(spec, prompt, parse):
+            base = "%s/judge/%s/%s" % (slot, spec.model_id, kind)
+            logged = self.record.logged_requests(base + "/")
+            for item in reversed(logged):
+                result = (item["done"] or {}).get("result") or {}
+                if result.get("status") != providers.OK or _logged_prompt(item) != prompt:
+                    continue
+                try:
+                    verdict = parse(result.get("text"))
+                except judges.MalformedVerdict:
+                    continue
+                return verdict, (), [{
+                    "attempt": int(item["request_id"].rpartition("/")[2]), "result": "ok",
+                    "detail": "verdict taken from the run log; the judge was not asked again"}]
+            waiting = [item["request_id"] for item in logged
+                       if self.awaits_reconciliation(item)]
+            if waiting:
+                if AWAITING_FLAG not in flags:
+                    flags.append(AWAITING_FLAG)
+                self.out("  resume: judge %s is not asked for %s on slot %s: request %s may "
+                         "have been billed and has no result on record. Nothing is sent for "
+                         "this judge call until it is reconciled with explicit --retry-lost-paid consent."
+                         % (spec.model_id, kind, slot, ", ".join(waiting)))
+                return None, range(0), [{
+                    "attempt": None, "result": "awaiting_reconciliation",
+                    "detail": "request %s may have been billed and has no result on record; "
+                              "nothing is sent for this judge call until it is reconciled"
+                              % ", ".join(waiting)}]
+            numbers = [int(item["request_id"].rpartition("/")[2]) for item in logged]
+            following = max(numbers, default=0) + 1
+            left = judges.ATTEMPTS_PER_JUDGE_CALL - len(numbers)
+            found = []
+            if numbers:
+                found.append({"attempt": None, "result": "earlier_attempts_unresolved",
+                              "detail": "%d earlier request(s) in the run log gave no verdict"
+                                        % len(numbers)})
+            if left <= 0:
+                # The limit holds for the life of the run: nothing is sent.
+                if EXHAUSTED_FLAG not in flags:
+                    flags.append(EXHAUSTED_FLAG)
+                self.out("  resume: judge %s has used all %d of its requests for %s on slot "
+                         "%s and gave no verdict; nothing more is sent and the slot stays "
+                         "pending" % (spec.model_id, judges.ATTEMPTS_PER_JUDGE_CALL, kind,
+                                      slot))
+                found.append({"attempt": None, "result": "attempts_exhausted",
+                              "detail": "the judge call has used its %d requests; nothing "
+                                        "more is sent" % judges.ATTEMPTS_PER_JUDGE_CALL})
+                return None, range(0), found
+            return None, range(following, following + left), found
+        return earlier_for
+
+    def awaits_reconciliation(self, item):
+        """Block a dispatched request with no durable response, even when its
+        cost has been reconciled. Only explicit, journalled retry consent
+        releases it. Ledger-only reservations precede dispatch and are safe.
+        """
+        if item.get("done") is not None or item.get("received") is not None:
+            return False
+        if item["sent"].get("ledger_only"):
+            return False
+        book = self.budget.ledgers.get(item["sent"].get("provider"))
+        entry = None if book is None else book.entries.get(item["request_id"])
+        return entry is None or not entry.get("retry_lost_paid", False)
+
+    def unknown_requests(self):
+        """Every request of this run that awaits reconciliation, sorted."""
+        return sorted(item["request_id"]
+                      for item in self.record.logged_requests(self.record.run_id + "/")
+                      if self.awaits_reconciliation(item))
+
+    def blocked_slots(self):
+        """{slot id: [request id]} for the planned slots that have a model
+        request awaiting reconciliation. No model request is sent for such
+        a slot and no row is written for it."""
+        planned = {slot["slot_id"] for slot in self.record.planned}
+        blocked = {}
+        for request in self.unknown_requests():
+            slot, _, number = request.rpartition("/")
+            if slot in planned and number.isdigit():
+                blocked.setdefault(slot, []).append(request)
+        return blocked
+
+    def _judge(self, slot, task, reply, needs, trail, resumed_flags=None):
+        """Ask the panel what the grader needs. `resumed_flags` is the flag
+        list of the slot's row when the slot is being finished on a resume;
+        verdicts already in the run log are then reused."""
         wants_outcome = "outcome" in needs
         known = {check["id"]: check for check in judges.judged_checks(task)}
         checks = []
@@ -883,9 +1041,15 @@ class _Engine:
             return lambda spec: self._judge_call(
                 spec, "%s/judge/%s/%s" % (slot, spec.model_id, kind), kind, trail)
 
+        def earlier(kind):
+            if resumed_flags is None:
+                return None
+            return self._earlier_verdict(slot, kind, resumed_flags)
+
         if wants_outcome:
             result = judges.classify_outcome(self.panel, task["prompt"], reply,
-                                             call_for("outcome_classification"))
+                                             call_for("outcome_classification"),
+                                             earlier("outcome_classification"))
             judged["outcome"] = result["outcome"]
             judged["detail"]["outcome"] = result["judges"]
         if checks:
@@ -895,7 +1059,8 @@ class _Engine:
                 judged["checks"] = {check["id"]: judges.UNRESOLVED for check in checks}
             else:
                 result = judges.judge_checklist(self.panel, task["prompt"], reply,
-                                                checks, call_for("checklist_judging"))
+                                                checks, call_for("checklist_judging"),
+                                                earlier("checklist_judging"))
                 judged["checks"] = result["checks"]
                 judged["detail"]["checklist"] = result["judges"]
         return judged
@@ -908,9 +1073,15 @@ class _Engine:
     def _earlier_requests(self, model, slot):
         """The model requests a resumed slot already has in the log, as
         trail entries, with the answer text of any that came back."""
+        return self._logged_trail(self.record.logged_model_requests(slot), model.provider)
+
+    def _logged_trail(self, logged, provider=None):
+        """Requests read back from the run log as (trail entry, result or
+        None) pairs. `provider` is the ledger to look in; a judge request
+        names its own on its sent line."""
         earlier = []
-        book = self.budget.ledgers[model.provider].entries
-        for item in self.record.logged_model_requests(slot):
+        for item in logged:
+            book = self.budget.ledgers[provider or item["sent"].get("provider")].entries
             done, entry = item["done"], book.get(item["request_id"]) or {}
             if done is not None:
                 result = done.get("result") or {}
@@ -926,13 +1097,21 @@ class _Engine:
             # In flight when the run stopped: there is no result on record.
             # It still counts as one of the slot's requests, and it is not
             # sent again. Its reservation stays open in the ledger unless
-            # the ledger shows it settled.
+            # the ledger shows it settled or reconciled; while it is open
+            # the slot or judge call sends nothing (`awaits_reconciliation`).
+            # A request that is only in the ledger, reserved and never
+            # written to the log, counts as used in the same way and was
+            # never sent, so it blocks nothing.
             settled = entry.get("charge") is not None
             charge = entry["charge"] if settled else item["sent"].get("reserved_usd")
+            only_ledger = bool(item["sent"].get("ledger_only"))
             earlier.append(({
-                "request_id": item["request_id"], "status": "in_flight_when_stopped",
+                "request_id": item["request_id"],
+                "status": "reserved_never_logged" if only_ledger else "in_flight_when_stopped",
                 "http_status": None,
-                "error": "no result on record: the run stopped while this request was in flight",
+                "error": "reserved in the ledger and never written to the run log: the run "
+                         "stopped between the two" if only_ledger else
+                         "no result on record: the run stopped while this request was in flight",
                 "finish_reason": None, "charge_usd": str(charge),
                 "request_time_seconds": None, "usage": None,
                 "ledger_flags": list(entry.get("flags") or []) if settled
@@ -943,10 +1122,19 @@ class _Engine:
         slot = records.slot_id(self.record.run_id, model.model_id, task["id"], repeat)
         prompt = task["prompt"]
         limit = task["max_output_tokens"]
+        if resumed and any(self.awaits_reconciliation(item)
+                           for item in self.record.logged_model_requests(slot)):
+            # A model request of this slot may have been billed and has no
+            # result on record. Nothing is sent and no row is written: a
+            # pending row without a reply would freeze the slot for ever.
+            return None
         earlier = self._earlier_requests(model, slot) if resumed else []
         trail = [entry for entry, _ in earlier]
         used = len(trail)
-        judge_trail = []
+        # On a resume the slot's judge requests are read back from the log
+        # as well, so that the row carries all of them and their whole cost.
+        judge_trail = [entry for entry, _ in self._logged_trail(
+            self.record.logged_requests(slot + "/judge/"))] if resumed else []
         # `model`, `task_id`, `family`, `split`, `repeat`, `outcome`, `pass`,
         # `truncated`, `time_s`, `cost_usd`, `checks` and
         # `needed_judge_classification` are the fields scores.py reads.
@@ -962,17 +1150,36 @@ class _Engine:
         }
         kept = next((result for _, result in reversed(earlier)
                      if result is not None and result.get("status") == providers.OK), None)
+        before = self.record.rows.get(slot) if resumed else None
+        if kept is None and before is not None:
+            # A pending row whose answer is not in the log as a finished
+            # request. The row itself holds the reply; without one there is
+            # nothing to grade, and the row is left as it is. Either way the
+            # model is not asked again for a slot that has a row.
+            if not isinstance(before.get("reply"), str):
+                return before
+            kept = {"text": before["reply"], "truncated": before.get("truncated"),
+                    "finish_reason": before.get("finish_reason"),
+                    "usage": before.get("tokens"),
+                    "request_time_seconds": before.get("time_s")}
         if kept is not None:
-            # A paid answer is on record without a slot row: the run stopped
-            # after the answer came back and before it was graded. It is kept
-            # and never asked for again. Grading a kept answer later is not
-            # built, so the slot stays pending and the run cannot be scored.
+            # A paid answer is on record: the run stopped after the answer
+            # came back and before it was graded (no row), or its row was
+            # left pending because the grader could not run or the judging
+            # was not finished. The answer is never asked for again. It is
+            # graded here from the record, and only the judging that is
+            # still missing is sent. The new row is appended; an earlier
+            # pending row stays in the log.
             row.update(reply=kept.get("text"), truncated=bool(kept.get("truncated")),
                        finish_reason=kept.get("finish_reason"), tokens=kept.get("usage"),
-                       outcome=judges.UNRESOLVED, pending=True,
                        time_s=kept.get("request_time_seconds"))
-            row["flags"].append("answer_kept_ungraded_on_resume")
-            return self._close_slot(row, trail, judge_trail, None)
+            row["timing"] = {"slot_time_seconds": kept.get("request_time_seconds"),
+                             "first_token_seconds": kept.get("first_token_seconds")}
+            row["flags"].extend(kept.get("flags") or [])
+            row["flags"].append("finished_on_resume")
+            stop = self._grade_answer(row, slot, task, kept.get("text"), judge_trail,
+                                      resumed=True)
+            return self._close_slot(row, trail, judge_trail, stop)
         if used >= providers.MAX_REQUESTS_PER_SLOT:
             row.update(outcome="execution_error", pending=False)
             row["pass"] = False
@@ -1009,52 +1216,7 @@ class _Engine:
                              "first_token_seconds": last.first_token_seconds}
             row["flags"].extend(last.flags)
             row["time_s"] = last.request_time_seconds
-            judged = None
-            try:
-                first = self.grade(task, last.text)
-            except Exception as problem:
-                # The answer is paid for and kept. It is left ungraded and
-                # pending, and the run stops: a grader that cannot run would
-                # fail every later slot the same way.
-                first = {"outcome": judges.UNRESOLVED, "pass": None, "pending": True,
-                         "flags": ["grader_error:" + type(problem).__name__]}
-                stop = _Stop("interrupted: the grader could not run on %s (%s)"
-                             % (task["id"], type(problem).__name__))
-            final = first
-            needs = list(first.get("needs_judge") or [])
-            if needs:
-                row["needed_judge_classification"] = "outcome" in needs
-                try:
-                    judged = self._judge(slot, task, last.text, needs, judge_trail)
-                    row["judged"] = judged
-                    final = self._final_grade(task, last.text, first, judged)
-                except ledger.CapExceeded as cap:
-                    stop = _Stop("interrupted by cap: " + str(cap), cap.provider)
-                    final = {"outcome": first.get("outcome"), "pass": None, "pending": True}
-                    judged = {"outcome": None, "checks": {
-                        (item["id"] if isinstance(item, dict) else item): judges.UNRESOLVED
-                        for item in needs if item != "outcome"}}
-                    row["flags"].append("judging_refused_by_cap")
-                except ledger.ReservationExceeded as overrun:
-                    # The answer is paid for and kept; no judge request was
-                    # sent after the overrun, so the slot stays pending.
-                    stop = _Stop("interrupted: " + str(overrun), overrun.provider)
-                    final = {"outcome": first.get("outcome"), "pass": None, "pending": True}
-                    judged = {"outcome": None, "checks": {
-                        (item["id"] if isinstance(item, dict) else item): judges.UNRESOLVED
-                        for item in needs if item != "outcome"}}
-                    row["flags"].append("judging_refused_after_overrun")
-            outcome, passed = final.get("outcome"), final.get("pass")
-            pending = bool(final.get("pending"))
-            if outcome not in records.FINAL_OUTCOMES:
-                # The outcome is still with the judges: never a scored value.
-                outcome, passed, pending = judges.UNRESOLVED, None, True
-            row.update(outcome=outcome, pending=pending)
-            row["pass"] = passed
-            row["flags"].extend(final.get("flags", []))
-            row["checks"] = record_checks(outcome, passed, final, judged)
-            if isinstance(final.get("detail"), dict):
-                row["grader_detail"] = final["detail"]
+            stop = self._grade_answer(row, slot, task, last.text, judge_trail) or stop
         else:
             # No gradable answer: retries ran out, a timeout or a provider error.
             row.update(outcome="execution_error", pending=False)
@@ -1062,6 +1224,76 @@ class _Engine:
             row["failure_reason"] = trail[-1]["error"] if trail else None
             row["failure_class"] = trail[-1]["status"] if trail else None
         return self._close_slot(row, trail, judge_trail, stop)
+
+    def _grade_answer(self, row, slot, task, text, judge_trail, resumed=False):
+        """Grade one answer, ask the judges what the grader needs, and fill
+        the row. Returns a `_Stop` when the run must stop after this slot,
+        else None. No model request is ever sent from here.
+
+        With `resumed` true the answer came from the run record: verdicts
+        that are already in the log are reused and only the missing judge
+        requests are sent (see `_earlier_verdict`).
+        """
+        stop = None
+        judged = None
+        try:
+            first = self.grade(task, text)
+        except Exception as problem:
+            # The answer is paid for and kept. It is left ungraded and
+            # pending, and the run stops: a grader that cannot run would
+            # fail every later slot the same way. A resume grades it again.
+            first = {"outcome": judges.UNRESOLVED, "pass": None, "pending": True,
+                     "flags": ["grader_error:" + type(problem).__name__]}
+            stop = _Stop("interrupted: the grader could not run on %s (%s)"
+                         % (task["id"], type(problem).__name__))
+        final = first
+        needs = list(first.get("needs_judge") or [])
+        if needs:
+            row["needed_judge_classification"] = "outcome" in needs
+            try:
+                judged = self._judge(slot, task, text, needs, judge_trail,
+                                     resumed_flags=row["flags"] if resumed else None)
+                row["judged"] = judged
+                final = self._final_grade(task, text, first, judged)
+            except ledger.CapExceeded as cap:
+                stop = _Stop("interrupted by cap: " + str(cap), cap.provider)
+                final = {"outcome": first.get("outcome"), "pass": None, "pending": True}
+                judged = {"outcome": None, "checks": {
+                    (item["id"] if isinstance(item, dict) else item): judges.UNRESOLVED
+                    for item in needs if item != "outcome"}}
+                row["flags"].append("judging_refused_by_cap")
+            except ledger.ReservationExceeded as overrun:
+                # The answer is paid for and kept; no judge request was
+                # sent after the overrun, so the slot stays pending.
+                stop = _Stop("interrupted: " + str(overrun), overrun.provider)
+                final = {"outcome": first.get("outcome"), "pass": None, "pending": True}
+                judged = {"outcome": None, "checks": {
+                    (item["id"] if isinstance(item, dict) else item): judges.UNRESOLVED
+                    for item in needs if item != "outcome"}}
+                row["flags"].append("judging_refused_after_overrun")
+        outcome, passed = final.get("outcome"), final.get("pass")
+        pending = bool(final.get("pending"))
+        if outcome not in records.FINAL_OUTCOMES:
+            # The outcome is still with the judges: never a scored value.
+            outcome, passed, pending = judges.UNRESOLVED, None, True
+        row.update(outcome=outcome, pending=pending)
+        row["pass"] = passed
+        row["flags"].extend(final.get("flags", []))
+        row["checks"] = record_checks(outcome, passed, final, judged)
+        if isinstance(final.get("detail"), dict):
+            row["grader_detail"] = final["detail"]
+        return stop
+
+    def has_paid_answer(self, slot):
+        """True when the slot holds an answer that only has to be graded and
+        judged: it has a row that is not final, or it has no row and a model
+        request of it came back with an answer before the run stopped. Such
+        a slot is finished on a resume without a model request."""
+        row = self.record.rows.get(slot)
+        if row is not None:
+            return not records.is_final(row)
+        return any(((item["done"] or {}).get("result") or {}).get("status") == providers.OK
+                   for item in self.record.logged_model_requests(slot))
 
     def _close_slot(self, row, trail, judge_trail, stop):
         """Total the slot's charges, store its row, then stop if need be."""
@@ -1145,6 +1377,140 @@ class _Engine:
                 "qualified": panel is not None, "failures": failures}
 
 
+def _logged_prompt(item):
+    """The prompt of a request as it is written on its sent line."""
+    request = (item.get("sent") or {}).get("request") or {}
+    body = request.get("body") or {}
+    try:
+        if request.get("provider") == "openai":
+            return body["input"]
+        return body["messages"][0]["content"]
+    except (KeyError, IndexError, TypeError):
+        return None
+
+
+def adopt_ledger_only_requests(record, books, out=print):
+    """Bring the run log level with the ledgers when a run is reopened.
+
+    A request is reserved in its provider ledger (fsynced) before its sent
+    line is written to the run log. A run that dies between the two leaves
+    an id that only the ledger knows. Every such id of this run, model or
+    judge, is taken into the record here, before anything is sent: an audit
+    line (`ledger_only_request_found`, with the id, the provider and the
+    reserved amount) is appended and printed, the id is never issued again,
+    and it counts as one of its slot's or judge call's requests. The
+    reservation is left exactly as it is in the ledger, so it keeps counting
+    against the cap until it is reconciled. Returns the audit lines.
+    """
+    found = []
+    prefix = record.run_id + "/"
+    for provider, book in sorted(books.items()):
+        for request, entry in list(book.entries.items()):
+            if not request.startswith(prefix) or record.is_issued(request):
+                continue
+            line = record.ledger_only(request, provider, entry["reserved"], entry["charge"])
+            found.append(line)
+            out("  resume: request %s is in the %s ledger (reserved %s USD) and not in the run "
+                "log: the run stopped before it was written. The id is not used again, it "
+                "counts as a request already made, and its reservation stays in the ledger."
+                % (request, provider, entry["reserved"]))
+    return found
+
+
+def not_billed_reason(status, http_status):
+    """Why a result settles to zero, or None when it is charged. The one
+    rule, used when a result is settled as it arrives and when a resume
+    settles it from the run log: a request that the provider answered with
+    an HTTP error status was not billed."""
+    if status in (providers.TRANSPORT_ERROR, providers.PROVIDER_ERROR) \
+            and http_status not in (None, 200):
+        return "http_error_not_billed"
+    return None
+
+
+def _spec_for(config, sent):
+    """The model or judge spec, and so the price, of a logged request."""
+    pools = [config.models] if sent.get("kind") == "model" \
+        else [config.judges, config.all_judge_candidates()]
+    for pool in pools:
+        for spec in pool:
+            if spec.model_id == sent.get("model_id") and spec.provider == sent.get("provider"):
+                return spec
+    raise records.RecordError(
+        "request %s was made by %s, which is not in the run config; it cannot be settled "
+        "from the run log" % (sent.get("request_id"), sent.get("model_id")))
+
+
+def recover_received_requests(record, books, config, out=print):
+    """Finish, from the run log, every request whose response came back
+    and whose `done` line was never written. Runs when a run is reopened,
+    before anything is sent.
+
+    The `received` line holds the result and the billable usage, written
+    and fsynced before the ledger was settled. For each request of this run
+    with a `received` line and no `done` line:
+
+    - if its ledger entry is still open, it is settled now from the logged
+      usage at the price of its model, by the same rule as a live result
+      (`not_billed_reason`);
+    - if the ledger already shows it settled, the ledger is left alone;
+    - its `done` line is appended, built from the logged result and the
+      ledger figures, with an audit line, and one line is printed.
+
+    After that it is an ordinary finished request: its answer or verdict
+    is reused by the resume and no request is sent for it. Each step can be
+    repeated after a crash. Returns one entry per request recovered.
+    """
+    recovered = []
+    for item in record.logged_requests(record.run_id + "/"):
+        received = item.get("received")
+        if received is None or item["done"] is not None:
+            continue
+        request, sent = item["request_id"], item["sent"]
+        provider = sent.get("provider")
+        book = books.get(provider)
+        entry = None if book is None else book.entries.get(request)
+        if entry is None:
+            raise records.RecordError(
+                "request %s has a response in the run log and no reservation in the %s "
+                "ledger; repair it by hand before resuming" % (request, provider))
+        result = received.get("result") or {}
+        settled_now = entry["charge"] is None
+        if settled_now:
+            settled = book.settle(
+                request, received.get("billable"), _spec_for(config, sent).price,
+                zero_reason=not_billed_reason(result.get("status"), result.get("http_status")))
+        else:
+            settled = {"charge": entry["charge"], "reserved": entry["reserved"],
+                       "flags": list(entry["flags"]), "reconciled": entry["reconciled"]}
+        record.request_done(request, {
+            "result": result, "charge_usd": str(settled["charge"]),
+            "ledger_flags": settled["flags"], "reconciled": settled["reconciled"],
+            "finished_on_resume": True})
+        record.note(RECOVERED_EVENT, {
+            "request_id": request, "provider": provider, "charge_usd": str(settled["charge"]),
+            "reserved_usd": str(settled["reserved"]), "settled_on_resume": settled_now})
+        out("  resume: request %s had come back and was not finished: its response is in the "
+            "run log. %s at %s USD; its done line is written. It is not sent again."
+            % (request, "Settled now from the logged usage" if settled_now
+               else "The ledger already shows it settled", settled["charge"]))
+        recovered.append({"request_id": request, "provider": provider,
+                          "charge_usd": str(settled["charge"]),
+                          "reserved_usd": str(settled["reserved"]),
+                          "ledger_flags": list(settled["flags"]),
+                          "settled_on_resume": settled_now})
+    return recovered
+
+
+def reconcile_command(private_store, provider, request, live, run_id):
+    """The command that reconciles one request, as text for the operator."""
+    return ('python -I bench/daily-use/core/cli.py reconcile --private-store "%s" '
+            '--provider %s --request-id "%s" --usd <amount from the provider console> '
+            '--note "<what the console shows>"%s'
+            % (os.fspath(private_store), provider, request,
+               "" if live else " --dry-ledger " + run_id))
+
+
 def _ledgers(config, private_store, live, run_id):
     """Live ledgers are shared across runs. A dry run gets its own, so a
     rehearsal can never eat into the real caps. A run builds these with the
@@ -1180,10 +1546,8 @@ def overruns_on_file(books):
 
 
 def tasks_sha256(tasks):
-    """A fingerprint of what is sent for each task, so that a run is only
-    resumed against the task set it was started with."""
-    return content_sha256(sorted([task["id"], task["prompt"], task["max_output_tokens"]]
-                                 for task in tasks))
+    """Freeze the full normalised definitions, including all marking criteria."""
+    return content_sha256(sorted(tasks, key=lambda task: task["id"]))
 
 
 def caps_in_force(config, max_usd):
@@ -1245,6 +1609,23 @@ def _resumable(private_store, run_id, stage, config, tasks, live, qualification_
     if document.get("status") not in records.RESUMABLE:
         raise records.RecordError("run %s has status %s and cannot be resumed"
                                   % (run_id, document.get("status")))
+    _same_run(document, run_id, stage, config, tasks, live, qualification_run_id,
+              check_qualification_id)
+    raised = _caps_raised(document, config, max_usd)
+    if raised:
+        raise records.RecordError(
+            "run %s cannot be resumed with a higher cap: %s. A run never spends above the "
+            "caps it started with; a cap may only be lowered on resume."
+            % (run_id, "; ".join(raised)))
+    return document
+
+
+def _same_run(document, run_id, stage, config, tasks, live, qualification_run_id=None,
+              check_qualification_id=False):
+    """Refuse unless `document` is the run.json of this very run: same
+    stage, same kind (dry or live), same config apart from `caps_usd` and
+    `acknowledged_overruns`, same task set and, when asked, same judge
+    qualification."""
     different = []
     if document.get("stage") != stage:
         different.append("it is a %s run" % document.get("stage"))
@@ -1260,13 +1641,59 @@ def _resumable(private_store, run_id, stage, config, tasks, live, qualification_
         different.append("the judge qualification on record has changed")
     if different:
         raise records.RecordError("run %s cannot be resumed: %s" % (run_id, "; ".join(different)))
-    raised = _caps_raised(document, config, max_usd)
-    if raised:
-        raise records.RecordError(
-            "run %s cannot be resumed with a higher cap: %s. A run never spends above the "
-            "caps it started with; a cap may only be lowered on resume."
-            % (run_id, "; ".join(raised)))
-    return document
+
+
+def _finish_sealed(stage, config, tasks, *, private_store, run_id, live, out):
+    """Finish a canary or full run that was stopped while it was being
+    finalised: its staged folder is sealed (run.json says `finalised`) or
+    its final folder is already there.
+
+    Every slot of such a run is final and paid for. After checking that it
+    is the same run, this does what is left of finalising and nothing else:
+    `records.complete_finalisation` (the manifest, the move to
+    `runs/<run id>/`, the public record of a full run), then the stage index
+    entry of a live run. Each step is skipped when it is already done. No
+    request is sent, no key is loaded and no ledger is touched. A run with
+    nothing left to do is reported as already finalised.
+
+    No key guard is needed for the public record here: it is built only
+    from files that were written through the guard.
+    """
+    store = os.fspath(private_store)
+    document = records.sealed_document(store, run_id)
+    _same_run(document, run_id, stage, config, tasks, live)
+    listed = any(entry.get("run_id") == run_id for entry in _stage_history(store))
+    already = (os.path.isdir(os.path.join(store, "runs", run_id))
+               and (stage != "full" or os.path.isfile(
+                   os.path.join(store, "public", run_id, "public-record.json")))
+               and (listed or not live))
+    finalised = records.complete_finalisation(store, run_id)
+    if live:
+        _record_stage(store, _stage_entry(stage, run_id, config,
+                                          document.get("qualification_run_id")))
+    if already:
+        out("  resume: run %s is already finalised; nothing was left to do and nothing was "
+            "sent" % run_id)
+    else:
+        out("  resume: run %s was stopped while it was being finalised. Its finalising has "
+            "been completed from the record; nothing was sent." % run_id)
+    with open(os.path.join(finalised["dir"], "slots.json"), encoding="utf-8") as stream:
+        rows = json.load(stream)
+    by_pass = {}
+    for row in rows:
+        by_pass.setdefault(row.get("repeat"), []).append(records.is_final(row))
+    return {"run_id": run_id, "stage": stage, "live": bool(live), "seed": document.get("seed"),
+            "preflight": None, "qualification": None, "qualification_record": None,
+            "qualification_record_path": None,
+            "qualification_run_id": document.get("qualification_run_id"),
+            "finalised": finalised, "resumed": True, "pass_gates": [],
+            "ledger_only_requests": [], "recovered_requests": [],
+            "awaiting_reconciliation": [], "already_finalised": already,
+            "passes": {"required": document.get("required_passes"),
+                       "complete": sum(1 for finals in by_pass.values() if all(finals))},
+            "status": "finalised", "publishable": bool(document.get("publishable")),
+            "report": document.get("report"), "dir": finalised["dir"],
+            "remaining_caps": None, "run_committed_usd": None}
 
 
 def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, key_file=None,
@@ -1286,9 +1713,22 @@ def run_stage(stage, config, tasks, *, private_store, grade=None, live=False, ke
 
     `resume` is the run id of a stopped canary or full run in staging. The
     run carries on in its planned order under the same run id and the same
-    ledger; a slot that has a row is left alone, and no request id that is
-    in the log is issued again. A resume is refused when a provider cap or
-    `max_usd` is above the one the run started with.
+    ledger; a slot that has a final row is left alone, and no request id
+    that is in the log is issued again. In each pass the slots that already
+    hold a paid answer are finished first, without a model request: an
+    answer with no row is graded, a row left pending by the grader is
+    graded again, and a row pending on the judges gets only the judging
+    that is missing. The pass gate counts that work. A resume is refused
+    when a provider cap or `max_usd` is above the one the run started with.
+
+    Before anything is sent, a resume finishes from the run log every
+    request whose response had come back (`recover_received_requests`). A
+    request that was sent and has no response on record may have been
+    billed: its slot is skipped, or its judge call sends nothing, until it
+    is reconciled, and `awaiting_reconciliation` in the summary lists every
+    such request id. A run whose slots are all final (status `complete`) is
+    scored and finalised with nothing sent, and a run that was stopped
+    while it was being finalised is finished by `_finish_sealed`.
 
     One owner at a time: the execution lock of the private store
     (`ledger.StoreLock`) is taken before any ledger is read or any run
@@ -1356,6 +1796,10 @@ def _run_stage_locked(lock, stage, config, tasks, *, private_store, grade, live,
     """The rest of `run_stage`, with the store's execution lock held."""
     resuming = resume is not None
     resume_note = None
+    if resuming and stage != "qualify" and records.is_sealed(private_store, resume):
+        # Stopped while it was being finalised. Nothing is left to send.
+        return _finish_sealed(stage, config, tasks, private_store=private_store,
+                              run_id=resume, live=live, out=out)
     if resuming:
         # Before any ledger is built and long before the key file is read:
         # a resume with a cap above the one the run started with stops here.
@@ -1368,6 +1812,15 @@ def _run_stage_locked(lock, stage, config, tasks, *, private_store, grade, live,
         seed = seed if seed is not None else random.SystemRandom().randrange(2 ** 32)
         lock.describe(run_id)
     books = _ledgers(config, private_store, live, run_id)
+    torn_tails = []
+    for provider, book in sorted(books.items()):
+        for moved in book.torn_recovered:
+            torn_tails.append(dict(moved, provider=provider))
+            out("  the %s ledger ended in a part-written record (%d bytes at offset %d), "
+                "left by a run that died while writing it. It was moved to %s and cut from "
+                "the ledger; every earlier entry is kept."
+                % (provider, moved["length"], moved["offset"],
+                   moved["journal"] + ledger.TORN_SUFFIX))
     remaining = {provider: book.remaining for provider, book in books.items()}
     # A settled charge above its reservation, from this run or an earlier
     # one, refuses the start unless the config acknowledges it.
@@ -1425,15 +1878,58 @@ def _run_stage_locked(lock, stage, config, tasks, *, private_store, grade, live,
                       "whole_plan_gate": plan["whole_plan_gate"]},
     }, guard=guard, required_passes=preflight.REPEATS if stage == "full" else None)
     budget = ledger.Budget(books, run_id, max_usd=max_usd)
+    for moved in record.torn_recovered:
+        torn_tails.append(dict(moved, provider=None))
+        out("  the run log ended in a part-written line (%d bytes at offset %d), left by a "
+            "run that died while writing it. It was moved to %s and cut from the log."
+            % (moved["length"], moved["offset"], moved["journal"] + ledger.TORN_SUFFIX))
     engine = _Engine(config=config, tasks=tasks, stage=stage, record=record, budget=budget,
                      transport=transport, loaded_keys=loaded, grade=grade, clock=clock,
-                     sleep=sleep)
+                     sleep=sleep, out=out)
+    ledger_only, recovered, awaiting, blocked = [], [], [], {}
+    if resuming:
+        # Bring the log and the ledgers level before anything is sent.
+        try:
+            ledger_only = adopt_ledger_only_requests(record, books, out)
+            recovered = recover_received_requests(record, books, config, out)
+        except BaseException:
+            record.close()
+            raise
+        awaiting = engine.unknown_requests()
+        blocked = engine.blocked_slots()
+        sent_by = {item["request_id"]: item["sent"].get("provider")
+                   for item in record.logged_requests(run_id + "/")}
+        for request in awaiting:
+            provider = sent_by[request]
+            out("  resume: request %s was sent and has no result on record. It may have "
+                "been billed. Its %s stays pending. Reconcile the cost from the %s console "
+                "(or use --at-reserved-maximum). Accounting alone does not permit retry. "
+                "Only add --retry-lost-paid to authorise a SECOND PAID CALL:"
+                % (request, "slot" if request.rpartition("/")[0] in blocked else "judge call",
+                   provider))
+            out("    " + reconcile_command(private_store, provider, request, live, run_id))
+        for item in recovered:
+            if item["settled_on_resume"] and ledger.OVERRUN_FLAG in item["ledger_flags"] \
+                    and engine.overrun is None:
+                engine.overrun = ledger.ReservationExceeded(
+                    "a charge was above its reservation on %s: request %s was charged %s "
+                    "USD against a reservation of %s USD"
+                    % (item["provider"], item["request_id"], item["charge_usd"],
+                       item["reserved_usd"]),
+                    provider=item["provider"], request_id=item["request_id"])
     summary = {"run_id": run_id, "stage": stage, "live": bool(live), "seed": seed,
                "preflight": plan, "qualification": None, "qualification_record": None,
                "qualification_record_path": None,
                "qualification_run_id": qualification_run_id, "finalised": None,
-               "resumed": resuming, "pass_gates": []}
+               "resumed": resuming, "pass_gates": [],
+               "ledger_only_requests": [line["request_id"] for line in ledger_only],
+               "recovered_requests": [item["request_id"] for item in recovered],
+               "awaiting_reconciliation": list(awaiting), "torn_tails": torn_tails,
+               "already_finalised": False}
     try:
+        # A charge above its reservation that came to light while the log
+        # was brought level: nothing is sent.
+        engine.stop_if_overrun()
         if stage == "qualify":
             record.plan([])
             qualification = engine.qualify(checklist_samples, outcome_samples)
@@ -1453,10 +1949,24 @@ def _run_stage_locked(lock, stage, config, tasks, *, private_store, grade, live,
             numbers = sorted({slot["repeat"] for slot in slots})
             for number in numbers:
                 # Pass `number`: repeat `number` of every task for every
-                # model, each slot judged before the next one starts. A slot
-                # that already has a row (a resumed run) is left alone.
-                todo = [slot for slot in slots if slot["repeat"] == number
-                        and slot["slot_id"] not in record.rows]
+                # model, each slot judged before the next one starts. On a
+                # resumed run a slot with a final row is left alone. The
+                # slots of the pass that already hold a paid answer come
+                # first, in planned order: they are graded and judged from
+                # the record and no model request is sent for them. Then the
+                # unsent slots, in planned order. The gate counts both: a
+                # slot to finish at the planning bound of its judging, an
+                # unsent slot at its whole planning bound. A slot with a
+                # model request that awaits reconciliation is left out of
+                # all of it: nothing is sent for it and no row is written.
+                of_pass = [slot for slot in slots
+                           if slot["repeat"] == number and slot["slot_id"] not in blocked]
+                finish = [dict(slot, judging_only=True) for slot in of_pass
+                          if resuming and engine.has_paid_answer(slot["slot_id"])]
+                finishing = {slot["slot_id"] for slot in finish}
+                todo = finish + [slot for slot in of_pass
+                                 if slot["slot_id"] not in record.rows
+                                 and slot["slot_id"] not in finishing]
                 if not todo:
                     continue
                 gate = preflight.pass_gate(
@@ -1474,6 +1984,12 @@ def _run_stage_locked(lock, stage, config, tasks, *, private_store, grade, live,
                 for slot in todo:
                     engine.model_slot(by_model[slot["model_id"]], by_task[slot["task_id"]],
                                       slot["repeat"], resumed=resuming)
+            if blocked and record.status == "running":
+                waiting = sorted(request for group in blocked.values() for request in group)
+                record.mark_interrupted(
+                    "%d model request(s) were sent and have no result on record, so %d "
+                    "slot(s) were not carried on. Reconcile them, then resume: %s"
+                    % (len(waiting), len(blocked), ", ".join(waiting)))
     except _Stop as stop:
         record.mark_interrupted(stop.reason, stop.provider)
     except ledger.CapExceeded as cap:
@@ -1508,10 +2024,7 @@ def _run_stage_locked(lock, stage, config, tasks, *, private_store, grade, live,
                     private_store, signed,
                     guard=loaded.leaks_into if loaded is not None else None)
         if live:
-            entry = {"stage": stage, "run_id": run_id, "live": True,
-                     "judges": [judge.model_id for judge in config.judges],
-                     "config_sha256": config.sha256,
-                     "qualification_run_id": qualification_run_id}
+            entry = _stage_entry(stage, run_id, config, qualification_run_id)
             if stage == "qualify":
                 entry["qualification_run_id"] = run_id
                 entry["qualified"] = summary["qualification"]["qualified"]
