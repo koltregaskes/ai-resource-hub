@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T17:55:40.454Z",
+  "generatedAt": "2026-11-16T18:55:37.984Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T17:55:40.447Z",
+      "lastCheckedAt": "2026-11-16T18:55:37.980Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T17:55:39.022Z",
+      "lastCheckedAt": "2026-11-16T18:55:36.333Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "2 active incidents across 10 tracked components.",
@@ -138,10 +138,10 @@
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-11-16T15:10:15.167Z",
-          "updatedAt": "2026-11-16T16:27:03.838Z",
+          "updatedAt": "2026-11-16T18:10:10.242Z",
           "resolvedAt": null,
           "url": "https://stspg.io/01qq3kzyyqzl",
-          "summary": "We have temporarily paused Auto-join while we work on this. Adding Claude to a call by hand is also affected. Calls already in progress are not affected. We will provide another u..."
+          "summary": "Claude may still be unable to join some calls in Claude Meetings (beta), and Auto-join remains paused. Calls already in progress and other Claude features are not affected. We exp..."
         },
         {
           "id": "ct4c2pwf2xpj",
@@ -162,10 +162,10 @@
           "status": "investigating",
           "impact": "major",
           "startedAt": "2026-11-16T15:10:15.167Z",
-          "updatedAt": "2026-11-16T16:27:03.838Z",
+          "updatedAt": "2026-11-16T18:10:10.242Z",
           "resolvedAt": null,
           "url": "https://stspg.io/01qq3kzyyqzl",
-          "summary": "We have temporarily paused Auto-join while we work on this. Adding Claude to a call by hand is also affected. Calls already in progress are not affected. We will provide another u..."
+          "summary": "Claude may still be unable to join some calls in Claude Meetings (beta), and Auto-join remains paused. Calls already in progress and other Claude features are not affected. We exp..."
         },
         {
           "id": "r1b4f9bbnsx1",
@@ -213,7 +213,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T17:55:39.638Z",
+      "lastCheckedAt": "2026-11-16T18:55:36.898Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -233,7 +233,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T17:55:39.181Z",
+      "lastCheckedAt": "2026-11-16T18:55:36.472Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -276,7 +276,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T17:55:39.182Z",
+      "lastCheckedAt": "2026-11-16T18:55:36.166Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -362,7 +362,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T17:55:39.779Z",
+      "lastCheckedAt": "2026-11-16T18:55:37.133Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -386,7 +386,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []

@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 16 Nov 2026, 17:55 UTC
+Generated: 16 Nov 2026, 18:55 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 16 Nov 2026, 17:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 16 Nov 2026, 17:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 16 Nov 2026, 17:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 16 Nov 2026, 17:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 16 Nov 2026, 18:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 16 Nov 2026, 18:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 16 Nov 2026, 18:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 16 Nov 2026, 18:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 16 Nov 2026, 12:00 UTC | digest | FBI says Artex AI open-source hacking tool used to breach networks in &#8216;under three hours&#8217; | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours/) |
-| 16 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,027 open roles across 10 tracked companies. | `/jobs/` |
-| 16 Nov 2026, 12:00 UTC | digest | Jordan Belfort’s new AI voice startup, Tone, wants to sell like the &#8216;Wolf of Wall Street&#8217; | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/jordan-belforts-new-ai-voice-startup-tone-wants-to-sell-like-the-wolf-of-wall-street/) |
-| 16 Nov 2026, 12:00 UTC | digest | OpenAI will embed Apollo researchers to investigate AI subversion | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/openai-will-embed-apollo-researchers-to-investigate-ai-subversion/) |
+| 16 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,026 open roles across 10 tracked companies. | `/jobs/` |
+| 16 Nov 2026, 12:00 UTC | digest | Nvidia’s board is reportedly ‘not considering’ hiring Jensen Huang back | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1034501/nvidia-board-jensen-huang-not-bringing-back) |
 | 16 Nov 2026, 12:00 UTC | digest | Published the 2026-11-16 daily digest | 20 stories captured from 4 sources. | `/news/` |
+| 16 Nov 2026, 12:00 UTC | digest | Sam Altman on Nvidia without Jensen Huang: the industry will be &#8216;fine’ | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/sam-altman-on-nvidia-without-jensen-huang-the-industry-will-be-fine/) |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
