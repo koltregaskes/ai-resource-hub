@@ -79,6 +79,21 @@ test('renderer escapes text and rejects executable or credential-bearing source 
   assert.match(html, /&lt;script&gt;/);
   assert.doesNotMatch(renderMethodPanel({ model: 'A', sourceUrl: 'https://user:password@example.com' }), /href=/);
 });
+
+test('evidence dates reject calendar rollover and ambiguous timestamps', () => {
+  for (const value of ['2026-02-30', '2025-02-29', '2026-13-01', '11/16/2026', '2026-11-16T12:00:00', '2026-11-16T24:00:00Z']) {
+    for (const key of ['measuredAt', 'retrievedAt', 'releasedAt', 'revisedAt']) {
+      assert.throws(() => admitMethod(envelope({ ...internal, [key]: value })));
+    }
+    assert.match(renderMethodPanel({ model: 'A', measuredAt: value, now: new Date('2026-11-16') }), /Measurement age unknown/);
+  }
+  for (const value of ['2024-02-29', '2026-11-16T12:00:00Z', '2026-11-16T12:00:00.123+01:00']) {
+    assert.equal(admitMethod(envelope({ measuredAt: value })).measuredAt, value);
+  }
+  assert.match(render({ ...internal, measuredAt: '2026-11-18' }), /future; review required/);
+  assert.match(render({ ...internal, measuredAt: '2025-11-16' }), /within 365 days/);
+  assert.match(render({ ...internal, measuredAt: '2025-11-15' }), /Stale measurement/);
+});
 test('semantic disclosure has a named native summary and paired definition fields', () => {
   const html = render(internal);
   assert.match(html, /<details[^>]*><summary>Method and limits for Example A<\/summary>/);
