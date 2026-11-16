@@ -10,6 +10,19 @@ const CONTROLS = ['dataset', 'split', 'version', 'metric', 'promptVersion', 'sam
   'attempts', 'aggregation', 'contextLimit', 'tokenLimit'];
 const NUMBER_FIELDS = ['attempts', 'contextLimit', 'tokenLimit', 'sampleSize',
   'accuracy', 'brier', 'coverage', 'abstention', 'totalCostUsd', 'acceptedCorrect'];
+const DATE_FIELDS = ['measuredAt', 'retrievedAt', 'releasedAt', 'revisedAt'];
+
+// Require a real calendar day and explicit timezone for timestamps. Date.parse
+// alone rolls invalid days forward and accepts ambiguous locale date strings.
+function evidenceTime(value) {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?(?:Z|[+-]\d{2}:\d{2}))?$/.test(value)) return NaN;
+  const day = value.slice(0, 10);
+  const calendar = Date.parse(`${day}T00:00:00Z`);
+  if (!Number.isFinite(calendar) || new Date(calendar).toISOString().slice(0, 10) !== day) return NaN;
+  // ISO 24:00 rolls into the following day; evidence must name that day explicitly.
+  if (value.length > 10 && Number(value.slice(11, 13)) > 23) return NaN;
+  return Date.parse(value);
+}
 
 /** Fail closed on unexpected keys at every admitted level; do not persist input. */
 export function admitMethod(input) {
@@ -25,6 +38,7 @@ export function admitMethod(input) {
   if (Object.keys(method).some(k => !METHOD_FIELDS.includes(k))) throw Error('Unexpected method field');
   for (const [key, value] of Object.entries(method)) {
     if (value === null) continue;
+    if (DATE_FIELDS.includes(key) && !Number.isFinite(evidenceTime(value))) throw Error('Invalid evidence date');
     if (NUMBER_FIELDS.includes(key)) {
       if (typeof value !== 'number' || !Number.isFinite(value) || value < 0) throw Error('Invalid aggregate number');
       if (['accuracy', 'coverage', 'abstention', 'brier'].includes(key) && value > 1) throw Error('Invalid probability');
@@ -72,7 +86,7 @@ const labels = {
 export function renderMethodPanel({ model, measuredAt = null, sourceUrl = null, method = null, now = new Date() }) {
   const values = method ?? { model, measuredAt };
   const measured = values.measuredAt;
-  const age = measured ? (now.getTime() - Date.parse(measured)) / 86400000 : NaN;
+  const age = (now.getTime() - evidenceTime(measured)) / 86400000;
   const freshness = !Number.isFinite(age) ? 'Measurement age unknown'
     : age < -1 ? 'Measurement date is in the future; review required'
     : age > 365 ? 'Stale measurement (over 365 days)' : 'Measurement within 365 days';
