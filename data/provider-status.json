@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T07:55:42.069Z",
+  "generatedAt": "2026-11-16T08:36:23.358Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T07:55:42.062Z",
+      "lastCheckedAt": "2026-11-16T08:36:23.351Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T07:55:40.868Z",
+      "lastCheckedAt": "2026-11-16T08:36:21.962Z",
       "overallStatus": "degraded",
       "overallLabel": "Minor Service Outage",
       "summary": "2 active incidents across 10 tracked components.",
@@ -135,13 +135,13 @@
         {
           "id": "r1b4f9bbnsx1",
           "title": "Elevated errors for Claude Sonnet 5.5 and Claude Fable 5.2",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "major",
           "startedAt": "2026-11-16T07:49:55.066Z",
-          "updatedAt": "2026-11-16T07:49:55.388Z",
+          "updatedAt": "2026-11-16T08:02:25.388Z",
           "resolvedAt": null,
           "url": "https://stspg.io/n18qjkd7dt4q",
-          "summary": "We are currently investigating this issue."
+          "summary": "A fix has been deployed for Claude Sonnet 5.5 and other Claude models and we are monitoring for recovery."
         },
         {
           "id": "ct4c2pwf2xpj",
@@ -159,13 +159,13 @@
         {
           "id": "r1b4f9bbnsx1",
           "title": "Elevated errors for Claude Sonnet 5.5 and Claude Fable 5.2",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "major",
           "startedAt": "2026-11-16T07:49:55.066Z",
-          "updatedAt": "2026-11-16T07:49:55.388Z",
+          "updatedAt": "2026-11-16T08:02:25.388Z",
           "resolvedAt": null,
           "url": "https://stspg.io/n18qjkd7dt4q",
-          "summary": "We are currently investigating this issue."
+          "summary": "A fix has been deployed for Claude Sonnet 5.5 and other Claude models and we are monitoring for recovery."
         },
         {
           "id": "ct4c2pwf2xpj",
@@ -213,7 +213,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T07:55:41.516Z",
+      "lastCheckedAt": "2026-11-16T08:36:22.839Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -233,7 +233,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T07:55:40.891Z",
+      "lastCheckedAt": "2026-11-16T08:36:22.226Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -276,7 +276,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T07:55:41.021Z",
+      "lastCheckedAt": "2026-11-16T08:36:21.948Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -362,7 +362,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-16T07:55:41.723Z",
+      "lastCheckedAt": "2026-11-16T08:36:22.958Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -386,7 +386,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
