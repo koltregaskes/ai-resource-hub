@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 16 Nov 2026, 19:55 UTC
+Generated: 16 Nov 2026, 20:23 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 16 Nov 2026, 19:55 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 16 Nov 2026, 19:55 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 16 Nov 2026, 19:55 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 16 Nov 2026, 19:55 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 16 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,026 open roles across 10 tracked companies. | `/jobs/` |
-| 16 Nov 2026, 12:00 UTC | digest | Nvidia’s board is reportedly ‘not considering’ hiring Jensen Huang back | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1034501/nvidia-board-jensen-huang-not-bringing-back) |
+| 16 Nov 2026, 20:23 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 16 Nov 2026, 20:23 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 16 Nov 2026, 20:23 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 16 Nov 2026, 20:23 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 16 Nov 2026, 12:00 UTC | digest | Apple is testing daily usage limits for more complex Siri AI interactions | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1034581/apple-intelligence-siri-ai-daily-usage-limits-icloud-subscription) |
+| 16 Nov 2026, 12:00 UTC | digest | California state AG sues OpenAI over rogue agent incidents | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/) |
+| 16 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,025 open roles across 10 tracked companies. | `/jobs/` |
+| 16 Nov 2026, 12:00 UTC | digest | OpenAI wants to stop deepfakes from overwhelming child abuse tiplines | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/1034527/openai-csam-classifier) |
 | 16 Nov 2026, 12:00 UTC | digest | Published the 2026-11-16 daily digest | 20 stories captured from 4 sources. | `/news/` |
-| 16 Nov 2026, 12:00 UTC | digest | Sam Altman on Nvidia without Jensen Huang: the industry will be &#8216;fine’ | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/sam-altman-on-nvidia-without-jensen-huang-the-industry-will-be-fine/) |
-| 16 Nov 2026, 12:00 UTC | digest | Trump says ex-Nvidia CEO Jensen Huang&#8217;s affair with an alleged Chinese spy did not threaten national security | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/trump-says-ex-nvidia-ceo-jensen-huangs-affair-with-an-alleged-chinese-spy-did-not-threaten-national-security/) |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
