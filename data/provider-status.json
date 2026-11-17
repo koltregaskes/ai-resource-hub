@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T20:57:28.380Z",
+  "generatedAt": "2026-11-17T21:59:05.771Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T20:57:28.376Z",
+      "lastCheckedAt": "2026-11-17T21:59:05.764Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,10 +100,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T20:57:26.381Z",
+      "lastCheckedAt": "2026-11-17T21:59:04.063Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
-      "summary": "2 active incidents across 10 tracked components.",
+      "summary": "1 active incident across 10 tracked components.",
       "notes": null,
       "components": [
         {
@@ -142,30 +142,19 @@
           "resolvedAt": null,
           "url": "https://stspg.io/01qq3kzyyqzl",
           "summary": "Claude Meetings (beta) saw higher than expected demand today, and Claude was unable to join many calls. We have put mitigations in place and are continuing to monitor and improve..."
-        },
-        {
-          "id": "1lglzf469c0z",
-          "title": "Some users unable to sign in with Apple on claude.ai and the Claude iOS app",
-          "status": "identified",
-          "impact": "major",
-          "startedAt": "2026-11-17T18:55:53.499Z",
-          "updatedAt": "2026-11-17T18:56:06.196Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/3tl6h35nnzwm",
-          "summary": "We have identified the cause of the issue affecting claude.ai and are working on a fix. We will provide an update as soon as possible."
         }
       ],
       "recentIncidents": [
         {
           "id": "1lglzf469c0z",
           "title": "Some users unable to sign in with Apple on claude.ai and the Claude iOS app",
-          "status": "identified",
+          "status": "resolved",
           "impact": "major",
           "startedAt": "2026-11-17T18:55:53.499Z",
-          "updatedAt": "2026-11-17T18:56:06.196Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-11-17T21:51:09.296Z",
+          "resolvedAt": "2026-11-17T21:51:09.266Z",
           "url": "https://stspg.io/3tl6h35nnzwm",
-          "summary": "We have identified the cause of the issue affecting claude.ai and are working on a fix. We will provide an update as soon as possible."
+          "summary": "The issue affecting Sign in with Apple on claude.ai and the Claude iOS app has been resolved. Impact occurred from 08:40 PT / 16:40 UTC to 12:20 PT / 20:20 UTC."
         },
         {
           "id": "ct4c2pwf2xpj",
@@ -213,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T20:57:26.387Z",
+      "lastCheckedAt": "2026-11-17T21:59:04.042Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -310,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T20:57:27.150Z",
+      "lastCheckedAt": "2026-11-17T21:59:04.875Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -330,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T20:57:26.725Z",
+      "lastCheckedAt": "2026-11-17T21:59:04.421Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -373,7 +362,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T20:57:27.329Z",
+      "lastCheckedAt": "2026-11-17T21:59:05.122Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -397,7 +386,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
