@@ -19,11 +19,11 @@
  *   - Log clearly what's LIVE vs CACHED
  *   - Write to both SQLite and Postgres so all sites benefit
  */
-import { getDB, logScrapeRun } from './base';
+import { getDB } from './base';
 import { getOptionalDatabaseUrl } from '../../src/db/database-url';
 import pg from 'pg';
 import type Database from 'better-sqlite3';
-import { blockedSourceById, isBlockedSource } from '../../src/data/source-policy';
+import { permittedFallback, recordCreativeCollection, skipBlockedSource } from './source-policy-collection';
 
 interface CreativeScore {
   modelName: string;
@@ -98,7 +98,7 @@ async function tryFetchAA(category: string, url: string): Promise<CreativeScore[
 
 // ─── Known fallback data ────────────────────────────────────────
 // Validated scores from manual checks. Updated when live scraping succeeds.
-// These ensure the pipeline always produces output even when APIs are down.
+// Source policy can exclude every fallback row; the receipt must explain that case.
 
 function getKnownScores(): CreativeScore[] {
   return [
@@ -209,10 +209,7 @@ async function main() {
   const allScores: CreativeScore[] = [];
 
   // Hub #1569: no requests to Artificial Analysis while its terms bar our use.
-  const aaBlocked = blockedSourceById('artificial-analysis');
-  if (aaBlocked) {
-    console.log(`  ⊘ Artificial Analysis arenas skipped: blocked source (${aaBlocked.termsUrl}).`);
-  } else {
+  if (!skipBlockedSource(db, 'creative-benchmarks:artificial-analysis', 'artificial-analysis')) {
     console.log('  Checking Artificial Analysis arenas...');
     const imageScores = await tryFetchAA('image_generation', AA_ENDPOINTS.image);
     const videoScores = await tryFetchAA('video_generation', AA_ENDPOINTS.video);
@@ -222,14 +219,21 @@ async function main() {
 
   // If we got no live data, use fallback, minus any rows from a blocked source.
   const isLive = allScores.length > 0;
+  let fallback: ReturnType<typeof permittedFallback<CreativeScore>> | undefined;
   if (!isLive) {
-    const known = getKnownScores();
-    const licensed = known.filter((s) => !isBlockedSource(s.sourceName, s.sourceUrl));
-    console.log(`\n  No live arena data — using fallback scores (${licensed.length} of ${known.length}; ${known.length - licensed.length} from blocked sources left out)`);
-    allScores.push(...licensed);
+    fallback = permittedFallback(getKnownScores());
+    console.log(`\n  ${fallback.reason}`);
+    allScores.push(...fallback.scores);
   }
 
   console.log(`\n  Total scores to write: ${allScores.length}`);
+
+  if (allScores.length === 0) {
+    recordCreativeCollection(db, 0, false, fallback);
+    console.log('  No scores written. See the scrape receipt for the reason.');
+    db.close();
+    return;
+  }
 
   // Write to SQLite (local Hub DB)
   const sqliteCount = writeToSQLite(db, allScores);
@@ -239,7 +243,7 @@ async function main() {
   const pgCount = await writeToPostgres(allScores);
   console.log(`  Postgres: ${pgCount} scores written`);
 
-  logScrapeRun(db, 'creative-benchmarks', isLive ? 'live' : 'fallback', allScores.length);
+  recordCreativeCollection(db, sqliteCount, isLive, fallback);
   console.log(`\n  Source: ${isLive ? 'LIVE from Artificial Analysis' : 'CACHED fallback data'}`);
   console.log('  Done.');
 }

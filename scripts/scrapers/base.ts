@@ -112,21 +112,7 @@ export function upsertModels(db: Database.Database, models: ScrapedModel[]): num
   return updated;
 }
 
-/**
- * Log a scraper run.
- */
-export function logScrapeRun(
-  db: Database.Database,
-  scraper: string,
-  status: 'success' | 'error' | 'live' | 'fallback' | 'computed',
-  modelsUpdated: number,
-  errorMessage?: string
-): void {
-  db.prepare(`
-    INSERT INTO scrape_log (scraper, status, models_updated, error_message, finished_at)
-    VALUES (?, ?, ?, ?, datetime('now'))
-  `).run(scraper, status, modelsUpdated, errorMessage ?? null);
-}
+export { logScrapeRun } from './scrape-log';
 
 /**
  * Fetch a URL and return the text content.

@@ -1,6 +1,6 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
-import { benchmarkFreshness } from './benchmark-freshness';
+import { benchmarkFreshness, scrapeRunExplanation } from './benchmark-freshness';
 import { blogPostHref, blogPosts } from './blog-posts';
 
 import {
@@ -240,9 +240,19 @@ const SCRAPER_ACTIVITY_LABELS: Record<string, { title: string; detail: string; h
     detail: 'Collection attempt only; cached scores and transport success do not verify measurements.',
     href: '/benchmarks/',
   },
-  'benchmarks:open-llm-leaderboard': {
-    title: 'Attempted Open LLM benchmark collection',
-    detail: 'Collection attempt only; public ranking still requires exact dated evidence.',
+  'benchmarks:artificial-analysis': {
+    title: 'Checked cached Artificial Analysis report',
+    detail: 'A cached report is not a new retrieval or verified measurement.',
+    href: '/benchmarks/',
+  },
+  'creative-benchmarks': {
+    title: 'Attempted creative benchmark collection',
+    detail: 'Collection status does not verify measurement dates.',
+    href: '/benchmarks/',
+  },
+  'creative-benchmarks:artificial-analysis': {
+    title: 'Checked creative benchmark source policy',
+    detail: 'Source policy check only.',
     href: '/benchmarks/',
   },
 };
@@ -830,16 +840,21 @@ export function getAgiOverview(): AgiOverview {
   };
 }
 
-export function getDataPulse(basePath = '/'): DataPulseEntry[] {
+export function getDataPulse(basePath = '/', scrapeLogs = readCacheArray<CacheScrapeLog>('scrape_log')): DataPulseEntry[] {
   const digest = getLatestDigest();
   const jobsOverview = getAIJobsOverview();
-  const benchmarkRefresh = benchmarkFreshness(getBenchmarkScores(), readCacheArray<CacheScrapeLog>('scrape_log'));
+  const benchmarkRefresh = benchmarkFreshness(getBenchmarkScores(), scrapeLogs);
+  const speedAttempt = [...scrapeLogs].filter((entry) => entry.scraper === 'speed')
+    .sort((a, b) => Date.parse(normaliseDateTime(b.finished_at ?? b.started_at) ?? '')
+      - Date.parse(normaliseDateTime(a.finished_at ?? a.started_at) ?? '') || b.id - a.id)[0];
+  const speedUnavailable = speedAttempt && ['blocked', 'error', 'fallback'].includes(speedAttempt.status);
 
   return [
     {
       id: 'meta',
       label: 'Evaluated composite',
-      note: 'Latest measurement among exact evidence-backed rows; collection and recomputation do not refresh measurement dates.',
+      note: ['Latest measurement among exact evidence-backed rows; collection and recomputation do not refresh measurement dates.',
+        ...benchmarkRefresh.blockedReasons].join(' '),
       updatedAt: benchmarkRefresh.measuredAt,
       attemptedAt: benchmarkRefresh.attemptedAt,
       sourceVerifiedAt: benchmarkRefresh.sourceVerifiedAt,
@@ -855,8 +870,11 @@ export function getDataPulse(basePath = '/'): DataPulseEntry[] {
     {
       id: 'speed',
       label: 'Speed measurements',
-      note: 'Latency and tokens-per-second snapshots for tracked models.',
-      updatedAt: getLastScrapeTime('speed'),
+      note: speedUnavailable ? scrapeRunExplanation(speedAttempt.status, speedAttempt.error_message)
+        : 'Latency and tokens-per-second snapshots for tracked models.',
+      updatedAt: speedUnavailable ? null : getLastScrapeTime('speed'),
+      attemptedAt: normaliseDateTime(speedAttempt?.finished_at ?? speedAttempt?.started_at),
+      sourceVerifiedAt: null,
       href: `${basePath}speed/`,
     },
     {
@@ -878,11 +896,11 @@ export function getDataPulse(basePath = '/'): DataPulseEntry[] {
   ];
 }
 
-function latestScrapeActivities(basePath: string): ActivityEntry[] {
-  const logs = readCacheArray<CacheScrapeLog>('scrape_log')
-    .filter((entry) => entry.status === 'success' || entry.status === 'computed'
-      || (entry.scraper.startsWith('benchmarks:') && ['live', 'fallback'].includes(entry.status)))
-    .sort((a, b) => Date.parse(normaliseDateTime(b.finished_at) ?? '') - Date.parse(normaliseDateTime(a.finished_at) ?? ''));
+export function latestScrapeActivities(basePath: string, scrapeLogs = readCacheArray<CacheScrapeLog>('scrape_log')): ActivityEntry[] {
+  // Select the newest receipt before filtering so a block/error cannot reveal an old success instead.
+  const logs = [...scrapeLogs]
+    .sort((a, b) => Date.parse(normaliseDateTime(b.finished_at ?? b.started_at) ?? '')
+      - Date.parse(normaliseDateTime(a.finished_at ?? a.started_at) ?? '') || b.id - a.id);
 
   const latestByScraper = new Map<string, CacheScrapeLog>();
   for (const log of logs) {
@@ -898,8 +916,11 @@ function latestScrapeActivities(basePath: string): ActivityEntry[] {
         id: `scrape-${entry.scraper}`,
         date: normaliseDateTime(entry.finished_at) ?? normaliseDateTime(entry.started_at) ?? new Date(0).toISOString(),
         category: 'data' as const,
-        title: config.title,
-        detail: config.detail,
+        title: entry.status === 'blocked' ? 'Collection blocked by source policy'
+          : entry.status === 'error' ? `Collection failed: ${config.title}`
+          : entry.status === 'fallback' ? 'Cached fallback used; no live scores retrieved' : config.title,
+        detail: ['blocked', 'error', 'fallback'].includes(entry.status)
+          ? scrapeRunExplanation(entry.status, entry.error_message) : config.detail,
         href: `${basePath}${config.href.replace(/^\//, '')}`,
       };
     });

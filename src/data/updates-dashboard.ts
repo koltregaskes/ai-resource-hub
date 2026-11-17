@@ -5,7 +5,7 @@ import { getBenchmarkScores, getLastScrapeTime, getNews, getRecentModels } from 
 import { benchmarkFreshness } from './benchmark-freshness';
 import { getAiMilestonesOverview } from './ai-milestones';
 import { modelReleaseDesk } from './model-release-desk.generated';
-import { getLatestDigest, normaliseDateTime } from './hub-dashboard';
+import { getDataPulse, getLatestDigest, normaliseDateTime } from './hub-dashboard';
 import { getAvailabilityOverview, getAvailabilityRows } from './model-availability';
 
 export interface UpdateHighlight {
@@ -329,12 +329,12 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
       href: formatRoute(basePath, '/benchmarks/'),
       summary: 'Only exact dated evidence is eligible for public comparison. Cached inputs and successful collection attempts do not establish current measurements.',
       sources: [
-        'Artificial Analysis and other benchmark owners',
-        'LMSYS / arena-style public benchmark sources',
+        'Exact dated evidence from permitted benchmark owners',
+        'Artificial Analysis and Arena are blocked by source policy',
         'Research repositories and public eval feeds where intended for reuse',
       ],
       lastRefreshed: benchmarkMeasuredAt,
-      note: 'Raw evidence gaps remain quarantined. Collection health and source verification require separate evidence.',
+      note: getDataPulse(basePath).find((entry) => entry.id === 'meta')?.note,
       highlights: benchmarkUpdates,
     },
     {
