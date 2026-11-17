@@ -43,11 +43,15 @@ OUTPUT_LIMITS = (4096, 8192)
 # and live validation.
 JUDGE_MAX_OUTPUT_TOKENS = 400
 # The most that may be spent with each provider, in USD. This is the owner's
-# authority, typed by the owner on 15 November 2026. A run config may set
+# authority, typed by the owner on 15 November 2026 (90 USD OpenAI, 60 USD
+# Anthropic). OpenAI raised to 115 USD on 17 November 2026: the owner asked for
+# the whole prepaid OpenAI grant to be used on benchmarking before it expires
+# on 20 November (verified balance 115.58 USD, 116 USD granted, auto-reload
+# off); 115 leaves at least 1 USD of the grant unused. A run config may set
 # `caps_usd` at or below these figures; a config above either one is not
 # ready for a live run. Raising a figure here needs a reviewed commit: no
 # config field, command-line option or resume can do it.
-AUTHORISED_CAPS_USD = {"openai": Decimal("90"), "anthropic": Decimal("60")}
+AUTHORISED_CAPS_USD = {"openai": Decimal("115"), "anthropic": Decimal("60")}
 # Read from the provider references on 14 November 2026 (see RUNNER.md).
 # Anthropic: the `anthropic-version` header values. 2026-10-21 rejects
 # `temperature` on every model; 2023-06-01 still takes it.
