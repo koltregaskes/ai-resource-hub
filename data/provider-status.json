@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T18:57:40.296Z",
+  "generatedAt": "2026-11-17T19:59:04.661Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T18:57:40.291Z",
+      "lastCheckedAt": "2026-11-17T19:59:04.654Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T18:57:38.737Z",
+      "lastCheckedAt": "2026-11-17T19:59:03.201Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "2 active incidents across 10 tracked components.",
@@ -213,7 +213,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T18:57:38.701Z",
+      "lastCheckedAt": "2026-11-17T19:59:03.124Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -248,24 +248,24 @@
         {
           "id": "01M7N9VNR6X5SEC90M1YCDB36D",
           "title": "Costs API data is delayed",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-11-17T17:46:15.000Z",
-          "updatedAt": "2026-11-17T18:41:57.000Z",
+          "updatedAt": "2026-11-17T19:53:49.000Z",
           "resolvedAt": null,
-          "summary": "We have identified the issue, it was due to an internal account, that jumped from 100 groups to 400+ groups, breaking rockset's ingestion. We have identified a simple fix for this..."
+          "summary": "We've pushed a fix and are monitoring the recovery."
         }
       ],
       "recentIncidents": [
         {
           "id": "01M7N9VNR6X5SEC90M1YCDB36D",
           "title": "Costs API data is delayed",
-          "status": "investigating",
+          "status": "monitoring",
           "impact": "minor",
           "startedAt": "2026-11-17T17:46:15.000Z",
-          "updatedAt": "2026-11-17T18:41:57.000Z",
+          "updatedAt": "2026-11-17T19:53:49.000Z",
           "resolvedAt": null,
-          "summary": "We have identified the issue, it was due to an internal account, that jumped from 100 groups to 400+ groups, breaking rockset's ingestion. We have identified a simple fix for this..."
+          "summary": "We've pushed a fix and are monitoring the recovery."
         },
         {
           "id": "01M7ATRS6BMZ61E4JDHJGM79Y0",
@@ -310,7 +310,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T18:57:39.472Z",
+      "lastCheckedAt": "2026-11-17T19:59:04.124Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -330,7 +330,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T18:57:38.983Z",
+      "lastCheckedAt": "2026-11-17T19:59:03.598Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -373,7 +373,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T18:57:39.650Z",
+      "lastCheckedAt": "2026-11-17T19:59:04.305Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
