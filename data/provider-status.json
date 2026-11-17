@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T16:59:07.884Z",
+  "generatedAt": "2026-11-17T17:58:05.678Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T16:59:07.877Z",
+      "lastCheckedAt": "2026-11-17T17:58:05.673Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T16:59:05.795Z",
+      "lastCheckedAt": "2026-11-17T17:58:03.193Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
@@ -192,6 +192,103 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-11-17T17:58:03.263Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Compliance API",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Chat Completions",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Agents",
+          "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01M7N9VNR6X5SEC90M1YCDB36D",
+          "title": "Costs API data is delayed",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-11-17T17:46:15.000Z",
+          "updatedAt": "2026-11-17T17:46:15.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified a delay in our Costs API. We are working to resolve the issue."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01M7N9VNR6X5SEC90M1YCDB36D",
+          "title": "Costs API data is delayed",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-11-17T17:46:15.000Z",
+          "updatedAt": "2026-11-17T17:46:15.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified a delay in our Costs API. We are working to resolve the issue."
+        },
+        {
+          "id": "01M7ATRS6BMZ61E4JDHJGM79Y0",
+          "title": "Delayed Costs Data in the Compliance API",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-13T16:10:07.000Z",
+          "updatedAt": "2026-11-16T00:17:25.000Z",
+          "resolvedAt": "2026-11-16T00:17:25.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M7C40W0N5MZHNW0YM09QV962",
+          "title": "Elevated errors with ChatGPT billing and Ads billing",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-11-14T04:11:04.000Z",
+          "updatedAt": "2026-11-14T05:27:53.000Z",
+          "resolvedAt": "2026-11-14T05:27:53.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M78GAT3AK9P9W8Z230KHFVE8",
+          "title": "Elevated errors affecting the Microsoft 365 connector",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-12T18:29:14.000Z",
+          "updatedAt": "2026-11-14T00:18:13.000Z",
+          "resolvedAt": "2026-11-14T00:18:13.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        }
+      ]
+    },
+    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -202,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T16:59:06.531Z",
+      "lastCheckedAt": "2026-11-17T17:58:04.109Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T16:59:05.939Z",
+      "lastCheckedAt": "2026-11-17T17:58:03.639Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -255,92 +352,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T16:59:05.841Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Chat Completions",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Agents",
-          "status": "operational"
-        },
-        {
-          "name": "Decisions",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01M7ATRS6BMZ61E4JDHJGM79Y0",
-          "title": "Delayed Costs Data in the Compliance API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-13T16:10:07.000Z",
-          "updatedAt": "2026-11-16T00:17:25.000Z",
-          "resolvedAt": "2026-11-16T00:17:25.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M7C40W0N5MZHNW0YM09QV962",
-          "title": "Elevated errors with ChatGPT billing and Ads billing",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-11-14T04:11:04.000Z",
-          "updatedAt": "2026-11-14T05:27:53.000Z",
-          "resolvedAt": "2026-11-14T05:27:53.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M78GAT3AK9P9W8Z230KHFVE8",
-          "title": "Elevated errors affecting the Microsoft 365 connector",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-12T18:29:14.000Z",
-          "updatedAt": "2026-11-14T00:18:13.000Z",
-          "resolvedAt": "2026-11-14T00:18:13.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M79GYA0GA772Y6D089AH5478",
-          "title": "Sites: Publishing failing",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-13T03:59:08.000Z",
-          "updatedAt": "2026-11-13T05:55:44.000Z",
-          "resolvedAt": "2026-11-13T05:55:44.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -351,7 +362,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T16:59:06.762Z",
+      "lastCheckedAt": "2026-11-17T17:58:04.214Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -375,7 +386,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
