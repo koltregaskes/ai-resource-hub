@@ -22,9 +22,11 @@ import {
   PROVIDER_PREFIX_MAP,
   deriveModelIdFromOpenRouterId,
   findCatalogModelByAlias,
+  getCatalogModelsById,
   getOpenRouterModelMap,
   getWatchedProviderPrefixes,
 } from '../model-catalog';
+import { cleanOpenRouterName, isOpenRouterVariant, nameForMatchedModel } from '../lib/registry-guards';
 
 // ─── OpenRouter API types ──────────────────────────────────────
 interface OpenRouterModel {
@@ -236,9 +238,8 @@ const MODEL_MAP: Record<string, string> = {
 const WATCHED_PROVIDERS = getWatchedProviderPrefixes();
 const DISCOVERY_EXCLUDE_PATTERN = /\b(guard|moderation|embed|embedding|rerank|tts|transcribe|speech-to-text|text-to-speech|whisper)\b/i;
 
-function cleanModelName(name: string): string {
-  return name.replace(/^[^:]+:\s*/, '').trim();
-}
+const cleanModelName = cleanOpenRouterName;
+const catalogNames: ReadonlyMap<string, string> = new Map([...getCatalogModelsById()].map(([id, model]) => [id, model.name]));
 
 function resolveDbId(orModel: OpenRouterModel, validModelIds: Set<string>): string | null {
   const mapped = MODEL_MAP[orModel.id];
@@ -311,6 +312,10 @@ async function scrapeOpenRouter(
   let matched = 0;
 
   for (const orModel of data.data) {
+    // Hub #1534: ":batch", ":free" and similar ids are price tiers of a base
+    // model, not models. Matching them overwrote base names ("o3 (batch)")
+    // and prices (o3 showed the $1/$4 batch price instead of $2/$8).
+    if (isOpenRouterVariant(orModel.id)) continue;
     const dbId = resolveDbId(orModel, validModelIds);
     const prefix = orModel.id.split('/')[0];
     const providerId = dbId ? resolveProviderId(orModel, dbId, knownModels) : (PROVIDER_PREFIX_MAP[prefix] ?? null);
@@ -372,7 +377,7 @@ async function scrapeOpenRouter(
 
     models.push({
       id: dbId,
-      name: cleanModelName(orModel.name),
+      name: nameForMatchedModel(dbId, orModel.name, catalogNames),
       providerId,
       inputPrice: Math.round(inputPrice * 1000) / 1000,
       outputPrice: Math.round(outputPrice * 1000) / 1000,

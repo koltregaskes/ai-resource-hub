@@ -24,6 +24,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           ref: main
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v6
@@ -49,4 +50,4 @@ jobs:
           git config user.email "bot@theairesourcehub.com"
           git add data/provider-status.json
           git commit -m "chore: refresh provider status $(date +%Y-%m-%dT%H:%MZ) [automated]"
-          git push
+          bash scripts/push-generated-data.sh

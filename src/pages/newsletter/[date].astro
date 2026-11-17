@@ -1,0 +1,40 @@
+---
+import { serializeJsonLd } from '../../lib/json-ld';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EditionView from '../../components/newsletter/EditionView.astro';
+import { getEditions, isoWeekId, type Edition } from '../../data/newsletter-editions';
+import { editionStructuredData } from '../../lib/edition-jsonld';
+
+export function getStaticPaths() {
+  const editions = getEditions();
+  return editions.map((edition, index) => ({
+    params: { date: edition.date },
+    props: {
+      edition,
+      next: index > 0 ? { date: editions[index - 1].date, shortLabel: editions[index - 1].shortLabel } : null,
+      previous: index < editions.length - 1 ? { date: editions[index + 1].date, shortLabel: editions[index + 1].shortLabel } : null,
+    },
+  }));
+}
+
+interface Props {
+  edition: Edition;
+  next: { date: string; shortLabel: string } | null;
+  previous: { date: string; shortLabel: string } | null;
+}
+
+const { edition, next, previous } = Astro.props;
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const structuredData = editionStructuredData(edition, Astro.site!, base);
+---
+
+<BaseLayout
+  title={`AI daily edition, ${edition.shortLabel}: ${edition.lead.title} | The AI Resource Hub`}
+  description={edition.sixtySeconds.text.slice(0, 155)}
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <EditionView edition={edition} next={next} previous={previous} weekId={isoWeekId(edition.date).id} />
+  </article>
+  <script type="application/ld+json" set:html={serializeJsonLd(structuredData)} />
+</BaseLayout>

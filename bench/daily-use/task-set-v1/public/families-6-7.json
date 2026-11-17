@@ -1,0 +1,678 @@
+[
+  {
+    "id": "f6-pub-03",
+    "version": 1,
+    "family": 6,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I'm travelling from Skipton to Durham on Saturday 21 November 2026 for my niece's graduation lunch. I have to change trains twice, at Leeds and then at York. Please work out my trains from the timetable extracts below.\n\nWhat I need:\n- The lunch starts at 13:30 at a restaurant that is a 25-minute walk from Durham station, and I have promised to be at the restaurant at least 10 minutes before it starts.\n- I want at least 8 minutes at Leeds between my train arriving and the next one leaving, and at least 10 minutes at York.\n- I would like to leave Skipton as late as I safely can.\n\nTimetable extracts (24-hour times). Notes: SX = Saturdays excepted (does not run on Saturdays). SO = Saturdays only.\n\nSkipton to Leeds\nDepart Skipton | Arrive Leeds | Notes\n09:32 | 10:14 |\n10:02 | 10:47 |\n10:14 | 10:58 | SO\n10:26 | 11:05 |\n10:44 | 11:22 | SX\n11:02 | 11:47 |\n\nLeeds to York\nDepart Leeds | Arrive York | Notes\n10:21 | 10:49 |\n10:55 | 11:18 | SX\n11:12 | 11:38 |\n11:25 | 11:54 |\n11:55 | 12:20 |\n\nYork to Durham\nDepart York | Arrive Durham | Notes\n11:00 | 11:46 |\n11:45 | 12:29 |\n12:02 | 12:50 |\n12:10 | 12:57 |\n12:33 | 13:24 |\n\nWhat is the latest train I can take from Skipton that meets all of this, and if I take that train, what is the earliest time I can arrive at Durham station?\n\nReply with only a JSON object in exactly this form, using 24-hour HH:MM times: {\"depart_skipton\": \"HH:MM\", \"arrive_durham\": \"HH:MM\"}",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "json",
+      "expected": {
+        "depart_skipton": "10:14",
+        "arrive_durham": "12:50"
+      },
+      "numeric_tolerance": 0.005,
+      "allow_extra_keys": false,
+      "string_compare": "casefold_trim"
+    },
+    "expected": "Latest Skipton departure 10:14 (Saturdays only, so it runs), Leeds 10:58, depart Leeds 11:12, York 11:38, depart York 12:02, arrive Durham 12:50. Must reach Durham station by 12:55 (13:30 less 10 minutes less a 25-minute walk). {\"depart_skipton\": \"10:14\", \"arrive_durham\": \"12:50\"}",
+    "accept_examples": [
+      "{\"depart_skipton\": \"10:14\", \"arrive_durham\": \"12:50\"}",
+      "{\n  \"arrive_durham\": \"12:50\",\n  \"depart_skipton\": \"10:14\"\n}"
+    ],
+    "reject_examples": [
+      "{\"depart_skipton\": \"10:26\", \"arrive_durham\": \"12:57\"}",
+      "{\"depart_skipton\": \"10:02\", \"arrive_durham\": \"12:50\"}",
+      "{\"depart_skipton\": \"10:26\", \"arrive_durham\": \"12:29\"}"
+    ],
+    "sources": [],
+    "why_hard": "The station deadline (12:55) must be derived, the 10:26 misses the 8-minute Leeds change by one minute, the 11:25 from Leeds leaves only 8 minutes at York, and the SO train runs on a Saturday while the SX trains do not.",
+    "verification": "Brute-forced every train combination in Python with the Saturday filter, both change minimums and the 12:55 station deadline (latest departure 10:14, earliest arrival 12:50), then confirmed by working backwards by hand from the 12:02 York departure; also reproduced the three reject answers as the specific slips (no 10-minute margin, SO train ignored, change minimum ignored).",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f6-pub-04",
+    "version": 1,
+    "family": 6,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I've had a letter from my landlord's solicitors, Harcastle & Venn, dated Thursday 10 December 2026. The relevant parts say:\n\n\"You must respond in writing within 15 working days of the date of this letter. The date of this letter is not counted. A working day is any day other than a Saturday, a Sunday or a bank holiday. Your response must be received at our office by the end of the fifteenth working day.\"\n\n\"Please note that our office is closed from 24 December 2026 to 1 January 2027 inclusive. Post and deliveries continue to be received and date-stamped by the building's mailroom on every working day during the closure, and the closure does not extend the deadline above.\"\n\nThe bank holidays in England over this period are Friday 25 December 2026, Monday 28 December 2026 (the substitute day for Boxing Day) and Friday 1 January 2027.\n\nI'm going to send my reply by a tracked courier. Whatever day I hand the envelope over, the courier delivers it on the next working day after that (same meaning of working day as in the letter).\n\nWhat is the latest date on which I can hand my reply to the courier and still have it received in time?\n\nReply with the date only, in the form DD/MM/YYYY.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "regex",
+      "pattern": "^\\s*04/01/2027\\.?\\s*$",
+      "flags": "i"
+    },
+    "expected": "04/01/2027 (Monday 4 January 2027). The fifteenth working day is Tuesday 5 January 2027; a courier handover on Monday 4 January is delivered the next working day, 5 January.",
+    "accept_examples": [
+      "04/01/2027",
+      "04/01/2027."
+    ],
+    "reject_examples": [
+      "05/01/2027",
+      "31/12/2026",
+      "23/12/2026"
+    ],
+    "sources": [],
+    "why_hard": "The letter date is not counted, three bank holidays fall inside the period, the office closure is a distractor that does not stop the clock, and the question asks for the courier handover date, one working day before the deadline.",
+    "verification": "Counted the 15 working days with a Python loop over the calendar (deadline Tuesday 5 January 2027) and again by listing the dates by hand in weekly blocks (11 Dec; 14-18; 21-24; 29-31; 4 Jan; 5 Jan = 1+5+4+3+1+1 = 15), then searched for the latest handover date whose next working day is on or before the deadline (4 January 2027).",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f6-pub-05",
+    "version": 1,
+    "family": 6,
+    "split": "public",
+    "answerable": true,
+    "prompt": "Four of us (Asha, Ben, Carys and Dev) rented a cottage near Keswick for four nights and I need to sort out who owes what. Here is everything:\n\nCottage: Asha paid the letting agency £1,000.00 up front. That was £840.00 rent for the four nights, a £60.00 cleaning fee and a £100.00 refundable damage deposit. The deposit has since been returned to Asha in full.\n\nWho stayed: Asha, Ben and Carys stayed all four nights. Dev arrived late and stayed only the last two nights.\n\nWhat we agreed: the rent is split according to the number of nights each person stayed. The cleaning fee is split equally between all four of us.\n\nFood: Ben paid £195.00 at the supermarket. £27.00 of that was wine. Carys doesn't drink, so the wine is split equally between the other three. The rest of the shop is split equally between all four.\n\nFuel: Ben drove Asha and Carys there and back in his car and paid £72.00 for fuel, which is split equally between the three people who were in the car. Dev came by train and paid his own £38.40 fare, which nobody else is contributing to.\n\nNobody has paid anybody back yet. To keep it simple, Ben, Carys and Dev will each make a single bank transfer to Asha, and that must settle everything between all four of us. So what Ben has already spent has to be taken into account in his transfer, and Asha will not pay anyone separately.\n\nHow much should each of the three transfers to Asha be?\n\nReply with only a JSON object in exactly this form, amounts in pounds to the nearest penny as numbers: {\"Ben\": 0.00, \"Carys\": 0.00, \"Dev\": 0.00}",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "json",
+      "expected": {
+        "Ben": 63.0,
+        "Carys": 321.0,
+        "Dev": 186.0
+      },
+      "numeric_tolerance": 0.005,
+      "allow_extra_keys": false,
+      "string_compare": "casefold_trim"
+    },
+    "expected": "Rent is £60 per person-night (£840 over 14 person-nights). Shares: Asha £330, Ben £330, Carys £321, Dev £186 (total £1,167). Ben has already paid £267, so he transfers £63. {\"Ben\": 63.00, \"Carys\": 321.00, \"Dev\": 186.00}",
+    "accept_examples": [
+      "{\"Ben\": 63.00, \"Carys\": 321.00, \"Dev\": 186.00}",
+      "{\"Dev\": 186, \"Ben\": 63, \"Carys\": 321}"
+    ],
+    "reject_examples": [
+      "{\"Ben\": 330.00, \"Carys\": 321.00, \"Dev\": 186.00}",
+      "{\"Ben\": 88.00, \"Carys\": 346.00, \"Dev\": 211.00}",
+      "{\"Ben\": 55.50, \"Carys\": 313.50, \"Dev\": 201.00}"
+    ],
+    "sources": [],
+    "why_hard": "Rent is split by person-nights (14, not 4 people), the returned deposit and Dev's train fare are distractors, Carys is excluded from the wine and Dev from the fuel, and Ben's transfer must be net of the £267 he already paid.",
+    "verification": "Computed each person's share item by item in Python with exact fractions and checked the shares sum to the £1,167 real cost; separately built a ledger of paid minus owed for all four and confirmed the three transfers (63 + 321 + 186 = 570) equal exactly what Asha is owed (900 paid less her 330 share).",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f6-pub-06",
+    "version": 2,
+    "changed_in_v2": "Added integer_keys for lemon_nets and sugar_bags, so the pack counts must be exact whole numbers (10.004 nets or 2.004 bags no longer pass inside the numeric tolerance).",
+    "family": 6,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I'm making lemon squash for the school summer fair and need a shopping list.\n\nMy recipe makes 2.5 litres of squash concentrate and uses 12 lemons and 900 g of sugar. The recipe scales exactly, and I'm happy to make a part batch so that I make only as much concentrate as I need.\n\nTo serve it, the concentrate is diluted: 1 part concentrate to 4 parts water.\n\nWe expect to sell 150 cups, and each cup holds 250 ml of the diluted drink. I want to make 10% more diluted drink than that, to allow for spills.\n\nShopping: lemons are sold only in nets of 4. Sugar is sold only in 1 kg bags, and I already have exactly 1 kg of sugar in the cupboard, which I'll use up first.\n\nPlease tell me:\n- how many nets of lemons I need to buy,\n- how many bags of sugar I need to buy,\n- how many litres of water I need for diluting the concentrate at the fair (not counting any water that goes into making the concentrate itself).\n\nReply with only a JSON object in exactly this form: {\"lemon_nets\": 0, \"sugar_bags\": 0, \"water_litres\": 0.00}\nNets and bags are whole numbers. Give the water in litres to 2 decimal places.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "json",
+      "expected": {
+        "lemon_nets": 10,
+        "sugar_bags": 2,
+        "water_litres": 33.0
+      },
+      "numeric_tolerance": 0.005,
+      "allow_extra_keys": false,
+      "string_compare": "casefold_trim",
+      "integer_keys": [
+        "lemon_nets",
+        "sugar_bags"
+      ]
+    },
+    "expected": "Diluted drink 150 x 0.25 L x 1.1 = 41.25 L. Concentrate is one fifth = 8.25 L (3.3 batches); water is four fifths = 33.00 L. Lemons 39.6, so 40 lemons = 10 nets. Sugar 2,970 g less 1,000 g in the cupboard = 1,970 g, so 2 bags. {\"lemon_nets\": 10, \"sugar_bags\": 2, \"water_litres\": 33.00}",
+    "accept_examples": [
+      "{\"lemon_nets\": 10, \"sugar_bags\": 2, \"water_litres\": 33.00}",
+      "{\"water_litres\": 33, \"sugar_bags\": 2, \"lemon_nets\": 10}"
+    ],
+    "reject_examples": [
+      "{\"lemon_nets\": 13, \"sugar_bags\": 3, \"water_litres\": 30.94}",
+      "{\"lemon_nets\": 9, \"sugar_bags\": 2, \"water_litres\": 30.00}",
+      "{\"lemon_nets\": 10, \"sugar_bags\": 3, \"water_litres\": 33.00}",
+      "{\"lemon_nets\": 10.004, \"sugar_bags\": 2.004, \"water_litres\": 33.00}",
+      "{\"lemon_nets\": 10, \"sugar_bags\": 2.004, \"water_litres\": 33.00}"
+    ],
+    "sources": [],
+    "why_hard": "A 1 to 4 dilution means concentrate is one fifth of the drink, not one quarter; the 10% extra applies to the diluted drink; lemons and sugar round up to whole packs, and the sugar already in the cupboard takes the purchase from 3 bags to 2.",
+    "verification": "Computed forwards in Python with exact fractions (cups to litres to concentrate to batches to packs) and checked by a second route working back from the answer: 10 nets and 3 kg of sugar make 3.33 batches = 8.33 L concentrate, which with 4 parts water covers the 41.25 L needed, while 9 nets or 1 bag would fall short. v2: all accept and reject examples re-run through _verify/fixes/check_fixes.py with integer_keys.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f7-pub-03",
+    "version": 2,
+    "changed_in_v2": "No change to the prompt, cases or key; the task was validated in a real formula engine (formulas 1.3.4) and the result is recorded in verification and engine_validated.",
+    "family": 7,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I keep a small orders log in Excel and I need one formula.\n\nThe sheet has headers in row 1 and the orders in rows 2 to 9 (some of those rows may still be empty):\n- Column A: order number\n- Column B: region (for example North, South, Wales, Scotland)\n- Column C: status, which is always exactly one of Paid, Pending or Cancelled\n- Column D: order value in pounds\n- Column E: amount refunded in pounds. This is left blank when nothing has been refunded.\n\nI type a region name into cell H1. In cell I1 I want the net paid sales for that region: taking only the orders in that region whose status is Paid, the total of their order values minus the total refunded on them.\n\nPending and Cancelled orders must be ignored completely, including any refund amount shown against them (a cancelled order usually shows its full value in column E).\n\nThe result should be rounded to 2 decimal places. If the region in H1 has no Paid orders at all, the result should be 0.\n\nReply with only the Excel formula for I1, starting with =, using the ranges for rows 2 to 9. No explanation.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "formula",
+      "dialect": "excel",
+      "cases": [
+        {
+          "cells": {
+            "H1": "North",
+            "A2": 4002,
+            "B2": "North",
+            "C2": "Paid",
+            "D2": 120.0,
+            "A3": 4003,
+            "B3": "South",
+            "C3": "Paid",
+            "D3": 80.5,
+            "E3": 10.5,
+            "A4": 4004,
+            "B4": "North",
+            "C4": "Pending",
+            "D4": 300.0,
+            "A5": 4005,
+            "B5": "North",
+            "C5": "Paid",
+            "D5": 45.25,
+            "E5": 45.25,
+            "A6": 4006,
+            "B6": "Wales",
+            "C6": "Cancelled",
+            "D6": 60.0,
+            "E6": 60.0,
+            "A7": 4007,
+            "B7": "North",
+            "C7": "Cancelled",
+            "D7": 99.99,
+            "E7": 99.99,
+            "A8": 4008,
+            "B8": "South",
+            "C8": "Paid",
+            "D8": 19.99,
+            "A9": 4009,
+            "B9": "North",
+            "C9": "Paid",
+            "D9": 200.1,
+            "E9": 20.0
+          },
+          "expect": 300.1
+        },
+        {
+          "cells": {
+            "H1": "Wales",
+            "A2": 4002,
+            "B2": "North",
+            "C2": "Paid",
+            "D2": 120.0,
+            "A3": 4003,
+            "B3": "South",
+            "C3": "Paid",
+            "D3": 80.5,
+            "E3": 10.5,
+            "A4": 4004,
+            "B4": "North",
+            "C4": "Pending",
+            "D4": 300.0,
+            "A5": 4005,
+            "B5": "North",
+            "C5": "Paid",
+            "D5": 45.25,
+            "E5": 45.25,
+            "A6": 4006,
+            "B6": "Wales",
+            "C6": "Cancelled",
+            "D6": 60.0,
+            "E6": 60.0,
+            "A7": 4007,
+            "B7": "North",
+            "C7": "Cancelled",
+            "D7": 99.99,
+            "E7": 99.99,
+            "A8": 4008,
+            "B8": "South",
+            "C8": "Paid",
+            "D8": 19.99,
+            "A9": 4009,
+            "B9": "North",
+            "C9": "Paid",
+            "D9": 200.1,
+            "E9": 20.0
+          },
+          "expect": 0
+        },
+        {
+          "cells": {
+            "H1": "South",
+            "A2": 4002,
+            "B2": "North",
+            "C2": "Paid",
+            "D2": 120.0,
+            "A3": 4003,
+            "B3": "South",
+            "C3": "Paid",
+            "D3": 80.5,
+            "E3": 10.5,
+            "A4": 4004,
+            "B4": "North",
+            "C4": "Pending",
+            "D4": 300.0,
+            "A5": 4005,
+            "B5": "North",
+            "C5": "Paid",
+            "D5": 45.25,
+            "E5": 45.25,
+            "A6": 4006,
+            "B6": "Wales",
+            "C6": "Cancelled",
+            "D6": 60.0,
+            "E6": 60.0,
+            "A7": 4007,
+            "B7": "North",
+            "C7": "Cancelled",
+            "D7": 99.99,
+            "E7": 99.99,
+            "A8": 4008,
+            "B8": "South",
+            "C8": "Paid",
+            "D8": 19.99,
+            "A9": 4009,
+            "B9": "North",
+            "C9": "Paid",
+            "D9": 200.1,
+            "E9": 20.0
+          },
+          "expect": 89.99
+        },
+        {
+          "cells": {
+            "H1": "Scotland",
+            "A2": 4002,
+            "B2": "North",
+            "C2": "Paid",
+            "D2": 120.0,
+            "A3": 4003,
+            "B3": "South",
+            "C3": "Paid",
+            "D3": 80.5,
+            "E3": 10.5,
+            "A4": 4004,
+            "B4": "North",
+            "C4": "Pending",
+            "D4": 300.0,
+            "A5": 4005,
+            "B5": "North",
+            "C5": "Paid",
+            "D5": 45.25,
+            "E5": 45.25,
+            "A6": 4006,
+            "B6": "Wales",
+            "C6": "Cancelled",
+            "D6": 60.0,
+            "E6": 60.0,
+            "A7": 4007,
+            "B7": "North",
+            "C7": "Cancelled",
+            "D7": 99.99,
+            "E7": 99.99,
+            "A8": 4008,
+            "B8": "South",
+            "C8": "Paid",
+            "D8": 19.99,
+            "A9": 4009,
+            "B9": "North",
+            "C9": "Paid",
+            "D9": 200.1,
+            "E9": 20.0
+          },
+          "expect": 0
+        },
+        {
+          "cells": {
+            "H1": "North",
+            "A2": 4002,
+            "B2": "North",
+            "C2": "Paid",
+            "D2": 0,
+            "A3": 4003,
+            "B3": "North",
+            "C3": "Paid",
+            "D3": 50.0,
+            "E3": 0,
+            "A4": 4004,
+            "B4": "North",
+            "C4": "Pending",
+            "D4": 75.0,
+            "A5": 4005,
+            "B5": "South",
+            "C5": "Paid",
+            "D5": 10.0
+          },
+          "expect": 50
+        }
+      ]
+    },
+    "expected": "=ROUND(SUMIFS(D2:D9,B2:B9,H1,C2:C9,\"Paid\")-SUMIFS(E2:E9,B2:B9,H1,C2:C9,\"Paid\"),2)",
+    "accept_examples": [
+      "=ROUND(SUMIFS(D2:D9,B2:B9,H1,C2:C9,\"Paid\")-SUMIFS(E2:E9,B2:B9,H1,C2:C9,\"Paid\"),2)",
+      "=ROUND(SUMIFS($D$2:$D$9,$C$2:$C$9,\"Paid\",$B$2:$B$9,$H$1)-SUMIFS($E$2:$E$9,$C$2:$C$9,\"Paid\",$B$2:$B$9,$H$1),2)"
+    ],
+    "reject_examples": [
+      "=ROUND(SUMIFS(D2:D9,B2:B9,H1,C2:C9,\"Paid\")-SUMIFS(E2:E9,B2:B9,H1),2)",
+      "=ROUND(SUMIFS(D2:D9,B2:B9,H1)-SUMIFS(E2:E9,B2:B9,H1),2)",
+      "=ROUND(SUMIFS(D2:D9,B2:B9,H1,C2:C9,\"Paid\"),2)"
+    ],
+    "sources": [],
+    "why_hard": "The refund total must carry the same Paid condition as the sales total, otherwise refunds shown against Cancelled orders are subtracted (Wales gives -60 instead of 0).",
+    "verification": "Worked each case by hand (North: 120 + 45.25 + 200.10 = 365.35 less 45.25 + 20 = 65.25, giving 300.10; South: 80.50 + 19.99 - 10.50 = 89.99; Wales and Scotland 0; second sheet 50) and with a Python model of SUMIFS over the same cells; the two accept formulas reproduce every expected value and each reject formula fails at least one case. Blank cells are represented by leaving the cell out of the case. v2 engine validation (2026-11-14): every case was built as a workbook (openpyxl 3.1.5) and evaluated by the formula engine formulas 1.3.4 under Python 3.15.2; both accept formulas give the expected value in every case and each reject formula differs in at least one case: expected 300.1, 0, 89.99, 0, 50; A1 gives 300.1, 0, 89.99, 0, 50; A2 gives 300.1, 0, 89.99, 0, 50; R1 gives 200.11, -60, 89.99, 0, 50 (differs in case 1 and 2); R2 gives 600.1, 0, 89.99, 0, 125 (differs in case 1 and 5); R3 gives 365.35, 0, 100.49, 0, 50 (differs in case 1 and 3).",
+    "engine_validated": {
+      "engine": "formulas",
+      "version": "1.3.4",
+      "date": "2026-11-14"
+    },
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f7-pub-04",
+    "version": 3,
+    "changed_in_v2": "The reference solution and accept example A1 now parse pounds and pence as integers (no floats); two regression tests were added (£70,368,744,177,664.01 must give 7036874417766401 pence, and its refund), the old round(float) key is now a reject example, and the prompt says 'however large the amounts are'.",
+    "changed_in_v3": "Accept example A2 (Decimal under the default 28-digit context, which rounds very large amounts) is replaced by a Decimal solution that sets a local context precision from the length of each amount and sums as an int; three tests were added (£100000000000000000000000000.01 must give 10000000000000000000000000001 pence, a refund of that size, and a sum of two), and the old A2 is now a reject example.",
+    "family": 7,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I use this little Python function to total a column that I export from our household budget spreadsheet. The values come through as text like \"£1,234.50\", refunds come through with a minus sign in front like \"-£12.00\", and some cells are blank.\n\n```python\ndef total_pence(amounts):\n    \"\"\"Add up money strings such as \"£1,234.50\" and return the total in pence as an int.\n\n    Blank entries are skipped. A leading minus sign, as in \"-£12.00\", is a refund.\n    \"\"\"\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += int(float(a) * 100)\n    return total\n```\n\nMost of the time it is right, but every so often the total is a penny or two out compared with adding it up by hand. For example total_pence([\"£19.99\", \"£0.29\"]) gives 2026 when it should be 2028. It has to be exactly right for every list of amounts, however large the amounts are, including lists with refunds in them. Amounts never have more than two decimal places.\n\nPlease fix it. Keep the function name, the argument and the return type (an int number of pence) the same, and use only the standard library.\n\nReply with only the corrected Python code, no explanation.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "python_tests",
+      "entry": "total_pence",
+      "tests": [
+        {
+          "args": [
+            [
+              "£19.99",
+              "£0.29"
+            ]
+          ],
+          "expect": 2028
+        },
+        {
+          "args": [
+            [
+              "£1,234.50",
+              "£0.07"
+            ]
+          ],
+          "expect": 123457
+        },
+        {
+          "args": [
+            []
+          ],
+          "expect": 0
+        },
+        {
+          "args": [
+            [
+              "",
+              "   ",
+              "£5"
+            ]
+          ],
+          "expect": 500
+        },
+        {
+          "args": [
+            [
+              "-£0.29",
+              "£1.00"
+            ]
+          ],
+          "expect": 71
+        },
+        {
+          "args": [
+            [
+              " £2.5 ",
+              "£1,000,000.01"
+            ]
+          ],
+          "expect": 100000251
+        },
+        {
+          "args": [
+            [
+              "£0.57",
+              "£0.58",
+              "£0.01"
+            ]
+          ],
+          "expect": 116
+        },
+        {
+          "args": [
+            [
+              "-£19.99",
+              "-£0.57"
+            ]
+          ],
+          "expect": -2056
+        },
+        {
+          "args": [
+            [
+              "£4.35",
+              "£4.35",
+              "£4.35"
+            ]
+          ],
+          "expect": 1305
+        },
+        {
+          "args": [
+            [
+              "£70,368,744,177,664.01"
+            ]
+          ],
+          "expect": 7036874417766401
+        },
+        {
+          "args": [
+            [
+              "-£70,368,744,177,664.01",
+              "£0.02"
+            ]
+          ],
+          "expect": -7036874417766399
+        },
+        {
+          "args": [
+            [
+              "£100000000000000000000000000.01"
+            ]
+          ],
+          "expect": 10000000000000000000000000001
+        },
+        {
+          "args": [
+            [
+              "-£100,000,000,000,000,000,000,000,000.01",
+              "£0.02"
+            ]
+          ],
+          "expect": -9999999999999999999999999999
+        },
+        {
+          "args": [
+            [
+              "£100000000000000000000000000.01",
+              "£100000000000000000000000000.01",
+              "£0.98"
+            ]
+          ],
+          "expect": 20000000000000000000000000100
+        }
+      ]
+    },
+    "expected": "def total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        sign = -1 if a.startswith(\"-\") else 1\n        pounds, _, pence = a.lstrip(\"+-\").partition(\".\")\n        pence = (pence + \"00\")[:2]\n        total += sign * (int(pounds or \"0\") * 100 + int(pence))\n    return total",
+    "accept_examples": [
+      "def total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        sign = -1 if a.startswith(\"-\") else 1\n        pounds, _, pence = a.lstrip(\"+-\").partition(\".\")\n        pence = (pence + \"00\")[:2]\n        total += sign * (int(pounds or \"0\") * 100 + int(pence))\n    return total",
+      "from decimal import Decimal, localcontext\n\ndef total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\").replace(\" \", \"\")\n        if not a:\n            continue\n        with localcontext() as ctx:\n            ctx.prec = len(a) + 10\n            total += int(Decimal(a) * 100)\n    return total"
+    ],
+    "reject_examples": [
+      "def total_pence(amounts):\n    \"\"\"Add up money strings such as \"£1,234.50\" and return the total in pence as an int.\n\n    Blank entries are skipped. A leading minus sign, as in \"-£12.00\", is a refund.\n    \"\"\"\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += int(float(a) * 100)\n    return total",
+      "def total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += int(float(a) * 100 + 0.5)\n    return total",
+      "import math\n\ndef total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += math.ceil(float(a) * 100)\n    return total",
+      "def total_pence(amounts):\n    total = 0\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\")\n        if not a:\n            continue\n        total += round(float(a) * 100)\n    return total",
+      "from decimal import Decimal\n\ndef total_pence(amounts):\n    total = Decimal(0)\n    for a in amounts:\n        a = a.strip().replace(\"£\", \"\").replace(\",\", \"\").replace(\" \", \"\")\n        if not a:\n            continue\n        total += Decimal(a) * 100\n    return int(total)"
+    ],
+    "sources": [],
+    "why_hard": "int() truncates binary floating-point values such as 19.99 * 100 = 1998.9999999999998; the obvious patch of adding 0.5 before int() still gets negative refunds wrong, and round(float(a) * 100) is still not exact for very large amounts, so only integer or Decimal parsing is right for every amount. Decimal is exact only if its precision is large enough: under the default 28-digit context, Decimal(a) * 100 silently rounds a 29-digit amount.",
+    "verification": "v2: ran under Python 3.15.2 through _verify/fixes/check_fixes.py (each solution in its own subprocess): the integer-parsing key and the Decimal solution pass 11 of 11 tests; the original function, the add-0.5 patch, math.ceil and the old round(float(a) * 100) key each fail (the last only on the two new large-amount tests, where it returns 7036874417766402). v3: ran under the same Python through _verify/fixes2/check_fixes2.py: the integer-parsing key (A1) and the new local-context Decimal solution (A2) pass 14 of 14 tests; all five rejects fail, the old A2 (R5) only on the three new tests, where the default Decimal context rounds £100000000000000000000000000.01 to 10000000000000000000000000000 pence.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  },
+  {
+    "id": "f7-pub-05",
+    "version": 2,
+    "changed_in_v2": "Prompt now says the parts of the worded form are separated by exactly one ordinary space each; four tests were added that require None for a newline, a tab or a double space between the parts (plus one confirming outer whitespace is still ignored), and both accept examples were changed to obey this; the old A1 is now a reject example.",
+    "family": 7,
+    "split": "public",
+    "answerable": true,
+    "prompt": "I'm tidying up a membership list where staff in our UK office typed the dates by hand in all sorts of ways. Please write a Python function parse_uk_date(text) that turns one typed date into an ISO date string.\n\nIt must return a string in the form \"YYYY-MM-DD\", or None if the text is not a valid date in one of the two accepted forms below. Leading and trailing spaces are ignored.\n\nAccepted form 1, numeric, always day first then month then year:\n- the day is one or two digits, the month is one or two digits;\n- the year is either four digits, or two digits meaning 20YY (so 26 means 2026);\n- the separator is \"/\", \"-\" or \".\", and it must be the same separator in both places.\nExamples: \"3/4/2026\", \"03-04-26\" and \"3.4.2026\" all mean 3 April 2026.\n\nAccepted form 2, with the month as a word: the day, then the month name, then a four-digit year, with exactly one ordinary space between the day and the month and exactly one between the month and the year. Two spaces, a tab or a line break between the parts is not accepted.\n- the day is one or two digits and may be followed by st, nd, rd or th;\n- the month is the full English month name or its first three letters, in any mix of upper and lower case.\nExamples: \"3 April 2026\", \"3rd apr 2026\", \"21st DECEMBER 2026\".\n\nAnything else must return None. That includes dates that do not exist, such as 31/04/2026 or 29/02/2027, and text in any other layout.\n\nUse only the Python standard library. Reply with only the Python code, no explanation.",
+    "max_output_tokens": 4096,
+    "grader": {
+      "type": "python_tests",
+      "entry": "parse_uk_date",
+      "tests": [
+        {
+          "args": [
+            "3/4/2026"
+          ],
+          "expect": "2026-04-03"
+        },
+        {
+          "args": [
+            "03-04-26"
+          ],
+          "expect": "2026-04-03"
+        },
+        {
+          "args": [
+            " 29.02.2028 "
+          ],
+          "expect": "2028-02-29"
+        },
+        {
+          "args": [
+            "29/02/2027"
+          ],
+          "expect": null
+        },
+        {
+          "args": [
+            "31/04/2026"
+          ],
+          "expect": null
+        },
+        {
+          "args": [
+            "12/25/2026"
+          ],
+          "expect": null
+        },
+        {
+          "args": [
+            "3rd apr 2026"
+          ],
+          "expect": "2026-04-03"
+        },
+        {
+          "args": [
+            "21st DECEMBER 2026"
+          ],
+          "expect": "2026-12-21"
+        },
+        {
+          "args": [
+            "1 May 2026"
+          ],
+          "expect": "2026-05-01"
+        },
+        {
+          "args": [
+            "31 June 2026"
+          ],
+          "expect": null
+        },
+        {
+          "args": [
+            "3/4-2026"
+          ],
+          "expect": null
+        },
+        {
+          "args": [
+            "2026-04-03"
+          ],
+          "expect": null
+        },
+        {
+          "args": [
+            ""
+          ],
+          "expect": null
+        },
+        {
+          "args": [
+            "5/11/26"
+          ],
+          "expect": "2026-11-05"
+        },
+        {
+          "args": [
+            "3 April\n2026"
+          ],
+          "expect": null
+        },
+        {
+          "args": [
+            "3\tApril 2026"
+          ],
+          "expect": null
+        },
+        {
+          "args": [
+            "3 April\t2026"
+          ],
+          "expect": null
+        },
+        {
+          "args": [
+            "3  April 2026"
+          ],
+          "expect": null
+        },
+        {
+          "args": [
+            "  3 April 2026\n"
+          ],
+          "expect": "2026-04-03"
+        }
+      ]
+    },
+    "expected": "import re\nfrom datetime import date\n\n_MONTHS = [\"january\", \"february\", \"march\", \"april\", \"may\", \"june\", \"july\",\n           \"august\", \"september\", \"october\", \"november\", \"december\"]\n\ndef parse_uk_date(text):\n    if not isinstance(text, str):\n        return None\n    s = text.strip()\n    m = re.fullmatch(r\"(\\d{1,2})([/.\\-])(\\d{1,2})\\2(\\d{4}|\\d{2})\", s)\n    if m:\n        d, mo, y = int(m.group(1)), int(m.group(3)), m.group(4)\n        y = int(y) if len(y) == 4 else 2000 + int(y)\n    else:\n        m = re.fullmatch(r\"(\\d{1,2})(?:st|nd|rd|th)? ([A-Za-z]+) (\\d{4})\", s, re.IGNORECASE)\n        if not m:\n            return None\n        name = m.group(2).lower()\n        mo = None\n        for i, full in enumerate(_MONTHS, start=1):\n            if name == full or name == full[:3]:\n                mo = i\n        if mo is None:\n            return None\n        d, y = int(m.group(1)), int(m.group(3))\n    try:\n        return date(y, mo, d).isoformat()\n    except ValueError:\n        return None",
+    "accept_examples": [
+      "import re\nfrom datetime import date\n\n_MONTHS = [\"january\", \"february\", \"march\", \"april\", \"may\", \"june\", \"july\",\n           \"august\", \"september\", \"october\", \"november\", \"december\"]\n\ndef parse_uk_date(text):\n    if not isinstance(text, str):\n        return None\n    s = text.strip()\n    m = re.fullmatch(r\"(\\d{1,2})([/.\\-])(\\d{1,2})\\2(\\d{4}|\\d{2})\", s)\n    if m:\n        d, mo, y = int(m.group(1)), int(m.group(3)), m.group(4)\n        y = int(y) if len(y) == 4 else 2000 + int(y)\n    else:\n        m = re.fullmatch(r\"(\\d{1,2})(?:st|nd|rd|th)? ([A-Za-z]+) (\\d{4})\", s, re.IGNORECASE)\n        if not m:\n            return None\n        name = m.group(2).lower()\n        mo = None\n        for i, full in enumerate(_MONTHS, start=1):\n            if name == full or name == full[:3]:\n                mo = i\n        if mo is None:\n            return None\n        d, y = int(m.group(1)), int(m.group(3))\n    try:\n        return date(y, mo, d).isoformat()\n    except ValueError:\n        return None",
+      "import calendar\n\ndef parse_uk_date(text):\n    s = (text or \"\").strip()\n    names = {}\n    for i in range(1, 13):\n        names[calendar.month_name[i].lower()] = i\n        names[calendar.month_abbr[i].lower()] = i\n    day = month = year = None\n    for sep in \"/-.\":\n        if sep in s:\n            parts = s.split(sep)\n            if len(parts) != 3 or not all(p.isdigit() and p.isascii() for p in parts):\n                return None\n            if not (1 <= len(parts[0]) <= 2 and 1 <= len(parts[1]) <= 2 and len(parts[2]) in (2, 4)):\n                return None\n            day, month, year = int(parts[0]), int(parts[1]), int(parts[2])\n            if len(parts[2]) == 2:\n                year += 2000\n            break\n    else:\n        parts = s.split(\" \")\n        if len(parts) != 3:\n            return None\n        d = parts[0].lower()\n        for suf in (\"st\", \"nd\", \"rd\", \"th\"):\n            if d.endswith(suf):\n                d = d[:-2]\n                break\n        if not (d.isdigit() and 1 <= len(d) <= 2 and parts[2].isdigit() and len(parts[2]) == 4):\n            return None\n        month = names.get(parts[1].lower())\n        if month is None:\n            return None\n        day, year = int(d), int(parts[2])\n    if not (1 <= month <= 12) or year < 1:\n        return None\n    if not (1 <= day <= calendar.monthrange(year, month)[1]):\n        return None\n    return \"%04d-%02d-%02d\" % (year, month, day)"
+    ],
+    "reject_examples": [
+      "from datetime import datetime\n\ndef parse_uk_date(text):\n    s = text.strip()\n    for fmt in (\"%d/%m/%Y\", \"%d-%m-%Y\", \"%d.%m.%Y\", \"%d/%m/%y\", \"%d-%m-%y\", \"%d.%m.%y\",\n                \"%d %B %Y\", \"%d %b %Y\", \"%Y-%m-%d\"):\n        try:\n            return datetime.strptime(s, fmt).strftime(\"%Y-%m-%d\")\n        except ValueError:\n            pass\n    return None",
+      "import re\n\nMONTHS = [\"jan\", \"feb\", \"mar\", \"apr\", \"may\", \"jun\", \"jul\", \"aug\", \"sep\", \"oct\", \"nov\", \"dec\"]\n\ndef parse_uk_date(text):\n    s = text.strip()\n    m = re.match(r\"^(\\d{1,2})[/.\\-](\\d{1,2})[/.\\-](\\d{2}|\\d{4})$\", s)\n    if m:\n        d, mo, y = int(m.group(1)), int(m.group(2)), int(m.group(3))\n        if y < 100:\n            y += 2000\n    else:\n        m = re.match(r\"^(\\d{1,2})(?:st|nd|rd|th)?\\s+([a-z]+)\\s+(\\d{4})$\", s.lower())\n        if not m or m.group(2)[:3] not in MONTHS:\n            return None\n        d, mo, y = int(m.group(1)), MONTHS.index(m.group(2)[:3]) + 1, int(m.group(3))\n    if not (1 <= mo <= 12 and 1 <= d <= 31):\n        return None\n    return f\"{y:04d}-{mo:02d}-{d:02d}\"",
+      "import re\nfrom datetime import date\n\ndef parse_uk_date(text):\n    s = text.strip()\n    m = re.fullmatch(r\"(\\d{1,2})[/.\\-](\\d{1,2})[/.\\-](\\d{4}|\\d{2})\", s)\n    if not m:\n        return None\n    a, b, y = int(m.group(1)), int(m.group(2)), int(m.group(3))\n    if y < 100:\n        y += 2000\n    try:\n        return date(y, a, b).isoformat()\n    except ValueError:\n        try:\n            return date(y, b, a).isoformat()\n        except ValueError:\n            return None",
+      "import re\nfrom datetime import date\n\n_MONTHS = [\"january\", \"february\", \"march\", \"april\", \"may\", \"june\", \"july\",\n           \"august\", \"september\", \"october\", \"november\", \"december\"]\n\ndef parse_uk_date(text):\n    if not isinstance(text, str):\n        return None\n    s = text.strip()\n    m = re.fullmatch(r\"(\\d{1,2})([/.\\-])(\\d{1,2})\\2(\\d{4}|\\d{2})\", s)\n    if m:\n        d, mo, y = int(m.group(1)), int(m.group(3)), m.group(4)\n        y = int(y) if len(y) == 4 else 2000 + int(y)\n    else:\n        m = re.fullmatch(r\"(\\d{1,2})(?:st|nd|rd|th)?\\s+([A-Za-z]+)\\s+(\\d{4})\", s, re.IGNORECASE)\n        if not m:\n            return None\n        name = m.group(2).lower()\n        mo = None\n        for i, full in enumerate(_MONTHS, start=1):\n            if name == full or name == full[:3]:\n                mo = i\n        if mo is None:\n            return None\n        d, y = int(m.group(1)), int(m.group(3))\n    try:\n        return date(y, mo, d).isoformat()\n    except ValueError:\n        return None"
+    ],
+    "sources": [],
+    "why_hard": "Dates are day first (12/25/2026 is invalid, not Christmas), impossible dates must be rejected, mixed separators and ISO-style input must return None, and ordinal suffixes and short month names must be accepted; in the worded form only single spaces may separate the parts, so the usual \\s+ pattern or a bare split() wrongly accepts tabs and line breaks.",
+    "verification": "v2: ran under Python 3.15.2 through _verify/fixes/check_fixes.py (each solution in its own subprocess): the two corrected implementations (regex with single literal spaces, and split(\" \") plus calendar.monthrange) pass 19 of 19 tests; the three original wrong ones and the old A1 (which used \\s+ and so accepts '3 April\\n2026') each fail.",
+    "author": "Claude (AIRH task agent)",
+    "written_on": "2026-11-14"
+  }
+]

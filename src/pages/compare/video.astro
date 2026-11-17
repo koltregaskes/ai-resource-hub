@@ -1,4 +1,5 @@
 ---
+import { serializeJsonLd } from '../../lib/json-ld';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ModelComparisonTable from '../../components/ModelComparisonTable';
 import { getModelsByCategory } from '../../db/queries';
@@ -79,5 +80,5 @@ const structuredData = {
     />
   </section>
 
-  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <script type="application/ld+json" set:html={serializeJsonLd(structuredData)} />
 </BaseLayout>

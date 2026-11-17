@@ -1,0 +1,69 @@
+{
+  "metrics": {
+    "candidateRecall": "80%",
+    "candidatePrecision": "28.6%",
+    "reviewQueue": 28,
+    "judgeAgreement": "85%",
+    "judgeDisagreement": 15,
+    "falseAcceptShare": "50%",
+    "referenceAccept": 90,
+    "judgeAccept": 85
+  },
+  "zero-failures-small-ai-test": [
+    [
+      50,
+      "60.5%",
+      "5.82%"
+    ],
+    [
+      100,
+      "36.6%",
+      "2.95%"
+    ],
+    [
+      300,
+      "4.9%",
+      "0.99%"
+    ]
+  ],
+  "rare-class-ai-accuracy": [
+    [
+      "Always negative",
+      0,
+      10,
+      0,
+      990,
+      "99%"
+    ],
+    [
+      "Candidate",
+      8,
+      2,
+      20,
+      970,
+      "97.8%"
+    ]
+  ],
+  "ai-judge-disagreement-log": [
+    [
+      "Accept",
+      "Accept",
+      80
+    ],
+    [
+      "Accept",
+      "Reject",
+      10
+    ],
+    [
+      "Reject",
+      "Accept",
+      5
+    ],
+    [
+      "Reject",
+      "Reject",
+      5
+    ]
+  ]
+}

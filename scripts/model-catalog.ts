@@ -1,3 +1,5 @@
+import { MODEL_FIELD_REVIEWS, getReviewedCatalogEntries } from './lib/model-field-reviews';
+
 export interface ProviderCatalogEntry {
   id: string;
   name: string;
@@ -43,6 +45,7 @@ export interface CatalogModelEntry {
     aliases?: string[];
   };
   officialPricing?: OfficialPricingDefinition;
+  pricingConditions?: string;
 }
 
 export interface FrontierModelRequirement {
@@ -297,7 +300,7 @@ export const PROVIDER_CATALOG: ProviderCatalogEntry[] = [
   },
 ];
 
-export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
+const BASE_VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
   {
     id: 'gpt-5.4',
     name: 'GPT-5.4',
@@ -499,6 +502,9 @@ export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Claude Opus 5',
     providerId: 'anthropic',
     released: '2026-07-24',
+    // Vendor specs: https://platform.claude.com/docs/en/models/overview
+    contextWindow: 1_000_000,
+    maxOutput: 128_000,
     modality: 'text,vision',
     apiAvailable: true,
     notes: 'Current generally available Opus model. Some safeguarded requests can fall back to Opus 4.8.',
@@ -540,6 +546,9 @@ export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Claude Fable 5',
     providerId: 'anthropic',
     released: '2026-06-09',
+    // Vendor specs: https://platform.claude.com/docs/en/models/overview
+    contextWindow: 1_000_000,
+    maxOutput: 128_000,
     modality: 'text,vision',
     apiAvailable: true,
     notes: 'Generally available Mythos-class model. Safeguarded topics can fall back to Opus 4.8 or Opus 5.',
@@ -562,6 +571,9 @@ export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Claude Sonnet 5',
     providerId: 'anthropic',
     released: '2026-06-30',
+    // Vendor specs: https://platform.claude.com/docs/en/models/overview
+    contextWindow: 1_000_000,
+    maxOutput: 128_000,
     modality: 'text,vision',
     apiAvailable: true,
     notes: 'Generally available Sonnet model. Introductory pricing applies through 31 August 2026.',
@@ -584,6 +596,9 @@ export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Claude Opus 4.8',
     providerId: 'anthropic',
     released: '2026-05-28',
+    // Vendor specs: https://platform.claude.com/docs/en/models/overview
+    contextWindow: 1_000_000,
+    maxOutput: 128_000,
     modality: 'text,vision',
     apiAvailable: true,
     notes: 'Official Opus release retained for comparisons and fallback-routing context.',
@@ -622,6 +637,9 @@ export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
     name: 'Claude Opus 4.7',
     providerId: 'anthropic',
     released: '2026-04-16',
+    // Vendor specs: https://platform.claude.com/docs/en/models/overview
+    contextWindow: 1_000_000,
+    maxOutput: 128_000,
     modality: 'text,vision',
     apiAvailable: true,
     notes: 'Official generally available Opus release retained for historical comparisons.',
@@ -939,6 +957,160 @@ export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
       requiredAsOf: '2026-04-06',
     },
   },
+
+  /*
+   * Hub #614 part 2 (12 Nov 2026): releases that were discovery-only, each
+   * checked first-hand on the maker's own page. A field is set only when that
+   * page states it; omitted specs must not inherit discovery values. Prices are set
+   * only where the maker quotes an exact, single global price.
+   */
+  {
+    id: 'gemini-4-argon',
+    name: 'Gemini 4 Argon',
+    providerId: 'google',
+    contextWindow: 1_048_576,
+    maxOutput: 65_536,
+    apiAvailable: true,
+    status: 'active',
+    notes: 'Stable. Google lists $2/$10 per million tokens through 30 November 2026, rising to $4/$20 from 1 December 2026 (hub #1535). Default synchronous output is 65,536; long decode allows up to 1,048,576.',
+    officialUrl: 'https://ai.google.dev/gemini-api/docs/models/gemini-4-argon',
+    openRouterIds: ['google/gemini-4-argon'],
+    officialPricing: {
+      inputPrice: 2,
+      outputPrice: 10,
+      cachedInputPrice: 0.1,
+      source: 'Google AI (official, through 2026-11-30)',
+      sourceUrl: 'https://ai.google.dev/gemini-api/docs/pricing#gemini-4-argon',
+    },
+  },
+  {
+    id: 'muse-ember',
+    name: 'Muse Ember',
+    providerId: 'meta',
+    released: '2026-11-09',
+    apiAvailable: true,
+    status: 'active',
+    notes: 'Meta API id muse-ember-1.0. Requests over 200K input tokens are billed at $0.30/$1.50 per million.',
+    officialUrl: 'https://research.meta.ai/blog/muse-ember',
+    openRouterIds: ['meta/muse-ember'],
+    pricingConditions: 'Tiered by input length: up to 200K tokens is $0.10 input, $0.50 output and $0.004 cached input per million; above 200K is $0.30 input and $1.50 output per million. No global scalar price.',
+  },
+  {
+    id: 'muse-wonder',
+    name: 'Muse Wonder',
+    providerId: 'meta',
+    released: '2026-10-12',
+    contextWindow: 1_048_576,
+    apiAvailable: true,
+    status: 'preview',
+    notes: 'Meta API id muse-wonder-1.0.',
+    officialUrl: 'https://research.meta.ai/blog/muse-wonder',
+    openRouterIds: ['meta/muse-wonder'],
+    officialPricing: {
+      inputPrice: 4,
+      outputPrice: 20,
+      cachedInputPrice: 0.2,
+      source: 'Meta (official)',
+      sourceUrl: 'https://dev.meta.ai/docs/pricing-rate-limits',
+    },
+  },
+  ...([
+    ['muse-spark-1.3', 'Muse Spark 1.3', '2026-09-02', 'https://research.meta.ai/blog/introducing-muse-spark-1-3'],
+    ['muse-spark-1.2', 'Muse Spark 1.2', '2026-08-05', 'https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2'],
+    ['muse-spark-1.1', 'Muse Spark 1.1', '2026-07-09', 'https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/'],
+  ] as const).map(([id, name, released, officialUrl]): CatalogModelEntry => ({
+    id,
+    name,
+    providerId: 'meta',
+    released,
+    contextWindow: 1_048_576,
+    apiAvailable: true,
+    status: 'tracking',
+    notes: 'Vendor lifecycle status unverified; Meta gives no model lifecycle label. See field review.',
+    officialUrl,
+    openRouterIds: [`meta/${id}`],
+    officialPricing: {
+      inputPrice: 1.25,
+      outputPrice: 4.25,
+      cachedInputPrice: 0.15,
+      source: 'Meta (official, standard mode)',
+      sourceUrl: 'https://dev.meta.ai/docs/pricing-rate-limits',
+    },
+  })),
+  ...([
+    ['glm-5.3-flashx', 'GLM 5.3 FlashX', 'z-ai/glm-5.3-flashx'],
+    ['glm-5.3-flashx-legal', 'GLM 5.3 FlashX Legal', 'z-ai/glm-5.3-flashx-legal'],
+  ] as const).map(([id, name, openRouterId]): CatalogModelEntry => ({
+    id,
+    name,
+    providerId: 'zhipu',
+    apiAvailable: true,
+    status: 'active',
+    officialUrl: 'https://docs.z.ai/guides/vlm/glm-5.3-flash',
+    openRouterIds: [openRouterId],
+    officialPricing: {
+      inputPrice: 0.37,
+      outputPrice: 1.25,
+      cachedInputPrice: 0.075,
+      source: 'Z.ai (official)',
+      sourceUrl: 'https://docs.z.ai/guides/overview/pricing',
+    },
+  })),
+  {
+    id: 'mistral-large-4-0',
+    name: 'Mistral Large 4',
+    providerId: 'mistral',
+    openSource: true,
+    apiAvailable: true,
+    status: 'active',
+    notes: 'Open weights under the Mistral Ecosystem open-weight licence. API id mistral-large-4.',
+    officialUrl: 'https://docs.mistral.ai/models/mistral-large-4-0',
+    openRouterIds: ['mistralai/mistral-large-4-0'],
+    officialPricing: {
+      inputPrice: 0.7,
+      outputPrice: 2.1,
+      cachedInputPrice: 0.07,
+      source: 'Mistral (official)',
+      sourceUrl: 'https://docs.mistral.ai/models/mistral-large-4-0',
+    },
+  },
+  {
+    id: 'nemotron-3.5-super-vl',
+    name: 'Nemotron 3.5 Super VL',
+    providerId: 'nvidia',
+    released: '2026-10-15',
+    openSource: true,
+    status: 'active',
+    notes: 'Open 120-billion-parameter model. NVIDIA publishes no API price or API availability guarantee; API availability is unverified.',
+    officialUrl: 'https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/',
+    openRouterIds: ['nvidia/nemotron-3.5-super-vl'],
+  },
+  {
+    id: 'qwen3.8-omni-flash',
+    name: 'Qwen3.8 Omni Flash',
+    providerId: 'alibaba',
+    maxOutput: 131_072,
+    apiAvailable: true,
+    status: 'active',
+    notes: 'Alibaba Cloud Model Studio. Official prices vary by region, so no single official price is set.',
+    officialUrl: 'https://www.alibabacloud.com/help/en/model-studio/qwen3-8-omni-flash',
+    openRouterIds: ['qwen/qwen3.8-omni-flash'],
+  },
+  {
+    id: 'qwen3.8-flash',
+    name: 'Qwen3.8 Flash',
+    providerId: 'alibaba',
+    apiAvailable: true,
+    status: 'active',
+    notes: 'Alibaba Cloud Model Studio. Official prices vary by region, so no single official price is set.',
+    officialUrl: 'https://www.alibabacloud.com/help/en/model-studio/qwen3-8-flash',
+    openRouterIds: ['qwen/qwen3.8-flash'],
+  },
+];
+
+export const VERIFIED_MODEL_CATALOG: CatalogModelEntry[] = [
+  ...BASE_VERIFIED_MODEL_CATALOG.filter(model => !MODEL_FIELD_REVIEWS.some(review => review.id === model.id)),
+  ...getReviewedCatalogEntries(),
 ];
 
 const EXTRA_PROVIDER_PREFIX_MAP: Record<string, string> = {

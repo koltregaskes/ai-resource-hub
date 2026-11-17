@@ -23,6 +23,7 @@ import { getDB, logScrapeRun } from './base';
 import { getOptionalDatabaseUrl } from '../../src/db/database-url';
 import pg from 'pg';
 import type Database from 'better-sqlite3';
+import { blockedSourceById, isBlockedSource } from '../../src/data/source-policy';
 
 interface CreativeScore {
   modelName: string;
@@ -207,19 +208,25 @@ async function main() {
   const db = getDB();
   const allScores: CreativeScore[] = [];
 
-  // Try live AA scraping for each category
-  console.log('  Checking Artificial Analysis arenas...');
-  const imageScores = await tryFetchAA('image_generation', AA_ENDPOINTS.image);
-  const videoScores = await tryFetchAA('video_generation', AA_ENDPOINTS.video);
-  const ttsScores = await tryFetchAA('voice_tts', AA_ENDPOINTS.tts);
+  // Hub #1569: no requests to Artificial Analysis while its terms bar our use.
+  const aaBlocked = blockedSourceById('artificial-analysis');
+  if (aaBlocked) {
+    console.log(`  ⊘ Artificial Analysis arenas skipped: blocked source (${aaBlocked.termsUrl}).`);
+  } else {
+    console.log('  Checking Artificial Analysis arenas...');
+    const imageScores = await tryFetchAA('image_generation', AA_ENDPOINTS.image);
+    const videoScores = await tryFetchAA('video_generation', AA_ENDPOINTS.video);
+    const ttsScores = await tryFetchAA('voice_tts', AA_ENDPOINTS.tts);
+    allScores.push(...imageScores, ...videoScores, ...ttsScores);
+  }
 
-  allScores.push(...imageScores, ...videoScores, ...ttsScores);
-
-  // If we got no live data, use fallback
+  // If we got no live data, use fallback, minus any rows from a blocked source.
   const isLive = allScores.length > 0;
   if (!isLive) {
-    console.log('\n  No live arena data available — using validated fallback scores');
-    allScores.push(...getKnownScores());
+    const known = getKnownScores();
+    const licensed = known.filter((s) => !isBlockedSource(s.sourceName, s.sourceUrl));
+    console.log(`\n  No live arena data — using fallback scores (${licensed.length} of ${known.length}; ${known.length - licensed.length} from blocked sources left out)`);
+    allScores.push(...licensed);
   }
 
   console.log(`\n  Total scores to write: ${allScores.length}`);

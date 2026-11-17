@@ -1,13 +1,13 @@
 {
   "news_routing_configuration": {
-    "status": "unknown",
-    "reason": "missing_config",
-    "routingMode": "fallback",
-    "checkedAt": "2026-11-04T02:56:47.438Z",
-    "sourceVerifiedAt": null,
-    "siteFiltersSha256": null
+    "status": "verified",
+    "reason": "canonical_config_read",
+    "routingMode": "configured",
+    "checkedAt": "2026-11-17T13:15:32.193Z",
+    "sourceVerifiedAt": "2026-11-17T13:15:32.193Z",
+    "siteFiltersSha256": "bad10f90faa07d54f4ce690f38214e0e06b7b46dbc1710c466d53bc45e7f5768"
   },
-  "generated_at": "2026-11-04T02:56:48.454Z",
+  "generated_at": "2026-11-17T13:15:33.058Z",
   "source": "local sqlite + shared postgres",
   "sqlite_storage": "local-only",
   "shared_postgres_available": false

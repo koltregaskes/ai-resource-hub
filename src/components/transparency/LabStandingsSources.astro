@@ -1,0 +1,10 @@
+---
+import { DEFAULT_WEIGHTS } from '../../lib/lab-standings.mjs';
+const files=import.meta.glob('../../../data/lab-standings/snapshots/*.json',{eager:true,import:'default'});
+const snapshots=Object.values(files) as any[];
+---
+<section id="lab-standings" class="my-12"><h2 class="text-2xl font-bold">Lab Standings: every input and calculation</h2>
+<p>Method v0.3. Default weights: {DEFAULT_WEIGHTS.join(', ')} for capability, value, shipping pace, openness and developer usage. These are editorial choices, not measured facts. Capability is progress above the same-download frontier a year earlier; value uses log(1 + progress / blended price), normalised to the leader. Blend = (3 × input + output) / 4, an explicit workload assumption. Shipping and usage use square-root ratios; openness averages checked licence credits. Missing inputs never become zeroes.</p>
+<p><a href="https://github.com/koltregaskes/ai-resource-hub/blob/main/docs/LAB-STANDINGS-METHOD.md">Full formulas, coverage threshold, sensitivity and terms</a>. Epoch's <a href="https://epoch.ai/data/eci-documentation/data">included benchmarks</a> and <a href="https://epoch.ai/eci">licence</a> read on 14 November 2026: no Artificial Analysis or Arena sources listed in the fit. The published index may be revised by Epoch; AIRH preserves each downloaded vintage.</p>
+{snapshots.map(s=><div><h3>{s.date}</h3><a href={`${import.meta.env.BASE_URL}labs/standings/${s.date}.json`}>All original inputs, source URLs, dates, SHA-256 version, licences and derived scores</a><p>Unmapped models are retained in the audit, excluded from scores. Shipping is withheld without a release-channel check. Open weights are withheld without a checked licence. The bench in <a href={s.input.bench.pr}>PR #111</a> supplies synthetic fixture evidence only; no model comparison is inferred.</p></div>)}
+</section>

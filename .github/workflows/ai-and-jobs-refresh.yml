@@ -1,0 +1,25 @@
+name: Prepare AI and jobs source review
+on:
+  schedule:
+    - cron: '30 6 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  candidate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+      - run: python scripts/fetch-jobs-indeed.py
+      - run: node --test scripts/ai-and-jobs.test.mjs
+      - uses: actions/upload-artifact@v7
+        with:
+          name: ai-and-jobs-review-candidate
+          path: data/ai-and-jobs/
+      # No write token, provider keys, commit or deployment. Publish through a reviewed PR.
