@@ -570,7 +570,7 @@ def fallback_resolve(task, first, judged):
 #       verdicts_by_judge = {judge model id: {check id: true or false}}
 #   core.scores.score_run(slot_records)
 
-CHECK_STATES = ("pass", "fail", "disputed", "unresolved")
+CHECK_STATES = ("pass", "fail", "disputed", "unresolved", "unresolved-final")
 # From a grader's check status, or a judged status, to the state that
 # scores.py reads. A check that was never run is left out of the list.
 _CHECK_STATE = {
@@ -739,7 +739,7 @@ def default_scores(rows, tasks):
 def record_checks(outcome, passed, final, judged):
     """The `checks` list written on a slot record, in the shape scores.py
     reads: [{"id", "by": "script" | "judge", "state": "pass" | "fail" |
-    "disputed" | "unresolved"}].
+    "disputed" | "unresolved" | "unresolved-final"}].
 
     Checks belong only to an `answered` slot. A grader that returns
     `"checks"` has the last word. Otherwise the list is built from the
@@ -929,7 +929,7 @@ class _Engine:
         `<slot>/judge/<judge>/<kind>/` counts: one with a result, one that
         was in flight, one that only the ledger knew, one reconciled by
         hand. When they are used up and no verdict is on record, nothing is
-        sent: the attempt range is empty, the slot stays pending and its row
+        sent: the attempt range is empty and its row
         gets the flag `judge_attempts_exhausted`.
 
         A request of this judge call that was sent, has no response on
@@ -978,9 +978,8 @@ class _Engine:
                 if EXHAUSTED_FLAG not in flags:
                     flags.append(EXHAUSTED_FLAG)
                 self.out("  resume: judge %s has used all %d of its requests for %s on slot "
-                         "%s and gave no verdict; nothing more is sent and the slot stays "
-                         "pending" % (spec.model_id, judges.ATTEMPTS_PER_JUDGE_CALL, kind,
-                                      slot))
+                         "%s and gave no verdict; nothing more is sent"
+                         % (spec.model_id, judges.ATTEMPTS_PER_JUDGE_CALL, kind, slot))
                 found.append({"attempt": None, "result": "attempts_exhausted",
                               "detail": "the judge call has used its %d requests; nothing "
                                         "more is sent" % judges.ATTEMPTS_PER_JUDGE_CALL})
@@ -1280,9 +1279,44 @@ class _Engine:
         row["pass"] = passed
         row["flags"].extend(final.get("flags", []))
         row["checks"] = record_checks(outcome, passed, final, judged)
+        if stop is None:
+            self._finalise_exhausted_checks(row, slot)
         if isinstance(final.get("detail"), dict):
             row["grader_detail"] = final["detail"]
         return stop
+
+    def _finalise_exhausted_checks(self, row, slot):
+        """Resolve checklist exhaustion conservatively, including old resumed rows.
+
+        Use the durable request history, never an inherited flag alone. An
+        unreturned request awaiting reconciliation must still block finality.
+        Outcome classification and other causes of pending are unchanged.
+        """
+        if row["outcome"] != "answered":
+            return
+        detail = (row.get("judged") or {}).get("detail") or {}
+        exhausted = False
+        for item in detail.get("checklist") or []:
+            if item.get("verdict") is not None:
+                continue
+            base = "%s/judge/%s/checklist_judging/" % (slot, item["judge"])
+            logged = self.record.logged_requests(base)
+            if any(self.awaits_reconciliation(q) for q in logged):
+                return
+            if len(logged) >= judges.ATTEMPTS_PER_JUDGE_CALL:
+                exhausted = True
+        checks = row["checks"]
+        if not exhausted or not any(c["state"] == "unresolved" for c in checks):
+            return
+        # An unresolved verdict on either side prevents a pass, regardless
+        # of the other judge's verdict. Keep the panel's raw detail intact.
+        for check in checks:
+            if check["by"] == "judge" and check["state"] == "unresolved":
+                check["state"] = "unresolved-final"
+        if EXHAUSTED_FLAG not in row["flags"]:
+            row["flags"].append(EXHAUSTED_FLAG)
+        row["pass"] = False
+        row["pending"] = any(c["state"] == "unresolved" for c in checks)
 
     def has_paid_answer(self, slot):
         """True when the slot holds an answer that only has to be graded and

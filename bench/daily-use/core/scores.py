@@ -10,7 +10,7 @@ and one repeat (1 to 3). Nothing here reads files, keys or the network.
 
 A checklist slot carries its check-level results in "checks": a list of
 {"id", "by": "script" or "judge", "state": "pass", "fail", "disputed" or
-"unresolved"}. The slot's pass must equal the AND of those checks (method,
+"unresolved" or "unresolved-final"}. The slot's pass must equal the AND of those checks (method,
 "Checklist graders"); a record that contradicts its own checks is refused.
 The check list is what makes the dispute sensitivity score possible.
 
@@ -36,10 +36,10 @@ PENDING_OUTCOME = "judge_unresolved"
 ABSTAIN_FAMILIES = (2, 3)
 NO_SUCCESSFUL_TASKS = "no successful tasks"
 CHECK_BY = ("script", "judge")
-CHECK_STATES = ("pass", "fail", "disputed", "unresolved")
+CHECK_STATES = ("pass", "fail", "disputed", "unresolved", "unresolved-final")
 # Only a model-judged check can be disputed or unresolved: a script check's
 # verdict is final and never goes to a judge.
-JUDGE_ONLY_STATES = ("disputed", "unresolved")
+JUDGE_ONLY_STATES = ("disputed", "unresolved", "unresolved-final")
 
 REQUIRED_FIELDS = (
     "model",
@@ -125,7 +125,7 @@ def _check_checks(where, slot):
         if state not in CHECK_STATES:
             raise SlotValidationError(
                 "%s: check %r: state must be 'pass', 'fail', 'disputed' or "
-                "'unresolved', got %r" % (where, check_id, state)
+                "'unresolved' or 'unresolved-final', got %r" % (where, check_id, state)
             )
         if by == "script" and state in JUDGE_ONLY_STATES:
             raise SlotValidationError(
@@ -146,13 +146,13 @@ def _check_checks(where, slot):
                 "unresolved the pass must be None (pending)"
                 % (where, passed, states["unresolved"])
             )
-    elif "fail" in states or "disputed" in states:
-        state = "fail" if "fail" in states else "disputed"
+    elif any(s in states for s in ("fail", "disputed", "unresolved-final")):
+        state = next(s for s in ("fail", "disputed", "unresolved-final") if s in states)
         if passed is not False:
             raise SlotValidationError(
                 "%s: pass is %r but check %r is %s; a failed or disputed check "
                 "fails the slot, so pass must be false"
-                % (where, passed, states[state], "failed" if state == "fail" else "disputed")
+                % (where, passed, states[state], "failed" if state == "fail" else state)
             )
     elif passed is not True:
         raise SlotValidationError(
@@ -476,6 +476,8 @@ def _side_figures(tasks):
         "truncation_rate": _percent(sum(1 for slot in slots if slot["truncated"]), n_slots),
         "judged_checks": judged,
         "disputed_checks": disputed,
+        "unresolved_final_checks": sum(
+            c["state"] == "unresolved-final" for slot in slots for c in slot_checks(slot)),
         "dispute_rate": _percent(disputed, judged),
         "judge_classification_rate": _percent(
             sum(1 for slot in slots if slot.get("needed_judge_classification", False)), n_slots

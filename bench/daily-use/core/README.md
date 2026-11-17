@@ -27,7 +27,7 @@ Every grader returns a `GradeResult` with a `status`:
 - `pending`: verdicts were supplied but at least one check is `judge_unresolved`.
 - `sandbox_unavailable`: a `python_tests` reply was not run because there is no proven sandbox. The task has not been graded.
 
-A script verdict is final and never goes to a judge. For a judged check: it passes only if every judge says true; a disagreement is `disputed` and counts as failed; a missing or malformed verdict is `judge_unresolved` and the pass stays pending.
+A script verdict is final and never goes to a judge. For a judged check: it passes only if every judge says true; a disagreement is `disputed` and counts as failed; a missing or malformed verdict is `judge_unresolved` and the grader leaves the pass pending. At the runner layer, exhausted checklist calls become `unresolved-final`, count as not passed and allow finalisation with a visible `judge_attempts_exhausted` flag. Unresolved outcome classification and requests awaiting reconciliation remain pending. See [RUNNER.md](RUNNER.md).
 
 A reply never makes a grader raise. A JSON number outside the supported range (larger than 10^400 in size, closer to zero than 10^-400, or an integer of more than 4,000 digits) is still valid JSON, so the reply is not malformed; the number simply never equals an expected one and the answer fails.
 
