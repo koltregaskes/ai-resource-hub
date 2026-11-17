@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { admitMethod, comparisonReasons, renderMethodPanel, robustnessComparison, METHOD_FIELDS } from '../src/data/benchmark-method.mjs';
+import { admitMethod, comparisonReasons, renderMethodPanel, robustnessComparison, renderRobustnessPanel, METHOD_FIELDS } from '../src/data/benchmark-method.mjs';
 
 const envelope = method => ({ kind: 'synthetic', privacyReview: 'Original synthetic example; no private inputs', rightsReview: 'Original fixture', method });
 const internal = { dataset: 'Synthetic office tasks', split: 'demo', version: '1', metric: 'exact-choice accuracy v1', promptVersion: 'prompt-v1', sampling: 'temperature 0', model: 'Example A',
@@ -156,4 +156,40 @@ test('robustness pairs require invariant evidence and matched model, route and s
     assert.equal(blocked.delta, null);
   }
   assert.equal(robustnessComparison(null, null).delta, null);
+});
+
+test('paired disclosure renders admitted synthetic pairs and blocks invalid or mixed evidence', () => {
+  const original = { ...internal, route: 'API snapshot', model: '<Example A>' };
+  const perturbed = { ...original, accuracy: .5, perturbation: 'invariant', equivalence: 'Synthetic answer invariance review', pairing: 'Synthetic paired sample review' };
+  const panel = changes => renderRobustnessPanel({ original: envelope(original), perturbed: envelope({ ...perturbed, ...changes }), now: new Date('2026-11-16') });
+  assert.match(panel(), /Synthetic example — not a model evaluation/);
+  assert.match(panel(), /-10 percentage points/);
+  assert.match(panel(), /Original result<\/h3>/);
+  assert.match(panel(), /Perturbed result<\/h3>/);
+  assert.match(panel(), /&lt;Example A&gt;/);
+  assert.match(panel(), /Stale measurement/);
+  assert.doesNotMatch(panel(), /<Example A>|<script|onclick=/);
+  for (const changes of [{ attempts: 5 }, { equivalence: null }, { perturbation: 'task-change' }]) {
+    assert.match(panel(changes), /Comparison unavailable/);
+    assert.doesNotMatch(panel(changes), /percentage points/);
+  }
+  const invalid = renderRobustnessPanel({ original: envelope(original), perturbed: envelope({ ...perturbed, raw_outputs: 'PRIVATE-SENTINEL' }) });
+  assert.match(invalid, /metadata missing or invalid/);
+  assert.doesNotMatch(invalid, /PRIVATE-SENTINEL|raw_outputs/);
+  const mixed = renderRobustnessPanel({ original: envelope(original), perturbed: { ...envelope(perturbed), kind: 'internal-aggregate' } });
+  assert.match(mixed, /measurement kind: incompatible/);
+  assert.doesNotMatch(mixed, /percentage points/);
+  assert.match(renderRobustnessPanel(), /Comparison unavailable/);
+});
+
+ test('mixed evidence labels each synthetic result even without synthetic method text', () => {
+  const method = { ...internal, origin: 'Independent aggregate', dataset: 'Office tasks' };
+  const synthetic = envelope(method);
+  const real = { ...synthetic, kind: 'internal-aggregate' };
+  for (const [original, perturbed, heading] of [[synthetic, real, 'Original'], [real, synthetic, 'Perturbed']]) {
+    const html = renderRobustnessPanel({ original, perturbed });
+    assert.match(html, new RegExp(heading + ' result</h3><p>Synthetic example — not a model evaluation.'));
+    assert.match(html, /measurement kind: incompatible/);
+    assert.doesNotMatch(html, /percentage points/);
+  }
 });
