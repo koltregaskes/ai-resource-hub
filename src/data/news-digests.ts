@@ -9,6 +9,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { getNews } from '../db/queries';
+import { loadRoutedNewsCards } from './routed-news';
 import { routeAiResourceHubNews } from './news-routing';
 import { curateNewsItems } from './content-curation';
 import { classifyNewsItem, getNewsCategory, type NewsCategoryId, type NewsTagId } from './news-categories';
@@ -317,9 +318,18 @@ function loadNewsFromDB(): NewsItem[] {
 
 /**
  * Canonical news loader for public pages.
- * Prefers the live SQLite news store, then falls back to archived digest files.
+ * Prefers a non-empty shared gatherer feed. An empty gatherer file keeps the
+ * database feed, then the archived digest files.
  */
 export function loadNewsItems(): NewsItem[] {
+  const routed: NewsItem[] = loadRoutedNewsCards().flatMap((card) => {
+    const classification = classifyNewsItem({ title: card.title, summary: card.summary });
+    return classification.category ? [{ ...card,
+      category: getNewsCategory(classification.category).label,
+      readerCategory: classification.category, readerTags: classification.tags,
+    }] : [];
+  });
+  if (routed.length > 0) return routed;
   const dbItems = routeAiResourceHubNews(loadNewsFromDB());
   if (dbItems.length > 0) return dbItems;
   return routeAiResourceHubNews(loadNewsDigests());
