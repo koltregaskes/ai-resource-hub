@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T22:19:29.569Z",
+  "generatedAt": "2026-11-17T23:59:06.022Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T22:19:29.564Z",
+      "lastCheckedAt": "2026-11-17T23:59:06.015Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T22:19:27.915Z",
+      "lastCheckedAt": "2026-11-17T23:59:05.044Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
@@ -138,10 +138,10 @@
           "status": "identified",
           "impact": "major",
           "startedAt": "2026-11-16T15:10:15.167Z",
-          "updatedAt": "2026-11-17T20:47:29.385Z",
+          "updatedAt": "2026-11-17T23:39:43.921Z",
           "resolvedAt": null,
           "url": "https://stspg.io/01qq3kzyyqzl",
-          "summary": "Claude Meetings (beta) saw higher than expected demand today, and Claude was unable to join many calls. We have put mitigations in place and are continuing to monitor and improve..."
+          "summary": "Claude Meetings (beta) is joining calls more reliably, and we are monitoring it. It remains enabled for all Enterprise customers. Team customers can again add Claude to new calls..."
         }
       ],
       "recentIncidents": [
@@ -173,10 +173,10 @@
           "status": "identified",
           "impact": "major",
           "startedAt": "2026-11-16T15:10:15.167Z",
-          "updatedAt": "2026-11-17T20:47:29.385Z",
+          "updatedAt": "2026-11-17T23:39:43.921Z",
           "resolvedAt": null,
           "url": "https://stspg.io/01qq3kzyyqzl",
-          "summary": "Claude Meetings (beta) saw higher than expected demand today, and Claude was unable to join many calls. We have put mitigations in place and are continuing to monitor and improve..."
+          "summary": "Claude Meetings (beta) is joining calls more reliably, and we are monitoring it. It remains enabled for all Enterprise customers. Team customers can again add Claude to new calls..."
         },
         {
           "id": "r1b4f9bbnsx1",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T22:19:27.944Z",
+      "lastCheckedAt": "2026-11-17T23:59:05.055Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -299,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T22:19:28.539Z",
+      "lastCheckedAt": "2026-11-17T23:59:05.846Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T22:19:28.119Z",
+      "lastCheckedAt": "2026-11-17T23:59:05.114Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -362,7 +362,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T22:19:28.777Z",
+      "lastCheckedAt": "2026-11-17T23:59:05.992Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -386,7 +386,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []

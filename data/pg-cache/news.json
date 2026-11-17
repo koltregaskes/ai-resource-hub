@@ -1,5 +1,65 @@
 [
   {
+    "id": "news-19bce111d0ee6096879c",
+    "title": "Satya Nadella says he’s AGI-pilled now",
+    "url": "https://www.theverge.com/tech/1036111/satya-nadella-says-hes-agi-pilled-now",
+    "source": "The Verge",
+    "summary": "Microsoft CEO Satya Nadella says he's AGI-pilled, at least when it comes to how AI might make startling changes to the structure of the economy and how politics might change because of it. \"I am AGI pilled in the sense that at an economy level, what is the political economy's organization around AGI?\" he asked [&#8230…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-17T23:41:18.000Z",
+    "discovered_at": "2026-11-17 23:59:04"
+  },
+  {
+    "id": "news-28509d8a3a743ac7527b",
+    "title": "Nvidia is abandoning China after Jensen Huang&#8217;s ouster",
+    "url": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/",
+    "source": "TechCrunch",
+    "summary": "Nvidia's interim CEO says the company is done selling chips to China. How much will that cost?",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-17T23:37:48.000Z",
+    "discovered_at": "2026-11-17 23:58:55"
+  },
+  {
+    "id": "news-3feac09277102c220aa9",
+    "title": "Nvidia says its open source AI strategy remains intact after Jensen Huang&#8217;s exit",
+    "url": "https://techcrunch.com/2026/11/17/nvidia-says-its-open-source-ai-strategy-remains-intact-after-jensen-huangs-exit/",
+    "source": "TechCrunch",
+    "summary": "Nvidia's interim CEO reaffirmed its open source AI strategy and plans to acquire Hugging Face, despite Jensen Huang's sudden departure.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-17T23:04:35.000Z",
+    "discovered_at": "2026-11-17 23:58:55"
+  },
+  {
+    "id": "news-f8045fa626e2c02a351f",
+    "title": "Nvidia says it doesn&#8217;t plan to reappoint Jensen Huang as CEO",
+    "url": "https://techcrunch.com/2026/11/17/nvidia-says-it-doesnt-plan-to-reappoint-jensen-huang-as-ceo/",
+    "source": "TechCrunch",
+    "summary": "The former CEO offered to return to his top role at the company after his resignation last week.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-17T22:42:27.000Z",
+    "discovered_at": "2026-11-17 23:58:55"
+  },
+  {
+    "id": "news-6908e71926e8ed83b504",
+    "title": "Amazon and Google will together own nearly 30% of Anthropic after its IPO",
+    "url": "https://techcrunch.com/2026/11/17/amazon-and-google-will-together-own-nearly-30-of-anthropic-after-its-ipo/",
+    "source": "TechCrunch",
+    "summary": "Amazon will own just under 15% of Anthropic after the IPO, with the option to go much higher. Google is a close second with holdings of nearly 14%.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-17T22:29:05.000Z",
+    "discovered_at": "2026-11-17 23:58:55"
+  },
+  {
     "id": "news-6e2564c29c662909b172",
     "title": "SEC reportedly investigating Nvidia amid Huang exit",
     "url": "https://techcrunch.com/2026/11/17/sec-reportedly-investigating-nvidia-amid-huang-exit/",
@@ -9,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T21:48:07.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-7465bbc4c963251d4045",
@@ -21,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T21:40:59.000Z",
-    "discovered_at": "2026-11-17 22:19:27"
+    "discovered_at": "2026-11-17 23:59:04"
   },
   {
     "id": "news-320959dca20ca092fa1b",
@@ -33,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T21:34:50.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-859fe7425ca0830b25c8",
@@ -45,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T21:00:55.000Z",
-    "discovered_at": "2026-11-17 22:19:27"
+    "discovered_at": "2026-11-17 23:59:04"
   },
   {
     "id": "news-d9a047affb028160412d",
@@ -57,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T19:32:11.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-0fc744e43d6095d814ec",
@@ -69,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T19:02:20.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-72284a47c9d975a21bbe",
@@ -81,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T18:58:01.000Z",
-    "discovered_at": "2026-11-17 22:19:27"
+    "discovered_at": "2026-11-17 23:59:04"
   },
   {
     "id": "news-560e703561a25cd9d0c9",
@@ -93,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T18:48:23.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-f4982bcb3ccbe841326c",
@@ -105,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T18:10:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-b145ab91c01065c7623f",
@@ -117,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T18:04:16.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-549a77347d5e1e5f25e0",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T17:45:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-42c4fd05f3f446d0374a",
@@ -141,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T17:32:25.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-447a475adcedf3c157f8",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T17:20:41.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-357d085ae06f4ca28864",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T17:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-5fbc7d8ce285cc025b46",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T16:44:15.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-f70b9be328657a7e1d18",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T16:32:55.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-cb8293f821d94f0d4a91",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T16:19:03.000Z",
-    "discovered_at": "2026-11-17 22:19:27"
+    "discovered_at": "2026-11-17 23:59:04"
   },
   {
     "id": "news-e0185595ee6eb2dbd526",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T16:09:57.000Z",
-    "discovered_at": "2026-11-17 22:19:27"
+    "discovered_at": "2026-11-17 23:59:04"
   },
   {
     "id": "news-27f55ceac5142fd119be",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T15:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-3ddd561d3db586e7cf4e",
@@ -237,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T14:50:58.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-bcc5080f4e5647dce939",
@@ -249,19 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T14:26:46.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
-  },
-  {
-    "id": "news-1632fb5fec801cff1c50",
-    "title": "Nvidia&#8217;s first big move after Jensen Huang&#8217;s exit targets national security",
-    "url": "https://techcrunch.com/2026/11/17/nvidias-first-big-move-after-jensen-huangs-exit-targets-national-security/",
-    "source": "TechCrunch",
-    "summary": "The new standing committee will give board-level oversight of national security policies, export control compliance, and global trade risks, the company said.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-17T14:05:30.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-0e789c02d67386aaea91",
@@ -273,31 +321,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T14:00:29.000Z",
-    "discovered_at": "2026-11-17 22:19:27"
+    "discovered_at": "2026-11-17 23:59:04"
   },
   {
-    "id": "news-38c9e250512479595149",
-    "title": "Spotify&#8217;s new tool aims to stop deepfakes from being attributed to real artists",
-    "url": "https://techcrunch.com/2026/11/17/spotifys-new-tool-aims-to-stop-deepfakes-from-being-attributed-to-real-artists/",
-    "source": "TechCrunch",
-    "summary": "The update comes as Billboard reported last month that Sony Music had requested the removal of more than 260,000 deepfake songs from digital platforms, nearly double the number the label disclosed in March.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-17T14:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
-  },
-  {
-    "id": "news-0604bc2b50fc0c3b8a76",
-    "title": "Astra for Law leads in legal intelligence",
-    "url": "https://openai.com/index/astra-law-6-2",
+    "id": "news-c6c361c53bc4ce2d407e",
+    "title": "Introducing ChatGPT for Sales",
+    "url": "https://openai.com/index/introducing-chatgpt-for-sales",
     "source": "OpenAI",
-    "summary": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
+    "summary": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitches, update your CRM, and move deals forward.",
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-11-17T00:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "published_at": "2026-11-17T08:00:00.000Z",
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-58da9c66b1456ac9aedd",
@@ -309,7 +345,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T00:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:54"
+  },
+  {
+    "id": "news-0604bc2b50fc0c3b8a76",
+    "title": "Astra for Law leads in legal intelligence",
+    "url": "https://openai.com/index/astra-law-6-2",
+    "source": "OpenAI",
+    "summary": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-17T00:00:00.000Z",
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-590cb0b9c5dd23f2eba5",
@@ -321,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T00:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
-  },
-  {
-    "id": "news-aae8c4832e631e5c6d02",
-    "title": "Cybersecurity AI startup Corma reaches $1B valuation in about 3 months",
-    "url": "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/",
-    "source": "TechCrunch",
-    "summary": "Three months since introducing its product, AI cybersecurity startup Corba has raised a $125 million Series A at a $1 billion valuation led by NEA.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-16T23:32:32.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-a59424729711a810deea",
@@ -345,19 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T23:17:34.000Z",
-    "discovered_at": "2026-11-17 22:19:27"
-  },
-  {
-    "id": "news-ac8ed7d9657ddc76111d",
-    "title": "All the questions Nvidia should answer on Tuesday — but probably won’t",
-    "url": "https://techcrunch.com/2026/11/16/all-the-questions-nvidia-should-answer-on-tuesday-but-probably-wont/",
-    "source": "TechCrunch",
-    "summary": "Nvidia interim CEO and longtime CFO Colette Kress is about to have one of the biggest days of her career on Tuesday when the company reports its third-quarter results. Given the turmoil Nvidia is in, there are a number of questions that Nvidia should answer.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-16T22:03:02.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:59:04"
   },
   {
     "id": "news-d0b83026be95e613438e",
@@ -369,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T20:46:01.000Z",
-    "discovered_at": "2026-11-17 22:19:27"
+    "discovered_at": "2026-11-17 23:59:04"
   },
   {
     "id": "news-6dc341b82897f4397a88",
@@ -381,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T20:41:28.000Z",
-    "discovered_at": "2026-11-17 22:19:27"
+    "discovered_at": "2026-11-17 23:59:04"
   },
   {
     "id": "news-84f741940fbdaff2c7e2",
@@ -393,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T20:37:47.000Z",
-    "discovered_at": "2026-11-17 22:19:27"
+    "discovered_at": "2026-11-17 23:59:04"
   },
   {
     "id": "news-0873131c018e5da52f89",
@@ -405,19 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T20:29:37.000Z",
-    "discovered_at": "2026-11-17 22:19:27"
-  },
-  {
-    "id": "news-94e979efd7382a51e7bf",
-    "title": "US data centers now burn more electricity than a midsized country",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1034668/data-centers-electricity-climate-pollution-study-harvard",
-    "source": "The Verge",
-    "summary": "Fossil fuels are still the biggest source of electricity for hyperscale data centers in the US, a new paper published in the journal Nature Sustainability shows. They likely burn through more electricity collectively than many countries do, resulting in a serious amount of greenhouse gas emissions. The study homes in…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-16T20:27:58.000Z",
-    "discovered_at": "2026-11-17 22:19:27"
+    "discovered_at": "2026-11-17 23:59:04"
   },
   {
     "id": "news-b1c71d07875ac772d826",
@@ -429,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T17:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-f26f2a4dfd6b9b957c15",
@@ -441,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T17:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-717626b76ea030ce1456",
@@ -453,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T14:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-f891bd93f3d214690602",
@@ -465,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T12:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-f054a54f8228cfac7fd4",
@@ -477,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T09:30:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-91e58e2ea930c2fabc27",
@@ -489,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T09:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-ebd9eb94963902d268e9",
@@ -501,19 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T08:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
-  },
-  {
-    "id": "news-cfcc7acb02e9ca7944d1",
-    "title": "More ways to move care forward with ChatGPT for Healthcare",
-    "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
-    "source": "OpenAI",
-    "summary": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-16T06:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-b0ded74e06b06613ea57",
@@ -525,7 +525,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T06:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:54"
+  },
+  {
+    "id": "news-cfcc7acb02e9ca7944d1",
+    "title": "More ways to move care forward with ChatGPT for Healthcare",
+    "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+    "source": "OpenAI",
+    "summary": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-16T06:00:00.000Z",
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-3899b6e8ee3cc1f1e22e",
@@ -537,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T00:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-e3915f7e4cf071c42329",
@@ -549,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T00:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-87d7014c15ee68a3a258",
@@ -561,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-15T22:00:01.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-4b0fc5b701ffd77dc125",
@@ -573,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-15T22:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-5bf4951adbe9698dd9e4",
@@ -585,19 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-13T15:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
-  },
-  {
-    "id": "news-d1318183fe1728936389",
-    "title": "Shield helps technicians hand off legacy portal work with OpenAI",
-    "url": "https://openai.com/business/customer-stories/shield",
-    "source": "OpenAI",
-    "summary": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their judgment.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-13T08:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:54"
   },
   {
     "id": "news-459a57b4750adf481f4f",
@@ -609,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T18:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-8e4104a923ec61a4f8ae",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T18:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-97adab01dbf7344a4376",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-7e65614cc89aac7b14f8",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T09:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-b686da68349e5f787ade",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T21:12:59.000Z",
-    "discovered_at": "2026-11-17 22:19:27"
+    "discovered_at": "2026-11-17 23:59:04"
   },
   {
     "id": "news-ac5a661efbfd509d2187",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T19:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-c5fffc8a0cbdc3d45109",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T14:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-155d33cae72679311e5a",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T13:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-a5eef3cf57a4e41068d1",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T20:56:41.000Z",
-    "discovered_at": "2026-11-17 22:19:27"
+    "discovered_at": "2026-11-17 23:59:04"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-17 22:19:27"
+    "discovered_at": "2026-11-17 23:59:04"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -765,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-17 22:19:14"
+    "discovered_at": "2026-11-17 23:58:55"
   }
 ]
