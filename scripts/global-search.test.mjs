@@ -78,4 +78,3 @@ test('human form submission cancels navigation without agent response', () => {
   h.nodes.form.listeners.submit({ preventDefault() { prevented = true; }, respondWith() { assert.fail('human submission responded as agent'); } });
   assert.ok(prevented);
 });
-
