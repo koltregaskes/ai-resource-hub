@@ -1,5 +1,5 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-17T13:15:34.625Z",
+  "generatedAt": "2026-11-17T14:57:38.721Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -484,7 +484,7 @@ export const modelReleaseDesk = {
       "outputPrice": 0.6,
       "outputPriceState": "verified",
       "pricingSource": "Vendor (official, checked 2026-11-13)",
-      "pricingUpdated": "2026-11-17 13:15:13",
+      "pricingUpdated": "2026-11-17 14:57:15",
       "summary": "MiniMax M3.1 Flash is a currently tracked release from MiniMax. It belongs in the open-weight / local-model conversation. Tracked context window: 1M tokens. Current tracked pricing: $0.15 in / $0.60 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "MiniMax's MiniMax M3.1 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -928,7 +928,7 @@ export const modelReleaseDesk = {
       "outputPrice": 25,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-17 13:15:13",
+      "pricingUpdated": "2026-11-17 14:57:15",
       "summary": "Claude Opus 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Current generally available Opus model. Some safeguarded requests can fall back to Opus 4.8. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1009,7 +1009,7 @@ export const modelReleaseDesk = {
       "outputPrice": 50,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-17 13:15:13",
+      "pricingUpdated": "2026-11-17 14:57:15",
       "summary": "Claude Opus 5 Fast is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Official faster Opus 5 mode, priced at twice the base token rate. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 5 Fast is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1090,7 +1090,7 @@ export const modelReleaseDesk = {
       "outputPrice": 2.5,
       "outputPriceState": "verified",
       "pricingSource": "Google AI (official)",
-      "pricingUpdated": "2026-11-17 13:15:13",
+      "pricingUpdated": "2026-11-17 14:57:15",
       "summary": "Gemini 3.5 Flash-Lite is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.30 in / $2.50 out per million tokens. Current generally available low-cost Gemini Flash-Lite model. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Google's Gemini 3.5 Flash-Lite is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1182,7 +1182,7 @@ export const modelReleaseDesk = {
       "outputPrice": 7.5,
       "outputPriceState": "verified",
       "pricingSource": "Google AI (official)",
-      "pricingUpdated": "2026-11-17 13:15:13",
+      "pricingUpdated": "2026-11-17 14:57:15",
       "summary": "Gemini 3.6 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Current generally available Gemini Flash model. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Google's Gemini 3.6 Flash is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1274,9 +1274,9 @@ export const modelReleaseDesk = {
       "outputPrice": 30,
       "outputPriceState": "verified",
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-11-17 13:15:13",
+      "pricingUpdated": "2026-11-17 14:57:15",
       "summary": "GPT-5.6 Sol is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Current frontier GPT-5.6 model; the gpt-5.6 alias routes to Sol. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1308,6 +1308,16 @@ export const modelReleaseDesk = {
             "funding",
             "acquisition",
             "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Introducing OpenAI for Chile",
+          "url": "https://openai.com/index/introducing-openai-for-chile",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+          "routingTags": [
             "model_release"
           ]
         },
@@ -1348,8 +1358,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-07-09-gpt-5-6-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "claude-sonnet-5",
@@ -1391,7 +1401,7 @@ export const modelReleaseDesk = {
       "outputPrice": 10,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official, introductory through 2026-08-31)",
-      "pricingUpdated": "2026-11-17 13:15:13",
+      "pricingUpdated": "2026-11-17 14:57:15",
       "summary": "Claude Sonnet 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Generally available Sonnet model. Introductory pricing applies through 31 August 2026. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Sonnet 5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1472,7 +1482,7 @@ export const modelReleaseDesk = {
       "outputPrice": 50,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-17 13:15:13",
+      "pricingUpdated": "2026-11-17 14:57:15",
       "summary": "Claude Fable 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Generally available Mythos-class model. Safeguarded topics can fall back to Opus 4.8 or Opus 5. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Fable 5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1983,9 +1993,9 @@ export const modelReleaseDesk = {
       "outputPrice": 15,
       "outputPriceState": "verified",
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-11-17 13:15:13",
+      "pricingUpdated": "2026-11-17 14:57:15",
       "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Official GPT-5.4 API model; superseded as the current flagship by GPT-5.6. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "OpenAI's GPT-5.4 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.4 is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2017,6 +2027,16 @@ export const modelReleaseDesk = {
             "funding",
             "acquisition",
             "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Introducing OpenAI for Chile",
+          "url": "https://openai.com/index/introducing-openai-for-chile",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+          "routingTags": [
             "model_release"
           ]
         },
@@ -2057,8 +2077,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-03-05-gpt-5-4-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "gemini-3.1-pro",
@@ -2192,7 +2212,7 @@ export const modelReleaseDesk = {
       "outputPrice": 15,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-17 13:15:13",
+      "pricingUpdated": "2026-11-17 14:57:15",
       "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 200K tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. Speed data hidden until it is refreshed from a current live measurement source. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2340,7 +2360,7 @@ export const modelReleaseDesk = {
       "outputPrice": 25,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-17 13:15:13",
+      "pricingUpdated": "2026-11-17 14:57:15",
       "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Official Opus release retained for historical comparisons. Speed data hidden until it is refreshed from a current live measurement source. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 1 related story and 1 benchmark signal to review.",
       "whyItMatters": [
@@ -3717,7 +3737,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Astra is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-astra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Astra is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Astra is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3763,6 +3783,16 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "Introducing OpenAI for Chile",
+          "url": "https://openai.com/index/introducing-openai-for-chile",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
           "title": "The King’s Trust and OpenAI launch £1m partnership",
           "url": "https://openai.com/index/the-kings-trust-and-openai",
           "source": "OpenAI",
@@ -3799,8 +3829,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-astra-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 6,
+      "sourceCount": 6
     },
     {
       "id": "gpt-6-astra-pro",
@@ -3850,7 +3880,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Astra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-astra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Astra Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Astra Pro is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3882,6 +3912,16 @@ export const modelReleaseDesk = {
             "funding",
             "acquisition",
             "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Introducing OpenAI for Chile",
+          "url": "https://openai.com/index/introducing-openai-for-chile",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+          "routingTags": [
             "model_release"
           ]
         },
@@ -3922,8 +3962,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-astra-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "gpt-6-luna",
@@ -3973,7 +4013,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Luna is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-luna); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Luna is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Luna is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4005,6 +4045,16 @@ export const modelReleaseDesk = {
             "funding",
             "acquisition",
             "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Introducing OpenAI for Chile",
+          "url": "https://openai.com/index/introducing-openai-for-chile",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+          "routingTags": [
             "model_release"
           ]
         },
@@ -4045,8 +4095,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-luna-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "gpt-6-luna-pro",
@@ -4096,7 +4146,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Luna Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-luna-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Luna Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Luna Pro is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4128,6 +4178,16 @@ export const modelReleaseDesk = {
             "funding",
             "acquisition",
             "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Introducing OpenAI for Chile",
+          "url": "https://openai.com/index/introducing-openai-for-chile",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+          "routingTags": [
             "model_release"
           ]
         },
@@ -4168,8 +4228,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-luna-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "gpt-6-sol",
@@ -4219,7 +4279,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Sol is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4251,6 +4311,16 @@ export const modelReleaseDesk = {
             "funding",
             "acquisition",
             "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Introducing OpenAI for Chile",
+          "url": "https://openai.com/index/introducing-openai-for-chile",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+          "routingTags": [
             "model_release"
           ]
         },
@@ -4291,8 +4361,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "gpt-6-sol-pro",
@@ -4342,7 +4412,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Sol Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Sol Pro is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4374,6 +4444,16 @@ export const modelReleaseDesk = {
             "funding",
             "acquisition",
             "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Introducing OpenAI for Chile",
+          "url": "https://openai.com/index/introducing-openai-for-chile",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+          "routingTags": [
             "model_release"
           ]
         },
@@ -4414,8 +4494,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-sol-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "gpt-6.1-sol",
@@ -4465,7 +4545,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Sol is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4497,6 +4577,16 @@ export const modelReleaseDesk = {
             "funding",
             "acquisition",
             "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Introducing OpenAI for Chile",
+          "url": "https://openai.com/index/introducing-openai-for-chile",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+          "routingTags": [
             "model_release"
           ]
         },
@@ -4537,8 +4627,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-1-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "gpt-6.1-sol-pro",
@@ -4588,7 +4678,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Sol Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Sol Pro is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4620,6 +4710,16 @@ export const modelReleaseDesk = {
             "funding",
             "acquisition",
             "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Introducing OpenAI for Chile",
+          "url": "https://openai.com/index/introducing-openai-for-chile",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+          "routingTags": [
             "model_release"
           ]
         },
@@ -4660,8 +4760,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-1-sol-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "gpt-6.1-terra",
@@ -4711,7 +4811,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Terra is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-terra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Terra is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Terra is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4743,6 +4843,16 @@ export const modelReleaseDesk = {
             "funding",
             "acquisition",
             "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Introducing OpenAI for Chile",
+          "url": "https://openai.com/index/introducing-openai-for-chile",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+          "routingTags": [
             "model_release"
           ]
         },
@@ -4783,8 +4893,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-1-terra-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "gpt-6.1-terra-pro",
@@ -4834,7 +4944,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Terra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-terra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Terra Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Terra Pro is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4866,6 +4976,16 @@ export const modelReleaseDesk = {
             "funding",
             "acquisition",
             "industry_move",
+            "model_release"
+          ]
+        },
+        {
+          "title": "Introducing OpenAI for Chile",
+          "url": "https://openai.com/index/introducing-openai-for-chile",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+          "routingTags": [
             "model_release"
           ]
         },
@@ -4906,8 +5026,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-1-terra-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "grok-4.6",
