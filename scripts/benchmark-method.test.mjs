@@ -181,3 +181,15 @@ test('paired disclosure renders admitted synthetic pairs and blocks invalid or m
   assert.doesNotMatch(mixed, /percentage points/);
   assert.match(renderRobustnessPanel(), /Comparison unavailable/);
 });
+
+ test('mixed evidence labels each synthetic result even without synthetic method text', () => {
+  const method = { ...internal, origin: 'Independent aggregate', dataset: 'Office tasks' };
+  const synthetic = envelope(method);
+  const real = { ...synthetic, kind: 'internal-aggregate' };
+  for (const [original, perturbed, heading] of [[synthetic, real, 'Original'], [real, synthetic, 'Perturbed']]) {
+    const html = renderRobustnessPanel({ original, perturbed });
+    assert.match(html, new RegExp(heading + ' result</h3><p>Synthetic example — not a model evaluation.'));
+    assert.match(html, /measurement kind: incompatible/);
+    assert.doesNotMatch(html, /percentage points/);
+  }
+});

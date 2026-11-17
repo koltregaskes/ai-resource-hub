@@ -158,7 +158,7 @@ export function renderRobustnessPanel({ original = null, perturbed = null, now =
     : '<p>Descriptive accuracy change (perturbed minus original): ' + escape(Number((result.delta * 100).toPrecision(4))) + ' percentage points. This is not a significance test.</p>';
   return '<details class="benchmark-method"><summary>Paired robustness method and limits</summary>'
     + (original.kind === 'synthetic' && perturbed.kind === 'synthetic' ? '<p>Synthetic example — not a model evaluation.</p>' : '')
-    + outcome + '<h3>Original result</h3>' + renderMethodPanel({ model: left.model, method: left, now })
-    + '<h3>Perturbed result</h3>' + renderMethodPanel({ model: right.model, method: right, now })
+    + outcome + '<h3>Original result</h3>' + (original.kind === 'synthetic' ? '<p>Synthetic example — not a model evaluation.</p>' : '') + renderMethodPanel({ model: left.model, method: left, now })
+    + '<h3>Perturbed result</h3>' + (perturbed.kind === 'synthetic' ? '<p>Synthetic example — not a model evaluation.</p>' : '') + renderMethodPanel({ model: right.model, method: right, now })
     + '<p>Equivalence and pairing references require independent review. A drop is not proof of training contamination. Task changes are separate evaluations.</p></details>';
 }
