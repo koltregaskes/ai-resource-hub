@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-560e703561a25cd9d0c9",
+    "title": "Google to keep Gemini chats for two months, up from 72 hours, even with history off",
+    "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+    "source": "TechCrunch",
+    "summary": "Google's Gemini update extending chat retention will roll out globally over the coming weeks.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-17T18:48:23.000Z",
+    "discovered_at": "2026-11-17 18:57:27"
+  },
+  {
+    "id": "news-f4982bcb3ccbe841326c",
+    "title": "As decision model use skyrockets, is customization the next frontier?",
+    "url": "https://techcrunch.com/2026/11/17/as-decision-model-use-skyrockets-is-customization-is-the-next-frontier/",
+    "source": "TechCrunch",
+    "summary": "Sqwish Labs has a new wrinkle on the decision model: Train it with your own data to max its capabilities.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-17T18:10:00.000Z",
+    "discovered_at": "2026-11-17 18:57:27"
+  },
+  {
+    "id": "news-b145ab91c01065c7623f",
+    "title": "Pedestal AI raises $4.7 million to agentify the supply chain",
+    "url": "https://techcrunch.com/2026/11/17/pedestal-ai-raises-4-7-million-to-agentify-the-supply-chain/",
+    "source": "TechCrunch",
+    "summary": "The company uses agentic AI to make supply chains faster and more reliable.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-17T18:04:16.000Z",
+    "discovered_at": "2026-11-17 18:57:27"
+  },
+  {
+    "id": "news-549a77347d5e1e5f25e0",
+    "title": "Introducing GPT-6.2 Astra and Sol",
+    "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+    "source": "OpenAI",
+    "summary": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-17T17:45:00.000Z",
+    "discovered_at": "2026-11-17 18:57:27"
+  },
+  {
     "id": "news-42c4fd05f3f446d0374a",
     "title": "Proton&#8217;s Lumo, a privacy-focused alternative to ChatGPT and Claude, arrives on desktop",
     "url": "https://techcrunch.com/2026/11/17/protons-lumo-a-privacy-focused-alternative-to-chatgpt-and-claude-arrives-on-desktop/",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T17:32:25.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-447a475adcedf3c157f8",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T17:20:41.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-357d085ae06f4ca28864",
@@ -33,19 +81,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T17:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-5fbc7d8ce285cc025b46",
     "title": "Jensen Huang says he would be &#8216;honored&#8217; if allowed to return as Nvidia CEO",
     "url": "https://techcrunch.com/2026/11/17/jensen-huang-says-he-would-be-honored-if-allowed-to-return-as-nvidia-ceo/",
     "source": "TechCrunch",
-    "summary": "In the first public statement since his resignation, Nvidia founder Jensen Huang signalled his willingness to return as CEO.",
+    "summary": "In the first public statement since his resignation, Nvidia founder Jensen Huang signaled his willingness to return as CEO.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T16:44:15.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-f70b9be328657a7e1d18",
@@ -57,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T16:32:55.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-cb8293f821d94f0d4a91",
@@ -69,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T16:19:03.000Z",
-    "discovered_at": "2026-11-17 17:58:02"
+    "discovered_at": "2026-11-17 18:57:38"
   },
   {
     "id": "news-e0185595ee6eb2dbd526",
@@ -81,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T16:09:57.000Z",
-    "discovered_at": "2026-11-17 17:58:02"
+    "discovered_at": "2026-11-17 18:57:38"
   },
   {
     "id": "news-27f55ceac5142fd119be",
@@ -93,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T15:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-3ddd561d3db586e7cf4e",
@@ -105,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T14:50:58.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-bcc5080f4e5647dce939",
@@ -117,7 +165,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T14:26:46.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-1632fb5fec801cff1c50",
@@ -129,7 +177,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T14:05:30.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-0e789c02d67386aaea91",
@@ -141,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T14:00:29.000Z",
-    "discovered_at": "2026-11-17 17:58:02"
+    "discovered_at": "2026-11-17 18:57:38"
   },
   {
     "id": "news-38c9e250512479595149",
@@ -153,7 +201,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T14:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
+  },
+  {
+    "id": "news-0604bc2b50fc0c3b8a76",
+    "title": "Astra for Law leads in legal intelligence",
+    "url": "https://openai.com/index/astra-law-6-2",
+    "source": "OpenAI",
+    "summary": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-17T00:00:00.000Z",
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-58da9c66b1456ac9aedd",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T00:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-590cb0b9c5dd23f2eba5",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T00:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-aae8c4832e631e5c6d02",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T23:32:32.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-a59424729711a810deea",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T23:17:34.000Z",
-    "discovered_at": "2026-11-17 17:58:02"
+    "discovered_at": "2026-11-17 18:57:38"
   },
   {
     "id": "news-ac8ed7d9657ddc76111d",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T22:03:02.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-d0b83026be95e613438e",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T20:46:01.000Z",
-    "discovered_at": "2026-11-17 17:58:02"
+    "discovered_at": "2026-11-17 18:57:38"
   },
   {
     "id": "news-6dc341b82897f4397a88",
@@ -237,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T20:41:28.000Z",
-    "discovered_at": "2026-11-17 17:58:02"
+    "discovered_at": "2026-11-17 18:57:38"
   },
   {
     "id": "news-84f741940fbdaff2c7e2",
@@ -249,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T20:37:47.000Z",
-    "discovered_at": "2026-11-17 17:58:02"
+    "discovered_at": "2026-11-17 18:57:38"
   },
   {
     "id": "news-0873131c018e5da52f89",
@@ -261,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T20:29:37.000Z",
-    "discovered_at": "2026-11-17 17:58:02"
+    "discovered_at": "2026-11-17 18:57:38"
   },
   {
     "id": "news-94e979efd7382a51e7bf",
@@ -273,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T20:27:58.000Z",
-    "discovered_at": "2026-11-17 17:58:02"
+    "discovered_at": "2026-11-17 18:57:38"
   },
   {
     "id": "news-b16b5f3f20484c9207ef",
@@ -285,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T20:07:13.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-cd9a297fa8a4dcbf7609",
@@ -297,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T19:24:40.000Z",
-    "discovered_at": "2026-11-17 17:58:02"
+    "discovered_at": "2026-11-17 18:57:38"
   },
   {
     "id": "news-5f72fbdc79b9385d19bf",
@@ -309,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T19:23:45.000Z",
-    "discovered_at": "2026-11-17 17:58:02"
+    "discovered_at": "2026-11-17 18:57:38"
   },
   {
     "id": "news-d1bee759e86a69db18c4",
@@ -321,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T19:12:02.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-bd7cc537cd570a59da96",
@@ -333,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T18:43:35.000Z",
-    "discovered_at": "2026-11-17 17:58:02"
+    "discovered_at": "2026-11-17 18:57:38"
   },
   {
     "id": "news-0b5fe7dce536bb454a9f",
@@ -345,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T18:11:10.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-690a9aa8938dfa2f5ba4",
@@ -357,43 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T17:36:43.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
-  },
-  {
-    "id": "news-98a6b93915396a17328e",
-    "title": "Jordan Belfort’s new AI voice startup, Tone, wants to sell like the &#8216;Wolf of Wall Street&#8217;",
-    "url": "https://techcrunch.com/2026/11/16/jordan-belforts-new-ai-voice-startup-tone-wants-to-sell-like-the-wolf-of-wall-street/",
-    "source": "TechCrunch",
-    "summary": "Belfort claims his AI sales voice can already close deals almost as well as the best human salespeople, and he thinks it will catch up in a year.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-16T17:10:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
-  },
-  {
-    "id": "news-6d05b4dbd591c899b0c6",
-    "title": "OpenAI will embed safety researchers to investigate AI subversion",
-    "url": "https://techcrunch.com/2026/11/16/openai-will-embed-apollo-researchers-to-investigate-ai-subversion/",
-    "source": "TechCrunch",
-    "summary": "OpenAI will embed six Apollo Research evaluators to investigate whether its AI models engage in subversive behavior, but restrictions on access and disclosure raise questions about their independence.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-16T17:02:43.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
-  },
-  {
-    "id": "news-63e5e5cd2656670211a5",
-    "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
-    "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
-    "source": "TechCrunch",
-    "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-16T17:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-b1c71d07875ac772d826",
@@ -405,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T17:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-f26f2a4dfd6b9b957c15",
@@ -417,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T17:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-717626b76ea030ce1456",
@@ -429,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T14:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-f891bd93f3d214690602",
@@ -441,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T12:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-f054a54f8228cfac7fd4",
@@ -453,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T09:30:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-91e58e2ea930c2fabc27",
@@ -465,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T09:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-ebd9eb94963902d268e9",
@@ -477,19 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T08:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
-  },
-  {
-    "id": "news-b0ded74e06b06613ea57",
-    "title": "Advancing computer-use agents for healthcare teams",
-    "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-    "source": "OpenAI",
-    "summary": null,
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-16T06:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-cfcc7acb02e9ca7944d1",
@@ -501,7 +513,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T06:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
+  },
+  {
+    "id": "news-b0ded74e06b06613ea57",
+    "title": "Advancing computer-use agents for healthcare teams",
+    "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
+    "source": "OpenAI",
+    "summary": null,
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-16T06:00:00.000Z",
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-3899b6e8ee3cc1f1e22e",
@@ -513,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T00:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-e3915f7e4cf071c42329",
@@ -525,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T00:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-87d7014c15ee68a3a258",
@@ -537,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-15T22:00:01.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-4b0fc5b701ffd77dc125",
@@ -549,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-15T22:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-5bf4951adbe9698dd9e4",
@@ -561,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-13T15:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-d1318183fe1728936389",
@@ -573,19 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-13T08:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
-  },
-  {
-    "id": "news-5b0f73df89a6e31055ee",
-    "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
-    "url": "https://openai.com/business/customer-stories/amplitude",
-    "source": "OpenAI",
-    "summary": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-12T20:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-459a57b4750adf481f4f",
@@ -597,19 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T18:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
-  },
-  {
-    "id": "news-90d79223706ea3abe78d",
-    "title": "Gondola doubles revenue as its team builds more with Codex",
-    "url": "https://openai.com/business/customer-stories/gondola",
-    "source": "OpenAI",
-    "summary": "Gondola helps creatives get credit and get hired, with Codex raising its lead engineer’s output by 50% and ChatGPT simplifying daily work.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-12T12:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-8e4104a923ec61a4f8ae",
@@ -621,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T18:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-97adab01dbf7344a4376",
@@ -633,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-7e65614cc89aac7b14f8",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T09:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-b686da68349e5f787ade",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T21:12:59.000Z",
-    "discovered_at": "2026-11-17 17:58:02"
+    "discovered_at": "2026-11-17 18:57:38"
   },
   {
     "id": "news-ac5a661efbfd509d2187",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T19:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-c5fffc8a0cbdc3d45109",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T14:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-155d33cae72679311e5a",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T13:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-a5eef3cf57a4e41068d1",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T20:56:41.000Z",
-    "discovered_at": "2026-11-17 17:58:02"
+    "discovered_at": "2026-11-17 18:57:38"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-17 17:58:02"
+    "discovered_at": "2026-11-17 18:57:38"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -765,6 +765,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-17 17:57:52"
+    "discovered_at": "2026-11-17 18:57:27"
   }
 ]

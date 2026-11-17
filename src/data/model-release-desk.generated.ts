@@ -1,13 +1,13 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-17T17:58:11.174Z",
+  "generatedAt": "2026-11-17T18:57:46.058Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
-    "totalReleases": 63,
+    "totalReleases": 66,
     "highPriority": 5,
     "readyForEditor": 15,
     "officiallyVerified": 29,
-    "watchOnly": 34,
+    "watchOnly": 37,
     "openSource": 5
   },
   "releases": [
@@ -132,7 +132,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini Omni 1.2 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini Omni 1.2 Flash is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini Omni 1.2 Flash is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -152,6 +152,21 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Google to keep Gemini chats for two months, up from 72 hours, even with history off",
+          "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+          "source": "TechCrunch",
+          "date": "2026-11-17",
+          "summary": "Google's Gemini update extending chat retention will roll out globally over the coming weeks.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
@@ -175,8 +190,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-05-gemini-omni-1-2-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "muse-wonder",
@@ -300,7 +315,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini Omni 1.1 Flash is a preview-stage release from Google. It is positioned as an API-available model rather than a local-only release. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini Omni 1.1 Flash is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini Omni 1.1 Flash is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Preview status means the launch narrative matters before long-run benchmark coverage is complete.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -321,6 +336,21 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Google to keep Gemini chats for two months, up from 72 hours, even with history off",
+          "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+          "source": "TechCrunch",
+          "date": "2026-11-17",
+          "summary": "Google's Gemini update extending chat retention will roll out globally over the coming weeks.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
@@ -344,8 +374,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-08-27-gemini-omni-1-1-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "claude-mythos-preview",
@@ -476,7 +506,7 @@ export const modelReleaseDesk = {
       "outputPrice": 0.6,
       "outputPriceState": "verified",
       "pricingSource": "Vendor (official, checked 2026-11-13)",
-      "pricingUpdated": "2026-11-17 17:57:49",
+      "pricingUpdated": "2026-11-17 18:57:24",
       "summary": "MiniMax M3.1 Flash is a currently tracked release from MiniMax. It belongs in the open-weight / local-model conversation. Tracked context window: 1M tokens. Current tracked pricing: $0.15 in / $0.60 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "MiniMax's MiniMax M3.1 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -920,7 +950,7 @@ export const modelReleaseDesk = {
       "outputPrice": 25,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-17 17:57:49",
+      "pricingUpdated": "2026-11-17 18:57:24",
       "summary": "Claude Opus 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Current generally available Opus model. Some safeguarded requests can fall back to Opus 4.8. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1001,7 +1031,7 @@ export const modelReleaseDesk = {
       "outputPrice": 50,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-17 17:57:49",
+      "pricingUpdated": "2026-11-17 18:57:24",
       "summary": "Claude Opus 5 Fast is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Official faster Opus 5 mode, priced at twice the base token rate. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 5 Fast is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1082,9 +1112,9 @@ export const modelReleaseDesk = {
       "outputPrice": 2.5,
       "outputPriceState": "verified",
       "pricingSource": "Google AI (official)",
-      "pricingUpdated": "2026-11-17 17:57:49",
+      "pricingUpdated": "2026-11-17 18:57:24",
       "summary": "Gemini 3.5 Flash-Lite is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.30 in / $2.50 out per million tokens. Current generally available low-cost Gemini Flash-Lite model. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.5 Flash-Lite is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.5 Flash-Lite is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1104,6 +1134,21 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Google to keep Gemini chats for two months, up from 72 hours, even with history off",
+          "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+          "source": "TechCrunch",
+          "date": "2026-11-17",
+          "summary": "Google's Gemini update extending chat retention will roll out globally over the coming weeks.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
@@ -1127,8 +1172,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-5-flash-lite-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "gemini-3.6-flash",
@@ -1170,9 +1215,9 @@ export const modelReleaseDesk = {
       "outputPrice": 7.5,
       "outputPriceState": "verified",
       "pricingSource": "Google AI (official)",
-      "pricingUpdated": "2026-11-17 17:57:49",
+      "pricingUpdated": "2026-11-17 18:57:24",
       "summary": "Gemini 3.6 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Current generally available Gemini Flash model. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.6 Flash is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.6 Flash is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1192,6 +1237,21 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Google to keep Gemini chats for two months, up from 72 hours, even with history off",
+          "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+          "source": "TechCrunch",
+          "date": "2026-11-17",
+          "summary": "Google's Gemini update extending chat retention will roll out globally over the coming weeks.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
@@ -1215,8 +1275,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-6-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "gpt-5.6-sol",
@@ -1258,9 +1318,9 @@ export const modelReleaseDesk = {
       "outputPrice": 30,
       "outputPriceState": "verified",
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-11-17 17:57:49",
+      "pricingUpdated": "2026-11-17 18:57:24",
       "summary": "GPT-5.6 Sol is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Current frontier GPT-5.6 model; the gpt-5.6 alias routes to Sol. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1280,21 +1340,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
-          "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
-          "source": "TechCrunch",
-          "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
         {
           "title": "Introducing OpenAI for Chile",
           "url": "https://openai.com/index/introducing-openai-for-chile",
@@ -1342,8 +1387,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-07-09-gpt-5-6-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 6
+      "storyCount": 4,
+      "sourceCount": 5
     },
     {
       "id": "claude-sonnet-5",
@@ -1385,7 +1430,7 @@ export const modelReleaseDesk = {
       "outputPrice": 10,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official, introductory through 2026-08-31)",
-      "pricingUpdated": "2026-11-17 17:57:49",
+      "pricingUpdated": "2026-11-17 18:57:24",
       "summary": "Claude Sonnet 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Generally available Sonnet model. Introductory pricing applies through 31 August 2026. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Sonnet 5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1466,7 +1511,7 @@ export const modelReleaseDesk = {
       "outputPrice": 50,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-17 17:57:49",
+      "pricingUpdated": "2026-11-17 18:57:24",
       "summary": "Claude Fable 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Generally available Mythos-class model. Safeguarded topics can fall back to Opus 4.8 or Opus 5. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Fable 5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1549,7 +1594,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemma 4 is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 131.1K tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemma 4 is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemma 4 is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -1573,6 +1618,21 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
+          "title": "Google to keep Gemini chats for two months, up from 72 hours, even with history off",
+          "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+          "source": "TechCrunch",
+          "date": "2026-11-17",
+          "summary": "Google's Gemini update extending chat retention will roll out globally over the coming weeks.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
           "source": "Google",
@@ -1595,8 +1655,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-04-02-gemma-4-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "qwen3.6-plus",
@@ -1973,9 +2033,9 @@ export const modelReleaseDesk = {
       "outputPrice": 15,
       "outputPriceState": "verified",
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-11-17 17:57:49",
+      "pricingUpdated": "2026-11-17 18:57:24",
       "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Official GPT-5.4 API model; superseded as the current flagship by GPT-5.6. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "OpenAI's GPT-5.4 is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.4 is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1995,21 +2055,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
-          "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
-          "source": "TechCrunch",
-          "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
         {
           "title": "Introducing OpenAI for Chile",
           "url": "https://openai.com/index/introducing-openai-for-chile",
@@ -2057,8 +2102,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-03-05-gpt-5-4-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 6
+      "storyCount": 4,
+      "sourceCount": 5
     },
     {
       "id": "gemini-3.1-pro",
@@ -2102,7 +2147,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 3.1 Pro is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.1 Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.1 Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2122,6 +2167,21 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Google to keep Gemini chats for two months, up from 72 hours, even with history off",
+          "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+          "source": "TechCrunch",
+          "date": "2026-11-17",
+          "summary": "Google's Gemini update extending chat retention will roll out globally over the coming weeks.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
@@ -2145,8 +2205,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-02-19-gemini-3-1-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "claude-sonnet-4.6",
@@ -2188,7 +2248,7 @@ export const modelReleaseDesk = {
       "outputPrice": 15,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-17 17:57:49",
+      "pricingUpdated": "2026-11-17 18:57:24",
       "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 200K tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. Speed data hidden until it is refreshed from a current live measurement source. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2336,7 +2396,7 @@ export const modelReleaseDesk = {
       "outputPrice": 25,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-17 17:57:49",
+      "pricingUpdated": "2026-11-17 18:57:24",
       "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Official Opus release retained for historical comparisons. Speed data hidden until it is refreshed from a current live measurement source. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 1 related story and 1 benchmark signal to review.",
       "whyItMatters": [
@@ -3092,7 +3152,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 3.7 Flash is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-3.7-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 3.7 Flash is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.7 Flash is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3112,6 +3172,21 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Google to keep Gemini chats for two months, up from 72 hours, even with history off",
+          "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+          "source": "TechCrunch",
+          "date": "2026-11-17",
+          "summary": "Google's Gemini update extending chat retention will roll out globally over the coming weeks.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
@@ -3135,8 +3210,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gemini-3-7-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gemini-3.8-flash",
@@ -3186,7 +3261,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 3.8 Flash is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-3.8-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 3.8 Flash is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.8 Flash is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3206,6 +3281,21 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Google to keep Gemini chats for two months, up from 72 hours, even with history off",
+          "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+          "source": "TechCrunch",
+          "date": "2026-11-17",
+          "summary": "Google's Gemini update extending chat retention will roll out globally over the coming weeks.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
@@ -3229,8 +3319,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gemini-3-8-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gemini-4-carbon",
@@ -3280,7 +3370,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 4 Carbon is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-4-carbon); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 4 Carbon is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 4 Carbon is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3300,6 +3390,21 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "Google to keep Gemini chats for two months, up from 72 hours, even with history off",
+          "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+          "source": "TechCrunch",
+          "date": "2026-11-17",
+          "summary": "Google's Gemini update extending chat retention will roll out globally over the coming weeks.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
@@ -3323,8 +3428,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gemini-4-carbon-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gemini-4-hydrogen",
@@ -3374,7 +3479,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 4 Hydrogen is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-4-hydrogen); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 4 Hydrogen is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 4 Hydrogen is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3405,6 +3510,21 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "Google to keep Gemini chats for two months, up from 72 hours, even with history off",
+          "url": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+          "source": "TechCrunch",
+          "date": "2026-11-17",
+          "summary": "Google's Gemini update extending chat retention will roll out globally over the coming weeks.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
           "source": "Google",
@@ -3427,8 +3547,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gemini-4-hydrogen-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 3
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "glm-5.3",
@@ -3697,7 +3817,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Astra is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-astra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Astra is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Astra is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3724,21 +3844,6 @@ export const modelReleaseDesk = {
           "date": "2026-11-15",
           "summary": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
           "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
-          "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
-          "source": "TechCrunch",
-          "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
             "model_release"
           ]
         },
@@ -3789,8 +3894,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-astra-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 6
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "gpt-6-astra-pro",
@@ -3840,7 +3945,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Astra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-astra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Astra Pro is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Astra Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3860,21 +3965,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
-          "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
-          "source": "TechCrunch",
-          "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
         {
           "title": "Introducing OpenAI for Chile",
           "url": "https://openai.com/index/introducing-openai-for-chile",
@@ -3922,8 +4012,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-astra-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gpt-6-luna",
@@ -3973,7 +4063,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Luna is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-luna); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Luna is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Luna is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3993,21 +4083,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
-          "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
-          "source": "TechCrunch",
-          "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
         {
           "title": "Introducing OpenAI for Chile",
           "url": "https://openai.com/index/introducing-openai-for-chile",
@@ -4055,8 +4130,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-luna-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gpt-6-luna-pro",
@@ -4106,7 +4181,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Luna Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-luna-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Luna Pro is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Luna Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4126,21 +4201,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
-          "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
-          "source": "TechCrunch",
-          "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
         {
           "title": "Introducing OpenAI for Chile",
           "url": "https://openai.com/index/introducing-openai-for-chile",
@@ -4188,8 +4248,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-luna-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gpt-6-sol",
@@ -4239,7 +4299,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Sol is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4259,21 +4319,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
-          "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
-          "source": "TechCrunch",
-          "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
         {
           "title": "Introducing OpenAI for Chile",
           "url": "https://openai.com/index/introducing-openai-for-chile",
@@ -4321,8 +4366,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gpt-6-sol-pro",
@@ -4372,7 +4417,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Sol Pro is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Sol Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4392,21 +4437,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
-          "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
-          "source": "TechCrunch",
-          "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
         {
           "title": "Introducing OpenAI for Chile",
           "url": "https://openai.com/index/introducing-openai-for-chile",
@@ -4454,8 +4484,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-sol-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gpt-6.1-sol",
@@ -4505,7 +4535,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Sol is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4525,21 +4555,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
-          "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
-          "source": "TechCrunch",
-          "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
         {
           "title": "Introducing OpenAI for Chile",
           "url": "https://openai.com/index/introducing-openai-for-chile",
@@ -4587,8 +4602,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-1-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gpt-6.1-sol-pro",
@@ -4638,7 +4653,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Sol Pro is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Sol Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4658,21 +4673,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
-          "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
-          "source": "TechCrunch",
-          "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
         {
           "title": "Introducing OpenAI for Chile",
           "url": "https://openai.com/index/introducing-openai-for-chile",
@@ -4720,8 +4720,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-1-sol-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gpt-6.1-terra",
@@ -4771,7 +4771,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Terra is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-terra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Terra is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Terra is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4791,21 +4791,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
-          "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
-          "source": "TechCrunch",
-          "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
         {
           "title": "Introducing OpenAI for Chile",
           "url": "https://openai.com/index/introducing-openai-for-chile",
@@ -4853,8 +4838,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-1-terra-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gpt-6.1-terra-pro",
@@ -4904,7 +4889,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Terra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-terra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Terra Pro is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Terra Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4924,21 +4909,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
-          "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
-          "source": "TechCrunch",
-          "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
         {
           "title": "Introducing OpenAI for Chile",
           "url": "https://openai.com/index/introducing-openai-for-chile",
@@ -4986,8 +4956,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-1-terra-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gpt-6.2-astra",
@@ -5058,18 +5028,14 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
-          "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
-          "source": "TechCrunch",
-          "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
+          "title": "Introducing GPT-6.2 Astra and Sol",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.",
           "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
+            "model_release",
+            "api_update"
           ]
         },
         {
@@ -5121,6 +5087,360 @@ export const modelReleaseDesk = {
       "benchmarkCount": 0,
       "storyCount": 5,
       "sourceCount": 5
+    },
+    {
+      "id": "gpt-6.2-astra-pro",
+      "fileSlug": "2026-11-17-gpt-6-2-astra-pro-release-brief",
+      "modelName": "GPT-6.2 Astra Pro",
+      "providerId": "openai",
+      "providerName": "OpenAI",
+      "providerColour": "#10a37f",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.openai.com",
+      "providerDocsUrl": "https://platform.openai.com/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "GPT-6.2 Astra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.2-astra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "OpenAI's GPT-6.2 Astra Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-6.2 Astra Pro, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Introducing OpenAI for Chile",
+          "url": "https://openai.com/index/introducing-openai-for-chile",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "The King’s Trust and OpenAI launch £1m partnership",
+          "url": "https://openai.com/index/the-kings-trust-and-openai",
+          "source": "OpenAI",
+          "date": "2026-11-16",
+          "summary": "The King's Trust and OpenAI launch a £1m partnership to help up to 25,000 young people across the UK build practical AI skills for work.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "California sues OpenAI over rogue AI hacking incidents",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+          "source": "The Verge",
+          "date": "2026-11-16",
+          "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "open_source"
+          ]
+        },
+        {
+          "title": "Our new blog for science",
+          "url": "https://openai.com/index/our-new-blog-for-science",
+          "source": "OpenAI",
+          "date": "2026-11-15",
+          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
+          "routingTags": [
+            "research_paper"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-2-astra-pro-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 4,
+      "sourceCount": 4
+    },
+    {
+      "id": "gpt-6.2-sol",
+      "fileSlug": "2026-11-17-gpt-6-2-sol-release-brief",
+      "modelName": "GPT-6.2 Sol",
+      "providerId": "openai",
+      "providerName": "OpenAI",
+      "providerColour": "#10a37f",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.openai.com",
+      "providerDocsUrl": "https://platform.openai.com/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "GPT-6.2 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.2-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "OpenAI's GPT-6.2 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-6.2 Sol, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Introducing OpenAI for Chile",
+          "url": "https://openai.com/index/introducing-openai-for-chile",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "The King’s Trust and OpenAI launch £1m partnership",
+          "url": "https://openai.com/index/the-kings-trust-and-openai",
+          "source": "OpenAI",
+          "date": "2026-11-16",
+          "summary": "The King's Trust and OpenAI launch a £1m partnership to help up to 25,000 young people across the UK build practical AI skills for work.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "California sues OpenAI over rogue AI hacking incidents",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+          "source": "The Verge",
+          "date": "2026-11-16",
+          "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "open_source"
+          ]
+        },
+        {
+          "title": "Our new blog for science",
+          "url": "https://openai.com/index/our-new-blog-for-science",
+          "source": "OpenAI",
+          "date": "2026-11-15",
+          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
+          "routingTags": [
+            "research_paper"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-2-sol-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 4,
+      "sourceCount": 4
+    },
+    {
+      "id": "gpt-6.2-sol-pro",
+      "fileSlug": "2026-11-17-gpt-6-2-sol-pro-release-brief",
+      "modelName": "GPT-6.2 Sol Pro",
+      "providerId": "openai",
+      "providerName": "OpenAI",
+      "providerColour": "#10a37f",
+      "releaseDate": null,
+      "releaseDateLabel": "Unknown",
+      "ageDays": null,
+      "status": null,
+      "fieldStates": {
+        "released": "unverified",
+        "context_window": "unverified",
+        "max_output": "unverified",
+        "open_source": "unverified",
+        "modality": "unverified",
+        "api_available": "unverified",
+        "status": "unverified",
+        "category": "unverified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "discovery_only",
+      "priority": "backfill",
+      "draftStatus": "watch_only",
+      "officialUrl": null,
+      "providerStatusUrl": "https://status.openai.com",
+      "providerDocsUrl": "https://platform.openai.com/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": null,
+      "apiAvailableState": "unverified",
+      "modality": null,
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": null,
+      "maxOutputState": "unverified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "GPT-6.2 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.2-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
+      "dek": "OpenAI's GPT-6.2 Sol Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Confirm the model exists using a model-level provider source before drafting any release claim.",
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what OpenAI actually launched with GPT-6.2 Sol Pro, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "Introducing OpenAI for Chile",
+          "url": "https://openai.com/index/introducing-openai-for-chile",
+          "source": "OpenAI",
+          "date": "2026-11-17",
+          "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "The King’s Trust and OpenAI launch £1m partnership",
+          "url": "https://openai.com/index/the-kings-trust-and-openai",
+          "source": "OpenAI",
+          "date": "2026-11-16",
+          "summary": "The King's Trust and OpenAI launch a £1m partnership to help up to 25,000 young people across the UK build practical AI skills for work.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "California sues OpenAI over rogue AI hacking incidents",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+          "source": "The Verge",
+          "date": "2026-11-16",
+          "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "open_source"
+          ]
+        },
+        {
+          "title": "Our new blog for science",
+          "url": "https://openai.com/index/our-new-blog-for-science",
+          "source": "OpenAI",
+          "date": "2026-11-15",
+          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
+          "routingTags": [
+            "research_paper"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-2-sol-pro-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "grok-4.6",

@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 17 Nov 2026, 17:58 UTC
+Generated: 17 Nov 2026, 18:57 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 17 Nov 2026, 17:57 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 17 Nov 2026, 17:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 17 Nov 2026, 17:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 17 Nov 2026, 17:57 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 17 Nov 2026, 12:00 UTC | digest | AI models can be tricked into identifying civilians as military targets by telling them it&#8217;s a game | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/17/ai-models-can-be-tricked-into-identifying-civilians-as-military-targets-by-telling-them-its-a-game/) |
-| 17 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,017 open roles across 10 tracked companies. | `/jobs/` |
-| 17 Nov 2026, 12:00 UTC | digest | Proton&#8217;s Lumo, a privacy-focused alternative to ChatGPT and Claude, arrives on desktop | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/17/protons-lumo-a-privacy-focused-alternative-to-chatgpt-and-claude-arrives-on-desktop/) |
-| 17 Nov 2026, 12:00 UTC | digest | Published the 2026-11-17 daily digest | 15 stories captured from 5 sources. | `/news/` |
-| 17 Nov 2026, 12:00 UTC | digest | Put Gemini to work for you | Google featured in the latest daily brief. | [open](https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/) |
+| 17 Nov 2026, 18:57 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 17 Nov 2026, 18:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 17 Nov 2026, 18:57 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 17 Nov 2026, 18:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 17 Nov 2026, 12:00 UTC | digest | As decision model use skyrockets, is customization the next frontier? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/17/as-decision-model-use-skyrockets-is-customization-is-the-next-frontier/) |
+| 17 Nov 2026, 12:00 UTC | digest | Google to keep Gemini chats for two months, up from 72 hours, even with history off | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/) |
+| 17 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,018 open roles across 10 tracked companies. | `/jobs/` |
+| 17 Nov 2026, 12:00 UTC | digest | Pedestal AI raises $4.7 million to agentify the supply chain | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/17/pedestal-ai-raises-4-7-million-to-agentify-the-supply-chain/) |
+| 17 Nov 2026, 12:00 UTC | digest | Published the 2026-11-17 daily digest | 20 stories captured from 5 sources. | `/news/` |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
