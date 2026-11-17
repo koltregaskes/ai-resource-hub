@@ -2,7 +2,7 @@ import reviews from '../model-field-reviews.json';
 import type { CatalogModelEntry } from '../model-catalog';
 
 export type FieldEvidence = { value: string | number | boolean | null; verification: string; sourceUrl: string; checkedAt: string; reason?: string };
-export type ModelFieldReview = { id: string; fields: Record<string, FieldEvidence> };
+export type ModelFieldReview = { id: string; fields: Record<string, FieldEvidence>; summary?: string; successor?: { id: string; name: string; sourceUrl: string }; claims?: { text: string; sourceUrl: string }[] };
 export const MODEL_FIELD_REVIEWS: ModelFieldReview[] = reviews;
 export function getModelFieldReview(id: string) { return MODEL_FIELD_REVIEWS.find(row => row.id === id); }
 export function getReviewedCatalogEntries(): CatalogModelEntry[] {

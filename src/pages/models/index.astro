@@ -1,5 +1,6 @@
 ---
 import { MODEL_FIELD_REVIEWS } from '../../../scripts/lib/model-field-reviews';
+import releaseReviews from '../../../scripts/gpt62-model-reviews.json';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getBenchmarkScores, getLastScrapeTime, getPublicModelsByCategory } from '../../db/queries';
 
@@ -88,6 +89,11 @@ function formatPrice(value: number): string {
         </div>
       </div>
     </header>
+    <section class="my-6 rounded-lg border border-(--color-border) p-4" aria-label="OpenAI release field reviews">
+      <h2 class="text-lg font-semibold">OpenAI release: sourced model pages</h2>
+      <p class="mt-2">Specifications and scoped API prices, with vendor claims kept separate from independent benchmark evidence.</p>
+      <ul class="mt-2 flex flex-wrap gap-4">{releaseReviews.map(review => <li><a href={`${base}models/${review.id}/`}>{review.fields.name.value}</a></li>)}</ul>
+    </section>
 
     <div class="desk-note">
       This directory is intentionally factual. It does not decide which model is best; for scored views use
