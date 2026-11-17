@@ -345,6 +345,25 @@ class DisputedChecks(unittest.TestCase):
 
         return run_from("m", method_tasks(), decide)
 
+    def test_unresolved_final_counts_as_failed_in_both_scores(self):
+        slots = self.run_with(False, checks(["pass", "unresolved-final", "disputed"]))
+        result = scores.score_model(slots)
+        self.assertFalse(result["provisional"])
+        self.assertEqual(result["side_figures"]["unresolved_final_checks"], 1)
+        self.assertEqual(result["task_scores"]["f1-t01"], 2 / 3)
+        self.assertEqual(result["task_scores_excluding_disputed"]["f1-t01"], 2 / 3)
+        other = run_from("other", method_tasks(), lambda *args: ("answered", True))
+        report = scores.score_run(slots + other)
+        self.assertEqual(report["other"]["side_figures"]["unresolved_final_checks"], 0)
+
+    def test_unresolved_final_can_never_pass_or_be_a_script_verdict(self):
+        for passed in (True, None):
+            with self.assertRaises(scores.SlotValidationError):
+                scores.score_model(self.run_with(passed, checks(["unresolved-final"])))
+        with self.assertRaises(scores.SlotValidationError):
+            scores.score_model(self.run_with(False, [
+                {"id": "s1", "by": "script", "state": "unresolved-final"}]))
+
     def test_pass_true_with_a_disputed_check_is_refused(self):
         slots = self.run_with(True, checks(["pass", "disputed", "pass"]))
         self.assertEqual(len(slots), 180)

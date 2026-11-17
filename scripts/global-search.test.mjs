@@ -1,4 +1,4 @@
-import assert from 'node:assert/strict';
+﻿import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { runInNewContext } from 'node:vm';
@@ -11,7 +11,7 @@ const source = process.argv[2]
 const script = source.match(/<script is:inline>\s*([\s\S]*?)<\/script>/)?.[1];
 assert.ok(script);
 
-function harness(items = []) {
+function harness(items = [], href = 'https://example.test/') {
   class Element {
     listeners = {};
     innerHTML = '';
@@ -31,12 +31,14 @@ function harness(items = []) {
     if (selector === '[data-global-search]') return root;
     return { textContent: JSON.stringify(payloads[selector.match(/data-global-search-(.*)\]/)[1]]) };
   } };
+  const documentListeners = {};
+  const location = new URL(href);
   runInNewContext(script, {
     HTMLElement: Element, HTMLInputElement: Input, URL,
-    document: { currentScript: { parentElement }, addEventListener() {} },
-    window: { setTimeout() {}, location: { href: 'https://example.test/' } },
+    document: { currentScript: { parentElement }, addEventListener(type, handler) { documentListeners[type] = handler; } },
+    window: { setTimeout() {}, location, history: { state: { query: '<b>zqxmarker</b>' } } },
   });
-  return { nodes, async search(query, agent = false) {
+  return { nodes, documentListeners, async search(query, agent = false) {
     nodes.input.value = query;
     if (!agent) { nodes.input.listeners.input(); return; }
     let response;
@@ -77,4 +79,31 @@ test('human form submission cancels navigation without agent response', () => {
   let prevented = false;
   h.nodes.form.listeners.submit({ preventDefault() { prevented = true; }, respondWith() { assert.fail('human submission responded as agent'); } });
   assert.ok(prevented);
+});
+
+test('typed harmless bold markup is displayed literally, without a bold element', async () => {
+  const h = harness();
+  await h.search('<b>zqxmarker</b>');
+  const html = h.nodes.results.innerHTML;
+  assert.ok(html.includes('No results found for "&lt;b&gt;zqxmarker&lt;/b&gt;"'));
+  assert.equal((html.match(/<[^>]+>/g) || []).join(''), '<div class="px-4 py-8 text-center text-sm text-[var(--color-text-muted)]"></div>');
+});
+
+test('URL query, hash and history state do not enter the global search output', () => {
+  const marker = encodeURIComponent('<b>zqxmarker</b>');
+  const h = harness([], `https://example.test/?q=${marker}&query=${marker}&search=${marker}#${marker}`);
+  assert.equal(h.nodes.input.value, '');
+  assert.ok(!h.nodes.results.innerHTML.includes('zqxmarker'));
+  assert.ok(!/URLSearchParams|location\.(?:search|hash)|history\.|popstate/.test(script), 'new URL/history input needs an explicit source-to-sink audit');
+});
+
+test('closing clears typed query state before the search is reopened', async () => {
+  const h = harness();
+  h.nodes.trigger.listeners.click();
+  await h.search('<b>zqxmarker</b>');
+  h.documentListeners.keydown({ key: 'Escape' });
+  assert.equal(h.nodes.input.value, '');
+  h.nodes.trigger.listeners.click();
+  assert.ok(!h.nodes.results.innerHTML.includes('zqxmarker'));
+  assert.ok(h.nodes.results.innerHTML.includes('Start typing'));
 });

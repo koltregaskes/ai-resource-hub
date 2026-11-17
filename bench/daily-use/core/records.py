@@ -537,7 +537,7 @@ class RunRecord:
         for slot in self.planned:
             entry = models.setdefault(slot["model_id"], {
                 "planned": 0, "attempted": 0, "unstarted": 0, "pending": 0,
-                "unstarted_slots": []})
+                "unstarted_slots": [], "unresolved_final_checks": 0})
             entry["planned"] += 1
             row = self.rows.get(slot["slot_id"])
             if row is None:
@@ -545,6 +545,8 @@ class RunRecord:
                 entry["unstarted_slots"].append(slot["slot_id"])
             else:
                 entry["attempted"] += 1
+                entry["unresolved_final_checks"] += sum(
+                    c["state"] == "unresolved-final" for c in row.get("checks", []))
                 if not is_final(row):
                     entry["pending"] += 1
         return {"models": models, "stopped_providers": list(self.stopped_providers),

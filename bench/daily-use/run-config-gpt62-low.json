@@ -1,0 +1,249 @@
+{
+  "_comment": "GPT-6.2 arm at reasoning_effort low for Day-to-Day Bench task set v1 (rooms-os-hub #2051): gpt-6.2-astra and gpt-6.2-sol, released 17 November 2026, scored against gpt-6-astra and gpt-6.1-sol under the same conditions (the main seven-model run used low). Same tasks, graders, output limits (4,096 tokens, reasoning included), judges and repeats as run-config.json. Model entries are copied from gpt-6-astra and gpt-6.1-sol with only model_id, reasoning_effort and the price receipt changed. Prices read on the OpenAI pricing page on 17 November 2026, standard tier, short context: gpt-6.2-astra 8 / 0.40 cached / 40 USD per million tokens, gpt-6.2-sol 2 / 0.10 / 10. The model pages say the API rejects reasoning effort none for both, so low is the lowest effort used. caps_usd are the provider ledgers' lifetime ceilings, unchanged from the OpenAI arms. Results are a separate, labelled run.",
+  "task_set_version": "v1",
+  "live_approved": true,
+  "approved_by": "Kol (repo owner): typed go for the paid runs in the AI Resource Hub session on 15 November 2026, caps 90 USD OpenAI and 60 USD Anthropic; on 17 November 2026, relayed by the Chief of Staff: 'we need to use all those up, as we were using them for benchmarking' (prepaid credit only). OpenAI balance read on the billing page 17 November 2026: 115.58 USD, expiring 20 November 2026, auto-reload off",
+  "key_names": {
+    "openai": [
+      "OPENAI_API_KEY"
+    ],
+    "anthropic": [
+      "CLAUDE_API",
+      "CLAUDE_API_KEY"
+    ]
+  },
+  "caps_usd": {
+    "openai": 115,
+    "anthropic": 60
+  },
+  "planning": {
+    "expected_output_tokens": 600,
+    "judge_expected_output_tokens": 300
+  },
+  "canary": {
+    "public_tasks_per_model": 2,
+    "repeats": 1,
+    "task_ids": [
+      "f5-pub-03",
+      "f7-pub-05"
+    ],
+    "_comment": "Second canary, 15 November 2026. The first (run 2026-11-15T031058Z-aa0ee142) took the default two tasks, both short and script-graded, so it proved the transport and the charges and nothing else. These two exercise what it missed: f5-pub-03 has five judged checks and a long prompt, f7-pub-05 is graded by tests in the sandbox."
+  },
+  "models": [
+    {
+      "provider": "openai",
+      "model_id": "gpt-6.2-astra",
+      "api_version": "v1",
+      "reasoning_effort": "low",
+      "send_reasoning_effort": true,
+      "temperature": 1,
+      "send_temperature": false,
+      "output_limit_parameter": "max_output_tokens",
+      "data_retention": "store false is sent; no zero-data-retention agreement; provider abuse-monitoring logs, which can include prompts and replies, are kept up to 30 days (developers.openai.com/api/docs/guides/your-data, read 2026-11-15)",
+      "price": {
+        "input_per_mtok": 8,
+        "output_per_mtok": 40,
+        "cached_input_per_mtok": 0.4,
+        "reasoning_billing": "in_output",
+        "reasoning_per_mtok": null,
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "read_on": "2026-11-17",
+        "promo_ends": null,
+        "note": "standard tier, short context, USD per million tokens (read 17 November 2026); the long-context threshold for GPT-6.2 was not re-checked, and every bench prompt is far below any such threshold"
+      }
+    },
+    {
+      "provider": "openai",
+      "model_id": "gpt-6.2-sol",
+      "api_version": "v1",
+      "reasoning_effort": "low",
+      "send_reasoning_effort": true,
+      "temperature": 1,
+      "send_temperature": false,
+      "output_limit_parameter": "max_output_tokens",
+      "data_retention": "store false is sent; no zero-data-retention agreement; provider abuse-monitoring logs, which can include prompts and replies, are kept up to 30 days (developers.openai.com/api/docs/guides/your-data, read 2026-11-15)",
+      "price": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
+        "cached_input_per_mtok": 0.1,
+        "reasoning_billing": "in_output",
+        "reasoning_per_mtok": null,
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "read_on": "2026-11-17",
+        "promo_ends": null,
+        "note": "standard tier, short context, USD per million tokens (read 17 November 2026); the long-context threshold for GPT-6.2 was not re-checked, and every bench prompt is far below any such threshold"
+      }
+    }
+  ],
+  "_judge_candidates_comment": "The qualify stage tries every candidate against the frozen samples, cheapest first, and names the panel: on each side the cheapest candidate that passed. Then set judges to that panel. A judge verdict is a small JSON object, so every judge and candidate has an output limit of 400 tokens.",
+  "judge_candidates": {
+    "openai": [
+      {
+        "provider": "openai",
+        "model_id": "gpt-6-luna",
+        "api_version": "v1",
+        "reasoning_effort": "none",
+        "send_reasoning_effort": true,
+        "temperature": 1,
+        "send_temperature": false,
+        "output_limit_parameter": "max_output_tokens",
+        "data_retention": "store false is sent; no zero-data-retention agreement; provider abuse-monitoring logs, which can include prompts and replies, are kept up to 30 days (developers.openai.com/api/docs/guides/your-data, read 2026-11-15)",
+        "max_output_tokens": 400,
+        "price": {
+          "input_per_mtok": 0.1,
+          "output_per_mtok": 0.5,
+          "cached_input_per_mtok": 0.01,
+          "reasoning_billing": "in_output",
+          "reasoning_per_mtok": null,
+          "source_url": "https://developers.openai.com/api/docs/pricing",
+          "read_on": "2026-11-15",
+          "promo_ends": null,
+          "note": "standard tier, USD per million tokens, for prompts up to 272,000 input tokens; longer prompts cost more"
+        }
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-6.1-terra",
+        "api_version": "v1",
+        "reasoning_effort": "none",
+        "send_reasoning_effort": true,
+        "temperature": 1,
+        "send_temperature": false,
+        "output_limit_parameter": "max_output_tokens",
+        "data_retention": "store false is sent; no zero-data-retention agreement; provider abuse-monitoring logs, which can include prompts and replies, are kept up to 30 days (developers.openai.com/api/docs/guides/your-data, read 2026-11-15)",
+        "max_output_tokens": 400,
+        "price": {
+          "input_per_mtok": 1,
+          "output_per_mtok": 5,
+          "cached_input_per_mtok": 0.05,
+          "reasoning_billing": "in_output",
+          "reasoning_per_mtok": null,
+          "source_url": "https://developers.openai.com/api/docs/pricing",
+          "read_on": "2026-11-15",
+          "promo_ends": null,
+          "note": "standard tier, USD per million tokens, for prompts up to 272,000 input tokens; longer prompts cost more"
+        }
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-6.1-sol",
+        "api_version": "v1",
+        "reasoning_effort": "low",
+        "send_reasoning_effort": true,
+        "temperature": 1,
+        "send_temperature": false,
+        "output_limit_parameter": "max_output_tokens",
+        "data_retention": "store false is sent; no zero-data-retention agreement; provider abuse-monitoring logs, which can include prompts and replies, are kept up to 30 days (developers.openai.com/api/docs/guides/your-data, read 2026-11-15)",
+        "max_output_tokens": 400,
+        "price": {
+          "input_per_mtok": 2,
+          "output_per_mtok": 10,
+          "cached_input_per_mtok": 0.1,
+          "reasoning_billing": "in_output",
+          "reasoning_per_mtok": null,
+          "source_url": "https://developers.openai.com/api/docs/pricing",
+          "read_on": "2026-11-15",
+          "promo_ends": null,
+          "note": "standard tier, USD per million tokens, for prompts up to 272,000 input tokens; longer prompts cost more"
+        }
+      }
+    ],
+    "anthropic": [
+      {
+        "provider": "anthropic",
+        "model_id": "claude-haiku-5-5",
+        "api_version": "2026-10-21",
+        "reasoning_effort": "low",
+        "send_reasoning_effort": true,
+        "temperature": 1,
+        "send_temperature": false,
+        "output_limit_parameter": "max_tokens",
+        "data_retention": "no zero-data-retention agreement; provider default, inputs and outputs deleted within 30 days and flagged content kept longer (privacy.claude.com article 7996866, read 2026-11-15)",
+        "max_output_tokens": 400,
+        "price": {
+          "input_per_mtok": 0.1,
+          "output_per_mtok": 0.5,
+          "cached_input_per_mtok": 0.01,
+          "reasoning_billing": "in_output",
+          "reasoning_per_mtok": null,
+          "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "read_on": "2026-11-15",
+          "promo_ends": null,
+          "note": "USD per million tokens, for prompts up to 100,000 tokens; longer prompts cost five times as much; cached rate is the cache-read rate"
+        }
+      },
+      {
+        "provider": "anthropic",
+        "model_id": "claude-sonnet-5-5",
+        "api_version": "2026-10-21",
+        "reasoning_effort": "low",
+        "send_reasoning_effort": true,
+        "temperature": 1,
+        "send_temperature": false,
+        "output_limit_parameter": "max_tokens",
+        "data_retention": "no zero-data-retention agreement; provider default, inputs and outputs deleted within 30 days and flagged content kept longer (privacy.claude.com article 7996866, read 2026-11-15)",
+        "max_output_tokens": 400,
+        "price": {
+          "input_per_mtok": 2,
+          "output_per_mtok": 10,
+          "cached_input_per_mtok": 0.1,
+          "reasoning_billing": "in_output",
+          "reasoning_per_mtok": null,
+          "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+          "read_on": "2026-11-15",
+          "promo_ends": null,
+          "note": "USD per million tokens; cached rate is the cache-read rate"
+        }
+      }
+    ]
+  },
+  "_judges_comment": "The panel named by the live judge qualification of 15 November 2026 (run 2026-11-15T023300Z-391854ad): on each side the cheapest candidate that passed. The canary and the full run refuse a panel that differs from the qualification record.",
+  "judges": [
+    {
+      "provider": "openai",
+      "model_id": "gpt-6.1-terra",
+      "api_version": "v1",
+      "reasoning_effort": "none",
+      "send_reasoning_effort": true,
+      "temperature": 1,
+      "send_temperature": false,
+      "output_limit_parameter": "max_output_tokens",
+      "data_retention": "store false is sent; no zero-data-retention agreement; provider abuse-monitoring logs, which can include prompts and replies, are kept up to 30 days (developers.openai.com/api/docs/guides/your-data, read 2026-11-15)",
+      "max_output_tokens": 400,
+      "price": {
+        "input_per_mtok": 1,
+        "output_per_mtok": 5,
+        "cached_input_per_mtok": 0.05,
+        "reasoning_billing": "in_output",
+        "reasoning_per_mtok": null,
+        "source_url": "https://developers.openai.com/api/docs/pricing",
+        "read_on": "2026-11-15",
+        "promo_ends": null,
+        "note": "standard tier, USD per million tokens, for prompts up to 272,000 input tokens; longer prompts cost more"
+      }
+    },
+    {
+      "provider": "anthropic",
+      "model_id": "claude-sonnet-5-5",
+      "api_version": "2026-10-21",
+      "reasoning_effort": "low",
+      "send_reasoning_effort": true,
+      "temperature": 1,
+      "send_temperature": false,
+      "output_limit_parameter": "max_tokens",
+      "data_retention": "no zero-data-retention agreement; provider default, inputs and outputs deleted within 30 days and flagged content kept longer (privacy.claude.com article 7996866, read 2026-11-15)",
+      "max_output_tokens": 400,
+      "price": {
+        "input_per_mtok": 2,
+        "output_per_mtok": 10,
+        "cached_input_per_mtok": 0.1,
+        "reasoning_billing": "in_output",
+        "reasoning_per_mtok": null,
+        "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "read_on": "2026-11-15",
+        "promo_ends": null,
+        "note": "USD per million tokens; cached rate is the cache-read rate"
+      }
+    }
+  ]
+}

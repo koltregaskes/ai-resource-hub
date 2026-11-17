@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T13:15:29.171Z",
+  "generatedAt": "2026-11-17T18:57:40.296Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T13:15:29.167Z",
+      "lastCheckedAt": "2026-11-17T18:57:40.291Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,10 +100,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T13:15:28.776Z",
+      "lastCheckedAt": "2026-11-17T18:57:38.737Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
-      "summary": "1 active incident across 10 tracked components.",
+      "summary": "2 active incidents across 10 tracked components.",
       "notes": null,
       "components": [
         {
@@ -133,6 +133,17 @@
       ],
       "activeIncidents": [
         {
+          "id": "1lglzf469c0z",
+          "title": "Some users unable to sign in with Apple on claude.ai and the Claude iOS app",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-11-17T18:55:53.499Z",
+          "updatedAt": "2026-11-17T18:56:06.196Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/3tl6h35nnzwm",
+          "summary": "We have identified the cause of the issue affecting claude.ai and are working on a fix. We will provide an update as soon as possible."
+        },
+        {
           "id": "b5cq662qf2wm",
           "title": "Claude unable to join meetings",
           "status": "identified",
@@ -145,6 +156,17 @@
         }
       ],
       "recentIncidents": [
+        {
+          "id": "1lglzf469c0z",
+          "title": "Some users unable to sign in with Apple on claude.ai and the Claude iOS app",
+          "status": "identified",
+          "impact": "major",
+          "startedAt": "2026-11-17T18:55:53.499Z",
+          "updatedAt": "2026-11-17T18:56:06.196Z",
+          "resolvedAt": null,
+          "url": "https://stspg.io/3tl6h35nnzwm",
+          "summary": "We have identified the cause of the issue affecting claude.ai and are working on a fix. We will provide an update as soon as possible."
+        },
         {
           "id": "ct4c2pwf2xpj",
           "title": "Some users unable to sign up with Apple on the Claude iOS app",
@@ -177,17 +199,103 @@
           "resolvedAt": "2026-11-16T09:04:39.778Z",
           "url": "https://stspg.io/n18qjkd7dt4q",
           "summary": "The issue affecting claude.ai, the Claude API, Claude Code, and Claude Cowork has been resolved. Impact occurred from 23:32 PT on November 15 / 07:32 UTC on November 16 to 00:45 P..."
+        }
+      ]
+    },
+    {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-11-17T18:57:38.701Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Compliance API",
+          "status": "degraded_performance"
         },
         {
-          "id": "qrpz8k79qm7x",
-          "title": "Elevated purchasing errors on claude.ai",
+          "name": "Chat Completions",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Agents",
+          "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01M7N9VNR6X5SEC90M1YCDB36D",
+          "title": "Costs API data is delayed",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-11-17T17:46:15.000Z",
+          "updatedAt": "2026-11-17T18:41:57.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified the issue, it was due to an internal account, that jumped from 100 groups to 400+ groups, breaking rockset's ingestion. We have identified a simple fix for this..."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01M7N9VNR6X5SEC90M1YCDB36D",
+          "title": "Costs API data is delayed",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-11-17T17:46:15.000Z",
+          "updatedAt": "2026-11-17T18:41:57.000Z",
+          "resolvedAt": null,
+          "summary": "We have identified the issue, it was due to an internal account, that jumped from 100 groups to 400+ groups, breaking rockset's ingestion. We have identified a simple fix for this..."
+        },
+        {
+          "id": "01M7ATRS6BMZ61E4JDHJGM79Y0",
+          "title": "Delayed Costs Data in the Compliance API",
           "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-11-14T02:54:33.309Z",
-          "updatedAt": "2026-11-14T04:23:05.216Z",
-          "resolvedAt": "2026-11-14T04:23:05.193Z",
-          "url": "https://stspg.io/qqf00d9r7pm4",
-          "summary": "The issue affecting purchases and plan changes on claude.ai has been resolved, and delayed plan changes and payments have now been applied. Impact occurred from 18:34 PT on Novemb..."
+          "impact": "minor",
+          "startedAt": "2026-11-13T16:10:07.000Z",
+          "updatedAt": "2026-11-16T00:17:25.000Z",
+          "resolvedAt": "2026-11-16T00:17:25.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M7C40W0N5MZHNW0YM09QV962",
+          "title": "Elevated errors with ChatGPT billing and Ads billing",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-11-14T04:11:04.000Z",
+          "updatedAt": "2026-11-14T05:27:53.000Z",
+          "resolvedAt": "2026-11-14T05:27:53.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M78GAT3AK9P9W8Z230KHFVE8",
+          "title": "Elevated errors affecting the Microsoft 365 connector",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-12T18:29:14.000Z",
+          "updatedAt": "2026-11-14T00:18:13.000Z",
+          "resolvedAt": "2026-11-14T00:18:13.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
         }
       ]
     },
@@ -202,7 +310,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T13:15:27.630Z",
+      "lastCheckedAt": "2026-11-17T18:57:39.472Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +330,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T13:15:27.149Z",
+      "lastCheckedAt": "2026-11-17T18:57:38.983Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -255,92 +363,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T13:15:26.838Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Chat Completions",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Agents",
-          "status": "operational"
-        },
-        {
-          "name": "Decisions",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01M7ATRS6BMZ61E4JDHJGM79Y0",
-          "title": "Delayed Costs Data in the Compliance API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-13T16:10:07.000Z",
-          "updatedAt": "2026-11-16T00:17:25.000Z",
-          "resolvedAt": "2026-11-16T00:17:25.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M7C40W0N5MZHNW0YM09QV962",
-          "title": "Elevated errors with ChatGPT billing and Ads billing",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-11-14T04:11:04.000Z",
-          "updatedAt": "2026-11-14T05:27:53.000Z",
-          "resolvedAt": "2026-11-14T05:27:53.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M78GAT3AK9P9W8Z230KHFVE8",
-          "title": "Elevated errors affecting the Microsoft 365 connector",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-12T18:29:14.000Z",
-          "updatedAt": "2026-11-14T00:18:13.000Z",
-          "resolvedAt": "2026-11-14T00:18:13.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M79GYA0GA772Y6D089AH5478",
-          "title": "Sites: Publishing failing",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-13T03:59:08.000Z",
-          "updatedAt": "2026-11-13T05:55:44.000Z",
-          "resolvedAt": "2026-11-13T05:55:44.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -351,7 +373,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-17T13:15:27.799Z",
+      "lastCheckedAt": "2026-11-17T18:57:39.650Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",

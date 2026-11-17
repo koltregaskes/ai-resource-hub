@@ -33,11 +33,11 @@ One entry per check on the task, script checks and model-judged checks alike (me
 |---|---|
 | `id` | Non-empty string, unique within the slot, for example `c7` |
 | `by` | `script` or `judge` |
-| `state` | `pass`, `fail`, `disputed` (the two judges disagreed) or `unresolved` (the method's `judge_unresolved`) |
+| `state` | `pass`, `fail`, `disputed` (the two judges disagreed) or `unresolved` (the method's `judge_unresolved`), or `unresolved-final` (exhausted checklist judging, final and not passed) |
 
-- Only a `judge` check can be `disputed` or `unresolved`. A script verdict is final.
+- Only a `judge` check can be `disputed`, `unresolved` or `unresolved-final`. A script verdict is final.
 - Checks are accepted only on a slot whose outcome is `answered`.
-- **`pass` must equal the AND of the checks.** Every check `pass`: `pass` must be true. Any `fail` or `disputed`: `pass` must be false, because a disputed check counts as failed in the main score. Any `unresolved`: `pass` must be None (pending). A record that contradicts its own checks is refused with a message naming the slot and the check, for example `pass is True but check 'c7' is disputed`.
+- **`pass` must equal the AND of the checks.** Every check `pass`: `pass` must be true. Any `fail`, `disputed` or `unresolved-final` (with no pending `unresolved`): `pass` must be false, because a disputed check counts as failed in the main score. Any `unresolved`: `pass` must be None (pending). A record that contradicts its own checks is refused with a message naming the slot and the check, for example `pass is True but check 'c7' is disputed`.
 - Model-judged checks = entries with `by` `judge`. Disputed checks = entries with `state` `disputed`. `judged_checks`, `disputed_checks` and `dispute_rate` in the output are counted from this list and from nothing else.
 - The old aggregate input fields `judged_checks` and `disputed_checks` are kept only as a cross-check. They can't stand in for the list: a count without a matching `checks` list is refused, since a count can't say whether a slot failed only on a disputed check or on an undisputed one as well.
 
@@ -122,3 +122,5 @@ python -I -m unittest discover -s bench/daily-use/core/tests -p "test_b*.py" -v
 ```
 
 If NumPy isn't installed for that Python, set the environment variable `DTD_NUMPY_PATH` to a folder that holds it.
+
+`side_figures.unresolved_final_checks` counts exhausted checklist checks per evaluated model. They count as not passed in both the main score and the sensitivity score excluding disputed checks. The runner retains the `judge_attempts_exhausted` flag and judge evidence.
