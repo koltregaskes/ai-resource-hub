@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 17 Nov 2026, 14:57 UTC
+Generated: 17 Nov 2026, 15:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 17 Nov 2026, 14:57 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 17 Nov 2026, 14:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 17 Nov 2026, 14:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 17 Nov 2026, 14:57 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 17 Nov 2026, 15:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 17 Nov 2026, 15:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 17 Nov 2026, 15:58 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 17 Nov 2026, 15:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 17 Nov 2026, 12:00 UTC | digest | Isomorphic Labs raises $5B as it looks to take drug candidates to clinical trials | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/) |
-| 17 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,024 open roles across 10 tracked companies. | `/jobs/` |
-| 17 Nov 2026, 12:00 UTC | digest | Nvidia&#8217;s first big move after Jensen Huang&#8217;s exit targets national security | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/17/nvidias-first-big-move-after-jensen-huangs-exit-targets-national-security/) |
-| 17 Nov 2026, 12:00 UTC | digest | Published the 2026-11-17 daily digest | 7 stories captured from 3 sources. | `/news/` |
+| 17 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,018 open roles across 10 tracked companies. | `/jobs/` |
+| 17 Nov 2026, 12:00 UTC | digest | Published the 2026-11-17 daily digest | 8 stories captured from 3 sources. | `/news/` |
 | 17 Nov 2026, 12:00 UTC | digest | Science Corporation&#8217;s brain tech is worth $3.5 billion after new funding | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding/) |
+| 17 Nov 2026, 12:00 UTC | digest | Voyage Labs raises $12 million for a specialized AI travel assistant | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/17/voyage-labs-raises-12-million-for-a-specialized-ai-travel-assistant/) |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
