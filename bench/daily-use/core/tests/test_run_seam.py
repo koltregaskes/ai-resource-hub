@@ -104,15 +104,15 @@ def stub_score_run(slots, allow_pending=False):
             ids.add(check["id"])
             if check["by"] not in ("script", "judge"):
                 raise ValueError("by must be script or judge")
-            if check["state"] not in ("pass", "fail", "disputed", "unresolved"):
+            if check["state"] not in ("pass", "fail", "disputed", "unresolved", "unresolved-final"):
                 raise ValueError("unknown state")
-            if check["by"] == "script" and check["state"] in ("disputed", "unresolved"):
+            if check["by"] == "script" and check["state"] in ("disputed", "unresolved", "unresolved-final"):
                 raise ValueError("a script check is never disputed or unresolved")
             states.add(check["state"])
         if checks:
             if "unresolved" in states:
                 expected = None
-            elif states & {"fail", "disputed"}:
+            elif states & {"fail", "disputed", "unresolved-final"}:
                 expected = False
             else:
                 expected = True
@@ -449,10 +449,10 @@ class RecordShapeTests(SeamCase):
         self.assertEqual(summary["status"], "pending_judging")
         self.assertIsNone(summary["finalised"])
         row = self.one(rows, "k-pass")
-        self.assertEqual((row["outcome"], row["pass"], row["pending"]), ("answered", None, True))
+        self.assertEqual((row["outcome"], row["pass"], row["pending"]), ("answered", False, False))
         self.assertEqual(row["checks"], [{"id": "s1", "by": "script", "state": "pass"},
-                                         {"id": "j1", "by": "judge", "state": "unresolved"},
-                                         {"id": "j2", "by": "judge", "state": "unresolved"}])
+                                         {"id": "j1", "by": "judge", "state": "unresolved-final"},
+                                         {"id": "j2", "by": "judge", "state": "unresolved-final"}])
         row = self.one(rows, "u-unclear")
         self.assertEqual((row["outcome"], row["pass"], row["pending"], row["checks"]),
                          ("judge_unresolved", None, True, []))

@@ -4,6 +4,7 @@ Every transport here is a fake. The live-gate tests switch `LIVE_ENABLED`
 on inside the test only, and still use a fake transport and a fake key file.
 """
 
+import contextlib
 import glob
 import io
 import json
@@ -463,22 +464,21 @@ class JudgingTests(RunnerCase):
             self.assertTrue(ids[0].endswith("/judge/j-oa/checklist_judging/1"))
             self.assertTrue(ids[1].endswith("/judge/j-oa/checklist_judging/2"))
 
-    def test_unresolved_judge_leaves_the_slot_pending_and_the_run_unfinalised(self):
+    def test_exhausted_checklist_is_final_failed_with_visible_counts(self):
         summary, rows, _ = self.run_judged(checklist={"j-oa": "never valid"})
-        self.assertEqual(summary["status"], "pending_judging")
-        self.assertFalse(summary["publishable"])
-        self.assertIsNone(summary["finalised"])
-        self.assertIn(os.path.join("runs", "_staging"), summary["dir"])
-        self.assertFalse(os.path.exists(os.path.join(self.store, "runs", summary["run_id"])))
+        self.assertEqual(summary["status"], "finalised")
         for row in (r for r in rows if r["task_id"] == "t1"):
             self.assertEqual(row["judged"]["checks"],
                              {"c1": "judge_unresolved", "c2": "judge_unresolved"})
-            self.assertIsNone(row["pass"])
-            self.assertTrue(row["pending"])
-            # The model's own outcome is not turned into a failure by the judge's failure.
-            self.assertEqual(row["outcome"], "answered")
-            self.assertEqual(len(row["judge_requests"]), 3)       # j-oa first + one retry, j-an
-        self.assertEqual(summary["report"]["models"]["m-oa"]["pending"], 3)
+            self.assertEqual((row["outcome"], row["pass"], row["pending"]),
+                             ("answered", False, False))
+            self.assertEqual([c["state"] for c in row["checks"]],
+                             ["unresolved-final", "unresolved-final"])
+            self.assertIn("judge_attempts_exhausted", row["flags"])
+            self.assertEqual(len(row["judge_requests"]), 3)
+        report = summary["report"]["models"]["m-oa"]
+        self.assertEqual((report["pending"], report["unresolved_final_checks"]), (0, 6))
+        records.verify_manifest(summary["dir"])
 
     def test_judge_timeout_is_retried_once(self):
         calls = {"n": 0}
@@ -2352,60 +2352,38 @@ class FinishJudgingOnResumeTests(JudgingTests):
         self.assertFalse(any("used all" in line for line in printed))
         records.verify_manifest(done["dir"])
 
-    def test_the_judge_call_limit_holds_for_the_life_of_the_run_however_often_it_is_resumed(
-            self):
-        # The canary: each task once, so each judge call has a prompt of its
-        # own and the calls can be counted per prompt in the fake transports.
-        # j-oa never gives a valid checklist verdict for t1.
+    def test_legacy_exhausted_checklist_finalises_on_resume_without_requests(self):
+        # Recreate the old writer's pending record, including a prior resume
+        # which already added the exhaustion flag. Both malformed responses
+        # and the other judge's valid verdict remain in the durable log.
         bad = {"checklist": {"j-oa": "never valid"}}
-        transports = [self.transport(**bad)]
-        waiting = self.run_stage(transport=transports[0], grade=self.grade, stage="canary")
-        self.assertEqual(waiting["status"], "pending_judging")
-        run_id = waiting["run_id"]
-        (pending,) = [r for r in self.rows(waiting) if r["pending"]]
-        self.assertEqual(pending["task_id"], "t1")
-        base = pending["slot_id"] + "/judge/j-oa/checklist_judging/"
-
-        def calls_for_the_judge_call():
-            """How often the fake transports were asked for j-oa's checklist
-            verdict on the pending slot, over the whole life of the run."""
-            return [r for transport in transports for r in transport.requests
-                    if r.body["model"] == "j-oa"
-                    and prompt_of(r).startswith(judges.CHECKLIST_PROMPT[:60])]
-        self.assertEqual(len(calls_for_the_judge_call()), judges.ATTEMPTS_PER_JUDGE_CALL)
-        self.assertEqual(len({prompt_of(r) for r in calls_for_the_judge_call()}), 1)
-        # Resumed three times: twice with the judge still broken, then with a
-        # judge that would answer. Nothing is sent, for this judge call or
-        # for anything else, and the slot stays pending.
-        for number, verdicts in enumerate((bad, bad, {}), 1):
-            transports.append(self.transport(**verdicts))
-            printed = []
-            again = self.run_stage(transport=transports[-1], grade=self.grade, stage="canary",
-                                   resume=run_id, out=printed.append)
-            self.assertEqual(transports[-1].requests, [])
-            self.assertEqual((again["status"], again["finalised"]), ("pending_judging", None))
-            self.assertFalse(again["publishable"])
-            self.assertEqual(len(calls_for_the_judge_call()), judges.ATTEMPTS_PER_JUDGE_CALL)
-            (row,) = [r for r in self.rows(again) if r["pending"]]
-            self.assertEqual((row["slot_id"], row["pass"]), (pending["slot_id"], None))
-            self.assertEqual(row["flags"], ["finished_on_resume", "judge_attempts_exhausted"])
-            self.assertEqual(len([line for line in printed if "has used all 2 of its "
-                                  "requests for checklist_judging" in line]), 1)
-            attempts = row["judged"]["detail"]["checklist"][0]["attempts"]
-            self.assertEqual([item["result"] for item in attempts],
-                             ["earlier_attempts_unresolved", "attempts_exhausted"])
-            # j-an's verdict is on record and is reused, not asked for again.
-            self.assertEqual(row["judged"]["detail"]["checklist"][1]["attempts"][0]["detail"],
-                             "verdict taken from the run log; the judge was not asked again")
-            self.assertEqual(len(self.run_json(again)["resumed"]), number)
-        # The log holds exactly the two request ids of the judge call, and no
-        # line of the retired kind.
-        log = self.log(again)
-        self.assertEqual([line["request_id"] for line in log
-                          if line["event"] == "sent" and line["request_id"].startswith(base)],
-                         [base + "1", base + "2"])
-        self.assertNotIn("judge_attempt_added_on_resume", [line["event"] for line in log])
-        self.assertEqual(again["awaiting_reconciliation"], [])
+        with mock.patch.object(runner._Engine, "_finalise_exhausted_checks"):
+            waiting = self.run_stage(transport=self.transport(**bad), grade=self.grade)
+            legacy = self.run_stage(transport=self.transport(**bad), grade=self.grade,
+                                    resume=waiting["run_id"])
+        self.assertEqual(legacy["status"], "pending_judging")
+        self.assertTrue(all("judge_attempts_exhausted" in r["flags"]
+                            for r in self.rows(legacy) if r["pending"]))
+        before = self.sent(legacy)
+        idle = self.transport()
+        done = self.run_stage(transport=idle, grade=self.grade, resume=waiting["run_id"],
+                              scores=runner.default_scores)
+        self.assertEqual(idle.requests, [])
+        self.assertEqual(done["status"], "finalised")
+        self.assertEqual(self.sent(done), before)
+        for row in self.rows(done):
+            if row["task_id"] == "t1":
+                self.assertEqual((row["pass"], row["pending"]), (False, False))
+                self.assertEqual([c["state"] for c in row["checks"]],
+                                 ["unresolved-final", "unresolved-final"])
+                self.assertEqual(row["flags"].count("judge_attempts_exhausted"), 1)
+        self.assertEqual(done["report"]["models"]["m-oa"]["unresolved_final_checks"], 6)
+        with open(os.path.join(done["dir"], "scores.json"), encoding="utf-8") as stream:
+            scored = json.load(stream)["m-oa"]
+        self.assertFalse(scored["provisional"])
+        self.assertEqual(scored["side_figures"]["unresolved_final_checks"], 6)
+        self.assertEqual(scored["task_scores"]["t1"], 0)
+        records.verify_manifest(done["dir"])
 
     def run_json(self, summary):
         with open(os.path.join(summary["dir"], "run.json"), encoding="utf-8") as stream:
@@ -2418,7 +2396,11 @@ class FinishJudgingOnResumeTests(JudgingTests):
     def one_request_per_judge_call(self):
         """Hold a first run to one request per judge call, so that a judge
         that gave no verdict has one request of its two left for a resume."""
-        return mock.patch.object(judges, "ATTEMPTS_PER_JUDGE_CALL", 1)
+        stack = contextlib.ExitStack()
+        stack.enter_context(mock.patch.object(judges, "ATTEMPTS_PER_JUDGE_CALL", 1))
+        # A partial first run, rather than genuine lifetime exhaustion.
+        stack.enter_context(mock.patch.object(runner._Engine, "_finalise_exhausted_checks"))
+        return stack
 
     def test_the_caps_and_the_pass_gate_still_refuse_a_resume_that_only_has_judging_left(self):
         bad = {"checklist": {"j-oa": "never valid"}}
