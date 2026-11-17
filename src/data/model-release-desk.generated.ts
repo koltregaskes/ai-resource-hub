@@ -1,5 +1,5 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-16T20:23:43.408Z",
+  "generatedAt": "2026-11-17T03:46:57.728Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -20,7 +20,7 @@ export const modelReleaseDesk = {
       "providerColour": "#0a66ff",
       "releaseDate": "2026-11-09",
       "releaseDateLabel": "9 Nov 2026",
-      "ageDays": 7,
+      "ageDays": 8,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -93,7 +93,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-11-05",
       "releaseDateLabel": "5 Nov 2026",
-      "ageDays": 11,
+      "ageDays": 12,
       "status": "active",
       "fieldStates": {
         "released": "verified",
@@ -191,7 +191,7 @@ export const modelReleaseDesk = {
       "providerColour": "#0a66ff",
       "releaseDate": "2026-10-12",
       "releaseDateLabel": "12 Oct 2026",
-      "ageDays": 35,
+      "ageDays": 36,
       "status": "preview",
       "fieldStates": {
         "released": "verified",
@@ -265,7 +265,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-08-27",
       "releaseDateLabel": "27 Aug 2026",
-      "ageDays": 81,
+      "ageDays": 82,
       "status": "preview",
       "fieldStates": {
         "released": "verified",
@@ -364,7 +364,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-04-07",
       "releaseDateLabel": "7 Apr 2026",
-      "ageDays": 223,
+      "ageDays": 224,
       "status": "preview",
       "fieldStates": {
         "context_window": "unverified",
@@ -447,7 +447,7 @@ export const modelReleaseDesk = {
       "providerColour": "#e040fb",
       "releaseDate": "2026-10-19",
       "releaseDateLabel": "19 Oct 2026",
-      "ageDays": 28,
+      "ageDays": 29,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -484,7 +484,7 @@ export const modelReleaseDesk = {
       "outputPrice": 0.6,
       "outputPriceState": "verified",
       "pricingSource": "Vendor (official, checked 2026-11-13)",
-      "pricingUpdated": "2026-11-16 20:23:19",
+      "pricingUpdated": "2026-11-17 03:46:33",
       "summary": "MiniMax M3.1 Flash is a currently tracked release from MiniMax. It belongs in the open-weight / local-model conversation. Tracked context window: 1M tokens. Current tracked pricing: $0.15 in / $0.60 out per million tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "MiniMax's MiniMax M3.1 Flash is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -523,7 +523,7 @@ export const modelReleaseDesk = {
       "providerColour": "#0a66ff",
       "releaseDate": "2026-10-15",
       "releaseDateLabel": "15 Oct 2026",
-      "ageDays": 32,
+      "ageDays": 33,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -599,7 +599,7 @@ export const modelReleaseDesk = {
       "providerColour": "#76b900",
       "releaseDate": "2026-10-15",
       "releaseDateLabel": "15 Oct 2026",
-      "ageDays": 32,
+      "ageDays": 33,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -675,7 +675,7 @@ export const modelReleaseDesk = {
       "providerColour": "#0a66ff",
       "releaseDate": "2026-09-02",
       "releaseDateLabel": "2 Sept 2026",
-      "ageDays": 75,
+      "ageDays": 76,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -748,7 +748,7 @@ export const modelReleaseDesk = {
       "providerColour": "#76b900",
       "releaseDate": "2026-08-11",
       "releaseDateLabel": "11 Aug 2026",
-      "ageDays": 97,
+      "ageDays": 98,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -824,7 +824,7 @@ export const modelReleaseDesk = {
       "providerColour": "#0a66ff",
       "releaseDate": "2026-08-05",
       "releaseDateLabel": "5 Aug 2026",
-      "ageDays": 103,
+      "ageDays": 104,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -897,7 +897,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-07-24",
       "releaseDateLabel": "24 Jul 2026",
-      "ageDays": 115,
+      "ageDays": 116,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -928,7 +928,7 @@ export const modelReleaseDesk = {
       "outputPrice": 25,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-16 20:23:19",
+      "pricingUpdated": "2026-11-17 03:46:33",
       "summary": "Claude Opus 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Current generally available Opus model. Some safeguarded requests can fall back to Opus 4.8. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -978,7 +978,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-07-24",
       "releaseDateLabel": "24 Jul 2026",
-      "ageDays": 115,
+      "ageDays": 116,
       "status": "active",
       "fieldStates": {
         "context_window": "unverified",
@@ -1009,7 +1009,7 @@ export const modelReleaseDesk = {
       "outputPrice": 50,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-16 20:23:19",
+      "pricingUpdated": "2026-11-17 03:46:33",
       "summary": "Claude Opus 5 Fast is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Official faster Opus 5 mode, priced at twice the base token rate. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 5 Fast is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1059,7 +1059,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-07-21",
       "releaseDateLabel": "21 Jul 2026",
-      "ageDays": 118,
+      "ageDays": 119,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1090,7 +1090,7 @@ export const modelReleaseDesk = {
       "outputPrice": 2.5,
       "outputPriceState": "verified",
       "pricingSource": "Google AI (official)",
-      "pricingUpdated": "2026-11-16 20:23:19",
+      "pricingUpdated": "2026-11-17 03:46:33",
       "summary": "Gemini 3.5 Flash-Lite is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.30 in / $2.50 out per million tokens. Current generally available low-cost Gemini Flash-Lite model. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Google's Gemini 3.5 Flash-Lite is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1151,7 +1151,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-07-21",
       "releaseDateLabel": "21 Jul 2026",
-      "ageDays": 118,
+      "ageDays": 119,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1182,7 +1182,7 @@ export const modelReleaseDesk = {
       "outputPrice": 7.5,
       "outputPriceState": "verified",
       "pricingSource": "Google AI (official)",
-      "pricingUpdated": "2026-11-16 20:23:19",
+      "pricingUpdated": "2026-11-17 03:46:33",
       "summary": "Gemini 3.6 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Current generally available Gemini Flash model. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Google's Gemini 3.6 Flash is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1243,7 +1243,7 @@ export const modelReleaseDesk = {
       "providerColour": "#10a37f",
       "releaseDate": "2026-07-09",
       "releaseDateLabel": "9 Jul 2026",
-      "ageDays": 130,
+      "ageDays": 131,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1274,7 +1274,7 @@ export const modelReleaseDesk = {
       "outputPrice": 30,
       "outputPriceState": "verified",
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-11-16 20:23:19",
+      "pricingUpdated": "2026-11-17 03:46:33",
       "summary": "GPT-5.6 Sol is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Current frontier GPT-5.6 model; the gpt-5.6 alias routes to Sol. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1301,22 +1301,7 @@ export const modelReleaseDesk = {
           "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
           "source": "TechCrunch",
           "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "The AI graveyard: a running list of projects and startups that didn&#8217;t make it",
-          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-          "source": "TechCrunch",
-          "date": "2026-11-14",
-          "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -1334,6 +1319,20 @@ export const modelReleaseDesk = {
           "summary": "The King's Trust and OpenAI launch a £1m partnership to help up to 25,000 young people across the UK build practical AI skills for work.",
           "routingTags": [
             "model_release"
+          ]
+        },
+        {
+          "title": "California sues OpenAI over rogue AI hacking incidents",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+          "source": "The Verge",
+          "date": "2026-11-16",
+          "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "open_source"
           ]
         },
         {
@@ -1361,7 +1360,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-06-30",
       "releaseDateLabel": "30 Jun 2026",
-      "ageDays": 139,
+      "ageDays": 140,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1392,7 +1391,7 @@ export const modelReleaseDesk = {
       "outputPrice": 10,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official, introductory through 2026-08-31)",
-      "pricingUpdated": "2026-11-16 20:23:19",
+      "pricingUpdated": "2026-11-17 03:46:33",
       "summary": "Claude Sonnet 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Generally available Sonnet model. Introductory pricing applies through 31 August 2026. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Sonnet 5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1442,7 +1441,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-06-09",
       "releaseDateLabel": "9 Jun 2026",
-      "ageDays": 160,
+      "ageDays": 161,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1473,7 +1472,7 @@ export const modelReleaseDesk = {
       "outputPrice": 50,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-16 20:23:19",
+      "pricingUpdated": "2026-11-17 03:46:33",
       "summary": "Claude Fable 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Generally available Mythos-class model. Safeguarded topics can fall back to Opus 4.8 or Opus 5. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Fable 5 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -1523,7 +1522,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-04-02",
       "releaseDateLabel": "2 Apr 2026",
-      "ageDays": 228,
+      "ageDays": 229,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1618,7 +1617,7 @@ export const modelReleaseDesk = {
       "providerColour": "#ff6a00",
       "releaseDate": "2026-04-02",
       "releaseDateLabel": "2 Apr 2026",
-      "ageDays": 228,
+      "ageDays": 229,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1685,7 +1684,7 @@ export const modelReleaseDesk = {
       "providerColour": "#1da1f2",
       "releaseDate": "2026-03-31",
       "releaseDateLabel": "31 Mar 2026",
-      "ageDays": 230,
+      "ageDays": 231,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1752,7 +1751,7 @@ export const modelReleaseDesk = {
       "providerColour": "#f59e0b",
       "releaseDate": "2026-03-28",
       "releaseDateLabel": "28 Mar 2026",
-      "ageDays": 233,
+      "ageDays": 234,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1819,7 +1818,7 @@ export const modelReleaseDesk = {
       "providerColour": "#e040fb",
       "releaseDate": "2026-03-18",
       "releaseDateLabel": "18 Mar 2026",
-      "ageDays": 243,
+      "ageDays": 244,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1886,7 +1885,7 @@ export const modelReleaseDesk = {
       "providerColour": "#00b4d8",
       "releaseDate": "2026-03-15",
       "releaseDateLabel": "15 Mar 2026",
-      "ageDays": 246,
+      "ageDays": 247,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1953,7 +1952,7 @@ export const modelReleaseDesk = {
       "providerColour": "#10a37f",
       "releaseDate": "2026-03-05",
       "releaseDateLabel": "5 Mar 2026",
-      "ageDays": 256,
+      "ageDays": 257,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1984,7 +1983,7 @@ export const modelReleaseDesk = {
       "outputPrice": 15,
       "outputPriceState": "verified",
       "pricingSource": "OpenAI (official)",
-      "pricingUpdated": "2026-11-16 20:23:19",
+      "pricingUpdated": "2026-11-17 03:46:33",
       "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Official GPT-5.4 API model; superseded as the current flagship by GPT-5.6. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "OpenAI's GPT-5.4 is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2011,22 +2010,7 @@ export const modelReleaseDesk = {
           "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
           "source": "TechCrunch",
           "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "The AI graveyard: a running list of projects and startups that didn&#8217;t make it",
-          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-          "source": "TechCrunch",
-          "date": "2026-11-14",
-          "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -2044,6 +2028,20 @@ export const modelReleaseDesk = {
           "summary": "The King's Trust and OpenAI launch a £1m partnership to help up to 25,000 young people across the UK build practical AI skills for work.",
           "routingTags": [
             "model_release"
+          ]
+        },
+        {
+          "title": "California sues OpenAI over rogue AI hacking incidents",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+          "source": "The Verge",
+          "date": "2026-11-16",
+          "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "open_source"
           ]
         },
         {
@@ -2071,7 +2069,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-02-19",
       "releaseDateLabel": "19 Feb 2026",
-      "ageDays": 270,
+      "ageDays": 271,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -2163,7 +2161,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-02-17",
       "releaseDateLabel": "17 Feb 2026",
-      "ageDays": 272,
+      "ageDays": 273,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -2194,7 +2192,7 @@ export const modelReleaseDesk = {
       "outputPrice": 15,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-16 20:23:19",
+      "pricingUpdated": "2026-11-17 03:46:33",
       "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 200K tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. Speed data hidden until it is refreshed from a current live measurement source. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
@@ -2244,7 +2242,7 @@ export const modelReleaseDesk = {
       "providerColour": "#00b4d8",
       "releaseDate": "2026-02-12",
       "releaseDateLabel": "12 Feb 2026",
-      "ageDays": 277,
+      "ageDays": 278,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -2311,7 +2309,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-02-05",
       "releaseDateLabel": "5 Feb 2026",
-      "ageDays": 284,
+      "ageDays": 285,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -2342,7 +2340,7 @@ export const modelReleaseDesk = {
       "outputPrice": 25,
       "outputPriceState": "verified",
       "pricingSource": "Anthropic (official)",
-      "pricingUpdated": "2026-11-16 20:23:19",
+      "pricingUpdated": "2026-11-17 03:46:33",
       "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Official Opus release retained for historical comparisons. Speed data hidden until it is refreshed from a current live measurement source. A model-level official source is attached, so this can enter source-first editorial review.",
       "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 1 related story and 1 benchmark signal to review.",
       "whyItMatters": [
@@ -2398,7 +2396,7 @@ export const modelReleaseDesk = {
     },
     {
       "id": "claude-fable-5.1",
-      "fileSlug": "2026-11-16-claude-fable-5-1-release-brief",
+      "fileSlug": "2026-11-17-claude-fable-5-1-release-brief",
       "modelName": "Claude Fable 5.1",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -2478,14 +2476,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-claude-fable-5-1-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-claude-fable-5-1-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 1,
       "sourceCount": 1
     },
     {
       "id": "claude-fable-5.2",
-      "fileSlug": "2026-11-16-claude-fable-5-2-release-brief",
+      "fileSlug": "2026-11-17-claude-fable-5-2-release-brief",
       "modelName": "Claude Fable 5.2",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -2565,14 +2563,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-claude-fable-5-2-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-claude-fable-5-2-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 1,
       "sourceCount": 1
     },
     {
       "id": "claude-haiku-5.5",
-      "fileSlug": "2026-11-16-claude-haiku-5-5-release-brief",
+      "fileSlug": "2026-11-17-claude-haiku-5-5-release-brief",
       "modelName": "Claude Haiku 5.5",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -2652,14 +2650,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-claude-haiku-5-5-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-claude-haiku-5-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 1,
       "sourceCount": 1
     },
     {
       "id": "claude-opus-5.5",
-      "fileSlug": "2026-11-16-claude-opus-5-5-release-brief",
+      "fileSlug": "2026-11-17-claude-opus-5-5-release-brief",
       "modelName": "Claude Opus 5.5",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -2739,14 +2737,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-claude-opus-5-5-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-claude-opus-5-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 1,
       "sourceCount": 1
     },
     {
       "id": "claude-sonnet-5.5",
-      "fileSlug": "2026-11-16-claude-sonnet-5-5-release-brief",
+      "fileSlug": "2026-11-17-claude-sonnet-5-5-release-brief",
       "modelName": "Claude Sonnet 5.5",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -2826,14 +2824,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-claude-sonnet-5-5-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-claude-sonnet-5-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 1,
       "sourceCount": 1
     },
     {
       "id": "deepseek-v4-flash-0731",
-      "fileSlug": "2026-11-16-deepseek-v4-flash-0731-release-brief",
+      "fileSlug": "2026-11-17-deepseek-v4-flash-0731-release-brief",
       "modelName": "DeepSeek V4 Flash 0731",
       "providerId": "deepseek",
       "providerName": "DeepSeek",
@@ -2899,14 +2897,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-16-deepseek-v4-flash-0731-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-deepseek-v4-flash-0731-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "deepseek-v4.1-flash",
-      "fileSlug": "2026-11-16-deepseek-v4-1-flash-release-brief",
+      "fileSlug": "2026-11-17-deepseek-v4-1-flash-release-brief",
       "modelName": "DeepSeek V4.1 Flash",
       "providerId": "deepseek",
       "providerName": "DeepSeek",
@@ -2972,14 +2970,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-16-deepseek-v4-1-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-deepseek-v4-1-flash-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "deepseek-v4.1-flash-1017",
-      "fileSlug": "2026-11-16-deepseek-v4-1-flash-1017-release-brief",
+      "fileSlug": "2026-11-17-deepseek-v4-1-flash-1017-release-brief",
       "modelName": "DeepSeek V4.1 Flash 1017",
       "providerId": "deepseek",
       "providerName": "DeepSeek",
@@ -3045,14 +3043,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-16-deepseek-v4-1-flash-1017-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-deepseek-v4-1-flash-1017-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "gemini-3.7-flash",
-      "fileSlug": "2026-11-16-gemini-3-7-flash-release-brief",
+      "fileSlug": "2026-11-17-gemini-3-7-flash-release-brief",
       "modelName": "Gemini 3.7 Flash",
       "providerId": "google",
       "providerName": "Google",
@@ -3143,14 +3141,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-gemini-3-7-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-gemini-3-7-flash-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 2,
       "sourceCount": 2
     },
     {
       "id": "gemini-3.8-flash",
-      "fileSlug": "2026-11-16-gemini-3-8-flash-release-brief",
+      "fileSlug": "2026-11-17-gemini-3-8-flash-release-brief",
       "modelName": "Gemini 3.8 Flash",
       "providerId": "google",
       "providerName": "Google",
@@ -3241,14 +3239,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-gemini-3-8-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-gemini-3-8-flash-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 2,
       "sourceCount": 2
     },
     {
       "id": "gemini-4-carbon",
-      "fileSlug": "2026-11-16-gemini-4-carbon-release-brief",
+      "fileSlug": "2026-11-17-gemini-4-carbon-release-brief",
       "modelName": "Gemini 4 Carbon",
       "providerId": "google",
       "providerName": "Google",
@@ -3339,14 +3337,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-gemini-4-carbon-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-gemini-4-carbon-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 2,
       "sourceCount": 2
     },
     {
       "id": "gemini-4-hydrogen",
-      "fileSlug": "2026-11-16-gemini-4-hydrogen-release-brief",
+      "fileSlug": "2026-11-17-gemini-4-hydrogen-release-brief",
       "modelName": "Gemini 4 Hydrogen",
       "providerId": "google",
       "providerName": "Google",
@@ -3447,14 +3445,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-gemini-4-hydrogen-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-gemini-4-hydrogen-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "glm-5.3",
-      "fileSlug": "2026-11-16-glm-5-3-release-brief",
+      "fileSlug": "2026-11-17-glm-5-3-release-brief",
       "modelName": "GLM 5.3",
       "providerId": "zhipu",
       "providerName": "Zhipu AI",
@@ -3520,14 +3518,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-16-glm-5-3-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-glm-5-3-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "glm-5.3-flash",
-      "fileSlug": "2026-11-16-glm-5-3-flash-release-brief",
+      "fileSlug": "2026-11-17-glm-5-3-flash-release-brief",
       "modelName": "GLM 5.3 Flash",
       "providerId": "zhipu",
       "providerName": "Zhipu AI",
@@ -3593,14 +3591,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-16-glm-5-3-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-glm-5-3-flash-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "glm-5.3-prime",
-      "fileSlug": "2026-11-16-glm-5-3-prime-release-brief",
+      "fileSlug": "2026-11-17-glm-5-3-prime-release-brief",
       "modelName": "GLM 5.3 Prime",
       "providerId": "zhipu",
       "providerName": "Zhipu AI",
@@ -3666,14 +3664,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-16-glm-5-3-prime-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-glm-5-3-prime-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "gpt-6-astra",
-      "fileSlug": "2026-11-16-gpt-6-astra-release-brief",
+      "fileSlug": "2026-11-17-gpt-6-astra-release-brief",
       "modelName": "GPT-6 Astra",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -3754,22 +3752,7 @@ export const modelReleaseDesk = {
           "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
           "source": "TechCrunch",
           "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "The AI graveyard: a running list of projects and startups that didn&#8217;t make it",
-          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-          "source": "TechCrunch",
-          "date": "2026-11-14",
-          "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -3790,6 +3773,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "California sues OpenAI over rogue AI hacking incidents",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+          "source": "The Verge",
+          "date": "2026-11-16",
+          "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "open_source"
+          ]
+        },
+        {
           "title": "Our new blog for science",
           "url": "https://openai.com/index/our-new-blog-for-science",
           "source": "OpenAI",
@@ -3800,14 +3797,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-gpt-6-astra-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-astra-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 5,
       "sourceCount": 5
     },
     {
       "id": "gpt-6-astra-pro",
-      "fileSlug": "2026-11-16-gpt-6-astra-pro-release-brief",
+      "fileSlug": "2026-11-17-gpt-6-astra-pro-release-brief",
       "modelName": "GPT-6 Astra Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -3878,22 +3875,7 @@ export const modelReleaseDesk = {
           "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
           "source": "TechCrunch",
           "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "The AI graveyard: a running list of projects and startups that didn&#8217;t make it",
-          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-          "source": "TechCrunch",
-          "date": "2026-11-14",
-          "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -3914,6 +3896,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "California sues OpenAI over rogue AI hacking incidents",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+          "source": "The Verge",
+          "date": "2026-11-16",
+          "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "open_source"
+          ]
+        },
+        {
           "title": "Our new blog for science",
           "url": "https://openai.com/index/our-new-blog-for-science",
           "source": "OpenAI",
@@ -3924,14 +3920,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-gpt-6-astra-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-astra-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gpt-6-luna",
-      "fileSlug": "2026-11-16-gpt-6-luna-release-brief",
+      "fileSlug": "2026-11-17-gpt-6-luna-release-brief",
       "modelName": "GPT-6 Luna",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4002,22 +3998,7 @@ export const modelReleaseDesk = {
           "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
           "source": "TechCrunch",
           "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "The AI graveyard: a running list of projects and startups that didn&#8217;t make it",
-          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-          "source": "TechCrunch",
-          "date": "2026-11-14",
-          "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -4038,6 +4019,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "California sues OpenAI over rogue AI hacking incidents",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+          "source": "The Verge",
+          "date": "2026-11-16",
+          "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "open_source"
+          ]
+        },
+        {
           "title": "Our new blog for science",
           "url": "https://openai.com/index/our-new-blog-for-science",
           "source": "OpenAI",
@@ -4048,14 +4043,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-gpt-6-luna-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-luna-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gpt-6-luna-pro",
-      "fileSlug": "2026-11-16-gpt-6-luna-pro-release-brief",
+      "fileSlug": "2026-11-17-gpt-6-luna-pro-release-brief",
       "modelName": "GPT-6 Luna Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4126,22 +4121,7 @@ export const modelReleaseDesk = {
           "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
           "source": "TechCrunch",
           "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "The AI graveyard: a running list of projects and startups that didn&#8217;t make it",
-          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-          "source": "TechCrunch",
-          "date": "2026-11-14",
-          "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -4162,6 +4142,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "California sues OpenAI over rogue AI hacking incidents",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+          "source": "The Verge",
+          "date": "2026-11-16",
+          "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "open_source"
+          ]
+        },
+        {
           "title": "Our new blog for science",
           "url": "https://openai.com/index/our-new-blog-for-science",
           "source": "OpenAI",
@@ -4172,14 +4166,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-gpt-6-luna-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-luna-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gpt-6-sol",
-      "fileSlug": "2026-11-16-gpt-6-sol-release-brief",
+      "fileSlug": "2026-11-17-gpt-6-sol-release-brief",
       "modelName": "GPT-6 Sol",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4250,22 +4244,7 @@ export const modelReleaseDesk = {
           "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
           "source": "TechCrunch",
           "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "The AI graveyard: a running list of projects and startups that didn&#8217;t make it",
-          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-          "source": "TechCrunch",
-          "date": "2026-11-14",
-          "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -4286,6 +4265,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "California sues OpenAI over rogue AI hacking incidents",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+          "source": "The Verge",
+          "date": "2026-11-16",
+          "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "open_source"
+          ]
+        },
+        {
           "title": "Our new blog for science",
           "url": "https://openai.com/index/our-new-blog-for-science",
           "source": "OpenAI",
@@ -4296,14 +4289,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-gpt-6-sol-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-sol-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gpt-6-sol-pro",
-      "fileSlug": "2026-11-16-gpt-6-sol-pro-release-brief",
+      "fileSlug": "2026-11-17-gpt-6-sol-pro-release-brief",
       "modelName": "GPT-6 Sol Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4374,22 +4367,7 @@ export const modelReleaseDesk = {
           "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
           "source": "TechCrunch",
           "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "The AI graveyard: a running list of projects and startups that didn&#8217;t make it",
-          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-          "source": "TechCrunch",
-          "date": "2026-11-14",
-          "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -4410,6 +4388,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "California sues OpenAI over rogue AI hacking incidents",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+          "source": "The Verge",
+          "date": "2026-11-16",
+          "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "open_source"
+          ]
+        },
+        {
           "title": "Our new blog for science",
           "url": "https://openai.com/index/our-new-blog-for-science",
           "source": "OpenAI",
@@ -4420,14 +4412,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-gpt-6-sol-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-sol-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gpt-6.1-sol",
-      "fileSlug": "2026-11-16-gpt-6-1-sol-release-brief",
+      "fileSlug": "2026-11-17-gpt-6-1-sol-release-brief",
       "modelName": "GPT-6.1 Sol",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4498,22 +4490,7 @@ export const modelReleaseDesk = {
           "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
           "source": "TechCrunch",
           "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "The AI graveyard: a running list of projects and startups that didn&#8217;t make it",
-          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-          "source": "TechCrunch",
-          "date": "2026-11-14",
-          "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -4534,6 +4511,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "California sues OpenAI over rogue AI hacking incidents",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+          "source": "The Verge",
+          "date": "2026-11-16",
+          "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "open_source"
+          ]
+        },
+        {
           "title": "Our new blog for science",
           "url": "https://openai.com/index/our-new-blog-for-science",
           "source": "OpenAI",
@@ -4544,14 +4535,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-gpt-6-1-sol-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-1-sol-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gpt-6.1-sol-pro",
-      "fileSlug": "2026-11-16-gpt-6-1-sol-pro-release-brief",
+      "fileSlug": "2026-11-17-gpt-6-1-sol-pro-release-brief",
       "modelName": "GPT-6.1 Sol Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4622,22 +4613,7 @@ export const modelReleaseDesk = {
           "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
           "source": "TechCrunch",
           "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "The AI graveyard: a running list of projects and startups that didn&#8217;t make it",
-          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-          "source": "TechCrunch",
-          "date": "2026-11-14",
-          "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -4658,6 +4634,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "California sues OpenAI over rogue AI hacking incidents",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+          "source": "The Verge",
+          "date": "2026-11-16",
+          "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "open_source"
+          ]
+        },
+        {
           "title": "Our new blog for science",
           "url": "https://openai.com/index/our-new-blog-for-science",
           "source": "OpenAI",
@@ -4668,14 +4658,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-gpt-6-1-sol-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-1-sol-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gpt-6.1-terra",
-      "fileSlug": "2026-11-16-gpt-6-1-terra-release-brief",
+      "fileSlug": "2026-11-17-gpt-6-1-terra-release-brief",
       "modelName": "GPT-6.1 Terra",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4746,22 +4736,7 @@ export const modelReleaseDesk = {
           "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
           "source": "TechCrunch",
           "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "The AI graveyard: a running list of projects and startups that didn&#8217;t make it",
-          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-          "source": "TechCrunch",
-          "date": "2026-11-14",
-          "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -4782,6 +4757,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "California sues OpenAI over rogue AI hacking incidents",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+          "source": "The Verge",
+          "date": "2026-11-16",
+          "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "open_source"
+          ]
+        },
+        {
           "title": "Our new blog for science",
           "url": "https://openai.com/index/our-new-blog-for-science",
           "source": "OpenAI",
@@ -4792,14 +4781,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-gpt-6-1-terra-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-1-terra-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gpt-6.1-terra-pro",
-      "fileSlug": "2026-11-16-gpt-6-1-terra-pro-release-brief",
+      "fileSlug": "2026-11-17-gpt-6-1-terra-pro-release-brief",
       "modelName": "GPT-6.1 Terra Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4870,22 +4859,7 @@ export const modelReleaseDesk = {
           "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
           "source": "TechCrunch",
           "date": "2026-11-16",
-          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "The AI graveyard: a running list of projects and startups that didn&#8217;t make it",
-          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-          "source": "TechCrunch",
-          "date": "2026-11-14",
-          "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+          "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
           "routingTags": [
             "announcement",
             "product_launch",
@@ -4906,6 +4880,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "California sues OpenAI over rogue AI hacking incidents",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+          "source": "The Verge",
+          "date": "2026-11-16",
+          "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "open_source"
+          ]
+        },
+        {
           "title": "Our new blog for science",
           "url": "https://openai.com/index/our-new-blog-for-science",
           "source": "OpenAI",
@@ -4916,14 +4904,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-16-gpt-6-1-terra-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-gpt-6-1-terra-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "grok-4.6",
-      "fileSlug": "2026-11-16-grok-4-6-release-brief",
+      "fileSlug": "2026-11-17-grok-4-6-release-brief",
       "modelName": "Grok 4.6",
       "providerId": "xai",
       "providerName": "xAI",
@@ -4989,14 +4977,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-16-grok-4-6-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-grok-4-6-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "grok-4.7",
-      "fileSlug": "2026-11-16-grok-4-7-release-brief",
+      "fileSlug": "2026-11-17-grok-4-7-release-brief",
       "modelName": "Grok 4.7",
       "providerId": "xai",
       "providerName": "xAI",
@@ -5062,14 +5050,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-16-grok-4-7-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-grok-4-7-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "kimi-k3.1-pro",
-      "fileSlug": "2026-11-16-kimi-k3-1-pro-release-brief",
+      "fileSlug": "2026-11-17-kimi-k3-1-pro-release-brief",
       "modelName": "Kimi K3.1 Pro",
       "providerId": "moonshot",
       "providerName": "Moonshot AI",
@@ -5135,14 +5123,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-16-kimi-k3-1-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-kimi-k3-1-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "muse-glimmer-30b",
-      "fileSlug": "2026-11-16-muse-glimmer-30b-release-brief",
+      "fileSlug": "2026-11-17-muse-glimmer-30b-release-brief",
       "modelName": "Muse Glimmer 30B",
       "providerId": "meta",
       "providerName": "Meta",
@@ -5208,14 +5196,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-16-muse-glimmer-30b-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-muse-glimmer-30b-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "qwen3.8-27b",
-      "fileSlug": "2026-11-16-qwen3-8-27b-release-brief",
+      "fileSlug": "2026-11-17-qwen3-8-27b-release-brief",
       "modelName": "Qwen3.8 27B",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -5281,14 +5269,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-16-qwen3-8-27b-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-qwen3-8-27b-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "qwen3.8-max-0902",
-      "fileSlug": "2026-11-16-qwen3-8-max-0902-release-brief",
+      "fileSlug": "2026-11-17-qwen3-8-max-0902-release-brief",
       "modelName": "Qwen3.8 Max (0902)",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -5354,14 +5342,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-16-qwen3-8-max-0902-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-qwen3-8-max-0902-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "qwen3.8-max-prime",
-      "fileSlug": "2026-11-16-qwen3-8-max-prime-release-brief",
+      "fileSlug": "2026-11-17-qwen3-8-max-prime-release-brief",
       "modelName": "Qwen3.8 Max Prime",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -5427,14 +5415,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-16-qwen3-8-max-prime-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-qwen3-8-max-prime-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "qwen4-max",
-      "fileSlug": "2026-11-16-qwen4-max-release-brief",
+      "fileSlug": "2026-11-17-qwen4-max-release-brief",
       "modelName": "Qwen4 Max",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -5500,7 +5488,7 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-16-qwen4-max-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-17-qwen4-max-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0

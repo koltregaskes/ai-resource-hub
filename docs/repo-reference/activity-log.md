@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 16 Nov 2026, 20:23 UTC
+Generated: 17 Nov 2026, 03:46 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 16 Nov 2026, 20:23 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 16 Nov 2026, 20:23 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 16 Nov 2026, 20:23 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 16 Nov 2026, 20:23 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 16 Nov 2026, 12:00 UTC | digest | Apple is testing daily usage limits for more complex Siri AI interactions | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1034581/apple-intelligence-siri-ai-daily-usage-limits-icloud-subscription) |
-| 16 Nov 2026, 12:00 UTC | digest | California state AG sues OpenAI over rogue agent incidents | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/) |
-| 16 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,025 open roles across 10 tracked companies. | `/jobs/` |
-| 16 Nov 2026, 12:00 UTC | digest | OpenAI wants to stop deepfakes from overwhelming child abuse tiplines | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/1034527/openai-csam-classifier) |
+| 17 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,027 open roles across 10 tracked companies. | `/jobs/` |
+| 17 Nov 2026, 03:46 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 17 Nov 2026, 03:46 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 17 Nov 2026, 03:46 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
+| 17 Nov 2026, 03:46 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 16 Nov 2026, 12:00 UTC | digest | All the questions Nvidia should answer on Tuesday — but probably won’t | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/all-the-questions-nvidia-should-answer-on-tuesday-but-probably-wont/) |
+| 16 Nov 2026, 12:00 UTC | digest | Cybersecurity AI startup Corma reaches $1B valuation in about 3 months | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/) |
 | 16 Nov 2026, 12:00 UTC | digest | Published the 2026-11-16 daily digest | 20 stories captured from 4 sources. | `/news/` |
+| 16 Nov 2026, 12:00 UTC | digest | Tech leaders are convinced that Jensen Huang’s exit was a plot against him | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1035027/tech-leaders-nvidia-jensen-huang-theories) |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |

@@ -1,15 +1,111 @@
 [
   {
+    "id": "news-aae8c4832e631e5c6d02",
+    "title": "Cybersecurity AI startup Corma reaches $1B valuation in about 3 months",
+    "url": "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/",
+    "source": "TechCrunch",
+    "summary": "Three months since introducing its product, AI cybersecurity startup Corba has raised a $125 million Series A at a $1 billion valuation led by NEA.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-16T23:32:32.000Z",
+    "discovered_at": "2026-11-17 03:46:37"
+  },
+  {
+    "id": "news-a59424729711a810deea",
+    "title": "Tech leaders are convinced that Jensen Huang’s exit was a plot against him",
+    "url": "https://www.theverge.com/tech/1035027/tech-leaders-nvidia-jensen-huang-theories",
+    "source": "The Verge",
+    "summary": "Jensen Huang's stunning resignation from Nvidia after more than 33 years has sent shockwaves throughout the tech industry. Now prominent figures are calling for Huang's reinstatement, and many are also hopping on board with a theory spreading throughout Silicon Valley: that the scandal is the result of a plot against…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-16T23:17:34.000Z",
+    "discovered_at": "2026-11-17 03:46:48"
+  },
+  {
+    "id": "news-ac8ed7d9657ddc76111d",
+    "title": "All the questions Nvidia should answer on Tuesday — but probably won’t",
+    "url": "https://techcrunch.com/2026/11/16/all-the-questions-nvidia-should-answer-on-tuesday-but-probably-wont/",
+    "source": "TechCrunch",
+    "summary": "Nvidia interim CEO and longtime CFO Colette Kress is about to have one of the biggest days of her career on Tuesday when the company reports its third-quarter results. Given the turmoil Nvidia is in, there are a number of questions that Nvidia should answer.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-16T22:03:02.000Z",
+    "discovered_at": "2026-11-17 03:46:37"
+  },
+  {
+    "id": "news-d0b83026be95e613438e",
+    "title": "California sues OpenAI over rogue AI hacking incidents",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
+    "source": "The Verge",
+    "summary": "California is suing OpenAI after its AI agents broke out of their testing environment and hacked other companies, including Hugging Face. In a lawsuit filed Monday, Attorney General Rob Bonta accuses OpenAI of violating consumer safety law by knowingly developing a \"dangerous product without proper oversight,\" as repo…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-16T20:46:01.000Z",
+    "discovered_at": "2026-11-17 03:46:48"
+  },
+  {
+    "id": "news-6dc341b82897f4397a88",
+    "title": "Sam Altman says he wants everyone ‘to have a lot of RAM’",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1034787/sam-altman-ram-shortage-semafor",
+    "source": "The Verge",
+    "summary": "OpenAI CEO Sam Altman is once again addressing his controversial comments on PC RAM purchases. \"I want to be clear, I want people to have a lot of RAM, I think everybody should be able to buy a lot of RAM for their own computer,\" Altman said today. \"I think the home tinkering is great.\" [&#8230;]",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-16T20:41:28.000Z",
+    "discovered_at": "2026-11-17 03:46:48"
+  },
+  {
+    "id": "news-84f741940fbdaff2c7e2",
+    "title": "Shareholders sue Intel, its CEO, and CFO after stock drops 28.6 percent in one day",
+    "url": "https://arstechnica.com/tech-policy/2026/11/shareholders-sue-intel-its-ceo-and-cfo-after-stock-drops-28-6-percent-in-one-day/",
+    "source": "Ars Technica",
+    "summary": "The PC sales slump \"more than offset” AI boom gains, shareholders say.",
+    "category": "research",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-16T20:37:47.000Z",
+    "discovered_at": "2026-11-17 03:46:48"
+  },
+  {
+    "id": "news-0873131c018e5da52f89",
+    "title": "Big Nuclear isn’t worried about the Democrats stopping data centers",
+    "url": "https://www.theverge.com/science/1034694/nuclear-energy-constellation-earnings-data-centers-democrats",
+    "source": "The Verge",
+    "summary": "Constellation Energy - America's largest operator of nuclear power plants - does not share Wall Street's concerns that the Democrats will slow down data center development. On the company's third-quarter earnings call last week, CEO Joe Dominguez was, for lack of a better word, unbothered as he addressed the blue wave…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-16T20:29:37.000Z",
+    "discovered_at": "2026-11-17 03:46:48"
+  },
+  {
+    "id": "news-94e979efd7382a51e7bf",
+    "title": "US data centers now burn more electricity than a midsized country",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/1034668/data-centers-electricity-climate-pollution-study-harvard",
+    "source": "The Verge",
+    "summary": "Fossil fuels are still the biggest source of electricity for hyperscale data centers in the US, a new paper published in the journal Nature Sustainability shows. They likely burn through more electricity collectively than many countries do, resulting in a serious amount of greenhouse gas emissions. The study homes in…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-16T20:27:58.000Z",
+    "discovered_at": "2026-11-17 03:46:48"
+  },
+  {
     "id": "news-b16b5f3f20484c9207ef",
     "title": "California state AG sues OpenAI over rogue agent incidents",
     "url": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/",
     "source": "TechCrunch",
-    "summary": "The California lawsuit represents one of the first attempts to hold an AI lab legally accountable for a rogue agent incident",
+    "summary": "The California lawsuit represents one of the first attempts to hold an AI lab legally accountable for a rogue agent incident.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T20:07:13.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-cd9a297fa8a4dcbf7609",
@@ -21,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T19:24:40.000Z",
-    "discovered_at": "2026-11-16 20:23:33"
+    "discovered_at": "2026-11-17 03:46:48"
   },
   {
     "id": "news-5f72fbdc79b9385d19bf",
@@ -33,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T19:23:45.000Z",
-    "discovered_at": "2026-11-16 20:23:33"
+    "discovered_at": "2026-11-17 03:46:48"
   },
   {
     "id": "news-d1bee759e86a69db18c4",
@@ -45,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T19:12:02.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-bd7cc537cd570a59da96",
@@ -57,11 +153,11 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T18:43:35.000Z",
-    "discovered_at": "2026-11-16 20:23:33"
+    "discovered_at": "2026-11-17 03:46:48"
   },
   {
     "id": "news-0b5fe7dce536bb454a9f",
-    "title": "Sam Altman on Nvidia without Jensen Huang: the industry will be &#8216;fine’",
+    "title": "Sam Altman on Nvidia without Jensen Huang: The industry will be &#8216;fine’",
     "url": "https://techcrunch.com/2026/11/16/sam-altman-on-nvidia-without-jensen-huang-the-industry-will-be-fine/",
     "source": "TechCrunch",
     "summary": "OpenAI CEO Sam Altman acknowledged the special role Nvidia CEO Jensen Huang has played in the AI boom, but ultimately thinks the industry will be “fine” without him at the helm.",
@@ -69,19 +165,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T18:11:10.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-690a9aa8938dfa2f5ba4",
-    "title": "FBI says Artex AI open-source hacking tool used to breach networks in &#8216;under three hours&#8217;",
+    "title": "FBI says Artex AI open source hacking tool used to breach networks in &#8216;under three hours&#8217;",
     "url": "https://techcrunch.com/2026/11/16/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours/",
     "source": "TechCrunch",
-    "summary": "The FBI says that the open-source hacking tool was used in cyberattacks targeting a U.S. IT giant and the South Korean financial industry.",
+    "summary": "The FBI says that the open source hacking tool was used in cyberattacks targeting a U.S. IT giant and the South Korean financial industry.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T17:36:43.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-98a6b93915396a17328e",
@@ -93,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T17:10:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-6d05b4dbd591c899b0c6",
@@ -105,19 +201,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T17:02:43.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-63e5e5cd2656670211a5",
     "title": "OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM",
     "url": "https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/",
     "source": "TechCrunch",
-    "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning",
+    "summary": "ChatGPT will ban an account trying to access CSAM content for 24 hours as a warning.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T17:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-b1c71d07875ac772d826",
@@ -129,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T17:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-f26f2a4dfd6b9b957c15",
@@ -141,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T17:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-7163ff8dd6d1107782fe",
@@ -153,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T15:52:19.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-43465bb556008cf4e2fa",
@@ -165,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T15:02:34.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-cc64e684881ce25786e9",
@@ -177,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T14:48:13.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-dd02c35afc864bbe7d1e",
@@ -189,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T14:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:33"
+    "discovered_at": "2026-11-17 03:46:48"
   },
   {
     "id": "news-29a19e1aacc64ded6c47",
@@ -201,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T14:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:33"
+    "discovered_at": "2026-11-17 03:46:48"
   },
   {
     "id": "news-717626b76ea030ce1456",
@@ -213,19 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T14:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
-  },
-  {
-    "id": "news-2b2bb87b4857660b3e1d",
-    "title": "The Nvidia scandal isn’t slowing down",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1031740/jensen-huang-nvidia-scandal-isnt-slowing-down",
-    "source": "The Verge",
-    "summary": "For years, Jensen Huang has had an almost unprecedented power to shape AI's advancement as Nvidia's CEO, cofounder, and president. As The Verge wrote last week, Nvidia's chips are \"the bedrock upon which advanced AI technology in the US is being built.\" Ever-increasing demand has consistently outpaced supply, leading…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-16T13:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:33"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-8cd345b9ca86f67c8a32",
@@ -237,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T12:30:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-f891bd93f3d214690602",
@@ -249,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T12:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-91e58e2ea930c2fabc27",
@@ -261,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T09:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-ebd9eb94963902d268e9",
@@ -273,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T08:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-cfcc7acb02e9ca7944d1",
@@ -285,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T06:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-b0ded74e06b06613ea57",
@@ -297,31 +381,31 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T06:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-77828770ffb5c4ae52e6",
     "title": "Apple launches new app to study how people use AI for health",
     "url": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/",
     "source": "TechCrunch",
-    "summary": "Apple's new app for a study will answer everyday medical questions",
+    "summary": "Apple's new app for a study will answer everyday medical questions.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T01:30:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
-    "id": "news-f7214e14d1e100a38313",
-    "title": "Apple’s new study looks to improve the effectiveness of AI health tools",
-    "url": "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools",
-    "source": "The Verge",
-    "summary": "Apple announced a new study today with the goal of better understanding how people interact with conversational AI health tools and how useful their responses actually are. The company is conducting the Apple Health AI Usage Study in collaboration with OpenEvidence, a clinical AI platform used by healthcare profession…",
-    "category": "industry",
+    "id": "news-3899b6e8ee3cc1f1e22e",
+    "title": "At Holiday Extras, dots get to work before anyone asks",
+    "url": "https://openai.com/business/customer-stories/holiday-extras-dots",
+    "source": "OpenAI",
+    "summary": "Dots deliver launch reports unprompted, flag issues people might miss, and talk through upcoming meetings on the commute to work.",
+    "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
-    "published_at": "2026-11-16T01:26:56.000Z",
-    "discovered_at": "2026-11-16 20:23:33"
+    "published_at": "2026-11-16T00:00:00.000Z",
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-e3915f7e4cf071c42329",
@@ -333,19 +417,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T00:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-fa232e2aaf8a19622135",
     "title": "Indian chip startup Bharat Semi lands $24M seed round as it eyes global AI sensor market",
     "url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/",
     "source": "TechCrunch",
-    "summary": "Bharat Semi says it has secured design wins for its AI-enabled sensor technology with companies including General Atomics.",
+    "summary": "Bharat Semi says it has secured design wins for its AI-enabled sensor technology with companies, including General Atomics.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-15T23:30:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-87d7014c15ee68a3a258",
@@ -357,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-15T22:00:01.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-4b0fc5b701ffd77dc125",
@@ -369,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-15T22:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-9e3d554c6cb56d83d86e",
@@ -381,19 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-15T21:56:35.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
-  },
-  {
-    "id": "news-2f1f5cbf7ce833ab47a4",
-    "title": "Jensen Huang might be plotting a return and more of the latest Nvidia drama",
-    "url": "https://www.theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed",
-    "source": "The Verge",
-    "summary": "The drama around Nvidia co-founder and former CEO Jensen Huang is evolving quickly. The latest edition of our Stepback newsletter should get you up to speed, but there have already been a number of new developments since this morning. That includes rumors that Jensen Huang might be trying to find a path back to CEO, […",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-15T20:43:49.000Z",
-    "discovered_at": "2026-11-16 20:23:33"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-d9bb72c7b4b4341821eb",
@@ -405,31 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-15T20:20:57.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
-  },
-  {
-    "id": "news-1207b5c1c70bbc649c48",
-    "title": "Congress wants to tighten export rules on AI chips after Nvidia spy scandal",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
-    "source": "The Verge",
-    "summary": "Unsurprisingly, following the scandal involving now-former Nvidia CEO Jensen Huang and a suspected Chinese spy, Congress is looking to further restrict exports of AI chips. Both Democrats and Republicans have voiced support for various measures and bills that would tighten rules and have demanded that Huang and other…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-15T19:15:43.000Z",
-    "discovered_at": "2026-11-16 20:23:33"
-  },
-  {
-    "id": "news-4c525e5e54fa36453dd6",
-    "title": "An overview of Jensen Huang’s messy days",
-    "url": "https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation",
-    "source": "The Verge",
-    "summary": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on Jensen Huang's resignation and the fallout from Nvidia's leadership crisis, follow Terrence O'Brien. The Stepback arrives in our subscribers' inboxes on Sunday at 8AM ET. Opt in for The Stepback here. How it st…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-15T13:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:33"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-acaf00569e865f08061f",
@@ -441,31 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-15T00:08:07.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
-  },
-  {
-    "id": "news-a4a92fbcda03532a9916",
-    "title": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
-    "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
-    "source": "TechCrunch",
-    "summary": "The petition had attracted more than 115,000 signatures as of Saturday afternoon.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-14T21:41:22.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
-  },
-  {
-    "id": "news-7134e7e1ad670b601a76",
-    "title": "The AI graveyard: a running list of projects and startups that didn&#8217;t make it",
-    "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-    "source": "TechCrunch",
-    "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-14T17:30:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-5bf4951adbe9698dd9e4",
@@ -477,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-13T15:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-d1318183fe1728936389",
@@ -489,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-13T08:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-5b0f73df89a6e31055ee",
@@ -501,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T20:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-459a57b4750adf481f4f",
@@ -513,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T18:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-90d79223706ea3abe78d",
@@ -525,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T12:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-0990939c7d6ea9f7b924",
@@ -537,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T09:30:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-f28f90d2895a812ca579",
@@ -549,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T00:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-b06379671ede1f625c58",
@@ -561,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T00:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-8e4104a923ec61a4f8ae",
@@ -573,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T18:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-97adab01dbf7344a4376",
@@ -585,7 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-7e65614cc89aac7b14f8",
@@ -597,19 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T09:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
-  },
-  {
-    "id": "news-80b38ea7da372c49e059",
-    "title": "ChatGPT Plus for veterans and servicemembers",
-    "url": "https://openai.com/index/chatgpt-plus-for-veterans",
-    "source": "OpenAI",
-    "summary": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-11T08:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:23"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-b686da68349e5f787ade",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T21:12:59.000Z",
-    "discovered_at": "2026-11-16 20:23:33"
+    "discovered_at": "2026-11-17 03:46:48"
   },
   {
     "id": "news-ac5a661efbfd509d2187",
@@ -633,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T19:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-c5fffc8a0cbdc3d45109",
@@ -645,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T14:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-155d33cae72679311e5a",
@@ -657,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T13:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-a5eef3cf57a4e41068d1",
@@ -669,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T20:56:41.000Z",
-    "discovered_at": "2026-11-16 20:23:33"
+    "discovered_at": "2026-11-17 03:46:48"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -681,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -693,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -705,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-16 20:23:33"
+    "discovered_at": "2026-11-17 03:46:48"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -717,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -729,6 +741,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-16 20:23:24"
+    "discovered_at": "2026-11-17 03:46:37"
   }
 ]
