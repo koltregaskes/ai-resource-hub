@@ -1,4 +1,5 @@
 #!/usr/bin/env npx tsx
+import { applyModelFieldEvidence } from './lib/public-model-fields';
 import fs from 'node:fs';
 import path from 'node:path';
 import { routeAiResourceHubNews } from '../src/data/news-routing';
@@ -269,7 +270,7 @@ function buildChecklist(model: ReleaseModelRow, verificationState: ReleaseVerifi
     checklist.push('Add local-running context: LM Studio, Ollama, GGUF, MLX, or device notes where relevant.');
   }
 
-  if (!model.api_available) {
+  if (model.api_available === false || model.api_available === 0) {
     checklist.push('Explain whether this is open-weight, limited preview, or a non-general-availability research release.');
   }
 
@@ -508,7 +509,8 @@ function main() {
     providerAliasMap.set(model.provider_id, current);
   }
 
-  const releases = releaseCandidates.map((model) => {
+  const releases = releaseCandidates.map((rawModel) => {
+    const model = applyModelFieldEvidence(rawModel);
     const catalogModel = catalogModels.get(model.id);
     const verificationState: ReleaseVerificationState = catalogModel
       ? 'official'
@@ -604,21 +606,28 @@ function main() {
       releaseDateLabel: formatDate(model.released),
       ageDays,
       status: model.status,
+      fieldStates: model.field_states,
       verificationState,
       priority,
       draftStatus,
       officialUrl,
       providerStatusUrl: model.provider_status_url,
       providerDocsUrl: model.provider_api_docs_url,
-      openSource: Boolean(model.open_source),
-      apiAvailable: Boolean(model.api_available),
+      openSource: model.open_source == null ? null : Boolean(model.open_source),
+      openSourceState: model.field_states.open_source ?? 'unreviewed',
+      apiAvailable: model.api_available == null ? null : Boolean(model.api_available),
+      apiAvailableState: model.field_states.api_available ?? 'unreviewed',
       modality: model.modality,
       contextWindow: model.context_window,
+      contextWindowState: model.field_states.context_window ?? 'unreviewed',
       maxOutput: model.max_output,
+      maxOutputState: model.field_states.max_output ?? 'unreviewed',
       qualityScore: null,
       qualityScoreState: 'suppressed_untraceable' as const,
       inputPrice: model.input_price,
+      inputPriceState: model.field_states.input_price ?? 'unreviewed',
       outputPrice: model.output_price,
+      outputPriceState: model.field_states.output_price ?? 'unreviewed',
       pricingSource: model.pricing_source,
       pricingUpdated: model.pricing_updated,
       summary,
@@ -643,7 +652,7 @@ function main() {
   fs.mkdirSync(path.dirname(GENERATED_TS_PATH), { recursive: true });
   fs.mkdirSync(path.dirname(PUBLIC_JSON_PATH), { recursive: true });
   fs.mkdirSync(DRAFT_DIR, { recursive: true });
-  for (const file of fs.readdirSync(DRAFT_DIR)) {
+  for (const file of process.argv.includes('--public-only') ? [] : fs.readdirSync(DRAFT_DIR)) {
     if (file.endsWith('.md')) {
       fs.unlinkSync(path.join(DRAFT_DIR, file));
     }
@@ -671,7 +680,7 @@ function main() {
   );
   fs.writeFileSync(PUBLIC_JSON_PATH, JSON.stringify(releaseDesk, null, 2), 'utf8');
 
-  for (const release of releases) {
+  for (const release of process.argv.includes('--public-only') ? [] : releases) {
     const markdown = buildDraftMarkdown({
       title: `${release.modelName}: release brief`,
       dek: release.dek,
@@ -696,7 +705,7 @@ function main() {
 
   console.log(`Generated release desk: ${GENERATED_TS_PATH}`);
   console.log(`Published release desk JSON: ${PUBLIC_JSON_PATH}`);
-  console.log(`Editorial drafts refreshed: ${releases.length}`);
+  if (!process.argv.includes('--public-only')) console.log(`Editorial drafts refreshed: ${releases.length}`);
 }
 
 main();

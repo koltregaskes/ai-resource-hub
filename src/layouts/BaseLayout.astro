@@ -1,8 +1,10 @@
 ---
+import { serializeJsonLd } from '../lib/json-ld';
 import '../styles/global.css';
 import GlobalSearch from '../components/GlobalSearch.astro';
 import { activityTypeLabel, getLatestActivities, getNewestBlogActivity, pinActivity } from '../data/hub-dashboard';
 import { getSearchIndex } from '../data/search-index';
+import { getOgCardForPath, ogImagePathForCard } from '../data/og-cards';
 import {
   buildAlternateTranslations,
   buildLocaleSwitcherLinks,
@@ -17,6 +19,7 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   locale?: SupportedLocale;
   localeMenuLinks?: Partial<Record<SupportedLocale, string>>;
   alternateTranslations?: Partial<Record<SupportedLocale, string>>;
@@ -30,6 +33,7 @@ const {
   title,
   description = 'Independent AI model comparison for pricing, benchmarks, tools, and live news across the AI landscape.',
   ogImage,
+  ogImageAlt,
   locale = DEFAULT_LOCALE,
   localeMenuLinks = {},
   alternateTranslations = {},
@@ -39,7 +43,7 @@ const {
   compactChrome = true,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname === "/404/" ? "/404.html" : Astro.url.pathname, Astro.site);
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const searchIndex = getSearchIndex(base);
@@ -48,11 +52,68 @@ const currentPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${A
 const isHomePage = currentPath === basePath;
 const localeMeta = getLocaleMeta(locale);
 const localeSwitcherLinks = buildLocaleSwitcherLinks(base, locale, localeMenuLinks);
-const alternateLocaleLinks = buildAlternateTranslations(base, alternateTranslations);
+// hreflang targets must be fully qualified URLs (Google ignores relative ones).
+const alternateLocaleLinks = buildAlternateTranslations(base, alternateTranslations).map((link) => ({
+  ...link,
+  href: new URL(link.href, Astro.site).href,
+}));
+const xDefaultHref = alternateTranslations['en-GB'] ? new URL(alternateTranslations['en-GB'], Astro.site).href : null;
 const translationMeta = getTranslationStateMeta(translationState);
+// The newsletter Worker (and optional Turnstile) are only allowed once PUBLIC_NEWSLETTER_API is set.
+const newsletterApiOrigin = (() => {
+  try {
+    return import.meta.env.PUBLIC_NEWSLETTER_API ? new URL(import.meta.env.PUBLIC_NEWSLETTER_API).origin : '';
+  } catch {
+    return '';
+  }
+})();
+const turnstileOrigin = newsletterApiOrigin && import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ? 'https://challenges.cloudflare.com' : '';
+const contentSecurityPolicy = [
+  "default-src 'self'",
+  "img-src 'self' data: https:",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  "font-src 'self' https://fonts.gstatic.com data:",
+  `script-src 'self' 'unsafe-inline'${turnstileOrigin ? ` ${turnstileOrigin}` : ''}`,
+  `connect-src 'self'${newsletterApiOrigin ? ` ${newsletterApiOrigin}` : ''}`,
+  ...(turnstileOrigin ? [`frame-src ${turnstileOrigin}`] : []),
+  "object-src 'none'",
+  "base-uri 'self'",
+  `form-action 'self'${newsletterApiOrigin ? ` ${newsletterApiOrigin}` : ''}`,
+  'upgrade-insecure-requests',
+].join('; ');
+const pathFromBase = `/${Astro.url.pathname.slice(new URL(base, Astro.site).pathname.length)}`;
+const ogCard = getOgCardForPath(pathFromBase);
 const ogImageUrl = ogImage
   ? new URL(ogImage, Astro.site).href
-  : new URL(`${base}og-default.svg`, Astro.site).href;
+  : new URL(`${base}${ogImagePathForCard(ogCard.id)}`, Astro.site).href;
+const ogImageAltText = ogImageAlt ?? (ogImage ? title : ogCard.alt);
+const siteStructuredData = isHomePage
+  ? {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'Organization',
+          '@id': new URL(`${base}#organization`, Astro.site).href,
+          name: 'The AI Resource Hub',
+          url: new URL(base, Astro.site).href,
+          logo: new URL(`${base}logo.png`, Astro.site).href,
+        },
+        {
+          '@type': 'WebSite',
+          '@id': new URL(`${base}#website`, Astro.site).href,
+          name: 'The AI Resource Hub',
+          url: new URL(base, Astro.site).href,
+          inLanguage: 'en-GB',
+          publisher: { '@id': new URL(`${base}#organization`, Astro.site).href },
+        },
+      ],
+    }
+  : {
+      '@context': 'https://schema.org', '@type': 'WebPage',
+      '@id': canonicalURL.href + '#webpage', url: canonicalURL.href,
+      name: title, description,
+      isPartOf: { '@type': 'WebSite', url: new URL(base, Astro.site).href },
+    };
 
 const primaryNav = [
   {
@@ -110,6 +171,7 @@ const primaryNav = [
     children: [
       { href: `${base}new/`, label: 'Release Desk', note: 'Latest model launches and editor-ready briefs' },
       { href: `${base}news/`, label: 'AI News', note: 'Rolling signal from tracked sources' },
+      { href: `${base}newsletter/`, label: 'Daily Edition', note: "The day's AI stories in one page, filterable by category" },
       { href: `${base}updates/`, label: 'Updates & Freshness', note: 'Categories, cadence, sources, and latest changes' },
       { href: `${base}changelog/`, label: 'Changelog', note: 'Recent website and data changes' },
       { href: `${base}status/`, label: 'Provider Status', note: 'Live API health and incidents' },
@@ -140,6 +202,7 @@ const primaryNav = [
       { href: `${base}finds/`, label: 'AI Finds', note: 'Curated AI models, tools, benchmarks and techniques from our research backlog' },
       { href: `${base}collection-policy/`, label: 'Collection Policy', note: 'How data is collected without overclaiming' },
       { href: `${base}methodology/`, label: 'Methodology', note: 'How data is sourced and scored' },
+      { href: `${base}transparency/`, label: 'Transparency', note: 'Every source, its terms, and every formula' },
       { href: `${base}news/pipeline/`, label: 'News Pipeline', note: 'Website routing, source categories, and filters' },
       { href: `${base}stats/`, label: 'Stats and Numbers', note: 'Data points and market figures' },
       { href: `${base}about/`, label: 'About', note: 'Independent reference desk context' },
@@ -176,6 +239,7 @@ const mobileSections = [
     links: [
       { href: `${base}new/`, label: 'Release Desk' },
       { href: `${base}news/`, label: 'AI News' },
+      { href: `${base}newsletter/`, label: 'Daily Edition' },
       { href: `${base}updates/`, label: 'Updates & Freshness' },
       { href: `${base}changelog/`, label: 'Changelog' },
       { href: `${base}labs/`, label: 'Labs and Providers' },
@@ -196,6 +260,7 @@ const mobileSections = [
       { href: `${base}finds/`, label: 'AI Finds' },
       { href: `${base}collection-policy/`, label: 'Collection Policy' },
       { href: `${base}methodology/`, label: 'Methodology' },
+      { href: `${base}transparency/`, label: 'Transparency' },
       { href: `${base}about/`, label: 'About' },
     ],
   },
@@ -239,6 +304,7 @@ const footerSections = [
       { href: `${base}about/`, label: 'About this hub' },
       { href: `${base}collection-policy/`, label: 'Collection policy' },
       { href: `${base}methodology/`, label: 'Methodology' },
+      { href: `${base}transparency/`, label: 'Transparency' },
       { href: `${base}news/pipeline/`, label: 'News pipeline' },
       { href: `${base}rss.xml`, label: 'RSS feed' },
       { href: 'https://x.com/koltregaskes', label: 'X / Twitter', external: true },
@@ -352,13 +418,13 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
     {robots && <meta name="robots" content={robots} />}
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+      content={contentSecurityPolicy}
     />
     <link rel="canonical" href={canonicalURL} />
     {alternateLocaleLinks.map((link) => (
       <link rel="alternate" hreflang={link.hreflang} href={link.href} />
     ))}
-    {alternateTranslations['en-GB'] && <link rel="alternate" hreflang="x-default" href={alternateTranslations['en-GB']} />}
+    {xDefaultHref && <link rel="alternate" hreflang="x-default" href={xDefaultHref} />}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -368,6 +434,7 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
     />
 
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="apple-touch-icon" href={`${base}apple-touch-icon.png`} />
     <link rel="alternate" type="application/rss+xml" title="The AI Resource Hub RSS" href={`${base}rss.xml`} />
     <meta name="generator" content={Astro.generator} />
 
@@ -378,12 +445,16 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    {ogImageUrl.endsWith('.png') && <meta property="og:image:type" content="image/png" />}
+    <meta property="og:image:alt" content={ogImageAltText} />
     <meta property="og:site_name" content="The AI Resource Hub" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content={ogImageAltText} />
+    {siteStructuredData && <script type="application/ld+json" set:html={serializeJsonLd(siteStructuredData)} />}
 
     <title>{title}</title>
 
@@ -696,7 +767,7 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
       </div>
     )}
 
-    <main id="main-content" class:list={['flex-1', { 'airh-route-template-host': compactChrome && !isHomePage }]}>
+    <main id="main-content" tabindex="-1" class:list={['flex-1', { 'airh-route-template-host': compactChrome && !isHomePage }]}>
       {compactChrome && !isHomePage ? (
         <>
           <header class="airh-route-template-chrome airh-route-dossier-head" aria-hidden="true">
@@ -965,5 +1036,9 @@ const routeTerminalStatusItems = routeTemplateTickerItems.slice(0, 4);
       });
     </script>
     <script src={`${base}cross-site-nav.js`} defer></script>
-  </body>
+  <script>
+ const markTables=()=>{document.querySelectorAll('table').forEach(table=>{if(table.parentElement?.hasAttribute('data-airh-scroll-region'))return;const region=document.createElement('div');region.className='airh-table-scroll';region.tabIndex=0;region.setAttribute('role','region');region.setAttribute('aria-label','Scrollable data table');region.dataset.airhScrollRegion='true';table.before(region);region.append(table);});};
+ markTables();new MutationObserver(markTables).observe(document.body,{childList:true,subtree:true});
+</script>
+</body>
 </html>

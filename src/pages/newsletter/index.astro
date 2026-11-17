@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EditionView from '../../components/newsletter/EditionView.astro';
+import NewsletterSignup from '../../components/NewsletterSignup.astro';
+import { getEditions, isoWeekId, ukDate } from '../../data/newsletter-editions';
+
+const editions = getEditions();
+const latest = editions[0];
+const today = ukDate(new Date());
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const previous = editions[1] ? { date: editions[1].date, shortLabel: editions[1].shortLabel } : null;
+---
+
+<BaseLayout
+  title="AI daily edition: today's AI news in one page | The AI Resource Hub"
+  description="One page a day with the AI stories that mattered: a lead story, the day in 60 seconds and a numbered list you can filter by category."
+>
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    {!latest && (
+      <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-6">
+        <h1 class="text-3xl font-black font-display text-(--color-text-primary)">AI daily edition</h1>
+        <p class="mt-3 text-(--color-text-secondary)">There's no edition yet because the news store is empty. This page fills in on the first hourly rebuild after stories arrive.</p>
+      </div>
+    )}
+    {latest && latest.date !== today && (
+      <p class="mb-6 rounded-xl border border-(--color-warning)/40 bg-(--color-warning)/10 px-4 py-3 text-sm text-(--color-text-secondary)">
+        No stories have come in yet today, so this is the latest edition, from {latest.dateLabel}.
+      </p>
+    )}
+    {latest && <EditionView edition={latest} previous={previous} next={null} weekId={isoWeekId(latest.date).id} />}
+    {latest && (
+      <p class="mt-8 text-xs text-(--color-text-muted)">
+        Permanent link to this edition: <a class="text-(--color-accent)" href={`${base}newsletter/${latest.date}/`}>{`/newsletter/${latest.date}/`}</a>
+      </p>
+    )}
+    {!latest && <div class="mt-8"><NewsletterSignup variant="inline" /></div>}
+  </section>
+</BaseLayout>

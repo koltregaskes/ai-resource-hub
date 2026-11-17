@@ -1,0 +1,5 @@
+[
+  {"id":"qwen3.6-27b","family":"qwen3.6-27b","licence_id":"Apache-2.0","licence_url":"https://huggingface.co/Qwen/Qwen3.6-27B/blob/main/LICENSE","credit":1,"checked_on":"2026-11-14"},
+  {"id":"deepseek-v4-flash-0731","family":"deepseek-v4-flash","licence_id":"MIT","licence_url":"https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731/blob/main/LICENSE","credit":1,"checked_on":"2026-11-14"},
+  {"id":"gpt-oss-120b","family":"gpt-oss","licence_id":"Apache-2.0","licence_url":"https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE","credit":1,"checked_on":"2026-11-14"}
+]

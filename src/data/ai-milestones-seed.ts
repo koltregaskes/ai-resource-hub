@@ -107,7 +107,7 @@ export const aiMilestoneSeed: AiMilestoneSeed[] = [
     homepageEligible: true,
     calendarEligible: true,
     exactAnniversaryEligible: true,
-    sources: [{ label: 'Google DeepMind', url: 'https://deepmind.google/discover/blog/alphago-seoul-final-score-4-1/', sourceType: 'official_research', role: 'canonical' }],
+    sources: [{ label: 'Google DeepMind', url: 'https://blog.google/innovation-and-ai/products/what-we-learned-in-seoul-with-alphago/', sourceType: 'official_research', role: 'canonical' }],
   },
   {
     id: 'transformer-paper',

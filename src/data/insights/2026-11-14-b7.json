@@ -1,0 +1,64 @@
+{
+  "metrics": {
+    "conditionalSupport": 84.2,
+    "unsupportedPointers": 15,
+    "fields": 1000,
+    "correctFields": 980,
+    "fieldAccuracy": 98,
+    "cleanDocumentShares": [
+      98,
+      80
+    ],
+    "monthlyInputVolumes": [
+      40000000,
+      70000000,
+      120000000
+    ]
+  },
+  "citations-pointer-and-proof": [
+    [
+      "Valid source pointer",
+      95,
+      "95%"
+    ],
+    [
+      "Fully supported claim",
+      80,
+      "80%"
+    ]
+  ],
+  "ocr-field-accuracy-document-acceptance": [
+    [
+      "Two documents, ten errors each",
+      980,
+      "98%",
+      98
+    ],
+    [
+      "Twenty documents, one error each",
+      980,
+      "98%",
+      80
+    ]
+  ],
+  "translated-prompts-token-budget": [
+    [
+      "A",
+      4000,
+      10000,
+      "$40.00"
+    ],
+    [
+      "B",
+      7000,
+      10000,
+      "$70.00"
+    ],
+    [
+      "C",
+      12000,
+      10000,
+      "$120.00"
+    ]
+  ]
+}

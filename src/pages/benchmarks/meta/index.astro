@@ -142,10 +142,10 @@ function dsweTokens(entry: MetaBenchmarkLeaderboardEntry): string {
     </section>
 
     <nav class="meta-tabs" aria-label="Benchmark leaderboards">
-      <button type="button" data-meta-tab="floor" aria-selected="true">Floor Capability</button>
-      <button type="button" data-meta-tab="operating" aria-selected="false">Operating Envelope</button>
-      <button type="button" data-meta-tab="frontier" aria-selected="false">Frontier Reality</button>
-      <button type="button" data-meta-tab="research" aria-selected="false">Research Trust</button>
+      <button type="button" data-meta-tab="floor" aria-pressed="true">Floor Capability</button>
+      <button type="button" data-meta-tab="operating" aria-pressed="false">Operating Envelope</button>
+      <button type="button" data-meta-tab="frontier" aria-pressed="false">Frontier Reality</button>
+      <button type="button" data-meta-tab="research" aria-pressed="false">Research Trust</button>
     </nav>
 
     <section class="meta-help-strip" aria-label="Quick guide">
@@ -588,7 +588,7 @@ function dsweTokens(entry: MetaBenchmarkLeaderboardEntry): string {
     button.addEventListener('click', () => {
       const selected = button.getAttribute('data-meta-tab');
       tabButtons.forEach((candidate) => {
-        candidate.setAttribute('aria-selected', String(candidate === button));
+        candidate.setAttribute('aria-pressed', String(candidate === button));
       });
       tabPanels.forEach((panel) => {
         panel.toggleAttribute('hidden', panel.getAttribute('data-meta-panel') !== selected);
@@ -657,10 +657,10 @@ function dsweTokens(entry: MetaBenchmarkLeaderboardEntry): string {
     cursor: pointer;
   }
 
-  .meta-tabs button[aria-selected="true"] {
+  .meta-tabs button[aria-pressed="true"] {
     border-color: var(--color-accent);
     background: var(--color-accent);
-    color: var(--color-surface);
+    color: var(--color-bg-primary);
   }
 
   .meta-help-strip {

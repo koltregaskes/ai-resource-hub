@@ -19,6 +19,7 @@
  */
 import { getDB, logScrapeRun } from './base';
 import type Database from 'better-sqlite3';
+import { isBlockedSource } from '../../src/data/source-policy';
 
 const WEIGHTS: Record<string, number> = {
   'chatbot-arena-elo': 0.30,
@@ -51,11 +52,14 @@ function main() {
   }>;
 
   // Get all benchmark scores indexed by model
-  const allScores = db.prepare('SELECT model_id, benchmark_id, score FROM benchmark_scores').all() as Array<{
+  // Hub #1569: scores from a source whose terms bar our use never feed the composite.
+  const allScores = (db.prepare('SELECT model_id, benchmark_id, score, source, source_url FROM benchmark_scores').all() as Array<{
     model_id: string;
     benchmark_id: string;
     score: number;
-  }>;
+    source: string | null;
+    source_url: string | null;
+  }>).filter((row) => !isBlockedSource(row.source, row.source_url));
 
   const scoresByModel = new Map<string, Map<string, number>>();
   for (const s of allScores) {

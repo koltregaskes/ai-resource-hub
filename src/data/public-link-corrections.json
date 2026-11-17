@@ -1,0 +1,268 @@
+[
+  {
+    "url": "https://charm.sh/crush",
+    "kind": "unsafe",
+    "status": null,
+    "checked": "2026-11-14",
+    "replacement": "https://github.com/charmbracelet/crush"
+  },
+  {
+    "url": "https://deepmind.google/discover/blog/alphago-seoul-final-score-4-1/",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": "https://blog.google/innovation-and-ai/products/what-we-learned-in-seoul-with-alphago/"
+  },
+  {
+    "url": "https://docs.mistral.ai/capabilities/prompting/",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": "https://docs.mistral.ai/inference/prompting"
+  },
+  {
+    "url": "https://github.com/google-deepmind/math_dataset",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": "https://github.com/hendrycks/math"
+  },
+  {
+    "url": "https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-transformers",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://qwenlm.github.io/blog/qwen-code/",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": "https://qwenlm.github.io/qwen-code-docs/"
+  },
+  {
+    "url": "https://www.youtube.com/@SkillGapTrainer",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://www.youtube.com/@daboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/CohereAI",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/Copilot/status/1958644693090308225",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/DanHendrycks",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/LangChainAI",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/WesRothAI",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/connaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/delaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/demaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/dwaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/elevenlabsio",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/faboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/firaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/ideaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/jamaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/kaaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/lumaaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/maboroshii_s",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/mustaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/noaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/paboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/peraboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/polyaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/replaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/saboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/samwitteveen",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/sataboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/timaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/xaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/yaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  },
+  {
+    "url": "https://x.com/yoshaboroshii",
+    "kind": "broken",
+    "status": 404,
+    "checked": "2026-11-14",
+    "replacement": null
+  }
+]

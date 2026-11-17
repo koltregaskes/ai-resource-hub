@@ -1,4 +1,6 @@
 ---
+import { contrastColour } from "../../lib/contrast";
+import { serializeJsonLd } from '../../lib/json-ld';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import {
   getAllProviderIds,
@@ -20,7 +22,7 @@ const { id } = Astro.params;
 const provider = getProviderById(id);
 
 if (!provider) {
-  return Astro.redirect(`${import.meta.env.BASE_URL}404`);
+  return Astro.redirect(`${import.meta.env.BASE_URL}404.html`);
 }
 
 const models = getModelsByProvider(id);
@@ -97,7 +99,7 @@ const structuredData = {
     <div class="flex flex-col sm:flex-row items-start gap-4 mb-8">
       <div
         class="w-16 h-16 rounded-xl flex items-center justify-center text-white font-bold text-xl shrink-0"
-        style={`background-color: ${provider.colour}`}
+        style={`background-color: ${provider.colour}; color: ${contrastColour(provider.colour)}`}
       >
         {provider.name.slice(0, 2).toUpperCase()}
       </div>
@@ -335,5 +337,5 @@ const structuredData = {
     </a>
   </section>
 
-  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  <script type="application/ld+json" set:html={serializeJsonLd(structuredData)} />
 </BaseLayout>

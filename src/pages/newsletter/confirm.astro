@@ -1,51 +1,69 @@
 ---
+/**
+ * Landing page for the newsletter Worker's redirects:
+ *   ?status=check-email  after sign-up without JavaScript
+ *   ?status=confirmed    after the double opt-in click (with &manage=<signed link>)
+ *   ?status=expired      bad or old confirmation link
+ * Static page; a small inline script picks the message.
+ */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const apiOrigin = (() => {
+  try {
+    return import.meta.env.PUBLIC_NEWSLETTER_API ? new URL(import.meta.env.PUBLIC_NEWSLETTER_API).origin : '';
+  } catch {
+    return '';
+  }
+})();
 ---
 
 <BaseLayout
-  title="Newsletter Paused — The AI Resource Hub"
-  description="The AI Resource Hub newsletter is currently paused. Use the live news page and RSS feed for updates."
+  title="Daily edition sign-up | The AI Resource Hub"
+  description="Confirming your AI Resource Hub daily edition sign-up."
+  robots="noindex"
 >
-  <section class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
-    <div class="mb-6">
-      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-(--color-warning)/20 mb-4">
-        <svg class="w-8 h-8 text-(--color-warning)" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M4.93 19h14.14c1.54 0 2.5-1.67 1.73-3L13.73 4c-.77-1.33-2.69-1.33-3.46 0L3.2 16c-.77 1.33.19 3 1.73 3z" />
-        </svg>
-      </div>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-3">
-        Newsletter is paused
-      </h1>
-      <p class="text-(--color-text-secondary) text-lg mb-2">
-        The site is live, but email signup is not part of the launch build.
-      </p>
-      <p class="text-(--color-text-muted) text-sm">
-        For now, use the news page and RSS feed to follow updates as they land.
-      </p>
+  <section class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24" data-api-origin={apiOrigin}>
+    <div data-state="check-email">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary)">Check your inbox</h1>
+      <p class="mt-3 text-(--color-text-secondary)">We've sent a confirmation email. Click the link in it and your daily edition starts the next morning. Nothing arrives until you do.</p>
+      <p class="mt-2 text-sm text-(--color-text-muted)">Nothing there after a few minutes? Check spam, or sign up again.</p>
     </div>
-
-    <div class="mt-10 grid sm:grid-cols-3 gap-4">
-      <a href={`${base}news/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
-        <p class="text-sm font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">News archive</p>
-        <p class="text-xs text-(--color-text-muted) mt-1">Follow the public news stream</p>
-      </a>
-      <a href={`${base}rss.xml`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
-        <p class="text-sm font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">RSS feed</p>
-        <p class="text-xs text-(--color-text-muted) mt-1">Subscribe in your reader of choice</p>
-      </a>
-      <a href={`${base}leaderboard/`} class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) hover:border-(--color-accent)/30 transition-colors group">
-        <p class="text-sm font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">Leaderboard</p>
-        <p class="text-xs text-(--color-text-muted) mt-1">Go straight to the data surfaces</p>
-      </a>
+    <div data-state="confirmed" hidden>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary)">You're in</h1>
+      <p class="mt-3 text-(--color-text-secondary)">Your first daily edition arrives tomorrow morning. Every email has a link to change your categories and a one-click unsubscribe.</p>
+      <p class="mt-3 hidden" data-manage-wrap><a data-manage-link class="text-(--color-accent) hover:text-(--color-accent-hover)" href="#">Change your categories now</a></p>
     </div>
-
-    <div class="mt-8">
-      <a href={base} class="text-sm text-(--color-accent) hover:text-(--color-accent-hover) transition-colors">
-        &larr; Back to homepage
-      </a>
+    <div data-state="expired" hidden>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary)">That link has expired</h1>
+      <p class="mt-3 text-(--color-text-secondary)">Confirmation links work for 7 days. Sign up again and we'll send a fresh one.</p>
+    </div>
+    <div class="mt-10 flex flex-wrap gap-4 text-sm">
+      <a href={`${base}newsletter/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">Read today's edition</a>
+      <a href={`${base}newsletter/archive/`} class="text-(--color-text-secondary) hover:text-(--color-text-primary)">All editions</a>
     </div>
   </section>
+
+  <script is:inline>
+    (function () {
+      var params = new URLSearchParams(location.search);
+      var status = params.get('status');
+      if (status !== 'confirmed' && status !== 'expired') return;
+      document.querySelectorAll('[data-state]').forEach(function (el) {
+        el.hidden = el.getAttribute('data-state') !== status;
+      });
+      var origin = document.querySelector('[data-api-origin]').getAttribute('data-api-origin');
+      var manage = params.get('manage');
+      if (status === 'confirmed' && manage && origin) {
+        try {
+          var url = new URL(manage);
+          if (url.origin === origin && url.pathname === '/manage') {
+            document.querySelector('[data-manage-link]').href = url.href;
+            document.querySelector('[data-manage-wrap]').classList.remove('hidden');
+          }
+        } catch (_) {}
+      }
+    })();
+  </script>
 </BaseLayout>

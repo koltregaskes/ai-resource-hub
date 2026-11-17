@@ -1,4 +1,5 @@
 ---
+import { serializeJsonLd } from '../../lib/json-ld';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getYouTubeCreators } from '../../db/queries';
 import {
@@ -189,7 +190,7 @@ function formatSubs(n: number): string {
     })();
   </script>
 
-  <script type="application/ld+json" set:html={JSON.stringify({
+  <script type="application/ld+json" set:html={serializeJsonLd({
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'AI YouTube Channels to Follow',

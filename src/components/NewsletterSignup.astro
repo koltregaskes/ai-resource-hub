@@ -1,4 +1,15 @@
 ---
+/**
+ * Daily edition sign-up with category picks.
+ *
+ * The email form only appears when PUBLIC_NEWSLETTER_API is set at build time
+ * (the Cloudflare Worker in workers/newsletter). Until Kol approves the Resend
+ * and Cloudflare accounts and the Worker goes live, the component points
+ * readers at the web edition and RSS instead of collecting addresses it
+ * cannot use.
+ */
+import { NEWS_CATEGORIES } from '../data/news-categories';
+
 interface Props {
   variant?: 'inline' | 'card' | 'compact';
 }
@@ -6,44 +17,95 @@ interface Props {
 const { variant = 'card' } = Astro.props;
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const api = (import.meta.env.PUBLIC_NEWSLETTER_API ?? '').replace(/\/$/, '');
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? '';
+const emailOpen = api.length > 0;
 ---
 
-{variant === 'card' ? (
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="relative overflow-hidden rounded-[2rem] border border-(--color-border) bg-(--color-bg-secondary) p-8 sm:p-10">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(190,242,100,0.12),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(56,189,248,0.12),transparent_36%)]"></div>
-      <div class="relative z-10 max-w-3xl">
-        <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-text-muted)">Newsletter On Hold</p>
-        <h2 class="mt-3 text-3xl sm:text-4xl font-black font-display text-(--color-text-primary)">
-          Follow the live site instead of a waiting list.
-        </h2>
-        <p class="mt-4 max-w-2xl text-(--color-text-secondary)">
-          The newsletter will come back later. For launch, the site itself is the product:
-          fresh model data, public news tracking, and an RSS feed you can use right now.
-        </p>
-        <div class="mt-6 flex flex-col sm:flex-row gap-3">
-          <a
-            href={`${base}news/`}
-            class="inline-flex items-center justify-center rounded-full bg-(--color-text-primary) px-5 py-3 text-sm font-semibold text-(--color-bg-primary) transition-transform hover:-translate-y-0.5"
-          >
-            Read the latest news
-          </a>
-          <a
-            href={`${base}rss.xml`}
-            class="inline-flex items-center justify-center rounded-full border border-(--color-border) px-5 py-3 text-sm font-semibold text-(--color-text-primary) transition-colors hover:border-(--color-border-hover) hover:bg-(--color-bg-tertiary)"
-          >
-            Subscribe via RSS
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-) : variant === 'inline' ? (
-  <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-4 text-sm text-(--color-text-secondary)">
-    Newsletter is on hold. Use the <a href={`${base}news/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">news page</a> or <a href={`${base}rss.xml`} class="text-(--color-accent) hover:text-(--color-accent-hover)">RSS feed</a> for updates.
+{variant === 'compact' ? (
+  <div class="text-xs text-(--color-text-muted)">
+    <a href={`${base}newsletter/`} class="text-(--color-accent) hover:text-(--color-accent-hover)">Daily edition</a>
+    {' · '}
+    <a href={`${base}newsletter/rss.xml`} class="text-(--color-accent) hover:text-(--color-accent-hover)">RSS</a>
   </div>
 ) : (
-  <div class="text-xs text-(--color-text-muted)">
-    Newsletter on hold. Follow <a href={`${base}rss.xml`} class="text-(--color-accent) hover:text-(--color-accent-hover)">RSS</a>.
-  </div>
+  <section class:list={[variant === 'card' ? 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12' : '']} aria-labelledby="edition-signup-title">
+    <div class="rounded-2xl border border-(--color-border) bg-(--color-bg-secondary) p-6 sm:p-8">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-accent)">The daily edition by email</p>
+      <h2 id="edition-signup-title" class="mt-2 text-2xl font-black font-display text-(--color-text-primary)">
+        {emailOpen ? 'Pick your categories and get one email a day' : 'Email is coming. The edition is here now.'}
+      </h2>
+
+      {emailOpen ? (
+        <form class="mt-5" method="post" action={`${api}/subscribe`} data-newsletter-form>
+          <label for="edition-email" class="block text-sm font-medium text-(--color-text-primary)">Email address</label>
+          <input id="edition-email" name="email" type="email" required autocomplete="email" class="mt-1 w-full max-w-md rounded-lg border border-(--color-border) bg-(--color-bg-primary) px-3 py-2 text-(--color-text-primary)" />
+
+          <fieldset class="mt-5">
+            <legend class="text-sm font-medium text-(--color-text-primary)">Send me stories about</legend>
+            <p class="text-xs text-(--color-text-muted)">Pick at least one. You can change these from any email.</p>
+            <div class="mt-3 grid gap-2 sm:grid-cols-2">
+              {NEWS_CATEGORIES.map((category) => (
+                <label class="flex items-start gap-2 rounded-lg border border-(--color-border) px-3 py-2 text-sm">
+                  <input type="checkbox" name="categories" value={category.id} checked class="mt-1" />
+                  <span>
+                    <span class="font-semibold text-(--color-text-primary)">{category.label}</span>
+                    <span class="block text-xs text-(--color-text-muted)">{category.description}</span>
+                  </span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
+          <input type="hidden" name="source" value="site" />
+          {turnstileSiteKey && <div class="cf-turnstile mt-4" data-sitekey={turnstileSiteKey}></div>}
+          <button type="submit" class="mt-5 rounded-full bg-(--color-text-primary) px-5 py-2.5 text-sm font-semibold text-(--color-bg-primary)">Sign up</button>
+          <p class="mt-3 text-xs text-(--color-text-muted)">
+            We'll send one email to confirm. Nothing else arrives until you click it. Every email has a one-click unsubscribe.
+          </p>
+          <p class="mt-2 hidden text-sm" role="status" data-newsletter-status></p>
+        </form>
+      ) : (
+        <>
+          <p class="mt-3 max-w-2xl text-sm text-(--color-text-secondary)">
+            You'll be able to pick the categories you want ({NEWS_CATEGORIES.map((category) => category.label).join(', ')}) and get one email a day. Until that's switched on, read the edition here or follow it by RSS.
+          </p>
+          <div class="mt-5 flex flex-col sm:flex-row gap-3">
+            <a href={`${base}newsletter/`} class="inline-flex items-center justify-center rounded-full bg-(--color-text-primary) px-5 py-2.5 text-sm font-semibold text-(--color-bg-primary)">Read today's edition</a>
+            <a href={`${base}newsletter/rss.xml`} class="inline-flex items-center justify-center rounded-full border border-(--color-border) px-5 py-2.5 text-sm font-semibold text-(--color-text-primary) hover:bg-(--color-bg-tertiary)">Follow by RSS</a>
+          </div>
+        </>
+      )}
+    </div>
+  </section>
 )}
+
+{emailOpen && (
+  <script is:inline>
+    (function () {
+      var form = document.querySelector('[data-newsletter-form]');
+      if (!form || !window.fetch) return;
+      var status = form.querySelector('[data-newsletter-status]');
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var data = new FormData(form);
+        if (data.getAll('categories').length === 0) {
+          status.textContent = 'Pick at least one category.';
+          status.classList.remove('hidden');
+          return;
+        }
+        status.textContent = 'Sending...';
+        status.classList.remove('hidden');
+        fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
+          .then(function (res) { return res.json().then(function (body) { return { ok: res.ok, body: body }; }); })
+          .then(function (result) {
+            status.textContent = result.ok
+              ? 'Check your inbox for a confirmation email. It can take a minute or two.'
+              : (result.body && result.body.error) || 'That did not work. Please try again.';
+          })
+          .catch(function () { status.textContent = 'That did not work. Please try again.'; });
+      });
+    })();
+  </script>
+)}
+{emailOpen && turnstileSiteKey && <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}

@@ -138,7 +138,7 @@ export default function PriceTrendChart({ data, modelName, providerColour }: Pro
 
   return (
     <div style={{ height: '300px', position: 'relative' }}>
-      <Line ref={chartRef} data={chartData} options={options} />
+      <Line role="img" aria-label="Model price trend chart" ref={chartRef} data={chartData} options={options} />
     </div>
   );
 }

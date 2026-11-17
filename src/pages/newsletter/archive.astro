@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getEditions, getWeeklyRoundups } from '../../data/newsletter-editions';
+
+const editions = getEditions();
+const weeks = getWeeklyRoundups();
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const oldest = editions.at(-1);
+---
+
+<BaseLayout
+  title="Daily edition archive | The AI Resource Hub"
+  description="Every AI daily edition, newest first, plus the weekly round-ups."
+>
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-(--color-accent)">Archive</p>
+    <h1 class="mt-3 text-3xl sm:text-4xl font-black font-display text-(--color-text-primary)">Every daily edition</h1>
+    <p class="mt-3 text-sm text-(--color-text-secondary)">
+      {editions.length} {editions.length === 1 ? 'edition' : 'editions'}{oldest && <>, going back to {oldest.dateLabel}</>}.
+      Days with no stories in the news store have no edition.
+      <a class="text-(--color-accent)" href={`${base}newsletter/rss.xml`}>Follow by RSS</a>.
+    </p>
+
+    <h2 class="mt-10 text-xs font-semibold uppercase tracking-[0.22em] text-(--color-text-muted)">Weekly round-ups</h2>
+    <ul class="mt-3 grid gap-2 sm:grid-cols-2">
+      {weeks.map((week) => (
+        <li>
+          <a href={`${base}newsletter/week/${week.id}/`} class="block rounded-xl border border-(--color-border) bg-(--color-bg-secondary) px-4 py-3 hover:border-(--color-accent)/40">
+            <span class="block text-sm font-semibold text-(--color-text-primary)">{week.label}</span>
+            <span class="text-xs text-(--color-text-muted)">{week.storyCount} {week.storyCount === 1 ? 'story' : 'stories'} across {week.editions.length} {week.editions.length === 1 ? 'edition' : 'editions'}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <h2 class="mt-10 text-xs font-semibold uppercase tracking-[0.22em] text-(--color-text-muted)">Daily editions</h2>
+    <ol class="mt-3 divide-y divide-(--color-border) rounded-2xl border border-(--color-border)">
+      {editions.map((edition) => (
+        <li class="px-4 py-3">
+          <a href={`${base}newsletter/${edition.date}/`} class="group block">
+            <span class="text-sm font-semibold text-(--color-text-primary) group-hover:text-(--color-accent)">{edition.dateLabel}</span>
+            <span class="block text-sm text-(--color-text-secondary)">{edition.lead.title}</span>
+            <span class="text-xs text-(--color-text-muted)">{1 + edition.stories.length} {edition.stories.length === 0 ? 'story' : 'stories'} · {edition.categoryCounts.map((entry) => entry.label).join(', ')}</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </section>
+</BaseLayout>
