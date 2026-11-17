@@ -89,7 +89,7 @@
     },
     "claims": [
       {
-        "text": "On its internal GDPval v2 evaluation, OpenAI reports a 6.2 percentage-point improvement over GPT-6 Astra. This is a relative change, not an absolute pass rate.",
+        "text": "On its internal GDPval v2 evaluation, OpenAI reports a 6.2 percentage-point improvement over GPT-6 Astra. This is a change from the predecessor, not an absolute pass rate.",
         "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
       }
     ]
@@ -184,7 +184,7 @@
     },
     "claims": [
       {
-        "text": "On its internal GDPval v2 evaluation, OpenAI reports a 5.3 percentage-point improvement over GPT-6.1 Sol. This is a relative change, not an absolute pass rate.",
+        "text": "On its internal GDPval v2 evaluation, OpenAI reports a 5.3 percentage-point improvement over GPT-6.1 Sol. This is a change from the predecessor, not an absolute pass rate.",
         "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
       }
     ]
