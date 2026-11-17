@@ -49,6 +49,9 @@ jobs:
       - name: Test Lab Standings method
         run: node --test scripts/lab-standings.test.mjs
 
+      - name: Test global search shows typed text safely
+        run: node --test scripts/global-search.test.mjs
+
       - name: Validate AI and jobs evidence, rights and immutable history
         run: |
           node --test scripts/ai-and-jobs.test.mjs
