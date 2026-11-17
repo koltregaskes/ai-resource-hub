@@ -36,6 +36,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           ref: main
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v6
@@ -124,7 +125,7 @@ jobs:
           news_feed_files=(src/data/news-feed-latest.json)
           git add data/pg-cache data/provider-status.json data/events-source-status.json public/data src/data/model-release-desk.generated.ts src/data/news-pipeline.generated.ts src/data/newsletter-archive src/data/news-archive docs/repo-reference "${digest_files[@]}" "${news_feed_files[@]}"
           git diff --staged --quiet || git commit -m "chore: update pricing & benchmark data $(date +%Y-%m-%d) [automated]"
-          git push
+          bash scripts/push-generated-data.sh
 
       - name: Trigger Pages deploy
         if: steps.changes.outputs.changed == 'true' || inputs.force_rebuild == 'true'

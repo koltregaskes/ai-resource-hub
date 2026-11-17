@@ -91,3 +91,15 @@ jobs:
 
       - name: Test Worker in Miniflare (no network, no deploy)
         run: npm test
+
+  generated-data-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - name: Exercise concurrent writers against local bare Git fixtures
+        run: node --test scripts/push-generated-data.test.mjs
