@@ -108,8 +108,8 @@ except ImportError:
     import records
 
 # The live switch. True since the run-config PR of 15 November 2026: the owner
-# typed his go for the paid runs that day (caps 90 USD OpenAI, 60 USD
-# Anthropic), and this line was changed in a reviewed commit. Every other gate
+# typed his go for the paid runs that day (funded by prepaid API credit,
+# amount private), and this line was changed in a reviewed commit. Every other gate
 # still applies to every live start: --live, live_approved and approved_by in
 # the config, a key file, no provider key in the environment, the earlier
 # stages on record, and the pre-flight.

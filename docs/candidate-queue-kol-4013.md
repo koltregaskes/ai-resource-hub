@@ -4,9 +4,9 @@ Curation of the 171 fetched links from the Todoist PROJECTS2 research backlog
 (KOL-4013). Goal: separate benchmarks / model releases / tools from creative
 examples, archive stale links, and promote useful primary sources.
 
-Source data: `W:\hub\Runtime\LOCAL-ONLY\todoist-intake\projects2-remaining-triage-current.json`
+Source data: a private local triage export (kept off GitHub)
 Classifier + full machine-readable queue:
-`W:\hub\Runtime\LOCAL-ONLY\todoist-intake\classify-airh.mjs` ->
+a private local classifier ->
 `airh-candidate-queue.json`.
 
 ## Breakdown (171 links)

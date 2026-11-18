@@ -2,8 +2,8 @@
 
 **Status:** DRAFT — awaiting Kol's sign-off. Not yet committed.
 **Last updated:** 2026-05-16
-**Estate-wide policy:** `W:\Websites\AGENT-READINESS-ESTATE.md`
-**Repo:** `W:\Websites\sites\ai-resource-hub`
+**Estate-wide policy:** the private estate-wide readiness policy (kept off GitHub)
+**Repo:** this repository (`koltregaskes/ai-resource-hub`)
 **Domain:** TBD (no CNAME at repo root — per memory `airesourcehub.com` or `theairesourcehub.com`; Codex confirms before shipping)
 **Stack:** Astro (`astro.config.mjs`, build via `scripts/run-astro.mjs`)
 

@@ -2,7 +2,7 @@
   "_comment": "The pinned run config for Day-to-Day Bench task set v1. Effort is low for all seven benchmarked models, and the lowest value each judge candidate accepts (none on gpt-6.1-terra and gpt-6-luna, low elsewhere). Model ids, API versions and prices were re-read on the makers' pages on 15 November 2026 and all matched. temperature is the value in effect (1, the default) and is not sent. A config never holds a key: key_names lists entry names in the owner's key file, not values.",
   "task_set_version": "v1",
   "live_approved": true,
-  "approved_by": "Kol (repo owner): typed go for the paid runs in the AI Resource Hub session on 15 November 2026, caps 90 USD OpenAI and 60 USD Anthropic",
+  "approved_by": "Kol (repo owner): typed go for the paid runs in the AI Resource Hub session on 15 November 2026; funded by prepaid API credit (amount private).",
   "key_names": {
     "openai": [
       "OPENAI_API_KEY"
