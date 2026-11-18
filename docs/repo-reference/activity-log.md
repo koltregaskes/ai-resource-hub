@@ -1,18 +1,18 @@
 # Recent Activity Snapshot
 
-Generated: 18 Nov 2026, 15:58 UTC
+Generated: 18 Nov 2026, 16:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 18 Nov 2026, 15:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 18 Nov 2026, 15:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 18 Nov 2026, 15:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 18 Nov 2026, 15:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 18 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,010 open roles across 10 tracked companies. | `/jobs/` |
-| 18 Nov 2026, 12:00 UTC | digest | Nvidia isn’t selling any more AI chips to China | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1036445/nvidia-h200-ai-chips-china-stop-selling) |
-| 18 Nov 2026, 12:00 UTC | digest | Published the 2026-11-18 daily digest | 10 stories captured from 3 sources. | `/news/` |
+| 18 Nov 2026, 16:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 18 Nov 2026, 16:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 18 Nov 2026, 16:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 18 Nov 2026, 16:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,011 open roles across 10 tracked companies. | `/jobs/` |
+| 18 Nov 2026, 12:00 UTC | digest | OpenAI CEO Sam Altman says it&#8217;s &#8216;hard to imagine the AI industry without Jensen&#8217; | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/18/openai-ceo-sam-altman-says-its-hard-to-imagine-the-ai-industry-without-jensen/) |
+| 18 Nov 2026, 12:00 UTC | digest | Published the 2026-11-18 daily digest | 11 stories captured from 3 sources. | `/news/` |
 | 18 Nov 2026, 12:00 UTC | digest | Remember the frontier AI pause? Chip companies don’t either | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1036549/nvidia-amd-earnings-fall-2026-chips-pause-frontier-models) |
 | 18 Nov 2026, 12:00 UTC | digest | Will Wright’s next game uses AI to map your memories | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/games/1036140/will-wright-mymems-ai-game-interview) |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
