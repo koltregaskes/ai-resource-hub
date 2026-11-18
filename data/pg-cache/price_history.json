@@ -93040,9 +93040,9 @@
   {
     "id": 255,
     "model_id": "deepseek-r1-0528",
-    "input_price": 0.5,
-    "output_price": 2.15,
-    "recorded_at": "2026-11-18 08:58:04",
+    "input_price": 0.571,
+    "output_price": 2.286,
+    "recorded_at": "2026-11-18 11:57:21",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "R1 0528",
     "provider_name": "DeepSeek",

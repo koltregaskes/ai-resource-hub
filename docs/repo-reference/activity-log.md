@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 18 Nov 2026, 10:58 UTC
+Generated: 18 Nov 2026, 11:57 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 18 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,011 open roles across 10 tracked companies. | `/jobs/` |
-| 18 Nov 2026, 12:00 UTC | digest | Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT | OpenAI featured in the latest daily brief. | [open](https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership) |
-| 18 Nov 2026, 12:00 UTC | digest | Nvidia promises that revenue will keep soaring — for now | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/17/nvidia-promises-that-revenue-will-keep-soaring-for-now/) |
+| 18 Nov 2026, 12:00 UTC | digest | India’s Humyn Labs raises $47M to feed U.S. robotics companies the data they need | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/18/accel-backs-indias-humyn-labs-to-supply-training-data-needed-by-u-s-robotics-ai-developers/) |
+| 18 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,012 open roles across 10 tracked companies. | `/jobs/` |
 | 18 Nov 2026, 12:00 UTC | digest | Nvidia’s startup stakes ballooned to $65B, but Huang’s exit puts future deals in doubt | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/) |
-| 18 Nov 2026, 12:00 UTC | digest | Published the 2026-11-18 daily digest | 3 stories captured from 2 sources. | `/news/` |
-| 18 Nov 2026, 10:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 18 Nov 2026, 10:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 18 Nov 2026, 10:57 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 18 Nov 2026, 10:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Nov 2026, 12:00 UTC | digest | Published the 2026-11-18 daily digest | 5 stories captured from 3 sources. | `/news/` |
+| 18 Nov 2026, 12:00 UTC | digest | Suno now lets you make AI videos for your AI music | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1036415/suno-visuals-ai-generated-video-images-feature) |
+| 18 Nov 2026, 11:57 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 18 Nov 2026, 11:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 18 Nov 2026, 11:57 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 18 Nov 2026, 11:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
