@@ -23,8 +23,8 @@ except ImportError:
     import records
     import runner
 
-OUTPUT_LIMITS = (4096, 8192, 16384, 32768)
-TIMEOUTS = {4096: 120, 8192: 120, 16384: 600, 32768: 900}
+OUTPUT_LIMITS = (4096, 8192, 16384, 32768, 65536, 128000)
+TIMEOUTS = {4096: 120, 8192: 120, 16384: 600, 32768: 900, 65536: 1800, 128000: 3600}
 _COMPONENT = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,199}\Z")
 _DEVICES = {"con", "prn", "aux", "nul"} | {
     prefix + str(n) for prefix in ("com", "lpt") for n in range(1, 10)}
