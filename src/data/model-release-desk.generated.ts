@@ -1,5 +1,5 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-18T17:59:31.562Z",
+  "generatedAt": "2026-11-18T18:59:55.475Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -4311,7 +4311,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Astra is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-astra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Astra is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Astra is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4331,16 +4331,6 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
-        {
-          "title": "A step toward defining the Standard Model on a lattice",
-          "url": "https://openai.com/index/step-toward-defining-the-standard-model",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
         {
           "title": "Advancing chip design with OpenAI models",
           "url": "https://openai.com/index/advancing-chip-design-with-our-models",
@@ -4390,8 +4380,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-astra-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gpt-6-astra-pro",
