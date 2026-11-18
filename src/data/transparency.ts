@@ -75,7 +75,7 @@ export const sources: TransparencySource[] = [
     name: "Labs' own pricing pages",
     url: 'https://openai.com/api/pricing/',
     takes: 'List prices for input and output tokens for the models each lab sells directly.',
-    how: 'Typed in by hand from each lab\'s pricing page into our model catalogue, then copied into the database on every run. Nothing is scraped from these pages.',
+    how: 'Typed in by hand from each lab\'s pricing page into our model catalogue. Nothing is scraped from these pages. For a model in the catalogue, its pages show this list price rather than the OpenRouter price; the stored OpenRouter price is kept, not overwritten.',
     collector: 'official-pricing',
     cadence: 'When someone re-checks the page',
     state: 'hand-entered',
@@ -83,7 +83,7 @@ export const sources: TransparencySource[] = [
     termsNote: 'Published list prices, quoted with a link to the lab\'s page.',
     shownOn: ['Model pages', 'Compare', 'Calculator'],
     caveat:
-      'The "pricing updated" time on these rows is the time of the last run, not the last time a person checked the lab\'s page. A price can therefore look fresh and still be out of date. This is a known fault.',
+      'The "price updated" date on these rows is the date a person last checked the lab\'s page, where that date is recorded; otherwise no date is shown. Earlier versions showed the time of the last run instead, which made old prices look fresh. That fault is fixed, and run-time dates recorded before the fix are not evidence of a check.',
     reviewed: REVIEWED,
   },
   {

@@ -55,9 +55,7 @@ export function hasPricingChanged(existing: ExistingModel | undefined, model: Ca
 }
 
 export function mergeModel(existing: ExistingModel | undefined, model: CatalogModelEntry) {
-  const nowIso = new Date().toISOString();
   const pricing = model.officialPricing;
-  const pricingChanged = hasPricingChanged(existing, model);
 
   // SQLite price columns are NOT NULL. Reserve -1 for unknown; zero is a
   // real free price. Public boundaries project the sentinel to null/unverified.
@@ -82,9 +80,9 @@ export function mergeModel(existing: ExistingModel | undefined, model: CatalogMo
     category: model.category ?? existing?.category ?? 'llm',
     status: model.status ?? existing?.status ?? 'active',
     pricing_source: pricing?.source ?? null,
-    pricing_updated: pricing && pricingChanged
-      ? nowIso
-      : pricing ? existing?.pricing_updated ?? null : null,
+    // Hub #2121: a curated price is only as fresh as its dated source check.
+    // CI reseeds SQLite every run, so the run time here would re-stamp every hour.
+    pricing_updated: pricing ? pricing.checkedAt ?? null : null,
   };
 }
 

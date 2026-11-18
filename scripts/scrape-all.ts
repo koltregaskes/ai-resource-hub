@@ -12,7 +12,8 @@
  * Pipeline order matters:
  * 1. Canonical catalog sync runs FIRST (seed official providers + tracked frontier models)
  * 2. OpenRouter runs SECOND (primary pricing source + new model detection)
- * 3. Pricing validators run THIRD (cross-checks against official sources and live APIs)
+ * 3. Curated catalogue prices fill gaps THIRD (no fetch; never replace live prices),
+ *    then pricing validators cross-check against live APIs
  * 4. Benchmarks and speed run FOURTH (quality + latency signals)
  * 5. Registry normalisation runs FIFTH (demotes incomplete models and hides stale speed data)
  * 6. News, status, jobs, and events run LAST (public editorial + market signals)
@@ -33,7 +34,7 @@ async function main() {
   const scrapers = [
     { name: 'Canonical Model Catalog Sync', script: 'scripts/sync-model-catalog.ts' },
     { name: 'OpenRouter Pricing (PRIMARY)', script: 'scripts/scrapers/openrouter.ts' },
-    { name: 'Official Provider Pricing', script: 'scripts/scrapers/official-pricing.ts' },
+    { name: 'Curated Catalogue Pricing (no live fetch)', script: 'scripts/scrapers/official-pricing.ts' },
     { name: 'Multi-Source Validator', script: 'scripts/scrapers/pricing.ts' },
     { name: 'Benchmarks (AA + LMSYS + HuggingFace)', script: 'scripts/scrapers/benchmarks.ts' },
     { name: 'Speed & TTFT', script: 'scripts/scrapers/speed.ts' },
@@ -76,7 +77,7 @@ async function main() {
   // Show data source summary
   console.log('\n  Data sources used:');
   console.log('  ├─ OpenRouter API (live, no key) ✓');
-  console.log('  ├─ Official provider pricing pages (OpenAI, Anthropic, Google, DeepSeek, Mistral) ✓');
+  console.log('  ├─ Curated catalogue prices (no live fetch; fills gaps only, never replaces live prices; counts above)');
   console.log(`  ├─ Artificial Analysis API (${process.env.AA_API_KEY ? 'live, key set ✓' : 'skipped, no AA_API_KEY — free at artificialanalysis.ai'})`);
   console.log(`  ├─ Together AI API (${process.env.TOGETHER_API_KEY ? 'live, key set ✓' : 'skipped, no TOGETHER_API_KEY'})`);
   console.log(`  ├─ Google Gemini API (${process.env.GOOGLE_API_KEY ? 'live, key set ✓' : 'skipped, no GOOGLE_API_KEY'})`);

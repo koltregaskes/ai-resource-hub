@@ -221,8 +221,8 @@ const SCRAPER_ACTIVITY_LABELS: Record<string, { title: string; detail: string; h
     href: '/leaderboard/',
   },
   'official-pricing': {
-    title: 'Validated official pricing snapshots',
-    detail: 'Rechecked provider pricing pages against the comparison database.',
+    title: 'Applied curated catalogue prices',
+    detail: 'Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept.',
     href: '/compare/llm/',
   },
   'pricing:openrouter': {
@@ -849,7 +849,8 @@ export function getDataPulse(basePath = '/'): DataPulseEntry[] {
       id: 'pricing',
       label: 'Pricing & value',
       note: 'Official provider pricing and routed API cost references.',
-      updatedAt: latestDateTime(getLastScrapeTime('official-pricing'), getLastScrapeTime('pricing:openrouter')),
+      // The curated catalogue step fetches nothing, so its run time is not a price check (hub #2121).
+      updatedAt: getLastScrapeTime('pricing:openrouter'),
       href: `${basePath}compare/llm/`,
     },
     {
