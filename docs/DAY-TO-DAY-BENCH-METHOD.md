@@ -241,7 +241,7 @@ Used only when the script's pattern list can't tell whether a reply is `answered
 ## Prices and budget
 
 - **Price receipt:** before a run, the run config records each model's input, output and cached-token prices from the provider's official pricing page, with the URL, the date read and any promotional end date. That frozen price is used for every charge in the run. Our catalogue isn't the source, because it can lag (the first review found a model page showing a promotional price our catalogue didn't have).
-- **Caps (from hub #270):** about $90 of OpenAI credit and $60 of Anthropic credit. These are planned allocations, not checked balances; the remaining credit is confirmed in the provider console before the first paid run.
+- **Caps (from hub #270):** a set amount of OpenAI and Anthropic credit, funded by prepaid API credit (amount private). These are planned allocations, not checked balances; the remaining credit is confirmed in the provider console before the first paid run.
 - **Reservation, not estimation:**
   - Before each request, the harness reserves the most it could cost: input tokens × input price + the task's output limit × output price. A retry is reserved when it's dispatched, not in advance.
   - It keeps one ledger per provider, shared by model calls and judge calls, covering requests in flight.
