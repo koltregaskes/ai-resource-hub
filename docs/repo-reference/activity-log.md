@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 18 Nov 2026, 12:59 UTC
+Generated: 18 Nov 2026, 13:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 18 Nov 2026, 12:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 18 Nov 2026, 12:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 18 Nov 2026, 12:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 18 Nov 2026, 12:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Nov 2026, 13:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 18 Nov 2026, 13:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 18 Nov 2026, 13:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 18 Nov 2026, 13:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 18 Nov 2026, 12:00 UTC | digest | Felicis leads $7.5M bet on Unsiloed AI to make enterprise documents usable by AI agents | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/18/felicis-leads-7-5m-bet-on-unsiloed-ai-to-make-enterprise-documents-usable-by-ai-agents/) |
-| 18 Nov 2026, 12:00 UTC | digest | India’s Humyn Labs raises $47M to feed U.S. robotics companies the data they need | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/18/accel-backs-indias-humyn-labs-to-supply-training-data-needed-by-u-s-robotics-ai-developers/) |
 | 18 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,013 open roles across 10 tracked companies. | `/jobs/` |
-| 18 Nov 2026, 12:00 UTC | digest | Published the 2026-11-18 daily digest | 6 stories captured from 3 sources. | `/news/` |
-| 18 Nov 2026, 12:00 UTC | digest | Suno now lets you make AI videos for your AI music | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1036415/suno-visuals-ai-generated-video-images-feature) |
+| 18 Nov 2026, 12:00 UTC | digest | Nvidia clarifies when it will — and won&#8217;t —keep financing neoclouds | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/18/nvidia-clarifies-when-it-will-and-wont-keep-financing-neoclouds/) |
+| 18 Nov 2026, 12:00 UTC | digest | Nvidia isn’t selling any more AI chips to China | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1036445/nvidia-h200-ai-chips-china-stop-selling) |
+| 18 Nov 2026, 12:00 UTC | digest | Published the 2026-11-18 daily digest | 8 stories captured from 3 sources. | `/news/` |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
