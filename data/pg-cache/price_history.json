@@ -182116,6 +182116,17 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 293,
+    "model_id": "gemini-4-neon",
+    "input_price": 3,
+    "output_price": 15,
+    "recorded_at": "2026-11-18 21:56:50",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemini 4 Neon",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 346,
     "model_id": "gemini-nano-banana-2.1",
     "input_price": 1.5,
@@ -660627,11 +660638,11 @@
     "provider_colour": "#ff6a00"
   },
   {
-    "id": 363,
+    "id": 364,
     "model_id": "qwen3.5-9b",
-    "input_price": 0.154,
-    "output_price": 0.226,
-    "recorded_at": "2026-11-18 19:58:49",
+    "input_price": 0.17,
+    "output_price": 0.25,
+    "recorded_at": "2026-11-18 21:56:50",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3.5-9B",
     "provider_name": "Alibaba",
