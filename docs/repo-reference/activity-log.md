@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 18 Nov 2026, 02:58 UTC
+Generated: 18 Nov 2026, 03:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 18 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,013 open roles across 10 tracked companies. | `/jobs/` |
+| 18 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,012 open roles across 10 tracked companies. | `/jobs/` |
 | 18 Nov 2026, 12:00 UTC | digest | Nvidia promises that revenue will keep soaring — for now | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/17/nvidia-promises-that-revenue-will-keep-soaring-for-now/) |
 | 18 Nov 2026, 12:00 UTC | digest | Nvidia’s startup stakes ballooned to $65B, but Huang’s exit puts future deals in doubt | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/) |
 | 18 Nov 2026, 12:00 UTC | digest | Published the 2026-11-18 daily digest | 2 stories captured from 1 sources. | `/news/` |
-| 18 Nov 2026, 02:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 18 Nov 2026, 02:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 18 Nov 2026, 02:58 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
-| 18 Nov 2026, 02:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Nov 2026, 03:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 18 Nov 2026, 03:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 18 Nov 2026, 03:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Nov 2026, 03:58 UTC | data | Validated official pricing snapshots | Rechecked provider pricing pages against the comparison database. | `/compare/llm/` |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
