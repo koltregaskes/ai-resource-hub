@@ -39,8 +39,8 @@ missing usage or an uncertain connection failure keeps the full reserved charge.
 The stage retry policy applies: at most three transport attempts, each separately
 reserved, with 2 s / 8 s waits and the same `Retry-After` rules. Timeouts and
 provider errors are not retried. An above-reservation charge stops all later
-pairs. Output limits are 4096, 8192, 16384 or 32768; their transport deadlines are
-120, 120, 600 or 900 seconds respectively. Stage defaults are unchanged.
+pairs. Output limits are 4096, 8192, 16384, 32768, 65536 or 128000; their transport deadlines are
+120, 120, 600, 900, 1800 or 3600 seconds respectively. Stage defaults are unchanged. The two largest exist because Claude models at high effort can spend more than 32,768 tokens thinking before they write anything (18 Nov 2026).
 
 Use a fresh output directory. Every pair gets `<out-dir>/<prompt id>/<model id>.txt`
 (raw reply, even when truncated) and `.json` (receipt); an HTML fence or document
