@@ -47,6 +47,8 @@ def validate_prompts(value):
         if not isinstance(item, dict) or set(item) != {"id", "prompt"}:
             raise ValueError("each prompt must have exactly id and prompt fields")
         name = _component(item["id"])
+        if name.casefold() == "summary.json":
+            raise ValueError("a prompt id may not be summary.json: that name is the run summary")
         if name.casefold() in seen:
             raise ValueError("prompt ids must be unique, ignoring case")
         if not isinstance(item["prompt"], str) or not item["prompt"].strip():
