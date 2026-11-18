@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T13:58:19.910Z",
+  "generatedAt": "2026-11-18T14:59:49.629Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-18T13:58:19.901Z",
+      "lastCheckedAt": "2026-11-18T14:59:49.623Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-18T13:58:17.924Z",
+      "lastCheckedAt": "2026-11-18T14:59:48.327Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
@@ -202,16 +202,12 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-18T13:58:17.965Z",
+      "lastCheckedAt": "2026-11-18T14:59:48.448Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
-      "summary": "2 active incidents across 25 tracked components.",
+      "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
-        {
-          "name": "Conversations",
-          "status": "degraded_performance"
-        },
         {
           "name": "Compliance API",
           "status": "degraded_performance"
@@ -231,19 +227,13 @@
         {
           "name": "Decisions",
           "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
         }
       ],
       "activeIncidents": [
-        {
-          "id": "01M7Q99XRGP8T4DWJN8DSZXA1X",
-          "title": "Elevated conversation errors for Free and Go users",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-11-18T12:15:02.000Z",
-          "updatedAt": "2026-11-18T12:15:02.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
-        },
         {
           "id": "01M7N9VNR6X5SEC90M1YCDB36D",
           "title": "Costs API data is delayed",
@@ -259,12 +249,12 @@
         {
           "id": "01M7Q99XRGP8T4DWJN8DSZXA1X",
           "title": "Elevated conversation errors for Free and Go users",
-          "status": "identified",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-11-18T12:15:02.000Z",
-          "updatedAt": "2026-11-18T12:15:02.000Z",
-          "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+          "updatedAt": "2026-11-18T14:13:46.000Z",
+          "resolvedAt": "2026-11-18T14:13:46.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
         },
         {
           "id": "01M7N9VNR6X5SEC90M1YCDB36D",
@@ -309,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-18T13:58:19.030Z",
+      "lastCheckedAt": "2026-11-18T14:59:48.973Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -329,7 +319,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-18T13:58:18.889Z",
+      "lastCheckedAt": "2026-11-18T14:59:48.777Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -349,7 +339,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-18T13:58:18.458Z",
+      "lastCheckedAt": "2026-11-18T14:59:48.206Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -396,7 +386,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
