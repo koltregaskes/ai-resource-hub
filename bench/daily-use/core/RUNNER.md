@@ -4,6 +4,65 @@ Status: built and tested offline only. Nothing here has called a model provider.
 
 The method is `docs/DAY-TO-DAY-BENCH-METHOD.md`. This page says how the code carries it out.
 
+## Oneshot
+
+`oneshot` sends free-form prompts without judges, grading or benchmark scores.
+For example, a JSON file containing `[{"id":"demo-1","prompt":"Build a demo page."}]`
+can be rehearsed with:
+
+```powershell
+python bench/daily-use/core/cli.py oneshot --config bench/daily-use/run-config.json --prompts D:/private/prompts.json --models MODEL_ID_1,MODEL_ID_2 --output-limit 8192 --out-dir D:/private/demo-output --private-store D:/private/bench-store --max-usd 1
+```
+
+Model ids must occur in `config.models`; all their configured settings, including
+effort and API version, are preserved. Each (prompt, model) pair is one fresh
+conversation containing exactly one user prompt. **Both adapters send no system
+prompt:** OpenAI Responses uses the prompt string as its user input, with no
+`instructions`; Anthropic Messages uses one `user` message, with no `system`.
+There are no tools, history, judge calls or grading calls.
+
+Without `--live`, this uses the fake transport and separate
+`<store>/ledgers-dry/<run id>/` ledgers; a supplied key-file path is never read.
+For an authorised live invocation, add `--key-file <path> --live`. The existing
+live switch, clean-environment check, config approval, pinned settings/prices,
+overrun acknowledgement and key loader still apply. Oneshot needs no stage
+qualification or canary, whole-plan 2x gate or pass gate. It takes the same store
+execution lock for the entire invocation. Use the **same private store** as
+stages: live calls share `<store>/ledgers/<provider>.jsonl` and its lifetime caps,
+limited by both `caps_usd` and `AUTHORISED_CAPS_USD`.
+
+Before every send, it reserves the prompt's UTF-8 input bound plus framing and
+the full output limit, at the config's frozen rates. A reservation exceeding a
+provider's remaining cap or the optional invocation-wide `--max-usd` is refused,
+printed as `SKIPPED`, and the next pair is tried. Settlement releases unused room;
+missing usage or an uncertain connection failure keeps the full reserved charge.
+The stage retry policy applies: at most three transport attempts, each separately
+reserved, with 2 s / 8 s waits and the same `Retry-After` rules. Timeouts and
+provider errors are not retried. An above-reservation charge stops all later
+pairs. Output limits are 4096, 8192, 16384 or 32768; their transport deadlines are
+120, 120, 600 or 900 seconds respectively. Stage defaults are unchanged.
+
+Use a fresh output directory. Every pair gets `<out-dir>/<prompt id>/<model id>.txt`
+(raw reply, even when truncated) and `.json` (receipt); an HTML fence or document
+starting with `<!doctype html` / `<html` also produces `.html` without surrounding
+prose/fences. Refused or subsequently skipped pairs get empty text and an explicit
+receipt status. Ids must be unique safe filename components, ignoring case.
+Receipts include model, effort, output limit, token counts, cost, finish reason,
+truncation, elapsed transport seconds, UTC time, harness request id and every
+attempt. Token counts and finish metadata describe the last received attempt;
+cost and seconds cover all attempts. Unreported reasoning tokens are `null`.
+`summary.json` lists every pair and total charged USD by provider (simulated in
+dry mode). Exit 0 means every pair returned `ok`; exit 3 means at least one pair
+was refused, failed or stopped; exit 2 is a setup/gate refusal.
+
+The private append-only journal is `<store>/oneshot/<UTC>-<id>.jsonl`, with fsynced
+`sent`, `received` and `done` events in the stage log style, settings and prices,
+and no key. Received results are logged before settlement; unknown interrupted
+requests keep their ledger reservations and can be handled with `reconcile`.
+There is no oneshot resume: a new invocation is new paid work. Inspect the journal
+after an interruption before deciding to send any pair again. No stage record,
+qualification result or public benchmark result is written.
+
 ## How the pieces fit
 
 | File | Job |

@@ -46,6 +46,7 @@ import config as config_module  # noqa: E402
 import judges  # noqa: E402
 import keys  # noqa: E402
 import ledger  # noqa: E402
+import oneshot  # noqa: E402
 import preflight  # noqa: E402
 import records  # noqa: E402
 import runner  # noqa: E402
@@ -152,6 +153,16 @@ def build_parser():
             sub.add_argument("--resume", metavar="RUN_ID",
                              help="carry on a stopped canary or full run in staging; no "
                                   "request already in its log is sent again")
+    sub = commands.add_parser("oneshot", help="single prompts, no system prompt or grading")
+    sub.add_argument("--config", required=True)
+    sub.add_argument("--prompts", required=True, help='JSON list of {"id", "prompt"}')
+    sub.add_argument("--models", required=True, help="comma-separated config model ids")
+    sub.add_argument("--output-limit", required=True, type=int, choices=oneshot.OUTPUT_LIMITS)
+    sub.add_argument("--out-dir", required=True)
+    sub.add_argument("--private-store", required=True)
+    sub.add_argument("--key-file", help="read only when --live passes the gate")
+    sub.add_argument("--live", action="store_true")
+    sub.add_argument("--max-usd", type=_usd, help="invocation cap across all providers")
     sub = commands.add_parser(
         "reconcile", help="enter the provider console figure for one request in a ledger")
     sub.add_argument("--private-store", required=True,
@@ -174,7 +185,8 @@ def build_parser():
 
 
 PATH_OPTIONS = ("--config", "--public-tasks", "--held-out-tasks", "--held-out-manifest",
-                "--key-file", "--private-store", "--checklist-samples", "--outcome-samples")
+                "--key-file", "--private-store", "--checklist-samples", "--outcome-samples",
+                "--prompts", "--out-dir")
 RECONCILE_PROVIDERS = ("openai", "anthropic")
 
 
@@ -310,6 +322,8 @@ def main(argv=None, out=print):
     args = build_parser().parse_args(argv)
     if args.command == "reconcile":
         return reconcile(args, out)
+    if args.command == "oneshot":
+        return oneshot.command(args, out)
     live = bool(getattr(args, "live", False))
     stage = args.command if args.command in STAGE_COMMANDS else args.stage
     try:
