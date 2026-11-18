@@ -22,7 +22,7 @@ If you believe you have found a security issue involving:
 
 report it privately to the maintainer at:
 
-- `kolin@tregaskes.co.uk`
+- `hello@koltregaskes.com`
 
 When possible, include:
 
