@@ -35,10 +35,10 @@ export function applyModelFieldEvidence<T extends { id: string; notes?: string |
     }
   }
   // Catalogue identity does not verify cached discovery prices.
+  // Hub #2121: a catalogue price's displayed freshness is its dated source
+  // check, never the refresh run that copied it (null when none is recorded).
+  if (entry?.officialPricing) values.pricing_updated = entry.officialPricing.checkedAt ?? null;
   if (entry?.officialPricing && !review) {
-    if (values.pricing_source !== entry.officialPricing.source
-      || values.input_price !== entry.officialPricing.inputPrice
-      || values.output_price !== entry.officialPricing.outputPrice) values.pricing_updated = null;
     values.pricing_source = entry.officialPricing.source;
     values.input_price = entry.officialPricing.inputPrice;
     values.output_price = entry.officialPricing.outputPrice;

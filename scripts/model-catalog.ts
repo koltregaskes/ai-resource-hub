@@ -21,6 +21,13 @@ export interface OfficialPricingDefinition {
   cachedInputPrice?: number;
   source: string;
   sourceUrl: string;
+  /**
+   * Date (YYYY-MM-DD) this price was last checked on the source page. This is
+   * the only date the site may show as the price's freshness (hub #2121).
+   * Field-reviewed entries get it from their review. Leave it unset when no
+   * dated check is recorded: never use a run time.
+   */
+  checkedAt?: string;
 }
 
 export interface CatalogModelEntry {

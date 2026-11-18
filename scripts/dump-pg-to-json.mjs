@@ -15,6 +15,7 @@ import path from 'path';
 import { getOptionalEnv } from './lib/load-env.mjs';
 import { loadNewsRoutingConfig } from './lib/news-routing-config.mjs';
 import { exportNewsRows } from './lib/news-routing-policy.mjs';
+import { selectChangedPriceRows } from './lib/price-history-merge.mjs';
 
 const require = createRequire(import.meta.url);
 const Database = require('better-sqlite3');
@@ -314,8 +315,9 @@ const currentPriceHistoryRows = sqlite.prepare(`
   JOIN providers p ON m.provider_id = p.id
   ORDER BY ph.model_id, ph.recorded_at ASC
 `).all();
+const publishedPriceHistoryRows = loadExistingCacheRows('price_history');
 const mergedPriceHistoryRows = new Map();
-for (const row of loadExistingCacheRows('price_history')) {
+for (const row of publishedPriceHistoryRows) {
   mergedPriceHistoryRows.set([
     row.model_id,
     row.input_price,
@@ -324,7 +326,7 @@ for (const row of loadExistingCacheRows('price_history')) {
     row.source,
   ].join('|'), row);
 }
-for (const row of currentPriceHistoryRows) {
+for (const row of selectChangedPriceRows(publishedPriceHistoryRows, currentPriceHistoryRows)) {
   mergedPriceHistoryRows.set([
     row.model_id,
     row.input_price,

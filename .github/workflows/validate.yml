@@ -46,6 +46,9 @@ jobs:
       - name: Test source policy (no numbers from sources whose terms bar our use)
         run: npm run test:source-policy
 
+      - name: Test pricing freshness (no re-stamped dates, no repeat history, live prices kept)
+        run: npm run test:pricing-freshness
+
       - name: Test Lab Standings method
         run: node --test scripts/lab-standings.test.mjs
 

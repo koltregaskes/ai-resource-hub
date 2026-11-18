@@ -239,8 +239,8 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
 
   const pricingUpdates = scrapeHighlights([
     {
-      title: 'Official provider pricing cross-check',
-      detail: 'Validated tracked price rows against official pricing pages.',
+      title: 'Curated catalogue prices applied',
+      detail: 'Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept.',
       href: formatRoute(basePath, '/compare/llm/'),
       date: getLastScrapeTime('official-pricing'),
     },
@@ -346,12 +346,12 @@ export function getUpdatesDashboard(basePath = '/'): UpdateCategoryCard[] {
       href: formatRoute(basePath, '/compare/llm/'),
       summary: 'Track provider pricing and value signals from official pages first, with routed API pricing used as the fastest discovery layer.',
       sources: [
-        'Official provider pricing pages',
+        'Official provider pricing pages (hand-checked into the model catalogue, not fetched)',
         'Provider APIs and model catalogs where pricing is exposed',
         'OpenRouter price index for discovery and cross-checking',
       ],
+      // The curated catalogue step fetches nothing, so its run time is not a refresh (hub #2121).
       lastRefreshed: latestDateTime(
-        getLastScrapeTime('official-pricing'),
         getLastScrapeTime('pricing:openrouter'),
         getLastScrapeTime('pricing:validator'),
       ),

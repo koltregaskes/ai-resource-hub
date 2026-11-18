@@ -20,7 +20,9 @@ export function getReviewedCatalogEntries(): CatalogModelEntry[] {
       && fields.pricingConditions.value === null) {
       entry.officialPricing = { inputPrice: Number(fields.inputPrice.value), outputPrice: Number(fields.outputPrice.value),
         ...(fields.cachedInputPrice.verification === 'verified' ? { cachedInputPrice: Number(fields.cachedInputPrice.value) } : {}),
-        source: 'Vendor (official, checked ' + fields.inputPrice.checkedAt + ')', sourceUrl: fields.inputPrice.sourceUrl };
+        source: 'Vendor (official, checked ' + fields.inputPrice.checkedAt + ')', sourceUrl: fields.inputPrice.sourceUrl,
+        // Hub #2121: freshness is the older of the two dated price checks.
+        checkedAt: [fields.inputPrice.checkedAt, fields.outputPrice.checkedAt].sort()[0] };
     }
     return entry;
   });
