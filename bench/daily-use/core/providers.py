@@ -243,14 +243,18 @@ class _Adapter:
     def reply_flags(self, payload):
         return []
 
-    def call(self, transport, prompt, max_output_tokens, secret, clock=time.monotonic):
+    def call(self, transport, prompt, max_output_tokens, secret, clock=time.monotonic,
+             timeout_seconds=None):
         """Send one request and classify what came back. Never retries."""
         request = self.build_request(prompt, max_output_tokens, secret)
+        if timeout_seconds is not None:
+            request.timeout_seconds = timeout_seconds
+        deadline = request.timeout_seconds
         started = clock()
         try:
             response = transport(request)
         except TransportTimeout:
-            return Result(TIMEOUT, error="timeout after %d s" % TIMEOUT_SECONDS,
+            return Result(TIMEOUT, error="timeout after %d s" % deadline,
                           request_time_seconds=clock() - started)
         except TransportFailure as failure:
             return Result(TRANSPORT_ERROR, retryable=True,
@@ -259,8 +263,8 @@ class _Adapter:
         elapsed = response.elapsed_seconds
         if elapsed is None:
             elapsed = clock() - started
-        if elapsed > TIMEOUT_SECONDS:
-            return Result(TIMEOUT, error="timeout after %d s" % TIMEOUT_SECONDS,
+        if elapsed > deadline:
+            return Result(TIMEOUT, error="timeout after %d s" % deadline,
                           request_time_seconds=elapsed)
         status = response.status
         body = response.body
@@ -410,7 +414,8 @@ def adapter_for(spec):
 
 def call_with_retries(adapter, transport, prompt, max_output_tokens, secret, *,
                       max_requests=MAX_REQUESTS_PER_SLOT, before_send=None,
-                      after_result=None, sleep=None, clock=time.monotonic):
+                      after_result=None, sleep=None, clock=time.monotonic,
+                      timeout_seconds=None):
     """Up to `max_requests` requests: the first, then retries of transport
     errors only. A timeout or a provider error ends the attempt at once.
     The wait before a retry is 2 s, then 8 s, or the provider's `Retry-After`
@@ -425,7 +430,8 @@ def call_with_retries(adapter, transport, prompt, max_output_tokens, secret, *,
     for number in range(1, max_requests + 1):
         if before_send:
             before_send(number)
-        result = adapter.call(transport, prompt, max_output_tokens, secret, clock=clock)
+        options = {} if timeout_seconds is None else {"timeout_seconds": timeout_seconds}
+        result = adapter.call(transport, prompt, max_output_tokens, secret, clock=clock, **options)
         results.append(result)
         if after_result:
             after_result(number, result)
@@ -475,7 +481,7 @@ class UrllibTransport:
         worker = threading.Thread(target=self._exchange, args=(request, box), daemon=True)
         started = time.monotonic()
         worker.start()
-        worker.join(TIMEOUT_SECONDS)
+        worker.join(request.timeout_seconds)
         if worker.is_alive():
             box["abandoned"] = True
             stream = box.get("stream")
@@ -504,7 +510,7 @@ class UrllibTransport:
                                               method="POST")
             opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), _NoRedirect())
             try:
-                stream = opener.open(outgoing, timeout=TIMEOUT_SECONDS)
+                stream = opener.open(outgoing, timeout=request.timeout_seconds)
             except urllib.error.HTTPError as http_error:
                 stream = http_error
             finally:
@@ -517,7 +523,7 @@ class UrllibTransport:
                 if not chunk:
                     break
                 chunks.append(chunk)
-                if time.monotonic() - started > TIMEOUT_SECONDS:
+                if time.monotonic() - started > request.timeout_seconds:
                     box["timeout"] = True
                     return
             status = getattr(stream, "status", None) or stream.getcode()

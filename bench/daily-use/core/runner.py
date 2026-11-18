@@ -411,6 +411,13 @@ def open_live_gate(*, live, config, key_file, tasks, stage, private_store, remai
                           + "; ".join(config.live_blockers))
     if not key_file:
         raise LiveRefused("--key-file was not given")
+    if stage == "oneshot":
+        # Each request is its own budget unit: no judges, stage prerequisites,
+        # whole-plan gate or pass gate. All approval/key checks still apply.
+        refusals = preflight.overrun_refusals(config, overruns)
+        if refusals:
+            raise LiveRefused(" | ".join(refusals))
+        return _issue_live_pass(config, key_file), None, None
     if hashes is None:
         hashes = sample_hashes(checklist_samples, outcome_samples)
     missing, qualified = _earlier_steps_missing(stage, config, private_store, hashes)
@@ -425,13 +432,18 @@ def open_live_gate(*, live, config, key_file, tasks, stage, private_store, remai
         qualification_note="this is the qualification stage" if stage == "qualify" else None)
     if not result["ok"]:
         raise LiveRefused("pre-flight refused: " + " | ".join(result["refusals"]))
+    return _issue_live_pass(config, key_file), result, qualified
+
+
+def _issue_live_pass(config, key_file):
+    """Load keys only after the caller has passed the live checks."""
     try:
         loaded = keys_module.load_keys(key_file, config.key_names)
     except (keys_module.KeyNotFound, keys_module.KeyFileError) as problem:
         raise LiveRefused(str(problem)) from None
     gate_pass = LiveGatePass(loaded)
     _PASSES.append(gate_pass)
-    return gate_pass, result, qualified
+    return gate_pass
 
 
 # ---- dry-run transports ------------------------------------------------
