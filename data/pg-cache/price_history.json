@@ -410830,9 +410830,9 @@
   {
     "id": 339,
     "model_id": "kimi-k2.7-code",
-    "input_price": 0.7,
+    "input_price": 0.8,
     "output_price": 3.75,
-    "recorded_at": "2026-11-18 10:57:58",
+    "recorded_at": "2026-11-18 15:58:10",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Kimi K2.7 Code",
     "provider_name": "Moonshot AI",
@@ -463705,12 +463705,12 @@
     "provider_colour": "#e040fb"
   },
   {
-    "id": 460,
+    "id": 180,
     "model_id": "minimax-m3.1-flash",
-    "input_price": 0.15,
-    "output_price": 0.6,
-    "recorded_at": "2026-11-18 08:58:05",
-    "source": "Vendor (official, checked 2026-11-13)",
+    "input_price": 0.075,
+    "output_price": 0.3,
+    "recorded_at": "2026-11-18 15:58:10",
+    "source": "openrouter.ai/api/v1/models",
     "model_name": "MiniMax M3.1 Flash",
     "provider_name": "MiniMax",
     "provider_colour": "#e040fb"
