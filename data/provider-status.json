@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T16:58:28.493Z",
+  "generatedAt": "2026-11-18T17:59:25.049Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-18T16:58:28.488Z",
+      "lastCheckedAt": "2026-11-18T17:59:25.014Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-18T16:58:26.903Z",
+      "lastCheckedAt": "2026-11-18T17:59:24.055Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
@@ -192,103 +192,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-11-18T16:58:26.943Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partial System Degradation",
-      "summary": "1 active incident across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Compliance API",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "Chat Completions",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Agents",
-          "status": "operational"
-        },
-        {
-          "name": "Decisions",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [
-        {
-          "id": "01M7N9VNR6X5SEC90M1YCDB36D",
-          "title": "Costs API data is delayed",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-11-17T17:46:15.000Z",
-          "updatedAt": "2026-11-17T19:53:49.000Z",
-          "resolvedAt": null,
-          "summary": "We've pushed a fix and are monitoring the recovery."
-        }
-      ],
-      "recentIncidents": [
-        {
-          "id": "01M7Q99XRGP8T4DWJN8DSZXA1X",
-          "title": "Elevated conversation errors for Free and Go users",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-18T12:15:02.000Z",
-          "updatedAt": "2026-11-18T14:13:46.000Z",
-          "resolvedAt": "2026-11-18T14:13:46.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M7N9VNR6X5SEC90M1YCDB36D",
-          "title": "Costs API data is delayed",
-          "status": "monitoring",
-          "impact": "minor",
-          "startedAt": "2026-11-17T17:46:15.000Z",
-          "updatedAt": "2026-11-17T19:53:49.000Z",
-          "resolvedAt": null,
-          "summary": "We've pushed a fix and are monitoring the recovery."
-        },
-        {
-          "id": "01M7ATRS6BMZ61E4JDHJGM79Y0",
-          "title": "Delayed Costs Data in the Compliance API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-13T16:10:07.000Z",
-          "updatedAt": "2026-11-16T00:17:25.000Z",
-          "resolvedAt": "2026-11-16T00:17:25.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M7C40W0N5MZHNW0YM09QV962",
-          "title": "Elevated errors with ChatGPT billing and Ads billing",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-11-14T04:11:04.000Z",
-          "updatedAt": "2026-11-14T05:27:53.000Z",
-          "resolvedAt": "2026-11-14T05:27:53.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -299,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-18T16:58:27.801Z",
+      "lastCheckedAt": "2026-11-18T17:59:25.043Z",
       "overallStatus": "maintenance",
       "overallLabel": "Under maintenance",
       "summary": "Official provider status page reports: Under maintenance.",
@@ -319,7 +222,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-18T16:58:27.628Z",
+      "lastCheckedAt": "2026-11-18T17:59:24.888Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -339,7 +242,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-18T16:58:27.176Z",
+      "lastCheckedAt": "2026-11-18T17:59:24.266Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -372,6 +275,92 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-11-18T17:59:24.067Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Chat Completions",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Agents",
+          "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Embeddings",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [],
+      "recentIncidents": [
+        {
+          "id": "01M7N9VNR6X5SEC90M1YCDB36D",
+          "title": "Costs API data is delayed",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-17T17:46:15.000Z",
+          "updatedAt": "2026-11-18T17:15:46.000Z",
+          "resolvedAt": "2026-11-18T17:15:46.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M7Q99XRGP8T4DWJN8DSZXA1X",
+          "title": "Elevated conversation errors for Free and Go users",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-18T12:15:02.000Z",
+          "updatedAt": "2026-11-18T14:13:46.000Z",
+          "resolvedAt": "2026-11-18T14:13:46.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M7ATRS6BMZ61E4JDHJGM79Y0",
+          "title": "Delayed Costs Data in the Compliance API",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-13T16:10:07.000Z",
+          "updatedAt": "2026-11-16T00:17:25.000Z",
+          "resolvedAt": "2026-11-16T00:17:25.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M7C40W0N5MZHNW0YM09QV962",
+          "title": "Elevated errors with ChatGPT billing and Ads billing",
+          "status": "resolved",
+          "impact": "none",
+          "startedAt": "2026-11-14T04:11:04.000Z",
+          "updatedAt": "2026-11-14T05:27:53.000Z",
+          "resolvedAt": "2026-11-14T05:27:53.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        }
+      ]
+    },
+    {
       "id": "deepseek",
       "providerId": "deepseek",
       "name": "DeepSeek",
@@ -386,7 +375,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []

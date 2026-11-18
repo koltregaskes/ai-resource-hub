@@ -1,5 +1,53 @@
 [
   {
+    "id": "news-00a34e9a7fe6f28e4eb7",
+    "title": "Disney’s new Star Wars animatronics interact with guests using AI",
+    "url": "https://www.theverge.com/tech/1036729/disney-star-wars-anzellans-animatronic-amazon-aws-cloud-ai",
+    "source": "The Verge",
+    "summary": "As advanced and lifelike as the animatronic characters at Disney parks have become, they typically either stick to predefined movements and routines, or there's an out of sight puppeteer helping make their behavior appear more spontaneous. That could soon change as Walt Disney Imagineering R&#38;D has revealed three n…",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-18T17:50:57.000Z",
+    "discovered_at": "2026-11-18 17:59:23"
+  },
+  {
+    "id": "news-708e52618cd98258b59e",
+    "title": "More banks says customers using AI agents are on their own — even if they get hacked",
+    "url": "https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/",
+    "source": "TechCrunch",
+    "summary": "Citi is the latest major financial institution to put the breaks on personal finance AI agents.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-18T17:32:10.000Z",
+    "discovered_at": "2026-11-18 17:59:14"
+  },
+  {
+    "id": "news-03ca256a4adf40871dcd",
+    "title": "The Gemini app is now available on lower-memory Android devices.",
+    "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+    "source": "Google",
+    "summary": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-18T17:00:00.000Z",
+    "discovered_at": "2026-11-18 17:59:14"
+  },
+  {
+    "id": "news-3439be5ca6040b728f34",
+    "title": "Sam Altman warns against a future where AI, not humans, calls the shots",
+    "url": "https://techcrunch.com/2026/11/18/sam-altman-warns-against-a-future-where-ai-not-humans-calls-the-shots/",
+    "source": "TechCrunch",
+    "summary": "Sam Altman and Greg Brockman pushed back against Silicon Valley's growing debate over an AI takeover, while acknowledging the challenges of keeping advanced models under human control.",
+    "category": "industry",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-18T16:59:00.000Z",
+    "discovered_at": "2026-11-18 17:59:14"
+  },
+  {
     "id": "news-f816757e046db7524180",
     "title": "OpenAI CEO Sam Altman says it&#8217;s &#8216;hard to imagine the AI industry without Jensen&#8217;",
     "url": "https://techcrunch.com/2026/11/18/openai-ceo-sam-altman-says-its-hard-to-imagine-the-ai-industry-without-jensen/",
@@ -9,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-18T16:14:09.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-d4ec4820484976f59c02",
@@ -21,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-18T15:44:02.000Z",
-    "discovered_at": "2026-11-18 16:58:26"
+    "discovered_at": "2026-11-18 17:59:23"
   },
   {
     "id": "news-84d2fa603ef696ee1521",
@@ -33,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-18T14:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:26"
+    "discovered_at": "2026-11-18 17:59:23"
   },
   {
     "id": "news-ce416493dbd77e398c0b",
@@ -45,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-18T13:01:05.000Z",
-    "discovered_at": "2026-11-18 16:58:26"
+    "discovered_at": "2026-11-18 17:59:23"
   },
   {
     "id": "news-5d3a453ab03ddae12506",
@@ -57,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-18T13:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-620756f297e99f3c560b",
@@ -69,19 +117,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-18T12:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-996c920e2c06362cd8d1",
-    "title": "India’s Humyn Labs raises $47M to feed U.S. robotics companies the data they need",
+    "title": "India’s Humyn Labs raises $47M to feed US robotics companies the data they need",
     "url": "https://techcrunch.com/2026/11/18/accel-backs-indias-humyn-labs-to-supply-training-data-needed-by-u-s-robotics-ai-developers/",
     "source": "TechCrunch",
-    "summary": "Founded in February, Humyn Labs competes with startups including Mecka AI and XDOF, with about 90% of its revenue coming from the U.S.",
+    "summary": "Founded in February, Humyn Labs competes with startups such as Mecka AI and XDOF, with about 90% of its revenue coming from the U.S.",
     "category": "industry",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-18T11:30:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-da6c827addce47a13c5e",
@@ -93,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-18T11:16:53.000Z",
-    "discovered_at": "2026-11-18 16:58:26"
+    "discovered_at": "2026-11-18 17:59:23"
   },
   {
     "id": "news-d652f478feeed9d6a3d4",
@@ -105,7 +153,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-18T01:44:21.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-83a48772429ae19970ea",
@@ -117,7 +165,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-18T00:16:50.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
+  },
+  {
+    "id": "news-c7d3ecb006439a135768",
+    "title": "Advancing chip design with OpenAI models",
+    "url": "https://openai.com/index/advancing-chip-design-with-our-models",
+    "source": "OpenAI",
+    "summary": "OpenAI models optimized circuits used in Jalapeño silicon and improved RISC‑V core designs, showing progress in AI-assisted chip design with GPT‑6 Astra.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-18T00:00:00.000Z",
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-6cab9c8cd38347e314ec",
@@ -129,7 +189,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-18T00:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-19bce111d0ee6096879c",
@@ -141,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T23:41:18.000Z",
-    "discovered_at": "2026-11-18 16:58:26"
+    "discovered_at": "2026-11-18 17:59:23"
   },
   {
     "id": "news-28509d8a3a743ac7527b",
@@ -153,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T23:37:48.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-3feac09277102c220aa9",
@@ -165,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T23:04:35.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-f8045fa626e2c02a351f",
@@ -177,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T22:42:27.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-6908e71926e8ed83b504",
@@ -189,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T22:29:05.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-6e2564c29c662909b172",
@@ -201,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T21:48:07.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-7465bbc4c963251d4045",
@@ -213,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T21:40:59.000Z",
-    "discovered_at": "2026-11-18 16:58:26"
+    "discovered_at": "2026-11-18 17:59:23"
   },
   {
     "id": "news-320959dca20ca092fa1b",
@@ -225,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T21:34:50.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-859fe7425ca0830b25c8",
@@ -237,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T21:00:55.000Z",
-    "discovered_at": "2026-11-18 16:58:26"
+    "discovered_at": "2026-11-18 17:59:23"
   },
   {
     "id": "news-d9a047affb028160412d",
@@ -249,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T19:32:11.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-0fc744e43d6095d814ec",
@@ -261,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T19:02:20.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-72284a47c9d975a21bbe",
@@ -273,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T18:58:01.000Z",
-    "discovered_at": "2026-11-18 16:58:26"
+    "discovered_at": "2026-11-18 17:59:23"
   },
   {
     "id": "news-560e703561a25cd9d0c9",
@@ -285,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T18:48:23.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-f4982bcb3ccbe841326c",
@@ -297,19 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T18:10:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
-  },
-  {
-    "id": "news-b145ab91c01065c7623f",
-    "title": "Pedestal AI raises $4.7 million to agentify the supply chain",
-    "url": "https://techcrunch.com/2026/11/17/pedestal-ai-raises-4-7-million-to-agentify-the-supply-chain/",
-    "source": "TechCrunch",
-    "summary": "The company uses agentic AI to make supply chains faster and more reliable.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-17T18:04:16.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-549a77347d5e1e5f25e0",
@@ -321,19 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T17:45:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
-  },
-  {
-    "id": "news-42c4fd05f3f446d0374a",
-    "title": "Proton&#8217;s Lumo, a privacy-focused alternative to ChatGPT and Claude, arrives on desktop",
-    "url": "https://techcrunch.com/2026/11/17/protons-lumo-a-privacy-focused-alternative-to-chatgpt-and-claude-arrives-on-desktop/",
-    "source": "TechCrunch",
-    "summary": "Proton's new Lumo Desktop app for Windows, Mac, and Linux lets users automate tasks across files and connected apps, with granular controls over what its AI can access.",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-17T17:32:25.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-357d085ae06f4ca28864",
@@ -345,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T17:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-cb8293f821d94f0d4a91",
@@ -357,19 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T16:19:03.000Z",
-    "discovered_at": "2026-11-18 16:58:26"
-  },
-  {
-    "id": "news-e0185595ee6eb2dbd526",
-    "title": "Jensen Huang says he’s willing to return as Nvidia CEO",
-    "url": "https://www.theverge.com/tech/1035420/jensen-huang-nvidia-return-as-ceo-statement",
-    "source": "The Verge",
-    "summary": "Jensen Huang, who resigned as Nvidia's CEO last week, would be willing to return as CEO if the company's board of directors wanted it, he said in a statement reported on by The Wall Street Journal. \"Since my departure, I've seen an outpouring of calls from Nvidia's employees, investors, business partners, and customer…",
-    "category": "industry",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-17T16:09:57.000Z",
-    "discovered_at": "2026-11-18 16:58:26"
+    "discovered_at": "2026-11-18 17:59:23"
   },
   {
     "id": "news-0e789c02d67386aaea91",
@@ -381,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T14:00:29.000Z",
-    "discovered_at": "2026-11-18 16:58:26"
+    "discovered_at": "2026-11-18 17:59:23"
   },
   {
     "id": "news-c6c361c53bc4ce2d407e",
@@ -393,19 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T08:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
-  },
-  {
-    "id": "news-58da9c66b1456ac9aedd",
-    "title": "Introducing OpenAI for Chile",
-    "url": "https://openai.com/index/introducing-openai-for-chile",
-    "source": "OpenAI",
-    "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-17T00:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-0604bc2b50fc0c3b8a76",
@@ -417,7 +429,19 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T00:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
+  },
+  {
+    "id": "news-58da9c66b1456ac9aedd",
+    "title": "Introducing OpenAI for Chile",
+    "url": "https://openai.com/index/introducing-openai-for-chile",
+    "source": "OpenAI",
+    "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-17T00:00:00.000Z",
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-590cb0b9c5dd23f2eba5",
@@ -429,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T00:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-84f741940fbdaff2c7e2",
@@ -441,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T20:37:47.000Z",
-    "discovered_at": "2026-11-18 16:58:26"
+    "discovered_at": "2026-11-18 17:59:23"
   },
   {
     "id": "news-b1c71d07875ac772d826",
@@ -453,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T17:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-f26f2a4dfd6b9b957c15",
@@ -465,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T17:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-717626b76ea030ce1456",
@@ -477,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T14:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-f891bd93f3d214690602",
@@ -489,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T12:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-f054a54f8228cfac7fd4",
@@ -501,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T09:30:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-91e58e2ea930c2fabc27",
@@ -513,7 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T09:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-ebd9eb94963902d268e9",
@@ -525,7 +549,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T08:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-cfcc7acb02e9ca7944d1",
@@ -537,7 +561,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T06:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-b0ded74e06b06613ea57",
@@ -549,7 +573,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T06:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-3899b6e8ee3cc1f1e22e",
@@ -561,7 +585,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T00:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-e3915f7e4cf071c42329",
@@ -573,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T00:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-87d7014c15ee68a3a258",
@@ -585,19 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-15T22:00:01.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
-  },
-  {
-    "id": "news-4b0fc5b701ffd77dc125",
-    "title": "Our new blog for science",
-    "url": "https://openai.com/index/our-new-blog-for-science",
-    "source": "OpenAI",
-    "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-15T22:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-459a57b4750adf481f4f",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T18:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-8e4104a923ec61a4f8ae",
@@ -621,7 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T18:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-97adab01dbf7344a4376",
@@ -633,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-7e65614cc89aac7b14f8",
@@ -645,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T09:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-b686da68349e5f787ade",
@@ -657,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T21:12:59.000Z",
-    "discovered_at": "2026-11-18 16:58:26"
+    "discovered_at": "2026-11-18 17:59:23"
   },
   {
     "id": "news-ac5a661efbfd509d2187",
@@ -669,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T19:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-c5fffc8a0cbdc3d45109",
@@ -681,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T14:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-155d33cae72679311e5a",
@@ -693,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T13:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-a5eef3cf57a4e41068d1",
@@ -705,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T20:56:41.000Z",
-    "discovered_at": "2026-11-18 16:58:26"
+    "discovered_at": "2026-11-18 17:59:23"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -717,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -729,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -741,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-18 16:58:26"
+    "discovered_at": "2026-11-18 17:59:23"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -753,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   },
   {
     "id": "news-1778fb273dbb6c0b5967",
@@ -765,6 +777,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-21T04:00:00.000Z",
-    "discovered_at": "2026-11-18 16:58:14"
+    "discovered_at": "2026-11-18 17:59:14"
   }
 ]

@@ -1,5 +1,5 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-18T16:58:47.000Z",
+  "generatedAt": "2026-11-18T17:59:31.562Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -132,7 +132,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini Omni 1.2 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini Omni 1.2 Flash is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini Omni 1.2 Flash is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -183,6 +183,16 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The Gemini app is now available on lower-memory Android devices.",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+          "source": "Google",
+          "date": "2026-11-18",
+          "summary": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
           "source": "Google",
@@ -205,8 +215,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-05-gemini-omni-1-2-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "muse-wonder",
@@ -330,7 +340,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini Omni 1.1 Flash is a preview-stage release from Google. It is positioned as an API-available model rather than a local-only release. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini Omni 1.1 Flash is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini Omni 1.1 Flash is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Preview status means the launch narrative matters before long-run benchmark coverage is complete.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -382,6 +392,16 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The Gemini app is now available on lower-memory Android devices.",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+          "source": "Google",
+          "date": "2026-11-18",
+          "summary": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
           "source": "Google",
@@ -404,8 +424,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-08-27-gemini-omni-1-1-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "claude-mythos-preview",
@@ -1256,7 +1276,7 @@ export const modelReleaseDesk = {
       "pricingSource": "Google AI (official)",
       "pricingUpdated": null,
       "summary": "Gemini 3.5 Flash-Lite is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.30 in / $2.50 out per million tokens. Current generally available low-cost Gemini Flash-Lite model. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.5 Flash-Lite is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.5 Flash-Lite is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1307,6 +1327,16 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The Gemini app is now available on lower-memory Android devices.",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+          "source": "Google",
+          "date": "2026-11-18",
+          "summary": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
           "source": "Google",
@@ -1329,8 +1359,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-5-flash-lite-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "gemini-3.6-flash",
@@ -1374,7 +1404,7 @@ export const modelReleaseDesk = {
       "pricingSource": "Google AI (official)",
       "pricingUpdated": null,
       "summary": "Gemini 3.6 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Current generally available Gemini Flash model. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.6 Flash is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.6 Flash is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1425,6 +1455,16 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The Gemini app is now available on lower-memory Android devices.",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+          "source": "Google",
+          "date": "2026-11-18",
+          "summary": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
           "source": "Google",
@@ -1447,8 +1487,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-6-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "gpt-5.6-sol",
@@ -1492,7 +1532,7 @@ export const modelReleaseDesk = {
       "pricingSource": "OpenAI (official)",
       "pricingUpdated": null,
       "summary": "GPT-5.6 Sol is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Current frontier GPT-5.6 model; the gpt-5.6 alias routes to Sol. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1547,22 +1587,12 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-07-09-gpt-5-6-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "claude-sonnet-5",
@@ -1800,7 +1830,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemma 4 is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 131.1K tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemma 4 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemma 4 is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -1854,6 +1884,16 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The Gemini app is now available on lower-memory Android devices.",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+          "source": "Google",
+          "date": "2026-11-18",
+          "summary": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
           "source": "Google",
@@ -1876,8 +1916,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-04-02-gemma-4-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "qwen3.6-plus",
@@ -2256,7 +2296,7 @@ export const modelReleaseDesk = {
       "pricingSource": "OpenAI (official)",
       "pricingUpdated": null,
       "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Official GPT-5.4 API model; superseded as the current flagship by GPT-5.6. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "OpenAI's GPT-5.4 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.4 is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2311,22 +2351,12 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-03-05-gpt-5-4-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "gemini-3.1-pro",
@@ -2370,7 +2400,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 3.1 Pro is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.1 Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.1 Pro is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2421,6 +2451,16 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The Gemini app is now available on lower-memory Android devices.",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+          "source": "Google",
+          "date": "2026-11-18",
+          "summary": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
           "source": "Google",
@@ -2443,8 +2483,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-02-19-gemini-3-1-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "claude-sonnet-4.6",
@@ -3502,7 +3542,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 3.7 Flash is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-3.7-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 3.7 Flash is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.7 Flash is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3553,6 +3593,16 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The Gemini app is now available on lower-memory Android devices.",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+          "source": "Google",
+          "date": "2026-11-18",
+          "summary": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
           "source": "Google",
@@ -3575,8 +3625,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gemini-3-7-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "gemini-3.8-flash",
@@ -3626,7 +3676,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 3.8 Flash is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-3.8-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 3.8 Flash is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.8 Flash is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3677,6 +3727,16 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The Gemini app is now available on lower-memory Android devices.",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+          "source": "Google",
+          "date": "2026-11-18",
+          "summary": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
           "source": "Google",
@@ -3699,8 +3759,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gemini-3-8-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "gemini-4-carbon",
@@ -3750,7 +3810,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 4 Carbon is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-4-carbon); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 4 Carbon is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 4 Carbon is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3801,6 +3861,16 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The Gemini app is now available on lower-memory Android devices.",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+          "source": "Google",
+          "date": "2026-11-18",
+          "summary": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
           "title": "Put Gemini to work for you",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
           "source": "Google",
@@ -3823,8 +3893,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gemini-4-carbon-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "gemini-4-hydrogen",
@@ -3949,21 +4019,21 @@ export const modelReleaseDesk = {
           ]
         },
         {
-          "title": "Put Gemini to work for you",
-          "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+          "title": "The Gemini app is now available on lower-memory Android devices.",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
           "source": "Google",
-          "date": "2026-11-17",
-          "summary": "Tasks in Gemini is now free of charge in six countries, with new features starting in the U.S. and deeper Google Workspace integration to get things done on your behalf.",
+          "date": "2026-11-18",
+          "summary": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
           "routingTags": [
             "model_release"
           ]
         },
         {
-          "title": "Google Cloud launches Gemini for healthcare.",
-          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+          "title": "Put Gemini to work for you",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
           "source": "Google",
-          "date": "2026-11-10",
-          "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
+          "date": "2026-11-17",
+          "summary": "Tasks in Gemini is now free of charge in six countries, with new features starting in the U.S. and deeper Google Workspace integration to get things done on your behalf.",
           "routingTags": [
             "model_release"
           ]
@@ -4272,6 +4342,16 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "Advancing chip design with OpenAI models",
+          "url": "https://openai.com/index/advancing-chip-design-with-our-models",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI models optimized circuits used in Jalapeño silicon and improved RISC‑V core designs, showing progress in AI-assisted chip design with GPT‑6 Astra.",
+          "routingTags": [
+            "hardware"
+          ]
+        },
+        {
           "title": "Introducing OpenAI for Chile",
           "url": "https://openai.com/index/introducing-openai-for-chile",
           "source": "OpenAI",
@@ -4305,16 +4385,6 @@ export const modelReleaseDesk = {
             "training",
             "hardware",
             "open_source"
-          ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
           ]
         }
       ],
@@ -4371,7 +4441,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Astra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-astra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Astra Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Astra Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4426,22 +4496,12 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-astra-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6-luna",
@@ -4491,7 +4551,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Luna is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-luna); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Luna is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Luna is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4546,22 +4606,12 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-luna-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6-luna-pro",
@@ -4611,7 +4661,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Luna Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-luna-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Luna Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Luna Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4666,22 +4716,12 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-luna-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6-sol",
@@ -4731,7 +4771,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Sol is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4786,22 +4826,12 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6-sol-pro",
@@ -4851,7 +4881,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Sol Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Sol Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4906,22 +4936,12 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-sol-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.1-sol",
@@ -4971,7 +4991,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Sol is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5026,22 +5046,12 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-1-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.1-sol-pro",
@@ -5091,7 +5101,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Sol Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Sol Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5146,22 +5156,12 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-1-sol-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.1-terra",
@@ -5211,7 +5211,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Terra is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-terra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Terra is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Terra is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5266,22 +5266,12 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-1-terra-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.1-terra-pro",
@@ -5331,7 +5321,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Terra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-terra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Terra Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Terra Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5386,22 +5376,12 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-1-terra-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.2-astra",
@@ -5451,7 +5431,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.2 Astra is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.2-astra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.2 Astra is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.2 Astra is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5517,22 +5497,12 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-2-astra-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gpt-6.2-astra-pro",
@@ -5582,7 +5552,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.2 Astra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.2-astra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.2 Astra Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.2 Astra Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5637,22 +5607,12 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-2-astra-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.2-sol",
@@ -5702,7 +5662,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.2 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.2-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.2 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.2 Sol is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5757,22 +5717,12 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-2-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.2-sol-pro",
@@ -5822,7 +5772,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.2 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.2-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.2 Sol Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.2 Sol Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5877,22 +5827,12 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
-        },
-        {
-          "title": "Our new blog for science",
-          "url": "https://openai.com/index/our-new-blog-for-science",
-          "source": "OpenAI",
-          "date": "2026-11-15",
-          "summary": "The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.",
-          "routingTags": [
-            "research_paper"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-2-sol-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "grok-4.6",
