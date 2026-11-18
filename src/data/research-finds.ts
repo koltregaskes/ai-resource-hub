@@ -1,6 +1,6 @@
 // AI Finds - credible AI resources mined from the research link backlog
 // (KOL-4013 -> KOL-4337). Content-cleaned from the Todoist PROJECTS2 research
-// links. Regenerate via W:\\hub\\Runtime\\LOCAL-ONLY\\todoist-intake.
+// links. Regenerate via the private local intake tooling (kept off GitHub).
 
 export interface AiFind {
   name: string;

@@ -2,7 +2,7 @@
   "_comment": "OpenAI effort arm 'medium' for Day-to-Day Bench task set v1, run after the main seven-model run. Same tasks, graders, output limits (4,096 tokens, reasoning included), judges and repeats as run-config.json; the only change is reasoning_effort medium on the four OpenAI models. Results are a separate, labelled run and are never merged with the low-effort main result. The caps_usd openai figure of 115 is the provider ledger's lifetime ceiling (spent plus reserved across every run), set so at least 1 USD of the verified 116 USD grant is left unused. Prices and model ids are the 15 November 2026 receipts, re-checked against the OpenAI models page on 17 November 2026.",
   "task_set_version": "v1",
   "live_approved": true,
-  "approved_by": "Kol (repo owner): typed go for the paid runs in the AI Resource Hub session on 15 November 2026, caps 90 USD OpenAI and 60 USD Anthropic; on 17 November 2026, relayed by the Chief of Staff: 'we need to use all those up, as we were using them for benchmarking' (prepaid credit only). OpenAI balance read on the billing page 17 November 2026: 115.58 USD, expiring 20 November 2026, auto-reload off",
+  "approved_by": "Kol (repo owner): typed go for the paid runs in the AI Resource Hub session on 15 November 2026; funded by prepaid API credit (amount private).",
   "key_names": {
     "openai": [
       "OPENAI_API_KEY"

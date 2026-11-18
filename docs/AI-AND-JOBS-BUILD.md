@@ -16,11 +16,11 @@ Staleness uses source vintage plus cadence and half that cadence. It is calculat
 
 ONS, BLS, Anthropic and other listed sources are not yet admitted. They need exact-series rights, definitions and uncertainty extraction before any numbers are shown. Studies, exposure, company claims and projections are explicitly empty; no economy-wide impact claims are made. PR #111's bench fixtures are synthetic and provide no employment evidence; they are not imported here.
 
-The unavailable W:\Websites\AGENTS.md could not be read. Work used an isolated local scratch checkout; no NAS writes were attempted.
+The estate-wide AGENTS.md was unavailable and could not be read. Work used an isolated local scratch checkout; no shared-storage writes were attempted.
 
 ## Signed second-agent review
 
-Codex reviewer `review_standings`, T3 Gaming-Laptop: approved for PR review after verifying weekly refresh scheduling, CI evidence checks and immutable refresh history. Eight validator tests and the SQLite/repeated-fetch/new-vintage integration checks passed. The Indeed figures are appropriately sourced and labelled. Final build and rendered checks are required before merge.
+Codex reviewer `review_standings`, T3: approved for PR review after verifying weekly refresh scheduling, CI evidence checks and immutable refresh history. Eight validator tests and the SQLite/repeated-fetch/new-vintage integration checks passed. The Indeed figures are appropriately sourced and labelled. Final build and rendered checks are required before merge.
 
 ## Per-series rendering and the rights register (14 November 2026)
 

@@ -18,8 +18,8 @@ Offline snapshot: `npx tsx scripts/build-lab-standings.ts YYYY-MM-DD` after plac
 
 The OpenRouter collector is deliberately pending the licensed Data API delivery contract. No website rankings are scraped, no API keys are read, and no partial usage is scored. Business scale/valuation are unavailable and excluded. These remaining data integrations must not be described as complete.
 
-The repo-requested W:\Websites\AGENTS.md could not be read: W: is unavailable on this machine. Work used an isolated local scratch checkout; no NAS writes were attempted.
+The repo-requested estate-wide AGENTS.md could not be read: it was unavailable on this machine. Work used an isolated local scratch checkout; no shared-storage writes were attempted.
 
 ## Signed second-agent review
 
-Codex reviewer `review_standings`, T3 Gaming-Laptop: approved for PR review after fixing rank reset, missing-lab listing, historical changes, archive history, re-score display and receipt-vintage labelling. Seven scorer/history tests passed. Initial and final Astro builds passed; desktop/mobile Edge checks verified sliders, zero-weight state, URL reset and no page overflow/errors. The incomplete collection lanes are disclosed and no unsupported composite is published.
+Codex reviewer `review_standings`, T3: approved for PR review after fixing rank reset, missing-lab listing, historical changes, archive history, re-score display and receipt-vintage labelling. Seven scorer/history tests passed. Initial and final Astro builds passed; desktop/mobile Edge checks verified sliders, zero-weight state, URL reset and no page overflow/errors. The incomplete collection lanes are disclosed and no unsupported composite is published.
