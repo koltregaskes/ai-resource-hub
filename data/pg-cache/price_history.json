@@ -116162,9 +116162,9 @@
   {
     "id": 317,
     "model_id": "deepseek-v4.1-flash",
-    "input_price": 0.051,
-    "output_price": 0.567,
-    "recorded_at": "2026-11-18 08:58:04",
+    "input_price": 0.3,
+    "output_price": 1.2,
+    "recorded_at": "2026-11-18 09:57:28",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4.1 Flash",
     "provider_name": "DeepSeek",
@@ -179685,12 +179685,12 @@
     "provider_colour": "#4285f4"
   },
   {
-    "id": 454,
+    "id": 201,
     "model_id": "gemini-3.6-flash",
-    "input_price": 1.5,
-    "output_price": 7.5,
-    "recorded_at": "2026-11-18 08:58:05",
-    "source": "Google AI (official)",
+    "input_price": 0.75,
+    "output_price": 3.75,
+    "recorded_at": "2026-11-18 09:57:28",
+    "source": "openrouter.ai/api/v1/models",
     "model_name": "Gemini 3.6 Flash",
     "provider_name": "Google",
     "provider_colour": "#4285f4"
@@ -231387,9 +231387,9 @@
   {
     "id": 323,
     "model_id": "glm-5.3-flash",
-    "input_price": 0.04,
-    "output_price": 0.078,
-    "recorded_at": "2026-11-18 08:58:04",
+    "input_price": 0.15,
+    "output_price": 0.5,
+    "recorded_at": "2026-11-18 09:57:28",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GLM 5.3 Flash",
     "provider_name": "Zhipu AI",
@@ -327822,12 +327822,12 @@
     "provider_colour": "#10a37f"
   },
   {
-    "id": 444,
+    "id": 204,
     "model_id": "gpt-5.6-luna",
-    "input_price": 1,
-    "output_price": 6,
-    "recorded_at": "2026-11-18 08:58:05",
-    "source": "OpenAI (official)",
+    "input_price": 0.2,
+    "output_price": 1.2,
+    "recorded_at": "2026-11-18 09:57:28",
+    "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-5.6 Luna",
     "provider_name": "OpenAI",
     "provider_colour": "#10a37f"
@@ -330682,12 +330682,12 @@
     "provider_colour": "#10a37f"
   },
   {
-    "id": 442,
+    "id": 206,
     "model_id": "gpt-5.6-sol",
-    "input_price": 5,
-    "output_price": 30,
-    "recorded_at": "2026-11-18 08:58:05",
-    "source": "OpenAI (official)",
+    "input_price": 4,
+    "output_price": 20,
+    "recorded_at": "2026-11-18 09:57:28",
+    "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-5.6 Sol",
     "provider_name": "OpenAI",
     "provider_colour": "#10a37f"
@@ -333542,12 +333542,12 @@
     "provider_colour": "#10a37f"
   },
   {
-    "id": 443,
+    "id": 205,
     "model_id": "gpt-5.6-terra",
-    "input_price": 2.5,
-    "output_price": 15,
-    "recorded_at": "2026-11-18 08:58:05",
-    "source": "OpenAI (official)",
+    "input_price": 2,
+    "output_price": 12,
+    "recorded_at": "2026-11-18 09:57:28",
+    "source": "openrouter.ai/api/v1/models",
     "model_name": "GPT-5.6 Terra",
     "provider_name": "OpenAI",
     "provider_colour": "#10a37f"
@@ -410830,9 +410830,9 @@
   {
     "id": 339,
     "model_id": "kimi-k2.7-code",
-    "input_price": 0.7,
+    "input_price": 0.813,
     "output_price": 3.75,
-    "recorded_at": "2026-11-18 08:58:04",
+    "recorded_at": "2026-11-18 09:57:28",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Kimi K2.7 Code",
     "provider_name": "Moonshot AI",
@@ -660629,9 +660629,9 @@
   {
     "id": 363,
     "model_id": "qwen3.5-9b",
-    "input_price": 0.17,
-    "output_price": 0.25,
-    "recorded_at": "2026-11-18 08:58:04",
+    "input_price": 0.168,
+    "output_price": 0.247,
+    "recorded_at": "2026-11-18 09:57:28",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3.5-9B",
     "provider_name": "Alibaba",
