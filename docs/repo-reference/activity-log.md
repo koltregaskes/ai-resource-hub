@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 18 Nov 2026, 18:59 UTC
+Generated: 18 Nov 2026, 19:59 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 18 Nov 2026, 18:59 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 18 Nov 2026, 18:59 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 18 Nov 2026, 18:59 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 18 Nov 2026, 18:59 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 18 Nov 2026, 12:00 UTC | digest | Disney’s new Star Wars animatronics interact with guests using AI | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1036729/disney-star-wars-anzellans-animatronic-amazon-aws-cloud-ai) |
-| 18 Nov 2026, 12:00 UTC | digest | Google&#8217;s AI feature in Search gets its own incognito mode | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/18/googles-ai-feature-in-search-gets-its-own-incognito-mode/) |
-| 18 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,005 open roles across 10 tracked companies. | `/jobs/` |
+| 18 Nov 2026, 19:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 18 Nov 2026, 19:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 18 Nov 2026, 19:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 18 Nov 2026, 19:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 18 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 1,003 open roles across 10 tracked companies. | `/jobs/` |
 | 18 Nov 2026, 12:00 UTC | digest | Published the 2026-11-18 daily digest | 20 stories captured from 4 sources. | `/news/` |
-| 18 Nov 2026, 12:00 UTC | digest | What is Nvidia without AI’s sugar daddy in charge? | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1036776/nvidia-earnings-kress-jensen-huang-petition) |
+| 18 Nov 2026, 12:00 UTC | digest | Snapchat now lets developers build AR Lenses with AI assistants like Claude Code and Cursor | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/18/snapchat-now-lets-developers-build-ar-lenses-with-ai-coding-assistants-like-claude-code-and-cursor/) |
+| 18 Nov 2026, 12:00 UTC | digest | Trump’s latest land grab is an AI hub in the Philippines | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/1036749/trump-ai-chip-data-center-us-philippines-pax-silica) |
+| 18 Nov 2026, 12:00 UTC | digest | What’s next for Nvidia? Whatever doesn’t rock the mind-bogglingly profitable boat | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1035924/nvidia-visualized-revenue-profit-earnings-after-huang) |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
