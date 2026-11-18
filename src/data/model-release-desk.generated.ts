@@ -1,11 +1,11 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-18T22:58:27.990Z",
+  "generatedAt": "2026-11-18T23:59:16.350Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
     "totalReleases": 67,
     "highPriority": 5,
-    "readyForEditor": 17,
+    "readyForEditor": 15,
     "officiallyVerified": 29,
     "watchOnly": 38,
     "openSource": 5
@@ -132,7 +132,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini Omni 1.2 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini Omni 1.2 Flash is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini Omni 1.2 Flash is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -152,6 +152,20 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
@@ -185,8 +199,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-05-gemini-omni-1-2-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 4
+      "storyCount": 4,
+      "sourceCount": 5
     },
     {
       "id": "muse-wonder",
@@ -310,7 +324,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini Omni 1.1 Flash is a preview-stage release from Google. It is positioned as an API-available model rather than a local-only release. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini Omni 1.1 Flash is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini Omni 1.1 Flash is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Preview status means the launch narrative matters before long-run benchmark coverage is complete.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -331,6 +345,20 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
@@ -364,8 +392,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-08-27-gemini-omni-1-1-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 4
+      "storyCount": 4,
+      "sourceCount": 5
     },
     {
       "id": "claude-mythos-preview",
@@ -644,7 +672,7 @@ export const modelReleaseDesk = {
       },
       "verificationState": "official",
       "priority": "watch",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
       "providerStatusUrl": null,
       "providerDocsUrl": "https://docs.api.nvidia.com",
@@ -666,11 +694,11 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Nemotron 3.5 Super VL is a currently tracked release from NVIDIA. It belongs in the open-weight / local-model conversation. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "NVIDIA's Nemotron 3.5 Super VL is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "dek": "NVIDIA's Nemotron 3.5 Super VL is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -683,33 +711,16 @@ export const modelReleaseDesk = {
         "Lead with the hook: what NVIDIA actually launched with Nemotron 3.5 Super VL, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Include the local-model angle: LM Studio, Ollama, GGUF, MLX, or on-device relevance where appropriate.",
         "Keep the chronology explicit: this release landed on 15 Oct 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Nvidia says its open source AI strategy remains intact after Jensen Huang&#8217;s exit",
-          "url": "https://techcrunch.com/2026/11/17/nvidia-says-its-open-source-ai-strategy-remains-intact-after-jensen-huangs-exit/",
-          "source": "TechCrunch",
-          "date": "2026-11-17",
-          "summary": "Nvidia's interim CEO reaffirmed its open source AI strategy and plans to acquire Hugging Face, despite Jensen Huang's sudden departure.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "hardware",
-            "open_source"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-10-15-nemotron-3-5-super-vl-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "muse-spark-1.3",
@@ -810,7 +821,7 @@ export const modelReleaseDesk = {
       },
       "verificationState": "official",
       "priority": "backfill",
-      "draftStatus": "ready_for_editor",
+      "draftStatus": "needs_research",
       "officialUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
       "providerStatusUrl": null,
       "providerDocsUrl": "https://docs.api.nvidia.com",
@@ -832,11 +843,11 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Nemotron 3.5 Lightning is a currently tracked release from NVIDIA. It belongs in the open-weight / local-model conversation. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "NVIDIA's Nemotron 3.5 Lightning is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "dek": "NVIDIA's Nemotron 3.5 Lightning is on the release desk with 0 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -849,33 +860,16 @@ export const modelReleaseDesk = {
         "Lead with the hook: what NVIDIA actually launched with Nemotron 3.5 Lightning, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
         "Include the local-model angle: LM Studio, Ollama, GGUF, MLX, or on-device relevance where appropriate.",
         "Keep the chronology explicit: this release landed on 11 Aug 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "Nvidia says its open source AI strategy remains intact after Jensen Huang&#8217;s exit",
-          "url": "https://techcrunch.com/2026/11/17/nvidia-says-its-open-source-ai-strategy-remains-intact-after-jensen-huangs-exit/",
-          "source": "TechCrunch",
-          "date": "2026-11-17",
-          "summary": "Nvidia's interim CEO reaffirmed its open source AI strategy and plans to acquire Hugging Face, despite Jensen Huang's sudden departure.",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "funding",
-            "acquisition",
-            "industry_move",
-            "hardware",
-            "open_source"
-          ]
-        }
-      ],
+      "relatedStories": [],
       "draftPath": "editorial/release-drafts/2026-08-11-nemotron-3-5-lightning-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 0,
+      "sourceCount": 1
     },
     {
       "id": "muse-spark-1.2",
@@ -1186,7 +1180,7 @@ export const modelReleaseDesk = {
       "pricingSource": "Google AI (official)",
       "pricingUpdated": null,
       "summary": "Gemini 3.5 Flash-Lite is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.30 in / $2.50 out per million tokens. Current generally available low-cost Gemini Flash-Lite model. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.5 Flash-Lite is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.5 Flash-Lite is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1206,6 +1200,20 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
@@ -1239,8 +1247,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-5-flash-lite-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 4
+      "storyCount": 4,
+      "sourceCount": 5
     },
     {
       "id": "gemini-3.6-flash",
@@ -1284,7 +1292,7 @@ export const modelReleaseDesk = {
       "pricingSource": "Google AI (official)",
       "pricingUpdated": null,
       "summary": "Gemini 3.6 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Current generally available Gemini Flash model. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.6 Flash is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.6 Flash is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1304,6 +1312,20 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
@@ -1337,8 +1359,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-6-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 4
+      "storyCount": 4,
+      "sourceCount": 5
     },
     {
       "id": "gpt-5.6-sol",
@@ -1382,7 +1404,7 @@ export const modelReleaseDesk = {
       "pricingSource": "OpenAI (official)",
       "pricingUpdated": null,
       "summary": "GPT-5.6 Sol is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Current frontier GPT-5.6 model; the gpt-5.6 alias routes to Sol. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1427,12 +1449,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-07-09-gpt-5-6-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "claude-sonnet-5",
@@ -1670,7 +1702,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemma 4 is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 131.1K tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemma 4 is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemma 4 is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -1693,6 +1725,20 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
@@ -1726,8 +1772,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-04-02-gemma-4-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 4
+      "storyCount": 4,
+      "sourceCount": 5
     },
     {
       "id": "qwen3.6-plus",
@@ -2106,7 +2152,7 @@ export const modelReleaseDesk = {
       "pricingSource": "OpenAI (official)",
       "pricingUpdated": null,
       "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Official GPT-5.4 API model; superseded as the current flagship by GPT-5.6. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "OpenAI's GPT-5.4 is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.4 is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2151,12 +2197,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-03-05-gpt-5-4-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "gemini-3.1-pro",
@@ -2200,7 +2256,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 3.1 Pro is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.1 Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.1 Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2220,6 +2276,20 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
@@ -2253,8 +2323,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-02-19-gemini-3-1-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 4
+      "storyCount": 4,
+      "sourceCount": 5
     },
     {
       "id": "claude-sonnet-4.6",
@@ -3312,7 +3382,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 3.7 Flash is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-3.7-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 3.7 Flash is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.7 Flash is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3332,6 +3402,20 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
@@ -3365,8 +3449,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gemini-3-7-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 3
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gemini-3.8-flash",
@@ -3416,7 +3500,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 3.8 Flash is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-3.8-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 3.8 Flash is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.8 Flash is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3436,6 +3520,20 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
@@ -3469,8 +3567,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gemini-3-8-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 3
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gemini-4-carbon",
@@ -3520,7 +3618,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 4 Carbon is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-4-carbon); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 4 Carbon is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 4 Carbon is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3540,6 +3638,20 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
@@ -3573,8 +3685,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gemini-4-carbon-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 3
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gemini-4-hydrogen",
@@ -3624,7 +3736,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 4 Hydrogen is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-4-hydrogen); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 4 Hydrogen is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 4 Hydrogen is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3651,6 +3763,20 @@ export const modelReleaseDesk = {
           "date": "2026-11-12",
           "summary": "We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intuitive responses.",
           "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
             "model_release"
           ]
         },
@@ -3687,8 +3813,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gemini-4-hydrogen-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "gemini-4-neon",
@@ -3738,7 +3864,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 4 Neon is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-4-neon); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 4 Neon is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 4 Neon is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3758,6 +3884,20 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [
+        {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
         {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
@@ -3791,8 +3931,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gemini-4-neon-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 3
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "glm-5.3",
@@ -4061,7 +4201,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Astra is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-astra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Astra is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Astra is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4116,12 +4256,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-astra-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 3
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gpt-6-astra-pro",
@@ -4171,7 +4321,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Astra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-astra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Astra Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Astra Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4216,12 +4366,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-astra-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6-luna",
@@ -4271,7 +4431,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Luna is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-luna); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Luna is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Luna is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4316,12 +4476,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-luna-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6-luna-pro",
@@ -4371,7 +4541,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Luna Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-luna-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Luna Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Luna Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4416,12 +4586,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-luna-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6-sol",
@@ -4471,7 +4651,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Sol is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Sol is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4516,12 +4696,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6-sol-pro",
@@ -4571,7 +4761,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Sol Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Sol Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4616,12 +4806,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-sol-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.1-sol",
@@ -4671,7 +4871,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Sol is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Sol is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4716,12 +4916,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-1-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.1-sol-pro",
@@ -4771,7 +4981,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Sol Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Sol Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4816,12 +5026,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-1-sol-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.1-terra",
@@ -4871,7 +5091,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Terra is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-terra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Terra is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Terra is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4916,12 +5136,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-1-terra-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.1-terra-pro",
@@ -4971,7 +5201,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Terra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-terra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Terra Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Terra Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5016,12 +5246,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-1-terra-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.2-astra",
@@ -5071,7 +5311,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.2 Astra is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.2-astra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.2 Astra is on the release desk with 3 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.2 Astra is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5127,12 +5367,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-2-astra-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 3,
-      "sourceCount": 3
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gpt-6.2-astra-pro",
@@ -5182,7 +5432,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.2 Astra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.2-astra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.2 Astra Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.2 Astra Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5227,12 +5477,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-2-astra-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.2-sol",
@@ -5282,7 +5542,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.2 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.2-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.2 Sol is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.2 Sol is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5327,12 +5587,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-2-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.2-sol-pro",
@@ -5382,7 +5652,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.2 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.2-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.2 Sol Pro is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.2 Sol Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5427,12 +5697,22 @@ export const modelReleaseDesk = {
             "hardware",
             "open_source"
           ]
+        },
+        {
+          "title": "Research acceleration: The jagged frontier",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+          "source": "OpenAI",
+          "date": "2026-11-18",
+          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+          "routingTags": [
+            "evaluation"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-2-sol-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "grok-4.6",
