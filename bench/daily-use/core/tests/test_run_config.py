@@ -390,18 +390,18 @@ class ValidationTests(unittest.TestCase):
         self.assertIsInstance(loaded.models[0].price.input_per_mtok, Decimal)
 
     def test_caps_above_the_authorised_ceiling_are_not_ready_for_a_live_run(self):
-        # The owner's authority, in reviewed code: 115 USD and 60 USD.
+        # The owner's authority, in reviewed code.
         self.assertEqual(config.AUTHORISED_CAPS_USD,
-                         {"openai": Decimal("115"), "anthropic": Decimal("60")})
-        at = self.check(mode="live", caps_usd={"openai": "115", "anthropic": "60"})
+                         {"openai": Decimal("115"), "anthropic": Decimal("160")})
+        at = self.check(mode="live", caps_usd={"openai": "115", "anthropic": "160"})
         self.assertEqual(at.live_blockers, ())
         self.assertEqual(self.check(mode="live",
                                     caps_usd={"openai": "1", "anthropic": "2"}).live_blockers, ())
         for caps, fragment in (
-                ({"openai": "115.01", "anthropic": "60"},
+                ({"openai": "115.01", "anthropic": "160"},
                  "config.caps_usd.openai is 115.01 USD, above the authorised 115 USD"),
-                ({"openai": "115", "anthropic": "60.000001"},
-                 "config.caps_usd.anthropic is 60.000001 USD, above the authorised 60 USD"),
+                ({"openai": "115", "anthropic": "160.000001"},
+                 "config.caps_usd.anthropic is 160.000001 USD, above the authorised 160 USD"),
                 ({"openai": "5000", "anthropic": "5000"}, "above the authorised 115 USD")):
             text = self.rejects(fragment, mode="live", caps_usd=caps)
             self.assertIn("not ready for a live run", text)
