@@ -47,7 +47,7 @@ JUDGE_MAX_OUTPUT_TOKENS = 400
 # A run config may set `caps_usd` at or below these figures; a config above
 # either one is not ready for a live run. Raising a figure here needs a
 # reviewed commit: no config field, command-line option or resume can do it.
-AUTHORISED_CAPS_USD = {"openai": Decimal("115"), "anthropic": Decimal("160")}
+AUTHORISED_CAPS_USD = {"openai": Decimal("115"), "anthropic": Decimal("258.5")}
 # Read from the provider references on 14 November 2026 (see RUNNER.md).
 # Anthropic: the `anthropic-version` header values. 2026-10-21 rejects
 # `temperature` on every model; 2023-06-01 still takes it.
