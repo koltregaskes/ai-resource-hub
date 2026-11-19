@@ -2903,5 +2903,481 @@
         "reason": "Unverified: the vendor documentation index, GLM-5.3 model page and official pricing page do not identify this exact Prime variant. Base-model specifications are not inherited."
       }
     }
+  },
+  {
+    "id": "gpt-6.2-astra",
+    "summary": "Astra is the higher-priced option in the new pair. OpenAI positions it for complex projects; the figures below describe its published API contract, not a Hub performance assessment.",
+    "fields": {
+      "name": {
+        "value": "GPT-6.2 Astra",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "providerId": {
+        "value": "openai",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "released": {
+        "value": "2026-11-17",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+        "checkedAt": "2026-11-17",
+        "reason": "API release date from the dated changelog entry."
+      },
+      "contextWindow": {
+        "value": 1050000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "maxOutput": {
+        "value": 128000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "maxInput": {
+        "value": 922000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "modality": {
+        "value": "Text and image input; text output",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "checkedAt": "2026-11-17",
+        "reason": "OpenAI's claim about supported modalities; not independently exercised in this review."
+      },
+      "inputPrice": {
+        "value": 8,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "checkedAt": "2026-11-17",
+        "reason": "Standard short-context text input, excluding tools and other processing tiers."
+      },
+      "outputPrice": {
+        "value": 40,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "checkedAt": "2026-11-17",
+        "reason": "Standard short-context text output, excluding tools and other processing tiers."
+      },
+      "cachedInputPrice": {
+        "value": 0.4,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "checkedAt": "2026-11-17",
+        "reason": "Cached reads, not cache writes."
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "pricingConditions": {
+        "value": "Standard text rates for requests with at most 272,000 input tokens. Above that threshold, input and cache rates double and output rates multiply by 1.5 for the entire request. Tools and other processing tiers are separate; consult the linked pricing documentation before estimating a bill.",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "apiId": {
+        "value": "gpt-6.2-astra",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "knowledgeCutoff": {
+        "value": "2026-05-18",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "cacheWritePrice": {
+        "value": 10,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra",
+        "checkedAt": "2026-11-17",
+        "reason": "30-minute cache writes."
+      }
+    },
+    "claims": [
+      {
+        "text": "On its internal GDPval v2 evaluation, OpenAI reports a 6.2 percentage-point improvement over GPT-6 Astra. This is a change from the predecessor, not an absolute pass rate.",
+        "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+        "checkedAt": "2026-11-18",
+        "reportedAt": "2026-11-17",
+        "evaluatedAt": "Unknown",
+        "effort": "Unknown",
+        "snapshot": "Unknown"
+      }
+    ],
+    "pageOnly": true,
+    "snapshotStatus": "Unknown",
+    "availability": [
+      {
+        "surface": "API",
+        "value": "Available from 17 November 2026.",
+        "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+        "checkedAt": "2026-11-17"
+      },
+      {
+        "surface": "ChatGPT Work",
+        "value": "Announced for Plus, Pro, Enterprise and Edu as part of the 17 November rollout.",
+        "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+        "checkedAt": "2026-11-18"
+      },
+      {
+        "surface": "Codex",
+        "value": "Announced for Plus, Pro, Enterprise and Edu as part of the 17 November rollout.",
+        "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+        "checkedAt": "2026-11-18"
+      },
+      {
+        "surface": "ChatGPT Chat",
+        "value": "Outside the 17 November rollout.",
+        "sourceUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+        "checkedAt": "2026-11-17"
+      }
+    ],
+    "pricingEffective": {
+      "date": "2026-11-17",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+    },
+    "independentResults": {
+      "sourceUrl": "https://artificialanalysis.ai/articles/openai-has-the-2-model-in-the-intelligence-index-with-the-release-of-gpt-6-2-astra-and-gpt-6-2-sol",
+      "checkedAt": "2026-11-18"
+    }
+  },
+  {
+    "id": "gpt-6.2-sol",
+    "summary": "Sol is the lower-priced option in the new pair. OpenAI positions it for routine coding and agent work; suitability still depends on the task and independent testing.",
+    "fields": {
+      "name": {
+        "value": "GPT-6.2 Sol",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "providerId": {
+        "value": "openai",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "released": {
+        "value": "2026-11-17",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+        "checkedAt": "2026-11-17",
+        "reason": "API release date from the dated changelog entry."
+      },
+      "contextWindow": {
+        "value": 1050000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "maxOutput": {
+        "value": 128000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "maxInput": {
+        "value": 922000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "modality": {
+        "value": "Text and image input; text output",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "checkedAt": "2026-11-17",
+        "reason": "OpenAI's claim about supported modalities; not independently exercised in this review."
+      },
+      "inputPrice": {
+        "value": 2,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "checkedAt": "2026-11-17",
+        "reason": "Standard short-context text input, excluding tools and other processing tiers."
+      },
+      "outputPrice": {
+        "value": 10,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "checkedAt": "2026-11-17",
+        "reason": "Standard short-context text output, excluding tools and other processing tiers."
+      },
+      "cachedInputPrice": {
+        "value": 0.1,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "checkedAt": "2026-11-17",
+        "reason": "Cached reads, not cache writes."
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "pricingConditions": {
+        "value": "Standard text rates for requests with at most 272,000 input tokens. Above that threshold, input and cache rates double and output rates multiply by 1.5 for the entire request. Tools and other processing tiers are separate; consult the linked pricing documentation before estimating a bill.",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "apiId": {
+        "value": "gpt-6.2-sol",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "knowledgeCutoff": {
+        "value": "2026-06-01",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "cacheWritePrice": {
+        "value": 2.5,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol",
+        "checkedAt": "2026-11-17",
+        "reason": "30-minute cache writes."
+      }
+    },
+    "claims": [
+      {
+        "text": "On its internal GDPval v2 evaluation, OpenAI reports a 5.3-point improvement over GPT-6.1 Sol. This is a change from the predecessor, not an absolute pass rate.",
+        "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+        "checkedAt": "2026-11-18",
+        "reportedAt": "2026-11-17",
+        "evaluatedAt": "Unknown",
+        "effort": "Unknown",
+        "snapshot": "Unknown"
+      }
+    ],
+    "pageOnly": true,
+    "snapshotStatus": "Unknown",
+    "availability": [
+      {
+        "surface": "API",
+        "value": "Available from 17 November 2026.",
+        "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+        "checkedAt": "2026-11-17"
+      },
+      {
+        "surface": "ChatGPT Work",
+        "value": "Announced for Plus, Pro, Enterprise and Edu as part of the 17 November rollout.",
+        "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+        "checkedAt": "2026-11-18"
+      },
+      {
+        "surface": "Codex",
+        "value": "Announced for Plus, Pro, Enterprise and Edu as part of the 17 November rollout.",
+        "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+        "checkedAt": "2026-11-18"
+      },
+      {
+        "surface": "ChatGPT Chat",
+        "value": "Outside the 17 November rollout.",
+        "sourceUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+        "checkedAt": "2026-11-17"
+      }
+    ],
+    "pricingEffective": {
+      "date": "2026-11-17",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+    },
+    "independentResults": {
+      "sourceUrl": "https://artificialanalysis.ai/articles/openai-has-the-2-model-in-the-intelligence-index-with-the-release-of-gpt-6-2-astra-and-gpt-6-2-sol",
+      "checkedAt": "2026-11-18"
+    }
+  },
+  {
+    "id": "gpt-6.1-sol",
+    "summary": "This page retains the predecessor model’s own published prices. The successor link lets readers inspect the newer release without attributing its results to this model.",
+    "fields": {
+      "name": {
+        "value": "GPT-6.1 Sol",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "providerId": {
+        "value": "openai",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "contextWindow": {
+        "value": 1050000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "maxOutput": {
+        "value": 128000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "modality": {
+        "value": "Text and image input; text output",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "checkedAt": "2026-11-17",
+        "reason": "OpenAI's claim about supported modalities; not independently exercised in this review."
+      },
+      "inputPrice": {
+        "value": 2,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "checkedAt": "2026-11-17",
+        "reason": "Standard short-context text input, excluding tools and other processing tiers."
+      },
+      "outputPrice": {
+        "value": 10,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "checkedAt": "2026-11-17",
+        "reason": "Standard short-context text output, excluding tools and other processing tiers."
+      },
+      "cachedInputPrice": {
+        "value": 0.1,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "checkedAt": "2026-11-17",
+        "reason": "Cached reads, not cache writes."
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "checkedAt": "2026-11-17"
+      },
+      "pricingConditions": {
+        "value": "Standard text rates for requests with at most 272,000 input tokens. Above that threshold, input and cache rates double and output rates multiply by 1.5 for the entire request. Cache writes, tools and other processing tiers are separate; consult the linked pricing documentation before estimating a bill.",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "checkedAt": "2026-11-17"
+      }
+    },
+    "successor": {
+      "id": "gpt-6.2-sol",
+      "name": "GPT-6.2 Sol",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      "checkedAt": "2026-11-18"
+    },
+    "pageOnly": true
+  },
+  {
+    "id": "gpt-6-astra",
+    "summary": "This page retains the predecessor model’s own published prices. Its successor has a separate specification and evidence record.",
+    "fields": {
+      "name": {
+        "value": "GPT-6 Astra",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "providerId": {
+        "value": "openai",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "contextWindow": {
+        "value": 1050000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "maxOutput": {
+        "value": 128000,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "modality": {
+        "value": "Text and image input; text output",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "checkedAt": "2026-11-17",
+        "reason": "OpenAI's claim about supported modalities; not independently exercised in this review."
+      },
+      "inputPrice": {
+        "value": 10,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "checkedAt": "2026-11-17",
+        "reason": "Standard short-context text input, excluding tools and other processing tiers."
+      },
+      "outputPrice": {
+        "value": 50,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "checkedAt": "2026-11-17",
+        "reason": "Standard short-context text output, excluding tools and other processing tiers."
+      },
+      "cachedInputPrice": {
+        "value": 1,
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "checkedAt": "2026-11-17",
+        "reason": "Cached reads, not cache writes."
+      },
+      "currency": {
+        "value": "USD",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "pricingUnit": {
+        "value": "per 1M tokens",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "checkedAt": "2026-11-17"
+      },
+      "pricingConditions": {
+        "value": "Standard text rates for requests with at most 272,000 input tokens. Above that threshold, input and cache rates double and output rates multiply by 1.5 for the entire request. Cache writes, tools and other processing tiers are separate; consult the linked pricing documentation before estimating a bill.",
+        "verification": "verified",
+        "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+        "checkedAt": "2026-11-17"
+      }
+    },
+    "successor": {
+      "id": "gpt-6.2-astra",
+      "name": "GPT-6.2 Astra",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      "checkedAt": "2026-11-18"
+    },
+    "pageOnly": true
   }
 ]
