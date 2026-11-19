@@ -410918,9 +410918,9 @@
   {
     "id": 340,
     "model_id": "kimi-k2.7-code",
-    "input_price": 0.712,
+    "input_price": 0.6,
     "output_price": 3.5,
-    "recorded_at": "2026-11-19 07:57:42",
+    "recorded_at": "2026-11-19 08:58:52",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Kimi K2.7 Code",
     "provider_name": "Moonshot AI",
