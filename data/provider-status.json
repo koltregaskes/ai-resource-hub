@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T08:59:10.130Z",
+  "generatedAt": "2026-11-19T09:33:35.320Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T08:59:10.123Z",
+      "lastCheckedAt": "2026-11-19T09:33:35.313Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,26 +90,6 @@
       ]
     },
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T08:59:09.082Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -120,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T08:59:08.489Z",
+      "lastCheckedAt": "2026-11-19T09:33:33.753Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 10 tracked components.",
@@ -154,6 +134,17 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "c1kmrkmv5f3d",
+          "title": "Elevated errors for Claude Mythos 5.2 and Claude Fable 5.2",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-11-19T09:10:24.815Z",
+          "updatedAt": "2026-11-19T09:33:18.914Z",
+          "resolvedAt": "2026-11-19T09:33:18.884Z",
+          "url": "https://stspg.io/nlb5fptv28h5",
+          "summary": "The issue affecting claude.ai, the Claude API, Claude Code, and Claude Cowork has been resolved. Impact occurred from 00:56 PT / 08:56 UTC to 01:11 PT / 09:11 UTC."
+        },
+        {
           "id": "b5cq662qf2wm",
           "title": "Claude Meetings auto-join limited on the Team plan",
           "status": "resolved",
@@ -185,17 +176,6 @@
           "resolvedAt": "2026-11-17T21:51:09.266Z",
           "url": "https://stspg.io/3tl6h35nnzwm",
           "summary": "The issue affecting Sign in with Apple on claude.ai and the Claude iOS app has been resolved. Impact occurred from 08:40 PT / 16:40 UTC to 12:20 PT / 20:20 UTC."
-        },
-        {
-          "id": "ct4c2pwf2xpj",
-          "title": "Some users unable to sign up with Apple on the Claude iOS app",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-11-14T07:11:36.117Z",
-          "updatedAt": "2026-11-16T19:52:36.619Z",
-          "resolvedAt": "2026-11-16T19:52:36.590Z",
-          "url": "https://stspg.io/4858wf40dx89",
-          "summary": "The issue affecting Sign in with Apple on the Claude iOS app has been resolved. Impact occurred from 16:29 PT on November 13 / 00:29 UTC on November 14 to 10:31 PT / 18:31 UTC on..."
         }
       ]
     },
@@ -210,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T08:59:09.043Z",
+      "lastCheckedAt": "2026-11-19T09:33:34.571Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -230,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T08:59:08.487Z",
+      "lastCheckedAt": "2026-11-19T09:33:34.085Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -273,7 +253,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T08:59:08.520Z",
+      "lastCheckedAt": "2026-11-19T09:33:33.699Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -349,6 +329,26 @@
       ]
     },
     {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-11-19T09:33:34.690Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
       "id": "deepseek",
       "providerId": "deepseek",
       "name": "DeepSeek",
@@ -363,7 +363,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
