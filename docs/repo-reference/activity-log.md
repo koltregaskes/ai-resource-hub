@@ -1,15 +1,15 @@
 # Recent Activity Snapshot
 
-Generated: 19 Nov 2026, 13:00 UTC
+Generated: 19 Nov 2026, 13:04 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 19 Nov 2026, 12:59 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 19 Nov 2026, 12:59 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 19 Nov 2026, 12:59 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 19 Nov 2026, 12:59 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 19 Nov 2026, 13:04 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 19 Nov 2026, 13:04 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 19 Nov 2026, 13:03 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 19 Nov 2026, 13:03 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 19 Nov 2026, 12:00 UTC | digest | Canva adds an AI ‘off’ button | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1037126/canva-ai-features-off-button) |
 | 19 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 993 open roles across 10 tracked companies. | `/jobs/` |
 | 19 Nov 2026, 12:00 UTC | digest | Microsoft CEO Satya Nadella explains why he asked 60K employees to quit | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/) |
