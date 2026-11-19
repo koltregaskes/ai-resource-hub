@@ -116525,9 +116525,9 @@
   {
     "id": 305,
     "model_id": "deepseek-v4.1-flash-1017",
-    "input_price": 0.15,
-    "output_price": 0.6,
-    "recorded_at": "2026-11-19 00:58:51",
+    "input_price": 0.3,
+    "output_price": 1.2,
+    "recorded_at": "2026-11-19 01:59:31",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4.1 Flash 1017",
     "provider_name": "DeepSeek",
@@ -463793,6 +463793,17 @@
     "provider_colour": "#e040fb"
   },
   {
+    "id": 180,
+    "model_id": "minimax-m3.1-flash",
+    "input_price": 0.15,
+    "output_price": 0.6,
+    "recorded_at": "2026-11-19 01:59:31",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "MiniMax M3.1 Flash",
+    "provider_name": "MiniMax",
+    "provider_colour": "#e040fb"
+  },
+  {
     "id": 3753,
     "model_id": "ministral-14b-2512",
     "input_price": 0.2,
@@ -660728,9 +660739,9 @@
   {
     "id": 364,
     "model_id": "qwen3.5-9b",
-    "input_price": 0.17,
-    "output_price": 0.25,
-    "recorded_at": "2026-11-19 00:58:51",
+    "input_price": 0.154,
+    "output_price": 0.226,
+    "recorded_at": "2026-11-19 01:59:31",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3.5-9B",
     "provider_name": "Alibaba",

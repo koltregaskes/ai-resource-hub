@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T01:31:54.031Z",
+  "generatedAt": "2026-11-19T01:59:49.867Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T01:31:54.027Z",
+      "lastCheckedAt": "2026-11-19T01:59:49.860Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,15 +20,15 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-19T01:12:04.000Z",
+          "id": "fireworks-feed-0-2026-11-19T01:46:16.000Z",
           "title": "Service Outage for Kimi K3.1 Pro",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-11-19T01:12:04.000Z",
-          "updatedAt": "2026-11-19T01:12:04.000Z",
+          "startedAt": "2026-11-19T01:46:16.000Z",
+          "updatedAt": "2026-11-19T01:46:16.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M7RNRPWNZXWMBQBNRS4WXHTX",
-          "summary": "Status: Investigating We are actively investigating an outage for Kimi K3.1 Pro Affected components Kimi K3.1 Pro (Full outage)"
+          "summary": "Status: Investigating We’ve partially restored service to Kimi K3.1 Pro, and are still actively root causing the situation Affected components Kimi K3.1 Pro (Partial outage)"
         },
         {
           "id": "fireworks-feed-1-2026-11-18T12:30:42.000Z",
@@ -44,15 +44,15 @@
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-19T01:12:04.000Z",
+          "id": "fireworks-feed-0-2026-11-19T01:46:16.000Z",
           "title": "Service Outage for Kimi K3.1 Pro",
           "status": "investigating",
           "impact": "major",
-          "startedAt": "2026-11-19T01:12:04.000Z",
-          "updatedAt": "2026-11-19T01:12:04.000Z",
+          "startedAt": "2026-11-19T01:46:16.000Z",
+          "updatedAt": "2026-11-19T01:46:16.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M7RNRPWNZXWMBQBNRS4WXHTX",
-          "summary": "Status: Investigating We are actively investigating an outage for Kimi K3.1 Pro Affected components Kimi K3.1 Pro (Full outage)"
+          "summary": "Status: Investigating We’ve partially restored service to Kimi K3.1 Pro, and are still actively root causing the situation Affected components Kimi K3.1 Pro (Partial outage)"
         },
         {
           "id": "fireworks-feed-1-2026-11-18T12:30:42.000Z",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T01:31:52.037Z",
+      "lastCheckedAt": "2026-11-19T01:59:48.153Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T01:31:52.833Z",
+      "lastCheckedAt": "2026-11-19T01:59:48.818Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T01:31:52.383Z",
+      "lastCheckedAt": "2026-11-19T01:59:48.201Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -265,7 +265,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T01:31:52.008Z",
+      "lastCheckedAt": "2026-11-19T01:59:48.293Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -351,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T01:31:53.083Z",
+      "lastCheckedAt": "2026-11-19T01:59:49.210Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -375,7 +375,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
