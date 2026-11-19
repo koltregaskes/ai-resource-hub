@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 19 Nov 2026, 16:59 UTC
+Generated: 19 Nov 2026, 17:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 19 Nov 2026, 16:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 19 Nov 2026, 16:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 19 Nov 2026, 16:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 19 Nov 2026, 16:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 19 Nov 2026, 12:00 UTC | digest | Anthropic starts trading on Wall Street | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq) |
-| 19 Nov 2026, 12:00 UTC | digest | At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/) |
-| 19 Nov 2026, 12:00 UTC | digest | ChatGPT can transcribe as you speak now with Live Dictation | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation) |
-| 19 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 993 open roles across 10 tracked companies. | `/jobs/` |
-| 19 Nov 2026, 12:00 UTC | digest | Published the 2026-11-19 daily digest | 9 stories captured from 2 sources. | `/news/` |
+| 19 Nov 2026, 17:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 19 Nov 2026, 17:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 19 Nov 2026, 17:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 19 Nov 2026, 17:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 19 Nov 2026, 12:00 UTC | digest | Former Alibaba exec&#8217;s Everful raises $48.5M to connect retailers with Chinese factories | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/19/former-alibaba-execs-everful-raises-48-5m-to-connect-retailers-with-chinese-factories/) |
+| 19 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 995 open roles across 10 tracked companies. | `/jobs/` |
+| 19 Nov 2026, 12:00 UTC | digest | Meta’s AI agent Muse is mixing up conversations and exposing private data, report says | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/) |
+| 19 Nov 2026, 12:00 UTC | digest | Published the 2026-11-19 daily digest | 14 stories captured from 4 sources. | `/news/` |
+| 19 Nov 2026, 12:00 UTC | digest | Walter Isaacson on curiosity and creativity in the AI age. | Google featured in the latest daily brief. | [open](https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/) |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
