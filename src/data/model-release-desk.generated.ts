@@ -1,5 +1,5 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-19T18:58:32.579Z",
+  "generatedAt": "2026-11-19T19:59:29.516Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -495,7 +495,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Claude Mythos Preview is a preview-stage release from Anthropic. Limited-access Anthropic frontier preview launched with Project Glasswing for defensive cybersecurity work. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Anthropic's Claude Mythos Preview is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Mythos Preview is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Preview status means the launch narrative matters before long-run benchmark coverage is complete.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -529,6 +529,21 @@ export const modelReleaseDesk = {
             "policy",
             "industry_move",
             "model_release"
+          ]
+        },
+        {
+          "title": "Anthropic&#8217;s IPO could deliver $156 billion to charity",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+          "source": "TechCrunch",
+          "date": "2026-11-19",
+          "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "pricing_change"
           ]
         },
         {
@@ -576,8 +591,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-04-07-claude-mythos-preview-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "minimax-m3.1-flash",
@@ -1071,7 +1086,7 @@ export const modelReleaseDesk = {
       "pricingSource": "Anthropic (official)",
       "pricingUpdated": null,
       "summary": "Claude Opus 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Current generally available Opus model. Some safeguarded requests can fall back to Opus 4.8. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Anthropic's Claude Opus 5 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 5 is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1103,6 +1118,21 @@ export const modelReleaseDesk = {
             "policy",
             "industry_move",
             "model_release"
+          ]
+        },
+        {
+          "title": "Anthropic&#8217;s IPO could deliver $156 billion to charity",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+          "source": "TechCrunch",
+          "date": "2026-11-19",
+          "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "pricing_change"
           ]
         },
         {
@@ -1150,8 +1180,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-07-24-claude-opus-5-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "claude-opus-5-fast",
@@ -1195,7 +1225,7 @@ export const modelReleaseDesk = {
       "pricingSource": "Anthropic (official)",
       "pricingUpdated": null,
       "summary": "Claude Opus 5 Fast is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Official faster Opus 5 mode, priced at twice the base token rate. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Anthropic's Claude Opus 5 Fast is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 5 Fast is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1227,6 +1257,21 @@ export const modelReleaseDesk = {
             "policy",
             "industry_move",
             "model_release"
+          ]
+        },
+        {
+          "title": "Anthropic&#8217;s IPO could deliver $156 billion to charity",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+          "source": "TechCrunch",
+          "date": "2026-11-19",
+          "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "pricing_change"
           ]
         },
         {
@@ -1274,8 +1319,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-07-24-claude-opus-5-fast-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "gemini-3.6-flash",
@@ -1558,7 +1603,7 @@ export const modelReleaseDesk = {
       "pricingSource": "Anthropic (official, introductory through 2026-08-31)",
       "pricingUpdated": null,
       "summary": "Claude Sonnet 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $2.00 in / $10.00 out per million tokens. Generally available Sonnet model. Introductory pricing applies through 31 August 2026. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Anthropic's Claude Sonnet 5 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Sonnet 5 is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1590,6 +1635,21 @@ export const modelReleaseDesk = {
             "policy",
             "industry_move",
             "model_release"
+          ]
+        },
+        {
+          "title": "Anthropic&#8217;s IPO could deliver $156 billion to charity",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+          "source": "TechCrunch",
+          "date": "2026-11-19",
+          "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "pricing_change"
           ]
         },
         {
@@ -1637,8 +1697,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-06-30-claude-sonnet-5-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "claude-fable-5",
@@ -1682,7 +1742,7 @@ export const modelReleaseDesk = {
       "pricingSource": "Anthropic (official)",
       "pricingUpdated": null,
       "summary": "Claude Fable 5 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $10.00 in / $50.00 out per million tokens. Generally available Mythos-class model. Safeguarded topics can fall back to Opus 4.8 or Opus 5. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Anthropic's Claude Fable 5 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Fable 5 is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1714,6 +1774,21 @@ export const modelReleaseDesk = {
             "policy",
             "industry_move",
             "model_release"
+          ]
+        },
+        {
+          "title": "Anthropic&#8217;s IPO could deliver $156 billion to charity",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+          "source": "TechCrunch",
+          "date": "2026-11-19",
+          "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "pricing_change"
           ]
         },
         {
@@ -1761,8 +1836,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-06-09-claude-fable-5-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "gemma-4",
@@ -2524,7 +2599,7 @@ export const modelReleaseDesk = {
       "pricingSource": "Anthropic (official)",
       "pricingUpdated": null,
       "summary": "Claude Sonnet 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 200K tokens. Current tracked pricing: $3.00 in / $15.00 out per million tokens. Default model; extended thinking Anthropic balanced frontier model. Speed data hidden until it is refreshed from a current live measurement source. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Sonnet 4.6 is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2556,6 +2631,21 @@ export const modelReleaseDesk = {
             "policy",
             "industry_move",
             "model_release"
+          ]
+        },
+        {
+          "title": "Anthropic&#8217;s IPO could deliver $156 billion to charity",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+          "source": "TechCrunch",
+          "date": "2026-11-19",
+          "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "pricing_change"
           ]
         },
         {
@@ -2603,8 +2693,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-02-17-claude-sonnet-4-6-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "glm-5",
@@ -2715,7 +2805,7 @@ export const modelReleaseDesk = {
       "pricingSource": "Anthropic (official)",
       "pricingUpdated": null,
       "summary": "Claude Opus 4.6 is a currently tracked release from Anthropic. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1M tokens. Current tracked pricing: $5.00 in / $25.00 out per million tokens. Most capable; 1M context beta; adaptive thinking Official Opus release retained for historical comparisons. Speed data hidden until it is refreshed from a current live measurement source. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 4 related stories and 1 benchmark signal to review.",
+      "dek": "Anthropic's Claude Opus 4.6 is on the release desk with 5 related stories and 1 benchmark signal to review.",
       "whyItMatters": [
         "There are already 1 benchmark signal(s) attached, so we can compare claims against measured results quickly.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2763,6 +2853,21 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "Anthropic&#8217;s IPO could deliver $156 billion to charity",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+          "source": "TechCrunch",
+          "date": "2026-11-19",
+          "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "pricing_change"
+          ]
+        },
+        {
           "title": "Anthropic hits Nasdaq exchanges at $111, 33% above IPO price",
           "url": "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/",
           "source": "TechCrunch",
@@ -2807,8 +2912,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-02-05-claude-opus-4-6-release-brief.md",
       "benchmarkCount": 1,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 5,
+      "sourceCount": 6
     },
     {
       "id": "claude-fable-5.1",
@@ -2858,7 +2963,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Claude Fable 5.1 is a currently tracked release from Anthropic. Auto-tracked from OpenRouter discovery (anthropic/claude-fable-5.1); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Anthropic's Claude Fable 5.1 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Fable 5.1 is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2890,6 +2995,21 @@ export const modelReleaseDesk = {
             "policy",
             "industry_move",
             "model_release"
+          ]
+        },
+        {
+          "title": "Anthropic&#8217;s IPO could deliver $156 billion to charity",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+          "source": "TechCrunch",
+          "date": "2026-11-19",
+          "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "pricing_change"
           ]
         },
         {
@@ -2937,8 +3057,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-19-claude-fable-5-1-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "claude-fable-5.2",
@@ -2988,7 +3108,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Claude Fable 5.2 is a currently tracked release from Anthropic. Auto-tracked from OpenRouter discovery (anthropic/claude-fable-5.2); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Anthropic's Claude Fable 5.2 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Fable 5.2 is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3020,6 +3140,21 @@ export const modelReleaseDesk = {
             "policy",
             "industry_move",
             "model_release"
+          ]
+        },
+        {
+          "title": "Anthropic&#8217;s IPO could deliver $156 billion to charity",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+          "source": "TechCrunch",
+          "date": "2026-11-19",
+          "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "pricing_change"
           ]
         },
         {
@@ -3067,8 +3202,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-19-claude-fable-5-2-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "claude-haiku-5.5",
@@ -3118,7 +3253,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Claude Haiku 5.5 is a currently tracked release from Anthropic. Auto-tracked from OpenRouter discovery (anthropic/claude-haiku-5.5); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Anthropic's Claude Haiku 5.5 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Haiku 5.5 is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3150,6 +3285,21 @@ export const modelReleaseDesk = {
             "policy",
             "industry_move",
             "model_release"
+          ]
+        },
+        {
+          "title": "Anthropic&#8217;s IPO could deliver $156 billion to charity",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+          "source": "TechCrunch",
+          "date": "2026-11-19",
+          "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "pricing_change"
           ]
         },
         {
@@ -3197,8 +3347,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-19-claude-haiku-5-5-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "claude-opus-5.5",
@@ -3248,7 +3398,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Claude Opus 5.5 is a currently tracked release from Anthropic. Auto-tracked from OpenRouter discovery (anthropic/claude-opus-5.5); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Anthropic's Claude Opus 5.5 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Opus 5.5 is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3280,6 +3430,21 @@ export const modelReleaseDesk = {
             "policy",
             "industry_move",
             "model_release"
+          ]
+        },
+        {
+          "title": "Anthropic&#8217;s IPO could deliver $156 billion to charity",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+          "source": "TechCrunch",
+          "date": "2026-11-19",
+          "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "pricing_change"
           ]
         },
         {
@@ -3327,8 +3492,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-19-claude-opus-5-5-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "claude-sonnet-5.5",
@@ -3378,7 +3543,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Claude Sonnet 5.5 is a currently tracked release from Anthropic. Auto-tracked from OpenRouter discovery (anthropic/claude-sonnet-5.5); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Anthropic's Claude Sonnet 5.5 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "Anthropic's Claude Sonnet 5.5 is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3410,6 +3575,21 @@ export const modelReleaseDesk = {
             "policy",
             "industry_move",
             "model_release"
+          ]
+        },
+        {
+          "title": "Anthropic&#8217;s IPO could deliver $156 billion to charity",
+          "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+          "source": "TechCrunch",
+          "date": "2026-11-19",
+          "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "funding",
+            "acquisition",
+            "industry_move",
+            "pricing_change"
           ]
         },
         {
@@ -3457,8 +3637,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-19-claude-sonnet-5-5-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "deepseek-v4-flash-0731",
