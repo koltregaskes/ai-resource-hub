@@ -115,7 +115,7 @@
         "source_url": "https://platform.claude.com/docs/en/models/opus-5-5/overview",
         "read_on": "2026-11-19",
         "promo_ends": null,
-        "note": "USD per million tokens, from the model comparison table (Claude Fable 5.2: 8 input / 40 output); cached rate assumed at one tenth of input as for the other models"
+        "note": "USD per million tokens, from the model comparison table (Claude Fable 5.2: 8 input / 40 output); cached rate set at one twentieth of input, the same ratio as the Opus 5.5 receipt (not separately verified)"
       }
     }
   ],
