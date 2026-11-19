@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T15:58:21.113Z",
+  "generatedAt": "2026-11-19T16:59:09.654Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T15:58:21.108Z",
+      "lastCheckedAt": "2026-11-19T16:59:09.647Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,15 +20,15 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-19T15:38:27.000Z",
+          "id": "fireworks-feed-0-2026-11-19T16:30:35.000Z",
           "title": "Service Degradation for GLM 5.3 Flash",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-11-19T15:38:27.000Z",
-          "updatedAt": "2026-11-19T15:38:27.000Z",
+          "startedAt": "2026-11-19T16:30:35.000Z",
+          "updatedAt": "2026-11-19T16:30:35.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M7T7B3V8KQVZ9H423SCAWEH5",
-          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.3 Flash. We are actively investigating. Affected components GLM 5.3 Flash (Degraded performance)"
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-11-19T08:14:49.000Z",
@@ -44,15 +44,15 @@
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-19T15:38:27.000Z",
+          "id": "fireworks-feed-0-2026-11-19T16:30:35.000Z",
           "title": "Service Degradation for GLM 5.3 Flash",
           "status": "reported",
           "impact": "unknown",
-          "startedAt": "2026-11-19T15:38:27.000Z",
-          "updatedAt": "2026-11-19T15:38:27.000Z",
+          "startedAt": "2026-11-19T16:30:35.000Z",
+          "updatedAt": "2026-11-19T16:30:35.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M7T7B3V8KQVZ9H423SCAWEH5",
-          "summary": "Status: Investigating We are seeing impacted performance for GLM 5.3 Flash. We are actively investigating. Affected components GLM 5.3 Flash (Degraded performance)"
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
           "id": "fireworks-feed-1-2026-11-19T08:14:49.000Z",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T15:58:19.483Z",
+      "lastCheckedAt": "2026-11-19T16:59:08.023Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 10 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T15:58:20.449Z",
+      "lastCheckedAt": "2026-11-19T16:59:08.626Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T15:58:19.791Z",
+      "lastCheckedAt": "2026-11-19T16:59:08.030Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -253,7 +253,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T15:58:19.451Z",
+      "lastCheckedAt": "2026-11-19T16:59:07.937Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -287,6 +287,16 @@
       "activeIncidents": [],
       "recentIncidents": [
         {
+          "id": "01M7T8MRF9SDBDNQ62Z6V156ZZ",
+          "title": "Elevated error rates for gpt-6 Luna API requests",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-11-19T16:01:12.000Z",
+          "updatedAt": "2026-11-19T16:58:04.000Z",
+          "resolvedAt": "2026-11-19T16:58:04.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
           "id": "01M7N9VNR6X5SEC90M1YCDB36D",
           "title": "Costs API data is delayed",
           "status": "resolved",
@@ -315,16 +325,6 @@
           "updatedAt": "2026-11-16T00:17:25.000Z",
           "resolvedAt": "2026-11-16T00:17:25.000Z",
           "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M7C40W0N5MZHNW0YM09QV962",
-          "title": "Elevated errors with ChatGPT billing and Ads billing",
-          "status": "resolved",
-          "impact": "none",
-          "startedAt": "2026-11-14T04:11:04.000Z",
-          "updatedAt": "2026-11-14T05:27:53.000Z",
-          "resolvedAt": "2026-11-14T05:27:53.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
         }
       ]
     },
@@ -339,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T15:58:20.614Z",
+      "lastCheckedAt": "2026-11-19T16:59:08.766Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",

@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 19 Nov 2026, 15:58 UTC
+Generated: 19 Nov 2026, 16:59 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 19 Nov 2026, 15:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 19 Nov 2026, 15:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 19 Nov 2026, 15:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 19 Nov 2026, 15:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 19 Nov 2026, 12:00 UTC | digest | Anthropic&#8217;s IPO puts AI&#8217;s circular financing boom to the test | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/) |
+| 19 Nov 2026, 16:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 19 Nov 2026, 16:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 19 Nov 2026, 16:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 19 Nov 2026, 16:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 19 Nov 2026, 12:00 UTC | digest | Anthropic starts trading on Wall Street | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq) |
+| 19 Nov 2026, 12:00 UTC | digest | At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/) |
 | 19 Nov 2026, 12:00 UTC | digest | ChatGPT can transcribe as you speak now with Live Dictation | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation) |
 | 19 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 993 open roles across 10 tracked companies. | `/jobs/` |
-| 19 Nov 2026, 12:00 UTC | digest | Published the 2026-11-19 daily digest | 7 stories captured from 2 sources. | `/news/` |
-| 19 Nov 2026, 12:00 UTC | digest | With the biggest IPO of all time, Anthropic’s ‘good guy’ reputation is on the line | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure) |
+| 19 Nov 2026, 12:00 UTC | digest | Published the 2026-11-19 daily digest | 9 stories captured from 2 sources. | `/news/` |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
