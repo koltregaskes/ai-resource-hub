@@ -1,6 +1,6 @@
 # Refresh Matrix
 
-Generated: 18 Nov 2026, 23:59 UTC
+Generated: 19 Nov 2026, 00:59 UTC
 
 This mirrors the public updates page in a repo-readable format so contributors can see what is automated, what is mixed, and where manual review still exists.
 
@@ -8,20 +8,20 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 | Category | Cadence | Automation | Last refreshed |
 | --- | --- | --- | --- |
-| AI milestones | Curated updates as research lands | Mixed | 18 Nov 2026, 23:59 UTC |
+| AI milestones | Curated updates as research lands | Mixed | 19 Nov 2026, 00:59 UTC |
 | Regional availability | Manual review with official-source refresh | Mixed | 09 Apr 2026, 20:49 UTC |
-| Models and releases | Hourly automated refresh | Mixed | 18 Nov 2026, 23:59 UTC |
+| Models and releases | Hourly automated refresh | Mixed | 19 Nov 2026, 00:59 UTC |
 | Benchmarks and evals | Hourly collection attempts; measurement dates vary | Automated | 05 Feb 2026, 00:00 UTC |
-| Pricing and value | Hourly automated refresh | Automated | 18 Nov 2026, 23:58 UTC |
-| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 18 Nov 2026, 12:00 UTC |
-| Provider status | Hourly automated refresh | Automated | 18 Nov 2026, 23:59 UTC |
-| Guides and learning | Manual editorial review | Manual | 18 Nov 2026, 23:58 UTC |
+| Pricing and value | Hourly automated refresh | Automated | 19 Nov 2026, 00:58 UTC |
+| News and release watch | Hourly automated refresh plus manual newsroom watch | Mixed | 19 Nov 2026, 12:00 UTC |
+| Provider status | Hourly automated refresh | Automated | 19 Nov 2026, 00:59 UTC |
+| Guides and learning | Manual editorial review | Manual | 19 Nov 2026, 00:58 UTC |
 
 ## AI milestones
 
 - Cadence: Curated updates as research lands
 - Automation: Mixed
-- Last refreshed: 18 Nov 2026, 23:59 UTC
+- Last refreshed: 19 Nov 2026, 00:59 UTC
 - Category route: `/milestones/`
 - Note: Estimated anchors stay in tracking notes, not in the canonical public date fields.
 
@@ -33,8 +33,8 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 30 Nov 2026, 12:00 UTC: AlphaFold breakthrough at CASP14 - Next exact anniversary in 12 days. (`/milestones/`)
-- 18 Nov 2026, 23:59 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
+- 30 Nov 2026, 12:00 UTC: AlphaFold breakthrough at CASP14 - Next exact anniversary in 11 days. (`/milestones/`)
+- 19 Nov 2026, 00:59 UTC: Moonshot AI founded - Still marked tracking until stronger chronology evidence is sourced. (`/milestones/`)
 
 ## Regional availability
 
@@ -60,7 +60,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Mixed
-- Last refreshed: 18 Nov 2026, 23:59 UTC
+- Last refreshed: 19 Nov 2026, 00:59 UTC
 - Category route: `/new/`
 - Note: Social posts are a trigger, not the source of truth. We should verify launches against official docs before the public data layer changes.
 
@@ -98,7 +98,7 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 18 Nov 2026, 23:58 UTC
+- Last refreshed: 19 Nov 2026, 00:58 UTC
 - Category route: `/compare/llm/`
 
 
@@ -110,15 +110,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 18 Nov 2026, 23:58 UTC: Curated catalogue prices applied - Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. (`/compare/llm/`)
-- 18 Nov 2026, 23:58 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
-- 18 Nov 2026, 23:58 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
+- 19 Nov 2026, 00:58 UTC: Curated catalogue prices applied - Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. (`/compare/llm/`)
+- 19 Nov 2026, 00:58 UTC: OpenRouter pricing refresh - Pulled live routed endpoint pricing and model discovery data. (`/compare/llm/`)
+- 19 Nov 2026, 00:58 UTC: Pricing validator pass - Ran the secondary sanity-check layer over live pricing snapshots. (`/pricing-trends/`)
 
 ## News and release watch
 
 - Cadence: Hourly automated refresh plus manual newsroom watch
 - Automation: Mixed
-- Last refreshed: 18 Nov 2026, 12:00 UTC
+- Last refreshed: 19 Nov 2026, 12:00 UTC
 - Category route: `/news/`
 - Note: X / Twitter should stay manual-review only or official API only. It can tell us when to look, but it should not be an unauthorised automated source.
 
@@ -130,15 +130,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 18 Nov 2026, 23:45 UTC: Amidst fears of AI-cyberattacks, Satya Nadella says lots of critical infrastructure is &#8216;unpatchable&#8217; - TechCrunch (industry) ([source](https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/))
+- 19 Nov 2026, 00:42 UTC: Microsoft CEO Satya Nadella explains why he asked 60K employees to quit - TechCrunch (industry) ([source](https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/))
+- 18 Nov 2026, 23:45 UTC: Amidst fears of AI cyberattacks, Satya Nadella says lots of critical infrastructure is &#8216;unpatchable&#8217; - TechCrunch (industry) ([source](https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/))
 - 18 Nov 2026, 23:25 UTC: Elon Musk says ousting Jensen Huang is like &#8216;kicking Michael Jordan off your team&#8217; - TechCrunch (industry) ([source](https://techcrunch.com/2026/11/18/elon-musk-says-ousting-jensen-huang-is-like-kicking-michael-jordan-off-your-team/))
-- 18 Nov 2026, 23:18 UTC: The nation’s largest school districts consider ditching Google Search - The Verge (industry) ([source](https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google))
 
 ## Provider status
 
 - Cadence: Hourly automated refresh
 - Automation: Automated
-- Last refreshed: 18 Nov 2026, 23:59 UTC
+- Last refreshed: 19 Nov 2026, 00:59 UTC
 - Category route: `/status/`
 
 
@@ -149,15 +149,15 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 18 Nov 2026, 23:59 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
-- 18 Nov 2026, 23:59 UTC: Anthropic - Partially Degraded Service ([source](https://status.claude.com))
-- 18 Nov 2026, 23:59 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
+- 19 Nov 2026, 00:59 UTC: Fireworks AI - Partial outage ([source](https://status.fireworks.ai))
+- 19 Nov 2026, 00:59 UTC: Anthropic - Partially Degraded Service ([source](https://status.claude.com))
+- 19 Nov 2026, 00:59 UTC: Cohere - All systems operational ([source](https://status.cohere.io))
 
 ## Guides and learning
 
 - Cadence: Manual editorial review
 - Automation: Manual
-- Last refreshed: 18 Nov 2026, 23:58 UTC
+- Last refreshed: 19 Nov 2026, 00:58 UTC
 - Category route: `/guides/`
 - Note: This is the least automated part of the site today, so users should expect an editorial review rhythm rather than a live ticker.
 
@@ -169,6 +169,6 @@ This mirrors the public updates page in a repo-readable format so contributors c
 
 ### Last Visible Updates
 
-- 18 Nov 2026, 23:58 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
-- 18 Nov 2026, 23:58 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
-- 18 Nov 2026, 23:58 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)
+- 19 Nov 2026, 00:58 UTC: Advanced Prompting - Guide or learning page updated in the repository. (`/guides/advanced-prompting/`)
+- 19 Nov 2026, 00:58 UTC: Ai For Research - Guide or learning page updated in the repository. (`/guides/ai-for-research/`)
+- 19 Nov 2026, 00:58 UTC: Ai For Writing - Guide or learning page updated in the repository. (`/guides/ai-for-writing/`)

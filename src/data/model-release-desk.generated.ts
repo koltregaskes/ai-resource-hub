@@ -1,12 +1,12 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-18T23:59:16.350Z",
+  "generatedAt": "2026-11-19T00:59:15.175Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
-    "totalReleases": 67,
+    "totalReleases": 66,
     "highPriority": 5,
-    "readyForEditor": 15,
-    "officiallyVerified": 29,
+    "readyForEditor": 14,
+    "officiallyVerified": 28,
     "watchOnly": 38,
     "openSource": 5
   },
@@ -20,7 +20,7 @@ export const modelReleaseDesk = {
       "providerColour": "#0a66ff",
       "releaseDate": "2026-11-09",
       "releaseDateLabel": "9 Nov 2026",
-      "ageDays": 9,
+      "ageDays": 10,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -93,7 +93,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-11-05",
       "releaseDateLabel": "5 Nov 2026",
-      "ageDays": 13,
+      "ageDays": 14,
       "status": "active",
       "fieldStates": {
         "released": "verified",
@@ -211,7 +211,7 @@ export const modelReleaseDesk = {
       "providerColour": "#0a66ff",
       "releaseDate": "2026-10-12",
       "releaseDateLabel": "12 Oct 2026",
-      "ageDays": 37,
+      "ageDays": 38,
       "status": "preview",
       "fieldStates": {
         "released": "verified",
@@ -285,7 +285,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-08-27",
       "releaseDateLabel": "27 Aug 2026",
-      "ageDays": 83,
+      "ageDays": 84,
       "status": "preview",
       "fieldStates": {
         "released": "verified",
@@ -404,7 +404,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-04-07",
       "releaseDateLabel": "7 Apr 2026",
-      "ageDays": 225,
+      "ageDays": 226,
       "status": "preview",
       "fieldStates": {
         "context_window": "unverified",
@@ -503,7 +503,7 @@ export const modelReleaseDesk = {
       "providerColour": "#e040fb",
       "releaseDate": "2026-10-19",
       "releaseDateLabel": "19 Oct 2026",
-      "ageDays": 30,
+      "ageDays": 31,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -579,7 +579,7 @@ export const modelReleaseDesk = {
       "providerColour": "#0a66ff",
       "releaseDate": "2026-10-15",
       "releaseDateLabel": "15 Oct 2026",
-      "ageDays": 34,
+      "ageDays": 35,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -655,7 +655,7 @@ export const modelReleaseDesk = {
       "providerColour": "#76b900",
       "releaseDate": "2026-10-15",
       "releaseDateLabel": "15 Oct 2026",
-      "ageDays": 34,
+      "ageDays": 35,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -731,7 +731,7 @@ export const modelReleaseDesk = {
       "providerColour": "#0a66ff",
       "releaseDate": "2026-09-02",
       "releaseDateLabel": "2 Sept 2026",
-      "ageDays": 77,
+      "ageDays": 78,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -804,7 +804,7 @@ export const modelReleaseDesk = {
       "providerColour": "#76b900",
       "releaseDate": "2026-08-11",
       "releaseDateLabel": "11 Aug 2026",
-      "ageDays": 99,
+      "ageDays": 100,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -880,7 +880,7 @@ export const modelReleaseDesk = {
       "providerColour": "#0a66ff",
       "releaseDate": "2026-08-05",
       "releaseDateLabel": "5 Aug 2026",
-      "ageDays": 105,
+      "ageDays": 106,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -953,7 +953,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-07-24",
       "releaseDateLabel": "24 Jul 2026",
-      "ageDays": 117,
+      "ageDays": 118,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1050,7 +1050,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-07-24",
       "releaseDateLabel": "24 Jul 2026",
-      "ageDays": 117,
+      "ageDays": 118,
       "status": "active",
       "fieldStates": {
         "context_window": "unverified",
@@ -1139,118 +1139,6 @@ export const modelReleaseDesk = {
       "sourceCount": 3
     },
     {
-      "id": "gemini-3.5-flash-lite",
-      "fileSlug": "2026-07-21-gemini-3-5-flash-lite-release-brief",
-      "modelName": "Gemini 3.5 Flash-Lite",
-      "providerId": "google",
-      "providerName": "Google",
-      "providerColour": "#4285f4",
-      "releaseDate": "2026-07-21",
-      "releaseDateLabel": "21 Jul 2026",
-      "ageDays": 120,
-      "status": "active",
-      "fieldStates": {
-        "context_window": "verified",
-        "max_output": "verified",
-        "input_price": "verified",
-        "output_price": "verified",
-        "cached_input_price": "unverified"
-      },
-      "verificationState": "official",
-      "priority": "backfill",
-      "draftStatus": "ready_for_editor",
-      "officialUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite",
-      "providerStatusUrl": "https://status.cloud.google.com",
-      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
-      "openSource": false,
-      "openSourceState": "unreviewed",
-      "apiAvailable": true,
-      "apiAvailableState": "unreviewed",
-      "modality": "text,vision,audio",
-      "contextWindow": 1048576,
-      "contextWindowState": "verified",
-      "maxOutput": 65536,
-      "maxOutputState": "verified",
-      "qualityScore": null,
-      "qualityScoreState": "suppressed_untraceable",
-      "inputPrice": 0.3,
-      "inputPriceState": "verified",
-      "outputPrice": 2.5,
-      "outputPriceState": "verified",
-      "pricingSource": "Google AI (official)",
-      "pricingUpdated": null,
-      "summary": "Gemini 3.5 Flash-Lite is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $0.30 in / $2.50 out per million tokens. Current generally available low-cost Gemini Flash-Lite model. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.5 Flash-Lite is on the release desk with 4 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
-      ],
-      "checklist": [
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what Google actually launched with Gemini 3.5 Flash-Lite, and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
-        "Keep the chronology explicit: this release landed on 21 Jul 2026 and should be framed against the models it is replacing or competing with."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "The nation’s largest school districts consider ditching Google Search",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
-          "source": "The Verge",
-          "date": "2026-11-18",
-          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "model_release"
-          ]
-        },
-        {
-          "title": "The Gemini app is now available on lower-memory Android devices.",
-          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
-          "source": "Google",
-          "date": "2026-11-18",
-          "summary": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "Put Gemini to work for you",
-          "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
-          "source": "Google",
-          "date": "2026-11-17",
-          "summary": "Tasks in Gemini is now free of charge in six countries, with new features starting in the U.S. and deeper Google Workspace integration to get things done on your behalf.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google Cloud launches Gemini for healthcare.",
-          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
-          "source": "Google",
-          "date": "2026-11-10",
-          "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
-          "routingTags": [
-            "model_release"
-          ]
-        }
-      ],
-      "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-5-flash-lite-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
-    },
-    {
       "id": "gemini-3.6-flash",
       "fileSlug": "2026-07-21-gemini-3-6-flash-release-brief",
       "modelName": "Gemini 3.6 Flash",
@@ -1259,7 +1147,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-07-21",
       "releaseDateLabel": "21 Jul 2026",
-      "ageDays": 120,
+      "ageDays": 121,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1371,7 +1259,7 @@ export const modelReleaseDesk = {
       "providerColour": "#10a37f",
       "releaseDate": "2026-07-09",
       "releaseDateLabel": "9 Jul 2026",
-      "ageDays": 132,
+      "ageDays": 133,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1475,7 +1363,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-06-30",
       "releaseDateLabel": "30 Jun 2026",
-      "ageDays": 141,
+      "ageDays": 142,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1572,7 +1460,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-06-09",
       "releaseDateLabel": "9 Jun 2026",
-      "ageDays": 162,
+      "ageDays": 163,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1669,7 +1557,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-04-02",
       "releaseDateLabel": "2 Apr 2026",
-      "ageDays": 230,
+      "ageDays": 231,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1784,7 +1672,7 @@ export const modelReleaseDesk = {
       "providerColour": "#ff6a00",
       "releaseDate": "2026-04-02",
       "releaseDateLabel": "2 Apr 2026",
-      "ageDays": 230,
+      "ageDays": 231,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1851,7 +1739,7 @@ export const modelReleaseDesk = {
       "providerColour": "#1da1f2",
       "releaseDate": "2026-03-31",
       "releaseDateLabel": "31 Mar 2026",
-      "ageDays": 232,
+      "ageDays": 233,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1918,7 +1806,7 @@ export const modelReleaseDesk = {
       "providerColour": "#f59e0b",
       "releaseDate": "2026-03-28",
       "releaseDateLabel": "28 Mar 2026",
-      "ageDays": 235,
+      "ageDays": 236,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1985,7 +1873,7 @@ export const modelReleaseDesk = {
       "providerColour": "#e040fb",
       "releaseDate": "2026-03-18",
       "releaseDateLabel": "18 Mar 2026",
-      "ageDays": 245,
+      "ageDays": 246,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -2052,7 +1940,7 @@ export const modelReleaseDesk = {
       "providerColour": "#00b4d8",
       "releaseDate": "2026-03-15",
       "releaseDateLabel": "15 Mar 2026",
-      "ageDays": 248,
+      "ageDays": 249,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -2119,7 +2007,7 @@ export const modelReleaseDesk = {
       "providerColour": "#10a37f",
       "releaseDate": "2026-03-05",
       "releaseDateLabel": "5 Mar 2026",
-      "ageDays": 258,
+      "ageDays": 259,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -2223,7 +2111,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-02-19",
       "releaseDateLabel": "19 Feb 2026",
-      "ageDays": 272,
+      "ageDays": 273,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -2335,7 +2223,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-02-17",
       "releaseDateLabel": "17 Feb 2026",
-      "ageDays": 274,
+      "ageDays": 275,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -2432,7 +2320,7 @@ export const modelReleaseDesk = {
       "providerColour": "#00b4d8",
       "releaseDate": "2026-02-12",
       "releaseDateLabel": "12 Feb 2026",
-      "ageDays": 279,
+      "ageDays": 280,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -2499,7 +2387,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-02-05",
       "releaseDateLabel": "5 Feb 2026",
-      "ageDays": 286,
+      "ageDays": 287,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -2602,7 +2490,7 @@ export const modelReleaseDesk = {
     },
     {
       "id": "claude-fable-5.1",
-      "fileSlug": "2026-11-18-claude-fable-5-1-release-brief",
+      "fileSlug": "2026-11-19-claude-fable-5-1-release-brief",
       "modelName": "Claude Fable 5.1",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -2698,14 +2586,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-claude-fable-5-1-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-claude-fable-5-1-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 2,
       "sourceCount": 2
     },
     {
       "id": "claude-fable-5.2",
-      "fileSlug": "2026-11-18-claude-fable-5-2-release-brief",
+      "fileSlug": "2026-11-19-claude-fable-5-2-release-brief",
       "modelName": "Claude Fable 5.2",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -2801,14 +2689,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-claude-fable-5-2-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-claude-fable-5-2-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 2,
       "sourceCount": 2
     },
     {
       "id": "claude-haiku-5.5",
-      "fileSlug": "2026-11-18-claude-haiku-5-5-release-brief",
+      "fileSlug": "2026-11-19-claude-haiku-5-5-release-brief",
       "modelName": "Claude Haiku 5.5",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -2904,14 +2792,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-claude-haiku-5-5-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-claude-haiku-5-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 2,
       "sourceCount": 2
     },
     {
       "id": "claude-opus-5.5",
-      "fileSlug": "2026-11-18-claude-opus-5-5-release-brief",
+      "fileSlug": "2026-11-19-claude-opus-5-5-release-brief",
       "modelName": "Claude Opus 5.5",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -3007,14 +2895,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-claude-opus-5-5-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-claude-opus-5-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 2,
       "sourceCount": 2
     },
     {
       "id": "claude-sonnet-5.5",
-      "fileSlug": "2026-11-18-claude-sonnet-5-5-release-brief",
+      "fileSlug": "2026-11-19-claude-sonnet-5-5-release-brief",
       "modelName": "Claude Sonnet 5.5",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -3110,14 +2998,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-claude-sonnet-5-5-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-claude-sonnet-5-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 2,
       "sourceCount": 2
     },
     {
       "id": "deepseek-v4-flash-0731",
-      "fileSlug": "2026-11-18-deepseek-v4-flash-0731-release-brief",
+      "fileSlug": "2026-11-19-deepseek-v4-flash-0731-release-brief",
       "modelName": "DeepSeek V4 Flash 0731",
       "providerId": "deepseek",
       "providerName": "DeepSeek",
@@ -3183,14 +3071,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-18-deepseek-v4-flash-0731-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-deepseek-v4-flash-0731-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "deepseek-v4.1-flash",
-      "fileSlug": "2026-11-18-deepseek-v4-1-flash-release-brief",
+      "fileSlug": "2026-11-19-deepseek-v4-1-flash-release-brief",
       "modelName": "DeepSeek V4.1 Flash",
       "providerId": "deepseek",
       "providerName": "DeepSeek",
@@ -3256,14 +3144,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-18-deepseek-v4-1-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-deepseek-v4-1-flash-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "deepseek-v4.1-flash-1017",
-      "fileSlug": "2026-11-18-deepseek-v4-1-flash-1017-release-brief",
+      "fileSlug": "2026-11-19-deepseek-v4-1-flash-1017-release-brief",
       "modelName": "DeepSeek V4.1 Flash 1017",
       "providerId": "deepseek",
       "providerName": "DeepSeek",
@@ -3329,14 +3217,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-18-deepseek-v4-1-flash-1017-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-deepseek-v4-1-flash-1017-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "gemini-3.7-flash",
-      "fileSlug": "2026-11-18-gemini-3-7-flash-release-brief",
+      "fileSlug": "2026-11-19-gemini-3-7-flash-release-brief",
       "modelName": "Gemini 3.7 Flash",
       "providerId": "google",
       "providerName": "Google",
@@ -3447,14 +3335,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gemini-3-7-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gemini-3-7-flash-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gemini-3.8-flash",
-      "fileSlug": "2026-11-18-gemini-3-8-flash-release-brief",
+      "fileSlug": "2026-11-19-gemini-3-8-flash-release-brief",
       "modelName": "Gemini 3.8 Flash",
       "providerId": "google",
       "providerName": "Google",
@@ -3565,14 +3453,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gemini-3-8-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gemini-3-8-flash-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gemini-4-carbon",
-      "fileSlug": "2026-11-18-gemini-4-carbon-release-brief",
+      "fileSlug": "2026-11-19-gemini-4-carbon-release-brief",
       "modelName": "Gemini 4 Carbon",
       "providerId": "google",
       "providerName": "Google",
@@ -3683,14 +3571,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gemini-4-carbon-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gemini-4-carbon-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gemini-4-hydrogen",
-      "fileSlug": "2026-11-18-gemini-4-hydrogen-release-brief",
+      "fileSlug": "2026-11-19-gemini-4-hydrogen-release-brief",
       "modelName": "Gemini 4 Hydrogen",
       "providerId": "google",
       "providerName": "Google",
@@ -3811,14 +3699,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gemini-4-hydrogen-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gemini-4-hydrogen-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 5,
       "sourceCount": 5
     },
     {
       "id": "gemini-4-neon",
-      "fileSlug": "2026-11-18-gemini-4-neon-release-brief",
+      "fileSlug": "2026-11-19-gemini-4-neon-release-brief",
       "modelName": "Gemini 4 Neon",
       "providerId": "google",
       "providerName": "Google",
@@ -3929,14 +3817,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gemini-4-neon-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gemini-4-neon-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "glm-5.3",
-      "fileSlug": "2026-11-18-glm-5-3-release-brief",
+      "fileSlug": "2026-11-19-glm-5-3-release-brief",
       "modelName": "GLM 5.3",
       "providerId": "zhipu",
       "providerName": "Zhipu AI",
@@ -4002,14 +3890,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-18-glm-5-3-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-glm-5-3-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "glm-5.3-flash",
-      "fileSlug": "2026-11-18-glm-5-3-flash-release-brief",
+      "fileSlug": "2026-11-19-glm-5-3-flash-release-brief",
       "modelName": "GLM 5.3 Flash",
       "providerId": "zhipu",
       "providerName": "Zhipu AI",
@@ -4075,14 +3963,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-18-glm-5-3-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-glm-5-3-flash-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "glm-5.3-prime",
-      "fileSlug": "2026-11-18-glm-5-3-prime-release-brief",
+      "fileSlug": "2026-11-19-glm-5-3-prime-release-brief",
       "modelName": "GLM 5.3 Prime",
       "providerId": "zhipu",
       "providerName": "Zhipu AI",
@@ -4148,14 +4036,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-18-glm-5-3-prime-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-glm-5-3-prime-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "gpt-6-astra",
-      "fileSlug": "2026-11-18-gpt-6-astra-release-brief",
+      "fileSlug": "2026-11-19-gpt-6-astra-release-brief",
       "modelName": "GPT-6 Astra",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4268,14 +4156,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-astra-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-astra-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gpt-6-astra-pro",
-      "fileSlug": "2026-11-18-gpt-6-astra-pro-release-brief",
+      "fileSlug": "2026-11-19-gpt-6-astra-pro-release-brief",
       "modelName": "GPT-6 Astra Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4378,14 +4266,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-astra-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-astra-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6-luna",
-      "fileSlug": "2026-11-18-gpt-6-luna-release-brief",
+      "fileSlug": "2026-11-19-gpt-6-luna-release-brief",
       "modelName": "GPT-6 Luna",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4488,14 +4376,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-luna-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-luna-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6-luna-pro",
-      "fileSlug": "2026-11-18-gpt-6-luna-pro-release-brief",
+      "fileSlug": "2026-11-19-gpt-6-luna-pro-release-brief",
       "modelName": "GPT-6 Luna Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4598,14 +4486,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-luna-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-luna-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6-sol",
-      "fileSlug": "2026-11-18-gpt-6-sol-release-brief",
+      "fileSlug": "2026-11-19-gpt-6-sol-release-brief",
       "modelName": "GPT-6 Sol",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4708,14 +4596,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-sol-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-sol-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6-sol-pro",
-      "fileSlug": "2026-11-18-gpt-6-sol-pro-release-brief",
+      "fileSlug": "2026-11-19-gpt-6-sol-pro-release-brief",
       "modelName": "GPT-6 Sol Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4818,14 +4706,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-sol-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-sol-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.1-sol",
-      "fileSlug": "2026-11-18-gpt-6-1-sol-release-brief",
+      "fileSlug": "2026-11-19-gpt-6-1-sol-release-brief",
       "modelName": "GPT-6.1 Sol",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4928,14 +4816,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-1-sol-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-1-sol-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.1-sol-pro",
-      "fileSlug": "2026-11-18-gpt-6-1-sol-pro-release-brief",
+      "fileSlug": "2026-11-19-gpt-6-1-sol-pro-release-brief",
       "modelName": "GPT-6.1 Sol Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5038,14 +4926,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-1-sol-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-1-sol-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.1-terra",
-      "fileSlug": "2026-11-18-gpt-6-1-terra-release-brief",
+      "fileSlug": "2026-11-19-gpt-6-1-terra-release-brief",
       "modelName": "GPT-6.1 Terra",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5148,14 +5036,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-1-terra-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-1-terra-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.1-terra-pro",
-      "fileSlug": "2026-11-18-gpt-6-1-terra-pro-release-brief",
+      "fileSlug": "2026-11-19-gpt-6-1-terra-pro-release-brief",
       "modelName": "GPT-6.1 Terra Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5258,14 +5146,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-1-terra-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-1-terra-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.2-astra",
-      "fileSlug": "2026-11-18-gpt-6-2-astra-release-brief",
+      "fileSlug": "2026-11-19-gpt-6-2-astra-release-brief",
       "modelName": "GPT-6.2 Astra",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5379,14 +5267,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-2-astra-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-2-astra-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gpt-6.2-astra-pro",
-      "fileSlug": "2026-11-18-gpt-6-2-astra-pro-release-brief",
+      "fileSlug": "2026-11-19-gpt-6-2-astra-pro-release-brief",
       "modelName": "GPT-6.2 Astra Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5489,14 +5377,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-2-astra-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-2-astra-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.2-sol",
-      "fileSlug": "2026-11-18-gpt-6-2-sol-release-brief",
+      "fileSlug": "2026-11-19-gpt-6-2-sol-release-brief",
       "modelName": "GPT-6.2 Sol",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5599,14 +5487,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-2-sol-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-2-sol-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.2-sol-pro",
-      "fileSlug": "2026-11-18-gpt-6-2-sol-pro-release-brief",
+      "fileSlug": "2026-11-19-gpt-6-2-sol-pro-release-brief",
       "modelName": "GPT-6.2 Sol Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5709,14 +5597,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-18-gpt-6-2-sol-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-2-sol-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "grok-4.6",
-      "fileSlug": "2026-11-18-grok-4-6-release-brief",
+      "fileSlug": "2026-11-19-grok-4-6-release-brief",
       "modelName": "Grok 4.6",
       "providerId": "xai",
       "providerName": "xAI",
@@ -5782,14 +5670,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-18-grok-4-6-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-grok-4-6-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "grok-4.7",
-      "fileSlug": "2026-11-18-grok-4-7-release-brief",
+      "fileSlug": "2026-11-19-grok-4-7-release-brief",
       "modelName": "Grok 4.7",
       "providerId": "xai",
       "providerName": "xAI",
@@ -5855,14 +5743,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-18-grok-4-7-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-grok-4-7-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "kimi-k3.1-pro",
-      "fileSlug": "2026-11-18-kimi-k3-1-pro-release-brief",
+      "fileSlug": "2026-11-19-kimi-k3-1-pro-release-brief",
       "modelName": "Kimi K3.1 Pro",
       "providerId": "moonshot",
       "providerName": "Moonshot AI",
@@ -5928,14 +5816,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-18-kimi-k3-1-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-kimi-k3-1-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "muse-glimmer-30b",
-      "fileSlug": "2026-11-18-muse-glimmer-30b-release-brief",
+      "fileSlug": "2026-11-19-muse-glimmer-30b-release-brief",
       "modelName": "Muse Glimmer 30B",
       "providerId": "meta",
       "providerName": "Meta",
@@ -6001,14 +5889,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-18-muse-glimmer-30b-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-muse-glimmer-30b-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "qwen3.8-27b",
-      "fileSlug": "2026-11-18-qwen3-8-27b-release-brief",
+      "fileSlug": "2026-11-19-qwen3-8-27b-release-brief",
       "modelName": "Qwen3.8 27B",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -6074,14 +5962,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-18-qwen3-8-27b-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-qwen3-8-27b-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "qwen3.8-max-0902",
-      "fileSlug": "2026-11-18-qwen3-8-max-0902-release-brief",
+      "fileSlug": "2026-11-19-qwen3-8-max-0902-release-brief",
       "modelName": "Qwen3.8 Max (0902)",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -6147,14 +6035,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-18-qwen3-8-max-0902-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-qwen3-8-max-0902-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "qwen3.8-max-prime",
-      "fileSlug": "2026-11-18-qwen3-8-max-prime-release-brief",
+      "fileSlug": "2026-11-19-qwen3-8-max-prime-release-brief",
       "modelName": "Qwen3.8 Max Prime",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -6220,14 +6108,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-18-qwen3-8-max-prime-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-qwen3-8-max-prime-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "qwen4-max",
-      "fileSlug": "2026-11-18-qwen4-max-release-brief",
+      "fileSlug": "2026-11-19-qwen4-max-release-brief",
       "modelName": "Qwen4 Max",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -6293,7 +6181,7 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-18-qwen4-max-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-19-qwen4-max-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
