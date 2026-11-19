@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T01:59:49.867Z",
+  "generatedAt": "2026-11-19T02:58:52.039Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T01:59:49.860Z",
+      "lastCheckedAt": "2026-11-19T02:58:52.033Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,15 +100,15 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T01:59:48.153Z",
-      "overallStatus": "degraded",
-      "overallLabel": "Partially Degraded Service",
-      "summary": "1 active incident across 10 tracked components.",
+      "lastCheckedAt": "2026-11-19T02:58:50.267Z",
+      "overallStatus": "operational",
+      "overallLabel": "All Systems Operational",
+      "summary": "No active incidents across 10 tracked components.",
       "notes": null,
       "components": [
         {
           "name": "claude.ai",
-          "status": "degraded_performance"
+          "status": "operational"
         },
         {
           "name": "Claude Platform on AWS",
@@ -131,20 +131,19 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
+      "activeIncidents": [],
+      "recentIncidents": [
         {
           "id": "b5cq662qf2wm",
-          "title": "Claude unable to join meetings",
-          "status": "identified",
+          "title": "Claude Meetings auto-join limited on the Team plan",
+          "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-11-16T15:10:15.167Z",
-          "updatedAt": "2026-11-18T01:29:51.981Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-11-19T02:15:05.860Z",
+          "resolvedAt": "2026-11-19T02:15:05.834Z",
           "url": "https://stspg.io/01qq3kzyyqzl",
-          "summary": "Claude Meetings (beta) is joining calls more reliably, and we are monitoring it. It remains enabled for all Enterprise customers. Team customers can again add Claude to new calls..."
-        }
-      ],
-      "recentIncidents": [
+          "summary": "Claude Meetings (beta) is joining calls normally. Enterprise and Team customers can add Claude to calls. Auto-join is available for all Enterprise customers and some Team customer..."
+        },
         {
           "id": "6prv10gjdpz1",
           "title": "Elevated errors affecting the Google Docs connector",
@@ -177,17 +176,6 @@
           "resolvedAt": "2026-11-16T19:52:36.590Z",
           "url": "https://stspg.io/4858wf40dx89",
           "summary": "The issue affecting Sign in with Apple on the Claude iOS app has been resolved. Impact occurred from 16:29 PT on November 13 / 00:29 UTC on November 14 to 10:31 PT / 18:31 UTC on..."
-        },
-        {
-          "id": "b5cq662qf2wm",
-          "title": "Claude unable to join meetings",
-          "status": "identified",
-          "impact": "minor",
-          "startedAt": "2026-11-16T15:10:15.167Z",
-          "updatedAt": "2026-11-18T01:29:51.981Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/01qq3kzyyqzl",
-          "summary": "Claude Meetings (beta) is joining calls more reliably, and we are monitoring it. It remains enabled for all Enterprise customers. Team customers can again add Claude to new calls..."
         }
       ]
     },
@@ -202,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T01:59:48.818Z",
+      "lastCheckedAt": "2026-11-19T02:58:50.969Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T01:59:48.201Z",
+      "lastCheckedAt": "2026-11-19T02:58:50.383Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -265,7 +253,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T01:59:48.293Z",
+      "lastCheckedAt": "2026-11-19T02:58:50.284Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -304,7 +292,7 @@
           "status": "resolved",
           "impact": "minor",
           "startedAt": "2026-11-17T17:46:15.000Z",
-          "updatedAt": "2026-11-18T17:15:46.000Z",
+          "updatedAt": "2026-11-19T02:42:30.000Z",
           "resolvedAt": "2026-11-18T17:15:46.000Z",
           "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
         },
@@ -351,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-19T01:59:49.210Z",
+      "lastCheckedAt": "2026-11-19T02:58:51.217Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -375,7 +363,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
