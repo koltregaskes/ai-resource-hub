@@ -192071,6 +192071,17 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 423,
+    "model_id": "gemma-3-27b-it",
+    "input_price": 0.08,
+    "output_price": 0.45,
+    "recorded_at": "2026-11-20 17:58:59",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemma 3 27B",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 3867,
     "model_id": "gemma-3-4b-it",
     "input_price": 0.04,
