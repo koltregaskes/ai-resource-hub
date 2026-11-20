@@ -1,0 +1,336 @@
+{
+  "version": 1,
+  "date": "2026-11-19",
+  "snapshotAt": "2026-11-20T06:58:39.618Z",
+  "stories": [
+    {
+      "id": "news-a22c687c439c6aed0fe3",
+      "title": "Apple is hiring engineers to build its own AI agent",
+      "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+      "source": "The Verge",
+      "summary": "Apple is working on its own AI agent that can perform a range of tasks for you, including browsing the web, working across apps, writing code, and calling services. That's according to a job listing spotted by Bloomberg, which says Apple is looking for an engineer to lead the creation of an agentic AI assistant. [&#82…",
+      "publishedAt": "2026-11-19T22:31:41.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-74e2df77898470ffbaf4",
+      "title": "A brief history of Nvidia’s recent stock fluctuations",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings",
+      "source": "The Verge",
+      "summary": "\"We've got this,\" Colette Kress, interim CEO of Nvidia, said Tuesday night as she closed out the embattled chip company's third quarter earnings call. By Thursday, the company's stock price was hovering at around $150 per share, a nearly 40 percent drop from its all-time high on October 6th, and wiping out a brief pos…",
+      "publishedAt": "2026-11-19T21:59:35.000Z",
+      "category": "industry",
+      "tags": [
+        "pricing_change"
+      ],
+      "importance": 0.4
+    },
+    {
+      "id": "news-6f0f2d869f0fe635e8e9",
+      "title": "Meta&#8217;s new Muse Charm device may cost $300",
+      "url": "https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/",
+      "source": "TechCrunch",
+      "summary": "Meta hasn't denied the reporting from The Information, saying only that it will \"have more to share soon\" about its upcoming AI wearable.",
+      "publishedAt": "2026-11-19T21:58:06.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-f2dddf2ea7d8bc56ba8f",
+      "title": "These tech outages are giving Y2K, AI agent style",
+      "url": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
+      "source": "TechCrunch",
+      "summary": "Are the recent outages in the airline booking systems, banking platforms, and productivity platforms really a coincidence? There's actually likely something deeper going on, cybersecurity experts say.",
+      "publishedAt": "2026-11-19T21:42:31.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-b0341a0ae375085ebde8",
+      "title": "Meta’s Muse Charm might cost $300",
+      "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
+      "source": "The Verge",
+      "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but [&#8230;]",
+      "publishedAt": "2026-11-19T20:22:17.000Z",
+      "category": "agents",
+      "tags": [
+        "pricing_change"
+      ],
+      "importance": 0.4
+    },
+    {
+      "id": "news-423b8c753c11c2429c2e",
+      "title": "The unfolding Jensen Huang scandal: a timeline",
+      "url": "https://techcrunch.com/2026/11/19/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+      "source": "TechCrunch",
+      "summary": "Jensen Huang has resigned from Nvidia following an affair, which could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
+      "publishedAt": "2026-11-19T20:18:49.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-6900f6014b2aa0cd6970",
+      "title": "Google is putting AI chats right on the homepage",
+      "url": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
+      "source": "The Verge",
+      "summary": "Google is updating its homepage to include AI searches. In a post on X, Google's vice president of product, Robby Stein, shows how you can now open a collapsible sidebar to view and continue your AI chats. Based on the GIF shared by Stein, it looks like you can open the sidebar by clicking the [&#8230;]",
+      "publishedAt": "2026-11-19T20:05:06.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-2ad2190c7ade6b93c369",
+      "title": "Anthropic&#8217;s IPO could deliver $156B to charity",
+      "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+      "source": "TechCrunch",
+      "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+      "publishedAt": "2026-11-19T19:10:45.000Z",
+      "category": "industry",
+      "tags": [
+        "pricing_change"
+      ],
+      "importance": 0.4
+    },
+    {
+      "id": "news-a628e3d51eab8a75a863",
+      "title": "Gemini on Mac can now use your computer",
+      "url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
+      "source": "The Verge",
+      "summary": "Google's Gemini app for macOS now has computer use, meaning it can help you \"get multi-step tasks done across your local files, desktop apps, and the web,\" the company says. Google suggests the feature might be useful for things like speeding up workflows, filling in forms, making presentations, and listing items for…",
+      "publishedAt": "2026-11-19T18:21:13.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-1054662f25c3d852e57e",
+      "title": "Google gives Gemini the ability to use your Mac for you",
+      "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
+      "source": "TechCrunch",
+      "summary": "Google's latest update to Gemini brings an AI agent to the Mac that can organize files, fill out forms, and tackle multistep workflows.",
+      "publishedAt": "2026-11-19T18:09:11.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-57728669e04868aebe5c",
+      "title": "Introducing Tool Retrieval in the Gemini API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+      "source": "Google",
+      "summary": "Give your agents access to hundreds of tools while using fewer tokens with Tool Retrieval, now in preview in the Gemini API.",
+      "publishedAt": "2026-11-19T18:00:00.000Z",
+      "category": "models",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-2919f418f3f516824d26",
+      "title": "Meta’s AI agent Muse is mixing up conversations and could be exposing private data, report says",
+      "url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
+      "source": "TechCrunch",
+      "summary": "In some of these instances, employees said Muse surfaced messages about childcare requests they never made, career advice they never asked for, product orders they never placed, and bank account balances that didn't belong to them.",
+      "publishedAt": "2026-11-19T17:38:40.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-27f297a759c176e68bd7",
+      "title": "Former Alibaba exec&#8217;s Everful raises $48.5M to connect retailers with Chinese factories",
+      "url": "https://techcrunch.com/2026/11/19/former-alibaba-execs-everful-raises-48-5m-to-connect-retailers-with-chinese-factories/",
+      "source": "TechCrunch",
+      "summary": "Everful has raised $48.5 million to expand its factory-direct sourcing platform, helping retailers source products from overseas manufacturers.",
+      "publishedAt": "2026-11-19T17:00:00.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-c3e7758a237362e25e13",
+      "title": "Walter Isaacson on curiosity and creativity in the AI age.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
+      "source": "Google",
+      "summary": "Walter Isaacson joins Google to discuss how history’s greatest innovators inspire creativity and human judgment in the AI age. Watch the episode.",
+      "publishedAt": "2026-11-19T17:00:00.000Z",
+      "category": "models",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-d680d8751ecd7c4c1e56",
+      "title": "Anthropic hits Nasdaq exchanges at $111, 33% above IPO price",
+      "url": "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/",
+      "source": "TechCrunch",
+      "summary": "Anthropic's IPO price was set at $83, representing more than $80 billion in new capital raised.",
+      "publishedAt": "2026-11-19T16:59:23.000Z",
+      "category": "industry",
+      "tags": [
+        "pricing_change"
+      ],
+      "importance": 0.4
+    },
+    {
+      "id": "news-d0946e26531ae61b752d",
+      "title": "Anthropic starts trading on Wall Street",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq",
+      "source": "The Verge",
+      "summary": "Anthropic has officially gone public. It began trading on the Nasdaq under the ticker symbol \"ANT\" at $111.50 per share, up from its initial $83 per share price that put company's value at around $1.5 trillion. The listing comes nearly a month after Anthropic revealed its plans to go public. In its lengthy S-1 filing,…",
+      "publishedAt": "2026-11-19T16:52:01.000Z",
+      "category": "industry",
+      "tags": [
+        "pricing_change"
+      ],
+      "importance": 0.4
+    },
+    {
+      "id": "news-b80c1a82c17c25525281",
+      "title": "At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development",
+      "url": "https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/",
+      "source": "TechCrunch",
+      "summary": "In his Nasdaq opening bell speech, Dario Amodei reiterated Anthropic's commitment to pacing AI development, regardless of business or political pressure.",
+      "publishedAt": "2026-11-19T16:19:41.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-2600860578f34aa5361a",
+      "title": "ChatGPT can transcribe as you speak now with Live Dictation",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation",
+      "source": "The Verge",
+      "summary": "ChatGPT can receive audio prompts from your microphone faster now with a Live Dictation feature that transcribes as you speak, rather than waiting until you finish recording. It's rolling out now globally on all ChatGPT plans on the web, desktop app, and iOS and Android apps. While using dictation in ChatGPT, you can…",
+      "publishedAt": "2026-11-19T15:16:45.000Z",
+      "category": "tools",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-c990fb12100073c5af34",
+      "title": "Anthropic&#8217;s IPO puts AI&#8217;s circular financing boom to the test",
+      "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/",
+      "source": "TechCrunch",
+      "summary": "Anthropic faces enormous compute commitments as it goes public, but its biggest infrastructure partners, including Amazon and Google, could continue profiting from AI even if Anthropic loses its lead.",
+      "publishedAt": "2026-11-19T14:54:39.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-0b3a38ae0a194f3984df",
+      "title": "With the biggest IPO of all time, Anthropic’s ‘good guy’ reputation is on the line",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1037459/anthropic-ipo-safe-ai-reputation-power-structure",
+      "source": "The Verge",
+      "summary": "Today is a new beginning for Anthropic: a years-in-the-making IPO that beat out SpaceX for most valuable of all time, having raised $81.3 billion and set an important precedent for the other public AI lab debuts to come. But it's not simply a financial milestone. Anthropic was founded on the idea that it prioritized s…",
+      "publishedAt": "2026-11-19T14:25:37.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-1501adb883e7f84cadad",
+      "title": "Superhuman pushes its Go assistant everywhere",
+      "url": "https://techcrunch.com/2026/11/19/superhuman-pushes-its-go-assistant-everywhere/",
+      "source": "TechCrunch",
+      "summary": "Superhuman is making Go its central agent and making it available in Docs and Mail.",
+      "publishedAt": "2026-11-19T14:00:00.000Z",
+      "category": "tools",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-029ded4e9a8f172f9007",
+      "title": "I let Apple’s always-listening AI summarize my life for two weeks",
+      "url": "https://www.theverge.com/tech/1037100/apple-siri-recap-audio-intelligence-hands-on",
+      "source": "The Verge",
+      "summary": "Was it worth it? I've been asking myself this quite a bit over the last month or so while testing both the Amazon Bee Frontier and Siri Recap on the Apple Watch Ultra 4. Both enable a wearable to ambiently listen to your conversations and, using AI, summarize them for you. Why? So you can [&#8230;]",
+      "publishedAt": "2026-11-19T13:00:00.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-fdfefb89d61360e3f14c",
+      "title": "Canva adds an AI ‘off’ button",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1037126/canva-ai-features-off-button",
+      "source": "The Verge",
+      "summary": "Canva will now allow you to turn off its generative AI features. With this change, you can disable the graphic design platform's array of AI tools, such as its AI photo-extending Magic Expand feature, as well as turn off the ability to generate images with its Canva chatbot. This toggle doesn't turn off every AI-power…",
+      "publishedAt": "2026-11-19T12:30:00.000Z",
+      "category": "tools",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-6687f7be62c34e4af8b1",
+      "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+      "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+      "source": "OpenAI",
+      "summary": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
+      "publishedAt": "2026-11-19T08:00:00.000Z",
+      "category": "models",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-a8022fb06095c478eb24",
+      "title": "Microsoft CEO Satya Nadella explains why he asked 60K employees to quit",
+      "url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/",
+      "source": "TechCrunch",
+      "summary": "Microsoft CEO Satya Nadella explained why he offered buyouts to 60,000 of his employees in October, essentially urging them to voluntarily quit, rather than reducing the workforce via another massive layoff. The short answer is AI, but not in the way you might expect.",
+      "publishedAt": "2026-11-19T00:42:56.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-a2fb00344062975fa7ac",
+      "title": "Get started with Daybreak Blue",
+      "url": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+      "source": "OpenAI",
+      "summary": "Watch a walkthrough of onboarding to Daybreak Blue, with a closer look at the setup experience and how to get started.",
+      "publishedAt": "2026-11-19T00:00:00.000Z",
+      "category": "models",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-e29ac258c013c12c7631",
+      "title": "Explore the Codex Security Plugin",
+      "url": "https://openai.com/business/learn/codex-security-plugin-demo",
+      "source": "OpenAI",
+      "summary": "Watch a demo of the Codex Security Plugin and see the workflow in action, from getting started to reviewing the results shown in the recording.",
+      "publishedAt": "2026-11-19T00:00:00.000Z",
+      "category": "models",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-cb99e2baa62e786645f3",
+      "title": "See PR scans in action",
+      "url": "https://openai.com/business/learn/pr-scans-demo",
+      "source": "OpenAI",
+      "summary": "Watch a walkthrough of PR scans and see how the presenter reviews scan results in a pull request workflow.",
+      "publishedAt": "2026-11-19T00:00:00.000Z",
+      "category": "models",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-4b08ec50268e04a4eb3c",
+      "title": "Deploying Daybreak Red",
+      "url": "https://openai.com/business/learn/deploying-daybreak-red",
+      "source": "OpenAI",
+      "summary": "Explore a reference architecture for supervised security investigations with Daybreak Red, including safety controls, setup, and monitoring.",
+      "publishedAt": "2026-11-19T00:00:00.000Z",
+      "category": "models",
+      "tags": [],
+      "importance": 0.4
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "date": "2026-11-19",
+  "snapshotAt": "2026-11-20T06:58:39.618Z",
+  "totalAvailable": 29,
+  "stories": [
+    {
+      "id": "news-a22c687c439c6aed0fe3",
+      "title": "Apple is hiring engineers to build its own AI agent",
+      "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+      "source": "The Verge",
+      "summary": "Apple is working on its own AI agent that can perform a range of tasks for you, including browsing the web, working across apps, writing code, and calling services. That's according to a job listing spotted by Bloomberg, which says Apple is looking for an engineer to lead the creation of an agentic AI assistant. [&#82…",
+      "publishedAt": "2026-11-19T22:31:41.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-74e2df77898470ffbaf4",
+      "title": "A brief history of Nvidia’s recent stock fluctuations",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings",
+      "source": "The Verge",
+      "summary": "\"We've got this,\" Colette Kress, interim CEO of Nvidia, said Tuesday night as she closed out the embattled chip company's third quarter earnings call. By Thursday, the company's stock price was hovering at around $150 per share, a nearly 40 percent drop from its all-time high on October 6th, and wiping out a brief pos…",
+      "publishedAt": "2026-11-19T21:59:35.000Z",
+      "category": "industry",
+      "tags": [
+        "pricing_change"
+      ],
+      "importance": 0.4
+    },
+    {
+      "id": "news-6f0f2d869f0fe635e8e9",
+      "title": "Meta&#8217;s new Muse Charm device may cost $300",
+      "url": "https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/",
+      "source": "TechCrunch",
+      "summary": "Meta hasn't denied the reporting from The Information, saying only that it will \"have more to share soon\" about its upcoming AI wearable.",
+      "publishedAt": "2026-11-19T21:58:06.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-f2dddf2ea7d8bc56ba8f",
+      "title": "These tech outages are giving Y2K, AI agent style",
+      "url": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
+      "source": "TechCrunch",
+      "summary": "Are the recent outages in the airline booking systems, banking platforms, and productivity platforms really a coincidence? There's actually likely something deeper going on, cybersecurity experts say.",
+      "publishedAt": "2026-11-19T21:42:31.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-b0341a0ae375085ebde8",
+      "title": "Meta’s Muse Charm might cost $300",
+      "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
+      "source": "The Verge",
+      "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but [&#8230;]",
+      "publishedAt": "2026-11-19T20:22:17.000Z",
+      "category": "agents",
+      "tags": [
+        "pricing_change"
+      ],
+      "importance": 0.4
+    },
+    {
+      "id": "news-423b8c753c11c2429c2e",
+      "title": "The unfolding Jensen Huang scandal: a timeline",
+      "url": "https://techcrunch.com/2026/11/19/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+      "source": "TechCrunch",
+      "summary": "Jensen Huang has resigned from Nvidia following an affair, which could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
+      "publishedAt": "2026-11-19T20:18:49.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-6900f6014b2aa0cd6970",
+      "title": "Google is putting AI chats right on the homepage",
+      "url": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
+      "source": "The Verge",
+      "summary": "Google is updating its homepage to include AI searches. In a post on X, Google's vice president of product, Robby Stein, shows how you can now open a collapsible sidebar to view and continue your AI chats. Based on the GIF shared by Stein, it looks like you can open the sidebar by clicking the [&#8230;]",
+      "publishedAt": "2026-11-19T20:05:06.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-2ad2190c7ade6b93c369",
+      "title": "Anthropic&#8217;s IPO could deliver $156B to charity",
+      "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+      "source": "TechCrunch",
+      "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+      "publishedAt": "2026-11-19T19:10:45.000Z",
+      "category": "industry",
+      "tags": [
+        "pricing_change"
+      ],
+      "importance": 0.4
+    },
+    {
+      "id": "news-a628e3d51eab8a75a863",
+      "title": "Gemini on Mac can now use your computer",
+      "url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
+      "source": "The Verge",
+      "summary": "Google's Gemini app for macOS now has computer use, meaning it can help you \"get multi-step tasks done across your local files, desktop apps, and the web,\" the company says. Google suggests the feature might be useful for things like speeding up workflows, filling in forms, making presentations, and listing items for…",
+      "publishedAt": "2026-11-19T18:21:13.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-1054662f25c3d852e57e",
+      "title": "Google gives Gemini the ability to use your Mac for you",
+      "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
+      "source": "TechCrunch",
+      "summary": "Google's latest update to Gemini brings an AI agent to the Mac that can organize files, fill out forms, and tackle multistep workflows.",
+      "publishedAt": "2026-11-19T18:09:11.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-57728669e04868aebe5c",
+      "title": "Introducing Tool Retrieval in the Gemini API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+      "source": "Google",
+      "summary": "Give your agents access to hundreds of tools while using fewer tokens with Tool Retrieval, now in preview in the Gemini API.",
+      "publishedAt": "2026-11-19T18:00:00.000Z",
+      "category": "models",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-2919f418f3f516824d26",
+      "title": "Meta’s AI agent Muse is mixing up conversations and could be exposing private data, report says",
+      "url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
+      "source": "TechCrunch",
+      "summary": "In some of these instances, employees said Muse surfaced messages about childcare requests they never made, career advice they never asked for, product orders they never placed, and bank account balances that didn't belong to them.",
+      "publishedAt": "2026-11-19T17:38:40.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-27f297a759c176e68bd7",
+      "title": "Former Alibaba exec&#8217;s Everful raises $48.5M to connect retailers with Chinese factories",
+      "url": "https://techcrunch.com/2026/11/19/former-alibaba-execs-everful-raises-48-5m-to-connect-retailers-with-chinese-factories/",
+      "source": "TechCrunch",
+      "summary": "Everful has raised $48.5 million to expand its factory-direct sourcing platform, helping retailers source products from overseas manufacturers.",
+      "publishedAt": "2026-11-19T17:00:00.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-c3e7758a237362e25e13",
+      "title": "Walter Isaacson on curiosity and creativity in the AI age.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/dialogues-walter-isaacson/",
+      "source": "Google",
+      "summary": "Walter Isaacson joins Google to discuss how history’s greatest innovators inspire creativity and human judgment in the AI age. Watch the episode.",
+      "publishedAt": "2026-11-19T17:00:00.000Z",
+      "category": "models",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-d680d8751ecd7c4c1e56",
+      "title": "Anthropic hits Nasdaq exchanges at $111, 33% above IPO price",
+      "url": "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/",
+      "source": "TechCrunch",
+      "summary": "Anthropic's IPO price was set at $83, representing more than $80 billion in new capital raised.",
+      "publishedAt": "2026-11-19T16:59:23.000Z",
+      "category": "industry",
+      "tags": [
+        "pricing_change"
+      ],
+      "importance": 0.4
+    }
+  ]
+}
