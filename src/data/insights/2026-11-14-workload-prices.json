@@ -1,0 +1,110 @@
+{
+  "source": "src/data/insights/2026-11-14.json",
+  "inputSha256": "4e5d30af7cea9b626ed87a9ff21b47fc69dac339c41a13fcd124f94d4b651998",
+  "cacheGeneratedAt": "2026-11-14T06:55:53.573Z",
+  "warning": "Frozen catalogue records, not newly verified provider offers. Hypothetical workloads, no model calls or quality measurements. Taxes, discounts, tools and reasoning excluded.",
+  "models": [
+    {
+      "id": "mistral-large-4-0",
+      "name": "Mistral Large 4",
+      "provider": "Mistral",
+      "input": 0.7,
+      "output": 2.1,
+      "source": "Vendor (official, checked 2026-11-13)",
+      "checked": "2026-11-14 06:55:29"
+    },
+    {
+      "id": "gemini-3.5-flash-lite",
+      "name": "Gemini 3.5 Flash-Lite",
+      "provider": "Google",
+      "input": 0.3,
+      "output": 2.5,
+      "source": "Google AI (official)",
+      "checked": "2026-11-14 06:55:29"
+    }
+  ],
+  "mix": [
+    {
+      "outputPerInput": 0.1,
+      "large": 0.827273,
+      "flashLite": 0.5
+    },
+    {
+      "outputPerInput": 0.25,
+      "large": 0.98,
+      "flashLite": 0.74
+    },
+    {
+      "outputPerInput": 1,
+      "large": 1.4,
+      "flashLite": 1.4
+    },
+    {
+      "outputPerInput": 3,
+      "large": 1.75,
+      "flashLite": 1.95
+    }
+  ],
+  "length": [
+    {
+      "input": 3000,
+      "output": 500,
+      "jobs": 10000,
+      "large": 31.5,
+      "flashLite": 21.5
+    },
+    {
+      "input": 3000,
+      "output": 2000,
+      "jobs": 10000,
+      "large": 63,
+      "flashLite": 59
+    },
+    {
+      "input": 3000,
+      "output": 8000,
+      "jobs": 10000,
+      "large": 189,
+      "flashLite": 209
+    }
+  ],
+  "routing": [
+    {
+      "fallbackShare": 0,
+      "jobs": 10000,
+      "firstStage": 21.5,
+      "secondStage": 0,
+      "total": 21.5
+    },
+    {
+      "fallbackShare": 0.1,
+      "jobs": 10000,
+      "firstStage": 21.5,
+      "secondStage": 3.15,
+      "total": 24.65
+    },
+    {
+      "fallbackShare": 0.25,
+      "jobs": 10000,
+      "firstStage": 21.5,
+      "secondStage": 7.875,
+      "total": 29.375
+    },
+    {
+      "fallbackShare": 0.5,
+      "jobs": 10000,
+      "firstStage": 21.5,
+      "secondStage": 15.75,
+      "total": 37.25
+    },
+    {
+      "fallbackShare": 1,
+      "jobs": 10000,
+      "firstStage": 21.5,
+      "secondStage": 31.5,
+      "total": 53
+    }
+  ],
+  "directLarge": 31.5,
+  "breakEvenFallbackShare": 0.31746031746031744
+}

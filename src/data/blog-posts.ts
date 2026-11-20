@@ -15,6 +15,9 @@ export interface BlogPost {
 
 /** Editorial posts, newest first. The blog index, search, RSS, and tickers share this list. */
 export const blogPosts: BlogPost[] = [
+  { slug: 'blended-price-ranking-reversal', title: 'One blended AI price can put your shortlist in the wrong order', description: 'A frozen price pair reverses order when reading and writing change places. A worked guide to the workload behind a blended price.', date: '2026-11-14', type: 'Explainer', readTime: '9 min' },
+  { slug: 'answer-length-budget-range', title: 'An answer-length assumption can reverse an AI budget decision', description: 'Three answer lengths give three bills from frozen AIRH rates. How to distinguish a scenario, an enforced cap and a measured forecast.', date: '2026-11-14', type: 'Explainer', readTime: '9 min' },
+  { slug: 'two-stage-routing-break-even', title: 'A cheap first pass stops saving money when too much work goes round twice', description: 'A two-stage workflow has a calculable break-even point. Frozen rates price an escalation policy without claiming model quality.', date: '2026-11-14', type: 'Explainer', readTime: '9 min' },
   ...additionalPractitioner.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: p.type as BlogType, readTime: '5 min' })),
   ...practitionerB3.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: (p.slug === 'model-upgrade-regression-register' ? 'Explainer' : 'Analysis') as BlogType, readTime: '5 min' })),
   ...practitionerB2.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: (p.slug === 'structured-output-is-not-a-correct-answer' ? 'Explainer' : 'Analysis') as BlogType, readTime: '5 min' })),
