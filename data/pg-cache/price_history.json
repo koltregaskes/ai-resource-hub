@@ -105160,6 +105160,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 265,
+    "model_id": "deepseek-v3.2",
+    "input_price": 0.25,
+    "output_price": 1,
+    "recorded_at": "2026-11-20 19:58:53",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V3 0324",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 3788,
     "model_id": "deepseek-v3.2-exp",
     "input_price": 0.27,
@@ -112200,6 +112211,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 194,
+    "model_id": "deepseek-v4-flash-vision-exp",
+    "input_price": 0.216,
+    "output_price": 0.647,
+    "recorded_at": "2026-11-20 19:58:53",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V4 Flash Vision Exp",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 263,
     "model_id": "deepseek-v4-pro",
     "input_price": 0.435,
@@ -116580,9 +116602,9 @@
   {
     "id": 306,
     "model_id": "deepseek-v4.1-flash-1017",
-    "input_price": 0.15,
-    "output_price": 0.6,
-    "recorded_at": "2026-11-20 10:57:17",
+    "input_price": 0.036,
+    "output_price": 0.5,
+    "recorded_at": "2026-11-20 19:58:53",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4.1 Flash 1017",
     "provider_name": "DeepSeek",
@@ -461796,6 +461818,17 @@
     "input_price": 0.21,
     "output_price": 0.84,
     "recorded_at": "2026-11-18 08:58:04",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "MiniMax M2.7",
+    "provider_name": "MiniMax",
+    "provider_colour": "#e040fb"
+  },
+  {
+    "id": 219,
+    "model_id": "minimax-m2.7",
+    "input_price": 0.6,
+    "output_price": 1.8,
+    "recorded_at": "2026-11-20 19:58:53",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "MiniMax M2.7",
     "provider_name": "MiniMax",
