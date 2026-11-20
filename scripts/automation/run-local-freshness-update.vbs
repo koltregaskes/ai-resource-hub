@@ -1,10 +1,11 @@
 ' AI Resource Hub - hidden hourly local freshness launcher.
 Option Explicit
 
-Dim shell, command, exitCode
+Dim shell, here, command, exitCode
 
 Set shell = CreateObject("WScript.Shell")
-command = "cmd.exe /d /c ""W:\Websites\sites\ai-resource-hub\scripts\automation\run-local-freshness-update.cmd"""
+here = CreateObject("Scripting.FileSystemObject").GetParentFolderName(WScript.ScriptFullName)
+command = "cmd.exe /d /c """ & here & "\run-local-freshness-update.cmd"""
 exitCode = shell.Run(command, 0, True)
 
 WScript.Quit exitCode

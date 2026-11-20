@@ -11,7 +11,6 @@ function resolveEstateRoot() {
   const candidates = [
     process.env.WEBSITES_ESTATE_ROOT,
     path.resolve(repoRoot, '..', '..'),
-    'W:\\Websites',
     'C:\\Workspaces\\Websites',
   ].filter(Boolean);
 
