@@ -1,6 +1,7 @@
 ---
 import { serializeJsonLd } from '../../lib/json-ld';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BenchmarkMethodPanel from '../../components/BenchmarkMethodPanel.astro';
 import { getAllBenchmarkIds, getBenchmarkById, getScoresForBenchmark } from '../../db/queries';
 
 export function getStaticPaths() {
@@ -330,7 +331,7 @@ const structuredData = {
       </h2>
 
       {scores.length > 0 ? (
-        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-hidden">
+        <div class="rounded-xl border border-(--color-border) bg-(--color-bg-card) overflow-x-auto">
           <table class="w-full text-sm">
             <thead>
               <tr class="border-b border-(--color-border)">
@@ -341,6 +342,7 @@ const structuredData = {
                 <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium hidden sm:table-cell">Source</th>
                 <th class="text-left py-3 px-4 text-(--color-text-muted) font-medium hidden md:table-cell">Measured</th>
                 <th class="py-3 px-4 w-24"></th>
+                <th scope="col" class="text-left py-3 px-4">Method and limits</th>
               </tr>
             </thead>
             <tbody>
@@ -390,6 +392,9 @@ const structuredData = {
                       <div class="w-full h-1.5 bg-(--color-bg-tertiary) rounded-full overflow-hidden">
                         <div class="h-full rounded-full bg-(--color-accent)" style={`width: ${barWidth}%`}></div>
                       </div>
+                    </td>
+                    <td class="py-3 px-4 align-top">
+                      <BenchmarkMethodPanel model={s.model_name} measuredAt={s.measured_at} sourceUrl={s.source_url} />
                     </td>
                   </tr>
                 );
