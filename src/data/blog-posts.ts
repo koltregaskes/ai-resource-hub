@@ -15,6 +15,9 @@ export interface BlogPost {
 
 /** Editorial posts, newest first. The blog index, search, RSS, and tickers share this list. */
 export const blogPosts: BlogPost[] = [
+  { slug: 'document-space-after-reserves', title: 'The context window is bigger than the document space you can plan around', description: 'A recorded context capacity becomes a document allowance only after explicit reserves. A worked guide to the subtraction and its limits.', date: '2026-11-14', type: 'Explainer', readTime: '9 min' },
+  { slug: 'repeated-model-trial-budget', title: 'Repeating a model trial multiplies calls before it improves the evidence', description: 'Frozen AIRH rates price hypothetical trial repetitions. Distinct cases, repeated attempts and candidate versions answer different questions.', date: '2026-11-14', type: 'Explainer', readTime: '9 min' },
+  { slug: 'human-review-token-bill', title: 'A small token bill can sit beside a large review queue', description: 'A worked comparison keeps frozen token rates, invented review times and assumed labour valuations separate. No measured savings are claimed.', date: '2026-11-14', type: 'Explainer', readTime: '9 min' },
   ...additionalPractitioner.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: p.type as BlogType, readTime: '5 min' })),
   ...practitionerB3.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: (p.slug === 'model-upgrade-regression-register' ? 'Explainer' : 'Analysis') as BlogType, readTime: '5 min' })),
   ...practitionerB2.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: (p.slug === 'structured-output-is-not-a-correct-answer' ? 'Explainer' : 'Analysis') as BlogType, readTime: '5 min' })),
