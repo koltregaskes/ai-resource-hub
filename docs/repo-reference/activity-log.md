@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 20 Nov 2026, 14:58 UTC
+Generated: 20 Nov 2026, 15:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 20 Nov 2026, 14:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 20 Nov 2026, 14:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 20 Nov 2026, 14:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 20 Nov 2026, 14:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 20 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 995 open roles across 10 tracked companies. | `/jobs/` |
+| 20 Nov 2026, 15:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 20 Nov 2026, 15:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 20 Nov 2026, 15:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 20 Nov 2026, 15:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 20 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 996 open roles across 10 tracked companies. | `/jobs/` |
 | 20 Nov 2026, 12:00 UTC | digest | Published the 2026-11-20 daily digest | 6 stories captured from 2 sources. | `/news/` |
 | 20 Nov 2026, 12:00 UTC | digest | Six AI-powered gadgets that could make your home office smarter | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/) |
 | 20 Nov 2026, 12:00 UTC | digest | The fallout from Nvidia’s Jensen Huang scandal continues | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/) |
