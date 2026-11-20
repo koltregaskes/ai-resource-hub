@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-14",
+  "charts": [
+    {
+      "id": "nvidia-revenue",
+      "title": "NVIDIA quarterly revenue",
+      "unit": "US$ million, reported",
+      "rows": [{"label":"Q2 FY2026","value":46743},{"label":"Q1 FY2027","value":81615},{"label":"Q2 FY2027","value":96221}],
+      "note": "Company-wide revenue, not an estimate of AI spending. Q2 FY2027 ended 26 July 2026. Fiscal quarters are not calendar quarters. Values transcribed from the release table; no forecast included.",
+      "source": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/default.aspx"
+    },
+    {
+      "id": "uk-adoption",
+      "title": "UK business AI adoption, survey waves",
+      "unit": "% of UK businesses",
+      "rows": [{"label":"2025 wave","value":16},{"label":"2026 wave","value":32}],
+      "note": "Businesses reporting use of at least one AI technology. The 2026 wave interviewed 3,503 businesses from 7 January to 21 April, published 29 October. This is not a November measurement. Survey estimates, not a census or a causal productivity measure; uncertainty intervals are not supplied in this summary chart.",
+      "source": "https://www.gov.uk/government/publications/ai-adoption-survey-2026/ai-adoption-survey-report-2026-executive-summary"
+    }
+  ]
+}

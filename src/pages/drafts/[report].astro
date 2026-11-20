@@ -1,0 +1,9 @@
+---
+import StateOfAIReport from '../../reports/StateOfAI2026.astro';
+export function getStaticPaths() {
+  return process.env.AIRH_REPORT_DRAFT === '1'
+    ? [{ params: { report: 'state-of-ai-november-2026' } }]
+    : [];
+}
+---
+<StateOfAIReport />
