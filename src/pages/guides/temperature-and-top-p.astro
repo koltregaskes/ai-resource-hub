@@ -1,0 +1,60 @@
+---
+import GuideArticle from '../../components/GuideArticle.astro';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const sources = [
+  { label: 'Holtzman et al. (2019), The Curious Case of Neural Text Degeneration (nucleus sampling), arXiv:1904.09751', url: 'https://arxiv.org/abs/1904.09751' },
+  { label: 'OpenAI API reference, Chat Completions (temperature and top_p)', url: 'https://platform.openai.com/docs/api-reference/chat/create' },
+  { label: 'Anthropic API reference, Messages (temperature, top_p, top_k)', url: 'https://docs.anthropic.com/en/api/messages' },
+];
+---
+<GuideArticle
+  title="Temperature and Top-p: What the Sampling Settings Do"
+  crumb="Temperature & Top-p"
+  description="What temperature and top-p change in a model's output, sensible starting values for different jobs, and why the same prompt gives different answers."
+  intro="Temperature and top-p control how a model picks each next word. Lower settings make it predictable. Higher settings make it varied, and eventually odd."
+  category="Intermediate"
+  readTime="6 min read"
+  updated="2026-10-26"
+  sources={sources}
+>
+  <p>
+    At every step a language model produces a score for every token it could write next, and those scores become probabilities. It then picks one. These settings decide how it picks.
+  </p>
+
+  <h2>Temperature</h2>
+  <p>
+    Temperature reshapes the probabilities before the pick. Near zero, the most likely token wins almost every time, so the same prompt gives nearly the same answer. Turn it up and less likely tokens get more of a chance, which brings variety and, past a point, nonsense.
+  </p>
+  <p>
+    Ranges differ by provider. OpenAI's Chat Completions API accepts 0 to 2. Anthropic's Messages API accepts 0 to 1 and defaults to 1. A value of 1 on one service isn't the same as 1 on another, so check the docs for the model you're using.
+  </p>
+
+  <h2>Top-p (nucleus sampling)</h2>
+  <p>
+    Top-p cuts the list instead of reshaping it. The model keeps the smallest group of tokens whose probabilities add up to p and samples only from those. With top-p at 0.9, the long tail of unlikely tokens that make up the last 10% is thrown out. The method comes from a 2019 paper by Ari Holtzman and colleagues, who called it nucleus sampling and showed it avoided both the dull repetition of always picking the top token and the incoherence of sampling from everything.
+  </p>
+  <p>
+    Some APIs also offer top-k, which keeps a fixed number of the most likely tokens. OpenAI's reference suggests changing temperature or top-p but not both at once, and Anthropic gives similar advice. Changing one at a time makes it easier to see what each does.
+  </p>
+
+  <h2>Starting points</h2>
+  <ul>
+    <li><strong>Extracting data, classifying, code:</strong> low temperature, around 0 to 0.3.</li>
+    <li><strong>General writing and chat:</strong> leave the provider's default.</li>
+    <li><strong>Brainstorming and fiction:</strong> raise it a little and read the results.</li>
+  </ul>
+  <p>
+    These are rules of thumb, not measured optimums. Test on your own prompts.
+  </p>
+
+  <h2>Things people get wrong</h2>
+  <ul>
+    <li><strong>Temperature 0 isn't fully repeatable.</strong> Answers can still vary slightly between runs because of how servers batch and compute requests.</li>
+    <li><strong>Low temperature doesn't make a model accurate.</strong> It makes it consistent. A wrong answer at temperature 0 is consistently wrong.</li>
+    <li><strong>Some models fix these settings.</strong> Several reasoning models ignore or reject custom temperature values. If a setting seems to do nothing, check the model's documentation.</li>
+    <li><strong>Chat apps usually hide them.</strong> In ChatGPT, Claude or Gemini's consumer apps you mostly can't change them. They're API settings, and some playgrounds expose them.</li>
+  </ul>
+  <p>
+    If you're using an API, the <a href={`${base}api-guides/`}>API getting started page</a> has code for the main providers. The February post <a href={`${base}blog/temperature-top-p-and-inference-settings/`}>Temperature, Top-p and Inference Settings</a> covers a few more parameters.
+  </p>
+</GuideArticle>

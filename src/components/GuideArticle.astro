@@ -1,0 +1,115 @@
+---
+/**
+ * Shared shell for guide pages written from KOL-6513 onwards.
+ * Same desk styling as the older hand-built guides, with a dated
+ * sources list at the foot so every factual claim can be traced.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface Source {
+  label: string;
+  url: string;
+}
+
+interface Props {
+  title: string;
+  crumb: string;
+  description: string;
+  intro: string;
+  category: 'Beginner' | 'Intermediate' | 'Practical' | 'Advanced';
+  readTime: string;
+  updated: string;
+  sources: Source[];
+}
+
+const { title, crumb, description, intro, category, readTime, updated, sources } = Astro.props;
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const categoryColours: Record<string, string> = {
+  Beginner: 'bg-green-500/10 text-green-400',
+  Intermediate: 'bg-blue-500/10 text-blue-400',
+  Practical: 'bg-purple-500/10 text-purple-400',
+  Advanced: 'bg-orange-500/10 text-orange-400',
+};
+
+const updatedLabel = new Date(updated).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+---
+
+<BaseLayout title={`${title} — The AI Resource Hub`} description={description}>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`${base}guides/`} class="hover:text-(--color-text-secondary) transition-colors">Guides</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">{crumb}</span>
+    </nav>
+
+    <header class="mb-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class={`text-xs px-2 py-0.5 rounded-full ${categoryColours[category]}`}>{category}</span>
+        <span class="text-xs text-(--color-text-muted)">{readTime}</span>
+        <span class="text-xs text-(--color-text-muted)">Updated {updatedLabel}</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-(--color-text-primary) mb-4">{title}</h1>
+      <p class="text-lg text-(--color-text-secondary)">{intro}</p>
+    </header>
+
+    <div class="guide-body space-y-5 text-(--color-text-secondary) leading-relaxed">
+      <slot />
+    </div>
+
+    {sources.length > 0 && (
+      <section class="mt-12 p-5 rounded-xl bg-(--color-bg-card) border border-(--color-border)">
+        <h2 class="text-lg font-semibold text-(--color-text-primary) mb-3">Sources</h2>
+        <ul class="text-sm space-y-2 list-disc pl-5">
+          {sources.map((s) => (
+            <li><a href={s.url} class="text-(--color-accent) hover:text-(--color-accent-hover)" rel="noopener">{s.label}</a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <div class="mt-8">
+      <a
+        href={`${base}guides/`}
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-(--color-bg-tertiary) text-(--color-text-secondary) hover:text-(--color-text-primary) hover:bg-(--color-bg-hover) transition-colors text-sm"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        All Guides
+      </a>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .guide-body :global(h2) {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-top: 2.5rem;
+  }
+  .guide-body :global(h3) {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-top: 1.5rem;
+  }
+  .guide-body :global(ul) { list-style: disc; padding-left: 1.5rem; }
+  .guide-body :global(ol) { list-style: decimal; padding-left: 1.5rem; }
+  .guide-body :global(li) { margin-top: 0.4rem; }
+  .guide-body :global(a) { color: var(--color-accent); }
+  .guide-body :global(a:hover) { color: var(--color-accent-hover); }
+  .guide-body :global(strong) { color: var(--color-text-primary); }
+  .guide-body :global(.note) {
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
+    background: var(--color-accent-glow);
+    border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent);
+    color: var(--color-text-primary);
+  }
+</style>

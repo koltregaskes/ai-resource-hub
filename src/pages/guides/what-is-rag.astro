@@ -1,0 +1,69 @@
+---
+import GuideArticle from '../../components/GuideArticle.astro';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const sources = [
+  { label: 'Lewis et al. (2020), Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, arXiv:2005.11401', url: 'https://arxiv.org/abs/2005.11401' },
+  { label: 'Liu et al. (2023), Lost in the Middle: How Language Models Use Long Contexts, arXiv:2307.03172', url: 'https://arxiv.org/abs/2307.03172' },
+  { label: 'OpenAI, Embeddings guide', url: 'https://platform.openai.com/docs/guides/embeddings' },
+];
+---
+<GuideArticle
+  title="What Is RAG? Retrieval-Augmented Generation"
+  crumb="What Is RAG?"
+  description="How retrieval-augmented generation works, when it helps, when it doesn't, and how to check a RAG answer."
+  intro="RAG is a way of handing a model the right documents at the moment you ask it something, so it answers from them instead of from memory."
+  category="Intermediate"
+  readTime="7 min read"
+  updated="2026-10-26"
+  sources={sources}
+>
+  <p>
+    A language model learns from a fixed set of training data, and after training it knows nothing new. It hasn't seen your company handbook. It hasn't seen last week's news. Ask about either and it may refuse, or it may make something up that sounds right.
+  </p>
+  <p>
+    Retrieval-augmented generation, usually shortened to RAG, was named in a 2020 paper by Patrick Lewis and colleagues at Facebook AI Research, UCL and NYU. Their setup paired a model's own learned knowledge with a searchable index of documents (Wikipedia, in their tests) and fetched passages from that index for each question. Most RAG systems today follow the same basic idea.
+  </p>
+
+  <h2>How it works</h2>
+  <ol>
+    <li><strong>Prepare the documents.</strong> Your files are split into chunks, often a few paragraphs each, and every chunk is turned into an embedding. An embedding is a list of numbers that places text with similar meaning close together.</li>
+    <li><strong>Search at question time.</strong> Your question gets an embedding too. The system finds the chunks whose embeddings sit nearest to it. Many systems also run an ordinary keyword search and merge the two lists.</li>
+    <li><strong>Answer from the results.</strong> The top chunks are pasted into the prompt with your question, and the model is told to answer from them and say which chunk it used.</li>
+  </ol>
+  <p>
+    That's all RAG is. The model doesn't change. Only the prompt does.
+  </p>
+
+  <h2>When it helps</h2>
+  <ul>
+    <li>Questions about private material the model never saw, such as policies, contracts, support tickets or code.</li>
+    <li>Material that changes often, where retraining would be slow and expensive.</li>
+    <li>Cases where you need to show your working, because each answer can point to the passage it came from.</li>
+  </ul>
+
+  <h2>When it doesn't</h2>
+  <p>
+    RAG only works if the search finds the right passage. If the answer is spread across forty documents, or the question needs a calculation over a whole table, a handful of chunks won't cover it, and the model will fill the gaps. It also doesn't teach the model a new skill or writing style. For that, people look at fine-tuning or better prompts.
+  </p>
+  <p>
+    Where the passage lands in the prompt matters too. Researchers at Stanford and elsewhere found that models used information best when it sat at the start or end of a long prompt and noticeably worse when it was buried in the middle (Liu et al., 2023). So more chunks isn't always better.
+  </p>
+
+  <h2>RAG or a long context window?</h2>
+  <p>
+    Some models now accept hundreds of thousands of tokens, and you can paste a whole report in. For one long document that's often simpler than building a search index. For a library of thousands of files it's slow and costly, because you pay for every token on every question. Our <a href={`${base}guides/context-windows/`}>context windows guide</a> covers the trade-off, and the <a href={`${base}context-window/`}>context window table</a> lists what each model in our catalogue accepts.
+  </p>
+
+  <h2>How to check a RAG answer</h2>
+  <ul>
+    <li>Open the cited passage and read it. Does it say what the answer claims?</li>
+    <li>Ask something you know isn't in the documents. A well-built system should say it can't find it.</li>
+    <li>Rephrase the same question three ways. If the answers disagree, the search step is probably fragile.</li>
+  </ul>
+  <p class="note">
+    A cited passage is a lead, not proof. Models can quote a real passage and still draw the wrong conclusion from it.
+  </p>
+  <p>
+    There's a longer explainer from February on the blog: <a href={`${base}blog/what-is-rag/`}>What Is RAG?</a>
+  </p>
+</GuideArticle>

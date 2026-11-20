@@ -67,14 +67,14 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
         <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">2. Few-Shot Prompting</h2>
         <p class="text-(--color-text-secondary) leading-relaxed mb-4">
           Instead of explaining what you want, show the AI 2-3 examples. This is often more effective
-          than lengthy instructions — the AI pattern-matches from your examples.
+          than lengthy instructions, because the AI pattern-matches from your examples.
         </p>
 
         <div class="p-4 rounded-xl bg-(--color-bg-card) border border-(--color-border) mb-4">
           <p class="text-xs font-semibold text-(--color-accent) uppercase tracking-wider mb-3">Example: Generating Product Descriptions</p>
           <div class="text-sm text-(--color-text-secondary) space-y-3 font-mono">
             <p><strong>Input:</strong> Red wool scarf, 180cm, handmade in Scotland</p>
-            <p><strong>Output:</strong> Wrap yourself in warmth with this handcrafted Scottish wool scarf. At 180cm, it's generous enough to style multiple ways — whether draped casually or wound snugly against the Highland winds. The rich red hue adds a pop of colour to any winter outfit.</p>
+            <p><strong>Output:</strong> Wrap yourself in warmth with this handcrafted Scottish wool scarf. At 180cm, it's generous enough to style multiple ways, whether draped casually or wound snugly against the Highland winds. The rich red hue adds a pop of colour to any winter outfit.</p>
             <p class="border-t border-(--color-border) pt-3"><strong>Input:</strong> Blue ceramic mug, 350ml, dishwasher safe</p>
             <p><strong>Output:</strong> Start your morning right with this ocean-blue ceramic mug. Holding a generous 350ml, it's the perfect size for your favourite brew. Best of all? It's dishwasher safe, so you can spend less time washing up and more time enjoying your cuppa.</p>
             <p class="border-t border-(--color-border) pt-3"><strong>Input:</strong> Black leather wallet, RFID blocking, 12 card slots</p>
@@ -106,7 +106,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
         </div>
 
         <p class="text-(--color-text-secondary) leading-relaxed">
-          You can request JSON, CSV, Markdown tables, bullet lists, numbered steps — any structured format.
+          You can request JSON, CSV, Markdown tables, bullet lists, numbered steps or any other structured format.
           The more explicitly you define it, the more consistent the output.
         </p>
       </section>
@@ -134,7 +134,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
       <section>
         <h2 class="text-2xl font-bold text-(--color-text-primary) mb-4">5. Strategic Constraints</h2>
         <p class="text-(--color-text-secondary) leading-relaxed mb-4">
-          Constraints aren't limitations — they're creative tools. The right constraints force the AI to
+          Constraints can help. The right ones force the AI to
           produce exactly what you need.
         </p>
 
@@ -177,7 +177,7 @@ const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
         </div>
 
         <p class="text-(--color-text-secondary) leading-relaxed">
-          This flips the conversation — instead of you guessing what information to provide, the AI tells
+          This flips the conversation. Instead of you guessing what information to provide, the AI tells
           you what it needs. The result is usually much better than going straight to the question.
         </p>
       </section>

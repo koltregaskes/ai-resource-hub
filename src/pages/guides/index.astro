@@ -1,59 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { guides } from '../../data/guides';
 
 const rawBase = import.meta.env.BASE_URL;
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 
-const guides = [
-  {
-    slug: 'prompting-basics',
-    title: 'Prompting Basics: How to Talk to AI',
-    description: 'Learn the fundamentals of writing effective prompts. No technical background needed — just clear thinking and these simple techniques.',
-    category: 'Beginner',
-    readTime: '8 min read',
-    icon: '💬',
-  },
-  {
-    slug: 'choosing-an-ai-model',
-    title: 'How to Choose the Right AI Model',
-    description: 'ChatGPT, Claude, Gemini, Copilot — which one is right for you? A practical guide to picking the best AI for your needs and budget.',
-    category: 'Beginner',
-    readTime: '10 min read',
-    icon: '🎯',
-  },
-  {
-    slug: 'advanced-prompting',
-    title: 'Advanced Prompting Techniques',
-    description: 'Chain-of-thought, few-shot learning, role prompting, and more. Level up your AI interactions with these proven techniques.',
-    category: 'Intermediate',
-    readTime: '12 min read',
-    icon: '🧠',
-  },
-  {
-    slug: 'ai-for-writing',
-    title: 'Using AI for Writing & Content Creation',
-    description: 'From blog posts to emails to creative fiction — how to use AI as a writing partner without losing your voice.',
-    category: 'Practical',
-    readTime: '10 min read',
-    icon: '✍️',
-  },
-  {
-    slug: 'ai-for-research',
-    title: 'Using AI for Research & Analysis',
-    description: 'How to use AI to research topics, summarise documents, analyse data, and fact-check — plus pitfalls to avoid.',
-    category: 'Practical',
-    readTime: '10 min read',
-    icon: '🔍',
-  },
-  {
-    slug: 'understanding-ai-pricing',
-    title: 'Understanding AI Pricing: Tokens, Tiers & Value',
-    description: 'What are tokens? Why does AI cost money? Free vs paid tiers explained. How to estimate your costs and find the best value.',
-    category: 'Beginner',
-    readTime: '7 min read',
-    icon: '💰',
-  },
-];
+
 
 const categoryColours: Record<string, string> = {
   Beginner: 'bg-green-500/10 text-green-400',
