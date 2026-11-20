@@ -1,5 +1,5 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-19T22:58:33.023Z",
+  "generatedAt": "2026-11-20T00:00:31.439Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -20,7 +20,7 @@ export const modelReleaseDesk = {
       "providerColour": "#0a66ff",
       "releaseDate": "2026-11-09",
       "releaseDateLabel": "9 Nov 2026",
-      "ageDays": 10,
+      "ageDays": 11,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -108,7 +108,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-11-05",
       "releaseDateLabel": "5 Nov 2026",
-      "ageDays": 14,
+      "ageDays": 15,
       "status": "active",
       "fieldStates": {
         "released": "verified",
@@ -147,7 +147,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini Omni 1.2 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini Omni 1.2 Flash is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini Omni 1.2 Flash is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -197,6 +197,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
           "source": "Google",
@@ -229,8 +243,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-11-05-gemini-omni-1-2-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 6
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "muse-wonder",
@@ -241,7 +255,7 @@ export const modelReleaseDesk = {
       "providerColour": "#0a66ff",
       "releaseDate": "2026-10-12",
       "releaseDateLabel": "12 Oct 2026",
-      "ageDays": 38,
+      "ageDays": 39,
       "status": "preview",
       "fieldStates": {
         "released": "verified",
@@ -330,7 +344,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-08-27",
       "releaseDateLabel": "27 Aug 2026",
-      "ageDays": 84,
+      "ageDays": 85,
       "status": "preview",
       "fieldStates": {
         "released": "verified",
@@ -369,7 +383,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini Omni 1.1 Flash is a preview-stage release from Google. It is positioned as an API-available model rather than a local-only release. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini Omni 1.1 Flash is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini Omni 1.1 Flash is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Preview status means the launch narrative matters before long-run benchmark coverage is complete.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -420,6 +434,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
           "source": "Google",
@@ -452,8 +480,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-08-27-gemini-omni-1-1-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 6
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "claude-mythos-preview",
@@ -464,7 +492,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-04-07",
       "releaseDateLabel": "7 Apr 2026",
-      "ageDays": 226,
+      "ageDays": 227,
       "status": "preview",
       "fieldStates": {
         "context_window": "unverified",
@@ -605,7 +633,7 @@ export const modelReleaseDesk = {
       "providerColour": "#e040fb",
       "releaseDate": "2026-10-19",
       "releaseDateLabel": "19 Oct 2026",
-      "ageDays": 31,
+      "ageDays": 32,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -681,7 +709,7 @@ export const modelReleaseDesk = {
       "providerColour": "#0a66ff",
       "releaseDate": "2026-10-15",
       "releaseDateLabel": "15 Oct 2026",
-      "ageDays": 35,
+      "ageDays": 36,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -772,7 +800,7 @@ export const modelReleaseDesk = {
       "providerColour": "#76b900",
       "releaseDate": "2026-10-15",
       "releaseDateLabel": "15 Oct 2026",
-      "ageDays": 35,
+      "ageDays": 36,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -864,7 +892,7 @@ export const modelReleaseDesk = {
       "providerColour": "#0a66ff",
       "releaseDate": "2026-09-02",
       "releaseDateLabel": "2 Sept 2026",
-      "ageDays": 78,
+      "ageDays": 79,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -952,7 +980,7 @@ export const modelReleaseDesk = {
       "providerColour": "#76b900",
       "releaseDate": "2026-08-11",
       "releaseDateLabel": "11 Aug 2026",
-      "ageDays": 100,
+      "ageDays": 101,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -1044,7 +1072,7 @@ export const modelReleaseDesk = {
       "providerColour": "#0a66ff",
       "releaseDate": "2026-08-05",
       "releaseDateLabel": "5 Aug 2026",
-      "ageDays": 106,
+      "ageDays": 107,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -1132,7 +1160,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-07-24",
       "releaseDateLabel": "24 Jul 2026",
-      "ageDays": 118,
+      "ageDays": 119,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1271,7 +1299,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-07-24",
       "releaseDateLabel": "24 Jul 2026",
-      "ageDays": 118,
+      "ageDays": 119,
       "status": "active",
       "fieldStates": {
         "context_window": "unverified",
@@ -1410,7 +1438,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-07-21",
       "releaseDateLabel": "21 Jul 2026",
-      "ageDays": 121,
+      "ageDays": 122,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1443,7 +1471,7 @@ export const modelReleaseDesk = {
       "pricingSource": "Google AI (official)",
       "pricingUpdated": null,
       "summary": "Gemini 3.6 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Current tracked pricing: $1.50 in / $7.50 out per million tokens. Current generally available Gemini Flash model. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.6 Flash is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.6 Flash is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1493,6 +1521,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
           "source": "Google",
@@ -1525,8 +1567,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-07-21-gemini-3-6-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 6
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "gpt-5.6-sol",
@@ -1537,7 +1579,7 @@ export const modelReleaseDesk = {
       "providerColour": "#10a37f",
       "releaseDate": "2026-07-09",
       "releaseDateLabel": "9 Jul 2026",
-      "ageDays": 133,
+      "ageDays": 134,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1635,7 +1677,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-06-30",
       "releaseDateLabel": "30 Jun 2026",
-      "ageDays": 142,
+      "ageDays": 143,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1774,7 +1816,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-06-09",
       "releaseDateLabel": "9 Jun 2026",
-      "ageDays": 163,
+      "ageDays": 164,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1913,7 +1955,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-04-02",
       "releaseDateLabel": "2 Apr 2026",
-      "ageDays": 231,
+      "ageDays": 232,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1946,7 +1988,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemma 4 is a currently tracked release from Google. It belongs in the open-weight / local-model conversation. Tracked context window: 131.1K tokens. Open-weight Gemma 4 family anchor for local/open-source coverage. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemma 4 is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemma 4 is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -1999,6 +2041,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
           "source": "Google",
@@ -2031,8 +2087,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-04-02-gemma-4-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 6
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "qwen3.6-plus",
@@ -2043,7 +2099,7 @@ export const modelReleaseDesk = {
       "providerColour": "#ff6a00",
       "releaseDate": "2026-04-02",
       "releaseDateLabel": "2 Apr 2026",
-      "ageDays": 231,
+      "ageDays": 232,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -2110,7 +2166,7 @@ export const modelReleaseDesk = {
       "providerColour": "#1da1f2",
       "releaseDate": "2026-03-31",
       "releaseDateLabel": "31 Mar 2026",
-      "ageDays": 233,
+      "ageDays": 234,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -2177,7 +2233,7 @@ export const modelReleaseDesk = {
       "providerColour": "#f59e0b",
       "releaseDate": "2026-03-28",
       "releaseDateLabel": "28 Mar 2026",
-      "ageDays": 236,
+      "ageDays": 237,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -2244,7 +2300,7 @@ export const modelReleaseDesk = {
       "providerColour": "#e040fb",
       "releaseDate": "2026-03-18",
       "releaseDateLabel": "18 Mar 2026",
-      "ageDays": 246,
+      "ageDays": 247,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -2311,7 +2367,7 @@ export const modelReleaseDesk = {
       "providerColour": "#00b4d8",
       "releaseDate": "2026-03-15",
       "releaseDateLabel": "15 Mar 2026",
-      "ageDays": 249,
+      "ageDays": 250,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -2378,7 +2434,7 @@ export const modelReleaseDesk = {
       "providerColour": "#10a37f",
       "releaseDate": "2026-03-05",
       "releaseDateLabel": "5 Mar 2026",
-      "ageDays": 259,
+      "ageDays": 260,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -2476,7 +2532,7 @@ export const modelReleaseDesk = {
       "providerColour": "#4285f4",
       "releaseDate": "2026-02-19",
       "releaseDateLabel": "19 Feb 2026",
-      "ageDays": 273,
+      "ageDays": 274,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -2509,7 +2565,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 3.1 Pro is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Latest; ARC-AGI-2: 77.1%; >200K: $4/$18 Current Gemini 3.1 Pro preview line. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini 3.1 Pro is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.1 Pro is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2559,6 +2615,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
           "source": "Google",
@@ -2591,8 +2661,8 @@ export const modelReleaseDesk = {
       ],
       "draftPath": "editorial/release-drafts/2026-02-19-gemini-3-1-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 6
+      "storyCount": 6,
+      "sourceCount": 7
     },
     {
       "id": "claude-sonnet-4.6",
@@ -2603,7 +2673,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-02-17",
       "releaseDateLabel": "17 Feb 2026",
-      "ageDays": 275,
+      "ageDays": 276,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -2742,7 +2812,7 @@ export const modelReleaseDesk = {
       "providerColour": "#00b4d8",
       "releaseDate": "2026-02-12",
       "releaseDateLabel": "12 Feb 2026",
-      "ageDays": 280,
+      "ageDays": 281,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -2809,7 +2879,7 @@ export const modelReleaseDesk = {
       "providerColour": "#d97706",
       "releaseDate": "2026-02-05",
       "releaseDateLabel": "5 Feb 2026",
-      "ageDays": 287,
+      "ageDays": 288,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -2954,7 +3024,7 @@ export const modelReleaseDesk = {
     },
     {
       "id": "claude-fable-5.1",
-      "fileSlug": "2026-11-19-claude-fable-5-1-release-brief",
+      "fileSlug": "2026-11-20-claude-fable-5-1-release-brief",
       "modelName": "Claude Fable 5.1",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -3092,14 +3162,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-claude-fable-5-1-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-claude-fable-5-1-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 5,
       "sourceCount": 5
     },
     {
       "id": "claude-fable-5.2",
-      "fileSlug": "2026-11-19-claude-fable-5-2-release-brief",
+      "fileSlug": "2026-11-20-claude-fable-5-2-release-brief",
       "modelName": "Claude Fable 5.2",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -3237,14 +3307,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-claude-fable-5-2-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-claude-fable-5-2-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 5,
       "sourceCount": 5
     },
     {
       "id": "claude-haiku-5.5",
-      "fileSlug": "2026-11-19-claude-haiku-5-5-release-brief",
+      "fileSlug": "2026-11-20-claude-haiku-5-5-release-brief",
       "modelName": "Claude Haiku 5.5",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -3382,14 +3452,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-claude-haiku-5-5-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-claude-haiku-5-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 5,
       "sourceCount": 5
     },
     {
       "id": "claude-opus-5.5",
-      "fileSlug": "2026-11-19-claude-opus-5-5-release-brief",
+      "fileSlug": "2026-11-20-claude-opus-5-5-release-brief",
       "modelName": "Claude Opus 5.5",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -3527,14 +3597,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-claude-opus-5-5-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-claude-opus-5-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 5,
       "sourceCount": 5
     },
     {
       "id": "claude-sonnet-5.5",
-      "fileSlug": "2026-11-19-claude-sonnet-5-5-release-brief",
+      "fileSlug": "2026-11-20-claude-sonnet-5-5-release-brief",
       "modelName": "Claude Sonnet 5.5",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -3672,14 +3742,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-claude-sonnet-5-5-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-claude-sonnet-5-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 5,
       "sourceCount": 5
     },
     {
       "id": "deepseek-v4-flash-0731",
-      "fileSlug": "2026-11-19-deepseek-v4-flash-0731-release-brief",
+      "fileSlug": "2026-11-20-deepseek-v4-flash-0731-release-brief",
       "modelName": "DeepSeek V4 Flash 0731",
       "providerId": "deepseek",
       "providerName": "DeepSeek",
@@ -3745,14 +3815,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-19-deepseek-v4-flash-0731-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-deepseek-v4-flash-0731-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "deepseek-v4.1-flash",
-      "fileSlug": "2026-11-19-deepseek-v4-1-flash-release-brief",
+      "fileSlug": "2026-11-20-deepseek-v4-1-flash-release-brief",
       "modelName": "DeepSeek V4.1 Flash",
       "providerId": "deepseek",
       "providerName": "DeepSeek",
@@ -3818,14 +3888,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-19-deepseek-v4-1-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-deepseek-v4-1-flash-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "deepseek-v4.1-flash-1017",
-      "fileSlug": "2026-11-19-deepseek-v4-1-flash-1017-release-brief",
+      "fileSlug": "2026-11-20-deepseek-v4-1-flash-1017-release-brief",
       "modelName": "DeepSeek V4.1 Flash 1017",
       "providerId": "deepseek",
       "providerName": "DeepSeek",
@@ -3891,14 +3961,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-19-deepseek-v4-1-flash-1017-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-deepseek-v4-1-flash-1017-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "gemini-3.7-flash",
-      "fileSlug": "2026-11-19-gemini-3-7-flash-release-brief",
+      "fileSlug": "2026-11-20-gemini-3-7-flash-release-brief",
       "modelName": "Gemini 3.7 Flash",
       "providerId": "google",
       "providerName": "Google",
@@ -3944,7 +4014,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 3.7 Flash is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-3.7-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 3.7 Flash is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.7 Flash is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -3994,6 +4064,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
           "source": "Google",
@@ -4024,14 +4108,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gemini-3-7-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gemini-3-7-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 6,
+      "sourceCount": 6
     },
     {
       "id": "gemini-3.8-flash",
-      "fileSlug": "2026-11-19-gemini-3-8-flash-release-brief",
+      "fileSlug": "2026-11-20-gemini-3-8-flash-release-brief",
       "modelName": "Gemini 3.8 Flash",
       "providerId": "google",
       "providerName": "Google",
@@ -4077,7 +4161,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 3.8 Flash is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-3.8-flash); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 3.8 Flash is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 3.8 Flash is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4127,6 +4211,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
           "source": "Google",
@@ -4157,14 +4255,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gemini-3-8-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gemini-3-8-flash-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 6,
+      "sourceCount": 6
     },
     {
       "id": "gemini-4-carbon",
-      "fileSlug": "2026-11-19-gemini-4-carbon-release-brief",
+      "fileSlug": "2026-11-20-gemini-4-carbon-release-brief",
       "modelName": "Gemini 4 Carbon",
       "providerId": "google",
       "providerName": "Google",
@@ -4210,7 +4308,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 4 Carbon is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-4-carbon); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 4 Carbon is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 4 Carbon is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4260,6 +4358,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
           "source": "Google",
@@ -4290,14 +4402,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gemini-4-carbon-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gemini-4-carbon-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 6,
+      "sourceCount": 6
     },
     {
       "id": "gemini-4-hydrogen",
-      "fileSlug": "2026-11-19-gemini-4-hydrogen-release-brief",
+      "fileSlug": "2026-11-20-gemini-4-hydrogen-release-brief",
       "modelName": "Gemini 4 Hydrogen",
       "providerId": "google",
       "providerName": "Google",
@@ -4403,6 +4515,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
           "source": "Google",
@@ -4421,26 +4547,16 @@ export const modelReleaseDesk = {
           "routingTags": [
             "model_release"
           ]
-        },
-        {
-          "title": "Google Cloud launches Gemini for healthcare.",
-          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
-          "source": "Google",
-          "date": "2026-11-10",
-          "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
-          "routingTags": [
-            "model_release"
-          ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gemini-4-hydrogen-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gemini-4-hydrogen-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 6,
       "sourceCount": 6
     },
     {
       "id": "gemini-4-neon",
-      "fileSlug": "2026-11-19-gemini-4-neon-release-brief",
+      "fileSlug": "2026-11-20-gemini-4-neon-release-brief",
       "modelName": "Gemini 4 Neon",
       "providerId": "google",
       "providerName": "Google",
@@ -4486,7 +4602,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Gemini 4 Neon is a currently tracked release from Google. Auto-tracked from OpenRouter discovery (google/gemini-4-neon); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Google's Gemini 4 Neon is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "Google's Gemini 4 Neon is on the release desk with 6 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4536,6 +4652,20 @@ export const modelReleaseDesk = {
           ]
         },
         {
+          "title": "The nation’s largest school districts consider ditching Google Search",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+          "source": "The Verge",
+          "date": "2026-11-18",
+          "summary": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Searc…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "model_release"
+          ]
+        },
+        {
           "title": "The Gemini app is now available on lower-memory Android devices.",
           "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
           "source": "Google",
@@ -4566,14 +4696,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gemini-4-neon-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gemini-4-neon-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 6,
+      "sourceCount": 6
     },
     {
       "id": "glm-5.3",
-      "fileSlug": "2026-11-19-glm-5-3-release-brief",
+      "fileSlug": "2026-11-20-glm-5-3-release-brief",
       "modelName": "GLM 5.3",
       "providerId": "zhipu",
       "providerName": "Zhipu AI",
@@ -4639,14 +4769,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-19-glm-5-3-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-glm-5-3-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "glm-5.3-flash",
-      "fileSlug": "2026-11-19-glm-5-3-flash-release-brief",
+      "fileSlug": "2026-11-20-glm-5-3-flash-release-brief",
       "modelName": "GLM 5.3 Flash",
       "providerId": "zhipu",
       "providerName": "Zhipu AI",
@@ -4712,14 +4842,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-19-glm-5-3-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-glm-5-3-flash-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "glm-5.3-prime",
-      "fileSlug": "2026-11-19-glm-5-3-prime-release-brief",
+      "fileSlug": "2026-11-20-glm-5-3-prime-release-brief",
       "modelName": "GLM 5.3 Prime",
       "providerId": "zhipu",
       "providerName": "Zhipu AI",
@@ -4785,14 +4915,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-19-glm-5-3-prime-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-glm-5-3-prime-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "gpt-6-astra",
-      "fileSlug": "2026-11-19-gpt-6-astra-release-brief",
+      "fileSlug": "2026-11-20-gpt-6-astra-release-brief",
       "modelName": "GPT-6 Astra",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4899,14 +5029,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-astra-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gpt-6-astra-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gpt-6-astra-pro",
-      "fileSlug": "2026-11-19-gpt-6-astra-pro-release-brief",
+      "fileSlug": "2026-11-20-gpt-6-astra-pro-release-brief",
       "modelName": "GPT-6 Astra Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5003,14 +5133,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-astra-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gpt-6-astra-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6-luna",
-      "fileSlug": "2026-11-19-gpt-6-luna-release-brief",
+      "fileSlug": "2026-11-20-gpt-6-luna-release-brief",
       "modelName": "GPT-6 Luna",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5107,14 +5237,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-luna-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gpt-6-luna-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6-luna-pro",
-      "fileSlug": "2026-11-19-gpt-6-luna-pro-release-brief",
+      "fileSlug": "2026-11-20-gpt-6-luna-pro-release-brief",
       "modelName": "GPT-6 Luna Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5211,14 +5341,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-luna-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gpt-6-luna-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6-sol",
-      "fileSlug": "2026-11-19-gpt-6-sol-release-brief",
+      "fileSlug": "2026-11-20-gpt-6-sol-release-brief",
       "modelName": "GPT-6 Sol",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5315,14 +5445,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-sol-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gpt-6-sol-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6-sol-pro",
-      "fileSlug": "2026-11-19-gpt-6-sol-pro-release-brief",
+      "fileSlug": "2026-11-20-gpt-6-sol-pro-release-brief",
       "modelName": "GPT-6 Sol Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5419,14 +5549,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-sol-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gpt-6-sol-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.1-sol",
-      "fileSlug": "2026-11-19-gpt-6-1-sol-release-brief",
+      "fileSlug": "2026-11-20-gpt-6-1-sol-release-brief",
       "modelName": "GPT-6.1 Sol",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5523,14 +5653,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-1-sol-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gpt-6-1-sol-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.1-sol-pro",
-      "fileSlug": "2026-11-19-gpt-6-1-sol-pro-release-brief",
+      "fileSlug": "2026-11-20-gpt-6-1-sol-pro-release-brief",
       "modelName": "GPT-6.1 Sol Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5627,14 +5757,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-1-sol-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gpt-6-1-sol-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.1-terra",
-      "fileSlug": "2026-11-19-gpt-6-1-terra-release-brief",
+      "fileSlug": "2026-11-20-gpt-6-1-terra-release-brief",
       "modelName": "GPT-6.1 Terra",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5731,14 +5861,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-1-terra-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gpt-6-1-terra-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.1-terra-pro",
-      "fileSlug": "2026-11-19-gpt-6-1-terra-pro-release-brief",
+      "fileSlug": "2026-11-20-gpt-6-1-terra-pro-release-brief",
       "modelName": "GPT-6.1 Terra Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5835,14 +5965,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-1-terra-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gpt-6-1-terra-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.2-astra",
-      "fileSlug": "2026-11-19-gpt-6-2-astra-release-brief",
+      "fileSlug": "2026-11-20-gpt-6-2-astra-release-brief",
       "modelName": "GPT-6.2 Astra",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5950,14 +6080,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-2-astra-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gpt-6-2-astra-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gpt-6.2-astra-pro",
-      "fileSlug": "2026-11-19-gpt-6-2-astra-pro-release-brief",
+      "fileSlug": "2026-11-20-gpt-6-2-astra-pro-release-brief",
       "modelName": "GPT-6.2 Astra Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -6054,14 +6184,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-2-astra-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gpt-6-2-astra-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.2-sol",
-      "fileSlug": "2026-11-19-gpt-6-2-sol-release-brief",
+      "fileSlug": "2026-11-20-gpt-6-2-sol-release-brief",
       "modelName": "GPT-6.2 Sol",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -6158,14 +6288,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-2-sol-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gpt-6-2-sol-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.2-sol-pro",
-      "fileSlug": "2026-11-19-gpt-6-2-sol-pro-release-brief",
+      "fileSlug": "2026-11-20-gpt-6-2-sol-pro-release-brief",
       "modelName": "GPT-6.2 Sol Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -6262,14 +6392,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-gpt-6-2-sol-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-gpt-6-2-sol-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "grok-4.6",
-      "fileSlug": "2026-11-19-grok-4-6-release-brief",
+      "fileSlug": "2026-11-20-grok-4-6-release-brief",
       "modelName": "Grok 4.6",
       "providerId": "xai",
       "providerName": "xAI",
@@ -6335,14 +6465,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-19-grok-4-6-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-grok-4-6-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "grok-4.7",
-      "fileSlug": "2026-11-19-grok-4-7-release-brief",
+      "fileSlug": "2026-11-20-grok-4-7-release-brief",
       "modelName": "Grok 4.7",
       "providerId": "xai",
       "providerName": "xAI",
@@ -6408,14 +6538,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-19-grok-4-7-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-grok-4-7-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "kimi-k3.1-pro",
-      "fileSlug": "2026-11-19-kimi-k3-1-pro-release-brief",
+      "fileSlug": "2026-11-20-kimi-k3-1-pro-release-brief",
       "modelName": "Kimi K3.1 Pro",
       "providerId": "moonshot",
       "providerName": "Moonshot AI",
@@ -6481,14 +6611,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-19-kimi-k3-1-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-kimi-k3-1-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "muse-glimmer-30b",
-      "fileSlug": "2026-11-19-muse-glimmer-30b-release-brief",
+      "fileSlug": "2026-11-20-muse-glimmer-30b-release-brief",
       "modelName": "Muse Glimmer 30B",
       "providerId": "meta",
       "providerName": "Meta",
@@ -6569,14 +6699,14 @@ export const modelReleaseDesk = {
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-19-muse-glimmer-30b-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-muse-glimmer-30b-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 1,
       "sourceCount": 1
     },
     {
       "id": "qwen3.8-27b",
-      "fileSlug": "2026-11-19-qwen3-8-27b-release-brief",
+      "fileSlug": "2026-11-20-qwen3-8-27b-release-brief",
       "modelName": "Qwen3.8 27B",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -6642,14 +6772,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-19-qwen3-8-27b-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-qwen3-8-27b-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "qwen3.8-max-0902",
-      "fileSlug": "2026-11-19-qwen3-8-max-0902-release-brief",
+      "fileSlug": "2026-11-20-qwen3-8-max-0902-release-brief",
       "modelName": "Qwen3.8 Max (0902)",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -6715,14 +6845,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-19-qwen3-8-max-0902-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-qwen3-8-max-0902-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "qwen3.8-max-prime",
-      "fileSlug": "2026-11-19-qwen3-8-max-prime-release-brief",
+      "fileSlug": "2026-11-20-qwen3-8-max-prime-release-brief",
       "modelName": "Qwen3.8 Max Prime",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -6788,14 +6918,14 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-19-qwen3-8-max-prime-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-qwen3-8-max-prime-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "qwen4-max",
-      "fileSlug": "2026-11-19-qwen4-max-release-brief",
+      "fileSlug": "2026-11-20-qwen4-max-release-brief",
       "modelName": "Qwen4 Max",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -6861,7 +6991,7 @@ export const modelReleaseDesk = {
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-19-qwen4-max-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-20-qwen4-max-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
