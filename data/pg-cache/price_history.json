@@ -354266,6 +354266,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 411,
+    "model_id": "gpt-oss-20b",
+    "input_price": 0.017,
+    "output_price": 0.085,
+    "recorded_at": "2026-11-20 20:07:33",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "gpt-oss-20b",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 3770,
     "model_id": "gpt-oss-safeguard-20b",
     "input_price": 0.075,
