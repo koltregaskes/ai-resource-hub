@@ -116228,9 +116228,9 @@
   {
     "id": 319,
     "model_id": "deepseek-v4.1-flash",
-    "input_price": 0.051,
-    "output_price": 0.203,
-    "recorded_at": "2026-11-20 13:58:01",
+    "input_price": 0.3,
+    "output_price": 1.2,
+    "recorded_at": "2026-11-20 14:58:14",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4.1 Flash",
     "provider_name": "DeepSeek",
@@ -654049,11 +654049,11 @@
     "provider_colour": "#ff6a00"
   },
   {
-    "id": 365,
+    "id": 366,
     "model_id": "qwen3.5-27b",
-    "input_price": 0.26,
-    "output_price": 2.6,
-    "recorded_at": "2026-11-20 00:59:44",
+    "input_price": 0.195,
+    "output_price": 1.56,
+    "recorded_at": "2026-11-20 14:58:14",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3.5-27B",
     "provider_name": "Alibaba",
