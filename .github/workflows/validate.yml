@@ -10,6 +10,19 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
+  routed-feed-regressions:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - run: mkdir -p .review
+      - name: Test fake feeds and local Git races without network or dependencies
+        run: node --test tests/refresh-routed-feed.test.mjs tests/routed-feed-freshness.test.mjs tests/routed-news.test.mjs scripts/push-generated-data.test.mjs
+
   build:
     runs-on: ubuntu-latest
     steps:

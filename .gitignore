@@ -62,6 +62,8 @@ tools/esbuild/
 # Internal editorial release drafts (manager-only WIP)
 editorial/release-drafts/
 
+# Sparse checkout used by the routed news refresh
+.news-pipeline/
 workers/newsletter/node_modules/
 workers/newsletter/dist/
 workers/newsletter/.wrangler/

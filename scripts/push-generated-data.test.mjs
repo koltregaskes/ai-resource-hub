@@ -1,13 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync, writeFileSync, readFileSync } from 'node:fs';
-import { tmpdir } from 'node:os';
+import { chmodSync, mkdirSync, mkdtempSync, writeFileSync, readFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { execFileSync, spawnSync } from 'node:child_process';
 
 const script = resolve('scripts/push-generated-data.sh');
+mkdirSync(resolve('.review'), { recursive: true });
 function fixture() {
-  const root = mkdtempSync(join(tmpdir(), 'data-push-'));
+  const root = mkdtempSync(resolve('.review', 'data-push-'));
   const remote = join(root, 'remote.git');
   const writer = join(root, 'writer');
   const peer = join(root, 'peer');
@@ -21,7 +21,8 @@ function fixture() {
   git(writer, 'push', 'origin', 'HEAD:main');
   git(root, 'clone', remote, peer);
   identity(peer);
-  const run = () => spawnSync('bash', [script], { cwd: writer, encoding: 'utf8', timeout: 20000 });
+  const bash = process.platform === 'win32' ? 'C:/Program Files/Git/bin/bash.exe' : 'bash';
+  const run = () => spawnSync(bash, [script], { cwd: writer, encoding: 'utf8', timeout: 20000 });
   return { root, remote, writer, peer, git, commit, run };
 }
 test('rebases generated data over an unrelated concurrent merge and preserves both', () => {
@@ -68,4 +69,24 @@ test('a persistent push rejection fails after three attempts', () => {
   assert.notEqual(result.status, 0);
   assert.match(result.stderr, /three attempts/);
   assert.equal((result.stderr.match(/does not appear to be a git repository/g) || []).length, 3);
+});
+
+test('a peer push between fetch and push is replayed once and keeps both commits', () => {
+  const f = fixture();
+  f.commit(f.writer, 'data.json', 'generated\n');
+  f.commit(f.peer, 'reviewed.txt', 'concurrent review\n');
+  const marker = join(f.root, 'peer-pushed');
+  const quote = value => "'" + value.replaceAll("'", "'\\''") + "'";
+  writeFileSync(join(f.writer, '.git', 'hooks', 'pre-push'),
+    `#!/usr/bin/env bash\nif [ ! -f ${quote(marker)} ]; then\n  git -C ${quote(f.peer)} push origin HEAD:main || exit 1\n  touch ${quote(marker)}\nfi\n`);
+  chmodSync(join(f.writer, '.git', 'hooks', 'pre-push'), 0o755);
+  f.git(f.writer, 'config', 'core.hooksPath', join(f.writer, '.git', 'hooks'));
+  const result = f.run();
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(result.stderr, /rejected/);
+  assert.equal(f.git(f.root, '--git-dir=' + f.remote, 'show', 'main:data.json'), 'generated');
+  assert.equal(f.git(f.root, '--git-dir=' + f.remote, 'show', 'main:reviewed.txt'), 'concurrent review');
+  const after = f.git(f.writer, 'rev-parse', 'HEAD');
+  assert.equal(f.run().status, 0);
+  assert.equal(f.git(f.writer, 'rev-parse', 'HEAD'), after);
 });
