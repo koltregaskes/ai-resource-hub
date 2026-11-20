@@ -1,6 +1,6 @@
 # Provider Coverage Snapshot
 
-Generated: 20 Nov 2026, 01:58 UTC
+Generated: 20 Nov 2026, 02:57 UTC
 
 This table shows how much of each provider's public model surface is currently represented in the site cache.
 
@@ -10,7 +10,7 @@ This table shows how much of each provider's public model surface is currently r
 | Google | 14 | 6 | 1 | Gemini Omni 1.2 Flash (5 Nov 2026) | [status](https://status.cloud.google.com) | [docs](https://ai.google.dev/gemini-api/docs/models) |
 | Anthropic | 12 | 7 | 1 | Claude Opus 5 (24 Jul 2026) | [status](https://status.claude.com) | [docs](https://docs.anthropic.com) |
 | Meta | 6 | 1 | 1 | Muse Ember (9 Nov 2026) | n/a | [docs](https://llama.meta.com/docs) |
-| Mistral | 4 | 5 | 0 | n/a | [status](https://status.mistral.ai) | [docs](https://docs.mistral.ai) |
+| Mistral | 4 | 5 | 0 | Pixtral Large 2502 (Unknown) | [status](https://status.mistral.ai) | [docs](https://docs.mistral.ai) |
 | Amazon | 4 | 2 | 0 | n/a | [status](https://health.aws.amazon.com) | [docs](https://docs.aws.amazon.com/bedrock) |
 | Cohere | 4 | 1 | 0 | n/a | [status](https://status.cohere.com) | [docs](https://docs.cohere.com) |
 | Black Forest Labs | 4 | 0 | 0 | n/a | n/a | n/a |

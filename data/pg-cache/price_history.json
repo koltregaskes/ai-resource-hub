@@ -116226,11 +116226,11 @@
     "provider_colour": "#2563eb"
   },
   {
-    "id": 318,
+    "id": 319,
     "model_id": "deepseek-v4.1-flash",
-    "input_price": 0.3,
-    "output_price": 1.2,
-    "recorded_at": "2026-11-20 00:59:44",
+    "input_price": 0.051,
+    "output_price": 0.567,
+    "recorded_at": "2026-11-20 02:57:22",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4.1 Flash",
     "provider_name": "DeepSeek",
@@ -116578,11 +116578,11 @@
     "provider_colour": "#2563eb"
   },
   {
-    "id": 305,
+    "id": 306,
     "model_id": "deepseek-v4.1-flash-1017",
-    "input_price": 0.036,
-    "output_price": 0.5,
-    "recorded_at": "2026-11-20 00:00:03",
+    "input_price": 0.3,
+    "output_price": 1.2,
+    "recorded_at": "2026-11-20 02:57:22",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4.1 Flash 1017",
     "provider_name": "DeepSeek",
@@ -579630,6 +579630,17 @@
     "recorded_at": "2026-11-18 08:58:02",
     "source": "mistral.ai/pricing",
     "model_name": "Pixtral Large",
+    "provider_name": "Mistral",
+    "provider_colour": "#111827"
+  },
+  {
+    "id": 293,
+    "model_id": "pixtral-large-2502",
+    "input_price": 2,
+    "output_price": 6,
+    "recorded_at": "2026-11-20 02:57:22",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Pixtral Large 2502",
     "provider_name": "Mistral",
     "provider_colour": "#111827"
   },
