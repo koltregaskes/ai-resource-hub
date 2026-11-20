@@ -115467,6 +115467,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 196,
+    "model_id": "deepseek-v4-pro-0813",
+    "input_price": 0.27,
+    "output_price": 11.5,
+    "recorded_at": "2026-11-20 00:59:44",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V4 Pro 0813",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 350,
     "model_id": "deepseek-v4.1-flash",
     "input_price": 0.15,
@@ -116217,9 +116228,9 @@
   {
     "id": 318,
     "model_id": "deepseek-v4.1-flash",
-    "input_price": 0.051,
-    "output_price": 0.567,
-    "recorded_at": "2026-11-20 00:00:03",
+    "input_price": 0.3,
+    "output_price": 1.2,
+    "recorded_at": "2026-11-20 00:59:44",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4.1 Flash",
     "provider_name": "DeepSeek",
@@ -351923,6 +351934,17 @@
     "provider_colour": "#10a37f"
   },
   {
+    "id": 409,
+    "model_id": "gpt-oss-120b",
+    "input_price": 0.09,
+    "output_price": 0.36,
+    "recorded_at": "2026-11-20 00:59:44",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "gpt-oss-120b",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
     "id": 3816,
     "model_id": "gpt-oss-20b",
     "input_price": 0.03,
@@ -410965,6 +410987,17 @@
     "input_price": 0.65,
     "output_price": 3.5,
     "recorded_at": "2026-11-19 13:58:15",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Kimi K2.7 Code",
+    "provider_name": "Moonshot AI",
+    "provider_colour": "#f59e0b"
+  },
+  {
+    "id": 340,
+    "model_id": "kimi-k2.7-code",
+    "input_price": 0.6,
+    "output_price": 3,
+    "recorded_at": "2026-11-20 00:59:44",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Kimi K2.7 Code",
     "provider_name": "Moonshot AI",
@@ -653966,6 +653999,17 @@
     "input_price": 0.195,
     "output_price": 1.56,
     "recorded_at": "2026-11-19 00:58:51",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.5-27B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 365,
+    "model_id": "qwen3.5-27b",
+    "input_price": 0.26,
+    "output_price": 2.6,
+    "recorded_at": "2026-11-20 00:59:44",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3.5-27B",
     "provider_name": "Alibaba",
