@@ -1,0 +1,11 @@
+{
+  "git_commit": "fa31ff51cfb29b09d80f14a464d17608bcf7caad",
+  "task_set_version": "daily-use-v1",
+  "sha256": {
+    "public-tasks.json": "9e8766fb4ff73f525c3a98239264b516012c7c3cb5c6e18ce29a9da4dfae2c0b",
+    "report.md": "6191e0ca2b744769d7394340bea10690ae87cad1a8e4be15c03260a76498e75d",
+    "results.json": "87604666228f79f16349085cd1319c24b7589c6f5f4e4f7e6011c5bee82b57be",
+    "harness.py": "0503b764df75290e284587de3ae0a7e157ec24795d0ecac9da86f888d2cb98e1",
+    "fixtures.json": "d36c4c470638195d1ab81592ae68bbfe2f0a116bb9d6114e72f4df42e6520b15"
+  }
+}
