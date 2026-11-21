@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T02:57:38.806Z",
+  "generatedAt": "2026-11-21T03:57:44.733Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-21T02:57:38.802Z",
+      "lastCheckedAt": "2026-11-21T03:57:44.728Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-21T02:29:34.000Z",
+          "id": "fireworks-feed-0-2026-11-21T03:00:28.000Z",
+          "title": "Service Degradation for Kimi K3.1 Pro",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-21T03:00:28.000Z",
+          "updatedAt": "2026-11-21T03:00:28.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M7Y0FJY2TYCFNK9QPCCBSSP2",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-21T02:29:34.000Z",
           "title": "Service Degradation for Qwen 3.8 Max",
           "status": "reported",
           "impact": "unknown",
@@ -29,22 +40,22 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M7XX1N1YYAE08SRM0K22GSG3",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-11-20T23:06:00.000Z",
-          "title": "Service Degradation for GLM 5.3 Fast",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-20T23:06:00.000Z",
-          "updatedAt": "2026-11-20T23:06:00.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M7XK4TWY6EG3FJ31Q1GP8HZD",
-          "summary": "Status: Resolved Performance for GLM 5.3 Fast has recovered and is now operating normally. Affected components GLM 5.3 Fast (Operational)"
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-21T02:29:34.000Z",
+          "id": "fireworks-feed-0-2026-11-21T03:00:28.000Z",
+          "title": "Service Degradation for Kimi K3.1 Pro",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-21T03:00:28.000Z",
+          "updatedAt": "2026-11-21T03:00:28.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M7Y0FJY2TYCFNK9QPCCBSSP2",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-21T02:29:34.000Z",
           "title": "Service Degradation for Qwen 3.8 Max",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-11-20T23:06:00.000Z",
+          "id": "fireworks-feed-2-2026-11-20T23:06:00.000Z",
           "title": "Service Degradation for GLM 5.3 Fast",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved Performance for GLM 5.3 Fast has recovered and is now operating normally. Affected components GLM 5.3 Fast (Operational)"
         },
         {
-          "id": "fireworks-feed-2-2026-11-20T19:56:40.000Z",
+          "id": "fireworks-feed-3-2026-11-20T19:56:40.000Z",
           "title": "Service Degradation for Kimi K3.1 Pro",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-11-20T19:56:40.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M7X5PJYCPVF5QHBZP544HJ8N",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-11-19T18:33:52.000Z",
-          "title": "Service Degradation for GLM 5.3 Flash",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-19T18:33:52.000Z",
-          "updatedAt": "2026-11-19T18:33:52.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M7TH7VVDARV9TY1TFSC4DC9W",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-21T02:57:37.437Z",
+      "lastCheckedAt": "2026-11-21T03:57:43.582Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 10 tracked components.",
@@ -190,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-21T02:57:38.377Z",
+      "lastCheckedAt": "2026-11-21T03:57:44.217Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-21T02:57:37.905Z",
+      "lastCheckedAt": "2026-11-21T03:57:43.651Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -253,7 +253,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-21T02:57:37.540Z",
+      "lastCheckedAt": "2026-11-21T03:57:43.551Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -339,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-21T02:57:38.643Z",
+      "lastCheckedAt": "2026-11-21T03:57:44.363Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
