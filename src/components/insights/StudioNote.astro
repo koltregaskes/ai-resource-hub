@@ -1,0 +1,11 @@
+---
+import DataNote from './DataNote.astro';
+import type { StudioArticle } from '../../data/studio/types';
+interface Props { article: StudioArticle; snapshot: string; }
+const { article, snapshot } = Astro.props;
+---
+<DataNote anchor={article.id} snapshot={snapshot} title="Sources, sums and limits">
+  <p><strong>What went in.</strong> {article.assumptions}</p>
+  <p><strong>What this cannot tell you.</strong> {article.limits}</p>
+  <ul>{article.sources.map((s) => <li><a href={s.url} rel="noopener">{s.title}</a> (read {s.checked}): {s.claim}</li>)}</ul>
+</DataNote>
