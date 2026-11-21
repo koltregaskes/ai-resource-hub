@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "date": "2026-11-20",
+  "snapshotAt": "2026-11-21T06:58:23.422Z",
+  "totalAvailable": 15,
+  "stories": [
+    {
+      "id": "news-99727b65c29013d05b70",
+      "title": "Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced.",
+      "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+      "source": "Ars Technica",
+      "summary": "Test using prompts with unique, trackable secrets proves that data doesn't stay private.",
+      "publishedAt": "2026-11-20T20:59:08.000Z",
+      "category": "research",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-340614cb1d4599fcf910",
+      "title": "Daniel Ek backs AI researcher&#8217;s fusion power startup. Here&#8217;s what they&#8217;re building.",
+      "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
+      "source": "TechCrunch",
+      "summary": "Spotify founder Daniel Ek is backing Europa Fusion, a fusion power startup founded by an AI researcher. Here's what the startup is building.",
+      "publishedAt": "2026-11-20T19:53:41.000Z",
+      "category": "research",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-d6bff5841b5a64e74379",
+      "title": "AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too",
+      "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
+      "source": "TechCrunch",
+      "summary": "Mathematicians are having their minds blown by the latest AI-driven result — and there's a competing human solution, too.",
+      "publishedAt": "2026-11-20T19:32:08.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-3a0cb236fd3220dadae4",
+      "title": "Trump threatens ‘tremendous tax’ for moving AI data centers outside the US",
+      "url": "https://www.theverge.com/policy/1038892/trump-foreign-data-centers-tax",
+      "source": "The Verge",
+      "summary": "President Donald Trump promised to put a \"tremendous tax\" on companies that build data centers outside of the US, even as states and cities around the country are placing restrictions on new applications to build them. \"We're not going to allow our companies to build data centers outside of our country,\" Trump said at…",
+      "publishedAt": "2026-11-20T18:50:19.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-079373956374b3c38a44",
+      "title": "Chips can survive the space environment — can their financing?",
+      "url": "https://techcrunch.com/2026/11/20/chips-can-survive-the-space-environment-can-their-financing/",
+      "source": "TechCrunch",
+      "summary": "Lenders don't want SpaceX shooting their collateral into orbit. What does that mean for space data centers writ large?",
+      "publishedAt": "2026-11-20T17:40:01.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-859ee3ec8c206bcf248f",
+      "title": "Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+      "source": "The Verge",
+      "summary": "Anthropic mathematician Levent Alp&#246;ge claims he has proved the Riemann hypothesis, one of mathematics's most notoriously difficult problems, with the help of Claude, cracking a puzzle that has eluded some of the world's best mathematicians for decades. If verified, it would mark yet another seismic achievement fo…",
+      "publishedAt": "2026-11-20T16:34:13.000Z",
+      "category": "models",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-92c1cc867c014247330c",
+      "title": "The fallout from Nvidia’s Jensen Huang scandal continues",
+      "url": "https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/",
+      "source": "TechCrunch",
+      "summary": "In the midst of dealing with the fallout from its ouster of CEO Jensen Huang, Nvidia delivered its latest earnings report this week, with healthy growth and promises that the good times will continue. At the same time, the chipmaker said it will stop selling its H200 chips in China, and it dismissed calls to [&#8230;]",
+      "publishedAt": "2026-11-20T14:55:44.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-299291fdd5181a565cde",
+      "title": "The week everything fell apart",
+      "url": "https://www.theverge.com/podcast/1038419/outage-outlook-ground-stop-tech-failure-vergecast",
+      "source": "The Verge",
+      "summary": "There was a dayslong Outlook outage. A nationwide ground stop for only the second time in 25 years. Banks seemed to suddenly stop working. Even iCloud couldn't stay up and running. This week, it felt like the technological world simply collapsed. And it felt like this might be the beginning of something even bigger. O…",
+      "publishedAt": "2026-11-20T14:06:59.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-7d8981ef547621735a99",
+      "title": "Six AI-powered gadgets that could make your home office smarter",
+      "url": "https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/",
+      "source": "TechCrunch",
+      "summary": "From notetakers to webcams, here are six AI-powered gadgets to upgrade your workspace.",
+      "publishedAt": "2026-11-20T14:00:00.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-779ccf54081cfd883b8c",
+      "title": "Signal is blocking Gemini and Siri AI from reading your screen",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
+      "source": "The Verge",
+      "summary": "Signal is restricting the ability to take screenshots on Android and iOS devices in an effort to prevent AI agents from reading users' messages and other data. The agentic AI capabilities built into operating systems that analyze on-screen information to learn more about the user are \"undermining Signal's ability to i…",
+      "publishedAt": "2026-11-20T12:30:47.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-3ea993db7e3c60d1925e",
+      "title": "Combatting adversarial distillation",
+      "url": "https://openai.com/index/combatting-adversarial-distillation",
+      "source": "OpenAI",
+      "summary": "OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction.",
+      "publishedAt": "2026-11-20T10:00:00.000Z",
+      "category": "models",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-8f4728ffc5b95bfc4916",
+      "title": "Apple may be developing its own AI agent that runs your Mac",
+      "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+      "source": "TechCrunch",
+      "summary": "The iPhone maker appears to be building agents that can compete with the likes of Meta Muse, Instinct, Claude, and OpenAI Dots.",
+      "publishedAt": "2026-11-20T00:56:01.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-f1dd0bea0b97e4abfbaa",
+      "title": "Anthropic&#8217;s 7 founders cashed out nearly $2B in record-breaking IPO",
+      "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+      "source": "TechCrunch",
+      "summary": "At the upgraded $83/share IPO price, Anthropic's seven founders each pocketed $280 million, while the company nabbed nearly $105 billion.",
+      "publishedAt": "2026-11-20T00:43:50.000Z",
+      "category": "industry",
+      "tags": [
+        "pricing_change"
+      ],
+      "importance": 0.4
+    },
+    {
+      "id": "news-f4784c30400364a22881",
+      "title": "Can AI help scientists identify promising drug candidates?",
+      "url": "https://openai.com/index/introducing-medchembench",
+      "source": "OpenAI",
+      "summary": "MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery.",
+      "publishedAt": "2026-11-20T00:00:00.000Z",
+      "category": "models",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-d15c45643214b444b1cb",
+      "title": "Hebbia sees improvements in financial research with GPT-6 Astra",
+      "url": "https://openai.com/business/customer-stories/hebbia",
+      "source": "OpenAI",
+      "summary": "Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality.",
+      "publishedAt": "2026-11-20T00:00:00.000Z",
+      "category": "models",
+      "tags": [],
+      "importance": 0.4
+    }
+  ]
+}
