@@ -116259,6 +116259,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 319,
+    "model_id": "deepseek-v4.1-flash",
+    "input_price": 0.051,
+    "output_price": 0.203,
+    "recorded_at": "2026-11-21 00:58:57",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V4.1 Flash",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 346,
     "model_id": "deepseek-v4.1-flash-1017",
     "input_price": 0.15,
@@ -116605,6 +116616,17 @@
     "input_price": 0.036,
     "output_price": 0.5,
     "recorded_at": "2026-11-20 19:58:53",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V4.1 Flash 1017",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
+    "id": 306,
+    "model_id": "deepseek-v4.1-flash-1017",
+    "input_price": 0.15,
+    "output_price": 0.6,
+    "recorded_at": "2026-11-21 00:58:57",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4.1 Flash 1017",
     "provider_name": "DeepSeek",
@@ -194386,6 +194408,17 @@
     "input_price": 0.04,
     "output_price": 0.05,
     "recorded_at": "2026-11-20 23:58:10",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemma 3 4B",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
+    "id": 421,
+    "model_id": "gemma-3-4b-it",
+    "input_price": 0.05,
+    "output_price": 0.1,
+    "recorded_at": "2026-11-21 00:58:57",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Gemma 3 4B",
     "provider_name": "Google",
@@ -459569,6 +459602,17 @@
     "provider_colour": "#e040fb"
   },
   {
+    "id": 372,
+    "model_id": "minimax-m2.5",
+    "input_price": 0.27,
+    "output_price": 0.95,
+    "recorded_at": "2026-11-21 00:58:57",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "MiniMax M2.5",
+    "provider_name": "MiniMax",
+    "provider_colour": "#e040fb"
+  },
+  {
     "id": 3708,
     "model_id": "minimax-m2.7",
     "input_price": 0.3,
@@ -521229,6 +521273,17 @@
     "input_price": 0.15,
     "output_price": 0.5,
     "recorded_at": "2026-11-18 08:58:04",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Nemotron 3.5 Super VL",
+    "provider_name": "NVIDIA",
+    "provider_colour": "#76b900"
+  },
+  {
+    "id": 182,
+    "model_id": "nemotron-3.5-super-vl",
+    "input_price": 0.15,
+    "output_price": 0.47,
+    "recorded_at": "2026-11-21 00:58:57",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Nemotron 3.5 Super VL",
     "provider_name": "NVIDIA",
@@ -619481,6 +619536,17 @@
     "input_price": 0.15,
     "output_price": 0.6,
     "recorded_at": "2026-11-18 08:58:04",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3 Coder 30B A3B Instruct",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 413,
+    "model_id": "qwen3-coder-30b-a3b-instruct",
+    "input_price": 0.07,
+    "output_price": 0.28,
+    "recorded_at": "2026-11-21 00:58:57",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3 Coder 30B A3B Instruct",
     "provider_name": "Alibaba",
