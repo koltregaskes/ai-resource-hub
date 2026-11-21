@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 21 Nov 2026, 06:58 UTC
+Generated: 21 Nov 2026, 07:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 21 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 988 open roles across 10 tracked companies. | `/jobs/` |
-| 21 Nov 2026, 06:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 21 Nov 2026, 06:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 21 Nov 2026, 06:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 21 Nov 2026, 06:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 21 Nov 2026, 07:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 21 Nov 2026, 07:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 21 Nov 2026, 07:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 21 Nov 2026, 07:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 20 Nov 2026, 12:00 UTC | digest | AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/) |
 | 20 Nov 2026, 12:00 UTC | digest | Daniel Ek backs AI researcher&#8217;s fusion power startup. Here&#8217;s what they&#8217;re building. | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/) |
 | 20 Nov 2026, 12:00 UTC | digest | Published the 2026-11-20 daily digest | 15 stories captured from 4 sources. | `/news/` |
