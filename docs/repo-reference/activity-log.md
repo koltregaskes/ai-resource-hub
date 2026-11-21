@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 21 Nov 2026, 16:59 UTC
+Generated: 21 Nov 2026, 17:29 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 21 Nov 2026, 16:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 21 Nov 2026, 16:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 21 Nov 2026, 16:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 21 Nov 2026, 16:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 21 Nov 2026, 17:29 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 21 Nov 2026, 17:29 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 21 Nov 2026, 17:29 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 21 Nov 2026, 17:29 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 21 Nov 2026, 12:00 UTC | digest | Can Anthropic afford to put safety first? | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure) |
 | 21 Nov 2026, 12:00 UTC | digest | Chess.com’s next move is a new hub for classic games, from mahjong to sudoku | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/games/1038099/chess-classic-games-expansion-ai) |
 | 21 Nov 2026, 12:00 UTC | digest | Is selling an AI version of your face to this microdrama startup the future of Hollywood? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/) |
-| 21 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 990 open roles across 10 tracked companies. | `/jobs/` |
+| 21 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 993 open roles across 10 tracked companies. | `/jobs/` |
 | 21 Nov 2026, 12:00 UTC | digest | Published the 2026-11-21 daily digest | 3 stories captured from 2 sources. | `/news/` |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
