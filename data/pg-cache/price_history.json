@@ -228019,6 +228019,17 @@
     "provider_colour": "#00b4d8"
   },
   {
+    "id": 359,
+    "model_id": "glm-5.1",
+    "input_price": 1.4,
+    "output_price": 4.4,
+    "recorded_at": "2026-11-21 11:58:21",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 5.1",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
     "id": 248,
     "model_id": "glm-5.2",
     "input_price": 1.4,
