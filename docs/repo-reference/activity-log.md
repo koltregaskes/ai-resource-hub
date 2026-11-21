@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 21 Nov 2026, 20:58 UTC
+Generated: 21 Nov 2026, 21:59 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 21 Nov 2026, 20:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 21 Nov 2026, 20:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 21 Nov 2026, 20:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 21 Nov 2026, 20:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 21 Nov 2026, 12:00 UTC | digest | Here are the top AI agents that can live in your text messages | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/) |
-| 21 Nov 2026, 12:00 UTC | digest | Is selling an AI version of your face to this microdrama startup the future of Hollywood? | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/) |
-| 21 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 993 open roles across 10 tracked companies. | `/jobs/` |
-| 21 Nov 2026, 12:00 UTC | digest | Published the 2026-11-21 daily digest | 5 stories captured from 2 sources. | `/news/` |
+| 21 Nov 2026, 21:59 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 21 Nov 2026, 21:59 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 21 Nov 2026, 21:59 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 21 Nov 2026, 21:59 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 21 Nov 2026, 12:00 UTC | digest | A tale of two Nvidias | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/) |
+| 21 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 990 open roles across 10 tracked companies. | `/jobs/` |
+| 21 Nov 2026, 12:00 UTC | digest | Published the 2026-11-21 daily digest | 7 stories captured from 2 sources. | `/news/` |
+| 21 Nov 2026, 12:00 UTC | digest | Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/) |
 | 21 Nov 2026, 12:00 UTC | digest | The UN fails to agree on rules regulating ‘killer robots’ | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1039554/un-regulations-killer-robots) |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
