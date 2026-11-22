@@ -1,11 +1,11 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-22T17:58:30.136Z",
+  "generatedAt": "2026-11-22T18:59:18.366Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
     "totalReleases": 66,
     "highPriority": 5,
-    "readyForEditor": 18,
+    "readyForEditor": 20,
     "officiallyVerified": 27,
     "watchOnly": 39,
     "openSource": 5
@@ -59,7 +59,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Muse Ember is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Meta's Muse Ember is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "dek": "Meta's Muse Ember is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -93,12 +93,26 @@ export const modelReleaseDesk = {
             "industry_move",
             "model_release"
           ]
+        },
+        {
+          "title": "Meta’s Muse Charm might cost $300",
+          "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
+          "source": "The Verge",
+          "date": "2026-11-19",
+          "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but [&#8230;]",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "pricing_change"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-09-muse-ember-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 2,
+      "sourceCount": 3
     },
     {
       "id": "gemini-omni-1.2-flash",
@@ -267,7 +281,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Muse Wonder is a preview-stage release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Meta's Muse Wonder is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "dek": "Meta's Muse Wonder is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Preview status means the launch narrative matters before long-run benchmark coverage is complete.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -302,12 +316,26 @@ export const modelReleaseDesk = {
             "industry_move",
             "model_release"
           ]
+        },
+        {
+          "title": "Meta’s Muse Charm might cost $300",
+          "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
+          "source": "The Verge",
+          "date": "2026-11-19",
+          "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but [&#8230;]",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "pricing_change"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-10-12-muse-wonder-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 2,
+      "sourceCount": 3
     },
     {
       "id": "gemini-omni-1.1-flash",
@@ -695,7 +723,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Muse Spark Open is a currently tracked release from Meta. It belongs in the open-weight / local-model conversation. Tracked context window: 1.0M tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Meta's Muse Spark Open is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "dek": "Meta's Muse Spark Open is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -732,12 +760,26 @@ export const modelReleaseDesk = {
             "industry_move",
             "model_release"
           ]
+        },
+        {
+          "title": "Meta’s Muse Charm might cost $300",
+          "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
+          "source": "The Verge",
+          "date": "2026-11-19",
+          "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but [&#8230;]",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "pricing_change"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-10-15-muse-spark-open-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 2,
+      "sourceCount": 3
     },
     {
       "id": "nemotron-3.5-super-vl",
@@ -765,7 +807,7 @@ export const modelReleaseDesk = {
       },
       "verificationState": "official",
       "priority": "watch",
-      "draftStatus": "needs_research",
+      "draftStatus": "ready_for_editor",
       "officialUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
       "providerStatusUrl": null,
       "providerDocsUrl": "https://docs.api.nvidia.com",
@@ -787,11 +829,11 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Nemotron 3.5 Super VL is a currently tracked release from NVIDIA. It belongs in the open-weight / local-model conversation. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "NVIDIA's Nemotron 3.5 Super VL is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "dek": "NVIDIA's Nemotron 3.5 Super VL is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -804,16 +846,32 @@ export const modelReleaseDesk = {
         "Lead with the hook: what NVIDIA actually launched with Nemotron 3.5 Super VL, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
         "Include the local-model angle: LM Studio, Ollama, GGUF, MLX, or on-device relevance where appropriate.",
         "Keep the chronology explicit: this release landed on 15 Oct 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [],
+      "relatedStories": [
+        {
+          "title": "A brief history of Nvidia’s recent stock fluctuations",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings",
+          "source": "The Verge",
+          "date": "2026-11-19",
+          "summary": "\"We've got this,\" Colette Kress, interim CEO of Nvidia, said Tuesday night as she closed out the embattled chip company's third quarter earnings call. By Thursday, the company's stock price was hovering at around $150 per share, a nearly 40 percent drop from its all-time high on October 6th, and wiping out a brief pos…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "pricing_change",
+            "hardware"
+          ]
+        }
+      ],
       "draftPath": "editorial/release-drafts/2026-10-15-nemotron-3-5-super-vl-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "muse-spark-1.3",
@@ -863,7 +921,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Muse Spark 1.3 is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Meta's Muse Spark 1.3 is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "dek": "Meta's Muse Spark 1.3 is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -897,12 +955,26 @@ export const modelReleaseDesk = {
             "industry_move",
             "model_release"
           ]
+        },
+        {
+          "title": "Meta’s Muse Charm might cost $300",
+          "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
+          "source": "The Verge",
+          "date": "2026-11-19",
+          "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but [&#8230;]",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "pricing_change"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-09-02-muse-spark-1-3-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 2,
+      "sourceCount": 3
     },
     {
       "id": "nemotron-3.5-lightning",
@@ -930,7 +1002,7 @@ export const modelReleaseDesk = {
       },
       "verificationState": "official",
       "priority": "backfill",
-      "draftStatus": "needs_research",
+      "draftStatus": "ready_for_editor",
       "officialUrl": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
       "providerStatusUrl": null,
       "providerDocsUrl": "https://docs.api.nvidia.com",
@@ -952,11 +1024,11 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Nemotron 3.5 Lightning is a currently tracked release from NVIDIA. It belongs in the open-weight / local-model conversation. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "NVIDIA's Nemotron 3.5 Lightning is on the release desk with 0 related stories and 0 benchmark signals to review.",
+      "dek": "NVIDIA's Nemotron 3.5 Lightning is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "This still needs outside coverage gathering, so the editor should expect a source-light draft first."
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
       ],
       "checklist": [
         "Summarise the official launch post and link the primary docs first.",
@@ -969,16 +1041,32 @@ export const modelReleaseDesk = {
         "Lead with the hook: what NVIDIA actually launched with Nemotron 3.5 Lightning, and why it matters now.",
         "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
         "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Flag the missing outside reaction lane so the editor knows to top up community or analyst feedback before publish.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
         "Include the local-model angle: LM Studio, Ollama, GGUF, MLX, or on-device relevance where appropriate.",
         "Keep the chronology explicit: this release landed on 11 Aug 2026 and should be framed against the models it is replacing or competing with."
       ],
       "benchmarkHighlights": [],
-      "relatedStories": [],
+      "relatedStories": [
+        {
+          "title": "A brief history of Nvidia’s recent stock fluctuations",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings",
+          "source": "The Verge",
+          "date": "2026-11-19",
+          "summary": "\"We've got this,\" Colette Kress, interim CEO of Nvidia, said Tuesday night as she closed out the embattled chip company's third quarter earnings call. By Thursday, the company's stock price was hovering at around $150 per share, a nearly 40 percent drop from its all-time high on October 6th, and wiping out a brief pos…",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "pricing_change",
+            "hardware"
+          ]
+        }
+      ],
       "draftPath": "editorial/release-drafts/2026-08-11-nemotron-3-5-lightning-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 0,
-      "sourceCount": 1
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "muse-spark-1.2",
@@ -1028,7 +1116,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Muse Spark 1.2 is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Meta's Muse Spark 1.2 is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "dek": "Meta's Muse Spark 1.2 is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1062,12 +1150,26 @@ export const modelReleaseDesk = {
             "industry_move",
             "model_release"
           ]
+        },
+        {
+          "title": "Meta’s Muse Charm might cost $300",
+          "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
+          "source": "The Verge",
+          "date": "2026-11-19",
+          "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but [&#8230;]",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "pricing_change"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-08-05-muse-spark-1-2-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 2
+      "storyCount": 2,
+      "sourceCount": 3
     },
     {
       "id": "claude-opus-5",
@@ -6505,7 +6607,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Muse Glimmer 30B is a currently tracked release from Meta. Auto-tracked from OpenRouter discovery (meta/muse-glimmer-30b); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Meta's Muse Glimmer 30B is on the release desk with 1 related story and 0 benchmark signals to review.",
+      "dek": "Meta's Muse Glimmer 30B is on the release desk with 2 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -6539,12 +6641,26 @@ export const modelReleaseDesk = {
             "industry_move",
             "model_release"
           ]
+        },
+        {
+          "title": "Meta’s Muse Charm might cost $300",
+          "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
+          "source": "The Verge",
+          "date": "2026-11-19",
+          "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but [&#8230;]",
+          "routingTags": [
+            "announcement",
+            "product_launch",
+            "policy",
+            "industry_move",
+            "pricing_change"
+          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-22-muse-glimmer-30b-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 1,
-      "sourceCount": 1
+      "storyCount": 2,
+      "sourceCount": 2
     },
     {
       "id": "pixtral-large-2502",

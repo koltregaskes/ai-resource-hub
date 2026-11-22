@@ -354378,9 +354378,9 @@
   {
     "id": 411,
     "model_id": "gpt-oss-20b",
-    "input_price": 0.075,
-    "output_price": 0.3,
-    "recorded_at": "2026-11-22 08:57:32",
+    "input_price": 0.03,
+    "output_price": 0.13,
+    "recorded_at": "2026-11-22 18:58:54",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "gpt-oss-20b",
     "provider_name": "OpenAI",
