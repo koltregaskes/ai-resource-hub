@@ -231662,9 +231662,9 @@
   {
     "id": 325,
     "model_id": "glm-5.3-flash",
-    "input_price": 0.15,
-    "output_price": 0.5,
-    "recorded_at": "2026-11-22 07:58:09",
+    "input_price": 0.04,
+    "output_price": 0.078,
+    "recorded_at": "2026-11-22 13:58:21",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GLM 5.3 Flash",
     "provider_name": "Zhipu AI",

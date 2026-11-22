@@ -1,5 +1,5 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-22T12:59:18.214Z",
+  "generatedAt": "2026-11-22T13:58:45.498Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -59,7 +59,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Muse Ember is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Meta's Muse Ember is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Meta's Muse Ember is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -93,26 +93,12 @@ export const modelReleaseDesk = {
             "industry_move",
             "model_release"
           ]
-        },
-        {
-          "title": "Meta’s Muse Charm might cost $300",
-          "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
-          "source": "The Verge",
-          "date": "2026-11-19",
-          "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but [&#8230;]",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "pricing_change"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-09-muse-ember-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "gemini-omni-1.2-flash",
@@ -281,7 +267,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Muse Wonder is a preview-stage release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Meta's Muse Wonder is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Meta's Muse Wonder is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Preview status means the launch narrative matters before long-run benchmark coverage is complete.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -316,26 +302,12 @@ export const modelReleaseDesk = {
             "industry_move",
             "model_release"
           ]
-        },
-        {
-          "title": "Meta’s Muse Charm might cost $300",
-          "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
-          "source": "The Verge",
-          "date": "2026-11-19",
-          "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but [&#8230;]",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "pricing_change"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-10-12-muse-wonder-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "gemini-omni-1.1-flash",
@@ -723,7 +695,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Muse Spark Open is a currently tracked release from Meta. It belongs in the open-weight / local-model conversation. Tracked context window: 1.0M tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Meta's Muse Spark Open is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Meta's Muse Spark Open is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "This release matters for open-weight and local-model coverage, not just hosted API buyers.",
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
@@ -760,26 +732,12 @@ export const modelReleaseDesk = {
             "industry_move",
             "model_release"
           ]
-        },
-        {
-          "title": "Meta’s Muse Charm might cost $300",
-          "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
-          "source": "The Verge",
-          "date": "2026-11-19",
-          "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but [&#8230;]",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "pricing_change"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-10-15-muse-spark-open-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "nemotron-3.5-super-vl",
@@ -921,7 +879,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Muse Spark 1.3 is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Meta's Muse Spark 1.3 is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Meta's Muse Spark 1.3 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -955,26 +913,12 @@ export const modelReleaseDesk = {
             "industry_move",
             "model_release"
           ]
-        },
-        {
-          "title": "Meta’s Muse Charm might cost $300",
-          "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
-          "source": "The Verge",
-          "date": "2026-11-19",
-          "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but [&#8230;]",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "pricing_change"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-09-02-muse-spark-1-3-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "nemotron-3.5-lightning",
@@ -1116,7 +1060,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Muse Spark 1.2 is a currently tracked release from Meta. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.0M tokens. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Meta's Muse Spark 1.2 is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Meta's Muse Spark 1.2 is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1150,26 +1094,12 @@ export const modelReleaseDesk = {
             "industry_move",
             "model_release"
           ]
-        },
-        {
-          "title": "Meta’s Muse Charm might cost $300",
-          "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
-          "source": "The Verge",
-          "date": "2026-11-19",
-          "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but [&#8230;]",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "pricing_change"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-08-05-muse-spark-1-2-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 3
+      "storyCount": 1,
+      "sourceCount": 2
     },
     {
       "id": "claude-opus-5",
@@ -6607,7 +6537,7 @@ export const modelReleaseDesk = {
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "Muse Glimmer 30B is a currently tracked release from Meta. Auto-tracked from OpenRouter discovery (meta/muse-glimmer-30b); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "Meta's Muse Glimmer 30B is on the release desk with 2 related stories and 0 benchmark signals to review.",
+      "dek": "Meta's Muse Glimmer 30B is on the release desk with 1 related story and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -6641,26 +6571,12 @@ export const modelReleaseDesk = {
             "industry_move",
             "model_release"
           ]
-        },
-        {
-          "title": "Meta’s Muse Charm might cost $300",
-          "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
-          "source": "The Verge",
-          "date": "2026-11-19",
-          "summary": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm \"in time for the holidays in December,\" but [&#8230;]",
-          "routingTags": [
-            "announcement",
-            "product_launch",
-            "policy",
-            "industry_move",
-            "pricing_change"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-22-muse-glimmer-30b-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 2,
-      "sourceCount": 2
+      "storyCount": 1,
+      "sourceCount": 1
     },
     {
       "id": "pixtral-large-2502",
