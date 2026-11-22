@@ -1,0 +1,56 @@
+---
+import GuideArticle from '../../components/GuideArticle.astro';
+import HubModelTable from '../../components/HubModelTable.astro';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const sources = [
+  { label: 'Rombach et al. (2022), High-Resolution Image Synthesis with Latent Diffusion Models, arXiv:2112.10752', url: 'https://arxiv.org/abs/2112.10752' },
+  { label: 'Ho et al. (2020), Denoising Diffusion Probabilistic Models, arXiv:2006.11239', url: 'https://arxiv.org/abs/2006.11239' },
+  { label: 'C2PA, Content Credentials specification', url: 'https://c2pa.org/specifications/specifications/2.1/index.html' },
+];
+---
+<GuideArticle
+  title="AI Image Models: A Practical Guide"
+  crumb="Image Models"
+  description="How AI image generators work, what to compare between them, how to prompt them, and the rights and labelling questions to check first."
+  intro="Image models turn a text description, and sometimes a reference picture, into a new image. This guide covers how they work and what to compare before you pick one."
+  category="Practical"
+  readTime="7 min read"
+  updated="2026-10-26"
+  sources={sources}
+>
+  <p>
+    Most image generators you'll meet are diffusion models. During training the model sees millions of images with noise added step by step, and it learns to reverse that, removing noise a little at a time. To make a new picture it starts from pure noise and cleans it up, guided by your text. The 2020 DDPM paper by Jonathan Ho and colleagues set out the modern version of this, and the 2022 latent diffusion paper behind Stable Diffusion made it cheap enough to run on ordinary GPUs by working on a compressed version of the image. Some newer systems generate images in a different way, inside a multimodal language model, but the questions below apply to both.
+  </p>
+
+  <h2>What's in our catalogue</h2>
+  <HubModelTable category="image" limit={10} />
+  <p>
+    Prices for these models are on the <a href={`${base}compare/image/`}>image comparison page</a>, in cost per image. Like the rest of our prices they're dated, so check the provider before you spend.
+  </p>
+
+  <h2>What to compare</h2>
+  <ul>
+    <li><strong>Prompt following.</strong> Does it put the right number of objects in the right places? Test with a busy prompt.</li>
+    <li><strong>Text in images.</strong> Older models garble lettering. Newer ones are much better, but check spelling on signs and labels.</li>
+    <li><strong>Editing.</strong> Can it change one part of an image and leave the rest alone, or keep a character the same across shots?</li>
+    <li><strong>Resolution and aspect ratios.</strong> Check the sizes it supports before you plan a print or a banner.</li>
+    <li><strong>Cost per image and speed,</strong> which matter more than usual if you generate in bulk.</li>
+    <li><strong>Terms of use.</strong> Who owns the output, and can you use it commercially?</li>
+  </ul>
+
+  <h2>Prompting tips</h2>
+  <ul>
+    <li>Describe the subject, setting, style, lighting and framing, in that order.</li>
+    <li>Say what you want, not what you don't. Many models handle "no" badly.</li>
+    <li>Generate several and pick, then refine the prompt from the best one.</li>
+    <li>For a consistent look, reuse the same style words or a reference image.</li>
+  </ul>
+
+  <h2>Rights and labelling</h2>
+  <p>
+    Copyright in AI images is unsettled and varies by country, so get advice before relying on an image for something important. Avoid prompts that copy a living artist's name or a real person's likeness. Some providers attach Content Credentials, an open standard from the C2PA group that records how an image was made in its metadata, and many platforms now label AI images. Keep the original files so you can show where an image came from.
+  </p>
+  <p>
+    For moving pictures, see <a href={`${base}guides/video-models/`}>AI Video Models</a>.
+  </p>
+</GuideArticle>

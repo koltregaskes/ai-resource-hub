@@ -1,0 +1,77 @@
+---
+/**
+ * A small, honest table built from the Hub's own export
+ * (public/data/models-latest.json). It prints the export's generated
+ * time and the newest release date in the catalogue, so readers can
+ * see how old the rows are. No prices: units differ by category and
+ * the price columns live on the compare pages.
+ */
+import modelsLatest from '../../public/data/models-latest.json';
+import { getAllModelIds } from '../db/queries';
+
+interface Props {
+  category: string;
+  limit?: number;
+  caption?: string;
+}
+
+const { category, limit = 12, caption } = Astro.props;
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+type Row = {
+  id: string;
+  model: string;
+  provider: string;
+  category: string;
+  status: string;
+  released: string | null;
+  open_source: boolean;
+  api_available: boolean;
+};
+
+const all = (modelsLatest as { generated: string; models: Row[] }).models;
+const pageIds = new Set(getAllModelIds());
+const inCategory = all.filter((m) => m.category === category);
+const rows = [...inCategory]
+  .sort((a, b) => (b.released ?? '').localeCompare(a.released ?? ''))
+  .slice(0, limit);
+const newest = rows[0]?.released ?? null;
+const fmt = (d: string | null) =>
+  d ? new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Not listed';
+const generated = fmt((modelsLatest as { generated: string }).generated);
+---
+
+<div class="my-6 overflow-x-auto rounded-xl border border-(--color-border) bg-(--color-bg-card)">
+  <table class="w-full text-sm">
+    <caption class="text-left text-xs text-(--color-text-muted) px-4 pt-3 pb-2">
+      {caption ?? `The ${rows.length} most recently released ${category} models in the Hub catalogue, out of ${inCategory.length}.`}
+      {' '}Export generated {generated}. The newest release date in this list is {fmt(newest)}, so treat it as dated.
+    </caption>
+    <thead>
+      <tr class="text-left text-(--color-text-muted) border-b border-(--color-border)">
+        <th class="px-4 py-2 font-medium">Model</th>
+        <th class="px-4 py-2 font-medium">Provider</th>
+        <th class="px-4 py-2 font-medium">Released</th>
+        <th class="px-4 py-2 font-medium">Open weights</th>
+        <th class="px-4 py-2 font-medium">API</th>
+        <th class="px-4 py-2 font-medium">Hub status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((m) => (
+        <tr class="border-b border-(--color-border) last:border-0">
+          <td class="px-4 py-2 text-(--color-text-primary)">
+            {pageIds.has(m.id) ? <a href={`${base}models/${m.id}/`} class="hover:text-(--color-accent)">{m.model}</a> : m.model}
+          </td>
+          <td class="px-4 py-2">{m.provider}</td>
+          <td class="px-4 py-2 whitespace-nowrap">{fmt(m.released)}</td>
+          <td class="px-4 py-2">{m.open_source ? 'Yes' : 'No'}</td>
+          <td class="px-4 py-2">{m.api_available ? 'Yes' : 'No'}</td>
+          <td class="px-4 py-2">{m.status}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

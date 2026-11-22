@@ -1,0 +1,62 @@
+---
+import GuideArticle from '../../components/GuideArticle.astro';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const sources = [
+  { label: 'Anthropic (Dec 2024), Building effective agents', url: 'https://www.anthropic.com/research/building-effective-agents' },
+  { label: 'Yao et al. (2022), ReAct: Synergizing Reasoning and Acting in Language Models, arXiv:2210.03629', url: 'https://arxiv.org/abs/2210.03629' },
+  { label: 'Model Context Protocol, Introduction', url: 'https://modelcontextprotocol.io/introduction' },
+];
+---
+<GuideArticle
+  title="What Is an AI Agent?"
+  crumb="What Is an Agent?"
+  description="A plain explanation of AI agents: a model that uses tools in a loop until a job is done. How they work, where they go wrong, and how to use one safely."
+  intro="An AI agent is a language model that can take actions, look at the result and decide what to do next, in a loop, until it thinks the job is finished."
+  category="Beginner"
+  readTime="6 min read"
+  updated="2026-10-26"
+  sources={sources}
+>
+  <p>
+    A chatbot answers and stops. An agent is given a goal and some tools (a web browser, a code runner, your calendar, a database) and keeps going on its own. It searches, reads what came back, runs some code, notices an error, fixes it and tries again.
+  </p>
+
+  <h2>The loop</h2>
+  <ol>
+    <li>The model reads the goal and everything that's happened so far.</li>
+    <li>It decides on one action, such as calling a tool with some inputs.</li>
+    <li>The software around it runs that tool and adds the result to the conversation.</li>
+    <li>Back to step one, until the model says it's done or hits a limit.</li>
+  </ol>
+  <p>
+    A 2022 paper called ReAct, from researchers at Princeton and Google, showed that letting a model write out its reasoning between actions made this kind of loop work noticeably better on question answering and simple web tasks. Most agent tools since build on the same pattern.
+  </p>
+
+  <h2>Agents and workflows</h2>
+  <p>
+    Anthropic's guide "Building effective agents" draws a useful line. A workflow is a fixed sequence of model calls that a developer wrote in advance. An agent is a model that chooses its own steps. Anthropic's advice is to start with the simplest thing that works and only reach for a full agent when the task can't be broken into fixed steps, because agents cost more and their mistakes can compound.
+  </p>
+
+  <h2>How tools get connected</h2>
+  <p>
+    Each tool is described to the model with a name, what it does and what inputs it takes. The Model Context Protocol (MCP), which Anthropic introduced in November 2024, is an open standard for doing this, so the same tool can plug into different apps. You'll see coding agents, browser agents and assistants that read email all described this way.
+  </p>
+
+  <h2>Where agents go wrong</h2>
+  <ul>
+    <li><strong>Errors stack up.</strong> One wrong step early on can send the rest of the run in the wrong direction.</li>
+    <li><strong>They report success too readily.</strong> A tool saying "done" doesn't mean the job was done correctly.</li>
+    <li><strong>Instructions hidden in content.</strong> A web page or email can contain text written to steer the agent, known as prompt injection.</li>
+    <li><strong>Cost and time.</strong> Long runs use a lot of tokens.</li>
+  </ul>
+
+  <h2>Using one safely</h2>
+  <ul>
+    <li>Give it the fewest tools and permissions the job needs.</li>
+    <li>Ask it to stop and check with you before anything that sends, buys, deletes or publishes.</li>
+    <li>Check the output yourself, especially for anything you'll put your name to.</li>
+  </ul>
+  <p>
+    The <a href={`${base}agents/`}>agents section</a> and the <a href={`${base}cli/`}>CLI tools page</a> track agent products, and the February post <a href={`${base}blog/ai-agents-explained/`}>AI Agents Explained</a> has more examples.
+  </p>
+</GuideArticle>

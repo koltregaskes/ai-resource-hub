@@ -1,0 +1,75 @@
+---
+import GuideArticle from '../../components/GuideArticle.astro';
+import modelsLatest from '../../../public/data/models-latest.json';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+type Row = { status: string; released: string | null; quality_score_state: string | null };
+const rows = modelsLatest.models as Row[];
+const policy = modelsLatest.benchmark_policy;
+const newestRelease = rows.map((m) => m.released ?? '').sort().at(-1) ?? '';
+const fmt = (d: string) => new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+const previewRows = (modelsLatest.models as { status: string }[]).filter((m) => m.status === 'preview').length;
+const batchRows = (modelsLatest.models as { model: string }[]).filter((m) => /\(batch\)/i.test(m.model)).length;
+const suppressed = rows.filter((m) => m.quality_score_state === 'suppressed_untraceable').length;
+const sources = [
+  { label: 'The AI Resource Hub, Methodology', url: 'https://theairesourcehub.com/methodology/' },
+  { label: 'The AI Resource Hub, Collection policy', url: 'https://theairesourcehub.com/collection-policy/' },
+  { label: 'The AI Resource Hub, model export (JSON)', url: 'https://theairesourcehub.com/data/models-latest.json' },
+  { label: 'OpenRouter, Models API', url: 'https://openrouter.ai/docs/api-reference/models/get-models' },
+];
+---
+<GuideArticle
+  title="How to Read the Hub's Tables"
+  crumb="Reading Our Tables"
+  description="What each column on the Hub's model tables means, where the numbers come from, how old they are, and what a blank cell is telling you."
+  intro="Our tables are only useful if you know how old each number is and where it came from. This page explains both, column by column."
+  category="Beginner"
+  readTime="7 min read"
+  updated="2026-10-26"
+  sources={sources}
+>
+  <p class="note">
+    State of the data on {fmt(modelsLatest.generated)}: the model export holds {modelsLatest.model_count} models, {modelsLatest.active_model_count} active, {modelsLatest.tracking_model_count} tracking and {previewRows} in preview. The newest release date in it is {fmt(newestRelease)}. The export file is rebuilt several times a day, but rebuilding doesn't add models, so anything launched since the newest date above won't appear yet.
+  </p>
+
+  <h2>Two dates to look for</h2>
+  <p>
+    Every table has a generated or updated date, which is when we last rebuilt the page. That's not the same as when a price was last checked or a model was last added. A page rebuilt this morning can still hold a price from months ago. Where we know the source date, the model page shows it. Where we don't, assume the number is old.
+  </p>
+
+  <h2>The columns</h2>
+  <h3>Input and output price</h3>
+  <p>
+    For language models these are US dollars per million tokens, input (what you send) and output (what the model writes). They come from the provider's pricing page or from OpenRouter's public models API, and each model page names its source. They're the list price at the time we fetched them. Some rows are batch prices, which are usually discounted, and those carry "(batch)" in the model name; {batchRows} rows in the current export do. Don't compare a batch row with a standard one. Caching discounts, free tiers and regional prices aren't shown, and a provider can change prices at any time, so check their page before you budget. Image, video and voice tables use different units, such as cost per image, and say so in the header.
+  </p>
+  <h3>Context and max output</h3>
+  <p>
+    The most tokens a model accepts in one request, and the most it will write back. See <a href={`${base}guides/context-windows/`}>Context Windows</a>.
+  </p>
+  <h3>Quality and value</h3>
+  <p>
+    These would be composite scores built from benchmarks. Right now they're switched off: in the current export, {suppressed} of {modelsLatest.model_count} models have their quality score suppressed because we can't trace it to reviewed evidence. A blank here means "not enough evidence", not "bad model".
+  </p>
+  <h3>Benchmarks</h3>
+  <p>
+    We only rank a benchmark score that matches an exact, reviewed row in a named source. In the current export that's {policy.rankable_score_count} of {policy.raw_score_count} scores. The other {policy.quarantined_score_count} are held back. The internal benchmark on the homepage is a snapshot from 12 June 2026 and isn't a current ranking. <a href={`${base}guides/how-benchmarks-work/`}>How AI Benchmarks Work</a> explains why.
+  </p>
+  <h3>Speed</h3>
+  <p>
+    Tokens per second and time to first token, where we have a measurement. Speed depends on the provider, region and load, so treat it as a rough guide.
+  </p>
+  <h3>Open source and status</h3>
+  <p>
+    "Open source" means the weights can be downloaded. It doesn't check the licence (see <a href={`${base}guides/open-vs-closed-models/`}>Open vs Closed</a>). Status is "active" for models we list as current, and "tracking" for models we still list but which may be older, superseded or waiting on evidence. Tracking rows aren't ranked.
+  </p>
+
+  <h2>A quick checklist</h2>
+  <ol>
+    <li>Look for the date first.</li>
+    <li>Open the model page and check the price source.</li>
+    <li>Read a blank cell as missing evidence.</li>
+    <li>Before you spend money, confirm the price on the provider's site.</li>
+  </ol>
+  <p>
+    If something looks wrong, the corrections section of the <a href={`${base}methodology/`}>methodology page</a> covers how we handle fixes. The raw data is public at <a href={`${base}data/models-latest.json`}>/data/models-latest.json</a>.
+  </p>
+</GuideArticle>
