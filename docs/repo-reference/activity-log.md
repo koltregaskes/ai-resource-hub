@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 22 Nov 2026, 21:57 UTC
+Generated: 22 Nov 2026, 22:59 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 22 Nov 2026, 21:57 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 22 Nov 2026, 21:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 22 Nov 2026, 21:57 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 22 Nov 2026, 21:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 22 Nov 2026, 12:00 UTC | digest | Binding of Isaac developer removes AI music from Repentance Plus | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/games/1039770/binding-of-isaac-ai-music) |
+| 22 Nov 2026, 22:59 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 22 Nov 2026, 22:59 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 22 Nov 2026, 22:59 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 22 Nov 2026, 22:59 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 22 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 991 open roles across 10 tracked companies. | `/jobs/` |
 | 22 Nov 2026, 12:00 UTC | digest | OpenAI’s chief scientist has thoughts on how to limit AI development | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/) |
-| 22 Nov 2026, 12:00 UTC | digest | Published the 2026-11-22 daily digest | 5 stories captured from 3 sources. | `/news/` |
+| 22 Nov 2026, 12:00 UTC | digest | Published the 2026-11-22 daily digest | 6 stories captured from 3 sources. | `/news/` |
+| 22 Nov 2026, 12:00 UTC | digest | We haven’t seen the last of the major tech outages | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1039851/major-tech-outages) |
 | 22 Nov 2026, 12:00 UTC | digest | Why data centers are at the center of the Big Tech backlash | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/) |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
