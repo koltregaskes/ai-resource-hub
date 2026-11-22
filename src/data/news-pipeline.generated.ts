@@ -1,7 +1,7 @@
 export const newsPipelineSnapshot = {
-  "generatedAt": "2026-11-21T23:11:50.195Z",
+  "generatedAt": "2026-11-22T01:00:05.283Z",
   "provenance": {
-    "sourceVerifiedAt": "2026-11-21T23:11:50.195Z",
+    "sourceVerifiedAt": "2026-11-22T01:00:05.283Z",
     "sourceEdition": {
       "siteFiltersSha256": "bad10f90faa07d54f4ce690f38214e0e06b7b46dbc1710c466d53bc45e7f5768",
       "sourcesSha256": "4299709f06121cfefd781c092a5bc01a1168cb636477b159e5774bd69d38bc8d",

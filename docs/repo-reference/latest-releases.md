@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 21 Nov 2026, 23:11 UTC
+Generated: 22 Nov 2026, 01:00 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -20,7 +20,6 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 11 Aug 2026 | Nemotron 3.5 Lightning | NVIDIA |  | backfill | ready for editor | 0 | 1 | [official](https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/) |
 | 5 Aug 2026 | Muse Spark 1.2 | Meta |  | backfill | ready for editor | 0 | 2 | [official](https://dev.meta.ai/docs/models) |
 | 24 Jul 2026 | Claude Opus 5 | Anthropic | active | backfill | ready for editor | 0 | 5 | [official](https://www.anthropic.com/news/claude-opus-5) |
-| 24 Jul 2026 | Claude Opus 5 Fast | Anthropic | active | backfill | ready for editor | 0 | 5 | [official](https://www.anthropic.com/news/claude-opus-5) |
 | 21 Jul 2026 | Gemini 3.6 Flash | Google | active | backfill | ready for editor | 0 | 4 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash) |
 | 9 Jul 2026 | GPT-5.6 Sol | OpenAI | active | backfill | ready for editor | 0 | 4 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-sol) |
 | 30 Jun 2026 | Claude Sonnet 5 | Anthropic | active | backfill | ready for editor | 0 | 5 | [official](https://www.anthropic.com/news/claude-sonnet-5) |
@@ -28,5 +27,6 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 2 Apr 2026 | Gemma 4 | Google | tracking | backfill | ready for editor | 0 | 4 | [official](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/) |
 | 2 Apr 2026 | Qwen 3.6 Plus | Alibaba | tracking | backfill | needs research | 0 | 0 | [official](https://help.aliyun.com/zh/model-studio/model-pricing) |
 | 31 Mar 2026 | Grok 4.20 | xAI | tracking | backfill | needs research | 0 | 0 | [official](https://docs.x.ai/developers/models) |
+| 28 Mar 2026 | Kimi K2.5 | Moonshot AI | tracking | backfill | needs research | 0 | 0 | [official](https://platform.moonshot.ai/docs/pricing/tools.en-US) |
 
 Raw export: [model-release-desk.json](../../public/data/model-release-desk.json)
