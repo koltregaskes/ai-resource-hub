@@ -1,5 +1,5 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-22T08:57:54.766Z",
+  "generatedAt": "2026-11-22T09:59:25.518Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
