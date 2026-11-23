@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T10:59:17.193Z",
+  "generatedAt": "2026-11-23T11:59:18.971Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-23T10:59:17.185Z",
+      "lastCheckedAt": "2026-11-23T11:59:18.964Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,10 +100,10 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-23T10:59:15.297Z",
+      "lastCheckedAt": "2026-11-23T11:59:17.526Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
-      "summary": "1 active incident across 10 tracked components.",
+      "summary": "No active incidents across 10 tracked components.",
       "notes": null,
       "components": [
         {
@@ -131,30 +131,18 @@
           "status": "operational"
         }
       ],
-      "activeIncidents": [
-        {
-          "id": "yzs0s90d8fm8",
-          "title": "Elevated errors for multiple models",
-          "status": "monitoring",
-          "impact": "major",
-          "startedAt": "2026-11-23T09:49:22.304Z",
-          "updatedAt": "2026-11-23T10:07:23.487Z",
-          "resolvedAt": null,
-          "url": "https://stspg.io/q2ptbwdjx31m",
-          "summary": "A fix has been deployed for the issue affecting Claude services and we are monitoring for recovery."
-        }
-      ],
+      "activeIncidents": [],
       "recentIncidents": [
         {
           "id": "yzs0s90d8fm8",
           "title": "Elevated errors for multiple models",
-          "status": "monitoring",
+          "status": "resolved",
           "impact": "major",
           "startedAt": "2026-11-23T09:49:22.304Z",
-          "updatedAt": "2026-11-23T10:07:23.487Z",
-          "resolvedAt": null,
+          "updatedAt": "2026-11-23T11:07:41.080Z",
+          "resolvedAt": "2026-11-23T11:07:41.048Z",
           "url": "https://stspg.io/q2ptbwdjx31m",
-          "summary": "A fix has been deployed for the issue affecting Claude services and we are monitoring for recovery."
+          "summary": "The issue affecting Claude services has been resolved. Impact occurred from 01:39 PT / 09:39 UTC to 01:56 PT / 09:56 UTC."
         },
         {
           "id": "c1kmrkmv5f3d",
@@ -202,7 +190,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-23T10:59:15.948Z",
+      "lastCheckedAt": "2026-11-23T11:59:18.266Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +210,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-23T10:59:15.456Z",
+      "lastCheckedAt": "2026-11-23T11:59:17.754Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -265,7 +253,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-23T10:59:15.298Z",
+      "lastCheckedAt": "2026-11-23T11:59:17.535Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -351,7 +339,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-23T10:59:16.146Z",
+      "lastCheckedAt": "2026-11-23T11:59:18.460Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -375,7 +363,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
