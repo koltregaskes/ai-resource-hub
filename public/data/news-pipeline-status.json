@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "status": "fresh",
   "reason": "canonical_config_read",
-  "attemptedAt": "2026-11-23T21:19:32.422Z",
-  "sourceGeneratedAt": "2026-11-23T21:19:32.422Z",
-  "sourceVerifiedAt": "2026-11-23T21:19:32.422Z",
+  "attemptedAt": "2026-11-23T22:59:25.391Z",
+  "sourceGeneratedAt": "2026-11-23T22:59:25.391Z",
+  "sourceVerifiedAt": "2026-11-23T22:59:25.391Z",
   "sourceEdition": {
     "siteFiltersSha256": "bad10f90faa07d54f4ce690f38214e0e06b7b46dbc1710c466d53bc45e7f5768",
     "sourcesSha256": "4299709f06121cfefd781c092a5bc01a1168cb636477b159e5774bd69d38bc8d",
     "estateManifestSha256": "a0aaffd48032be4a810d6152fecef37730130d3b2d1e3d655ede268b63f3b63f"
   },
-  "snapshotSha256": "7d41bb09ebc1267f2bedf2c8a403302986e2b911dbb05fbe117c80a476daf4bf",
+  "snapshotSha256": "576930a1c4430c9035bafedcc9baa798951dbe5c181a31ca22a1cc8b65356c3b",
   "missingInputs": []
 }
