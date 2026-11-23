@@ -1,18 +1,18 @@
 # Recent Activity Snapshot
 
-Generated: 23 Nov 2026, 21:00 UTC
+Generated: 23 Nov 2026, 21:19 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 23 Nov 2026, 20:59 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 23 Nov 2026, 20:59 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 23 Nov 2026, 20:59 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 23 Nov 2026, 20:59 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 23 Nov 2026, 21:19 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 23 Nov 2026, 21:19 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 23 Nov 2026, 21:19 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 23 Nov 2026, 21:19 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 23 Nov 2026, 12:00 UTC | digest | Claude AI can review pull requests and ship fixes on its own now | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests) |
 | 23 Nov 2026, 12:00 UTC | digest | How Jensen Huang ended up as Nvidia CEO again | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1040428/nvidia-jensen-huang-ceo-return) |
-| 23 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 978 open roles across 10 tracked companies. | `/jobs/` |
+| 23 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 979 open roles across 10 tracked companies. | `/jobs/` |
 | 23 Nov 2026, 12:00 UTC | digest | Nvidia employees greet Jensen Huang like a hero as he returns to company&#8217;s HQ | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/23/nvidia-employees-greet-jensen-huang-like-a-hero-as-he-returns-to-companys-hq/) |
 | 23 Nov 2026, 12:00 UTC | digest | Published the 2026-11-23 daily digest | 20 stories captured from 4 sources. | `/news/` |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
