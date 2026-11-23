@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 23 Nov 2026, 00:00 UTC
+Generated: 23 Nov 2026, 00:51 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 23 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 991 open roles across 10 tracked companies. | `/jobs/` |
-| 22 Nov 2026, 23:59 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 22 Nov 2026, 23:59 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 22 Nov 2026, 23:59 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 22 Nov 2026, 23:59 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 23 Nov 2026, 00:51 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 23 Nov 2026, 00:51 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 23 Nov 2026, 00:51 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 23 Nov 2026, 00:51 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 22 Nov 2026, 12:00 UTC | digest | OpenAI’s chief scientist has thoughts on how to limit AI development | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/) |
 | 22 Nov 2026, 12:00 UTC | digest | Published the 2026-11-22 daily digest | 6 stories captured from 3 sources. | `/news/` |
 | 22 Nov 2026, 12:00 UTC | digest | We haven’t seen the last of the major tech outages | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1039851/major-tech-outages) |

@@ -192126,6 +192126,17 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 423,
+    "model_id": "gemma-3-27b-it",
+    "input_price": 0.08,
+    "output_price": 0.16,
+    "recorded_at": "2026-11-23 00:51:24",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemma 3 27B",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 3867,
     "model_id": "gemma-3-4b-it",
     "input_price": 0.04,
@@ -228057,6 +228068,17 @@
     "input_price": 1.4,
     "output_price": 4.4,
     "recorded_at": "2026-11-22 08:57:32",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 5.1",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
+    "id": 359,
+    "model_id": "glm-5.1",
+    "input_price": 1.19,
+    "output_price": 3.74,
+    "recorded_at": "2026-11-23 00:51:24",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GLM 5.1",
     "provider_name": "Zhipu AI",
@@ -352082,6 +352104,17 @@
     "input_price": 0.09,
     "output_price": 0.36,
     "recorded_at": "2026-11-20 00:59:44",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "gpt-oss-120b",
+    "provider_name": "OpenAI",
+    "provider_colour": "#10a37f"
+  },
+  {
+    "id": 410,
+    "model_id": "gpt-oss-120b",
+    "input_price": 0.05,
+    "output_price": 0.25,
+    "recorded_at": "2026-11-23 00:51:24",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "gpt-oss-120b",
     "provider_name": "OpenAI",
