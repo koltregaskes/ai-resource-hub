@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T14:59:25.155Z",
+  "generatedAt": "2026-11-23T15:58:29.678Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-23T14:59:25.147Z",
+      "lastCheckedAt": "2026-11-23T15:58:29.673Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -90,6 +90,103 @@
       ]
     },
     {
+      "id": "openai",
+      "providerId": "openai",
+      "name": "OpenAI",
+      "colour": "#10a37f",
+      "websiteUrl": "https://openai.com",
+      "statusPageUrl": "https://status.openai.com",
+      "sourceKind": "statuspage_json",
+      "sourceLabel": "Official status API",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-11-23T15:58:28.489Z",
+      "overallStatus": "degraded",
+      "overallLabel": "Partial System Degradation",
+      "summary": "1 active incident across 25 tracked components.",
+      "notes": null,
+      "components": [
+        {
+          "name": "Conversations",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "Chat Completions",
+          "status": "operational"
+        },
+        {
+          "name": "Responses",
+          "status": "operational"
+        },
+        {
+          "name": "Agents",
+          "status": "operational"
+        },
+        {
+          "name": "Decisions",
+          "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        }
+      ],
+      "activeIncidents": [
+        {
+          "id": "01M84HKHX73RF7HTVZQ2A9GFXP",
+          "title": "Elevated errors with GPT-6 conversations on paid ChatGPT plans",
+          "status": "identified",
+          "impact": "minor",
+          "startedAt": "2026-11-23T15:50:14.000Z",
+          "updatedAt": "2026-11-23T15:58:23.000Z",
+          "resolvedAt": null,
+          "summary": "We’ve identified the issue causing intermittent errors in GPT-6 conversations on paid ChatGPT plans.\n\nWe are working on implementing a mitigation."
+        }
+      ],
+      "recentIncidents": [
+        {
+          "id": "01M84HKHX73RF7HTVZQ2A9GFXP",
+          "title": "Elevated errors with GPT-6 conversations on paid ChatGPT plans",
+          "status": "investigating",
+          "impact": "minor",
+          "startedAt": "2026-11-23T15:50:14.000Z",
+          "updatedAt": "2026-11-23T15:50:14.000Z",
+          "resolvedAt": null,
+          "summary": "We are investigating intermittent errors affecting GPT-6 conversations on paid ChatGPT plans."
+        },
+        {
+          "id": "01M7T8MRF9SDBDNQ62Z6V156ZZ",
+          "title": "Elevated error rates for gpt-6 Luna API requests",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-11-19T16:01:12.000Z",
+          "updatedAt": "2026-11-19T16:58:04.000Z",
+          "resolvedAt": "2026-11-19T16:58:04.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M7N9VNR6X5SEC90M1YCDB36D",
+          "title": "Costs API data is delayed",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-17T17:46:15.000Z",
+          "updatedAt": "2026-11-19T02:42:30.000Z",
+          "resolvedAt": "2026-11-18T17:15:46.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        },
+        {
+          "id": "01M7Q99XRGP8T4DWJN8DSZXA1X",
+          "title": "Elevated conversation errors for Free and Go users",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-18T12:15:02.000Z",
+          "updatedAt": "2026-11-18T14:13:46.000Z",
+          "resolvedAt": "2026-11-18T14:13:46.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
+        }
+      ]
+    },
+    {
       "id": "anthropic",
       "providerId": "anthropic",
       "name": "Anthropic",
@@ -100,7 +197,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-23T14:59:22.016Z",
+      "lastCheckedAt": "2026-11-23T15:58:28.419Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 10 tracked components.",
@@ -190,7 +287,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-23T14:59:22.873Z",
+      "lastCheckedAt": "2026-11-23T15:58:29.492Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -210,7 +307,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-23T14:59:22.477Z",
+      "lastCheckedAt": "2026-11-23T15:58:28.792Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -243,92 +340,6 @@
       ]
     },
     {
-      "id": "openai",
-      "providerId": "openai",
-      "name": "OpenAI",
-      "colour": "#10a37f",
-      "websiteUrl": "https://openai.com",
-      "statusPageUrl": "https://status.openai.com",
-      "sourceKind": "statuspage_json",
-      "sourceLabel": "Official status API",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-11-23T14:59:22.059Z",
-      "overallStatus": "operational",
-      "overallLabel": "All Systems Operational",
-      "summary": "No active incidents across 25 tracked components.",
-      "notes": null,
-      "components": [
-        {
-          "name": "Chat Completions",
-          "status": "operational"
-        },
-        {
-          "name": "Responses",
-          "status": "operational"
-        },
-        {
-          "name": "Agents",
-          "status": "operational"
-        },
-        {
-          "name": "Decisions",
-          "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
-        },
-        {
-          "name": "Embeddings",
-          "status": "operational"
-        }
-      ],
-      "activeIncidents": [],
-      "recentIncidents": [
-        {
-          "id": "01M7T8MRF9SDBDNQ62Z6V156ZZ",
-          "title": "Elevated error rates for gpt-6 Luna API requests",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-11-19T16:01:12.000Z",
-          "updatedAt": "2026-11-19T16:58:04.000Z",
-          "resolvedAt": "2026-11-19T16:58:04.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M7N9VNR6X5SEC90M1YCDB36D",
-          "title": "Costs API data is delayed",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-17T17:46:15.000Z",
-          "updatedAt": "2026-11-19T02:42:30.000Z",
-          "resolvedAt": "2026-11-18T17:15:46.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M7Q99XRGP8T4DWJN8DSZXA1X",
-          "title": "Elevated conversation errors for Free and Go users",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-18T12:15:02.000Z",
-          "updatedAt": "2026-11-18T14:13:46.000Z",
-          "resolvedAt": "2026-11-18T14:13:46.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M7ATRS6BMZ61E4JDHJGM79Y0",
-          "title": "Delayed Costs Data in the Compliance API",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-13T16:10:07.000Z",
-          "updatedAt": "2026-11-16T00:17:25.000Z",
-          "resolvedAt": "2026-11-16T00:17:25.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        }
-      ]
-    },
-    {
       "id": "together",
       "providerId": null,
       "name": "Together AI",
@@ -339,7 +350,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-23T14:59:23.051Z",
+      "lastCheckedAt": "2026-11-23T15:58:29.635Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
