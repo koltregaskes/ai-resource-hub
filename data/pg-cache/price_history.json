@@ -116646,9 +116646,9 @@
   {
     "id": 306,
     "model_id": "deepseek-v4.1-flash-1017",
-    "input_price": 0.15,
-    "output_price": 0.6,
-    "recorded_at": "2026-11-23 10:59:00",
+    "input_price": 0.03,
+    "output_price": 0.2,
+    "recorded_at": "2026-11-23 16:57:37",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4.1 Flash 1017",
     "provider_name": "DeepSeek",
