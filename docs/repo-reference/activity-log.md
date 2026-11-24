@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 24 Nov 2026, 19:58 UTC
+Generated: 24 Nov 2026, 20:59 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 24 Nov 2026, 19:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 24 Nov 2026, 19:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 24 Nov 2026, 19:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 24 Nov 2026, 19:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 24 Nov 2026, 20:59 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 24 Nov 2026, 20:59 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 24 Nov 2026, 20:59 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 24 Nov 2026, 20:59 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 24 Nov 2026, 12:00 UTC | digest | Anthropic shares fall below IPO price, a worrying sign for AI startups | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups/) |
 | 24 Nov 2026, 12:00 UTC | digest | David Fincher is being dragged for suspected use of AI in his latest film | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/entertainment/1041417/david-fincher-netflix-cliff-booth-ai-interpositive) |
-| 24 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 985 open roles across 10 tracked companies. | `/jobs/` |
-| 24 Nov 2026, 12:00 UTC | digest | Published the 2026-11-24 daily digest | 16 stories captured from 5 sources. | `/news/` |
-| 24 Nov 2026, 12:00 UTC | digest | UK warns AI-driven cyberattacks are exposing years of weak security | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/24/uk-warns-ai-driven-cyberattacks-are-exposing-years-of-weak-security/) |
+| 24 Nov 2026, 12:00 UTC | digest | Jensen Huang reportedly tells Nvidia staff it&#8217;s ‘not true’ Trump got him rehired | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology) |
+| 24 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 984 open roles across 10 tracked companies. | `/jobs/` |
+| 24 Nov 2026, 12:00 UTC | digest | Published the 2026-11-24 daily digest | 17 stories captured from 5 sources. | `/news/` |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |

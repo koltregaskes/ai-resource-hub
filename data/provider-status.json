@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T19:58:30.026Z",
+  "generatedAt": "2026-11-24T20:59:29.155Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-24T19:58:30.021Z",
+      "lastCheckedAt": "2026-11-24T20:59:29.149Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-24T11:19:04.000Z",
+          "id": "fireworks-feed-0-2026-11-24T20:40:08.000Z",
+          "title": "Service Degradation for Kimi K3 US",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-24T20:40:08.000Z",
+          "updatedAt": "2026-11-24T20:40:08.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M87JKKZWM5TTJ3ZG80ZJ62FR",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-24T11:19:04.000Z",
           "title": "Service Degradation for Kimi K3.1 Pro US",
           "status": "reported",
           "impact": "unknown",
@@ -28,23 +39,23 @@
           "updatedAt": "2026-11-24T11:19:04.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M86ESC8TBFTFVQ9KPAWC0SM9",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-11-24T08:08:49.000Z",
-          "title": "Service Degradation for GLM 5.3 Fast",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-24T08:08:49.000Z",
-          "updatedAt": "2026-11-24T08:08:49.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M8688M7HE0RJPSFMN7VA48QM",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-24T11:19:04.000Z",
+          "id": "fireworks-feed-0-2026-11-24T20:40:08.000Z",
+          "title": "Service Degradation for Kimi K3 US",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-24T20:40:08.000Z",
+          "updatedAt": "2026-11-24T20:40:08.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M87JKKZWM5TTJ3ZG80ZJ62FR",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-24T11:19:04.000Z",
           "title": "Service Degradation for Kimi K3.1 Pro US",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-11-24T08:08:49.000Z",
+          "id": "fireworks-feed-2-2026-11-24T08:08:49.000Z",
           "title": "Service Degradation for GLM 5.3 Fast",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-2-2026-11-24T06:40:45.000Z",
+          "id": "fireworks-feed-3-2026-11-24T06:40:45.000Z",
           "title": "Service Degradation for GLM 5.3 Flash",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-11-24T06:40:45.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M862A6JWHCC3HK71CWGJZ3SY",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-11-23T14:40:22.000Z",
-          "title": "Service Degradation for Kimi K3",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-23T14:40:22.000Z",
-          "updatedAt": "2026-11-23T14:40:22.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M84CPGD66CWC38Y760PYE76H",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-24T19:58:28.587Z",
+      "lastCheckedAt": "2026-11-24T20:59:26.790Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
@@ -192,6 +192,26 @@
       ]
     },
     {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-11-24T20:59:27.805Z",
+      "overallStatus": "maintenance",
+      "overallLabel": "Under maintenance",
+      "summary": "Official provider status page reports: Under maintenance.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
+    },
+    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -202,7 +222,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-24T19:58:29.781Z",
+      "lastCheckedAt": "2026-11-24T20:59:27.564Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +242,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-24T19:58:29.054Z",
+      "lastCheckedAt": "2026-11-24T20:59:27.003Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -265,7 +285,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-24T19:58:28.666Z",
+      "lastCheckedAt": "2026-11-24T20:59:26.829Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -339,26 +359,6 @@
           "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
         }
       ]
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-11-24T19:58:29.890Z",
-      "overallStatus": "operational",
-      "overallLabel": "All systems operational",
-      "summary": "Official provider status page reports all systems operational.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
     },
     {
       "id": "deepseek",
