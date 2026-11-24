@@ -672496,6 +672496,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 350,
+    "model_id": "qwen3.6-35b-a3b",
+    "input_price": 0.1,
+    "output_price": 0.89,
+    "recorded_at": "2026-11-24 22:58:46",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.6 35B A3B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 262,
     "model_id": "qwen3.6-flash",
     "input_price": 0.25,
