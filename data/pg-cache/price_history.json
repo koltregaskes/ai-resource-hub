@@ -412687,6 +412687,17 @@
     "provider_colour": "#f59e0b"
   },
   {
+    "id": 330,
+    "model_id": "kimi-k3",
+    "input_price": 0.2,
+    "output_price": 16,
+    "recorded_at": "2026-11-24 11:59:01",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Kimi K3",
+    "provider_name": "Moonshot AI",
+    "provider_colour": "#f59e0b"
+  },
+  {
     "id": 339,
     "model_id": "kimi-k3.1-pro",
     "input_price": 2,
