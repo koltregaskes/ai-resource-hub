@@ -9,7 +9,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-24T18:30:42.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-3e9a37054bc905422f78",
@@ -21,7 +21,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-24T18:15:00.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:27"
   },
   {
     "id": "news-cb0d7372f9a0d9c643e3",
@@ -33,7 +33,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-24T18:02:59.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-c7d2da5c582fe3f0d662",
@@ -45,7 +45,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-24T17:17:09.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:27"
   },
   {
     "id": "news-eaadf2423721fd74ac0d",
@@ -57,7 +57,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-24T17:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-26c3ceae08944feb53c1",
@@ -69,7 +69,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-24T16:46:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-c82ab5c574080217a00a",
@@ -81,7 +81,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-24T16:30:00.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:27"
   },
   {
     "id": "news-8a546b15d29e6902534f",
@@ -93,7 +93,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-24T16:10:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-dc69597abec1a000fbd1",
@@ -105,7 +105,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-24T16:09:23.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:27"
   },
   {
     "id": "news-ee2357a4074e0cc8b152",
@@ -117,7 +117,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-24T16:02:37.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-8d6c7c64bc8598955fbc",
@@ -129,7 +129,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-24T16:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-4a847676e926b3bb09b8",
@@ -141,7 +141,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-24T15:51:07.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-21c67f84759f6dc51b11",
@@ -153,19 +153,43 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-24T12:30:05.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:28"
   },
   {
-    "id": "news-71996d97862bb6c2f7db",
+    "id": "news-f3aa9260f1094b3713b9",
+    "title": "Searching for distant planets with Astra",
+    "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+    "source": "OpenAI",
+    "summary": "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler and TESS space telescopes.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-24T11:00:00.000Z",
+    "discovered_at": "2026-11-24 19:58:18"
+  },
+  {
+    "id": "news-7a6462e387eb267a9c42",
     "title": "How iFood scales coding agents across 15,000 repositories",
-    "url": "https://openai.com/index/ifood",
+    "url": "https://openai.com/business/customer-stories/ifood",
     "source": "OpenAI",
     "summary": null,
     "category": "models",
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-24T00:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
+    "discovered_at": "2026-11-24 19:58:18"
+  },
+  {
+    "id": "news-ec442b764e041cd285d6",
+    "title": "How Intentful uses dots to make more time for growth",
+    "url": "https://openai.com/business/customer-stories/intentful-dots",
+    "source": "OpenAI",
+    "summary": "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolving issues.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-24T00:00:00.000Z",
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-049542555c2cb3db303f",
@@ -177,7 +201,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T22:25:12.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:27"
   },
   {
     "id": "news-15c28179b2dc3ec9cbc8",
@@ -189,7 +213,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T22:10:32.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:27"
   },
   {
     "id": "news-8ab70d6f89cfc96bd543",
@@ -201,7 +225,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T22:09:26.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:27"
   },
   {
     "id": "news-27065c561fbc5a7f071e",
@@ -213,7 +237,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T22:05:50.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-0d63fb1e6c01db65a7dd",
@@ -225,7 +249,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T22:02:05.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-ada2460a24f685eb34e5",
@@ -237,7 +261,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T21:47:41.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-9d1f6a725104cec1c99d",
@@ -249,7 +273,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T21:25:42.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-1d0c151fefed0deaf7f3",
@@ -261,7 +285,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T21:20:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-0cd17937bdc8feaaf0a9",
@@ -273,7 +297,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T21:09:37.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:27"
   },
   {
     "id": "news-2475b067992dd4abe8c9",
@@ -285,7 +309,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T20:38:53.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-49ef9cf5084cd81be3d8",
@@ -297,7 +321,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T20:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:27"
   },
   {
     "id": "news-47b1648bdb930a3d39c6",
@@ -309,7 +333,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T19:57:18.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:27"
   },
   {
     "id": "news-7601f68fa236425c4aed",
@@ -321,7 +345,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T19:14:46.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-a2f14d06f82b7f3a79c0",
@@ -333,7 +357,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T18:12:22.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-6a7990e1ad10d3b07182",
@@ -345,7 +369,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T17:14:23.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-c5903c8754bbbfd59b55",
@@ -357,7 +381,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T17:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-b7579835e4e7c6dde87c",
@@ -369,7 +393,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T16:57:40.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-81a464b2bd018e0d300a",
@@ -381,7 +405,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T16:39:10.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-aa93777566bc104e9158",
@@ -393,7 +417,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T15:04:01.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-680b35173b971311b4b8",
@@ -405,7 +429,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T08:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-f8a4e02f421246931880",
@@ -417,7 +441,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-23T08:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-de5cd1a6d51dc917ab91",
@@ -429,7 +453,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-22T00:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-99727b65c29013d05b70",
@@ -441,7 +465,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-20T20:59:08.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:28"
   },
   {
     "id": "news-3ea993db7e3c60d1925e",
@@ -453,7 +477,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-20T10:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-f4784c30400364a22881",
@@ -465,7 +489,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-20T00:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-d15c45643214b444b1cb",
@@ -477,7 +501,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-20T00:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-57728669e04868aebe5c",
@@ -489,7 +513,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-19T18:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-c3e7758a237362e25e13",
@@ -501,7 +525,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-19T17:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-6687f7be62c34e4af8b1",
@@ -513,43 +537,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-19T08:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
-  },
-  {
-    "id": "news-e29ac258c013c12c7631",
-    "title": "Explore the Codex Security Plugin",
-    "url": "https://openai.com/business/learn/codex-security-plugin-demo",
-    "source": "OpenAI",
-    "summary": "Watch a demo of the Codex Security Plugin and see the workflow in action, from getting started to reviewing the results shown in the recording.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-19T00:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
-  },
-  {
-    "id": "news-a2fb00344062975fa7ac",
-    "title": "Get started with Daybreak Blue",
-    "url": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
-    "source": "OpenAI",
-    "summary": "Watch a walkthrough of onboarding to Daybreak Blue, with a closer look at the setup experience and how to get started.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-19T00:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
-  },
-  {
-    "id": "news-cb99e2baa62e786645f3",
-    "title": "See PR scans in action",
-    "url": "https://openai.com/business/learn/pr-scans-demo",
-    "source": "OpenAI",
-    "summary": "Watch a walkthrough of PR scans and see how the presenter reviews scan results in a pull request workflow.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-19T00:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-4b08ec50268e04a4eb3c",
@@ -561,7 +549,43 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-19T00:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
+    "discovered_at": "2026-11-24 19:58:18"
+  },
+  {
+    "id": "news-e29ac258c013c12c7631",
+    "title": "Explore the Codex Security Plugin",
+    "url": "https://openai.com/business/learn/codex-security-plugin-demo",
+    "source": "OpenAI",
+    "summary": "Watch a demo of the Codex Security Plugin and see the workflow in action, from getting started to reviewing the results shown in the recording.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-19T00:00:00.000Z",
+    "discovered_at": "2026-11-24 19:58:18"
+  },
+  {
+    "id": "news-cb99e2baa62e786645f3",
+    "title": "See PR scans in action",
+    "url": "https://openai.com/business/learn/pr-scans-demo",
+    "source": "OpenAI",
+    "summary": "Watch a walkthrough of PR scans and see how the presenter reviews scan results in a pull request workflow.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-19T00:00:00.000Z",
+    "discovered_at": "2026-11-24 19:58:18"
+  },
+  {
+    "id": "news-a2fb00344062975fa7ac",
+    "title": "Get started with Daybreak Blue",
+    "url": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+    "source": "OpenAI",
+    "summary": "Watch a walkthrough of onboarding to Daybreak Blue, with a closer look at the setup experience and how to get started.",
+    "category": "models",
+    "tags": "[]",
+    "importance_score": 0.4,
+    "published_at": "2026-11-19T00:00:00.000Z",
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-03ca256a4adf40871dcd",
@@ -573,7 +597,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-18T17:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-e683d40fba103b5f4ba8",
@@ -585,19 +609,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-18T10:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
-  },
-  {
-    "id": "news-53f2a14376dda94d54be",
-    "title": "Inside the Codex sandbox",
-    "url": "https://openai.com/index/inside-the-codex-sandbox",
-    "source": "OpenAI",
-    "summary": "See how Codex runs commands on your machine while enforcing the filesystem and network limits you control across macOS, Linux, and Windows.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-18T08:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-9fa731b0ef6c1da92e2e",
@@ -609,7 +621,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-18T08:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-b527b6f0ddceafec7084",
@@ -621,19 +633,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-18T08:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
-  },
-  {
-    "id": "news-8b6ac2940fdc0d0ef0bb",
-    "title": "Managing frontier AI risk: From training to deployment",
-    "url": "https://openai.com/index/managing-frontier-ai-risk",
-    "source": "OpenAI",
-    "summary": "OpenAI explains how it manages frontier AI risk from training through deployment with model alignment, sandboxing, blocking safeguards, and monitoring.",
-    "category": "models",
-    "tags": "[]",
-    "importance_score": 0.4,
-    "published_at": "2026-11-18T06:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:14"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-357d085ae06f4ca28864",
@@ -645,7 +645,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T17:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-0e789c02d67386aaea91",
@@ -657,7 +657,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-17T14:00:29.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:28"
   },
   {
     "id": "news-84f741940fbdaff2c7e2",
@@ -669,7 +669,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T20:37:47.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:28"
   },
   {
     "id": "news-717626b76ea030ce1456",
@@ -681,7 +681,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-16T14:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-459a57b4750adf481f4f",
@@ -693,7 +693,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-12T18:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-8e4104a923ec61a4f8ae",
@@ -705,7 +705,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T18:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-97adab01dbf7344a4376",
@@ -717,7 +717,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T16:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-7e65614cc89aac7b14f8",
@@ -729,7 +729,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-11T09:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-b686da68349e5f787ade",
@@ -741,7 +741,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T21:12:59.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:28"
   },
   {
     "id": "news-ac5a661efbfd509d2187",
@@ -753,7 +753,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T19:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-c5fffc8a0cbdc3d45109",
@@ -765,7 +765,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T14:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-155d33cae72679311e5a",
@@ -777,7 +777,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-10T13:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-a5eef3cf57a4e41068d1",
@@ -789,7 +789,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-06T20:56:41.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:28"
   },
   {
     "id": "news-63c3d56bc72bc9e8d1c7",
@@ -801,7 +801,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-05T17:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-b810030289ed799f4f42",
@@ -813,7 +813,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-11-02T17:45:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   },
   {
     "id": "news-ce0cce9f3bc5563cb51b",
@@ -825,7 +825,7 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-30T21:09:54.000Z",
-    "discovered_at": "2026-11-24 18:59:26"
+    "discovered_at": "2026-11-24 19:58:28"
   },
   {
     "id": "news-be77c96c39b4ea3e55fc",
@@ -837,6 +837,6 @@
     "tags": "[]",
     "importance_score": 0.4,
     "published_at": "2026-10-26T16:00:00.000Z",
-    "discovered_at": "2026-11-24 18:59:15"
+    "discovered_at": "2026-11-24 19:58:18"
   }
 ]

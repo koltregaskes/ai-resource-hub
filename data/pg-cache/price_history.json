@@ -459888,6 +459888,17 @@
     "provider_colour": "#e040fb"
   },
   {
+    "id": 369,
+    "model_id": "minimax-m2.5",
+    "input_price": 0.3,
+    "output_price": 1.2,
+    "recorded_at": "2026-11-24 19:58:14",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "MiniMax M2.5",
+    "provider_name": "MiniMax",
+    "provider_colour": "#e040fb"
+  },
+  {
     "id": 3708,
     "model_id": "minimax-m2.7",
     "input_price": 0.3,
