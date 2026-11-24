@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 24 Nov 2026, 20:59 UTC
+Generated: 24 Nov 2026, 22:04 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -21,7 +21,7 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | 5 Aug 2026 | Muse Spark 1.2 | Meta |  | backfill | needs research | 0 | 0 | [official](https://dev.meta.ai/docs/models) |
 | 24 Jul 2026 | Claude Opus 5 | Anthropic | active | backfill | ready for editor | 0 | 4 | [official](https://www.anthropic.com/news/claude-opus-5) |
 | 21 Jul 2026 | Gemini 3.6 Flash | Google | active | backfill | ready for editor | 0 | 6 | [official](https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash) |
-| 9 Jul 2026 | GPT-5.6 Sol | OpenAI | active | backfill | ready for editor | 0 | 4 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-sol) |
+| 9 Jul 2026 | GPT-5.6 Sol | OpenAI | active | backfill | ready for editor | 0 | 3 | [official](https://developers.openai.com/api/docs/models/gpt-5.6-sol) |
 | 30 Jun 2026 | Claude Sonnet 5 | Anthropic | active | backfill | ready for editor | 0 | 4 | [official](https://www.anthropic.com/news/claude-sonnet-5) |
 | 9 Jun 2026 | Claude Fable 5 | Anthropic | active | backfill | ready for editor | 0 | 4 | [official](https://www.anthropic.com/news/claude-fable-5-mythos-5) |
 | 2 Apr 2026 | Gemma 4 | Google | tracking | backfill | ready for editor | 0 | 6 | [official](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/) |

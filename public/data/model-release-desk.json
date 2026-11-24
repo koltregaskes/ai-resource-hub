@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T20:59:36.807Z",
+  "generatedAt": "2026-11-24T22:04:07.448Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -1314,7 +1314,7 @@
       "pricingSource": "OpenAI (official)",
       "pricingUpdated": null,
       "summary": "GPT-5.6 Sol is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $5.00 in / $30.00 out per million tokens. Current frontier GPT-5.6 model; the gpt-5.6 alias routes to Sol. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.6 Sol is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -1365,22 +1365,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-07-09-gpt-5-6-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "claude-sonnet-5",
@@ -2145,7 +2135,7 @@
       "pricingSource": "OpenAI (official)",
       "pricingUpdated": null,
       "summary": "GPT-5.4 is a currently tracked release from OpenAI. It is positioned as an API-available model rather than a local-only release. Tracked context window: 1.1M tokens. Current tracked pricing: $2.50 in / $15.00 out per million tokens. Official GPT-5.4 API model; superseded as the current flagship by GPT-5.6. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "OpenAI's GPT-5.4 is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-5.4 is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -2196,22 +2186,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-03-05-gpt-5-4-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 5
+      "storyCount": 3,
+      "sourceCount": 4
     },
     {
       "id": "gemini-3.1-pro",
@@ -4512,7 +4492,7 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Astra is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-astra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Astra is on the release desk with 6 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Astra is on the release desk with 5 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4583,22 +4563,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-24-gpt-6-astra-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 6,
-      "sourceCount": 6
+      "storyCount": 5,
+      "sourceCount": 5
     },
     {
       "id": "gpt-6-astra-pro",
@@ -4648,7 +4618,7 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Astra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-astra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Astra Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Astra Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4699,22 +4669,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-24-gpt-6-astra-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6-luna",
@@ -4764,7 +4724,7 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Luna is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-luna); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Luna is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Luna is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4825,22 +4785,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-24-gpt-6-luna-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gpt-6-luna-pro",
@@ -4890,7 +4840,7 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Luna Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-luna-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Luna Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Luna Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -4941,22 +4891,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-24-gpt-6-luna-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6-sol",
@@ -5006,7 +4946,7 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Sol is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5057,22 +4997,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-24-gpt-6-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6-sol-pro",
@@ -5122,7 +5052,7 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6 Sol Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6 Sol Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5173,22 +5103,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-24-gpt-6-sol-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.1-sol",
@@ -5238,7 +5158,7 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Sol is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5299,22 +5219,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-24-gpt-6-1-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 5
+      "storyCount": 4,
+      "sourceCount": 4
     },
     {
       "id": "gpt-6.1-sol-pro",
@@ -5364,7 +5274,7 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Sol Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Sol Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5415,22 +5325,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-24-gpt-6-1-sol-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.1-terra",
@@ -5480,7 +5380,7 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Terra is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-terra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Terra is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Terra is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5531,22 +5431,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-24-gpt-6-1-terra-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.1-terra-pro",
@@ -5596,7 +5486,7 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.1 Terra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.1-terra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.1 Terra Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.1 Terra Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5647,22 +5537,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-24-gpt-6-1-terra-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.2-astra",
@@ -5712,7 +5592,7 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.2 Astra is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.2-astra); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.2 Astra is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.2 Astra is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5763,22 +5643,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-24-gpt-6-2-astra-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.2-astra-pro",
@@ -5828,7 +5698,7 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.2 Astra Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.2-astra-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.2 Astra Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.2 Astra Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5879,22 +5749,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-24-gpt-6-2-astra-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.2-sol",
@@ -5944,7 +5804,7 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.2 Sol is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.2-sol); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.2 Sol is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.2 Sol is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -5995,22 +5855,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-24-gpt-6-2-sol-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "gpt-6.2-sol-pro",
@@ -6060,7 +5910,7 @@
       "pricingSource": null,
       "pricingUpdated": null,
       "summary": "GPT-6.2 Sol Pro is a currently tracked release from OpenAI. Auto-tracked from OpenRouter discovery (openai/gpt-6.2-sol-pro); awaiting official verification. This is a discovery-only record. It must stay on the watchlist until a model-level primary source confirms it.",
-      "dek": "OpenAI's GPT-6.2 Sol Pro is on the release desk with 4 related stories and 0 benchmark signals to review.",
+      "dek": "OpenAI's GPT-6.2 Sol Pro is on the release desk with 3 related stories and 0 benchmark signals to review.",
       "whyItMatters": [
         "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
         "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
@@ -6111,22 +5961,12 @@
           "routingTags": [
             "evaluation"
           ]
-        },
-        {
-          "title": "Research acceleration: The jagged frontier",
-          "url": "https://openai.com/index/research-acceleration-jagged-frontier",
-          "source": "OpenAI",
-          "date": "2026-11-18",
-          "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
-          "routingTags": [
-            "evaluation"
-          ]
         }
       ],
       "draftPath": "editorial/release-drafts/2026-11-24-gpt-6-2-sol-pro-release-brief.md",
       "benchmarkCount": 0,
-      "storyCount": 4,
-      "sourceCount": 4
+      "storyCount": 3,
+      "sourceCount": 3
     },
     {
       "id": "grok-4.6",
