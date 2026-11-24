@@ -111267,9 +111267,9 @@
   {
     "id": 329,
     "model_id": "deepseek-v4-flash-0731",
-    "input_price": 0.069,
-    "output_price": 0.47,
-    "recorded_at": "2026-11-24 04:57:31",
+    "input_price": 0.055,
+    "output_price": 0.375,
+    "recorded_at": "2026-11-24 05:59:03",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4 Flash 0731",
     "provider_name": "DeepSeek",
@@ -231792,11 +231792,11 @@
     "provider_colour": "#00b4d8"
   },
   {
-    "id": 325,
+    "id": 323,
     "model_id": "glm-5.3-flash",
-    "input_price": 0.12,
-    "output_price": 0.38,
-    "recorded_at": "2026-11-24 01:58:23",
+    "input_price": 0.036,
+    "output_price": 0.081,
+    "recorded_at": "2026-11-24 05:59:03",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GLM 5.3 Flash",
     "provider_name": "Zhipu AI",
