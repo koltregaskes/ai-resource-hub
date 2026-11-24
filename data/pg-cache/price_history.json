@@ -464345,9 +464345,9 @@
   {
     "id": 180,
     "model_id": "minimax-m3.1-flash",
-    "input_price": 0.15,
-    "output_price": 0.6,
-    "recorded_at": "2026-11-24 01:58:23",
+    "input_price": 0.075,
+    "output_price": 0.3,
+    "recorded_at": "2026-11-24 15:58:19",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "MiniMax M3.1 Flash",
     "provider_name": "MiniMax",

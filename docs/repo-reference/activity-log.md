@@ -1,18 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 24 Nov 2026, 14:58 UTC
+Generated: 24 Nov 2026, 15:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 24 Nov 2026, 14:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 24 Nov 2026, 14:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 24 Nov 2026, 14:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 24 Nov 2026, 14:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 24 Nov 2026, 15:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 24 Nov 2026, 15:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 24 Nov 2026, 15:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 24 Nov 2026, 15:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 24 Nov 2026, 12:00 UTC | digest | Amazon says hackers&#039; AI agents found and exploited 0-day with little human input | Ars Technica featured in the latest daily brief. | [open](https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/) |
-| 24 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 987 open roles across 10 tracked companies. | `/jobs/` |
-| 24 Nov 2026, 12:00 UTC | digest | Published the 2026-11-24 daily digest | 1 stories captured from 1 sources. | `/news/` |
+| 24 Nov 2026, 12:00 UTC | digest | Amazon&#8217;s Decart acquisition is a bet on using software to narrow the gap with Nvidia in the AI chip race | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race/) |
+| 24 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 988 open roles across 10 tracked companies. | `/jobs/` |
+| 24 Nov 2026, 12:00 UTC | digest | Published the 2026-11-24 daily digest | 2 stories captured from 2 sources. | `/news/` |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
@@ -25,4 +26,3 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 09 Jul 2026, 12:00 UTC | models | GPT-5.6 Sol added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.6-sol/` |
 | 09 Jul 2026, 12:00 UTC | models | GPT-5.6 Terra added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.6-terra/` |
 | 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
-| 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
