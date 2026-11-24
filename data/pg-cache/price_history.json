@@ -111265,11 +111265,11 @@
     "provider_colour": "#2563eb"
   },
   {
-    "id": 331,
+    "id": 329,
     "model_id": "deepseek-v4-flash-0731",
-    "input_price": 0.055,
-    "output_price": 0.375,
-    "recorded_at": "2026-11-24 02:58:15",
+    "input_price": 0.044,
+    "output_price": 0.3,
+    "recorded_at": "2026-11-24 03:59:01",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4 Flash 0731",
     "provider_name": "DeepSeek",
@@ -407346,6 +407346,17 @@
     "input_price": 0.57,
     "output_price": 2.3,
     "recorded_at": "2026-11-18 08:58:04",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Kimi K2.5",
+    "provider_name": "Moonshot AI",
+    "provider_colour": "#f59e0b"
+  },
+  {
+    "id": 232,
+    "model_id": "kimi-k2.5",
+    "input_price": 0.5,
+    "output_price": 2.5,
+    "recorded_at": "2026-11-24 03:59:01",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Kimi K2.5",
     "provider_name": "Moonshot AI",

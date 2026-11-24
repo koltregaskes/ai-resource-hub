@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T02:58:36.851Z",
+  "generatedAt": "2026-11-24T03:59:26.575Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -1830,7 +1830,7 @@
       "openSourceState": "unreviewed",
       "apiAvailable": true,
       "apiAvailableState": "unreviewed",
-      "modality": "text",
+      "modality": "text,vision",
       "contextWindow": 128000,
       "contextWindowState": "verified",
       "maxOutput": 16384,
