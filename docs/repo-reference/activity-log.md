@@ -1,17 +1,17 @@
 # Recent Activity Snapshot
 
-Generated: 24 Nov 2026, 12:57 UTC
+Generated: 24 Nov 2026, 13:57 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 24 Nov 2026, 12:57 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 24 Nov 2026, 12:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 24 Nov 2026, 12:57 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 24 Nov 2026, 12:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 24 Nov 2026, 13:57 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 24 Nov 2026, 13:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 24 Nov 2026, 13:57 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 24 Nov 2026, 13:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 24 Nov 2026, 12:00 UTC | digest | Amazon says hackers&#039; AI agents found and exploited 0-day with little human input | Ars Technica featured in the latest daily brief. | [open](https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/) |
-| 24 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 986 open roles across 10 tracked companies. | `/jobs/` |
+| 24 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 987 open roles across 10 tracked companies. | `/jobs/` |
 | 24 Nov 2026, 12:00 UTC | digest | Published the 2026-11-24 daily digest | 1 stories captured from 1 sources. | `/news/` |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
