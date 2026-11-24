@@ -685784,6 +685784,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 324,
+    "model_id": "qwen3.8-27b",
+    "input_price": 0.06,
+    "output_price": 1.96,
+    "recorded_at": "2026-11-24 17:37:38",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.8 27B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 336,
     "model_id": "qwen3.8-flash",
     "input_price": 0.16,
