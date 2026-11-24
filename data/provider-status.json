@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T06:02:03.000Z",
+  "generatedAt": "2026-11-24T06:58:22.389Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-24T06:02:02.996Z",
+      "lastCheckedAt": "2026-11-24T06:58:22.384Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -20,7 +20,18 @@
       "components": [],
       "activeIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-23T14:40:22.000Z",
+          "id": "fireworks-feed-0-2026-11-24T06:40:45.000Z",
+          "title": "Service Degradation for GLM 5.3 Flash",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-24T06:40:45.000Z",
+          "updatedAt": "2026-11-24T06:40:45.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M862A6JWHCC3HK71CWGJZ3SY",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-23T14:40:22.000Z",
           "title": "Service Degradation for Kimi K3",
           "status": "reported",
           "impact": "unknown",
@@ -29,22 +40,22 @@
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M84CPGD66CWC38Y760PYE76H",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-1-2026-11-23T02:48:13.000Z",
-          "title": "Service Degradation for Muse Spark Open US",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-23T02:48:13.000Z",
-          "updatedAt": "2026-11-23T02:48:13.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M8300306Q16Q2QRBXJ3C7W38",
-          "summary": "Status: Resolved We’ve resolved the incident and the affected service is now operational Affected components Muse Spark Open US (Operational)"
         }
       ],
       "recentIncidents": [
         {
-          "id": "fireworks-feed-0-2026-11-23T14:40:22.000Z",
+          "id": "fireworks-feed-0-2026-11-24T06:40:45.000Z",
+          "title": "Service Degradation for GLM 5.3 Flash",
+          "status": "reported",
+          "impact": "unknown",
+          "startedAt": "2026-11-24T06:40:45.000Z",
+          "updatedAt": "2026-11-24T06:40:45.000Z",
+          "resolvedAt": null,
+          "url": "https://status.fireworks.ai//incidents/01M862A6JWHCC3HK71CWGJZ3SY",
+          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
+        },
+        {
+          "id": "fireworks-feed-1-2026-11-23T14:40:22.000Z",
           "title": "Service Degradation for Kimi K3",
           "status": "reported",
           "impact": "unknown",
@@ -55,7 +66,7 @@
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         },
         {
-          "id": "fireworks-feed-1-2026-11-23T02:48:13.000Z",
+          "id": "fireworks-feed-2-2026-11-23T02:48:13.000Z",
           "title": "Service Degradation for Muse Spark Open US",
           "status": "reported",
           "impact": "unknown",
@@ -66,7 +77,7 @@
           "summary": "Status: Resolved We’ve resolved the incident and the affected service is now operational Affected components Muse Spark Open US (Operational)"
         },
         {
-          "id": "fireworks-feed-2-2026-11-22T22:27:27.000Z",
+          "id": "fireworks-feed-3-2026-11-22T22:27:27.000Z",
           "title": "Service Degradation for Kimi K3.1 Pro",
           "status": "reported",
           "impact": "unknown",
@@ -74,17 +85,6 @@
           "updatedAt": "2026-11-22T22:27:27.000Z",
           "resolvedAt": null,
           "url": "https://status.fireworks.ai//incidents/01M82NN474B0D734PEYZ1F84JG",
-          "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
-        },
-        {
-          "id": "fireworks-feed-3-2026-11-22T02:53:27.000Z",
-          "title": "Service Degradation for DeepSeek V4.1 Flash 1017",
-          "status": "reported",
-          "impact": "unknown",
-          "startedAt": "2026-11-22T02:53:27.000Z",
-          "updatedAt": "2026-11-22T02:53:27.000Z",
-          "resolvedAt": null,
-          "url": "https://status.fireworks.ai//incidents/01M80JH9Z7NBJFQ9Z5NWXYGM8P",
           "summary": "Status: Resolved We've resolved the incident and the affected service is now operational."
         }
       ]
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-24T06:02:01.459Z",
+      "lastCheckedAt": "2026-11-24T06:58:20.994Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-24T06:02:02.207Z",
+      "lastCheckedAt": "2026-11-24T06:58:21.831Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-24T06:02:01.649Z",
+      "lastCheckedAt": "2026-11-24T06:58:21.157Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -265,7 +265,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-24T06:02:01.500Z",
+      "lastCheckedAt": "2026-11-24T06:58:21.039Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -351,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-24T06:02:02.352Z",
+      "lastCheckedAt": "2026-11-24T06:58:22.000Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
