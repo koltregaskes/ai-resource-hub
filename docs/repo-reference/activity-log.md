@@ -1,20 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 25 Nov 2026, 14:06 UTC
+Generated: 25 Nov 2026, 16:59 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 25 Nov 2026, 14:06 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 25 Nov 2026, 14:06 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 25 Nov 2026, 14:06 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 25 Nov 2026, 14:06 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 25 Nov 2026, 12:00 UTC | digest | Has vibe coding made open source the new normal for synths? | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1040081/vibe-coding-open-source-music-firmware) |
-| 25 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 986 open roles across 10 tracked companies. | `/jobs/` |
-| 25 Nov 2026, 12:00 UTC | digest | Published the 2026-11-25 daily digest | 3 stories captured from 2 sources. | `/news/` |
-| 25 Nov 2026, 12:00 UTC | digest | The questions Jensen Huang and Nvidia will still have to answer about Megaspeed | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/) |
-| 25 Nov 2026, 12:00 UTC | digest | Yale&#8217;s Sonnenfeld: Nvidia is a &#8216;detriment&#8217; to US industrial might — not a champion | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion/) |
+| 25 Nov 2026, 16:59 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 25 Nov 2026, 16:59 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 25 Nov 2026, 16:59 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 25 Nov 2026, 16:59 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 25 Nov 2026, 12:00 UTC | digest | AI data centers are becoming harder to build, and neoclouds are feeling it | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/podcast/ai-data-centers-are-becoming-harder-to-build-and-neoclouds-are-feeling-it/) |
+| 25 Nov 2026, 12:00 UTC | digest | Amazon is reportedly in talks to end Muse AI shopping block | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions) |
+| 25 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 984 open roles across 10 tracked companies. | `/jobs/` |
+| 25 Nov 2026, 12:00 UTC | digest | Nothing offers a full look at its AI earbuds and charging case | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/gadgets/1042162/nothing-ear-note-ai-earbuds-reveal) |
+| 25 Nov 2026, 12:00 UTC | digest | Published the 2026-11-25 daily digest | 7 stories captured from 2 sources. | `/news/` |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |

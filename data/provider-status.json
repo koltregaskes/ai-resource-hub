@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T14:06:28.143Z",
+  "generatedAt": "2026-11-25T16:59:26.068Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T14:06:28.136Z",
+      "lastCheckedAt": "2026-11-25T16:59:26.062Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T14:06:26.434Z",
+      "lastCheckedAt": "2026-11-25T16:59:24.292Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
@@ -202,20 +202,12 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T14:06:26.626Z",
+      "lastCheckedAt": "2026-11-25T16:59:24.304Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
       "notes": null,
       "components": [
-        {
-          "name": "Conversations",
-          "status": "degraded_performance"
-        },
-        {
-          "name": "ChatGPT Work",
-          "status": "degraded_performance"
-        },
         {
           "name": "Chat Completions",
           "status": "operational"
@@ -231,30 +223,48 @@
         {
           "name": "Decisions",
           "status": "operational"
+        },
+        {
+          "name": "Fine-tuning",
+          "status": "operational"
+        },
+        {
+          "name": "Embeddings",
+          "status": "operational"
         }
       ],
       "activeIncidents": [
         {
-          "id": "01M898HVZGXFV2XC4775CG9GF8",
-          "title": "ChatGPT, ChatGPT Work, and Codex Cloud are experiencing elevated conversation errors",
+          "id": "01M89RGC3STKK2MT53TXHFMY4H",
+          "title": "Elevated errors with Codex GitHub reviews and pull request merges",
           "status": "monitoring",
           "impact": "minor",
-          "startedAt": "2026-11-25T11:48:13.000Z",
-          "updatedAt": "2026-11-25T13:22:34.000Z",
+          "startedAt": "2026-11-25T16:27:02.000Z",
+          "updatedAt": "2026-11-25T16:58:51.000Z",
           "resolvedAt": null,
-          "summary": "We have applied mitigations and are seeing recovery across ChatGPT, ChatGPT Work, and Codex cloud threads. We are monitoring the affected services to ensure continued stability. O..."
+          "summary": "GitHub reports that the service disruption affecting pull requests and webhooks has been mitigated. We are monitoring Codex automated pull request reviews and merge operations to..."
         }
       ],
       "recentIncidents": [
         {
-          "id": "01M898HVZGXFV2XC4775CG9GF8",
-          "title": "ChatGPT, ChatGPT Work, and Codex Cloud are experiencing elevated conversation errors",
+          "id": "01M89RGC3STKK2MT53TXHFMY4H",
+          "title": "Elevated errors with Codex GitHub reviews and pull request merges",
           "status": "monitoring",
           "impact": "minor",
-          "startedAt": "2026-11-25T11:48:13.000Z",
-          "updatedAt": "2026-11-25T13:22:34.000Z",
+          "startedAt": "2026-11-25T16:27:02.000Z",
+          "updatedAt": "2026-11-25T16:58:51.000Z",
           "resolvedAt": null,
-          "summary": "We have applied mitigations and are seeing recovery across ChatGPT, ChatGPT Work, and Codex cloud threads. We are monitoring the affected services to ensure continued stability. O..."
+          "summary": "GitHub reports that the service disruption affecting pull requests and webhooks has been mitigated. We are monitoring Codex automated pull request reviews and merge operations to..."
+        },
+        {
+          "id": "01M898HVZGXFV2XC4775CG9GF8",
+          "title": "ChatGPT, ChatGPT Work, and Codex Cloud are experiencing elevated conversation errors",
+          "status": "resolved",
+          "impact": "minor",
+          "startedAt": "2026-11-25T11:48:13.000Z",
+          "updatedAt": "2026-11-25T16:12:21.000Z",
+          "resolvedAt": "2026-11-25T16:12:21.000Z",
+          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
         },
         {
           "id": "01M84HKHX73RF7HTVZQ2A9GFXP",
@@ -275,38 +285,8 @@
           "updatedAt": "2026-11-19T16:58:04.000Z",
           "resolvedAt": "2026-11-19T16:58:04.000Z",
           "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
-        },
-        {
-          "id": "01M7N9VNR6X5SEC90M1YCDB36D",
-          "title": "Costs API data is delayed",
-          "status": "resolved",
-          "impact": "minor",
-          "startedAt": "2026-11-17T17:46:15.000Z",
-          "updatedAt": "2026-11-19T02:42:30.000Z",
-          "resolvedAt": "2026-11-18T17:15:46.000Z",
-          "summary": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience."
         }
       ]
-    },
-    {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T14:06:27.391Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
     },
     {
       "id": "cohere",
@@ -319,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T14:06:27.502Z",
+      "lastCheckedAt": "2026-11-25T16:59:24.984Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -339,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T14:06:26.734Z",
+      "lastCheckedAt": "2026-11-25T16:59:24.501Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -370,6 +350,26 @@
           "summary": "# Incident Report\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models experienced increased error rates. Impacted services incl..."
         }
       ]
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-11-25T16:59:25.193Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
     },
     {
       "id": "deepseek",
