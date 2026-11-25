@@ -5,7 +5,8 @@ Dim shell, here, command, exitCode
 
 Set shell = CreateObject("WScript.Shell")
 here = CreateObject("Scripting.FileSystemObject").GetParentFolderName(WScript.ScriptFullName)
-command = "cmd.exe /d /c """ & here & "\run-local-freshness-update.cmd"""
+' cmd /s /c ""<path>"": the outer pair is stripped as a whole, so a path with spaces or & stays quoted.
+command = "cmd.exe /d /s /c """"" & here & "\run-local-freshness-update.cmd"""""
 exitCode = shell.Run(command, 0, True)
 
 WScript.Quit exitCode
