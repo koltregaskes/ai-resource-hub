@@ -209946,6 +209946,17 @@
     "provider_colour": "#00b4d8"
   },
   {
+    "id": 411,
+    "model_id": "glm-4.5-air",
+    "input_price": 0.14,
+    "output_price": 0.86,
+    "recorded_at": "2026-11-25 09:59:13",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 4.5 Air",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
     "id": 3809,
     "model_id": "glm-4.5v",
     "input_price": 0.6,
