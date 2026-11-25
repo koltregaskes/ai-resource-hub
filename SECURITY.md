@@ -22,7 +22,7 @@ If you believe you have found a security issue involving:
 
 report it privately to the maintainer at:
 
-- `kolin@tregaskes.co.uk`
+- `contact@elusionworks.com` (the estate's shared contact address)
 
 When possible, include:
 

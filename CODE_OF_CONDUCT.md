@@ -35,6 +35,6 @@ This Code of Conduct applies across repository issues, pull requests, reviews, c
 
 If you experience or observe unacceptable behaviour, contact the maintainer privately at:
 
-- `kolin@tregaskes.co.uk`
+- `contact@elusionworks.com` (the estate's shared contact address)
 
 Maintainer decisions on repository moderation are final.
