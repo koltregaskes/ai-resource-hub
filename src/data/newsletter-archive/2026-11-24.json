@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "date": "2026-11-24",
+  "snapshotAt": "2026-11-25T06:57:59.267Z",
+  "totalAvailable": 23,
+  "stories": [
+    {
+      "id": "news-7a5947019eec714b9195",
+      "title": "Jensen Huang still thinks a succession plan creates unnecessary hierarchy",
+      "url": "https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy/",
+      "source": "TechCrunch",
+      "summary": "It's a remarkable stance for a company that spent the last two weeks finding out what happens without its founder.",
+      "publishedAt": "2026-11-24T22:27:52.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-5f077d12f5abe5fadd84",
+      "title": "In all-hands meeting, Jensen Huang thanks White House and says he&#8217;s in therapy",
+      "url": "https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy/",
+      "source": "TechCrunch",
+      "summary": "The Nvidia founder apologized to his staff on Tuesday and said he was grateful for a second chance to lead the company.",
+      "publishedAt": "2026-11-24T21:48:27.000Z",
+      "category": "policy",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-6e5f032fb046721a6133",
+      "title": "Even the best AI agents struggle with everyday life",
+      "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/",
+      "source": "TechCrunch",
+      "summary": "As millions embrace personal AI assistants, a new benchmark reveals that even the most advanced AI models struggle to complete everyday tasks reliably and safely without introducing potential new problems.",
+      "publishedAt": "2026-11-24T21:33:29.000Z",
+      "category": "agents",
+      "tags": [
+        "benchmark"
+      ],
+      "importance": 0.4
+    },
+    {
+      "id": "news-42cb577d7e7884cbc5bd",
+      "title": "Walmart teams up with Meta to bring Black Friday deals to AI agent Muse",
+      "url": "https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/",
+      "source": "TechCrunch",
+      "summary": "Walmart now lets customers shop Black Friday deals through Muse, Meta’s AI agent.",
+      "publishedAt": "2026-11-24T21:32:38.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-724878a26e68ea5bc3d9",
+      "title": "Maple raises $5.3M to build AI products that protect your data, even from itself",
+      "url": "https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself/",
+      "source": "TechCrunch",
+      "summary": "The startup's encrypted AI architecture is designed to prevent even the company itself from accessing users' private data.",
+      "publishedAt": "2026-11-24T21:19:52.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-32af257829de969688cb",
+      "title": "Jensen Huang reportedly tells Nvidia staff it&#8217;s ‘not true’ Trump got him rehired",
+      "url": "https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology",
+      "source": "The Verge",
+      "summary": "Nvidia CEO Jensen Huang apologized to staff during his first all-hands since returning to the company, while attempting to distance himself from the narrative that the White House and tech leaders helped him get his job back, according to reports from Bloomberg, The New York Times, and The Handbasket's Marisa Kabas. D…",
+      "publishedAt": "2026-11-24T20:02:03.000Z",
+      "category": "policy",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-754f867302b7ac7aa923",
+      "title": "Anthropic shares fall below IPO price, a worrying sign for AI startups",
+      "url": "https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups/",
+      "source": "TechCrunch",
+      "summary": "Anthropic’s post-IPO slump could put pressure on AI startup valuations.",
+      "publishedAt": "2026-11-24T18:30:42.000Z",
+      "category": "industry",
+      "tags": [
+        "pricing_change"
+      ],
+      "importance": 0.4
+    },
+    {
+      "id": "news-3e9a37054bc905422f78",
+      "title": "David Fincher is being dragged for suspected use of AI in his latest film",
+      "url": "https://www.theverge.com/entertainment/1041417/david-fincher-netflix-cliff-booth-ai-interpositive",
+      "source": "The Verge",
+      "summary": "Though David Fincher's fans had been eagerly anticipating The Further Mis-Adventures of Cliff Booth, early screenings of the Once Upon a Time in Hollywood sequel starring Brad Pitt have raised questions about whether generative AI was used in the film. People have claimed that the movie is chock-full of uncanny, incon…",
+      "publishedAt": "2026-11-24T18:15:00.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-cb0d7372f9a0d9c643e3",
+      "title": "UK warns AI-driven cyberattacks are exposing years of weak security",
+      "url": "https://techcrunch.com/2026/11/24/uk-warns-ai-driven-cyberattacks-are-exposing-years-of-weak-security/",
+      "source": "TechCrunch",
+      "summary": "The British cyber agency says that \"building strong foundations has never mattered more\" as AI hacking tools rely on exploiting simple security flaws.",
+      "publishedAt": "2026-11-24T18:02:59.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-c7d2da5c582fe3f0d662",
+      "title": "Tidal will start banning AI-generated music next month",
+      "url": "https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban",
+      "source": "The Verge",
+      "summary": "Tidal is officially banning AI-generated music on December 9th. As a result of this change, Tidal will delete around 29 million AI-generated songs and reject an estimated 80,000 to 85,000 tracks per day, according to Tidal music lead Robert Andersen. The move comes just months after Tidal began labeling and demonetizi…",
+      "publishedAt": "2026-11-24T17:17:09.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-eaadf2423721fd74ac0d",
+      "title": "Meta brings its Muse AI assistant directly into Instagram DMs",
+      "url": "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms/",
+      "source": "TechCrunch",
+      "summary": "The new integration gets rid of the need for users to toggle between Instagram and the Muse app when they want to interact with the AI agent.",
+      "publishedAt": "2026-11-24T17:00:00.000Z",
+      "category": "agents",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-26c3ceae08944feb53c1",
+      "title": "Tidal to ban and remove millions of AI-generated tracks as AI slop inundates music streaming",
+      "url": "https://techcrunch.com/2026/11/24/tidal-to-ban-and-remove-millions-of-ai-generated-tracks-as-ai-slop-inundates-music-streaming/",
+      "source": "TechCrunch",
+      "summary": "The company said it will still accept songs that were made with AI assistance, but not fully generated.",
+      "publishedAt": "2026-11-24T16:46:00.000Z",
+      "category": "policy",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-c82ab5c574080217a00a",
+      "title": "Jensen Huang deepfakes are the hot new AI slop",
+      "url": "https://www.theverge.com/tech/1041222/jensen-huang-nvidia-scandal-deepfakes",
+      "source": "The Verge",
+      "summary": "Jensen Huang is partying it up in Ibiza. In a video with nearly 6 million views on Instagram, the former CEO of Nvidia is dancing in a crowded club, champagne glass in hand, still wearing his signature black leather jacket. Suddenly, from behind him, Alice Huang - the Chinese technology executive and suspected spy he…",
+      "publishedAt": "2026-11-24T16:30:00.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-8a546b15d29e6902534f",
+      "title": "Why a Crusoe investor is betting on solar and batteries to power future AI data centers",
+      "url": "https://techcrunch.com/2026/11/24/why-a-crusoe-investor-is-betting-on-solar-and-batteries-to-power-future-ai-data-centers/",
+      "source": "TechCrunch",
+      "summary": "Next-generation data centers will need tens of gigawatts of power every year. One of Crusoe's investors thinks solar and energy storage are the obvious choice.",
+      "publishedAt": "2026-11-24T16:10:00.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-ee2357a4074e0cc8b152",
+      "title": "Pinterest will now let parents limit the AI-generated content their teens see",
+      "url": "https://techcrunch.com/2026/11/24/pinterest-will-now-let-parents-limit-the-ai-generated-content-their-teens-see/",
+      "source": "TechCrunch",
+      "summary": "While other social platforms have focused on restricting teens' access to AI chatbots, Pinterest is addressing the AI content filling their feeds.",
+      "publishedAt": "2026-11-24T16:02:37.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    }
+  ]
+}
