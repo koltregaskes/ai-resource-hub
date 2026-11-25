@@ -33,8 +33,6 @@ This Code of Conduct applies across repository issues, pull requests, reviews, c
 
 ## Reporting
 
-If you experience or observe unacceptable behaviour, contact the maintainer privately at:
-
-- `contact@elusionworks.com` (the estate's shared contact address)
+If you experience or observe unacceptable behaviour, tell the maintainer privately through this repository's **Security** tab (**Report a vulnerability**), or open an issue if it doesn't need to be private.
 
 Maintainer decisions on repository moderation are final.
