@@ -1,0 +1,231 @@
+{
+  "schema": "model-prices/v2",
+  "generated_at": "2026-11-25T13:21:00Z",
+  "stale_after_days": 7,
+  "policy": "Official list prices only, read from each vendor's own pricing or docs page on checked_at. One row per model and billing unit. A price that could not be read from the vendor page on checked_at is marked unverified with the reason in notes. Promotional prices are noted, not used as the list price. A rate the vendor page did not make clear is left empty and marked unverified; what the page displayed is kept as an unresolved observation, never as a price.",
+  "rows": [
+    {
+      "id": "anthropic:claude-opus-5-5",
+      "provider": "Anthropic",
+      "product": "Claude Opus 5.5",
+      "model_id": "claude-opus-5-5",
+      "category": "text",
+      "unit": "usd_per_1m_tokens",
+      "variant": "standard",
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 4,
+        "cached_input": 0.2,
+        "output": 20
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
+      "currency": "USD",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "checked_at": "2026-11-25",
+      "status": "verified",
+      "notes": "Cache writes: $5 (5 min), $8 (1 hour). Fast mode: $8 input, $40 output."
+    },
+    {
+      "id": "google:gemini-4-argon:to-2026-11-30",
+      "provider": "Google",
+      "product": "Gemini 4 Argon",
+      "model_id": "gemini-4-argon",
+      "category": "text",
+      "unit": "usd_per_1m_tokens",
+      "variant": "paid tier",
+      "effective_from": null,
+      "effective_to": "2026-11-30",
+      "prices": {
+        "input": 2,
+        "cached_input": 0.1,
+        "output": 10
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
+      "currency": "USD",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checked_at": "2026-11-25",
+      "status": "verified",
+      "notes": "Rate applies through 30 Nov 2026. Output includes thinking tokens. Implicit caching only."
+    },
+    {
+      "id": "google:gemini-4-argon:from-2026-12-01",
+      "provider": "Google",
+      "product": "Gemini 4 Argon",
+      "model_id": "gemini-4-argon",
+      "category": "text",
+      "unit": "usd_per_1m_tokens",
+      "variant": "paid tier",
+      "effective_from": "2026-12-01",
+      "effective_to": null,
+      "prices": {
+        "input": 4,
+        "cached_input": 0.2,
+        "output": 20
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
+      "currency": "USD",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checked_at": "2026-11-25",
+      "status": "verified",
+      "notes": "Rate published on the pricing page, starting 1 Dec 2026. Output includes thinking tokens. Implicit caching only."
+    },
+    {
+      "id": "krea:basic",
+      "provider": "Krea",
+      "product": "Krea Basic",
+      "model_id": "krea-plan-basic",
+      "category": "creative",
+      "unit": "usd_subscription",
+      "variant": "Basic plan",
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": null,
+        "annual_billing_per_year": null
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "unverified",
+        "annual_billing_per_year": "unverified"
+      },
+      "allowance": {
+        "amount": null,
+        "unit": "Krea compute units",
+        "period": "month",
+        "status": "unverified"
+      },
+      "unresolved_observations": [
+        "Page displayed $5.25/mo and 5,000 units/month; billing basis not stated."
+      ],
+      "currency": "USD",
+      "source_url": "https://www.krea.ai/pricing",
+      "checked_at": "2026-11-25",
+      "status": "unverified",
+      "notes": "Unverified: the pricing page did not state whether its displayed price is the monthly-billed or annual-billed rate, so no list price is recorded."
+    },
+    {
+      "id": "suno:pro",
+      "provider": "Suno",
+      "product": "Suno Pro",
+      "model_id": "suno-plan-pro",
+      "category": "music",
+      "unit": "usd_subscription",
+      "variant": "Pro plan",
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 10,
+        "annual_billing_per_year": 96
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified",
+        "annual_billing_per_year": "verified"
+      },
+      "allowance": {
+        "amount": 2500,
+        "unit": "Suno song credits",
+        "period": "month",
+        "status": "verified"
+      },
+      "currency": "USD",
+      "source_url": "https://suno.com/pricing",
+      "checked_at": "2026-11-25",
+      "status": "verified",
+      "notes": "A Black Friday promotion showed $5.60/mo and $67.20 for the first year on 25 Nov 2026; list prices are shown here."
+    },
+    {
+      "id": "suno:credits-per-song",
+      "provider": "Suno",
+      "product": "Suno song generation",
+      "model_id": "suno-song",
+      "category": "music",
+      "unit": "suno_credits_per_song",
+      "variant": "standard",
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "credits": null
+      },
+      "rate_status": {
+        "credits": "unverified"
+      },
+      "currency": "Suno credits",
+      "source_url": "https://suno.com/pricing",
+      "checked_at": "2026-11-25",
+      "status": "unverified",
+      "notes": "Unverified: the pricing page does not state credits per song, and no Suno help page read today stated it."
+    },
+    {
+      "id": "midjourney:basic",
+      "provider": "Midjourney",
+      "product": "Midjourney Basic",
+      "model_id": "midjourney-plan-basic",
+      "category": "image",
+      "unit": "usd_subscription",
+      "variant": "Basic plan",
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 10,
+        "annual_billing_per_year": 96
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified",
+        "annual_billing_per_year": "verified"
+      },
+      "allowance": {
+        "amount": 200,
+        "unit": "Midjourney Fast GPU minutes",
+        "period": "month",
+        "status": "verified"
+      },
+      "currency": "USD",
+      "source_url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+      "checked_at": "2026-11-25",
+      "status": "verified",
+      "notes": "3.3 hours. No Relax mode."
+    },
+    {
+      "id": "elevenlabs:creator",
+      "provider": "ElevenLabs",
+      "product": "ElevenLabs Creator",
+      "model_id": "elevenlabs-plan-creator",
+      "category": "audio",
+      "unit": "usd_subscription",
+      "variant": "Creator plan",
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": null,
+        "annual_billing_per_year": 220
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "unverified",
+        "annual_billing_per_year": "verified"
+      },
+      "allowance": {
+        "amount": 121000,
+        "unit": "ElevenLabs credits",
+        "period": "month",
+        "status": "verified"
+      },
+      "currency": "USD",
+      "source_url": "https://elevenlabs.io/pricing",
+      "checked_at": "2026-11-25",
+      "status": "unverified",
+      "notes": "Unverified: a Black Friday sale was live on 25 Nov 2026 ($99 for the first year, then $220 a year) and today's read did not give a clear monthly-billed list price."
+    }
+  ]
+}

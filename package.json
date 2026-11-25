@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/run-astro.mjs dev",
+    "prebuild": "node scripts/run-model-price-check.mjs",
     "build": "node scripts/run-astro.mjs build",
+    "check:model-prices": "node scripts/run-model-price-check.mjs",
     "preview": "node scripts/run-astro.mjs preview",
     "check": "node scripts/run-astro.mjs check",
     "seed": "tsx scripts/seed-db.ts && tsx scripts/seed-glossary.ts",

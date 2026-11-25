@@ -1,0 +1,322 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+  decimalPlaces,
+  getModelPriceRules,
+  getModelPrices,
+  isStale,
+  rateWindow,
+  safeSourceUrl,
+  todayUtcIso,
+  type ModelPriceRow,
+} from '../../data/model-prices';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const snapshot = getModelPrices();
+const rules = getModelPriceRules();
+const buildDay = todayUtcIso();
+const staleDays = snapshot.stale_after_days;
+
+// One table per billing unit, so a column never mixes units.
+const priceGroups = Object.entries(rules.units)
+  .map(([unit, rule]) => {
+    const rows = snapshot.rows.filter((row) => row.unit === unit);
+    const priceKeys = rule.price_keys.filter((key) => rows.some((row) => key in row.prices));
+    return { unit, label: rule.label, rows, priceKeys };
+  })
+  .filter((group) => group.rows.length > 0);
+
+// Plan entitlements, grouped by allowance unit and reset period for like-for-like comparison.
+const allowanceGroups = [...new Set(Object.values(rules.allowance_units).flat())].flatMap((unit) =>
+  rules.allowance_periods
+    .map((period) => ({
+      unit,
+      period,
+      rows: snapshot.rows.filter((row) => row.allowance?.unit === unit && row.allowance.period === period),
+    }))
+    .filter((group) => group.rows.length > 0),
+);
+
+const verified = snapshot.rows.filter((row) => row.status === 'verified').length;
+const unverified = snapshot.rows.length - verified;
+const staleCount = snapshot.rows.filter((row) => rateWindow(row, buildDay) !== 'ended' && isStale(row, staleDays, buildDay)).length;
+const providers = [...new Set(snapshot.rows.map((row) => row.provider))];
+const sources = [
+  ...new Map(
+    snapshot.rows
+      .map((row) => safeSourceUrl(row.source_url, row.provider, rules))
+      .filter((url): url is string => url !== null)
+      .map((url) => [url, url]),
+  ).values(),
+];
+
+const keyLabels: Record<string, string> = {
+  input: 'Input',
+  cached_input: 'Cached input',
+  output: 'Output',
+  per_image: 'Per image',
+  '1k_image': '1K image',
+  '2k_image': '2K image',
+  '4k_image': '4K image',
+  per_second: 'Per second',
+  credits: 'Credits',
+  credits_ultra_subscribers: 'Credits (Ultra subscribers)',
+  credits_per_month: 'Credits per month',
+  monthly_billing_per_month: 'Billed monthly, per month',
+  annual_billing_per_year: 'Billed annually, per year',
+  per_hour: 'Per hour',
+};
+
+const label = (key: string) => keyLabels[key] ?? key.replace(/_/g, ' ');
+
+// Keep every published significant digit: $0.113 stays $0.113, 1e-7 shows as
+// $0.0000001 (not $0.00), and $8 shows as $8.00.
+function formatNumber(value: number, currency: string): string {
+  const decimals = decimalPlaces(value);
+  if (currency === 'USD') {
+    const digits = Math.max(2, decimals);
+    return `$${value.toLocaleString('en-US', { minimumFractionDigits: digits, maximumFractionDigits: digits })}`;
+  }
+  return value.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+}
+
+function formatDate(value: string): string {
+  return new Date(`${value}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+}
+
+function windowLabels(row: ModelPriceRow) {
+  return {
+    current: row.effective_from ? `From ${formatDate(row.effective_from)}` : row.effective_to ? `Until ${formatDate(row.effective_to)}` : 'Current',
+    scheduled: row.effective_from ? `From ${formatDate(row.effective_from)} (scheduled)` : 'Scheduled',
+  };
+}
+
+function host(url: string): string {
+  return new URL(url).hostname.replace(/^www\./, '');
+}
+
+const badge = (status: string) =>
+  status === 'verified'
+    ? 'inline-block rounded-full border-2 border-(--color-success) px-2 py-0.5 text-xs font-semibold text-(--color-text-primary)'
+    : 'inline-block rounded-full border-2 border-dashed border-(--color-warning) px-2 py-0.5 text-xs font-semibold text-(--color-text-primary)';
+---
+
+<BaseLayout
+  title="Official AI Model Price List - The AI Resource Hub"
+  description="Official list prices for AI models and creative tools, one row per model and billing unit, each with the vendor's own source and the date it was checked."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12" data-model-prices data-stale-days={staleDays}>
+    <nav class="text-xs text-(--color-text-secondary) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="underline hover:text-(--color-text-primary)">Home</a>
+      <span class="mx-2" aria-hidden="true">/</span>
+      <span>Official Price List</span>
+    </nav>
+
+    <header class="mb-8 max-w-3xl">
+      <h1 class="text-3xl sm:text-4xl font-black text-(--color-text-primary) mb-3">Official AI model price list</h1>
+      <p class="text-sm sm:text-base text-(--color-text-secondary) leading-relaxed">
+        List prices read from each vendor's own pricing or documentation page. Every row links to the page it came from and shows the date it was checked.
+        Each table covers one billing unit, and plan allowances are grouped by unit and reset period, so different units never share a column.
+        Where a vendor page did not make a rate clear, the cell says <strong>unverified</strong> and the row explains why. We do not fill gaps with estimates.
+      </p>
+    </header>
+
+    <dl class="grid gap-3 grid-cols-2 lg:grid-cols-4 mb-10">
+      <div class="rounded-2xl border border-(--color-border-strong) bg-(--color-bg-secondary) p-4">
+        <dt class="text-xs uppercase tracking-wide text-(--color-text-secondary) mb-1">Rows</dt>
+        <dd class="text-2xl font-black text-(--color-text-primary)">{snapshot.rows.length}</dd>
+        <dd class="text-xs text-(--color-text-secondary) mt-1">{providers.length} providers</dd>
+      </div>
+      <div class="rounded-2xl border border-(--color-border-strong) bg-(--color-bg-secondary) p-4">
+        <dt class="text-xs uppercase tracking-wide text-(--color-text-secondary) mb-1">Verified</dt>
+        <dd class="text-2xl font-black text-(--color-text-primary)">{verified}</dd>
+        <dd class="text-xs text-(--color-text-secondary) mt-1">Every rate read from the vendor page</dd>
+      </div>
+      <div class="rounded-2xl border border-(--color-border-strong) bg-(--color-bg-secondary) p-4">
+        <dt class="text-xs uppercase tracking-wide text-(--color-text-secondary) mb-1">Unverified</dt>
+        <dd class="text-2xl font-black text-(--color-text-primary)">{unverified}</dd>
+        <dd class="text-xs text-(--color-text-secondary) mt-1">At least one rate unclear; reason in the row</dd>
+      </div>
+      <div class="rounded-2xl border border-(--color-border-strong) bg-(--color-bg-secondary) p-4">
+        <dt class="text-xs uppercase tracking-wide text-(--color-text-secondary) mb-1">Stale</dt>
+        <dd class="text-2xl font-black text-(--color-text-primary)" data-stale-count>{staleCount}</dd>
+        <dd class="text-xs text-(--color-text-secondary) mt-1">Checked more than {staleDays} days ago</dd>
+      </div>
+    </dl>
+
+    <h2 class="text-xl sm:text-2xl font-bold text-(--color-text-primary) mb-4">Prices</h2>
+    {priceGroups.map((group) => (
+      <section class="mb-10" aria-labelledby={`h-${group.unit}`}>
+        <h3 id={`h-${group.unit}`} class="text-lg font-bold text-(--color-text-primary) mb-2">{group.label}</h3>
+        <div
+          class="overflow-x-auto rounded-2xl border border-(--color-border-strong) bg-(--color-bg-secondary) focus:outline-2 focus:outline-(--color-accent)"
+          role="region"
+          aria-labelledby={`h-${group.unit}`}
+          tabindex="0"
+        >
+          <table class="w-full text-sm">
+            <caption class="sr-only">{group.label}. Product in the first column; prices in {group.rows[0].currency}.</caption>
+            <thead class="text-left text-xs uppercase tracking-wide text-(--color-text-secondary)">
+              <tr>
+                <th scope="col" class="px-3 py-2">Product</th>
+                <th scope="col" class="px-3 py-2">Provider</th>
+                <th scope="col" class="px-3 py-2">Variant</th>
+                <th scope="col" class="px-3 py-2">Applies</th>
+                {group.priceKeys.map((key) => <th scope="col" class="px-3 py-2 text-right">{label(key)}</th>)}
+                <th scope="col" class="px-3 py-2">Checked</th>
+                <th scope="col" class="px-3 py-2">Status</th>
+                <th scope="col" class="px-3 py-2">Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              {group.rows.map((row) => {
+                const rowWindow = rateWindow(row, buildDay);
+                const labels = windowLabels(row);
+                const href = safeSourceUrl(row.source_url, row.provider, rules);
+                return (
+                  <tr
+                    class="border-t border-(--color-border) align-top"
+                    data-price-row
+                    data-checked={row.checked_at}
+                    data-effective-from={row.effective_from ?? ''}
+                    data-effective-to={row.effective_to ?? ''}
+                    hidden={rowWindow === 'ended'}
+                  >
+                    <th scope="row" class="px-3 py-2 text-left font-semibold text-(--color-text-primary)">
+                      {row.product}
+                      {row.notes && <p class="text-xs font-normal text-(--color-text-secondary) mt-1 max-w-sm">{row.notes}</p>}
+                      {row.unresolved_observations?.map((obs) => (
+                        <p class="text-xs font-normal text-(--color-text-secondary) mt-1 max-w-sm"><strong>Unverified observation:</strong> {obs}</p>
+                      ))}
+                    </th>
+                    <td class="px-3 py-2 text-(--color-text-secondary)">{row.provider}</td>
+                    <td class="px-3 py-2 text-(--color-text-secondary)">{row.variant}</td>
+                    <td class="px-3 py-2 whitespace-nowrap text-(--color-text-secondary)" data-window data-label-current={labels.current} data-label-scheduled={labels.scheduled}>
+                      {rowWindow === 'scheduled' ? labels.scheduled : labels.current}
+                    </td>
+                    {group.priceKeys.map((key) => {
+                      const value = row.prices[key];
+                      if (value === undefined) return <td class="px-3 py-2 text-right text-(--color-text-secondary)"><span class="sr-only">not applicable</span></td>;
+                      if (value === null || row.rate_status[key] !== 'verified') {
+                        return <td class="px-3 py-2 text-right"><span class={badge('unverified')}>unverified</span></td>;
+                      }
+                      return <td class="px-3 py-2 text-right tabular-nums text-(--color-text-primary)">{formatNumber(value, row.currency)}</td>;
+                    })}
+                    <td class="px-3 py-2 whitespace-nowrap text-(--color-text-secondary)">
+                      {formatDate(row.checked_at)}
+                      <span class="ml-1 text-xs font-semibold text-(--color-text-primary)" data-stale-flag hidden={!isStale(row, staleDays, buildDay)}>(stale)</span>
+                    </td>
+                    <td class="px-3 py-2"><span class={badge(row.status)}>{row.status}</span></td>
+                    <td class="px-3 py-2">
+                      {href ? <a href={href} rel="noopener noreferrer" target="_blank" class="text-(--color-accent) underline">{host(href)}</a> : <span class="text-(--color-text-secondary)">source withheld</span>}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    ))}
+
+    <h2 class="text-xl sm:text-2xl font-bold text-(--color-text-primary) mb-2 mt-12">What plans include</h2>
+    <p class="text-sm text-(--color-text-secondary) mb-4 max-w-3xl">Allowances are vendor-specific units. Each table holds one unit and one reset period; compare within a table, not across tables.</p>
+    {allowanceGroups.map((group) => {
+      const id = `a-${group.unit}-${group.period}`.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      const title = `${group.unit} per ${group.period}`;
+      return (
+        <section class="mb-8" aria-labelledby={id}>
+          <h3 id={id} class="text-lg font-bold text-(--color-text-primary) mb-2">{title}</h3>
+          <div
+            class="overflow-x-auto rounded-2xl border border-(--color-border-strong) bg-(--color-bg-secondary) focus:outline-2 focus:outline-(--color-accent)"
+            role="region"
+            aria-labelledby={id}
+            tabindex="0"
+          >
+            <table class="w-full text-sm">
+              <caption class="sr-only">{title}, by plan</caption>
+              <thead class="text-left text-xs uppercase tracking-wide text-(--color-text-secondary)">
+                <tr>
+                  <th scope="col" class="px-3 py-2">Plan</th>
+                  <th scope="col" class="px-3 py-2 text-right">{title}</th>
+                  <th scope="col" class="px-3 py-2">Checked</th>
+                  <th scope="col" class="px-3 py-2">Status</th>
+                  <th scope="col" class="px-3 py-2">Source</th>
+                </tr>
+              </thead>
+              <tbody>
+                {group.rows.map((row) => {
+                  const href = safeSourceUrl(row.source_url, row.provider, rules);
+                  const allowance = row.allowance!;
+                  return (
+                    <tr class="border-t border-(--color-border) align-top" data-price-row data-checked={row.checked_at} data-effective-from={row.effective_from ?? ''} data-effective-to={row.effective_to ?? ''}>
+                      <th scope="row" class="px-3 py-2 text-left font-semibold text-(--color-text-primary)">{row.product}</th>
+                      <td class="px-3 py-2 text-right tabular-nums text-(--color-text-primary)">
+                        {allowance.amount === null || allowance.status !== 'verified'
+                          ? <span class={badge('unverified')}>unverified</span>
+                          : formatNumber(allowance.amount, '')}
+                      </td>
+                      <td class="px-3 py-2 whitespace-nowrap text-(--color-text-secondary)">
+                        {formatDate(row.checked_at)}
+                        <span class="ml-1 text-xs font-semibold text-(--color-text-primary)" data-stale-flag hidden={!isStale(row, staleDays, buildDay)}>(stale)</span>
+                      </td>
+                      <td class="px-3 py-2"><span class={badge(allowance.status)}>{allowance.status}</span></td>
+                      <td class="px-3 py-2">
+                        {href ? <a href={href} rel="noopener noreferrer" target="_blank" class="text-(--color-accent) underline">{host(href)}</a> : <span class="text-(--color-text-secondary)">source withheld</span>}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      );
+    })}
+
+    <section class="mt-12 max-w-3xl text-sm text-(--color-text-secondary) leading-relaxed" aria-labelledby="h-method">
+      <h2 id="h-method" class="text-lg font-bold text-(--color-text-primary) mb-2">How this list is kept</h2>
+      <p class="mb-2">{snapshot.policy}</p>
+      <p class="mb-2">
+        Rates with an end date are hidden once they end, and scheduled rates are labelled until they start; the page rechecks dates in your browser, so this stays right between rebuilds.
+        Stale means checked more than {staleDays} calendar days ago (UTC). Prices exclude tax, regional uplifts and negotiated discounts.
+      </p>
+      <h3 class="font-semibold text-(--color-text-primary) mt-4 mb-1">Sources checked</h3>
+      <ul class="list-disc pl-5">
+        {sources.map((url) => <li><a href={url} rel="noopener noreferrer" target="_blank" class="text-(--color-accent) underline break-all">{url}</a></li>)}
+      </ul>
+    </section>
+  </section>
+</BaseLayout>
+
+<script>
+  // Re-evaluate effective dates and freshness on the visitor's day (UTC), so a
+  // prerendered page does not keep showing an ended rate or a stale "fresh" flag.
+  const root = document.querySelector<HTMLElement>('[data-model-prices]');
+  if (root) {
+    const today = new Date().toISOString().slice(0, 10);
+    const staleDays = Number(root.dataset.staleDays ?? '7');
+    const dayMs = 86_400_000;
+    let stale = 0;
+    root.querySelectorAll<HTMLElement>('[data-price-row]').forEach((row) => {
+      const from = row.dataset.effectiveFrom ?? '';
+      const to = row.dataset.effectiveTo ?? '';
+      const ended = to !== '' && today > to;
+      const scheduled = from !== '' && today < from;
+      row.hidden = ended;
+      const windowCell = row.querySelector<HTMLElement>('[data-window]');
+      if (windowCell) {
+        windowCell.textContent = (scheduled ? windowCell.dataset.labelScheduled : windowCell.dataset.labelCurrent) ?? '';
+      }
+      const checked = row.dataset.checked ?? today;
+      const age = Math.round((Date.parse(`${today}T00:00:00Z`) - Date.parse(`${checked}T00:00:00Z`)) / dayMs);
+      const flag = row.querySelector<HTMLElement>('[data-stale-flag]');
+      if (flag) flag.hidden = !(age > staleDays);
+      if (!ended && age > staleDays && windowCell) stale += 1;
+    });
+    const counter = root.querySelector<HTMLElement>('[data-stale-count]');
+    if (counter) counter.textContent = String(stale);
+  }
+</script>
