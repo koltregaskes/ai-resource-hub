@@ -1,14 +1,14 @@
 # Source Registry Snapshot
 
-Document built: 2026-11-25T07:58:39.591Z
+Document built: 2026-11-25T08:59:38.323Z
 
 Sync status: fresh
 
-Last sync attempted: 2026-11-25T07:58:38.839Z
+Last sync attempted: 2026-11-25T08:59:37.226Z
 
-Source edition generated: 2026-11-25T07:58:38.839Z
+Source edition generated: 2026-11-25T08:59:37.226Z
 
-Canonical configuration last verified: 2026-11-25T07:58:38.839Z
+Canonical configuration last verified: 2026-11-25T08:59:37.226Z
 
 Canonical source edition (SHA-256): {"siteFiltersSha256":"bad10f90faa07d54f4ce690f38214e0e06b7b46dbc1710c466d53bc45e7f5768","sourcesSha256":"4299709f06121cfefd781c092a5bc01a1168cb636477b159e5774bd69d38bc8d","estateManifestSha256":"a0aaffd48032be4a810d6152fecef37730130d3b2d1e3d655ede268b63f3b63f"}
 
@@ -25,7 +25,7 @@ Canonical config:
 
 | Metric | Value |
 | --- | --- |
-| Source edition generated | 25 Nov 2026, 07:58 UTC |
+| Source edition generated | 25 Nov 2026, 08:59 UTC |
 | Configured sources | 14 |
 | AI Resource Hub routed sources | 14 |
 | Automated sources | 14 |
