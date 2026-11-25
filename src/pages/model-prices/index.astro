@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getModelPrices, isStale, type ModelPriceRow } from '../../data/model-prices';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+
+const snapshot = getModelPrices();
+const now = new Date();
+
+// One table per billing unit, so a column never mixes units.
+const unitOrder = Object.keys(snapshot.units);
+const groups = unitOrder
+  .map((unit) => {
+    const rows = snapshot.rows.filter((row) => row.unit === unit);
+    const priceKeys = [...new Set(rows.flatMap((row) => Object.keys(row.prices)))];
+    const hasAllowance = rows.some((row) => row.allowance);
+    return { unit, label: snapshot.units[unit], rows, priceKeys, hasAllowance };
+  })
+  .filter((group) => group.rows.length > 0);
+
+const verified = snapshot.rows.filter((row) => row.status === 'verified').length;
+const unverified = snapshot.rows.length - verified;
+const staleCount = snapshot.rows.filter((row) => isStale(row, snapshot.stale_after_days, now)).length;
+const providers = [...new Set(snapshot.rows.map((row) => row.provider))];
+const sources = [...new Set(snapshot.rows.map((row) => row.source_url))];
+
+const keyLabels: Record<string, string> = {
+  input: 'Input',
+  cached_input: 'Cached input',
+  output: 'Output',
+  per_image: 'Per image',
+  '1k_image': '1K image',
+  '2k_image': '2K image',
+  '4k_image': '4K image',
+  per_second: 'Per second',
+  credits: 'Credits',
+  credits_ultra_subscribers: 'Credits (Ultra)',
+  monthly_billing_per_month: 'Monthly billing, per month',
+  annual_billing_per_year: 'Annual billing, per year',
+  displayed_per_month: 'Displayed per month',
+  per_hour: 'Per hour',
+  google_ai_plus: 'Google AI Plus',
+  google_ai_pro: 'Google AI Pro',
+  google_ai_ultra_100: 'Google AI Ultra ($100)',
+  google_ai_ultra_200: 'Google AI Ultra ($200)',
+};
+
+function label(key: string): string {
+  return keyLabels[key] ?? key.replace(/_/g, ' ');
+}
+
+function formatPrice(row: ModelPriceRow, key: string): string {
+  const value = row.prices[key];
+  if (value === undefined) return '';
+  if (value === null) return 'n/a';
+  if (row.currency === 'USD') {
+    const digits = value !== 0 && value < 0.1 ? 4 : 2;
+    return `$${value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: digits })}`;
+  }
+  return value.toLocaleString('en-US');
+}
+
+function formatAllowance(row: ModelPriceRow): string {
+  if (!row.allowance) return '';
+  const amount = row.allowance.amount === null ? 'n/a' : row.allowance.amount.toLocaleString('en-US');
+  return `${amount} ${row.allowance.unit}`;
+}
+
+function formatDate(value: string): string {
+  const date = new Date(`${value}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) return value;
+  return date.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' });
+}
+
+function host(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+}
+---
+
+<BaseLayout
+  title="Official AI Model Price List - The AI Resource Hub"
+  description="Official list prices for AI models and creative tools, one row per model and billing unit, each with the vendor's own source and the date it was checked."
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <nav class="text-xs text-(--color-text-muted) mb-4" aria-label="Breadcrumb">
+      <a href={base} class="hover:text-(--color-text-secondary) transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-(--color-text-secondary)">Official Price List</span>
+    </nav>
+
+    <header class="mb-8 max-w-3xl">
+      <h1 class="text-3xl sm:text-4xl font-black text-(--color-text-primary) mb-3">Official AI model price list</h1>
+      <p class="text-sm sm:text-base text-(--color-text-secondary) leading-relaxed">
+        List prices read from each vendor's own pricing or documentation page. Every row links to the page it came from and shows the date it was checked.
+        Each table covers one billing unit, so token prices, credits and subscriptions are never mixed in one column.
+        Where we could not read a price from the vendor's page, the row says <strong>unverified</strong> and why. We do not fill gaps with estimates.
+      </p>
+    </header>
+
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 mb-10">
+      <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+        <p class="text-[11px] uppercase tracking-[0.2em] text-(--color-text-muted) mb-1">Rows</p>
+        <div class="text-2xl font-black text-(--color-text-primary)">{snapshot.rows.length}</div>
+        <p class="text-xs text-(--color-text-muted) mt-1">{providers.length} providers</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+        <p class="text-[11px] uppercase tracking-[0.2em] text-(--color-text-muted) mb-1">Verified</p>
+        <div class="text-2xl font-black text-emerald-300">{verified}</div>
+        <p class="text-xs text-(--color-text-muted) mt-1">Read from the vendor page</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+        <p class="text-[11px] uppercase tracking-[0.2em] text-(--color-text-muted) mb-1">Unverified</p>
+        <div class="text-2xl font-black text-amber-300">{unverified}</div>
+        <p class="text-xs text-(--color-text-muted) mt-1">Reason given in the row</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+        <p class="text-[11px] uppercase tracking-[0.2em] text-(--color-text-muted) mb-1">Stale</p>
+        <div class="text-2xl font-black text-(--color-text-primary)">{staleCount}</div>
+        <p class="text-xs text-(--color-text-muted) mt-1">Checked more than {snapshot.stale_after_days} days ago</p>
+      </div>
+    </div>
+
+    {groups.map((group) => (
+      <section class="mb-10" id={group.unit}>
+        <h2 class="text-lg sm:text-xl font-bold text-(--color-text-primary) mb-1">{group.label}</h2>
+        <div class="overflow-x-auto rounded-2xl border border-white/10">
+          <table class="w-full text-sm">
+            <thead class="bg-white/[0.04] text-left text-xs uppercase tracking-wide text-(--color-text-muted)">
+              <tr>
+                <th class="px-3 py-2">Provider</th>
+                <th class="px-3 py-2">Product</th>
+                <th class="px-3 py-2">Variant</th>
+                {group.priceKeys.map((key) => <th class="px-3 py-2 text-right">{label(key)}</th>)}
+                {group.hasAllowance && <th class="px-3 py-2">Included</th>}
+                <th class="px-3 py-2">Checked</th>
+                <th class="px-3 py-2">Status</th>
+                <th class="px-3 py-2">Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              {group.rows.map((row) => {
+                const stale = isStale(row, snapshot.stale_after_days, now);
+                return (
+                  <tr class="border-t border-white/5 align-top">
+                    <td class="px-3 py-2 text-(--color-text-secondary)">{row.provider}</td>
+                    <td class="px-3 py-2 text-(--color-text-primary)">
+                      {row.product}
+                      {row.notes && <p class="text-xs text-(--color-text-muted) mt-1 max-w-sm">{row.notes}</p>}
+                    </td>
+                    <td class="px-3 py-2 text-(--color-text-secondary)">{row.variant}</td>
+                    {group.priceKeys.map((key) => (
+                      <td class="px-3 py-2 text-right tabular-nums text-(--color-text-primary)">{formatPrice(row, key)}</td>
+                    ))}
+                    {group.hasAllowance && <td class="px-3 py-2 text-(--color-text-secondary)">{formatAllowance(row)}</td>}
+                    <td class="px-3 py-2 whitespace-nowrap text-(--color-text-secondary)">
+                      {formatDate(row.checked_at)}
+                      {stale && <span class="ml-1 text-xs text-amber-300">stale</span>}
+                    </td>
+                    <td class="px-3 py-2">
+                      <span class={row.status === 'verified'
+                        ? 'rounded-full border border-emerald-500/40 bg-emerald-500/10 px-2 py-0.5 text-xs text-emerald-200'
+                        : 'rounded-full border border-amber-500/40 bg-amber-500/10 px-2 py-0.5 text-xs text-amber-100'}>
+                        {row.status}
+                      </span>
+                    </td>
+                    <td class="px-3 py-2">
+                      <a href={row.source_url} rel="noopener" target="_blank" class="text-sky-300 hover:underline">{host(row.source_url)}</a>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    ))}
+
+    <section class="mt-12 max-w-3xl text-sm text-(--color-text-secondary) leading-relaxed">
+      <h2 class="text-lg font-bold text-(--color-text-primary) mb-2">How this list is kept</h2>
+      <p class="mb-2">{snapshot.policy}</p>
+      <p class="mb-2">
+        The data lives in <code>data/model-prices.json</code> and is validated by <code>scripts/check-model-prices.py</code>, which rejects missing fields, bad dates,
+        non-https sources and duplicate rows, and flags rows not checked within {snapshot.stale_after_days} days. Prices exclude tax, regional uplifts and negotiated discounts.
+      </p>
+      <h3 class="font-semibold text-(--color-text-primary) mt-4 mb-1">Sources checked</h3>
+      <ul class="list-disc pl-5">
+        {sources.map((url) => <li><a href={url} rel="noopener" target="_blank" class="text-sky-300 hover:underline break-all">{url}</a></li>)}
+      </ul>
+    </section>
+  </section>
+</BaseLayout>
