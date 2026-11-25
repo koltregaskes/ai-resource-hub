@@ -1,19 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 25 Nov 2026, 18:59 UTC
+Generated: 25 Nov 2026, 19:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 25 Nov 2026, 18:59 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 25 Nov 2026, 18:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 25 Nov 2026, 18:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 25 Nov 2026, 18:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
-| 25 Nov 2026, 12:00 UTC | digest | FCC signs off on SpaceX’s plan to put up to 1 million data center satellites into space | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers) |
-| 25 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 984 open roles across 10 tracked companies. | `/jobs/` |
-| 25 Nov 2026, 12:00 UTC | digest | Published the 2026-11-25 daily digest | 10 stories captured from 2 sources. | `/news/` |
-| 25 Nov 2026, 12:00 UTC | digest | State AGs fight Character AI&#8217;s plan to auction off users&#8217; private chats | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/) |
+| 25 Nov 2026, 19:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 25 Nov 2026, 19:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 25 Nov 2026, 19:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 25 Nov 2026, 19:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 25 Nov 2026, 12:00 UTC | digest | Anthropic’s Dario Amodei calls accusations of surrendering human control to AI ‘absurd’ | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/) |
+| 25 Nov 2026, 12:00 UTC | digest | Jensen Huang broke Nvidia&#8217;s code of conduct, and his employees may not forget it | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/25/jensen-huang-broke-nvidias-code-of-conduct-and-his-employees-may-not-forget-it/) |
+| 25 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 985 open roles across 10 tracked companies. | `/jobs/` |
+| 25 Nov 2026, 12:00 UTC | digest | Published the 2026-11-25 daily digest | 12 stories captured from 2 sources. | `/news/` |
 | 25 Nov 2026, 12:00 UTC | digest | Want to buy your kid an AI toy this Christmas? Not in New York | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/) |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |

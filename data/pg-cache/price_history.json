@@ -114479,9 +114479,9 @@
   {
     "id": 352,
     "model_id": "deepseek-v4-pro",
-    "input_price": 0.713,
-    "output_price": 1.523,
-    "recorded_at": "2026-11-25 18:58:56",
+    "input_price": 0.681,
+    "output_price": 1.551,
+    "recorded_at": "2026-11-25 19:58:15",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4 Pro 0423",
     "provider_name": "DeepSeek",
@@ -209959,9 +209959,9 @@
   {
     "id": 411,
     "model_id": "glm-4.5-air",
-    "input_price": 0.14,
-    "output_price": 0.86,
-    "recorded_at": "2026-11-25 09:59:13",
+    "input_price": 0.2,
+    "output_price": 1.1,
+    "recorded_at": "2026-11-25 19:58:15",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GLM 4.5 Air",
     "provider_name": "Zhipu AI",
@@ -659197,6 +659197,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 368,
+    "model_id": "qwen3.5-397b-a17b",
+    "input_price": 0.5,
+    "output_price": 3.6,
+    "recorded_at": "2026-11-25 19:58:15",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.5 397B A17B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 3714,
     "model_id": "qwen3.5-9b",
     "input_price": 0.05,
@@ -661487,9 +661498,9 @@
   {
     "id": 361,
     "model_id": "qwen3.5-9b",
-    "input_price": 0.17,
+    "input_price": 0.1,
     "output_price": 0.25,
-    "recorded_at": "2026-11-25 16:59:08",
+    "recorded_at": "2026-11-25 19:58:15",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3.5-9B",
     "provider_name": "Alibaba",
