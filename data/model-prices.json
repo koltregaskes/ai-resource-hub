@@ -1,20 +1,8 @@
 {
-  "schema": "model-prices/v1",
-  "generated_at": "2026-11-25T13:21:00Z",
+  "schema": "model-prices/v2",
+  "generated_at": "2026-11-25T14:14:56Z",
   "stale_after_days": 7,
-  "policy": "Official list prices only, read from each vendor's own pricing or docs page on checked_at. One row per model and billing unit. A price that could not be read from the vendor page on checked_at is marked unverified with the reason in notes. Promotional prices are noted, not used as the list price.",
-  "units": {
-    "usd_per_1m_tokens": "USD per 1 million text tokens (standard tier, global processing)",
-    "usd_per_1m_image_tokens": "USD per 1 million image tokens",
-    "usd_per_image": "USD per generated image",
-    "usd_per_video_second": "USD per second of generated video",
-    "flow_credits_per_generation": "Google Flow credits per video generation",
-    "flow_credits_per_second": "Google Flow credits per second of generated video",
-    "flow_credits_per_month": "Google Flow credits included per month with a Google AI plan",
-    "usd_subscription": "USD subscription list price, with the plan's included allowance in its own unit",
-    "usd_per_gpu_hour": "USD per extra Fast GPU hour",
-    "suno_credits_per_song": "Suno credits charged per song generation"
-  },
+  "policy": "Official list prices only, read from each vendor's own pricing or docs page on checked_at. One row per model and billing unit. A price that could not be read from the vendor page on checked_at is marked unverified with the reason in notes. Promotional prices are noted, not used as the list price. A rate the vendor page did not make clear is left empty and marked unverified; what the page displayed is kept as an unresolved observation, never as a price.",
   "rows": [
     {
       "id": "anthropic:claude-fable-5-2",
@@ -24,7 +12,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "standard",
-      "prices": { "input": 8, "cached_input": 0.2, "output": 40 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 8,
+        "cached_input": 0.2,
+        "output": 40
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
       "checked_at": "2026-11-25",
@@ -39,7 +38,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "standard",
-      "prices": { "input": 4, "cached_input": 0.2, "output": 20 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 4,
+        "cached_input": 0.2,
+        "output": 20
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
       "checked_at": "2026-11-25",
@@ -54,7 +64,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "standard",
-      "prices": { "input": 2, "cached_input": 0.1, "output": 10 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 2,
+        "cached_input": 0.1,
+        "output": 10
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
       "checked_at": "2026-11-25",
@@ -69,7 +90,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "prompts up to 100,000 tokens",
-      "prices": { "input": 0.1, "cached_input": 0.01, "output": 0.5 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 0.1,
+        "cached_input": 0.01,
+        "output": 0.5
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
       "checked_at": "2026-11-25",
@@ -84,7 +116,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "prompts over 100,000 tokens",
-      "prices": { "input": 0.5, "cached_input": 0.05, "output": 2.5 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 0.5,
+        "cached_input": 0.05,
+        "output": 2.5
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://platform.claude.com/docs/en/about-claude/pricing",
       "checked_at": "2026-11-25",
@@ -99,7 +142,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "standard",
-      "prices": { "input": 8, "cached_input": 0.4, "output": 40 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 8,
+        "cached_input": 0.4,
+        "output": 40
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://developers.openai.com/api/docs/pricing",
       "checked_at": "2026-11-25",
@@ -114,7 +168,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "standard",
-      "prices": { "input": 2, "cached_input": 0.1, "output": 10 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 2,
+        "cached_input": 0.1,
+        "output": 10
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://developers.openai.com/api/docs/pricing",
       "checked_at": "2026-11-25",
@@ -129,7 +194,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "short context",
-      "prices": { "input": 1, "cached_input": 0.05, "output": 5 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 1,
+        "cached_input": 0.05,
+        "output": 5
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://developers.openai.com/api/docs/pricing.md",
       "checked_at": "2026-11-25",
@@ -144,7 +220,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "long context",
-      "prices": { "input": 2, "cached_input": 0.1, "output": 7.5 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 2,
+        "cached_input": 0.1,
+        "output": 7.5
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://developers.openai.com/api/docs/pricing.md",
       "checked_at": "2026-11-25",
@@ -159,7 +246,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "short context",
-      "prices": { "input": 0.1, "cached_input": 0.01, "output": 0.5 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 0.1,
+        "cached_input": 0.01,
+        "output": 0.5
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://developers.openai.com/api/docs/pricing.md",
       "checked_at": "2026-11-25",
@@ -174,7 +272,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "long context",
-      "prices": { "input": 0.2, "cached_input": 0.02, "output": 0.75 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 0.2,
+        "cached_input": 0.02,
+        "output": 0.75
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://developers.openai.com/api/docs/pricing.md",
       "checked_at": "2026-11-25",
@@ -189,7 +298,18 @@
       "category": "image",
       "unit": "usd_per_1m_image_tokens",
       "variant": "standard",
-      "prices": { "input": 8, "cached_input": 2, "output": 30 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 8,
+        "cached_input": 2,
+        "output": 30
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://developers.openai.com/api/docs/pricing",
       "checked_at": "2026-11-25",
@@ -204,7 +324,18 @@
       "category": "image",
       "unit": "usd_per_1m_image_tokens",
       "variant": "standard",
-      "prices": { "input": 8, "cached_input": 2, "output": 30 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 8,
+        "cached_input": 2,
+        "output": 30
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://developers.openai.com/api/docs/pricing",
       "checked_at": "2026-11-25",
@@ -219,7 +350,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "paid tier",
-      "prices": { "input": 1.5, "cached_input": 0.075, "output": 7.5 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 1.5,
+        "cached_input": 0.075,
+        "output": 7.5
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
       "checked_at": "2026-11-25",
@@ -234,7 +376,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "paid tier",
-      "prices": { "input": 3, "cached_input": 0.15, "output": 15 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 3,
+        "cached_input": 0.15,
+        "output": 15
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
       "checked_at": "2026-11-25",
@@ -242,34 +395,108 @@
       "notes": "Output includes thinking tokens. Implicit caching only. Not available on the free tier."
     },
     {
-      "id": "google:gemini-4-argon",
+      "id": "google:gemini-4-argon:to-2026-11-30",
       "provider": "Google",
       "product": "Gemini 4 Argon",
       "model_id": "gemini-4-argon",
       "category": "text",
       "unit": "usd_per_1m_tokens",
-      "variant": "paid tier, through 30 Nov 2026",
-      "prices": { "input": 2, "cached_input": 0.1, "output": 10 },
+      "variant": "paid tier",
+      "effective_from": null,
+      "effective_to": "2026-11-30",
+      "prices": {
+        "input": 2,
+        "cached_input": 0.1,
+        "output": 10
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
       "checked_at": "2026-11-25",
       "status": "verified",
-      "notes": "Rises to $4 input, $0.20 caching, $20 output from 1 Dec 2026. Output includes thinking tokens. Implicit caching only."
+      "notes": "Rate applies through 30 Nov 2026. Output includes thinking tokens. Implicit caching only."
     },
     {
-      "id": "google:gemini-4-carbon",
+      "id": "google:gemini-4-argon:from-2026-12-01",
+      "provider": "Google",
+      "product": "Gemini 4 Argon",
+      "model_id": "gemini-4-argon",
+      "category": "text",
+      "unit": "usd_per_1m_tokens",
+      "variant": "paid tier",
+      "effective_from": "2026-12-01",
+      "effective_to": null,
+      "prices": {
+        "input": 4,
+        "cached_input": 0.2,
+        "output": 20
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
+      "currency": "USD",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checked_at": "2026-11-25",
+      "status": "verified",
+      "notes": "Rate published on the pricing page, starting 1 Dec 2026. Output includes thinking tokens. Implicit caching only."
+    },
+    {
+      "id": "google:gemini-4-carbon:to-2026-11-30",
       "provider": "Google",
       "product": "Gemini 4 Carbon",
       "model_id": "gemini-4-carbon",
       "category": "text",
       "unit": "usd_per_1m_tokens",
-      "variant": "paid tier, through 30 Nov 2026",
-      "prices": { "input": 2, "cached_input": 0.1, "output": 10 },
+      "variant": "paid tier",
+      "effective_from": null,
+      "effective_to": "2026-11-30",
+      "prices": {
+        "input": 2,
+        "cached_input": 0.1,
+        "output": 10
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
       "checked_at": "2026-11-25",
       "status": "verified",
-      "notes": "Rises to $4 input, $0.20 caching, $20 output from 1 Dec 2026. Output includes thinking tokens. Implicit caching only."
+      "notes": "Rate applies through 30 Nov 2026. Output includes thinking tokens. Implicit caching only."
+    },
+    {
+      "id": "google:gemini-4-carbon:from-2026-12-01",
+      "provider": "Google",
+      "product": "Gemini 4 Carbon",
+      "model_id": "gemini-4-carbon",
+      "category": "text",
+      "unit": "usd_per_1m_tokens",
+      "variant": "paid tier",
+      "effective_from": "2026-12-01",
+      "effective_to": null,
+      "prices": {
+        "input": 4,
+        "cached_input": 0.2,
+        "output": 20
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
+      "currency": "USD",
+      "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "checked_at": "2026-11-25",
+      "status": "verified",
+      "notes": "Rate published on the pricing page, starting 1 Dec 2026. Output includes thinking tokens. Implicit caching only."
     },
     {
       "id": "google:gemini-nano-banana-2.1",
@@ -279,7 +506,18 @@
       "category": "image",
       "unit": "usd_per_image",
       "variant": "paid tier",
-      "prices": { "1k_image": 0.0336, "2k_image": 0.0504, "4k_image": 0.113 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "1k_image": 0.0336,
+        "2k_image": 0.0504,
+        "4k_image": 0.113
+      },
+      "rate_status": {
+        "1k_image": "verified",
+        "2k_image": "verified",
+        "4k_image": "verified"
+      },
       "currency": "USD",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
       "checked_at": "2026-11-25",
@@ -294,7 +532,14 @@
       "category": "video",
       "unit": "usd_per_video_second",
       "variant": "paid tier",
-      "prices": { "per_second": null },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "per_second": null
+      },
+      "rate_status": {
+        "per_second": "unverified"
+      },
       "currency": "USD",
       "source_url": "https://ai.google.dev/gemini-api/docs/pricing",
       "checked_at": "2026-11-25",
@@ -309,7 +554,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "prompts under 200k tokens",
-      "prices": { "input": 2, "cached_input": 0.5, "output": 6 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 2,
+        "cached_input": 0.5,
+        "output": 6
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://docs.x.ai/developers/models",
       "checked_at": "2026-11-25",
@@ -324,7 +580,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "prompts of 200k tokens or more",
-      "prices": { "input": 4, "cached_input": 1, "output": 12 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 4,
+        "cached_input": 1,
+        "output": 12
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://docs.x.ai/developers/models",
       "checked_at": "2026-11-25",
@@ -339,7 +606,14 @@
       "category": "image",
       "unit": "usd_per_image",
       "variant": "standard",
-      "prices": { "per_image": 0.04 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "per_image": 0.04
+      },
+      "rate_status": {
+        "per_image": "verified"
+      },
       "currency": "USD",
       "source_url": "https://docs.x.ai/developers/models",
       "checked_at": "2026-11-25",
@@ -354,7 +628,14 @@
       "category": "video",
       "unit": "usd_per_video_second",
       "variant": "standard",
-      "prices": { "per_second": 0.08 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "per_second": 0.08
+      },
+      "rate_status": {
+        "per_second": "verified"
+      },
       "currency": "USD",
       "source_url": "https://docs.x.ai/developers/models",
       "checked_at": "2026-11-25",
@@ -369,7 +650,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "standard",
-      "prices": { "input": 4, "cached_input": 0.2, "output": 20 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 4,
+        "cached_input": 0.2,
+        "output": 20
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://dev.meta.ai/docs/pricing-rate-limits",
       "checked_at": "2026-11-25",
@@ -384,7 +676,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "standard",
-      "prices": { "input": 1.25, "cached_input": 0.15, "output": 4.25 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 1.25,
+        "cached_input": 0.15,
+        "output": 4.25
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://dev.meta.ai/docs/pricing-rate-limits",
       "checked_at": "2026-11-25",
@@ -399,7 +702,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "up to 200K input tokens",
-      "prices": { "input": 0.1, "cached_input": 0.004, "output": 0.5 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 0.1,
+        "cached_input": 0.004,
+        "output": 0.5
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://dev.meta.ai/docs/pricing-rate-limits",
       "checked_at": "2026-11-25",
@@ -414,7 +728,18 @@
       "category": "text",
       "unit": "usd_per_1m_tokens",
       "variant": "over 200K input tokens",
-      "prices": { "input": 0.3, "cached_input": 0.012, "output": 1.5 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "input": 0.3,
+        "cached_input": 0.012,
+        "output": 1.5
+      },
+      "rate_status": {
+        "input": "verified",
+        "cached_input": "verified",
+        "output": "verified"
+      },
       "currency": "USD",
       "source_url": "https://dev.meta.ai/docs/pricing-rate-limits",
       "checked_at": "2026-11-25",
@@ -429,8 +754,20 @@
       "category": "creative",
       "unit": "usd_subscription",
       "variant": "Free plan",
-      "prices": { "monthly_billing_per_month": 0, "annual_billing_per_year": null },
-      "allowance": { "amount": 100, "unit": "compute units per day" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 0
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified"
+      },
+      "allowance": {
+        "amount": 100,
+        "unit": "Krea compute units",
+        "period": "day",
+        "status": "verified"
+      },
       "currency": "USD",
       "source_url": "https://www.krea.ai/pricing",
       "checked_at": "2026-11-25",
@@ -445,13 +782,30 @@
       "category": "creative",
       "unit": "usd_subscription",
       "variant": "Basic plan",
-      "prices": { "displayed_per_month": 5.25 },
-      "allowance": { "amount": 5000, "unit": "compute units per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": null,
+        "annual_billing_per_year": null
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "unverified",
+        "annual_billing_per_year": "unverified"
+      },
+      "allowance": {
+        "amount": null,
+        "unit": "Krea compute units",
+        "period": "month",
+        "status": "unverified"
+      },
+      "unresolved_observations": [
+        "Page displayed $5.25/mo and 5,000 units/month; billing basis not stated."
+      ],
       "currency": "USD",
       "source_url": "https://www.krea.ai/pricing",
       "checked_at": "2026-11-25",
       "status": "unverified",
-      "notes": "Unverified: the page shows $5.25/mo but today's read did not confirm whether that is the monthly-billed or annual-billed rate."
+      "notes": "Unverified: the pricing page did not state whether its displayed price is the monthly-billed or annual-billed rate, so no list price is recorded."
     },
     {
       "id": "krea:pro",
@@ -461,13 +815,30 @@
       "category": "creative",
       "unit": "usd_subscription",
       "variant": "Pro plan",
-      "prices": { "displayed_per_month": 21 },
-      "allowance": { "amount": 20000, "unit": "compute units per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": null,
+        "annual_billing_per_year": null
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "unverified",
+        "annual_billing_per_year": "unverified"
+      },
+      "allowance": {
+        "amount": null,
+        "unit": "Krea compute units",
+        "period": "month",
+        "status": "unverified"
+      },
+      "unresolved_observations": [
+        "Page displayed $21/mo and 20,000 units/month; billing basis not stated."
+      ],
       "currency": "USD",
       "source_url": "https://www.krea.ai/pricing",
       "checked_at": "2026-11-25",
       "status": "unverified",
-      "notes": "Unverified: billing basis of the displayed $21/mo not confirmed today."
+      "notes": "Unverified: the pricing page did not state whether its displayed price is the monthly-billed or annual-billed rate, so no list price is recorded."
     },
     {
       "id": "krea:max",
@@ -477,13 +848,30 @@
       "category": "creative",
       "unit": "usd_subscription",
       "variant": "Max plan",
-      "prices": { "displayed_per_month": 42 },
-      "allowance": { "amount": null, "unit": "compute units per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": null,
+        "annual_billing_per_year": null
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "unverified",
+        "annual_billing_per_year": "unverified"
+      },
+      "allowance": {
+        "amount": null,
+        "unit": "Krea compute units",
+        "period": "month",
+        "status": "unverified"
+      },
+      "unresolved_observations": [
+        "Page displayed $42/mo, and both 60,000 and 40,000 units/month in different sections; billing basis not stated."
+      ],
       "currency": "USD",
       "source_url": "https://www.krea.ai/pricing",
       "checked_at": "2026-11-25",
       "status": "unverified",
-      "notes": "Unverified: the page shows both 60,000 and 40,000 units/month for Max in different sections, and the billing basis of $42/mo was not confirmed."
+      "notes": "Unverified: the pricing page did not state whether its displayed price is the monthly-billed or annual-billed rate, so no list price is recorded."
     },
     {
       "id": "krea:business",
@@ -493,13 +881,30 @@
       "category": "creative",
       "unit": "usd_subscription",
       "variant": "Business plan",
-      "prices": { "displayed_per_month": 96 },
-      "allowance": { "amount": 80000, "unit": "compute units per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": null,
+        "annual_billing_per_year": null
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "unverified",
+        "annual_billing_per_year": "unverified"
+      },
+      "allowance": {
+        "amount": null,
+        "unit": "Krea compute units",
+        "period": "month",
+        "status": "unverified"
+      },
+      "unresolved_observations": [
+        "Page displayed $96/mo and 80,000 units/month; billing basis and per-seat terms not stated."
+      ],
       "currency": "USD",
       "source_url": "https://www.krea.ai/pricing",
       "checked_at": "2026-11-25",
       "status": "unverified",
-      "notes": "Unverified: billing basis and per-seat terms of the displayed $96/mo not confirmed today. Business and Enterprise allow unused units to roll over."
+      "notes": "Unverified: the pricing page did not state whether its displayed price is the monthly-billed or annual-billed rate, so no list price is recorded."
     },
     {
       "id": "google-flow:veo-3.1-lite",
@@ -509,7 +914,16 @@
       "category": "video",
       "unit": "flow_credits_per_generation",
       "variant": "standard",
-      "prices": { "credits": 10, "credits_ultra_subscribers": 5 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "credits": 10,
+        "credits_ultra_subscribers": 5
+      },
+      "rate_status": {
+        "credits": "verified",
+        "credits_ultra_subscribers": "verified"
+      },
       "currency": "Flow credits",
       "source_url": "https://support.google.com/flow/answer/16526234?hl=en",
       "checked_at": "2026-11-25",
@@ -524,7 +938,16 @@
       "category": "video",
       "unit": "flow_credits_per_generation",
       "variant": "retiring model",
-      "prices": { "credits": 20, "credits_ultra_subscribers": 10 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "credits": 20,
+        "credits_ultra_subscribers": 10
+      },
+      "rate_status": {
+        "credits": "verified",
+        "credits_ultra_subscribers": "verified"
+      },
       "currency": "Flow credits",
       "source_url": "https://support.google.com/flow/answer/16526234?hl=en",
       "checked_at": "2026-11-25",
@@ -539,7 +962,16 @@
       "category": "video",
       "unit": "flow_credits_per_generation",
       "variant": "retiring model",
-      "prices": { "credits": 100, "credits_ultra_subscribers": 100 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "credits": 100,
+        "credits_ultra_subscribers": 100
+      },
+      "rate_status": {
+        "credits": "verified",
+        "credits_ultra_subscribers": "verified"
+      },
       "currency": "Flow credits",
       "source_url": "https://support.google.com/flow/answer/16526234?hl=en",
       "checked_at": "2026-11-25",
@@ -554,7 +986,14 @@
       "category": "video",
       "unit": "flow_credits_per_second",
       "variant": "360p",
-      "prices": { "credits": 1 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "credits": 1
+      },
+      "rate_status": {
+        "credits": "verified"
+      },
       "currency": "Flow credits",
       "source_url": "https://support.google.com/flow/answer/16526234?hl=en",
       "checked_at": "2026-11-25",
@@ -569,7 +1008,14 @@
       "category": "video",
       "unit": "flow_credits_per_second",
       "variant": "720p",
-      "prices": { "credits": 3 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "credits": 3
+      },
+      "rate_status": {
+        "credits": "verified"
+      },
       "currency": "Flow credits",
       "source_url": "https://support.google.com/flow/answer/16526234?hl=en",
       "checked_at": "2026-11-25",
@@ -577,19 +1023,92 @@
       "notes": "Up to 15 s for subscribers: 6 credits per extra second from 11 to 15 s."
     },
     {
-      "id": "google-flow:plan-allowances",
+      "id": "google-flow:google-ai-plus:credits",
       "provider": "Google Flow",
-      "product": "Flow credits included with Google AI plans",
-      "model_id": "google-ai-plans",
+      "product": "Google AI Plus",
+      "model_id": "google-ai-plus",
       "category": "video",
       "unit": "flow_credits_per_month",
       "variant": "extra monthly credits",
-      "prices": { "google_ai_plus": 200, "google_ai_pro": 1000, "google_ai_ultra_100": 10000, "google_ai_ultra_200": 25000 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "credits_per_month": 200
+      },
+      "rate_status": {
+        "credits_per_month": "verified"
+      },
       "currency": "Flow credits",
       "source_url": "https://support.google.com/flow/answer/16526234?hl=en",
       "checked_at": "2026-11-25",
       "status": "verified",
-      "notes": "Everyone also gets 50 Flow credits per day. Plan prices themselves are not on this page and are not listed here."
+      "notes": "Tier name exactly as written on the Flow help page. This row records Flow credits only; plan prices are not checked here. Everyone also gets 50 Flow credits per day."
+    },
+    {
+      "id": "google-flow:google-ai-pro:credits",
+      "provider": "Google Flow",
+      "product": "Google AI Pro",
+      "model_id": "google-ai-pro",
+      "category": "video",
+      "unit": "flow_credits_per_month",
+      "variant": "extra monthly credits",
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "credits_per_month": 1000
+      },
+      "rate_status": {
+        "credits_per_month": "verified"
+      },
+      "currency": "Flow credits",
+      "source_url": "https://support.google.com/flow/answer/16526234?hl=en",
+      "checked_at": "2026-11-25",
+      "status": "verified",
+      "notes": "Tier name exactly as written on the Flow help page. This row records Flow credits only; plan prices are not checked here. Everyone also gets 50 Flow credits per day."
+    },
+    {
+      "id": "google-flow:google-ai-ultra-100:credits",
+      "provider": "Google Flow",
+      "product": "Google AI Ultra $100",
+      "model_id": "google-ai-ultra-100",
+      "category": "video",
+      "unit": "flow_credits_per_month",
+      "variant": "extra monthly credits",
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "credits_per_month": 10000
+      },
+      "rate_status": {
+        "credits_per_month": "verified"
+      },
+      "currency": "Flow credits",
+      "source_url": "https://support.google.com/flow/answer/16526234?hl=en",
+      "checked_at": "2026-11-25",
+      "status": "verified",
+      "notes": "Tier name exactly as written on the Flow help page. This row records Flow credits only; plan prices are not checked here. Everyone also gets 50 Flow credits per day."
+    },
+    {
+      "id": "google-flow:google-ai-ultra-200:credits",
+      "provider": "Google Flow",
+      "product": "Google AI Ultra $200",
+      "model_id": "google-ai-ultra-200",
+      "category": "video",
+      "unit": "flow_credits_per_month",
+      "variant": "extra monthly credits",
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "credits_per_month": 25000
+      },
+      "rate_status": {
+        "credits_per_month": "verified"
+      },
+      "currency": "Flow credits",
+      "source_url": "https://support.google.com/flow/answer/16526234?hl=en",
+      "checked_at": "2026-11-25",
+      "status": "verified",
+      "notes": "Tier name exactly as written on the Flow help page. This row records Flow credits only; plan prices are not checked here. Everyone also gets 50 Flow credits per day."
     },
     {
       "id": "suno:free",
@@ -599,8 +1118,20 @@
       "category": "music",
       "unit": "usd_subscription",
       "variant": "Free plan",
-      "prices": { "monthly_billing_per_month": 0, "annual_billing_per_year": null },
-      "allowance": { "amount": 50, "unit": "song credits per day" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 0
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified"
+      },
+      "allowance": {
+        "amount": 50,
+        "unit": "Suno song credits",
+        "period": "day",
+        "status": "verified"
+      },
       "currency": "USD",
       "source_url": "https://suno.com/pricing",
       "checked_at": "2026-11-25",
@@ -615,8 +1146,22 @@
       "category": "music",
       "unit": "usd_subscription",
       "variant": "Pro plan",
-      "prices": { "monthly_billing_per_month": 10, "annual_billing_per_year": 96 },
-      "allowance": { "amount": 2500, "unit": "song credits per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 10,
+        "annual_billing_per_year": 96
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified",
+        "annual_billing_per_year": "verified"
+      },
+      "allowance": {
+        "amount": 2500,
+        "unit": "Suno song credits",
+        "period": "month",
+        "status": "verified"
+      },
       "currency": "USD",
       "source_url": "https://suno.com/pricing",
       "checked_at": "2026-11-25",
@@ -631,8 +1176,22 @@
       "category": "music",
       "unit": "usd_subscription",
       "variant": "Premier plan",
-      "prices": { "monthly_billing_per_month": 30, "annual_billing_per_year": 288 },
-      "allowance": { "amount": 10000, "unit": "song credits per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 30,
+        "annual_billing_per_year": 288
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified",
+        "annual_billing_per_year": "verified"
+      },
+      "allowance": {
+        "amount": 10000,
+        "unit": "Suno song credits",
+        "period": "month",
+        "status": "verified"
+      },
       "currency": "USD",
       "source_url": "https://suno.com/pricing",
       "checked_at": "2026-11-25",
@@ -647,8 +1206,22 @@
       "category": "music",
       "unit": "usd_subscription",
       "variant": "Platinum plan",
-      "prices": { "monthly_billing_per_month": 120, "annual_billing_per_year": 1200 },
-      "allowance": { "amount": 15000, "unit": "song credits per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 120,
+        "annual_billing_per_year": 1200
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified",
+        "annual_billing_per_year": "verified"
+      },
+      "allowance": {
+        "amount": 15000,
+        "unit": "Suno song credits",
+        "period": "month",
+        "status": "verified"
+      },
       "currency": "USD",
       "source_url": "https://suno.com/pricing",
       "checked_at": "2026-11-25",
@@ -663,7 +1236,14 @@
       "category": "music",
       "unit": "suno_credits_per_song",
       "variant": "standard",
-      "prices": { "credits": null },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "credits": null
+      },
+      "rate_status": {
+        "credits": "unverified"
+      },
       "currency": "Suno credits",
       "source_url": "https://suno.com/pricing",
       "checked_at": "2026-11-25",
@@ -678,8 +1258,22 @@
       "category": "image",
       "unit": "usd_subscription",
       "variant": "Basic plan",
-      "prices": { "monthly_billing_per_month": 10, "annual_billing_per_year": 96 },
-      "allowance": { "amount": 200, "unit": "Fast GPU minutes per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 10,
+        "annual_billing_per_year": 96
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified",
+        "annual_billing_per_year": "verified"
+      },
+      "allowance": {
+        "amount": 200,
+        "unit": "Midjourney Fast GPU minutes",
+        "period": "month",
+        "status": "verified"
+      },
       "currency": "USD",
       "source_url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
       "checked_at": "2026-11-25",
@@ -694,8 +1288,22 @@
       "category": "image",
       "unit": "usd_subscription",
       "variant": "Standard plan",
-      "prices": { "monthly_billing_per_month": 30, "annual_billing_per_year": 288 },
-      "allowance": { "amount": 900, "unit": "Fast GPU minutes per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 30,
+        "annual_billing_per_year": 288
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified",
+        "annual_billing_per_year": "verified"
+      },
+      "allowance": {
+        "amount": 900,
+        "unit": "Midjourney Fast GPU minutes",
+        "period": "month",
+        "status": "verified"
+      },
       "currency": "USD",
       "source_url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
       "checked_at": "2026-11-25",
@@ -710,8 +1318,22 @@
       "category": "image",
       "unit": "usd_subscription",
       "variant": "Pro plan",
-      "prices": { "monthly_billing_per_month": 60, "annual_billing_per_year": 576 },
-      "allowance": { "amount": 1800, "unit": "Fast GPU minutes per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 60,
+        "annual_billing_per_year": 576
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified",
+        "annual_billing_per_year": "verified"
+      },
+      "allowance": {
+        "amount": 1800,
+        "unit": "Midjourney Fast GPU minutes",
+        "period": "month",
+        "status": "verified"
+      },
       "currency": "USD",
       "source_url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
       "checked_at": "2026-11-25",
@@ -726,8 +1348,22 @@
       "category": "image",
       "unit": "usd_subscription",
       "variant": "Mega plan",
-      "prices": { "monthly_billing_per_month": 120, "annual_billing_per_year": 1152 },
-      "allowance": { "amount": 3600, "unit": "Fast GPU minutes per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 120,
+        "annual_billing_per_year": 1152
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified",
+        "annual_billing_per_year": "verified"
+      },
+      "allowance": {
+        "amount": 3600,
+        "unit": "Midjourney Fast GPU minutes",
+        "period": "month",
+        "status": "verified"
+      },
       "currency": "USD",
       "source_url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
       "checked_at": "2026-11-25",
@@ -742,7 +1378,14 @@
       "category": "image",
       "unit": "usd_per_gpu_hour",
       "variant": "all plans",
-      "prices": { "per_hour": 4 },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "per_hour": 4
+      },
+      "rate_status": {
+        "per_hour": "verified"
+      },
       "currency": "USD",
       "source_url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
       "checked_at": "2026-11-25",
@@ -757,8 +1400,20 @@
       "category": "audio",
       "unit": "usd_subscription",
       "variant": "Free plan",
-      "prices": { "monthly_billing_per_month": 0, "annual_billing_per_year": null },
-      "allowance": { "amount": 10000, "unit": "credits per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 0
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified"
+      },
+      "allowance": {
+        "amount": 10000,
+        "unit": "ElevenLabs credits",
+        "period": "month",
+        "status": "verified"
+      },
       "currency": "USD",
       "source_url": "https://elevenlabs.io/pricing",
       "checked_at": "2026-11-25",
@@ -773,8 +1428,22 @@
       "category": "audio",
       "unit": "usd_subscription",
       "variant": "Starter plan",
-      "prices": { "monthly_billing_per_month": 6, "annual_billing_per_year": 60 },
-      "allowance": { "amount": 30000, "unit": "credits per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 6,
+        "annual_billing_per_year": 60
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified",
+        "annual_billing_per_year": "verified"
+      },
+      "allowance": {
+        "amount": 30000,
+        "unit": "ElevenLabs credits",
+        "period": "month",
+        "status": "verified"
+      },
       "currency": "USD",
       "source_url": "https://elevenlabs.io/pricing",
       "checked_at": "2026-11-25",
@@ -789,8 +1458,22 @@
       "category": "audio",
       "unit": "usd_subscription",
       "variant": "Creator plan",
-      "prices": { "monthly_billing_per_month": null, "annual_billing_per_year": 220 },
-      "allowance": { "amount": 121000, "unit": "credits per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": null,
+        "annual_billing_per_year": 220
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "unverified",
+        "annual_billing_per_year": "verified"
+      },
+      "allowance": {
+        "amount": 121000,
+        "unit": "ElevenLabs credits",
+        "period": "month",
+        "status": "verified"
+      },
       "currency": "USD",
       "source_url": "https://elevenlabs.io/pricing",
       "checked_at": "2026-11-25",
@@ -805,8 +1488,22 @@
       "category": "audio",
       "unit": "usd_subscription",
       "variant": "Pro plan",
-      "prices": { "monthly_billing_per_month": 99, "annual_billing_per_year": 990 },
-      "allowance": { "amount": 600000, "unit": "credits per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 99,
+        "annual_billing_per_year": 990
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified",
+        "annual_billing_per_year": "verified"
+      },
+      "allowance": {
+        "amount": 600000,
+        "unit": "ElevenLabs credits",
+        "period": "month",
+        "status": "verified"
+      },
       "currency": "USD",
       "source_url": "https://elevenlabs.io/pricing",
       "checked_at": "2026-11-25",
@@ -821,8 +1518,22 @@
       "category": "audio",
       "unit": "usd_subscription",
       "variant": "Scale plan",
-      "prices": { "monthly_billing_per_month": 299, "annual_billing_per_year": 2990 },
-      "allowance": { "amount": 1800000, "unit": "credits per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 299,
+        "annual_billing_per_year": 2990
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified",
+        "annual_billing_per_year": "verified"
+      },
+      "allowance": {
+        "amount": 1800000,
+        "unit": "ElevenLabs credits",
+        "period": "month",
+        "status": "verified"
+      },
       "currency": "USD",
       "source_url": "https://elevenlabs.io/pricing",
       "checked_at": "2026-11-25",
@@ -837,8 +1548,22 @@
       "category": "audio",
       "unit": "usd_subscription",
       "variant": "Business plan",
-      "prices": { "monthly_billing_per_month": 990, "annual_billing_per_year": 9900 },
-      "allowance": { "amount": 6000000, "unit": "credits per month" },
+      "effective_from": null,
+      "effective_to": null,
+      "prices": {
+        "monthly_billing_per_month": 990,
+        "annual_billing_per_year": 9900
+      },
+      "rate_status": {
+        "monthly_billing_per_month": "verified",
+        "annual_billing_per_year": "verified"
+      },
+      "allowance": {
+        "amount": 6000000,
+        "unit": "ElevenLabs credits",
+        "period": "month",
+        "status": "verified"
+      },
       "currency": "USD",
       "source_url": "https://elevenlabs.io/pricing",
       "checked_at": "2026-11-25",

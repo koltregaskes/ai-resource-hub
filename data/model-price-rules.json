@@ -1,0 +1,73 @@
+{
+  "schema": "model-price-rules/v1",
+  "data_schema": "model-prices/v2",
+  "about": "Validation rules for data/model-prices.json, shared by scripts/check-model-prices.py and src/data/model-prices.ts. The refresh job edits model-prices.json only; changes to this file (new units, new source hosts) need review.",
+  "statuses": ["verified", "unverified"],
+  "units": {
+    "usd_per_1m_tokens": {
+      "label": "Text tokens: USD per 1 million tokens (standard tier, global processing)",
+      "currency": "USD",
+      "price_keys": ["input", "cached_input", "output"]
+    },
+    "usd_per_1m_image_tokens": {
+      "label": "Image tokens: USD per 1 million image tokens",
+      "currency": "USD",
+      "price_keys": ["input", "cached_input", "output"]
+    },
+    "usd_per_image": {
+      "label": "Images: USD per generated image",
+      "currency": "USD",
+      "price_keys": ["per_image", "1k_image", "2k_image", "4k_image"]
+    },
+    "usd_per_video_second": {
+      "label": "Video: USD per second of generated video",
+      "currency": "USD",
+      "price_keys": ["per_second"]
+    },
+    "flow_credits_per_generation": {
+      "label": "Google Flow: credits per video generation",
+      "currency": "Flow credits",
+      "price_keys": ["credits", "credits_ultra_subscribers"]
+    },
+    "flow_credits_per_second": {
+      "label": "Google Flow: credits per second of generated video",
+      "currency": "Flow credits",
+      "price_keys": ["credits"]
+    },
+    "flow_credits_per_month": {
+      "label": "Google Flow: extra credits per month included with a Google AI plan",
+      "currency": "Flow credits",
+      "price_keys": ["credits_per_month"]
+    },
+    "usd_subscription": {
+      "label": "Subscriptions: USD list price",
+      "currency": "USD",
+      "price_keys": ["monthly_billing_per_month", "annual_billing_per_year"],
+      "allowance": true
+    },
+    "usd_per_gpu_hour": {
+      "label": "Midjourney: USD per extra Fast GPU hour",
+      "currency": "USD",
+      "price_keys": ["per_hour"]
+    },
+    "suno_credits_per_song": {
+      "label": "Suno: credits charged per song generation",
+      "currency": "Suno credits",
+      "price_keys": ["credits"]
+    }
+  },
+  "allowance_units": ["Krea compute units", "Suno song credits", "ElevenLabs credits", "Midjourney Fast GPU minutes"],
+  "allowance_periods": ["day", "month"],
+  "source_hosts": {
+    "Anthropic": ["platform.claude.com"],
+    "OpenAI": ["developers.openai.com"],
+    "Google": ["ai.google.dev"],
+    "xAI": ["docs.x.ai"],
+    "Meta": ["dev.meta.ai"],
+    "Krea": ["www.krea.ai"],
+    "Google Flow": ["support.google.com"],
+    "Suno": ["suno.com"],
+    "Midjourney": ["docs.midjourney.com"],
+    "ElevenLabs": ["elevenlabs.io"]
+  }
+}
