@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T11:59:10.773Z",
+  "generatedAt": "2026-11-25T12:46:16.063Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T11:59:10.766Z",
+      "lastCheckedAt": "2026-11-25T12:46:16.054Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T11:59:09.255Z",
+      "lastCheckedAt": "2026-11-25T12:46:14.374Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T11:59:09.233Z",
+      "lastCheckedAt": "2026-11-25T12:46:14.385Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -210,6 +210,10 @@
       "components": [
         {
           "name": "Conversations",
+          "status": "degraded_performance"
+        },
+        {
+          "name": "ChatGPT Work",
           "status": "degraded_performance"
         },
         {
@@ -227,34 +231,30 @@
         {
           "name": "Decisions",
           "status": "operational"
-        },
-        {
-          "name": "Fine-tuning",
-          "status": "operational"
         }
       ],
       "activeIncidents": [
         {
           "id": "01M898HVZGXFV2XC4775CG9GF8",
-          "title": "ChatGPT is experiencing elevated conversation errors affecting Education, Team, Business, Pro, and Plus plans",
+          "title": "ChatGPT and Codex Cloud are experiencing elevated conversation errors",
           "status": "identified",
           "impact": "minor",
           "startedAt": "2026-11-25T11:48:13.000Z",
-          "updatedAt": "2026-11-25T11:56:25.000Z",
+          "updatedAt": "2026-11-25T12:14:44.000Z",
           "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+          "summary": "We have identified that users are experiencing elevated errors for ChatGPT and ChatGPT Work, as well as cloud Codex threads.\n\nWe have identified the issue and are working on imple..."
         }
       ],
       "recentIncidents": [
         {
           "id": "01M898HVZGXFV2XC4775CG9GF8",
-          "title": "ChatGPT is experiencing elevated conversation errors affecting Education, Team, Business, Pro, and Plus plans",
+          "title": "ChatGPT and Codex Cloud are experiencing elevated conversation errors",
           "status": "identified",
           "impact": "minor",
           "startedAt": "2026-11-25T11:48:13.000Z",
-          "updatedAt": "2026-11-25T11:56:25.000Z",
+          "updatedAt": "2026-11-25T12:14:44.000Z",
           "resolvedAt": null,
-          "summary": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation."
+          "summary": "We have identified that users are experiencing elevated errors for ChatGPT and ChatGPT Work, as well as cloud Codex threads.\n\nWe have identified the issue and are working on imple..."
         },
         {
           "id": "01M84HKHX73RF7HTVZQ2A9GFXP",
@@ -299,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T11:59:10.002Z",
+      "lastCheckedAt": "2026-11-25T12:46:15.379Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -319,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T11:59:09.464Z",
+      "lastCheckedAt": "2026-11-25T12:46:14.770Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -362,7 +362,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T11:59:10.150Z",
+      "lastCheckedAt": "2026-11-25T12:46:15.437Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -386,7 +386,7 @@
       "overallStatus": "unknown",
       "overallLabel": "Status unavailable",
       "summary": null,
-      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/summary.json",
+      "notes": "HTTP 404 for https://status.deepseek.com/api/v2/incidents.json",
       "components": [],
       "activeIncidents": [],
       "recentIncidents": []
