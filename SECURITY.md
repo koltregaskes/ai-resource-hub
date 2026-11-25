@@ -20,9 +20,7 @@ If you believe you have found a security issue involving:
 - data pipeline access
 - infrastructure or supply-chain risk
 
-report it privately to the maintainer at:
-
-- `kolin@tregaskes.co.uk`
+report it privately through GitHub's private vulnerability reporting: open this repository's **Security** tab and choose [**Report a vulnerability**](https://github.com/koltregaskes/ai-resource-hub/security/advisories/new). Please don't open a public issue for security problems.
 
 When possible, include:
 

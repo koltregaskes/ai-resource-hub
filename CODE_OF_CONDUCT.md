@@ -33,8 +33,6 @@ This Code of Conduct applies across repository issues, pull requests, reviews, c
 
 ## Reporting
 
-If you experience or observe unacceptable behaviour, contact the maintainer privately at:
-
-- `kolin@tregaskes.co.uk`
+If you experience or observe unacceptable behaviour, contact the maintainer privately through this repository's **Security** tab using [**Report a vulnerability**](https://github.com/koltregaskes/ai-resource-hub/security/advisories/new). Fields that only apply to software flaws, such as severity or affected packages, can be left blank.
 
 Maintainer decisions on repository moderation are final.
