@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T20:14:20.307Z",
+  "generatedAt": "2026-11-25T20:58:49.621Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T20:14:20.302Z",
+      "lastCheckedAt": "2026-11-25T20:58:49.615Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T20:14:19.226Z",
+      "lastCheckedAt": "2026-11-25T20:58:47.876Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
@@ -135,13 +135,13 @@
         {
           "id": "3vbyqgnswwxq",
           "title": "Claude for Microsoft 365 add-in missing for some users",
-          "status": "investigating",
+          "status": "identified",
           "impact": "major",
           "startedAt": "2026-11-24T00:10:40.018Z",
-          "updatedAt": "2026-11-24T17:19:32.218Z",
+          "updatedAt": "2026-11-25T20:21:12.140Z",
           "resolvedAt": null,
           "url": "https://stspg.io/ffdq2qfv8frk",
-          "summary": "We are continuing to investigate an issue causing the Claude add-in to disappear from Excel, Word, and PowerPoint on Mac for users signed in to Microsoft Office with a personal Mi..."
+          "summary": "We have identified an issue with an upstream provider that is causing the Claude add-in to disappear from Excel, Word, and PowerPoint on Mac for users signed in to Microsoft Offic..."
         }
       ],
       "recentIncidents": [
@@ -170,13 +170,13 @@
         {
           "id": "3vbyqgnswwxq",
           "title": "Claude for Microsoft 365 add-in missing for some users",
-          "status": "investigating",
+          "status": "identified",
           "impact": "major",
           "startedAt": "2026-11-24T00:10:40.018Z",
-          "updatedAt": "2026-11-24T17:19:32.218Z",
+          "updatedAt": "2026-11-25T20:21:12.140Z",
           "resolvedAt": null,
           "url": "https://stspg.io/ffdq2qfv8frk",
-          "summary": "We are continuing to investigate an issue causing the Claude add-in to disappear from Excel, Word, and PowerPoint on Mac for users signed in to Microsoft Office with a personal Mi..."
+          "summary": "We have identified an issue with an upstream provider that is causing the Claude add-in to disappear from Excel, Word, and PowerPoint on Mac for users signed in to Microsoft Offic..."
         },
         {
           "id": "yzs0s90d8fm8",
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T20:14:19.278Z",
+      "lastCheckedAt": "2026-11-25T20:58:47.916Z",
       "overallStatus": "degraded",
       "overallLabel": "Partial System Degradation",
       "summary": "1 active incident across 25 tracked components.",
@@ -289,26 +289,6 @@
       ]
     },
     {
-      "id": "together",
-      "providerId": null,
-      "name": "Together AI",
-      "colour": "#fb923c",
-      "websiteUrl": "https://www.together.ai",
-      "statusPageUrl": "https://status.together.ai",
-      "sourceKind": "betterstack_page_rss",
-      "sourceLabel": "Official status page and RSS feed",
-      "monitored": true,
-      "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T20:14:20.145Z",
-      "overallStatus": "maintenance",
-      "overallLabel": "Under maintenance",
-      "summary": "Official provider status page reports: Under maintenance.",
-      "notes": null,
-      "components": [],
-      "activeIncidents": [],
-      "recentIncidents": []
-    },
-    {
       "id": "cohere",
       "providerId": "cohere",
       "name": "Cohere",
@@ -319,7 +299,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T20:14:19.971Z",
+      "lastCheckedAt": "2026-11-25T20:58:48.846Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -339,7 +319,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-25T20:14:19.293Z",
+      "lastCheckedAt": "2026-11-25T20:58:48.152Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -370,6 +350,26 @@
           "summary": "# Incident Report\n## Summary\nOn Friday, 27 February 2026 at 04:37 US/Pacific, customers using Vertex AI Gemini API models experienced increased error rates. Impacted services incl..."
         }
       ]
+    },
+    {
+      "id": "together",
+      "providerId": null,
+      "name": "Together AI",
+      "colour": "#fb923c",
+      "websiteUrl": "https://www.together.ai",
+      "statusPageUrl": "https://status.together.ai",
+      "sourceKind": "betterstack_page_rss",
+      "sourceLabel": "Official status page and RSS feed",
+      "monitored": true,
+      "fetchState": "live",
+      "lastCheckedAt": "2026-11-25T20:58:49.045Z",
+      "overallStatus": "operational",
+      "overallLabel": "All systems operational",
+      "summary": "Official provider status page reports all systems operational.",
+      "notes": null,
+      "components": [],
+      "activeIncidents": [],
+      "recentIncidents": []
     },
     {
       "id": "deepseek",
