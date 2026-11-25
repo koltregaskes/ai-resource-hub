@@ -1,17 +1,19 @@
 # Recent Activity Snapshot
 
-Generated: 25 Nov 2026, 12:46 UTC
+Generated: 25 Nov 2026, 14:06 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 25 Nov 2026, 12:46 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 25 Nov 2026, 12:46 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 25 Nov 2026, 12:45 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 25 Nov 2026, 12:45 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 25 Nov 2026, 14:06 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 25 Nov 2026, 14:06 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 25 Nov 2026, 14:06 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 25 Nov 2026, 14:06 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 25 Nov 2026, 12:00 UTC | digest | Has vibe coding made open source the new normal for synths? | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/ai-artificial-intelligence/1040081/vibe-coding-open-source-music-firmware) |
 | 25 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 986 open roles across 10 tracked companies. | `/jobs/` |
-| 25 Nov 2026, 12:00 UTC | digest | Published the 2026-11-25 daily digest | 1 stories captured from 1 sources. | `/news/` |
+| 25 Nov 2026, 12:00 UTC | digest | Published the 2026-11-25 daily digest | 3 stories captured from 2 sources. | `/news/` |
+| 25 Nov 2026, 12:00 UTC | digest | The questions Jensen Huang and Nvidia will still have to answer about Megaspeed | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/) |
 | 25 Nov 2026, 12:00 UTC | digest | Yale&#8217;s Sonnenfeld: Nvidia is a &#8216;detriment&#8217; to US industrial might — not a champion | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion/) |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
@@ -24,5 +26,3 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 09 Jul 2026, 12:00 UTC | models | GPT-5.6 Luna added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.6-luna/` |
 | 09 Jul 2026, 12:00 UTC | models | GPT-5.6 Sol added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.6-sol/` |
 | 09 Jul 2026, 12:00 UTC | models | GPT-5.6 Terra added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.6-terra/` |
-| 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
-| 02 Apr 2026, 16:33 UTC | data | AAAI-26 appears in the events watchlist | Tracked as a conference signal date in the hub calendar. | `/events/` |
