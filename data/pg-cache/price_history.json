@@ -111276,6 +111276,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 328,
+    "model_id": "deepseek-v4-flash-0731",
+    "input_price": 0.047,
+    "output_price": 0.3,
+    "recorded_at": "2026-11-25 00:04:50",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V4 Flash 0731",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 339,
     "model_id": "deepseek-v4-flash-vision-exp",
     "input_price": 0.22,
@@ -116352,6 +116363,17 @@
     "input_price": 0.051,
     "output_price": 0.203,
     "recorded_at": "2026-11-24 13:57:37",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V4.1 Flash",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
+    "id": 316,
+    "model_id": "deepseek-v4.1-flash",
+    "input_price": 0.14,
+    "output_price": 0.42,
+    "recorded_at": "2026-11-25 00:04:50",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4.1 Flash",
     "provider_name": "DeepSeek",
@@ -231808,6 +231830,17 @@
     "input_price": 0.15,
     "output_price": 0.5,
     "recorded_at": "2026-11-24 13:57:37",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 5.3 Flash",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
+    "id": 322,
+    "model_id": "glm-5.3-flash",
+    "input_price": 0.12,
+    "output_price": 0.38,
+    "recorded_at": "2026-11-25 00:04:50",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "GLM 5.3 Flash",
     "provider_name": "Zhipu AI",
@@ -685822,6 +685855,17 @@
     "input_price": 0.06,
     "output_price": 1.96,
     "recorded_at": "2026-11-24 17:37:38",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.8 27B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 324,
+    "model_id": "qwen3.8-27b",
+    "input_price": 0.035,
+    "output_price": 1.5,
+    "recorded_at": "2026-11-25 00:04:50",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3.8 27B",
     "provider_name": "Alibaba",
