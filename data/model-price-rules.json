@@ -56,7 +56,12 @@
       "price_keys": ["credits"]
     }
   },
-  "allowance_units": ["Krea compute units", "Suno song credits", "ElevenLabs credits", "Midjourney Fast GPU minutes"],
+  "allowance_units": {
+    "Krea": ["Krea compute units"],
+    "Suno": ["Suno song credits"],
+    "ElevenLabs": ["ElevenLabs credits"],
+    "Midjourney": ["Midjourney Fast GPU minutes"]
+  },
   "allowance_periods": ["day", "month"],
   "source_hosts": {
     "Anthropic": ["platform.claude.com"],

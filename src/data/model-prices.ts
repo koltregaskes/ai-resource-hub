@@ -49,7 +49,8 @@ export interface ModelPriceRules {
   data_schema: string;
   statuses: PriceStatus[];
   units: Record<string, UnitRule>;
-  allowance_units: string[];
+  /** Allowance units each provider may use, so a Suno plan cannot carry Midjourney GPU minutes. */
+  allowance_units: Record<string, string[]>;
   allowance_periods: string[];
   source_hosts: Record<string, string[]>;
 }
@@ -70,8 +71,21 @@ function isIsoDate(value: unknown): value is string {
   return !Number.isNaN(parsed.getTime()) && parsed.toISOString().slice(0, 10) === value;
 }
 
+const MAX_DECIMALS = 20;
+
+/**
+ * Decimal places needed to show a number without losing significant digits,
+ * including exponent forms: 0.113 -> 3, 1e-7 -> 7, 1.25e-7 -> 9, 8 -> 0.
+ */
+export function decimalPlaces(value: number): number {
+  const [mantissa, exponentText] = String(value).toLowerCase().split('e');
+  const fraction = mantissa.includes('.') ? mantissa.split('.')[1].length : 0;
+  const exponent = exponentText ? Number(exponentText) : 0;
+  return Math.max(0, fraction - exponent);
+}
+
 function isPrice(value: unknown): value is number {
-  return typeof value === 'number' && Number.isFinite(value) && value >= 0;
+  return typeof value === 'number' && Number.isFinite(value) && value >= 0 && decimalPlaces(value) <= MAX_DECIMALS;
 }
 
 /** Returns the URL only if it is https on a host approved for this provider. */
@@ -129,7 +143,9 @@ export function validateModelPrices(data: unknown, rules: ModelPriceRules): Mode
     if (row.allowance) {
       const a = row.allowance;
       if (!unit.allowance) errors.push(`${label}: unit ${row.unit} does not take an allowance`);
-      if (!rules.allowance_units.includes(a.unit)) errors.push(`${label}: unknown allowance unit ${a.unit}`);
+      if (!(rules.allowance_units[row.provider] ?? []).includes(a.unit)) {
+        errors.push(`${label}: allowance unit ${a.unit} is not valid for ${row.provider}`);
+      }
       if (!rules.allowance_periods.includes(a.period)) errors.push(`${label}: unknown allowance period ${a.period}`);
       if (a.amount !== null && !isPrice(a.amount)) errors.push(`${label}: allowance amount invalid`);
       if ((a.status === 'verified') !== (a.amount !== null)) errors.push(`${label}: allowance amount must be set if and only if verified`);

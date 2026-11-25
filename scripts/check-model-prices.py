@@ -20,6 +20,7 @@ import math
 import sys
 from collections import Counter
 from datetime import date, datetime, timezone
+from decimal import Decimal
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -29,8 +30,13 @@ REQUIRED = ['id', 'provider', 'product', 'model_id', 'unit', 'variant', 'prices'
 OPTIONAL = {'category', 'effective_from', 'effective_to', 'allowance', 'unresolved_observations'}
 
 
+MAX_DECIMALS = 20  # the page can show up to 20 decimal places without rounding
+
+
 def is_number(value):
-    return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value) and value >= 0
+    if not isinstance(value, (int, float)) or isinstance(value, bool) or not math.isfinite(value) or value < 0:
+        return False
+    return -min(0, Decimal(repr(value)).as_tuple().exponent) <= MAX_DECIMALS
 
 
 def parse_date(value):
@@ -117,8 +123,8 @@ def check(data, rules, today):
             elif not isinstance(allowance, dict):
                 errors.append(f'{label}: allowance must be an object')
             else:
-                if allowance.get('unit') not in rules['allowance_units']:
-                    errors.append(f'{label}: unknown allowance unit {allowance.get("unit")!r}')
+                if allowance.get('unit') not in rules['allowance_units'].get(row.get('provider'), []):
+                    errors.append(f'{label}: allowance unit {allowance.get("unit")!r} is not valid for {row.get("provider")!r}')
                 if allowance.get('period') not in rules['allowance_periods']:
                     errors.append(f'{label}: allowance period must be one of {rules["allowance_periods"]}')
                 amount, state = allowance.get('amount'), allowance.get('status')

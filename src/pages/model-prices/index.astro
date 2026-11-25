@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import {
+  decimalPlaces,
   getModelPriceRules,
   getModelPrices,
   isStale,
@@ -28,7 +29,7 @@ const priceGroups = Object.entries(rules.units)
   .filter((group) => group.rows.length > 0);
 
 // Plan entitlements, grouped by allowance unit and reset period for like-for-like comparison.
-const allowanceGroups = rules.allowance_units.flatMap((unit) =>
+const allowanceGroups = [...new Set(Object.values(rules.allowance_units).flat())].flatMap((unit) =>
   rules.allowance_periods
     .map((period) => ({
       unit,
@@ -70,10 +71,10 @@ const keyLabels: Record<string, string> = {
 
 const label = (key: string) => keyLabels[key] ?? key.replace(/_/g, ' ');
 
-// Keep every published decimal: $0.113 stays $0.113, $8 shows as $8.00.
+// Keep every published significant digit: $0.113 stays $0.113, 1e-7 shows as
+// $0.0000001 (not $0.00), and $8 shows as $8.00.
 function formatNumber(value: number, currency: string): string {
-  const text = String(value);
-  const decimals = text.includes('.') ? text.split('.')[1].length : 0;
+  const decimals = decimalPlaces(value);
   if (currency === 'USD') {
     const digits = Math.max(2, decimals);
     return `$${value.toLocaleString('en-US', { minimumFractionDigits: digits, maximumFractionDigits: digits })}`;
