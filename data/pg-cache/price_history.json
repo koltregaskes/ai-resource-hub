@@ -192313,6 +192313,17 @@
     "provider_colour": "#4285f4"
   },
   {
+    "id": 418,
+    "model_id": "gemma-3-27b-it",
+    "input_price": 0.08,
+    "output_price": 0.45,
+    "recorded_at": "2026-11-26 09:59:00",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemma 3 27B",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
     "id": 3867,
     "model_id": "gemma-3-4b-it",
     "input_price": 0.04,
@@ -686020,6 +686031,17 @@
     "input_price": 0.035,
     "output_price": 1.5,
     "recorded_at": "2026-11-25 00:04:50",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.8 27B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 324,
+    "model_id": "qwen3.8-27b",
+    "input_price": 0.06,
+    "output_price": 1.96,
+    "recorded_at": "2026-11-26 09:59:00",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3.8 27B",
     "provider_name": "Alibaba",
