@@ -1,19 +1,20 @@
 # Recent Activity Snapshot
 
-Generated: 26 Nov 2026, 19:59 UTC
+Generated: 26 Nov 2026, 20:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 26 Nov 2026, 19:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 26 Nov 2026, 19:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 26 Nov 2026, 19:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 26 Nov 2026, 19:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 26 Nov 2026, 20:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 26 Nov 2026, 20:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 26 Nov 2026, 20:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 26 Nov 2026, 20:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 26 Nov 2026, 12:00 UTC | digest | 42 state AGs are trying to stop Character.AI from selling users’ chats | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats) |
 | 26 Nov 2026, 12:00 UTC | digest | Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/) |
 | 26 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 985 open roles across 10 tracked companies. | `/jobs/` |
-| 26 Nov 2026, 12:00 UTC | digest | Published the 2026-11-26 daily digest | 2 stories captured from 2 sources. | `/news/` |
+| 26 Nov 2026, 12:00 UTC | digest | Nvidia hits pause on chip shipments to Southeast Asia | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/) |
+| 26 Nov 2026, 12:00 UTC | digest | Published the 2026-11-26 daily digest | 3 stories captured from 2 sources. | `/news/` |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
@@ -25,4 +26,3 @@ This is the repo-readable mirror of the latest visible site and data activity.
 | 09 Jul 2026, 12:00 UTC | models | GPT-5.6 Luna added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.6-luna/` |
 | 09 Jul 2026, 12:00 UTC | models | GPT-5.6 Sol added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.6-sol/` |
 | 09 Jul 2026, 12:00 UTC | models | GPT-5.6 Terra added to the comparison layer | OpenAI now appears in the live model index and ranking surfaces. | `/models/gpt-5.6-terra/` |
-| 02 Apr 2026, 16:33 UTC | data | Google I/O appears in the events watchlist | Tracked as a tech_conference signal date in the hub calendar. | `/events/` |
