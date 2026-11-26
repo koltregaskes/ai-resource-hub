@@ -28,6 +28,9 @@ jobs:
       - name: Test benchmark provenance
         run: npm run test:benchmark-provenance
 
+      - name: Test benchmark method aggregate boundary and disclosures
+        run: node --test scripts/benchmark-method.test.mjs
+
       - name: Test news categories
         run: npm run test:news-categories
 
