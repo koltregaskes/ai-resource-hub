@@ -111287,6 +111287,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 328,
+    "model_id": "deepseek-v4-flash-0731",
+    "input_price": 0.047,
+    "output_price": 0.3,
+    "recorded_at": "2026-11-26 12:58:11",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V4 Flash 0731",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 339,
     "model_id": "deepseek-v4-flash-vision-exp",
     "input_price": 0.22,
@@ -114490,9 +114501,9 @@
   {
     "id": 352,
     "model_id": "deepseek-v4-pro",
-    "input_price": 0.888,
+    "input_price": 0.877,
     "output_price": 1.508,
-    "recorded_at": "2026-11-26 00:58:06",
+    "recorded_at": "2026-11-26 12:58:11",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4 Pro 0423",
     "provider_name": "DeepSeek",
