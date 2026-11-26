@@ -114488,6 +114488,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 352,
+    "model_id": "deepseek-v4-pro",
+    "input_price": 0.888,
+    "output_price": 1.508,
+    "recorded_at": "2026-11-26 00:58:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V4 Pro 0423",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 338,
     "model_id": "deepseek-v4-pro-0813",
     "input_price": 0.435,
@@ -116385,6 +116396,17 @@
     "input_price": 0.051,
     "output_price": 0.567,
     "recorded_at": "2026-11-25 23:58:57",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V4.1 Flash",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
+    "id": 316,
+    "model_id": "deepseek-v4.1-flash",
+    "input_price": 0.14,
+    "output_price": 0.42,
+    "recorded_at": "2026-11-26 00:58:06",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4.1 Flash",
     "provider_name": "DeepSeek",
@@ -659208,6 +659230,17 @@
     "provider_colour": "#ff6a00"
   },
   {
+    "id": 368,
+    "model_id": "qwen3.5-397b-a17b",
+    "input_price": 0.5,
+    "output_price": 3.6,
+    "recorded_at": "2026-11-26 00:58:06",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.5 397B A17B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
     "id": 3714,
     "model_id": "qwen3.5-9b",
     "input_price": 0.05,
@@ -661501,6 +661534,17 @@
     "input_price": 0.17,
     "output_price": 0.25,
     "recorded_at": "2026-11-25 20:58:31",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.5-9B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 361,
+    "model_id": "qwen3.5-9b",
+    "input_price": 0.1,
+    "output_price": 0.25,
+    "recorded_at": "2026-11-26 00:58:06",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3.5-9B",
     "provider_name": "Alibaba",
