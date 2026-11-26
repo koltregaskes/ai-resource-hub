@@ -1,5 +1,5 @@
 export const modelReleaseDesk = {
-  "generatedAt": "2026-11-26T17:58:16.164Z",
+  "generatedAt": "2026-11-26T18:58:29.909Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
@@ -472,7 +472,7 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "As Anthropic IPOs, Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
+          "title": "Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
           "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
           "source": "TechCrunch",
           "date": "2026-11-26",
@@ -1033,7 +1033,7 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "As Anthropic IPOs, Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
+          "title": "Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
           "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
           "source": "TechCrunch",
           "date": "2026-11-26",
@@ -1362,7 +1362,7 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "As Anthropic IPOs, Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
+          "title": "Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
           "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
           "source": "TechCrunch",
           "date": "2026-11-26",
@@ -1473,7 +1473,7 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "As Anthropic IPOs, Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
+          "title": "Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
           "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
           "source": "TechCrunch",
           "date": "2026-11-26",
@@ -2258,7 +2258,7 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "As Anthropic IPOs, Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
+          "title": "Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
           "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
           "source": "TechCrunch",
           "date": "2026-11-26",
@@ -2449,7 +2449,7 @@ export const modelReleaseDesk = {
       ],
       "relatedStories": [
         {
-          "title": "As Anthropic IPOs, Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
+          "title": "Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
           "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
           "source": "TechCrunch",
           "date": "2026-11-26",
@@ -2566,7 +2566,7 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "As Anthropic IPOs, Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
+          "title": "Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
           "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
           "source": "TechCrunch",
           "date": "2026-11-26",
@@ -2683,7 +2683,7 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "As Anthropic IPOs, Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
+          "title": "Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
           "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
           "source": "TechCrunch",
           "date": "2026-11-26",
@@ -2800,7 +2800,7 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "As Anthropic IPOs, Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
+          "title": "Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
           "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
           "source": "TechCrunch",
           "date": "2026-11-26",
@@ -2917,7 +2917,7 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "As Anthropic IPOs, Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
+          "title": "Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
           "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
           "source": "TechCrunch",
           "date": "2026-11-26",
@@ -3034,7 +3034,7 @@ export const modelReleaseDesk = {
       "benchmarkHighlights": [],
       "relatedStories": [
         {
-          "title": "As Anthropic IPOs, Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
+          "title": "Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
           "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
           "source": "TechCrunch",
           "date": "2026-11-26",
