@@ -231913,6 +231913,17 @@
     "provider_colour": "#00b4d8"
   },
   {
+    "id": 322,
+    "model_id": "glm-5.3-flash",
+    "input_price": 0.15,
+    "output_price": 0.5,
+    "recorded_at": "2026-11-26 05:58:58",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "GLM 5.3 Flash",
+    "provider_name": "Zhipu AI",
+    "provider_colour": "#00b4d8"
+  },
+  {
     "id": 346,
     "model_id": "glm-5.3-flashx",
     "input_price": 0.37,
