@@ -5,8 +5,8 @@
     "status": "success",
     "models_updated": 985,
     "error_message": null,
-    "started_at": "2026-11-26 14:59:52",
-    "finished_at": "2026-11-26 14:59:52"
+    "started_at": "2026-11-26 15:09:05",
+    "finished_at": "2026-11-26 15:09:05"
   },
   {
     "id": 9,
@@ -14,8 +14,8 @@
     "status": "error",
     "models_updated": 71,
     "error_message": "VentureBeat: HTTP 429: Too Many Requests",
-    "started_at": "2026-11-26 14:59:48",
-    "finished_at": "2026-11-26 14:59:48"
+    "started_at": "2026-11-26 15:08:51",
+    "finished_at": "2026-11-26 15:08:51"
   },
   {
     "id": 8,
@@ -23,8 +23,8 @@
     "status": "success",
     "models_updated": 143,
     "error_message": null,
-    "started_at": "2026-11-26 14:59:38",
-    "finished_at": "2026-11-26 14:59:38"
+    "started_at": "2026-11-26 15:08:40",
+    "finished_at": "2026-11-26 15:08:40"
   },
   {
     "id": 6,
@@ -32,8 +32,8 @@
     "status": "fallback",
     "models_updated": 0,
     "error_message": null,
-    "started_at": "2026-11-26 14:59:37",
-    "finished_at": "2026-11-26 14:59:37"
+    "started_at": "2026-11-26 15:08:39",
+    "finished_at": "2026-11-26 15:08:39"
   },
   {
     "id": 7,
@@ -41,8 +41,8 @@
     "status": "computed",
     "models_updated": 49,
     "error_message": null,
-    "started_at": "2026-11-26 14:59:37",
-    "finished_at": "2026-11-26 14:59:37"
+    "started_at": "2026-11-26 15:08:39",
+    "finished_at": "2026-11-26 15:08:39"
   },
   {
     "id": 5,
@@ -50,26 +50,8 @@
     "status": "success",
     "models_updated": 0,
     "error_message": null,
-    "started_at": "2026-11-26 14:59:36",
-    "finished_at": "2026-11-26 14:59:36"
-  },
-  {
-    "id": 3,
-    "scraper": "official-pricing",
-    "status": "success",
-    "models_updated": 0,
-    "error_message": null,
-    "started_at": "2026-11-26 14:59:35",
-    "finished_at": "2026-11-26 14:59:35"
-  },
-  {
-    "id": 4,
-    "scraper": "pricing:validator",
-    "status": "success",
-    "models_updated": 0,
-    "error_message": null,
-    "started_at": "2026-11-26 14:59:35",
-    "finished_at": "2026-11-26 14:59:35"
+    "started_at": "2026-11-26 15:08:38",
+    "finished_at": "2026-11-26 15:08:38"
   },
   {
     "id": 2,
@@ -77,8 +59,26 @@
     "status": "success",
     "models_updated": 255,
     "error_message": null,
-    "started_at": "2026-11-26 14:59:34",
-    "finished_at": "2026-11-26 14:59:34"
+    "started_at": "2026-11-26 15:08:37",
+    "finished_at": "2026-11-26 15:08:37"
+  },
+  {
+    "id": 3,
+    "scraper": "official-pricing",
+    "status": "success",
+    "models_updated": 0,
+    "error_message": null,
+    "started_at": "2026-11-26 15:08:37",
+    "finished_at": "2026-11-26 15:08:37"
+  },
+  {
+    "id": 4,
+    "scraper": "pricing:validator",
+    "status": "success",
+    "models_updated": 0,
+    "error_message": null,
+    "started_at": "2026-11-26 15:08:37",
+    "finished_at": "2026-11-26 15:08:37"
   },
   {
     "id": 1,
@@ -86,7 +86,7 @@
     "status": "success",
     "models_updated": 77,
     "error_message": null,
-    "started_at": "2026-11-26 14:59:33",
-    "finished_at": "2026-11-26 14:59:33"
+    "started_at": "2026-11-26 15:08:36",
+    "finished_at": "2026-11-26 15:08:36"
   }
 ]

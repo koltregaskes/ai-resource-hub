@@ -1,15 +1,15 @@
 # Recent Activity Snapshot
 
-Generated: 26 Nov 2026, 14:59 UTC
+Generated: 26 Nov 2026, 15:09 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 26 Nov 2026, 14:59 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 26 Nov 2026, 14:59 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 26 Nov 2026, 14:59 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 26 Nov 2026, 14:59 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 26 Nov 2026, 15:08 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 26 Nov 2026, 15:08 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 26 Nov 2026, 15:08 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 26 Nov 2026, 15:08 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 26 Nov 2026, 12:00 UTC | digest | 42 state AGs are trying to stop Character.AI from selling users’ chats | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats) |
 | 26 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 985 open roles across 10 tracked companies. | `/jobs/` |
 | 26 Nov 2026, 12:00 UTC | digest | Published the 2026-11-26 daily digest | 1 stories captured from 1 sources. | `/news/` |
