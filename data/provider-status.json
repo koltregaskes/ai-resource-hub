@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T09:58:33.883Z",
+  "generatedAt": "2026-11-27T10:58:32.789Z",
   "providers": [
     {
       "id": "fireworks",
@@ -12,7 +12,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-27T09:58:33.878Z",
+      "lastCheckedAt": "2026-11-27T10:58:32.784Z",
       "overallStatus": "major_outage",
       "overallLabel": "Partial outage",
       "summary": "Official provider status page reports: Partial outage.",
@@ -100,7 +100,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-27T09:58:32.471Z",
+      "lastCheckedAt": "2026-11-27T10:58:31.599Z",
       "overallStatus": "degraded",
       "overallLabel": "Partially Degraded Service",
       "summary": "1 active incident across 10 tracked components.",
@@ -146,6 +146,17 @@
       ],
       "recentIncidents": [
         {
+          "id": "0x1yvzkfmmxj",
+          "title": "Degraded performance for Claude Fable 5.2",
+          "status": "resolved",
+          "impact": "major",
+          "startedAt": "2026-11-27T10:34:01.804Z",
+          "updatedAt": "2026-11-27T10:49:33.823Z",
+          "resolvedAt": "2026-11-27T10:49:33.790Z",
+          "url": "https://stspg.io/n4l14k7m49zw",
+          "summary": "The issue affecting claude.ai has been resolved. Impact occurred from 02:20 PT / 10:20 UTC to 02:40 PT / 10:40 UTC."
+        },
+        {
           "id": "yl30wkjblcm6",
           "title": "Elevated errors for multiple models",
           "status": "resolved",
@@ -177,17 +188,6 @@
           "resolvedAt": null,
           "url": "https://stspg.io/ffdq2qfv8frk",
           "summary": "We have identified an issue with an upstream provider that is causing the Claude add-in to disappear from Excel, Word, and PowerPoint on Mac for users signed in to Microsoft Offic..."
-        },
-        {
-          "id": "yzs0s90d8fm8",
-          "title": "Elevated errors for multiple models",
-          "status": "resolved",
-          "impact": "major",
-          "startedAt": "2026-11-23T09:49:22.304Z",
-          "updatedAt": "2026-11-23T11:07:41.080Z",
-          "resolvedAt": "2026-11-23T11:07:41.048Z",
-          "url": "https://stspg.io/q2ptbwdjx31m",
-          "summary": "The issue affecting Claude services has been resolved. Impact occurred from 01:39 PT / 09:39 UTC to 01:56 PT / 09:56 UTC."
         }
       ]
     },
@@ -202,7 +202,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-27T09:58:33.440Z",
+      "lastCheckedAt": "2026-11-27T10:58:32.524Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
@@ -222,7 +222,7 @@
       "sourceLabel": "Official incident feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-27T09:58:32.672Z",
+      "lastCheckedAt": "2026-11-27T10:58:31.734Z",
       "overallStatus": "operational",
       "overallLabel": "No active Gemini or Vertex AI incidents",
       "summary": "Filtered from the official Google Cloud public incident feed.",
@@ -265,7 +265,7 @@
       "sourceLabel": "Official status API",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-27T09:58:32.381Z",
+      "lastCheckedAt": "2026-11-27T10:58:31.552Z",
       "overallStatus": "operational",
       "overallLabel": "All Systems Operational",
       "summary": "No active incidents across 25 tracked components.",
@@ -351,7 +351,7 @@
       "sourceLabel": "Official status page and RSS feed",
       "monitored": true,
       "fetchState": "live",
-      "lastCheckedAt": "2026-11-27T09:58:33.636Z",
+      "lastCheckedAt": "2026-11-27T10:58:32.627Z",
       "overallStatus": "operational",
       "overallLabel": "All systems operational",
       "summary": "Official provider status page reports all systems operational.",
