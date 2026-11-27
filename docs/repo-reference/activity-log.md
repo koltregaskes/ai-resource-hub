@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 27 Nov 2026, 04:59 UTC
+Generated: 27 Nov 2026, 05:57 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 27 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 984 open roles across 10 tracked companies. | `/jobs/` |
-| 27 Nov 2026, 04:59 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 27 Nov 2026, 04:59 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 27 Nov 2026, 04:59 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 27 Nov 2026, 04:59 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 27 Nov 2026, 05:57 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 27 Nov 2026, 05:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 27 Nov 2026, 05:57 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 27 Nov 2026, 05:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 26 Nov 2026, 12:00 UTC | digest | 42 state AGs are trying to stop Character.AI from selling users’ chats | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats) |
 | 26 Nov 2026, 12:00 UTC | digest | Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/) |
 | 26 Nov 2026, 12:00 UTC | digest | Nvidia hits pause on chip shipments to Southeast Asia | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/) |
