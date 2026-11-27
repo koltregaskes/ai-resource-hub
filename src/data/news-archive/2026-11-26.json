@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "date": "2026-11-26",
+  "snapshotAt": "2026-11-27T06:59:25.631Z",
+  "stories": [
+    {
+      "id": "news-94305b427e5aac0a7d6e",
+      "title": "Nvidia hits pause on chip shipments to Southeast Asia",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
+      "source": "TechCrunch",
+      "summary": "Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as the U.S. tightens its push to keep AI chips out of China.",
+      "publishedAt": "2026-11-26T20:03:54.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-e5c5d8632474a2a0c630",
+      "title": "Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
+      "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
+      "source": "TechCrunch",
+      "summary": "On the same day that Anthropic entered the public market, a painstakingly human video game became one of most successful entertainment launches of all time.",
+      "publishedAt": "2026-11-26T16:00:00.000Z",
+      "category": "tools",
+      "tags": [],
+      "importance": 0.4
+    },
+    {
+      "id": "news-c0f2de19f05669ce83a2",
+      "title": "42 state AGs are trying to stop Character.AI from selling users’ chats",
+      "url": "https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
+      "source": "The Verge",
+      "summary": "A coalition of 42 state attorneys general is trying to prevent Character.AI from selling off user data as it navigates Chapter 11 bankruptcy proceedings. In a deluge of nearly identical press releases, the various AGs accuse the company of planning to auction off \"the private chat histories of more than 21 million U.S…",
+      "publishedAt": "2026-11-26T09:54:40.000Z",
+      "category": "industry",
+      "tags": [],
+      "importance": 0.4
+    }
+  ]
+}
