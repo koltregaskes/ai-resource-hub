@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-26T23:51:40.883Z",
+  "generatedAt": "2026-11-27T00:58:19.880Z",
   "releaseWindowDays": 120,
   "relatedStoryWindowDays": 30,
   "stats": {
     "totalReleases": 66,
-    "highPriority": 5,
+    "highPriority": 4,
     "readyForEditor": 13,
     "officiallyVerified": 27,
     "watchOnly": 39,
@@ -20,7 +20,7 @@
       "providerColour": "#0a66ff",
       "releaseDate": "2026-11-09",
       "releaseDateLabel": "9 Nov 2026",
-      "ageDays": 17,
+      "ageDays": 18,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -85,130 +85,6 @@
       "sourceCount": 1
     },
     {
-      "id": "gemini-omni-1.2-flash",
-      "fileSlug": "2026-11-05-gemini-omni-1-2-flash-release-brief",
-      "modelName": "Gemini Omni 1.2 Flash",
-      "providerId": "google",
-      "providerName": "Google",
-      "providerColour": "#4285f4",
-      "releaseDate": "2026-11-05",
-      "releaseDateLabel": "5 Nov 2026",
-      "ageDays": 21,
-      "status": "active",
-      "fieldStates": {
-        "released": "verified",
-        "context_window": "unverified",
-        "max_output": "verified",
-        "open_source": "unverified",
-        "modality": "verified",
-        "api_available": "verified",
-        "status": "verified",
-        "category": "verified",
-        "input_price": "unverified",
-        "output_price": "unverified",
-        "cached_input_price": "unverified"
-      },
-      "verificationState": "official",
-      "priority": "high",
-      "draftStatus": "ready_for_editor",
-      "officialUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
-      "providerStatusUrl": "https://status.cloud.google.com",
-      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
-      "openSource": null,
-      "openSourceState": "unverified",
-      "apiAvailable": true,
-      "apiAvailableState": "verified",
-      "modality": "text,vision,video",
-      "contextWindow": null,
-      "contextWindowState": "unverified",
-      "maxOutput": 260640,
-      "maxOutputState": "verified",
-      "qualityScore": null,
-      "qualityScoreState": "suppressed_untraceable",
-      "inputPrice": null,
-      "inputPriceState": "unverified",
-      "outputPrice": null,
-      "outputPriceState": "unverified",
-      "pricingSource": null,
-      "pricingUpdated": null,
-      "summary": "Gemini Omni 1.2 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
-      "dek": "Google's Gemini Omni 1.2 Flash is on the release desk with 5 related stories and 0 benchmark signals to review.",
-      "whyItMatters": [
-        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
-        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
-      ],
-      "checklist": [
-        "Summarise the official launch post and link the primary docs first.",
-        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
-        "Confirm pricing, context window, API availability, and local/open-weight status.",
-        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
-      ],
-      "threadPlan": [
-        "Lead with the hook: what Google actually launched with Gemini Omni 1.2 Flash, and why it matters now.",
-        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
-        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
-        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
-        "Keep the chronology explicit: this release landed on 5 Nov 2026 and should be framed against the models it is replacing or competing with."
-      ],
-      "benchmarkHighlights": [],
-      "relatedStories": [
-        {
-          "title": "How Gemini is changing the game for Golden State's organization and fans.",
-          "url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
-          "source": "Google",
-          "date": "2026-11-24",
-          "summary": "Google Gemini partners with Golden State to power fan experiences and business operations for the Warriors, Valkyries, and Chase Center. See the news.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "A more tailored Google Search that’s uniquely yours",
-          "url": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
-          "source": "Google",
-          "date": "2026-11-23",
-          "summary": "Get more helpful Search responses by securely opting in to connect Google Wallet, Drive, and the Gemini app to Personal Intelligence in AI Mode.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "The Gemini app is now available on lower-memory Android devices.",
-          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
-          "source": "Google",
-          "date": "2026-11-18",
-          "summary": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "Put Gemini to work for you",
-          "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
-          "source": "Google",
-          "date": "2026-11-17",
-          "summary": "Tasks in Gemini is now free of charge in six countries, with new features starting in the U.S. and deeper Google Workspace integration to get things done on your behalf.",
-          "routingTags": [
-            "model_release"
-          ]
-        },
-        {
-          "title": "Google Cloud launches Gemini for healthcare.",
-          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
-          "source": "Google",
-          "date": "2026-11-10",
-          "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
-          "routingTags": [
-            "model_release"
-          ]
-        }
-      ],
-      "draftPath": "editorial/release-drafts/2026-11-05-gemini-omni-1-2-flash-release-brief.md",
-      "benchmarkCount": 0,
-      "storyCount": 5,
-      "sourceCount": 6
-    },
-    {
       "id": "muse-wonder",
       "fileSlug": "2026-10-12-muse-wonder-release-brief",
       "modelName": "Muse Wonder",
@@ -217,7 +93,7 @@
       "providerColour": "#0a66ff",
       "releaseDate": "2026-10-12",
       "releaseDateLabel": "12 Oct 2026",
-      "ageDays": 45,
+      "ageDays": 46,
       "status": "preview",
       "fieldStates": {
         "released": "verified",
@@ -291,7 +167,7 @@
       "providerColour": "#4285f4",
       "releaseDate": "2026-08-27",
       "releaseDateLabel": "27 Aug 2026",
-      "ageDays": 91,
+      "ageDays": 92,
       "status": "preview",
       "fieldStates": {
         "released": "verified",
@@ -416,7 +292,7 @@
       "providerColour": "#d97706",
       "releaseDate": "2026-04-07",
       "releaseDateLabel": "7 Apr 2026",
-      "ageDays": 233,
+      "ageDays": 234,
       "status": "preview",
       "fieldStates": {
         "context_window": "unverified",
@@ -521,6 +397,130 @@
       "sourceCount": 4
     },
     {
+      "id": "gemini-omni-1.2-flash",
+      "fileSlug": "2026-11-05-gemini-omni-1-2-flash-release-brief",
+      "modelName": "Gemini Omni 1.2 Flash",
+      "providerId": "google",
+      "providerName": "Google",
+      "providerColour": "#4285f4",
+      "releaseDate": "2026-11-05",
+      "releaseDateLabel": "5 Nov 2026",
+      "ageDays": 22,
+      "status": "active",
+      "fieldStates": {
+        "released": "verified",
+        "context_window": "unverified",
+        "max_output": "verified",
+        "open_source": "unverified",
+        "modality": "verified",
+        "api_available": "verified",
+        "status": "verified",
+        "category": "verified",
+        "input_price": "unverified",
+        "output_price": "unverified",
+        "cached_input_price": "unverified"
+      },
+      "verificationState": "official",
+      "priority": "watch",
+      "draftStatus": "ready_for_editor",
+      "officialUrl": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash",
+      "providerStatusUrl": "https://status.cloud.google.com",
+      "providerDocsUrl": "https://ai.google.dev/gemini-api/docs/models",
+      "openSource": null,
+      "openSourceState": "unverified",
+      "apiAvailable": true,
+      "apiAvailableState": "verified",
+      "modality": "text,vision,video",
+      "contextWindow": null,
+      "contextWindowState": "unverified",
+      "maxOutput": 260640,
+      "maxOutputState": "verified",
+      "qualityScore": null,
+      "qualityScoreState": "suppressed_untraceable",
+      "inputPrice": null,
+      "inputPriceState": "unverified",
+      "outputPrice": null,
+      "outputPriceState": "unverified",
+      "pricingSource": null,
+      "pricingUpdated": null,
+      "summary": "Gemini Omni 1.2 Flash is a currently tracked release from Google. It is positioned as an API-available model rather than a local-only release. Vendor field review checked 2026-11-13. See the model page for field sources, pricing scope and unverified values. A model-level official source is attached, so this can enter source-first editorial review.",
+      "dek": "Google's Gemini Omni 1.2 Flash is on the release desk with 5 related stories and 0 benchmark signals to review.",
+      "whyItMatters": [
+        "Benchmark coverage is still thin, so the first post should separate launch claims from verified performance.",
+        "Outside coverage exists already, which makes it easier to contrast the official story with early analyst takes."
+      ],
+      "checklist": [
+        "Summarise the official launch post and link the primary docs first.",
+        "Cross-check any benchmark claims against tracked evals and note gaps clearly.",
+        "Confirm pricing, context window, API availability, and local/open-weight status.",
+        "Pull early external reactions from trusted analysts, benchmark trackers, or engineering write-ups."
+      ],
+      "threadPlan": [
+        "Lead with the hook: what Google actually launched with Gemini Omni 1.2 Flash, and why it matters now.",
+        "Follow with the official facts only: availability, context window, pricing, access level, and any stated positioning against the previous family.",
+        "Be explicit that benchmark and eval coverage is still thin, so the first take should stay launch-first rather than overclaiming performance.",
+        "Close with early outside reaction and what to watch next, using summaries rather than a bare link dump.",
+        "Keep the chronology explicit: this release landed on 5 Nov 2026 and should be framed against the models it is replacing or competing with."
+      ],
+      "benchmarkHighlights": [],
+      "relatedStories": [
+        {
+          "title": "How Gemini is changing the game for Golden State's organization and fans.",
+          "url": "https://blog.google/products-and-platforms/products/gemini/gemini-golden-state/",
+          "source": "Google",
+          "date": "2026-11-24",
+          "summary": "Google Gemini partners with Golden State to power fan experiences and business operations for the Warriors, Valkyries, and Chase Center. See the news.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "A more tailored Google Search that’s uniquely yours",
+          "url": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
+          "source": "Google",
+          "date": "2026-11-23",
+          "summary": "Get more helpful Search responses by securely opting in to connect Google Wallet, Drive, and the Gemini app to Personal Intelligence in AI Mode.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "The Gemini app is now available on lower-memory Android devices.",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/",
+          "source": "Google",
+          "date": "2026-11-18",
+          "summary": "The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Put Gemini to work for you",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+          "source": "Google",
+          "date": "2026-11-17",
+          "summary": "Tasks in Gemini is now free of charge in six countries, with new features starting in the U.S. and deeper Google Workspace integration to get things done on your behalf.",
+          "routingTags": [
+            "model_release"
+          ]
+        },
+        {
+          "title": "Google Cloud launches Gemini for healthcare.",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+          "source": "Google",
+          "date": "2026-11-10",
+          "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
+          "routingTags": [
+            "model_release"
+          ]
+        }
+      ],
+      "draftPath": "editorial/release-drafts/2026-11-05-gemini-omni-1-2-flash-release-brief.md",
+      "benchmarkCount": 0,
+      "storyCount": 5,
+      "sourceCount": 6
+    },
+    {
       "id": "minimax-m3.1-flash",
       "fileSlug": "2026-10-19-minimax-m3-1-flash-release-brief",
       "modelName": "MiniMax M3.1 Flash",
@@ -529,7 +529,7 @@
       "providerColour": "#e040fb",
       "releaseDate": "2026-10-19",
       "releaseDateLabel": "19 Oct 2026",
-      "ageDays": 38,
+      "ageDays": 39,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -605,7 +605,7 @@
       "providerColour": "#0a66ff",
       "releaseDate": "2026-10-15",
       "releaseDateLabel": "15 Oct 2026",
-      "ageDays": 42,
+      "ageDays": 43,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -681,7 +681,7 @@
       "providerColour": "#76b900",
       "releaseDate": "2026-10-15",
       "releaseDateLabel": "15 Oct 2026",
-      "ageDays": 42,
+      "ageDays": 43,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -757,7 +757,7 @@
       "providerColour": "#0a66ff",
       "releaseDate": "2026-09-02",
       "releaseDateLabel": "2 Sept 2026",
-      "ageDays": 85,
+      "ageDays": 86,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -830,7 +830,7 @@
       "providerColour": "#76b900",
       "releaseDate": "2026-08-11",
       "releaseDateLabel": "11 Aug 2026",
-      "ageDays": 107,
+      "ageDays": 108,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -906,7 +906,7 @@
       "providerColour": "#0a66ff",
       "releaseDate": "2026-08-05",
       "releaseDateLabel": "5 Aug 2026",
-      "ageDays": 113,
+      "ageDays": 114,
       "status": null,
       "fieldStates": {
         "released": "verified",
@@ -979,7 +979,7 @@
       "providerColour": "#d97706",
       "releaseDate": "2026-07-24",
       "releaseDateLabel": "24 Jul 2026",
-      "ageDays": 125,
+      "ageDays": 126,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1090,7 +1090,7 @@
       "providerColour": "#4285f4",
       "releaseDate": "2026-07-21",
       "releaseDateLabel": "21 Jul 2026",
-      "ageDays": 128,
+      "ageDays": 129,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1208,7 +1208,7 @@
       "providerColour": "#10a37f",
       "releaseDate": "2026-07-09",
       "releaseDateLabel": "9 Jul 2026",
-      "ageDays": 140,
+      "ageDays": 141,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1308,7 +1308,7 @@
       "providerColour": "#d97706",
       "releaseDate": "2026-06-30",
       "releaseDateLabel": "30 Jun 2026",
-      "ageDays": 149,
+      "ageDays": 150,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1419,7 +1419,7 @@
       "providerColour": "#d97706",
       "releaseDate": "2026-06-09",
       "releaseDateLabel": "9 Jun 2026",
-      "ageDays": 170,
+      "ageDays": 171,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -1530,7 +1530,7 @@
       "providerColour": "#4285f4",
       "releaseDate": "2026-04-02",
       "releaseDateLabel": "2 Apr 2026",
-      "ageDays": 238,
+      "ageDays": 239,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1651,7 +1651,7 @@
       "providerColour": "#ff6a00",
       "releaseDate": "2026-04-02",
       "releaseDateLabel": "2 Apr 2026",
-      "ageDays": 238,
+      "ageDays": 239,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1718,7 +1718,7 @@
       "providerColour": "#1da1f2",
       "releaseDate": "2026-03-31",
       "releaseDateLabel": "31 Mar 2026",
-      "ageDays": 240,
+      "ageDays": 241,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1785,7 +1785,7 @@
       "providerColour": "#f59e0b",
       "releaseDate": "2026-03-28",
       "releaseDateLabel": "28 Mar 2026",
-      "ageDays": 243,
+      "ageDays": 244,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1852,7 +1852,7 @@
       "providerColour": "#e040fb",
       "releaseDate": "2026-03-18",
       "releaseDateLabel": "18 Mar 2026",
-      "ageDays": 253,
+      "ageDays": 254,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1919,7 +1919,7 @@
       "providerColour": "#00b4d8",
       "releaseDate": "2026-03-15",
       "releaseDateLabel": "15 Mar 2026",
-      "ageDays": 256,
+      "ageDays": 257,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -1986,7 +1986,7 @@
       "providerColour": "#10a37f",
       "releaseDate": "2026-03-05",
       "releaseDateLabel": "5 Mar 2026",
-      "ageDays": 266,
+      "ageDays": 267,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -2086,7 +2086,7 @@
       "providerColour": "#4285f4",
       "releaseDate": "2026-02-19",
       "releaseDateLabel": "19 Feb 2026",
-      "ageDays": 280,
+      "ageDays": 281,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -2204,7 +2204,7 @@
       "providerColour": "#d97706",
       "releaseDate": "2026-02-17",
       "releaseDateLabel": "17 Feb 2026",
-      "ageDays": 282,
+      "ageDays": 283,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -2315,7 +2315,7 @@
       "providerColour": "#00b4d8",
       "releaseDate": "2026-02-12",
       "releaseDateLabel": "12 Feb 2026",
-      "ageDays": 287,
+      "ageDays": 288,
       "status": "tracking",
       "fieldStates": {
         "context_window": "verified",
@@ -2382,7 +2382,7 @@
       "providerColour": "#d97706",
       "releaseDate": "2026-02-05",
       "releaseDateLabel": "5 Feb 2026",
-      "ageDays": 294,
+      "ageDays": 295,
       "status": "active",
       "fieldStates": {
         "context_window": "verified",
@@ -2499,7 +2499,7 @@
     },
     {
       "id": "claude-fable-5.1",
-      "fileSlug": "2026-11-26-claude-fable-5-1-release-brief",
+      "fileSlug": "2026-11-27-claude-fable-5-1-release-brief",
       "modelName": "Claude Fable 5.1",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -2609,14 +2609,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-claude-fable-5-1-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-claude-fable-5-1-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "claude-fable-5.2",
-      "fileSlug": "2026-11-26-claude-fable-5-2-release-brief",
+      "fileSlug": "2026-11-27-claude-fable-5-2-release-brief",
       "modelName": "Claude Fable 5.2",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -2726,14 +2726,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-claude-fable-5-2-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-claude-fable-5-2-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "claude-haiku-5.5",
-      "fileSlug": "2026-11-26-claude-haiku-5-5-release-brief",
+      "fileSlug": "2026-11-27-claude-haiku-5-5-release-brief",
       "modelName": "Claude Haiku 5.5",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -2843,14 +2843,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-claude-haiku-5-5-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-claude-haiku-5-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "claude-opus-5.5",
-      "fileSlug": "2026-11-26-claude-opus-5-5-release-brief",
+      "fileSlug": "2026-11-27-claude-opus-5-5-release-brief",
       "modelName": "Claude Opus 5.5",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -2960,14 +2960,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-claude-opus-5-5-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-claude-opus-5-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "claude-sonnet-5.5",
-      "fileSlug": "2026-11-26-claude-sonnet-5-5-release-brief",
+      "fileSlug": "2026-11-27-claude-sonnet-5-5-release-brief",
       "modelName": "Claude Sonnet 5.5",
       "providerId": "anthropic",
       "providerName": "Anthropic",
@@ -3077,14 +3077,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-claude-sonnet-5-5-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-claude-sonnet-5-5-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "deepseek-v4-flash-0731",
-      "fileSlug": "2026-11-26-deepseek-v4-flash-0731-release-brief",
+      "fileSlug": "2026-11-27-deepseek-v4-flash-0731-release-brief",
       "modelName": "DeepSeek V4 Flash 0731",
       "providerId": "deepseek",
       "providerName": "DeepSeek",
@@ -3150,14 +3150,14 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-26-deepseek-v4-flash-0731-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-deepseek-v4-flash-0731-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "deepseek-v4.1-flash",
-      "fileSlug": "2026-11-26-deepseek-v4-1-flash-release-brief",
+      "fileSlug": "2026-11-27-deepseek-v4-1-flash-release-brief",
       "modelName": "DeepSeek V4.1 Flash",
       "providerId": "deepseek",
       "providerName": "DeepSeek",
@@ -3223,14 +3223,14 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-26-deepseek-v4-1-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-deepseek-v4-1-flash-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "deepseek-v4.1-flash-1017",
-      "fileSlug": "2026-11-26-deepseek-v4-1-flash-1017-release-brief",
+      "fileSlug": "2026-11-27-deepseek-v4-1-flash-1017-release-brief",
       "modelName": "DeepSeek V4.1 Flash 1017",
       "providerId": "deepseek",
       "providerName": "DeepSeek",
@@ -3296,14 +3296,14 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-26-deepseek-v4-1-flash-1017-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-deepseek-v4-1-flash-1017-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "gemini-3.7-flash",
-      "fileSlug": "2026-11-26-gemini-3-7-flash-release-brief",
+      "fileSlug": "2026-11-27-gemini-3-7-flash-release-brief",
       "modelName": "Gemini 3.7 Flash",
       "providerId": "google",
       "providerName": "Google",
@@ -3420,14 +3420,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gemini-3-7-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gemini-3-7-flash-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 5,
       "sourceCount": 5
     },
     {
       "id": "gemini-3.8-flash",
-      "fileSlug": "2026-11-26-gemini-3-8-flash-release-brief",
+      "fileSlug": "2026-11-27-gemini-3-8-flash-release-brief",
       "modelName": "Gemini 3.8 Flash",
       "providerId": "google",
       "providerName": "Google",
@@ -3544,14 +3544,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gemini-3-8-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gemini-3-8-flash-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 5,
       "sourceCount": 5
     },
     {
       "id": "gemini-4-carbon",
-      "fileSlug": "2026-11-26-gemini-4-carbon-release-brief",
+      "fileSlug": "2026-11-27-gemini-4-carbon-release-brief",
       "modelName": "Gemini 4 Carbon",
       "providerId": "google",
       "providerName": "Google",
@@ -3668,14 +3668,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gemini-4-carbon-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gemini-4-carbon-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 5,
       "sourceCount": 5
     },
     {
       "id": "gemini-4-hydrogen",
-      "fileSlug": "2026-11-26-gemini-4-hydrogen-release-brief",
+      "fileSlug": "2026-11-27-gemini-4-hydrogen-release-brief",
       "modelName": "Gemini 4 Hydrogen",
       "providerId": "google",
       "providerName": "Google",
@@ -3802,14 +3802,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gemini-4-hydrogen-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gemini-4-hydrogen-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 6,
       "sourceCount": 6
     },
     {
       "id": "gemini-4-neon",
-      "fileSlug": "2026-11-26-gemini-4-neon-release-brief",
+      "fileSlug": "2026-11-27-gemini-4-neon-release-brief",
       "modelName": "Gemini 4 Neon",
       "providerId": "google",
       "providerName": "Google",
@@ -3926,14 +3926,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gemini-4-neon-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gemini-4-neon-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 5,
       "sourceCount": 5
     },
     {
       "id": "glm-5.3",
-      "fileSlug": "2026-11-26-glm-5-3-release-brief",
+      "fileSlug": "2026-11-27-glm-5-3-release-brief",
       "modelName": "GLM 5.3",
       "providerId": "zhipu",
       "providerName": "Zhipu AI",
@@ -3999,14 +3999,14 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-26-glm-5-3-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-glm-5-3-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "glm-5.3-flash",
-      "fileSlug": "2026-11-26-glm-5-3-flash-release-brief",
+      "fileSlug": "2026-11-27-glm-5-3-flash-release-brief",
       "modelName": "GLM 5.3 Flash",
       "providerId": "zhipu",
       "providerName": "Zhipu AI",
@@ -4072,14 +4072,14 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-26-glm-5-3-flash-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-glm-5-3-flash-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "glm-5.3-prime",
-      "fileSlug": "2026-11-26-glm-5-3-prime-release-brief",
+      "fileSlug": "2026-11-27-glm-5-3-prime-release-brief",
       "modelName": "GLM 5.3 Prime",
       "providerId": "zhipu",
       "providerName": "Zhipu AI",
@@ -4145,14 +4145,14 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-26-glm-5-3-prime-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-glm-5-3-prime-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "gpt-6-astra",
-      "fileSlug": "2026-11-26-gpt-6-astra-release-brief",
+      "fileSlug": "2026-11-27-gpt-6-astra-release-brief",
       "modelName": "GPT-6 Astra",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4271,14 +4271,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gpt-6-astra-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gpt-6-astra-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 5,
       "sourceCount": 5
     },
     {
       "id": "gpt-6-astra-pro",
-      "fileSlug": "2026-11-26-gpt-6-astra-pro-release-brief",
+      "fileSlug": "2026-11-27-gpt-6-astra-pro-release-brief",
       "modelName": "GPT-6 Astra Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4377,14 +4377,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gpt-6-astra-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gpt-6-astra-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6-luna",
-      "fileSlug": "2026-11-26-gpt-6-luna-release-brief",
+      "fileSlug": "2026-11-27-gpt-6-luna-release-brief",
       "modelName": "GPT-6 Luna",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4493,14 +4493,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gpt-6-luna-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gpt-6-luna-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gpt-6-luna-pro",
-      "fileSlug": "2026-11-26-gpt-6-luna-pro-release-brief",
+      "fileSlug": "2026-11-27-gpt-6-luna-pro-release-brief",
       "modelName": "GPT-6 Luna Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4599,14 +4599,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gpt-6-luna-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gpt-6-luna-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6-sol",
-      "fileSlug": "2026-11-26-gpt-6-sol-release-brief",
+      "fileSlug": "2026-11-27-gpt-6-sol-release-brief",
       "modelName": "GPT-6 Sol",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4705,14 +4705,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gpt-6-sol-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gpt-6-sol-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6-sol-pro",
-      "fileSlug": "2026-11-26-gpt-6-sol-pro-release-brief",
+      "fileSlug": "2026-11-27-gpt-6-sol-pro-release-brief",
       "modelName": "GPT-6 Sol Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4811,14 +4811,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gpt-6-sol-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gpt-6-sol-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.1-sol",
-      "fileSlug": "2026-11-26-gpt-6-1-sol-release-brief",
+      "fileSlug": "2026-11-27-gpt-6-1-sol-release-brief",
       "modelName": "GPT-6.1 Sol",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -4927,14 +4927,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gpt-6-1-sol-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gpt-6-1-sol-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 4,
       "sourceCount": 4
     },
     {
       "id": "gpt-6.1-sol-pro",
-      "fileSlug": "2026-11-26-gpt-6-1-sol-pro-release-brief",
+      "fileSlug": "2026-11-27-gpt-6-1-sol-pro-release-brief",
       "modelName": "GPT-6.1 Sol Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5033,14 +5033,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gpt-6-1-sol-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gpt-6-1-sol-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.1-terra",
-      "fileSlug": "2026-11-26-gpt-6-1-terra-release-brief",
+      "fileSlug": "2026-11-27-gpt-6-1-terra-release-brief",
       "modelName": "GPT-6.1 Terra",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5139,14 +5139,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gpt-6-1-terra-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gpt-6-1-terra-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.1-terra-pro",
-      "fileSlug": "2026-11-26-gpt-6-1-terra-pro-release-brief",
+      "fileSlug": "2026-11-27-gpt-6-1-terra-pro-release-brief",
       "modelName": "GPT-6.1 Terra Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5245,14 +5245,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gpt-6-1-terra-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gpt-6-1-terra-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.2-astra",
-      "fileSlug": "2026-11-26-gpt-6-2-astra-release-brief",
+      "fileSlug": "2026-11-27-gpt-6-2-astra-release-brief",
       "modelName": "GPT-6.2 Astra",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5351,14 +5351,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gpt-6-2-astra-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gpt-6-2-astra-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.2-astra-pro",
-      "fileSlug": "2026-11-26-gpt-6-2-astra-pro-release-brief",
+      "fileSlug": "2026-11-27-gpt-6-2-astra-pro-release-brief",
       "modelName": "GPT-6.2 Astra Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5457,14 +5457,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gpt-6-2-astra-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gpt-6-2-astra-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.2-sol",
-      "fileSlug": "2026-11-26-gpt-6-2-sol-release-brief",
+      "fileSlug": "2026-11-27-gpt-6-2-sol-release-brief",
       "modelName": "GPT-6.2 Sol",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5563,14 +5563,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gpt-6-2-sol-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gpt-6-2-sol-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "gpt-6.2-sol-pro",
-      "fileSlug": "2026-11-26-gpt-6-2-sol-pro-release-brief",
+      "fileSlug": "2026-11-27-gpt-6-2-sol-pro-release-brief",
       "modelName": "GPT-6.2 Sol Pro",
       "providerId": "openai",
       "providerName": "OpenAI",
@@ -5669,14 +5669,14 @@
           ]
         }
       ],
-      "draftPath": "editorial/release-drafts/2026-11-26-gpt-6-2-sol-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-gpt-6-2-sol-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 3,
       "sourceCount": 3
     },
     {
       "id": "grok-4.6",
-      "fileSlug": "2026-11-26-grok-4-6-release-brief",
+      "fileSlug": "2026-11-27-grok-4-6-release-brief",
       "modelName": "Grok 4.6",
       "providerId": "xai",
       "providerName": "xAI",
@@ -5742,14 +5742,14 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-26-grok-4-6-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-grok-4-6-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "grok-4.7",
-      "fileSlug": "2026-11-26-grok-4-7-release-brief",
+      "fileSlug": "2026-11-27-grok-4-7-release-brief",
       "modelName": "Grok 4.7",
       "providerId": "xai",
       "providerName": "xAI",
@@ -5815,14 +5815,14 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-26-grok-4-7-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-grok-4-7-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "kimi-k3.1-pro",
-      "fileSlug": "2026-11-26-kimi-k3-1-pro-release-brief",
+      "fileSlug": "2026-11-27-kimi-k3-1-pro-release-brief",
       "modelName": "Kimi K3.1 Pro",
       "providerId": "moonshot",
       "providerName": "Moonshot AI",
@@ -5888,14 +5888,14 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-26-kimi-k3-1-pro-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-kimi-k3-1-pro-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "muse-glimmer-30b",
-      "fileSlug": "2026-11-26-muse-glimmer-30b-release-brief",
+      "fileSlug": "2026-11-27-muse-glimmer-30b-release-brief",
       "modelName": "Muse Glimmer 30B",
       "providerId": "meta",
       "providerName": "Meta",
@@ -5961,14 +5961,14 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-26-muse-glimmer-30b-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-muse-glimmer-30b-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "pixtral-large-2502",
-      "fileSlug": "2026-11-26-pixtral-large-2502-release-brief",
+      "fileSlug": "2026-11-27-pixtral-large-2502-release-brief",
       "modelName": "Pixtral Large 2502",
       "providerId": "mistral",
       "providerName": "Mistral",
@@ -6034,14 +6034,14 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-26-pixtral-large-2502-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-pixtral-large-2502-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "qwen3.8-27b",
-      "fileSlug": "2026-11-26-qwen3-8-27b-release-brief",
+      "fileSlug": "2026-11-27-qwen3-8-27b-release-brief",
       "modelName": "Qwen3.8 27B",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -6107,14 +6107,14 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-26-qwen3-8-27b-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-qwen3-8-27b-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "qwen3.8-max-0902",
-      "fileSlug": "2026-11-26-qwen3-8-max-0902-release-brief",
+      "fileSlug": "2026-11-27-qwen3-8-max-0902-release-brief",
       "modelName": "Qwen3.8 Max (0902)",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -6180,14 +6180,14 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-26-qwen3-8-max-0902-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-qwen3-8-max-0902-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "qwen3.8-max-prime",
-      "fileSlug": "2026-11-26-qwen3-8-max-prime-release-brief",
+      "fileSlug": "2026-11-27-qwen3-8-max-prime-release-brief",
       "modelName": "Qwen3.8 Max Prime",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -6253,14 +6253,14 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-26-qwen3-8-max-prime-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-qwen3-8-max-prime-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0
     },
     {
       "id": "qwen4-max",
-      "fileSlug": "2026-11-26-qwen4-max-release-brief",
+      "fileSlug": "2026-11-27-qwen4-max-release-brief",
       "modelName": "Qwen4 Max",
       "providerId": "alibaba",
       "providerName": "Alibaba",
@@ -6326,7 +6326,7 @@
       ],
       "benchmarkHighlights": [],
       "relatedStories": [],
-      "draftPath": "editorial/release-drafts/2026-11-26-qwen4-max-release-brief.md",
+      "draftPath": "editorial/release-drafts/2026-11-27-qwen4-max-release-brief.md",
       "benchmarkCount": 0,
       "storyCount": 0,
       "sourceCount": 0

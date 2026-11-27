@@ -1,6 +1,6 @@
 # Latest Releases Snapshot
 
-Generated: 26 Nov 2026, 23:51 UTC
+Generated: 27 Nov 2026, 00:58 UTC
 
 This is the current release-desk view of the newest tracked launches. It is intended for quick repo-side review before editorial work or data promotion.
 
@@ -9,10 +9,10 @@ This is the current release-desk view of the newest tracked launches. It is inte
 | Date | Model | Provider | Status | Priority | Editor state | Benchmarks | Stories | Official |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 9 Nov 2026 | Muse Ember | Meta |  | high | needs research | 0 | 0 | [official](https://dev.meta.ai/docs/models) |
-| 5 Nov 2026 | Gemini Omni 1.2 Flash | Google | active | high | ready for editor | 0 | 5 | [official](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash) |
 | 12 Oct 2026 | Muse Wonder | Meta | preview | high | needs research | 0 | 0 | [official](https://dev.meta.ai/docs/models) |
 | 27 Aug 2026 | Gemini Omni 1.1 Flash | Google | preview | high | ready for editor | 0 | 5 | [official](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash) |
 | 7 Apr 2026 | Claude Mythos Preview | Anthropic | preview | high | ready for editor | 0 | 3 | [official](https://www.anthropic.com/glasswing) |
+| 5 Nov 2026 | Gemini Omni 1.2 Flash | Google | active | watch | ready for editor | 0 | 5 | [official](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash) |
 | 19 Oct 2026 | MiniMax M3.1 Flash | MiniMax |  | watch | needs research | 0 | 0 | [official](https://platform.minimax.io/docs/guides/text-generation) |
 | 15 Oct 2026 | Muse Spark Open | Meta |  | watch | needs research | 0 | 0 | [official](https://dev.meta.ai/docs/muse-spark-open) |
 | 15 Oct 2026 | Nemotron 3.5 Super VL | NVIDIA |  | watch | needs research | 0 | 0 | [official](https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/) |
