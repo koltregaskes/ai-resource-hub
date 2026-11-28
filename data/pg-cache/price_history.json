@@ -114545,9 +114545,9 @@
   {
     "id": 353,
     "model_id": "deepseek-v4-pro",
-    "input_price": 0.431,
-    "output_price": 1.551,
-    "recorded_at": "2026-11-28 02:58:12",
+    "input_price": 0.391,
+    "output_price": 1.579,
+    "recorded_at": "2026-11-28 03:58:51",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4 Pro 0423",
     "provider_name": "DeepSeek",
