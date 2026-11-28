@@ -114545,9 +114545,9 @@
   {
     "id": 353,
     "model_id": "deepseek-v4-pro",
-    "input_price": 0.493,
-    "output_price": 1.502,
-    "recorded_at": "2026-11-28 00:57:58",
+    "input_price": 0.472,
+    "output_price": 1.523,
+    "recorded_at": "2026-11-28 01:57:19",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "DeepSeek V4 Pro 0423",
     "provider_name": "DeepSeek",
@@ -464673,6 +464673,17 @@
     "provider_colour": "#e040fb"
   },
   {
+    "id": 180,
+    "model_id": "minimax-m3.1-flash",
+    "input_price": 0.15,
+    "output_price": 0.6,
+    "recorded_at": "2026-11-28 01:57:19",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "MiniMax M3.1 Flash",
+    "provider_name": "MiniMax",
+    "provider_colour": "#e040fb"
+  },
+  {
     "id": 3753,
     "model_id": "ministral-14b-2512",
     "input_price": 0.2,
@@ -521592,6 +521603,17 @@
     "input_price": 0.07,
     "output_price": 0.2,
     "recorded_at": "2026-11-25 11:58:52",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Nemotron 3.5 Lightning",
+    "provider_name": "NVIDIA",
+    "provider_colour": "#76b900"
+  },
+  {
+    "id": 197,
+    "model_id": "nemotron-3.5-lightning",
+    "input_price": 0.05,
+    "output_price": 0.2,
+    "recorded_at": "2026-11-28 01:57:19",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Nemotron 3.5 Lightning",
     "provider_name": "NVIDIA",
