@@ -661817,9 +661817,9 @@
   {
     "id": 362,
     "model_id": "qwen3.5-9b",
-    "input_price": 0.066,
-    "output_price": 0.097,
-    "recorded_at": "2026-11-28 08:58:55",
+    "input_price": 0.085,
+    "output_price": 0.125,
+    "recorded_at": "2026-11-28 11:57:54",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3.5-9B",
     "provider_name": "Alibaba",
