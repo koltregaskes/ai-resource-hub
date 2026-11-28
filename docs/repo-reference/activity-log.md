@@ -1,16 +1,16 @@
 # Recent Activity Snapshot
 
-Generated: 28 Nov 2026, 01:57 UTC
+Generated: 28 Nov 2026, 02:00 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
 | 28 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 984 open roles across 10 tracked companies. | `/jobs/` |
-| 28 Nov 2026, 01:57 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 28 Nov 2026, 01:57 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 28 Nov 2026, 01:57 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 28 Nov 2026, 01:57 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 28 Nov 2026, 02:00 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 28 Nov 2026, 02:00 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 28 Nov 2026, 01:59 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 28 Nov 2026, 01:59 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 27 Nov 2026, 12:00 UTC | digest | Android’s DIY widgets are a bit of vibe-coding fun | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini) |
 | 27 Nov 2026, 12:00 UTC | digest | Published the 2026-11-27 daily digest | 1 stories captured from 1 sources. | `/news/` |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
