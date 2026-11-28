@@ -1,7 +1,10 @@
 ---
 import LabStandings from '../../../components/LabStandings.astro';
+import { selectCurrentSnapshot } from '../../../lib/lab-standings.mjs';
 const files = import.meta.glob('../../../../data/lab-standings/snapshots/*.json', {eager:true,import:'default'});
+const rescored = import.meta.glob('../../../../data/lab-standings/rescored/*/*.json', {eager:true,import:'default'});
 const snapshots = Object.values(files) as any[];
 snapshots.sort((a,b)=>b.date.localeCompare(a.date));
+const snapshot = selectCurrentSnapshot(snapshots,Object.values(rescored));
 ---
-<LabStandings snapshot={snapshots[0]} dates={snapshots.map(s=>s.date)} history={snapshots} />
+<LabStandings snapshot={snapshot} dates={snapshots.map(s=>s.date)} history={snapshots} />
