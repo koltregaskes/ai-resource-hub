@@ -1,18 +1,18 @@
 # Recent Activity Snapshot
 
-Generated: 28 Nov 2026, 13:58 UTC
+Generated: 28 Nov 2026, 14:58 UTC
 
 This is the repo-readable mirror of the latest visible site and data activity.
 
 | Date | Category | Title | Detail | Route / source |
 | --- | --- | --- | --- | --- |
-| 28 Nov 2026, 13:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
-| 28 Nov 2026, 13:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
-| 28 Nov 2026, 13:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
-| 28 Nov 2026, 13:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
+| 28 Nov 2026, 14:58 UTC | data | Recomputed internal benchmark aggregates | Refreshed the remediation layer; public rankings still require row-level provenance and current dates. | `/leaderboard/` |
+| 28 Nov 2026, 14:58 UTC | data | Updated speed measurements | Refreshed output speed and latency references for tracked models. | `/speed/` |
+| 28 Nov 2026, 14:58 UTC | data | Applied curated catalogue prices | Filled price gaps from the hand-checked model catalogue. No pricing page was fetched; live prices were kept. | `/compare/llm/` |
+| 28 Nov 2026, 14:58 UTC | data | Pulled latest OpenRouter price index | Updated comparison data for providers and routed model endpoints. | `/compare/llm/` |
 | 28 Nov 2026, 12:00 UTC | jobs | Jobs market snapshot refreshed | 984 open roles across 10 tracked companies. | `/jobs/` |
-| 27 Nov 2026, 12:00 UTC | digest | Android’s DIY widgets are a bit of vibe-coding fun | The Verge featured in the latest daily brief. | [open](https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini) |
-| 27 Nov 2026, 12:00 UTC | digest | Published the 2026-11-27 daily digest | 1 stories captured from 1 sources. | `/news/` |
+| 28 Nov 2026, 12:00 UTC | digest | Published the 2026-11-28 daily digest | 1 stories captured from 1 sources. | `/news/` |
+| 28 Nov 2026, 12:00 UTC | digest | Sakana AI&#8217;s CEO says its homegrown models are about more than Japan&#8217;s national security | TechCrunch featured in the latest daily brief. | [open](https://techcrunch.com/2026/11/28/sakana-ais-ceo-says-its-homegrown-models-are-about-more-than-japans-national-security/) |
 | 14 Nov 2026, 12:00 UTC | blog | An embedding upgrade is an index migration | Explainer · 5 min read. | `/blog/embedding-upgrade-reindex-plan/` |
 | 14 Nov 2026, 12:00 UTC | blog | Find out whether your RAG system found the answer first | Explainer · 5 min read. | `/blog/rag-retrieval-before-answer-quality/` |
 | 14 Nov 2026, 12:00 UTC | blog | Overlapping document chunks has a bill you can count | Analysis · 5 min read. | `/blog/rag-chunk-overlap-budget/` |
