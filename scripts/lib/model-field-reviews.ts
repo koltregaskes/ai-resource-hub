@@ -2,8 +2,26 @@ import reviews from '../model-field-reviews.json';
 import type { CatalogModelEntry } from '../model-catalog';
 
 export type FieldEvidence = { value: string | number | boolean | null; verification: string; sourceUrl: string; checkedAt: string; reason?: string };
-export type ModelFieldReview = { id: string; fields: Record<string, FieldEvidence> };
-export const MODEL_FIELD_REVIEWS: ModelFieldReview[] = reviews;
+type DatedSource = { sourceUrl: string; checkedAt: string };
+export type ModelFieldReview = {
+  id: string;
+  fields: Record<string, FieldEvidence>;
+  summary?: string;
+  pageOnly?: boolean;
+  successor?: DatedSource & { id: string; name: string };
+  claims?: (DatedSource & { text: string; reportedAt: string; evaluatedAt: string; effort: string; snapshot: string })[];
+  availability?: (DatedSource & { surface: string; value: string })[];
+  snapshotStatus?: string;
+  pricingEffective?: { date: string; sourceUrl: string };
+  independentResults?: DatedSource;
+};
+
+export const MODEL_PAGE_REVIEWS: ModelFieldReview[] = reviews.map(row => ({
+  ...row,
+  fields: Object.fromEntries(Object.entries(row.fields)),
+}));
+// Page-only evidence does not replace cache fields or feed catalogue exports.
+export const MODEL_FIELD_REVIEWS = MODEL_PAGE_REVIEWS.filter(row => !row.pageOnly);
 export function getModelFieldReview(id: string) { return MODEL_FIELD_REVIEWS.find(row => row.id === id); }
 export function getReviewedCatalogEntries(): CatalogModelEntry[] {
   return MODEL_FIELD_REVIEWS.filter(row => row.fields.name.verification === 'verified' && row.fields.providerId.verification === 'verified').map(row => {

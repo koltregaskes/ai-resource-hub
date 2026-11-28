@@ -1,33 +1,130 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import type { ModelFieldReview } from '../../scripts/lib/model-field-reviews';
+import { getProviderById } from '../db/pg-cache';
+import type { FieldEvidence, ModelFieldReview } from '../../scripts/lib/model-field-reviews';
 interface Props { review: ModelFieldReview; discoveryName: string; }
 const { review, discoveryName } = Astro.props;
 const confirmed = review.fields.name.verification === 'verified';
 const name = confirmed ? String(review.fields.name.value) : discoveryName;
-const labels: Record<string,string> = { name:'Model name',providerId:'Provider',released:'Release date',contextWindow:'Context window (tokens)',maxOutput:'Maximum output (tokens)',modality:'Modalities',openSource:'Open weights',apiAvailable:'API available',status:'Vendor lifecycle status',category:'Category',inputPrice:'Input price',outputPrice:'Output price',cachedInputPrice:'Cached input price',currency:'Published currency',pricingUnit:'Price unit',pricingConditions:'Pricing and deployment scope' };
-const priceKeys = new Set(['inputPrice','outputPrice','cachedInputPrice']);
-function display(key: string, value: string | number | boolean | null) {
+const labels: Record<string, string> = {
+  name: 'Model name',
+  providerId: 'Provider',
+  apiId: 'API model ID',
+  released: 'Release date',
+  knowledgeCutoff: 'Knowledge cutoff',
+  contextWindow: review.pageOnly ? 'API context window (tokens)' : 'Context window (tokens)',
+  maxInput: 'Maximum input (tokens)',
+  maxOutput: 'Maximum output (tokens)',
+  modality: 'Modalities',
+  openSource: 'Open weights',
+  apiAvailable: 'API available',
+  status: 'Vendor lifecycle status',
+  category: 'Category',
+  inputPrice: 'Input',
+  outputPrice: 'Output',
+  cachedInputPrice: 'Cached input',
+  cacheWritePrice: 'Cache write',
+  currency: 'Published currency',
+  pricingUnit: 'Price unit',
+  pricingConditions: 'Pricing and deployment scope',
+};
+const rateKeys = new Set(['inputPrice', 'outputPrice', 'cachedInputPrice', 'cacheWritePrice']);
+const pricingKeys = new Set([...rateKeys, 'currency', 'pricingUnit', 'pricingConditions']);
+const fields = Object.entries(review.fields);
+const specs = fields.filter(([key]) => !pricingKeys.has(key));
+const pricing = fields.filter(([key]) => pricingKeys.has(key));
+function matchesSource(field: FieldEvidence, source: FieldEvidence) {
+  return field.sourceUrl === source.sourceUrl && field.checkedAt === source.checkedAt && field.verification === source.verification;
+}
+const specSource = review.fields.name;
+const priceSource = pricing.find(([key]) => key === 'inputPrice')?.[1] ?? pricing[0]?.[1];
+
+function display(key: string, value: FieldEvidence['value']) {
   if (value === null) return 'Unverified';
   if (typeof value === 'boolean') return value ? 'Yes' : 'No';
-  if (priceKeys.has(key)) return String(review.fields.currency.value ?? '') + ' ' + value;
-  return String(value);
+  if (key === 'providerId') return getProviderById(String(value))?.name ?? String(value);
+  if (rateKeys.has(key) && typeof value === 'number') {
+    const currency = review.fields.currency?.value;
+    const unit = review.fields.pricingUnit?.value;
+    const amount = currency === 'USD'
+      ? '$' + value.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 8 })
+      : [currency, value].filter(part => part != null).join(' ');
+    return unit ? amount + ' ' + unit : amount;
+  }
+  return typeof value === 'number' ? value.toLocaleString('en-GB') : value;
 }
 ---
 <BaseLayout title={name + ' - The AI Resource Hub'} description={name + ': vendor sources, specifications and explicitly unverified fields.'}>
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
     <a href={import.meta.env.BASE_URL + 'models/'}>All models</a>
     <h1 class="text-3xl font-bold mt-4 mb-4">{name}</h1>
-    <p class="mb-4">{confirmed ? 'Vendor-confirmed model. Each field below has its own source and check date.' : 'Discovery only. This exact model has not been verified from a readable vendor page.'}</p>
-    {review.fields.status.value === 'retired' && <p class="mb-4">Retired model. Its replacement's specifications and prices are not attributed to this release.</p>}
-    <p class="mb-6">No score yet. No benchmark result was verified in this catalogue review.</p>
-    <dl class="grid gap-4">
-      {Object.entries(review.fields).map(([key, field]) => <div class="rounded-lg border border-(--color-border) p-4 min-w-0" data-model-field={key} data-verification={field.verification}>
-        <dt class="font-semibold">{labels[key] ?? key}</dt>
-        <dd class="mt-1 break-words">{display(key,field.value)}</dd>
-        {field.reason && <dd class="text-sm mt-1">{field.reason}</dd>}
-        <dd class="text-sm mt-2"><a href={field.sourceUrl} target="_blank" rel="noopener noreferrer">{field.verification === 'verified' ? 'Vendor source' : 'Vendor page checked'}</a> - Checked {field.checkedAt}</dd>
-      </div>)}
-    </dl>
+    {review.summary && <p class="mb-4">{review.summary}</p>}
+    {review.successor && <p class="mb-4" data-model-successor>Successor: <a href={import.meta.env.BASE_URL + 'models/' + review.successor.id + '/'}>{review.successor.name}</a>. <a href={review.successor.sourceUrl}>OpenAI announcement</a> (checked <time datetime={review.successor.checkedAt}>{review.successor.checkedAt}</time>). Retirement status is separate.</p>}
+    <p class="mb-4">{confirmed ? 'Vendor-confirmed model.' : 'Discovery only. This exact model has not been verified from a readable vendor page.'}</p>
+    {review.fields.status?.value === 'retired' && <p class="mb-4">Retired model. Its replacement's specifications and prices are not attributed to this release.</p>}
+    <section class="mb-8" aria-labelledby="model-specifications">
+      <h2 id="model-specifications" class="text-xl font-semibold mb-3">Specifications</h2>
+      <dl class="divide-y divide-(--color-border) border-y border-(--color-border)">
+        {specs.map(([key, field]) => <div class="py-2 sm:grid sm:grid-cols-[minmax(10rem,1fr)_2fr]" data-model-field={key} data-verification={field.verification}>
+          <dt class="font-medium">{labels[key] ?? key}</dt>
+          <dd class="break-words">
+            {display(key, field.value)}
+            {key === 'apiId' && review.snapshotStatus && <span class="block text-sm">Snapshot guarantee: {review.snapshotStatus}</span>}
+            {field.reason && <span class="block text-sm">{field.reason}</span>}
+            {!matchesSource(field, specSource) && <span class="block text-sm"><a href={field.sourceUrl}>Vendor page</a> (checked <time datetime={field.checkedAt}>{field.checkedAt}</time>)</span>}
+          </dd>
+        </div>)}
+      </dl>
+      <p class="mt-2 text-sm" data-spec-source><a href={specSource.sourceUrl}>Vendor source for specifications unless cited individually</a> (checked <time datetime={specSource.checkedAt}>{specSource.checkedAt}</time>)</p>
+    </section>
+    {priceSource && <section class="mb-8" aria-labelledby="model-pricing">
+      <h2 id="model-pricing" class="text-xl font-semibold mb-3">Pricing</h2>
+      <table class="w-full min-w-0! max-w-2xl text-left">
+        <thead class="border-b border-(--color-border)">
+          <tr><th scope="col" class="py-2 pr-3">Charge</th><th scope="col" class="py-2">Published rate</th></tr>
+        </thead>
+        <tbody class="divide-y divide-(--color-border)">
+          {pricing.filter(([key]) => rateKeys.has(key)).map(([key, field]) => <tr data-model-field={key} data-verification={field.verification}>
+            <th scope="row" class="py-2 pr-3 font-medium">{labels[key] ?? key}</th>
+            <td class="py-2">
+              {display(key, field.value)}
+              {field.reason && <span class="block text-sm">{field.reason}</span>}
+              {!matchesSource(field, priceSource) && <span class="block text-sm"><a href={field.sourceUrl}>Vendor page</a> (checked <time datetime={field.checkedAt}>{field.checkedAt}</time>)</span>}
+            </td>
+          </tr>)}
+        </tbody>
+      </table>
+      <dl class="mt-3 space-y-2">
+        {pricing.filter(([key]) => !rateKeys.has(key)).map(([key, field]) => <div data-model-field={key} data-verification={field.verification}>
+          <dt class="inline font-medium">{labels[key] ?? key}</dt>{' '}
+          <dd class="inline">
+            {display(key, field.value)}
+            {field.reason && <span class="block text-sm">{field.reason}</span>}
+            {!matchesSource(field, priceSource) && <span class="block text-sm"><a href={field.sourceUrl}>Vendor page</a> (checked <time datetime={field.checkedAt}>{field.checkedAt}</time>)</span>}
+          </dd>
+        </div>)}
+      </dl>
+      <p class="mt-2 text-sm" data-pricing-source><a href={priceSource.sourceUrl}>Vendor source for pricing unless cited individually</a> (checked <time datetime={priceSource.checkedAt}>{priceSource.checkedAt}</time>)</p>
+      {review.pricingEffective && <p class="mt-1 text-sm" data-pricing-effective>Effective <time datetime={review.pricingEffective.date}>{review.pricingEffective.date}</time> according to <a href={review.pricingEffective.sourceUrl}>OpenAI's launch announcement</a>.</p>}
+    </section>}
+    {review.availability && <section class="mb-8" aria-labelledby="model-availability">
+      <h2 id="model-availability" class="text-xl font-semibold mb-3">Availability</h2>
+      <dl class="space-y-2">
+        {review.availability.map(item => <div data-model-surface={item.surface}>
+          <dt class="font-medium">{item.surface}</dt>
+          <dd>{item.value} <a href={item.sourceUrl}>Source</a> (checked <time datetime={item.checkedAt}>{item.checkedAt}</time>)</dd>
+        </div>)}
+      </dl>
+    </section>}
+    <p class="mb-4">No score yet. No benchmark result was verified in this catalogue review.</p>
+    {review.independentResults && <p class="mb-4" data-independent-results>Independent results: <a href={review.independentResults.sourceUrl}>See Artificial Analysis</a> (checked <time datetime={review.independentResults.checkedAt}>{review.independentResults.checkedAt}</time>).</p>}
+    {review.claims && review.claims.length > 0 && <section aria-label="Vendor claims">
+      <h2 class="text-xl font-semibold mb-2">OpenAI's claims</h2>
+      <p class="mb-2">These are vendor-reported comparisons, not independently confirmed results or Hub rankings.</p>
+      <ul class="list-disc pl-6 space-y-2">{review.claims.map(claim => <li data-vendor-claim>
+        OpenAI's claim: {claim.text} <a href={claim.sourceUrl}>Source</a> (reported <time datetime={claim.reportedAt}>{claim.reportedAt}</time>, checked <time datetime={claim.checkedAt}>{claim.checkedAt}</time>).
+        <p class="text-sm">Evaluation date: {claim.evaluatedAt}. Reasoning effort: {claim.effort}. Model snapshot: {claim.snapshot}.</p>
+      </li>)}</ul>
+    </section>}
   </section>
 </BaseLayout>
