@@ -8,7 +8,8 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { getCatalogModelsById, VERIFIED_MODEL_CATALOG } from './model-catalog';
+import { findCatalogModelByAlias, getCatalogModelsById, VERIFIED_MODEL_CATALOG } from './model-catalog';
+import { isPubliclyVerifiedModel } from '../src/data/model-verification';
 import { buildDemotions, cleanOpenRouterName, isOpenRouterVariant, nameForMatchedModel, splitZeroQuality, stripDemotionReasons } from './lib/registry-guards';
 
 const catalog = getCatalogModelsById();
@@ -96,4 +97,68 @@ test('zero-quality catalogue models are warnings, so they no longer block the sc
   const split = splitZeroQuality([...rows, { id: 'some-unverified-model', name: 'Unverified' }], verifiedIds);
   assert.equal(split.catalogue.length, 19);
   assert.deepEqual(split.critical.map((row) => row.id), ['some-unverified-model'], 'non-catalogue models are still critical');
+});
+
+/*
+ * Hub #1568 (14 Nov 2026): prices read that day on the makers' own pages.
+ * OpenAI model pages: Sol $4/$20 (promotional until 30 November 2026), Terra $2/$12, Luna $0.20/$1.20.
+ * Anthropic pricing page: Fable 5.2 $8/$40, Opus 5.5 $4/$20, Sonnet 5.5 $2/$10, Haiku 5.5 tiered by prompt length.
+ */
+test('GPT-5.6 prices match the OpenAI model pages read on 14 Nov, with the Sol promotion recorded', () => {
+  const price = (id: string) => catalog.get(id)?.officialPricing;
+  assert.deepEqual([price('gpt-5.6-sol')?.inputPrice, price('gpt-5.6-sol')?.outputPrice, price('gpt-5.6-sol')?.cachedInputPrice], [4, 20, 0.4]);
+  assert.match(price('gpt-5.6-sol')!.source, /promotional through 2026-11-30/);
+  assert.match(catalog.get('gpt-5.6-sol')!.notes!, /promotional pricing until 30 November 2026.*standard price of \$5\/\$30/);
+  assert.deepEqual([price('gpt-5.6-terra')?.inputPrice, price('gpt-5.6-terra')?.outputPrice, price('gpt-5.6-terra')?.cachedInputPrice], [2, 12, 0.2]);
+  assert.deepEqual([price('gpt-5.6-luna')?.inputPrice, price('gpt-5.6-luna')?.outputPrice, price('gpt-5.6-luna')?.cachedInputPrice], [0.2, 1.2, 0.02]);
+  for (const id of ['gpt-5.6-sol', 'gpt-5.6-terra', 'gpt-5.6-luna']) {
+    assert.equal(price(id)!.sourceUrl, `https://developers.openai.com/api/docs/models/${id}`);
+    assert.match(price(id)!.source, /^OpenAI \(official.*checked 2026-11-14\)$/);
+  }
+  // Spot-confirmed unchanged on the same day.
+  assert.deepEqual([price('gpt-5.5-pro')?.inputPrice, price('gpt-5.5-pro')?.outputPrice], [30, 180]);
+  assert.deepEqual([price('gpt-5.4-pro')?.inputPrice, price('gpt-5.4-pro')?.outputPrice], [30, 180]);
+  assert.deepEqual([price('gpt-5.4')?.inputPrice, price('gpt-5.4')?.outputPrice], [2.5, 15]);
+});
+
+test('Claude 5.5 family and Fable 5.2 are verified catalogue models with Anthropic sources', () => {
+  const expected = [
+    ['claude-fable-5.2', 'Claude Fable 5.2', '2026-11-09', 8, 40, 0.2],
+    ['claude-opus-5.5', 'Claude Opus 5.5', '2026-09-22', 4, 20, 0.2],
+    ['claude-sonnet-5.5', 'Claude Sonnet 5.5', '2026-09-28', 2, 10, 0.1],
+  ] as const;
+  for (const [id, name, released, input, output, cached] of expected) {
+    const model = catalog.get(id);
+    assert.ok(model, id);
+    assert.deepEqual([model.name, model.providerId, model.status, model.released, model.contextWindow, model.maxOutput], [name, 'anthropic', 'active', released, 1_000_000, 128_000]);
+    assert.deepEqual(model.officialPricing, {
+      inputPrice: input, outputPrice: output, cachedInputPrice: cached,
+      source: 'Anthropic (official, checked 2026-11-14)',
+      sourceUrl: 'https://platform.claude.com/docs/en/about-claude/pricing',
+    });
+    assert.equal(new URL(model.officialUrl).hostname, 'www.anthropic.com');
+    assert.equal(model.pricingConditions, undefined);
+  }
+  // Haiku 5.5 is priced by prompt length, so it must not carry a single global price.
+  const haiku = catalog.get('claude-haiku-5.5');
+  assert.ok(haiku);
+  assert.deepEqual([haiku.released, haiku.contextWindow, haiku.maxOutput, haiku.status], ['2026-10-07', 1_000_000, 128_000, 'active']);
+  assert.equal(haiku.officialPricing, undefined);
+  assert.match(haiku.pricingConditions!, /up to 100,000 tokens are \$0\.10 input, \$0\.50 output.*over 100,000 tokens are \$0\.50 input, \$2\.50 output/);
+  // Still listed by Anthropic at the prices held.
+  assert.deepEqual([catalog.get('claude-fable-5')?.officialPricing?.inputPrice, catalog.get('claude-fable-5')?.officialPricing?.outputPrice], [10, 50]);
+  assert.deepEqual([catalog.get('claude-opus-5')?.officialPricing?.inputPrice, catalog.get('claude-opus-5')?.officialPricing?.outputPrice], [5, 25]);
+});
+
+test('"Pro" rows that OpenAI does not publish stay discovery-only, never verified priced models', () => {
+  // OpenAI's pricing page and model pages list no Pro model for GPT-5.6, GPT-6 or GPT-6.1 (read 14 Nov 2026).
+  // These rows exist only as OpenRouter discovery records.
+  const proIds = ['gpt-5.6-sol-pro', 'gpt-5.6-terra-pro', 'gpt-5.6-luna-pro', 'gpt-6-astra-pro', 'gpt-6-sol-pro', 'gpt-6-luna-pro', 'gpt-6.1-sol-pro', 'gpt-6.1-terra-pro'];
+  for (const id of proIds) {
+    assert.equal(catalog.has(id), false, `${id} must not be a catalogue model`);
+    assert.equal(findCatalogModelByAlias(id), null, `${id} must not resolve to a catalogue model`);
+    assert.equal(findCatalogModelByAlias(`openai/${id}`), null, `openai/${id} must not resolve to a catalogue model`);
+    const discovery = { status: 'tracking', notes: `Auto-tracked from OpenRouter discovery (openai/${id}); awaiting official verification.` };
+    assert.equal(isPubliclyVerifiedModel(discovery), false, id);
+  }
 });
