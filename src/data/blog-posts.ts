@@ -1,3 +1,4 @@
+import { studioArticles } from './studio';
 import { practitionerB1 } from './practitioner-b1';
 import { additionalPractitioner } from './practitioner-additional';
 import { practitionerB2 } from './practitioner-b2';
@@ -15,6 +16,7 @@ export interface BlogPost {
 
 /** Editorial posts, newest first. The blog index, search, RSS, and tickers share this list. */
 export const blogPosts: BlogPost[] = [
+  ...studioArticles.map((a) => ({ slug: a.slug, title: a.title, description: a.description, date: a.date, type: a.type as BlogType, readTime: a.readTime })),
   ...additionalPractitioner.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: p.type as BlogType, readTime: '5 min' })),
   ...practitionerB3.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: (p.slug === 'model-upgrade-regression-register' ? 'Explainer' : 'Analysis') as BlogType, readTime: '5 min' })),
   ...practitionerB2.map(p => ({ slug: p.slug, title: p.title, description: p.description, date: '2026-11-14', type: (p.slug === 'structured-output-is-not-a-correct-answer' ? 'Explainer' : 'Analysis') as BlogType, readTime: '5 min' })),
