@@ -114543,6 +114543,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 353,
+    "model_id": "deepseek-v4-pro",
+    "input_price": 0.493,
+    "output_price": 1.502,
+    "recorded_at": "2026-11-28 00:57:58",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "DeepSeek V4 Pro 0423",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 338,
     "model_id": "deepseek-v4-pro-0813",
     "input_price": 0.435,
@@ -194727,6 +194738,17 @@
     "input_price": 0.05,
     "output_price": 0.1,
     "recorded_at": "2026-11-27 00:58:00",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Gemma 3 4B",
+    "provider_name": "Google",
+    "provider_colour": "#4285f4"
+  },
+  {
+    "id": 417,
+    "model_id": "gemma-3-4b-it",
+    "input_price": 0.04,
+    "output_price": 0.05,
+    "recorded_at": "2026-11-28 00:57:58",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Gemma 3 4B",
     "provider_name": "Google",
@@ -521939,6 +521961,17 @@
     "provider_colour": "#76b900"
   },
   {
+    "id": 182,
+    "model_id": "nemotron-3.5-super-vl",
+    "input_price": 0.15,
+    "output_price": 0.45,
+    "recorded_at": "2026-11-28 00:57:58",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Nemotron 3.5 Super VL",
+    "provider_name": "NVIDIA",
+    "provider_colour": "#76b900"
+  },
+  {
     "id": 3912,
     "model_id": "nemotron-70b",
     "input_price": 1.2,
@@ -661743,6 +661776,17 @@
     "input_price": 0.085,
     "output_price": 0.125,
     "recorded_at": "2026-11-27 21:58:56",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "Qwen3.5-9B",
+    "provider_name": "Alibaba",
+    "provider_colour": "#ff6a00"
+  },
+  {
+    "id": 362,
+    "model_id": "qwen3.5-9b",
+    "input_price": 0.075,
+    "output_price": 0.11,
+    "recorded_at": "2026-11-28 00:57:58",
     "source": "openrouter.ai/api/v1/models",
     "model_name": "Qwen3.5-9B",
     "provider_name": "Alibaba",
