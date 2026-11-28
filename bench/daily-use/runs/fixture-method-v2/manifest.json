@@ -1,0 +1,11 @@
+{
+  "git_commit": "e0651b470fb5de7ba1fa4698ef0c7d1cb585bc0c",
+  "task_set_version": "daily-use-development-fixtures-v2",
+  "sha256": {
+    "public-tasks.json": "9e8766fb4ff73f525c3a98239264b516012c7c3cb5c6e18ce29a9da4dfae2c0b",
+    "report.md": "18cd04b6ae7cf29cec7d82b50e783b41e0a9944d968dea81b60643cdbb9ce937",
+    "results.json": "380a69c2e4217fa732f66732af30b920941a71bef62d3a9529ba25e905afe756",
+    "harness.py": "63bc13b82f8d20000c0ee1531316a87a789b267ca24c52158017bd8525c570f2",
+    "fixtures.json": "d36c4c470638195d1ab81592ae68bbfe2f0a116bb9d6114e72f4df42e6520b15"
+  }
+}

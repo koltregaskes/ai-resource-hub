@@ -1,0 +1,68 @@
+{
+  "task_set_version": "daily-use-development-fixtures-v2",
+  "repeats": 3,
+  "caps_usd": {
+    "openai": "30",
+    "anthropic": "30"
+  },
+  "judge_panel": [
+    {
+      "provider": "openai",
+      "model": "fixture-judge-o",
+      "effort": "provider_default",
+      "temperature": "provider_default",
+      "max_output_tokens": 4096,
+      "context_tokens": 16384,
+      "input_usd_per_million": "1",
+      "output_usd_per_million": "4",
+      "system_prompt": "",
+      "shot": "zero-shot"
+    },
+    {
+      "provider": "anthropic",
+      "model": "fixture-judge-a",
+      "effort": "provider_default",
+      "temperature": "provider_default",
+      "max_output_tokens": 4096,
+      "context_tokens": 16384,
+      "input_usd_per_million": "1",
+      "output_usd_per_million": "4",
+      "system_prompt": "",
+      "shot": "zero-shot"
+    }
+  ],
+  "models": [
+    {
+      "provider": "openai",
+      "model": "fixture-openai",
+      "effort": "provider_default",
+      "temperature": "provider_default",
+      "max_output_tokens": 4096,
+      "context_tokens": 16384,
+      "input_usd_per_million": "1",
+      "output_usd_per_million": "4",
+      "system_prompt": "",
+      "shot": "zero-shot"
+    },
+    {
+      "provider": "anthropic",
+      "model": "fixture-anthropic",
+      "effort": "provider_default",
+      "temperature": "provider_default",
+      "max_output_tokens": 4096,
+      "context_tokens": 16384,
+      "input_usd_per_million": "1",
+      "output_usd_per_million": "4",
+      "system_prompt": "",
+      "shot": "zero-shot"
+    }
+  ],
+  "key_names": {
+    "openai": [
+      "OPENAI_API_KEY"
+    ],
+    "anthropic": [
+      "CLAUDE_API"
+    ]
+  }
+}
