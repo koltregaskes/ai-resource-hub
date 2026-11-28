@@ -93049,6 +93049,17 @@
     "provider_colour": "#2563eb"
   },
   {
+    "id": 254,
+    "model_id": "deepseek-r1-0528",
+    "input_price": 0.5,
+    "output_price": 2.18,
+    "recorded_at": "2026-11-28 12:57:15",
+    "source": "openrouter.ai/api/v1/models",
+    "model_name": "R1 0528",
+    "provider_name": "DeepSeek",
+    "provider_colour": "#2563eb"
+  },
+  {
     "id": 3894,
     "model_id": "deepseek-r1-distill-llama-70b",
     "input_price": 0.7,
